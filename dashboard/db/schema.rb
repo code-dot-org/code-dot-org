@@ -1162,23 +1162,6 @@ ActiveRecord::Schema.define(version: 20200415193328) do
     t.index ["stage_id"], name: "index_plc_learning_modules_on_stage_id", using: :btree
   end
 
-  create_table "plc_learning_modules_tasks", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "plc_learning_module_id", null: false
-    t.integer "plc_task_id",            null: false
-    t.index ["plc_learning_module_id"], name: "index_plc_learning_modules_tasks_on_plc_learning_module_id", using: :btree
-    t.index ["plc_task_id"], name: "index_plc_learning_modules_tasks_on_plc_task_id", using: :btree
-  end
-
-  create_table "plc_tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name"
-    t.datetime "created_at",                                          null: false
-    t.datetime "updated_at",                                          null: false
-    t.string   "type",                          default: "Plc::Task", null: false
-    t.text     "properties",      limit: 65535
-    t.integer  "script_level_id"
-    t.index ["script_level_id"], name: "index_plc_tasks_on_script_level_id", using: :btree
-  end
-
   create_table "plc_user_course_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "status"
     t.integer  "plc_course_id"
@@ -1804,7 +1787,6 @@ ActiveRecord::Schema.define(version: 20200415193328) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
-  add_foreign_key "plc_tasks", "script_levels"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"

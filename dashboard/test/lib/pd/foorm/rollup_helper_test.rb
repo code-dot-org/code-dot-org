@@ -62,7 +62,7 @@ module Pd::Foorm
       question_details = RollupHelper.get_question_details_for_rollup(csf_forms, questions_to_summarize)
       expected_facilitator_question = {
         facilitator_effectiveness: {
-          title: "During my workshop, {panel.facilitatorName} did the following:",
+          title: "During my workshop, my facilitator did the following:",
           rows: {
             demonstrated_knowledge: "Demonstrated knowledge of the curriculum.",
             built_equitable: "Built and sustained an equitable learning environment in our workshop.",

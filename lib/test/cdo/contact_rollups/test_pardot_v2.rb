@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
-  def test_retrieve_new_ids_without_result
+  def test_retrieve_prospects_without_result
     pardot_response = Nokogiri::XML <<-XML
       <rsp stat="ok">
         <result>
@@ -13,15 +13,15 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
     yielded_result = nil
-    result = PardotV2.retrieve_new_ids(0) {|mappings| yielded_result = mappings}
+    result = PardotV2.retrieve_prospects(0, ['id']) {|mappings| yielded_result = mappings}
 
     assert_equal 0, result
     assert_equal [], yielded_result
   end
 
-  def test_retrieve_new_ids_with_result
-    pardot_id = 1
-    email = "alex@rollups.com"
+  def test_retrieve_prospects_with_result
+    pardot_id = '1'
+    email = 'alex@rollups.com'
     pardot_response = Nokogiri::XML <<-XML
       <rsp stat="ok">
         <result>
@@ -36,14 +36,14 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
     yielded_result = nil
-    result = PardotV2.retrieve_new_ids(0) {|mappings| yielded_result = mappings}
+    result = PardotV2.retrieve_prospects(0, %w(id email)) {|mappings| yielded_result = mappings}
 
     assert_equal 1, result
-    assert_equal [{email: email, pardot_id: pardot_id}], yielded_result
+    assert_equal [{'id' => pardot_id, 'email' => email}], yielded_result
   end
 
   def test_batch_create_prospects_single_contact
-    contact = {email: 'crv2_test@domain.com', data: {opt_in: true}}
+    contact = {email: 'crv2_test@domain.com', data: {opt_in: 1}}
 
     ok_response = Nokogiri.XML <<-XML
       <rsp stat="ok" version="1.0">
@@ -62,8 +62,8 @@ class PardotV2Test < Minitest::Test
 
   def test_batch_create_prospects_multiple_contacts
     contacts = [
-      {email: 'invalid_email', data: {opt_in: false}},
-      {email: 'crv2_test@domain.com', data: {opt_in: true}}
+      {email: 'invalid_email', data: {opt_in: 0}},
+      {email: 'crv2_test@domain.com', data: {opt_in: 1}}
     ]
 
     response_with_errors = Nokogiri.XML <<-XML
@@ -103,7 +103,7 @@ class PardotV2Test < Minitest::Test
       email: 'alpha@cdo.org',
       pardot_id: 1,
       old_prospect_data: {db_Opt_In: 'Yes'},
-      new_contact_data: {opt_in: false}
+      new_contact_data: {opt_in: 0}
     }
 
     ok_response = Nokogiri.XML <<-XML
@@ -132,13 +132,13 @@ class PardotV2Test < Minitest::Test
         email: 'alpha@cdo.org',
         pardot_id: 1,
         old_prospect_data: {db_Opt_In: 'Yes'},
-        new_contact_data: {opt_in: false}
+        new_contact_data: {opt_in: 0}
       },
       {
         email: 'beta@cdo.org',
         pardot_id: 2,
         old_prospect_data: nil,
-        new_contact_data: {opt_in: true}
+        new_contact_data: {opt_in: 1}
       }
     ]
 
@@ -175,7 +175,7 @@ class PardotV2Test < Minitest::Test
 
   def test_convert_to_pardot_prospect
     contacts = [
-      {email: 'test0@domain.com', pardot_id: 10, opt_in: true},
+      {email: 'test0@domain.com', pardot_id: 10, opt_in: 1},
       {email: 'test1@domain.com', pardot_id: nil, bad_key: true}
     ]
     expected_prospects = [

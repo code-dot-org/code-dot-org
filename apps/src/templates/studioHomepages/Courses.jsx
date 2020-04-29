@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import {CourseBlocksAll} from './CourseBlocks';
+import {CourseBlocksIntl} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -106,7 +106,7 @@ class Courses extends Component {
 
         <ProtectedStatefulDiv ref="flashes" />
 
-        <SpecialAnnouncement isTeacher={isTeacher} />
+        {isEnglish && <SpecialAnnouncement isTeacher={isTeacher} />}
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {isEnglish && isTeacher && (
@@ -126,8 +126,8 @@ class Courses extends Component {
 
         {/* Non-English */}
         {!isEnglish && (
-          <CourseBlocksAll
-            isEnglish={false}
+          <CourseBlocksIntl
+            isTeacher={isTeacher}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
           />
         )}
