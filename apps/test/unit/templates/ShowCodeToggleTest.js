@@ -56,18 +56,6 @@ describe('The ShowCodeToggle component', () => {
       skin: {}
     };
 
-    afterEach(() => {
-      server.restore();
-      $.post.restore();
-      $.getJSON.restore();
-      project.getCurrentId.restore();
-      restoreStudioApp();
-      LegacyDialog.prototype.show.restore();
-      restoreRedux();
-      document.body.removeChild(codeWorkspaceDiv);
-      document.body.removeChild(containerDiv);
-    });
-
     codeWorkspaceDiv = document.createElement('div');
     codeWorkspaceDiv.id = 'codeWorkspace';
     document.body.appendChild(codeWorkspaceDiv);
@@ -86,6 +74,18 @@ describe('The ShowCodeToggle component', () => {
     studioApp().init(config);
     sinon.stub(studioApp(), 'onDropletToggle');
     sinon.stub(studioApp(), 'showGeneratedCode');
+  });
+
+  afterEach(() => {
+    server.restore();
+    $.post.restore();
+    $.getJSON.restore();
+    project.getCurrentId.restore();
+    restoreStudioApp();
+    LegacyDialog.prototype.show.restore();
+    restoreRedux();
+    document.body.removeChild(codeWorkspaceDiv);
+    document.body.removeChild(containerDiv);
   });
 
   describe('when the studioApp editor has currentlyUsingBlocks=false', () => {
