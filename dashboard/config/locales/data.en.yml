@@ -601,6 +601,8 @@ en:
         codebreak_e03: 'Code Break 3.0: Encryption with Ashton Kutcher and Mia Gil Epner'
         codebreak_e04: Code Break 4.0 Digital Information with Mike Krieger and Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulations & Data with Bill Gates'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
