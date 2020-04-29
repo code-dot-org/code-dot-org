@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
-import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
+import {expect} from '../../../util/reconfiguredChai';
+import LessonExtras from '@cdo/apps/code-studio/components/stageExtras/LessonExtras';
 import {bonusLevels} from './lessonExtrasTestHelpers';
 
 const DEFAULT_PROPS = {
@@ -12,6 +12,7 @@ const DEFAULT_PROPS = {
   projectTypes: [],
   bonusLevels: bonusLevels,
   sectionId: 3,
+  userId: 5,
   showStageExtrasWarning: true
 };
 
@@ -33,10 +34,5 @@ describe('LessonExtras', () => {
   it('show stage extra warning if showStageExtrasWarning and have sectionId', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
     expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(1);
-  });
-
-  it('renders correct number of sublevels', () => {
-    const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
-    assert.equal(2, wrapper.find('SublevelCard').length);
   });
 });
