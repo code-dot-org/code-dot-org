@@ -17,7 +17,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 const MAX_SEARCH_RESULTS = 40;
-const MAX_HEIGHT = 420;
+const MAX_HEIGHT = 460;
 
 const animationPickerStyles = {
   allAnimations: {
