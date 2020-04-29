@@ -28,7 +28,7 @@ export default storybook => {
     withInfo('This is the LessonExtras component.')(() => (
       <Provider store={store}>
         <LessonExtras
-          stageNumber={1}
+          lessonNumber={1}
           nextLevelPath="#"
           bonusLevels={[
             {
