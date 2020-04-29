@@ -7,17 +7,13 @@ import * as utils from '@cdo/apps/utils';
 import cookies from 'js-cookie';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
-
-class FakeSessionStorage {
-  getItem() {}
-  setItem() {}
-}
+import FakeStorage from '../../util/FakeStorage';
 
 describe('SignInOrAgeDialog', () => {
   const defaultProps = {
     age13Required: true,
     signedIn: false,
-    sessionStorage: new FakeSessionStorage()
+    sessionStorage: new FakeStorage()
   };
 
   before(() => {

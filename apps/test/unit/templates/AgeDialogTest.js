@@ -3,17 +3,13 @@ import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-
-class FakeSessionStorage {
-  getItem() {}
-  setItem() {}
-}
+import FakeStorage from '../../util/FakeStorage';
 
 describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
     turnOffFilter: () => {},
-    sessionStorage: new FakeSessionStorage()
+    sessionStorage: new FakeStorage()
   };
 
   it('renders null if user is signed in', () => {
