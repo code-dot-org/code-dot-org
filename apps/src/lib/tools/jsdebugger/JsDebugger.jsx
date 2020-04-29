@@ -26,6 +26,7 @@ import {
 } from '../../../redux/watchedExpressions';
 import DebugConsole from './DebugConsole';
 import DebugButtons from './DebugButtons';
+import trackEvent from '../../../util/trackEvent';
 
 import {
   // actions
@@ -244,6 +245,9 @@ class JsDebugger extends React.Component {
   }
 
   onMouseUpDebugResizeBar = () => {
+    if (this.props.debugButtons) {
+      trackEvent('debug_commands', 'release_console_resize');
+    }
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
       document.body.removeEventListener(
@@ -295,6 +299,9 @@ class JsDebugger extends React.Component {
     if (this.props.isOpen) {
       this.props.close();
     } else {
+      if (this.props.debugButtons) {
+        trackEvent('debug_commands', 'toggle_open_console');
+      }
       this.props.open();
     }
   };
