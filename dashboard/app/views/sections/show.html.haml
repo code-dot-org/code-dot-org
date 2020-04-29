@@ -40,7 +40,7 @@
         %ul.pictures
           - @secret_pictures.each do |secret_picture|
             %li{id: secret_picture.id}
-              = image_tag secret_picture.path, width: 90, alt: secret_picture.name
+              = image_tag secret_picture.path, width: 66, alt: secret_picture.name
         .clear
 
     - if @section.login_type == Section::LOGIN_TYPE_WORD
