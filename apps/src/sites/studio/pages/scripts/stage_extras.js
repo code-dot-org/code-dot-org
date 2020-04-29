@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LessonExtras from '@cdo/apps/code-studio/components/stageExtras/LessonExtras';
+import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
