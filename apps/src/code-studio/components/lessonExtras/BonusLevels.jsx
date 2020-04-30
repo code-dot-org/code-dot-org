@@ -6,7 +6,7 @@ import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import color from '../../../util/color';
 import i18n from '@cdo/locale';
-import {bonusLevel, stageOfBonusLevels} from './shapes';
+import {bonusLevel, lessonOfBonusLevels} from './shapes';
 import {connect} from 'react-redux';
 import {isPerfect} from '@cdo/apps/code-studio/progressRedux';
 
@@ -49,7 +49,7 @@ const styles = {
     height: 400,
     maxWidth: 'initial'
   },
-  stageNumberHeading: {
+  lessonNumberHeading: {
     textAlign: 'center'
   },
   arrow: {
@@ -153,7 +153,7 @@ const ConnectedBonusLevel = connect((state, ownProps) => ({
 export default Radium(
   class BonusLevels extends React.Component {
     static propTypes = {
-      bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+      bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
       sectionId: PropTypes.number,
       userId: PropTypes.number
     };
@@ -161,47 +161,47 @@ export default Radium(
     constructor(props) {
       super(props);
       this.state = {
-        stageIndex: props.bonusLevels.length - 1
+        lessonIndex: props.bonusLevels.length - 1
       };
     }
 
-    nextStage = () => {
-      if (this.state.stageIndex < this.props.bonusLevels.length - 1) {
-        this.setState({stageIndex: this.state.stageIndex + 1});
+    nextLesson = () => {
+      if (this.state.lessonIndex < this.props.bonusLevels.length - 1) {
+        this.setState({lessonIndex: this.state.lessonIndex + 1});
       }
     };
 
-    previousStage = () => {
-      if (this.state.stageIndex > 0) {
-        this.setState({stageIndex: this.state.stageIndex - 1});
+    previousLesson = () => {
+      if (this.state.lessonIndex > 0) {
+        this.setState({lessonIndex: this.state.lessonIndex - 1});
       }
     };
 
     render() {
       const totalThumbnailWidth = THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN;
       const totalWidth =
-        this.props.bonusLevels[this.state.stageIndex].levels.length *
+        this.props.bonusLevels[this.state.lessonIndex].levels.length *
           totalThumbnailWidth -
         THUMBNAIL_IMAGE_MARGIN;
 
       const levels = this.props.bonusLevels
         .filter(
-          stage =>
-            stage.stageNumber <
-            this.props.bonusLevels[this.state.stageIndex].stageNumber
+          lesson =>
+            lesson.stageNumber <
+            this.props.bonusLevels[this.state.lessonIndex].stageNumber
         )
-        .reduce((numLevels, stage) => numLevels + stage.levels.length, 0);
+        .reduce((numLevels, lesson) => numLevels + lesson.levels.length, 0);
       const scrollAmount = -1 * levels * totalThumbnailWidth;
 
-      const leftDisabled = this.state.stageIndex === 0;
+      const leftDisabled = this.state.lessonIndex === 0;
       const rightDisabled =
-        this.state.stageIndex === this.props.bonusLevels.length - 1;
+        this.state.lessonIndex === this.props.bonusLevels.length - 1;
       return (
         <div>
           <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
           <RadiumFontAwesome
             icon="caret-left"
-            onClick={this.previousStage}
+            onClick={this.previousLesson}
             style={[styles.arrow, leftDisabled && styles.arrowDisabled]}
           />
           <div
@@ -210,22 +210,22 @@ export default Radium(
               width: totalWidth
             }}
           >
-            {this.props.bonusLevels.map(stage => (
+            {this.props.bonusLevels.map(lesson => (
               <div
-                key={stage.stageNumber}
+                key={lesson.stageNumber}
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,
-                  width: stage.levels.length * totalThumbnailWidth
+                  width: lesson.levels.length * totalThumbnailWidth
                 }}
               >
-                <h3 style={styles.stageNumberHeading}>
+                <h3 style={styles.lessonNumberHeading}>
                   {i18n.extrasStageNChallenges({
-                    stageNumber: this.props.bonusLevels[this.state.stageIndex]
+                    stageNumber: this.props.bonusLevels[this.state.lessonIndex]
                       .stageNumber
                   })}
                 </h3>
-                {stage.levels.map(level => (
+                {lesson.levels.map(level => (
                   <ConnectedBonusLevel
                     key={level.id}
                     {...level}
@@ -238,7 +238,7 @@ export default Radium(
           </div>
           <RadiumFontAwesome
             icon="caret-right"
-            onClick={this.nextStage}
+            onClick={this.nextLesson}
             style={[styles.arrow, rightDisabled && styles.arrowDisabled]}
           />
         </div>
