@@ -82,7 +82,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         summary << {
           category: lesson_group.localized_display_name,
           status: module_assignment_for_type(lesson_group.key).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,
-          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: lesson_group.localized_display_name.downcase.tr(' ', '-'))
+          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: lesson_group.key.downcase.tr(' ', '-'))
         }
       end
     else

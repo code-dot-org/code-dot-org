@@ -50,11 +50,12 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
+    # All the categories except Peer Review will be Content because there is no translation and that is the default
     assert_equal [
       {
-        category: "Overview",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
-        link: "/s/#{@script.name}#overview"
+        link: "/s/#{@script.name}#required"
       },
       {
         category: "Content",
@@ -62,9 +63,9 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
         link: "/s/#{@script.name}#content"
       },
       {
-        category: "Teaching Practices",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
-        link: "/s/#{@script.name}#teaching-practices"
+        link: "/s/#{@script.name}#practice"
       },
       {
         category: "Peer Review",
@@ -74,12 +75,13 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     ], @unit_enrollment.summarize_progress
   end
 
+  # All the categories except Peer Review will be Content because there is no translation and that is the default
   test 'Enrolling user in a course without an evaluation returns status appropriately' do
     Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(false)
 
     assert_equal [
       {
-        category: "Teaching Practices",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::COMPLETED,
         link: "/s/#{@script.name}"
       },
@@ -89,7 +91,7 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
         link: "/s/#{@script.name}"
       },
       {
-        category: "Overview",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::COMPLETED,
         link: "/s/#{@script.name}"
       }
