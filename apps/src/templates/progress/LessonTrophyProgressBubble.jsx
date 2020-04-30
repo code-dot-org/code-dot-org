@@ -9,7 +9,7 @@ const styles = {
   }
 };
 
-export default class StageTrophyProgressBubble extends Component {
+export default class LessonTrophyProgressBubble extends Component {
   static propTypes = {
     percentPerfect: PropTypes.number.isRequired
   };

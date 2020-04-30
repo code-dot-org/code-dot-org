@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default class StageExtrasNotification extends Component {
+export default class LessonExtrasNotification extends Component {
   render() {
     return (
       <Notification
