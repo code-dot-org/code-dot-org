@@ -1,4 +1,8 @@
 /**
+ * @fileoverview Utility functions which require the Blockly global.
+ */
+
+/**
  * Shrink the DOM element containing the given blockSpace to the minimum size
  * required to contain the block space
  * @param {BlockSpace} blockSpace - the Blockly BlockSpace to resize
