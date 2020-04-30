@@ -1403,35 +1403,6 @@ a.download-video {
   }
 }
 
-.gallery {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 890px;
-
-  .pagination {
-    float: left;
-    font-size: 30px;
-    line-height: 154px;
-    margin: 10px 5px;
-    width: 25px;
-    text-align: center;
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  .gallery_activity {
-    margin: 10px 5px;
-    box-sizing: border-box;
-    height: 154px;
-    width: 154px;
-    img {
-      border: 2px solid $lighter_gray;
-      background-color: $white;
-    }
-  }
-}
-
 .course_progress {
   margin: 10px 0;
 }
@@ -2311,44 +2282,6 @@ a.download-video {
   }
   .block-checkbox {
     float: left;
-  }
-}
-
-div.gallery_activity {
-  $img_size: 154px;
-  $img_border_size: 10px;
-  $img_total_size: $img_size + 2 * $img_border_size;
-  float: left;
-  width: $img_total_size;
-  margin: 10px 5px;
-  img {
-    width: $img_size;
-    height: $img_size;
-    border: $img_border_size groove $light_gray;
-  }
-  .caption {
-    color: $charcoal;
-    margin: 0 auto;
-    clear: both;
-    max-width: $img_size;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-  }
-}
-
-div.mini_gallery_activity {
-  $img_size: 54px;
-  $img_border_size: 4px;
-  $img_total_size: $img_size + 2 * $img_border_size;
-  float: left;
-  width: $img_total_size;
-  margin: 0 5px;
-  img {
-    width: $img_size;
-    height: $img_size;
-    border: $img_border_size groove $light_gray;
   }
 }
 
