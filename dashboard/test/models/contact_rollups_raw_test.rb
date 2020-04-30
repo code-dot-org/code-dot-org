@@ -24,6 +24,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
       sources: 'dashboard.users.parent_email'
     )
 
+    # confirms that a) record exists, and b) data is blank
     assert_nil result.data
   end
 
