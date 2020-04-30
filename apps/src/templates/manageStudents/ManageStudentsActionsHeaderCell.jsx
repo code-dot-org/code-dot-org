@@ -7,7 +7,6 @@ import QuickActionsCell, {
 } from '../tables/QuickActionsCell';
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 import ChangeLoginTypeDialog from '@cdo/apps/templates/teacherDashboard/ChangeLoginTypeDialog';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -69,11 +68,6 @@ class ManageStudentsActionsHeaderCell extends Component {
           {isShareColumnVisible && (
             <PopUpMenu.Item onClick={hideSharingColumn}>
               {i18n.hideProjectSharingColumn()}
-            </PopUpMenu.Item>
-          )}
-          {true && (
-            <PopUpMenu.Item onClick={this.openChangeLoginTypeDialog}>
-              Change login type
             </PopUpMenu.Item>
           )}
         </QuickActionsCell>
