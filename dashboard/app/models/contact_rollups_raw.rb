@@ -41,7 +41,7 @@ class ContactRollupsRaw < ApplicationRecord
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
   # @param email_column [String] Column in source table we want to insert ino the email column
-  # @param source_name [String] Name for source if using a subquery
+  # @param source_name [String] Name for source (should be non-nil if using a subquery or non-dashboard table)
   # @return [String] A SQL statement to extract and reshape data from the source table.
   def self.extract_from_source_query(source, data_columns, email_column, source_name=nil)
     wrapped_source, sources_column = format_source(source, source_name)
