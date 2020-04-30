@@ -1,6 +1,7 @@
 /*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -270,7 +271,7 @@ export default class LibraryPublisher extends React.Component {
             <input
               style={styles.largerCheckbox}
               type="checkbox"
-              id={functionName}
+              id={_.uniqueId(`${functionName}-`)}
               disabled={!this.isFunctionValid(sourceFunction)}
               name={functionName}
               checked={checked}
@@ -378,6 +379,7 @@ export default class LibraryPublisher extends React.Component {
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
     const {onShareTeacherLibrary} = this.props;
+    const selectAllCheckboxId = _.uniqueId('func-select-all-');
 
     return (
       <div>
@@ -390,11 +392,11 @@ export default class LibraryPublisher extends React.Component {
           <input
             style={styles.largerCheckbox}
             type="checkbox"
-            id="func-select-all"
+            id={selectAllCheckboxId}
             checked={this.allFunctionsSelected()}
             onChange={this.toggleAllFunctionsSelected}
           />
-          <label htmlFor="func-select-all" style={styles.functionLabel}>
+          <label htmlFor={selectAllCheckboxId} style={styles.functionLabel}>
             {i18n.selectAllFunctions()}
           </label>
         </div>
