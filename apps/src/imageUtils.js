@@ -35,11 +35,6 @@ export function dataURIToSourceSize(dataURI) {
   }));
 }
 
-export async function canvasFromURI(uri) {
-  const image = await imageFromURI(uri);
-  return canvasFromImage(image);
-}
-
 export function canvasFromImage(image) {
   const canvas = document.createElement('canvas');
   canvas.width = image.width;
@@ -111,6 +106,35 @@ export function dataURIToBlob(uri) {
   return imageFromURI(uri)
     .then(canvasFromImage)
     .then(canvasToBlob);
+}
+
+/**
+ * Given an input of a valid type, converts it to an HTMLCanvasElement
+ * with matching contents drawn onto it.
+ *
+ * @param {string|HTMLImageElement|HTMLCanvasElement} input
+ * @returns {Promise<HTMLCanvasElement>}
+ */
+export async function toCanvas(input) {
+  if (input instanceof HTMLCanvasElement) {
+    return input;
+  }
+
+  let image;
+  if (input instanceof HTMLImageElement) {
+    image = input;
+  } else if (typeof input === 'string') {
+    image = await imageFromURI(input);
+  } else {
+    throw new Error('Unable to convert input to canvas');
+  }
+
+  const canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+  const context = canvas.getContext('2d');
+  context.drawImage(image, 0, 0);
+  return canvas;
 }
 
 /**

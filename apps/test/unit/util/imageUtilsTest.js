@@ -3,11 +3,16 @@ import {
   dataURIFromURI,
   dataURIToFramedBlob,
   imageFromURI,
+  toCanvas,
   toImageData
 } from '@cdo/apps/imageUtils';
 import {assert, expect} from 'chai';
 import expectedPhantomPng from './expected-phantom.png';
 import expectedChromePng from './expected-chrome.png';
+import assertVisualMatch from '../../util/assertVisualMatch';
+
+const TEST_DATA_URI =
+  'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="1000"/></svg>';
 
 describe('image utils', () => {
   it('overlays an image inside the Artist frame', done => {
@@ -17,15 +22,41 @@ describe('image utils', () => {
     const expectedPng = /PhantomJS/.test(window.navigator.userAgent)
       ? expectedPhantomPng
       : expectedChromePng;
-    const dataURI =
-      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="1000"/></svg>';
-    dataURIToFramedBlob(dataURI, actual => {
+    dataURIToFramedBlob(TEST_DATA_URI, actual => {
       dataURIFromURI(expectedPng).then(expected => {
         blobToDataURI(actual, actual => {
           expect(expected).to.equal(actual);
           done();
         });
       });
+    });
+  });
+
+  describe('toCanvas', () => {
+    it('returns a Canvas unchanged', async () => {
+      const canvas = document.createElement('canvas');
+      const result = await toCanvas(canvas);
+      assert(canvas === result);
+    });
+
+    it('converts an image element to a canvas', async () => {
+      const image = await imageFromURI(expectedChromePng);
+      const result = await toCanvas(image);
+      assert.instanceOf(result, HTMLCanvasElement);
+      assertVisualMatch(image, result);
+    });
+
+    it('converts an image URI to a canvas', async () => {
+      assert.typeOf(expectedChromePng, 'string');
+      const result = await toCanvas(expectedChromePng);
+      assert.instanceOf(result, HTMLCanvasElement);
+      assertVisualMatch(expectedChromePng, result);
+    });
+
+    it('converts a data URI to a canvas', async () => {
+      const result = await toCanvas(TEST_DATA_URI);
+      assert.instanceOf(result, HTMLCanvasElement);
+      assertVisualMatch(TEST_DATA_URI, result);
     });
   });
 
@@ -77,9 +108,7 @@ describe('image utils', () => {
     });
 
     it('converts a data URI string to an ImageData object', async () => {
-      const dataURI =
-        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="1000"/></svg>';
-      const result = await toImageData(dataURI);
+      const result = await toImageData(TEST_DATA_URI);
       assert.instanceOf(result, ImageData);
       assert.equal(180000, result.data.length);
     });
