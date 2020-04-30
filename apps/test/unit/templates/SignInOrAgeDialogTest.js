@@ -7,25 +7,22 @@ import * as utils from '@cdo/apps/utils';
 import cookies from 'js-cookie';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
+import FakeStorage from '../../util/FakeStorage';
 
 describe('SignInOrAgeDialog', () => {
   const defaultProps = {
     age13Required: true,
-    signedIn: false
+    signedIn: false,
+    storage: new FakeStorage()
   };
 
   before(() => {
-    replaceOnWindow('sessionStorage', {
-      getItem: () => {},
-      setItem: () => {}
-    });
     replaceOnWindow('dashboard', {
       rack_env: 'unit_test'
     });
   });
 
   after(() => {
-    restoreOnWindow('sessionStorage');
     restoreOnWindow('dashboard');
   });
 
@@ -44,7 +41,7 @@ describe('SignInOrAgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    let getItem = sinon.stub(window.sessionStorage, 'getItem');
+    let getItem = sinon.stub(defaultProps.storage, 'getItem');
     getItem.withArgs('anon_over13').returns('true');
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
@@ -94,7 +91,7 @@ describe('SignInOrAgeDialog', () => {
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      let setItemSpy = sinon.spy(window.sessionStorage, 'setItem');
+      const setItemSpy = sinon.spy(defaultProps.storage, 'setItem');
       // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
       // does not work in unit tests
       sinon.stub(cookies, 'get').returns('something');
@@ -117,7 +114,7 @@ describe('SignInOrAgeDialog', () => {
           domain: '.code.org'
         })
       );
-      window.sessionStorage.setItem.restore();
+      setItemSpy.restore();
     });
 
     it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
