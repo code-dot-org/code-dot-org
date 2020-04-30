@@ -77,6 +77,7 @@ export default class LibraryPublisher extends React.Component {
   constructor(props) {
     super(props);
 
+    // Filter out already-published functions that are now invalid.
     const initialSelectedFunctions = props.libraryDetails.selectedFunctions;
     let validSelectedFunctions = {};
     props.libraryDetails.sourceFunctionList.forEach(sourceFunction => {
@@ -347,6 +348,7 @@ export default class LibraryPublisher extends React.Component {
 
     let allSelected = true;
     sourceFunctionList.forEach(sourceFunction => {
+      // If any *valid* functions are not selected, set allSelected to false.
       if (
         !selectedFunctions[sourceFunction.functionName] &&
         this.isFunctionValid(sourceFunction)
