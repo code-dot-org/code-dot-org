@@ -97,9 +97,18 @@ export async function dataURIToBlob(uri) {
 }
 
 /**
+ * @typedef {string} ImageURI
+ * A string in the form of an image URI or data URI; anything you might
+ * assign to an <image>'s `src` attribute.  Examples:
+ * "https://example.com/example.png"
+ * "data:image/svg+xml,<svg..."
+ * "data:image/png;base64,iVBOR..."
+ */
+
+/**
  * Given an input of a supported type, converts it to an HTMLCanvasElement.
  *
- * @param {string|HTMLImageElement|HTMLCanvasElement} input
+ * @param {ImageURI|HTMLImageElement|HTMLCanvasElement} input
  * @returns {Promise<HTMLCanvasElement>}
  */
 export async function toCanvas(input) {
@@ -127,7 +136,7 @@ export async function toCanvas(input) {
 /**
  * Given an input of a supported type, converts it to an ImageData object.
  *
- * @param {string|HTMLImageElement|HTMLCanvasElement|ImageData} input
+ * @param {ImageURI|HTMLImageElement|HTMLCanvasElement|ImageData} input
  * @returns {Promise<ImageData>}
  */
 export async function toImageData(input) {
