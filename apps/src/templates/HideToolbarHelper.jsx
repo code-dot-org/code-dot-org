@@ -30,7 +30,7 @@ export default class HideToolbarHelper extends React.Component {
     super(props);
 
     // Track whether we knew the helper was shown last update, so that if we
-    // no longer show it because the toolar appears to be no longer be showing
+    // no longer show it because the toolbar appears to be no longer be showing
     // in particular, we can track the event in analytics, and also write
     // the cookie so that it isn't shown again...
     this.wasHelperShowing = false;
