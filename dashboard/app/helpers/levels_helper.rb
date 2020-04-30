@@ -256,7 +256,7 @@ module LevelsHelper
     end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
+    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
