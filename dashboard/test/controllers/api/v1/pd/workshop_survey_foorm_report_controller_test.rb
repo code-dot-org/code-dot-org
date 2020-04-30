@@ -219,8 +219,8 @@ module Api::V1::Pd
       assert_nil response[:workshop_rollups][:facilitator][:single_workshop][facilitator_2_id]
     end
 
-    # Creates sample survey responses for the given workshop with the given facilitator_ids
-    # Will generate both facilitator-specific responses and general responses
+    # Creates sample survey responses for the given workshop with the given facilitator_ids.
+    # Will generate both facilitator-specific responses and general responses.
     # @param csf_workshop
     # @param facilitator_ids Array[Integer] facilitator ids to generate survey results for
     # @param high_count Number of submissions with high score responses (maximum score for each response)
