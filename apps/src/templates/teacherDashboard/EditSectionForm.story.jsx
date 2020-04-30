@@ -96,6 +96,27 @@ export default storybook => {
         assignedScriptName="script name"
       />
     ));
+    storybook = storybook.add('no students yet', () => (
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={action('handleSave')}
+        handleClose={action('handleClose')}
+        editSectionProperties={action('editSectionProperties')}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{
+          ...testSection,
+          studentCount: 0
+        }}
+        isSaveInProgress={false}
+        stageExtrasAvailable={() => false}
+        hiddenStageState={{}}
+        updateHiddenScript={() => {}}
+        assignedScriptName="script name"
+      />
+    ));
     storybook = storybook.add('save in progress', () => (
       <EditSectionForm
         title="Edit section details"
