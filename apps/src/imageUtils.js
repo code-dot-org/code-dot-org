@@ -46,6 +46,16 @@ export function imageDataFromURI(uri) {
   });
 }
 
+export function imageDataFromCanvas(canvas) {
+  const context = canvas.getContext('2d');
+  return context.getImageData(0, 0, canvas.width, canvas.height);
+}
+
+export async function canvasFromURI(uri) {
+  const image = await imageFromURI(uri);
+  return canvasFromImage(image);
+}
+
 export function canvasFromImage(image) {
   const canvas = document.createElement('canvas');
   canvas.width = image.width;
