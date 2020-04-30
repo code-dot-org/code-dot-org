@@ -419,12 +419,6 @@ const initialState = {
   // for consistency and ease of comparison).
   providers: [],
   validGrades: [],
-  // List of login types that can be edited:
-  // email -> word OR picture
-  // word -> picture
-  // picture -> word
-  // OAuth options can not be changed
-  validLoginTypes: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // A map from assignmentId to assignment (see assignmentShape PropType).
