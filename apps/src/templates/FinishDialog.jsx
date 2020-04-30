@@ -518,7 +518,7 @@ export class UnconnectedFinishDialog extends Component {
                   }}
                 >
                   <div style={styles.mastery}>
-                    <LessonProgress stageTrophyEnabled />
+                    <LessonProgress lessonTrophyEnabled />
                   </div>
                   {this.props.feedbackImage && (
                     <div style={styles.share}>

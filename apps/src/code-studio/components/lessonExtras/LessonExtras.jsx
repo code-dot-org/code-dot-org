@@ -4,7 +4,7 @@ import msg from '@cdo/locale';
 import color from '../../../util/color';
 import BonusLevels from './BonusLevels';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import {stageOfBonusLevels} from './shapes';
+import {lessonOfBonusLevels} from './shapes';
 import LessonExtrasNotification from './LessonExtrasNotification';
 
 const styles = {
@@ -22,7 +22,7 @@ export default class LessonExtras extends React.Component {
     nextLevelPath: PropTypes.string.isRequired,
     showProjectWidget: PropTypes.bool,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number,
     showLessonExtrasWarning: PropTypes.bool
