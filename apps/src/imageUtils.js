@@ -35,17 +35,6 @@ export function dataURIToSourceSize(dataURI) {
   }));
 }
 
-export function imageDataFromURI(uri) {
-  return imageFromURI(uri).then(image => {
-    const canvas = document.createElement('canvas');
-    canvas.width = image.width;
-    canvas.height = image.height;
-    const context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0);
-    return context.getImageData(0, 0, canvas.width, canvas.height);
-  });
-}
-
 export async function canvasFromURI(uri) {
   const image = await imageFromURI(uri);
   return canvasFromImage(image);
@@ -139,13 +128,21 @@ export async function toImageData(input) {
     return input;
   }
 
+  let canvas, context;
   if (input instanceof HTMLCanvasElement) {
-    const context = input.getContext('2d');
-    return context.getImageData(0, 0, input.width, input.height);
+    canvas = input;
+    context = input.getContext('2d');
+  } else if (typeof input === 'string') {
+    // Assume we've been given a valid imageURI or dataURI and load the image.
+    const image = await imageFromURI(input);
+    canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0);
+  } else {
+    throw new Error('Unable to convert input to ImageData');
   }
 
-  if (typeof input === 'string') {
-    // Assume we've been given a valid imageURI and load the image.
-    return imageDataFromURI(input);
-  }
+  return context.getImageData(0, 0, canvas.width, canvas.height);
 }
