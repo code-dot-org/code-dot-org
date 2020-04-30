@@ -1,3 +1,4 @@
+hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
@@ -129,11 +130,12 @@ level 'CSD U2L14 TFMD_2020', named: true
 
 stage 'CSS Classes', flex_category: 'csd2_2'
 level 'CSD U2L15 TFMD_2020', named: true
-level 'CSD U2 classes sample_2020', progression: 'Styling with Classes'
-level 'CSD U2 classes modify_2020', progression: 'Styling with Classes'
-level 'CSD U2 classes spring_2020', progression: 'Styling with Classes'
-level 'CSD U2 classes summer_2020', progression: 'Styling with Classes', assessment: true
-level 'CSD U2 RGB intro_2020', named: true
+level 'CSD U2 Sample classes', progression: 'Sample Page'
+level 'CSD U2 classes waterfalls', progression: 'Exploring Classes'
+level 'CSD U2 classes humors', progression: 'Styling with Classes'
+level 'CSD web classes practice', progression: 'Styling with Classes'
+level 'CSD U2 classes haikus', progression: 'Styling with Classes', assessment: true
+level 'CSD web classes challenge', progression: 'Challenges: Styling with Classes', named: true
 
 stage 'Planning a Multi-page Website', flex_category: 'csd2_2'
 level 'CSD U2L16 TFMD_2020', named: true
