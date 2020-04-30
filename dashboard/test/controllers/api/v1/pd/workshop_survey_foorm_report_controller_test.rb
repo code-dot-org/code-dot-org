@@ -192,6 +192,7 @@ module Api::V1::Pd
       facilitator_2 = csf_workshop.facilitators[1]
       create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
 
+      # csf_workshop has two facilitators, sign in as facilitator_1
       sign_in facilitator_1
       get :generic_survey_report, params: {workshop_id: csf_workshop.id}
       assert_response :success
@@ -205,15 +206,25 @@ module Api::V1::Pd
 
       overall_facilitator = response[:this_workshop][:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0'.to_sym]
       facilitator_effectiveness = overall_facilitator[:facilitator_effectiveness]
+      # Verify see results for facilitator 1
       assert_not_nil facilitator_effectiveness[facilitator_1_id][:on_track]
+      # Verify do not see results for facilitator 2
       assert_nil facilitator_effectiveness[facilitator_2_id]
 
       facilitator_rollup = response[:workshop_rollups][:facilitator][:single_workshop][facilitator_1_id]
+      # Verify see results for facilitator 1
       assert_equal 5.29, facilitator_rollup[:averages][:facilitator_effectiveness][:rows][:on_track]
       assert_equal 5.29, facilitator_rollup[:averages][:facilitator_effectiveness][:average]
+      # Verify do not see results for facilitator 2
       assert_nil response[:workshop_rollups][:facilitator][:single_workshop][facilitator_2_id]
     end
 
+    # Creates sample survey responses for the given workshop with the given facilitator_ids
+    # Will generate both facilitator-specific responses and general responses
+    # @param csf_workshop
+    # @param facilitator_ids Array[Integer] facilitator ids to generate survey results for
+    # @param high_count Number of submissions with high score responses (maximum score for each response)
+    # @param low_count Number of submissions with low score responses (minimum score for each response)
     def create_surveys_for_csf_workshop(csf_workshop, facilitator_ids, high_count, low_count)
       facilitator_ids.each do |facilitator_id|
         create_list :csf_intro_post_facilitator_workshop_submission,
