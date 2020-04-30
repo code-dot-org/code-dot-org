@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import StageProgress from './StageProgress';
+import LessonProgress from './LessonProgress';
 import stageLock from '../../stageLockRedux';
 import progress, {
   initProgress,
@@ -111,9 +111,9 @@ export default storybook => {
     return store;
   };
 
-  storybook.storiesOf('StageProgress', module).addStoryTable([
+  storybook.storiesOf('LessonProgress', module).addStoryTable([
     {
-      name: 'StageProgress example',
+      name: 'LessonProgress example',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -130,7 +130,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -146,7 +146,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -162,7 +162,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -182,7 +182,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -203,7 +203,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -224,7 +224,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress stageTrophyEnabled />
             </Provider>
           </div>
         );
@@ -245,7 +245,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress stageTrophyEnabled />
             </Provider>
           </div>
         );
@@ -266,7 +266,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress stageTrophyEnabled />
             </Provider>
           </div>
         );
@@ -287,7 +287,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress stageTrophyEnabled />
             </Provider>
           </div>
         );

@@ -48,7 +48,7 @@ const styles = {
 /**
  * Stage progress component used in level header and course overview.
  */
-class StageProgress extends Component {
+class LessonProgress extends Component {
   static propTypes = {
     // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,
@@ -111,7 +111,7 @@ class StageProgress extends Component {
   }
 }
 
-export const UnconnectedStageProgress = StageProgress;
+export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
@@ -120,4 +120,4 @@ export default connect(state => ({
     state.progress.currentStageId
   ),
   onLessonExtras: state.progress.currentLevelId === 'stage_extras'
-}))(StageProgress);
+}))(LessonProgress);
