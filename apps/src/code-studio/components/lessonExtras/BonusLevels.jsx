@@ -4,7 +4,7 @@ import Radium from 'radium';
 import React from 'react';
 import color from '../../../util/color';
 import i18n from '@cdo/locale';
-import {stageOfBonusLevels} from './shapes';
+import {lessonOfBonusLevels} from './shapes';
 import SublevelCard from '../SublevelCard';
 
 const CARD_AREA_SIZE = 900;
@@ -28,7 +28,7 @@ const styles = {
     transition: 'width 0.1s ease-out',
     verticalAlign: 'top'
   },
-  stageNumberHeading: {
+  lessonNumberHeading: {
     backgroundColor: color.purple,
     width: '100%',
     textAlign: 'center',
@@ -63,7 +63,7 @@ const styles = {
 
 class BonusLevels extends React.Component {
   static propTypes = {
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number
   };
@@ -71,46 +71,46 @@ class BonusLevels extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stageIndex: props.bonusLevels.length - 1
+      lessonIndex: props.bonusLevels.length - 1
     };
   }
 
-  nextStage = () => {
-    if (this.state.stageIndex < this.props.bonusLevels.length - 1) {
-      this.setState({stageIndex: this.state.stageIndex + 1});
+  nextLesson = () => {
+    if (this.state.lessonIndex < this.props.bonusLevels.length - 1) {
+      this.setState({lessonIndex: this.state.lessonIndex + 1});
     }
   };
 
-  previousStage = () => {
-    if (this.state.stageIndex > 0) {
-      this.setState({stageIndex: this.state.stageIndex - 1});
+  previousLesson = () => {
+    if (this.state.lessonIndex > 0) {
+      this.setState({lessonIndex: this.state.lessonIndex - 1});
     }
   };
 
   render() {
-    const previousNumStages = this.props.bonusLevels.filter(
-      stage =>
-        stage.stageNumber <
-        this.props.bonusLevels[this.state.stageIndex].stageNumber
+    const previousNumLessons = this.props.bonusLevels.filter(
+      lesson =>
+        lesson.stageNumber <
+        this.props.bonusLevels[this.state.lessonIndex].stageNumber
     ).length;
-    const scrollAmount = -1 * previousNumStages * CARD_AREA_SIZE;
+    const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
 
-    const leftDisabled = this.state.stageIndex === 0;
+    const leftDisabled = this.state.lessonIndex === 0;
     const rightDisabled =
-      this.state.stageIndex === this.props.bonusLevels.length - 1;
+      this.state.lessonIndex === this.props.bonusLevels.length - 1;
 
     return (
       <div>
-        <div style={styles.stageNumberHeading}>
+        <div style={styles.lessonNumberHeading}>
           {i18n.extrasStageNChallenges({
-            stageNumber: this.props.bonusLevels[this.state.stageIndex]
+            stageNumber: this.props.bonusLevels[this.state.lessonIndex]
               .stageNumber
           })}
         </div>
         <div style={styles.scroller}>
           <RadiumFontAwesome
             icon="caret-left"
-            onClick={this.previousStage}
+            onClick={this.previousLesson}
             style={[styles.arrow, leftDisabled && styles.arrowDisabled]}
           />
           <div
@@ -119,9 +119,9 @@ class BonusLevels extends React.Component {
               width: CARD_AREA_SIZE
             }}
           >
-            {this.props.bonusLevels.map(stage => (
+            {this.props.bonusLevels.map(lesson => (
               <div
-                key={stage.stageNumber}
+                key={lesson.stageNumber}
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,
@@ -129,7 +129,7 @@ class BonusLevels extends React.Component {
                 }}
               >
                 <div style={styles.cards}>
-                  {stage.levels.map(level => (
+                  {lesson.levels.map(level => (
                     <SublevelCard
                       isLessonExtra={true}
                       sublevel={level}
@@ -144,7 +144,7 @@ class BonusLevels extends React.Component {
           </div>
           <RadiumFontAwesome
             icon="caret-right"
-            onClick={this.nextStage}
+            onClick={this.nextLesson}
             style={[styles.arrow, rightDisabled && styles.arrowDisabled]}
           />
         </div>

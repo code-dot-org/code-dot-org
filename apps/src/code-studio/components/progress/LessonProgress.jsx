@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
-import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
+import LessonTrophyProgressBubble from '@cdo/apps/templates/progress/LessonTrophyProgressBubble';
 import {
   levelsForLessonId,
   lessonExtrasUrl,
@@ -30,7 +30,7 @@ const styles = {
   spacer: {
     marginRight: 'auto'
   },
-  stageTrophyContainer: {
+  lessonTrophyContainer: {
     border: 0,
     borderRadius: 20,
     paddingLeft: 8,
@@ -46,7 +46,7 @@ const styles = {
 };
 
 /**
- * Stage progress component used in level header and course overview.
+ * Lesson progress component used in level header and course overview.
  */
 class LessonProgress extends Component {
   static propTypes = {
@@ -54,15 +54,15 @@ class LessonProgress extends Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     lessonExtrasUrl: PropTypes.string,
     onLessonExtras: PropTypes.bool,
-    stageTrophyEnabled: PropTypes.bool
+    lessonTrophyEnabled: PropTypes.bool
   };
 
   render() {
-    const {lessonExtrasUrl, onLessonExtras, stageTrophyEnabled} = this.props;
+    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
-    if (stageTrophyEnabled) {
+    if (lessonTrophyEnabled) {
       levels = levels.filter(level => !level.isConceptLevel);
     }
 
@@ -74,10 +74,10 @@ class LessonProgress extends Component {
         className="react_stage"
         style={{
           ...styles.headerContainer,
-          ...(stageTrophyEnabled && styles.stageTrophyContainer)
+          ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
         }}
       >
-        {stageTrophyEnabled && <div style={styles.spacer} />}
+        {lessonTrophyEnabled && <div style={styles.spacer} />}
         {levels.map((level, index) => (
           <div
             key={index}
@@ -91,18 +91,18 @@ class LessonProgress extends Component {
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
-              stageTrophyEnabled={stageTrophyEnabled}
+              lessonTrophyEnabled={lessonTrophyEnabled}
             />
           </div>
         ))}
-        {lessonExtrasUrl && !stageTrophyEnabled && (
+        {lessonExtrasUrl && !lessonTrophyEnabled && (
           <LessonExtrasProgressBubble
             lessonExtrasUrl={lessonExtrasUrl}
             perfect={onLessonExtras}
           />
         )}
-        {stageTrophyEnabled && (
-          <StageTrophyProgressBubble
+        {lessonTrophyEnabled && (
+          <LessonTrophyProgressBubble
             percentPerfect={getPercentPerfect(levels)}
           />
         )}

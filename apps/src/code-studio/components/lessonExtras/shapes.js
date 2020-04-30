@@ -11,7 +11,7 @@ export const bonusLevel = {
   maze_summary: PropTypes.object
 };
 
-export const stageOfBonusLevels = {
+export const lessonOfBonusLevels = {
   stageNumber: PropTypes.number.isRequired,
   levels: PropTypes.arrayOf(PropTypes.shape(bonusLevel))
 };

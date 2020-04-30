@@ -17,21 +17,21 @@ const DEFAULT_PROPS = {
 };
 
 describe('LessonExtras', () => {
-  it('does not show stage extras warning if showLessonExtrasWarning is false', () => {
+  it('does not show lesson extras warning if showLessonExtrasWarning is false', () => {
     const wrapper = shallow(
       <LessonExtras {...DEFAULT_PROPS} showLessonExtrasWarning={false} />
     );
     expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
   });
 
-  it('does not show stage extras warning if sectionId is not provided', () => {
+  it('does not show lesson extras warning if sectionId is not provided', () => {
     const wrapper = shallow(
       <LessonExtras {...DEFAULT_PROPS} sectionId={null} />
     );
     expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
   });
 
-  it('show stage extra warning if showLessonExtrasWarning and have sectionId', () => {
+  it('show lesson extra warning if showLessonExtrasWarning and have sectionId', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
     expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(1);
   });
