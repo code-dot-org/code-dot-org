@@ -161,7 +161,6 @@ module.exports = {
 
           const imageSrc = $('#image1').attr('src');
           assert(imageSrc.includes(escapedImageSuffix), 'image src');
-          expect(imageSrc).to.contain(escapedImageSuffix, 'image src');
 
           const buttonImage = $('#button1')[0].style.backgroundImage;
           assert(
