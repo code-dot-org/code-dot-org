@@ -35,20 +35,9 @@ export function dataURIToSourceSize(dataURI) {
   }));
 }
 
-function canvasFromImage(image) {
-  const canvas = document.createElement('canvas');
-  canvas.width = image.width;
-  canvas.height = image.height;
-  const context = canvas.getContext('2d');
-  context.drawImage(image, 0, 0, image.width, image.height);
-  return canvas;
-}
-
-export function dataURIFromURI(uri) {
-  return imageFromURI(uri).then(image => {
-    const canvas = canvasFromImage(image);
-    return canvas.toDataURL();
-  });
+export async function dataURIFromURI(uri) {
+  const canvas = await toCanvas(uri);
+  return canvas.toDataURL();
 }
 
 export function URIFromImageData(imageData) {
@@ -102,10 +91,9 @@ export function canvasToBlob(canvas) {
   });
 }
 
-export function dataURIToBlob(uri) {
-  return imageFromURI(uri)
-    .then(canvasFromImage)
-    .then(canvasToBlob);
+export async function dataURIToBlob(uri) {
+  const canvas = await toCanvas(uri);
+  return await canvasToBlob(canvas);
 }
 
 /**
