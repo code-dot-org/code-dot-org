@@ -46,7 +46,7 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}sprite_lab_tutorials"),
         url: CDO.code_org_url('/educate/spritelab'),
-        id: "spritelab-tutorials",
+        id: "spritelab-tutorials"
       }
     end
 
@@ -81,6 +81,11 @@ class HelpHeader
       }
     end
 
+    # We want help links to open in a new window so students can refer to them in parallel with their code.
+    # However, there are security (and performance) risks to opening links in new windows.
+    # The security risks are partially mitigated by setting the rel attribute to "noopener noreferrer nofollow",
+    # but not all browsers support these -- see these docs for more details:
+    # https://developers.google.com/web/tools/lighthouse/audits/noopener
     entries.each do |entry|
       entry[:target] = "_blank"
       entry[:rel] = "noopener noreferrer nofollow"
