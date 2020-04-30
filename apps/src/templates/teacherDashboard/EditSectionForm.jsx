@@ -178,6 +178,10 @@ class EditSectionForm extends Component {
         validLoginTypes = [SectionLoginType.google_classroom];
         break;
     }
+    const showLoginTypeField =
+      !isNewSection &&
+      (section.studentCount === 0 ||
+        changableLoginTypes.includes(section.loginType));
 
     if (!section) {
       return null;
@@ -197,15 +201,14 @@ class EditSectionForm extends Component {
             validGrades={validGrades}
             disabled={isSaveInProgress}
           />
-          {section.studentCount === 0 ||
-            (changableLoginTypes.includes(section.loginType) && (
-              <LoginTypeField
-                value={section.loginType}
-                onChange={loginType => editSectionProperties({loginType})}
-                validLoginTypes={validLoginTypes}
-                disabled={isSaveInProgress}
-              />
-            ))}
+          {showLoginTypeField && (
+            <LoginTypeField
+              value={section.loginType}
+              onChange={loginType => editSectionProperties({loginType})}
+              validLoginTypes={validLoginTypes}
+              disabled={isSaveInProgress}
+            />
+          )}
           <AssignmentField
             section={section}
             onChange={ids => editSectionProperties(ids)}
