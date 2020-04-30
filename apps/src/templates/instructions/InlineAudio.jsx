@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -90,6 +91,7 @@ class InlineAudio extends React.Component {
     src: PropTypes.string,
     message: PropTypes.string,
     style: PropTypes.object,
+    section: sectionDataPropType,
 
     // Provided by redux
     // To Log TTS usage
@@ -285,6 +287,7 @@ export default connect(function propsFromStore(state) {
     locale: state.pageConstants.locale,
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
-    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed
+    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
+    section: state.sectionData.section
   };
 })(StatelessInlineAudio);
