@@ -7,6 +7,7 @@ import i18n from '@cdo/locale';
 import {stageOfBonusLevels} from './shapes';
 import SublevelCard from '../SublevelCard';
 
+const CARD_AREA_SIZE = 900;
 const RadiumFontAwesome = Radium(FontAwesome);
 
 const styles = {
@@ -86,20 +87,17 @@ class BonusLevels extends React.Component {
   };
 
   render() {
-    const levels = this.props.bonusLevels
-      .filter(
-        stage =>
-          stage.stageNumber <
-          this.props.bonusLevels[this.state.stageIndex].stageNumber
-      )
-      .reduce((numLevels, stage) => numLevels + stage.levels.length, 0);
-    const scrollAmount = -1 * levels * 450;
+    const previousNumStages = this.props.bonusLevels.filter(
+      stage =>
+        stage.stageNumber <
+        this.props.bonusLevels[this.state.stageIndex].stageNumber
+    ).length;
+    const scrollAmount = -1 * previousNumStages * CARD_AREA_SIZE;
 
     const leftDisabled = this.state.stageIndex === 0;
     const rightDisabled =
       this.state.stageIndex === this.props.bonusLevels.length - 1;
 
-    console.log(this.props.bonusLevels);
     return (
       <div>
         <div style={styles.stageNumberHeading}>
@@ -117,7 +115,7 @@ class BonusLevels extends React.Component {
           <div
             style={{
               ...styles.challenges,
-              width: 900
+              width: CARD_AREA_SIZE
             }}
           >
             {this.props.bonusLevels.map(stage => (
@@ -126,7 +124,7 @@ class BonusLevels extends React.Component {
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,
-                  width: 900
+                  width: CARD_AREA_SIZE
                 }}
               >
                 <div style={styles.cards}>
