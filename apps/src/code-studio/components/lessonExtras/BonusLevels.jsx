@@ -18,7 +18,8 @@ const styles = {
     position: 'relative',
     whiteSpace: 'normal',
     transition: 'left 0.25s ease-out',
-    paddingBottom: 10
+    padding: '10px 0',
+    verticalAlign: 'top'
   },
   challenges: {
     display: 'inline-block',
