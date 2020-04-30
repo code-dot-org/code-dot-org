@@ -5,9 +5,9 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Specifying Colors in App Lab
+# Picking Colors in App Lab
 
-There are a number of ways you can specify colors in App Lab.
+There are a number of ways you can pick colors in App Lab.
 
 <span style="color: #00adbc; font-size: 150%">1.</span> *background-color* is a string (in quotes) that represents the color. Typically the string is a named color like "red" or a hex value.
 

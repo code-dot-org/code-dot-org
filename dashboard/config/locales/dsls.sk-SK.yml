@@ -1859,7 +1859,9 @@ sk-SK:
           feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
             a vyrobiť med na každom pláste.
         questions:
-        - {}
+        - text: 'Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
+            "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
+            *jeden* kvet.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
@@ -1875,7 +1877,9 @@ sk-SK:
           feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
             a vyrobiť med na každom pláste.
         questions:
-        - {}
+        - text: 'Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
+            "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
+            *jeden* kvet.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
@@ -2648,7 +2652,7 @@ sk-SK:
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
         - text: Neviem.
         markdown: Niekedy sa pod oblakom skrýva kvet a niekedy včelí plást! V každom
-          prípade, bude tam buď  **jedna** včela, alebo **jeden** plást.
+          prípade, bude tam buď  **jeden** kvet, alebo **jeden** plást.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseF_multi_bee_for3_predict1:
