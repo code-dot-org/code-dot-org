@@ -2,6 +2,7 @@ import {
   blobToDataURI,
   dataURIFromURI,
   dataURIToFramedBlob,
+  imageFromURI,
   toImageData
 } from '@cdo/apps/imageUtils';
 import {assert, expect} from 'chai';
@@ -59,6 +60,13 @@ describe('image utils', () => {
       assert.equal(canvas.width, actual.width);
       assert.equal(canvas.height, actual.height);
       assert.deepEqual(expectedData, actual.data);
+    });
+
+    it('converts an image element to an ImageData object', async () => {
+      const image = await imageFromURI(expectedChromePng);
+      const result = await toImageData(image);
+      assert.instanceOf(result, ImageData);
+      assert.equal(522000, result.data.length);
     });
 
     it('converts an image URI string to an ImageData object', async () => {
