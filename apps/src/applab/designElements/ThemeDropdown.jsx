@@ -6,11 +6,34 @@ import {themeOptionsForSelect} from '../constants';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
+const styles = {
+  outerContainer: {
+    marginBottom: 8,
+    width: 240
+  },
+  description: {
+    paddingLeft: 2,
+    paddingBottom: 2
+  },
+  label: {
+    paddingLeft: 4
+  },
+  icon: {
+    marginTop: 4,
+    marginBottom: 4
+  },
+  dropdownLabel: {
+    display: 'flex',
+    flexDeirection: 'row',
+    alignItems: 'center'
+  }
+};
+
 export default class ThemeDropdown extends React.Component {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func.isRequired,
-    desc: PropTypes.node
+    description: PropTypes.node
   };
 
   state = {
@@ -21,56 +44,24 @@ export default class ThemeDropdown extends React.Component {
     this.setState({selectedValue: event.value});
   };
 
-  // Need to reset theme value if screen switches
-  componentWillReceiveProps(nextProps) {
-    const {initialValue} = nextProps;
-    if (this.props.initialValue !== initialValue) {
-      this.setState({selectedValue: initialValue});
-    }
-  }
-
-  // need map of value-> {icon, display name}
   render() {
-    const styles = {
-      outerContainer: {
-        marginBottom: 8,
-        width: 240
-      },
-      description: {
-        paddingLeft: 2,
-        paddingBottom: 2
-      },
-      label: {
-        paddingLeft: 4
-      },
-      icon: {
-        marginTop: 4,
-        marginBottom: 4
-      },
-      dropdownLabel: {
-        display: 'flex',
-        flexDeirection: 'row',
-        alignItems: 'center'
-      }
-    };
-
-    const {desc} = this.props;
+    const {description} = this.props;
     const {selectedValue} = this.state;
 
-    const renderedOptions = themeOptionsForSelect.map(function(option, index) {
+    const renderedOptions = themeOptionsForSelect.map(function(themeOption) {
       return {
-        value: option.option,
+        value: themeOption.option,
         label: (
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
-            <img style={styles.icon} src={option.icon} />
-            <div style={styles.label}>{option.displayName}</div>
+            <img style={styles.icon} src={themeOption.icon} />
+            <div style={styles.label}>{themeOption.displayName}</div>
           </div>
         )
       };
     });
     return (
       <div style={styles.outerContainer} className="theme-dropdown">
-        <div style={styles.description}>{desc}</div>
+        <div style={styles.description}>{description}</div>
         <Select
           className="form-control"
           value={selectedValue}

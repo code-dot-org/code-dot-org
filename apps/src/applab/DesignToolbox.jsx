@@ -30,10 +30,12 @@ export default class DesignToolbox extends React.Component {
 
     return (
       <div id="design-toolbox" style={toolboxStyle}>
+        {/* key on theme dropdown forces re-render if we get a new themeValue */}
         <ThemeDropdown
           initialValue={this.props.themeValue}
           handleChange={this.props.handleScreenChange.bind(this, 'theme')}
-          desc={'Theme'}
+          description={'Theme'}
+          key={this.props.themeValue}
         />
         <p>{applabMsg.designToolboxDescription()}</p>
         <DesignToolboxElement
