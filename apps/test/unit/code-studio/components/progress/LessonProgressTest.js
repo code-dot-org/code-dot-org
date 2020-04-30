@@ -21,7 +21,7 @@ describe('LessonProgress', () => {
     assert.equal(wrapper.find('ProgressBubble').length, 1);
   });
 
-  it('does not include stage extras when there is not a lessonExtrasUrl', () => {
+  it('does not include lesson extras when there is not a lessonExtrasUrl', () => {
     const wrapper = shallow(<LessonProgress {...defaultProps} />);
     assert.equal(wrapper.find('LessonExtrasProgressBubble').length, 0);
   });

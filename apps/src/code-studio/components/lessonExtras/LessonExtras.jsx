@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import {stageOfBonusLevels} from './shapes';
+import {lessonOfBonusLevels} from './shapes';
 import LessonExtrasNotification from './LessonExtrasNotification';
 import Button from '@cdo/apps/templates/Button';
 import BonusLevels from './BonusLevels';
@@ -37,7 +37,7 @@ export default class LessonExtras extends React.Component {
     nextLevelPath: PropTypes.string.isRequired,
     showProjectWidget: PropTypes.bool,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number,
     showLessonExtrasWarning: PropTypes.bool
