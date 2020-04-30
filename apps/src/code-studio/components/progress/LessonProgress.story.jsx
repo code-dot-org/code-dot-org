@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import StageProgress from './StageProgress';
+import LessonProgress from './LessonProgress';
 import stageLock from '../../stageLockRedux';
 import progress, {
   initProgress,
@@ -111,9 +111,9 @@ export default storybook => {
     return store;
   };
 
-  storybook.storiesOf('StageProgress', module).addStoryTable([
+  storybook.storiesOf('LessonProgress', module).addStoryTable([
     {
-      name: 'StageProgress example',
+      name: 'LessonProgress example',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -130,7 +130,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -146,7 +146,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -162,7 +162,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -170,7 +170,7 @@ export default storybook => {
     },
 
     {
-      name: 'with stage extras',
+      name: 'with lesson extras',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -182,7 +182,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -190,7 +190,7 @@ export default storybook => {
     },
 
     {
-      name: 'with stage extras as current level',
+      name: 'with lesson extras as current level',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -203,7 +203,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress />
+              <LessonProgress />
             </Provider>
           </div>
         );
@@ -211,7 +211,7 @@ export default storybook => {
     },
 
     {
-      name: 'with stage empty trophy',
+      name: 'with lesson empty trophy',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -224,7 +224,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress lessonTrophyEnabled />
             </Provider>
           </div>
         );
@@ -232,7 +232,7 @@ export default storybook => {
     },
 
     {
-      name: 'with stage 20% trophy',
+      name: 'with lesson 20% trophy',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -245,7 +245,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress lessonTrophyEnabled />
             </Provider>
           </div>
         );
@@ -253,7 +253,7 @@ export default storybook => {
     },
 
     {
-      name: 'with stage 67% trophy',
+      name: 'with lesson 67% trophy',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -266,7 +266,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress lessonTrophyEnabled />
             </Provider>
           </div>
         );
@@ -274,7 +274,7 @@ export default storybook => {
     },
 
     {
-      name: 'with stage mastered trophy',
+      name: 'with lesson mastered trophy',
       // Provide an outer div to simulate some of the CSS that gets leaked into
       // this component
       story: () => {
@@ -287,7 +287,7 @@ export default storybook => {
         return (
           <div style={{display: 'inline-block'}} className="header_level">
             <Provider store={store}>
-              <StageProgress stageTrophyEnabled />
+              <LessonProgress lessonTrophyEnabled />
             </Provider>
           </div>
         );

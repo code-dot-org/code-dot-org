@@ -2,16 +2,16 @@ import {assert} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
-import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 
 const defaultProps = {
-  stageExtrasUrl: '/extras',
-  onStageExtras: false
+  lessonExtrasUrl: '/extras',
+  onLessonExtras: false
 };
 
-describe('StageExtrasProgressBubble', () => {
+describe('LessonExtrasProgressBubble', () => {
   beforeEach(() => {
     stub(utils, 'currentLocation').returns({search: ''});
   });
@@ -21,7 +21,7 @@ describe('StageExtrasProgressBubble', () => {
   });
 
   it('renders a link to given url', () => {
-    const wrapper = shallow(<StageExtrasProgressBubble {...defaultProps} />);
+    const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
     assert.equal(wrapper.props().href, '/extras');
   });
@@ -30,13 +30,13 @@ describe('StageExtrasProgressBubble', () => {
     utils.currentLocation.restore();
     stub(utils, 'currentLocation').returns({search: '?foo=1'});
 
-    const wrapper = shallow(<StageExtrasProgressBubble {...defaultProps} />);
+    const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
     assert.equal(wrapper.props().href, '/extras?foo=1');
   });
 
   it('has a grey flag icon when not current level', () => {
-    const wrapper = shallow(<StageExtrasProgressBubble {...defaultProps} />);
+    const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
     assert.equal(
       wrapper
         .find('i')
@@ -46,9 +46,9 @@ describe('StageExtrasProgressBubble', () => {
     );
   });
 
-  it('has a green flag icon when on stage extras', () => {
+  it('has a green flag icon when on lesson extras', () => {
     const wrapper = shallow(
-      <StageExtrasProgressBubble {...defaultProps} onStageExtras={true} />
+      <LessonExtrasProgressBubble {...defaultProps} onLessonExtras={true} />
     );
     assert.equal(
       wrapper
