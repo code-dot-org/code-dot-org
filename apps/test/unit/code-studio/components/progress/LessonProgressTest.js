@@ -1,10 +1,10 @@
 import React from 'react';
 import {assert} from 'chai';
-import {UnconnectedStageProgress as StageProgress} from '@cdo/apps/code-studio/components/progress/StageProgress';
+import {UnconnectedLessonProgress as LessonProgress} from '@cdo/apps/code-studio/components/progress/LessonProgress';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {shallow} from 'enzyme';
 
-describe('StageProgress', () => {
+describe('LessonProgress', () => {
   const defaultProps = {
     levels: [
       {
@@ -12,23 +12,23 @@ describe('StageProgress', () => {
       }
     ],
     stageId: 1,
-    onStageExtras: false
+    onLessonExtras: false
   };
 
   it('uses progress bubbles', () => {
-    const wrapper = shallow(<StageProgress {...defaultProps} />);
+    const wrapper = shallow(<LessonProgress {...defaultProps} />);
     assert.equal(wrapper.find('Connect(StatusProgressDot)').length, 0);
     assert.equal(wrapper.find('ProgressBubble').length, 1);
   });
 
   it('does not include stage extras when there is not a lessonExtrasUrl', () => {
-    const wrapper = shallow(<StageProgress {...defaultProps} />);
+    const wrapper = shallow(<LessonProgress {...defaultProps} />);
     assert.equal(wrapper.find('LessonExtrasProgressBubble').length, 0);
   });
 
-  it('includes stage extras when there is a lessonExtrasUrl', () => {
+  it('includes lesson extras when there is a lessonExtrasUrl', () => {
     const wrapper = shallow(
-      <StageProgress {...defaultProps} lessonExtrasUrl={'/extras'} />
+      <LessonProgress {...defaultProps} lessonExtrasUrl={'/extras'} />
     );
     assert.equal(wrapper.find('LessonExtrasProgressBubble').length, 1);
   });
