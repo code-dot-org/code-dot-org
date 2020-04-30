@@ -109,8 +109,7 @@ export function dataURIToBlob(uri) {
 }
 
 /**
- * Given an input of a valid type, converts it to an HTMLCanvasElement
- * with matching contents drawn onto it.
+ * Given an input of a supported type, converts it to an HTMLCanvasElement.
  *
  * @param {string|HTMLImageElement|HTMLCanvasElement} input
  * @returns {Promise<HTMLCanvasElement>}
@@ -138,12 +137,7 @@ export async function toCanvas(input) {
 }
 
 /**
- * Given an input of one of the following types, converts it to an ImageData object.
- *
- *   - A valid image URI or dataURI string
- *   - Image element
- *   - Canvas element
- *   - ImageData (Returned without changes)
+ * Given an input of a supported type, converts it to an ImageData object.
  *
  * @param {string|HTMLImageElement|HTMLCanvasElement|ImageData} input
  * @returns {Promise<ImageData>}
