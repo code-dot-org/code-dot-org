@@ -3,24 +3,14 @@ import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
+import FakeStorage from '../../util/FakeStorage';
 
 describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
-    turnOffFilter: () => {}
+    turnOffFilter: () => {},
+    storage: new FakeStorage()
   };
-
-  before(() => {
-    replaceOnWindow('sessionStorage', {
-      getItem: () => {},
-      setItem: () => {}
-    });
-  });
-
-  after(() => {
-    restoreOnWindow('sessionStorage');
-  });
 
   it('renders null if user is signed in', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} signedIn={true} />);
@@ -28,7 +18,7 @@ describe('AgeDialog', () => {
   });
 
   it('renders null if dialog was seen before', () => {
-    let getItem = sinon.stub(window.sessionStorage, 'getItem');
+    let getItem = sinon.stub(defaultProps.storage, 'getItem');
     getItem.withArgs('ad_anon_over13').returns('true');
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);

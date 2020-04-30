@@ -2,14 +2,13 @@
 require_relative '../../../deployment'
 require 'cdo/only_one'
 require 'json'
+require 'cdo/chat_client'
 
 PALLY_PATH = File.expand_path("../../../../apps/node_modules/pa11y-ci/bin/pa11y-ci.js", __FILE__)
 CONFIG_PATH = File.expand_path("../config.json", __FILE__)
 
 def main
-  puts "Scanning for Accessibility Errors and Warnings"
-  puts "Using WCAG2AA standard using PA11Y tool {http://pa11y.org}"
-  puts "JSON output in pa11y_log.json"
+  ChatClient.message 'wcag-checker', 'Scanning for Accessibility Errors and Warnings using WCAG2AA standard using PA11Y tool {http://pa11y.org}'
 
   # call pa11y
   `#{PALLY_PATH} -j -c #{CONFIG_PATH} > pa11y_log.json`
@@ -17,8 +16,9 @@ def main
   file = File.read('pa11y_log.json')
   file_hash = JSON.parse(file)
 
-  puts ""
-  puts "Found #{file_hash['errors']} errors across #{file_hash['total']} urls"
+  summary = "Found #{file_hash['errors']} errors across #{file_hash['total']} urls"
+
+  ChatClient.message 'wcag-checker', summary
 
   # Get urls we ran this on
   urls = File.read(CONFIG_PATH)
@@ -39,10 +39,9 @@ def main
     # Sort from most to least frequent errors
     error_results = error_results.sort_by {|_, count| -count}
 
-    puts ""
-    puts "Most Common Errors for #{url}:"
+    ChatClient.message 'wcag-checker', "Most Common Errors for #{url}:"
     error_results.each do |error, count|
-      puts "  #{error} - #{count}"
+      ChatClient.message 'wcag-checker', "  #{error} - #{count}"
     end
   end
 end
