@@ -153,27 +153,12 @@ export async function toImageData(input) {
     return input;
   }
 
-  let image;
-  if (input instanceof HTMLImageElement) {
-    image = input;
-  } else if (typeof input === 'string') {
-    // Load the image - valid for an image URL or dataURI
-    image = await imageFromURI(input);
-  }
-
-  let canvas, context;
-  if (input instanceof HTMLCanvasElement) {
-    canvas = input;
-    context = input.getContext('2d');
-  } else if (image instanceof HTMLImageElement) {
-    canvas = document.createElement('canvas');
-    canvas.width = image.width;
-    canvas.height = image.height;
-    context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0);
-  } else {
+  try {
+    const canvas = await toCanvas(input);
+    return canvas
+      .getContext('2d')
+      .getImageData(0, 0, canvas.width, canvas.height);
+  } catch (err) {
     throw new Error('Unable to convert input to ImageData');
   }
-
-  return context.getImageData(0, 0, canvas.width, canvas.height);
 }
