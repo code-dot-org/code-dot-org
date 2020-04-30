@@ -62,7 +62,15 @@ describe('image utils', () => {
 
   describe('toImageData', () => {
     it('returns ImageData unchanged', async () => {
-      const imageData = new ImageData(8, 8);
+      // When we no longer support Phantom, we can generate
+      // an ImageData object this way:
+      // const imageData = new ImageData(8, 8);
+      const canvas = document.createElement('canvas');
+      canvas.width = 8;
+      canvas.height = 8;
+      const context = canvas.getContext('2d');
+      const imageData = context.getImageData(0, 0, 8, 8);
+
       const result = await toImageData(imageData);
       assert(imageData === result);
     });
