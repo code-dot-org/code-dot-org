@@ -5,7 +5,7 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import {stageOfBonusLevels} from './shapes';
 import LessonExtrasNotification from './LessonExtrasNotification';
 import Button from '@cdo/apps/templates/Button';
-import SublevelCard from '../SublevelCard';
+import BonusLevels from './BonusLevels';
 
 const styles = {
   header: {
@@ -27,11 +27,6 @@ const styles = {
     fontStyle: 'normal',
     paddingTop: 10,
     paddingBottom: 20
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between'
   }
 };
 
@@ -44,6 +39,7 @@ export default class LessonExtras extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
     sectionId: PropTypes.number,
+    userId: PropTypes.number,
     showLessonExtrasWarning: PropTypes.bool
   };
 
@@ -54,6 +50,7 @@ export default class LessonExtras extends React.Component {
       nextLevelPath,
       bonusLevels,
       sectionId,
+      userId,
       showProjectWidget,
       projectTypes,
       showLessonExtrasWarning
@@ -81,15 +78,11 @@ export default class LessonExtras extends React.Component {
 
         <div style={styles.subHeader}>{i18n.extrasTryAChallenge()}</div>
         {bonusLevels && Object.keys(bonusLevels).length > 0 ? (
-          <div style={styles.cards}>
-            {bonusLevels[0].levels.map(sublevel => (
-              <SublevelCard
-                isLessonExtra={true}
-                sublevel={sublevel}
-                key={sublevel.id}
-              />
-            ))}
-          </div>
+          <BonusLevels
+            bonusLevels={bonusLevels}
+            sectionId={sectionId}
+            userId={userId}
+          />
         ) : (
           <p>{i18n.extrasNoBonusLevels()}</p>
         )}
