@@ -1683,7 +1683,12 @@ designMode.renderDesignWorkspace = function(element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
-    screenIds: designMode.getAllScreenIds()
+    screenIds: designMode.getAllScreenIds(),
+    currentTheme: elementLibrary.getCurrentTheme(designMode.activeScreen()),
+    handleScreenChange: designMode.onPropertyChange.bind(
+      this,
+      designMode.activeScreen()
+    )
   };
   ReactDOM.render(
     <Provider store={getStore()}>
