@@ -21,6 +21,7 @@ ReactDOM.render(
       showProjectWidget={showProjectWidget}
       projectTypes={projectTypes}
       sectionId={viewer.section_id}
+      userId={viewer.user_id}
       showLessonExtrasWarning={viewer.show_stage_extras_warning}
     />
   </Provider>,

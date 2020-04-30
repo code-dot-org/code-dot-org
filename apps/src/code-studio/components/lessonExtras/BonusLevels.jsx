@@ -2,30 +2,14 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import MazeThumbnail from './MazeThumbnail';
-import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import color from '../../../util/color';
 import i18n from '@cdo/locale';
-import {bonusLevel, stageOfBonusLevels} from './shapes';
-import {connect} from 'react-redux';
-import {isPerfect} from '@cdo/apps/code-studio/progressRedux';
+import {stageOfBonusLevels} from './shapes';
+import SublevelCard from '../SublevelCard';
 
-const THUMBNAIL_IMAGE_SIZE = 200;
-const THUMBNAIL_IMAGE_MARGIN = 10;
 const RadiumFontAwesome = Radium(FontAwesome);
 
 const styles = {
-  bonusLevel: {
-    width: THUMBNAIL_IMAGE_SIZE,
-    textAlign: 'center',
-    marginRight: THUMBNAIL_IMAGE_MARGIN,
-    float: 'left'
-  },
-  bonusLevelsTitle: {
-    fontSize: 24,
-    fontFamily: '"Gotham 4r"',
-    color: color.charcoal
-  },
   challengeRow: {
     clear: 'both',
     overflow: 'hidden',
@@ -42,163 +26,89 @@ const styles = {
     transition: 'width 0.1s ease-out',
     verticalAlign: 'top'
   },
-  solutionImage: {
-    border: `1px solid ${color.lighter_gray}`,
-    marginBottom: 5,
-    width: 400,
-    height: 400,
-    maxWidth: 'initial'
-  },
   stageNumberHeading: {
-    textAlign: 'center'
+    backgroundColor: color.purple,
+    width: '100%',
+    textAlign: 'center',
+    color: color.white,
+    fontSize: 20,
+    lineHeight: '35px'
   },
   arrow: {
     fontSize: 40,
     cursor: 'pointer',
-    verticalAlign: -30
+    verticalAlign: -30,
+    margin: 10
   },
   arrowDisabled: {
     color: color.lighter_gray,
     cursor: 'default'
+  },
+  cards: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    backgroundColor: color.white
+  },
+  scroller: {
+    backgroundColor: color.white,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 };
 
-class BonusLevelButton extends React.Component {
+class BonusLevels extends React.Component {
   static propTypes = {
-    perfected: PropTypes.bool.isRequired
-  };
-
-  render() {
-    return this.props.perfected ? (
-      <button type="button" className="btn btn-large">
-        {i18n.review()}
-      </button>
-    ) : (
-      <button type="button" className="btn btn-large btn-primary">
-        {i18n.tryIt()}
-      </button>
-    );
-  }
-}
-
-class BonusLevel extends React.Component {
-  static propTypes = {
-    ...bonusLevel,
-    perfected: PropTypes.bool.isRequired,
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number
   };
 
-  getQueryString = () => {
-    const {id, sectionId, userId} = this.props;
-    let url = `?id=${id}`;
-    if (sectionId && userId) {
-      // Both sectionId and userId are required to link to a student's work on a bonus level.
-      url += `&section_id=${sectionId}&user_id=${userId}`;
-    } else if (sectionId) {
-      url += `&section_id=${sectionId}`;
+  constructor(props) {
+    super(props);
+    this.state = {
+      stageIndex: props.bonusLevels.length - 1
+    };
+  }
+
+  nextStage = () => {
+    if (this.state.stageIndex < this.props.bonusLevels.length - 1) {
+      this.setState({stageIndex: this.state.stageIndex + 1});
     }
-    return url;
   };
 
-  renderWithMazeThumbnail() {
-    return (
-      <div style={styles.bonusLevel}>
-        <a href={this.getQueryString()}>
-          <CompletableLevelThumbnail
-            size={THUMBNAIL_IMAGE_SIZE}
-            completed={this.props.perfected}
-          >
-            <MazeThumbnail {...this.props} />
-          </CompletableLevelThumbnail>
-          <BonusLevelButton perfected={this.props.perfected} />
-        </a>
-      </div>
-    );
-  }
-
-  renderSolutionImageThumbnail(src) {
-    return (
-      <div style={styles.bonusLevel}>
-        <a href={this.getQueryString()}>
-          <CompletableLevelThumbnail
-            size={THUMBNAIL_IMAGE_SIZE}
-            completed={this.props.perfected}
-          >
-            <img src={src} style={styles.solutionImage} />
-          </CompletableLevelThumbnail>
-          <BonusLevelButton perfected={this.props.perfected} />
-        </a>
-      </div>
-    );
-  }
+  previousStage = () => {
+    if (this.state.stageIndex > 0) {
+      this.setState({stageIndex: this.state.stageIndex - 1});
+    }
+  };
 
   render() {
-    if (this.props.thumbnailUrl) {
-      return this.renderSolutionImageThumbnail(this.props.thumbnailUrl);
-    } else if (['Maze', 'Karel'].includes(this.props.type)) {
-      return this.renderWithMazeThumbnail();
-    } else if (this.props.solutionImageUrl) {
-      return this.renderSolutionImageThumbnail(this.props.solutionImageUrl);
-    } else {
-      return <a href={this.getQueryString()}>{this.props.name}</a>;
-    }
-  }
-}
+    const levels = this.props.bonusLevels
+      .filter(
+        stage =>
+          stage.stageNumber <
+          this.props.bonusLevels[this.state.stageIndex].stageNumber
+      )
+      .reduce((numLevels, stage) => numLevels + stage.levels.length, 0);
+    const scrollAmount = -1 * levels * 450;
 
-const ConnectedBonusLevel = connect((state, ownProps) => ({
-  perfected: isPerfect(state.progress, ownProps.levelId)
-}))(BonusLevel);
+    const leftDisabled = this.state.stageIndex === 0;
+    const rightDisabled =
+      this.state.stageIndex === this.props.bonusLevels.length - 1;
 
-export default Radium(
-  class BonusLevels extends React.Component {
-    static propTypes = {
-      bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
-      sectionId: PropTypes.number,
-      userId: PropTypes.number
-    };
-
-    constructor(props) {
-      super(props);
-      this.state = {
-        stageIndex: props.bonusLevels.length - 1
-      };
-    }
-
-    nextStage = () => {
-      if (this.state.stageIndex < this.props.bonusLevels.length - 1) {
-        this.setState({stageIndex: this.state.stageIndex + 1});
-      }
-    };
-
-    previousStage = () => {
-      if (this.state.stageIndex > 0) {
-        this.setState({stageIndex: this.state.stageIndex - 1});
-      }
-    };
-
-    render() {
-      const totalThumbnailWidth = THUMBNAIL_IMAGE_SIZE + THUMBNAIL_IMAGE_MARGIN;
-      const totalWidth =
-        this.props.bonusLevels[this.state.stageIndex].levels.length *
-          totalThumbnailWidth -
-        THUMBNAIL_IMAGE_MARGIN;
-
-      const levels = this.props.bonusLevels
-        .filter(
-          stage =>
-            stage.stageNumber <
-            this.props.bonusLevels[this.state.stageIndex].stageNumber
-        )
-        .reduce((numLevels, stage) => numLevels + stage.levels.length, 0);
-      const scrollAmount = -1 * levels * totalThumbnailWidth;
-
-      const leftDisabled = this.state.stageIndex === 0;
-      const rightDisabled =
-        this.state.stageIndex === this.props.bonusLevels.length - 1;
-      return (
-        <div>
-          <h2 style={styles.bonusLevelsTitle}>{i18n.extrasTryAChallenge()}</h2>
+    console.log(this.props.bonusLevels);
+    return (
+      <div>
+        <div style={styles.stageNumberHeading}>
+          {i18n.extrasStageNChallenges({
+            stageNumber: this.props.bonusLevels[this.state.stageIndex]
+              .stageNumber
+          })}
+        </div>
+        <div style={styles.scroller}>
           <RadiumFontAwesome
             icon="caret-left"
             onClick={this.previousStage}
@@ -207,7 +117,7 @@ export default Radium(
           <div
             style={{
               ...styles.challenges,
-              width: totalWidth
+              width: 900
             }}
           >
             {this.props.bonusLevels.map(stage => (
@@ -216,23 +126,20 @@ export default Radium(
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,
-                  width: stage.levels.length * totalThumbnailWidth
+                  width: 900
                 }}
               >
-                <h3 style={styles.stageNumberHeading}>
-                  {i18n.extrasStageNChallenges({
-                    stageNumber: this.props.bonusLevels[this.state.stageIndex]
-                      .stageNumber
-                  })}
-                </h3>
-                {stage.levels.map(level => (
-                  <ConnectedBonusLevel
-                    key={level.id}
-                    {...level}
-                    sectionId={this.props.sectionId}
-                    userId={this.props.userId}
-                  />
-                ))}
+                <div style={styles.cards}>
+                  {stage.levels.map(level => (
+                    <SublevelCard
+                      isLessonExtra={true}
+                      sublevel={level}
+                      key={level.id}
+                      sectionId={this.props.sectionId}
+                      userId={this.props.userId}
+                    />
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -242,7 +149,9 @@ export default Radium(
             style={[styles.arrow, rightDisabled && styles.arrowDisabled]}
           />
         </div>
-      );
-    }
+      </div>
+    );
   }
-);
+}
+
+export default Radium(BonusLevels);

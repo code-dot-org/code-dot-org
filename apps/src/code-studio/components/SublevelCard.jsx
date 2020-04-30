@@ -5,6 +5,7 @@ import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
@@ -16,7 +17,7 @@ const styles = {
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
     borderRadius: 2,
-    width: 450,
+    width: 400,
     marginRight: 10
   },
   thumbnail: {
@@ -88,8 +89,54 @@ export default class SublevelCard extends React.Component {
       url: PropTypes.string.isRequired,
       position: PropTypes.number,
       letter: PropTypes.string,
-      perfect: PropTypes.bool
-    })
+      perfect: PropTypes.bool,
+      type: PropTypes.string,
+      maze_summary: PropTypes.object
+    }),
+    sectionId: PropTypes.number,
+    userId: PropTypes.number
+  };
+
+  /*
+getLessonExtrasQueryString = () => {
+  const {id, sectionId, userId} = this.props;
+  let url = `?id=${id}`;
+  if (sectionId && userId) {
+    // Both sectionId and userId are required to link to a student's work on a bonus level.
+    url += `&section_id=${sectionId}&user_id=${userId}`;
+  } else if (sectionId) {
+    url += `&section_id=${sectionId}`;
+  }
+  return url;
+}; */
+
+  renderWithMazeThumbnail() {
+    return (
+      <MazeThumbnail
+        size={THUMBNAIL_IMAGE_SIZE}
+        mazeSummary={this.props.sublevel.maze_summary}
+      />
+    );
+  }
+
+  renderThumbnail = () => {
+    const {sublevel} = this.props;
+    if (sublevel.thumbnail_url) {
+      return <img src={sublevel.thumbnail_url} style={styles.thumbnail} />;
+    } else if (['Maze', 'Karel'].includes(sublevel.type)) {
+      return this.renderWithMazeThumbnail();
+    } else {
+      // Render a square-shaped placeholder if we don't have a thumbnail.
+      return (
+        <div style={styles.placeholderThumbnail} className="placeholder">
+          <FontAwesome
+            icon={getIconForLevel(sublevel)}
+            style={styles.icon}
+            key={sublevel.id}
+          />
+        </div>
+      );
+    }
   };
 
   /* Determine if we should use the normal progress
@@ -123,20 +170,7 @@ export default class SublevelCard extends React.Component {
         style={styles.row}
         className="uitest-bubble-choice"
       >
-        {/* Render a square-shaped placeholder if we don't have a thumbnail. */}
-        <a href={sublevel.url + location.search}>
-          {sublevel.thumbnail_url ? (
-            <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
-          ) : (
-            <div style={styles.placeholderThumbnail} className="placeholder">
-              <FontAwesome
-                icon={getIconForLevel(sublevel)}
-                style={styles.icon}
-                key={sublevel.id}
-              />
-            </div>
-          )}
-        </a>
+        <a href={sublevel.url + location.search}>{this.renderThumbnail()}</a>
         <div style={styles.column}>
           <div style={styles.bubbleAndTitle}>
             {this.renderBubble()}

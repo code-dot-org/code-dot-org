@@ -364,11 +364,18 @@ class ScriptLevel < ActiveRecord::Base
   def summarize_as_bonus(user_id)
     {
       id: id,
+      type: level.type,
       description: level.try(:bubble_choice_description),
       display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: UserLevel.find_by(level: level, user_id: user_id)&.perfect?
+      perfect: UserLevel.find_by(level: level, user_id: user_id)&.perfect?,
+      maze_summary: {
+        map: JSON.parse(level.try(:maze) || '[]'),
+        serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
+        skin: level.try(:skin),
+        level: level.summarize_as_bonus.camelize_keys
+      }.camelize_keys
     }
   end
 

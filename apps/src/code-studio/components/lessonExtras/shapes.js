@@ -6,7 +6,9 @@ export const bonusLevel = {
   description: PropTypes.string,
   thumbnail_url: PropTypes.string,
   url: PropTypes.string.isRequired,
-  perfect: PropTypes.bool
+  perfect: PropTypes.bool,
+  type: PropTypes.string,
+  maze_summary: PropTypes.object
 };
 
 export const stageOfBonusLevels = {
