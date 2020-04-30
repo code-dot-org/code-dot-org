@@ -1221,6 +1221,10 @@ cs:
               name: Nezávislý posudek
         artist-and-bb8:
           stages:
+            Programming with BB-8:
+              name: Programování s BB-8
+            Loops with BB-8:
+              name: Cykly s BB-8
             Ice Age Play Lab:
               name: Doba ledová Play Lab
             Bounce:
@@ -1241,6 +1245,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
           title: Kurz B
           assignment_family_title: Kurz B
         coursec-2017:
@@ -1692,6 +1698,8 @@ cs:
               name: Tvá digitální stopa
             'Programming: My Robotic Friends':
               name: Moji robotičtí přátelé (ml.)
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
               name: Moji zacyklení robotičtí přátelé (ml.)
             Move It, Move It:
@@ -1880,6 +1888,8 @@ cs:
               name: Pohyb, pohyb
             Your Digital Footprint:
               name: Tvá digitální stopa
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie a Velký projekt
         frozen-2018:
@@ -2208,6 +2218,7 @@ cs:
               name: 'Cykly: Bláznění s cykly'
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
             Loops in Harvester:
               name: Sběr úrody s cykly
             'Events: The Big Event':
@@ -2235,6 +2246,9 @@ cs:
               name: Šťastné mapy
             Going Places Safely:
               name: Cestování bezpečně
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
+              description_student: Pomoz BB-8 posbírat šrot!
         courseb-2019:
           title: Kurz B (2019)
           stages:
@@ -2244,6 +2258,8 @@ cs:
               name: Tvá digitální stopa
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Loops in Ice Age:
@@ -2260,6 +2276,8 @@ cs:
               name: Tvá digitální stopa
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Spelling Bee:
@@ -2371,6 +2389,8 @@ cs:
               name: Ladění
         csl-vn:
           stages:
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
             Loops in Ice Age:
               name: Cykly v Době ledové
         peru-2019:
@@ -2468,6 +2488,9 @@ cs:
               name: Cestování bezpečně
             'Programming: Happy Maps':
               name: Šťastné mapy
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
+              description_student: Pomoz BB-8 posbírat šrot!
         courseb-2020:
           title: Kurz B (2019)
           stages:
@@ -2504,6 +2527,7 @@ cs:
               name: Moji zacyklení robotičtí přátelé (ml.)
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+              description_student: Pomoz BB-8 dostat se z bludiště pomocí cyklů!
             Loops in Harvester:
               name: Sběr úrody s cykly
             Looking Ahead:
@@ -2707,6 +2731,8 @@ cs:
               name: Cykly dokud (until) v bludišti
         pre-express-2020:
           stages:
+            Programming with Rey and BB-8:
+              name: Programování s Rey a BB-8
             Spelling Bee:
               name: Hláskovací včelka
             Loops in Ice Age:

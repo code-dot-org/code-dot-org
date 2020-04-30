@@ -1,7 +1,7 @@
+hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit4/code/"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit4/{LESSON}'
@@ -96,3 +96,4 @@ lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019_2020'
 level 'csd-post-survey-levelgroup_2019_2020', assessment: true
+
