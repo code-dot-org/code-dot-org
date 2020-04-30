@@ -4,9 +4,9 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/foorm/generic_survey_report
     def generic_survey_report
-      is_authorized, filter = get_authorization_and_filter(current_user, params[:workshop_id])
+      is_authorized, facilitator_id_filter = get_authorization_and_filter(current_user, params[:workshop_id])
       return render json: {}, status: 401 unless is_authorized
-      report = Pd::Foorm::SurveyReporter.get_workshop_report(params[:workshop_id], filter)
+      report = Pd::Foorm::SurveyReporter.get_workshop_report(params[:workshop_id], facilitator_id_filter)
       render json: report
     end
 
