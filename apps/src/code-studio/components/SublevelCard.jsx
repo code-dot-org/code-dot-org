@@ -4,7 +4,7 @@ import color from '@cdo/apps/util/color';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
@@ -97,18 +97,22 @@ export default class SublevelCard extends React.Component {
     userId: PropTypes.number
   };
 
-  /*
-getLessonExtrasQueryString = () => {
-  const {id, sectionId, userId} = this.props;
-  let url = `?id=${id}`;
-  if (sectionId && userId) {
-    // Both sectionId and userId are required to link to a student's work on a bonus level.
-    url += `&section_id=${sectionId}&user_id=${userId}`;
-  } else if (sectionId) {
-    url += `&section_id=${sectionId}`;
-  }
-  return url;
-}; */
+  getQueryString = () => {
+    const {isLessonExtra, sublevel, sectionId, userId} = this.props;
+    let url;
+    if (isLessonExtra) {
+      url = `?id=${sublevel.id}`;
+      if (sectionId && userId) {
+        // Both sectionId and userId are required to link to a student's work on a bonus level.
+        url += `&section_id=${sectionId}&user_id=${userId}`;
+      } else if (sectionId) {
+        url += `&section_id=${sectionId}`;
+      }
+    } else {
+      url = sublevel.url + location.search;
+    }
+    return url;
+  };
 
   renderWithMazeThumbnail() {
     return (
@@ -147,12 +151,9 @@ getLessonExtrasQueryString = () => {
 
     if (isLessonExtra) {
       return (
-        <div style={styles.flagBubble}>
-          <LessonExtrasProgressBubble
-            lessonExtrasUrl={sublevel.url}
-            perfect={sublevel.perfect}
-          />
-        </div>
+        <a style={styles.flagBubble} href={this.getQueryString()}>
+          <LessonExtrasFlagIcon perfect={sublevel.perfect} />
+        </a>
       );
     }
 
@@ -170,12 +171,12 @@ getLessonExtrasQueryString = () => {
         style={styles.row}
         className="uitest-bubble-choice"
       >
-        <a href={sublevel.url + location.search}>{this.renderThumbnail()}</a>
+        <a href={this.getQueryString()}>{this.renderThumbnail()}</a>
         <div style={styles.column}>
           <div style={styles.bubbleAndTitle}>
             {this.renderBubble()}
             <a
-              href={sublevel.url + location.search}
+              href={this.getQueryString()}
               style={styles.title}
               className="sublevel-card-title-uitest"
             >
