@@ -4,8 +4,8 @@ import msg from '@cdo/locale';
 import color from '../../../util/color';
 import BonusLevels from './BonusLevels';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import {stageOfBonusLevels} from './shapes';
-import StageExtrasNotification from './StageExtrasNotification';
+import {lessonOfBonusLevels} from './shapes';
+import LessonExtrasNotification from './LessonExtrasNotification';
 
 const styles = {
   h2: {
@@ -15,40 +15,40 @@ const styles = {
   }
 };
 
-export default class StageExtras extends React.Component {
+export default class LessonExtras extends React.Component {
   static propTypes = {
-    stageNumber: PropTypes.number.isRequired,
-    nextStageNumber: PropTypes.number,
+    lessonNumber: PropTypes.number.isRequired,
+    nextLessonNumber: PropTypes.number,
     nextLevelPath: PropTypes.string.isRequired,
     showProjectWidget: PropTypes.bool,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number,
-    showStageExtrasWarning: PropTypes.bool
+    showLessonExtrasWarning: PropTypes.bool
   };
 
   render() {
     const {
-      stageNumber,
-      nextStageNumber,
+      lessonNumber,
+      nextLessonNumber,
       nextLevelPath,
       bonusLevels,
       sectionId,
       userId,
       showProjectWidget,
       projectTypes,
-      showStageExtrasWarning
+      showLessonExtrasWarning
     } = this.props;
     const nextMessage = /stage/.test(nextLevelPath)
-      ? msg.extrasNextLesson({number: nextStageNumber})
+      ? msg.extrasNextLesson({number: nextLessonNumber})
       : msg.extrasNextFinish();
 
     return (
       <div>
-        {showStageExtrasWarning && sectionId && <StageExtrasNotification />}
+        {showLessonExtrasWarning && sectionId && <LessonExtrasNotification />}
 
-        <h1>{msg.extrasStageNumberCompleted({number: stageNumber})}</h1>
+        <h1>{msg.extrasStageNumberCompleted({number: lessonNumber})}</h1>
 
         <h2 style={styles.h2}>{msg.continue()}</h2>
         <a href={nextLevelPath}>
