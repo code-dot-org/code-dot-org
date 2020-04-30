@@ -12,7 +12,7 @@ export const bonusLevel = {
   type: PropTypes.string.isRequired
 };
 
-export const stageOfBonusLevels = {
+export const lessonOfBonusLevels = {
   stageNumber: PropTypes.number.isRequired,
   levels: PropTypes.arrayOf(PropTypes.shape(bonusLevel))
 };
