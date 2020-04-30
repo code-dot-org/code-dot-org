@@ -116,6 +116,14 @@ class EditSectionForm extends Component {
     });
   };
 
+  isOauthType(loginType) {
+    const oauthSectionTypes = [
+      SectionLoginType.google_classroom,
+      SectionLoginType.clever
+    ];
+    return oauthSectionTypes.includes(loginType);
+  }
+
   render() {
     const {
       section,
@@ -131,7 +139,45 @@ class EditSectionForm extends Component {
       localeEnglishName,
       isNewSection
     } = this.props;
-    const validLoginTypes = ['email', 'word', 'picture'];
+
+    /**
+    OAuth login types can not be changed.
+    Personal email login type can be changed to word OR picture login type.
+    Picture login type can be changed to word login type.
+    Word login type can be changed to picture login type.
+    **/
+    const changableLoginTypes = [
+      SectionLoginType.word,
+      SectionLoginType.picture,
+      SectionLoginType.email
+    ];
+
+    // Sections that do not yet have students can use any login type.
+    var validLoginTypes;
+    switch (true) {
+      case section.studentCount === 0:
+        validLoginTypes = [
+          SectionLoginType.word,
+          SectionLoginType.picture,
+          SectionLoginType.email,
+          SectionLoginType.google_classroom,
+          SectionLoginType.clever
+        ];
+        break;
+      case section.loginType === SectionLoginType.email:
+        validLoginTypes = changableLoginTypes;
+        break;
+      case section.loginType === SectionLoginType.picture ||
+        section.loginType === SectionLoginType.word:
+        validLoginTypes = [SectionLoginType.word, SectionLoginType.picture];
+        break;
+      case section.loginType === SectionLoginType.clever:
+        validLoginTypes = [SectionLoginType.clever];
+        break;
+      case section.loginType === SectionLoginType.google_classroom:
+        validLoginTypes = [SectionLoginType.google_classroom];
+        break;
+    }
 
     if (!section) {
       return null;
@@ -151,12 +197,15 @@ class EditSectionForm extends Component {
             validGrades={validGrades}
             disabled={isSaveInProgress}
           />
-          <LoginTypeField
-            value={section.loginType}
-            onChange={loginType => editSectionProperties({loginType})}
-            validLoginTypes={validLoginTypes}
-            disabled={isSaveInProgress}
-          />
+          {section.studentCount === 0 ||
+            (changableLoginTypes.includes(section.loginType) && (
+              <LoginTypeField
+                value={section.loginType}
+                onChange={loginType => editSectionProperties({loginType})}
+                validLoginTypes={validLoginTypes}
+                disabled={isSaveInProgress}
+              />
+            ))}
           <AssignmentField
             section={section}
             onChange={ids => editSectionProperties(ids)}
@@ -261,6 +310,13 @@ GradeField.propTypes = {
 };
 
 const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
+  const friendlyNameByLoginType = {
+    [SectionLoginType.picture]: i18n.loginTypePicture(),
+    [SectionLoginType.word]: i18n.loginTypeWord(),
+    [SectionLoginType.email]: i18n.loginTypePersonal(),
+    [SectionLoginType.google_classroom]: i18n.loginTypeGoogleClassroom(),
+    [SectionLoginType.clever]: i18n.loginTypeClever()
+  };
   return (
     <div>
       <FieldName>{i18n.loginType()}</FieldName>
@@ -271,7 +327,7 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
       >
         {validLoginTypes.map((loginType, index) => (
           <option key={index} value={loginType}>
-            {loginType}
+            {friendlyNameByLoginType[loginType]}
           </option>
         ))}
       </Dropdown>
@@ -398,7 +454,6 @@ let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialScriptId: state.teacherSections.initialScriptId,
   validGrades: state.teacherSections.validGrades,
-  validLoginTypes: state.teacherSections.validLoginTypes,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   sections: state.teacherSections.sections,
