@@ -62,7 +62,6 @@ class EditSectionForm extends Component {
     initialScriptId: PropTypes.number,
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,

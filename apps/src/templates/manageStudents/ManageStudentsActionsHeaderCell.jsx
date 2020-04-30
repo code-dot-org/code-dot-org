@@ -6,25 +6,18 @@ import QuickActionsCell, {
   QuickActionsCellType
 } from '../tables/QuickActionsCell';
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
-import ChangeLoginTypeDialog from '@cdo/apps/templates/teacherDashboard/ChangeLoginTypeDialog';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
-import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 class ManageStudentsActionsHeaderCell extends Component {
   static propTypes = {
     editAll: PropTypes.func,
     isShareColumnVisible: PropTypes.bool,
-    hideSharingColumn: PropTypes.func,
-    loginType: PropTypes.string,
-    sectionId: PropTypes.number.isRequired,
-    // Provided by Redux
-    section: sectionShape
+    hideSharingColumn: PropTypes.func
   };
 
   state = {
-    isProjectSharingDialogOpen: false,
-    isChangeLoginTypeDialogOpen: false
+    isProjectSharingDialogOpen: false
   };
 
   openProjectSharingDialog = () => {
@@ -35,20 +28,8 @@ class ManageStudentsActionsHeaderCell extends Component {
     this.setState({isProjectSharingDialogOpen: false});
   };
 
-  openChangeLoginTypeDialog = () => {
-    this.setState({isChangeLoginTypeDialogOpen: true});
-  };
-
-  closeChangeLoginTypeDialog = () => {
-    this.setState({isChangeLoginTypeDialogOpen: false});
-  };
-
   onEditAll = () => {
     this.props.editAll();
-  };
-
-  onLoginTypeChanged = () => {
-    this.closeChangeLoginTypeDialog();
   };
 
   render() {
@@ -75,12 +56,6 @@ class ManageStudentsActionsHeaderCell extends Component {
           isDialogOpen={this.state.isProjectSharingDialogOpen}
           closeDialog={this.closeProjectSharingDialog}
         />
-        <ChangeLoginTypeDialog
-          isOpen={this.state.isChangeLoginTypeDialogOpen}
-          handleClose={this.closeChangeLoginTypeDialog}
-          onLoginTypeChanged={this.onLoginTypeChanged}
-          sectionId={this.props.sectionId}
-        />
       </div>
     );
   }
@@ -89,9 +64,7 @@ class ManageStudentsActionsHeaderCell extends Component {
 export const UnconnectedManageStudentsActionsHeaderCell = ManageStudentsActionsHeaderCell;
 
 export default connect(
-  (state, props) => ({
-    section: state.teacherSections.sections[props.sectionId]
-  }),
+  state => ({}),
   dispatch => ({
     hideSharingColumn() {
       dispatch(setShowSharingColumn(false));
