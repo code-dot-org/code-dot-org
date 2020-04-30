@@ -36,7 +36,7 @@ const style = {
   sectionNameInput: {
     // Full-width, large happy text, lots of space.
     display: 'block',
-    width: '100%',
+    width: '98%',
     boxSizing: 'border-box',
     fontSize: 'large',
     padding: '0.5em'
@@ -320,6 +320,13 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
     [SectionLoginType.google_classroom]: i18n.loginTypeGoogleClassroom(),
     [SectionLoginType.clever]: i18n.loginTypeClever()
   };
+  const descriptionByLoginType = {
+    [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
+    [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
+    [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc(),
+    [SectionLoginType.google_classroom]: i18n.editSectionLoginTypeGoogleDesc(),
+    [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc()
+  };
   return (
     <div>
       <FieldName>{i18n.loginType()}</FieldName>
@@ -334,6 +341,7 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
           </option>
         ))}
       </Dropdown>
+      <span style={{marginLeft: 5}}>{descriptionByLoginType[value]}</span>
     </div>
   );
 };
