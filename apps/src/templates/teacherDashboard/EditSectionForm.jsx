@@ -21,7 +21,7 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
-import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const style = {
   root: {
@@ -131,7 +131,7 @@ class EditSectionForm extends Component {
       localeEnglishName,
       isNewSection
     } = this.props;
-    const validLoginTypes = ['email', 'word', 'picture', 'dinosaur'];
+    const validLoginTypes = ['email', 'word', 'picture'];
 
     if (!section) {
       return null;
