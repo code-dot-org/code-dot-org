@@ -27,21 +27,35 @@ class ContactRollupsRaw < ApplicationRecord
     ActiveRecord::Base.connection.execute(query)
   end
 
-  # @param source [String] Source from which we want to extract data
+  def self.extract_parent_emails
+    source_sql = <<~SQL
+      SELECT parent_email, MAX(updated_at) AS updated_at
+      FROM users
+      GROUP BY 1
+    SQL
+
+    query = extract_from_source_query(source_sql, [], 'parent_email', 'dashboard.users.parent_email')
+    ActiveRecord::Base.connection.execute(query)
+  end
+
+  # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
   # @param email_column [String] Column in source table we want to insert ino the email column
+  # @param source_name [String] Name for source if using a subquery
   # @return [String] A SQL statement to extract and reshape data from the source table.
-  def self.extract_from_source_query(source, data_columns, email_column)
+  def self.extract_from_source_query(source, data_columns, email_column, source_name=nil)
+    wrapped_source, sources_column = format_source(source, source_name)
+
     <<~SQL
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         #{email_column},
-        'dashboard.#{source}' AS sources,
+        '#{sources_column}' AS sources,
         #{create_json_object(data_columns)} AS data,
-        #{source}.updated_at AS data_updated_at,
+        updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM #{source}
+      FROM #{wrapped_source}
       WHERE #{email_column} IS NOT NULL AND #{email_column} != ''
     SQL
   end
@@ -57,5 +71,22 @@ class ContactRollupsRaw < ApplicationRecord
     return 'NULL' if columns.empty?
 
     'JSON_OBJECT(' + columns.map {|col| "'#{col}',#{col}"}.join(',') + ')'
+  end
+
+  # Returns an array of:
+  #   the appropriate SQL syntax to be used on the FROM line
+  #   the appropriate "sources" column
+  # @example
+  #   When no source name provided (for dashboard tables)
+  #   Input: ['email_preferences', nil]
+  #   Output: ['email_preferences', 'dashboard.email_preferences']
+  # @example
+  #   When a source name provided (for subqueries / non-dashboard tables)
+  #   Input: ['SELECT DISTINCT parent_email FROM users', 'dashboard.users.parent_email']
+  #   Output: ['(SELECT DISTINCT parent_email FROM users) as subquery', 'dashboard.users.parent_email']
+  def self.format_source(source, source_name)
+    source_name ?
+      ["(#{source}) AS subquery", source_name] :
+      [source, 'dashboard.' + source]
   end
 end
