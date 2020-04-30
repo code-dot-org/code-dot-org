@@ -19,7 +19,9 @@ export default class DesignModeBox extends React.Component {
     onDuplicate: PropTypes.func.isRequired,
     onRestoreThemeDefaults: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    currentTheme: PropTypes.string.isRequired,
+    handleScreenChange: PropTypes.func.isRequired
   };
 
   render() {
@@ -66,6 +68,8 @@ export default class DesignModeBox extends React.Component {
         <DesignToolbox
           handleDragStart={this.props.handleDragStart}
           isToolboxVisible={this.props.isToolboxVisible}
+          handleScreenChange={this.props.handleScreenChange}
+          themeValue={this.props.currentTheme}
         />
         <div id="design-properties" style={styles.designProperties}>
           <DesignProperties
