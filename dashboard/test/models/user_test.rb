@@ -679,10 +679,27 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot create teacher without email" do
-    assert_does_not_create(User) do
-      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+  test "cannot create manual teacher without email" do
+    user = assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher',
+                  password: 'xxxxxxxx', provider: 'manual'
+      )
     end
+    assert_not_nil user.errors[:email]
+  end
+
+  # FND-1130: This test will no longer be required
+  test "teacher with no email created after 2016-06-14 should be invalid" do
+    user = create :teacher, :without_email
+    assert user.invalid?
+    assert_not_empty user.errors[:email]
+  end
+
+  # FND-1130: This test will no longer be required
+  test "teacher with no email created before 2016-06-14 should be valid" do
+    user = create :teacher, :without_email, :before_email_validation
+    assert user.valid?
+    assert_empty user.errors[:email]
   end
 
   test "cannot make an account without email a teacher" do
@@ -710,39 +727,6 @@ class UserTest < ActiveSupport::TestCase
       follower.student_user.update!(admin: true)
     end
     refute follower.student_user.reload.admin?
-  end
-
-  test "gallery" do
-    user = create(:user)
-    assert_equal [], user.gallery_activities
-
-    assert_does_not_create(GalleryActivity) do
-      create(:user_level, user: user)
-    end
-
-    ga2 = nil
-    assert_creates(GalleryActivity) do
-      user_level2 = create(:user_level, user: user)
-      ga2 = GalleryActivity.create!(
-        user: user,
-        user_level: user_level2
-      )
-    end
-
-    assert_does_not_create(GalleryActivity) do
-      create(:user_level, user: user)
-    end
-
-    ga4 = nil
-    assert_creates(GalleryActivity) do
-      user_level4 = create(:user_level, user: user)
-      ga4 = GalleryActivity.create!(
-        user: user,
-        user_level: user_level4
-      )
-    end
-
-    assert_equal [ga4, ga2], user.reload.gallery_activities
   end
 
   test "short name" do

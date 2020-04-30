@@ -27,8 +27,35 @@ Students can continue working on online lessons if they have reliable computers 
 
 <i>If you are currently teaching another unit...</i>
 
-* Give students a self paced project to keep their skills fresh: Students can be assigned a project using a tool they know (Web Lab, Game Lab, or App Lab). We have created a [step-by-step guide](/athome/project-ideas) for current CSD teachers interested in assigning students open-ended projects that use Code.org tools. These projects can serve as alternatives to other lessons or ways to augment the existing course material.
-* <strong>Assign a self-paced programming unit</strong>: We adapted Unit 3 from CS Principles to create [an intro to Turtle Programming in JavaScript](https://studio.code.org/s/csp3-virtual) designed for students in grades 6-12 to do on their own from home. There are no unplugged lessons or classroom activities, and you’ll be able to see your students’ work in your dashboard. (And check back soon… we are working hard to add more self paced programming options for your class.)
+<div class="col-25" style="text-align:right; padding-right: 20px;">
+
+<img src="/images/athome/no-sprites.gif" style="width: 60%"/>
+
+</div>
+
+<div class="col-75">
+
+<p><strong>Give students a self paced project to keep their skills fresh:</strong> Students can be assigned a project using a tool they know (Web Lab, Game Lab, or App Lab). We have created a [step-by-step guide](/athome/project-ideas) for current CSD teachers interested in assigning students open-ended projects that use Code.org tools. These projects can serve as alternatives to other lessons or ways to augment the existing course material.</p>
+
+</div>
+
+<div style="clear: both; margin-bottom: 30px"></div>
+
+<div class="col-25" style="text-align:right; padding-right: 20px;">
+
+<img src="/images/athome/self-paced.gif" style="width: 60%"/>
+
+</div>
+
+<div class="col-75">
+
+<p><strong>Assign a self-paced programming unit:</strong> We adapted Units 3 and 5 from CS Principles to create two self-paced modules: <a href="https://studio.code.org/s/csp3-virtual">Turtle Programming in App Lab</a> and <a href="https://studio.code.org/s/csp5-virtual">Event-Driven Programming in App Lab</a>. These modules are designed for middle and high school students to do on their own from home. There are no unplugged lessons or classroom activities, and you’ll be able to see your students’ work in your dashboard. We recommend that students begin with the Turtle Programming unit. The App Lab unit is more advanced (and in general is more appropriate for older/more experienced students).</p>
+
+</div>
+
+<div style="clear: both; margin-bottom: 15px"></div>
+
+**(And check back soon… we are working hard to add more self paced programming options for your class.)**
 
 ## Share on the Forum
 

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import HideToolbarHelper from '../templates/HideToolbarHelper';
 import RotateContainer from '../templates/RotateContainer';
 import {connect} from 'react-redux';
 
@@ -22,6 +23,7 @@ class StudioAppWrapper extends React.Component {
   render() {
     return (
       <div>
+        <HideToolbarHelper />
         {this.requiresLandscape() && (
           <RotateContainer assetUrl={this.props.assetUrl} />
         )}

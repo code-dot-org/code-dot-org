@@ -37,3 +37,10 @@ level 'CodeBreak E05 Beg Practice', progression: 'Practice'
 level 'Episode 5 Challenge Instructions Younger', progression: 'Challenges'
 level 'CodeBreak E05 Challenges Younger', progression: 'Challenges'
 level 'Episode 5 Share', progression: 'Share Your Work!'
+
+stage 'The Internet with Keegan-Michael Key & Vint Cerf'
+level 'CodeBreak Episode 6 Placeholder', progression: 'Code Break: Episode 6'
+level 'Episode 6 Instructions younger', progression: 'Practice'
+level 'Episode 6 Challenge Instructions younger', progression: 'Challenges'
+level 'Episode 6 Share', progression: 'Share Your Work!'
+
