@@ -116,11 +116,12 @@ export function dataURIToBlob(uri) {
 /**
  * Given an input of one of the following types, converts it to an ImageData object.
  *
- *   - ImageData: Returned without changes.
- *   - Canvas: ImageData pulled from the Canvas' 2D context.
- *   - String: Treated as a valid image URI, loaded, and converted to ImageData.
+ *   - A valid image URI or dataURI string
+ *   - Image element
+ *   - Canvas element
+ *   - ImageData (Returned without changes)
  *
- * @param {string|HTMLCanvasElement|ImageData} input
+ * @param {string|HTMLImageElement|HTMLCanvasElement|ImageData} input
  * @returns {Promise<ImageData>}
  */
 export async function toImageData(input) {
@@ -128,13 +129,19 @@ export async function toImageData(input) {
     return input;
   }
 
+  let image;
+  if (input instanceof HTMLImageElement) {
+    image = input;
+  } else if (typeof input === 'string') {
+    // Load the image - valid for an image URL or dataURI
+    image = await imageFromURI(input);
+  }
+
   let canvas, context;
   if (input instanceof HTMLCanvasElement) {
     canvas = input;
     context = input.getContext('2d');
-  } else if (typeof input === 'string') {
-    // Assume we've been given a valid imageURI or dataURI and load the image.
-    const image = await imageFromURI(input);
+  } else if (image instanceof HTMLImageElement) {
     canvas = document.createElement('canvas');
     canvas.width = image.width;
     canvas.height = image.height;
