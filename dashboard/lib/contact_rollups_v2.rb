@@ -9,6 +9,10 @@ class ContactRollupsV2
       ContactRollupsRaw.extract_email_preferences
     end
 
+    log_collector.time!('Extracts parent emails from dashboard users') do
+      ContactRollupsRaw.extract_parent_emails
+    end
+
     log_collector.time!('Processes all extracted data') do
       ContactRollupsProcessed.import_from_raw_table
     end
