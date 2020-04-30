@@ -29,10 +29,11 @@ export default class HideToolbarHelper extends React.Component {
   constructor(props) {
     super(props);
 
-    // Track whether we knew the toolbar was shown last update, so that
-    // if it disappears, we can track the event in analytics, and also write
+    // Track whether we knew the helper was shown last update, so that if we
+    // no longer show it because the toolar appears to be no longer be showing
+    // in particular, we can track the event in analytics, and also write
     // the cookie so that it isn't shown again...
-    this.wasToolbarShowing = false;
+    this.wasHelperShowing = false;
 
     // ...but only do these things once.
     this.didTrackToolbarHide = false;
@@ -55,6 +56,10 @@ export default class HideToolbarHelper extends React.Component {
   }
 
   isToolbarShowing() {
+    // window.innerHeight is smaller than document.body.offsetHeight when
+    // the iOS 13 Safari toolbar is showing.  It becomes equal when the toolbar
+    // is hidden.  (Interestingly, document.documentElement.clientHeight is
+    // the same as document.body.offsetHeight in both cases.)
     return window.innerHeight < document.body.offsetHeight;
   }
 
@@ -63,18 +68,19 @@ export default class HideToolbarHelper extends React.Component {
     const isHideCookieSet = this.isHideCookieSet();
     const isLandscape = this.isLandscape();
 
-    // window.innerHeight is smaller than document.body.offsetHeight when
-    // the iOS 13 Safari toolbar is showing.  It becomes equal when the toolbar
-    // is hidden.  (Interestingly, document.documentElement.clientHeight is
-    // the same as document.body.offsetHeight in both cases.)
-    const isToolbarShowing = this.isToolbarShowing();
+    if (!isiOS13 || !isLandscape || isHideCookieSet) {
+      this.setState({showHelper: false});
+    }
 
-    if (
-      this.wasToolbarShowing &&
-      !isToolbarShowing &&
-      !this.didTrackToolbarHide
-    ) {
-      // Let's track the disapearance of the toolbar.
+    // We are on iOS 13, in landscape, and we haven't hidden due to a cookie.
+    // Let's show the helper if we think the toolbar is showing.
+    const showHelper = this.isToolbarShowing();
+
+    // If we previously have shown the helper, and aren't now, and it's the
+    // first time we've encountered this situation, then do a couple things.
+    if (this.wasHelperShowing && !showHelper && !this.didTrackToolbarHide) {
+      // Let's track the disapearance of the toolbar after we had previously
+      // shown the helper.
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
 
       // And also set the cookie so this user doesn't see the helper again
@@ -84,10 +90,7 @@ export default class HideToolbarHelper extends React.Component {
       this.didTrackToolbarHide = true;
     }
 
-    this.wasToolbarShowing = isToolbarShowing;
-
-    const showHelper =
-      isiOS13 && !isHideCookieSet && isLandscape && isToolbarShowing;
+    this.wasHelperShowing = showHelper;
 
     this.setState({showHelper});
   };
