@@ -628,7 +628,6 @@ class Level < ActiveRecord::Base
   end
 
   def localized_teacher_markdown
-    puts(should_localize?)
     if should_localize?
       I18n.t(
         name,
