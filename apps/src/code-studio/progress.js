@@ -301,7 +301,7 @@ function initializeStoreWithProgress(
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
       stages: scriptData.stages,
-      peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
+      peerReviewStage: scriptData.peerReviewStage,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,
