@@ -1,6 +1,7 @@
 import React from 'react';
 import msg from '@cdo/locale';
 import color from '../util/color';
+import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
 
 const styles = {
@@ -13,7 +14,8 @@ const styles = {
     borderRadius: 4,
     padding: 15,
     transform: 'translate(-100%,-100%)',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    cursor: 'pointer'
   },
   buttonIcon: {
     display: 'inline-block',
@@ -75,10 +77,6 @@ export default class FixZoomHelper extends React.Component {
     mode: 'none'
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   isLandscape() {
     return window.matchMedia('(orientation: landscape)').matches;
   }
@@ -93,11 +91,17 @@ export default class FixZoomHelper extends React.Component {
     const isZoomed = this.isZoomed();
 
     if (this.state.mode !== 'none' && !isZoomed) {
+      const lastMode = this.state.mode;
+
       // If transitioning from zoomed to non-zoomed, then mode goes to "none".
       this.setState({mode: 'none'});
+
+      trackEvent('Research', 'FixZoomHelper', `${lastMode}-to-none`);
     } else if (this.state.mode === 'none' && isZoomed) {
       // If transitioning from non-zoomed to zoomed, then mode goes to "button".
       this.setState({mode: 'button'});
+
+      trackEvent('Research', 'FixZoomHelper', 'none-to-button');
     }
 
     // Also update the viewport information.
@@ -129,10 +133,14 @@ export default class FixZoomHelper extends React.Component {
 
   onButtonClick = () => {
     this.setState({mode: 'helper'});
+
+    trackEvent('Research', 'FixZoomHelper', 'button-to-helper');
   };
 
   onHelperClick = () => {
     this.setState({mode: 'button'});
+
+    trackEvent('Research', 'FixZoomHelper', 'helper-to-button');
   };
 
   render() {
