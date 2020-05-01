@@ -36,8 +36,8 @@ describe('LessonExtras', () => {
     expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(1);
   });
 
-  it('renders correct number of sublevels', () => {
+  it('renders BonusLevels area', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
-    assert.equal(2, wrapper.find('SublevelCard').length);
+    assert.equal(1, wrapper.find('BonusLevels').length);
   });
 });
