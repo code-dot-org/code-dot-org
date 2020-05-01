@@ -21,10 +21,8 @@ import {toImageData} from '@cdo/apps/imageUtils';
  *   because there are subtle differences in how browsers encode images.
  *   Even Chrome and ChromeHeadless give different results at this level
  *   of precision.
- * @returns {Promise<number>} Resolves to the number of mismatched pixels,
- *   after the error threshold is taken into account, which will always be
- *   zero if this assertion passes. There's an assertion embedded in this
- *   method, so the promise will reject if the images don't match.
+ * @returns {Promise} Resolves if the images visually match, rejects with
+ *   an assertion error if they do not match.
  */
 export default async function assertVisualMatch(
   expected,
@@ -39,6 +37,16 @@ export default async function assertVisualMatch(
    */
   expected = await toImageData(expected);
   actual = await toImageData(actual);
+
+  /*
+  Precondition for the pixel comparison: The images should be the same size.
+   */
+  assert(
+    expected.width === actual.width && expected.height === actual.height,
+    `Expected images to visually match, but they are different sizes\n` +
+      `Expected: ${expected.width} x ${expected.height}\n` +
+      `  Actual: ${actual.width} x ${actual.height}`
+  );
 
   /*
   This library counts the mismatched pixels between two ImageData arrays,
@@ -60,7 +68,6 @@ export default async function assertVisualMatch(
   assert.equal(
     0,
     mismatchedPixels,
-    `Expected images to visually match, but they were different by ${mismatchedPixels} pixels`
+    `Expected images to visually match, but they are different by ${mismatchedPixels} pixels`
   );
-  return mismatchedPixels;
 }
