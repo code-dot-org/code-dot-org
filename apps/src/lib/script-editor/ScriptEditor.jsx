@@ -79,8 +79,6 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      hidden: this.props.hidden,
-      pilotExperiment: this.props.pilotExperiment,
       curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
@@ -235,10 +233,9 @@ export default class ScriptEditor extends React.Component {
                 ))}
               </select>
             </label>
-            <VisibleInTeacherDashboard
-              checked={!this.state.hidden}
-              disabled={!!this.state.pilotExperiment}
-              onChange={e => this.setState({hidden: !e.target.checked})}
+            <VisibleAndPilotExperiment
+              visible={!this.props.hidden}
+              pilotExperiment={this.props.pilotExperiment}
             />
             <label>
               Can be recommended (aka stable)
@@ -254,10 +251,6 @@ export default class ScriptEditor extends React.Component {
                 the recommended version.
               </p>
             </label>
-            <PilotExperiment
-              value={this.state.pilotExperiment}
-              onChange={e => this.setState({pilotExperiment: e.target.value})}
-            />
           </div>
         )}
         <label>
@@ -546,7 +539,51 @@ export default class ScriptEditor extends React.Component {
   }
 }
 
-export const VisibleInTeacherDashboard = props => (
+/**
+ * Component which renders two input fields: a checkbox which controls whether the course/script
+ * should be available in the dropdown on Teacher Dashboard, and a text field which controls whether
+ * the course/script is in a pilot experiment. This component also ensures that if there is a pilot experiment,
+ * then the visible checkbox will be unchecked and greyed out, to maintain consistency between the two.
+ */
+export class VisibleAndPilotExperiment extends React.Component {
+  static propTypes = {
+    visible: PropTypes.bool.isRequired,
+    pilotExperiment: PropTypes.string,
+    paramName: PropTypes.string
+  };
+
+  static defaultProps = {
+    paramName: 'visible_to_teachers'
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: this.props.visible,
+      pilotExperiment: this.props.pilotExperiment
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <VisibleInTeacherDashboard
+          checked={this.state.visible}
+          disabled={!!this.state.pilotExperiment}
+          onChange={e => this.setState({visible: e.target.checked})}
+          paramName={this.props.paramName}
+        />
+        <PilotExperiment
+          value={this.state.pilotExperiment}
+          onChange={e => this.setState({pilotExperiment: e.target.value})}
+        />
+      </div>
+    );
+  }
+}
+
+const VisibleInTeacherDashboard = props => (
   <label style={props.disabled ? {opacity: 0.5} : {}}>
     Visible in Teacher Dashboard
     <input
@@ -567,16 +604,13 @@ export const VisibleInTeacherDashboard = props => (
   </label>
 );
 VisibleInTeacherDashboard.propTypes = {
-  paramName: PropTypes.string,
+  paramName: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };
-VisibleInTeacherDashboard.defaultProps = {
-  paramName: 'visible_to_teachers'
-};
 
-export const PilotExperiment = props => (
+const PilotExperiment = props => (
   <label>
     Pilot Experiment. If specified, this script will only be accessible to
     levelbuilders, or to classrooms whose teacher has this user experiment
