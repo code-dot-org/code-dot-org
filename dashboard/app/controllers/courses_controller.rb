@@ -20,8 +20,8 @@ class CoursesController < ApplicationController
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
-        courses = Course.valid_courses(user: current_user)
-        render json: courses
+        course_infos = Course.valid_course_infos(user: current_user)
+        render json: course_infos
       end
     end
   end
