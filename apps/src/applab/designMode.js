@@ -32,6 +32,8 @@ export default designMode;
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
+const HTTP_PREFIX_REGEX = applabConstants.ABSOLUTE_REGEXP;
+
 let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
@@ -190,6 +192,18 @@ designMode.fontFamilyOptionFromStyle = function(style) {
   return applabConstants.fontFamilyOptions[fontIndex === -1 ? 0 : fontIndex];
 };
 
+designMode.assignImageType = function(element, image_source) {
+  if (ICON_PREFIX_REGEX.test(image_source)) {
+    return 'icon';
+  } else if (HTTP_PREFIX_REGEX.test(image_source)) {
+    return 'url';
+  } else if (image_source === '') {
+    return 'default';
+  } else {
+    return 'files';
+  }
+};
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -231,6 +245,9 @@ designMode.updateProperty = function(
   if (timestamp) {
     cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
   }
+  // relevant for image-specific case statements below
+  let dataImageType;
+
   switch (name) {
     case 'id':
       elementUtils.setId(element, value);
@@ -329,6 +346,9 @@ designMode.updateProperty = function(
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
+      dataImageType = designMode.assignImageType(element, value);
+      element.setAttribute('data-image-type', dataImageType);
+
       var fitImage = function() {
         // Fit the image into the button
         element.style.backgroundSize = 'contain';
@@ -361,6 +381,9 @@ designMode.updateProperty = function(
     case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
+      dataImageType = designMode.assignImageType(element, value);
+      element.setAttribute('data-image-type', dataImageType);
+
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
@@ -382,6 +405,9 @@ designMode.updateProperty = function(
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
+
+      dataImageType = designMode.assignImageType(element, value);
+      element.setAttribute('data-image-type', dataImageType);
 
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
