@@ -83,7 +83,7 @@
         - unless view_options[:no_footer] || view_options[:small_footer]
           .push
 
-      - if view_options[:small_footer]
+      - if view_options[:small_footer] && !view_options[:no_footer]
         = render partial: 'layouts/small_footer', locals: {channel: view_options[:channel]}
 
       - if view_options[:responsive_content]
