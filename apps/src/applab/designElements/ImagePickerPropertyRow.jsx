@@ -18,7 +18,8 @@ export default class ImagePickerPropertyRow extends React.Component {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,
     desc: PropTypes.node,
-    elementId: PropTypes.string
+    elementId: PropTypes.string,
+    currentImageType: PropTypes.string
   };
 
   componentDidMount() {
@@ -68,7 +69,8 @@ export default class ImagePickerPropertyRow extends React.Component {
     dashboard.assets.showAssetManager(this.changeImage, 'image', null, {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
       elementId: this.props.elementId,
-      currentValue: this.state.value
+      currentValue: this.state.value,
+      currentImageType: this.props.currentImageType
     });
   };
 

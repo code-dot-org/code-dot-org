@@ -81,6 +81,7 @@ class ImageProperties extends React.Component {
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
+          currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')}
           elementId={elementUtils.getId(element)}
         />
@@ -199,6 +200,7 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
+    element.setAttribute('data-image-type', '');
 
     // New elements are created with 'contain', but the default value for
     // existing (unadorned) images is 'fill' for compatibility reasons

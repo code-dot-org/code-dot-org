@@ -28,6 +28,7 @@ export default class ImagePicker extends React.Component {
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
     currentValue: PropTypes.string,
+    currentImageType: PropTypes.string,
     //For logging purposes
     projectId: PropTypes.string,
     elementId: PropTypes.string
@@ -40,9 +41,7 @@ export default class ImagePicker extends React.Component {
   };
 
   setIconMode = () => this.setState({mode: 'icons'});
-
   setFileMode = () => this.setState({mode: 'files'});
-
   setURLMode = () => this.setState({mode: 'url'});
 
   render() {
@@ -144,7 +143,11 @@ export default class ImagePicker extends React.Component {
           <ImageURLInput
             assetChosen={this.props.assetChosen}
             allowedExtensions={extensionFilter[this.props.typeFilter]}
-            currentValue={this.props.currentValue}
+            currentValue={
+              this.props.currentImageType === 'url'
+                ? this.props.currentValue
+                : ''
+            }
           />
         );
       }
