@@ -68,7 +68,7 @@ const mockProgress = {
       levels
     }
   ],
-  peerReviewLessonInfo: false,
+  peerReviewStage: false,
   scriptId: 1,
   scriptName: 'test',
   scriptTitle: 'Test Script',

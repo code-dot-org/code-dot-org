@@ -110,12 +110,12 @@ class Script < ActiveRecord::Base
       )
 
       lessons.reload
-      lessons.each do |lesson|
-        lm = Plc::LearningModule.find_or_initialize_by(stage_id: lesson.id)
+      lessons.each do |stage|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
         lm.update!(
           plc_course_unit_id: unit.id,
-          name: lesson.name,
-          module_type: lesson.lesson_group&.key || Plc::LearningModule::REQUIRED_MODULE,
+          name: stage.name,
+          module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
         )
       end
     end
@@ -975,6 +975,7 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       bonus = nil
+      flex_category = nil
       lesson_group_key = nil
       lockable = nil
 
@@ -990,6 +991,7 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
+        flex_category = raw_level.delete(:stage_flex_category)
         lesson_group_key = raw_level.delete(:lesson_group)
         lockable = !!raw_level.delete(:stage_lockable)
 
@@ -1078,7 +1080,7 @@ class Script < ActiveRecord::Base
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable)
+        lesson.assign_attributes(lesson_group: lesson_group, flex_category: flex_category, lockable: lockable)
         lesson.save! if lesson.changed?
 
         script_level_attributes[:stage_id] = lesson.id
@@ -1362,9 +1364,6 @@ class Script < ActiveRecord::Base
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
-    # TODO: Set up peer reviews to be more consistent with the rest of the system
-    # so that they don't need a bunch of one off cases (example peer reviews
-    # don't have a lesson group in the database right now)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -1379,9 +1378,9 @@ class Script < ActiveRecord::Base
         }
       end
 
-      peer_review_lesson_info = {
+      peer_review_stage = {
         name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-        lesson_group_display_name: 'Peer Review',
+        flex_category: 'Peer Review',
         levels: levels,
         lockable: false
       }
@@ -1411,8 +1410,7 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_lesson_info, #TODO(dmcavoy) REMOVE AFTER A COUPLE DAYS April 2020
-      peerReviewLessonInfo: peer_review_lesson_info,
+      peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
