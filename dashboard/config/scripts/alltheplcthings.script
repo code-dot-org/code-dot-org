@@ -3,34 +3,34 @@ login_required 'true'
 peer_reviews_to_complete 5
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Introduction to Teachercon'
+stage 'Introduction to Teachercon', flex_category: 'required'
 level 'Welcome to TeacherCon!', named: true
 level 'TeacherCon Agenda', named: true
 level 'TeacherCon Self-Assessment', named: true
 
 lesson_group 'content', display_name: 'Content'
-stage 'Lesson 1,4'
+stage 'Lesson 1,4', flex_category: 'content'
 level 'U1L4 Lesson Overview', named: true
 
-stage 'Lesson 1,6'
+stage 'Lesson 1,6', flex_category: 'content'
 level 'U1L6 Lesson Overview', named: true
 
-stage 'Lesson 1,9'
+stage 'Lesson 1,9', flex_category: 'content'
 level 'U1L9 Lesson Overview', named: true
 
-stage 'Lesson 1,10'
+stage 'Lesson 1,10', flex_category: 'content'
 level 'U1L10 Lesson Overview', named: true
 
-stage 'Lesson 1,11'
+stage 'Lesson 1,11', flex_category: 'content'
 level 'U1L11 Lesson Overview', named: true
 
-stage 'Lesson 2,2'
+stage 'Lesson 2,2', flex_category: 'content'
 level 'U2L2 Lesson Overview', named: true
 
-stage 'Lesson 2,3'
+stage 'Lesson 2,3', flex_category: 'content'
 level 'U2L3 Lesson Overview', named: true
 
-stage 'Lesson 2,10'
+stage 'Lesson 2,10', flex_category: 'content'
 level 'U2L10 Lesson Overview', named: true
 
 stage 'Test stage with bubbles'
@@ -40,7 +40,7 @@ level 'cspu5_assess1_debugging'
 level 'cspu5_assess1_codevalues'
 
 lesson_group 'practice', display_name: 'Teaching Practices'
-stage 'Group Work and Peer Learning'
+stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: description and strategies', named: true
@@ -50,7 +50,7 @@ level 'Wednesday Report: Balancing Teachers and Tools in Unit 1', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true
 level 'Peer Review Level 2 - Wednesday Report', named: true
 
-stage 'Balancing Teachers and Tools'
+stage 'Balancing Teachers and Tools', flex_category: 'practice'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level  'Overview: Balancing Teachers and Tools', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true

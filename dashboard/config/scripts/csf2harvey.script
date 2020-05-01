@@ -3,7 +3,7 @@ hideable_stages true
 student_detail_progress_view true
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-stage 'Snowflakes'
+stage 'Snowflakes', flex_category: 'end_of_course_project'
 level 'harvey_snowflake_artist1', named: true
 level 'harvey_snowflake_artist2', named: true
 level 'expresslink', named: true
