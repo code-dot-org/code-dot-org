@@ -144,26 +144,19 @@ class EditSectionForm extends Component {
     Picture login type can be changed to word login type.
     Word login type can be changed to picture login type.
     **/
-    const changableLoginTypes = [
+    const changeableLoginTypes = [
       SectionLoginType.word,
       SectionLoginType.picture,
       SectionLoginType.email
     ];
 
-    // Sections that do not yet have students can use any login type.
     var validLoginTypes;
     switch (true) {
       case section.studentCount === 0:
-        validLoginTypes = [
-          SectionLoginType.word,
-          SectionLoginType.picture,
-          SectionLoginType.email,
-          SectionLoginType.google_classroom,
-          SectionLoginType.clever
-        ];
+        validLoginTypes = Object.values(SectionLoginType);
         break;
       case section.loginType === SectionLoginType.email:
-        validLoginTypes = changableLoginTypes;
+        validLoginTypes = changeableLoginTypes;
         break;
       case section.loginType === SectionLoginType.picture ||
         section.loginType === SectionLoginType.word:
@@ -179,7 +172,7 @@ class EditSectionForm extends Component {
     const showLoginTypeField =
       !isNewSection &&
       (section.studentCount === 0 ||
-        changableLoginTypes.includes(section.loginType));
+        changeableLoginTypes.includes(section.loginType));
 
     if (!section) {
       return null;
