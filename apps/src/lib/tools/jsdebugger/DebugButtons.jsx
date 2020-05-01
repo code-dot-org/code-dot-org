@@ -39,41 +39,41 @@ export default connect(
 
     // Wrap button actions to add tracking of presses to investigate student use
     // userInteracted tracks if the user has open/adjusted the debug console
-    togglePause() {
+    togglePause = () => {
       trackEvent(
         'debug_commands',
         'debug_button_press',
         this.props.userInteracted
       );
       this.props.togglePause();
-    }
+    };
 
-    stepIn() {
+    stepIn = () => {
       trackEvent(
         'debug_commands',
         'debug_button_press',
         this.props.userInteracted
       );
       this.props.stepIn();
-    }
+    };
 
-    stepOut() {
+    stepOut = () => {
       trackEvent(
         'debug_commands',
         'debug_button_press',
         this.props.userInteracted
       );
       this.props.stepOut();
-    }
+    };
 
-    stepOver() {
+    stepOver = () => {
       trackEvent(
         'debug_commands',
         'debug_button_press',
         this.props.userInteracted
       );
       this.props.stepOver();
-    }
+    };
 
     render() {
       const {isAttached, isPaused, canRunNext} = this.props;
