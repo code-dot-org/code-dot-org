@@ -116,11 +116,10 @@ class EditSectionForm extends Component {
   };
 
   isOauthType(loginType) {
-    const oauthSectionTypes = [
+    return [
       SectionLoginType.google_classroom,
       SectionLoginType.clever
-    ];
-    return oauthSectionTypes.includes(loginType);
+    ].includes(loginType);
   }
 
   render() {
