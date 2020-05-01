@@ -37,6 +37,8 @@ export class MicrobitStubBoard {
     callback();
   }
 
+  displayShow() {}
+
   displayPlot() {}
 
   displayClear() {}

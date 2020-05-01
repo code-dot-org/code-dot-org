@@ -331,7 +331,7 @@ exports.calcBlockGetVar = function(variableName) {
 /**
  * Generate the xml for a math block (either calc or eval apps).
  * @param {string} type Type for this block
- * @param {Object.<string,string} inputs Dictionary mapping input name to the
+ * @param {Object.<string,string>} inputs Dictionary mapping input name to the
      xml for that input
  * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
  */

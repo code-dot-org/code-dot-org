@@ -1,7 +1,7 @@
+hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-20/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit3/code/"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
@@ -245,7 +245,7 @@ level 'CSD U3 collisions displace y_2020', progression: 'Code a Sprite Interacti
 level 'CSD U3 collisions displace intro_2020', progression: 'Collisions'
 level 'CSD U3 collisions try blocks_2020', progression: 'Collisions'
 level 'CSD games collisions practice choice', progression: 'Collisions'
-level 'CSD games collisions assessment', progression: 'Collisions'
+level 'CSD games collisions assessment', progression: 'Collisions', assessment: true
 level 'CSD games collisions challenge choice', progression: 'Challenge: Collisions'
 
 stage 'Mini-Project: Flyer Game'
@@ -334,3 +334,4 @@ lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true
 level 'csd-post-survey-intro-2019_pilot_2020'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2020', assessment: true
+

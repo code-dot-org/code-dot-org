@@ -402,6 +402,7 @@ de:
         csp_applab_functions: Einführung in Funktionen
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
+        csp_concept_http_html: 'Das Internet: HTTP & HTML'
         csp_cs_is_changing_everything: Informatik verändert alles
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code – Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code – JavaScript'
@@ -462,6 +463,7 @@ de:
         CSF_skinOverview_Harvester: Die Erntearbeiterin
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Schleifen mit BB-8
         CSF_harvester_skinOverview_K-1: Die Erntearbeiterin
         CSF_harvester_loops_K1: Schleifen mit der Erntearbeiterin
         CSF_scrat_loops_K1: Schleifen in Ice Age
@@ -513,6 +515,7 @@ de:
         hoc_dance_measures_2019: Tanzparty 2019-Takte
         hoc_dance_properties_2019: Tanzparty 2019- Eigenschaften
         csf_my_online_neighborhood_2020: Meine Online-Nachbarschaft
+        csd_what_computers_are: Was ist ein Computer?
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

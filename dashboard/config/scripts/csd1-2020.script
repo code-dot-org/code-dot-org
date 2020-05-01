@@ -1,7 +1,7 @@
+hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
@@ -76,3 +76,4 @@ level 'CSD U1L12 TFMD_2020', named: true
 
 stage 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)'
 level 'CSD U1L13 TFMD_2020', named: true
+

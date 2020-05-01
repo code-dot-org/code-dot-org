@@ -72,6 +72,32 @@ describe('LedMatrix', function() {
     });
   });
 
+  describe('display()', () => {
+    let led;
+    let boardClient = new MicrobitStubBoard();
+    let displaySpy;
+
+    before(() => {
+      led = new LedMatrix({
+        mb: boardClient
+      });
+      displaySpy = sinon.spy(boardClient, 'displayShow');
+    });
+
+    it('calls the parent displayShow', () => {
+      let pixelArray = [
+        [1, 0, 1, 0, 1],
+        [0, 1, 0, 1, 0],
+        [1, 0, 1, 0, 1],
+        [0, 1, 0, 1, 0],
+        [1, 0, 1, 0, 1]
+      ];
+      led.display(pixelArray);
+      expect(displaySpy).to.have.been.calledOnce;
+      expect(displaySpy).to.have.been.calledWith(false, pixelArray);
+    });
+  });
+
   describe('scrollString() and scrollNumber()', () => {
     let led;
     let boardClient = new MicrobitStubBoard();

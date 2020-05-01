@@ -562,7 +562,7 @@ export const levelsForLessonId = (state, lessonId) =>
     .find(stage => stage.id === lessonId)
     .levels.map(level => levelWithStatus(state, level));
 
-export const stageExtrasUrl = (state, stageId) =>
+export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
     ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
     : '';

@@ -10358,10 +10358,14 @@ ar-SA:
         courseF_artist_variables3_a: 'سيتم استخدام متغير "طول" في مكانين في التعليمات
           البرمجية الخاصة بك: في الطول الجانبي للمثلث الخاص بك، وفي المقدار الذي تتحرك
           للأمام خلاله ما بين المثلثات.'
+        courseF_artist_variables3_b: 'يجب للمربع البرمجي ذو القيمة 50 أن يكون في مكان
+          واحد فقط: بعد المربع البرمجي `تعيين الطول`.'
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: 'سيتم استخدام متغير "طول" في مكانين في التعليمات
           البرمجية الخاصة بك: في الطول الجانبي للمثلث الخاص بك، وفي المقدار الذي تتحرك
           للأمام خلاله ما بين المثلثات.'
+        courseF_artist_variables3_b: 'يجب للمربع البرمجي ذو القيمة 50 أن يكون في مكان
+          واحد فقط: بعد المربع البرمجي `تعيين الطول`.'
       courseF_artist_variables4:
         courseF_artist_variables4_a: لن تصبح التعليمات البرمجية الخاصة بك أكثر اختلافاً
           بشكل كبير عن غيرها في اللغز السابق، فيماعدا أنك ستحتاج إلى استدارة الفنان
@@ -10370,6 +10374,7 @@ ar-SA:
         courseF_artist_variables4_c: هذا هو النمط الذي سيتبعه الفنان:![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2018:
+        courseF_artist_variables4_a: إجعله جاهزًا لرسم المثلث التالي.
         courseF_artist_variables4_c: هذا هو النمط الذي سيتبعه الفنان:![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
       courseF_artist_variables4_2019:
         courseF_artist_variables4_c: هذا هو النمط الذي سيتبعه الفنان:![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)

@@ -172,6 +172,8 @@ fr:
     email_preference_yes: "Oui"
     email_preference_no: "Non"
     email_preference_required: "Vous devez spécifier une adresse e-mail préférée."
+    parent_account_checkbox: "Je suis un parent/tuteur qui s'inscrit au nom de mon enfant"
+    parent_account_email_label: "E-mail du parent/tuteur"
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’École'
@@ -464,8 +466,11 @@ fr:
     auth_option_saved: "Vous avez réussi à lier votre %{provider} compte avec l'adresse électronique %{email}."
     auth_option_saved_no_email: "Vous avez réussi à lier votre %{provider} compte."
     update_email: "Mise à jour"
+    for_parents_and_guardians: "Pour les Parents et Tuteurs"
+    link_a_parent_email: "Associez une adresse e-mail parent/tuteur à ce compte pour rester au courant sur les progrès et les projets de votre enfant"
     parent_guardian_email_label: "E-mail du parent/tuteur"
     none: "Aucun"
+    only_one_parent_email_supported_warning: "Remarque : nous ne pouvons prendre en charge qu'une seule adresse e-mail parent / tuteur par compte étudiant pour le moment."
     encrypted: "chiffré"
   user_level:
     completed: 'Terminé'
@@ -1168,4 +1173,8 @@ fr:
       enter_code: 'Veuillez entrer le code fourni lors de votre connexion via Google sur votre navigateur par défaut.'
       copy_code: 'Veuillez copier et coller ce code à l''intérieur de l''application Maker pour vous connecter à Code.org.'
       error_token_expired: 'Le jeton est expiré. Veuillez vous reconnectez pour un nouveau jeton.'
+      error_invalid_user: 'Identifiant invalide. Veuillez vous reconnecter.'
       error_no_code: 'Veuillez entrer votre code de connexion.'
+  parent_email_banner:
+    link_your_email: "Associez votre e-mail"
+    not_now: "Plus tard"
