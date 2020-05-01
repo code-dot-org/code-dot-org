@@ -32,8 +32,7 @@ const styles = {
     float: 'left'
   },
   chartArea: {
-    flexGrow: 1,
-    overflow: 'auto'
+    flexGrow: 1
   },
   placeholderContainer: {
     position: 'relative',
@@ -319,7 +318,15 @@ class VisualizerModal extends React.Component {
               )}
             </div>
 
-            <div style={styles.chartArea}>
+            <div
+              style={{
+                ...styles.chartArea,
+                overflow:
+                  this.state.chartType === ChartType.CROSS_TAB
+                    ? 'auto'
+                    : 'hidden'
+              }}
+            >
               {this.canDisplayChart() ? (
                 <DataVisualizer
                   records={filteredRecords}

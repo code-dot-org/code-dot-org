@@ -253,7 +253,7 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
-    parent_email_added_subject: 'Welcome to Code.org!'  
+    parent_email_added_subject: 'Welcome to Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
@@ -706,20 +706,6 @@ en:
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Ages 14+"
       cta: "Learn how"
-  gallery:
-    students_drew_these_with_code: "Students drew these with code!"
-    students_made_these_with_code: "Students made these with code!"
-    picture_count: "In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action."
-    activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
-    want_to_make_your_own: "Want to make your own?"
-    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
-    more: "More →"
-    caption_by_name_age: "by %{name}, age %{age}"
-    caption_time_ago: "%{time_ago} ago"
-    header: "Gallery"
-    header_playlab: "Stories and games"
-    header_artist: "Code art"
-    report_abuse: "Report Abuse"
   landing:
     prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Report Bug"
