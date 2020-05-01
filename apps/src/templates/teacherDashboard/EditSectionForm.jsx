@@ -150,25 +150,28 @@ class EditSectionForm extends Component {
       SectionLoginType.email
     ];
 
-    var validLoginTypes;
-    switch (true) {
-      case section.studentCount === 0:
-        validLoginTypes = Object.values(SectionLoginType);
-        break;
-      case section.loginType === SectionLoginType.email:
-        validLoginTypes = changeableLoginTypes;
-        break;
-      case section.loginType === SectionLoginType.picture ||
-        section.loginType === SectionLoginType.word:
-        validLoginTypes = [SectionLoginType.word, SectionLoginType.picture];
-        break;
-      case section.loginType === SectionLoginType.clever:
-        validLoginTypes = [SectionLoginType.clever];
-        break;
-      case section.loginType === SectionLoginType.google_classroom:
-        validLoginTypes = [SectionLoginType.google_classroom];
-        break;
-    }
+    let sectionLoginTypeTransforms = {};
+    sectionLoginTypeTransforms[SectionLoginType.email] = changeableLoginTypes;
+    sectionLoginTypeTransforms[SectionLoginType.picture] = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.word] = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.clever] = [
+      SectionLoginType.clever
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.google_classroom] = [
+      SectionLoginType.google_classroom
+    ];
+
+    const validLoginTypes =
+      section.studentCount === 0
+        ? Object.values(SectionLoginType)
+        : sectionLoginTypeTransforms[section.loginType];
+
     const showLoginTypeField =
       !isNewSection &&
       (section.studentCount === 0 ||
