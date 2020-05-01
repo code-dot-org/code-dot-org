@@ -70,6 +70,7 @@ export default class HideToolbarHelper extends React.Component {
 
     if (!isiOS13 || !isLandscape || isHideCookieSet) {
       this.setState({showHelper: false});
+      return;
     }
 
     // We are on iOS 13, in landscape, and we haven't hidden due to a cookie.
