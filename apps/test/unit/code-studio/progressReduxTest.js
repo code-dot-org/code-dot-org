@@ -21,7 +21,7 @@ import reducer, {
   statusForLevel,
   processedStages,
   setCurrentStageId,
-  stageExtrasUrl,
+  lessonExtrasUrl,
   setStageExtrasEnabled,
   getLevelResult,
   __testonly__
@@ -1115,7 +1115,7 @@ describe('progressReduxTest', () => {
     });
   });
 
-  describe('stageExtrasUrl', () => {
+  describe('lessonExtrasUrl', () => {
     it('derives url from state by stageId', () => {
       const stateWithProgress = reducer(
         undefined,
@@ -1124,7 +1124,7 @@ describe('progressReduxTest', () => {
       const state = reducer(stateWithProgress, setStageExtrasEnabled(true));
 
       assert.strictEqual(
-        stageExtrasUrl(state, state.stages[0].id),
+        lessonExtrasUrl(state, state.stages[0].id),
         '//localhost.code.org:3000/s/course3/stage/2/extras'
       );
     });

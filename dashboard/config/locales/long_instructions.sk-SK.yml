@@ -160,11 +160,16 @@ sk-SK:
         Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
 
         Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
-      4-5 Bee Conditionals 5: |-
-        Pod každým z týchto oblakov je buď kvetina, alebo úľ!
+      4-5 Bee Conditionals 4: |-
+        Oblak niekedy zakrýva kvet a niekedy plást!
 
-        Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetina.
-        V opačnom prípade vyrob med (keďže tam bude úľ).
+        Použi blok `ak/inak` a pozberaj nektár len ak je tam kvet.\
+        V opačnom prípade vyrob med (lebo je to plást).
+      4-5 Bee Conditionals 5: |-
+        Pod každým z oblakov bude buď kvet alebo včelí plást!
+
+        Použi blok `ak/inak`a pozberaj nektár ak tam je kvet.
+        V opačnom prípade, vyrob med (lebo je to plást).
       4-5 Bee Conditionals 6: "Nie som si istý, koľko nektáru má táto kvetina, ale
         viem, že to budú 1, 2 alebo 3 nektáre. \n\nSkombinuj podmieňovacie bloky (\"if\"
         a/alebo \"if/else\") pre získanie práve toľko nektáru, koľko ho je na kvetine.
@@ -1507,10 +1512,26 @@ sk-SK:
         si pozbieral 3, 6, 9, 12, 15 nektárov?"
       New Minecraft Hero Project: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta
         a preskúmaj s ním tento svet."
+      Overworld Chop Tree: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí.
+        Kráčaj ku stromu a použi príkaz`znič blok` na to, aby si ho vyrúbal.
+      Overworld Chop Tree_2019: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa
+        vecí. Kráčaj ku stromu a použi príkaz`znič blok` na to, aby si ho vyrúbal.
+      Overworld House Frame Chosen: Vybuduj zvyšok svojho domu z hocijakého materiálu,
+        ktorý sa ti páči. Príkaz `opakuj` ti pri tom veľmi pomôže.
+      Overworld House Frame Chosen_2019: Vybuduj zvyšok svojho domu z hocijakého materiálu,
+        ktorý sa ti páči. Príkaz `opakuj` ti pri tom veľmi pomôže.
       Overworld Move to Sheep: Pohni sa ešte o jeden krok dopredu, aby si sa dostal
         ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
         dostal ku ovci.
+      Overworld Place Wall: Každý dom sa začína stenou. Postav prvú časť domu tak,
+        že použiješ príkazy `umiestni` a `posuň sa dopredu` v  opakovacom cykle.
+      Overworld Place Wall_2019: Každý dom sa začína stenou. Postav prvú časť domu
+        tak, že použiješ príkazy `umiestni` a `posuň sa dopredu` v  opakovacom cykle.
+      Overworld Shear Sheep: Je čas na strihanie oviec! Použi príkaz `ostrihaj` na
+        to, aby si z oboch oviec zozbieral/a vlnu.
+      Overworld Shear Sheep_2019: Je čas na strihanie oviec! Použi príkaz `ostrihaj`
+        na to, aby si z oboch oviec zozbieral/a vlnu.
       Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a
         dĺžkou strán 150 pixelov.
       Standalone_Artist_3: Dokážeš nakresliť tento šesťuholník so stranami 100 pixelov
@@ -1536,6 +1557,20 @@ sk-SK:
         štvorcov, trojuholníkov alebo osemuholníkov?
       Standalone_Artist_9: A teraz smelo do toho a nakresli obrázok aký len chceš!
         Dokonca máš jednú nevyužitú funkciu, ktorá spraví čokoľvek si zmyslíš!
+      Underground Avoiding Lava: Láva sa ukrýva pod niektorými z týchto blokov, ktoré
+        budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť
+        príkaz `ak`. Pridaj príkaz `posuň sa dopredu`  na správne miesto, aby si vyťažil
+        tieto bloky.
+      Underground Avoiding Lava_2019: Láva sa ukrýva pod niektorými z týchto blokov,
+        ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš
+        použiť príkaz `ak`. Pridaj príkaz `posuň sa dopredu`  na správne miesto, aby
+        si vyťažil tieto bloky.
+      Underground If Statements: Teraz to bude zapeklité. Vyťaž 3 červené kamene,
+        no nespadni pritom do lávy. Použí príkaz  `ak` aby si umiestnil kamene cez
+        všetku lávu, ktorú odkryješ.
+      Underground If Statements_2019: Teraz to bude zapeklité. Vyťaž 3 červené kamene,
+        no nespadni pritom do lávy. Použí príkaz  `ak` aby si umiestnil kamene cez
+        všetku lávu, ktorú odkryješ.
       Virtual Pet 1: |-
         Toto je žirafa Geraldine, tvoje nové domáce zvieratko .
 
@@ -1664,6 +1699,9 @@ sk-SK:
         -   Oba útvary majú **strany o dĺžke 50 pixelov**
         -   Pri kreslení _osemuholníkov_ sa musíš otáčať o \*\* 45 stupňov\*\*.
         -   Pri kreslení _trojuholníkov_ sa musíš otáčať o **120 stupňov**.
+      course2_bee_conditionals_challenge1: "Pozberaj všetok nektár a vyrob z neho
+        med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.\nSkontroluj
+        každé pole a zisti, či je tam kvet, alebo plást. "
       course2_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých
         **10** drahokamov?
       course2_harvester_loops_challenge1: Pozbieraj všetku kukuricu.
@@ -1686,7 +1724,165 @@ sk-SK:
       course4_harvester_nested_loops_challenge1: _"Potrebujem pomoc na farme! Pomôž
         mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
         nástrojov."_
+      courseA_artist_loops10: "## Čas vrátiť sa späť na pevninu. Pômož mi s kladením
+        kameňov, aby som nespadol!"
+      courseA_artist_loops10_2018: "## Čas vrátiť sa späť na pevninu. Pômož mi s kladením
+        kameňov, aby som nespadol!"
+      courseA_artist_loops10_2019: "## Čas vrátiť sa späť na pevninu. Pômož mi s kladením
+        kameňov, aby som nespadol!"
+      courseA_artist_loops11: |-
+        ## Pomôž mi postaviť schody, aby som mohol sledovať ako loď odpláva.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## Pomôž mi postaviť schody, aby som mohol sledovať ako loď odpláva.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## Pomôž mi postaviť schody, aby som mohol sledovať ako loď odpláva.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops12: |-
+        Umelec v diaľke uvidel niečo smiešne. Nakresli, čo si myslíš, že uvidel.
+
+        * * *
+
+        ### Nápady
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2018: |-
+        Umelec v diaľke uvidel niečo smiešne. Nakresli, čo si myslíš, že uvidel.
+
+        * * *
+
+        ### Nápady
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        Umelec v diaľke uvidel niečo smiešne. Nakresli, čo si myslíš, že uvidel.
+
+        * * *
+
+        ### Nápady
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops2: |-
+        Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2018: |-
+        Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3: Umelec sa pokúša nakresliť čiaru 5 krát, ale nedarí sa
+        mu. Vieš mu pomôcť?
+      courseA_artist_loops3_2018: Umelec sa pokúša nakresliť čiaru 5 krát, ale nedarí
+        sa mu. Vieš mu pomôcť?
+      courseA_artist_loops3_2019: Umelec sa pokúša nakresliť čiaru 5 krát, ale nedarí
+        sa mu. Vieš mu pomôcť?
+      courseA_artist_loops4: |-
+        Teraz použi tento cyklus <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>, na nakreslenie čiary päť krát!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        Teraz použi tento cyklus <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>, na nakreslenie čiary päť krát!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        Teraz použi tento cyklus <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>, na nakreslenie čiary päť krát!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops5: |-
+        ## Nakresli čiaru, ktorá bude zložená zo siedmich ťahov. Toto bude náš horizont
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2018: |-
+        ## Nakresli čiaru, ktorá bude zložená zo siedmich ťahov. Toto bude náš horizont
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
+        ## Nakresli čiaru, ktorá bude zložená zo siedmich ťahov. Toto bude náš horizont
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops6: |-
+        ## Poďme do pozadia vložiť pekný kopec!
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## Poďme do pozadia vložiť pekný kopec!
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Poďme do pozadia vložiť pekný kopec!
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops7: |-
+        ## Použi cyklus <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> , aby si do vody pridal/a vlny.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2018: |-
+        ## Použi cyklus <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> , aby si do vody pridal/a vlny.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: Použi blok "opakovať", aby si do vody pridal vlny
+      courseA_artist_loops8: |-
+        ## Potrebujeme rebrík do loďe.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2018: |-
+        ## Potrebujeme rebrík do loďe.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## Potrebujeme rebrík do loďe.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops9: |-
+        ## **Výzva:**  Schody dolu na mólo sú zlomené. Pomôž mi ich opraviť.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        ## **Výzva:**  Schody dolu na mólo sú zlomené. Pomôž mi ich opraviť.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        ## **Výzva:**  Schody dolu na mólo sú zlomené. Pomôž mi ich opraviť.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_collector_loops1: "**Voľná hra.** Toto je dobrodružka Laurel! Posúvaj
+        ju po ploche a pozbieraj toľko drahokamov, koľko len vieš. \n\nPresuň bloky
+        na pracovnú plochu a zisti, ako sa dostať k drahokamom. Získaj aspoň jeden,
+        aby si prešiel tento level."
+      courseA_collector_loops12: |-
+        _"Heuréka! Pozbieral čo najviac drahokamov!"_\
+        (Nemusíš to pozbierať všetko.)
+      courseA_collector_loops12_2018: |-
+        _"Heuréka! Pozbieral čo najviac drahokamov!"_\
+        (Nemusíš to pozbierať všetko.)
+      courseA_collector_loops12_2019: |-
+        _"Heuréka! Pozbieral čo najviac drahokamov!"_\
+        (Nemusíš to pozbierať všetko.)
+      courseA_collector_loops1_2018: "**Voľná hra.** Toto je dobrodružka Laurel! Posúvaj
+        ju po ploche a pozbieraj toľko drahokamov, koľko len vieš. \n\nPresuň bloky
+        na pracovnú plochu a zisti, ako sa dostať k drahokamom. Získaj aspoň jeden,
+        aby si prešiel tento level."
+      courseA_collector_loops1_2019: "**Voľná hra.** Toto je dobrodružka Laurel! Posúvaj
+        ju po ploche a pozbieraj toľko drahokamov, koľko len vieš. \n\nPresuň bloky
+        na pracovnú plochu a zisti, ako sa dostať k drahokamom. Získaj aspoň jeden,
+        aby si prešiel tento level."
       courseA_collector_loops2_2018: 'Pozbieraj všetky 3 kôpky! Posuň Laurel ku drahokamu
         a potom použi tento blok: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops2_2019: Pozbieraj všetky 3 drahokamy! Posuň Laurel ku
@@ -1833,14 +2029,50 @@ sk-SK:
         ku prasiatku!
       courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
         ku prasiatku!
+      courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
+      courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_playLab_events1_2019: Toto je Play Lab. Presuň bloky do svojho pracovného
         priestoru a uvidíš, čo sa stane!
       courseA_playLab_events2_2019: Pes Jorge chce povedať "Ahoj". Môžeš mu s tým
         pomôcť?
+      courseA_playLab_events3: |-
+        Pomôž psovi Jorgemu rozbehnúť sa, pripoj blok <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> k bloku udalosti <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml>, ktorú už máš na pracovnej ploche.
+
+        Pre dokončenie úlohy dostaň Jorgeho ku vlajke!
+      courseA_playLab_events3_2018: |-
+        Pomôž psovi Jorgemu rozbehnúť sa, pripoj blok <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> k bloku udalosti <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml>, ktorú už máš na pracovnej ploche.
+
+        Pre dokončenie úlohy dostaň Jorgeho ku vlajke!
+      courseA_playLab_events3_2019: |-
+        Pomôž psovi Jorgemu rozbehnúť sa, pripoj blok <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> k bloku udalosti <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml>, ktorú už máš na pracovnej ploche.
+
+        Pre dokončenie úlohy dostaň Jorgeho ku vlajke!
       courseA_playLab_events4_2018: Teraz pridaj ešte jeden blok s udalosťou, aby
         sa Jorge posunul doprava po kliknutí na šípku vpravo.
+      courseA_playLab_events5: Pridaj udalosti tak, aby sa Jorge hýbal hore a dole
+        po stlačení šípiek na klávensnici.
+      courseA_playLab_events5_2018: Pridaj udalosti tak, aby sa Jorge hýbal hore a
+        dole po stlačení šípiek na klávensnici.
+      courseA_playLab_events6_2019: Sprav to ešte zaujímavejšie, zmeň aj pozadie a
+        prehraj náhodný zvuk po kliknutí na Jorgeho. Keď bude tvoj kód hotový, klikni
+        na Jorgeho aby si to vyskúšal/a!
       courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
         Dokážeš aby dinosaurus zmizol potom, ako doňho Jorge narazí?
       courseA_playLab_events7_2019: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
@@ -1944,6 +2176,10 @@ sk-SK:
         dostať 3 do jedného riadku?
       courseB_artist_loops_challenge2_2019: Nakresli toľko X, koľko len dokážes. Dokážeš
         dostať 3 do jedného riadku?
+      courseB_collector_loops1: "**Voľná hra.** Toto je dobrodružka Laurel! Posúvaj
+        ju po ploche a pozbieraj toľko drahokamov, koľko len vieš. \n\nPresuň bloky
+        na pracovnú plochu a zisti, ako sa dostať k drahokamom. Získaj aspoň jeden,
+        aby si prešiel tento level."
       courseB_collector_loops10_2019: Pomôž Laurel pozbierať všetky drahokamy z tejto
         jaskyne.
       courseB_collector_loops11_2019: Heuréka! Pozbieraj toľko drahokamov, koľko dokážeš!
@@ -3568,6 +3804,18 @@ sk-SK:
         * * *
 
         Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
+      courseD_bee_conditionals10: |-
+        Podmienky môžu byť nápomocné aj vtedy, keď presne vieš, čo sa na každom mieste nachádza!
+
+        Pozberaj všetok nektár a urob z neho med.
+      courseD_bee_conditionals10_2018: |-
+        Podmienky môžu byť nápomocné aj vtedy, keď presne vieš, čo sa na každom mieste nachádza!
+
+        Pozberaj všetok nektár a urob z neho med.
+      courseD_bee_conditionals10_2019: |-
+        Podmienky môžu byť nápomocné aj vtedy, keď presne vieš, čo sa na každom mieste nachádza!
+
+        Pozberaj všetok nektár a urob z neho med.
       courseD_bee_conditionals1_predict1: |-
         _"Tento oblak mi zacláňa vo výhľade!"_
 
@@ -3607,6 +3855,41 @@ sk-SK:
       courseD_bee_conditionals3_2019: Nektár môžeš zbierať len z kvetov, ale musíš
         skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
         Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
+      courseD_bee_conditionals4: |-
+        Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
+
+        Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
+      courseD_bee_conditionals4_2018: |-
+        Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
+
+        Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
+      courseD_bee_conditionals4_2019: |-
+        Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
+
+        Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
+      courseD_bee_conditionals6: "_\"Teraz chcem len vyrábať med.\"_ \n\nPod niekotorými
+        z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky, či sa
+        tam nachádzajú plásty! Ak je tam plást, včela z neho _ihneď_ spraví med."
+      courseD_bee_conditionals6_2018: "_\"Teraz chcem len vyrábať med.\"_ \n\nPod
+        niekotorými z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky,
+        či sa tam nachádzajú plásty! Ak je tam plást, včela z neho _ihneď_ spraví
+        med."
+      courseD_bee_conditionals6_2019: "_\"Teraz chcem len vyrábať med.\"_ \n\nPod
+        niekotorými z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky,
+        či sa tam nachádzajú plásty! Ak je tam plást, včela z neho _ihneď_ spraví
+        med."
+      courseD_bee_conditionals7: "Niekedy sa pod oblakom skrýva kvet a niekedy včelí
+        plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu medu
+        z plástov. Pamätaj: ak je tam kvet, včela musí zobrať nektár  _ihneď_. Ak
+        je tam plást, včela musí  _ihneď_ spraviť med."
+      courseD_bee_conditionals7_2018: "Niekedy sa pod oblakom skrýva kvet a niekedy
+        včelí plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
+        medu z plástov. Pamätaj: ak je tam kvet, včela musí zobrať nektár  _ihneď_.
+        Ak je tam plást, včela musí  _ihneď_ spraviť med."
+      courseD_bee_conditionals7_2019: "Niekedy sa pod oblakom skrýva kvet a niekedy
+        včelí plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
+        medu z plástov. Pamätaj: ak je tam kvet, včela musí zobrať nektár  _ihneď_.
+        Ak je tam plást, včela musí  _ihneď_ spraviť med."
       courseD_bee_conditionals7_predict2: |-
         Niekedy sa pod oblakom skrýva kvet a niekedy včelí plást!
 
@@ -3619,6 +3902,39 @@ sk-SK:
         a niekedy plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
         medu z plástov. Zapamätaj si, že pod každým oblakom je vždy len _jeden_plást
         alebo _jeden_kvet."
+      courseD_bee_conditionals8: |-
+        **Výzva:** Pod každým z oblakov bude buď kvet alebo včelí plást!
+
+        Ak bude kvet, pozberaj nektár.
+        V opačnom prípade, vyrob med (lebo je to plást).
+      courseD_bee_conditionals8_2018: |-
+        **Výzva:** Pod každým z oblakov bude buď kvet alebo včelí plást!
+
+        Ak bude kvet, pozberaj nektár.
+        V opačnom prípade, vyrob med (lebo je to plást).
+      courseD_bee_conditionals8_2019: |-
+        **Výzva:** Pod každým z oblakov bude buď kvet alebo včelí plást!
+
+        Ak bude kvet, pozberaj nektár.
+        V opačnom prípade, vyrob med (lebo je to plást).
+      courseD_bee_conditionals9: |-
+        Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
+        Skontroluj každé pole a zisti, či je tam kvet, alebo plást. Pod každým oblakom je buď jeden kvet, alebo jeden plást.
+      courseD_bee_conditionals9_2018: |-
+        Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
+        Skontroluj každé pole a zisti, či je tam kvet, alebo plást. Pod každým oblakom je buď jeden kvet, alebo jeden plást.
+      courseD_bee_conditionals9_2019: |-
+        Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
+        Skontroluj každé pole a zisti, či je tam kvet, alebo plást. Pod každým oblakom je buď jeden kvet, alebo jeden plást.
+      courseD_bee_conditionals_challenge1: |-
+        Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
+        Skontroluj každé pole a zisti, či je tam kvet, alebo plást.
+      courseD_bee_conditionals_challenge1_2018: |-
+        Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
+        Skontroluj každé pole a zisti, či je tam kvet, alebo plást.
+      courseD_bee_conditionals_challenge1_2019: |-
+        Pozberaj všetok nektár a vyrob z neho med. Nektár môžeš zberať len z kvetov a med vyrábať z plástov.
+        Skontroluj každé pole a zisti, či je tam kvet, alebo plást.
       courseD_bee_nestedLoops1: |-
         "_Chystá sa niečo **VČEĽKÉ**!_"
 
@@ -3928,6 +4244,69 @@ sk-SK:
         potom zober tekvicu.
       courseD_farmer_condLoops9_predict1_2019: Pozbieraj všetku kukuricu a šalát a
         potom zober tekvicu.
+      courseD_farmer_while1: "_\"Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním
+        poľa na mojej farme tak, aby bolo pripravené pre výsadbu!\"_  \n\n Presuň
+        ma na hromadu hliny a použi blok \"odstráň\", aby si ju odstránil."
+      courseD_farmer_while1_2018: "_\"Ahoj, ja som farmárka. Potrebujem tvoju pomoc
+        s vyrovnaním poľa na mojej farme tak, aby bolo pripravené pre výsadbu!\"_
+        \ \n\n Presuň ma na hromadu hliny a použi blok \"odstráň\", aby si ju odstránil."
+      courseD_farmer_while1_2019: "_\"Ahoj, ja som farmárka. Potrebujem tvoju pomoc
+        s vyrovnaním poľa na mojej farme tak, aby bolo pripravené pre výsadbu!\"_
+        \ \n\n Presuň ma na hromadu hliny a použi blok \"odstráň\", aby si ju odstránil."
+      courseD_farmer_while3: |-
+        _"Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba odstrániť."_
+
+        Na vyriešenie úlohy použi čo najmänší počet blokov.
+      courseD_farmer_while3_2018: |-
+        _"Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba odstrániť."_
+
+        Na vyriešenie úlohy použi čo najmänší počet blokov.
+      courseD_farmer_while3_2019: |-
+        _"Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba odstrániť."_
+
+        Na vyriešenie úlohy použi čo najmänší počet blokov.
+      courseD_farmer_while4: |-
+        _"Neviem koľko hliny je na tejto hromade!"_
+
+        Pomôž farmárke odstrániť celú hromadu pomocou cyklu `pokiaľ tam je` .
+      courseD_farmer_while4_2018: |-
+        _"Neviem koľko hliny je na tejto hromade!"_
+
+        Pomôž farmárke odstrániť celú hromadu pomocou cyklu `pokiaľ tam je` .
+      courseD_farmer_while4_2019: |-
+        _"Neviem koľko hliny je na tejto hromade!"_
+
+        Pomôž farmárke odstrániť celú hromadu pomocou cyklu `pokiaľ tam je` .
+      courseD_farmer_while4_predict1: |-
+        _"Neviem koľko hliny je na tejto hromade!"_
+
+        Pomôž farmárke odstrániť celú hromadu pomocou cyklu `pokiaľ tam je` .
+      courseD_farmer_while4_predict1_2018: |-
+        _"Neviem koľko hliny je na tejto hromade!"_
+
+        Pomôž farmárke odstrániť celú hromadu pomocou cyklu `pokiaľ tam je` .
+      courseD_farmer_while4_predict1_2019: |-
+        _"Neviem koľko hliny je na tejto hromade!"_
+
+        Pomôž farmárke odstrániť celú hromadu pomocou cyklu `pokiaľ tam je` .
+      courseD_farmer_while6: |-
+        Pozrite na tie jamy! Každá z nich potrebuje iné množstvo hliny.
+
+        Môžeš použiť cyklus `pokiaľ` aby si ich všetky naplnil.
+      courseD_farmer_while6_2018: |-
+        Pozrite na tie jamy! Každá z nich potrebuje iné množstvo hliny.
+
+        Môžeš použiť cyklus `pokiaľ` aby si ich všetky naplnil.
+      courseD_farmer_while6_2019: |-
+        Pozrite na tie jamy! Každá z nich potrebuje iné množstvo hliny.
+
+        Môžeš použiť cyklus `pokiaľ` aby si ich všetky naplnil.
+      courseD_farmer_while8: "**Výzva:** Vyplň všetky jamy použitím čo njamenšieho
+        počtu blokov."
+      courseD_farmer_while8_2018: "**Výzva:** Vyplň všetky jamy použitím čo njamenšieho
+        počtu blokov."
+      courseD_farmer_while8_2019: "**Výzva:** Vyplň všetky jamy použitím čo njamenšieho
+        počtu blokov."
       courseD_harvester_nested_loops_challenge1: _"Potrebujem pomoc na farme! Pomôž
         mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
         nástrojov."_
@@ -4065,6 +4444,43 @@ sk-SK:
       courseD_maze_ramp5d: Dostaň vtáka k prasiatku.
       courseD_maze_ramp5d_2018: Dostaň vtáka k prasiatku.
       courseD_maze_ramp5d_2019: Dostaň vtáka k prasiatku.
+      courseD_maze_until10: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_predict2: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_predict2_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_predict2_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until4: |-
+        _"Drahý človeče. Som zombie. Som hladný. Musím ... sa dostať... k slnečnici..."_
+
+        Môžeš priviezť zombieho k slnečnici, ak použiješ len tie bloky, ktoré sú k dispozícii?
+      courseD_maze_until4_2018: |-
+        _"Drahý človeče. Som zombie. Som hladný. Musím ... sa dostať... k slnečnici..."_
+
+        Môžeš priviezť zombieho k slnečnici, ak použiješ len tie bloky, ktoré sú k dispozícii?
+      courseD_maze_until4_2019: |-
+        _"Drahý človeče. Som zombie. Som hladný. Musím ... sa dostať... k slnečnici..."_
+
+        Môžeš priviezť zombieho k slnečnici, ak použiješ len tie bloky, ktoré sú k dispozícii?
+      courseD_maze_until5: Použi blok `ak` a pomôž zombiemu rozhodnúť sa, kedy sa
+        má otočiť, aby získal slnečnicu.
+      courseD_maze_until5_2018: Použi blok `ak` a pomôž zombiemu rozhodnúť sa, kedy
+        sa má otočiť, aby získal slnečnicu.
+      courseD_maze_until5_2019: Použi blok `ak` a pomôž zombiemu rozhodnúť sa, kedy
+        sa má otočiť, aby získal slnečnicu.
+      courseD_maze_until6: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until6_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until6_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until7: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until7_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until7_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until8: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until9: "**Výzva:** Vyhni sa chomperom a pomôž zombiemu dostať
+        sa k slnečnici."
+      courseD_maze_until9_2018: "**Výzva:** Vyhni sa chomperom a pomôž zombiemu dostať
+        sa k slnečnici."
+      courseD_maze_until9_2019: "**Výzva:** Vyhni sa chomperom a pomôž zombiemu dostať
+        sa k slnečnici."
       courseD_playLab_cond1: "Aby sme sa mohli začať hrať, pirát Pegleg (postava 1)
         sa musí vedieť hýbať všetkými smermi. Pomôž Peglegovi tak, že pripojíš správne
         bloky ku jednotlivým udalostiam. \n\n* * *\n\nNa vyriešenie úlohy pomôž Peglegovi
@@ -4429,9 +4845,24 @@ sk-SK:
       courseE_farmer_ramp12c_2018: "Šalát je tento raz až na konci cestičky.\\\nChoď
         po cestičke **pokiaľ neplatí**, že si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12d: |-
+        Šalát je roztrúsený po celej záhrade.\
+        Prejdi po každej cestičke **dokiaľ** sa nedostaneš ku hlavičke šalátu, potom pokračuj v zbere **pokiaľ** sa tam ešte nejaká je.
       courseE_farmer_ramp12d_2018: "Šalát je rozptýlený po celej záhrade.\\\nChoď
         po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12d_2019: |-
+        Šalát je roztrúsený po celej záhrade.\
+        Prejdi po každej cestičke **dokiaľ** sa nedostaneš ku hlavičke šalátu, potom pokračuj v zbere **pokiaľ** sa tam ešte nejaká je.
+      courseE_farmer_ramp12e: |-
+        Šalát je roztrúsený po celej záhrade.\
+        Prejdi po každej cestičke **dokiaľ** sa nedostaneš ku hlavičke šalátu, potom pokračuj v zbere **pokiaľ** sa tam ešte nejaká je.
+      courseE_farmer_ramp12e_2018: |-
+        Šalát je roztrúsený po celej záhrade.\
+        Prejdi po každej cestičke **dokiaľ** sa nedostaneš ku hlavičke šalátu, potom pokračuj v zbere **pokiaľ** sa tam ešte nejaká je.
+      courseE_farmer_ramp12e_2019: |-
+        Šalát je roztrúsený po celej záhrade.\
+        Prejdi po každej cestičke **dokiaľ** sa nedostaneš ku hlavičke šalátu, potom pokračuj v zbere **pokiaľ** sa tam ešte nejaká je.
       courseE_farmer_ramp12f: "**Výzva**: jediný spôsob ako pozbierať celú úrodu je
         posúvať sa dopredu pokiaľ sa nedostaneš k šalátu, potom sa otoč vľavo **ak**
         je cesta vľavo, inak sa otoč vpravo."
@@ -4723,6 +5154,10 @@ sk-SK:
         **Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu.
 
         Ako môžeš použiť premenné so štvorcami, päťuholníkmi alebo šesťuholníkmi?
+      courseF_bee_conditionals10: |-
+        Podmienky môžu byť nápomocné aj vtedy, keď presne vieš, čo sa na každom mieste nachádza!
+
+        Pozberaj všetok nektár a urob z neho med.
       courseF_bee_conditionals1_predict1: |-
         _"Tento oblak mi zacláňa vo výhľade!"_
 
@@ -4738,6 +5173,18 @@ sk-SK:
       courseF_bee_conditionals3: Nektár môžeš zbierať len z kvetov, ale musíš skontrolovať
         každé miestečko, aby si si overil, či sa tam nenachádza kvet. Ak sa pod oblakom
         nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
+      courseF_bee_conditionals4: |-
+        Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
+
+        Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
+      courseF_bee_conditionals7_predict2: "Niekedy oblak zakrýva kvetinku a niekedy
+        zakrýva úľ! \n\nPouži blok `ak/inak` a pozberaj nektár pri kvetoch a vyrob
+        med pri pláste."
+      courseF_bee_conditionals8: |-
+        **Výzva:** Pod každým z oblakov bude buď kvet alebo včelí plást!
+
+        Ak bude kvet, pozberaj nektár.
+        V opačnom prípade, vyrob med (lebo je to plást).
       courseF_bee_for10: |-
         **Výzva:** Použi, čo si sa naučil o cykloch `for`, a skús vyriešiť tento problém.
 
