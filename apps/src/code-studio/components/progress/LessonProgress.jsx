@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../util/color';
-import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
-import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import LessonTrophyProgressBubble from '@cdo/apps/templates/progress/LessonTrophyProgressBubble';
 import {
   levelsForLessonId,
-  stageExtrasUrl,
+  lessonExtrasUrl,
   getPercentPerfect
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
@@ -30,7 +30,7 @@ const styles = {
   spacer: {
     marginRight: 'auto'
   },
-  stageTrophyContainer: {
+  lessonTrophyContainer: {
     border: 0,
     borderRadius: 20,
     paddingLeft: 8,
@@ -46,23 +46,23 @@ const styles = {
 };
 
 /**
- * Stage progress component used in level header and course overview.
+ * Lesson progress component used in level header and course overview.
  */
-class StageProgress extends Component {
+class LessonProgress extends Component {
   static propTypes = {
     // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,
-    stageExtrasUrl: PropTypes.string,
-    onStageExtras: PropTypes.bool,
-    stageTrophyEnabled: PropTypes.bool
+    lessonExtrasUrl: PropTypes.string,
+    onLessonExtras: PropTypes.bool,
+    lessonTrophyEnabled: PropTypes.bool
   };
 
   render() {
-    const {stageExtrasUrl, onStageExtras, stageTrophyEnabled} = this.props;
+    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
-    if (stageTrophyEnabled) {
+    if (lessonTrophyEnabled) {
       levels = levels.filter(level => !level.isConceptLevel);
     }
 
@@ -74,10 +74,10 @@ class StageProgress extends Component {
         className="react_stage"
         style={{
           ...styles.headerContainer,
-          ...(stageTrophyEnabled && styles.stageTrophyContainer)
+          ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
         }}
       >
-        {stageTrophyEnabled && <div style={styles.spacer} />}
+        {lessonTrophyEnabled && <div style={styles.spacer} />}
         {levels.map((level, index) => (
           <div
             key={index}
@@ -91,18 +91,18 @@ class StageProgress extends Component {
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
-              stageTrophyEnabled={stageTrophyEnabled}
+              lessonTrophyEnabled={lessonTrophyEnabled}
             />
           </div>
         ))}
-        {stageExtrasUrl && !stageTrophyEnabled && (
-          <StageExtrasProgressBubble
-            stageExtrasUrl={stageExtrasUrl}
-            onStageExtras={onStageExtras}
+        {lessonExtrasUrl && !lessonTrophyEnabled && (
+          <LessonExtrasProgressBubble
+            lessonExtrasUrl={lessonExtrasUrl}
+            onLessonExtras={onLessonExtras}
           />
         )}
-        {stageTrophyEnabled && (
-          <StageTrophyProgressBubble
+        {lessonTrophyEnabled && (
+          <LessonTrophyProgressBubble
             percentPerfect={getPercentPerfect(levels)}
           />
         )}
@@ -111,10 +111,13 @@ class StageProgress extends Component {
   }
 }
 
-export const UnconnectedStageProgress = StageProgress;
+export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
-  stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
-  onStageExtras: state.progress.currentLevelId === 'stage_extras'
-}))(StageProgress);
+  lessonExtrasUrl: lessonExtrasUrl(
+    state.progress,
+    state.progress.currentStageId
+  ),
+  onLessonExtras: state.progress.currentLevelId === 'stage_extras'
+}))(LessonProgress);

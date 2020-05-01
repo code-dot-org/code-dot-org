@@ -33,18 +33,18 @@ const styles = {
   }
 };
 
-class StageExtrasProgressBubble extends Component {
+class LessonExtrasProgressBubble extends Component {
   static propTypes = {
-    stageExtrasUrl: PropTypes.string.isRequired,
-    onStageExtras: PropTypes.bool.isRequired
+    lessonExtrasUrl: PropTypes.string.isRequired,
+    onLessonExtras: PropTypes.bool.isRequired
   };
   render() {
-    const {stageExtrasUrl, onStageExtras} = this.props;
+    const {lessonExtrasUrl, onLessonExtras} = this.props;
 
     const tooltipId = _.uniqueId();
     return (
       <a
-        href={stageExtrasUrl + currentLocation().search}
+        href={lessonExtrasUrl + currentLocation().search}
         style={styles.main}
         data-tip
         data-for={tooltipId}
@@ -58,7 +58,7 @@ class StageExtrasProgressBubble extends Component {
               style={{
                 ...styles.checkFlagNormal,
                 ...styles.hoverOverlay,
-                ...(onStageExtras && styles.focused)
+                ...(onLessonExtras && styles.focused)
               }}
             />
           </span>
@@ -67,7 +67,7 @@ class StageExtrasProgressBubble extends Component {
           tooltipId={tooltipId}
           icon={'flag-checkered'}
           text={i18n.stageExtras()}
-          // Currently a stage extra can not also be an assessment so this should always be false
+          // Currently a lesson extra can not also be an assessment so this should always be false
           // TODO (dmcavoy) : When we change the way we mark levels as assessment refactor
           includeAssessmentIcon={false}
         />
@@ -76,4 +76,4 @@ class StageExtrasProgressBubble extends Component {
   }
 }
 
-export default Radium(StageExtrasProgressBubble);
+export default Radium(LessonExtrasProgressBubble);
