@@ -5844,9 +5844,9 @@ it-IT:
 
         Modifica il programma in modo da assegnare un punto al pirata (personaggio 1) ogni volta che riesce a raggiungere il drago (personaggio 2).
       courseD_playLab_cond3: Usa un ciclo `ripeti per sempre` per fare in modo che
-        ogni secondo il drago (attore 2) cambi umore in modo casuale.
+        ogni secondo il drago (personaggio 2) cambi umore in modo casuale.
       courseD_playLab_cond3_2018: Usa un ciclo `ripeti per sempre` per fare in modo
-        che ogni secondo il drago (attore 2) cambi umore in modo casuale.
+        che ogni secondo il drago (personaggio 2) cambi umore in modo casuale.
       courseD_playLab_cond3a: |-
         È ora di sfruttare ciò che abbiamo imparato sulle istruzioni condizionali per rendere questo gioco fantastico.
 

@@ -7098,11 +7098,19 @@ de-DE:
           was nicht funktioniert.
         courseB_collector_loops4_b: Wenn Du verändern möchtest, wie weit Laurel geht,
           dann ändere die Zahl der Wiederholungen in der Schleife.
+        courseB_collector_loops4_c: |-
+          Laurel muss hinuntergehen und den Schatz einsammeln, nachdem die `repeat`  <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>-Schleife beendet wurde!
       courseB_collector_loops4_2019:
         courseB_collector_loops4_a: Versuche, mithilfe der Schaltfläche „Step“ herauszufinden,
           was nicht funktioniert.
         courseB_collector_loops4_b: Wenn Du verändern möchtest, wie weit Laurel geht,
           dann ändere die Zahl der Wiederholungen in der Schleife.
+        courseB_collector_loops4_c: |-
+          Laurel muss hinuntergehen und den Schatz einsammeln, nachdem die `repeat`  <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>-Schleife beendet wurde!
       courseB_collector_loops5:
         courseB_collector_loops5_a: Verwende mehr als eine Schleife, um die Aufgabe
           zu erledigen.
@@ -9588,36 +9596,190 @@ de-DE:
           Dieses Spiralmuster kann mit nur 18 Bausteinen gemeistert werden!
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      courseC_maze_debugging1:
+        courseC_maze_debugging1_a: |-
+          -   Funktioniert alles nach dem ersten Schritt?
+          -   Funktioniert nach dem zweiten Schritt noch alles?
+          -   Wo läuft es schief?
+        courseC_maze_debugging1_b: Es gibt einen Baustein, den du noch hinzufügen
+          musst, um dieses Puzzle zu vervollständigen.
+      courseC_maze_debugging1_2018:
+        courseC_maze_debugging1_a: |-
+          -   Funktioniert alles nach dem ersten Schritt?
+          -   Funktioniert nach dem zweiten Schritt noch alles?
+          -   Wo läuft es schief?
+        courseC_maze_debugging1_b: Es gibt einen Baustein, den du noch hinzufügen
+          musst, um dieses Puzzle zu vervollständigen.
+      courseC_maze_debugging1_2019:
+        courseC_maze_debugging1_a: |-
+          -   Funktioniert alles nach dem ersten Schritt?
+          -   Funktioniert nach dem zweiten Schritt noch alles?
+          -   Wo läuft es schief?
+        courseC_maze_debugging1_b: Es gibt einen Baustein, den du noch hinzufügen
+          musst, um dieses Puzzle zu vervollständigen.
       courseC_maze_debugging2:
         courseC_maze_debugging2_a: Es gibt eine Menge wertvollen Code im Arbeitsbereich.  Lösche
           nicht gleich alles, um von neuem anzufangen!
+        courseC_maze_debugging2_b: |-
+          -   Funktioniert alles nach dem ersten Schritt?
+          -   Funktioniert nach dem zweiten Schritt noch alles?
+          -   Wo läuft es schief?
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Es gibt eine Menge wertvollen Code im Arbeitsbereich.  Lösche
           nicht gleich alles, um von neuem anzufangen!
+        courseC_maze_debugging2_b: |-
+          -   Funktioniert alles nach dem ersten Schritt?
+          -   Funktioniert nach dem zweiten Schritt noch alles?
+          -   Wo läuft es schief?
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
       courseC_maze_debugging2_2019:
         courseC_maze_debugging2_a: Es gibt eine Menge wertvollen Code im Arbeitsbereich.  Lösche
           nicht gleich alles, um von neuem anzufangen!
+        courseC_maze_debugging2_b: |-
+          -   Funktioniert alles nach dem ersten Schritt?
+          -   Funktioniert nach dem zweiten Schritt noch alles?
+          -   Wo läuft es schief?
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
       courseC_maze_debugging3:
+        courseC_maze_debugging3_a: |-
+          Um einen Block aus der Mitte des Codes zu löschen, ziehe alle Blöcke in einen anderen Teil des Arbeitsbereichs.
+
+          Ziehe den Block, den du löschen möchtest, zurück in die Toolbox.
+
+          Lege schließlich deine anderen Blöcke wieder dahin zurück, wo sie hingehören.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
       courseC_maze_debugging3_2018:
+        courseC_maze_debugging3_a: |-
+          Um einen Block aus der Mitte des Codes zu löschen, ziehe alle Blöcke in einen anderen Teil des Arbeitsbereichs.
+
+          Ziehe den Block, den du löschen möchtest, zurück in die Toolbox.
+
+          Lege schließlich deine anderen Blöcke wieder dahin zurück, wo sie hingehören.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
       courseC_maze_debugging3_2019:
+        courseC_maze_debugging3_a: |-
+          Um einen Block aus der Mitte des Codes zu löschen, ziehe alle Blöcke in einen anderen Teil des Arbeitsbereichs.
+
+          Ziehe den Block, den du löschen möchtest, zurück in die Toolbox.
+
+          Lege schließlich deine anderen Blöcke wieder dahin zurück, wo sie hingehören.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging4:
+        courseC_maze_debugging4_a: Verwende die Schaltfläche "Schritt", um die Anweisungen
+          der Reihe nach durchzugehen.  Hilft das, die Zeile zu finden, wo etwas schief
+          läuft?
+        courseC_maze_debugging4_b: Eine der Drehungen ist verantwortlich dafür, dass
+          Scrat in die falsche Richtung geht. Kannst du herausfinden, in welche?
+      courseC_maze_debugging4_2018:
+        courseC_maze_debugging4_a: Verwende die Schaltfläche "Schritt", um die Anweisungen
+          der Reihe nach durchzugehen.  Hilft das, die Zeile zu finden, wo etwas schief
+          läuft?
+        courseC_maze_debugging4_b: Eine der Drehungen ist verantwortlich dafür, dass
+          Scrat in die falsche Richtung geht. Kannst du herausfinden, in welche?
+      courseC_maze_debugging4_2019:
+        courseC_maze_debugging4_a: Verwende die Schaltfläche "Schritt", um die Anweisungen
+          der Reihe nach durchzugehen.  Hilft das, die Zeile zu finden, wo etwas schief
+          läuft?
+        courseC_maze_debugging4_b: Eine der Drehungen ist verantwortlich dafür, dass
+          Scrat in die falsche Richtung geht. Kannst du herausfinden, in welche?
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_a: "Es gibt bereits viele hilfreiche Bausteine im
+          Arbeitsbereich.  Lösche diese nicht alle gleich! \n\nBenutze den \"Schritt\"-Knopf
+          um das Programm schrittweise auszuführen und herauszufinden, wo der Code
+          schiefläuft."
+        courseC_maze_debugging5_b: Versuche laut auszusprechen, was Scrat tun soll.  Ist
+          es identisch mit dem Code im Arbeitsbereich?  Was läuft falsch?
       courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_a: "Es gibt bereits viele hilfreiche Bausteine im
+          Arbeitsbereich.  Lösche diese nicht alle gleich! \n\nBenutze den \"Schritt\"-Knopf
+          um das Programm schrittweise auszuführen und herauszufinden, wo der Code
+          schiefläuft."
         courseC_maze_debugging5_c: Du kannst die Richtung des Kurvenblocks ändern,
           indem du auf die Dropdown-Liste klickst.
+        courseC_maze_debugging5_b: Versuche laut auszusprechen, was Scrat tun soll.  Ist
+          es identisch mit dem Code im Arbeitsbereich?  Was läuft falsch?
       courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_a: "Es gibt bereits viele hilfreiche Bausteine im
+          Arbeitsbereich.  Lösche diese nicht alle gleich! \n\nBenutze den \"Schritt\"-Knopf
+          um das Programm schrittweise auszuführen und herauszufinden, wo der Code
+          schiefläuft."
         courseC_maze_debugging5_c: Du kannst die Richtung des Kurvenblocks ändern,
           indem du auf die Dropdown-Liste klickst.
+        courseC_maze_debugging5_b: Versuche laut auszusprechen, was Scrat tun soll.  Ist
+          es identisch mit dem Code im Arbeitsbereich?  Was läuft falsch?
+      courseC_maze_debugging6:
+        courseC_maze_debugging6_a: |-
+          -   Was soll Scrat tun?
+          -   Was macht Scrat?
+          -   Was sagt dir das?
+        courseC_maze_debugging6_b: |-
+          Wenn du den ersten Fehler gefunden und behoben hast, durchlaufe den Debugging-Prozess erneut, um den zweiten Fehler zu finden.
+
+          Wiederhole den Prozess, bis das Programm funktioniert!
+      courseC_maze_debugging6_2018:
+        courseC_maze_debugging6_a: |-
+          -   Was soll Scrat tun?
+          -   Was macht Scrat?
+          -   Was sagt dir das?
+        courseC_maze_debugging6_b: |-
+          Wenn du den ersten Fehler gefunden und behoben hast, durchlaufe den Debugging-Prozess erneut, um den zweiten Fehler zu finden.
+
+          Wiederhole den Prozess, bis das Programm funktioniert!
+      courseC_maze_debugging6_2019:
+        courseC_maze_debugging6_a: |-
+          -   Was soll Scrat tun?
+          -   Was macht Scrat?
+          -   Was sagt dir das?
+        courseC_maze_debugging6_b: |-
+          Wenn du den ersten Fehler gefunden und behoben hast, durchlaufe den Debugging-Prozess erneut, um den zweiten Fehler zu finden.
+
+          Wiederhole den Prozess, bis das Programm funktioniert!
+      courseC_maze_debugging7:
+        courseC_maze_debugging7_a: |-
+          -   Funktioniert schon alles beim ersten Schritt?
+          -   Wie steht es mit dem zweiten Schritt?
+          -   Wo läuft es schief?
+        courseC_maze_debugging7_b: Vergiss nicht, den "Step"-Knopf zu benutzen, um
+          das Programm Zeile für Zeile auszuführen!
+        courseC_maze_debugging7_c: |-
+          Nachdem du den ersten Fehler gefunden und behoben hast, stelle sicher, dass du den Debugging-Prozess erneut verwendest, um den nächsten Fehler zu finden.
+
+          Wiederhole den Debugging-Prozess, bis das Programm funktioniert!
+      courseC_maze_debugging7_2018:
+        courseC_maze_debugging7_a: |-
+          -   Funktioniert schon alles beim ersten Schritt?
+          -   Wie steht es mit dem zweiten Schritt?
+          -   Wo läuft es schief?
+        courseC_maze_debugging7_b: Vergiss nicht, den "Step"-Knopf zu benutzen, um
+          das Programm Zeile für Zeile auszuführen!
+        courseC_maze_debugging7_c: |-
+          Nachdem du den ersten Fehler gefunden und behoben hast, stelle sicher, dass du den Debugging-Prozess erneut verwendest, um den nächsten Fehler zu finden.
+
+          Wiederhole den Debugging-Prozess, bis das Programm funktioniert!
+      courseC_maze_debugging7_2019:
+        courseC_maze_debugging7_a: |-
+          -   Funktioniert schon alles beim ersten Schritt?
+          -   Wie steht es mit dem zweiten Schritt?
+          -   Wo läuft es schief?
+        courseC_maze_debugging7_b: Vergiss nicht, den "Step"-Knopf zu benutzen, um
+          das Programm Zeile für Zeile auszuführen!
+        courseC_maze_debugging7_c: |-
+          Nachdem du den ersten Fehler gefunden und behoben hast, stelle sicher, dass du den Debugging-Prozess erneut verwendest, um den nächsten Fehler zu finden.
+
+          Wiederhole den Debugging-Prozess, bis das Programm funktioniert!
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Links oder rechts herum? Du triffst die
           Entscheidung!
@@ -10680,7 +10842,54 @@ de-DE:
       courseD_bounce_events7s_2019:
         courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
           wenn du magst!
+      courseD_collector_debugging1:
+        courseD_collector_debugging1_a: |-
+          Verwende die Schaltfläche "Schritt", um zu sehen, ob beim ersten Schritt schon alles richtig ist.
+
+          Wie steht es mit dem zweiten Schritt?
+
+          Wo läuft es falsch?
+        courseD_collector_debugging1_b: Siehst du irgendwelche Muster, die durch eine
+          `wiederhole` Schleife einfacher gemacht werden könnten?
+        courseD_collector_debugging1_c: Denke daran, den `sammle`-Baustein zu benutzen,
+          um Schätze aufzusammeln, wenn du einmal dorthin gekommen bist.
+      courseD_collector_debugging10_predict1:
+        courseD_collector_debugging9_a: Es gibt verschiedene Wege, dieses Problem
+          zu lösen... aber sie alle beinhalten Drehungen!
+      courseD_collector_debugging1a_2018:
+        courseD_collector_debugging1_a: |-
+          Verwende die Schaltfläche "Schritt", um zu sehen, ob beim ersten Schritt schon alles richtig ist.
+
+          Wie steht es mit dem zweiten Schritt?
+
+          Wo läuft es falsch?
+        courseD_collector_debugging1_c: Denke daran, den `sammle`-Baustein zu benutzen,
+          um Schätze aufzusammeln, wenn du einmal dorthin gekommen bist.
+      courseD_collector_debugging1a_2019:
+        courseD_collector_debugging1_a: |-
+          Verwende die Schaltfläche "Schritt", um zu sehen, ob beim ersten Schritt schon alles richtig ist.
+
+          Wie steht es mit dem zweiten Schritt?
+
+          Wo läuft es falsch?
+        courseD_collector_debugging1_c: Denke daran, den `sammle`-Baustein zu benutzen,
+          um Schätze aufzusammeln, wenn du einmal dorthin gekommen bist.
+      courseD_collector_debugging2:
+        courseD_collector_debugging2_a: |-
+          Verwende die Schaltfläche "Schritt", um zu sehen, ob beim ersten Schritt schon alles richtig ist.
+
+          Wie steht es mit dem zweiten Schritt?
+
+          Wo läuft es falsch?
+        courseD_collector_debugging2_b: Siehst du irgendwelche Muster, die durch eine
+          `wiederhole` Schleife einfacher gemacht werden könnten?
       courseD_collector_debugging2a_2018:
+        courseD_collector_debugging2a_a: |-
+          Verwende die Schaltfläche "Schritt", um zu sehen, ob beim ersten Schritt schon alles richtig ist.
+
+          Wie steht es mit dem zweiten Schritt?
+
+          Wo läuft es falsch?
         courseD_collector_debugging2a_c: |-
           Was passiert dann?
 
@@ -10688,12 +10897,30 @@ de-DE:
 
           Was sagt dir das?
       courseD_collector_debugging2a_2019:
+        courseD_collector_debugging2a_a: |-
+          Verwende die Schaltfläche "Schritt", um zu sehen, ob beim ersten Schritt schon alles richtig ist.
+
+          Wie steht es mit dem zweiten Schritt?
+
+          Wo läuft es falsch?
         courseD_collector_debugging2a_c: |-
           Was passiert dann?
 
           Was soll passieren?
 
           Was sagt dir das?
+      courseD_collector_debugging3:
+        courseD_collector_debugging3_a: Gibt es einen Ort, an dem Laurel etwas tut,
+          das keinen Sinn macht? Was passiert, wenn man diese Bausteine ändert?
+      courseD_collector_debugging3a_2018:
+        courseD_collector_debugging3_a: Gibt es einen Ort, an dem Laurel etwas tut,
+          das keinen Sinn macht? Was passiert, wenn man diese Bausteine ändert?
+      courseD_collector_debugging3a_2019:
+        courseD_collector_debugging3_a: Gibt es einen Ort, an dem Laurel etwas tut,
+          das keinen Sinn macht? Was passiert, wenn man diese Bausteine ändert?
+      courseD_collector_debugging4:
+        courseD_collector_debugging4_c: In dieser Schleife fehlt nur ein Baustein.
+          Kannst du herausfinden, welcher?
       courseD_collector_debugging5a_2018:
         courseD_collector_debugging5a_a: |-
           Was bewirkt es?
@@ -10712,14 +10939,36 @@ de-DE:
           Was sagt dir das?
         courseD_collector_debugging5a_b: Sobald du die erste Reihe an Schätzen gesammelt
           hast, was bleibt in deinem Code übrig?
+      courseD_collector_debugging6:
+        courseD_collector_debugging6_a: |-
+          Versuche, den Code mit der Schaltfläche "Schritt" zu durchlaufen.  Ist beim ersten Schritt noch alles gut?
+
+          Wie steht es mit dem zweiten?
+
+          Wo läuft etwas schief?
       courseD_collector_debugging6a_2018:
+        courseD_collector_debugging6_a: |-
+          Versuche, den Code mit der Schaltfläche "Schritt" zu durchlaufen.  Ist beim ersten Schritt noch alles gut?
+
+          Wie steht es mit dem zweiten?
+
+          Wo läuft etwas schief?
         courseD_collector_debugging6_b: Es sieht so aus, als ob sich alle benötigten
           Bausteine im Arbeitsbereich befinden. Versuche auf "Neuanfang" zu klicken,
           wenn es zu verwirrend wird.
       courseD_collector_debugging6a_2019:
+        courseD_collector_debugging6_a: |-
+          Versuche, den Code mit der Schaltfläche "Schritt" zu durchlaufen.  Ist beim ersten Schritt noch alles gut?
+
+          Wie steht es mit dem zweiten?
+
+          Wo läuft etwas schief?
         courseD_collector_debugging6_b: Es sieht so aus, als ob sich alle benötigten
           Bausteine im Arbeitsbereich befinden. Versuche auf "Neuanfang" zu klicken,
           wenn es zu verwirrend wird.
+      courseD_collector_debugging9:
+        courseD_collector_debugging9_a: Es gibt verschiedene Wege, dieses Problem
+          zu lösen... aber sie alle beinhalten Drehungen!
       courseD_collector_debugging_challenge2:
         courseD_collector_debugging_challenge2_a: "Beginne damit, nur **zwei** Edelsteine
           von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
