@@ -87,7 +87,7 @@ export default storybook => {
               levels: [
                 {
                   id: 23224,
-                  name: 'courseC_artist_prog_challenge1',
+                  display_name: 'courseC_artist_prog_challenge1',
                   type: 'Artist',
                   thumbnail_url:
                     'https://d3p74s6bwmy6t9.cloudfront.net/80cc9bbdbd9a05c1a0cf03500b4eb38c=development/2091.png',
@@ -95,7 +95,7 @@ export default storybook => {
                 },
                 {
                   id: 23225,
-                  name: 'courseC_PlayLab_events_challenge1',
+                  display_name: 'courseC_PlayLab_events_challenge1',
                   type: 'Studio',
                   thumbnail_url:
                     'https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png',
@@ -108,7 +108,7 @@ export default storybook => {
               levels: [
                 {
                   id: 23226,
-                  name: 'courseC_artist_prog_challenge1',
+                  display_name: 'courseC_artist_prog_challenge1',
                   type: 'Artist',
                   thumbnail_url:
                     'https://d3p74s6bwmy6t9.cloudfront.net/80cc9bbdbd9a05c1a0cf03500b4eb38c=development/2091.png',
@@ -116,7 +116,7 @@ export default storybook => {
                 },
                 {
                   id: 23227,
-                  name: 'courseB_maze_seq_challenge2',
+                  display_name: 'courseB_maze_seq_challenge2',
                   type: 'Maze',
                   perfect: false,
                   maze_summary: {
@@ -138,7 +138,7 @@ export default storybook => {
                 },
                 {
                   id: 23228,
-                  name: 'courseC_PlayLab_events_challenge1',
+                  display_name: 'courseC_PlayLab_events_challenge1',
                   type: 'Studio',
                   thumbnail_url:
                     'https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png',
