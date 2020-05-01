@@ -40,9 +40,9 @@ export default class ImagePicker extends React.Component {
     this.props.assetChosen(ICON_PREFIX + icon);
   };
 
-  setIconMode = () => this.setState({mode: 'icons'});
-  setFileMode = () => this.setState({mode: 'files'});
-  setURLMode = () => this.setState({mode: 'url'});
+  setMode = mode => {
+    this.setState({mode: mode});
+  };
 
   render() {
     const styles = {
@@ -94,13 +94,22 @@ export default class ImagePicker extends React.Component {
     if (this.props.assetChosen && imageTypeFilter) {
       modeSwitch = (
         <div>
-          <span onClick={this.setFileMode} style={styles.fileModeToggle}>
+          <span
+            onClick={() => this.setMode('files')}
+            style={styles.fileModeToggle}
+          >
             My Files
           </span>
-          <span onClick={this.setURLMode} style={styles.urlModeToggle}>
+          <span
+            onClick={() => this.setMode('url')}
+            style={styles.urlModeToggle}
+          >
             Image from URL
           </span>
-          <span onClick={this.setIconMode} style={styles.iconModeToggle}>
+          <span
+            onClick={() => this.setMode('icons')}
+            style={styles.iconModeToggle}
+          >
             Icons
           </span>
           <hr style={styles.divider} />
