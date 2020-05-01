@@ -3,7 +3,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Apprentice Reflection Overview'
+stage 'Apprentice Reflection Overview', flex_category: 'required'
 level 'welcome-apprentice-18', named: true
 
 lesson_group 'content', display_name: 'Content'
