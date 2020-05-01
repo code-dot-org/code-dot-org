@@ -4,7 +4,7 @@ login_required true
 student_detail_progress_view true
 
 lesson_group 'required', display_name: 'Overview'
-stage 'Deeper Learning Overview'
+stage 'Deeper Learning Overview', flex_category: 'required'
 level 'Deeper Learning Overview', progression: 'Background'
 level 'csd deeper learning timeline 2018-2019', progression: 'Deadlines and Payment'
 level 'deeper learning recommendations- csp - 2018', progression: 'Resource Recommendations'
