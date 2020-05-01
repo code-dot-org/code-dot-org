@@ -975,7 +975,6 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       bonus = nil
-      flex_category = nil
       lesson_group_key = nil
       lockable = nil
 
@@ -991,7 +990,6 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
-        flex_category = raw_level.delete(:stage_flex_category)
         lesson_group_key = raw_level.delete(:lesson_group)
         lockable = !!raw_level.delete(:stage_lockable)
 
@@ -1080,7 +1078,7 @@ class Script < ActiveRecord::Base
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        lesson.assign_attributes(lesson_group: lesson_group, flex_category: flex_category, lockable: lockable)
+        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable)
         lesson.save! if lesson.changed?
 
         script_level_attributes[:stage_id] = lesson.id
