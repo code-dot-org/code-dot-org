@@ -4,10 +4,7 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
-import {
-  PilotExperiment,
-  VisibleInTeacherDashboard
-} from '../../lib/script-editor/ScriptEditor.jsx';
+import {VisibleAndPilotExperiment} from '../../lib/script-editor/ScriptEditor.jsx';
 
 const styles = {
   input: {
@@ -45,15 +42,6 @@ export default class CourseEditor extends Component {
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      visible: this.props.visible,
-      pilotExperiment: this.props.pilotExperiment
-    };
-  }
 
   render() {
     const {
@@ -112,11 +100,10 @@ export default class CourseEditor extends Component {
             ))}
           </select>
         </label>
-        <VisibleInTeacherDashboard
+        <VisibleAndPilotExperiment
+          visible={this.props.visible}
+          pilotExperiment={this.props.pilotExperiment}
           paramName="visible"
-          checked={this.state.visible}
-          disabled={!!this.state.pilotExperiment}
-          onChange={e => this.setState({visible: e.target.checked})}
         />
         <label>
           Can be recommended (aka stable)
@@ -132,10 +119,6 @@ export default class CourseEditor extends Component {
             recommended version.
           </p>
         </label>
-        <PilotExperiment
-          value={this.state.pilotExperiment}
-          onChange={e => this.setState({pilotExperiment: e.target.value})}
-        />
         <label>
           Short Description (used in course cards on homepage)
           <textarea
