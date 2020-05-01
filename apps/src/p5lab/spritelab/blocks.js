@@ -163,7 +163,7 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: 'Draw',
+            text: i18n.draw(),
             action: () => {
               getStore().dispatch(
                 changeInterfaceMode(
@@ -174,7 +174,7 @@ const customInputTypes = {
             }
           },
           {
-            text: 'More',
+            text: i18n.more(),
             action: () => {
               getStore().dispatch(show(Goal.NEW_ANIMATION));
             }
