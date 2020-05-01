@@ -17,8 +17,8 @@ const styles = {
 };
 
 const description = `
-    Don't have the file downloaded? Provide the URL to an image on the web.
-    This works for URLs that end with .GIF, .PNG, or .JPEG
+    Don't have a file downloaded? Provide the URL to an image on the web.
+    This works for URLs that end with *.GIF*, *.PNG*, or *.JPG*.
     `;
 
 export default class ImageURLInput extends React.Component {
@@ -40,7 +40,7 @@ export default class ImageURLInput extends React.Component {
           currentValue={this.props.currentValue}
         />
         <div style={styles.example}>
-          Try an example! Paste in the following:
+          Need an example? Paste in the following:
           https://media.giphy.com/media/6brH8dM3zeMyA/giphy.gif
         </div>
       </div>
