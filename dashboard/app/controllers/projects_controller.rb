@@ -291,7 +291,7 @@ class ProjectsController < ApplicationController
     end
 
     iframe_embed = params[:iframe_embed] == true
-		iframe_embed_app_and_code = params[:iframe_embad_app_and_code] == true
+		iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
     if iframe_embed || iframe_embed_app_and_code
