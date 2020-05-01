@@ -1,7 +1,9 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
+import ScriptEditor, {
+  VisibleAndPilotExperiment
+} from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 describe('ScriptEditor', () => {
   const DEFAULT_PROPS = {
@@ -30,12 +32,13 @@ describe('ScriptEditor', () => {
       const checkbox = wrapper.find('input[name="visible_to_teachers"]');
       expect(checkbox.prop('checked')).to.be.false;
     });
+  });
 
-    it('is disabled and unchecked when pilotExperiment is present', () => {
+  describe('VisibleAndPilotExperiment', () => {
+    it('visible is disabled and unchecked when pilotExperiment is present', () => {
       const wrapper = mount(
-        <ScriptEditor
-          {...DEFAULT_PROPS}
-          hidden={false}
+        <VisibleAndPilotExperiment
+          visible={true}
           pilotExperiment="test-pilot"
         />
       );
@@ -44,8 +47,8 @@ describe('ScriptEditor', () => {
       expect(checkbox.prop('checked')).to.be.false;
     });
 
-    it('updates state as pilotExperiment changes', () => {
-      const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
+    it('visible updates state as pilotExperiment changes', () => {
+      const wrapper = mount(<VisibleAndPilotExperiment visible={true} />);
       const visibleInTeacherDashboard = () =>
         wrapper.find('input[name="visible_to_teachers"]');
       const pilotExperiment = () =>
