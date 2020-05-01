@@ -54,8 +54,6 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
     }
   });
 
-  console.log(options.currentImageType);
-
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
   ReactDOM.render(
