@@ -75,20 +75,19 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def summarize_progress
     summary = []
 
-    lesson_groups_for_lesson = plc_course_unit.script.lessons.map(&:lesson_group).uniq
-
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
-      Plc::LearningModule::MODULE_TYPES.select {|type| lesson_groups_for_lesson.include?(type)}.each do |lesson_group|
+      plc_course_unit.script.lesson_groups.each do |lesson_group|
+        next unless Plc::LearningModule::MODULE_TYPES.include?(lesson_group.key)
         summary << {
           category: lesson_group.localized_display_name,
           status: module_assignment_for_type(lesson_group.key).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,
-          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: lesson_group.localized_display_name.downcase.tr(' ', '-'))
+          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: lesson_group.key.downcase.tr(' ', '-'))
         }
       end
     else
       # Otherwise, status is determined by the completion of stages
-      lesson_groups_for_lesson.each do |lesson_group|
+      plc_course_unit.script.lesson_groups.each do |lesson_group|
         summary << {
           category: lesson_group.localized_display_name,
           status: Plc::EnrollmentModuleAssignment.stages_based_status(

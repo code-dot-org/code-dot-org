@@ -11,11 +11,12 @@ export default class SingleQuestionChoiceResponses extends React.Component {
     answer: PropTypes.object.isRequired,
     question: PropTypes.object.isRequired,
     section: PropTypes.string.isRequired,
-    questionId: PropTypes.string.isRequired
+    questionId: PropTypes.string.isRequired,
+    facilitators: PropTypes.object
   };
 
   render() {
-    const {section, answer, question, questionId} = this.props;
+    const {section, answer, question, questionId, facilitators} = this.props;
     // numRespondents will get either a value (for multiSelect) or undefined.
     const numRespondents = answer.num_respondents;
 
@@ -38,6 +39,7 @@ export default class SingleQuestionChoiceResponses extends React.Component {
         otherText={question['other_text']}
         otherAnswers={answer['other_answers']}
         key={questionId}
+        facilitators={facilitators}
       />
     );
   }

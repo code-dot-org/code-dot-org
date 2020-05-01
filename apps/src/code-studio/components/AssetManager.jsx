@@ -370,7 +370,7 @@ export default class AssetManager extends React.Component {
       assetList = (
         <div>
           <div
-            style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0'}}
+            style={{maxHeight: '380px', overflowY: 'scroll', margin: '1em 0'}}
           >
             <table style={{width: '100%'}}>
               <tbody>{rows}</tbody>
