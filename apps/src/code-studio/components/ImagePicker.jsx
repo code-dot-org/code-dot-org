@@ -34,7 +34,7 @@ export default class ImagePicker extends React.Component {
     elementId: PropTypes.string
   };
 
-  state = {mode: 'files'};
+  state = {mode: 'file'};
 
   getAssetNameWithPrefix = icon => {
     this.props.assetChosen(ICON_PREFIX + icon);
@@ -52,16 +52,16 @@ export default class ImagePicker extends React.Component {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: this.state.mode === 'files' ? '"Gotham 5r"' : null,
-        color: this.state.mode === 'files' ? null : '#999',
+        fontFamily: this.state.mode === 'file' ? '"Gotham 5r"' : null,
+        color: this.state.mode === 'file' ? null : '#999',
         fontSize: '16px',
         cursor: 'pointer'
       },
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        fontFamily: this.state.mode === 'icons' ? '"Gotham 5r"' : null,
-        color: this.state.mode === 'icons' ? null : '#999',
+        fontFamily: this.state.mode === 'icon' ? '"Gotham 5r"' : null,
+        color: this.state.mode === 'icon' ? null : '#999',
         cursor: 'pointer'
       },
       urlModeToggle: {
@@ -95,7 +95,7 @@ export default class ImagePicker extends React.Component {
       modeSwitch = (
         <div>
           <span
-            onClick={() => this.setMode('files')}
+            onClick={() => this.setMode('file')}
             style={styles.fileModeToggle}
           >
             My Files
@@ -107,7 +107,7 @@ export default class ImagePicker extends React.Component {
             Image from URL
           </span>
           <span
-            onClick={() => this.setMode('icons')}
+            onClick={() => this.setMode('icon')}
             style={styles.iconModeToggle}
           >
             Icons
@@ -128,7 +128,7 @@ export default class ImagePicker extends React.Component {
     }
 
     const getBody = () => {
-      if (!this.props.assetChosen || this.state.mode === 'files') {
+      if (!this.props.assetChosen || this.state.mode === 'file') {
         return (
           <AssetManager
             assetChosen={this.props.assetChosen}
@@ -145,7 +145,7 @@ export default class ImagePicker extends React.Component {
             isStartMode={isStartMode}
           />
         );
-      } else if (this.state.mode === 'icons') {
+      } else if (this.state.mode === 'icon') {
         return <IconLibrary assetChosen={this.getAssetNameWithPrefix} />;
       } else {
         return (
