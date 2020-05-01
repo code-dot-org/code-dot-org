@@ -23,13 +23,13 @@ const styles = {
     height: 40,
     marginLeft: 4,
     marginRight: 4,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    display: 'inline-block'
   },
   innerContainer: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: 33
+    alignItems: 'center'
   },
   spacer: {
     marginRight: 'auto'
@@ -97,11 +97,12 @@ class StageProgress extends Component {
         className="react_stage"
         style={{
           ...styles.headerContainer,
-          ...(stageTrophyEnabled && styles.stageTrophyContainer)
+          ...(stageTrophyEnabled && styles.stageTrophyContainer),
+          marginLeft: -offsetX
         }}
       >
         <div
-          style={{...styles.innerContainer, marginLeft: -offsetX}}
+          style={styles.innerContainer}
           ref={ref => (this.innerContainerRef = ref)}
         >
           {stageTrophyEnabled && <div style={styles.spacer} />}
