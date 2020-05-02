@@ -11,14 +11,13 @@
 -user_id = request.query_parameters[:user_id]
 
 .header_level
-  .header_level_container
-    .script_name_container
-    .progress_container
-    .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
-    %span.header_popup_link{style: 'display: none;'}
-      .header_popup_link_glyph
-        &#x25BC;
-      .header_popup_link_text= t(:more)
+  .script_name_container
+  .progress_container
+  .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
+  %span.header_popup_link{style: 'display: none;'}
+    .header_popup_link_glyph
+      &#x25BC;
+    .header_popup_link_text= t(:more)
 .header_popup
   .header_popup_scrollable
     .header_popup_body

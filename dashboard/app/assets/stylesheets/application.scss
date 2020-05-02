@@ -866,7 +866,11 @@ $default-modal-width: 640px;
 }
 
 .header_left {
+  display: flex;
+  float: left;
   z-index: 2;
+  flex-shrink: 0;
+  flex-grow: 1;
   .header_button, .header_input, .header_text {
     margin-left: 10px;
   }
@@ -977,8 +981,10 @@ $default-modal-width: 640px;
 
 .header_middle {
   display: flex;
+  flex-shrink: 1;
+  min-width: 0;
   float: left;
-  width: calc(100% - 260px);
+  /*width: calc(100% - 280px);*/
   .header_button {
     margin-top: 3px;
   }
@@ -999,6 +1005,10 @@ $default-modal-width: 640px;
   white-space: nowrap;
   width: 100%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   .progress_container {
     overflow: hidden;
   }
@@ -1006,9 +1016,18 @@ $default-modal-width: 640px;
 
 .script_name_container {
   overflow: hidden;
+  padding-right: 5px;
 }
 
 .header_right {
+  float: right;
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sign_in_or_user {
   float: left;
 }
 
@@ -1076,6 +1095,7 @@ input.header_input {
   display: inline-block;
   font-size: 16px;
   overflow: hidden;
+  padding-left: 5px;
 
   a {
     display: block;
