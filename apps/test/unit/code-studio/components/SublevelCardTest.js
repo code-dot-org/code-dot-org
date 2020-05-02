@@ -85,7 +85,7 @@ describe('SublevelCard', () => {
 
   it('renders flag bubble for lesson extras level', () => {
     const wrapper = mount(<SublevelCard {...LESSON_EXTRAS_DEFAULT_PROPS} />);
-    assert.equal(1, wrapper.find('LessonExtrasProgressBubble').length);
+    assert.equal(1, wrapper.find('LessonExtrasFlagIcon').length);
     assert.equal(
       LESSON_EXTRAS_DEFAULT_PROPS.sublevel.display_name,
       wrapper.find('.sublevel-card-title-uitest').text()
