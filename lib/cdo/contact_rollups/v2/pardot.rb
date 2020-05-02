@@ -64,11 +64,7 @@ class PardotV2
       results_in_response = 0
       prospects = []
       doc.xpath('/rsp/result/prospect').each do |node|
-        prospect = {}
-        fields.each do |field|
-          value = node.xpath(field).text
-          prospect.merge!({field => value})
-        end
+        prospect = extract_prospect_from_response(node, fields)
         prospects << prospect
 
         last_id = prospect['id']
@@ -199,7 +195,7 @@ class PardotV2
       next unless contact.key?(key)
 
       if prospect_info[:multi]
-        # For multi data fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+        # For multi-value fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
         contact[key].split(',').each_with_index do |value, index|
           prospect["#{prospect_info[:field]}_#{index}"] = value
@@ -216,6 +212,32 @@ class PardotV2
     end
 
     prospect
+  end
+
+  # Extracts prospect info from a prospect node in a Pardot's XML response.
+  # @see test method for example.
+  # @param [Nokogiri::XML::Element] prospect_node
+  # @param [Array<String>] fields
+  # @return [Hash]
+  def self.extract_prospect_from_response(prospect_node, fields)
+    {}.tap do |prospect|
+      fields.each do |field|
+        # Collect all text values for this field
+        field_node = prospect_node.xpath(field)
+        values = field_node.children.map(&:text)
+
+        if values.length == 1
+          prospect.merge!({field => values.first})
+        else
+          # For a multi-value field, to be consistent with how we update it to Pardot,
+          # set key names as [field]_0, [field]_1, etc.
+          # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
+          values.each_with_index do |value, index|
+            prospect.merge!("#{field}_#{index}" => value)
+          end
+        end
+      end
+    end
   end
 
   # Create a batch request URL containing one or more prospects in its query string.
