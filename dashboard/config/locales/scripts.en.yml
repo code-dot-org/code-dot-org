@@ -11107,10 +11107,10 @@ en:
             end_of_course_project:
               display_name: End of Course Project
         express-2019:
-          title: Express Course (2019)
-          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
-          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
-          description_audience: 'Ages: 9-18'
+          title: Curso Express (2019)
+          description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Una introducción a las ciencias de la computación: combina lo mejor de nuestro plan de estudios para escuelas primarias orientado a estudiantes mayores.'
+          description_audience: De 9 a 18 años
           stages:
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'

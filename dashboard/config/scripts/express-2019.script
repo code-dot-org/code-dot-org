@@ -1,6 +1,5 @@
 hidden false
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/express/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/express/{LESSON}'
@@ -9,6 +8,7 @@ project_widget_types ["playlab", "artist"]
 family_name 'express'
 version_year '2019'
 is_stable true
+supported_locales ["es-MX", "fr-FR"]
 curriculum_umbrella 'CSF'
 tts true
 
@@ -403,3 +403,4 @@ stage 'Build A Project'
 level 'courseF_project_exemplars_2019', progression: 'Example Projects'
 level 'CourseF_Project_SpriteLab_2019', progression: 'Sprite Lab Project'
 level 'Course F: Artist Project_2019', progression: 'Artist Project'
+
