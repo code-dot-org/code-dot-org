@@ -110,12 +110,12 @@ class Script < ActiveRecord::Base
       )
 
       lessons.reload
-      lessons.each do |stage|
-        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+      lessons.each do |lesson|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: lesson.id)
         lm.update!(
           plc_course_unit_id: unit.id,
-          name: stage.name,
-          module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
+          name: lesson.name,
+          module_type: lesson.lesson_group&.key.presence || Plc::LearningModule::REQUIRED_MODULE,
         )
       end
     end
@@ -1364,6 +1364,9 @@ class Script < ActiveRecord::Base
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
+    # TODO: Set up peer reviews to be more consistent with the rest of the system
+    # so that they don't need a bunch of one off cases (example peer reviews
+    # don't have a lesson group in the database right now)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -1378,9 +1381,9 @@ class Script < ActiveRecord::Base
         }
       end
 
-      peer_review_stage = {
+      peer_review_lesson_info = {
         name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-        flex_category: 'Peer Review',
+        lesson_group_display_name: 'Peer Review',
         levels: levels,
         lockable: false
       }
@@ -1410,7 +1413,8 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_stage,
+      peerReviewStage: peer_review_lesson_info, #TODO(dmcavoy) REMOVE AFTER A COUPLE DAYS April 2020
+      peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
