@@ -2195,24 +2195,6 @@ StudioApp.prototype.handleIframeEmbedAppAndCode_ = function(options) {
 	$('.header-wrapper').hide();
 	var vizColumn = document.getElementById('visualizationColumn');
 	$(vizColumn).addClass('chromelessShare');
-
-	if (!options.embed && !options.noHowItWorks) {
-		const buttonRow = document.getElementById('gameButtons');
-		const openWorkspace = document.createElement('button');
-		openWorkspace.setAttribute('id', 'open-workspace');
-		openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-  	dom.addClickTouchEvent(openWorkspace, function() {
-      // /c/ URLs go to /edit when we click open workspace.
-      // /project/ URLs we want to go to /view (which doesnt require login)
-  		if (/^\/c\//.test(location.pathname)) {
-  			location.pathname += '/edit';
-  		} else {
-  			location.pathname += '/view';
-      }
-  	});
-    buttonRow.appendChild(openWorkspace);
-  }
 };
 
 /**
