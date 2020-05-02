@@ -14,7 +14,18 @@ class PardotV2
   CONTACT_TO_PARDOT_PROSPECT_MAP = {
     email: {field: :email},
     pardot_id: {field: :id},
-  }
+    # Note: db_* fields are sorted alphabetically
+    city: {field: :db_City},
+    country: {field: :db_Country},
+    form_roles: {field: :db_Form_Roles},
+    forms_submitted: {field: :db_Forms_Submitted},
+    hoc_organizer_years: {field: :db_Hour_of_Code_Organizer, multi: true},
+    postal_code: {field: :db_Postal_Code},
+    professional_learning_attended: {field: :db_Professional_Learning_Attended, multi: true},
+    professional_learning_enrolled: {field: :db_Professional_Learning_Enrolled, multi: true},
+    roles: {field: :db_Roles, multi: true},
+    state: {field: :db_State},
+  }.freeze
 
   def initialize
     @new_prospects = []
