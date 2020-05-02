@@ -8,13 +8,17 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @script = @course_unit.script
     @script.update(professional_learning_course: @course.name)
 
-    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
-    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
-    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
+    @required_lesson_group = create(:lesson_group, key: Plc::LearningModule::REQUIRED_MODULE, script: @script)
+    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @script)
+    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @script)
 
-    @required_learning_module.lesson.update(script: @script, flex_category: Plc::LearningModule::REQUIRED_MODULE)
-    @content_learning_module.lesson.update(script: @script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @practice_learning_module.lesson.update(script: @script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @required_lesson_group.key)
+    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.key)
+    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.key)
+
+    @required_learning_module.lesson.update(script: @script, lesson_group: @required_lesson_group)
+    @content_learning_module.lesson.update(script: @script, lesson_group: @content_lesson_group)
+    @practice_learning_module.lesson.update(script: @script, lesson_group: @practice_lesson_group)
 
     Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
@@ -46,11 +50,12 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
+    # All the categories except Peer Review will be Content because there is no translation and that is the default
     assert_equal [
       {
-        category: "Overview",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
-        link: "/s/#{@script.name}#overview"
+        link: "/s/#{@script.name}#required"
       },
       {
         category: "Content",
@@ -58,9 +63,9 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
         link: "/s/#{@script.name}#content"
       },
       {
-        category: "Teaching Practices",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
-        link: "/s/#{@script.name}#teaching-practices"
+        link: "/s/#{@script.name}#practice"
       },
       {
         category: "Peer Review",
@@ -70,12 +75,13 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     ], @unit_enrollment.summarize_progress
   end
 
+  # All the categories except Peer Review will be Content because there is no translation and that is the default
   test 'Enrolling user in a course without an evaluation returns status appropriately' do
     Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(false)
 
     assert_equal [
       {
-        category: "Teaching Practices",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::COMPLETED,
         link: "/s/#{@script.name}"
       },
@@ -85,7 +91,7 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
         link: "/s/#{@script.name}"
       },
       {
-        category: "Overview",
+        category: "Content",
         status: Plc::EnrollmentModuleAssignment::COMPLETED,
         link: "/s/#{@script.name}"
       }

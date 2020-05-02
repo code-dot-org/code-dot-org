@@ -908,6 +908,26 @@ ar-SA:
         pick row: اختر سطر
       courseF_bee_fwp_challenge2:
         pick row: اختر سطر
+      courseF_bee_variables_1_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_1_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_2_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_2_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_3_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_3_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_4_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_4_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_5_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_5_2019:
+        collect row: جمع الصف
       courseF_bee_variables_7_2018:
         collect: اجمع
       courseF_bee_variables_7_2019:

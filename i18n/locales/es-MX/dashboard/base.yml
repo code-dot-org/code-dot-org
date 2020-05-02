@@ -172,6 +172,9 @@ es-MX:
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "Debes especificar una preferencia de correo electrónico."
+    parent_account_checkbox: "Soy padre o tutor registrándome en lugar de mi hijo"
+    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones ocasionales para el progreso y proyectos de tus hijos, y actualizaciones sobre sus cursos de ciencias de la computación?"
+    parent_account_email_label: "Correo electrónico del padre o tutor"
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País en el que está la escuela'
@@ -458,8 +461,11 @@ es-MX:
     auth_option_saved: "Has vinculado correctamente tu cuenta %{provider} con el correo electrónico %{email}."
     auth_option_saved_no_email: "Has vinculado correctamente tu cuenta %{provider}."
     update_email: "Actualizar"
+    for_parents_and_guardians: "Para padres y tutores"
+    link_a_parent_email: "Conecta tu correo electrónico como padre o tutor a esta cuenta para mantenerte al tanto del progreso y proyectos de tu hijo"
     parent_guardian_email_label: "Correo electrónico del padre o tutor"
     none: "Ninguna"
+    only_one_parent_email_supported_warning: "Nota: en este momento sólo podemos incluir el correo electrónico de un padre o tutor por cada cuenta de estudiante. "
     encrypted: "encriptado"
   user_level:
     completed: 'Completado'
@@ -1163,3 +1169,7 @@ es-MX:
       error_wrong_provider: 'Proveedor incorrecto. Asegúrate de iniciar sesión con Google.'
       error_invalid_user: 'ID de usuario inválida. Intenta iniciar sesión de nuevo.'
       error_no_code: 'Por favor, ingresa tu código de inicio de sesión.'
+  parent_email_banner:
+    text: "**¿Eres un padre o tutor?** ¡Conecta tu correo electrónico a esta cuenta para mantenerte al tanto del progreso y proyectos de tu hijo!"
+    link_your_email: "Conecta tu correo electrónico"
+    not_now: "Ahora no"

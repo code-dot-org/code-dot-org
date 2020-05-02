@@ -132,7 +132,9 @@ class JsDebugger extends React.Component {
       watchersHidden: false,
       open: props.isOpen,
       openedHeight: 120,
-      consoleWidth: 0
+      consoleWidth: 0,
+      // For Google Analytics to see if student has opened the debugger
+      userInteracted: false
     };
   }
 
@@ -244,6 +246,9 @@ class JsDebugger extends React.Component {
   }
 
   onMouseUpDebugResizeBar = () => {
+    if (this.props.debugButtons) {
+      this.setState({userInteracted: true});
+    }
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
       document.body.removeEventListener(
@@ -295,6 +300,9 @@ class JsDebugger extends React.Component {
     if (this.props.isOpen) {
       this.props.close();
     } else {
+      if (this.props.debugButtons) {
+        this.setState({userInteracted: true});
+      }
       this.props.open();
     }
   };
@@ -572,7 +580,7 @@ class JsDebugger extends React.Component {
               />
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
-                  ? 'Show Watch'
+                  ? i18n.debugShowWatchHeader()
                   : i18n.debugWatchHeader()}
               </span>
             </PaneSection>
@@ -606,7 +614,12 @@ class JsDebugger extends React.Component {
             />
           )}
         </PaneHeader>
-        {this.props.debugButtons && <DebugButtons style={openStyle} />}
+        {this.props.debugButtons && (
+          <DebugButtons
+            style={openStyle}
+            userInteracted={this.state.userInteracted}
+          />
+        )}
         {this.props.debugConsole && (
           <DebugConsole
             style={openStyle}

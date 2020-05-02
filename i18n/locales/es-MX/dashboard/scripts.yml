@@ -11277,6 +11277,8 @@ es-MX:
               name: 'Lección 11: evaluación de la unidad'
             'Lesson 11: Assessment Day':
               name: 'Lección 11: día de evaluación'
+            Intro to Programming:
+              name: Introducción a la programación
             Debugging:
               name: Depuración
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
@@ -11536,6 +11538,10 @@ es-MX:
               name: 'Lección 9: día de evaluación'
             The Need for Addressing:
               name: La necesidad de direccionamiento
+            Project - Internet Dilemmas Part 1:
+              name: Proyecto - Dilemas de Internet Parte 1
+            Project - Internet Dilemmas Part 2:
+              name: Proyecto - Dilemas de Internet Parte 2
         denny-science:
           stages:
             Earthquake Detector:
@@ -11582,6 +11588,12 @@ es-MX:
               name: Algoritmos paralelos y distribuidos
             The Limits of Algorithms:
               name: Los límites de los algoritmos
+            Unit 6 STUDENT Survey:
+              name: Unidad 6, Encuesta para estudiantes
+            Unit 6 TEACHER Survey:
+              name: Unidad 6, Encuesta para profesores
+            'Lesson 6: Assessment Day':
+              name: 'Lección 6: Día de evaluación'
         denny-science-8:
           title: Detector de colisiones
           stages:
@@ -11711,6 +11723,26 @@ es-MX:
               name: Protección de datos, parte 2
             'Lesson 14: Unit Assessment Day':
               name: 'Lección 14: día de evaluación de la unidad'
+            'Project: Innovation Simulation Part 4':
+              name: 'Proyecto: Simulación de Innovación, Parte 4'
+            'Project: Innovation Simulation Part 5':
+              name: 'Proyecto: Simulación de Innovación, Parte 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Proyecto: Simulación de Innovación, Parte 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Proyecto: Simulación de Innovación, Parte 7'
+            Project - Innovation Simulation Part 1:
+              name: 'Proyecto: Simulación de Innovación, Parte 1'
+            Project - Innovation Simulation Part 2:
+              name: 'Proyecto: Simulación de Innovación, Parte 2'
+            Project - Innovation Simulation Part 3:
+              name: 'Proyecto: Simulación de Innovación, Parte 3'
+            Project - Innovation Simulation Part 4:
+              name: 'Proyecto: Simulación de Innovación, Parte 4'
+            Project - Innovation Simulation Part 6:
+              name: 'Proyecto: Simulación de Innovación, Parte 6'
+            Project - Innovation Simulation Part 7:
+              name: 'Proyecto: Simulación de Innovación, Parte 7'
           title: Ciberseguridad e impactos globales
         csp4-preview:
           stages:
@@ -12949,6 +12981,10 @@ es-MX:
               name: Paquetes
             DNS and HTTP:
               name: DNS y HTTP
+            Project - Internet Dilemmas Part 1:
+              name: Proyecto - Dilemas de Internet Parte 1
+            Project - Internet Dilemmas Part 2:
+              name: Proyecto - Dilemas de Internet Parte 2
             'Lesson 9: Assessment Day':
               name: 'Lección 9: día de evaluación'
         csp3-2020:
@@ -12963,6 +12999,8 @@ es-MX:
               name: Proyecto - Diseñar una aplicación Parte 2
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+            Intro to Programming:
+              name: Introducción a la programación
             Debugging:
               name: Depuración
             Project - Designing an App Part 3:
@@ -12985,6 +13023,8 @@ es-MX:
               name: Los límites de los algoritmos
             Parallel and Distributed Algorithms:
               name: Algoritmos paralelos y distribuidos
+            'Lesson 6: Assessment Day':
+              name: 'Lección 6: Día de evaluación'
         csp8-2020:
           stages:
             new stage:
@@ -13001,18 +13041,38 @@ es-MX:
           stages:
             new stage:
               name: nueva etapa
+            Project - Innovation Simulation Part 1:
+              name: 'Proyecto: Simulación de Innovación, Parte 1'
+            Project - Innovation Simulation Part 2:
+              name: 'Proyecto: Simulación de Innovación, Parte 2'
+            Project - Innovation Simulation Part 3:
+              name: 'Proyecto: Simulación de Innovación, Parte 3'
             Data Policies and Privacy:
               name: Políticas y privacidad de datos 
             The Value of Privacy:
               name: El valor de la privacidad
+            Project - Innovation Simulation Part 4:
+              name: 'Proyecto: Simulación de Innovación, Parte 4'
             Security Risks Part 1:
               name: Riesgos de seguridad, parte 1
             Security Risks Part 2:
               name: Riesgos de seguridad Parte 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Proyecto: Simulación de Innovación, Parte 4'
+            Project - Innovation Simulation Part 6:
+              name: 'Proyecto: Simulación de Innovación, Parte 6'
+            Project - Innovation Simulation Part 7:
+              name: 'Proyecto: Simulación de Innovación, Parte 7'
             Protecting Data Part 1:
               name: Protección de datos, parte 1
             Protecting Data Part 2:
               name: Protección de datos, parte 2
+            'Project: Innovation Simulation Part 5':
+              name: 'Proyecto: Simulación de Innovación, Parte 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Proyecto: Simulación de Innovación, Parte 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Proyecto: Simulación de Innovación, Parte 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Lección 14: día de evaluación de la unidad'
         csp-march-virtual:
