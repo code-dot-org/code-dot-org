@@ -166,8 +166,8 @@ class CourseTest < ActiveSupport::TestCase
     summary = course.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
-                  :family_name, :version_year, :pilot_experiment,
-                  :description_short, :description_student,
+                  :family_name, :version_year, :visible, :is_stable,
+                  :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
                   :has_verified_resources, :versions, :show_assign_button], summary.keys
     assert_equal 'my-course', summary[:name]

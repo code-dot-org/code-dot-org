@@ -22,6 +22,8 @@ function showCourseEditor() {
         title={courseEditorData.course_summary.title}
         familyName={courseEditorData.course_summary.family_name}
         versionYear={courseEditorData.course_summary.version_year}
+        visible={courseEditorData.course_summary.visible}
+        isStable={courseEditorData.course_summary.is_stable}
         pilotExperiment={courseEditorData.course_summary.pilot_experiment}
         descriptionShort={courseEditorData.course_summary.description_short}
         descriptionStudent={courseEditorData.course_summary.description_student}
