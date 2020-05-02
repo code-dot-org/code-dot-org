@@ -188,6 +188,39 @@ class PardotV2Test < Minitest::Test
     end
   end
 
+  def test_extract_prospect_from_response
+    fields = %w(email id db_Opt_In db_Roles)
+    doc = create_xml_from_heredoc <<~XML
+      <rsp stat="ok">
+        <result>
+          <total_results>1</total_results>
+          <prospect>
+            <id>1</id>
+            <email>test@domain.com</email>
+            <db_Opt_In>Yes</db_Opt_In>
+            <db_Roles>
+                <value>Teacher</value>
+                <value>CSF Teacher</value>
+            </db_Roles>
+          </prospect>
+        </result>
+      </rsp>
+    XML
+
+    expected_prospect = {
+      'id' => '1',
+      'email' => 'test@domain.com',
+      'db_Opt_In' => 'Yes',
+      'db_Roles_0' => 'Teacher',
+      'db_Roles_1' => 'CSF Teacher'
+    }
+
+    prospect_node = doc.xpath('/rsp/result/prospect').first
+    prospect = PardotV2.extract_prospect_from_response(prospect_node, fields)
+
+    assert_equal expected_prospect, prospect
+  end
+
   def test_build_batch_url
     base_url = PardotV2::BATCH_CREATE_URL
     prospects = [
