@@ -4,7 +4,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
-import color from '@cdo/apps/util/color';
 
 const defaultProps = {
   lessonExtrasUrl: '/extras',
@@ -35,27 +34,8 @@ describe('LessonExtrasProgressBubble', () => {
     assert.equal(wrapper.props().href, '/extras?foo=1');
   });
 
-  it('has a grey flag icon when not current level', () => {
+  it('renders flag icon', () => {
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
-    assert.equal(
-      wrapper
-        .find('i')
-        .at(1)
-        .props().style.color,
-      color.lighter_gray
-    );
-  });
-
-  it('has a green flag icon when level result is perfect', () => {
-    const wrapper = shallow(
-      <LessonExtrasProgressBubble {...defaultProps} perfect={true} />
-    );
-    assert.equal(
-      wrapper
-        .find('i')
-        .at(1)
-        .props().style.color,
-      color.level_perfect
-    );
+    assert.equal(1, wrapper.find('LessonExtrasFlagIcon').length);
   });
 });
