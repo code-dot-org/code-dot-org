@@ -9,7 +9,6 @@ const styles = {
     display: 'block'
   },
   containerWithUpdatedAt: {
-    display: 'inline-block',
     verticalAlign: 'bottom'
   }
 };

@@ -21,8 +21,6 @@ const styles = {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     height: 40,
-    marginLeft: 4,
-    marginRight: 4,
     overflow: 'hidden',
     display: 'inline-block'
   },
