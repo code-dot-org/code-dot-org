@@ -52,6 +52,7 @@ class PardotV2
     limit_in_query = limit && limit < 200 ? limit : nil
 
     # Run repeated requests querying for prospects above our highest known Pardot ID.
+    # Stop when receiving no prospects or reaching the download limit.
     loop do
       # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
       url = "#{PROSPECT_QUERY_URL}?output=bulk"

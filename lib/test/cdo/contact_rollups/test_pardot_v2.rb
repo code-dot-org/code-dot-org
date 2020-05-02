@@ -3,37 +3,38 @@ require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
   def test_retrieve_prospects_without_result
-    pardot_response = create_xml_from_heredoc <<~XML
-      <rsp stat="ok">
-        <result>
-          <total_results>0</total_results>
-        </result>
-      </rsp>
+    empty_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok"><result></result></rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(empty_response)
 
     yielded_result = nil
     result = PardotV2.retrieve_prospects(0, ['id']) {|mappings| yielded_result = mappings}
 
     assert_equal 0, result
-    assert_equal [], yielded_result
+    assert_equal nil, yielded_result
   end
 
   def test_retrieve_prospects_with_result
     pardot_id = '1'
     email = 'alex@rollups.com'
-    pardot_response = create_xml_from_heredoc <<~XML
+    nonempty_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
           <prospect>
             <id>#{pardot_id}</id>
             <email>#{email}</email>
           </prospect>
-          <total_results>1</total_results>
         </result>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
+    empty_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok"><result></result></rsp>
+    XML
+
+    PardotV2.stubs(:post_with_auth_retry).
+      returns(nonempty_response).
+      returns(empty_response)
 
     yielded_result = nil
     result = PardotV2.retrieve_prospects(0, %w(id email)) {|mappings| yielded_result = mappings}
@@ -47,7 +48,7 @@ class PardotV2Test < Minitest::Test
 
     ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
-          <errors/>
+        <errors/>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
@@ -68,9 +69,9 @@ class PardotV2Test < Minitest::Test
 
     response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
-          <errors>
-              <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
-          </errors>
+        <errors>
+          <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
+        </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
@@ -108,7 +109,7 @@ class PardotV2Test < Minitest::Test
 
     ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
-          <errors/>
+        <errors/>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
@@ -144,9 +145,9 @@ class PardotV2Test < Minitest::Test
 
     response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
-          <errors>
-              <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
-          </errors>
+        <errors>
+          <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
+        </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
@@ -193,7 +194,6 @@ class PardotV2Test < Minitest::Test
     doc = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
-          <total_results>1</total_results>
           <prospect>
             <id>1</id>
             <email>test@domain.com</email>
@@ -246,7 +246,7 @@ class PardotV2Test < Minitest::Test
 
     ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
-          <errors/>
+        <errors/>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
@@ -261,10 +261,10 @@ class PardotV2Test < Minitest::Test
 
     response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
-          <errors>
-              <prospect identifier="0">Invalid prospect email address</prospect>
-              <prospect identifier="1">Another error</prospect>
-          </errors>
+        <errors>
+          <prospect identifier="0">Invalid prospect email address</prospect>
+          <prospect identifier="1">Another error</prospect>
+        </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
