@@ -47,10 +47,14 @@ class PardotV2
     raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
 
+    # Limit the number of prospects retrieved in each API call if the overall limit is less than 200.
+    # @see http://developer.pardot.com/kb/api-version-4/prospects/#manipulating-the-result-set
+    limit_in_query = limit && limit < 200 ? limit : nil
+
     # Run repeated requests querying for prospects above our highest known Pardot ID.
     loop do
       url = "#{PROSPECT_QUERY_URL}?id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
-      url += "&limit=#{limit}" if limit
+      url += "&limit=#{limit_in_query}" if limit_in_query
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
 
