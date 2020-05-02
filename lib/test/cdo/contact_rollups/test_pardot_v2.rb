@@ -3,7 +3,7 @@ require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
   def test_retrieve_prospects_without_result
-    pardot_response = Nokogiri::XML <<-XML
+    pardot_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
           <total_results>0</total_results>
@@ -22,7 +22,7 @@ class PardotV2Test < Minitest::Test
   def test_retrieve_prospects_with_result
     pardot_id = '1'
     email = 'alex@rollups.com'
-    pardot_response = Nokogiri::XML <<-XML
+    pardot_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
           <prospect>
@@ -45,7 +45,7 @@ class PardotV2Test < Minitest::Test
   def test_batch_create_prospects_single_contact
     contact = {email: 'crv2_test@domain.com', data: {opt_in: 1}}
 
-    ok_response = Nokogiri.XML <<-XML
+    ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
           <errors/>
       </rsp>
@@ -66,7 +66,7 @@ class PardotV2Test < Minitest::Test
       {email: 'crv2_test@domain.com', data: {opt_in: 1}}
     ]
 
-    response_with_errors = Nokogiri.XML <<-XML
+    response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
           <errors>
               <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
@@ -106,7 +106,7 @@ class PardotV2Test < Minitest::Test
       new_contact_data: {opt_in: 0}
     }
 
-    ok_response = Nokogiri.XML <<-XML
+    ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
           <errors/>
       </rsp>
@@ -142,7 +142,7 @@ class PardotV2Test < Minitest::Test
       }
     ]
 
-    response_with_errors = Nokogiri.XML <<-XML
+    response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
           <errors>
               <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
@@ -211,7 +211,7 @@ class PardotV2Test < Minitest::Test
       {email: 'test@domain.com', id: nil, db_Opt_In: 'No'}
     ]
 
-    ok_response = Nokogiri.XML <<-XML
+    ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
           <errors/>
       </rsp>
@@ -226,7 +226,7 @@ class PardotV2Test < Minitest::Test
       {email: 'test@domain.com', id: nil, db_Opt_In: 'No'}
     ]
 
-    response_with_errors = Nokogiri.XML <<-XML
+    response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
           <errors>
               <prospect identifier="0">Invalid prospect email address</prospect>
@@ -264,5 +264,14 @@ class PardotV2Test < Minitest::Test
       delta = PardotV2.calculate_data_delta test[:old_data], test[:new_data]
       assert_equal test[:expected_delta], delta, "Test index #{index} failed"
     end
+  end
+
+  # @param str a heredoc string
+  # @return Nokogiri::XML::Document
+  def create_xml_from_heredoc(str)
+    # Removes double whitespaces and newline characters in the input before parsing.
+    # Otherwise they will pollute XML document result.
+    cleaned_str = str.gsub(/^\s+/, '').delete("\n")
+    Nokogiri::XML cleaned_str
   end
 end
