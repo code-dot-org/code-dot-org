@@ -71,6 +71,7 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
+    /*
     // which dot is current level?
     var currentLevelIndex = 0;
     for (const [i, l] of levels.entries()) {
@@ -89,6 +90,7 @@ class LessonProgress extends Component {
     if (currentLevelX > currentInnerContainerWidth - 6 * 17) {
       offsetX = currentLevelX - currentInnerContainerWidth + 6 * 17;
     }
+    */
 
     return (
       <div
@@ -98,35 +100,37 @@ class LessonProgress extends Component {
           ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
         }}
       >
-        {lessonTrophyEnabled && <div style={styles.spacer} />}
-        {levels.map((level, index) => (
-          <div
-            key={index}
-            style={{
-              ...(level.isUnplugged &&
-                level.isCurrentLevel &&
-                styles.pillContainer)
-            }}
-          >
-            <ProgressBubble
-              level={level}
-              disabled={false}
-              smallBubble={!level.isCurrentLevel}
-              lessonTrophyEnabled={lessonTrophyEnabled}
+        <div style={styles.innerContainer}>
+          {lessonTrophyEnabled && <div style={styles.spacer} />}
+          {levels.map((level, index) => (
+            <div
+              key={index}
+              style={{
+                ...(level.isUnplugged &&
+                  level.isCurrentLevel &&
+                  styles.pillContainer)
+              }}
+            >
+              <ProgressBubble
+                level={level}
+                disabled={false}
+                smallBubble={!level.isCurrentLevel}
+                lessonTrophyEnabled={lessonTrophyEnabled}
+              />
+            </div>
+          ))}
+          {lessonExtrasUrl && !lessonTrophyEnabled && (
+            <LessonExtrasProgressBubble
+              lessonExtrasUrl={lessonExtrasUrl}
+              onLessonExtras={onLessonExtras}
             />
-          </div>
-        ))}
-        {lessonExtrasUrl && !lessonTrophyEnabled && (
-          <LessonExtrasProgressBubble
-            lessonExtrasUrl={lessonExtrasUrl}
-            onLessonExtras={onLessonExtras}
-          />
-        )}
-        {lessonTrophyEnabled && (
-          <LessonTrophyProgressBubble
-            percentPerfect={getPercentPerfect(levels)}
-          />
-        )}
+          )}
+          {lessonTrophyEnabled && (
+            <LessonTrophyProgressBubble
+              percentPerfect={getPercentPerfect(levels)}
+            />
+          )}
+        </div>
       </div>
     );
   }
