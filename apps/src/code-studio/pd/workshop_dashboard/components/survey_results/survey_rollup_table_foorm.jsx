@@ -33,7 +33,6 @@ const styles = {
 export default class SurveyRollupTableFoorm extends React.Component {
   static propTypes = {
     workshopRollups: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
     courseName: PropTypes.string.isRequired,
     isPerFacilitator: PropTypes.bool.isRequired,
     facilitators: PropTypes.object
@@ -374,7 +373,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
   // format numerator and denominator into format for displaying in the table
   getFormattedRowData(numerator, denominator) {
     if (numerator === null || numerator === undefined || numerator === '') {
-      console.log('found empty numerator');
       return '';
     }
     return `${numerator} / ${denominator}`;
