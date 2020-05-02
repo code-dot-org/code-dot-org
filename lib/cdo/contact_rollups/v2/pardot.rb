@@ -53,35 +53,27 @@ class PardotV2
 
     # Run repeated requests querying for prospects above our highest known Pardot ID.
     loop do
-      url = "#{PROSPECT_QUERY_URL}?id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
+      # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
+      url = "#{PROSPECT_QUERY_URL}?output=bulk"
+      url += "&id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
       url += "&limit=#{limit_in_query}" if limit_in_query
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
 
-      # Pardot returns the count total available prospects (not capped to 200),
-      # although the data for a max of 200 are contained in the response.
-      # The total prospects count changes in each loop iteration because the url we
-      # send to Pardot also changes.
-      # @see http://developer.pardot.com/kb/api-version-4/prospects/#xml-response-format
-      total_results = doc.xpath('/rsp/result/total_results').text.to_i
-
-      results_in_response = 0
       prospects = []
       doc.xpath('/rsp/result/prospect').each do |node|
         prospect = extract_prospect_from_response(node, fields)
         prospects << prospect
-
         last_id = prospect['id']
-        results_in_response += 1
       end
+      break if prospects.empty?
 
       yield prospects if block_given?
-      log "Retrieved #{results_in_response}/#{total_results} new Pardot IDs. Last Pardot ID = #{last_id}."
 
-      # Stop if all the remaining results were in this response or we reached the download limit.
-      total_results_retrieved += results_in_response
-      break if results_in_response == total_results ||
-        (limit && total_results_retrieved >= limit)
+      total_results_retrieved += prospects.length
+      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}."\
+        " #{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
+      break if limit && total_results_retrieved >= limit
     end
 
     total_results_retrieved
