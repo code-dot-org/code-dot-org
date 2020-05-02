@@ -20,11 +20,11 @@ export default storybook => {
     progress: {
       stages: [
         {
-          flex_category: 'cat1',
+          lesson_group_display_name: 'cat1',
           levels: []
         },
         {
-          flex_category: 'cat2',
+          lesson_group_display_name: 'cat2',
           levels: []
         }
       ],

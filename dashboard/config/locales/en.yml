@@ -904,6 +904,7 @@ en:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
+    peer_review: 'Peer Review'
   flex_category:
     required: 'Overview'
     content: 'Content'
