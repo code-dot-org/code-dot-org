@@ -6,6 +6,7 @@ import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
+import queryString from 'query-string';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
@@ -97,21 +98,34 @@ export default class SublevelCard extends React.Component {
     userId: PropTypes.number
   };
 
-  getQueryString = () => {
+  getSublevelUrl = () => {
     const {isLessonExtra, sublevel, sectionId, userId} = this.props;
-    let url;
+
     if (isLessonExtra) {
-      url = `?id=${sublevel.id}`;
+      const baseUrl = location.origin + location.pathname + '?';
       if (sectionId && userId) {
         // Both sectionId and userId are required to link to a student's work on a bonus level.
-        url += `&section_id=${sectionId}&user_id=${userId}`;
+        return (
+          baseUrl +
+          queryString.stringify({
+            id: sublevel.id,
+            section_id: sectionId,
+            user_id: userId
+          })
+        );
       } else if (sectionId) {
-        url += `&section_id=${sectionId}`;
+        return (
+          baseUrl +
+          queryString.stringify({
+            id: sublevel.id,
+            section_id: sectionId
+          })
+        );
       }
-    } else {
-      url = sublevel.url + location.search;
+      return baseUrl + queryString.stringify({id: sublevel.id});
     }
-    return url;
+
+    return sublevel.url + location.search;
   };
 
   renderWithMazeThumbnail() {
@@ -151,7 +165,7 @@ export default class SublevelCard extends React.Component {
 
     if (isLessonExtra) {
       return (
-        <a style={styles.flagBubble} href={this.getQueryString()}>
+        <a style={styles.flagBubble} href={this.getSublevelUrl()}>
           <LessonExtrasFlagIcon perfect={sublevel.perfect} />
         </a>
       );
@@ -171,12 +185,12 @@ export default class SublevelCard extends React.Component {
         style={styles.row}
         className="uitest-bubble-choice"
       >
-        <a href={this.getQueryString()}>{this.renderThumbnail()}</a>
+        <a href={this.getSublevelUrl()}>{this.renderThumbnail()}</a>
         <div style={styles.column}>
           <div style={styles.bubbleAndTitle}>
             {this.renderBubble()}
             <a
-              href={this.getQueryString()}
+              href={this.getSublevelUrl()}
               style={styles.title}
               className="sublevel-card-title-uitest"
             >
