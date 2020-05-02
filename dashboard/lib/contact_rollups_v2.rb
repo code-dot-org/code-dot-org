@@ -13,11 +13,6 @@ class ContactRollupsV2
       ContactRollupsProcessed.import_from_raw_table
     end
 
-    log_collector.time!('Compares new and previously processed data') do
-      ContactRollupsComparison.delete_all
-      ContactRollupsComparison.compile_processed_data
-    end
-
     if sync_with_pardot
       log_collector.time!('Downloads new email-Pardot ID mappings') do
         ContactRollupsPardotMemory.download_pardot_ids

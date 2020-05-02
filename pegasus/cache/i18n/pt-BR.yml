@@ -25,10 +25,10 @@ pt-BR:
   n_have_learned_an_hoc: "<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>"
   try_hoc_num_served: "<h1>Faça uma</h1><h2>Hora do Código</h2><h3>%{num} atendidos</h3>"
   try_hoc_num_served_markdown: |-
-    # Faça uma\
-    \
-    ## Hora do Código\
-    \
+    # Faça uma
+
+    ## Hora do Código
+
     ### %{num} atendidos #Try an
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora

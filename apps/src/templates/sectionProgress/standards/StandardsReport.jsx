@@ -22,7 +22,7 @@ import {
   setTeacherCommentForReport,
   lessonsByStandard
 } from './sectionStandardsProgressRedux';
-import StandardsLegendForPrint from './StandardsLegendForPrint';
+import StandardsLegend from './StandardsLegend';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
@@ -180,7 +180,7 @@ class StandardsReport extends Component {
                   style={styles.table}
                   isViewingReport={true}
                 />
-                <StandardsLegendForPrint />
+                <StandardsLegend />
                 <h2 style={styles.headerColor}>
                   {i18n.standardsGetInvolved()}
                 </h2>

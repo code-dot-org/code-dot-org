@@ -712,7 +712,6 @@ class ActivitiesControllerTest < ActionController::TestCase
         post :milestone,
           params: @milestone_params.merge(
             user_id: 0,
-            save_to_gallery: 'true',
             image: Base64.encode64(@good_image)
           )
       end
