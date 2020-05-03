@@ -1000,4 +1000,21 @@ class LevelTest < ActiveSupport::TestCase
     level.valid?
     assert_equal level.contained_level_names, ['real_name']
   end
+
+  test 'parent levels and child levels' do
+    parent = create :level
+    child = create :level
+    parent.child_levels << child
+    assert_equal [parent], child.parent_levels
+
+    # cannot add the same child a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      parent.child_levels << child
+    end
+
+    # cannot add the same parent a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      child.parent_levels << parent
+    end
+  end
 end
