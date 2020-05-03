@@ -14,4 +14,6 @@
 #
 
 class ParentLevelsChildLevel < ActiveRecord::Base
+  belongs_to :parent_level, class_name: 'Level'
+  belongs_to :child_level, class_name: 'Level'
 end
