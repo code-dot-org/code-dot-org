@@ -606,7 +606,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         type: arg.type,
         options: arg.options,
         assignment: arg.assignment,
-        defer: arg.defer
+        defer: arg.defer,
+        customOptions: arg.customOptions
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
