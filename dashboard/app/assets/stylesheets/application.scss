@@ -838,7 +838,7 @@ $default-modal-width: 640px;
   float: left;
   z-index: 2;
   flex-shrink: 0;
-  flex-grow: 1;
+  flex-grow: 0;
   .header_button, .header_input, .header_text {
     margin-left: 10px;
   }
@@ -950,6 +950,7 @@ $default-modal-width: 640px;
 .header_middle {
   display: flex;
   flex-shrink: 1;
+  flex-grow: 1;
   min-width: 0;
   float: left;
   /*width: calc(100% - 280px);*/
@@ -990,7 +991,7 @@ $default-modal-width: 640px;
 .header_right {
   float: right;
   flex-shrink: 0;
-  flex-grow: 1;
+  flex-grow: 0;
   display: flex;
   justify-content: flex-end;
 }

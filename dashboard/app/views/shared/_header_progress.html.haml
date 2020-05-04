@@ -1,30 +1,35 @@
-- small_text = @script && (@script.name == "starwars" || @script.name == "starwarsblocks")
-- if @stage_extras
-  - text = @stage.localized_title
-- else
-  - stage = @stage || @script_level.lesson
-  - text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
+-# Put these all into one React component that manages their spacing:
+-#   .script_name_container
+-#   .progress_container
+-#   .header_finished_link
+-#   .header_popup_link
+-#
+-# Importantly, that component must be able to find out what its own width is,
+-# up front, so that it can render all these things spaced appropriately.
+-#
+-# One question: who should create this component?
+-# It seems likely that it should be the header.js' header.build function
 
--# Pass along section_id param so that when teacher moves between lesson page and course overview
--# they maintain their section.
--section_id = request.query_parameters[:section_id]
--user_id = request.query_parameters[:user_id]
-
+-# We'll attach the new React stuff to this
 .header_level
-  .script_name_container
-  .progress_container
-  .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
-  %span.header_popup_link{style: 'display: none;'}
-    .header_popup_link_glyph
-      &#x25BC;
-    .header_popup_link_text= t(:more)
+
+-# Let's first replace all this in header.js
+  .header_level
+    -# _header_progress.js attaches ScriptName DOM component here.
+    .script_name_container
+
+    -# header.js' header.build function calls
+    -# progress.js' progress.renderStageProgress
+    -# which attaches LessonProgress here.
+    .progress_container
+
+    .header_finished_link{style: 'display: none;', class: ('small_font_on_tablet' if small_text)}
+    .header_popup_link{style: 'display: none;'}
+      .header_popup_link_glyph
+        &#x25BC;
+      .header_popup_link_text= t(:more)
+
 .header_popup
   .header_popup_scrollable
     .header_popup_body
       .user-stats-block
-
-- content_for(:body_scripts) do
-  - script_data = {scriptName: {name: text,
-    href: script_path(@script, section_id: section_id, user_id: user_id),
-    smallText: small_text}.to_json}
-  %script{type: "text/javascript", src: webpack_asset_path('js/shared/_header_progress.js'), data: script_data}

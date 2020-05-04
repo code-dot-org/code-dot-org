@@ -11,8 +11,13 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import Measure from 'react-measure';
 
 const styles = {
+  outerContainer: {
+    width: '100%',
+    overflow: 'hidden'
+  },
   headerContainer: {
     // With our new bubble we don't want any padding above/below
     paddingLeft: 5,
@@ -21,7 +26,6 @@ const styles = {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     height: 40,
-    overflow: 'hidden',
     display: 'inline-block'
   },
   innerContainer: {
@@ -59,6 +63,17 @@ class LessonProgress extends Component {
     lessonTrophyEnabled: PropTypes.bool
   };
 
+  state = {
+    outerDimensions: {
+      width: -1,
+      height: -1
+    },
+    innerDimensions: {
+      width: -1,
+      height: -1
+    }
+  };
+
   render() {
     const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
     let levels = this.props.levels;
@@ -71,7 +86,6 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    /*
     // which dot is current level?
     var currentLevelIndex = 0;
     for (const [i, l] of levels.entries()) {
@@ -83,55 +97,77 @@ class LessonProgress extends Component {
 
     var offsetX = 0;
 
-    var currentLevelX = currentLevelIndex * 17;
-    var currentInnerContainerWidth = 0.6 * (window.innerWidth - 260); //this.innerContainerRef.offsetWidth;
+    if (this.state.outerDimensions.width !== -1) {
+      var currentLevelX = currentLevelIndex * 17;
+      var currentOuterContainerWidth = this.state.outerDimensions.width; //this.innerContainerRef.offsetWidth;
 
-    // do we need to pull our dots to the left to see the current level?
-    if (currentLevelX > currentInnerContainerWidth - 6 * 17) {
-      offsetX = currentLevelX - currentInnerContainerWidth + 6 * 17;
+      // do we need to pull our dots to the left to see the current level?
+      //if (currentLevelX > currentOuterContainerWidth - 6 * 17) {
+      offsetX = currentLevelX - currentOuterContainerWidth / 2 + 40 / 2;
+      if (offsetX < 0) {
+        offsetX = 0;
+      }
+      //}
     }
-    */
 
     return (
-      <div
-        className="react_stage"
-        style={{
-          ...styles.headerContainer,
-          ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
+      <Measure
+        bounds
+        onResize={contentRect => {
+          this.setState({outerDimensions: contentRect.bounds});
+          console.log('outerDimensions', contentRect.bounds);
         }}
       >
-        <div style={styles.innerContainer}>
-          {lessonTrophyEnabled && <div style={styles.spacer} />}
-          {levels.map((level, index) => (
+        {/* The container for what we will see of the progress control. */}
+        {({measureRef}) => (
+          <div ref={measureRef} style={styles.outerContainer}>
+            {/*this.state.outerDimensions.width} x {this.state.outerDimensions.height*/}
+            {/* The grey rectangle with rounded corners that we will render
+                at a panned offset. */}
             <div
-              key={index}
+              className="react_stage"
               style={{
-                ...(level.isUnplugged &&
-                  level.isCurrentLevel &&
-                  styles.pillContainer)
+                ...styles.headerContainer,
+                ...(lessonTrophyEnabled && styles.lessonTrophyContainer),
+                transform: 'translateX(' + -offsetX + 'px)'
               }}
             >
-              <ProgressBubble
-                level={level}
-                disabled={false}
-                smallBubble={!level.isCurrentLevel}
-                lessonTrophyEnabled={lessonTrophyEnabled}
-              />
+              {/* The full set of bubbles. */}
+              <div style={styles.innerContainer}>
+                {lessonTrophyEnabled && <div style={styles.spacer} />}
+                {levels.map((level, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      ...(level.isUnplugged &&
+                        level.isCurrentLevel &&
+                        styles.pillContainer)
+                    }}
+                  >
+                    <ProgressBubble
+                      level={level}
+                      disabled={false}
+                      smallBubble={!level.isCurrentLevel}
+                      lessonTrophyEnabled={lessonTrophyEnabled}
+                    />
+                  </div>
+                ))}
+                {lessonExtrasUrl && !lessonTrophyEnabled && (
+                  <LessonExtrasProgressBubble
+                    lessonExtrasUrl={lessonExtrasUrl}
+                    onLessonExtras={onLessonExtras}
+                  />
+                )}
+                {lessonTrophyEnabled && (
+                  <LessonTrophyProgressBubble
+                    percentPerfect={getPercentPerfect(levels)}
+                  />
+                )}
+              </div>
             </div>
-          ))}
-          {lessonExtrasUrl && !lessonTrophyEnabled && (
-            <LessonExtrasProgressBubble
-              lessonExtrasUrl={lessonExtrasUrl}
-              onLessonExtras={onLessonExtras}
-            />
-          )}
-          {lessonTrophyEnabled && (
-            <LessonTrophyProgressBubble
-              percentPerfect={getPercentPerfect(levels)}
-            />
-          )}
-        </div>
-      </div>
+          </div>
+        )}
+      </Measure>
     );
   }
 }
