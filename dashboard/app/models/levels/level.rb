@@ -17,12 +17,14 @@
 #  notes                 :text(65535)
 #  audit_log             :text(65535)
 #  contained_level_id    :integer
+#  template_level_id     :integer
 #
 # Indexes
 #
 #  index_levels_on_contained_level_id  (contained_level_id)
 #  index_levels_on_game_id             (game_id)
 #  index_levels_on_name                (name)
+#  index_levels_on_template_level_id   (template_level_id)
 #
 
 class Level < ActiveRecord::Base
