@@ -54,6 +54,7 @@ class SectionLoginInfo extends React.Component {
             section={section}
             students={students}
             autoPrint={autoPrint}
+            loginType={section.loginType}
           />
         )}
         {section.loginType === SectionLoginType.email && (
@@ -201,6 +202,12 @@ const styles = {
   img: {
     width: 150,
     marginTop: 10
+  },
+  listAlign: {
+    marginLeft: 10
+  },
+  sublistAlign: {
+    marginLeft: 20
   }
 };
 
@@ -209,7 +216,11 @@ class WordOrPictureLogins extends React.Component {
     studioUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
-    autoPrint: PropTypes.bool
+    autoPrint: PropTypes.bool,
+    loginType: PropTypes.oneOf([
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ]).isRequired
   };
 
   componentDidMount() {
@@ -243,35 +254,55 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, section, students, loginType} = this.props;
     const manageStudentsUrl = getManageStudentsUrl(section.id);
+    const resetColumnTitle =
+      loginType === SectionLoginType.word
+        ? i18n.secretWords()
+        : i18n.picturePassword();
 
     return (
       <div>
-        <h1>{i18n.loginInfo_signingIn()}</h1>
-        <p>{i18n.loginInfo_signinSteps()}</p>
-        <ol>
-          <li>
-            {i18n.loginInfo_signinStep1({joinUrl: `${studioUrlPrefix}/join`})}
-          </li>
-          <li>{i18n.loginInfo_signinStep2({code: section.code})}</li>
-          <li>{i18n.loginInfo_signinStep3()}</li>
-          {section.loginType === SectionLoginType.picture && (
-            <li>{i18n.loginInfo_signinStep4_secretPicture()}</li>
-          )}
-          {section.loginType === SectionLoginType.word && (
-            <li>{i18n.loginInfo_signinStep4_secretWords()}</li>
-          )}
-          <li>{i18n.loginInfo_signinStep5()}</li>
-        </ol>
+        {loginType === SectionLoginType.word && (
+          <div>
+            <h1 style={styles.heading}>{i18n.signingInWord()}</h1>
+            <p>{i18n.signingInWordIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.signingInWordPic1({
+                joinLink: `${studioUrlPrefix}/join/${section.code}`,
+                sectionCode: section.code,
+                codeOrgLink: pegasus('/')
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
+            <p style={styles.listAlign}>{i18n.signingInWord3()}</p>
+          </div>
+        )}
+        {loginType === SectionLoginType.picture && (
+          <div>
+            <h1 style={styles.heading}>{i18n.signingInPic()}</h1>
+            <p>{i18n.signingInPicIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.signingInWordPic1({
+                joinLink: `${studioUrlPrefix}/join/${section.code}`,
+                sectionCode: section.code,
+                codeOrgLink: pegasus('/')
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
+            <p style={styles.listAlign}>{i18n.signingInPic3()}</p>
+          </div>
+        )}
         <p>
-          {i18n.loginInfo_signinStepsReset({wordOrPicture: section.loginType})}
+          {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
         <SafeMarkdown
-          markdown={i18n.loginInfo_resetSecretBody({
-            url: manageStudentsUrl
+          markdown={i18n.loginInfoResetSecretDesc({
+            url: manageStudentsUrl,
+            wordOrPicture: section.loginType,
+            columnTitle: resetColumnTitle
           })}
         />
         <br />
@@ -286,7 +317,7 @@ class WordOrPictureLogins extends React.Component {
             <Button
               __useDeprecatedTag
               text={i18n.printLoginCards_button()}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.gray}
               onClick={this.printLoginCards}
               icon="print"
               iconClassName="fa"
