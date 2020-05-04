@@ -87,6 +87,32 @@ class Level < ActiveRecord::Base
     thumbnail_url
   )
 
+  validate :no_deeply_nested_levels
+
+  def no_deeply_nested_levels
+    parent_levels.each do |parent_level|
+      if parent_level.parent_levels.count > 0
+        errors.add("parent level '#{parent_level.name}' must not have its own parent levels")
+      end
+    end
+    child_levels.each do |child_level|
+      if child_level.child_levels.count > 0
+        errors.add("child level '#{child_level.name}' must not have its own child levels")
+      end
+    end
+  end
+
+  # returns all levels which depend on this level, including itself.
+  def all_depending_levels
+    self + parent_levels
+  end
+
+  # returns all scripts which depend on this level.
+  def all_scripts
+    script_levels = all_depending_levels.map(&:script_levels).flatten
+    script_levels.map(&:script).uniq
+  end
+
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super
