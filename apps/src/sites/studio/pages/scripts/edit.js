@@ -11,7 +11,6 @@ import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
-  console.log(scriptEditorData);
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.lessonLevelData;
   const lessons = (scriptData.stages || [])
