@@ -206,51 +206,9 @@ endvariants
     assert_equal expected, script_text
   end
 
-  test 'test Script DSL flex category as property hash' do
-    input_dsl = <<~DSL
-      stage 'Lesson1',
-        flex_category: 'Content'
-      level 'Level 1'
-      stage 'Lesson2',
-        flex_category: 'Practice'
-      level 'Level 2'
-      stage 'Lesson3'
-      level 'Level 3'
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
-            ]
-          },
-          {
-            stage: "Lesson2",
-            scriptlevels: [
-              {stage: "Lesson2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
-            ]
-          },
-          {
-            stage: "Lesson3",
-            scriptlevels: [
-              {stage: "Lesson3", levels: [{name: "Level 3"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
   test 'test Script DSL property lockable as property hash' do
     input_dsl = <<~DSL
       stage 'Lesson1',
-        flex_category: 'Content',
         lockable: true
       level 'Level 1'
       stage 'Lesson2'
@@ -262,7 +220,7 @@ endvariants
           {
             stage: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
+              {stage: "Lesson1", levels: [{name: "Level 1", stage_lockable: true}]},
             ]
           },
           {
