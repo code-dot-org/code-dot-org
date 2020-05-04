@@ -1526,10 +1526,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.14":
-  version "3.5.14"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.14.tgz#917f6a72140496597f2efd3cbe3214c0e168015b"
-  integrity sha512-A3hq/agzlkHVPw+WBAY4RENtUSSZ3hH5/ichO2Y2T4IhR3wD+dkqq3KwRjz4kqoez6d93bxAB1L71HpwpwclyQ==
+"@code-dot-org/blockly@3.5.15":
+  version "3.5.15"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.15.tgz#6995cefddb2fd8472e5054a035b55eaae37fb269"
+  integrity sha512-e4Tg0CzoofUQBRjS9pcwBzzHidVsPp8fiNC+j5/srHubwef+PiK1NxeELj20YoBehefii+RQ20qM6HtxFXZY/Q==
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -12111,6 +12111,13 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+pixelmatch@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/pixelmatch/-/pixelmatch-5.2.0.tgz#6433386c6a830b0d9ee3962f9ad59695500677cd"
+  integrity sha512-TdleROuanI+Uo/4PcOAH7b7qgO4kjzJO8K4y/TBAo1wx/5BE8cn1B0I6Jfk3mKcJsGpWvX7zjM8OjU5o9i+aog==
+  dependencies:
+    pngjs "^4.0.1"
+
 pkcs7@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pkcs7/-/pkcs7-1.0.2.tgz#b6dba527528c2942bfc122ce2dafcdb5e59074e7"
@@ -12156,6 +12163,11 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
+
+pngjs@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-4.0.1.tgz#f803869bb2fc1bfe1bf99aa4ec21c108117cfdbe"
+  integrity sha512-rf5+2/ioHeQxR6IxuYNYGFytUyG3lma/WW1nsmjeHlWwtb2aByla6dkVc8pmJ9nplzkTA0q2xx7mMWrOTqT4Gg==
 
 popper.js@^1.14.1:
   version "1.14.3"

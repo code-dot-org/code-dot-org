@@ -6,13 +6,17 @@ module Pd::Foorm
     extend Helper
 
     # Calculates report for a given workshop id.
+    # @param [Integer] workshop_id
+    # @param [Integer] facilitator_id_filter. The user id
+    #   of the only facilitator we want to return data for.
+    #   If all facilitator data can be viewed, facilitator_id_filter is nil
     # @return workshop report in format specified in README
-    def self.get_workshop_report(workshop_id)
+    def self.get_workshop_report(workshop_id, facilitator_id_filter)
       return unless workshop_id
 
       # get workshop summary
-      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
-      facilitators = get_formatted_facilitators_for_workshop(workshop_id)
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id, facilitator_id_filter)
+      facilitators = get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter)
       parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
 
       ws_data = Pd::Workshop.find(workshop_id)
@@ -157,12 +161,18 @@ module Pd::Foorm
     end
 
     # @param integer workshop_id: id for a workshop
+    # @param integer facilitator_id_filter: If specified, only get facilitator data for the facilitator
+    #   with this id
     # @return {facilitator_id: facilitator_name,...} object with data
     # for each facilitator for the workshop specified
-    def self.get_formatted_facilitators_for_workshop(workshop_id)
+    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter=nil)
+      facilitators_formatted = {}
+      if facilitator_id_filter
+        facilitators_formatted[facilitator_id_filter] = User.find(facilitator_id_filter).name
+        return facilitators_formatted
+      end
       workshop = Pd::Workshop.find(workshop_id)
       facilitators = workshop.facilitators
-      facilitators_formatted = {}
       return nil unless facilitators
       facilitators.each do |facilitator|
         facilitators_formatted[facilitator.id] = facilitator.name
