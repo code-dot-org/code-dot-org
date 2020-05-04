@@ -210,6 +210,41 @@ class ManageStudentsTable extends Component {
 
   // Cell formatters.
 
+  passwordHeaderFormatter = () => {
+    const {loginType} = this.props;
+    const passwordLabels = {};
+    passwordLabels[SectionLoginType.picture] = i18n.picturePassword();
+    passwordLabels[SectionLoginType.word] = i18n.secretWords();
+    passwordLabels[SectionLoginType.email] = i18n.password();
+    const passwordTooltips = {};
+    passwordTooltips[
+      SectionLoginType.picture
+    ] = i18n.editSectionLoginTypePicDesc();
+    passwordTooltips[
+      SectionLoginType.word
+    ] = i18n.editSectionLoginTypeWordDesc();
+    passwordTooltips[
+      SectionLoginType.email
+    ] = i18n.editSectionLoginTypeEmailDesc();
+    return (
+      <span style={styles.verticalAlign}>
+        <div data-for="password" data-tip="">
+          {passwordLabels[loginType]}
+        </div>
+        <ReactTooltip
+          id="password"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>{passwordTooltips[loginType]}</div>
+        </ReactTooltip>
+      </span>
+    );
+  };
+
   passwordFormatter = (loginType, {rowData}) => {
     const {sectionId} = this.props;
     const resetDisabled = this.isEditingDisabled(rowData.userType);
@@ -395,8 +430,6 @@ class ManageStudentsTable extends Component {
 
   getColumns = sortable => {
     const {loginType} = this.props;
-    const passwordLabel =
-      loginType === SectionLoginType.email ? i18n.password() : i18n.secret();
     let dataColumns = [
       {
         property: 'name',
@@ -467,7 +500,7 @@ class ManageStudentsTable extends Component {
       {
         property: 'password',
         header: {
-          label: passwordLabel,
+          formatters: [this.passwordHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
