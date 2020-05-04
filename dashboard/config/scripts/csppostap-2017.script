@@ -106,6 +106,6 @@ level 'U6 - Final Project - Student Introduction'
 level 'U6 - Final Project - Project Level'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'Post-Course Survey', flex_category: 'cspSurvey'
+stage 'Post-Course Survey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'
