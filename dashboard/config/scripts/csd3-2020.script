@@ -14,7 +14,7 @@ curriculum_umbrella 'CSD'
 tts true
 
 lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
-stage 'Programming for Entertainment', flex_category: 'csd3_1'
+stage 'Programming for Entertainment'
 level 'CSD U3L01 TFMD_2020', named: true
 level 'CSD U3 Entertainment_2018_2019_pilot_2020', named: true
 level 'CSD U3 Entertainment Sample 4_2020', progression: 'Sample Programs'
@@ -22,11 +22,11 @@ level 'CSD U3 Entertainment Sample 3_2020', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 1_2020', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_2020', progression: 'Sample Programs'
 
-stage 'Plotting Shapes', flex_category: 'csd3_1'
+stage 'Plotting Shapes'
 level 'CSD U3L02 TFMD_2020', named: true
 level 'CSD U3 Plotting Shapes Shape Lab_2020', named: true
 
-stage 'Drawing in Game Lab', flex_category: 'csd3_1'
+stage 'Drawing in Game Lab'
 level 'CSD U3L03 TFMD_2020', named: true
 level 'CSD U3 rect_2020', named: true
 level 'CSD: Drawing in Game Lab 1_2020', named: true
@@ -39,7 +39,7 @@ level 'CSD U3 drawing practice choice_2020', progression: 'Drawing'
 level 'CSD U3 debug_2020', progression: 'Drawing', assessment: true
 level 'CSD U3 drawing challenges_2020', named: true
 
-stage 'Shapes and Parameters', flex_category: 'csd3_1'
+stage 'Shapes and Parameters'
 level 'CSD U3L04 TFMD_2020', named: true
 level 'CSD U3 Random Taller Rectangle_2020', progression: 'New Shapes'
 level 'CSD U3 Random Ellipse Behind_2018_2020', progression: 'More Parameters'
@@ -51,7 +51,7 @@ level 'CSD U3 Random Debug Cloud_2018_2020', progression: 'More Parameters', ass
 level 'CSD Games Parameters challenge_2020', named: true
 level 'CSD U3 parameters shape scene_2020', named: true
 
-stage 'Variables', flex_category: 'csd3_1'
+stage 'Variables'
 level 'CSD U3L05 TFMD_2020', named: true
 level 'CSD U3 Variables Predict Where X_2020', progression: 'Code Prediction'
 level 'Introduction to Variables - Part 1_2020', named: true
@@ -62,7 +62,7 @@ level 'CSD Games variables practice_2020', progression: 'Variables'
 level 'CSD U3 Variables assessment_2020', progression: 'Variables', assessment: true
 level 'CSD Games variables challenge_2020', named: true
 
-stage 'Random Numbers', flex_category: 'csd3_1'
+stage 'Random Numbers'
 level 'CSD U3L06 TFMD_2020', named: true
 level 'CSD U3 Random random ellipse_2018_2020', progression: 'Exploring Random Numbers'
 level 'CSD U3 Random random ellipse2_2018_2020', progression: 'Using Random Numbers'
@@ -72,7 +72,7 @@ level 'CSD games random practice_2020', progression: 'Using Random Numbers'
 level 'CSD U3 Random rainbow snake_2018_2020', progression: 'Using Random Numbers', assessment: true
 level 'CSD games random challenge_2020', named: true
 
-stage 'Sprites and Animations', flex_category: 'csd3_1'
+stage 'Sprites and Animations'
 level 'CSD U3L07 TFMD_2020', named: true
 level 'CSD U3 Sprites Exploration_2020', named: true
 level 'CSD: Sprites in Game Lab_2020', named: true
@@ -86,7 +86,7 @@ level 'CSD U3 drawSprites placement match_2019_pilot_2020', progression: 'Adding
 level 'CSD U3 Sprites assessment_2020', progression: 'Adding Images', assessment: true
 level 'CSD Games Sprites Challenges_2020', named: true
 
-stage 'Sprite Properties', flex_category: 'csd3_1'
+stage 'Sprite Properties'
 level 'CSD U3L08 TFMD_2020', named: true
 level 'CSD Games properties predict_2020', named: true
 level 'CSD Games properties xy_2020', progression: 'Sprite Properties'
@@ -95,7 +95,7 @@ level 'CSD Games Properties practice_2020', progression: 'Sprite Properties'
 level 'CSD Games properties assessment_2020', progression: 'Sprite Properties', assessment: true
 level 'CSD Games Properties challenge_2020', named: true
 
-stage 'Text', flex_category: 'csd3_1'
+stage 'Text'
 level 'CSD U3L09 TFMD_2020', named: true
 level 'CSD web text explore', progression: 'Code Prediction'
 level 'CSD U3 Sprites text_2020', progression: 'Text'
@@ -104,7 +104,7 @@ level 'CSD web text practice choice_2020', progression: 'Text'
 level 'CSD web text assessment', progression: 'Text', assessment: true
 level 'CSD web text challenge choice_2020', progression: 'Challenges: Text'
 
-stage 'Mini-Project: Captioned Scenes', flex_category: 'csd3_1'
+stage 'Mini-Project: Captioned Scenes'
 level 'CSD U3L09a TFMD_2020', named: true
 level 'CSD U3 Scene Example_2018_2020', named: true
 level 'CSD U3 Sprites scene drawing_2020', progression: 'Create a Background'
@@ -112,7 +112,7 @@ level 'CSD U3 Sprites scene sprites_2020', progression: 'Add Sprites'
 level 'CSD U3 Sprites scene text_2020', progression: 'Add Text'
 level 'CSD U3 Sprites scene challenge_2020', progression: 'Review Your Scene'
 
-stage 'The Draw Loop', flex_category: 'csd3_1'
+stage 'The Draw Loop'
 level 'CSD U3L10 TFMD pilot_2020', named: true
 level 'CSD: Introduction to the Draw Loop_2020', named: true
 level 'CSD U3 Draw Loop Plugged predict 1_2020', progression: 'Draw Loop Example'
@@ -124,7 +124,7 @@ level 'CSD web draw loop practice choice', progression: 'The Draw Loop'
 level 'CSD U3 Draw Loop Plugged wiggle sprite y_2020', progression: 'The Draw Loop', assessment: true
 level 'CSD web draw loop challenge choice', progression: 'Challenges: The Draw Loop'
 
-stage 'Sprite Movement', flex_category: 'csd3_1'
+stage 'Sprite Movement'
 level 'CSD U3L12 TFMD_2020', named: true
 level 'CSD U3 - Simple Counter Predict_2020', progression: 'Code Prediction'
 level 'CSD: Animating Sprite Movement_2020', named: true
@@ -135,7 +135,7 @@ level 'CSD web movement practice choice', progression: 'Sprite Movement'
 level 'CSD U3 Sprite Movement Predict_2020', progression: 'Sprite Movement', assessment: true
 level 'CSD web movement challenge choice', progression: 'Challenges: Sprite Movement'
 
-stage 'Mini-Project: Animation', flex_category: 'csd3_1'
+stage 'Mini-Project: Animation'
 level 'CSD U3L13 TFMD_2020', named: true
 level 'CSD web project animated example', progression: 'Example Animated Scene'
 level 'CSD web project animated plan', progression: 'Plan Your Scene'
@@ -145,7 +145,7 @@ level 'CSD web project animated text', progression: 'Add Text'
 level 'CSD web project animated movement', progression: 'Add Movement'
 level 'CSD web project animated review', progression: 'Review Your Animated Scene'
 
-stage 'Conditionals', flex_category: 'csd3_1'
+stage 'Conditionals'
 level 'CSD U3L14 TFMD_2020', named: true
 level 'CSD U3 Boolean Predict_2020', progression: 'Code Prediction'
 level 'CSD U3 - Booleans Video_2020', named: true
@@ -158,7 +158,7 @@ level 'CSD web conditionals practice choice', progression: 'Conditionals'
 level 'CSD web conditionals assessment', progression: 'Conditionals', assessment: true
 level 'CSD web conditionals challenge choice', progression: 'Challenges: Conditionals'
 
-stage 'Keyboard Input', flex_category: 'csd3_1'
+stage 'Keyboard Input'
 level 'CSD U3L15 TFMD_2020', named: true
 level 'CSD U3 Keypress Boolean_2018_2020', progression: 'Code Prediction'
 level 'CSD U3 keydown conditional_2018_2020', progression: 'Keyboard Input'
@@ -168,7 +168,7 @@ level 'CSD web keyboard practice choice', progression: 'Keyboard Input'
 level 'CSD U3 Direction Arrows_2018_2020', progression: 'Keyboard Input', assessment: true
 level 'CSD web keyboard challenge choice', progression: 'Challenges: Keyboard Input'
 
-stage 'Mouse Input', flex_category: 'csd3_1'
+stage 'Mouse Input'
 level 'CSD U3L16 TFMD_2020', named: true
 level 'CSD U3 if else predict_2020', progression: 'Code Prediction'
 level 'CSD U3 - Conditionals Video_2020', named: true
@@ -180,7 +180,7 @@ level 'CSD web mouse practice choice', progression: 'Mouse Input'
 level 'CSD web mouse assessment', progression: 'Mouse Input', assessment: true
 level 'CSD web mouse challenge choice', progression: 'Challenges: Mouse Input'
 
-stage 'Project - Interactive Card', flex_category: 'csd3_1'
+stage 'Project - Interactive Card'
 level 'CSD U3L17 TFMD_2020', named: true
 level 'CSD U3 Interactive Card Exemplar_2020', named: true
 level 'CSD U3 Card Examples_2018_2019_pilot_2020', named: true
@@ -192,7 +192,7 @@ level 'CSD U3 Interactive Card Final_2020', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
 
 lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
-stage 'Velocity', flex_category: 'csd3_2'
+stage 'Velocity'
 level 'CSD U3L18 TFMD_2020', named: true
 level 'CSD U3 abstraction velocityX_2020', progression: 'Velocity'
 level 'CSD: Sprite Velocity_2020', named: true
@@ -205,7 +205,7 @@ level 'CSD games velocity practice choice', progression: 'Velocity'
 level 'CSD U3 abstraction velocityX control_2020', progression: 'Velocity', assessment: true
 level 'CSD games velocity challenge choice', progression: 'Challenge: Velocity'
 
-stage 'Collision Detection', flex_category: 'csd3_2'
+stage 'Collision Detection'
 level 'CSD U3L19 TFMD_2020', named: true
 level 'CSD U3 collisions car intro_2020', named: true
 level 'CSD U3 collisions build isTouching_2020', named: true
@@ -216,7 +216,7 @@ level 'CSD games istouching practice choice', progression: 'Collision Detection'
 level 'CSD U3 collisions horse_2020', progression: 'Collision Detection', assessment: true
 level 'CSD games istouching challenge choice', progression: 'Challenges: Collision Detection'
 
-stage 'Mini-Project: Side Scroller', flex_category: 'csd3_2'
+stage 'Mini-Project: Side Scroller'
 level 'CSD U3L20 TFMD', named: true
 level 'CSD games side scroller demo', progression: 'Intro to Side Scrollers'
 level 'CSD games sidescroll background', progression: 'Draw Your Background'
@@ -227,7 +227,7 @@ level 'CSD U3 collisions sidescroll2_2020', progression: 'Sprite Interactions'
 level 'CSD U3 collisions scoreboard_2020', progression: 'Scoring & Scoreboard'
 level 'CSD games sidescroll review', progression: 'Review Your Game'
 
-stage 'Complex Sprite Movement', flex_category: 'csd3_2'
+stage 'Complex Sprite Movement'
 level 'CSD U3L20 TFMD_2020', named: true
 level 'CSD U3 Complex Movement counter prediction gamelab_2020', progression: 'Code Prediction'
 level 'CSD U3 abstraction accelerateX_2020', progression: 'Velocity and the Counter Pattern'
@@ -237,7 +237,7 @@ level 'CSD games movement2 practice choice', progression: 'Velocity and the Coun
 level 'CSD U3 abstraction decelerateY_2020', progression: 'Velocity and the Counter Pattern', assessment: true
 level 'CSD games movement2 challenge choice', progression: 'Challenges: Sprite Movement'
 
-stage 'Collisions', flex_category: 'csd3_2'
+stage 'Collisions'
 level 'CSD U3L21 TFMD_2020', named: true
 level 'CSD U3 collisions predict set velocity code_2020', progression: 'Code Prediction'
 level 'CSD U3 collisions displace x_2020', progression: 'Code a Sprite Interaction'
@@ -248,7 +248,7 @@ level 'CSD games collisions practice choice', progression: 'Collisions'
 level 'CSD games collisions assessment', progression: 'Collisions', assessment: true
 level 'CSD games collisions challenge choice', progression: 'Challenge: Collisions'
 
-stage 'Mini-Project: Flyer Game', flex_category: 'csd3_2'
+stage 'Mini-Project: Flyer Game'
 level 'CSD U3L23 TFMD', named: true
 level 'CSD games flyer demo', progression: 'Intro to Flyer Game'
 level 'CSD U3 abstraction add coin_2020', progression: 'Make Your Sprites'
@@ -259,7 +259,7 @@ level 'CSD U3 collisions flyman add obstacles_2020', progression: 'Sprite Moveme
 level 'CSD U3 abstraction reset coin_2020', progression: 'Sprite Interactions'
 level 'CSD U3 collisions flyman bounceOff_2020', progression: 'Review Your Game'
 
-stage 'Functions', flex_category: 'csd3_2'
+stage 'Functions'
 level 'CSD U3L22 TFMD_2020', named: true
 level 'CSD U3 function video_2020', named: true
 level 'CSD U3 Functions Call Function_2020', progression: 'Functions'
@@ -272,7 +272,7 @@ level 'CSD U3 Functions Add IsTouching_2020', progression: 'Collector Game'
 level 'CSD U3 Functions Add Change Background_2020', progression: 'Collector Game', assessment: true
 level 'CSD games functions challenge choice', progression: 'Challenges: Functions'
 
-stage 'The Game Design Process', flex_category: 'csd3_2'
+stage 'The Game Design Process'
 level 'CSD U3L23 TFMD_2020', named: true
 level 'CSD U3 AnimationsMulti Play Defender_2020', named: true
 level 'CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020', named: true
@@ -288,7 +288,7 @@ level 'CSD U3 AnimationsMulti defender displace enemies_2020', progression: 'Spr
 level 'CSD U3 AnimationsMulti defender touch water_2020', progression: 'Sprite Interactions'
 level 'CSD games cake challenge choice', progression: 'Challenges'
 
-stage 'Using the Game Design Process', flex_category: 'csd3_2'
+stage 'Using the Game Design Process'
 level 'CSD U3L24 TFMD_2020', named: true
 level 'CSD U3 platform sample1_2020', named: true
 level 'CSD U3 platform intro_2018_2019_pilot_2020', named: true
@@ -311,7 +311,7 @@ level 'CSD U3 platform sample2_2020', progression: 'Challenges'
 level 'CSD U3 platform sample3_2020', progression: 'Challenges'
 level 'CSD games platform challenge choice', progression: 'Challenges'
 
-stage 'Project - Design a Game', flex_category: 'csd3_2'
+stage 'Project - Design a Game'
 level 'CSD U3L25 TFMD_2020', named: true
 level 'CSD U3 game intro_2018_2019_pilot_2020', named: true
 level 'CSD U3 game variables_2020', progression: 'Project - Background and Variables'
@@ -327,11 +327,11 @@ level 'CSD games project review', progression: 'Review Your Game'
 level 'CSD games project challenge choice', progression: 'Challenges'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd3_2'
+stage 'Post-Project Test', lockable: true
 level 'CSD Interactive Animations and Games Post-Project Test_pilot_2020', assessment: true
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
+stage 'CS Discoveries Post Course survey', lockable: true
 level 'csd-post-survey-intro-2019_pilot_2020'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2020', assessment: true
 
