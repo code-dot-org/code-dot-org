@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FlexGroup from './FlexGroup';
-import StageDescriptions from './StageDescriptions';
+import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import $ from 'jquery';
@@ -47,7 +47,7 @@ export default class ScriptEditor extends React.Component {
     hidden: PropTypes.bool,
     isStable: PropTypes.bool,
     loginRequired: PropTypes.bool,
-    hideableStages: PropTypes.bool,
+    hideableLessons: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
     professionalLearningCourse: PropTypes.string,
     peerReviewsRequired: PropTypes.number,
@@ -55,8 +55,8 @@ export default class ScriptEditor extends React.Component {
     projectWidgetVisible: PropTypes.bool,
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    stageExtrasAvailable: PropTypes.bool,
-    stageLevelData: PropTypes.string,
+    lessonExtrasAvailable: PropTypes.bool,
+    lessonLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
     hasLessonPlan: PropTypes.bool,
     curriculumPath: PropTypes.string,
@@ -102,7 +102,7 @@ export default class ScriptEditor extends React.Component {
 
   presubmit = e => {
     const videoKeysBefore = (
-      this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []
+      this.props.lessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
     const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
@@ -121,8 +121,8 @@ export default class ScriptEditor extends React.Component {
 
   render() {
     const {betaWarning} = this.props;
-    const textAreaRows = this.props.stageLevelData
-      ? this.props.stageLevelData.split('\n').length + 5
+    const textAreaRows = this.props.lessonLevelData
+      ? this.props.lessonLevelData.split('\n').length + 5
       : 10;
     return (
       <div>
@@ -160,9 +160,9 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <StageDescriptions
+        <LessonDescriptions
           scriptName={this.props.name}
-          currentDescriptions={this.props.i18nData.stageDescriptions}
+          currentDescriptions={this.props.i18nData.lessonDescriptions}
         />
         <ScriptAnnouncementsEditor
           defaultAnnouncements={this.props.announcements}
@@ -278,15 +278,15 @@ export default class ScriptEditor extends React.Component {
           <p>Require users to log in before viewing this script.</p>
         </label>
         <label>
-          Hideable Stages
+          Hideable Lessons
           <input
             name="hideable_stages"
             type="checkbox"
-            defaultChecked={this.props.hideableStages}
+            defaultChecked={this.props.hideableLessons}
             style={styles.checkbox}
           />
           <p>
-            Allow teachers to toggle whether or not specific stages in this
+            Allow teachers to toggle whether or not specific lessons in this
             script are visible to students in their section.
           </p>
         </label>
@@ -309,12 +309,12 @@ export default class ScriptEditor extends React.Component {
           <input
             name="stage_extras_available"
             type="checkbox"
-            defaultChecked={this.props.stageExtrasAvailable}
+            defaultChecked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
           />
           <p>
             If also enabled by the teacher, show the lesson extras page at the
-            end of each stage.
+            end of each lesson.
           </p>
         </label>
         <label>
@@ -414,7 +414,7 @@ export default class ScriptEditor extends React.Component {
           />
           <p>
             If checked this script will have the projects widget (recent
-            projects and new project buttons) visible in stage extras.
+            projects and new project buttons) visible in lesson extras.
           </p>
         </label>
         <label>
@@ -503,7 +503,7 @@ export default class ScriptEditor extends React.Component {
             )}
           />
         </div>
-        <h2>Stages and Levels</h2>
+        <h2>Lessons and Levels</h2>
         {this.props.beta ? (
           <FlexGroup />
         ) : (
@@ -519,8 +519,8 @@ export default class ScriptEditor extends React.Component {
               rows={textAreaRows}
               style={styles.input}
               defaultValue={
-                this.props.stageLevelData ||
-                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new stage'\n"
+                this.props.lessonLevelData ||
+                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new lesson'\n"
               }
               ref={textArea => (this.scriptTextArea = textArea)}
             />

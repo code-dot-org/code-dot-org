@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import StageDescriptions from '@cdo/apps/lib/script-editor/StageDescriptions';
+import LessonDescriptions from '@cdo/apps/lib/script-editor/LessonDescriptions';
 
 const currentDescriptions = [
   {
@@ -17,7 +17,7 @@ const currentDescriptions = [
   }
 ];
 
-describe('StageDescriptions', () => {
+describe('LessonDescriptions', () => {
   var xhr, requests;
 
   beforeEach(() => {
@@ -30,7 +30,7 @@ describe('StageDescriptions', () => {
 
   it('begins collapsed', () => {
     const wrapper = shallow(
-      <StageDescriptions
+      <LessonDescriptions
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -45,7 +45,7 @@ describe('StageDescriptions', () => {
 
   it('uncollapses on click', () => {
     const wrapper = shallow(
-      <StageDescriptions
+      <LessonDescriptions
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -77,7 +77,7 @@ describe('StageDescriptions', () => {
 
   it('updates button while importing', () => {
     const wrapper = shallow(
-      <StageDescriptions
+      <LessonDescriptions
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -100,7 +100,7 @@ describe('StageDescriptions', () => {
 
   it('extracts importedDescriptions/mismatchedStages from response', () => {
     const wrapper = mount(
-      <StageDescriptions
+      <LessonDescriptions
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
@@ -172,7 +172,7 @@ describe('StageDescriptions', () => {
 
   it('recovers when there are too few importedDescriptions', () => {
     const wrapper = mount(
-      <StageDescriptions
+      <LessonDescriptions
         scriptName="myscript"
         currentDescriptions={currentDescriptions}
       />
