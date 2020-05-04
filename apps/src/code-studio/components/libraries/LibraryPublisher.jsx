@@ -264,6 +264,7 @@ export default class LibraryPublisher extends React.Component {
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
       const checked = selectedFunctions[functionName] || false;
+      const functionId = _.uniqueId(`${functionName}-`);
 
       return (
         <div key={functionName}>
@@ -271,13 +272,13 @@ export default class LibraryPublisher extends React.Component {
             <input
               style={styles.largerCheckbox}
               type="checkbox"
-              id={_.uniqueId(`${functionName}-`)}
+              id={functionId}
               disabled={!this.isFunctionValid(sourceFunction)}
               name={functionName}
               checked={checked}
               onChange={() => this.boxChecked(sourceFunction)}
             />
-            <label htmlFor={functionName} style={styles.functionLabel}>
+            <label htmlFor={functionId} style={styles.functionLabel}>
               {functionName}
             </label>
           </div>
