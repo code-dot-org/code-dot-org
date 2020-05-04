@@ -165,8 +165,14 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
         <br />
-        <h1>{i18n.loginInfo_signingIn()}</h1>
-        <p>{i18n.loginInfo_signingInDescription()}</p>
+        <h1 style={styles.heading}>{i18n.signingInEmail()}</h1>
+        <p>{i18n.signingInEmailIntro()}</p>
+        <SafeMarkdown
+          markdown={i18n.signingInEmailGoogle1({
+            codeOrgLink: pegasus('/')
+          })}
+        />
+        <p style={styles.listAlign}>{i18n.signingInEmail2()}</p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
         <SafeMarkdown
