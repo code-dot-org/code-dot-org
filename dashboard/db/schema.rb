@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200503222610) do
+ActiveRecord::Schema.define(version: 20200504010945) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -635,6 +635,7 @@ ActiveRecord::Schema.define(version: 20200503222610) do
     t.integer "parent_level_id", null: false
     t.integer "child_level_id",  null: false
     t.integer "position"
+    t.string  "kind"
     t.index ["child_level_id"], name: "index_parent_levels_child_levels_on_child_level_id", using: :btree
     t.index ["parent_level_id"], name: "index_parent_levels_child_levels_on_parent_level_id", using: :btree
   end
