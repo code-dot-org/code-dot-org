@@ -92,6 +92,21 @@ class Level < ActiveRecord::Base
     thumbnail_url
   )
 
+  # returns all levels which depend on this level in order to function properly,
+  # including itself. This implementation relies on the assumption that the
+  # hierarchy of levels is only one layer deep, meaning:
+  # 1. parent levels do not themselves have any parent levels or containing levels
+  # 2. containing levels do not themselves have any containing levels or parent levels
+  def all_depending_levels
+    self + parent_levels + containing_levels
+  end
+
+  # returns all scripts which depend on this level.
+  def all_scripts
+    script_levels = all_depending_levels.map(&:script_levels).flatten
+    script_levels.map(&:script).uniq
+  end
+
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super
