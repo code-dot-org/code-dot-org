@@ -117,7 +117,7 @@ export const commands = {
   },
 
   // Event commands
-  checkTouching(condition, sprite1, sprite2, unusedArg, callback) {
+  checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
 
@@ -125,7 +125,7 @@ export const commands = {
     eventCommands.keyPressed(condition, key, callback);
   },
 
-  spriteClicked(condition, spriteArg, unusedArg, callback) {
+  spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
   },
 

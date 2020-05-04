@@ -192,34 +192,6 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     }
   },
-  miniToolbox: {
-    addInput(blockly, block, inputConfig, currentInputRow) {
-      var toggle = new Blockly.FieldIcon('+');
-      var miniToolboxBlocks =
-        (inputConfig.customOptions && inputConfig.customOptions.blocks) || [];
-      var miniToolboxXml = '<xml>';
-      miniToolboxBlocks.forEach(block => {
-        miniToolboxXml += `\n  <block type="${block}"></block>`;
-      });
-      miniToolboxXml += '\n</xml>';
-
-      block.isOpen = false;
-      Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', block, () => {
-        if (block.isOpen) {
-          toggle.setText('-');
-        } else {
-          toggle.setText('+');
-        }
-        block.isOpen = !block.isOpen;
-        block.render();
-      });
-      currentInputRow.appendTitle(toggle);
-      block.initMiniFlyout(miniToolboxXml);
-    },
-    generateCode(block, arg) {
-      return '';
-    }
-  },
   spritePointer: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow
