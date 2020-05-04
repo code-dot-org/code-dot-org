@@ -1025,4 +1025,12 @@ class LevelTest < ActiveSupport::TestCase
     container.save!
     assert_equal [container], containee.containing_levels
   end
+
+  test 'template level id' do
+    template_backed = create :level
+    template = create :level
+    template_backed.template_level = template
+    template_backed.save!
+    assert_equal [template_backed], template.template_backed_levels
+  end
 end

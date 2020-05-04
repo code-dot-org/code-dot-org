@@ -50,6 +50,13 @@ class Level < ActiveRecord::Base
   belongs_to :contained_level, class_name: 'Level', inverse_of: :containing_levels
   has_many :containing_levels, class_name: 'Level', foreign_key: :contained_level_id, inverse_of: :contained_level
 
+  # Terminology: When a set of levels need to share start code and source code,
+  # this is implemented by having them share a template level. A level which has
+  # a template level is called a template-backed level.
+
+  belongs_to :template_level, class_name: 'Level', inverse_of: :template_backed_levels
+  has_many :template_backed_levels, class_name: 'Level', foreign_key: :template_level_id, inverse_of: :template_level
+
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
