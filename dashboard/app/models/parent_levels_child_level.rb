@@ -18,4 +18,7 @@ class ParentLevelsChildLevel < ActiveRecord::Base
   belongs_to :parent_level, class_name: 'Level'
   belongs_to :child_level, class_name: 'Level'
   validates_uniqueness_of :child_level, scope: :parent_level
+
+  VALID_KINDS = %w(sublevel contained template)
+  validates_inclusion_of :kind, in: VALID_KINDS
 end
