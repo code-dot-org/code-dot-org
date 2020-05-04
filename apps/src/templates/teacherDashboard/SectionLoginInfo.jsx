@@ -256,10 +256,6 @@ class WordOrPictureLogins extends React.Component {
   render() {
     const {studioUrlPrefix, section, students, loginType} = this.props;
     const manageStudentsUrl = getManageStudentsUrl(section.id);
-    const resetColumnTitle =
-      loginType === SectionLoginType.word
-        ? i18n.secretWords()
-        : i18n.picturePassword();
 
     return (
       <div>
@@ -298,13 +294,20 @@ class WordOrPictureLogins extends React.Component {
         </p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
-        <SafeMarkdown
-          markdown={i18n.loginInfoResetSecretDesc({
-            url: manageStudentsUrl,
-            wordOrPicture: section.loginType,
-            columnTitle: resetColumnTitle
-          })}
-        />
+        {loginType === SectionLoginType.picture && (
+          <SafeMarkdown
+            markdown={i18n.loginInfoResetSecretPicDesc({
+              url: manageStudentsUrl
+            })}
+          />
+        )}
+        {loginType === SectionLoginType.word && (
+          <SafeMarkdown
+            markdown={i18n.loginInfoResetSecretWordDesc({
+              url: manageStudentsUrl
+            })}
+          />
+        )}
         <br />
         <h1>{i18n.printLoginCards_title()}</h1>
         {students.length < 1 && (
