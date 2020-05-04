@@ -24,9 +24,10 @@ import {getStore} from '../redux';
 import msg from '@cdo/locale';
 import firehoseClient from '../lib/util/firehose';
 
-import {Provider} from 'react-redux';
-import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
+//import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 //import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
+
+import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -83,7 +84,7 @@ header.build = function(
 
   const scriptName = scriptData.name;
 
-  if (stageData.finishLink) {
+  /*if (stageData.finishLink) {
     $('.header_finished_link')
       .show()
       .append(
@@ -91,10 +92,10 @@ header.build = function(
           .attr('href', stageData.finishLink)
           .text(stageData.finishText)
       );
-  }
-  if (stageData.script_stages > 1) {
+  }*/
+  /*if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
-  }
+  }*/
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
 
@@ -108,35 +109,10 @@ header.build = function(
     stageExtrasEnabled
   );
 
-  /* this works
   ReactDOM.render(
-    <div>
+    <HeaderMiddle scriptNameData={scriptNameData} stageData={stageData}>
       {renderedProgress}
-    </div>,
-    document.querySelector('.progress_container')
-  );
-  */
-
-  ReactDOM.render(
-    <div>
-      {/*<Provider store={getStore()}>
-        <ProjectInfo />
-      </Provider>*/}
-
-      <div style={{float: 'left'}}>
-        <Provider store={getStore()}>
-          <ScriptName {...scriptNameData} />
-        </Provider>
-      </div>
-
-      <div className="progress_container">{renderedProgress}</div>
-
-      <div className="header_finished_link" style={{display: 'none'}} />
-      <div className="header_popup_link" style={{display: 'none'}}>
-        <div className="header_popup_link_glyph">&#x25BC;</div>
-        <div className="header_popup_link_text">More</div>
-      </div>
-    </div>,
+    </HeaderMiddle>,
     document.querySelector('.header_level')
   );
 
