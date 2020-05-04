@@ -105,12 +105,14 @@ export default class FixZoomHelper extends React.Component {
     }
 
     // Also update the viewport information.
-    this.setState({
-      offsetLeft: window.visualViewport.offsetLeft,
-      offsetTop: window.visualViewport.offsetTop,
-      width: window.visualViewport.width,
-      height: window.visualViewport.height
-    });
+    if (window.visualViewport) {
+      this.setState({
+        offsetLeft: window.visualViewport.offsetLeft,
+        offsetTop: window.visualViewport.offsetTop,
+        width: window.visualViewport.width,
+        height: window.visualViewport.height
+      });
+    }
   };
 
   componentDidMount() {
