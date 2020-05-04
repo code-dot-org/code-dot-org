@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import xml from './xml';
+import experiments from '@cdo/apps/util/experiments';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -999,7 +1000,10 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
-        if (miniToolboxBlocks) {
+        if (
+          miniToolboxBlocks &&
+          experiments.isEnabled(experiments.MINI_TOOLBOX)
+        ) {
           var toggle = new Blockly.FieldIcon('+');
           var miniToolboxXml = '<xml>';
           miniToolboxBlocks.forEach(block => {
