@@ -45,6 +45,9 @@ class Level < ActiveRecord::Base
   has_many :levels_child_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
   has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
 
+  belongs_to :contained_level, class_name: 'Level', inverse_of: :containing_levels
+  has_many :containing_levels, class_name: 'Level', foreign_key: :contained_level_id, inverse_of: :contained_level
+
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 

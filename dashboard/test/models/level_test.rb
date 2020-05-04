@@ -1017,4 +1017,12 @@ class LevelTest < ActiveSupport::TestCase
       child.parent_levels << parent
     end
   end
+
+  test 'contained level id' do
+    container = create :level
+    containee = create :level
+    container.contained_level = containee
+    container.save!
+    assert_equal [container], containee.containing_levels
+  end
 end
