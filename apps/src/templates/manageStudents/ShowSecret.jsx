@@ -81,6 +81,14 @@ class ShowSecret extends Component {
   render() {
     const {resetDisabled} = this.props;
     const tooltipId = resetDisabled && _.uniqueId();
+    const showButtonText =
+      this.props.loginType === SectionLoginType.word
+        ? i18n.showWords()
+        : i18n.showPicture();
+    const hideButtonText =
+      this.props.loginType === SectionLoginType.word
+        ? i18n.hideWords()
+        : i18n.hidePicture();
 
     return (
       <div>
@@ -89,7 +97,7 @@ class ShowSecret extends Component {
             __useDeprecatedTag
             onClick={this.show}
             color={Button.ButtonColor.white}
-            text={i18n.showSecret()}
+            text={showButtonText}
           />
         )}
         {this.state.isShowing && (
@@ -123,7 +131,7 @@ class ShowSecret extends Component {
               __useDeprecatedTag
               onClick={this.hide}
               color={Button.ButtonColor.white}
-              text={i18n.hideSecret()}
+              text={hideButtonText}
             />
           </div>
         )}
