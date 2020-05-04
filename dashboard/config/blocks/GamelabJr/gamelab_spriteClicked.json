@@ -7,7 +7,10 @@
       0.74
     ],
     "func": "spriteClicked",
-    "blockText": "{MINITOOLBOX} {CONDITION} {SPRITE} clicked",
+    "blockText": "{CONDITION} {SPRITE} clicked",
+    "miniToolboxBlocks": [
+      "gamelab_clickedSpritePointer"
+    ],
     "callbackParams": [
       "extraArgs"
     ],
@@ -28,15 +31,6 @@
       {
         "name": "SPRITE",
         "type": "Sprite"
-      },
-      {
-        "name": "MINITOOLBOX",
-        "customInput": "miniToolbox",
-        "customOptions": {
-          "blocks": [
-            "gamelab_clickedSpritePointer"
-          ]
-        }
       }
     ],
     "eventBlock": true

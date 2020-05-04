@@ -867,6 +867,7 @@ exports.createJsWrapperBlockCreator = function(
    * @param {boolean} opts.simpleValue Just return the field value of the block.
    * @param {string[]} opts.extraArgs Additional arguments to pass into the generated function.
    * @param {string[]} opts.callbackParams Parameters to add to the generated callback function.
+   * @param {string[]} opts.miniToolboxBlocks
    * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
@@ -890,7 +891,8 @@ exports.createJsWrapperBlockCreator = function(
       inline,
       simpleValue,
       extraArgs,
-      callbackParams
+      callbackParams,
+      miniToolboxBlocks
     },
     helperCode,
     pool
@@ -995,6 +997,29 @@ exports.createJsWrapperBlockCreator = function(
         } else {
           this.setNextStatement(true);
           this.setPreviousStatement(true);
+        }
+
+        if (miniToolboxBlocks) {
+          var toggle = new Blockly.FieldIcon('+');
+          var miniToolboxXml = '<xml>';
+          miniToolboxBlocks.forEach(block => {
+            miniToolboxXml += `\n <block type="${block}"></block>`;
+          });
+          miniToolboxXml += '\n</xml>';
+          this.tray = false;
+          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.tray) {
+              toggle.setText('+');
+            } else {
+              toggle.setText('-');
+            }
+            this.tray = !this.tray;
+            this.render();
+          });
+          this.appendDummyInput()
+            .appendTitle(toggle)
+            .appendTitle(' ');
+          this.initMiniFlyout(miniToolboxXml);
         }
 
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag
