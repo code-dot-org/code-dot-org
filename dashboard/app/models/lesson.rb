@@ -101,14 +101,6 @@ class Lesson < ActiveRecord::Base
     end
   end
 
-  def localized_category
-    if flex_category
-      I18n.t "flex_category.#{flex_category}"
-    else
-      I18n.t "flex_category.content"
-    end
-  end
-
   def localized_lesson_plan
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -146,7 +138,6 @@ class Lesson < ActiveRecord::Base
         relative_position: relative_position,
         name: localized_name,
         title: localized_title,
-        flex_category: localized_category,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
@@ -194,7 +185,6 @@ class Lesson < ActiveRecord::Base
     summary = summarize.dup
     # Do not let script name override stage name when there is only one stage
     summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
-    summary[:flex_category] = flex_category
     summary.freeze
   end
 
