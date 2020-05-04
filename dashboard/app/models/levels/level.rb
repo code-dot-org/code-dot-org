@@ -101,13 +101,30 @@ class Level < ActiveRecord::Base
     thumbnail_url
   )
 
-  # returns all levels which depend on this level in order to function properly.
-  # This implementation relies on the assumption that the
-  # hierarchy of levels is only one layer deep, meaning:
-  # 1. parent levels do not themselves have any parent levels or containing levels
-  # 2. containing levels do not themselves have any containing levels or parent levels
+  validate :no_deeply_nested_levels
+
+  def no_deeply_nested_levels
+    all_parent_levels.each do |parent_level|
+      if parent_level.all_parent_levels.count > 0
+        errors.add("parent level '#{parent_level.name}' must not have its own parent levels")
+      end
+    end
+    all_child_levels.each do |child_level|
+      if child_level.all_child_levels.count > 0
+        errors.add("child level '#{child_level.name}' must not have its own child levels")
+      end
+    end
+  end
+
+  # returns all levels which depend directly on this level in order to function
+  # properly, excluding itself.
   def all_parent_levels
     parent_levels + containing_levels + template_backed_levels
+  end
+
+  def all_child_levels
+    levels = child_levels + [contained_level] + [template_level]
+    levels.compact
   end
 
   # returns all scripts which depend on this level.
