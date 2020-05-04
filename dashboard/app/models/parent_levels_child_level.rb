@@ -6,6 +6,7 @@
 #  parent_level_id :integer          not null
 #  child_level_id  :integer          not null
 #  position        :integer
+#  kind            :string(255)
 #
 # Indexes
 #
