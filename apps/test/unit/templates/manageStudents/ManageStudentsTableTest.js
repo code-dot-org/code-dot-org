@@ -181,7 +181,7 @@ describe('ManageStudentsTable', () => {
       expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
     });
 
-    it('renders password column if loginType is picture', () => {
+    it('renders correct info in password column if loginType is picture', () => {
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable />
@@ -190,36 +190,53 @@ describe('ManageStudentsTable', () => {
       const passwordColumnHeader = wrapper.find('#password-header');
       expect(passwordColumnHeader).to.have.lengthOf(1);
       expect(passwordColumnHeader.text()).to.equal(i18n.picturePassword());
+      const showSecret = wrapper.find('ShowSecret');
+      expect(showSecret).to.have.lengthOf(1);
+      expect(showSecret.find('Button').text()).to.equal(i18n.showPicture());
     });
 
-    it('renders password column if loginType is word', () => {
+    it('renders correct info in password column if loginType is word', () => {
       const wordSection = {...fakeSection, loginType: SectionLoginType.word};
+      const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
+      const wordStudents = {
+        [wordStudent.id]: wordStudent
+      };
       getStore().dispatch(setLoginType(SectionLoginType.word));
       getStore().dispatch(setSections([wordSection]));
       getStore().dispatch(setSection(wordSection));
+      getStore().dispatch(setStudents(wordStudents));
       const wrapper = mount(
         <Provider store={getStore()}>
-          <ManageStudentsTable section={wordSection} />
+          <ManageStudentsTable />
         </Provider>
       );
       const passwordColumnHeader = wrapper.find('#password-header');
       expect(passwordColumnHeader).to.have.lengthOf(1);
       expect(passwordColumnHeader.text()).to.equal(i18n.secretWords());
+      const showSecret = wrapper.find('ShowSecret');
+      expect(showSecret).to.have.lengthOf(1);
+      expect(showSecret.find('Button').text()).to.equal(i18n.showWords());
     });
 
-    it('renders password column if loginType is personal email', () => {
+    it('renders correct info in password column if loginType is personal email', () => {
       const emailSection = {...fakeSection, loginType: SectionLoginType.email};
+      const emailStudent = {...fakeStudent, loginType: SectionLoginType.email};
+      const emailStudents = {
+        [emailStudent.id]: emailStudent
+      };
       getStore().dispatch(setLoginType(SectionLoginType.email));
       getStore().dispatch(setSections([emailSection]));
       getStore().dispatch(setSection(emailSection));
+      getStore().dispatch(setStudents(emailStudents));
       const wrapper = mount(
         <Provider store={getStore()}>
-          <ManageStudentsTable section={emailSection} />
+          <ManageStudentsTable />
         </Provider>
       );
       const passwordColumnHeader = wrapper.find('#password-header');
       expect(passwordColumnHeader).to.have.lengthOf(1);
       expect(passwordColumnHeader.text()).to.equal(i18n.password());
+      expect(wrapper.find('PasswordReset')).to.have.lengthOf(1);
     });
 
     it('does not render password column if loginType is clever', () => {
