@@ -29,7 +29,14 @@
         &#x25BC;
       .header_popup_link_text= t(:more)
 
-.header_popup
-  .header_popup_scrollable
-    .header_popup_body
-      .user-stats-block
+.hidden_components{style: "display: none"}
+  .header_popup_components
+    .header_popup
+      .header_popup_scrollable
+        .header_popup_body
+          .user-stats-block
+
+    .header_popup_link{style: 'display: none;'}
+      .header_popup_link_glyph
+        &#x25BC;
+      .header_popup_link_text= t(:more)
