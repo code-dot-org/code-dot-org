@@ -2711,6 +2711,8 @@ fr-FR:
             y a sur les fleurs. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        markdown: "Ага! С помощью циклов for эта головоломка решается намного проще!
+          \n"
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -2727,6 +2729,8 @@ fr-FR:
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
         - {}
+        markdown: "Ага! С помощью циклов for эта головоломка решается намного проще!
+          \n"
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -2743,6 +2747,8 @@ fr-FR:
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
         - {}
+        markdown: "Ага! С помощью циклов for эта головоломка решается намного проще!
+          \n"
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?

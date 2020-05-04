@@ -262,9 +262,17 @@ it-IT:
       NEW Course 4 Bee For Loops 5:
         actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
           "Azioni" ora sono qui.
+      New Artist Project:
+        New Artist Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
       New Frozen Project:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
       Overworld Chop Trees:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld Chop Trees_2019:

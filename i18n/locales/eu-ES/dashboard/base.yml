@@ -189,8 +189,10 @@ eu:
     header:
       finished_hoc: "Nire Kode Ordua bukatu dut"
       sign_in_to_save: 'Sartu aurrerapenak gordetzeko'
+      course_catalog: "Ikastaroak"
       project_gallery: "Proiektuak"
       educate_hoc: "Kode Ordua"
+      about: "Code.org-i buruz"
     user:
       classroom: 'Irakasleen sarrera orria'
       district_dashboard: 'Hezkuntza distritua'

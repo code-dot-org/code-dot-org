@@ -101,7 +101,7 @@ class ProgressBubble extends React.Component {
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
-    stageTrophyEnabled: PropTypes.bool,
+    lessonTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
@@ -135,7 +135,7 @@ class ProgressBubble extends React.Component {
       selectedSectionId,
       selectedStudentId,
       currentLocation,
-      stageTrophyEnabled,
+      lessonTrophyEnabled,
       pairingIconEnabled,
       hideAssessmentIcon
     } = this.props;
@@ -219,7 +219,7 @@ class ProgressBubble extends React.Component {
       <div
         style={{
           // two pixels on each side for border, 2 pixels on each side for margin
-          width: stageTrophyEnabled ? width - 3 : width,
+          width: lessonTrophyEnabled ? width - 3 : width,
           display: 'flex',
           justifyContent: 'center'
         }}

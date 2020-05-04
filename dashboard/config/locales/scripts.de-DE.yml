@@ -1028,6 +1028,8 @@ de:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
+            Reviewing the Modules:
+              name: Überprüfung der Module
             Welcome!:
               name: Willkommen!
             Wrap-Up:
@@ -1040,6 +1042,8 @@ de:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
+            Reviewing the Modules:
+              name: Überprüfung der Module
             Welcome!:
               name: Willkommen!
             Wrap-Up:
@@ -1054,6 +1058,8 @@ de:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
+            Reviewing the Modules:
+              name: Überprüfung der Module
             Welcome!:
               name: Willkommen!
             Wrap-Up:
@@ -1578,6 +1584,8 @@ de:
           stages:
             Binary Numbers:
               name: Binärzahlen
+            HTTP and Abstraction:
+              name: HTTP und Abstraktion
             Number Systems:
               name: Zahlensystem
             Personal Innovations:
@@ -1619,6 +1627,8 @@ de:
               name: Mit Visualisierungen Trends finden
             Good and Bad Data Visualizations:
               name: Gute und schlechte Daten Visualisierungen
+            Intro to Data:
+              name: Einführung in Daten
             Lossy Compression and File Formats:
               name: Verlustreiche Kompression und Dateitypen
             Making Data Visualizations:
@@ -1912,6 +1922,8 @@ de:
         CSDU2-Draft:
           description_short: Webentwicklung
           stages:
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
             Describing Webpages:
               name: Webseiten beschreiben
             Digital Footprint:
@@ -1993,6 +2005,8 @@ de:
           title: Kindergarten
           description_audience: Alter 5-18
           stages:
+            Being Safe Online:
+              name: Online sicher sein
             Debugging:
               name: Debugging
             Events:
@@ -2031,6 +2045,8 @@ de:
           title: 1. Klasse
           description_audience: Alter 5-18
           stages:
+            Being Safe Online:
+              name: Online sicher sein
             Debugging:
               name: Debugging
             Events:
@@ -2257,6 +2273,8 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Parameters and Randomization:
               name: Parameter und Randomisierung
         grade2:
@@ -2347,6 +2365,8 @@ de:
                 der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Representing Information:
               name: Darstellung von Informationen
             Human vs Computer Processing:
@@ -2427,6 +2447,13 @@ de:
             Play Lab:
               name: Spielelabor
         csd2-2017:
+          description: " In Lerneinheit 2 lernst du, wie du Inhalte auf deiner eigenen
+            Webseiten erstellst und weitergeben kannst. Nachdem du entschieden hast,
+            welche Inhalte du mit der Welt teilen möchtest, lernst du, wie du deine
+            Seiten mit HTML und CSS strukturieren und gestalten kannst. Außerdem übst
+            du wertvolle Programmierfähigkeiten wie Debugging und Kommentieren.  Am
+            Ende der Einheit wirst du eine persönliche Website haben, die du im Internet
+            veröffentlichen kannst."
           stages:
             new stage:
               name: neue Etappe
@@ -2440,6 +2467,14 @@ de:
               name: Text im Web
             Images on the Web:
               name: Bilder im Web
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
+              description_student: In dieser Lektion werden häufige Probleme behandelt,
+                die beim Entwerfen von Webseiten in HTML auftreten. Die Schülerinnen
+                und Schüler korrigieren Fehler in einer Folge von immer komplexeren
+                Webseiten, die sie in Code Studio finden, und lernen die Bedeutung
+                von Kommentaren, Leerzeichen und Einrückungen als Hilfsmittel, um
+                Webseiten leichter lesbar zu machen.
             Introduction to Styling with CSS:
               name: Einführung in das Styling mit CSS
             Multi-Page Websites:
@@ -2462,18 +2497,75 @@ de:
               name: Geistiges Eigentum
             Images in HTML:
               name: Bilder in HTML
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+              description_student: In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Klasse lernt die
+                grundlegende Syntax für CSS-Regelsätze und befasst sich dann mit Eigenschaften,
+                die sich auf HTML-Textelemente auswirken.  Schließlich wendet jeder
+                Teilnehmer Textstile auf seine persönlichen Websites an.
+              description_teacher: "In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Teilnehmer lernen
+                die grundlegende Syntax für CSS-Regelsätze kennen und untersuchen
+                dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Sie
+                arbeiten an einer HTML-Seite über Guinness-Weltrekordhalter und fügen
+                der bereitgestellten Seite ihren eigenen Stil hinzu. In der letzten
+                Stufe wenden die Schülerinnen und Schüler das, was sie über Stile
+                für Textelemente gelernt haben, auf ihre persönliche Webseite an.\r\n\r"
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
+              description_student: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Klasse beginnt mit der Untersuchung und Modifizierung der
+                neuen CSS-Stile auf einer "Desserts of the World"-Seite. Danach wendet
+                jeder dieses neue Wissen auf seine persönliche Website an.
+              description_teacher: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Schülerinnen und Schüler beginnen diese Lektion mit einem
+                Blick auf eine Website über "Desserts of the World". Sie untersuchen
+                und modifizieren die neuen CSS-Stile auf dieser Website und fügen
+                der Seite ihre eigenen Stile hinzu. Nach der Arbeit an der Seite "Desserts"
+                wenden die Schülerinnen und Schüler ihr Wissen über die neuen CSS-Eigenschaften
+                an, um ihre persönlichen Websites besser zu stylen.
             Exploring Websites:
               name: Erkunde Webseiten
             Intro to HTML:
               name: Einführung in HTML
             Headers:
               name: Kopfzeilen
+              description_student: Diese Lektion setzt die Einführung in HTML-Tags
+                fort, diesmal mit Überschriften.  Die Teilnehmer üben die Verwendung
+                von Header-Tags zur Erstellung von Seiten- und Abschnittsüberschriften
+                und lernen, wie die verschiedenen Header-Elemente standardmäßig angezeigt
+                werden.  Als Nächstes plant die Klasse, wie sie ihren Inhalt auf den
+                persönlichen Webseiten organisieren, die in der gesamten Einheit aufgebaut
+                werden, und beginnen mit der ersten Seite des Projekts.
             Lists:
               name: Listen
+              description_student: Diese Lektion führt in geordnete und ungeordnete
+                Listen und die zugehörigen &lt;ul&gt;, &lt;ol&gt;, und &lt;li&gt;
+                HTML-Tags ein.  Die Klasse übt die Verwendung der Tags und geht dann
+                zurück zum persönlichen Webseiten-Projekt, um eine neue HTML-Seite
+                hinzuzufügen, die die neuen Tags enthält.
             Intellectual Property and Images:
               name: Geistiges Eigentum und Bilder
+            RGB Colors and Classes:
+              description_student: Diese Lektion behandelt Klassen und benutzerdefinierte
+                Farben. Die Schülerinnen und Schüler lernen zunächst, wie man benutzerdefinierte
+                Farben unter Verwendung von RGB-Werten (Rot, Grün, Blau) festlegt,
+                und wendet diese Farben dann auf eine neue Vier Jahreszeiten-Webseite
+                an, die CSS-Klassen verwendet.  Mithilfe von Klassen fügt die Klasse
+                der "Vier Jahreszeiten"-Webseite weitere Stile hinzu und verwendet
+                sie dann für die Gestaltung ihrer persönlichen Websites.
             Headings:
               name: Überschriften
+              description_student: Diese Lektion setzt die Einführung in HTML-Tags
+                fort, diesmal mit Überschriften.  Die Teilnehmer üben die Verwendung
+                von Header-Tags zur Erstellung von Seiten- und Abschnittsüberschriften
+                und lernen, wie die verschiedenen Header-Elemente standardmäßig angezeigt
+                werden.  Als Nächstes plant die Klasse, wie sie ihren Inhalt auf den
+                persönlichen Webseiten organisieren, die in der gesamten Einheit aufgebaut
+                werden, und beginnen mit der ersten Seite des Projekts.
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -2547,6 +2639,8 @@ de:
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Learn to Drag and Drop:
               name: Erlerne Drag und Drop
+            Being Safe Online:
+              name: Online sicher sein
             Going Places Safely:
               name: Sicher unterwegs
             'Debugging: Unspotted Bugs':
@@ -2558,6 +2652,8 @@ de:
               name: 'Fehlersuche: Ungeklärte Bugs'
             Learn to Drag and Drop:
               name: Erlerne Drag und Drop
+            Being Safe Online:
+              name: Online sicher sein
             More Computer Science:
               name: Mehr Informatik
             'Real-life Algorithms: Plant a Seed':
@@ -2616,6 +2712,8 @@ de:
               name: Erstelle ein Star Wars Spiel
             Functions in Bee:
               name: Funktionen mit der Biene
+            Present Your Project:
+              name: Stelle dein Projekt vor
             More Programming with Scratch:
               name: Mehr Programmierung mit Scratch
             Internet:
@@ -2638,12 +2736,16 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Functions with Parameters in Bee:
               name: Funktionen mit Parametern
+            Presentation Your Project:
+              name: Stelle dein Projekt vor
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
             Introduction:
               name: Einführung
             Ice Age Play Lab:
               name: Ice Age Spielelabor
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
         classic-hoc-impact-study:
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen
             Lieblingsfiguren kennen!
@@ -2675,12 +2777,16 @@ de:
           stages:
             Welcome!:
               name: Willkommen!
+            Reviewing the Modules:
+              name: Überprüfung der Module
             Wrap-Up:
               name: Zusammenfassung
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
               name: Willkommen!
+            Reviewing the Modules:
+              name: Überprüfung der Module
             Wrap-Up:
               name: Zusammenfassung
         sciencepd3-2016:
@@ -2701,6 +2807,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Introduction to Styling with CSS (2.7):
+              name: Einführung in das Styling mit CSS (2.7)
             Introduction to Styling with CSS:
               name: Einführung in das Styling mit CSS
             External Style Sheets:
@@ -2911,12 +3019,16 @@ de:
             Circuits and Physical Prototypes:
               description_student: Verdrahten Sie einfache Schaltungen, um einen physischen
                 Prototyp mit billigen und leicht zu findenden Materialien zu erstellen.
+            Arrays and Color LEDs:
+              name: Felder und Farb-LEDs
             Innovations in Computing_:
               description_student: Entdecke eine Vielzahl von neuen und innovativen
                 Computerplattformen und erweitere dein Verständnis dafür, was ein
                 Computer sein kann.
             Analog Input_:
               name: Analoger Eingang
+            Arrays and Color LEDs_:
+              name: Felder und Farb-LEDs
             Making Music_:
               name: Musik machen
             Accelerometer_:
@@ -2929,6 +3041,7 @@ de:
             'Project: Prototype an Innovation_':
               name: 'Projekt: Prototyp einer Innovation'
             Arrays and Color LEDs__:
+              name: Felder und Farb-LEDs
               description_student: Erfahre, wie Listen verwendet werden können, um
                 mehrere Werte in einem einzigen Variablennamen zu speichern.
         csd3-draft:
@@ -2954,6 +3067,8 @@ de:
               name: Komplexe Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -3000,6 +3115,8 @@ de:
               name: Einführung in die Problemlösung
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Representing Information:
               name: Darstellung von Informationen
             Human vs Computer Processing:
@@ -3022,6 +3139,12 @@ de:
               name: Geistiges Eigentum
             Images:
               name: Bilder
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
             Sources and Search Engines:
               name: Quellen und Suchmaschinen
             Headers:
@@ -3036,6 +3159,8 @@ de:
               name: Einführung in die Problemlösung
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Inputs and Outputs:
               name: Ein- und Ausgaben
             Processing:
@@ -3062,6 +3187,8 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -3074,6 +3201,8 @@ de:
               name: temporär
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
             Introduction:
               name: Einführung
             Ice Age Play Lab:
@@ -3096,6 +3225,12 @@ de:
               name: Text im Web
             Images in HTML:
               name: Bilder in HTML
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
             Multi-Page Websites:
               name: Webseiten mit mehreren Seiten
             Classes:
@@ -3117,6 +3252,8 @@ de:
               name: B8 BB8
             Programming with BB-8:
               name: Programmierung mit BB-8
+            Loops with BB-8:
+              name: Schleifen mit BB-8
             Ice Age Play Lab:
               name: Ice Age Spielelabor
             Bounce:
@@ -3137,6 +3274,8 @@ de:
               name: 'Fehlersuche: Ungeklärte Bugs'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
           title: Kurs B
           assignment_family_title: Kurs B
           description_audience: 'Alter: 5-8'
@@ -3188,6 +3327,11 @@ de:
               name: 'Digitale Staatsbürgerschaft: Digitale Staatsbürgerschaft praktizieren'
             Nested Loops Project in Artist:
               name: Eingebettete Schleifen bei der Eiskönigin
+            Debugging in Collector:
+              description_student: Bist du beim Programmieren schon einmal auf Probleme
+                gestoßen? In dieser Lektion wirst du in die Geheimnisse des Debuggens
+                eingeweiht. Debuggen ist der Prozess, Probleme im Code zu finden und
+                zu beheben.
           title: Kurs D
           assignment_family_title: Kurs D
           description_audience: 'Alter: 7-11'
@@ -3195,6 +3339,8 @@ de:
             Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
             Introduction:
               description_student: Diese schnelle Einführung gibt dir die Möglichkeit,
                 die meisten der Fähigkeiten zu üben, die du zum Lösen der Rätsel in
@@ -3231,9 +3377,15 @@ de:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
                 eigenes Star Wars-Spiel entwickelst.
+              description_teacher: In dieser Lektion üben die Schülerinnen und Schüler
+                die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie
+                online weitergeben können. Mit R2-D2 und anderen Star Wars-Charakteren
+                werden die Schülerinnen und Schüler durch die Ereignisse geführt und
+                erhalten dann die Gelegenheit ihr eigenes Spiel zu erstellen.
             Functions in Bee:
               name: Funktionen mit der Biene
             Present Your Project:
+              name: Stelle dein Projekt vor
               description_teacher: Im Laufe von vier Lektionen werden die Studenten
                 ein selbst entworfenes Projekt programmieren, wobei sie entweder Play
                 Lab oder Artist als Programmierumgebung verwenden. Schließlich können
@@ -3262,6 +3414,8 @@ de:
             das du mit deinen Freunden und deiner Familie teilen kannst.
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
             Introduction:
               description_student: Diese Lektion gibt dir eine kurze Einführung in
                 einige der erstaunlichen Dinge, die du in diesem Kurs lernen wirst!
@@ -3302,6 +3456,7 @@ de:
                 mit einem Überblick über alle fünf Phasen des Prozesses finden Sie
                 zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Present Your Project:
+              name: Stelle dein Projekt vor
               description_teacher: Im Laufe von fünf Lektionen bauen die Schüler ein
                 selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist
                 als Programmierumgebung verwenden. Schließlich können die Studenten
@@ -3399,6 +3554,8 @@ de:
               name: Funktionen mit der Biene
             Functions with Parameters in Bee:
               name: Funktionen mit Parametern
+            Present Your Project:
+              name: Stelle dein Projekt vor
             Nested Loops Project in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
             'Common Sense Education: Digital Citizenship':
@@ -3518,6 +3675,8 @@ de:
               name: Erstelle ein Star Wars Spiel
             Functions in Bee:
               name: Funktionen mit der Biene
+            Present Your Project:
+              name: Stelle dein Projekt vor
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3563,6 +3722,8 @@ de:
               name: Funktionen mit der Biene
             Functions with Parameters in Bee:
               name: Funktionen mit Parametern
+            Present Your Project:
+              name: Stelle dein Projekt vor
             Building a Foundation:
               name: Grundlagen aufbauen
             Debugging with Scrat:
@@ -3589,6 +3750,8 @@ de:
               name: Erstelle ein Star Wars Spiel
             Functions in Bee:
               name: Funktionen mit der Biene
+            Present Your Project:
+              name: Stelle dein Projekt vor
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3601,6 +3764,8 @@ de:
               name: Debuggen mit Scrat
             Nested Loops with Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
             Course E Introduction:
               name: Kurs E Einführung
             Ice Age Play Lab:
@@ -3615,6 +3780,8 @@ de:
               name: Funktionen mit der Biene
             Functions with Parameters in Bee:
               name: Funktionen mit Parametern
+            Present Your Project:
+              name: Stelle dein Projekt vor
         csd5-old:
           stages:
             Patterns and Representation:
@@ -3669,6 +3836,8 @@ de:
               name: neue Etappe
             Personal Innovations:
               name: Persönliche Innovationen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Simple Encryption:
               name: Einfache Verschlüsselung
             Web Development - Creating Webpages:
@@ -3731,6 +3900,8 @@ de:
               name: Bedingungen
             Functions in Bee:
               name: Funktionen mit der Biene
+            Present Your Project:
+              name: Stelle dein Projekt vor
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3748,6 +3919,8 @@ de:
               name: Debuggen mit Scrat
             Nested Loops with Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
             Introduction:
               name: Einführung
             Ice Age Play Lab:
@@ -3762,6 +3935,8 @@ de:
               name: Funktionen mit der Biene
             Functions with Parameters in Bee:
               name: Funktionen mit Parametern
+            Present Your Project:
+              name: Stelle dein Projekt vor
           title: Kurs F 2018 (Veraltet!)
         csd6-old:
           stages:
@@ -3775,6 +3950,10 @@ de:
               name: Analoger Eingang
             'Project: Prototype an Innovation':
               name: 'Projekt: Prototyp einer Innovation'
+        unembeddedlevels:
+          title: Nicht eingebettete Level
+        unembedded:
+          title: Nicht eingebettete Level
         csd3-1819draft:
           stages:
             Programming for Entertainment:
@@ -3791,6 +3970,8 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -3823,6 +4004,8 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -3830,6 +4013,13 @@ de:
             Functions:
               name: Funktionen
         csd2-2018:
+          description: " In Lerneinheit 2 lernst du, wie du Inhalte auf deiner eigenen
+            Webseiten erstellst und weitergeben kannst. Nachdem du entschieden hast,
+            welche Inhalte du mit der Welt teilen möchtest, lernst du, wie du deine
+            Seiten mit HTML und CSS strukturieren und gestalten kannst. Außerdem übst
+            du wertvolle Programmierfähigkeiten wie Debugging und Kommentieren.  Am
+            Ende der Einheit wirst du eine persönliche Website haben, die du im Internet
+            veröffentlichen kannst."
           stages:
             Exploring Websites:
               name: Erkunde Webseiten
@@ -3837,14 +4027,72 @@ de:
               name: Einführung in HTML
             Headings:
               name: Überschriften
+              description_student: Diese Lektion setzt die Einführung in HTML-Tags
+                fort, diesmal mit Überschriften.  Die Teilnehmer üben die Verwendung
+                von Header-Tags zur Erstellung von Seiten- und Abschnittsüberschriften
+                und lernen, wie die verschiedenen Header-Elemente standardmäßig angezeigt
+                werden.  Als Nächstes plant die Klasse, wie sie ihren Inhalt auf den
+                persönlichen Webseiten organisieren, die in der gesamten Einheit aufgebaut
+                werden, und beginnen mit der ersten Seite des Projekts.
             Digital Footprint:
               name: Digitaler Fußabdruck
             Lists:
               name: Listen
+              description_student: Diese Lektion führt in geordnete und ungeordnete
+                Listen und die zugehörigen &lt;ul&gt;, &lt;ol&gt;, und &lt;li&gt;
+                HTML-Tags ein.  Die Klasse übt die Verwendung der Tags und geht dann
+                zurück zum persönlichen Webseiten-Projekt, um eine neue HTML-Seite
+                hinzuzufügen, die die neuen Tags enthält.
             Intellectual Property and Images:
               name: Geistiges Eigentum und Bilder
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
+              description_student: In dieser Lektion werden häufige Probleme behandelt,
+                die beim Entwerfen von Webseiten in HTML auftreten. Die Schülerinnen
+                und Schüler korrigieren Fehler in einer Folge von immer komplexeren
+                Webseiten, die sie in Code Studio finden, und lernen die Bedeutung
+                von Kommentaren, Leerzeichen und Einrückungen als Hilfsmittel, um
+                Webseiten leichter lesbar zu machen.
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+              description_student: In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Klasse lernt die
+                grundlegende Syntax für CSS-Regelsätze und befasst sich dann mit Eigenschaften,
+                die sich auf HTML-Textelemente auswirken.  Schließlich wendet jeder
+                Teilnehmer Textstile auf seine persönlichen Websites an.
+              description_teacher: "In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Teilnehmer lernen
+                die grundlegende Syntax für CSS-Regelsätze kennen und untersuchen
+                dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Sie
+                arbeiten an einer HTML-Seite über Guinness-Weltrekordhalter und fügen
+                der bereitgestellten Seite ihren eigenen Stil hinzu. In der letzten
+                Stufe wenden die Schülerinnen und Schüler das, was sie über Stile
+                für Textelemente gelernt haben, auf ihre persönliche Webseite an.\r\n\r"
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
+              description_student: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Klasse beginnt mit der Untersuchung und Modifizierung der
+                neuen CSS-Stile auf einer "Desserts of the World"-Seite. Danach wendet
+                jeder dieses neue Wissen auf seine persönliche Website an.
+              description_teacher: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Schülerinnen und Schüler beginnen diese Lektion mit einem
+                Blick auf eine Website über "Desserts of the World". Sie untersuchen
+                und modifizieren die neuen CSS-Stile auf dieser Website und fügen
+                der Seite ihre eigenen Stile hinzu. Nach der Arbeit an der Seite "Desserts"
+                wenden die Schülerinnen und Schüler ihr Wissen über die neuen CSS-Eigenschaften
+                an, um ihre persönlichen Websites besser zu stylen.
             Sources and Search Engines:
               name: Quellen und Suchmaschinen
+            RGB Colors and Classes:
+              description_student: Diese Lektion behandelt Klassen und benutzerdefinierte
+                Farben. Die Schülerinnen und Schüler lernen zunächst, wie man benutzerdefinierte
+                Farben unter Verwendung von RGB-Werten (Rot, Grün, Blau) festlegt,
+                und wendet diese Farben dann auf eine neue Vier Jahreszeiten-Webseite
+                an, die CSS-Klassen verwendet.  Mithilfe von Klassen fügt die Klasse
+                der "Vier Jahreszeiten"-Webseite weitere Stile hinzu und verwendet
+                sie dann für die Gestaltung ihrer persönlichen Websites.
         coursea-2018:
           title: Kurs A (2018)
           assignment_family_title: Kurs A
@@ -3896,6 +4144,10 @@ de:
               name: Funktionen mit der Biene
             Functions with Parameters in Bee:
               name: Funktionen mit Parametern
+            Present Your Project:
+              name: Stelle dein Projekt vor
+            Programming in Maze:
+              name: Preogrammieren mit Angry Birds
             Debugging in Maze:
               name: Debuggen mit Scrat
             Programming in Collector:
@@ -3955,6 +4207,8 @@ de:
               name: Erlerne Drag und Drop
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
             Loops in Collector:
               name: Schleifen mit Laurel
             Programming in Ice Age:
@@ -3992,6 +4246,8 @@ de:
               name: Künstler Binär
             Loops in Ice Age:
               name: Schleifen in Ice Age
+            Conditionals in Maze:
+              name: Bedingungen im Labyrinth
             Conditionals & Loops in Harvester:
               name: Ernten mit Bedingungen
             Graph Paper Programming:
@@ -4067,8 +4323,12 @@ de:
               name: Binäre Armbänder
         csd6-2018:
           stages:
+            Accelerometer_:
+              name: Beschleunigungsmesser_
             Analog Input:
               name: Analoger Eingang
+            Arrays and Color LEDs:
+              name: Felder und Farb-LEDs
             Making Music:
               name: Musik machen
             Accelerometer:
@@ -4088,6 +4348,8 @@ de:
           stages:
             'Programming: My Robotic Friends':
               name: Meine Roboterfreunde
+            Sequence in Maze:
+              name: Programmieren mit Kommentaren
             Building a Foundation:
               name: Grundlagen aufbauen
             Debugging with Scrat:
@@ -4107,6 +4369,11 @@ de:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
                 eigenes Star Wars-Spiel entwickelst.
+              description_teacher: In dieser Lektion üben die Schülerinnen und Schüler
+                die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie
+                online weitergeben können. Mit R2-D2 und anderen Star Wars-Charakteren
+                werden die Schülerinnen und Schüler durch die Ereignisse geführt und
+                erhalten dann die Gelegenheit ihr eigenes Spiel zu erstellen.
             'Functions: Songwriting':
               name: Songschreiben
             Functions in Harvester:
@@ -4130,6 +4397,7 @@ de:
                 des Projekts sein. Die Lektionsanleitung für alle vier Phasen des
                 Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
+              name: Stelle dein Projekt vor
               description_teacher: Im Laufe von vier Lektionen werden die Studenten
                 ein selbst entworfenes Projekt programmieren, wobei sie entweder Play
                 Lab oder Artist als Programmierumgebung verwenden. Schließlich können
@@ -4163,6 +4431,8 @@ de:
           stages:
             'Programming: My Robotic Friends':
               name: Meine Roboterfreunde
+            Sequence in Maze:
+              name: Programmieren mit Kommentaren
             Building a Foundation:
               name: Grundlagen aufbauen
             Debugging with Scrat:
@@ -4173,6 +4443,8 @@ de:
               name: Eingebettete Schleifen im Labyrinth
             Nested Loops with Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            'Algorithms: Tangrams':
+              name: 'Algorithmen: Tangramme'
             Introduction:
               name: Einführung
               description_student: Diese Lektion gibt dir eine kurze Einführung in
@@ -4222,6 +4494,7 @@ de:
                 mit einem Überblick über alle fünf Phasen des Prozesses finden Sie
                 zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Present Your Project:
+              name: Stelle dein Projekt vor
               description_teacher: Im Laufe von fünf Lektionen bauen die Schüler ein
                 selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist
                 als Programmierumgebung verwenden. Schließlich können die Studenten
@@ -4258,6 +4531,8 @@ de:
               name: Router und Redundanz
             The Need for DNS:
               name: Die Notwendigkeit von DNS
+            HTTP and Abstraction:
+              name: HTTP und Abstraktion
             Unit 1 Chapter 2 Assessment:
               name: Lerneinheit 1 Kapitel 2 Herausforderung
         csd1-2018:
@@ -4282,6 +4557,8 @@ de:
                 der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Input and Output:
               name: Ein- und Ausgabe
             Processing:
@@ -4338,6 +4615,8 @@ de:
               name: Verlustreiche Kompression und Dateitypen
             Unit 2 Chapter 1 Assessment:
               name: Lerneinheit 2 Kapitel 1 Herausforderung
+            Intro to Data:
+              name: Einführung in Daten
             Finding Trends with Visualizations:
               name: Mit Visualisierungen Trends finden
             Check Your Assumptions:
@@ -4438,6 +4717,8 @@ de:
               name: Beispielapps
             Final Project:
               name: Abschließende Herausforderung
+            Intro to Data:
+              name: Einführung in Daten
             Finding Trends with Visualizations:
               name: Mit Visualisierungen Trends finden
             Check Your Assumptions:
@@ -4571,6 +4852,8 @@ de:
               name: Programmieren mit Scrat
             Copyright and Creativity:
               name: Es ist großartig etwas zu erschaffen und fair zu spielen
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
             Loops in Ice Age:
               name: Schleifen mit Scrat
             'Persistence & Frustration: Stevie and the Big Project':
@@ -4690,6 +4973,7 @@ de:
                 mit einem Überblick über alle fünf Phasen des Prozesses finden Sie
                 zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Present Your Project:
+              name: Stelle dein Projekt vor
               description_teacher: Im Laufe von fünf Lektionen bauen die Schüler ein
                 selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist
                 als Programmierumgebung verwenden. Schließlich können die Studenten
@@ -4728,6 +5012,10 @@ de:
                 nach der anderen.
             Debugging in Collector:
               name: Debuggen mit Laurel
+              description_student: Bist du beim Programmieren schon einmal auf Probleme
+                gestoßen? In dieser Lektion wirst du in die Geheimnisse des Debuggens
+                eingeweiht. Debuggen ist der Prozess, Probleme im Code zu finden und
+                zu beheben.
             Loops in Ice Age:
               name: Schleifen in Ice Age
               description_student: In dieser Lektion wirst du den Wiederholungsbaustein
@@ -4781,6 +5069,11 @@ de:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
                 eigenes Star Wars-Spiel entwickelst.
+              description_teacher: In dieser Lektion üben die Schülerinnen und Schüler
+                die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie
+                online weitergeben können. Mit R2-D2 und anderen Star Wars-Charakteren
+                werden die Schülerinnen und Schüler durch die Ereignisse geführt und
+                erhalten dann die Gelegenheit ihr eigenes Spiel zu erstellen.
             Dance Party:
               name: Tanzparty
         coursee-2019:
@@ -4805,6 +5098,11 @@ de:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
                 eigenes Star Wars-Spiel entwickelst.
+              description_teacher: In dieser Lektion üben die Schülerinnen und Schüler
+                die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie
+                online weitergeben können. Mit R2-D2 und anderen Star Wars-Charakteren
+                werden die Schülerinnen und Schüler durch die Ereignisse geführt und
+                erhalten dann die Gelegenheit ihr eigenes Spiel zu erstellen.
             'Functions: Songwriting':
               name: Songschreiben
             Functions in Harvester:
@@ -4830,6 +5128,7 @@ de:
                 des Projekts sein. Die Lektionsanleitung für alle vier Phasen des
                 Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
+              name: Stelle dein Projekt vor
               description_teacher: Im Laufe von vier Lektionen werden die Studenten
                 ein selbst entworfenes Projekt programmieren, wobei sie entweder Play
                 Lab oder Artist als Programmierumgebung verwenden. Schließlich können
@@ -4883,6 +5182,8 @@ de:
               name: Umschlag-Variablen
             For Loop Fun:
               name: "„Zähle mit“-Schleifenspaß"
+            Present Your Project:
+              name: Stelle dein Projekt vor
             Binary Bracelets:
               name: Binäre Armbänder
             'Unplugged: Binary':
@@ -4917,12 +5218,16 @@ de:
                 der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Input and Output:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
             Apps and Storage:
               name: Anwendungen und Speicherung
+            Post-Project Test:
+              name: Test nach dem Projekt
         andrea-test:
           stages:
             new stage:
@@ -4961,6 +5266,10 @@ de:
           stages:
             Programming in Maze:
               name: Programmieren mit Angry Birds
+              description_student: Erfahre mehr über Sequenzen und Algorithmen mit
+                Angry Birds.
+            Debugging in Maze:
+              description_student: Finde Probleme in Rätseln und schule deine Debugging-Fähigkeiten.
             'Real-life Algorithms: Paper Planes':
               name: 'Alltagsalgorithmen: Papierflieger'
             Programming in Collector:
@@ -4979,6 +5288,10 @@ de:
             Loops with Rey and BB-8:
               name: Schleifen mit Rey und BB-8
               description_student: 'Hilf BB-8 durch Labyrinthe mit Schleifen! '
+              description_teacher: Aufbauend auf dem Konzept der Wiederholung von
+                Anweisungen aus "Getting Loopy" werden die Schülerinnen und Schüler
+                in dieser Phase Schleifen verwenden, um BB-8 dabei zu helfen, ein
+                Labyrinth effizienter als bisher zu durchqueren.
             Loops in Harvester:
               name: Ernten mit Schleifen
               description_student: Lasst uns Schleifen verwenden, um der Erntearbeiterin
@@ -5033,6 +5346,12 @@ de:
                 Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne
                 sie Codebausteinen in einer linearen Abfolge an, so dass sie sich
                 gerade bewegen, nach links oder rechts drehen.
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
+              description_student: Hilf BB-8 den Schrott einzusammeln
+              description_teacher: In dieser Lektion werden die Schüler ihre neu gewonnenen
+                Programmierkenntnisse auf komplexere Weise einsetzen, um BB-8 durch
+                einen kniffligen Parkour zu navigieren.
             Sequencing with Scrat:
               name: Sequenzen mit Scrat
               description_student: Programmiere Scrat, um die Eichel zu erreichen.
@@ -5048,6 +5367,8 @@ de:
               name: Dein digitaler Fußabdruck
             Copyright and Creativity:
               name: Urheberrecht und Kreativität
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
             Loops in Ice Age:
               name: Schleifen in Ice Age
             Loops in Collector:
@@ -5086,6 +5407,8 @@ de:
               name: Dein digitaler Fußabdruck
             Copyright and Creativity:
               name: Urheberrecht und Kreativität
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
             Loops in Ice Age:
               name: Schleifen mit Scrat
             Loops in Collector:
@@ -5109,6 +5432,13 @@ de:
             new stage:
               name: neue Etappe
         csd2-2019:
+          description: " In Lerneinheit 2 lernst du, wie du Inhalte auf deiner eigenen
+            Webseiten erstellst und weitergeben kannst. Nachdem du entschieden hast,
+            welche Inhalte du mit der Welt teilen möchtest, lernst du, wie du deine
+            Seiten mit HTML und CSS strukturieren und gestalten kannst. Außerdem übst
+            du wertvolle Programmierfähigkeiten wie Debugging und Kommentieren.  Am
+            Ende der Einheit wirst du eine persönliche Website haben, die du im Internet
+            veröffentlichen kannst."
           stages:
             Exploring Websites:
               name: Erkunde Webseiten
@@ -5116,14 +5446,74 @@ de:
               name: Einführung in HTML
             Headings:
               name: Überschriften
+              description_student: Diese Lektion setzt die Einführung in HTML-Tags
+                fort, diesmal mit Überschriften.  Die Teilnehmer üben die Verwendung
+                von Header-Tags zur Erstellung von Seiten- und Abschnittsüberschriften
+                und lernen, wie die verschiedenen Header-Elemente standardmäßig angezeigt
+                werden.  Als Nächstes plant die Klasse, wie sie ihren Inhalt auf den
+                persönlichen Webseiten organisieren, die in der gesamten Einheit aufgebaut
+                werden, und beginnen mit der ersten Seite des Projekts.
             Digital Footprint:
               name: Digitaler Fußabdruck
             Lists:
               name: Listen
+              description_student: Diese Lektion führt in geordnete und ungeordnete
+                Listen und die zugehörigen &lt;ul&gt;, &lt;ol&gt;, und &lt;li&gt;
+                HTML-Tags ein.  Die Klasse übt die Verwendung der Tags und geht dann
+                zurück zum persönlichen Webseiten-Projekt, um eine neue HTML-Seite
+                hinzuzufügen, die die neuen Tags enthält.
             Intellectual Property and Images:
               name: Geistiges Eigentum und Bilder
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
+              description_student: In dieser Lektion werden häufige Probleme behandelt,
+                die beim Entwerfen von Webseiten in HTML auftreten. Die Schülerinnen
+                und Schüler korrigieren Fehler in einer Folge von immer komplexeren
+                Webseiten, die sie in Code Studio finden, und lernen die Bedeutung
+                von Kommentaren, Leerzeichen und Einrückungen als Hilfsmittel, um
+                Webseiten leichter lesbar zu machen.
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+              description_student: In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Klasse lernt die
+                grundlegende Syntax für CSS-Regelsätze und befasst sich dann mit Eigenschaften,
+                die sich auf HTML-Textelemente auswirken.  Schließlich wendet jeder
+                Teilnehmer Textstile auf seine persönlichen Websites an.
+              description_teacher: "In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Teilnehmer lernen
+                die grundlegende Syntax für CSS-Regelsätze kennen und untersuchen
+                dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Sie
+                arbeiten an einer HTML-Seite über Guinness-Weltrekordhalter und fügen
+                der bereitgestellten Seite ihren eigenen Stil hinzu. In der letzten
+                Stufe wenden die Schülerinnen und Schüler das, was sie über Stile
+                für Textelemente gelernt haben, auf ihre persönliche Webseite an.\r\n\r"
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
+              description_student: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Klasse beginnt mit der Untersuchung und Modifizierung der
+                neuen CSS-Stile auf einer "Desserts of the World"-Seite. Danach wendet
+                jeder dieses neue Wissen auf seine persönliche Website an.
+              description_teacher: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Schülerinnen und Schüler beginnen diese Lektion mit einem
+                Blick auf eine Website über "Desserts of the World". Sie untersuchen
+                und modifizieren die neuen CSS-Stile auf dieser Website und fügen
+                der Seite ihre eigenen Stile hinzu. Nach der Arbeit an der Seite "Desserts"
+                wenden die Schülerinnen und Schüler ihr Wissen über die neuen CSS-Eigenschaften
+                an, um ihre persönlichen Websites besser zu stylen.
             Sources and Search Engines:
               name: Quellen und Suchmaschinen
+            RGB Colors and Classes:
+              description_student: Diese Lektion behandelt Klassen und benutzerdefinierte
+                Farben. Die Schülerinnen und Schüler lernen zunächst, wie man benutzerdefinierte
+                Farben unter Verwendung von RGB-Werten (Rot, Grün, Blau) festlegt,
+                und wendet diese Farben dann auf eine neue Vier Jahreszeiten-Webseite
+                an, die CSS-Klassen verwendet.  Mithilfe von Klassen fügt die Klasse
+                der "Vier Jahreszeiten"-Webseite weitere Stile hinzu und verwendet
+                sie dann für die Gestaltung ihrer persönlichen Websites.
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd3-2019:
           description_short: Programmierung
           stages:
@@ -5141,12 +5531,16 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
               name: Kollisionen
             Functions:
               name: Funktionen
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd4-2019:
           stages:
             Analysis of Design:
@@ -5170,6 +5564,8 @@ de:
                 Testen der Papierprototypen werden die Teams mit der Planung für die
                 spezifischen Szenarien beginnen, bevor sie die Tests durchführen und
                 beobachten. '
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd5-2019:
           stages:
             Patterns and Representation:
@@ -5180,10 +5576,14 @@ de:
               name: Zahlendarstellung
             Structuring Data:
               name: Daten strukturieren
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd6-2019:
           stages:
             Analog Input:
               name: Analoger Eingang
+            Arrays and Color LEDs:
+              name: Felder und Farb-LEDs
             Making Music:
               name: Musik machen
             Accelerometer:
@@ -5192,6 +5592,8 @@ de:
               name: Funktionen mit Parametern
             'Project: Prototype an Innovation':
               name: 'Projekt: Prototyp einer Innovation'
+            Post-Project Test:
+              name: Test nach dem Projekt
         csp4-pilot:
           stages:
             Student Survey:
@@ -5242,6 +5644,8 @@ de:
               name: Router und Redundanz
             The Need for DNS:
               name: Die Notwendigkeit von DNS
+            HTTP and Abstraction:
+              name: HTTP und Abstraktion
             Unit 1 Chapter 2 Assessment:
               name: Lerneinheit 1 Kapitel 2 Herausforderung
         csp2-2019:
@@ -5323,6 +5727,8 @@ de:
               name: Halbjahres-Umfrage
         csppostap-2019:
           stages:
+            Intro to Data:
+              name: Einführung in Daten
             Good and Bad Data Visualizations:
               name: Gute und schlechte Daten Visualisierungen
             Making Data Visualizations:
@@ -5389,6 +5795,10 @@ de:
               name: Webentwicklung
             Games and Animations:
               name: Spiele und Animationen
+            User Centered Design:
+              name: Benutzerzentriertes Design
+            Data and Society:
+              name: Daten und Gesellschaft
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5407,10 +5817,16 @@ de:
               name: Erstelle ein Star Wars Spiel
             Invasive Species:
               name: Invasive Arten
+            Current Solutions:
+              name: Aktuelle Lösungen
             Functions in Harvester:
               name: Programmieren mit dem Erntearbeiter
             Debate:
               name: Diskutiere
+            I'm in Big Trouble!:
+              name: Ich stecke in großen Schwierigkeiten!
+            I am in Big Trouble:
+              name: Ich stecke in großen Schwierigkeiten!
           description_audience: 4. Klasse
         csp1-pilot-staging:
           stages:
@@ -5450,6 +5866,8 @@ de:
               name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
+            Introduction to Apps:
+              name: Einführung in Apps
             'Project: Designing an App pt. 1':
               name: 'Projekt: Erstellen einer App (Teil 1)'
             'Project: Designing an App pt. 2':
@@ -5602,6 +6020,10 @@ de:
               name: Tag 4
             Wrap Up:
               name: Zusammenfassung
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Was ist ein Computer?
         fit2019-apprentice:
           stages:
             Day 1:
@@ -5636,13 +6058,24 @@ de:
                 der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Input and Output:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
             Apps and Storage:
               name: Anwendungen und Speicherung
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd2-pilot:
+          description: " In Lerneinheit 2 lernst du, wie du Inhalte auf deiner eigenen
+            Webseiten erstellst und weitergeben kannst. Nachdem du entschieden hast,
+            welche Inhalte du mit der Welt teilen möchtest, lernst du, wie du deine
+            Seiten mit HTML und CSS strukturieren und gestalten kannst. Außerdem übst
+            du wertvolle Programmierfähigkeiten wie Debugging und Kommentieren.  Am
+            Ende der Einheit wirst du eine persönliche Website haben, die du im Internet
+            veröffentlichen kannst."
           stages:
             Exploring Websites:
               name: Erkunde Webseiten
@@ -5650,14 +6083,74 @@ de:
               name: Einführung in HTML
             Headings:
               name: Überschriften
+              description_student: Diese Lektion setzt die Einführung in HTML-Tags
+                fort, diesmal mit Überschriften.  Die Teilnehmer üben die Verwendung
+                von Header-Tags zur Erstellung von Seiten- und Abschnittsüberschriften
+                und lernen, wie die verschiedenen Header-Elemente standardmäßig angezeigt
+                werden.  Als Nächstes plant die Klasse, wie sie ihren Inhalt auf den
+                persönlichen Webseiten organisieren, die in der gesamten Einheit aufgebaut
+                werden, und beginnen mit der ersten Seite des Projekts.
             Digital Footprint:
               name: Digitaler Fußabdruck
             Lists:
               name: Listen
+              description_student: Diese Lektion führt in geordnete und ungeordnete
+                Listen und die zugehörigen &lt;ul&gt;, &lt;ol&gt;, und &lt;li&gt;
+                HTML-Tags ein.  Die Klasse übt die Verwendung der Tags und geht dann
+                zurück zum persönlichen Webseiten-Projekt, um eine neue HTML-Seite
+                hinzuzufügen, die die neuen Tags enthält.
             Intellectual Property and Images:
               name: Geistiges Eigentum und Bilder
+            Clean Code and Debugging:
+              name: Sauberer Code und Fehlerbeseitigung
+              description_student: In dieser Lektion werden häufige Probleme behandelt,
+                die beim Entwerfen von Webseiten in HTML auftreten. Die Schülerinnen
+                und Schüler korrigieren Fehler in einer Folge von immer komplexeren
+                Webseiten, die sie in Code Studio finden, und lernen die Bedeutung
+                von Kommentaren, Leerzeichen und Einrückungen als Hilfsmittel, um
+                Webseiten leichter lesbar zu machen.
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+              description_student: In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Klasse lernt die
+                grundlegende Syntax für CSS-Regelsätze und befasst sich dann mit Eigenschaften,
+                die sich auf HTML-Textelemente auswirken.  Schließlich wendet jeder
+                Teilnehmer Textstile auf seine persönlichen Websites an.
+              description_teacher: "In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Teilnehmer lernen
+                die grundlegende Syntax für CSS-Regelsätze kennen und untersuchen
+                dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Sie
+                arbeiten an einer HTML-Seite über Guinness-Weltrekordhalter und fügen
+                der bereitgestellten Seite ihren eigenen Stil hinzu. In der letzten
+                Stufe wenden die Schülerinnen und Schüler das, was sie über Stile
+                für Textelemente gelernt haben, auf ihre persönliche Webseite an.\r\n\r"
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
+              description_student: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Klasse beginnt mit der Untersuchung und Modifizierung der
+                neuen CSS-Stile auf einer "Desserts of the World"-Seite. Danach wendet
+                jeder dieses neue Wissen auf seine persönliche Website an.
+              description_teacher: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Schülerinnen und Schüler beginnen diese Lektion mit einem
+                Blick auf eine Website über "Desserts of the World". Sie untersuchen
+                und modifizieren die neuen CSS-Stile auf dieser Website und fügen
+                der Seite ihre eigenen Stile hinzu. Nach der Arbeit an der Seite "Desserts"
+                wenden die Schülerinnen und Schüler ihr Wissen über die neuen CSS-Eigenschaften
+                an, um ihre persönlichen Websites besser zu stylen.
             Sources and Search Engines:
               name: Quellen und Suchmaschinen
+            RGB Colors and Classes:
+              description_student: Diese Lektion behandelt Klassen und benutzerdefinierte
+                Farben. Die Schülerinnen und Schüler lernen zunächst, wie man benutzerdefinierte
+                Farben unter Verwendung von RGB-Werten (Rot, Grün, Blau) festlegt,
+                und wendet diese Farben dann auf eine neue Vier Jahreszeiten-Webseite
+                an, die CSS-Klassen verwendet.  Mithilfe von Klassen fügt die Klasse
+                der "Vier Jahreszeiten"-Webseite weitere Stile hinzu und verwendet
+                sie dann für die Gestaltung ihrer persönlichen Websites.
+            Post-Project Test:
+              name: Test nach dem Projekt
             Intellectual Property:
               name: Geistiges Eigentum
             Project - Building a Webpage:
@@ -5689,12 +6182,16 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
               name: Kollisionen
             Functions:
               name: Funktionen
+            Post-Project Test:
+              name: Test nach dem Projekt
             Random Numbers:
               name: Zufällige Zahlen
             Sprite Properties:
@@ -5705,6 +6202,8 @@ de:
               name: neue Etappe
         csp3-pilot:
           stages:
+            Introduction to Apps:
+              name: Einführung in Apps
             Project - Designing an App Part 1:
               name: 'Projekt: Erstellen einer App (Teil 1)'
             Project - Designing an App Part 2:
@@ -5719,12 +6218,16 @@ de:
               name: Einheit 3 SCHÜLER Umfrage
             Unit 3 TEACHER Survey:
               name: Einheit 3 LEHRER Umfrage
+            Intro to Programming:
+              name: Einführung in die Programmierung
             Debugging:
               name: Debugging
         csl-vn:
           stages:
             Sequencing with Scrat:
               name: Sequenzen mit Scrat
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
             Loops in Ice Age:
               name: Schleifen in Ice Age
         dlp19-csd-mod-w1:
@@ -5741,12 +6244,16 @@ de:
               name: neue Etappe
         csd4-pilot:
           stages:
+            What is a Computer?:
+              name: Was ist ein Computer?
             Input and Output:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
             Apps and Storage:
               name: Anwendungen und Speicherung
+            Post-Project Test:
+              name: Test nach dem Projekt
         csp2-pilot:
           stages:
             new stage:
@@ -5767,6 +6274,11 @@ de:
               name: DNS und HTTP
             The Need for Addressing:
               name: Die Notwendigkeit von Addressierung
+        denny-science:
+          stages:
+            Earthquake Detector:
+              name: Erdbeben-Detektor
+          title: Erdbeben-Detektor
         peru-2019:
           stages:
             new stage:
@@ -5822,8 +6334,12 @@ de:
               name: Ereignisse
             Functions:
               name: Funktionen
+            Diving Deeper:
+              name: Tiefer Eintauchen
             Next steps:
               name: Nächste Schritte
+            Diving deeper:
+              name: Tiefer eintauchen
             Variables:
               name: Variablen
             For Loops:
@@ -5880,6 +6396,8 @@ de:
           stages:
             Invasive Species:
               name: Invasive Arten
+            I am in Big Trouble:
+              name: Ich stecke in großen Schwierigkeiten!
             Nested Loops in Maze:
               name: Eingebettete Schleifen im Labyrinth
             Nested Loops with Frozen:
@@ -5935,6 +6453,12 @@ de:
             Big Data, Crowdsourcing, and Machine Learning:
               name: Big Data, Crowdsourcing und maschinelles Lernen
         csd2-2020:
+          description: " In Lerneinheit 2 lernst du, wie du Inhalte auf deiner eigenen
+            Webseiten erstellst und weitergeben kannst. Nachdem du entschieden hast,
+            welche Inhalte du mit der Welt teilen möchtest, lernst du, wie du deine
+            Seiten mit HTML und CSS strukturieren und gestalten kannst. Außerdem übst
+            du wertvolle Programmierfähigkeiten wie Debugging mit Ressourcen und Teamarbeit.
+            \  "
           stages:
             Exploring Web Pages:
               name: Erkunde Webseiten
@@ -5944,16 +6468,24 @@ de:
               name: Überschriften
             Digital Footprint:
               name: Digitaler Fußabdruck
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
             Intellectual Property:
               name: Geistiges Eigentum
             Images:
               name: Bilder
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
             Project - Building a Webpage:
               name: Projekt - Erstellung einer Webseite
             Sources and Research:
               name: Quellen und Forschung
             CSS Classes:
               name: CSS-Klassen
+            Post-Project Test:
+              name: Test nach dem Projekt
+            'Mini-Project: HTML Web Page':
+              name: 'Mini-Projekt: HTML-Webseite'
         csd1-2020:
           stages:
             Intro to Problem Solving:
@@ -5976,12 +6508,16 @@ de:
                 der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
             Input and Output:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
             Apps and Storage:
               name: Anwendungen und Speicherung
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd4-2020:
           stages:
             Analysis of Design:
@@ -6005,6 +6541,8 @@ de:
                 Testen der Papierprototypen werden die Teams mit der Planung für die
                 spezifischen Szenarien beginnen, bevor sie die Tests durchführen und
                 beobachten. '
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd5-2020:
           stages:
             Patterns and Representation:
@@ -6015,10 +6553,14 @@ de:
               name: Zahlendarstellung
             Structuring Data:
               name: Daten strukturieren
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd6-2020:
           stages:
             Analog Input:
               name: Analoger Eingang
+            Arrays and Color LEDs:
+              name: Felder und Farb-LEDs
             Making Music:
               name: Musik machen
             Accelerometer:
@@ -6027,6 +6569,8 @@ de:
               name: Funktionen mit Parametern
             'Project: Prototype an Innovation':
               name: 'Projekt: Prototyp einer Innovation'
+            Post-Project Test:
+              name: Test nach dem Projekt
         csd3-2020:
           description_short: Programmierung
           stages:
@@ -6046,12 +6590,16 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
               name: Kollisionen
             Functions:
               name: Funktionen
+            Post-Project Test:
+              name: Test nach dem Projekt
             Text:
               name: Text
         coursea-2020:
@@ -6077,6 +6625,12 @@ de:
                 Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne
                 sie Codebausteinen in einer linearen Abfolge an, so dass sie sich
                 gerade bewegen, nach links oder rechts drehen.
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
+              description_student: Hilf BB-8 den Schrott einzusammeln
+              description_teacher: In dieser Lektion werden die Schüler ihre neu gewonnenen
+                Programmierkenntnisse auf komplexere Weise einsetzen, um BB-8 durch
+                einen kniffligen Parkour zu navigieren.
             Loops in Ice Age:
               name: Schleifen mit Scrat
               description_student: Hilf Scrat, mehr Boden mit Hilfe von Schleifen
@@ -6116,6 +6670,8 @@ de:
                 der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen
                 Schätze in offenen Höhlen. Ein neuer Block `sammle Schatz` wird eingeführt,
                 um ihr auf ihrer Reise zu helfen.
+            Digital Trails:
+              name: Digitale Spuren
         coursec-2020:
           title: Kurs C (2019)
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine
@@ -6126,6 +6682,10 @@ de:
               name: Starke Passwörter
             Programming in Maze:
               name: Programmieren mit Angry Birds
+              description_student: Erfahre mehr über Sequenzen und Algorithmen mit
+                Angry Birds.
+            Debugging in Maze:
+              description_student: Finde Probleme in Rätseln und schule deine Debugging-Fähigkeiten.
             Programming in Collector:
               name: Den Schatz mit Laurel sammeln
               description_student: Schreibe Algorithmen, um Laurel, die Abenteurerin,
@@ -6144,6 +6704,10 @@ de:
             Loops with Rey and BB-8:
               name: Schleifen mit Rey und BB-8
               description_student: 'Hilf BB-8 durch Labyrinthe mit Schleifen! '
+              description_teacher: Aufbauend auf dem Konzept der Wiederholung von
+                Anweisungen aus "Getting Loopy" werden die Schülerinnen und Schüler
+                in dieser Phase Schleifen verwenden, um BB-8 dabei zu helfen, ein
+                Labyrinth effizienter als bisher zu durchqueren.
             Loops in Harvester:
               name: Ernten mit Schleifen
               description_student: Lasst uns Schleifen verwenden, um der Erntearbeiterin
@@ -6177,10 +6741,19 @@ de:
                 nach der anderen.
             Debugging in Collector:
               name: Debuggen mit Laurel
+              description_student: Bist du beim Programmieren schon einmal auf Probleme
+                gestoßen? In dieser Lektion wirst du in die Geheimnisse des Debuggens
+                eingeweiht. Debuggen ist der Prozess, Probleme im Code zu finden und
+                zu beheben.
             Build a Star Wars Game:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
                 eigenes Star Wars-Spiel entwickelst.
+              description_teacher: In dieser Lektion üben die Schülerinnen und Schüler
+                die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie
+                online weitergeben können. Mit R2-D2 und anderen Star Wars-Charakteren
+                werden die Schülerinnen und Schüler durch die Ereignisse geführt und
+                erhalten dann die Gelegenheit ihr eigenes Spiel zu erstellen.
             Loops in Ice Age:
               name: Schleifen in Ice Age
               description_student: In dieser Lektion wirst du den Wiederholungsbaustein
@@ -6298,6 +6871,8 @@ de:
               name: Erlerne Drag und Drop
             Sequencing with Scrat:
               name: Sequenzen mit Scrat
+            Programming with Rey and BB-8:
+              name: Programmieren mit Rey und BB-8
             Programming in Harvester:
               name: Programmieren mit der Erntearbeiterin
             Spelling Bee:
@@ -6340,12 +6915,16 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Introduction to Apps:
+              name: Einführung in Apps
             Project - Designing an App Part 1:
               name: 'Projekt: Erstellen einer App (Teil 1)'
             Project - Designing an App Part 2:
               name: 'Projekt: Erstellen einer App (Teil 2)'
             The Need for Programming Languages:
               name: Die Notwendigkeit für Programmiersprachen
+            Intro to Programming:
+              name: Einführung in die Programmierung
             Debugging:
               name: Debugging
             Project - Designing an App Part 3:
@@ -6422,12 +7001,16 @@ de:
               name: Bedingungen
             Keyboard Input:
               name: Tastatureingabe
+            Other Forms of Input:
+              name: Andere Formen der Eingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
               name: Kollisionen
             Functions:
               name: Funktionen
+            Post-Project Test:
+              name: Test nach dem Projekt
             Random Numbers:
               name: Zufällige Zahlen
             Sprite Properties:
@@ -6440,6 +7023,7 @@ de:
               name: Werkzeuge
             Debugging:
               name: Debugging
+          title: Jess' Skript
         csd2-virtual:
           stages:
             Exploring Web Pages:
@@ -6448,18 +7032,57 @@ de:
               name: Einführung in HTML
             Headings:
               name: Überschriften
+              description_student: Diese Lektion setzt die Einführung in HTML-Tags
+                fort, diesmal mit Überschriften.  Die Teilnehmer üben die Verwendung
+                von Header-Tags zur Erstellung von Seiten- und Abschnittsüberschriften
+                und lernen, wie die verschiedenen Header-Elemente standardmäßig angezeigt
+                werden.  Als Nächstes plant die Klasse, wie sie ihren Inhalt auf den
+                persönlichen Webseiten organisieren, die in der gesamten Einheit aufgebaut
+                werden, und beginnen mit der ersten Seite des Projekts.
             Digital Footprint:
               name: Digitaler Fußabdruck
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+              description_student: In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Klasse lernt die
+                grundlegende Syntax für CSS-Regelsätze und befasst sich dann mit Eigenschaften,
+                die sich auf HTML-Textelemente auswirken.  Schließlich wendet jeder
+                Teilnehmer Textstile auf seine persönlichen Websites an.
+              description_teacher: "In dieser Lektion wird CSS als eine Möglichkeit
+                vorgestellt, Elemente auf der Seite zu stylen. Die Teilnehmer lernen
+                die grundlegende Syntax für CSS-Regelsätze kennen und untersuchen
+                dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Sie
+                arbeiten an einer HTML-Seite über Guinness-Weltrekordhalter und fügen
+                der bereitgestellten Seite ihren eigenen Stil hinzu. In der letzten
+                Stufe wenden die Schülerinnen und Schüler das, was sie über Stile
+                für Textelemente gelernt haben, auf ihre persönliche Webseite an.\r\n\r"
             Intellectual Property:
               name: Geistiges Eigentum
             Images:
               name: Bilder
+            Styling Elements with CSS:
+              name: Elemente mit CSS formatieren
+              description_student: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Klasse beginnt mit der Untersuchung und Modifizierung der
+                neuen CSS-Stile auf einer "Desserts of the World"-Seite. Danach wendet
+                jeder dieses neue Wissen auf seine persönliche Website an.
+              description_teacher: In dieser Lektion wird die Einführung in CSS-Style-Eigenschaften
+                fortgesetzt, wobei der Schwerpunkt dieses Mal mehr auf Nicht-Text-Elementen
+                liegt. Die Schülerinnen und Schüler beginnen diese Lektion mit einem
+                Blick auf eine Website über "Desserts of the World". Sie untersuchen
+                und modifizieren die neuen CSS-Stile auf dieser Website und fügen
+                der Seite ihre eigenen Stile hinzu. Nach der Arbeit an der Seite "Desserts"
+                wenden die Schülerinnen und Schüler ihr Wissen über die neuen CSS-Eigenschaften
+                an, um ihre persönlichen Websites besser zu stylen.
             Project - Building a Webpage:
               name: Projekt - Erstellung einer Webseite
             Sources and Research:
               name: Quellen und Forschung
             CSS Classes:
               name: CSS-Klassen
+            Post-Project Test:
+              name: Test nach dem Projekt
         csp5-virtual:
           stages:
             Multi-screen Apps:
@@ -6498,6 +7121,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Beginner Challenges:
+              name: Herausforderungen für Anfänger
             Algorithms:
               name: Algorithmen
             Events:
