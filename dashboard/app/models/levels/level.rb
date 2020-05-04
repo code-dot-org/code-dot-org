@@ -627,6 +627,19 @@ class Level < ActiveRecord::Base
     false
   end
 
+  def localized_teacher_markdown
+    if should_localize?
+      I18n.t(
+        name,
+        scope: [:data, "teacher_markdown"],
+        default: properties['teacher_markdown'],
+        smart: true
+      )
+    else
+      properties['teacher_markdown']
+    end
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present).

@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
-import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
+import color from '@cdo/apps/util/color';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -14,6 +13,15 @@ const styles = {
   explanation: {
     clear: 'both',
     paddingTop: 20
+  },
+  heading: {
+    color: color.purple
+  },
+  listAlign: {
+    marginLeft: 10
+  },
+  sublistAlign: {
+    marginLeft: 20
   }
 };
 
@@ -32,74 +40,145 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
-        <h2>{i18n.loginInformation()}</h2>
-        {(loginType === SectionLoginType.word ||
-          loginType === SectionLoginType.picture) && (
+        <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
+        {loginType === SectionLoginType.word && (
           <div>
-            <p>{i18n.sectionCode() + ': ' + sectionCode}</p>
-            <p>
-              {i18n.joinSectionExplanation()}
-              <a target="_blank" href={`${studioUrlPrefix}/join`}>
-                {`${studioUrlPrefix}/join`}
-              </a>
-            </p>
-            <p>
-              {i18n.sectionSignInInfo()}
-              <a
-                target="_blank"
-                href={`${studioUrlPrefix}/sections/${sectionCode}`}
-              >
-                {`${studioUrlPrefix}/sections/${sectionCode}`}
-              </a>
-            </p>
-            <p>
-              <a
-                target="_blank"
-                href={teacherDashboardUrl(sectionId, '/login_info')}
-              >
-                {i18n.printLoginCardExplanation()}
-              </a>
-            </p>
+            <p>{i18n.setUpClassWordIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClassWord2({
+                printLoginCardLink: teacherDashboardUrl(
+                  sectionId,
+                  '/login_info'
+                )
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClass3({
+                parentLetterLink: teacherDashboardUrl(
+                  sectionId,
+                  '/parent_letter'
+                )
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <h2 style={styles.heading}>{i18n.signingInWord()}</h2>
+            <p>{i18n.signingInWordIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.signingInWordPic1({
+                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                sectionCode: sectionCode,
+                codeOrgLink: pegasus('/')
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
+            <p style={styles.listAlign}>{i18n.signingInWord3()}</p>
+          </div>
+        )}
+        {loginType === SectionLoginType.picture && (
+          <div>
+            <p>{i18n.setUpClassPicIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClassPic2({
+                printLoginCardLink: teacherDashboardUrl(
+                  sectionId,
+                  '/login_info'
+                )
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClass3({
+                parentLetterLink: teacherDashboardUrl(
+                  sectionId,
+                  '/parent_letter'
+                )
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <h2 style={styles.heading}>{i18n.signingInPic()}</h2>
+            <p>{i18n.signingInPicIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.signingInWordPic1({
+                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                sectionCode: sectionCode,
+                codeOrgLink: pegasus('/')
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
+            <p style={styles.listAlign}>{i18n.signingInPic3()}</p>
           </div>
         )}
         {loginType === SectionLoginType.email && (
           <div>
-            <p>
-              {i18n.joinSectionAsk()}
-              <a
-                target="_blank"
-                href={`${studioUrlPrefix}/join/${sectionCode}`}
-              >
-                {`${studioUrlPrefix}/join/${sectionCode}`}
-              </a>
-            </p>
+            <p>{i18n.setUpClassEmailIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClassEmail1({
+                createAccountLink: `${studioUrlPrefix}/users/sign_up`
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClassEmail2({
+                joinLink: `${studioUrlPrefix}/join/${sectionCode}`
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClass3({
+                parentLetterLink: teacherDashboardUrl(
+                  sectionId,
+                  '/parent_letter'
+                )
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <h2 style={styles.heading}>{i18n.signingInEmail()}</h2>
+            <p>{i18n.signingInEmailIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.signingInEmailGoogle1({
+                codeOrgLink: pegasus('/')
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.signingInEmail2()}</p>
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
-          <p>
-            {`${i18n.loginInfo_signingInDescription()} ${i18n.loginInfo_signingInGoogle()}`}
-            <br />
-            <img src={googleSignInButton} style={{maxWidth: '35%'}} />
-            <br />
-            {i18n.loginInfo_oauthSectionCodes({
-              provider: i18n.loginTypeGoogleClassroom()
-            })}
-          </p>
+          <div>
+            <p>{i18n.setUpClassGoogleIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassGoogle1()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassGoogle2()}</p>
+            <p>{i18n.setUpClassGoogleFinished()}</p>
+            <h2 style={styles.heading}>{i18n.signingInGoogle()}</h2>
+            <p>{i18n.signingInGoogleIntro()}</p>
+            <SafeMarkdown
+              markdown={i18n.signingInEmailGoogle1({
+                codeOrgLink: pegasus('/')
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.signingInGoogle2()}</p>
+            <p style={styles.listAlign}>{i18n.signingInGoogle3()}</p>
+          </div>
         )}
         {loginType === SectionLoginType.clever && (
-          <p>
-            {i18n.loginInfo_signingInClever()}{' '}
-            {i18n.loginInfo_oauthSectionCodes({
-              provider: i18n.loginTypeClever()
-            })}
-          </p>
+          <div>
+            <p>{i18n.setUpClassCleverIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassClever1()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassClever2()}</p>
+            <p>{i18n.setUpClassCleverFinished()}</p>
+            <h2 style={styles.heading}>{i18n.signingInClever()}</h2>
+            <p>{i18n.signingInCleverIntro()}</p>
+            <p style={styles.listAlign}>{i18n.signingInClever1()}</p>
+            <div style={styles.sublistAlign}>
+              <SafeMarkdown markdown={i18n.signingInClever1a()} />
+            </div>
+            <p style={styles.sublistAlign}>{i18n.signingInClever1b()}</p>
+            <img
+              style={styles.sublistAlign}
+              src="/shared/images/clever_code_org_logo.png"
+            />
+          </div>
         )}
-        <h2>{i18n.loginType()}</h2>
-        <LoginTypeParagraph
-          sectionId={sectionId}
-          onLoginTypeChanged={() => window.location.reload()}
-        />
-        <h2>{i18n.privacyHeading()}</h2>
+
+        <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
           sectionId={this.props.sectionId}
