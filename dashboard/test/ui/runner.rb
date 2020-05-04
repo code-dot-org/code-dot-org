@@ -416,8 +416,7 @@ def report_tests_finished(start_time, run_results)
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
   "Total reruns of flaky tests: #{total_flaky_reruns}. " \
   "Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
-  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
+  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '')
 
   unless failures.empty?
     ChatClient.log "Failed tests: \n #{failures.join("\n")}"
