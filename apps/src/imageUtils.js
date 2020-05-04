@@ -35,31 +35,9 @@ export function dataURIToSourceSize(dataURI) {
   }));
 }
 
-export function imageDataFromURI(uri) {
-  return imageFromURI(uri).then(image => {
-    const canvas = document.createElement('canvas');
-    canvas.width = image.width;
-    canvas.height = image.height;
-    const context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0);
-    return context.getImageData(0, 0, canvas.width, canvas.height);
-  });
-}
-
-export function canvasFromImage(image) {
-  const canvas = document.createElement('canvas');
-  canvas.width = image.width;
-  canvas.height = image.height;
-  const context = canvas.getContext('2d');
-  context.drawImage(image, 0, 0, image.width, image.height);
-  return canvas;
-}
-
-export function dataURIFromURI(uri) {
-  return imageFromURI(uri).then(image => {
-    const canvas = canvasFromImage(image);
-    return canvas.toDataURL();
-  });
+export async function dataURIFromURI(uri) {
+  const canvas = await toCanvas(uri);
+  return canvas.toDataURL();
 }
 
 export function URIFromImageData(imageData) {
@@ -113,8 +91,65 @@ export function canvasToBlob(canvas) {
   });
 }
 
-export function dataURIToBlob(uri) {
-  return imageFromURI(uri)
-    .then(canvasFromImage)
-    .then(canvasToBlob);
+export async function dataURIToBlob(uri) {
+  const canvas = await toCanvas(uri);
+  return await canvasToBlob(canvas);
+}
+
+/**
+ * @typedef {string} ImageURI
+ * A string in the form of an image URI or data URI; anything you might
+ * assign to an <image>'s `src` attribute.  Examples:
+ * "https://example.com/example.png"
+ * "data:image/svg+xml,<svg..."
+ * "data:image/png;base64,iVBOR..."
+ */
+
+/**
+ * Given an input of a supported type, converts it to an HTMLCanvasElement.
+ *
+ * @param {ImageURI|HTMLImageElement|HTMLCanvasElement} input
+ * @returns {Promise<HTMLCanvasElement>}
+ */
+export async function toCanvas(input) {
+  if (input instanceof HTMLCanvasElement) {
+    return input;
+  }
+
+  let image;
+  if (input instanceof HTMLImageElement) {
+    image = input;
+  } else if (typeof input === 'string') {
+    image = await imageFromURI(input);
+  } else {
+    throw new Error('Unable to convert input to canvas');
+  }
+
+  const canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+  const context = canvas.getContext('2d');
+  context.drawImage(image, 0, 0);
+  return canvas;
+}
+
+/**
+ * Given an input of a supported type, converts it to an ImageData object.
+ *
+ * @param {ImageURI|HTMLImageElement|HTMLCanvasElement|ImageData} input
+ * @returns {Promise<ImageData>}
+ */
+export async function toImageData(input) {
+  if (input instanceof ImageData) {
+    return input;
+  }
+
+  try {
+    const canvas = await toCanvas(input);
+    return canvas
+      .getContext('2d')
+      .getImageData(0, 0, canvas.width, canvas.height);
+  } catch (err) {
+    throw new Error('Unable to convert input to ImageData');
+  }
 }

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import DesignToolboxElement from './DesignToolboxElement';
 import applabMsg from '@cdo/applab/locale';
-import ThemePropertyRow from './designElements/ThemePropertyRow';
+import ThemeDropdown from './designElements/ThemeDropdown';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
@@ -27,18 +27,15 @@ export default class DesignToolbox extends React.Component {
       padding: 10,
       paddingRight: 0 // setting this to 0 allows 2 columns with the potential scrollbar on Windows
     };
-    const themeStyle = {
-      paddingLeft: 0,
-      marginBottom: 10
-    };
 
     return (
       <div id="design-toolbox" style={toolboxStyle}>
-        <ThemePropertyRow
-          containerStyle={themeStyle}
+        {/* key on theme dropdown forces re-render if we get a new themeValue */}
+        <ThemeDropdown
           initialValue={this.props.themeValue}
           handleChange={this.props.handleScreenChange.bind(this, 'theme')}
-          desc={'Theme'}
+          description={'Theme'}
+          key={this.props.themeValue}
         />
         <p>{applabMsg.designToolboxDescription()}</p>
         <DesignToolboxElement
