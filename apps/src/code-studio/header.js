@@ -16,10 +16,17 @@ import {
   setShowTryAgainDialog
 } from './headerRedux';
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import progress from './progress';
 import {getStore} from '../redux';
 import msg from '@cdo/locale';
 import firehoseClient from '../lib/util/firehose';
+
+import {Provider} from 'react-redux';
+import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
+//import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -67,7 +74,8 @@ header.build = function(
   currentLevelId,
   puzzlePage,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  scriptNameData
 ) {
   scriptData = scriptData || {};
   stageData = stageData || {};
@@ -89,7 +97,8 @@ header.build = function(
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(
+
+  const renderedProgress = progress.renderStageProgress(
     scriptData,
     stageData,
     progressData,
@@ -97,6 +106,38 @@ header.build = function(
     saveAnswersBeforeNavigation,
     signedIn,
     stageExtrasEnabled
+  );
+
+  /* this works
+  ReactDOM.render(
+    <div>
+      {renderedProgress}
+    </div>,
+    document.querySelector('.progress_container')
+  );
+  */
+
+  ReactDOM.render(
+    <div>
+      {/*<Provider store={getStore()}>
+        <ProjectInfo />
+      </Provider>*/}
+
+      <div style={{float: 'left'}}>
+        <Provider store={getStore()}>
+          <ScriptName {...scriptNameData} />
+        </Provider>
+      </div>
+
+      <div className="progress_container">{renderedProgress}</div>
+
+      <div className="header_finished_link" style={{display: 'none'}} />
+      <div className="header_popup_link" style={{display: 'none'}}>
+        <div className="header_popup_link_glyph">&#x25BC;</div>
+        <div className="header_popup_link_text">More</div>
+      </div>
+    </div>,
+    document.querySelector('.header_level')
   );
 
   /**

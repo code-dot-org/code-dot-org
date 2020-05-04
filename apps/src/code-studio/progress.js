@@ -124,12 +124,17 @@ progress.renderStageProgress = function(
     store.dispatch(setVerified());
   }
 
-  ReactDOM.render(
+  return (
+    <Provider store={store}>
+      <LessonProgress />
+    </Provider>
+  );
+  /*ReactDOM.render(
     <Provider store={store}>
       <LessonProgress />
     </Provider>,
     document.querySelector('.progress_container')
-  );
+  );*/
 };
 
 /**
