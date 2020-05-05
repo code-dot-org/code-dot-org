@@ -135,6 +135,15 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
+  def teacher_enrollment_receipt__facilitator
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_FACILITATOR
+  end
+
+  def teacher_enrollment_reminder__facilitator
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
+      options: {days_before: 10}
+  end
+
   def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
       options: {days_before: 10}
