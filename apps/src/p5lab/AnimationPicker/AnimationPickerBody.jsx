@@ -62,7 +62,13 @@ class AnimationPickerBody extends React.Component {
       currentPage: 0,
       libraryManifest: props.spriteLab ? spriteCostumeLibrary : animationLibrary
     };
-    const results = this.searchAssets(initialState.currentPage, initialState);
+    const results = searchAssets(
+      initialState.searchQuery,
+      initialState.categoryQuery,
+      initialState.libraryManifest,
+      initialState.currentPage,
+      MAX_SEARCH_RESULTS
+    );
     this.state = {
       ...initialState,
       results
