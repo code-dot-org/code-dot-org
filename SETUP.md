@@ -144,7 +144,8 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `sudo apt-get update && sudo apt-get install yarn=1.16.0-1`
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
-    1. `export CHROME_BIN=$(which chromium-browser)`
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+        1. `export CHROME_BIN=$(which chromium-browser)`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
