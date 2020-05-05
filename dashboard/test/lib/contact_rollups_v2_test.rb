@@ -5,12 +5,14 @@ require 'cdo/log_collector'
 class ContactRollupsV2Test < ActiveSupport::TestCase
   setup do
     EmailPreference.delete_all
+    User.delete_all
     ContactRollupsPardotMemory.delete_all
     ContactRollupsFinal.delete_all
   end
 
   teardown do
     EmailPreference.delete_all
+    User.delete_all
     ContactRollupsRaw.delete_all
     ContactRollupsProcessed.delete_all
     ContactRollupsPardotMemory.delete_all
