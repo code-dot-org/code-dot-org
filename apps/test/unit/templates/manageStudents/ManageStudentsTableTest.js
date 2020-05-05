@@ -6,6 +6,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
+import i18n from '@cdo/locale';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
@@ -91,7 +92,7 @@ describe('ManageStudentsTable', () => {
       id: 101,
       location: '/v2/sections/101',
       name: 'My Section',
-      login_type: 'picture',
+      login_type: SectionLoginType.picture,
       grade: '2',
       code: 'PMTKVH',
       stage_extras: false,
@@ -178,6 +179,98 @@ describe('ManageStudentsTable', () => {
 
       // Expect the input box value to have changed
       expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
+    });
+
+    it('renders correct info in password column if loginType is picture', () => {
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      const passwordColumnHeader = wrapper.find('#password-header');
+      expect(passwordColumnHeader).to.have.lengthOf(1);
+      expect(passwordColumnHeader.text()).to.equal(i18n.picturePassword());
+      const showSecret = wrapper.find('ShowSecret');
+      expect(showSecret).to.have.lengthOf(1);
+      expect(showSecret.find('Button').text()).to.equal(i18n.showPicture());
+    });
+
+    it('renders correct info in password column if loginType is word', () => {
+      const wordSection = {...fakeSection, loginType: SectionLoginType.word};
+      const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
+      const wordStudents = {
+        [wordStudent.id]: wordStudent
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.word));
+      getStore().dispatch(setSections([wordSection]));
+      getStore().dispatch(setSection(wordSection));
+      getStore().dispatch(setStudents(wordStudents));
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      const passwordColumnHeader = wrapper.find('#password-header');
+      expect(passwordColumnHeader).to.have.lengthOf(1);
+      expect(passwordColumnHeader.text()).to.equal(i18n.secretWords());
+      const showSecret = wrapper.find('ShowSecret');
+      expect(showSecret).to.have.lengthOf(1);
+      expect(showSecret.find('Button').text()).to.equal(i18n.showWords());
+    });
+
+    it('renders correct info in password column if loginType is personal email', () => {
+      const emailSection = {...fakeSection, loginType: SectionLoginType.email};
+      const emailStudent = {...fakeStudent, loginType: SectionLoginType.email};
+      const emailStudents = {
+        [emailStudent.id]: emailStudent
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.email));
+      getStore().dispatch(setSections([emailSection]));
+      getStore().dispatch(setSection(emailSection));
+      getStore().dispatch(setStudents(emailStudents));
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      const passwordColumnHeader = wrapper.find('#password-header');
+      expect(passwordColumnHeader).to.have.lengthOf(1);
+      expect(passwordColumnHeader.text()).to.equal(i18n.password());
+      expect(wrapper.find('PasswordReset')).to.have.lengthOf(1);
+    });
+
+    it('does not render password column if loginType is clever', () => {
+      const cleverSection = {
+        ...fakeSection,
+        loginType: SectionLoginType.clever
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.clever));
+      getStore().dispatch(setSections([cleverSection]));
+      getStore().dispatch(setSection(cleverSection));
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable section={cleverSection} />
+        </Provider>
+      );
+      const passwordColumnHeader = wrapper.find('#password-header');
+      expect(passwordColumnHeader).to.have.lengthOf(0);
+    });
+
+    it('does not render password column if loginType is google_classroom', () => {
+      const googleSection = {
+        ...fakeSection,
+        loginType: SectionLoginType.google_classroom
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
+      getStore().dispatch(setSections([googleSection]));
+      getStore().dispatch(setSection(googleSection));
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable section={googleSection} />
+        </Provider>
+      );
+      const passwordColumnHeader = wrapper.find('#password-header');
+      expect(passwordColumnHeader).to.have.lengthOf(0);
     });
   });
 });
