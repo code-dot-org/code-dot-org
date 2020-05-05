@@ -56,7 +56,6 @@ import dom from '../dom';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
-import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const CANVAS_HEIGHT = 400;
@@ -311,9 +310,6 @@ Artist.prototype.init = function(config) {
     showDecoration: () => this.skin.id === 'elsa'
   });
 
-  this.limitedAutoRun =
-    experiments.isEnabled('limited-auto-artist') ||
-    this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
 
   this.executionInfo = {...DEFAULT_EXECUTION_INFO};
@@ -354,14 +350,8 @@ Artist.prototype.init = function(config) {
 
   if (this.autoRun) {
     this.studioApp_.addChangeHandler(() => {
-      if (this.limitedAutoRun) {
-        if (this.studioApp_.isRunning() && !this.executing) {
-          this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
-        }
-      } else {
-        if (!this.executing) {
-          this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
-        }
+      if (!this.executing) {
+        this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
       }
     });
   }
@@ -749,19 +739,13 @@ Artist.prototype.runButtonClick = function() {
     Blockly.mainBlockSpace.traceOn(true);
   }
   this.studioApp_.attempts++;
-  if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.blockSpaceEditor.lockMovement();
-  }
   this.execute(this.executionInfo);
 };
 
 Artist.prototype.resetButtonClick = function() {
   this.shouldAnimate_ = !this.instant_ && !this.autoRun;
-  if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.blockSpaceEditor.unlockMovement();
-  }
 
-  if (this.autoRun && !this.limitedAutoRun) {
+  if (this.autoRun) {
     this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
   } else {
     this.reset();
