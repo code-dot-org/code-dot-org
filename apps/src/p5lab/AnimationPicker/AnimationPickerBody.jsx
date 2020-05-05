@@ -156,26 +156,27 @@ class AnimationPickerBody extends React.Component {
   }
 
   render() {
-    let categories = this.props.spriteLab
-      ? CostumeCategories
-      : AnimationCategories;
+    const {searchQuery, categoryQuery, results} = this.state;
+    const {spriteLab, is13Plus, onDrawYourOwnClick, onUploadClick} = this.props;
+
+    let categories = spriteLab ? CostumeCategories : AnimationCategories;
 
     // Hide the upload option for students in spritelab
-    let hideUploadOption = this.props.spriteLab;
+    let hideUploadOption = spriteLab;
 
     return (
       <div style={{marginBottom: 10}}>
         <h1 style={styles.title}>{msg.animationPicker_title()}</h1>
-        {!this.props.is13Plus && !hideUploadOption && (
+        {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
           placeholderText={i18n.animationSearchPlaceholder()}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
-        {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') && (
+        {(searchQuery !== '' || categoryQuery !== '') && (
           <div style={animationPickerStyles.navigation}>
-            {this.state.categoryQuery !== '' && (
+            {categoryQuery !== '' && (
               <div style={animationPickerStyles.breadCrumbs}>
                 <span
                   onClick={this.onClearCategories}
@@ -183,7 +184,7 @@ class AnimationPickerBody extends React.Component {
                 >
                   {'All categories > '}
                 </span>
-                <span>{categories[this.state.categoryQuery]}</span>
+                <span>{categories[categoryQuery]}</span>
               </div>
             )}
           </div>
@@ -193,36 +194,34 @@ class AnimationPickerBody extends React.Component {
           onScroll={this.handleScroll}
         >
           {' '}
-          {/* TODO: Is this maxHeight appropriate? */}
-          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            this.state.results.length === 0 && (
+          {(searchQuery !== '' || categoryQuery !== '') &&
+            results.length === 0 && (
               <div style={animationPickerStyles.emptyResults}>
                 Sorry, no results found.
               </div>
             )}
-          {((this.state.searchQuery === '' &&
-            this.state.categoryQuery === '') ||
-            this.state.results.length === 0) && (
+          {((searchQuery === '' && categoryQuery === '') ||
+            results.length === 0) && (
             <div>
               <AnimationPickerListItem
                 label={msg.animationPicker_drawYourOwn()}
                 icon="pencil"
-                onClick={this.props.onDrawYourOwnClick}
+                onClick={onDrawYourOwnClick}
               />
               {!hideUploadOption && (
                 <AnimationPickerListItem
                   label={msg.animationPicker_uploadImage()}
                   icon="upload"
-                  onClick={this.props.onUploadClick}
+                  onClick={onUploadClick}
                 />
               )}
             </div>
           )}
-          {this.state.searchQuery === '' &&
-            this.state.categoryQuery === '' &&
+          {searchQuery === '' &&
+            categoryQuery === '' &&
             this.animationCategoriesRendering()}
-          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            this.animationItemsRendering(this.state.results || [])}
+          {(searchQuery !== '' || categoryQuery !== '') &&
+            this.animationItemsRendering(results || [])}
         </ScrollableList>
       </div>
     );
