@@ -8,7 +8,7 @@ import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import LessonCard from './LessonCard';
 import {NEW_LEVEL_ID, addLesson, addGroup} from './editorRedux';
-import LessonGroupSelector from './LessonGroupSelector';
+import NewLessonGroupInput from './NewLessonGroupInput';
 
 const styles = {
   groupHeader: {
@@ -41,10 +41,6 @@ const styles = {
     border: '1px solid #ccc',
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
-  },
-  lessonGroupSelector: {
-    height: 30,
-    marginBottom: 30
   }
 };
 
@@ -256,14 +252,11 @@ class LessonGroup extends Component {
           </button>
         )}
         {this.state.addingLessonGroup && (
-          <div style={styles.lessonGroupSelector}>
-            <LessonGroupSelector
-              labelText="New Lesson Group"
-              confirmButtonText="Create"
-              onConfirm={this.createLessonGroup}
-              onCancel={this.hideLessonGroupSelector}
-            />
-          </div>
+          <NewLessonGroupInput
+            confirmButtonText="Create"
+            onConfirm={this.createLessonGroup}
+            onCancel={this.hideLessonGroupSelector}
+          />
         )}
         <input
           type="hidden"

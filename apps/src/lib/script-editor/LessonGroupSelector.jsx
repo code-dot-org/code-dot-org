@@ -60,7 +60,6 @@ class LessonGroupSelector extends Component {
           onChange={e => this.lessonGroupSelected(e.target.value)}
           value={this.state.newLessonGroup}
         >
-          <option value="">(none): "Content"</option>
           {Object.keys(lessonGroupMap).map(lessonGroup => (
             <option key={lessonGroup} value={lessonGroup}>
               {lessonGroup}: "{lessonGroupMap[lessonGroup]}"
