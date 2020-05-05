@@ -115,7 +115,7 @@ class LessonProgress extends Component {
         {lessonExtrasUrl && !lessonTrophyEnabled && (
           <LessonExtrasProgressBubble
             lessonExtrasUrl={lessonExtrasUrl}
-            onLessonExtras={onLessonExtras}
+            perfect={onLessonExtras}
           />
         )}
         {lessonTrophyEnabled && (
