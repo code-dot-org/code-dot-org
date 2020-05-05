@@ -75,7 +75,7 @@ class AnimationPickerBody extends React.Component {
     };
   }
 
-  searchAssets = (page, config = {}) => {
+  searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
 
     // Set defaults if any config values are undefined.
@@ -107,7 +107,7 @@ class AnimationPickerBody extends React.Component {
     ) {
       const nextPage = this.state.currentPage + 1;
       this.setState({
-        results: [...this.state.results, ...this.searchAssets(nextPage)],
+        results: [...this.state.results, ...this.searchAssetsWrapper(nextPage)],
         currentPage: nextPage
       });
     }
@@ -115,14 +115,14 @@ class AnimationPickerBody extends React.Component {
 
   onSearchQueryChange = searchQuery => {
     const currentPage = 0;
-    const results = this.searchAssets(currentPage, {searchQuery});
+    const results = this.searchAssetsWrapper(currentPage, {searchQuery});
     this.setState({searchQuery, currentPage, results});
   };
 
   onCategoryChange = event => {
     const categoryQuery = event.target.className;
     const currentPage = 0;
-    const results = this.searchAssets(currentPage, {categoryQuery});
+    const results = this.searchAssetsWrapper(currentPage, {categoryQuery});
     this.setState({categoryQuery, currentPage, results});
   };
 
