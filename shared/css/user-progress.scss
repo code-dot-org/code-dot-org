@@ -75,21 +75,6 @@ a.level_link.submitted:hover
   color: white !important;
 }
 
-.puzzle_outer_level,
-.puzzle_outer_assessment,
-.puzzle_outer_current {
-  padding: 1px;
-  display: inline-block;
-}
-
-.puzzle_outer_assessment .level_link {
-  border: 2px solid $assessment;
-}
-
-.user-stats-block .puzzle_outer_current .level_link {
-  border: 2px solid $level_current;
-}
-
 .user-stats-block
 {
   display:inline-block;

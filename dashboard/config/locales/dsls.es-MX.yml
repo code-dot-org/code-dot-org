@@ -577,6 +577,10 @@ es-MX:
           <hr>
 
           **¡Ahora inténtalo tú!**
+        teacher_markdown: |
+          ###Primero Diseña
+
+          Algunos estudiantes pueden tener la tentación de comenzar a jugar en el Modo Código desde el principio, pero para esta lección nos centraremos únicamente en bosquejar una Interfaz de Usuario. Hágales saber a los estudiantes que llegarán al código pronto. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en App Lab sin preocuparse por la aplicación en si que están creando.
       CSD - Getters and Setters:
         markdown: |
           # Getters y Setters
@@ -2270,6 +2274,10 @@ es-MX:
           `unNombreCamelcasePodríaLucirAsí`\n* **Guiones bajos**: `Algunas_Personas_Prefieren_Usar_Guiones_Bajos_Para_Separar_Palabras`\n*
           **guiones**: `Otras_Prefieren_Guiones_O_Rayas'\n\nLo que elijas depende
           de ti. Es tu estilo. Simplemente ayuda a ser consistente.\n\n\n\n\n"
+        teacher_markdown: |-
+          #### Desarrollando Buenos Habitos de Programacion
+
+          Seguir convenciones de nomenclatura claras y consistentes es un hábito importante a desarrollar, pero los beneficios rara vez son inmediatamente obvios para los estudiantes. Realmente vale la pena a largo plazo ser riguroso en bien nombrados ID, particularmente porque le ayudara a mantener la cordura cuando llegue el momento de leer los programas de sus estudiantes, pero también simplificará el proceso de combinar la pantalla de cada estudiante en un aplicación de todo el equipo.
       Dance_Party_extras_intro:
         markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
           proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes

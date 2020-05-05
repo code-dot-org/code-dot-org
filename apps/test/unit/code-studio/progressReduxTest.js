@@ -21,7 +21,7 @@ import reducer, {
   statusForLevel,
   processedStages,
   setCurrentStageId,
-  stageExtrasUrl,
+  lessonExtrasUrl,
   setStageExtrasEnabled,
   getLevelResult,
   __testonly__
@@ -39,7 +39,7 @@ const stageData = [
     position: 1,
     name: 'Computational Thinking',
     title: 'Stage 1: Computational Thinking',
-    flex_category: null,
+    lesson_group_display_name: null,
     lockable: false,
     levels: [
       {
@@ -95,7 +95,7 @@ const stageData = [
     position: 2,
     name: 'Maze',
     title: 'Stage 2: Maze',
-    flex_category: null,
+    lesson_group_display_name: null,
     lockable: false,
     levels: [
       {
@@ -471,9 +471,9 @@ describe('progressReduxTest', () => {
 
   describe('with peer reviews', () => {
     // Sample stage of peer review
-    const peerReviewStage = {
+    const peerReviewLessonInfo = {
       name: 'You must complete 2 reviews for this unit',
-      flex_category: 'Peer Review',
+      lesson_group_display_name: 'Peer Review',
       levels: [
         {
           ids: [0],
@@ -502,7 +502,7 @@ describe('progressReduxTest', () => {
       professionalLearningCourse: true,
       saveAnswersBeforeNavigation: false,
       stages: stageData,
-      peerReviewStage: peerReviewStage,
+      peerReviewLessonInfo: peerReviewLessonInfo,
       scriptName: 'alltheplcthings'
     };
 
@@ -518,7 +518,7 @@ describe('progressReduxTest', () => {
         nextState.stages,
         processedStages(intialOverviewProgressWithPeerReview.stages, true)
       );
-      assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
+      assert.deepEqual(nextState.peerReviewLessonInfo, peerReviewLessonInfo);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
     });
@@ -531,12 +531,12 @@ describe('progressReduxTest', () => {
           341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
         stages: [stageData[1]],
-        peerReviewStage: peerReviewStage
+        peerReviewLessonInfo: peerReviewLessonInfo
       };
       assert.equal(state.stages[0].levels[2].ids[0], 341);
       state.stages[0].levels[2].status = LevelStatus.attempted;
 
-      assert.deepEqual(peerReviewStage.levels[0], {
+      assert.deepEqual(peerReviewLessonInfo.levels[0], {
         ids: [0],
         kind: LevelKind.peer_review,
         title: '',
@@ -564,15 +564,15 @@ describe('progressReduxTest', () => {
         state.levelProgress,
         'no change to levelProgress'
       );
-      const peerReviewLevels = nextState.peerReviewStage.levels;
+      const peerReviewLevels = nextState.peerReviewLessonInfo.levels;
       assert.equal(
         peerReviewLevels.length,
-        state.peerReviewStage.levels.length,
+        state.peerReviewLessonInfo.levels.length,
         'same number of peer review levels in stage'
       );
 
       // First assert about previous state, to make sure that we didn't mutate it
-      assert.deepEqual(state.peerReviewStage.levels[0], {
+      assert.deepEqual(state.peerReviewLessonInfo.levels[0], {
         ids: [0],
         kind: LevelKind.peer_review,
         title: '',
@@ -583,7 +583,7 @@ describe('progressReduxTest', () => {
       });
 
       // Now assert for our new state
-      assert.deepEqual(nextState.peerReviewStage.levels[0], {
+      assert.deepEqual(nextState.peerReviewLessonInfo.levels[0], {
         // TODO: Seems strange to have both an id and ids. Can we make this better?
         id: 13,
         ids: [0],
@@ -990,8 +990,7 @@ describe('progressReduxTest', () => {
 
   describe('groupedLessons', () => {
     // helper method that creates a fake lesson
-    const fakeLesson = (categoryName, groupName, lessonName, lessonId) => ({
-      flex_category: categoryName,
+    const fakeLesson = (groupName, lessonName, lessonId) => ({
       lesson_group_display_name: groupName,
       name: lessonName,
       id: lessonId,
@@ -1005,12 +1004,24 @@ describe('progressReduxTest', () => {
       ]
     });
 
-    it('returns a single category if all lessons have the same category', () => {
+    it('returns lesson group', () => {
+      const state = {
+        stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Lesson Group');
+    });
+
+    it('returns a single group if all lessons have the same lesson group', () => {
       const state = {
         stages: [
-          fakeLesson('Content', null, 'lesson1', 1),
-          fakeLesson('Content', null, 'lesson2', 2),
-          fakeLesson('Content', null, 'lesson3', 3)
+          fakeLesson('Lesson Group', 'lesson1', 1),
+          fakeLesson('Lesson Group', 'lesson2', 2),
+          fakeLesson('Lesson Group', 'lesson3', 3)
         ],
         levelProgress: {},
         focusAreaStageIds: []
@@ -1018,48 +1029,10 @@ describe('progressReduxTest', () => {
 
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Content');
+      assert.equal(groups[0].group, 'Lesson Group');
     });
 
-    it('groups non-adjacent lessons by category', () => {
-      const state = {
-        stages: [
-          fakeLesson('cat1', null, 'lesson1', 1),
-          fakeLesson('cat2', null, 'lesson2', 2),
-          fakeLesson('cat1', null, 'lesson3', 3)
-        ],
-        levelProgress: {},
-        focusAreaStageIds: []
-      };
-
-      const groups = groupedLessons(state);
-      assert.equal(groups.length, 2);
-      assert.equal(groups[0].group, 'cat1');
-      assert.equal(groups[1].group, 'cat2');
-      assert.equal(groups[0].levels.length, 2);
-      assert.equal(groups[1].levels.length, 1);
-      assert.deepEqual(groups[0].lessons, [
-        {
-          name: 'lesson1',
-          id: 1,
-          isFocusArea: false
-        },
-        {
-          name: 'lesson3',
-          id: 3,
-          isFocusArea: false
-        }
-      ]);
-      assert.deepEqual(groups[1].lessons, [
-        {
-          name: 'lesson2',
-          id: 2,
-          isFocusArea: false
-        }
-      ]);
-    });
-
-    it('includes bonus levels if includeBonusLevels is true', () => {
+    it('includes bonus levels in groups if includeBonusLevels is true', () => {
       const bonusLevel = {
         ids: [2106],
         title: 1,
@@ -1068,7 +1041,7 @@ describe('progressReduxTest', () => {
       const state = {
         stages: [
           {
-            flex_category: 'Content',
+            lesson_group_display_name: 'Lesson Group',
             levels: [bonusLevel],
             lessons: []
           }
@@ -1142,7 +1115,7 @@ describe('progressReduxTest', () => {
     });
   });
 
-  describe('stageExtrasUrl', () => {
+  describe('lessonExtrasUrl', () => {
     it('derives url from state by stageId', () => {
       const stateWithProgress = reducer(
         undefined,
@@ -1151,7 +1124,7 @@ describe('progressReduxTest', () => {
       const state = reducer(stateWithProgress, setStageExtrasEnabled(true));
 
       assert.strictEqual(
-        stageExtrasUrl(state, state.stages[0].id),
+        lessonExtrasUrl(state, state.stages[0].id),
         '//localhost.code.org:3000/s/course3/stage/2/extras'
       );
     });
@@ -1159,10 +1132,10 @@ describe('progressReduxTest', () => {
 
   describe('peerReviewLesson', () => {
     const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__;
-    it('extracts lesson data from our peerReviewStage', () => {
+    it('extracts lesson data from our peerReviewLessonInfo', () => {
       const state = {
-        peerReviewStage: {
-          flex_category: 'Peer Review',
+        peerReviewLessonInfo: {
+          lesson_group_display_name: 'Peer Review',
           levels: [],
           lockable: false,
           name: 'You must complete 5 reviews for this unit'
@@ -1181,7 +1154,7 @@ describe('progressReduxTest', () => {
 
     it('sets status and icon to locked when locked', () => {
       const state = {
-        peerReviewStage: {
+        peerReviewLessonInfo: {
           levels: [
             {
               icon: 'fa-lock',
@@ -1200,13 +1173,13 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].id, PEER_REVIEW_ID);
       assert.equal(levels[0].status, LevelStatus.locked);
       assert.equal(levels[0].url, '');
-      assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
+      assert.equal(levels[0].name, state.peerReviewLessonInfo.levels[0].name);
       assert.equal(levels[0].icon, 'fa-lock');
     });
 
     it('uses given status, no icon when not locked', () => {
       const state = {
-        peerReviewStage: {
+        peerReviewLessonInfo: {
           levels: [
             {
               icon: 'fa-lock',
@@ -1228,7 +1201,7 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].id, PEER_REVIEW_ID);
       assert.equal(levels[0].status, LevelStatus.perfect);
       assert.equal(levels[0].url, '/peer_reviews/1');
-      assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
+      assert.equal(levels[0].name, state.peerReviewLessonInfo.levels[0].name);
       assert.equal(levels[0].icon, undefined);
     });
   });

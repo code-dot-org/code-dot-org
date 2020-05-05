@@ -526,6 +526,12 @@ de-DE:
         geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 arrays select rainbow_2019: Schreibe den Inhalt der Felder nach Nummer
         geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 arrays select random_2018: Schreibe ein Programm, das eine zufällig ausgewählte
+        Farbe aus dem Array anzeigt. (Klicke hier, um die vollständige Anleitung zu
+        sehen)
+      CSDU6 arrays select variable_2018: Schreibe ein Programm, das eine zufällig
+        ausgewählte Farbe aus dem Array anzeigt. (Klicke hier, um die vollständige
+        Anleitung zu sehen)
       Choose Your Own Adventure: Du kannst im Spiellabor machen, was du willst! Hier
         siehst du ein Beispiel dafür, wie du deine eigene Abenteuergeschichte im Spiellabor
         auswählen kannst.
@@ -1457,6 +1463,9 @@ de-DE:
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      course3_bee_debugging_challenge1: Beobachte, wie sich die Biene den Nektar holt.
+        Kannst du die gleiche Art Muster verwenden, um der Biene bei der Herstellung
+        des gesamten Honigs zu helfen?
       course3_bee_functions_challenge2: Für diese Herausforderung bist du auf dich
         allein gestellt!
       course3_bee_functions_challenge3: Erstelle eine neue Funktion, um den gesamten
@@ -1464,6 +1473,8 @@ de-DE:
         um das Rätsel abzuschließen!
       course3_bee_functions_challenge4: Wende alles an, was du gelernt hast, um dieses
         Rätsel abzuschließen!
+      course3_collector_debugging_challenge2: Bist du ein Spezialist für verschachtelte
+        Schleifen? Nutze das bisher Gelernte, um dir den ganzen Schatz zu holen!
       course3_farmer_condLoops_challenge1: An den Kürbissen rechts abbiegen. Sammle
         alles, um das Level zu beenden. Jede versteckte Ernstestelle hat nur einen
         Mais oder Salat.
@@ -2521,11 +2532,23 @@ de-DE:
         du helfen?
       courseC_maze_debugging4_2019: Da hat jemand die Richtung verwechselt! Kannst
         du helfen?
+      courseC_maze_debugging5: Debugge dieses Level, indem du Bausteine neu anordnest
+        und änderst.
+      courseC_maze_debugging5_2018: Debugge dieses Level, indem du Bausteine neu anordnest
+        und änderst.
+      courseC_maze_debugging5_2019: Debugge dieses Level, indem du Bausteine neu anordnest
+        und änderst.
       courseC_maze_debugging6: Finde heraus, was falsch ist und bringe Scrat zur Eichel.
       courseC_maze_debugging6_2018: Finde heraus, was falsch ist und bringe Scrat
         zur Eichel.
       courseC_maze_debugging6_2019: Finde heraus, was falsch ist und bringe Scrat
         zur Eichel.
+      courseC_maze_debugging7: "**Herausforderung:** Debugge dieses Level durch Umordnen,
+        Hinzufügen und Löschen von Bausteinen."
+      courseC_maze_debugging7_2018: "**Herausforderung:** Debugge dieses Level durch
+        Umordnen, Hinzufügen und Löschen von Bausteinen."
+      courseC_maze_debugging7_2019: "**Herausforderung:** Debugge dieses Level durch
+        Umordnen, Hinzufügen und Löschen von Bausteinen."
       courseC_maze_debugging9: Debugge dieses Level, um Scrat an die Eichel zu bringen.
       courseC_maze_debugging9_2018: Debugge dieses Level, um Scrat an die Eichel zu
         bringen.
@@ -2929,6 +2952,15 @@ de-DE:
       courseD_bounce_events7s_2019: Hänge Soundbausteine ein, damit das Netz zischt,
         wenn du auf den Korb triffst und lassen die Pfeife erklingen wenn der Ball
         Ihre Hand verfehlt. Springe den Ball, bis er das Ziel trifft.
+      courseD_collector_debugging5: Alle Befehle, die du benötigst, sind bereits hier...jetzt
+        benutze deine Debugging-Fähigkeiten, um herauszufinden, wie du dieses Rätsel
+        lösen kannst.
+      courseD_collector_debugging5a_2018: Alle Befehle, die du benötigst, sind bereits
+        hier...jetzt benutze deine Debugging-Fähigkeiten, um herauszufinden, wie du
+        dieses Rätsel lösen kannst.
+      courseD_collector_debugging5a_2019: Alle Befehle, die du benötigst, sind bereits
+        hier...jetzt benutze deine Debugging-Fähigkeiten, um herauszufinden, wie du
+        dieses Rätsel lösen kannst.
       courseD_collector_debugging6a_2018: 'Herausforderung: Verwende den Code im Arbeitsbereich,
         um mindestens **6** Schätze zu erreichen!'
       courseD_collector_debugging6a_2019: 'Herausforderung: Verwende den Code im Arbeitsbereich,
