@@ -15521,10 +15521,10 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-survey-react@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.5.8.tgz#acd34b1eb234ea3f38ee12a3fe5c18495bfbd389"
-  integrity sha512-BgjTiPnzs7Tlp8D0VZZ2Rz+fjyQ3uKMkAJQWtY6OiOXtfeQvHlIiUrCd+CYaUjslzXugTgDK+qLWfFuqjUzQAg==
+survey-react@^1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.4.tgz#41194f0c4c4a96a88676a19f812ff362aa62f243"
+  integrity sha512-s6MsZvHUbp9YYoMsmpxcGEL3hz0iWLUQQ3aR+C1V6EBQrHwnhUN0nl7llpQsTc5pn0l4r0kwlGpKMFArVVInIA==
 
 svg-tag-names@^1.1.0:
   version "1.1.1"
