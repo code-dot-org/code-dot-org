@@ -19,14 +19,6 @@ module ScriptConstants
   # a category will be the order in which they appear in the dropdown, and the
   # order of the categories will be their order in the dropdown.
   CATEGORIES = {
-    full_course: [
-      CSP_2017 = 'csp-2017'.freeze,
-      CSP_2018 = 'csp-2018'.freeze,
-      CSP_2019 = 'csp-2019'.freeze,
-      CSD_2017 = 'csd-2017'.freeze,
-      CSD_2018 = 'csd-2018'.freeze,
-      CSD_2019 = 'csd-2019'.freeze,
-    ],
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
       COURSEB_NAME = 'courseb-2017'.freeze,
@@ -246,7 +238,8 @@ module ScriptConstants
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     PIXELATION = 'pixelation'.freeze,
-    VIGENERE = 'vigenere'.freeze
+    VIGENERE = 'vigenere'.freeze,
+    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'

@@ -16,7 +16,8 @@ export default class ChoiceResponses extends React.Component {
     possibleAnswers: PropTypes.array.isRequired,
     possibleAnswersMap: PropTypes.object,
     otherText: PropTypes.string,
-    otherAnswers: PropTypes.array
+    otherAnswers: PropTypes.array,
+    facilitators: PropTypes.object
   };
 
   getTotalRespondents() {
@@ -103,13 +104,14 @@ export default class ChoiceResponses extends React.Component {
         0
       );
     });
+    const {facilitators} = this.props;
 
     const headerRow = (
       <tr key="header">
         <td />
         {facilitatorNames.map((name, i) => (
           <td colSpan={2} style={{paddingLeft: '20px'}} key={i}>
-            {name}
+            {(facilitators && facilitators[name]) || name}
           </td>
         ))}
         {showTotalCount && (
