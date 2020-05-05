@@ -21,9 +21,7 @@ describe('ImagePicker', () => {
 
   it('shows icons and files as options', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
-    const tabs = wrapper
-      .find('#modeSwitch')
-      .find('p');
+    const tabs = wrapper.find('#modeSwitch').find('p');
 
     assert.equal(tabs.length, 2);
     assert.equal(tabs.find('p[children="Icons"]').length, 1);
