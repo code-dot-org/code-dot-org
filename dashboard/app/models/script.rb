@@ -763,12 +763,12 @@ class Script < ActiveRecord::Base
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_stage)
+  def get_bonus_script_levels(current_stage, current_user)
     unless @all_bonus_script_levels
       @all_bonus_script_levels = lessons.map do |stage|
         {
           stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
+          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user.id)}
         }
       end
       @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
@@ -975,7 +975,6 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       bonus = nil
-      flex_category = nil
       lesson_group_key = nil
       lockable = nil
 
@@ -991,7 +990,6 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
-        flex_category = raw_level.delete(:stage_flex_category)
         lesson_group_key = raw_level.delete(:lesson_group)
         lockable = !!raw_level.delete(:stage_lockable)
 
@@ -1080,7 +1078,7 @@ class Script < ActiveRecord::Base
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        lesson.assign_attributes(lesson_group: lesson_group, flex_category: flex_category, lockable: lockable)
+        lesson.assign_attributes(lesson_group: lesson_group, lockable: lockable)
         lesson.save! if lesson.changed?
 
         script_level_attributes[:stage_id] = lesson.id
