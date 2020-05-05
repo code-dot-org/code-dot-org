@@ -39,7 +39,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     create :contact_rollups_raw, email: email,
       data: nil, data_updated_at: base_time - 1.day
     create :contact_rollups_raw, email: email,
-      sources: "#{CDO.dashboard_db_name}.email_preferences", data: {opt_in: 1}, data_updated_at: base_time
+      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time
 
     ContactRollupsProcessed.import_from_raw_table
 
@@ -61,13 +61,13 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'extract_field' do
-    table = "#{CDO.dashboard_db_name}.email_preferences"
+    table = 'dashboard.email_preferences'
     field = 'opt_in'
 
     test_cases = [
       {input: [{}, nil, nil], expected_output: nil},
       {input: [{table => {}}, table, field], expected_output: nil},
-      {input: [{"#{CDO.dashboard_db_name}.another_table" => {opt_in: 1}}, table, field], expected_output: nil},
+      {input: [{'dashboard.another_table' => {opt_in: 1}}, table, field], expected_output: nil},
       {input: [{table => {'opt_in' => 0}}, table, field], expected_output: {opt_in: 0}},
       {input: [{table => {'opt_in' => 1}}, table, field], expected_output: {opt_in: 1}},
       {input: [{table => {'opt_in' => nil}}, table, field], expected_output: {opt_in: nil}}
