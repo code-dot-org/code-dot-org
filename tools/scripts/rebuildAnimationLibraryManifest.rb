@@ -191,6 +191,27 @@ The animation has been skipped.
     EOS
   end
 
+  # Returns a map of names and aliases used in animation metadata
+  # for translation
+  def get_animation_strings
+    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
+    animation_objects = get_animation_objects(bucket)
+
+    animation_metadata = build_animation_metadata(animation_objects, read_old_metadata)
+
+    strings = Hash.new
+    strings['names'] = Hash.new
+    strings['aliases'] = Hash.new
+    animation_metadata.each do |_, metadata|
+      strings['names'][metadata['name']] = metadata['name']
+      next unless metadata['aliases']
+      metadata['aliases'].each do |aliaz|
+        strings['aliases'][aliaz] = aliaz
+      end
+    end
+    return strings
+  end
+
   # Given an S3 bucket, return map of animation file objects:
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
   def get_animation_objects(bucket)
