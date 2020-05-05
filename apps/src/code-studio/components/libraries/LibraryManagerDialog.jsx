@@ -139,7 +139,7 @@ export class LibraryManagerDialog extends React.Component {
         this.setState({classLibraries, projectLibraries});
       },
       error => {
-        console.log('error: ' + error);
+        this.setState({classLibraries: null});
       }
     );
 
@@ -279,6 +279,11 @@ export class LibraryManagerDialog extends React.Component {
 
   displayClassLibraries = () => {
     const {classLibraries} = this.state;
+    if (classLibraries === null) {
+      return (
+        <div style={styles.message}>{i18n.errorFindingClassLibraries()}</div>
+      );
+    }
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
       return <div style={styles.message}>{i18n.noLibrariesInClass()}</div>;
     }

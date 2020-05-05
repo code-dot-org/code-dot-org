@@ -708,6 +708,7 @@
   "enrollmentDescription": "Join your teacher's classroom by entering their section code below. Teachers will be able to see your course progress, projects, and reset your password in case you forget it.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
   "errorExceededLimitedBlocks": "You did it! Now go find the pattern in your code and take out the extra blocks. You can only use {limit} of these blocks:",
+  "errorFindingClassLibraries": "Unable to load your class libraries at this time. Please check your internet connection and try again.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
   "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorLoadingRosteredSections": "Oops, there was a problem grabbing your sections from {type}.",
