@@ -10,6 +10,10 @@ export default class LedMatrix {
     ];
   }
 
+  display(pixelArray) {
+    this.board.mb.displayShow(/* useGrayscale */ false, pixelArray);
+  }
+
   scrollString(value) {
     this.board.mb.scrollString(value);
   }
