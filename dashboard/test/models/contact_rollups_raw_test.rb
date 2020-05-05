@@ -36,7 +36,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   test 'get_extraction_query can import when data column is null' do
     teacher = create :teacher
 
-    query = ContactRollupsRaw.get_extraction_query('users', false, [], 'email')
+    query = ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", false, [], 'email')
     ActiveRecord::Base.connection.execute(query)
 
     refute_nil ContactRollupsRaw.find_by(email: teacher.email, data: nil, sources: "#{CDO.dashboard_db_name}.users")
@@ -51,7 +51,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     subquery = <<~SQL
       SELECT parent_email, max(updated_at) as updated_at, max(id) as higher_student_id
       FROM users
-      GROUP BY 1
+      GROUP BY parent_email
     SQL
 
     query = ContactRollupsRaw.get_extraction_query(subquery, true, ['higher_student_id'], 'parent_email', "#{CDO.dashboard_db_name}.users.id")
@@ -75,11 +75,11 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
         updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM email_preferences
+      FROM #{CDO.dashboard_db_name}.email_preferences
       WHERE email IS NOT NULL AND email != ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query('email_preferences', false, ['opt_in'], 'email')
+    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", false, ['opt_in'], 'email')
   end
 
   test 'get_extraction_query looks as expected when called with multiple columns' do
@@ -92,11 +92,11 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
         updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM users
+      FROM #{CDO.dashboard_db_name}.users
       WHERE parent_email IS NOT NULL AND parent_email != ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query('users', false, ['birthday', 'gender'], 'parent_email')
+    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", false, ['birthday', 'gender'], 'parent_email')
   end
 
   test 'create_json_object looks as expected when called with single column' do

@@ -23,7 +23,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_email_preferences
-    query = get_extraction_query('email_preferences', false, ['opt_in'], 'email')
+    query = get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", false, ['opt_in'], 'email')
     ActiveRecord::Base.connection.execute(query)
   end
 
@@ -49,13 +49,14 @@ class ContactRollupsRaw < ApplicationRecord
       raise "Source name required if source is a subquery"
     end
 
-    wrapped_source, sources_column = format_source(source, source_is_subquery, source_name)
+    source_name ||= source
+    wrapped_source = source_is_subquery ? "(#{source}) AS subquery" : source
 
     <<~SQL
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         #{email_column},
-        '#{sources_column}' AS sources,
+        '#{source_name}' AS sources,
         #{create_json_object(data_columns)} AS data,
         updated_at AS data_updated_at,
         NOW() AS created_at,
@@ -76,22 +77,5 @@ class ContactRollupsRaw < ApplicationRecord
     return 'NULL' if columns.empty?
 
     'JSON_OBJECT(' + columns.map {|col| "'#{col}',#{col}"}.join(',') + ')'
-  end
-
-  # Returns an array of:
-  #   the appropriate SQL syntax to be used on the FROM line
-  #   the appropriate "sources" column
-  # @example
-  #   When no source name provided (for dashboard tables)
-  #   Input: ['email_preferences', false, nil]
-  #   Output: ['email_preferences', 'dashboard.email_preferences']
-  # @example
-  #   When a source name provided (for subqueries / non-dashboard tables)
-  #   Input: ['SELECT DISTINCT parent_email FROM users', true, 'dashboard.users.parent_email']
-  #   Output: ['(SELECT DISTINCT parent_email FROM users) as subquery', 'dashboard.users.parent_email']
-  def self.format_source(source, source_is_subquery, source_name)
-    source_is_subquery ?
-      ["(#{source}) AS subquery", source_name] :
-      [source, "#{CDO.dashboard_db_name}.#{source}"]
   end
 end
