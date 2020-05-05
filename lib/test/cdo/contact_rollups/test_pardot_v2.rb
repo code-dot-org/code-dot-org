@@ -3,37 +3,38 @@ require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
   def test_retrieve_prospects_without_result
-    pardot_response = Nokogiri::XML <<-XML
-      <rsp stat="ok">
-        <result>
-          <total_results>0</total_results>
-        </result>
-      </rsp>
+    empty_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok"><result></result></rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(empty_response)
 
     yielded_result = nil
     result = PardotV2.retrieve_prospects(0, ['id']) {|mappings| yielded_result = mappings}
 
     assert_equal 0, result
-    assert_equal [], yielded_result
+    assert_equal nil, yielded_result
   end
 
   def test_retrieve_prospects_with_result
     pardot_id = '1'
     email = 'alex@rollups.com'
-    pardot_response = Nokogiri::XML <<-XML
+    nonempty_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok">
         <result>
           <prospect>
             <id>#{pardot_id}</id>
             <email>#{email}</email>
           </prospect>
-          <total_results>1</total_results>
         </result>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
+    empty_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok"><result></result></rsp>
+    XML
+
+    PardotV2.stubs(:post_with_auth_retry).
+      returns(nonempty_response).
+      returns(empty_response)
 
     yielded_result = nil
     result = PardotV2.retrieve_prospects(0, %w(id email)) {|mappings| yielded_result = mappings}
@@ -45,9 +46,9 @@ class PardotV2Test < Minitest::Test
   def test_batch_create_prospects_single_contact
     contact = {email: 'crv2_test@domain.com', data: {opt_in: 1}}
 
-    ok_response = Nokogiri.XML <<-XML
+    ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
-          <errors/>
+        <errors/>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
@@ -66,11 +67,11 @@ class PardotV2Test < Minitest::Test
       {email: 'crv2_test@domain.com', data: {opt_in: 1}}
     ]
 
-    response_with_errors = Nokogiri.XML <<-XML
+    response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
-          <errors>
-              <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
-          </errors>
+        <errors>
+          <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
+        </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
@@ -106,9 +107,9 @@ class PardotV2Test < Minitest::Test
       new_contact_data: {opt_in: 0}
     }
 
-    ok_response = Nokogiri.XML <<-XML
+    ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
-          <errors/>
+        <errors/>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
@@ -142,11 +143,11 @@ class PardotV2Test < Minitest::Test
       }
     ]
 
-    response_with_errors = Nokogiri.XML <<-XML
+    response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
-          <errors>
-              <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
-          </errors>
+        <errors>
+          <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
+        </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
@@ -188,6 +189,38 @@ class PardotV2Test < Minitest::Test
     end
   end
 
+  def test_extract_prospect_from_response
+    fields = %w(email id db_Opt_In db_Roles)
+    doc = create_xml_from_heredoc <<~XML
+      <rsp stat="ok">
+        <result>
+          <prospect>
+            <id>1</id>
+            <email>test@domain.com</email>
+            <db_Opt_In>Yes</db_Opt_In>
+            <db_Roles>
+                <value>Teacher</value>
+                <value>CSF Teacher</value>
+            </db_Roles>
+          </prospect>
+        </result>
+      </rsp>
+    XML
+
+    expected_prospect = {
+      'id' => '1',
+      'email' => 'test@domain.com',
+      'db_Opt_In' => 'Yes',
+      'db_Roles_0' => 'Teacher',
+      'db_Roles_1' => 'CSF Teacher'
+    }
+
+    prospect_node = doc.xpath('/rsp/result/prospect').first
+    prospect = PardotV2.extract_prospect_from_response(prospect_node, fields)
+
+    assert_equal expected_prospect, prospect
+  end
+
   def test_build_batch_url
     base_url = PardotV2::BATCH_CREATE_URL
     prospects = [
@@ -211,9 +244,9 @@ class PardotV2Test < Minitest::Test
       {email: 'test@domain.com', id: nil, db_Opt_In: 'No'}
     ]
 
-    ok_response = Nokogiri.XML <<-XML
+    ok_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
-          <errors/>
+        <errors/>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
@@ -226,12 +259,12 @@ class PardotV2Test < Minitest::Test
       {email: 'test@domain.com', id: nil, db_Opt_In: 'No'}
     ]
 
-    response_with_errors = Nokogiri.XML <<-XML
+    response_with_errors = create_xml_from_heredoc <<~XML
       <rsp stat="fail" version="1.0">
-          <errors>
-              <prospect identifier="0">Invalid prospect email address</prospect>
-              <prospect identifier="1">Another error</prospect>
-          </errors>
+        <errors>
+          <prospect identifier="0">Invalid prospect email address</prospect>
+          <prospect identifier="1">Another error</prospect>
+        </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
@@ -264,5 +297,14 @@ class PardotV2Test < Minitest::Test
       delta = PardotV2.calculate_data_delta test[:old_data], test[:new_data]
       assert_equal test[:expected_delta], delta, "Test index #{index} failed"
     end
+  end
+
+  # @param str a heredoc string
+  # @return Nokogiri::XML::Document
+  def create_xml_from_heredoc(str)
+    # Trims whitespaces at the beginning and end of each line, and delete newline characters
+    # in the input before parsing. Otherwise they will pollute XML document result.
+    cleaned_str = str.strip.gsub(/\s*\n\s*/, '')
+    Nokogiri::XML cleaned_str
   end
 end

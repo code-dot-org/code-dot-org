@@ -43,39 +43,9 @@ const DEFAULT_PROPS = {
 };
 
 describe('BubbleChoice', () => {
-  it('renders level information', () => {
+  it('renders correct number of sublevels', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    assert.equal(DEFAULT_PROPS.level.display_name, wrapper.find('h1').text());
-    assert.equal(
-      DEFAULT_PROPS.level.description,
-      wrapper.find('SafeMarkdown').text()
-    );
-  });
-
-  it('renders sublevel thumbnail if present', () => {
-    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    const thumbnails = wrapper.find('img');
-    assert.equal(1, thumbnails.length);
-    assert(
-      thumbnails
-        .at(0)
-        .getDOMNode()
-        .src.includes(fakeSublevels[0].thumbnail_url)
-    );
-  });
-
-  it('renders progress bubbles for sublevels', () => {
-    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    const bubbles = wrapper.find('ProgressBubble');
-    assert.equal(2, bubbles.length);
-    assert.equal('perfect', bubbles.at(0).props().level.status);
-    assert.equal('not_tried', bubbles.at(1).props().level.status);
-  });
-
-  it('renders a placeholder div if sublevel thumbnail is not present', () => {
-    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    const placeholderThumbnails = wrapper.find('.placeholder');
-    assert.equal(1, placeholderThumbnails.length);
+    assert.equal(2, wrapper.find('SublevelCard').length);
   });
 
   describe('back and continue buttons', () => {

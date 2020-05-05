@@ -47,7 +47,7 @@ const initialState = {
   // a mapping of level id to result
   levelProgress: {},
   focusAreaStageIds: [],
-  peerReviewStage: null,
+  peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   postMilestoneDisabled: false,
@@ -76,7 +76,7 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
-      peerReviewStage: action.peerReviewStage,
+      peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
@@ -117,9 +117,9 @@ export default function reducer(state = initialState, action) {
   if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
     return {
       ...state,
-      peerReviewStage: {
-        ...state.peerReviewStage,
-        levels: state.peerReviewStage.levels.map((level, index) => ({
+      peerReviewLessonInfo: {
+        ...state.peerReviewLessonInfo,
+        levels: state.peerReviewLessonInfo.levels.map((level, index) => ({
           ...level,
           ...action.peerReviewsPerformed[index]
         }))
@@ -365,7 +365,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -379,7 +379,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -472,11 +472,11 @@ export const lessons = state =>
   state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**
- * Extract lesson from our peerReviewStage if we have one. We want this to end up
+ * Extract lesson from our peerReviewLessonInfo if we have one. We want this to end up
  * having the same fields as our non-peer review stages.
  */
 const peerReviewLesson = state => ({
-  ...lessonFromStage(state.peerReviewStage),
+  ...lessonFromStage(state.peerReviewLessonInfo),
   // add some fields that are missing for this stage but required for lessonType
   id: PEER_REVIEW_ID,
   lockable: false,
@@ -484,11 +484,11 @@ const peerReviewLesson = state => ({
 });
 
 /**
- * Extract levels from our peerReviewStage, making sure the levels have the same
+ * Extract levels from our peerReviewLessonInfo, making sure the levels have the same
  * set of fields as our non-peer review levels.
  */
 const peerReviewLevels = state =>
-  state.peerReviewStage.levels.map((level, index) => ({
+  state.peerReviewLessonInfo.levels.map((level, index) => ({
     // These aren't true levels (i.e. we won't have an entry in levelProgress),
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
@@ -664,12 +664,12 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
     byGroup[group].levels.push(lessonLevels);
   });
 
-  // Peer reviews get their own group, but these levels/lessson are stored
+  // Peer reviews get their own group, but these levels/lesson are stored
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
-  if (state.peerReviewStage) {
-    byGroup['Peer Review'] = {
-      group: 'Peer Review',
+  if (state.peerReviewLessonInfo) {
+    byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
+      group: state.peerReviewLessonInfo.lesson_group_display_name,
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
