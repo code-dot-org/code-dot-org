@@ -96,7 +96,6 @@ class ScriptDSL < BaseDSL
         stage: @stage,
         visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
-        stage_extras_disabled: @stage_extras_disabled,
       }.compact
     end
     @stage = name
@@ -105,7 +104,6 @@ class ScriptDSL < BaseDSL
     @scriptlevels = []
     @concepts = []
     @skin = nil
-    @stage_extras_disabled = nil
   end
 
   # If visible_after value is blank default to next wednesday at 8am PDT
@@ -270,10 +268,6 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
   end
 
-  def no_extras
-    @stage_extras_disabled = true
-  end
-
   # @override
   def i18n_hash
     i18n_stage_strings = {}
@@ -390,7 +384,6 @@ class ScriptDSL < BaseDSL
         s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
       end
     end
-    s << 'no_extras' if stage.stage_extras_disabled
     s << ''
     s.join("\n")
   end

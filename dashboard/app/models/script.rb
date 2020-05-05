@@ -1125,7 +1125,6 @@ class Script < ActiveRecord::Base
       end
 
       raw_lesson = raw_lessons.find {|rs| rs[:stage].downcase == lesson.name.downcase}
-      lesson.stage_extras_disabled = raw_lesson[:stage_extras_disabled]
       lesson.visible_after = raw_lesson[:visible_after]
       lesson.save! if lesson.changed?
     end
