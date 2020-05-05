@@ -125,10 +125,10 @@ class Lesson < ActiveRecord::Base
   end
 
   def summarize(include_bonus_levels = false)
-    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}/#{include_bonus_levels}") do
+    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
-      stage_data = {
+      lesson_data = {
         script_id: script.id,
         script_name: script.name,
         script_stages: script.lessons.to_a.size,
@@ -149,35 +149,35 @@ class Lesson < ActiveRecord::Base
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
 
-      # The last level in a stage might be a long assessment, so add extra information
+      # The last level in a lesson might be a long assessment, so add extra information
       # related to that.  This might include information for additional pages if it
       # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
-        last_level_summary = stage_data[:levels].last
+        last_level_summary = lesson_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        stage_data[:levels] += extra_levels
+        lesson_data[:levels] += extra_levels
         last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
         last_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels
       if !lockable && script.has_lesson_plan?
-        stage_data[:lesson_plan_html_url] = lesson_plan_html_url
-        stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
+        lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
 
       if script.hoc?
-        stage_data[:finishLink] = script.hoc_finish_url
-        stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
+        lesson_data[:finishLink] = script.hoc_finish_url
+        lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
-
+      
       unless unplugged?
-        stage_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
+        lesson_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
       end
 
-      stage_data
+      lesson_data
     end
-    stage_summary.freeze
+    lesson_summary.freeze
   end
 
   def summarize_for_edit
