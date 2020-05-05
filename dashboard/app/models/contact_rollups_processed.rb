@@ -38,7 +38,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # Because GROUP_CONCAT returns a string, we add a parser function to convert the result to a hash.
     group_by_query = <<-SQL.squish
       SELECT email, CONCAT('[', GROUP_CONCAT(data_and_metadata), ']') AS all_data_and_metadata
-      FROM (#{select_query}) AS subquery
+      FROM (#{select_query}) AS sub_query
       GROUP BY email
     SQL
 
@@ -48,7 +48,7 @@ class ContactRollupsProcessed < ApplicationRecord
       contact_data = parse_contact_data(contact['all_data_and_metadata'])
 
       processed_contact_data = {}
-      processed_contact_data.merge!(extract_field(contact_data, "#{CDO.dashboard_db_name}.email_preferences", 'opt_in') || {})
+      processed_contact_data.merge!(extract_field(contact_data, 'dashboard.email_preferences', 'opt_in') || {})
       processed_contact_data.merge!(extract_updated_at(contact_data) || {})
 
       batch << {email: contact['email'], data: processed_contact_data}
