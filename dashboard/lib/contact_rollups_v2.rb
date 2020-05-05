@@ -5,8 +5,12 @@ class ContactRollupsV2
       ContactRollupsProcessed.delete_all
     end
 
-    log_collector.time!('Extracts data from dashboard email_preferences') do
+    log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
       ContactRollupsRaw.extract_email_preferences
+    end
+
+    log_collector.time!('Extracts parent emails from dashboard.users') do
+      ContactRollupsRaw.extract_parent_emails
     end
 
     log_collector.time!('Processes all extracted data') do
