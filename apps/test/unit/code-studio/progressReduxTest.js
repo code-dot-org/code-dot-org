@@ -471,9 +471,9 @@ describe('progressReduxTest', () => {
 
   describe('with peer reviews', () => {
     // Sample stage of peer review
-    const peerReviewStage = {
+    const peerReviewLessonInfo = {
       name: 'You must complete 2 reviews for this unit',
-      flex_category: 'Peer Review',
+      lesson_group_display_name: 'Peer Review',
       levels: [
         {
           ids: [0],
@@ -502,7 +502,7 @@ describe('progressReduxTest', () => {
       professionalLearningCourse: true,
       saveAnswersBeforeNavigation: false,
       stages: stageData,
-      peerReviewStage: peerReviewStage,
+      peerReviewLessonInfo: peerReviewLessonInfo,
       scriptName: 'alltheplcthings'
     };
 
@@ -518,7 +518,7 @@ describe('progressReduxTest', () => {
         nextState.stages,
         processedStages(intialOverviewProgressWithPeerReview.stages, true)
       );
-      assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
+      assert.deepEqual(nextState.peerReviewLessonInfo, peerReviewLessonInfo);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
     });
@@ -531,12 +531,12 @@ describe('progressReduxTest', () => {
           341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
         stages: [stageData[1]],
-        peerReviewStage: peerReviewStage
+        peerReviewLessonInfo: peerReviewLessonInfo
       };
       assert.equal(state.stages[0].levels[2].ids[0], 341);
       state.stages[0].levels[2].status = LevelStatus.attempted;
 
-      assert.deepEqual(peerReviewStage.levels[0], {
+      assert.deepEqual(peerReviewLessonInfo.levels[0], {
         ids: [0],
         kind: LevelKind.peer_review,
         title: '',
@@ -564,15 +564,15 @@ describe('progressReduxTest', () => {
         state.levelProgress,
         'no change to levelProgress'
       );
-      const peerReviewLevels = nextState.peerReviewStage.levels;
+      const peerReviewLevels = nextState.peerReviewLessonInfo.levels;
       assert.equal(
         peerReviewLevels.length,
-        state.peerReviewStage.levels.length,
+        state.peerReviewLessonInfo.levels.length,
         'same number of peer review levels in stage'
       );
 
       // First assert about previous state, to make sure that we didn't mutate it
-      assert.deepEqual(state.peerReviewStage.levels[0], {
+      assert.deepEqual(state.peerReviewLessonInfo.levels[0], {
         ids: [0],
         kind: LevelKind.peer_review,
         title: '',
@@ -583,7 +583,7 @@ describe('progressReduxTest', () => {
       });
 
       // Now assert for our new state
-      assert.deepEqual(nextState.peerReviewStage.levels[0], {
+      assert.deepEqual(nextState.peerReviewLessonInfo.levels[0], {
         // TODO: Seems strange to have both an id and ids. Can we make this better?
         id: 13,
         ids: [0],
@@ -1132,10 +1132,10 @@ describe('progressReduxTest', () => {
 
   describe('peerReviewLesson', () => {
     const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__;
-    it('extracts lesson data from our peerReviewStage', () => {
+    it('extracts lesson data from our peerReviewLessonInfo', () => {
       const state = {
-        peerReviewStage: {
-          flex_category: 'Peer Review',
+        peerReviewLessonInfo: {
+          lesson_group_display_name: 'Peer Review',
           levels: [],
           lockable: false,
           name: 'You must complete 5 reviews for this unit'
@@ -1154,7 +1154,7 @@ describe('progressReduxTest', () => {
 
     it('sets status and icon to locked when locked', () => {
       const state = {
-        peerReviewStage: {
+        peerReviewLessonInfo: {
           levels: [
             {
               icon: 'fa-lock',
@@ -1173,13 +1173,13 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].id, PEER_REVIEW_ID);
       assert.equal(levels[0].status, LevelStatus.locked);
       assert.equal(levels[0].url, '');
-      assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
+      assert.equal(levels[0].name, state.peerReviewLessonInfo.levels[0].name);
       assert.equal(levels[0].icon, 'fa-lock');
     });
 
     it('uses given status, no icon when not locked', () => {
       const state = {
-        peerReviewStage: {
+        peerReviewLessonInfo: {
           levels: [
             {
               icon: 'fa-lock',
@@ -1201,7 +1201,7 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].id, PEER_REVIEW_ID);
       assert.equal(levels[0].status, LevelStatus.perfect);
       assert.equal(levels[0].url, '/peer_reviews/1');
-      assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
+      assert.equal(levels[0].name, state.peerReviewLessonInfo.levels[0].name);
       assert.equal(levels[0].icon, undefined);
     });
   });
