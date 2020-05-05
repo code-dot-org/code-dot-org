@@ -738,7 +738,7 @@ class ScriptTest < ActiveSupport::TestCase
     summary = script.summarize
 
     assert_equal 1, summary[:stages].count
-    assert_nil summary[:peerReviewStage]
+    assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
@@ -754,7 +754,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     expected_peer_review_lesson = {
       name: "You must complete 1 reviews for this unit",
-      flex_category: "Peer Review",
+      lesson_group_display_name: "Peer Review",
       levels: [{
         ids: [0],
         kind: LEVEL_KIND.peer_review,
@@ -768,7 +768,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
 
     assert_equal 2, summary[:stages].count
-    assert_equal expected_peer_review_lesson, summary[:peerReviewStage]
+    assert_equal expected_peer_review_lesson, summary[:peerReviewLessonInfo]
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
@@ -1299,6 +1299,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "get_bonus_script_levels" do
+    student = create :student
     script = create :script
     lesson1 = create :lesson, script: script
     create :lesson, script: script
@@ -1308,8 +1309,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson3, bonus: true
     create :script_level, script: script, lesson: lesson3, bonus: true
 
-    bonus_levels1 = script.get_bonus_script_levels(lesson1)
-    bonus_levels3 = script.get_bonus_script_levels(lesson3)
+    bonus_levels1 = script.get_bonus_script_levels(lesson1, student)
+    bonus_levels3 = script.get_bonus_script_levels(lesson3, student)
 
     assert_equal 1, bonus_levels1.length
     assert_equal 1, bonus_levels1[0][:stageNumber]
