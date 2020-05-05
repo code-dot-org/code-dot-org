@@ -239,7 +239,7 @@ class Course < ApplicationRecord
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
-      courses = courses.concat(pilot_courses)
+      courses += pilot_courses
     end
 
     courses

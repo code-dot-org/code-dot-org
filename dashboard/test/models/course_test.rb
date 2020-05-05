@@ -550,6 +550,23 @@ class CourseTest < ActiveSupport::TestCase
     assert Course.valid_courses(user: levelbuilder).any?(&:pilot_experiment)
   end
 
+  test "valid_courses: pilot experiment results not cached" do
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    csp_2019 = create :course, name: 'csp-2019', visible: true
+    csp_2020 = create :course, name: 'csp-2020', pilot_experiment: 'my-experiment'
+
+    assert_equal Course.valid_courses, [csp_2019]
+    assert_equal Course.valid_courses(user: teacher), [csp_2019]
+    # We had a caching bug where valid_courses with a user with pilot experiment would mutate the value stored
+    # in the Rails cache, causing the course behind the experiment to be returned for all calls afterwards.
+    # Verify that the results are still correct after this call.
+    assert_equal Course.valid_courses(user: pilot_teacher), [csp_2019, csp_2020]
+    assert_equal Course.valid_courses, [csp_2019]
+    assert_equal Course.valid_courses(user: teacher), [csp_2019]
+  end
+
   test "update_teacher_resources" do
     course = create :course
     course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
