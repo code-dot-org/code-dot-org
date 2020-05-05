@@ -48,7 +48,7 @@ class ContactRollupsProcessed < ApplicationRecord
       contact_data = parse_contact_data(contact['all_data_and_metadata'])
 
       processed_contact_data = {}
-      processed_contact_data.merge!(extract_field(contact_data, "#{CDO.dashboard_db_name}.email_preferences", 'opt_in') || {})
+      processed_contact_data.merge!(extract_field(contact_data, 'dashboard.email_preferences', 'opt_in') || {})
       processed_contact_data.merge!(extract_updated_at(contact_data) || {})
 
       batch << {email: contact['email'], data: processed_contact_data}
