@@ -101,13 +101,14 @@ class AnimationPickerBody extends React.Component {
 
   handleScroll = event => {
     const scrollWindow = event.target;
+    const {currentPage, results} = this.state;
     if (
       scrollWindow.scrollTop + MAX_HEIGHT >=
       scrollWindow.scrollHeight * 0.9
     ) {
-      const nextPage = this.state.currentPage + 1;
+      const nextPage = currentPage + 1;
       this.setState({
-        results: [...this.state.results, ...this.searchAssetsWrapper(nextPage)],
+        results: [...results, ...this.searchAssetsWrapper(nextPage)],
         currentPage: nextPage
       });
     }
