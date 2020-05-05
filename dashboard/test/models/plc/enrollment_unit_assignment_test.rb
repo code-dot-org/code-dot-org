@@ -51,9 +51,11 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
     # All the categories except Peer Review will be Content because there is no translation and that is the default
-    assert_equal ["/s/#{@script.name}#required", "/s/#{@script.name}#content", "/s/#{@script.name}#practice", "/s/#{@script.name}#peer-review"], @unit_enrollment.summarize_progress.map {|summary| summary[:link]}
+    assert_equal ["/s/#{@script.name}#required", "/s/#{@script.name}#content", "/s/#{@script.name}#practice", "/s/#{@script.name}#peer-review"],
+      @unit_enrollment.summarize_progress.map {|summary| summary[:link]}
 
-    assert_equal [Plc::EnrollmentModuleAssignment::NOT_STARTED], @unit_enrollment.summarize_progress.map {|summary| summary[:status]}.uniq
+    assert_equal [Plc::EnrollmentModuleAssignment::NOT_STARTED],
+      @unit_enrollment.summarize_progress.map {|summary| summary[:status]}.uniq
   end
 
   # All the categories except Peer Review will be Content because there is no translation and that is the default
