@@ -100,6 +100,12 @@ export default class DesignToolbox extends React.Component {
           elementType={'SLIDER'}
           handleDragStart={this.props.handleDragStart}
         />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'button.png'}
+          desc={'Photo Chooser'}
+          elementType={'PHOTO_CHOOSER'}
+          handleDragStart={this.props.handleDragStart}
+        />
       </div>
     );
   }

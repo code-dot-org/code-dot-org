@@ -200,8 +200,12 @@ export default function sanitizeHtml(
       'placeholder',
       'step',
       'type',
-      'value'
+      'value',
+      'accept',
+      'hidden',
+      'capture'
     ]),
+    label: standardAttributes.concat(['data-canonical-image-url', 'src']),
     select: standardAttributes.concat(['multiple', 'size'])
   };
   var tagsWithCustomAttributes = Object.keys(customAttributesMap);
