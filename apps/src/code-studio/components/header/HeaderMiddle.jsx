@@ -7,6 +7,8 @@ import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import _ from 'lodash';
 
+import LessonProgress from '../progress/LessonProgress.jsx';
+
 export default class HeaderMiddle extends React.Component {
   static propTypes = {
     scriptNameData: PropTypes.object.isRequired,
@@ -35,16 +37,48 @@ export default class HeaderMiddle extends React.Component {
   }
 
   updateLayout = () => {
-    console.log(this.refs.header_middle_parent.clientWidth);
-    this.setState({width: this.refs.header_middle_parent.clientWidth});
+    //console.log(this.refs.header_middle_parent.clientWidth);
+    //this.setState({width: this.refs.header_middle_parent.clientWidth});
+    console.log($('.header_middle').width());
+    this.setState({width: $('.header_middle').width()});
   };
 
-  getScriptNameWidth() {
-    return this.state.width / 3;
+  // The first item is the script name, the second item is the progress container.
+  // But the third item can be the "I'm finished" link, or the popup link.
+  thirdItem() {
+    if (this.props.stageData.finishLink) {
+      return 'finish';
+    } else if (this.props.stageData.script_stages > 1) {
+      return 'popup';
+    } else {
+      return 'none';
+    }
+  }
+
+  // Return the desired widths for the items that are showing.
+  getWidths() {
+    const width = this.state.width;
+    const thirdItem = this.thirdItem();
+
+    if (thirdItem === 'finish') {
+      return {
+        scriptName: width / 3,
+        progress: width / 3,
+        finishLink: width / 3
+      };
+    } else if (thirdItem === 'popup') {
+      return {
+        scriptName: (width - 40) / 2 - 1,
+        progress: (width - 40) / 2 - 1,
+        popup: 40
+      };
+    }
   }
 
   render() {
-    const {scriptNameData, stageData, children} = this.props;
+    const {scriptNameData, stageData} = this.props;
+
+    const widths = this.getWidths();
 
     return (
       <div ref="header_middle_parent" style={{width: '100%'}}>
@@ -52,23 +86,32 @@ export default class HeaderMiddle extends React.Component {
           <ProjectInfo />
         </Provider>*/}
 
-        <div style={{float: 'left', width: this.getScriptNameWidth()}}>
+        <div style={{float: 'left', width: widths.scriptName}}>
           <Provider store={getStore()}>
             <ScriptName {...scriptNameData} />
           </Provider>
         </div>
 
-        <div style={{float: 'left'}}>
-          <div className="progress_container">{children}</div>
+        <div style={{float: 'left', width: widths.progress}}>
+          {/*<div className="progress_container">{children}</div>*/}
+          <Provider store={getStore()}>
+            <LessonProgress width={widths.progress} />
+          </Provider>
         </div>
 
         {stageData.finishLink && (
-          <div className="header_finished_link">
-            <a href={stageData.finishLink}>{stageData.finishText}</a>
+          <div style={{float: 'left', width: widths.finishLink}}>
+            <div className="header_finished_link">
+              <a href={stageData.finishLink}>{stageData.finishText}</a>
+            </div>
           </div>
         )}
 
-        <ProtectedStatefulDiv ref="header_popup_components" />
+        {stageData.script_stages > 1 && (
+          <div style={{float: 'left', width: widths.popup}}>
+            <ProtectedStatefulDiv ref="header_popup_components" />
+          </div>
+        )}
       </div>
     );
   }
