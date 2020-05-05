@@ -1,5 +1,5 @@
 import React from 'react';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import color from '../util/color';
 import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
@@ -146,9 +146,11 @@ export default class FixZoomHelper extends React.Component {
   };
 
   render() {
-    if (this.state.mode === 'button') {
-      const top = this.state.offsetTop + this.state.height - 10;
-      const left = this.state.offsetLeft + this.state.width - 10;
+    const {offsetTop, offsetLeft, height, width, mode} = this.state;
+
+    if (mode === 'button') {
+      const top = offsetTop + height - 10;
+      const left = offsetLeft + width - 10;
 
       return (
         <div onClick={this.onButtonClick} style={{...styles.button, top, left}}>
@@ -156,12 +158,12 @@ export default class FixZoomHelper extends React.Component {
             <span style={styles.icon} className="fa fa-search-minus" />
             &nbsp;
           </div>
-          <div style={styles.buttonText}>{msg.fixZoomHelperZoomOut()}</div>
+          <div style={styles.buttonText}>{i18n.fixZoomHelperZoomOut()}</div>
         </div>
       );
-    } else if (this.state.mode === 'helper') {
-      const top = this.state.offsetTop + this.state.height / 2;
-      const left = this.state.offsetLeft + this.state.width / 2;
+    } else if (mode === 'helper') {
+      const top = offsetTop + height / 2;
+      const left = offsetLeft + width / 2;
 
       return (
         <div>
@@ -172,9 +174,9 @@ export default class FixZoomHelper extends React.Component {
               &nbsp;
               <span className="fa fa-arrow-circle-o-left" />
             </div>
-            {msg.fixZoomHelperPinch()}
+            {i18n.fixZoomHelperPinch()}
             <br />
-            {msg.fixZoomHelperDismiss()}
+            {i18n.fixZoomHelperDismiss()}
           </div>
         </div>
       );
