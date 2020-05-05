@@ -9,7 +9,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     expected_data = {opt_in: email_preference.opt_in ? 1 : 0}
     result = ContactRollupsRaw.find_by(
       email: email_preference.email,
-      sources: "#{CDO.dashboard_db_name}.email_preferences"
+      sources: "dashboard.#{email_preference.class.table_name}"
     )
 
     assert_equal expected_data, result.data.symbolize_keys
@@ -21,82 +21,47 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert 3, ContactRollupsRaw.count
   end
 
-  test 'extract_parent_email creates records as we would expect' do
-    student = create :student, parent_email: 'caring@parent.com'
-    ContactRollupsRaw.extract_parent_emails
-
-    # confirms that a) record exists, and b) data is blank
-    refute_nil ContactRollupsRaw.find_by(
-      email: student.parent_email,
-      sources: "#{CDO.dashboard_db_name}.users.parent_email",
-      data: nil
-    )
-  end
-
-  test 'get_extraction_query can import when data column is null' do
+  test 'extract_from_source_query can import when data column is null' do
     teacher = create :teacher
 
-    query = ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", 'email', [])
+    query = ContactRollupsRaw.extract_from_source_query('users', [], 'email')
     ActiveRecord::Base.connection.execute(query)
 
-    refute_nil ContactRollupsRaw.find_by(email: teacher.email, data: nil, sources: "#{CDO.dashboard_db_name}.users")
+    refute_nil ContactRollupsRaw.find_by(email: teacher.email, data: nil, sources: 'dashboard.users')
   end
 
-  test 'get_extraction_query can import when source is a subquery' do
-    first_child = create :student, parent_email: 'caring@parent.com'
-    second_child = create :student, parent_email: 'caring@parent.com'
-
-    # we're not actually interested in user IDs in contact rollups
-    # just a simple example of something we could extract in a subquery
-    subquery = <<~SQL
-      SELECT parent_email, max(updated_at) as updated_at, max(id) as higher_student_id
-      FROM users
-      GROUP BY parent_email
-    SQL
-
-    query = ContactRollupsRaw.get_extraction_query(subquery, 'parent_email', ['higher_student_id'], true, "#{CDO.dashboard_db_name}.users.id")
-    ActiveRecord::Base.connection.execute(query)
-
-    refute_empty ContactRollupsRaw.where(
-      "email = :email and data->'$.higher_student_id' = :higher_student_id and sources = :sources",
-      email: first_child.parent_email,
-      sources: "#{CDO.dashboard_db_name}.users.id",
-      higher_student_id: second_child.id
-    )
-  end
-
-  test 'get_extraction_query looks as expected when called with a single column' do
+  test 'extract_from_source_query looks as expected when called with a single column' do
     expected_sql = <<~SQL
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         email,
-        '#{CDO.dashboard_db_name}.email_preferences' AS sources,
+        'dashboard.email_preferences' AS sources,
         JSON_OBJECT('opt_in',opt_in) AS data,
-        updated_at AS data_updated_at,
+        email_preferences.updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM #{CDO.dashboard_db_name}.email_preferences
+      FROM email_preferences
       WHERE email IS NOT NULL AND email != ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", 'email', ['opt_in'])
+    assert_equal expected_sql, ContactRollupsRaw.extract_from_source_query('email_preferences', ['opt_in'], 'email')
   end
 
-  test 'get_extraction_query looks as expected when called with multiple columns' do
+  test 'extract_from_source_query looks as expected when called with multiple columns' do
     expected_sql = <<~SQL
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         parent_email,
-        '#{CDO.dashboard_db_name}.users' AS sources,
+        'dashboard.users' AS sources,
         JSON_OBJECT('birthday',birthday,'gender',gender) AS data,
-        updated_at AS data_updated_at,
+        users.updated_at AS data_updated_at,
         NOW() AS created_at,
         NOW() AS updated_at
-      FROM #{CDO.dashboard_db_name}.users
+      FROM users
       WHERE parent_email IS NOT NULL AND parent_email != ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", 'parent_email', ['birthday', 'gender'])
+    assert_equal expected_sql, ContactRollupsRaw.extract_from_source_query('users', ['birthday', 'gender'], 'parent_email')
   end
 
   test 'create_json_object looks as expected when called with single column' do
