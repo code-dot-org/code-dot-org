@@ -23,7 +23,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_email_preferences
-    query = extract_from_source_query('email_preferences', ['opt_in'], 'email')
+    query = get_extraction_query('email_preferences', false, ['opt_in'], 'email')
     ActiveRecord::Base.connection.execute(query)
   end
 
@@ -31,20 +31,25 @@ class ContactRollupsRaw < ApplicationRecord
     source_sql = <<~SQL
       SELECT parent_email, MAX(updated_at) AS updated_at
       FROM users
-      GROUP BY 1
+      GROUP BY parent_email
     SQL
 
-    query = extract_from_source_query(source_sql, [], 'parent_email', 'dashboard.users.parent_email')
+    query = get_extraction_query(source_sql, true, [], 'parent_email', "#{CDO.dashboard_db_name}.users.parent_email")
     ActiveRecord::Base.connection.execute(query)
   end
 
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
+  # @param source_is_subquery [Boolean] True if source is a subquery, rather than a table name
   # @param data_columns [Array] Columns we want reshaped into a single JSON object
   # @param email_column [String] Column in source table we want to insert ino the email column
   # @param source_name [String] Name for source (should be non-nil if using a subquery or non-dashboard table)
   # @return [String] A SQL statement to extract and reshape data from the source table.
-  def self.extract_from_source_query(source, data_columns, email_column, source_name=nil)
-    wrapped_source, sources_column = format_source(source, source_name)
+  def self.get_extraction_query(source, source_is_subquery, data_columns, email_column, source_name=nil)
+    if source_name.nil? && source_is_subquery
+      raise "Source name required if source is a subquery"
+    end
+
+    wrapped_source, sources_column = format_source(source, source_is_subquery, source_name)
 
     <<~SQL
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
@@ -78,15 +83,15 @@ class ContactRollupsRaw < ApplicationRecord
   #   the appropriate "sources" column
   # @example
   #   When no source name provided (for dashboard tables)
-  #   Input: ['email_preferences', nil]
+  #   Input: ['email_preferences', false, nil]
   #   Output: ['email_preferences', 'dashboard.email_preferences']
   # @example
   #   When a source name provided (for subqueries / non-dashboard tables)
-  #   Input: ['SELECT DISTINCT parent_email FROM users', 'dashboard.users.parent_email']
+  #   Input: ['SELECT DISTINCT parent_email FROM users', true, 'dashboard.users.parent_email']
   #   Output: ['(SELECT DISTINCT parent_email FROM users) as subquery', 'dashboard.users.parent_email']
-  def self.format_source(source, source_name)
-    source_name ?
+  def self.format_source(source, source_is_subquery, source_name)
+    source_is_subquery ?
       ["(#{source}) AS subquery", source_name] :
-      [source, 'dashboard.' + source]
+      [source, "#{CDO.dashboard_db_name}.#{source}"]
   end
 end
