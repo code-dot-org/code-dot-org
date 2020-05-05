@@ -84,19 +84,6 @@ header.build = function(
 
   const scriptName = scriptData.name;
 
-  /*if (stageData.finishLink) {
-    $('.header_finished_link')
-      .show()
-      .append(
-        $('<a>')
-          .attr('href', stageData.finishLink)
-          .text(stageData.finishText)
-      );
-  }*/
-  /*if (stageData.script_stages > 1) {
-    $('.header_popup_link').show();
-  }*/
-
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
 
   const renderedProgress = progress.renderStageProgress(
