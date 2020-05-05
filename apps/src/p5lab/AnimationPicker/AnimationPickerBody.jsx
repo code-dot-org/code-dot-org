@@ -62,7 +62,7 @@ class AnimationPickerBody extends React.Component {
       currentPage: 0,
       libraryManifest: props.spriteLab ? spriteCostumeLibrary : animationLibrary
     };
-    const results = searchAssets(
+    const {results, pageCount} = searchAssets(
       initialState.searchQuery,
       initialState.categoryQuery,
       initialState.libraryManifest,
@@ -71,7 +71,8 @@ class AnimationPickerBody extends React.Component {
     );
     this.state = {
       ...initialState,
-      results
+      results,
+      pageCount
     };
   }
 
@@ -89,42 +90,50 @@ class AnimationPickerBody extends React.Component {
       libraryManifest = this.state.libraryManifest;
     }
 
-    const {results} = searchAssets(
+    return searchAssets(
       searchQuery,
       categoryQuery,
       libraryManifest,
       page,
       MAX_SEARCH_RESULTS
     );
-    return results;
   };
 
   handleScroll = event => {
     const scrollWindow = event.target;
-    const {currentPage, results} = this.state;
+    const {currentPage, results, pageCount} = this.state;
+    const nextPage = currentPage + 1;
     if (
-      scrollWindow.scrollTop + MAX_HEIGHT >=
-      scrollWindow.scrollHeight * 0.9
+      scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
+      nextPage <= pageCount
     ) {
-      const nextPage = currentPage + 1;
+      const {results: newResults, pageCount} = this.searchAssetsWrapper(
+        nextPage
+      );
+
       this.setState({
-        results: [...results, ...this.searchAssetsWrapper(nextPage)],
-        currentPage: nextPage
+        results: [...results, ...newResults],
+        currentPage: nextPage,
+        pageCount
       });
     }
   };
 
   onSearchQueryChange = searchQuery => {
     const currentPage = 0;
-    const results = this.searchAssetsWrapper(currentPage, {searchQuery});
-    this.setState({searchQuery, currentPage, results});
+    const {results, pageCount} = this.searchAssetsWrapper(currentPage, {
+      searchQuery
+    });
+    this.setState({searchQuery, currentPage, results, pageCount});
   };
 
   onCategoryChange = event => {
     const categoryQuery = event.target.className;
     const currentPage = 0;
-    const results = this.searchAssetsWrapper(currentPage, {categoryQuery});
-    this.setState({categoryQuery, currentPage, results});
+    const {results, pageCount} = this.searchAssetsWrapper(currentPage, {
+      categoryQuery
+    });
+    this.setState({categoryQuery, currentPage, results, pageCount});
   };
 
   onClearCategories = () => {
@@ -132,7 +141,8 @@ class AnimationPickerBody extends React.Component {
       categoryQuery: '',
       searchQuery: '',
       currentPage: 0,
-      results: []
+      results: [],
+      pageCount: 0
     });
   };
 
