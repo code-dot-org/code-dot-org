@@ -88,6 +88,7 @@ class LessonProgress extends Component {
     if (numAvailableElements >= numLevels) {
       // If there is enough room for all dots, just show them all.
       firstElement = 0;
+      numElements = numLevels;
     } else {
       // If there isn't enough room, show the current level in the middle
       // of the dots we can show.
