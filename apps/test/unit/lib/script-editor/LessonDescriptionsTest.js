@@ -98,7 +98,7 @@ describe('LessonDescriptions', () => {
     assert.equal(descriptions.find('button').text(), 'Querying server...');
   });
 
-  it('extracts importedDescriptions/mismatchedStages from response', () => {
+  it('extracts importedDescriptions/mismatchedLessons from response', () => {
     const wrapper = mount(
       <LessonDescriptions
         scriptName="myscript"
@@ -140,7 +140,7 @@ describe('LessonDescriptions', () => {
     wrapper.update();
 
     assert.equal(wrapper.state('buttonText'), 'Imported');
-    assert.deepEqual(wrapper.state('mismatchedStages'), ['The Internet_new']);
+    assert.deepEqual(wrapper.state('mismatchedLessons'), ['The Internet_new']);
     const imported = wrapper.state('importedDescriptions');
     assert.equal(imported.length, 2);
     assert.deepEqual(
