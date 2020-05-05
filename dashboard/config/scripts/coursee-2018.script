@@ -14,10 +14,10 @@ supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
 lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
-stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
+stage 'Programming: My Robotic Friends'
 level 'courseB_unplugged_MRF_2018'
 
-stage 'Sequence in Maze', flex_category: 'csf_e_1'
+stage 'Sequence in Maze'
 level 'courseF_markdown_algorithms_intro'
 level 'courseD_video_ramp1_2018'
 level 'courseD_maze_ramp1_2018'
@@ -32,10 +32,10 @@ level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 level 'courseF_markdown_algorithms_end'
 
-stage 'Building a Foundation', flex_category: 'csf_e_1'
+stage 'Building a Foundation'
 level 'BuildingAFoundation_2018'
 
-stage 'Debugging with Scrat', flex_category: 'csf_e_1'
+stage 'Debugging with Scrat'
 level 'courseF_markdown_debugging_intro'
 level 'courseC_video_debugging_2018'
 level 'courseC_maze_debugging1_2018'
@@ -49,7 +49,7 @@ level 'courseC_maze_debugging8_predict1_2018'
 level 'courseC_maze_debugging9_2018'
 level 'courseF_markdown_debugging_end'
 
-stage 'Programming in Artist', flex_category: 'csf_e_1'
+stage 'Programming in Artist'
 level 'courseC_video_artist_2018'
 level 'courseC_artist_prog1_2018'
 level 'courseC_artist_prog2_2018'
@@ -63,10 +63,10 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_e_1'
+stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF_2018'
 
-stage 'Loops in Artist', flex_category: 'csf_e_1'
+stage 'Loops in Artist'
 level 'courseF_markdown_loops_intro'
 level 'ramp_video_artistIntro_2018'
 level 'ramp_artist_loops1_2018'
@@ -81,7 +81,7 @@ level 'ramp_artist_loops8_2018', challenge: true
 level 'ramp_artist_loops9_2018'
 level 'courseF_markdown_loops_end'
 
-stage 'Nested Loops', flex_category: 'csf_e_1'
+stage 'Nested Loops'
 level 'courseD_bee_nestedLoops1a_2018'
 level 'courseD_bee_nestedLoops1_2018'
 level 'courseF_markdown_nestedloops_intro'
@@ -98,7 +98,7 @@ level 'courseD_bee_nestedLoops9_2018'
 level 'courseD_bee_nestedLoops9_predict2_2018'
 level 'courseF_markdown_nestedloops_end'
 
-stage 'Nested Loops with Frozen', flex_category: 'csf_e_1'
+stage 'Nested Loops with Frozen'
 level 'courseD_artist_project1_2018'
 level 'courseD_artist_project2_2018'
 level 'courseD_artist_project3_2018'
@@ -109,10 +109,10 @@ level 'courseD_artist_project2a_2018'
 level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
-stage 'Conditionals with Cards', flex_category: 'csf_e_1'
+stage 'Conditionals with Cards'
 level 'Conditionals_2018'
 
-stage 'Conditionals', flex_category: 'csf_e_1'
+stage 'Conditionals'
 level 'courseF_markdown_conditionals_intro'
 level 'courseD_video_whileIntro_2018'
 level 'courseD_farmer_while4_predict1_2018'
@@ -130,10 +130,10 @@ level 'courseE_farmer_ramp12g_2018'
 level 'courseF_markdown_conditionals_end'
 
 lesson_group 'csf_e_2', display_name: 'Course E Content'
-stage 'Private and Personal Information', flex_category: 'csf_e_2'
+stage 'Private and Personal Information'
 level 'courseE_unplugged_privateInformation_2018'
 
-stage 'Build a Star Wars Game', flex_category: 'csf_e_2'
+stage 'Build a Star Wars Game'
 level 'courseE_video_StarWarsProject'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
@@ -155,10 +155,10 @@ skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_congrats'
 level 'blockly:Studio:hoc2015_blockly_15'
 
-stage 'Functions: Songwriting', flex_category: 'csf_e_2'
+stage 'Functions: Songwriting'
 level 'SongwritingParameters_2018'
 
-stage 'Functions in Minecraft', flex_category: 'csf_e_2'
+stage 'Functions in Minecraft'
 level 'MC_HOC_2017_01_RETRY'
 level 'MC_HOC_2017_02_Cole'
 level 'MC_HOC_2017_03_Cole'
@@ -172,7 +172,7 @@ level 'MC_HOC_2017_10_RETRY'
 level 'MC_HOC_2017_Ali'
 level 'MC_HOC_2017_FP20x20'
 
-stage 'Functions in Harvester', flex_category: 'csf_e_2'
+stage 'Functions in Harvester'
 level 'harvester_skinOverview_video'
 level 'courseE_farmer_functions1_2018'
 level 'courseE_farmer_functions1a_2018'
@@ -188,10 +188,10 @@ level 'courseE_farmer_functions10a1_2018', challenge: true
 level 'courseE_farmer_functions13_2018'
 level 'courseE_farmer_functions11_predict_2018'
 
-stage 'Copyright and Creativity', flex_category: 'csf_e_2'
+stage 'Copyright and Creativity'
 level 'courseE_unplugged_CnC_2018'
 
-stage 'Functions in Artist', flex_category: 'csf_e_2'
+stage 'Functions in Artist'
 level 'courseE_artist_functions_predict1_2018'
 level 'courseE_artist_functions2_2018'
 level 'courseE_artist_functions3_2018'
@@ -208,7 +208,7 @@ level 'courseE_artist_functionsProj_2018'
 bonus 'courseE_artist_functions_challenge1_2018'
 bonus 'courseE_artist_functions_challenge2_2018'
 
-stage 'Determine the Concept', flex_category: 'csf_e_2'
+stage 'Determine the Concept'
 level 'courseE_bee_concept1_2018'
 level 'courseE_farmer_concept1_2018'
 level 'courseE_bee_concept2_2018'
@@ -222,7 +222,7 @@ level 'courseE_artist_concept4_2018'
 bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
-stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_e_2'
+stage 'Learning Sprites with Sprite Lab'
 level 'CourseEF_video_IntroSpriteLab'
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'
@@ -233,7 +233,7 @@ level 'Fish Tank 5-validated'
 level 'Fish Tank 6-validated'
 level 'Fish Tank 7-validated'
 
-stage 'Alien Dance Party with Sprite Lab', flex_category: 'csf_e_2'
+stage 'Alien Dance Party with Sprite Lab'
 level 'Dance Party 1-validated'
 level 'Dance Party 2'
 level 'CDEF_video_SpritesInAction'
@@ -244,7 +244,7 @@ level 'Dance Party 6'
 level 'Dance Party 7'
 level 'Dance Party Freeplay'
 
-stage 'Pet Giraffe with Sprite Lab', flex_category: 'csf_e_2'
+stage 'Pet Giraffe with Sprite Lab'
 level 'Virtual Pet 1'
 level 'Virtual Pet 2'
 level 'Virtual Pet 3'
@@ -254,26 +254,26 @@ level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
-stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
+stage 'Explore Project Ideas'
 level 'courseF_video_csMatters_2018', named: true
 level 'Geometric Sun_2018', named: true
 level 'Robot Doodle_2018', named: true
 level 'CourseE_hoops', named: true
 level 'courseE_Dogger_2', named: true
 
-stage 'The Design Process', flex_category: 'end_of_course_project'
+stage 'The Design Process'
 level 'Begin planning your project_2018', named: true
 
-stage 'Build Your Project', flex_category: 'end_of_course_project'
+stage 'Build Your Project'
 level 'Course E: Artist Project_2018', named: true
 level 'CourseE_Project_SpriteLab', named: true
 
-stage 'Present Your Project', flex_category: 'end_of_course_project'
+stage 'Present Your Project'
 level 'Prepare for your presentation_2018', named: true
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
-stage 'Internet', flex_category: 'extra_course_content'
+stage 'Internet'
 level 'Internet_2018'
 
-stage 'Crowdsourcing', flex_category: 'extra_course_content'
+stage 'Crowdsourcing'
 level 'Crowdsourcing_2018'
