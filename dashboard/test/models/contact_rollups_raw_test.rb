@@ -15,6 +15,12 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert_equal expected_data, result.data.symbolize_keys
   end
 
+  test 'extract_email_preferences can import many email preferences' do
+    3.times {|i| create :email_preference, email: "contact_#{i}@rollups.com"}
+    ContactRollupsRaw.extract_email_preferences
+    assert 3, ContactRollupsRaw.count
+  end
+
   test 'extract_parent_email creates records as we would expect' do
     student = create :student, parent_email: 'caring@parent.com'
     ContactRollupsRaw.extract_parent_emails
@@ -25,12 +31,6 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
       sources: "#{CDO.dashboard_db_name}.users.parent_email",
       data: nil
     )
-  end
-
-  test 'extract_email_preferences can import many email preferences' do
-    3.times {|i| create :email_preference, email: "contact_#{i}@rollups.com"}
-    ContactRollupsRaw.extract_email_preferences
-    assert 3, ContactRollupsRaw.count
   end
 
   test 'get_extraction_query can import when data column is null' do
