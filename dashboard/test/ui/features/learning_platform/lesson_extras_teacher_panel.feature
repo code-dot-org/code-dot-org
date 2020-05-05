@@ -16,7 +16,7 @@ Feature: Lesson extras teacher panel
     And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
 
     # Lesson extras individual puzzle page
-    And I click selector "button:contains(Try it):eq(0)" once I see it to load a new page
+    And I click selector ".sublevel-card-title-uitest" once I see it to load a new page
     When I wait for the page to fully load
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "section_id="
