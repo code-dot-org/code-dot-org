@@ -36,7 +36,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   test 'get_extraction_query can import when data column is null' do
     teacher = create :teacher
 
-    query = ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", false, [], 'email')
+    query = ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", 'email', [])
     ActiveRecord::Base.connection.execute(query)
 
     refute_nil ContactRollupsRaw.find_by(email: teacher.email, data: nil, sources: "#{CDO.dashboard_db_name}.users")
@@ -54,7 +54,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
       GROUP BY parent_email
     SQL
 
-    query = ContactRollupsRaw.get_extraction_query(subquery, true, ['higher_student_id'], 'parent_email', "#{CDO.dashboard_db_name}.users.id")
+    query = ContactRollupsRaw.get_extraction_query(subquery, 'parent_email', ['higher_student_id'], true, "#{CDO.dashboard_db_name}.users.id")
     ActiveRecord::Base.connection.execute(query)
 
     refute_empty ContactRollupsRaw.where(
@@ -79,7 +79,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
       WHERE email IS NOT NULL AND email != ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", false, ['opt_in'], 'email')
+    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", 'email', ['opt_in'])
   end
 
   test 'get_extraction_query looks as expected when called with multiple columns' do
@@ -96,7 +96,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
       WHERE parent_email IS NOT NULL AND parent_email != ''
     SQL
 
-    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", false, ['birthday', 'gender'], 'parent_email')
+    assert_equal expected_sql, ContactRollupsRaw.get_extraction_query("#{CDO.dashboard_db_name}.users", 'parent_email', ['birthday', 'gender'])
   end
 
   test 'create_json_object looks as expected when called with single column' do

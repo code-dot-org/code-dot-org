@@ -23,7 +23,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_email_preferences
-    query = get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", false, ['opt_in'], 'email')
+    query = get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", 'email', ['opt_in'])
     ActiveRecord::Base.connection.execute(query)
   end
 
@@ -34,17 +34,17 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY parent_email
     SQL
 
-    query = get_extraction_query(source_sql, true, [], 'parent_email', "#{CDO.dashboard_db_name}.users.parent_email")
+    query = get_extraction_query(source_sql, 'parent_email', [], true, "#{CDO.dashboard_db_name}.users.parent_email")
     ActiveRecord::Base.connection.execute(query)
   end
 
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
-  # @param source_is_subquery [Boolean] True if source is a subquery, rather than a table name
-  # @param data_columns [Array] Columns we want reshaped into a single JSON object
   # @param email_column [String] Column in source table we want to insert ino the email column
-  # @param source_name [String] Name for source (should be non-nil if using a subquery or non-dashboard table)
+  # @param data_columns [Array] Columns we want reshaped into a single JSON object
+  # @param source_is_subquery [Boolean] (default false) Set to true if source is a subquery, rather than a table name
+  # @param source_name [String] (default nil) Name for source (non-nil if using a subquery)
   # @return [String] A SQL statement to extract and reshape data from the source table.
-  def self.get_extraction_query(source, source_is_subquery, data_columns, email_column, source_name=nil)
+  def self.get_extraction_query(source, email_column, data_columns, source_is_subquery=false, source_name=nil)
     if source_name.nil? && source_is_subquery
       raise "Source name required if source is a subquery"
     end
