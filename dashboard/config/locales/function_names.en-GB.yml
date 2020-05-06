@@ -141,17 +141,23 @@ en-GB:
         draw a square: dibuja un cuadrado
       courseE_artist_functions2_2019:
         draw a square: dibuja un cuadrado
+      courseE_artist_functions2_copy:
+        draw a square: dibuja un cuadrado
       courseE_artist_functions3_2018:
         draw a star: dibuja una estrella
       courseE_artist_functions3_2019:
         draw a star: dibuja una estrella
       courseE_artist_functions4:
         draw a star: dibuja una estrella
+      courseE_artist_functions4_copy:
+        draw a star: dibuja una estrella
       courseE_artist_functions5:
         draw a star: dibuja una estrella
       courseE_artist_functions5_2018:
         draw a star: dibuja una estrella
       courseE_artist_functions5_2019:
+        draw a star: dibuja una estrella
+      courseE_artist_functions5_copy:
         draw a star: dibuja una estrella
       courseE_artist_functions7:
         draw a house: dibuja una casa
@@ -200,6 +206,8 @@ en-GB:
       courseE_artist_functions_predict1_2018:
         draw a square: dibuja un cuadrado
       courseE_artist_functions_predict1_2019:
+        draw a square: dibuja un cuadrado
+      courseE_artist_functions_predict1_copy:
         draw a square: dibuja un cuadrado
       courseE_artist_functions_predict2:
         do something: do something
