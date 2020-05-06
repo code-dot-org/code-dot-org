@@ -668,6 +668,39 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
   )
 
+  test 'can update a workshop to be virtual with suppressed email' do
+    sign_in @organizer
+    workshop = create :workshop, organizer: @organizer
+    refute workshop.virtual?
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: true)}
+    assert_response :success
+    workshop.reload
+    assert workshop.virtual?
+  end
+
+  test 'cannot update a workshop to be virtual without suppressed email' do
+    sign_in @organizer
+    workshop = create :workshop, organizer: @organizer
+    refute workshop.virtual?
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
+    assert_response :bad_request
+    workshop.reload
+    refute workshop.virtual?
+  end
+
+  test 'can update a workshop to have suppressed email' do
+    sign_in @organizer
+    workshop = create :workshop, organizer: @organizer
+    refute workshop.suppress_email?
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(suppress_email: true)}
+    assert_response :success
+    workshop.reload
+    assert workshop.suppress_email?
+  end
+
   test 'updating with notify true sends detail change notification emails' do
     sign_in create :admin
 
