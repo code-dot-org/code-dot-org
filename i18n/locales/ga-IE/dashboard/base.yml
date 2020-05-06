@@ -691,20 +691,6 @@ ga:
       body: "Is féidir le daltaí na huirlisí digiteacha seo a úsáid chun coincheapa ó Fhoras Feasa na Ríomheolaíochta a fhoghlaim. Úsáid na giuirléidí ina n-aonar, nó cruthaigh ceacht a chlúdaíonn coincheap amháin."
       audience: "Aois 14+"
       cta: "Foghlaim anois"
-  gallery:
-    students_drew_these_with_code: "Tharraing daltaí na pictiúir seo le cód!"
-    students_made_these_with_code: "Rinne daltaí iad seo le cód!"
-    picture_count: "Sna <b>%{days}</b> lá seo caite, tharraing daltaí <b>%{count}</b> pictiúr trína ríomhchláir féin a scríobh. Cliceáil na pictiúir le gach ceann acu a fheiceáil i ngníomh."
-    activity_count: "Sna <b>%{days}</b> lá seo caite, rinne daltaí <b>%{count}</b> aip agus pictiúr trína ríomhchláir féin a scríobh. Cliceáil na pictiúir le gach ceann acu a fheiceáil i ngníomh."
-    want_to_make_your_own: "Ar mhaith leat do cheann féin a dhéanamh?"
-    how_to_save: "Ar an leibhéal deireanach de na cúrsaí teagaisc seo, cliceáil \"Críochnaigh\" agus \"Sábháil\" le do chuid oibre a shábháil sa ghailearaí."
-    more: "Tuilleadh →"
-    caption_by_name_age: "le %{name}, aois %{age}"
-    caption_time_ago: "%{time_ago} ó shin"
-    header: "Gailearaí"
-    header_playlab: "Scéalta agus cluichí"
-    header_artist: "Ealaín chódála"
-    report_abuse: "Déan Tuairisc ar Mhí-Úsáid"
   landing:
     prerelease_tutorial: "Is cúrsa teagaisc **béite** é seo. Seans go bhfeabhsófar é amach anseo, bunaithe ar aiseolas ón phobal."
     report_bug: "Déan Tuairisc ar Fhadhb"
@@ -888,6 +874,7 @@ ga:
     instructor_feedback: 'Aiseolas ó Mhúinteoir'
     peer_feedback: 'Aiseolas ó Scoláirí Eile'
     outdated: 'Baineann an t-aiseolas seo le seanleagan'
+    peer_review: 'Athbhreithniú Comhghleacaithe'
   flex_category:
     required: 'Foramharc'
     content: 'Ábhar'
