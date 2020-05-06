@@ -38,7 +38,6 @@ class Lesson < ActiveRecord::Base
   self.table_name = 'stages'
 
   serialized_attrs %w(
-    stage_extras_disabled
     visible_after
   )
 
@@ -172,7 +171,7 @@ class Lesson < ActiveRecord::Base
         stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      if !unplugged? && !stage_extras_disabled
+      unless unplugged?
         stage_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
       end
 
