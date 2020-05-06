@@ -21,14 +21,18 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
   test 'sync new contact' do
     # Create seed data in a source table
-    email = 'test@domain.com'
-    create :email_preference, email: email, opt_in: true
+
+    email_preference = create :email_preference, email: 'test@domain.com', opt_in: true
+    student_with_parent_email = create :student, parent_email: 'caring@parent.com'
 
     # Stub out Pardot responses
-    pardot_id = 1
     PardotV2.stubs(:retrieve_prospects).
       yields([]).
-      then.yields([{'id' => pardot_id, 'email' => email}])
+      then.yields([
+                    {'id' => 1, 'email' => email_preference.email},
+                    {'id' => 2, 'email' => student_with_parent_email.parent_email}
+                  ]
+      )
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
@@ -36,13 +40,23 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     ContactRollupsV2.build_contact_rollups(log_collector, true)
 
     # Verify results
-    pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
+
+    # Email preference
+    pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email_preference.email, pardot_id: 1)
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record.data_synced)
 
-    contact_record = ContactRollupsFinal.find_by_email(email)
+    contact_record = ContactRollupsFinal.find_by_email(email_preference.email)
     refute_nil contact_record
     assert_equal 1, contact_record.data['opt_in']
+
+    # Parent email
+    pardot_memory_record = ContactRollupsPardotMemory.find_by(email: student_with_parent_email.parent_email, pardot_id: 2)
+    refute_nil pardot_memory_record
+    assert_equal({}, pardot_memory_record.data_synced)
+
+    contact_record = ContactRollupsFinal.find_by_email(student_with_parent_email.parent_email)
+    refute_nil contact_record
   end
 
   test 'sync updated contact' do
