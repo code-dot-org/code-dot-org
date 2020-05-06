@@ -615,6 +615,14 @@ ca:
           stages:
             Evaluation Blocks:
               name: Blocs d'avaluació
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Vista general
         allthehiddenthings:
           stages:
             Game Lab:
@@ -625,6 +633,10 @@ ca:
               name: 'Artista: Funcions'
         artistExemplar:
           description_audience: De 8 a 18 anys
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Vista general
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -695,6 +707,10 @@ ca:
               name: Rebota
             'Farmer: While Loops':
               name: 'Pagesa: bucles mentre'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Vista general
         csd3-2017:
           stages:
             Functions:
@@ -735,6 +751,14 @@ ca:
               name: Variables
             While Loops:
               name: Bucles Mentres
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         basketball:
           stages:
             Bounce:
@@ -752,6 +776,10 @@ ca:
           stages:
             Lists:
               name: Llistes
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         minecraft:
           description_short: Programa animals i altres criatures de Minecraft en la
             teva pròpia versió de Minecraft.
@@ -845,6 +873,14 @@ ca:
           stages:
             Wrap-Up:
               name: Recapitulació
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         sciencepd4:
           stages:
             Wrap-Up:
@@ -861,6 +897,10 @@ ca:
           stages:
             Wrap-Up:
               name: Recapitulació
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         csd6-draft:
           stages:
             Lists:
@@ -986,6 +1026,54 @@ ca:
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
         express-2017:
           stages:
             Introduction:
@@ -1271,6 +1359,74 @@ ca:
           stages:
             While Loops:
               name: Bucles Mentres
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1281,6 +1437,10 @@ ca:
               name: Mou-lo, Mou-lo
             Your Digital Footprint:
               name: La vostra empremta digital
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Vista general
         frozen-2018:
           stages:
             Artist:
@@ -1317,6 +1477,14 @@ ca:
           stages:
             Dance Party:
               name: Festa de ball
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
         dance-extras:
           description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
@@ -1335,6 +1503,15 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Ciutadania digital
         dance-low:
           stages:
             Dance Party:
@@ -1356,6 +1533,17 @@ ca:
               name: Artista binari
             Dance Party:
               name: Festa de ball
+          lesson_groups:
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_binary:
+              display_name: Binari
+            csf_digcit:
+              display_name: Ciutadania digital
         coursee-2019:
           description_audience: De 8 a 12 anys
           stages:
@@ -1373,6 +1561,13 @@ ca:
               name: Col·laboració oberta
             Songwriting:
               name: Composició de cançons
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
         express-2019:
           stages:
             Relay Programming:
@@ -1391,10 +1586,24 @@ ca:
               name: Col·laboració oberta
             Dance Party:
               name: Festa de ball
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
         andrea-test:
           stages:
             'null':
               name: nul
+          lesson_groups:
+            required:
+              display_name: Vista general
         dance-extras-gallery:
           title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades
@@ -1410,6 +1619,15 @@ ca:
               name: El gran esdeveniment
             Binary Bracelets:
               name: Polseres binàries
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_binary:
+              display_name: Binari
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         gamelab:
           title: Laboratori de jocs
         coursea-2019:
@@ -1420,6 +1638,13 @@ ca:
               name: Mapes feliços
             Going Places Safely:
               name: Anant a llocs segurs
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         courseb-2019:
           description_audience: De 5 a 8 anys
           stages:
@@ -1429,6 +1654,13 @@ ca:
               name: La vostra empremta digital
             'Loops: Getting Loopy':
               name: Fent bucles
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1437,6 +1669,11 @@ ca:
               name: La vostra empremta digital
             Spelling Bee:
               name: Abella ortogràfica
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1457,6 +1694,16 @@ ca:
           stages:
             Functions with Parameters:
               name: Funcions amb Paràmetres
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+            required:
+              display_name: Vista general
         csp1-2019:
           stages:
             The Internet:
@@ -1469,6 +1716,10 @@ ca:
           stages:
             While Loops:
               name: Bucles Mentres
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1477,10 +1728,88 @@ ca:
               name: Condicionals amb targetes
             Building a Foundation:
               name: Posant les bases
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programació de paper quadriculat
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+            required:
+              display_name: Vista general
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Vista general
         csd2-pilot:
           stages:
             Lists:
@@ -1493,12 +1822,70 @@ ca:
               name: Condicionals
             Functions:
               name: Funcions
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
         peru-2019:
           stages:
             Introduction:
               name: Introducció
             Nested Loops:
               name: Bucles imbricats
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
         dance-2019:
           stages:
             Dance Party:
@@ -1526,6 +1913,14 @@ ca:
         dance-extras-2019:
           description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1536,14 +1931,59 @@ ca:
               name: Col·laboració oberta
             Conditionals with Cards:
               name: Condicionals amb targetes
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_conditionals:
+              display_name: Condicionals
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Condicionals
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_events:
+              display_name: Esdeveniments
+            csf_digcit:
+              display_name: Ciutadania digital
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Condicionals
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_events:
+              display_name: Esdeveniments
+            csf_digcit:
+              display_name: Ciutadania digital
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1566,6 +2006,13 @@ ca:
               name: Anant a llocs segurs
             'Programming: Happy Maps':
               name: Mapes feliços
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         courseb-2020:
           description_audience: De 5 a 8 anys
           stages:
@@ -1575,6 +2022,13 @@ ca:
               name: Mou-lo, Mou-lo
             'Loops: Getting Loopy':
               name: Fent bucles
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         coursec-2020:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
@@ -1584,6 +2038,15 @@ ca:
               name: Polseres binàries
             'Events: The Big Event':
               name: El gran esdeveniment
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_binary:
+              display_name: Binari
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         coursed-2020:
           description_audience: De 7 a 11 anys
           stages:
@@ -1601,11 +2064,29 @@ ca:
               name: Ciutadania digital
             Dance Party:
               name: Festa de ball
+          lesson_groups:
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_binary:
+              display_name: Binari
+            csf_digcit:
+              display_name: Ciutadania digital
         coursee-2020:
           description_audience: De 8 a 12 anys
           stages:
             'Functions: Songwriting':
               name: Composició de cançons
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
         coursef-2020:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
@@ -1615,14 +2096,37 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
         express-2020:
           stages:
             Dance Party:
               name: Festa de ball
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Abella ortogràfica
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
         csp3-virtual:
           stages:
             Creating Functions:

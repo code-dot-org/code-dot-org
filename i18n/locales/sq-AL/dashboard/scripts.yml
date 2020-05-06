@@ -855,6 +855,22 @@ sq:
           stages:
             Introduction to PD:
               name: Hyrje në PD
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -867,6 +883,14 @@ sq:
               name: Funksionet e Artistit
         artistExemplar:
           description_audience: Moshat 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -939,6 +963,14 @@ sq:
               name: Hidhu
             'Farmer: While Loops':
               name: 'Fermeri: Ciklet While'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
         csd3-2017:
           stages:
             Functions:
@@ -987,6 +1019,22 @@ sq:
               name: Receta e Dizenjimit
             Welcome!:
               name: Mirë se vini!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
         basketball:
           title: Realizo një lojë basketbolli
           description_short: Realizo një lojë basketbolli
@@ -1009,6 +1057,14 @@ sq:
               name: Rishikimi i ndërsjellë
             Lists:
               name: Listat
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
         minecraft:
           title: Dizenjo Minecraft-in e Orës së Kodimit
           description_short: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
@@ -1068,6 +1124,9 @@ sq:
               name: Hyrja
             Conditionals:
               name: Kushtet
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1082,6 +1141,9 @@ sq:
               name: Hyrja
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         classic-hoc-impact-study:
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
           stages:
@@ -1108,6 +1170,22 @@ sq:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
         sciencepd4:
           stages:
             Welcome!:
@@ -1124,12 +1202,27 @@ sq:
           stages:
             Binary:
               name: Binare
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         sciencepd5:
           stages:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+            practice:
+              display_name: Praktikat mësimore
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         csd6-draft:
           stages:
             Lists:
@@ -1240,6 +1333,78 @@ sq:
           stages:
             Building a Foundation:
               name: Krijimi i një fondacioni
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
         express-2017:
           stages:
             Introduction:
@@ -1260,6 +1425,9 @@ sq:
               name: Krijimi i një fondacioni
             Nested Loops:
               name: Përsëritjet e Mbivendosura
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1310,6 +1478,9 @@ sq:
               name: Krijimi i një fondacioni
             Nested Loops:
               name: Përsëritjet e Mbivendosura
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         new-e:
           stages:
             Building a Foundation:
@@ -1534,6 +1705,108 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1544,6 +1817,12 @@ sq:
               name: Lëvize atë, lëvize atë
             Your Digital Footprint:
               name: Gjurmët e Tua Dixhitale
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
         frozen-2018:
           stages:
             Artist:
@@ -1558,6 +1837,14 @@ sq:
               name: Artisti
         aquatic:
           title: 'Minecraft: Udhëtimi ujor'
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1574,6 +1861,17 @@ sq:
               name: Interneti
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: variabla
+            csf_data:
+              display_name: të dhëna
+            csf_for_loops:
+              display_name: Për Ciklet
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1588,6 +1886,17 @@ sq:
               name: Imazhet Binare
             Artist Binary:
               name: Artist Binar
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle 
+            csf_conditionals:
+              display_name: Kushtet
+            csf_binary:
+              display_name: Binare
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1604,6 +1913,13 @@ sq:
               name: Crowdsourcing
             Songwriting:
               name: Të shkruarit e Këngëve
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_nested_loops:
+              display_name: Përsëritjet e Mbivendosura
+            csf_functions:
+              display_name: funksione
         express-2019:
           stages:
             Relay Programming:
@@ -1624,10 +1940,26 @@ sq:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_conditionals:
+              display_name: Kushtet
+            csf_functions:
+              display_name: funksione
+            csf_variables:
+              display_name: variabla
+            csf_for_loops:
+              display_name: Për Ciklet
         andrea-test:
           stages:
             'null':
               name: 'pa vlerë'
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1636,12 +1968,30 @@ sq:
               name: Eventi i Madh
             Binary Bracelets:
               name: Byzylykët Binarë
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_binary:
+              display_name: Binare
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
+            csf_data:
+              display_name: të dhëna
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Hartat e Gëzuara
             Going Places Safely:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1650,6 +2000,13 @@ sq:
               name: Gjurmët e Tua Dixhitale
             'Loops: Getting Loopy':
               name: Duke u Çmëndur
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1658,6 +2015,11 @@ sq:
               name: Gjurmët e Tua Dixhitale
             Spelling Bee:
               name: Bleta Gërmëzuese
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1678,6 +2040,16 @@ sq:
           stages:
             Functions with Parameters:
               name: Funksionet me parametra
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+            required:
+              display_name: Përmbledhja
         csp1-2019:
           stages:
             Personal Innovations:
@@ -1698,6 +2070,9 @@ sq:
           stages:
             Number Systems:
               name: Sistemi Numerik
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1706,10 +2081,92 @@ sq:
               name: Kushtoret me Karta
             Building a Foundation:
               name: Krijimi i një fondacioni
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle 
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programimi Grafik me Letër
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle 
+            required:
+              display_name: Përmbledhja
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
         csd2-pilot:
           stages:
             Lists:
@@ -1722,12 +2179,96 @@ sq:
               name: Kushtet
             Functions:
               name: funksione
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+            content:
+              display_name: Përmbajtja
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
         peru-2019:
           stages:
             Introduction:
               name: Hyrja
             Nested Loops:
               name: Përsëritjet e Mbivendosura
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
+            required:
+              display_name: Përmbledhja
         k5-onlinepd-2019:
           stages:
             Next Steps:
@@ -1744,6 +2285,17 @@ sq:
               name: variabla
             For Loops:
               name: Për Ciklet
+          lesson_groups:
+            k5_next_steps:
+              display_name: Hapat e ardhshme
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1754,14 +2306,59 @@ sq:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Kushtoret me Karta
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_conditionals:
+              display_name: Kushtet
+            csf_nested_loops:
+              display_name: Përsëritjet e Mbivendosura
+            csf_functions:
+              display_name: funksione
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Kushtet
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_conditionals:
+              display_name: Kushtet
+            csf_events:
+              display_name: Ngjarje
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Kushtet
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_conditionals:
+              display_name: Kushtet
+            csf_events:
+              display_name: Ngjarje
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Përmbledhja
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: variabla
+            csp_conditionals:
+              display_name: Kushtet
+            csp_functions:
+              display_name: funksione
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: cikle 
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1782,6 +2379,13 @@ sq:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
             'Programming: Happy Maps':
               name: Hartat e Gëzuara
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1790,12 +2394,30 @@ sq:
               name: Lëvize atë, lëvize atë
             'Loops: Getting Loopy':
               name: Duke u Çmëndur
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Byzylykët Binarë
             'Events: The Big Event':
               name: Eventi i Madh
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_binary:
+              display_name: Binare
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
+            csf_data:
+              display_name: të dhëna
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1810,10 +2432,28 @@ sq:
               name: Artist Binar
             Digital Citizenship:
               name: Shtetësi Dixhitale
+          lesson_groups:
+            csf_events:
+              display_name: Ngjarje
+            csf_loops:
+              display_name: cikle 
+            csf_conditionals:
+              display_name: Kushtet
+            csf_binary:
+              display_name: Binare
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Të shkruarit e Këngëve
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_nested_loops:
+              display_name: Përsëritjet e Mbivendosura
+            csf_functions:
+              display_name: funksione
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1824,10 +2464,36 @@ sq:
               name: Interneti
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Shtetësi Dixhitale
+            csf_variables:
+              display_name: variabla
+            csf_data:
+              display_name: të dhëna
+            csf_for_loops:
+              display_name: Për Ciklet
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_conditionals:
+              display_name: Kushtet
+            csf_functions:
+              display_name: funksione
+            csf_variables:
+              display_name: variabla
+            csf_for_loops:
+              display_name: Për Ciklet
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Bleta Gërmëzuese
+          lesson_groups:
+            csf_loops:
+              display_name: cikle 
+            csf_events:
+              display_name: Ngjarje
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1850,6 +2516,9 @@ sq:
           stages:
             Functions:
               name: funksione
+          lesson_groups:
+            content:
+              display_name: Përmbajtja
         code-break:
           stages:
             Algorithms:

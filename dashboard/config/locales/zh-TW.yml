@@ -707,20 +707,6 @@ zh-TW:
       body: 學生可以親身使用這些電子工具，探索計算機科學原理課程中會學到的概念。讓他們使用那些元件去學習，又或者為你的班級建立「單一概念」的課堂。
       audience: 14 歲以上
       cta: 學習如何做
-  gallery:
-    students_drew_these_with_code: 學生是用程式畫出這些圖案的喔！
-    students_made_these_with_code: 學生是用程式做出這些玩意的喔！
-    picture_count: 在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個圖畫。你可以點擊縮圖看看這些程式是如何運作的。
-    activity_count: 在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了 <b>%{count}</b> 個 App 以及圖畫。你可以點擊縮圖看看這些程式是如何運作的。
-    want_to_make_your_own: 想要自己創作嗎？
-    how_to_save: 在這些教程的最後一關裡單擊「完成」和「儲存」，你創作的作品就會像它們一樣留在藝廊裡。
-    more: 更多 →
-    caption_by_name_age: "%{name}, %{age} 歲"
-    caption_time_ago: "%{time_ago} 前"
-    header: 藝廊
-    header_playlab: 故事與遊戲
-    header_artist: 代碼藝術
-    report_abuse: 檢舉濫用
   landing:
     prerelease_tutorial: 這個教程仍在 **測試階段**，或會根據收到的意見、作出改善而有所修改。
     report_bug: 臭蟲回報
@@ -911,6 +897,7 @@ zh-TW:
     instructor_feedback: 教師回饋
     peer_feedback: 同伴反饋
     outdated: 這是先前版本的回饋內容
+    peer_review: 同儕審查
   flex_category:
     required: 概覽
     content: 內容

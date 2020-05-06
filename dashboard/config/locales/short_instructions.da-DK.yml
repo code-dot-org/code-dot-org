@@ -561,6 +561,8 @@ da-DK:
       courseA_collector_preLoops7: Saml alle 3 skatte for at komme gennem dette trin.
       courseA_maze_seq1: Få fuglen hen til den onde gris!
       courseA_maze_seq10: 'Udfording: Gå uden om TNT for at få fuglen hen til grisen! '
+      courseA_maze_seq10_copy: 'Udfording: Gå uden om TNT for at få fuglen hen til
+        grisen! '
       courseA_maze_seq11: Flyt i en retning, så en anden, for at få fuglen hen til
         grisen.
       courseA_maze_seq11_2018: Flyt i en retning, så en anden, for at få fuglen hen
@@ -579,16 +581,22 @@ da-DK:
       courseA_maze_seq3: Ret koden, for at få fuglen hen til grisen!
       courseA_maze_seq4: Fjern en blok for at få fuglen hen til grisen!
       courseA_maze_seq5: Prøv denne opgave selv helt fra begyndelsen.
+      courseA_maze_seq5_copy: Prøv denne opgave selv helt fra begyndelsen.
       courseA_maze_seq6: Flyt i en retning, så en anden, for at komme hen til grisen!
       courseA_maze_seq6_2018: Flyt i en retning, så en anden, for at komme hen til
         grisen!
       courseA_maze_seq6_2019: Flyt i en retning, så en anden, for at komme hen til
         grisen!
+      courseA_maze_seq6_copy: Flyt i en retning, så en anden, for at komme hen til
+        grisen!
       courseA_maze_seq7: Prøv at finde ud af hvad der mangler, og tilføj så blokke,
+        for at få fuglen hen til grisen!
+      courseA_maze_seq7_copy: Prøv at finde ud af hvad der mangler, og tilføj så blokke,
         for at få fuglen hen til grisen!
       courseA_maze_seq8: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_2018: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_2019: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq8_copy: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq9: Ret fejlen og tilføj blokke, så fuglen kommer hen til grisen!
       courseA_maze_seq_challenge1: Der er noget galt. Ret koden så fuglen kommer hen
         til grisen!
@@ -671,6 +679,9 @@ da-DK:
       courseE_artist_functions1: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp
         mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels
         kortere end firkantens længde.'
+      courseE_artist_functions1_copy: 'Hej. Mig zombie kunstner. Mig elske tegning.
+        Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25
+        pixels kortere end firkantens længde.'
       courseE_bee_concept1: "Saml al nektaren fra hver blomst.\nBrug et indlejret
         loop. "
       courseE_bee_concept1_2018: "Saml al nektaren fra hver blomst.\nBrug et indlejret

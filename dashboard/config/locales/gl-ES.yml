@@ -628,23 +628,6 @@ gl:
       title: Minecraft
     unplugged_conditionals:
       title: Condicionais
-  gallery:
-    students_drew_these_with_code: Os alumnos crearon isto con programación!
-    students_made_these_with_code: Os alumnos crearon isto con programación!
-    picture_count: Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b>
-      imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes
-      para ver cada programa em execución.
-    activity_count: Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b>
-      aplicacións e figuras escribindo os seus proprios programas de computador. Clique
-      nas figuras e capturas de pantalla para ver cada programa en funcionamento.
-    want_to_make_your_own: Queres crear o teu propio programa?
-    more: Máis &rarr;
-    caption_by_name_age: feito por %{name}, anos %{age}
-    caption_time_ago: hai %{time_ago}
-    header: Galería
-    header_playlab: Laboratorio de xogos
-    header_artist: Artista
-    report_abuse: Reportar abuso
   landing:
     report_bug: Comunicar erro
     support: Obter axuda

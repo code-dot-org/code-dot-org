@@ -67,8 +67,22 @@ lv-LV:
       NEW Course 4 Bee For Loops 5:
         actions_category: Rīku josla ir ieguvusi jaunu dizainu! Tagad tajā ir "Darbības"
           bloki.
+      New Artist Project:
+        New Artist Project_callout1: Klikšķini uz kategorijām, lai redzētu blokus
+          savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai
+        New Artist Project_callout2: Nospied "Palaist", lai saglabātu un palaistu
+          programmu
+        sign_in_to_save_project: Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies,
+          lai saglabātu šo projektu savā kontā!
       New Frozen Project:
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Klikšķini uz kategorijām, lai redzētu blokus
+          savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai
+        New Play Lab Project_callout2: Nospied "Palaist", lai saglabātu un palaistu
+          programmu
+        sign_in_to_save_project: Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies,
+          lai saglabātu šo projektu savā kontā!
       Overworld Move to Sheep:
         craft_run_button_callout: Nospied "Palaist", lai izmēģinātu programmu
       Overworld Move to Sheep_2019:

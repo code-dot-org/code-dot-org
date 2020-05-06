@@ -14,8 +14,8 @@ de-DE:
       2-3 Artist 2 new: 'Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100
         Pixel, aber die halbfertige nur 50. Vervollständige die Wand. '
       2-3 Artist 3.4: "Der \"springe\"-Baustein bewegt den Künstler, ohne eine Linie
-        zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
-        und \"bewegen\"-Bausteine."
+        zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe
+        vorwärts\" und \"vorwärts bewegen\"-Bausteine."
       2-3 Artist 3new: |-
         Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende.
         (Beachte: Die Breite des schwarzen Hutes beträgt 50 Pixel.)
@@ -71,6 +71,9 @@ de-DE:
         \ \n\nHilf dem Zombie, quadratische Gläser zu zeichnen.  \n\nDie Brücke zwischen
         den Brillengläsern ist 25 Pixel kürzer als die Breite der Quadrate, die 100
         Pixel beträgt."
+      2-3 Artist Functions 10: 'Freies Spielen: Hier sind zwei Funktionen, um ein
+        großes und ein kleines Zahnrad zu zeichnen. Verwende sie, um das Innere einer
+        Maschine zu zeichnen!'
       2-3 Artist Functions 11: "Wir haben die Funktion \"Ein Quadrat zeichnen\" in
         \"Ein Sechseck zeichnen\" umbenannt, aber sie gibt uns immer noch Felder!
         Kannst du die Funktion \"Draw a hexagon\" ändern, um ein Hexagon mit 50 Pixel
@@ -78,6 +81,11 @@ de-DE:
       2-3 Artist Functions 11.5: "Hier ist die gleiche „Zeichne ein Sechseck“-Funktion.
         \n\nWas passiert, wenn du das Hauptprogramm 6 Mal wiederholst und dich dabei
         jedes Mal um 60 Grad drehst?"
+      2-3 Artist Functions 12: |-
+        Funktionen sind sehr gut zum mehrfachen Zeichnen von komplexen Dingen.
+
+        Kannst du die "Zeichne eine Blume" Funktion verwenden, um den Rest des Blumenkasten zu füllen?
+        Die Pflanzen sind alle 100 Pixel voneinander entfernt.
       2-3 Artist Functions 2: "Mit Funktionen können Sie neue Bausteine definieren!
         \n\nWir haben die Blöcke, die zum Zeichnen eines Quadrats benötigt werden,
         in eine Funktion namens \"Zeichne ein Quadrat\" verschoben. Verwende diesmal
@@ -88,6 +96,9 @@ de-DE:
         sind nun 45 Pixel voneinander entfernt."
       2-3 Artist Functions 4: Platziere die Funktion nun in eine Schleife, um diese
         drei Quadrate zu zeichnen.
+      2-3 Artist Functions 9: 'Freies Spielen: Hier ist eine Schneeflocken-Funktion.
+        Experimentiere damit, um ein Winterbild zu erstellen! Dies ist ein freies
+        Spiel, daher gibt es kein zu lösendes Rätsel. Viel Spaß!'
       2-3 Artist Loops New 1: Lasst uns den Kopf dieses Roboters zeichnen! Kannst
         du ein Quadrat mit Seiten machen, die 100 Pixel groß sind?
       2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
@@ -105,7 +116,7 @@ de-DE:
         du drehen musst und wie oft du dich bewegst.
       2-3 Artist Loops New 15: Zeichne etwas, wozu du gerade Lust hast.
       2-3 Artist Loops New 2: |-
-        Hier ist das gleiche Rätsel, das wir gerade gelöst haben, aber diesmal können wir nur einen "bewege vorwärts"-Baustein und einen "Drehe"-Baustein verwenden.
+        Hier ist das gleiche Rätsel, das wir gerade gelöst haben, aber diesmal können wir nur einen "vorwärts bewegen"-Baustein und einen "Drehe"-Baustein verwenden.
 
         Kannst du einen `wiederhole` Baustein benutzen, um dieses Rätsel zu lösen?
       2-3 Artist Loops New 9: Zeichne ein einfaches V (beide Seiten haben 50 Pixel),
@@ -182,6 +193,8 @@ de-DE:
         darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat.'
       2-3 Bee Debugging 1: Diese Blöcke nerven mich wirklich. Bereinige den oder die
         Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 10: Dieses Puzzle artet in Schleifen aus! Löse die Fehler,
+        sammle allen Nektar und erzeuge den Honig.
       2-3 Bee Debugging 2: |-
         Kannst du das Problem hier finden?
         Behebe den oder die Fehler, um den gesamten Nektar zu sammeln.
@@ -204,6 +217,14 @@ de-DE:
         So viele schöne Blumen!
 
         Behebe den/die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 9: |-
+        Sei geduldig mit dieser Bienen-Aufgabe!
+
+        Du musst einige Dinge in diesem Programm lösen, um allen Nektar einzusammeln und Honig daraus zu machen.
+      2-3 Bee Debugging Assessment 1: |-
+        Prüfung: Jetzt ist es an der Zeit zu zeigen was du weißt!
+
+        Löse die Fehler, sammle den Nektar und erzeuge den Honig.
       2-3 Bee Functions 1: Funktionen sind Codeblöcke, die eine Aufgabe ausführen.
         Benutze die Funktion "sammle 2 Nektar", um den Nektar von jeder Blume zu sammeln.
       2-3 Bee Functions 10: Lila Blüten haben entweder 1 oder 0 Nektar.  Erstelle
@@ -264,13 +285,13 @@ de-DE:
 
         Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: `Nektar > 0`.
       2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
-        `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
+        `vorwärts bewegen` Bausteine unter dem `wenn Ausführen` Baustein ein und drücke
         auf "Ausführen". '
       2-3 Maze 10: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze 12: Kannst du zum Schwein gelangen, indem du eine Schleife erstellst,
-        die nur einen `bewege vorwärts`-Baustein innerhalb eines `wiederhole` verwendet?
-      2-3 Maze 13: Bringt mich zum Schwein! Du kannst diesmal nur einen `bewege vorwärts`
-        Baustein verwenden
+        die nur einen `vorwärts bewegen`-Baustein innerhalb eines `wiederhole` verwendet?
+      2-3 Maze 13: Bringt mich zum Schwein! Du kannst diesmal nur einen `vorwärts
+        bewegen` Baustein verwenden
       2-3 Maze 15: In diesem Rätsel werden dir zwei `wiederhole` Schleifen helfen,
         das Schwein mit der geringsten Anzahl an Schleifen zu erreichen!
       2-3 Maze 16: Schleifen funktionieren sogar mit mehr als einem Baustein im Inneren!  Kannst
@@ -481,7 +502,7 @@ de-DE:
       4-5 While Loops 1: Bringe mich zu dem Loch und fülle es mit zwei Schaufeln Dreck,
         indem Du den `füllen`-Baustein benutzt.
       4-5 While Loops 2: Bringe mich zu dem Erdhaufen und entferne ihn mit 5 Schaufelladungen,
-        indem due den `entferne 1` Baustein verwendest.
+        indem du den `entferne 1` Baustein verwendest.
       4-5 While Loops 3: "Benutze so wenige Blöcke wie möglich, um dieses Puzzle zu
         vervollständigen!  \n\nBewege mich zum Haufen und entferne ihn vollständig,
         dann bewege mich zu dem Loch und fülle es komplett aus."
@@ -506,9 +527,15 @@ de-DE:
       CSD U3 Sprites intro sprites: Mache Folgendes
       CSD U3 Sprites intro sprites_2018: Mache Folgendes
       CSD U3 Sprites intro sprites_2019: Mache Folgendes
+      CSD U5 black white images pixelation: Vervollständige das X durch Eingabe von
+        Nullen und Einsen
       CSD U5 black white images pixelation 5: Zeichne was du willst
       CSD U5 black white images pixelation 5_2018: Zeichne was du willst
       CSD U5 black white images pixelation 5_2019: Zeichne was du willst
+      CSD U5 black white images pixelation_2018: Vervollständige das X durch Eingabe
+        von Nullen und Einsen
+      CSD U5 black white images pixelation_2019: Vervollständige das X durch Eingabe
+        von Nullen und Einsen
       CSDU4 - Design Mode - 16: Füge einen Event-Handler für die Schaltfläche über
         den Link "Einfügen und Anzeigen" auf der Registerkarte Design Mode Events
         hinzu. (Klicke, um die vollständige Anleitung zu sehen).
@@ -865,6 +892,10 @@ de-DE:
         Weg zur Fackel zu bauen.
       Function intro Ryan_2019: Verwende zweimal die "Brücke bauen"-Funktion, um einen
         Weg zur Fackel zu bauen.
+      Geometric Sun: 'Projektidee: Erstelle ein Muster mit geometrischen Ideen wie
+        Formen. Dies erfordert Ausdauer und Planung!'
+      Geometric Sun_2018: 'Projektidee: Erstelle ein Muster mit geometrischen Ideen
+        wie Formen. Dies erfordert Ausdauer und Planung!'
       Guess The Number: Baue, was immer du willst. Dies ist ein Beispiel für ein Zahlen-Ratespiel!
       HOC 2018 Level_1: Hol dir ein Boot aus der Truhe.
       HOC 2018 Level_10: Erreiche den Eingang dieses Ozeanmonuments.
@@ -1182,6 +1213,40 @@ de-DE:
         Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
         \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
         auf ihren Smartphones ausprobieren."
+      OPD-K5-events-2: Hänge den `normal flattern`-Baustein an das Ereignis `beim
+        Klicken` an und drücke dann "Ausführen".    Klicke oder tippe auf die Abspielfläche,
+        um Flappy zum Ziel zu bewegen.
+      OPD-K5-events-5: Befestige einen Block an dem Ereignis `wenn ein Hindernis getroffen
+        wird`, so dass das Spiel endet, wenn Flappy gegen die Rohre kracht.
+      OPD-K5-forloops-1: Sammele den Nektar von jeder Blüte und verwende dabei möglichst
+        wenige Blöcke.
+      OPD-K5-forloops-2: Schreibe den Code, um der Biene beim Sammeln des gesamten
+        Nektars zu helfen.
+      OPD-K5-forloops-5: Hilf der Biene beim Sammeln des gesamten Nektars.
+      OPD-K5-forloops-6: Versuche, diesen Nektar zu sammeln, indem du um 1 von 5 um
+        1 herunterzählst.
+      OPD-K5-forloops-7: Versuche, diese Blüten mit einer Steigerung um 2 zu sammeln.
+      OPD-K5-projects-3: Nutze Ereignisse und Aktionen, um deinen Helden in Bewegung
+        zu setzen. Komme zu den Zielen.
+      OPD-K5-projects-6: Tolle Arbeit! Du hast alle grundlegenden Komponenten für
+        ein funktionierendes Spiel. Verbringe nun Zeit damit, sicherzustellen, dass
+        das Spiel so funktioniert, wie du es dir vorstellst.
+      OPD-K5-spritelab-2: Verwandle den Steppenläufer in jede Art von Fisch!
+      OPD-K5-spritelab-3: Ändere das Verhalten der Fische so, dass sie nach links
+        und rechts schwimmen.
+      OPD-K5-spritelab-4: Verwende den `Hintergrundfarbe einstellen` Baustein, um
+        den Hintergrund auf eine beliebigen Farbe zu setzen.
+      OPD-K5-spritelab-6: Der Fisch ist abenteuerlustig und will neue Kreaturen im
+        Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
+        kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
+      OPD-K5-variables-2: Zeichne nun drei dieser Dreiecke direkt nebeneinander.
+      OPD-K5-variables-5: Verschiebe die Länge von 50 in eine Variable, damit wir
+        sie in den nächsten Rätseln verwenden können.
+      OPD-K5-variables-6: Jetzt nutze die `length` Variable, damit der Künster vorwärts
+        springt und runter `length` Pixel zwischen den Dreiecken.
+      OPD-K5-variables-7: Füge eine weiteren Folge von Schleifen am Ende deines Codes
+        hinzu, um drei weitere Dreiecke hinzuzufügen. Dieses Mal gehe vorwärts und
+        aufwärts!
       Overworld Avoid Monsters: In einen Creeper hinein zu laufen, ist eine schlechte
         Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
         Zuhause.
@@ -1291,6 +1356,12 @@ de-DE:
         zeichnen?
       Standalone_Artist_9: Leg los und zeichne ein Bild deiner Wahl! Du erhältst dafür
         eine leere Funktion, mit der du machen kannst was du möchtest!
+      U4 Model Design 1: Füge im Designmodus eine große rote Schaltfläche zu deinem
+        Bildschirm hinzu. (Klicke für vollständige Anweisungen).
+      U4 Model Design 1_2018: Füge im Designmodus eine große rote Schaltfläche zu
+        deinem Bildschirm hinzu. (Klicke für vollständige Anweisungen).
+      U4 Model Design 1_2019: Füge im Designmodus eine große rote Schaltfläche zu
+        deinem Bildschirm hinzu. (Klicke für vollständige Anweisungen).
       Underground Avoiding Lava: Lava versteckt sich unter manchen dieser Bausteine,
         die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist
         hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle
@@ -1320,6 +1391,7 @@ de-DE:
       Vigenere: Test
       Virtual Pet 8_2019: "**Freispiel:** Was können Sie noch mit Ihrem Haustier machen?
         Versuchen Sie, was Sie wollen!"
+      Virtual Pet Freeplay: 'Freispiel: Was kannst du deine Giraffe noch tun lassen? '
       'Widget: Text Compression': Suche im Text nach Mustern (Worte oder Sätze die
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
@@ -1479,8 +1551,8 @@ de-DE:
         alles, um das Level zu beenden. Jede versteckte Ernstestelle hat nur einen
         Mais oder Salat.
       course3_farmer_condLoops_challenge2: Sammele alles ein, um den Level abzuschließen.
-      course3_farmer_until_challenge2: Verwende Wenn/Sonst-Blöcke, um dem gewundenen
-        Pfad zu folgen. Verwende an jeder Ecke den Befehl `1 entfernen` in einer Schleife,
+      course3_farmer_until_challenge2: Verwende Wenn/Sonst-Bausteine, um dem gewundenen
+        Pfad zu folgen. Verwende an jeder Ecke den Befehl `entferne 1` in einer Schleife,
         um die Erdhaufen zu entfernen.
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course3_maze_debugging_challenge2: _"Wenn ich mich zu oft drehe, wird mir schwindelig!
@@ -1492,6 +1564,8 @@ de-DE:
         um diese Zeichnung zu vervollständigen.
       course4_artist_binary_challenge2: Bist du hartnäckig genug, um dieses Logo wieder
         in den Normalzustand zu versetzen?
+      course4_artist_concept_challenge2: Erstelle fünf Windrädchen-Entwürfe unter
+        Verwendung des untenstehenden Programm-Codes.
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
@@ -1762,6 +1836,8 @@ de-DE:
         Schwein zu bringen! '
       courseA_maze_seq10_2019: 'Herausforderung: Vermeide das TNT um den Vogel zum
         Schwein zu bringen! '
+      courseA_maze_seq10_copy: 'Herausforderung: Geh um das TNT herum, um den Vogel
+        zum Schwein zu bringen! '
       courseA_maze_seq11: Gehe zuerst in eine Richtung und dann in eine andere, um
         den Vogel zum Schwein zu bringen.
       courseA_maze_seq11_2018: Gehe zuerst in eine Richtung und dann in eine andere,
@@ -1782,6 +1858,7 @@ de-DE:
       courseA_maze_seq5: Versuche diese Aufgabe von Anfang an allein zu schaffen.
       courseA_maze_seq5_2018: Probiere dies hier mal aus.
       courseA_maze_seq5_2019: Probiere dies hier mal aus.
+      courseA_maze_seq5_copy: Versuche diese Aufgabe von Anfang an allein zu schaffen.
       courseA_maze_seq5a_2018: Was kannst du am Ende dieses Codes hinzufügen, um den
         Vogel zum Schwein zu bringen?
       courseA_maze_seq5a_2019: Was kannst du am Ende dieses Codes hinzufügen, um den
@@ -1792,11 +1869,16 @@ de-DE:
         um den Vogel zum Schwein zu bringen!
       courseA_maze_seq6_2019: Gehe zuerst in eine Richtung und dann in eine andere,
         um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_copy: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
       courseA_maze_seq7: Finde heraus was fehlt, und füge dann Blöcke hinzu, um den
         Vogel zum Schwein zu bringen!
+      courseA_maze_seq7_copy: Finde heraus was fehlt, und füge dann Blöcke hinzu,
+        um den Vogel zum Schwein zu bringen!
       courseA_maze_seq8: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
+      courseA_maze_seq8_copy: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq9: Repariere dieses Level, indem Du Blöcke hinzufügst um den
         Vogel zum Schwein zu bewegen!
       courseA_maze_seq_challenge1: Hier ist etwas falsch. Hilf dabei den Code zu korrigieren,
@@ -1981,12 +2063,12 @@ de-DE:
       courseB_collector_loops2: Hole alle vier Stapel, um diesen Level zu schaffen.
       courseB_collector_loops2_2018: Hole alle vier Stapel, um diesen Level zu schaffen.
       courseB_collector_loops2_2019: Hole alle vier Stapel, um diesen Level zu schaffen.
-      courseB_collector_loops3: Wie kann Laurel mit nur einem `E -->`-Block alle fünf
-        Schatzhaufen bekommen?
-      courseB_collector_loops3_2018: Wie kann Laurel mit nur einem `E -->`-Block alle
+      courseB_collector_loops3: Wie kann Laurel mit nur einem `E -->` Baustein alle
         fünf Schatzhaufen bekommen?
-      courseB_collector_loops3_2019: Wie kann Laurel mit nur einem `E -->`-Block alle
-        fünf Schatzhaufen bekommen?
+      courseB_collector_loops3_2018: Wie kann Laurel mit nur einem `E -->` Baustein
+        alle fünf Schatzhaufen bekommen?
+      courseB_collector_loops3_2019: Wie kann Laurel mit nur einem `E -->` Baustein
+        alle fünf Schatzhaufen bekommen?
       courseB_collector_loops4: Korrigiere Laurels Weg, um alle diese Schätze zu holen!
       courseB_collector_loops4_2018: Korrigiere Laurels Weg, um alle diese Schätze
         zu holen!
@@ -2079,6 +2161,10 @@ de-DE:
       courseB_maze_seq12: Jetzt hol dir das Schwein - egal wie!
       courseB_maze_seq12_2018: Erreiche die Eichel nun auf irgendeine Art und Weise!
       courseB_maze_seq12_2019: Erreiche die Eichel nun auf irgendeine Art und Weise!
+      courseB_maze_seq1_2018: "Spiele mit diesen Bausteinen, um zu sehen, wozu sie
+        Scrat veranlassen! \n\nBringe Scrat zur Eichel, um das Level abzuschließen."
+      courseB_maze_seq1_2019: "Spiele mit diesen Bausteinen, um zu sehen, wozu sie
+        Scrat veranlassen! \n\nBringe Scrat zur Eichel, um das Level abzuschließen."
       courseB_maze_seq2: _"Ein Fehler! Repariere den Code, um mich zu dem Schwein
         zu bringen."_
       courseB_maze_seq3: '"Repariere den Code, um mich zu dem Schwein zu bringen!"'
@@ -2527,6 +2613,9 @@ de-DE:
         zur Eichel zu bringen.
       courseC_maze_debugging2_2019: Setze deine Debugging-Fähigkeiten ein, um Scrat
         zur Eichel zu bringen.
+      courseC_maze_debugging3: Entferne Bausteine, um Scrat zur Eichel zu bringen!
+      courseC_maze_debugging3_2018: Entferne Bausteine, um Scrat zur Eichel zu bringen!
+      courseC_maze_debugging3_2019: Entferne Bausteine, um Scrat zur Eichel zu bringen!
       courseC_maze_debugging4: Da hat jemand die Richtung verwechselt! Kannst du helfen?
       courseC_maze_debugging4_2018: Da hat jemand die Richtung verwechselt! Kannst
         du helfen?
@@ -2679,6 +2768,9 @@ de-DE:
       courseC_starWars_loops2_2019: Um den ganzen Metallschrott aufzusammeln, versuche
         eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet
         wird.
+      courseC_starWars_loops2_copy: Um den ganzen Metallschrott aufzusammeln, versuche
+        eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet
+        wird.
       courseC_starWars_loops4: Um in dieser Aufgabe BB-8 zum ganzen Metallschrott
         zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2
         'wiederholen' Schleifen helfen!
@@ -2688,17 +2780,24 @@ de-DE:
       courseC_starWars_loops4_2019: Um in dieser Aufgabe BB-8 zum ganzen Metallschrott
         zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2
         'wiederholen' Schleifen helfen!
+      courseC_starWars_loops4_copy: Um in dieser Aufgabe BB-8 zum ganzen Metallschrott
+        zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2
+        'wiederholen' Schleifen helfen!
       courseC_starWars_loops5: Bringe BB-8 dazu den ganzen Metallschrott so schnell
         wie möglich einzusammeln!
       courseC_starWars_loops5_2018: Bringe BB-8 dazu den ganzen Metallschrott so schnell
         wie möglich einzusammeln!
       courseC_starWars_loops5_2019: Bringe BB-8 dazu den ganzen Metallschrott so schnell
         wie möglich einzusammeln!
+      courseC_starWars_loops5_copy: Bringe BB-8 dazu den ganzen Metallschrott so schnell
+        wie möglich einzusammeln!
       courseC_starWars_loops6: Schleifen funktionieren auch mit mehr als einem Block
         drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
       courseC_starWars_loops6_2018: Schleifen funktionieren auch mit mehr als einem
         Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
       courseC_starWars_loops6_2019: Schleifen funktionieren auch mit mehr als einem
+        Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops6_copy: Schleifen funktionieren auch mit mehr als einem
         Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
       courseC_starWars_loops7: Schaffst du es mit nur einer Schleife den ganzen Metallschrott
         zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde
@@ -2708,6 +2807,10 @@ de-DE:
         und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben
         kannst.
       courseC_starWars_loops7_2019: Schaffst du es mit nur einer Schleife den ganzen
+        Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren
+        und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben
+        kannst.
+      courseC_starWars_loops7_copy: Schaffst du es mit nur einer Schleife den ganzen
         Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren
         und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben
         kannst.
@@ -2776,6 +2879,12 @@ de-DE:
         wieder in den Normalzustand zu versetzen?
       courseD_artist_binary_challenge2_2019: Bist du hartnäckig genug, um dieses Logo
         wieder in den Normalzustand zu versetzen?
+      courseD_artist_nestedLoopsFP: Jetzt bist du dran.  Nimm die Fähigkeiten, die
+        du gelernt hast, und mache etwas, das du liebst!
+      courseD_artist_nestedLoopsFP_2018: Jetzt bist du dran.  Nimm die Fähigkeiten,
+        die du gelernt hast, und mache etwas, das du liebst!
+      courseD_artist_nestedLoopsFP_2019: Jetzt bist du dran.  Nimm die Fähigkeiten,
+        die du gelernt hast, und mache etwas, das du liebst!
       courseD_artist_project1: Zeichne eine kleine Form, die **20 bis 50** Pixel breit
         ist. Es kann jede beliebige Form sein, die dir gefällt.
       courseD_artist_project1_2018: Zeichne eine kleine Form, die **20 bis 50** Pixel
@@ -2845,17 +2954,23 @@ de-DE:
         Blüte befindet. Wenn es dort eine Blüte gibt, sammele Nektar.
       courseD_bee_conditionals1_predict1_2019: Prüfe, ob sich unter der Wolke eine
         Blüte befindet. Wenn es dort eine Blüte gibt, sammele Nektar.
+      courseD_bee_conditionals1_predict1_copy: Prüfe, ob sich unter der Wolke eine
+        Blüte befindet. Wenn es dort eine Blüte gibt, sammele Nektar.
       courseD_bee_conditionals4: Hol dir mit so wenigen Blöcken wie möglich den ganzen
         Nektar.
       courseD_bee_conditionals4_2018: Hol dir mit so wenigen Blöcken wie möglich den
         ganzen Nektar.
       courseD_bee_conditionals4_2019: Hol dir mit so wenigen Blöcken wie möglich den
         ganzen Nektar.
+      courseD_bee_conditionals4_copy: Hol dir mit so wenigen Blöcken wie möglich den
+        ganzen Nektar.
       courseD_bee_conditionals5: Sammele den gesamten Nektar mit so wenigen Blöcken
         wie möglich
       courseD_bee_conditionals5_2018: Sammele den gesamten Nektar mit so wenigen Blöcken
         wie möglich
       courseD_bee_conditionals5_2019: Sammele den gesamten Nektar mit so wenigen Blöcken
+        wie möglich
+      courseD_bee_conditionals5_copy: Sammele den gesamten Nektar mit so wenigen Blöcken
         wie möglich
       courseD_bee_conditionals7: Verwende den `if/else-Block`, um Nektar von Blüten
         zu sammeln und Honig in den Waben herzustellen.
@@ -2952,6 +3067,30 @@ de-DE:
       courseD_bounce_events7s_2019: Hänge Soundbausteine ein, damit das Netz zischt,
         wenn du auf den Korb triffst und lassen die Pfeife erklingen wenn der Ball
         Ihre Hand verfehlt. Springe den Ball, bis er das Ziel trifft.
+      courseD_collector_debugging1: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging1a_2018: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging1a_2019: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging2: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging2a_2018: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging2a_2019: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging3: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging3a_2018: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging3a_2019: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging4: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging4a_2018: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
+      courseD_collector_debugging4a_2019: Behebe den/die Fehler, um den gesamten Schatz
+        einzusammeln.
       courseD_collector_debugging5: Alle Befehle, die du benötigst, sind bereits hier...jetzt
         benutze deine Debugging-Fähigkeiten, um herauszufinden, wie du dieses Rätsel
         lösen kannst.
@@ -2976,6 +3115,8 @@ de-DE:
       courseD_collector_nested_loops_challenge2_2019: Hilf dem Sammler, mindestens
         zwei Stapel Schätze zu erreichen und verwende dabei nur die Blöcke in deinem
         Werkzeugkasten. Es ist möglich, alle 4 einzusammeln.
+      courseD_collector_nested_loops_challenge2a: Hilf Laurel, mindestens zwei Haufen
+        Schätze einzusammeln.
       courseD_collector_ramp10: Hilf Laurel alle Schätze einzusammeln.
       courseD_collector_ramp8: Hilf Laurel alle Schätze einzusammeln.
       courseD_collector_ramp9: Hilf Laurel alle Schätze einzusammeln.
@@ -3048,26 +3189,27 @@ de-DE:
       courseD_farmer_condLoops_challenge2: Sammele alles ein, um den Level abzuschließen.
       courseD_farmer_condLoops_challenge2_2018: Sammele alles ein, um den Level abzuschließen.
       courseD_farmer_condLoops_challenge2_2019: Sammele alles ein, um den Level abzuschließen.
-      courseD_farmer_until_challenge2: Verwende Wenn/Sonst-Blöcke, um dem gewundenen
-        Pfad zu folgen. Verwende an jeder Ecke den Befehl `1 entfernen` in einer Schleife,
+      courseD_farmer_until_challenge2: Verwende Wenn/Sonst-Bausteine, um dem gewundenen
+        Pfad zu folgen. Verwende an jeder Ecke den Befehl `entferne 1` in einer Schleife,
         um die Erdhaufen zu entfernen.
-      courseD_farmer_while1: Bewege sich zu dem Erdhaufen und verwende den Block `Entfernen`,
+      courseD_farmer_while1: Bewege dich zum Erdhaufen und verwende den Baustein `entfernen`,
         um ihn zu entfernen.
-      courseD_farmer_while10: Ebne alle diese Haufen mit so wenigen Blöcken wie möglich.
-      courseD_farmer_while10_2018: Ebne alle diese Haufen mit so wenigen Blöcken wie
+      courseD_farmer_while10: Ebne alle diese Haufen mit so wenigen Bausteinen wie
         möglich.
-      courseD_farmer_while10_2019: Ebne alle diese Haufen mit so wenigen Blöcken wie
-        möglich.
-      courseD_farmer_while10_predict2: Ebne alle diese Haufen mit so wenigen Blöcken
+      courseD_farmer_while10_2018: Ebne alle diese Haufen mit so wenigen Bausteinen
+        wie möglich.
+      courseD_farmer_while10_2019: Ebne alle diese Haufen mit so wenigen Bausteinen
+        wie möglich.
+      courseD_farmer_while10_predict2: Ebne alle diese Haufen mit so wenigen Bausteinen
         wie möglich.
       courseD_farmer_while10_predict2_2018: Ebne alle diese Haufen mit so wenigen
-        Blöcken wie möglich.
+        Bausteinen wie möglich.
       courseD_farmer_while10_predict2_2019: Ebne alle diese Haufen mit so wenigen
-        Blöcken wie möglich.
-      courseD_farmer_while1_2018: Bewege sich zu dem Erdhaufen und verwende den Block
-        `Entfernen`, um ihn zu entfernen.
-      courseD_farmer_while1_2019: Bewege sich zu dem Erdhaufen und verwende den Block
-        `Entfernen`, um ihn zu entfernen.
+        Bausteinen wie möglich.
+      courseD_farmer_while1_2018: Bewege dich zum Erdhaufen und verwende den Baustein
+        `entfernen`, um ihn zu entfernen.
+      courseD_farmer_while1_2019: Bewege dich zum Erdhaufen und verwende den Baustein
+        `entfernen`, um ihn zu entfernen.
       courseD_farmer_while2: Bewege sich zu dem Loch und fülle es mit sechs Schaufeln
         Erde, indem du den `Füllen`-Block verwendest.
       courseD_farmer_while2_2018: Bewege sich zu dem Loch und fülle es mit sechs Schaufeln
@@ -3080,12 +3222,18 @@ de-DE:
         Rätsel zu lösen.
       courseD_farmer_while3_2019: Verwende so wenige Blöcke wie möglich, um dieses
         Rätsel zu lösen.
-      courseD_farmer_while4: "."
-      courseD_farmer_while4_2018: "."
-      courseD_farmer_while4_2019: "."
-      courseD_farmer_while4_predict1: "."
-      courseD_farmer_while4_predict1_2018: "."
-      courseD_farmer_while4_predict1_2019: "."
+      courseD_farmer_while4: Hilf der Arbeiterin, diesen ganzen Haufen mit einer ´solange´-Schleife
+        zu entfernen.
+      courseD_farmer_while4_2018: Hilf der Arbeiterin, diesen ganzen Haufen mit einer
+        ´solange´-Schleife zu entfernen.
+      courseD_farmer_while4_2019: Hilf der Arbeiterin, diesen ganzen Haufen mit einer
+        ´solange´-Schleife zu entfernen.
+      courseD_farmer_while4_predict1: Hilf der Arbeiterin, diesen ganzen Haufen mit
+        einer ´solange´-Schleife zu entfernen.
+      courseD_farmer_while4_predict1_2018: Hilf der Arbeiterin, diesen ganzen Haufen
+        mit einer ´solange´-Schleife zu entfernen.
+      courseD_farmer_while4_predict1_2019: Hilf der Arbeiterin, diesen ganzen Haufen
+        mit einer ´solange´-Schleife zu entfernen.
       courseD_farmer_while5: Hilf mir, diese ganze Erde zu entfernen.
       courseD_farmer_while5_2018: Hilf mir, diese ganze Erde zu entfernen.
       courseD_farmer_while5_2019: Hilf mir, diese ganze Erde zu entfernen.
@@ -3104,11 +3252,12 @@ de-DE:
         Blöcken wie möglich.'
       courseD_farmer_while8_2019: 'Aufgabe: Fülle alle diese Löcher mit so wenigen
         Blöcken wie möglich.'
-      courseD_farmer_while9: Ebne alle diese Haufen mit so wenigen Blöcken wie möglich.
-      courseD_farmer_while9_2018: Ebne alle diese Haufen mit so wenigen Blöcken wie
+      courseD_farmer_while9: Ebne alle diese Haufen mit so wenigen Bausteinen wie
         möglich.
-      courseD_farmer_while9_2019: Ebne alle diese Haufen mit so wenigen Blöcken wie
-        möglich.
+      courseD_farmer_while9_2018: Ebne alle diese Haufen mit so wenigen Bausteinen
+        wie möglich.
+      courseD_farmer_while9_2019: Ebne alle diese Haufen mit so wenigen Bausteinen
+        wie möglich.
       courseD_farmer_while_challenge1: Fülle alle Löcher und entferne alle Erdhaufen.
       courseD_farmer_while_challenge1_2018: Fülle alle Löcher und entferne alle Erdhaufen.
       courseD_farmer_while_challenge1_2019: Fülle alle Löcher und entferne alle Erdhaufen.
@@ -3290,7 +3439,14 @@ de-DE:
       courseE_artist_concept1_2018: 'Erstelle dieses Bild neu. '
       courseE_artist_concept4: Rekonstruiere diese Zeichnung.
       courseE_artist_concept4_2018: Rekonstruiere diese Zeichnung.
+      courseE_artist_concept_challenge2: Erstelle fünf Windrädchen-Entwürfe unter
+        Verwendung des untenstehenden Programm-Codes.
+      courseE_artist_concept_challenge2_2018: Erstelle fünf Windrädchen-Entwürfe unter
+        Verwendung des untenstehenden Programm-Codes.
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
+        Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
+        den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
+      courseE_artist_functions1_copy: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
       courseE_artist_functions2_2018: 'Verwende die Funktion `Zeichne ein Quadrat`,
@@ -3408,6 +3564,9 @@ de-DE:
       courseE_farmer_ramp11b: Solange es einen Haufen gibt, entferne ihn.
       courseE_farmer_ramp11b_2018: Solange es einen Haufen gibt, entferne ihn.
       courseE_farmer_ramp11b_2019: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp12b: Solange es Salat gibt, pflücken den Salat!
+      courseE_farmer_ramp12b_2018: Solange es Salat gibt, pflücken den Salat!
+      courseE_farmer_ramp12b_2019: Solange es Salat gibt, pflücken den Salat!
       courseE_video_createFunctions: Wir haben - noch - kein Video zur Erstellung
         von Funktionen. Dies ist ein Platzhalter.
       courseE_video_createFunctions2: Wir haben - noch - kein Video zur Erstellung
@@ -3899,6 +4058,8 @@ de-DE:
       grade5_pixelation: Kodiere ein Bild von allem, was du magst, mit Binärdateien.
         Die binäre Sprache wird nur mit '0' und '1' dargestellt.
       iceage_move_events: Schreibe Code, damit Scrat alle Eicheln bekommt!
+      iceage_move_to_flag: Scrat sucht nach seiner Eichel! Kannst du ihm helfen, die
+        letzten 200 Pixel zu verschieben?
       k-1 maze 1: Kannst du mich nach Westen bewegen, damit ich zum Schwein komme?
       mike3bit: Wir beginnen mit dem 4x2-Bild, das Maddie erstellt hat, aber wir haben
         die letzten Pixel weggelassen. Vervollständige das Bild, indem du herausfinden,

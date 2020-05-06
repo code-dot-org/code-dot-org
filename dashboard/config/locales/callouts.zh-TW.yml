@@ -283,6 +283,14 @@ zh-TW:
         actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
       New Frozen Project:
         snowflake_dropdown: 使用下拉清單來創建不同的雪花！
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
       Overworld Chop Trees:
         craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
       Overworld Chop Trees_2019:
@@ -537,6 +545,8 @@ zh-TW:
         courseC_starWars_loops2: 此關卡中只有這些積木可以用。
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: 此關卡中只有這些積木可以用。
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: 此關卡中只有這些積木可以用。
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
       courseD_artist_nestedLoops1a_2018:
@@ -553,6 +563,9 @@ zh-TW:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+        4_5_Bee_Conditionals_2_2: 需要幫忙？點擊此處獲取影片提示！
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       courseD_bee_conditionals_challenge2_2018:
@@ -631,11 +644,15 @@ zh-TW:
         courseD_maze_ramp7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
       courseE_artist_functions1:
         courseD_artist_functions1_1: 讓我們首先使用此積木來畫出第一個正方形。
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: 讓我們首先使用此積木來畫出第一個正方形。
       courseE_artist_functions2:
         courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
       courseE_artist_functions2_2018:
         courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
       courseE_artist_functions8:
         courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
