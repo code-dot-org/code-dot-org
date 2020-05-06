@@ -17255,6 +17255,9 @@ es-MX:
       OPD-K5 RepeatBlock: Mira el video a continuación, que explica cómo funcionan
         los bucles e introduce el bloque 'Repetir' en Fundamentos de la Ciencia de
         la Computación.
+      OPD-K5 RepeatBlock_copy: Mira el video a continuación, que explica cómo funcionan
+        los bucles e introduce el bloque 'Repetir' en Fundamentos de la Ciencia de
+        la Computación.
       OPD-K5 Unplugged Video: |-
         ## Mirando hacia el futuro > "Desconectado"
 
@@ -17271,6 +17274,65 @@ es-MX:
         O "¿Por qué algunos programas de computadora se escriben con palabras y otros
         se escriben con imágenes?" Si es así, mira este video; es una gran introducción
         al campo de la ciencia de la computación.
+      OPD-K5-events-2: "Agrega el bloque `cantidad normal de aleteo` al evento `cuando
+        hagas clic`, y luego presiona \"Ejecutar\".  \n\n* * *\n\nHaz clic o toca
+        en el espacio de juego para mover a Flappy hacia el objetivo."
+      OPD-K5-events-3: "El evento `cuando se ejecute` te permite ejecutar el código
+        tan pronto como comience tu juego.  \n\nIntenta agregar un bloque que establezca
+        el nivel de velocidad cuando se presiona el botón \"Ejecutar\". \n\n* * *\n\nJuega
+        y aletea hacia el objetivo para continuar."
+      OPD-K5-events-4: "Ahora hemos agregado el suelo. \n\nAgrega el bloque `finalizar
+        el juego` al evento `cuando toque el suelo`. \n\n* * *\n\nJuega y estrella
+        el pájaro en el suelo para continuar."
+      OPD-K5-events-5: "Flappy volará a través de los obstáculos a menos que escribas
+        el código para hacerlo chocar. \n\nAgrega un bloque al evento `cuando golpee
+        un obstáculo` para que el juego termine si Flappy se estrella contra el primer
+        grupo de tuberías."
+      OPD-K5-events-6: "Hemos agregado un marcador para contar los puntos cuando Flappy
+        pasa los obstáculos.  \n\nAgrega un bloque al evento `cuando pase un obstáculo`
+        que anote un punto, y luego presiona \"Ejecutar\" para que Floppy vuele a
+        través del primer grupo de tuberías."
+      OPD-K5-forloops-2: "Escribe el código para ayudar a la abeja a recoger todo
+        el néctar.\\\r\n\\\r\nNecesitarás muchos bloques para este desafío, pero aprenderemos
+        una manera más fácil en el próximo desafío."
+      OPD-K5-forloops-6: "También puedes usar el bucle 'para' para hacer cuenta regresiva.\\\r\n\\\r\nIntenta
+        juntar este néctar contando regresivamente de **5** a **1** de **1** en uno."
+      OPD-K5-forloops-7: "El último número en tu bucle 'para' se llama **incremento**.
+        Cada vez que el bucle es ejecutado, la variable contador cambia por el valor
+        del **incremento**.\\\r\n\\\r\nIntenta recoger estas flores usando un **incremento**
+        de 2."
+      OPD-K5-projects-2: "¡Es sorprendente cuánto has aprendido! Vamos a hacer un
+        juego paso a paso.\\\r\n\\\r\nUsando nuevos bloques de la caja de herramientas,
+        escoge un nuevo fondo, luego escoge un actor para que esté en tu juego."
+      OPD-K5-projects-3: "Usa bloques como manejadores de eventos y acciones para
+        hacer que tu jugador se mueva de acuerdo a las flechas de tu teclado.  \\\r\n\\\r\nLleva
+        al jugador hasta los blancos para completar este desafío."
+      OPD-K5-projects-4: "¡Agreguemos más personajes a tu juego!\\\r\n\\\r\nUsa el
+        bloque 'establecer actor' para agregar más personajes luego mueve el objetivo
+        para completar el desafío."
+      OPD-K5-projects-5: "Personajes múltiples y hacer que los actores se muevan es
+        un gran comienzo para un juego, pero necesitamos hacer más para hacer que
+        se sienta como un juego real. ¡Agreguemos un puntaje!\\\r\n\\\r\nUsa bloques
+        de eventos como el 'cuando actores tocan' para cambiar el puntaje. Marca 10
+        puntos para completar el rompecabezas."
+      OPD-K5-projects-6: "¡Gran trabajo! Tienes todos los componentes básicos de un
+        juego funcionando. Ahora dedica algún tiempo asegurándote que el juego funcione
+        de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego
+        juega hasta que necesites una de esa condiciones."
+      OPD-K5-projects-7: "¡Has terminado! Ahora puedes jugar tu juego o compartirlo
+        con tus amigos o compañeros!"
+      OPD-K5-variables-1: |-
+        Vamos a dibujar un triángulo equilátero.
+
+        Tiene que tener lados de 50 pixeles de largo.
+      OPD-K5-variables-2: "Ahora usa otro loop  para dibujar tres de esos triángulos
+        uno al lado del otro. \\\r\n\\\r\nPuedes anidar el código dentro del interior
+        de tu último desafío."
+      OPD-K5-variables-5: "Antes de que las cosas se compliquen, ¿puedes mover la
+        longitud de 50 a una variable para usarla en los próximos desafíos? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Ahora usa la variable 'longitud' para hacer que el artista
+        salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los
+        triángulos.
       Overworld Chop Tree: La madera es un recurso muy importante. Muchas cosas están
         hechas de madera. Camina hacia el árbol y usa el comando del bloque `destruir`
         para talarlo.
@@ -18944,6 +19006,10 @@ es-MX:
         hasta el cerdo!"
       courseA_maze_seq10_2019: "**Desafío:** ¡Evita el TNT para que el pájaro llegue
         hasta el cerdo!"
+      courseA_maze_seq10_copy: |-
+        **Desafío:** ¡Rodea el TNT para que el pájaro llegue hasta el cerdo!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         ¡Es tiempo de un desafío más corto! Muévete en una dirección, y luego en otra, para que el pájaro llegue hasta el cerdo.
 
@@ -18983,6 +19049,10 @@ es-MX:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Prueba este.
       courseA_maze_seq5_2019: Prueba este.
+      courseA_maze_seq5_copy: |-
+        Inténtalo tú mismo desde el comienzo.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"¡Aquí cerdito, cerdito!"_
 
@@ -18999,7 +19069,15 @@ es-MX:
         el pájaro pueda llegar hasta el cerdo!"
       courseA_maze_seq6_2019: "¡Mueve en una dirección, y luego en otra, para que
         el pájaro pueda llegar hasta el cerdo!"
+      courseA_maze_seq6_copy: |-
+        ¡Muéveme en una dirección, y luego en otra, para que pueda llegar hasta el cerdo!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        ¡Descubre qué falta y luego agrega bloques para que el pájaro pueda llegar hasta el cerdo!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         ¡Descubre qué falta y luego agrega bloques para que el pájaro pueda llegar hasta el cerdo!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -19011,6 +19089,10 @@ es-MX:
         el cerdo!"
       courseA_maze_seq8_2019: "¡Resuelve este nivel y haz que el pájaro llegue hasta
         el cerdo!"
+      courseA_maze_seq8_copy: |-
+        ¡Resuelve este nivel y haz que el pájaro llegue hasta el cerdo!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Desafío:** Agrega bloques para depurar este nivel y que el pájaro llegue hasta el cerdo.
 
@@ -20289,6 +20371,10 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
 
         Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
+
+        Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
@@ -20301,11 +20387,17 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
         En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Vamos BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Vamos BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"¡Vamos BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Vamos BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
@@ -20316,6 +20408,10 @@ es-MX:
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
+
+        ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
@@ -20331,6 +20427,10 @@ es-MX:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
 
         ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+
+        ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
@@ -20340,6 +20440,10 @@ es-MX:
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
@@ -20857,6 +20961,10 @@ es-MX:
         _"¡Esta nube está bloqueando mi vista!"_
 
         Revisa para ver si hay una flor debajo de la nube. Si hay una flor, recoge el néctar.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"¡Esta nube está bloqueando mi vista!"_
+
+        Revisa para ver si hay una flor debajo de la nube. Si hay una flor, recoge el néctar.
       courseD_bee_conditionals2: "¡Más nubes! \n\nRevisa debajo de cada nube para
         ver si hay alguna flor escondida antes de sacar el néctar. Si hay una flor
         debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
@@ -20866,6 +20974,10 @@ es-MX:
         flor debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
         que no todas las nubes esconden lo mismo!"
       courseD_bee_conditionals2_2019: "¡Más nubes! \n\nRevisa debajo de cada nube
+        para ver si hay alguna flor escondida antes de sacar el néctar. Si hay una
+        flor debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
+        que no todas las nubes esconden lo mismo!"
+      courseD_bee_conditionals2_copy: "¡Más nubes! \n\nRevisa debajo de cada nube
         para ver si hay alguna flor escondida antes de sacar el néctar. Si hay una
         flor debajo de la nube, la abeja necesitará recoger el néctar _una vez_.  \n\n¡Recuerda
         que no todas las nubes esconden lo mismo!"
@@ -20880,6 +20992,10 @@ es-MX:
         puedes revisar todos los espacios por si hay alguna flor. Si hay una flor
         debajo de cualquiera de estas nubes, la abeja necesitará recoger el néctar
         _una vez_.
+      courseD_bee_conditionals3_copy: Solo puedes recoger néctar de las flores, pero
+        puedes revisar todos los espacios por si hay alguna flor. Si hay una flor
+        debajo de cualquiera de estas nubes, la abeja necesitará recoger el néctar
+        _una vez_.
       courseD_bee_conditionals4: |-
         En este desafío, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas de manera uniforme.
 
@@ -20889,6 +21005,10 @@ es-MX:
 
         Obtén todo el néctar con la menor cantidad de bloques posible.
       courseD_bee_conditionals4_2019: |-
+        En este desafío, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas de manera uniforme.
+
+        Obtén todo el néctar con la menor cantidad de bloques posible.
+      courseD_bee_conditionals4_copy: |-
         En este desafío, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas de manera uniforme.
 
         Obtén todo el néctar con la menor cantidad de bloques posible.
@@ -21715,6 +21835,11 @@ es-MX:
         -   Para hacer cada hexágono, repite el lado 6 veces, girando 60 grados.
         -   Salta 25 pixeles entre cada hexágono.
         -   Para dibujar un diamante, necesitarás alternar entre giros de 60 grados y 120 grados.
+      courseE_artist_functions1_copy: |-
+        _"¡Yo zombi artista. Yo amar dibujar!"_
+
+        Usa cuadrados con lados de 100 pixeles para ayudar al zombi a dibujar gafas.\
+        El puente entre las gafas es de 75 pixeles de largo.
       courseE_artist_functions2: |-
         ¡Las funciones te permiten definir nuevos bloques!
 
@@ -21729,6 +21854,14 @@ es-MX:
       courseE_artist_functions2_2019: "Aquí hay una función llamada `dibujar un cuadrado`.
         Úsala para completar este dibujo. \\\r\n\\_\\_\\_\\\r\n\\\r\nLos cuadrados
         están separados por 75 pixeles."
+      courseE_artist_functions2_copy: |-
+        ¡Las funciones te permiten definir nuevos bloques!
+
+        Hemos movido los bloques necesarios para dibujar un cuadrado a una función llamada `dibujar un cuadrado`. Esta vez, usa la función `dibujar un cuadrado` para crear las gafas.
+
+        * * *
+
+        Los cuadrados están separados por 75 pixeles.
       courseE_artist_functions3: "Volveremos a las funciones en breve. Tomémonos un
         descanso para practicar cómo hacer una estrella. \n\nPuedes agregar un bloque
         `repetir` para hacer este dibujo."
@@ -21738,7 +21871,16 @@ es-MX:
       courseE_artist_functions3_2019: "Volveremos a las funciones en breve. Tomémonos
         un descanso para practicar cómo hacer una estrella. \\\r\n\\\r\nPuedes hacer
         este dibujo agregando un bloque de repetición"
+      courseE_artist_functions3_copy: "Volveremos a las funciones en breve. Tomémonos
+        un descanso para practicar cómo hacer una estrella. \n\nPuedes agregar un
+        bloque `repetir` para hacer este dibujo."
       courseE_artist_functions4: |-
+        Ahora que puedes dibujar una estrella, ¡intenta dibujar cuatro!
+
+        -   Cada punta de la estrella tiene 25 pixeles de largo
+        -   Gira 45 grados entre las puntas
+        -   Salta 100 pixeles entre cada estrella
+      courseE_artist_functions4_copy: |-
         Ahora que puedes dibujar una estrella, ¡intenta dibujar cuatro!
 
         -   Cada punta de la estrella tiene 25 pixeles de largo
@@ -21754,6 +21896,10 @@ es-MX:
       courseE_artist_functions5_2019: "¿Cuándo dibujar tres estrellas es más díficil
         que dibujar cuatro? ¡Cuándo también tienes que saltar por sobre la luna!\\\r\n\\\r\nDibuja
         sólo esas tres estrellas para terminar el desafío"
+      courseE_artist_functions5_copy: |-
+        ¿Cuándo dibujar tres estrellas es más difícil que dibujar cuatro? ¡Cuando también tienes que saltar sobre la luna!
+
+        Dibuja esas tres estrellas para terminar el desafío.
       courseE_artist_functions6: |-
         ¡Lo estás haciendo muy bien!
 
@@ -21863,6 +22009,8 @@ es-MX:
       courseE_artist_functions_predict1_2018: 'Este es un desafío que usa una función
         que hemos definido. '
       courseE_artist_functions_predict1_2019: 'Este es un desafío que usa una función
+        que hemos definido. '
+      courseE_artist_functions_predict1_copy: 'Este es un desafío que usa una función
         que hemos definido. '
       courseE_artist_ramp8: |-
         ¡Genial! ¡Ahora vamos a usar el bucle `repetir` para hacer un cuadrado con el Artista! Los bloques para el artista son un poco diferentes a los de otros desafíos, pero la idea es la misma.

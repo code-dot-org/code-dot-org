@@ -288,16 +288,73 @@ km:
           stages:
             The Internet:
               name: អ៊ីនធឺណិត
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
         coursef-2019:
           stages:
             The Artist:
               name: វិចិត្រករ
             Internet:
               name: អ៊ីនធឺណិត
+          lesson_groups:
+            csf_variables:
+              display_name: អ​ថេរ
+        coursed-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+        coursee-2019:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+        express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_variables:
+              display_name: អ​ថេរ
         andrea-test:
           stages:
             'null':
               name: ទទេ
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
         csd2-2019:
           stages:
             Lists:
@@ -310,10 +367,86 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
         csp1-2019:
           stages:
             The Internet:
               name: អ៊ីនធឺណិត
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: បញ្ជី
+            csp_loops:
+              display_name: រង្វិល​ជុំ
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: បញ្ជី
+            csp_loops:
+              display_name: រង្វិល​ជុំ
         csd2-pilot:
           stages:
             Lists:
@@ -326,6 +459,12 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -340,18 +479,60 @@ km:
               name: អនុ​គមន៍
             Variables:
               name: អ​ថេរ
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
         time4cs-original-unit-1:
           stages:
             Conditionals:
               name: លក្ខខណ្ឌ
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: លក្ខខណ្ឌ
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: លក្ខខណ្ឌ
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: អ​ថេរ
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: បញ្ជី
+            csp_loops:
+              display_name: រង្វិល​ជុំ
         csd3-2020:
           stages:
             Variables:
@@ -362,10 +543,59 @@ km:
               name: អនុ​គមន៍
             Text:
               name: អត្ថ​​បទ
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+        coursed-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
         coursef-2020:
           stages:
             Internet:
               name: អ៊ីនធឺណិត
+          lesson_groups:
+            csf_variables:
+              display_name: អ​ថេរ
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_variables:
+              display_name: អ​ថេរ
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: រង្វិល​ជុំ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
         csd3-virtual:
           stages:
             Variables:

@@ -277,6 +277,20 @@ ru-RU:
       New Frozen Project:
         snowflake_dropdown: Используй данный раскрывающийся список для создания разных
           снежинок!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Цикл for находится здесь!
+      OPD-K5-spritelab-3:
+        spritelab_comment: 'Используй этот блок, чтобы оставить себе или учителю заметки
+          о работе своего кода.
+
+'
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Обрати внимание, что теперь числа на
+          блоках указываются новым способом. Эти блоки «математика» можно вытаскивать
+          и перемещать!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Используй его, чтобы установить значение переменной
+          «длина».
       Overworld Chop Trees:
         craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь
           тебе начать работу
@@ -557,6 +571,11 @@ ru-RU:
           из этих блоков.
 
 '
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: 'В этой головоломке в твоем распоряжении лишь один
+          из этих блоков.
+
+'
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: Вы можете изменить это число.
       courseD_bee_conditionals2:
@@ -569,6 +588,10 @@ ru-RU:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
           свой цветок. Вам вовсе не нужно проверять для этого соты.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
+        4_5_Bee_Conditionals_2_2: Нужна помощь? Щёлкни здесь для ВИДЕО подсказки!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Используй этот цикл для сбора всего
           нектара (или мёда) с одного цветка (или сота).
@@ -672,6 +695,9 @@ ru-RU:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Давай начнём использовать этот блок, чтобы помочь
           создать первый квадрат.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Давай начнём использовать этот блок, чтобы помочь
+          создать первый квадрат.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
           работает. Что должен делать художник после отрисовки первого квадрата?
@@ -679,6 +705,9 @@ ru-RU:
         courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
           работает. Что должен делать художник после отрисовки первого квадрата?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
+          работает. Что должен делать художник после отрисовки первого квадрата?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
           работает. Что должен делать художник после отрисовки первого квадрата?
       courseE_artist_ramp8:

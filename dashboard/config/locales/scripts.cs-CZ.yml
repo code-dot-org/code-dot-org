@@ -3,6 +3,7 @@ cs:
   data:
     script:
       category:
+        csf_category_name: Základy informatiky
         csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
         csp_category_name: Principy informatiky 2015-2016
         cspexams_category_name: Praktický test z principů informatiky
@@ -792,15 +793,28 @@ cs:
               name: Binární čísla
             The Internet:
               name: Internet
+          lesson_groups:
+            csp1_1:
+              display_name: 'Kapitola 1: Reprezentace a přenos informací'
+            csp1_2:
+              display_name: 'Kapitola 2: Objev Internetu'
         csp2-2017:
           stages:
             Text Compression:
               name: Komprese textu
+          lesson_groups:
+            csp2_1:
+              display_name: 'Kapitola 1: Kódování a komprese komplexních informací'
+            csp2_2:
+              display_name: 'Kapitola 2: Práce s daty a jejich zobrazení'
         csp3-2017:
           description_short: Programování
           stages:
             Creating Functions:
               name: Vytvářející funkce
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapitola 1: Programovací jazyky a algoritmy'
         csp4-2017:
           stages:
             Simple Encryption:
@@ -824,6 +838,22 @@ cs:
               name: Bloky vyhodnocení
             Teacher Dashboard:
               name: Katedra učitele
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
         csp-facilitators:
           stages:
             Introduction to Text Compression:
@@ -842,6 +872,13 @@ cs:
           stages:
             Lesson 2,2:
               name: 'Lekce 2.2: Komprese textu'
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -926,6 +963,14 @@ cs:
               name: Odraz
             'Farmer: While Loops':
               name: Farmářka - pokud (while) cykly
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
         csd3-2017:
           title: CSD Kapitola 3 - Animace and hry ('17-'18)
           description_short: Programování
@@ -936,6 +981,11 @@ cs:
               name: Proměnné
             Conditionals:
               name: Podmínky
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
         grade2:
           stages:
             Flappy:
@@ -976,6 +1026,28 @@ cs:
               name: Návrhový předpis
             Welcome!:
               name: Vítejte!
+        csd1-2017:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
         basketball:
           title: Vytvoř basketbalovou hru
           description_short: Vytvoř basketbalovou hru
@@ -1002,6 +1074,23 @@ cs:
               name: Nezávislý posudek
             Lists:
               name: Seznamy
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapitola 1: Obsah webu a HTML'
+            csd2_2:
+              display_name: 'Kapitola 2: Styly a CSS'
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
+        csd4-2017:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
         minecraft:
           title: Hodina kódu Minecraft Designer
           description_short: Naprogramuj zvířata a další postavy, vytvoř si svojí
@@ -1083,6 +1172,9 @@ cs:
               name: Úvod
             Conditionals:
               name: Podmínky
+          lesson_groups:
+            content:
+              display_name: Obsah
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1097,6 +1189,9 @@ cs:
               name: Úvod
             Ice Age Play Lab:
               name: Doba ledová Play Lab
+          lesson_groups:
+            content:
+              display_name: Obsah
         classic-hoc-impact-study:
           description_short: Zkuste základy informatiky s mnoha zábavnými postavami!
           stages:
@@ -1124,6 +1219,22 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
         sciencepd4:
           stages:
             Welcome!:
@@ -1140,12 +1251,27 @@ cs:
           stages:
             Binary:
               name: Binární
+          lesson_groups:
+            content:
+              display_name: Obsah
         sciencepd5:
           stages:
             Welcome!:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+            practice:
+              display_name: Výukové postupy
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Obsah
         csd6-draft:
           stages:
             Lists:
@@ -1156,10 +1282,19 @@ cs:
               name: Mapa
             Functions with Parameters:
               name: Funkce s Parametry
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         workshop-gamelab:
           stages:
             Introduction:
               name: Úvod
+        csd5-draft:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
         coursed-ramp:
           stages:
             Introduction:
@@ -1182,6 +1317,11 @@ cs:
               name: Funkce s Parametry
             Functions with Parameters_:
               name: Funkce s Parametry
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd3-draft:
           title: 'CSD Kapitola 3 - Programování: Animace and hry'
           stages:
@@ -1191,6 +1331,10 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+        csd5-2017:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
         csd3-old:
           stages:
             Functions:
@@ -1375,6 +1519,78 @@ cs:
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
           title: Kurz F
           assignment_family_title: Kurz F
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
         express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
@@ -1411,6 +1627,9 @@ cs:
               name: Vnořené cykly
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
+          lesson_groups:
+            content:
+              display_name: Obsah
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1432,6 +1651,13 @@ cs:
             Creating Functions:
               name: Vytvářející funkce
           description_short: Programování
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapitola 1: Programovací jazyky a algoritmy'
+        csd4-draft:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -1474,6 +1700,10 @@ cs:
               name: Budování nadace
             Loops in Ice Age:
               name: Cykly v Době ledové
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapitola 1: Programovací jazyky a algoritmy'
         new-express:
           stages:
             Introduction:
@@ -1492,6 +1722,9 @@ cs:
               name: Budování nadace
             Nested Loops:
               name: Vnořené cykly
+          lesson_groups:
+            content:
+              display_name: Obsah
         new-e:
           stages:
             'Programming: My Robotic Friends':
@@ -1524,10 +1757,21 @@ cs:
               name: For cyklus zábavy
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+        csd5-old:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd4-old:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
         csp3-staging:
           stages:
             Creating Functions:
               name: Vytvářející funkce
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kapitola 1: Programovací jazyky a algoritmy'
         pwc:
           stages:
             Simple Encryption:
@@ -1584,6 +1828,11 @@ cs:
               name: Seznamy
             For Loops:
               name: Cykly "For"
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd3-1819draft:
           stages:
             Variables:
@@ -1594,6 +1843,11 @@ cs:
               name: Funkce
           title: CSD Kapitola 3 - Animace and hry
           description_short: Programování
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
         csd3-2018:
           title: CSD Kapitola 3 - Animace and hry ('18-'19)
           description_short: Programování
@@ -1604,10 +1858,20 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
         csd2-2018:
           stages:
             Lists:
               name: Seznamy
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapitola 1: Obsah webu a HTML'
+            csd2_2:
+              display_name: 'Kapitola 2: Styly a CSS'
         coursea-2018:
           assignment_family_title: Kurz A
           stages:
@@ -1785,6 +2049,11 @@ cs:
           stages:
             Functions with Parameters:
               name: Funkce s Parametry
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         coursee-2018:
           assignment_family_title: Kurz E
           stages:
@@ -1851,15 +2120,40 @@ cs:
               name: Binární čísla
             The Internet:
               name: Internet
+          lesson_groups:
+            csp1_1:
+              display_name: 'Kapitola 1: Reprezentace a přenos informací'
+            csp1_2:
+              display_name: 'Kapitola 2: Objev Internetu'
+        csd1-2018:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd4-2018:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+        csd5-2018:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
         csp2-2018:
           stages:
             Text Compression:
               name: Komprese textu
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Kapitola 2: Digitální informace'
         csp3-2018:
           description_short: Programování
           stages:
             Creating Functions:
               name: Vytvářející funkce
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Kapitola 3: Úvod do programování'
         csp4-2018:
           stages:
             Simple Encryption:
@@ -1868,6 +2162,112 @@ cs:
           stages:
             While Loops:
               name: While (pokud) cykly
+        csppostap-2018:
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Kapitola 2: Práce s daty a jejich zobrazení'
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1892,6 +2292,12 @@ cs:
               name: Programování s Rey a BB-8
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie a Velký projekt
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
         frozen-2018:
           stages:
             Artist:
@@ -1926,6 +2332,14 @@ cs:
           stages:
             Dance Party:
               name: Taneční večírek
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
         dance-extras:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursef-2019:
@@ -1958,6 +2372,15 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digitální občanství
         dance-low:
           stages:
             Dance Party:
@@ -2091,6 +2514,19 @@ cs:
               description_teacher: V této lekci studenti naprogramují svůj vlastní
                 interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
                 tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_events:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_binary:
+              display_name: Binární
+            csf_digcit:
+              display_name: Digitální občanství
         coursee-2019:
           title: Kurz E (2019)
           stages:
@@ -2141,6 +2577,13 @@ cs:
               name: Kuba řekl
             Songwriting:
               name: Skládání písniček
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_nested_loops:
+              display_name: Vnořené cykly
+            csf_functions:
+              display_name: Funkce
         express-2019:
           title: Rychlý kurz (2019)
           stages:
@@ -2190,10 +2633,34 @@ cs:
               name: Crowdsourcing
             Dance Party:
               name: Taneční večírek
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_functions:
+              display_name: Funkce
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
+        csd1-2019:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
         andrea-test:
           stages:
             'null':
               name: prázdná hodnota
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
         dance-extras-gallery:
           title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
@@ -2239,6 +2706,17 @@ cs:
               name: Silná hesla
             Sticker Art with Loops:
               name: Razítka v cyklech
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_binary:
+              display_name: Binární
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         coursea-2019:
           title: Kurz A (2019)
           stages:
@@ -2249,6 +2727,15 @@ cs:
             Programming with Rey and BB-8:
               name: Programování s Rey a BB-8
               description_student: Pomoz BB-8 posbírat šrot!
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         courseb-2019:
           title: Kurz B (2019)
           stages:
@@ -2268,6 +2755,15 @@ cs:
               name: Bláznění s cykly
             Programming in Maze:
               name: Programujeme s Angry Birds
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2284,6 +2780,13 @@ cs:
               name: Hláskovací včelka
             Programming in Maze:
               name: Programujeme s Angry Birds
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2292,6 +2795,11 @@ cs:
           stages:
             Lists:
               name: Seznamy
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapitola 1: Obsah webu a HTML'
+            csd2_2:
+              display_name: 'Kapitola 2: Styly a CSS'
         csd3-2019:
           title: CSD Kapitola 3 - Animace and hry ('18-'19)
           description_short: Programování
@@ -2302,29 +2810,69 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
+        csd4-2019:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd5-2019:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
         csd6-2019:
           stages:
             Functions with Parameters:
               name: Funkce s Parametry
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csp4-pilot:
           stages:
             Surveys:
               name: Průzkumy
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+            required:
+              display_name: Přehled
         csp1-2019:
           stages:
             Binary Numbers:
               name: Binární čísla
             The Internet:
               name: Internet
+          lesson_groups:
+            csp1_1:
+              display_name: 'Kapitola 1: Reprezentace a přenos informací'
+            csp1_2:
+              display_name: 'Kapitola 2: Objev Internetu'
         csp2-2019:
           stages:
             Text Compression:
               name: Komprese textu
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Kapitola 2: Digitální informace'
         csp3-2019:
           description_short: Programování
           stages:
             Creating Functions:
               name: Vytvářející funkce
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Kapitola 3: Úvod do programování'
         csp4-2019:
           stages:
             Simple Encryption:
@@ -2333,10 +2881,17 @@ cs:
           stages:
             While Loops:
               name: While (pokud) cykly
+        csppostap-2019:
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Kapitola 2: Práce s daty a jejich zobrazení'
         csp1-pilot:
           stages:
             Binary Numbers:
               name: Binární čísla
+          lesson_groups:
+            required:
+              display_name: Přehled
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2353,10 +2908,71 @@ cs:
               name: Vytvoř hru Flappy Bird
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
         csp5-pilot-staging:
           stages:
             'Loops Practice: While Loops':
               name: 'Procvičování cyklů: Cykly pokud (while)'
+          lesson_groups:
+            csp_lists:
+              display_name: Seznamy
+            csp_loops:
+              display_name: Cykly
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -2367,10 +2983,40 @@ cs:
           stages:
             'Loops Practice: While Loops':
               name: 'Procvičování cyklů: Cykly pokud (while)'
+          lesson_groups:
+            csp_lists:
+              display_name: Seznamy
+            csp_loops:
+              display_name: Cykly
+            required:
+              display_name: Přehled
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd1-pilot:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
         csd2-pilot:
           stages:
             Lists:
               name: Seznamy
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapitola 1: Obsah webu a HTML'
+            csd2_2:
+              display_name: 'Kapitola 2: Styly a CSS'
         csd3-pilot:
           title: CSD Kapitola 3 - Animace and hry (pilotní verze)
           description_short: Programování
@@ -2383,16 +3029,103 @@ cs:
               name: Funkce
             Random Numbers:
               name: Náhodná čísla
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
         csp3-pilot:
           stages:
             Debugging:
               name: Ladění
+          lesson_groups:
+            content:
+              display_name: Obsah
+            required:
+              display_name: Přehled
         csl-vn:
           stages:
             Programming with Rey and BB-8:
               name: Programování s Rey a BB-8
             Loops in Ice Age:
               name: Cykly v Době ledové
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Přehled
+            content:
+              display_name: Obsah
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Obsah
+            required:
+              display_name: Přehled
         peru-2019:
           stages:
             Introduction:
@@ -2401,6 +3134,12 @@ cs:
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
               name: Vnořené cykly
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Obsah
+            required:
+              display_name: Přehled
         dance-2019:
           stages:
             Dance Party:
@@ -2431,6 +3170,14 @@ cs:
               name: Projekty k ukončení kurzu
         dance-extras-2019:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -2447,6 +3194,15 @@ cs:
               name: Podmínky s kartami
             Nested Loops in the Maze:
               name: Vnořené cykly v bludišti
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_conditionals:
+              display_name: Podmínky
+            csf_nested_loops:
+              display_name: Vnořené cykly
+            csf_functions:
+              display_name: Funkce
         time4cs-experiment-unit-2:
           stages:
             Nested Loops in Maze:
@@ -2457,16 +3213,83 @@ cs:
               name: Podmínky
             Simon Says:
               name: Kuba řekl
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_events:
+              display_name: Události
+            csf_digcit:
+              display_name: Digitální občanství
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Podmínky
             Simon Says:
               name: Kuba řekl
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_events:
+              display_name: Události
+            csf_digcit:
+              display_name: Digitální občanství
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Přehled
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznamy
+            csp_loops:
+              display_name: Cykly
+        csd2-2020:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapitola 1: Obsah webu a HTML'
+            csd2_2:
+              display_name: 'Kapitola 2: Styly a CSS'
+        csd1-2020:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            csd1_2:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+        csd4-2020:
+          lesson_groups:
+            csd4_2:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd5-2020:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Kapitola 2: Řešení datových problémů'
         csd6-2020:
           stages:
             Functions with Parameters:
               name: Funkce s Parametry
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kapitola 1: Programování s hardware'
+            csd6_2:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
         csd3-2020:
           title: CSD Kapitola 3 - Animace and hry
           description_short: Programování
@@ -2481,6 +3304,11 @@ cs:
               name: Funkce
             Text:
               name: Text
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
         coursea-2020:
           title: Kurz A (2019)
           stages:
@@ -2491,6 +3319,15 @@ cs:
             Programming with Rey and BB-8:
               name: Programování s Rey a BB-8
               description_student: Pomoz BB-8 posbírat šrot!
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         courseb-2020:
           title: Kurz B (2019)
           stages:
@@ -2502,6 +3339,15 @@ cs:
               name: Programujeme s Angry Birds
             'Loops: Getting Loopy':
               name: Bláznění s cykly
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         coursec-2020:
           title: Kurz C (2019)
           stages:
@@ -2540,6 +3386,17 @@ cs:
               name: Vytvoř hru Flappy Bird
             Events in Play Lab:
               name: Honička s událostmi
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_sequencing:
+              display_name: Sekvence
+            csf_binary:
+              display_name: Binární
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         coursed-2020:
           title: Kurz D (2019)
           description: Studenti se naučí chápat cykly, podmínky a události (events).
@@ -2666,6 +3523,19 @@ cs:
               description_teacher: V této lekci studenti naprogramují svůj vlastní
                 interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
                 tento nástroj byl vytvořený tak, aby reagoval na hudbu.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_events:
+              display_name: Události
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_binary:
+              display_name: Binární
+            csf_digcit:
+              display_name: Digitální občanství
         coursee-2020:
           title: Kurz E (2019)
           stages:
@@ -2694,6 +3564,13 @@ cs:
                 změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             'Functions: Songwriting':
               name: Skládání písniček
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_nested_loops:
+              display_name: Vnořené cykly
+            csf_functions:
+              display_name: Funkce
         coursef-2020:
           title: Kurz F (2019)
           stages:
@@ -2716,6 +3593,13 @@ cs:
               name: Crowdsourcing
             AI for Oceans:
               name: AI pomáhá oceánům
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitální občanství
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
         express-2020:
           title: Rychlý kurz (2019)
           stages:
@@ -2729,6 +3613,19 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmínky
+            csf_functions:
+              display_name: Funkce
+            csf_variables:
+              display_name: Proměnné
+            csf_for_loops:
+              display_name: Cykly "For"
         pre-express-2020:
           stages:
             Programming with Rey and BB-8:
@@ -2737,10 +3634,20 @@ cs:
               name: Hláskovací včelka
             Loops in Ice Age:
               name: Cykly v Době ledové
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvence
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Události
         csp1-2020:
           stages:
             Binary Numbers:
               name: Binární čísla
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Kapitola 1: Digitální informace'
         csp3-2020:
           stages:
             Debugging:
@@ -2750,6 +3657,9 @@ cs:
           stages:
             Creating Functions:
               name: Vytvářející funkce
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Kapitola 3: Úvod do programování'
         csd3-virtual:
           description_short: Programování
           stages:
@@ -2761,10 +3671,19 @@ cs:
               name: Funkce
             Random Numbers:
               name: Náhodná čísla
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitola 1: Obrázky a animace'
         jess-test-script:
           stages:
             Debugging:
               name: Ladění
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kapitola 1: Obsah webu a HTML'
+            csd2_2:
+              display_name: 'Kapitola 2: Styly a CSS'
         csp5-virtual:
           stages:
             While Loops:
@@ -2775,6 +3694,11 @@ cs:
           stages:
             Functions:
               name: Funkce
+          lesson_groups:
+            content:
+              display_name: Obsah
+            csd3_2:
+              display_name: 'Kapitola 2: Tvorba her'
         code-break:
           stages:
             Algorithms:

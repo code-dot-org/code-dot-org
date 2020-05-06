@@ -1165,6 +1165,26 @@ id-ID:
         NEW_Course_4_Bee_For_Loops_8_a: "Jika loop anda sedang menghitung, penambahan
           tersebut akan ditambahkan ke variabel counter setiap saat. \nApa yang perlu
           anda tambahkan ke setiap nomor untuk mendapatkan nomor setelah itu?"
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'The blok Anda perlu menambahkan disebut `diatur
+          speed`. '
+        courseC_flappy_events2_b: Hubungkan blok `set speed` ke blok`when run` untuk
+          memecahkan teka-teki ini.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Jika sesuatu tidak bekerja dengan benar, membuat
+          yakin Anda blok terhubung ke yang benar peristiwa di ruang kerja.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Hubungkan `akhir game` blok untuk`ketika memukul
+          sebuah obstacle` untuk memecahkan ini teka-teki.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Anda perlu menggunakan blok `score a point` untuk
+          melewati level ini.
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: Kode anda tidak akan jauh berbeda dengan yang
+          ada di teka teki terakhir, kecuali anda perlu untuk mengganti artis untuk
+          terjun, kemudian memutarnya balik untuk bersiap menggambar segitiga berikutnya.
       Overworld Avoid Monsters:
         mc_8_a: Terdapat beberapa jalan yang dapat anda ambil. Yang mana yang paling
           pendek?
@@ -1334,11 +1354,15 @@ id-ID:
         harvey_tictactoe: Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan
           lain.
       course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_a: 'Blok seperti ini: <xml>  <block type="simple_move_up_left"/></xml>
+          akan membantu artis bergerak di lereng!'
         courseA_artist_loops_challenge2_b: Ketika kamu menyelesaikan satu rumah burung,
           `lompatlah` ke berikutnya!
         courseA_artist_loops_challenge2_c: Kamu akan memerlukan BANYAK blok di dalam
           lingkaran untuk tantangan ini.
       course1_artist_loops_challenge4:
+        courseB_artist_loops_challenge1_a: 'Blok seperti ini: <xml>  <block type="simple_move_up_right"/></xml>
+          akan membantu artis bergerak di lereng!'
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu,
           `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk `langkah` atau `jump`
@@ -1351,11 +1375,139 @@ id-ID:
         courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua,
           tetapi anda hanya butuh untuk bergerak dan mengumpulkan 5 kali. Anda tahu
           kenapa?
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: |-
+          Pindah ke Timur dua kali di antara setiap jalur.
+
+          <xml>
+            <block type="maze_moveEast"/><next>
+            <block type="maze_moveEast"/></next>next>
+            </xml>
+
+          Kamu bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.
+        courseB_collector_loops_challenge1_d: |-
+          Cobalah ini!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       course1_collector_loops_challenge4:
         courseB_collector_loops_challenge2_a: Jika terjadi sesuatu kesalahan, jangan
           takut untuk memulai kembali. Jangan menyerah!
+        courseB_collector_loops_challenge2_b: |-
+          Jika kamu ulangi pola ini, Laurel tidak akan menabrak dinding di dasar gua!
+
+          <xml><block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block></xml>
         courseB_collector_loops_challenge2_c: Coba gunakan sebuah `berulang` blok
           untuk mengumpulkan final tumpukan harta!
+        courseB_collector_loops_challenge2_d: |-
+          Coba solusi ini:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       course1_maze_debugging_challenge1:
         courseA_maze_seq_challenge1_a: Sebagian jalur akan mengarah ke TNT, jika kamu
           bergerak terlalu jauh.
@@ -1814,6 +1966,10 @@ id-ID:
         courseA_maze_seq10_a: Jika anda mengalami masalah, coba tuliskan langkah-langkah
           di selembar kertas terlebih dahulu.
         courseA_maze_seq10_b: Anda perlu pergi 3 arah untuk memecahkan teka-teki ini.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Jika anda mengalami masalah, coba tuliskan langkah-langkah
+          di selembar kertas terlebih dahulu.
+        courseA_maze_seq10_b: Anda perlu pergi 3 arah untuk memecahkan teka-teki ini.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Jika jalur yang anda butuhkan tidak jelas, gunakan jari
           anda untuk melacak jalan anda dari burung ke babi.
@@ -1852,6 +2008,10 @@ id-ID:
         '1': Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
       courseA_maze_seq5_2019:
         '1': Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Cobalah menuliskan langkah-langkah di atas kertas untuk
+          menemukan solusinya!
+        courseA_maze_seq5_b: Anda memerlukan 2 blok, menunjuk 2 arah.
       courseA_maze_seq6:
         courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
         courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam
@@ -1864,7 +2024,17 @@ id-ID:
         courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
         courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam
           2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
+        courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam
+          2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Ada 1 blok yang perlu ditambahkan untuk memindahkan burung
+          ke babi.
+        courseA_maze_seq7_b: Jika anda tidak tahu apa yang harus dilakukan, cobalah
+          menggambar teka-teki di atas kertas dan gunakan jari anda untuk mencari
+          tahu kearah mana bergerak.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Ada 1 blok yang perlu ditambahkan untuk memindahkan burung
           ke babi.
         courseA_maze_seq7_b: Jika anda tidak tahu apa yang harus dilakukan, cobalah
@@ -1877,6 +2047,9 @@ id-ID:
         courseA_maze_seq8_a: Jika anda terjebak, coba gambar di atas kertas untuk
           melihat bagaimana burung harus bergerak.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Jika anda terjebak, coba gambar di atas kertas untuk
+          melihat bagaimana burung harus bergerak.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Jika anda terjebak, coba gambar di atas kertas untuk
           melihat bagaimana burung harus bergerak.
       courseA_maze_seq9:
@@ -1991,12 +2164,78 @@ id-ID:
       courseB_artist_loops7:
         courseB_artist_loops7_a: Tantangan ini menggunakan loop\*\* 4 \*\*, satu demi
           satu!
+        courseB_artist_loops7_b: |-
+          Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.
+
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: |-
+          Loopnya akan seperti ini:
+
+          -   Loop 1
+              -   Kanan
+              -   Turun
+
+          -   Loop 2
+              -   Kanan
+              -   Naik
+
+          -   Loop 3
+              -   Kiri
+              -   Naik
+
+          -   Loop 4
+              -   Kiri
+              -   Turun
       courseB_artist_loops7_2018:
         courseB_artist_loops7_a: Tantangan ini menggunakan loop\*\* 4 \*\*, satu demi
           satu!
+        courseB_artist_loops7_b: |-
+          Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.
+
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: |-
+          Loopnya akan seperti ini:
+
+          -   Loop 1
+              -   Kanan
+              -   Turun
+
+          -   Loop 2
+              -   Kanan
+              -   Naik
+
+          -   Loop 3
+              -   Kiri
+              -   Naik
+
+          -   Loop 4
+              -   Kiri
+              -   Turun
       courseB_artist_loops7_2019:
         courseB_artist_loops7_a: Tantangan ini menggunakan loop\*\* 4 \*\*, satu demi
           satu!
+        courseB_artist_loops7_b: |-
+          Perhatikan bahwa setiap loop membuat pola tangga menuju ke berbagai arah.
+
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: |-
+          Loopnya akan seperti ini:
+
+          -   Loop 1
+              -   Kanan
+              -   Turun
+
+          -   Loop 2
+              -   Kanan
+              -   Naik
+
+          -   Loop 3
+              -   Kiri
+              -   Naik
+
+          -   Loop 4
+              -   Kiri
+              -   Turun
       courseB_artist_loops8:
         courseB_artist_loops8_a: Berapa kali anda harus mengulangi pola untuk membuat
           tangga?
@@ -2034,16 +2273,22 @@ id-ID:
         courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan lingkaran? Coba
           tulis kode step-by-step dan cari sebuah pola.
       courseB_artist_loops_challenge1:
+        courseB_artist_loops_challenge1_a: 'Blok seperti ini: <xml>  <block type="simple_move_up_right"/></xml>
+          akan membantu artis bergerak di lereng!'
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu,
           `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk `langkah` atau `jump`
           lebih beberapa garis yang sama dua kali. '
       courseB_artist_loops_challenge1_2018:
+        courseB_artist_loops_challenge1_a: 'Blok seperti ini: <xml>  <block type="simple_move_up_right"/></xml>
+          akan membantu artis bergerak di lereng!'
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu,
           `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk `langkah` atau `jump`
           lebih beberapa garis yang sama dua kali. '
       courseB_artist_loops_challenge1_2019:
+        courseB_artist_loops_challenge1_a: 'Blok seperti ini: <xml>  <block type="simple_move_up_right"/></xml>
+          akan membantu artis bergerak di lereng!'
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu,
           `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk `langkah` atau `jump`
@@ -2066,6 +2311,9 @@ id-ID:
           tempat berikutnya.
         courseB_artist_loops_challenge2_b: Anda bisa menggunakan blok `melompat` untuk
           pindah ke ruangan lain.
+      courseB_collector_loops1:
+        courseB_collector_loops1_a: Blok <xml><block type="collector_collect_simplified"/></xml>
+          dapat digunakan untuk mengambil harta karun jika kamu berdiri di atasnya.
       courseB_collector_loops10:
         courseB_collector_loops10_a: Jika anda tidak tahu di mana meletakkan loop
           `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
@@ -2081,22 +2329,43 @@ id-ID:
           `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
         courseB_collector_loops10_b: Cobalah menulis langkah di selembar kertas dan
           mencari sebuah pola.
+      courseB_collector_loops1_2018:
+        courseB_collector_loops1_a: Blok <xml><block type="collector_collect_simplified"/></xml>
+          dapat digunakan untuk mengambil harta karun jika kamu berdiri di atasnya.
+      courseB_collector_loops1_2019:
+        courseB_collector_loops1_a: Blok <xml><block type="collector_collect_simplified"/></xml>
+          dapat digunakan untuk mengambil harta karun jika kamu berdiri di atasnya.
       courseB_collector_loops2:
         courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan
           harta karun.
+        courseB_collector_loops2_b: Setelah kamu mencapai titik dengan harta karun,
+          gunakan blok <xml><block type="collector_collect"/></xml> untuk mengambilnya.
       courseB_collector_loops2_2018:
         courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan
           harta karun.
+        courseB_collector_loops2_b: Setelah kamu mencapai titik dengan harta karun,
+          gunakan blok <xml><block type="collector_collect"/></xml> untuk mengambilnya.
       courseB_collector_loops2_2019:
         courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan
           harta karun.
+        courseB_collector_loops2_b: Setelah kamu mencapai titik dengan harta karun,
+          gunakan blok <xml><block type="collector_collect"/></xml> untuk mengambilnya.
       courseB_collector_loops3:
+        courseB_collector_prog3_a: Coba gunakan blok <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">5</title></block></xml> untuk mengumpulkan harta
+          karun.
         courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok
           di dalam sebuah berulang lingkaran.
       courseB_collector_loops3_2018:
+        courseB_collector_prog3_a: Coba gunakan blok <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">5</title></block></xml> untuk mengumpulkan harta
+          karun.
         courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok
           di dalam sebuah berulang lingkaran.
       courseB_collector_loops3_2019:
+        courseB_collector_prog3_a: Coba gunakan blok <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">5</title></block></xml> untuk mengumpulkan harta
+          karun.
         courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok
           di dalam sebuah berulang lingkaran.
       courseB_collector_loops4:
@@ -2201,11 +2470,307 @@ id-ID:
           3 masalah kecil agar terasa lebih mudah.
         courseB_collector_loops9_b: Anda akan membutuhkan 3 loop berulang, satu demi
           satu, untuk solusi ini.
+      courseB_collector_loops_challenge1:
+        courseB_collector_loops_challenge1_b: |-
+          Mulai dengan looping perintah berikut:
+
+          <xml>
+            <block type="maze_moveSouth">
+              <next>
+              <block type="collector_collect"></block>
+              </next>
+              </block>
+          </xml>
+        courseB_collector_loops_challenge1_c: |-
+          Pindah ke Timur dua kali di antara setiap jalur.
+
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+
+          Kamu bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.
+        courseB_collector_loops_challenge1_d: |-
+          Cobalah ini!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_collector_loops_challenge1_2018:
+        courseB_collector_loops_challenge1_b: |-
+          Mulai dengan looping perintah berikut:
+
+          <xml>
+            <block type="maze_moveSouth">
+              <next>
+              <block type="collector_collect"></block>
+              </next>
+              </block>
+          </xml>
+        courseB_collector_loops_challenge1_c: |-
+          Pindah ke Timur dua kali di antara setiap jalur.
+
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+
+          Kamu bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.
+        courseB_collector_loops_challenge1_d: |-
+          Cobalah ini!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_collector_loops_challenge1_2019:
+        courseB_collector_loops_challenge1_b: |-
+          Mulai dengan looping perintah berikut:
+
+          <xml>
+            <block type="maze_moveSouth">
+              <next>
+              <block type="collector_collect"></block>
+              </next>
+              </block>
+          </xml>
+        courseB_collector_loops_challenge1_c: |-
+          Pindah ke Timur dua kali di antara setiap jalur.
+
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+
+          Kamu bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.
+        courseB_collector_loops_challenge1_d: |-
+          Cobalah ini!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_collector_loops_challenge2:
         courseB_collector_loops_challenge2_a: Jika terjadi sesuatu kesalahan, jangan
           takut untuk memulai kembali. Jangan menyerah!
+        courseB_collector_loops_challenge2_b: |-
+          Jika kamu ulangi pola ini, Laurel tidak akan menabrak dinding di dasar gua!
+
+          <xml><block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block></xml>
         courseB_collector_loops_challenge2_c: Coba gunakan sebuah `berulang` blok
           untuk mengumpulkan final tumpukan harta!
+        courseB_collector_loops_challenge2_d: |-
+          Coba solusi ini:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_collector_loops_challenge2a:
         courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah
           debug itu. Jangan menyerah!
@@ -2239,6 +2804,12 @@ id-ID:
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`,
           kemudian letakkan blok yang anda inginkan di dalamnya.
+      courseB_maze_seq1:
+        courseB_maze_seq1_a: Sambungkan blok ke blok <xml><block type="when_run"/></xml>
+          untuk membuat burung bergerak!
+        courseB_maze_seq1_b: Seret tiga tanda panah <xml><block type="maze_moveSouth"/></xml>
+          keluar dan sambungkan ke blok <xml><block type="when_run"/></xml> agar burung
+          sampai ke babi.
       courseB_maze_seq10:
         courseB_maze_seq10_a: Cobalah menuliskan langkah-langkah di selembar kertas
           terlebih dahulu.
@@ -2259,15 +2830,23 @@ id-ID:
           Dapatkah anda mencari tahu yang mana dan menggantinya dengan blok yang benar?
         courseB_maze_seq3_b: Coba gunakan tombol langkah untuk menemukan di mana program
           berjalan salah. Apakah ini langkah pertama? Kedua?
+        courseB_maze_seq3_c: Blok <xml><block type="maze_moveWest"/></xml> sepertinya
+          tidak menggerakkan burung ke arah yang benar.
       courseB_maze_seq4:
         courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai
           anda tiba di babi.
+        courseB_maze_seq4_b: Kamu akan ingin menggunakan blok <xml><block type="maze_moveEast"/></xml>
+          untuk memecahkan teka-teki ini.
       courseB_maze_seq4_2018:
         courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai
           anda tiba di babi.
+        courseB_maze_seq4_b: Kamu akan ingin menggunakan blok <xml><block type="maze_moveEast"/></xml>
+          untuk memecahkan teka-teki ini.
       courseB_maze_seq4_2019:
         courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai
           anda tiba di babi.
+        courseB_maze_seq4_b: Kamu akan ingin menggunakan blok <xml><block type="maze_moveEast"/></xml>
+          untuk memecahkan teka-teki ini.
       courseB_maze_seq5:
         courseB_maze_seq5_a: Jika Anda terjebak, cobalah menarik keluar jalur di atas
           kertas.
@@ -2358,12 +2937,18 @@ id-ID:
       courseB_maze_seq_challenge1:
         courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat
           ini.
+        courseB_maze_seq_challenge1_b: Coba gunakan blok <xml><block type="maze_moveWest"/></xml>
+          untuk memulai.
       courseB_maze_seq_challenge1_2018:
         courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat
           ini.
+        courseB_maze_seq_challenge1_b: Coba gunakan blok <xml><block type="maze_moveWest"/></xml>
+          untuk memulai.
       courseB_maze_seq_challenge1_2019:
         courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat
           ini.
+        courseB_maze_seq_challenge1_b: Coba gunakan blok <xml><block type="maze_moveWest"/></xml>
+          untuk memulai.
       courseB_maze_seq_challenge2:
         courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok
           untuk memecahkan teka-teki ini.
@@ -2376,15 +2961,406 @@ id-ID:
         courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok
           untuk memecahkan teka-teki ini.
         courseB_maze_seq_challenge2_b: Susun ulang balok dan ambil jalan pola tangga.
+      courseB_playlab_events2:
+        courseB_playlab_events2_a: |-
+          Ini adalah blok agar Daisi mengucapkan sesuatu:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+            </xml>
+      courseB_playlab_events2_2018:
+        courseB_playlab_events2_a: |-
+          Ini adalah blok agar Daisi mengucapkan sesuatu:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+            </xml>
+      courseB_playlab_events2_2019:
+        courseB_playlab_events2_a: |-
+          Ini adalah blok agar Daisi mengucapkan sesuatu:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+            </xml>
+      courseB_playlab_events3:
+        courseB_playlab_events3_a: |-
+          Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">0</title>
+            </block>
+            </xml>
+        courseB_playlab_events3_b: |-
+          Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:
+
+          <xml>
+          <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">random</title>
+            </block>
+            </xml>
+      courseB_playlab_events3_2018:
+        courseB_playlab_events3_a: |-
+          Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">0</title>
+            </block>
+            </xml>
+        courseB_playlab_events3_b: |-
+          Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:
+
+          <xml>
+          <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">random</title>
+            </block>
+            </xml>
+      courseB_playlab_events3_2019:
+        courseB_playlab_events3_a: |-
+          Ini adalah blok yang harus kamu gunakan untuk menambahkan kejadian:
+
+          <xml>
+          <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">0</title>
+            </block>
+            </xml>
+        courseB_playlab_events3_b: |-
+          Ini adalah blok yang kamu butuhkan untuk mengalihkan suasana hati Daisy:
+
+          <xml>
+          <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">random</title>
+            </block>
+            </xml>
+      courseB_playlab_events4:
+        courseB_playlab_events4_a: |-
+          Ini adalah kejadian yang mengontrol tanda panah kiri:
+
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block>
+            </xml>
+        courseB_playlab_events4_b: |-
+          Ini adalah blok yang membuat kstaria bergerak ke kiri.
+
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block>
+            </xml>
+      courseB_playlab_events4_2018:
+        courseB_playlab_events4_a: |-
+          Ini adalah kejadian yang mengontrol tanda panah kiri:
+
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block>
+            </xml>
+        courseB_playlab_events4_b: |-
+          Ini adalah blok yang membuat kstaria bergerak ke kiri.
+
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block>
+            </xml>
+      courseB_playlab_events4_2019:
+        courseB_playlab_events4_a: |-
+          Ini adalah kejadian yang mengontrol tanda panah kiri:
+
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block>
+            </xml>
+        courseB_playlab_events4_b: |-
+          Ini adalah blok yang membuat kstaria bergerak ke kiri.
+
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block>
+            </xml>
+      courseB_playlab_events5:
+        courseB_playlab_events5_a: |-
+          Ini adalah blok kejadian yang mengontrol tanda panah kanan:
+
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+            </block>
+            </xml>
+        courseB_playlab_events5_b: "Ini adalah blok yang membuat kstaria berlari menjauh.
+          \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n
+          \   <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+      courseB_playlab_events5_2018:
+        courseB_playlab_events5_a: |-
+          Ini adalah blok kejadian yang mengontrol tanda panah kanan:
+
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+            </block>
+            </xml>
+        courseB_playlab_events5_b: "Ini adalah blok yang membuat kstaria berlari menjauh.
+          \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n
+          \   <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+      courseB_playlab_events5_2019:
+        courseB_playlab_events5_a: |-
+          Ini adalah blok kejadian yang mengontrol tanda panah kanan:
+
+          <xml>
+            <block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+            </block>
+            </xml>
+        courseB_playlab_events5_b: "Ini adalah blok yang membuat kstaria berlari menjauh.
+          \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n
+          \   <title name=\"DIR\">2</title>\n  </block>\n</xml>"
       courseB_playlab_events6:
+        courseB_playlab_events6_a: |-
+          Kamu akan membutuhkan blok kejadian ini:
+
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
       courseB_playlab_events6_2018:
+        courseB_playlab_events6_a: |-
+          Kamu akan membutuhkan blok kejadian ini:
+
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
       courseB_playlab_events6_2019:
+        courseB_playlab_events6_a: |-
+          Kamu akan membutuhkan blok kejadian ini:
+
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
+      courseB_playlab_events7:
+        courseB_playlab_events7_a: |-
+          Ini adalah blok kejadian yang akan kamu butuhkan:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Ini adalah blok yang kamu butuhkan untuk memutar suara.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events7_2018:
+        courseB_playlab_events7_a: |-
+          Ini adalah blok kejadian yang akan kamu butuhkan:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Ini adalah blok yang kamu butuhkan untuk memutar suara.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events7_2019:
+        courseB_playlab_events7_a: |-
+          Ini adalah blok kejadian yang akan kamu butuhkan:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Ini adalah blok yang kamu butuhkan untuk memutar suara.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Ini adalah blok yang kamu butuhkan untuk membuat ksatria menghilang:
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events_challenge1:
+        courseB_playlab_events_challenge1_a: "Buat hewan lain bergerak ke bawah jika
+          kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n
+          \   <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_b: |-
+          Change the speed of the animals by using this block:
+
+          <xml>
+            <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+            </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">2</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">2</title>
+                  <title name="VALUE">Woo hoo!</title>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_playlab_events_challenge1_2018:
+        courseB_playlab_events_challenge1_a: "Buat hewan lain bergerak ke bawah jika
+          kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n
+          \   <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_b: |-
+          Change the speed of the animals by using this block:
+
+          <xml>
+            <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+            </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">2</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">2</title>
+                  <title name="VALUE">Woo hoo!</title>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_playlab_events_challenge1_2019:
+        courseB_playlab_events_challenge1_a: "Buat hewan lain bergerak ke bawah jika
+          kamu menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n
+          \   <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_b: |-
+          Change the speed of the animals by using this block:
+
+          <xml>
+            <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+            </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          Apa yang akan dikatakan semua orang jika balapan selesai? Buat mereka bicara dengan kejadian ini:
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">2</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">2</title>
+                  <title name="VALUE">Woo hoo!</title>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_playlab_events_challenge2:
         courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap
-          saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+          saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_b: |-
+          Gunakan blok kejadian lain untuk membuat hewan lain menghilang!
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block>
+            </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!
+
+          <xml>
+            <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+            <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
           Campurkan itu!
 
@@ -2392,7 +3368,23 @@ id-ID:
           Mengubah suasana hati binatang!
       courseB_playlab_events_challenge2_2018:
         courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap
-          saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+          saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_b: |-
+          Gunakan blok kejadian lain untuk membuat hewan lain menghilang!
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block>
+            </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!
+
+          <xml>
+            <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+            <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
           Campurkan itu!
 
@@ -2400,7 +3392,23 @@ id-ID:
           Mengubah suasana hati binatang!
       courseB_playlab_events_challenge2_2019:
         courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap
-          saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+          saat diklik. Hewan tersebut juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_b: |-
+          Gunakan blok kejadian lain untuk membuat hewan lain menghilang!
+
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block>
+            </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!
+
+          <xml>
+            <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+            <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
           Campurkan itu!
 
@@ -2409,12 +3417,24 @@ id-ID:
       courseB_starWars_prog1:
         courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run"
           untuk melihat apa yang terjadi.
+        courseB_starWars_prog1_b: |-
+          Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog1_2018:
         courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run"
           untuk melihat apa yang terjadi.
+        courseB_starWars_prog1_b: |-
+          Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog1_2019:
         courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run"
           untuk melihat apa yang terjadi.
+        courseB_starWars_prog1_b: |-
+          Kamu akan ingin bergerak ke Timur untuk memecahkan teka-teki ini. Sejauh mana kamu perlu bergerak?
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2:
         courseB_starWars_prog2_a: Pisahkan masalah ini menjadi dua bagian. Ambil satu
           tumpukan logam bekas, lalu cari tahu cara menuju yang lain.
@@ -2442,39 +3462,93 @@ id-ID:
       courseB_starWars_prog4:
         courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu
           waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+        courseB_starWars_prog4_b: |-
+          Coba gunakan blok `ulangi` untuk kode yang lebih singkat.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog4_2018:
         courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu
           waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+        courseB_starWars_prog4_b: |-
+          Coba gunakan blok `ulangi` untuk kode yang lebih singkat.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog4_2019:
         courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu
           waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+        courseB_starWars_prog4_b: |-
+          Coba gunakan blok `ulangi` untuk kode yang lebih singkat.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog5:
         courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti
           teka-teki terakhir?
         courseB_starWars_prog5_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
-        courseB_starWars_prog5_c: Trace pola ini dengan jari Anda. Hitung potongan
-          logam saat Anda bergerak.
+        courseB_starWars_prog5_c: Lacak pola ini dengan jarimu. Hitung potongan logam
+          saat kamu bergerak.
+        courseB_starWars_prog5_da: |-
+          Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018:
         courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti
           teka-teki terakhir?
         courseB_starWars_prog5_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
-        courseB_starWars_prog5_c: Trace pola ini dengan jari Anda. Hitung potongan
-          logam saat Anda bergerak.
+        courseB_starWars_prog5_c: Lacak pola ini dengan jarimu. Hitung potongan logam
+          saat kamu bergerak.
+        courseB_starWars_prog5_da: |-
+          Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2019:
         courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti
           teka-teki terakhir?
         courseB_starWars_prog5_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
-        courseB_starWars_prog5_c: Trace pola ini dengan jari Anda. Hitung potongan
-          logam saat Anda bergerak.
+        courseB_starWars_prog5_c: Lacak pola ini dengan jarimu. Hitung potongan logam
+          saat kamu bergerak.
+        courseB_starWars_prog5_da: |-
+          Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan teka-teki anak tangga:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6:
         courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua
           langkah per arah!
+        courseB_starWars_prog6_b: |-
+          Coba gunakan blok `ulangi` untuk kode yang lebih singkat.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog6_2018:
         courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua
           langkah per arah!
+        courseB_starWars_prog6_b: |-
+          Coba gunakan blok `ulangi` untuk kode yang lebih singkat.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog6_2019:
         courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua
           langkah per arah!
+        courseB_starWars_prog6_b: |-
+          Coba gunakan blok `ulangi` untuk kode yang lebih singkat.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog7:
         courseB_starWars_prog7_a: Tidakkah pola ini terlihat sedikit sama seperti
           teka-teki terakhir?
@@ -2496,12 +3570,36 @@ id-ID:
       courseB_starWars_prog8:
         courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di
           mana Anda telah melakukan perjalanan.
+        courseB_starWars_prog8_b: |-
+          Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog8_2018:
         courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di
           mana Anda telah melakukan perjalanan.
+        courseB_starWars_prog8_b: |-
+          Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog8_2019:
         courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di
           mana Anda telah melakukan perjalanan.
+        courseB_starWars_prog8_b: |-
+          Coba gunakan blok `ulangi` untuk melihat apa yang terjadi ke kode yang kamu masukkan.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
       courseB_starWars_prog9:
         courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode
           untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
@@ -3739,6 +4837,9 @@ id-ID:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Untuk mengulang kode, seret sebuah loop `repeat`,
           kemudian letakkan blok yang anda inginkan di dalamnya.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Untuk mengulang kode, seret sebuah loop `repeat`,
+          kemudian letakkan blok yang anda inginkan di dalamnya.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Mengklik panah kecil di samping "kiri" di blok
           putar akan membiarkan Anda mengubahnya menjadi "benar".
@@ -3757,6 +4858,12 @@ id-ID:
         courseC_starWars_loops4_a: Gunakan dua `ulangi` blok.
         courseC_starWars_loops4_b: 'Setiap `mengulangi` lingkaran akan memilih satu
           perintah di dalamnya: `bergerak meneruskan`.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Mengklik panah kecil di samping "kiri" di blok
+          putar akan membiarkan Anda mengubahnya menjadi "benar".
+        courseC_starWars_loops4_a: Gunakan dua `ulangi` blok.
+        courseC_starWars_loops4_b: 'Setiap `mengulangi` lingkaran akan memilih satu
+          perintah di dalamnya: `bergerak meneruskan`.'
       courseC_starWars_loops5:
         courseC_starWars_loops5_b: Untuk bergerak ke bawah, Anda harus berbalik dan
           kemudian bergerak maju.
@@ -3768,6 +4875,11 @@ id-ID:
       courseC_starWars_loops5_2019:
         courseC_starWars_loops5_a: Solusi terbaiknya adalah dengan menggunakan satu
           `maju ke depan`, lalu satu balik, lalu satu putaran.
+      courseC_starWars_loops5_copy:
+        courseC_starWars_loops5_b: Untuk bergerak ke bawah, Anda harus berbalik dan
+          kemudian bergerak maju.
+        courseC_starWars_loops5_a: Solusi terbaik menggunakan sebuah gilirannya, kemudian
+          satu tunggal `langkah meneruskan`, giliran lain, makan satu lingkaran.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
@@ -3781,6 +4893,12 @@ id-ID:
           Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
           Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
+          dan mencari sebuah pola.
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
         courseC_starWars_loops6_b: |-
@@ -3813,6 +4931,15 @@ id-ID:
         courseC_starWars_loops7_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Pola ini terlihat lebih keras dari itu! Mulailah
+          dengan sebuah langkah tangga sederhana. Apakah itu mencakup semua logam
+          bekas?
+        courseC_starWars_loops7_b: Jika anda mempunyai masalah dengan teka-teki ini,
+          cobalah menulis semua langkah di selembar kertas dan mencari sebuah pola.
+        courseC_starWars_loops7_c: Jangan takut untuk membuat kesalahan! Jalankan
+          kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
+          itu.
       courseC_starWars_loops8:
         course_starWars_loops8_a: Coba pikirkan tentang masalah ini di bagian kecil.
           Gunakan waktumu. Anda tidak perlu menyelesaikannya pada percobaan pertama!
@@ -3824,6 +4951,11 @@ id-ID:
         course_starWars_loops8_b: Pikirkan bagian pertama dari masalah ini sebagai
           masalah langkah tangga. Bagaimana anda mengatasinya sebelumnya?
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Coba pikirkan tentang masalah ini di bagian kecil.
+          Gunakan waktumu. Anda tidak perlu menyelesaikannya pada percobaan pertama!
+        course_starWars_loops8_b: Pikirkan bagian pertama dari masalah ini sebagai
+          masalah langkah tangga. Bagaimana anda mengatasinya sebelumnya?
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Coba pikirkan tentang masalah ini di bagian kecil.
           Gunakan waktumu. Anda tidak perlu menyelesaikannya pada percobaan pertama!
         course_starWars_loops8_b: Pikirkan bagian pertama dari masalah ini sebagai
@@ -4349,6 +5481,9 @@ id-ID:
       courseD_bee_conditionals1_predict1_2019:
         courseD_bee_conditionals1_a: Anda perlu menggunakan blok `if` untuk memeriksa
           apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar.
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: Anda perlu menggunakan blok `if` untuk memeriksa
+          apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4379,6 +5514,18 @@ id-ID:
           pernyataan `if`.
         courseD_bee_conditionals2_c: Anda tidak perlu memeriksa sarang lebah, hanya
           ada bunga atau ruang kosong di bawah awan.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Butuh bantuan untuk memulai? Tonton video
+          itu!
+        courseD_bee_conditionals2_a: Terkadang akan ada bunga di sana, terkadang tidak.
+          Jika anda ingin kode anda berjalan dalam kedua kasus, pastikan untuk menggunakan
+          pernyataan `if`.
+        courseD_bee_conditionals2_b: Anda dapat menggunakan sebuah `ulangi` lingkaran
+          atau suatu `sementara jalan di depan` untuk bergerak melalui labirin ini.
+        courseD_bee_conditionals2_c: Anda tidak perlu memeriksa sarang lebah, hanya
+          ada bunga atau ruang kosong di bawah awan.
+        courseD_bee_conditionals2_hintVid2: Tonton video ini untuk membantu memecahkan
+          teka-teki ini.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4414,6 +5561,20 @@ id-ID:
         courseD_bee_conditionals3_c: Jangan takut untuk membuat kesalahan! Cobalah
           menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan
           jika anda belum memecahkan teka-teki itu.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Butuh bantuan untuk memulai? Tonton video
+          itu!
+        courseD_bee_conditionals3_a: Pastikan untuk menggunakan pernyataan `if` untuk
+          memeriksa setiap ruang untuk melihat apakah itu berisi bunga atau tidak
+          sama sekali.
+        courseD_bee_conditionals3_b: Anda dapat menggunakan sebuah `ulangi` lingkaran
+          atau suatu `sementara` lingkaran untuk menjaga lebah bergerak maju. Gunakan
+          yang mana saja yang kamu suka!
+        courseD_bee_conditionals3_c: Jangan takut untuk membuat kesalahan! Cobalah
+          menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan
+          jika anda belum memecahkan teka-teki itu.
+        courseD_bee_conditionals3_hintVid2: Tonton video ini untuk membantu memecahkan
+          teka-teki ini.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4437,6 +5598,15 @@ id-ID:
           seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.
         courseD_bee_conditionals4_b: 'Gunakan pernyataan `if` di dalam loop anda untuk
           memeriksa setiap ruang untuk nektar. '
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: Butuh bantuan untuk memulai? Tonton video
+          itu!
+        courseD_bee_conditionals4_a: Anda masih bisa memperlakukan setiap ruangan
+          seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.
+        courseD_bee_conditionals4_b: 'Gunakan pernyataan `if` di dalam loop anda untuk
+          memeriksa setiap ruang untuk nektar. '
+        courseD_bee_conditionals4_hintVid2: Tonton video ini untuk membantu memecahkan
+          teka-teki ini.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
@@ -4458,6 +5628,26 @@ id-ID:
         courseD_bee_conditionals5_hintVid2: Tonton video ini untuk membantu memecahkan
           teka-teki ini.
       courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video
+          itu!
+        courseD_bee_conditionals5_a: Pikirkan setiap sisi jalan segi empat sebagai
+          jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian
+          luar dan sebuah loop`while there is a path ahead` di bagian dalam. Berapa
+          banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan
+          setiap sisi dengan bunga?
+        courseD_bee_conditionals5_c: Ada 3 sisi dari persegi panjang dengan bunga,
+          sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan
+          perlu untuk terus sepanjang jalan, `sementara ada sebuah jalan di depan`.
+          Untuk terus menyusuri jalan setapak, lebah perlu `bergerak maju`. Sementara
+          di jalan, lebah perlu memeriksa sebuah bunga. `Jika ada sebuah bunga`, lebah
+          harus`mendapatkan nektar`.
+        courseD_bee_conditionals5_b: Di dalam `sementara ada sebuah jalan di depan`
+          blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana
+          cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada
+          sebuah bunga?
+        courseD_bee_conditionals5_hintVid2: Tonton video ini untuk membantu memecahkan
+          teka-teki ini.
+      courseD_bee_conditionals5_copy:
         courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video
           itu!
         courseD_bee_conditionals5_a: Pikirkan setiap sisi jalan segi empat sebagai
@@ -5467,6 +6657,12 @@ id-ID:
           persegi kedua anda.
         courseE_artist_functions1_b: Tidak apa-apa menggambar garis tumpang tindih
           untuk membuat gelas anda.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Setiap persegi memiliki 100 piksel sisi, yang
+          berarti anda harus bergerak maju ke depan 175 piksel sebelum menggambar
+          persegi kedua anda.
+        courseE_artist_functions1_b: Tidak apa-apa menggambar garis tumpang tindih
+          untuk membuat gelas anda.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Program anda harus:
@@ -5488,11 +6684,24 @@ id-ID:
           -   Menggunakan fungsi
           -   Bergerak maju 100 + 75 piksel
           -   Menggunakan fungsi
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_a: |-
+          Program anda harus:
+
+          -   Menggunakan fungsi
+          -   Bergerak maju 100 + 75 piksel
+          -   Menggunakan fungsi
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           Untuk mengatasi teka-teki ini, anda hanya perlu menambahkan satu loop yang mengulangi kode starter 8 kali.
           Jika anda tidak ingat kode starternya, klik "start over" di sudut kanan atas ruang kerja.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          Untuk mengatasi teka-teki ini, anda hanya perlu menambahkan satu loop yang mengulangi kode starter 8 kali.
+          Jika anda tidak ingat kode starternya, klik "start over" di sudut kanan atas ruang kerja.
       courseE_artist_functions4:
+        courseD_artist_functions4_a: Mencoba mengunakan fungsi!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: Mencoba mengunakan fungsi!
       courseE_artist_functions5:
         courseD_artist_functions5_a: Jangan menyerah! Ingat apa yang telah anda pelajari.
@@ -5503,6 +6712,10 @@ id-ID:
         courseD_artist_functions5_b: Fungsi memudahkan untuk memanggil kode yang tersimpan
           kapan saja, tidak hanya dari dalam satu loop!
       courseE_artist_functions5_2019:
+        courseD_artist_functions5_a: Jangan menyerah! Ingat apa yang telah anda pelajari.
+        courseD_artist_functions5_b: Fungsi memudahkan untuk memanggil kode yang tersimpan
+          kapan saja, tidak hanya dari dalam satu loop!
+      courseE_artist_functions5_copy:
         courseD_artist_functions5_a: Jangan menyerah! Ingat apa yang telah anda pelajari.
         courseD_artist_functions5_b: Fungsi memudahkan untuk memanggil kode yang tersimpan
           kapan saja, tidak hanya dari dalam satu loop!

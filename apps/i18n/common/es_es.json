@@ -930,7 +930,6 @@
   "loginCard_secretWords": "Palabras secretas:",
   "loginCard_sectionName": "Nombre de la sección",
   "loginInfo": "Información de acceso",
-  "loginInformation": "Información de registro",
   "loginInfo_joinTitle": "Suscribirse a su sección (sólo una vez)",
   "loginInfo_joinBody": "Si un estudiante todavía no se ha unido a su sección, pídale que realicen los siguientes pasos. Tenga en cuenta que solo necesitan hacer esto una vez. Al unirte a tu sección, los estudiantes podrán ver el curso que se les asignó y podrás seguir el progreso del trabajo que se ha completado mientras estén registrados.",
   "loginInfo_joinStep1": "Cree una cuenta de Code.org si aún no lo han hecho. Pueden hacer esto en {url}. Tenga en cuenta que pueden registrarse con una dirección de correo electrónico y contraseña, o registrarse en Google, Facebook o Microsoft haciendo clic en uno de estos botones:",

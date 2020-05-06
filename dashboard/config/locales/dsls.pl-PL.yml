@@ -1745,6 +1745,15 @@ pl-PL:
         - text: Nie wiem.
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+          feedback: Poprawnie!
+        - {}
+        - text: Nie wiem.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
@@ -2052,6 +2061,14 @@ pl-PL:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}
