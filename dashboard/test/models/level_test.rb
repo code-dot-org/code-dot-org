@@ -1017,4 +1017,27 @@ class LevelTest < ActiveSupport::TestCase
       child.parent_levels << parent
     end
   end
+
+  test 'child levels are in order of position' do
+    parent = create :level
+    child3 = create :level
+    child2 = create :level
+    child1 = create :level
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child3,
+      position: 3
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child1,
+      position: 1
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child2,
+      position: 2
+    )
+    assert_equal [child1, child2, child3], parent.child_levels
+  end
 end

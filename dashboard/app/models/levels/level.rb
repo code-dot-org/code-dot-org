@@ -40,7 +40,7 @@ class Level < ActiveRecord::Base
   has_many :levels_parent_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
   has_many :parent_levels, through: :levels_parent_levels, inverse_of: :child_levels
 
-  has_many :levels_child_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
+  has_many :levels_child_levels, -> {order('position ASC')}, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
   has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
 
   before_validation :strip_name

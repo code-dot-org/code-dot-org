@@ -1,45 +1,26 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import TooltipWithIcon from './TooltipWithIcon';
 import {currentLocation} from '../../utils';
-import color from '@cdo/apps/util/color';
+import LessonExtrasFlagIcon from './LessonExtrasFlagIcon';
 
 const styles = {
   main: {
     width: 21,
     height: 24
-  },
-  flagNormal: {
-    color: color.white
-  },
-  checkFlagNormal: {
-    color: color.lighter_gray
-  },
-  focused: {
-    color: color.level_perfect
-  },
-  hoverOverlay: {
-    ':hover': {
-      color: color.orange
-    }
-  },
-  smallStack: {
-    width: '1em',
-    height: '1em',
-    lineHeight: '1em'
   }
 };
 
-class LessonExtrasProgressBubble extends Component {
+export default class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     lessonExtrasUrl: PropTypes.string.isRequired,
-    onLessonExtras: PropTypes.bool.isRequired
+    perfect: PropTypes.bool
   };
+
   render() {
-    const {lessonExtrasUrl, onLessonExtras} = this.props;
+    const {lessonExtrasUrl, perfect} = this.props;
 
     const tooltipId = _.uniqueId();
     return (
@@ -50,19 +31,7 @@ class LessonExtrasProgressBubble extends Component {
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        <div style={styles.main}>
-          <span className="fa-stack fa-1x" style={styles.smallStack}>
-            <i className="fa fa-flag fa-stack-1x" style={styles.flagNormal} />
-            <i
-              className="fa fa-flag-checkered fa-stack-1x"
-              style={{
-                ...styles.checkFlagNormal,
-                ...styles.hoverOverlay,
-                ...(onLessonExtras && styles.focused)
-              }}
-            />
-          </span>
-        </div>
+        <LessonExtrasFlagIcon perfect={perfect} />
         <TooltipWithIcon
           tooltipId={tooltipId}
           icon={'flag-checkered'}
@@ -75,5 +44,3 @@ class LessonExtrasProgressBubble extends Component {
     );
   }
 }
-
-export default Radium(LessonExtrasProgressBubble);
