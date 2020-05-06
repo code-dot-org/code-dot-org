@@ -24,6 +24,10 @@
 #
 
 class LevelGroup < DSLDefined
+  serialized_attrs %w(
+    levels_per_page
+  )
+
   def dsl_default
     <<~ruby
       name 'unique level name here'
@@ -84,12 +88,39 @@ class LevelGroup < DSLDefined
 
   def self.setup(data)
     level = super(data)
-    level.update_pages(data[:pages])
+
+    # old way: store pages in property hash
+    level.update!(properties: {pages: data[:pages]})
+
+    # new way: store pages in levels_per_page and child_levels.
+    pages = data[:pages].map do |page|
+      page[:levels].map do |level_name|
+        Level.find_by_name!(level_name)
+      end
+    end
+    level.update_pages(pages)
+
     level
   end
 
+  # @param [Array] pages A 2D array of levels, e.g.
+  #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
   def update_pages(pages)
-    update!(properties: {pages: pages})
+    self.child_levels = []
+    levels = pages.flatten
+    levels.each_with_index do |level, level_index|
+      ParentLevelsChildLevel.find_or_create_by!(
+        parent_level: self,
+        child_level: level,
+        position: level_index + 1
+      )
+    end
+
+    self.levels_per_page = []
+    pages.each do |page_levels|
+      levels_per_page.push(page_levels.count)
+    end
+    save!
   end
 
   def assign_attributes(params)
