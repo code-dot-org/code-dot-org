@@ -108,14 +108,10 @@ class Level < ActiveRecord::Base
     end
   end
 
-  # returns all levels which depend on this level, including itself.
-  def all_depending_levels
-    self + parent_levels
-  end
-
   # returns all scripts which depend on this level.
   def all_scripts
-    script_levels = all_depending_levels.map(&:script_levels).flatten
+    levels = self + parent_levels
+    script_levels = levels.map(&:script_levels).flatten
     script_levels.map(&:script).uniq
   end
 
