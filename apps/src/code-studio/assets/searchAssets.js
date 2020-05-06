@@ -41,7 +41,6 @@ export function searchAssets(
     .reduce((resultSet, nextAlias) => {
       return resultSet.union(assetLibrary.aliases[nextAlias]);
     }, Immutable.Set());
-  console.log(resultSet);
 
   if (categoryQuery !== '' && categoryQuery !== 'category_all') {
     let categoryResultSet = Object.keys(assetLibrary.aliases)
