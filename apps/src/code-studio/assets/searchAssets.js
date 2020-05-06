@@ -23,7 +23,7 @@ export function searchAssets(
   // Example: searchQuery "bar"
   //   Will match: "barbell", "foo-bar", "foo_bar" or "foo bar"
   //   Will not match: "foobar", "ubar"
-  const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
+  const searchRegExp = new RegExp('(?:\\s+|_|^)' + searchQuery, 'i');
 
   // Generate the set of all results associated with all matched aliases
   let resultSet = Object.keys(assetLibrary.aliases)
