@@ -1,16 +1,29 @@
+/* global navigator */
 import React from 'react';
 import msg from '@cdo/locale';
 import cookies from 'js-cookie';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
+import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   closeX: {
     position: 'absolute',
     top: 5,
     right: 5,
-    fontSize: 13
+    fontSize: 13,
+    lineHeight: 0,
+    boxShadow: 'unset',
+    borderWidth: 0,
+    backgroundColor: 'unset',
+    paddingRight: 0,
+    color: color.black,
+    ':hover': {
+      boxShadow: 'unset',
+      backgroundColor: 'unset'
+    }
   }
 };
 
@@ -23,7 +36,7 @@ const HideToolbarHelperCookieName = 'hide_toolbar_helper';
  */
 export default class HideToolbarHelper extends React.Component {
   state = {
-    showHelper: false
+    shouldShowHelper: false
   };
 
   constructor(props) {
@@ -35,11 +48,10 @@ export default class HideToolbarHelper extends React.Component {
     // the cookie so that it isn't shown again...
     this.wasHelperShowing = false;
 
-    // ...but only do these things once.
-    this.didTrackToolbarHide = false;
-
+    this.forceShowHelper = false;
     if (window.location.search.indexOf('force_show_toolbar_helper') !== -1) {
       cookies.remove(HideToolbarHelperCookieName, {path: '/'});
+      this.forceShowHelper = true;
     }
   }
 
@@ -68,18 +80,22 @@ export default class HideToolbarHelper extends React.Component {
     const isHideCookieSet = this.isHideCookieSet();
     const isLandscape = this.isLandscape();
 
-    if (!isiOS13 || !isLandscape || isHideCookieSet) {
-      this.setState({showHelper: false});
+    // Check if our environment is in a state where showing the helper would be
+    // useful. i.e. we are on iOS 13 (or have used the override), are in
+    // landscape, and we haven't hidden due to a cookie
+    if (
+      !((this.forceShowHelper || isiOS13) && isLandscape && !isHideCookieSet)
+    ) {
+      this.setState({shouldShowHelper: false});
       return;
     }
 
-    // We are on iOS 13, in landscape, and we haven't hidden due to a cookie.
     // Let's show the helper if we think the toolbar is showing.
-    const showHelper = this.isToolbarShowing();
+    const shouldShowHelper = this.isToolbarShowing() || this.forceShowHelper;
 
     // If we previously have shown the helper, and aren't now, and it's the
     // first time we've encountered this situation, then do a couple things.
-    if (this.wasHelperShowing && !showHelper && !this.didTrackToolbarHide) {
+    if (this.wasHelperShowing && !shouldShowHelper) {
       // Let's track the disapearance of the toolbar after we had previously
       // shown the helper.
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
@@ -87,19 +103,16 @@ export default class HideToolbarHelper extends React.Component {
       // And also set the cookie so this user doesn't see the helper again
       // for a year.
       this.setHideHelperCookie();
-
-      this.didTrackToolbarHide = true;
     }
 
-    this.wasHelperShowing = showHelper;
-
-    this.setState({showHelper});
+    this.wasHelperShowing = shouldShowHelper;
+    this.setState({shouldShowHelper});
   };
 
   componentDidMount() {
     this.updateLayout();
 
-    this.updateLayoutListener = _.throttle(this.updateLayout, 200);
+    this.updateLayoutListener = _.throttle(this.updateLayout, 1000);
     window.addEventListener('orientationchange', this.updateLayoutListener);
 
     /* These two events catch all viewport changes. */
@@ -117,9 +130,9 @@ export default class HideToolbarHelper extends React.Component {
     document.removeEventListener('scroll', this.updateLayoutListener, false);
   }
 
-  onClick = () => {
+  dismissCallout = () => {
     this.setHideHelperCookie();
-    this.updateLayout();
+    this.setState({shouldShowHelper: false});
 
     // Let's track the click-to-dismiss event.
     trackEvent(
@@ -134,11 +147,20 @@ export default class HideToolbarHelper extends React.Component {
   }
 
   render() {
-    if (this.state.showHelper) {
+    if (this.state.shouldShowHelper) {
       return (
-        <div className="hide_toolbar_helper" onClick={this.onClick}>
+        <div className="hide_toolbar_helper" onClick={this.dismissCallout}>
           <SafeMarkdown markdown={msg.hideToolbarHelper()} />
-          <i className="fa fa-times" style={styles.closeX} />
+          <Button
+            style={styles.closeX}
+            onClick={this.dismissCallout}
+            icon={'times'}
+            color={Button.ButtonColor.white}
+            // Elements that display over minecraft can't use <button> right now
+            // unless they want minecraft styling due to the use of !important
+            // in the minecraft stylesheet.
+            __useDeprecatedTag
+          />
         </div>
       );
     } else {
