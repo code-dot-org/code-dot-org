@@ -678,6 +678,9 @@ vi-VN:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây dựng vài đường ray cho xe chở
           quặng để bạn có thể khám phá thế giới!
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển nhân
+          vật anh hùng của bạn bằng các phím mũi tên!
       Overworld House Frame Chosen:
         mc_6_b: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
           chưa giải được câu đố.
@@ -1092,6 +1095,9 @@ vi-VN:
         courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
           tờ giấy trước.
         courseA_maze_seq10_b: Bạn cần đi 3 hướng khác nhau để giải câu đố này.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
           vẽ đường từ chú chim đến chú lợn.
@@ -1141,6 +1147,8 @@ vi-VN:
           Bạn cần phải sử dụng khối lệnh này:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
       courseA_maze_seq5a_2018:
         '1': Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp
           không.
@@ -1159,6 +1167,10 @@ vi-VN:
         courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
         courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
           chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
       courseA_maze_seq8:
         courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
           chim nên di chuyển như thế nào.
@@ -1166,6 +1178,9 @@ vi-VN:
         courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
           chim nên di chuyển như thế nào.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
           chim nên di chuyển như thế nào.
       courseA_playLab_events2:
@@ -2109,6 +2124,9 @@ vi-VN:
       courseC_starWars_loops7_2019:
         courseC_starWars_loops7_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
           ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ
           hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình
@@ -2219,7 +2237,20 @@ vi-VN:
           thứ hai.
         courseE_artist_functions1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
           của bạn.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều
+          đó có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
+          thứ hai.
+        courseE_artist_functions1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
+          của bạn.
       courseE_artist_functions2:
+        courseD_artist_functions2_a: |-
+          Chương trình của bạn cần:
+
+          -   Dùng hàm\\
+          -   Tiến về phía trước 100 + 75 điểm ảnh
+          -   Dùng hàm
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Chương trình của bạn cần:
 
