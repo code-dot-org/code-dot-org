@@ -191,12 +191,6 @@ const styles = {
   img: {
     width: 150,
     marginTop: 10
-  },
-  listAlign: {
-    marginLeft: 10
-  },
-  sublistAlign: {
-    marginLeft: 20
   }
 };
 
@@ -205,11 +199,7 @@ class WordOrPictureLogins extends React.Component {
     studioUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
-    autoPrint: PropTypes.bool,
-    loginType: PropTypes.oneOf([
-      SectionLoginType.word,
-      SectionLoginType.picture
-    ]).isRequired
+    autoPrint: PropTypes.bool
   };
 
   componentDidMount() {
@@ -243,25 +233,25 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, section, students, loginType} = this.props;
+    const {studioUrlPrefix, section, students} = this.props;
     const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
       <div>
-        <SignInInstructions loginType={loginInfo} />
+        <SignInInstructions loginType={section.loginType} />
         <p>
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
-        {loginType === SectionLoginType.picture && (
+        {section.loginType === SectionLoginType.picture && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretPicDesc({
               url: manageStudentsUrl
             })}
           />
         )}
-        {loginType === SectionLoginType.word && (
+        {section.loginType === SectionLoginType.word && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretWordDesc({
               url: manageStudentsUrl

@@ -21,7 +21,8 @@ const styles = {
 export default class SignInInstructions extends React.Component {
   static propTypes = {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
-    sectionCode: PropTypes.string
+    sectionCode: PropTypes.string,
+    studioUrlPrefix: PropTypes.string
   };
   render() {
     const {loginType, sectionCode, studioUrlPrefix} = this.props;
@@ -91,6 +92,7 @@ export default class SignInInstructions extends React.Component {
               <SafeMarkdown markdown={i18n.signingInClever1a()} />
             </div>
             <p style={styles.sublistAlign}>{i18n.signingInClever1b()}</p>
+            <p style={styles.listAlign}>{i18n.signingInClever2()}</p>
             <img
               style={styles.sublistAlign}
               src="/shared/images/clever_code_org_logo.png"
