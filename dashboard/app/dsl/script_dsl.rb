@@ -18,7 +18,7 @@ class ScriptDSL < BaseDSL
     @hideable_stages = false
     @student_detail_progress_view = false
     @teacher_resources = []
-    @stage_extras_available = false
+    @lesson_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
     @has_lesson_plan = false
@@ -46,7 +46,7 @@ class ScriptDSL < BaseDSL
   boolean :login_required
   boolean :hideable_stages
   boolean :student_detail_progress_view
-  boolean :stage_extras_available
+  boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
@@ -134,7 +134,7 @@ class ScriptDSL < BaseDSL
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
-      stage_extras_available: @stage_extras_available,
+      lesson_extras_available: @lesson_extras_available,
       has_verified_resources: @has_verified_resources,
       has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
@@ -313,7 +313,7 @@ class ScriptDSL < BaseDSL
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
-    s << 'stage_extras_available true' if script.stage_extras_available
+    s << 'lesson_extras_available true' if script.lesson_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
