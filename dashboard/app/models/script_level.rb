@@ -361,7 +361,8 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus(user_id)
+  def summarize_as_bonus(user_id = nil)
+    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
       id: id,
       type: level.type,
@@ -369,7 +370,7 @@ class ScriptLevel < ActiveRecord::Base
       display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: UserLevel.find_by(level: level, user_id: user_id)&.perfect?,
+      perfect: perfect,
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
