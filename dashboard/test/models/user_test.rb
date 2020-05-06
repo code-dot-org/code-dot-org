@@ -3510,9 +3510,9 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'stage_extras_enabled?' do
-    script = create :script, stage_extras_available: true
-    other_script = create :script, stage_extras_available: true
+  test 'lesson_extras_enabled?' do
+    script = create :script, lesson_extras_available: true
+    other_script = create :script, lesson_extras_available: true
     teacher = create :teacher
     student = create :student
 
