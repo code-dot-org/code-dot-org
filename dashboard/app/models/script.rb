@@ -1574,7 +1574,6 @@ class Script < ActiveRecord::Base
       :student_detail_progress_view,
       :project_widget_visible,
       :project_widget_types,
-      :teacher_resources,
       :stage_extras_available,
       :curriculum_path,
       :script_announcements,
@@ -1591,12 +1590,16 @@ class Script < ActiveRecord::Base
       :project_sharing,
       :tts
     ]
+    not_defaulted_keys = [
+      :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
+    ]
 
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
     nonboolean_keys.each {|k| result[k] = script_data[k]}
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!script_data[k]}
+    not_defaulted_keys.each {|k| result[k] = script_data[k] if script_data.keys.include?(k)}
 
     result
   end
