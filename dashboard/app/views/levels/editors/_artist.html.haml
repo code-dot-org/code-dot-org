@@ -28,8 +28,7 @@
   :ruby
     selector = f.select :auto_run, options_for_select([
       ['No', nil],
-      ['Yes, but only for field changes', SharedConstants::ARTIST_AUTORUN_OPTIONS.limited_auto_run],
-      ['Yes, for all code changes', SharedConstants::ARTIST_AUTORUN_OPTIONS.full_auto_run],
+      ['Yes', SharedConstants::ARTIST_AUTORUN_OPTIONS.full_auto_run],
     ], selected: @level.auto_run)
   = selector
 .field
