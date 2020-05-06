@@ -163,7 +163,7 @@ export default class ScriptEditor extends React.Component {
         </label>
         <LessonDescriptions
           scriptName={this.props.name}
-          currentDescriptions={this.props.i18nData.lessonDescriptions}
+          currentDescriptions={this.props.i18nData.stageDescriptions}
         />
         <ScriptAnnouncementsEditor
           defaultAnnouncements={this.props.announcements}
