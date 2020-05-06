@@ -89,6 +89,14 @@ class LevelGroup < DSLDefined
     end
   end
 
+  def self.setup(data)
+    level = super(data)
+    # as a baby step, pull the code for setting pages into LevelGroup, without
+    # changing where they are stored on the level object.
+    level.update!(properties: {pages: data[:pages]})
+    level
+  end
+
   def assign_attributes(params)
     @pages = nil
     super(params)
