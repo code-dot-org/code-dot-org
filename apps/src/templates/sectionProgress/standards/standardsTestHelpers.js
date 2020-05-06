@@ -140,7 +140,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/1',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
       },
       {
@@ -162,7 +162,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/2',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
       },
       {
@@ -185,7 +185,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/3',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/3/extras'
       }
     ]
