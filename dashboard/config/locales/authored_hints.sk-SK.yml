@@ -3705,6 +3705,179 @@ sk-SK:
       New Minecraft Hero Project:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo
           Steve mohli prechádzať za okrajmi mapy.
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'Blok, ktorý potrebuješ pridať sa volá `nastav rýchlosť`. '
+        courseC_flappy_events2_b: Na vyriešenie tejto úlohy, spoj dokopy bloky `nastav
+          rýchlosť` a `pri spustení`.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Ak niečo nefunguje, uisti sa, že tvoje bloky sú
+          na pracovnej ploche pripojené k správnym udalostiam.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Na vyriešenie tejto úlohy, pripoj blok `ukonči hru`
+          k bloku `keď narazí na prekážku`.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Potrebuješ použiť blok `pridaj bod`, aby si prešiel
+          tento level.
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
+          `opakuj`, aby si povedal, koľko krát sa má opakovať.
+        courseF_bee_for1_b: Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral
+          všetok nektár.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: Ak si zmätený, tak pracuj vždy len na jednom kvete a často
+          testuj.
+        courseF_bee_for2_b: Nezabudni sa posunúť dopredu medzi každým cyklom, takže
+          sa dostaneš ku kaźdému kvetu.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide
+          od 1 do 7 so zvyšovaním o 1.
+        courseF_bee_for4_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for4_c: Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom
+          cykle `opakuj`, aby si pozbieral nektár!
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
+          cyklu `opakuj`.
+        courseF_bee_for6_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for6_c: Tvoj cyklus má počítať **od 5 do 1**.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: Tvoj cyklus `for` potrebuje počítať od 1 do 7 počítané
+          po 2.
+        courseF_bee_for7_b: Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu`
+          a cyklus na pozbieranie nektáru.
+        courseF_bee_for7_c: Nezabudni použiť premennú `počítadlo` v tvojom cykle `opakuj`.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Pamätaj, že musíš otočiť umelca o 120
+          stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.
+        grade5_artist_variables_triangles1_b: Použi cyklus `opakuj`, aby si skrátil
+          tvoj kód.
+        grade5_artist_variables_triangles1_c: Vo vnútri tvojho cyklu sa chceš pohnúť
+          dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Nezabudni sa pohnúť dopredu po nakreslení každého
+          trojuholníka.
+        courseF_artist_variables2_b: Tvoj nový cyklus bude obsahovať cyklus pre tvoj
+          trojuholník a potom príkaz `posuň sa dopredu`.
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach
+          v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko
+          sa posunieš medzi trojuholníkmi.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
+          iba na jednom mieste: po bloku `nastav dĺžka na`.'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Je viacero ciest, kotrými môžeš ísť. Ktorá je tá najkratšia?
         mc_8_b: Použi cykly `opakuj`, pre zjednodušenie kódu.
@@ -4933,6 +5106,9 @@ sk-SK:
           papier.
         courseA_maze_seq10_b: Na vyriešenie tejto úlohy, budeš musieť ísť 3 rôznymi
           smermi.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať na
+          papier.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Ak ti nie je jasná cesta, použi svoj prst aby si vystopoval
           kadiaľ sa dostať od vtáčika k prasaťu.
@@ -4987,6 +5163,9 @@ sk-SK:
           Budeš musieť použiť tento blok:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Vyskúšaj si kroky rozpísať na papier, aby si našiel/našla
+          rešenie!
       courseA_maze_seq5a_2018:
         '1': Prečítaj si kroky nahlas a uvidíš či ti to pomôže prísť na odpoveď.
       courseA_maze_seq5a_2019:
@@ -5003,6 +5182,10 @@ sk-SK:
         courseA_maze_seq6_a: Tvoj výsledný kód by mal mať tri pohybové bloky.
         courseA_maze_seq6_b: Ak sa zasekneš, vyskúšaj úlohu vyriešiť v dvoch častiach,
           prvá pred zabočením a druhá po zabočení.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Tvoj výsledný kód by mal mať tri pohybové bloky.
+        courseA_maze_seq6_b: Ak sa zasekneš, vyskúšaj úlohu vyriešiť v dvoch častiach,
+          prvá pred zabočením a druhá po zabočení.
       courseA_maze_seq8:
         courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
           a uvidíš kam by sa vtáčik mal pohnúť.
@@ -5010,6 +5193,9 @@ sk-SK:
         courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
           a uvidíš kam by sa vtáčik mal pohnúť.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
+          a uvidíš kam by sa vtáčik mal pohnúť.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Ak to nejde ďalej, vyskúšaj si to nakresliť na papier,
           a uvidíš kam by sa vtáčik mal pohnúť.
       courseA_playLab_events2:
@@ -8850,6 +9036,9 @@ sk-SK:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Na opakovanie kódu vytiahni cyklus `opakuj`, a
           potom vlož dovnútra blok, ktorý chceš.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Na opakovanie kódu vytiahni cyklus `opakuj`, a
+          potom vlož dovnútra blok, ktorý chceš.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Stlačením malej šípky vedľa slova "vľavo" na bloku
           otoč sa, zmeníš smer na "vpravo".
@@ -8868,6 +9057,12 @@ sk-SK:
         courseC_starWars_loops4_a: Použi dva bloky `opakuj`.
         courseC_starWars_loops4_b: 'Každý cyklus `opakuj` bude mať vo vnútri len jeden
           príkaz: `posuň sa dopredu`.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Stlačením malej šípky vedľa slova "vľavo" na bloku
+          otoč sa, zmeníš smer na "vpravo".
+        courseC_starWars_loops4_a: Použi dva bloky `opakuj`.
+        courseC_starWars_loops4_b: 'Každý cyklus `opakuj` bude mať vo vnútri len jeden
+          príkaz: `posuň sa dopredu`.'
       courseC_starWars_loops5:
         courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
           pohnúť dopredu.
@@ -8879,6 +9074,11 @@ sk-SK:
       courseC_starWars_loops5_2019:
         courseC_starWars_loops5_a: Najlepší výsledok dosiahneš cez jeden príkaz `posuň
           sa dopredu`, potom príkaz otočiť, a potom cyklus.
+      courseC_starWars_loops5_copy:
+        courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
+          pohnúť dopredu.
+        courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
+          blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
           krokov, ktorá sa opakuje.
@@ -8890,6 +9090,11 @@ sk-SK:
         courseC_starWars_loops6_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
           cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
+          krokov, ktorá sa opakuje.
+        courseC_starWars_loops6_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
           krokov, ktorá sa opakuje.
         courseC_starWars_loops6_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
@@ -8915,6 +9120,13 @@ sk-SK:
           kroky na papier a skús nájsť skupinu krokov, ktorá sa opakuje.
         courseC_starWars_loops7_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Tento vzor je jednoduchší. ako sa zdá! Začni jedným
+          schodom. Pokryje to všetok šrot?
+        courseC_starWars_loops7_b: Ak máš s touto úlohou problémy, zapíš si všetky
+          kroky na papier a skús nájsť skupinu krokov, ktorá sa opakuje.
+        courseC_starWars_loops7_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
+          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseC_starWars_loops8:
         course_starWars_loops8_a: Skús o probléme premýšľať po častiach. Máš čas,
           nemusíš nájsť riešenie hneď na prvý pokus!
@@ -8934,6 +9146,15 @@ sk-SK:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Skús o probléme premýšľať po častiach. Máš čas,
+          nemusíš nájsť riešenie hneď na prvý pokus!
+        course_starWars_loops8_b: Prvá časť problému sa podobá úlohe so schodami.
+          Ako ju bolo treba riešiť?
+        course_starWars_loops8_c: |-
+          Pozri na túto cestu.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Skús o probléme premýšľať po častiach. Máš čas,
           nemusíš nájsť riešenie hneď na prvý pokus!
         course_starWars_loops8_b: Prvá časť problému sa podobá úlohe so schodami.
@@ -9677,6 +9898,14 @@ sk-SK:
           `ak`.
         courseD_bee_conditionals2_c: Nemusíš kontrolovať včelie plásty, pod oblakmi
           budú len kvety, alebo nič.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_a: Niekedy sa tam kvet bude nachádzať a niekedy
+          nie. Ak chceš, aby tvoj kód fungoval v oboch prípadoch, určite použi podmienku
+          `ak`.
+        courseD_bee_conditionals2_b: Môžeš použiť cyklus `opakuj`, alebo `pokiaľ tam
+          je cesta vpred`, aby si sa dostal cez toto bludisko.
+        courseD_bee_conditionals2_c: Nemusíš kontrolovať včelie plásty, pod oblakmi
+          budú len kvety, alebo nič.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
           miestečko a zisti, či sa tam nachádza kvet, alebo nič.
@@ -9696,6 +9925,14 @@ sk-SK:
       courseD_bee_conditionals3_2019:
         courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
           miestečko a zisti, či sa tam nachádza kvet, alebo nič.
+        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
+          úlohu.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
+          miestečko a zisti, či sa tam nachádza kvet, alebo nič.
+        courseD_bee_conditionals3_b: Môžeš použiť cyklus `opakuj` alebo \`pokiaľ,
+          aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
@@ -9720,6 +9957,14 @@ sk-SK:
           ním oblak, napriek tomu, že vidíš celú cestu.
         courseD_bee_conditionals4_b: V cykle použi podmienku  `ak` a skontroluj každé
           pole, či sa tam nachádza nektár.
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_a: Ku každému políčku pristupuj tak, akoby bol nad
+          ním oblak, napriek tomu, že vidíš celú cestu.
+        courseD_bee_conditionals4_b: V cykle použi podmienku  `ak` a skontroluj každé
+          pole, či sa tam nachádza nektár.
+        courseD_bee_conditionals4_c: Použitím  bloku <xml><block type="maze_untilBlocked"/></xml>
+          by si sa mal posunúť vpred a skontrolovať kvet. Ak je tam kvet, čo by mala
+          včela spraviť?
       courseD_bee_conditionals5_2018:
         courseD_bee_conditionals5_a: Predstav si každú stranu obdĺžnika ako samostatnú
           cestu. Nastav zvonku vnorený cyklus s blokom `opakuj` a zvnútra cyklus `ak
@@ -10031,7 +10276,7 @@ sk-SK:
       courseD_bounce_events5s_2018:
         courseD_bounce_events5s_a: Na vyriešenie tejto úlohy nepotrebuješ hýbať rukou.
         courseD_bounce_events5s_b: |-
-          Skontroluj, či si pridali tento kód na svoju pracovnú plochu:
+          Skontroluj, či je tento kód pridaný na tvojej pracovnej ploche:
 
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2019:
@@ -10045,14 +10290,14 @@ sk-SK:
           Máš vo svojom kóde takúto udalosť?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
-        courseD_bounce_events6s_b: Ak si napísal kód správne, nemusíš už ani pohnúť
+        courseD_bounce_events6s_b: Ak je kód napísaný správne, nemusíš už ani pohnúť
           prstom a vyhráš.
       courseD_bounce_events6s_2019:
         courseD_bounce_events6s_a: |-
           Máš vo svojom kóde takúto udalosť?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
-        courseD_bounce_events6s_b: Ak si napísal kód správne, nemusíš už ani pohnúť
+        courseD_bounce_events6s_b: Ak je kód napísaný správne, nemusíš už ani pohnúť
           prstom a vyhráš.
       courseD_bounce_events7s_2018:
         courseD_bounce_events7s_a: Ak chceš, môžeš pridať zvuky aj na viacerých miestach!
@@ -11300,6 +11545,27 @@ sk-SK:
         courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
+      courseE_artist_functions10:
+        courseD_artist_functions10_b: Táto kresba je veľmi podobná ako predchádzajúca,
+          ale funkcia `nakresli čiaru` teraz kreslí iný tvar.
+        courseD_artist_functions10_a: Aby si nemusel viackrát použiť  bloky `posuň
+          sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.
+        courseD_artist_functions10_c: Vidíš, kde by táto kresba mohla použiť funkciu
+          nazvanú `rad šesťuholníkov`?
+      courseE_artist_functions10_2018:
+        courseD_artist_functions10_b: Táto kresba je veľmi podobná ako predchádzajúca,
+          ale funkcia `nakresli čiaru` teraz kreslí iný tvar.
+        courseD_artist_functions10_a: Aby si nemusel viackrát použiť  bloky `posuň
+          sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.
+        courseD_artist_functions10_c: Vidíš, kde by táto kresba mohla použiť funkciu
+          nazvanú `rad šesťuholníkov`?
+      courseE_artist_functions10_2019:
+        courseD_artist_functions10_b: Táto kresba je veľmi podobná ako predchádzajúca,
+          ale funkcia `nakresli čiaru` teraz kreslí iný tvar.
+        courseD_artist_functions10_a: Aby si nemusel viackrát použiť  bloky `posuň
+          sa dopredu`, vytvor funkciu `nakresli šesťuholník` a zavolaj ju viac krát.
+        courseD_artist_functions10_c: Vidíš, kde by táto kresba mohla použiť funkciu
+          nazvanú `rad šesťuholníkov`?
       courseE_artist_functions2_2018:
         courseD_artist_functions2_b: Funkcia by nemala obsahovať celý prgram, iba
           tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.
@@ -11326,28 +11592,89 @@ sk-SK:
           -   Použiť tvoju funkciu
           -   Posunúť sa dopredu 100 + 75 pixelov
           -   Znova použiť tvoju funkciu
+      courseE_artist_functions5:
+        courseD_artist_functions5_a: Nevzdávaj sa! Pamätaj, na to, čo si sa učil.
+        courseD_artist_functions5_b: 'Funkcie umožnujú zavolať uložený kód kedykoľvek,
+          nie len z vnútra cyklu. '
       courseE_artist_functions5_2018:
+        courseD_artist_functions5_a: Nevzdávaj sa! Pamätaj, na to, čo si sa učil.
+        courseD_artist_functions5_b: 'Funkcie umožnujú zavolať uložený kód kedykoľvek,
+          nie len z vnútra cyklu. '
         courseD_artist_functions5_c: Začni vytvorením funkcie `nakresli hviezdu`,
           potom túto funkciu použi na nakreslenie 3 hviezd!
       courseE_artist_functions5_2019:
+        courseD_artist_functions5_a: Nevzdávaj sa! Pamätaj, na to, čo si sa učil.
+        courseD_artist_functions5_b: 'Funkcie umožnujú zavolať uložený kód kedykoľvek,
+          nie len z vnútra cyklu. '
         courseD_artist_functions5_c: Začni vytvorením funkcie `nakresli hviezdu`,
           potom túto funkciu použi na nakreslenie 3 hviezd!
+      courseE_artist_functions5_copy:
+        courseD_artist_functions5_a: Nevzdávaj sa! Pamätaj, na to, čo si sa učil.
+        courseD_artist_functions5_b: 'Funkcie umožnujú zavolať uložený kód kedykoľvek,
+          nie len z vnútra cyklu. '
       courseE_artist_functions6:
         grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
           bloky a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil
           celú úlohu.
+      courseE_artist_functions7:
+        courseD_artist_functions7_a: Najskôr skús vytvoriť funkciu a potom naraz pridaj
+          okná.
       courseE_artist_functions7_2018:
+        courseD_artist_functions7_a: Najskôr skús vytvoriť funkciu a potom naraz pridaj
+          okná.
         courseD_artist_functions7_b: Aby si sa dostal/a od vrchných okien ku spodným,
           otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz
           umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!
       courseE_artist_functions7_2019:
+        courseD_artist_functions7_a: Najskôr skús vytvoriť funkciu a potom naraz pridaj
+          okná.
         courseD_artist_functions7_b: Aby si sa dostal/a od vrchných okien ku spodným,
           otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz
           umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!
+      courseE_artist_functions8:
+        courseD_artist_functions8_f: Budeš potrebovať len jeden blok  `posuň sa dopredu`,
+          ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.
+        courseD_artist_functions8_a: Začni s tým, že vytvoríš funkciu pre štvorec,
+          potom skús vytvoriť funkciu pre radu štvorcov.
+        courseD_artist_functions8_d: |-
+          Na vytvorenie rady štvorcov,
+
+          -   zopakuj 3-krát
+              -   nakresli štvroec
+              -   posuň sa dopredu o **100 pixelov**
+        courseD_artist_functions8_b: Uvažuj o každom riadku v tomto obrázku ako o
+          čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich
+          kresliť?
       courseE_artist_functions8_2018:
+        courseD_artist_functions8_f: Budeš potrebovať len jeden blok  `posuň sa dopredu`,
+          ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.
+        courseD_artist_functions8_a: Začni s tým, že vytvoríš funkciu pre štvorec,
+          potom skús vytvoriť funkciu pre radu štvorcov.
+        courseD_artist_functions8_d: |-
+          Na vytvorenie rady štvorcov,
+
+          -   zopakuj 3-krát
+              -   nakresli štvroec
+              -   posuň sa dopredu o **100 pixelov**
+        courseD_artist_functions8_b: Uvažuj o každom riadku v tomto obrázku ako o
+          čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich
+          kresliť?
         courseD_artist_functions8_c: 'Na konci každého striedavého radu štvorcov,
           pred začatím nového radu, umelec potrebuje skočiť dole a späť. '
       courseE_artist_functions8_2019:
+        courseD_artist_functions8_f: Budeš potrebovať len jeden blok  `posuň sa dopredu`,
+          ale budeš potrebovať niekoľko blokov `skoč dopredu` a/alebo `skoč dozadu`.
+        courseD_artist_functions8_a: Začni s tým, že vytvoríš funkciu pre štvorec,
+          potom skús vytvoriť funkciu pre radu štvorcov.
+        courseD_artist_functions8_d: |-
+          Na vytvorenie rady štvorcov,
+
+          -   zopakuj 3-krát
+              -   nakresli štvroec
+              -   posuň sa dopredu o **100 pixelov**
+        courseD_artist_functions8_b: Uvažuj o každom riadku v tomto obrázku ako o
+          čiare z 3 štvorcov. Koľko je tam čiar zo štvorcov a kde začneš každú z nich
+          kresliť?
         courseD_artist_functions8_c: 'Na konci každého striedavého radu štvorcov,
           pred začatím nového radu, umelec potrebuje skočiť dole a späť. '
       courseE_artist_functions8b_2018:
@@ -11388,22 +11715,133 @@ sk-SK:
         courseD_artist_functions8_c: Na konci každého radu štvorcov, pred začatím
           nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra
           opakovacieho cyklu, aby si sa priparavil/a na ďalšie cvičenie!
+      courseE_artist_functions9:
+        courseD_artist_functions9_e: Môžeš nájsť všetky štyri miesta, kde pri kreslení
+          môže byť použitý `rad trojuholníkov`?
+        courseD_artist_functions9_a: |-
+          Táto úloha môže byť rozdelená na 3 časti:
+
+          -   vytvor funkciu `nakresli trojuholník`
+          -   vytvor funkciu `nakresli rad trojuholníkov`
+          -   použi svoju funkciu  `nakresli rad trojuholníkov` 4-krát na dokončenie kresby
+        courseD_artist_functions9_b: Táto kresba je vytvorená kresbou radu trojuholníkov
+          4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš
+          ďalší rad trojuholníkov.
+        courseD_artist_functions9_c: |-
+          Nakresli rad trojuholníkov:
+
+          -   opakuj 4-krát
+          -   nakresli trojuholník
+          -   skoč vpred o 50 pixelov
+        courseD_artist_functions9_d: |-
+          Narkesli diamant:
+
+          -   opakuj 2-krát
+          -   nakresli rad trojuholníkov
+          -   otoč o 60 stupňov
+          -   nakresli rad trojuholníkov
+          -   otoč o 120 stupňov
+      courseE_artist_functions9_2018:
+        courseD_artist_functions9_e: Môžeš nájsť všetky štyri miesta, kde pri kreslení
+          môže byť použitý `rad trojuholníkov`?
+        courseD_artist_functions9_a: |-
+          Táto úloha môže byť rozdelená na 3 časti:
+
+          -   vytvor funkciu `nakresli trojuholník`
+          -   vytvor funkciu `nakresli rad trojuholníkov`
+          -   použi svoju funkciu  `nakresli rad trojuholníkov` 4-krát na dokončenie kresby
+        courseD_artist_functions9_b: Táto kresba je vytvorená kresbou radu trojuholníkov
+          4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš
+          ďalší rad trojuholníkov.
+        courseD_artist_functions9_c: |-
+          Nakresli rad trojuholníkov:
+
+          -   opakuj 4-krát
+          -   nakresli trojuholník
+          -   skoč vpred o 50 pixelov
+        courseD_artist_functions9_d: |-
+          Narkesli diamant:
+
+          -   opakuj 2-krát
+          -   nakresli rad trojuholníkov
+          -   otoč o 60 stupňov
+          -   nakresli rad trojuholníkov
+          -   otoč o 120 stupňov
+      courseE_artist_functions9_2019:
+        courseD_artist_functions9_e: Môžeš nájsť všetky štyri miesta, kde pri kreslení
+          môže byť použitý `rad trojuholníkov`?
+        courseD_artist_functions9_a: |-
+          Táto úloha môže byť rozdelená na 3 časti:
+
+          -   vytvor funkciu `nakresli trojuholník`
+          -   vytvor funkciu `nakresli rad trojuholníkov`
+          -   použi svoju funkciu  `nakresli rad trojuholníkov` 4-krát na dokončenie kresby
+        courseD_artist_functions9_b: Táto kresba je vytvorená kresbou radu trojuholníkov
+          4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš
+          ďalší rad trojuholníkov.
+        courseD_artist_functions9_c: |-
+          Nakresli rad trojuholníkov:
+
+          -   opakuj 4-krát
+          -   nakresli trojuholník
+          -   skoč vpred o 50 pixelov
+        courseD_artist_functions9_d: |-
+          Narkesli diamant:
+
+          -   opakuj 2-krát
+          -   nakresli rad trojuholníkov
+          -   otoč o 60 stupňov
+          -   nakresli rad trojuholníkov
+          -   otoč o 120 stupňov
       courseE_artist_ramp9:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseE_bee_concept1:
+        courseE_bee_concept1_b: Vidíš nejaké vzory, ktoré sa tu _opakujú_?
+        courseE_bee_concept1_a: 'Ak nerozumieš ako sa používajú vnorené cykly, skús
+          si vypísať inštrukcie krok po kroku na kúsok papiera. Zakrúžkuj vzor, ktorý
+          vidíš. '
+      courseE_bee_concept1_2018:
+        courseE_bee_concept1_b: Vidíš nejaké vzory, ktoré sa tu _opakujú_?
+        courseE_bee_concept1_a: 'Ak nerozumieš ako sa používajú vnorené cykly, skús
+          si vypísať inštrukcie krok po kroku na kúsok papiera. Zakrúžkuj vzor, ktorý
+          vidíš. '
+      courseE_bee_concept2:
+        courseE_bee_concept2_a: Pomohol by tu cyklus  `pokiaľ`?
+        courseE_bee_concept2_b: Môžeš použiť cyklus `pokiaľ`, aby si sa dostal na
+          koniec cesty a pozberal med z každého miesta.
+        courseE_bee_concept2_c: Kam by sa mala včela otočiť  po každej ceste?
       courseE_bee_concept2_2018:
+        courseE_bee_concept2_a: Pomohol by tu cyklus  `pokiaľ`?
         courseE_bee_concept2_d: S týmto cyklom `pokiaľ` dokážeš skontrolovať aj prázdne
           miesta a zistiť či je hodnota medu > 0. Toto vykoná to isté ako cyklus `pokiaľ
           tam je med`.
+        courseE_bee_concept2_b: Môžeš použiť cyklus `pokiaľ`, aby si sa dostal na
+          koniec cesty a pozberal med z každého miesta.
+        courseE_bee_concept2_c: Kam by sa mala včela otočiť  po každej ceste?
       courseE_bee_concept3:
         courseE_bee_concept3a_a: Vyskúšaj použiť vnorené cykly `opakuj`, aby si túto
           úlohu vyriešil.
+        courseE_bee_concept3a_b: Ak nemôžeš prísť na to, kam vložiť cykly, pokús sa
+          napísať kód krok za krokom a hľadaj vzory.
       courseE_bee_concept3_2018:
         courseE_bee_concept3a_a: Vyskúšaj použiť vnorené cykly `opakuj` alebo `pokiaľ`,
           aby si vyriešil túto úlohu.
+        courseE_bee_concept3a_b: Ak nemôžeš prísť na to, kam vložiť cykly, pokús sa
+          napísať kód krok za krokom a hľadaj vzory.
+      courseE_farmer_concept1:
+        courseE_farmer_concept1_a: Blok `pokiaľ tam je jama` ti pomôže naplniť jamu
+          až po okraj.
+        courseE_farmer_concept1_b: Môžeš použiť vzor ako keď kráčas po schodoch, aby
+          si sa dostal k jamám.
+      courseE_farmer_concept1_2018:
+        courseE_farmer_concept1_a: Blok `pokiaľ tam je jama` ti pomôže naplniť jamu
+          až po okraj.
+        courseE_farmer_concept1_b: Môžeš použiť vzor ako keď kráčas po schodoch, aby
+          si sa dostal k jamám.
       courseE_farmer_concept3:
         grade3_robotFarmer_ConditionalsIntro_8_a: Blok `pokiaľ tam je cesta vpred`
           ti umožnuje pokračovať, i keď nevieš koľko štvorcov má cesta.
@@ -11438,12 +11876,25 @@ sk-SK:
           Dokážeš povedať čo robí?
         courseE_farmer_functions1a_b: Dostaň sa k tekvici a použi na to blok `opakuj
           pokiaľ neplatí`.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions2b_b: Na spájajúcom chodiníku nie je žiadna kukurica,
+          takže sa môžeš posunúť a otočiť sa.
+        courseE_farmer_functions2b_c: Aby si pozberal celú úrodu, budeš potrebovať
+          2 separátne bloky `opakuj pokiaľ neplatí`.
       courseE_farmer_functions2b_2018:
         courseE_farmer_functions2b_a: Môžeš použiť  `opakuj pokiaľ tam sú tekvice`,
           aby si sa dostal na koniec oboch ciest.
+        courseE_farmer_functions2b_b: Na spájajúcom chodiníku nie je žiadna kukurica,
+          takže sa môžeš posunúť a otočiť sa.
+        courseE_farmer_functions2b_c: Aby si pozberal celú úrodu, budeš potrebovať
+          2 separátne bloky `opakuj pokiaľ neplatí`.
       courseE_farmer_functions2b_2019:
         courseE_farmer_functions2b_a: Môžeš použiť  `opakuj pokiaľ tam sú tekvice`,
           aby si sa dostal na koniec oboch ciest.
+        courseE_farmer_functions2b_b: Na spájajúcom chodiníku nie je žiadna kukurica,
+          takže sa môžeš posunúť a otočiť sa.
+        courseE_farmer_functions2b_c: Aby si pozberal celú úrodu, budeš potrebovať
+          2 separátne bloky `opakuj pokiaľ neplatí`.
       courseE_farmer_functions2ba_2018:
         courseE_farmer_functions2ba_a: Použi zelený blok `získaj všetky tekvice`,
           aby si určite všetky pozbieral/a!

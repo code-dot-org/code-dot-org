@@ -470,6 +470,7 @@ de:
         CSF_scrat_loops_CF: Schleifen in Ice Age
         CSF_if_allskins: Der Wenn-Block
         CSF_ifelse_allskins: Verwendung von Wenn/Sonst-Bausteinen
+        CSF_ifelseifelse_allskins: Nutzung von if-then-else Blöcken
         CSF_loops_AB: Schleifen
         csd_gamelab_booleans: Boolesche Ausdrücke
         csd_gamelab_conditional_statements: Bedingte Anweisungen
@@ -480,6 +481,7 @@ de:
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Aktion
         CSF_StarWars_ProjectIntro: Einführung in das Star Wars Projekt
         mc_2018_intro: 'Minecraft: Voyage Aquatic Einführung'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic wiederholen bis'
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic Bedingungen'
         mc_2018_closing: 'Minecraft: Voyage Aquatic Glückwunsch'
         hoc_dance_warmup: Tanzparty- Aufwärmen
@@ -493,8 +495,15 @@ de:
         what_is_cs: Was ist Informatik?
         repeat_block: Benutze den Wiederholungsblock
         lesson_planning: Unterrichtsplanung
+        opd_closing: 'Informatik-Grundlagenunterricht: Abschluss & nächste Schritte'
+        why_unplugged_lessons: Wie werde ich "unplugged"
         writing_first_program: Schreibe dein erstes Computerprogramm
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lektion über Aktion - Songwriting mit Funktionen
         what_is_an_event: Was ist ein Ereignis?
+        teaching_cs_pair_programming: 'Informatik-Grundlagenunterricht: Paarprogrammierung'
+        teaching_problem_solving: 'Informatik-Grundlagenunterricht: Unterricht in Problembehebung'
+        csd_applab_designmode: 'Informatik Entdeckungen: App Lab - Entwurfsmodus'
         csd_pair_programming: Paarprogrammierung
         csd_gamelab_functions: Aufrufen und Definieren von Funktionen
         csd_applab_parameters: Funktionen mit Parametern
@@ -506,6 +515,12 @@ de:
         csd_debugging: Debugging
         csd_applab_designmode_short: App-Labor - Designmodus
         csp-pd-welcome: Willkommen in der Familie!
+        CSF-Teaching-Problem-Solving: CSF Problemlösungskurs
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot-Video - Datenblock
+        u7-libraries-explanation: 'App Lab: Baue deine eigenen Blöcke - wie du Bibliotheken benutzen kannst'
+        how-to-k5-workshops: 'Code.org''s Informatikgrundlagen: mit jungen Menschen getestet und von Lehrern genehmigt'
+        why-should-teach-unplugged-activities: 'FAQ: Warum sollte ich "unplugged"-Aktivitäten unterrichten?'
+        cs-principles-intro-to-objects: 'Informatikprinzipien: Einführung in Objekte'
         oceans_machine_learning: Maschinelles Lernen
         oceans_training_data: Trainingsdaten
         oceans_societal_implications: Gesellschaftliche Auswirkungen
@@ -514,8 +529,15 @@ de:
         hoc_dance_events_2019: Tanzparty 2019- Events
         hoc_dance_measures_2019: Tanzparty 2019-Takte
         hoc_dance_properties_2019: Tanzparty 2019- Eigenschaften
+        csd_what_computers_do: Was tun Computer eigentlich?
         csf_my_online_neighborhood_2020: Meine Online-Nachbarschaft
+        csf_follow_the_digital_trail: Folge der digitalen Spur
         csd_what_computers_are: Was ist ein Computer?
+        codebreak_e01: 'Code Break 1.0: Algorithmen mit Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototypen mit Mark Cuban und Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Verschlüsselung mit Ashton Kutcher and Mia Gil Epner'
+        codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

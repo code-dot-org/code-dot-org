@@ -349,6 +349,17 @@ ga-IE:
           a rith
         sign_in_to_save_project: Ar mhaith leat teacht ar do thionscadal ar ball?
           Logáil isteach chun an cód seo a shábháil i do chuntas!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Gheobhaidh tú an lúb "do gach" anseo!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Treoraigh an t-aisteoir don bhratach seo chun
+          dul ar aghaidh go dtí an chéad leibhéal eile.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach
+          nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna
+          'mata' seo a tharraingt amach agus a bhogadh thart!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Úsáid é seo chun luach na hathróige "fad" a shocrú
       Overworld Chop Trees:
         craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc
           sa chlár cheana
@@ -728,6 +739,9 @@ ga-IE:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán
           seo.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán
+          seo.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Ní gá dathanna a úsáid chun an dúshlán seo
           a chríochnú. Ach tá sé éasca leis an mbloc "dath randamach"!
@@ -752,6 +766,11 @@ ga-IE:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
           an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
+          an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+        4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun leid
+          FÍSE a fháil!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó
           mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
@@ -860,6 +879,9 @@ ga-IE:
       courseE_artist_functions1:
         courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
           an chéad chearnóg a chruthú.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
+          an chéad chearnóg a chruthú.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann
           an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
@@ -869,6 +891,10 @@ ga-IE:
           an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
           tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann
+          an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
+          tar éis dó an chéad chearnóg a tharraingt?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann
           an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh
           tar éis dó an chéad chearnóg a tharraingt?

@@ -995,6 +995,58 @@ zh-TW:
 
         如果要依次收集 3、6、9、12、15 個花蜜，要在每次的數字後加多少呢？
       New Minecraft Hero Project: "**自由發揮：** 現在換你表現囉，在 Agent 上編程來探索這個世界。"
+      OPD-K5-events-2: "將`揮動正常幅度`積木放到`點擊時`事件下，然後按「運行」。   \n\n* * *\n\n點擊或按一下遊戲區來將
+        Flappy 移動到目標。"
+      OPD-K5-events-3: |-
+        `運行時`事件允許你在遊戲開始時立即運行代碼。
+
+        嘗試添加一個積木，該積木在按下「運行」按鈕時會設定關卡速度。
+
+        * * *
+
+        開始遊戲，然後向目標揮動翅膀來繼續。
+      OPD-K5-events-4: |-
+        現在，我們已經添加了地面。
+
+        將`結束遊戲`積木添加到`碰到地面`事件上。
+
+        * * *
+
+        開始遊戲，然後讓小鳥撞到地面來繼續。
+      OPD-K5-events-5: 如果不編寫代碼使 Flappy 發生碰撞，它會直接穿透障礙。在`碰到障礙`事件上添加一個積木，這樣當 Flappy 撞到第一組水管時遊戲結束。
+      OPD-K5-events-6: 我們添加了一個計分板，用來在 Flappy 越過障礙時計分。在`通過障礙`事件上添加得分的積木，然後按「運行」使 Flappy
+        穿過第一組水管。
+      OPD-K5-forloops-2: |-
+        編寫代碼，幫助蜜蜂採集所有的花蜜。
+
+        您將需要很多模塊來應對這一挑戰，但我們將在下個關卡中學習一種更簡單的方法。
+      OPD-K5-forloops-6: 您也可以使用「for」迴圈來倒數。嘗試透過從**5**逐**個**倒數到**1**來收集這種花蜜。
+      OPD-K5-forloops-7: |-
+        您的「for」迴圈中的最後一個數字稱為**「增量」 \*\*。 每次運行迴圈時，計數器變數都會隨著**增量\*\*值的變化而變化。
+
+        嘗試使用**增量**為2來收集這些花朵。
+      OPD-K5-projects-2: |-
+        你學到了這麼多東西，真是太神奇了！讓我們一步一步來進行遊戲。
+
+        在工具箱中使用新的積木，選擇新的背景，然後挑選一名角色加入你的遊戲。
+      OPD-K5-projects-4: |-
+        讓我們在遊戲中添加更多角色吧！
+
+        使用`設定角色`積木添加更多角色，然後移至目標即可完成此關卡。
+      OPD-K5-projects-7: 大功告成！現在，你可以開始遊戲或與你的朋友和同學分享了！
+      OPD-K5-variables-1: |-
+        讓我們來畫一個等邊三角形。
+
+        每條邊的長度必須正好是50畫素。
+      OPD-K5-variables-2: |-
+        現在使用另一個迴圈來畫三個那種三角形，讓它們彼此相鄰。
+
+        您可以從您上一個難題裡面嵌套代碼。
+      OPD-K5-variables-5: |-
+        在事情變複雜前，您能將50畫素的長度移動到一個變量中，以便我們在接下來的幾個難題中可以使用它嗎？
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      OPD-K5-variables-6: 現在，使用「length」變數使藝術家在三角形之間以「length」畫素向前或向下跳躍。
       Overworld Chop Tree: 木材是非常重要的資源，很多東西都是用它做的。走到樹木前面，使用「destroy」（摧毀）模塊指令把它砍倒。
       Overworld Chop Tree_2019: 木材是非常重要的資源，很多東西都是用它做的。走到樹木前面，使用「destroy」（摧毀）模塊指令把它砍倒。
       Overworld House Frame Chosen: 使用您喜歡的任何材料建造房子的其餘部份。「repeat」指令會派上用場。
@@ -1363,6 +1415,10 @@ zh-TW:
         **挑戰：** 繞過 TNT 炸藥，讓鳥抓到豬！
 
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+      courseA_maze_seq10_copy: |-
+        **挑戰：** 繞過 TNT 炸藥，讓鳥抓到豬！
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         移動以讓鳥抓到猪。
 
@@ -1398,13 +1454,25 @@ zh-TW:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: 測試一下吧。
       courseA_maze_seq5_2019: 測試一下吧。
+      courseA_maze_seq5_copy: |-
+        在開始時試試這個。
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq6: |-
         移動以讓鳥抓到這頭豬！
 
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq6_2019: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
+      courseA_maze_seq6_copy: |-
+        移動以讓鳥抓到這頭豬！
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        想一想少了什麼，然後添加一些積木讓鳥抓到這頭豬！
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         想一想少了什麼，然後添加一些積木讓鳥抓到這頭豬！
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -1414,6 +1482,10 @@ zh-TW:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: 完成這個關卡，讓鳥抓到這頭豬！
       courseA_maze_seq8_2019: 完成這個關卡，讓鳥抓到這頭豬！
+      courseA_maze_seq8_copy: |-
+        完成這個關卡，讓鳥抓到猪！
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **挑戰：** 找出這個關卡的錯誤，添加積木讓鳥抓到這頭豬！
 
@@ -2445,6 +2517,10 @@ zh-TW:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「去吧，BB-8！」_
 
         要獲得所有廢金屬，請嘗試創建一個迴圈，`重複`積木內部僅使用一個積木。
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「去吧，BB-8！」_
+
+        要獲得所有廢金屬，請嘗試創建一個迴圈，`重複`積木內部僅使用一個積木。
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「繼續加油，BB-8。」_
 
@@ -2457,11 +2533,17 @@ zh-TW:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「繼續加油，BB-8。」_
 
         在這個關卡中，用兩個`重複`迴圈可以幫助你用最少的積木數量讓 BB-8 獲取所有廢金屬！
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「繼續加油，BB-8。」_
+
+        在這個關卡中，用兩個`重複`迴圈可以幫助你用最少的積木數量讓 BB-8 獲取所有廢金屬！
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「你能全部收集到嗎？」_
@@ -2472,6 +2554,10 @@ zh-TW:
 
         迴圈內部甚至可以使用多個積木！你可以迴圈執行這個序列嗎？
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「你能全部收集到嗎？」_
+
+        迴圈內部甚至可以使用多個積木！你可以迴圈執行這個序列嗎？
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _「你能全部收集到嗎？」_
 
         迴圈內部甚至可以使用多個積木！你可以迴圈執行這個序列嗎？
@@ -2487,6 +2573,10 @@ zh-TW:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_「你可以做到！」_
 
         你能不能只用一個迴圈就獲得所有廢金屬？嘗試各種編寫程式的辦法，然後找到要迴圈的重複代碼。
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_「你可以做到！」_
+
+        你能不能只用一個迴圈就獲得所有廢金屬？嘗試各種編寫程式的辦法，然後找到要迴圈的重複代碼。
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_「繼續加油，BB-8。」_
 
@@ -2496,6 +2586,10 @@ zh-TW:
 
         **挑戰：**將最後幾個關卡中的點子結合起來，通過這個關卡。
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_「繼續加油，BB-8。」_
+
+        **挑戰：**將最後幾個關卡中的點子結合起來，通過這個關卡。
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_「繼續加油，BB-8。」_
 
         **挑戰：**將最後幾個關卡中的點子結合起來，通過這個關卡。
@@ -2958,6 +3052,10 @@ zh-TW:
         _「這雲擋住了我的視線 ！」_
 
         檢查看看雲下面是不是有花，如果有，就採集花蜜。
+      courseD_bee_conditionals1_predict1_copy: |-
+        _「這雲擋住了我的視線 ！」_
+
+        檢查看看雲下面是不是有花，如果有，就採集花蜜。
       courseD_bee_conditionals2: |-
         更多的雲朵！
 
@@ -2976,9 +3074,16 @@ zh-TW:
         在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。
 
         > 記住：不是所有的雲朵下面都藏著同樣的東西！
+      courseD_bee_conditionals2_copy: |-
+        更多的雲朵！
+
+        在獲取花蜜之前，請檢查每朵雲朵下方是否藏有花。如果雲朵下方有花，蜜蜂就需要獲取_一次_花蜜。
+
+        > 記住：不是所有的雲朵下面都藏著同樣的東西！
       courseD_bee_conditionals3: 你只能從花上採集花蜜，但是你可以檢查任何空格看看是否有花。如果這些雲朵下有花，蜜蜂將需要採集_一次_花蜜。
       courseD_bee_conditionals3_2018: 你只能從花上採集花蜜，但是你可以檢查任何空格看看是否有花。如果這些雲朵下有花，蜜蜂將需要採集_一次_花蜜。
       courseD_bee_conditionals3_2019: 你只能從花上採集花蜜，但是你可以檢查任何空格看看是否有花。如果這些雲朵下有花，蜜蜂將需要採集_一次_花蜜。
+      courseD_bee_conditionals3_copy: 你只能從花上採集花蜜，但是你可以檢查任何空格看看是否有花。如果這些雲朵下有花，蜜蜂將需要採集_一次_花蜜。
       courseD_bee_conditionals4: |-
         在這個關卡中，我們知道每朵花都只有一個花蜜，但是花的間距不均勻。
 
@@ -2988,6 +3093,10 @@ zh-TW:
 
         使用盡可能少的模塊採集所有花蜜。
       courseD_bee_conditionals4_2019: |-
+        在這個關卡中，我們知道每朵花都只有一個花蜜，但是花的間距不均勻。
+
+        使用盡可能少的模塊採集所有花蜜。
+      courseD_bee_conditionals4_copy: |-
         在這個關卡中，我們知道每朵花都只有一個花蜜，但是花的間距不均勻。
 
         使用盡可能少的模塊採集所有花蜜。
@@ -3572,7 +3681,20 @@ zh-TW:
         -   畫每個六邊形的時候，重複 6 次畫六條邊，每次旋轉 60 度。
         -   在每個六邊形之間跳躍 25 個像素。
         -   要繪製出菱形，需要交替轉向 60 度和 120 度。
+      courseE_artist_functions1_copy: |-
+        _「我是殭屍小藝術家。我喜歡繪畫！」_
+
+        幫殭屍畫一副方形眼鏡。
+        提示：眼鏡框之間的鼻樑比鏡框的長度短 25 像素。
       courseE_artist_functions2: |-
+        函式可以定義新的積木！
+
+        我們已將繪製正方形所需的積木移動到名為`繪製正方形`的函式中。這次，使用`繪製正方形`函式來創建眼鏡。
+
+        * * *
+
+        正方形相隔 75 像素。
+      courseE_artist_functions2_copy: |-
         函式可以定義新的積木！
 
         我們已將繪製正方形所需的積木移動到名為`繪製正方形`的函式中。這次，使用`繪製正方形`函式來創建眼鏡。
@@ -3584,13 +3706,27 @@ zh-TW:
         我們馬上要回到函式上面。讓我們休息一下，練習如何畫出一顆星星。
 
         你可以添加重複積木來畫出此圖形。
+      courseE_artist_functions3_copy: |-
+        我們馬上要回到函式上面。讓我們休息一下，練習如何畫出一顆星星。
+
+        你可以添加重複積木來畫出此圖形。
       courseE_artist_functions4: |-
         現在你畫出一顆星星了，那麼嘗試畫四顆星星！
 
         -   星星的每個分支長 25 像素
         -   分支之間旋轉 45 度
         -   每個星星之間跳躍 100 像素
+      courseE_artist_functions4_copy: |-
+        現在你畫出一顆星星了，那麼嘗試畫四顆星星！
+
+        -   星星的每個分支長 25 像素
+        -   分支之間旋轉 45 度
+        -   每個星星之間跳躍 100 像素
       courseE_artist_functions5: |-
+        畫三顆星星為什麼比畫四顆星星還要難？因為你還必須跳過月亮！
+
+        只需要畫好三顆星星即可通過此關卡。
+      courseE_artist_functions5_copy: |-
         畫三顆星星為什麼比畫四顆星星還要難？因為你還必須跳過月亮！
 
         只需要畫好三顆星星即可通過此關卡。
@@ -3646,6 +3782,7 @@ zh-TW:
       courseE_artist_functions_predict1: 這個關卡要使用我們已經定義的函式。
       courseE_artist_functions_predict1_2018: 這個關卡要使用我們已經定義的函式。
       courseE_artist_functions_predict1_2019: 這個關卡要使用我們已經定義的函式。
+      courseE_artist_functions_predict1_copy: 這個關卡要使用我們已經定義的函式。
       courseE_artist_ramp8: |-
         太好了！現在讓我們使用`重複`迴圈讓小藝術家繪製一個正方形！小藝術家的積木與其他關卡遊戲有所不同，但思路都是一樣的。
 

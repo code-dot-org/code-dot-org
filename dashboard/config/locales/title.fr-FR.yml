@@ -2,54 +2,56 @@
 fr-FR:
   data:
     title:
-      BigEvent: Le Grand Evénement
-      BigEvent_2018: Le Grand Evénement
+      BigEvent: Le Grand Événement
+      BigEvent_2018: Le Grand Événement
       BinaryBracelets: Les bracelets binaires
       BinaryBracelets_2018: Les bracelets binaires
-      BinaryImages: Les images binaires
-      BinaryImages_2018: Les images binaires
-      BuildingAFoundation: Construire une fondation
+      BinaryImages: Images Binaires
+      BinaryImages_2018: Images Binaires
+      BuildingAFoundation: Construire une Fondation
       BuildingAFoundation_2018: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Algorithmique
       Conditionals: Instructions conditionnelles
       Conditionals_2018: Instructions conditionnelles
-      Crowdsourcing: Financement participatif
-      Crowdsourcing_2018: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title'
-      DiceRace: 'Les algorithmes du monde réel: La course de dés'
-      DigitalCitizenship: Citoyenneté numérique
-      DigitalFootprint: Ton empreinte numérique
-      DigitalFootprint_2018: Ton empreinte numérique
-      EnvelopeVariables: Les variables de l'enveloppe
+      Crowdsourcing: Production Participative
+      Crowdsourcing_2018: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title
+
+'
+      DiceRace: 'Algorithmes du Monde Réel : La Course de Dés'
+      DigitalCitizenship: Citoyenneté Numérique
+      DigitalFootprint: Ton Empreinte Numérique
+      DigitalFootprint_2018: Ton Empreinte Numérique
+      EnvelopeVariables: Variables de l'Enveloppe
       EnvelopeVariables_2018: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.title'
-      ForLoopFun: Jouons avec les boucles « Pour »
+      ForLoopFun: Jouer avec les Boucles « Pour »
       ForLoopFun_2018: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.title'
-      FunctionalSuncatchers: Vitraux fonctionnels
-      GettingLoopy: Tourner en rond
-      GettingLoopy_2018: Tourner en rond
-      GoingPlacesSafely: Se déplacer en toute sécurité
-      GoingPlacesSafely_2018: Se déplacer en toute sécurité
+      FunctionalSuncatchers: Capteurs de Soleil Fonctionnels
+      GettingLoopy: Tourner en Rond
+      GettingLoopy_2018: Tourner en Rond
+      GoingPlacesSafely: Se Déplacer en Toute Sécurité
+      GoingPlacesSafely_2018: Se Déplacer en Toute Sécurité
       GraphPaperProgramming: Programmation sur papier quadrillé
       GraphPaperProgramming_2018: Programmation sur papier quadrillé
       Internet: Internet
       Internet_2018: 'traduction manquante : en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Mad Glibs
-      MoveIt: Déplace-le, déplace-le
+      MoveIt: Déplace-le, Déplace-le
       MoveItMoveIt_2018: Bouge, Bouge
-      PaperPlanes: 'Algorithmes du monde réel: Avions en papier'
-      PaperPlanes_2018: 'Algorithmes du monde réel: Avions en papier'
-      PlantASeed: 'Algorithmes du monde réel: Planter une graine'
-      PlantASeed_2018: 'Algorithmes du monde réel: Planter une graine'
+      PaperPlanes: 'Algorithmes du Monde Réel : Avions en Papier'
+      PaperPlanes_2018: 'Algorithmes du Monde Réel : Avions en Papier'
+      PlantASeed: 'Algorithmes du Monde Réel : Planter une Graine'
+      PlantASeed_2018: 'Algorithmes du Monde Réel : Planter une Graine'
       RelayProgramming: Programmation de relais
       RelayProgramming_2018: Programmation de relais
       SongwritingParameters: Écriture de chansons
       SongwritingParameters_2018: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Composition de chansons avec des paramètres
-      TangramAlgorithms: Les algorithmes de Tangram
+      TangramAlgorithms: Algorithmes de Tangram
       UnplugHappyMaps: Cartes Joyeuses
       UnplugHappyMaps_2018: Cartes Joyeuses
       courseA_unplugged_loops: Les Boucles Débranchées
       courseA_unplugged_loops_2018: Les Boucles Débranchées
-      courseB_unplugged_CnC_2018: C'est bien de créer et de jouer équitablement
+      courseB_unplugged_CnC_2018: C'est Super de Créer et de Jouer Équitablement
       courseB_unplugged_MRF: Activité manuelle
       courseB_unplugged_MRF_2018: Mes amis les robots
       courseB_unplugged_loopyMRF: Activité manuelle
@@ -57,8 +59,8 @@ fr-FR:
       courseC_Unplugged_ScreenOutTheMean_2018: Activité manuelle
       courseD_unplugged_digitalCitizenship: Activité manuelle
       courseD_unplugged_digitalCitizenship_2018: Activité manuelle
-      courseE_unplugged_CnC_2018: Partage numérique
-      courseE_unplugged_privateInformation: 'Education au sens commun : information
-        privée et personnelle '
+      courseE_unplugged_CnC_2018: Partage Numérique
+      courseE_unplugged_privateInformation: 'Common Sense Education : Information
+        Privée et Personnelle '
       courseF_unplugged_powerOfWords: Activité manuelle
       courseF_unplugged_powerOfWords_2018: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

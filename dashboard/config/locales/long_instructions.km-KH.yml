@@ -70,6 +70,22 @@ km-KH:
       New Minecraft Hero Project: |-
         **លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!
         ប្រើកូដរបស់ជំនួយការក្នុងការជួយអ្នកក្នុងការស្វែងយល់ពីពិភពលោកនេះ។
+      OPD-K5-forloops-2: "Write the code to help the bee\ncollect all of the nectar.\\\r\n\\\r\nYou
+        will need lots of blocks for this challenge,\nbut we'll learn an easier way
+        in the next puzzle."
+      OPD-K5-forloops-6: "You can also use a `for` loop\nto count down. \\\r\n\\\r\nTry
+        gathering this nectar by counting down from **5**\nto **1** by **1**."
+      OPD-K5-forloops-7: "The last number in your `for`\nloop is called the **\"increment\"**.
+        \ Each time the loop is run, the counter\nvariable changes by the value of
+        the **increment**.\\\r\n\\\r\nTry collecting\nthese flowers using an **increment**
+        of 2."
+      OPD-K5-variables-1: "Let's draw\nan equilateral triangle. \\\r\n\\\r\nIt has
+        to be exactly 50 pixels long on each\nside.\\\r\n\\\r"
+      OPD-K5-variables-2: "Now use another loop to draw\nthree of those triangles
+        right next to each other.   \\\r\n\\\r\nYou can nest\nthe code from your last
+        puzzle inside."
+      OPD-K5-variables-5: "Before things get tricky,\ncan you move the length of 50
+        into a variable so we can use it in the next\nfew puzzles?  \\\r\n\\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseB_playlab_events6: "Help your knight get all of the flags!\\\r\n\\\r\nTo\ndo
         this, you'll need to add events to help the knight move up, down, left,\nand
         right."
@@ -106,6 +122,8 @@ km-KH:
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseD_bee_conditionals1_predict1_2019: "_\"This cloud is\nblocking my view!\"_\\\r\n\\\r\nCheck
         to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
+      courseD_bee_conditionals1_predict1_copy: "_\"This cloud is\nblocking my view!\"_\\\r\n\\\r\nCheck
+        to see if there's a flower under the cloud.\nIf there's a flower, get nectar."
       courseD_bee_conditionals4: "In this puzzle, we know that\nevery flower has exactly
         one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall of the
         nectar using as few blocks as possible."
@@ -113,6 +131,9 @@ km-KH:
         has exactly one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall
         of the nectar using as few blocks as possible."
       courseD_bee_conditionals4_2019: "In this puzzle, we know that\nevery flower
+        has exactly one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall
+        of the nectar using as few blocks as possible."
+      courseD_bee_conditionals4_copy: "In this puzzle, we know that\nevery flower
         has exactly one nectar, but the flowers aren't spaced evenly.\\\r\n\\\r\nGet\nall
         of the nectar using as few blocks as possible."
       courseD_maze_ramp4: "_\"Trace the path and lead me to\nthe silly pig.\"_ \\\r\n\\\r\nAvoid

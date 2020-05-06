@@ -2389,6 +2389,8 @@ ko-KR:
           반복문이 계산 중일 때마다 증분이 매번 카운터 변수에 추가됩니다.
 
           그 번호 뒤에 번호를 얻기 위해 각 번호에 무엇을 추가해야합니까?
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Overworld Avoid Monsters:
         mc_8_a: 당신이 취할 수 있는 몇 가지 경로가 있습니다. 어느 것이 가장 짧습니까?
         mc_8_b: 코드를 단순화하려면`반복` 루프를 사용 하십시오.
@@ -2698,6 +2700,9 @@ ko-KR:
       courseC_starWars_loops7_2019:
         courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
           일이 발생하는지 확인하십시오.  '
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_c: '실수하는 것을 두려워하지 마라! 퍼즐을 아직 풀지 않은 경우에도 코드를 실행하여 어떤
+          일이 발생하는지 확인하십시오.  '
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           다음번에 그릴 사각형 꼭대기로 이동하기 위해서 '앞으로 점프' 블록을 이용해보세요.
@@ -2914,6 +2919,10 @@ ko-KR:
         courseE_artist_functions1_a: '이 사각형들은 각 면이 100픽셀입니다. 즉, 두번째 사각형을 그리기 전에 여러분은
           앞쪽으로 175픽셀을 이동해야 할 것입니다.  '
         courseE_artist_functions1_b: '안경을 만들기 위해 선이 겹쳐서 그려지더라도 괜찮아요. '
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: '이 사각형들은 각 면이 100픽셀입니다. 즉, 두번째 사각형을 그리기 전에 여러분은
+          앞쪽으로 175픽셀을 이동해야 할 것입니다.  '
+        courseE_artist_functions1_b: '안경을 만들기 위해 선이 겹쳐서 그려지더라도 괜찮아요. '
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           여러분의 프로그램은 반드시:
@@ -2927,6 +2936,12 @@ ko-KR:
           \-100 + 75픽셀 앞으로 이동
           \-함수 사용
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          여러분의 프로그램은 반드시:
+          \-함수 사용
+          \-100 + 75픽셀 앞으로 이동
+          \-함수 사용
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           여러분의 프로그램은 반드시:
           \-함수 사용
