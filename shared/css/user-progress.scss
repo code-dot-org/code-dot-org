@@ -1,0 +1,11 @@
+@import 'color';
+@import 'font';
+
+.user-stats-block
+{
+  display:inline-block;
+  position:relative;
+  float:left;
+  width:100%;
+  background-color: $white;
+}
