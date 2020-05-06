@@ -52,12 +52,9 @@ export default class Foorm extends React.Component {
     if (this.props.submitParams) {
       requestData = {...this.props.submitParams, ...requestData};
     }
-    // Default text says thank you before we send the post. Set to indicate
-    // we are saving and clear any error messages.
-    // We need to call showDataSavingClear() after changing completedHtml to force
-    // the survey component to refresh with the new completedHtml.
-    survey.completedHtml = '<h4>Your responses are being saved...</h4>';
-    options.showDataSavingClear();
+    // Set generic thank you text and show data as saving
+    survey.completedHtml = '<h4>Thank you for completing the survey!</h4>';
+    options.showDataSaving('Your responses are being submitted...');
     $.ajax({
       url: this.props.submitApi,
       type: 'post',
