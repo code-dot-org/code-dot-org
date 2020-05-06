@@ -41,13 +41,14 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @details_partial = get_details_partial @workshop.course, @workshop.subject
     @online_url = ONLINE_URL
     @is_enrollment_receipt = true
-    from = from_teacher
-    reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
 
     # Facilitator training workshops use different email addresses
     if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
       from = from_facilitators
       reply_to = from_facilitators
+    else
+      from = from_teacher
+      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
     end
 
     mail content_type: 'text/html',
@@ -106,13 +107,13 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
-    from = from_teacher
-    reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
-
     # Facilitator training workshops use a different email address
     if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
       from = from_facilitators
       reply_to = from_facilitators
+    else
+      from = from_teacher
+      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
     end
 
     return if @workshop.suppress_reminders?
