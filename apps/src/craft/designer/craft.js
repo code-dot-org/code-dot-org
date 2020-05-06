@@ -349,6 +349,7 @@ Craft.init = function(config) {
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
+        // HERE this is where we set up swipe for designer (see onDrag below)
         const hammerToButton = {
           [Hammer.DIRECTION_LEFT]: 'leftButton',
           [Hammer.DIRECTION_RIGHT]: 'rightButton',

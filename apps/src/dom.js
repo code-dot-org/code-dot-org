@@ -37,6 +37,9 @@ var addEvent = function(
   handler,
   suppressTouchDefault = true
 ) {
+  if (eventName === 'touchmove' || eventName === 'mousemove') {
+    debugger;
+  }
   // Scope bound event map to this addEvent call - we only provide for unbinding
   // what we bind right here.
   var boundEvents = {};

@@ -100,7 +100,7 @@ export default class MobileControls {
     document.getElementById(
       'studio-space-button'
     ).style.display = spaceButtonDisplayStyle;
-
+debugger;
     if (this.dpadFourWay !== dpadFourWay) {
       if (this.dPadState.trackingMouseMove) {
         // Fake a mousemove back at the original starting position, which

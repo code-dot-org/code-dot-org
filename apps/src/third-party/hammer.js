@@ -847,6 +847,7 @@
      * @return {Object} events
      */
     determineEventTypes: function determineEventTypes() {
+      debugger;
       var types;
       if (Hammer.HAS_POINTEREVENTS) {
         if (window.PointerEvent) {
