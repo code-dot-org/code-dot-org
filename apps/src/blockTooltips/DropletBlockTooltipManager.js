@@ -1,3 +1,4 @@
+/*globals dashboard*/
 import $ from 'jquery';
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -106,20 +107,41 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
         offsetX,
         offsetY,
         functionReady: function(_, contents) {
-          if (!this.showExamplesLink) {
-            return;
+          var tooltip = this.dropletTooltipManager.getDropletTooltip(funcName);
+          if (tooltip.showExamplesLink) {
+            var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+            // Important this binds to mouseDown/touchDown rather than click, needs to
+            // happen before `blur` which triggers the ace editor completer popup
+            // hide which in turn would hide the link and not show the docs.
+            dom.addClickTouchEvent(
+              seeExamplesLink,
+              function(event) {
+                this.dropletTooltipManager.showDocFor(funcName);
+                event.stopPropagation();
+              }.bind(this)
+            );
           }
-          var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
-          // Important this binds to mouseDown/touchDown rather than click, needs to
-          // happen before `blur` which triggers the ace editor completer popup
-          // hide which in turn would hide the link and not show the docs.
-          dom.addClickTouchEvent(
-            seeExamplesLink,
-            function(event) {
-              this.dropletTooltipManager.showDocFor(funcName);
-              event.stopPropagation();
-            }.bind(this)
-          );
+
+          if (tooltip.showCodeLink) {
+            var showCodeLink = contents.find('.tooltip-code-link > a')[0];
+            // Important this binds to mouseDown/touchDown rather than click, needs to
+            // happen before `blur` which triggers the ace editor completer popup
+            // hide which in turn would hide the link and not show the docs.
+            dom.addClickTouchEvent(
+              showCodeLink,
+              function(event) {
+                var projectLibraries = dashboard.project.getProjectLibraries();
+                var libraryName = funcName.split('.')[0];
+                var library = projectLibraries.find(
+                  lib => lib.name === libraryName
+                );
+                if (library) {
+                  console.log(library.source);
+                  // TODO: Open LibraryViewCode React component
+                }
+              }.bind(this)
+            );
+          }
         }.bind(this)
       });
 
@@ -157,8 +179,8 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function(functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    showExamplesLink: this.showExamplesLink,
-    customExamplesLink: tooltipInfo.customExamplesLink
+    showExamplesLink: tooltipInfo.showExamplesLink,
+    showCodeLink: tooltipInfo.showCodeLink
   });
 };
 
