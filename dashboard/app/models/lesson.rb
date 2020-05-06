@@ -191,9 +191,10 @@ class Lesson < ActiveRecord::Base
   end
 
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
-  # build lesson plans
+  # build lesson plans (Curriculum Builder)
   def summary_for_lesson_plans
     {
+      # TODO: should be renamed after we combine CurriculumBuilder into LevelBuilder, if we still need this.
       stageName: localized_name,
       lockable: lockable?,
       levels: script_levels.map do |script_level|
