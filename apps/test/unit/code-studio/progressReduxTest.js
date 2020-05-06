@@ -140,7 +140,8 @@ const stageData = [
       '//localhost.code.org:3000/curriculum/course3/2/Teacher',
     lesson_plan_pdf_url:
       '//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf',
-    stage_extras_level_url: '//localhost.code.org:3000/s/course3/stage/2/extras'
+    lesson_extras_level_url:
+      '//localhost.code.org:3000/s/course3/stage/2/extras'
   }
 ];
 
