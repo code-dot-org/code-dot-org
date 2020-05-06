@@ -70,7 +70,7 @@ export default function initPage(scriptEditorData) {
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
         teacherResources={teacherResources}
-        lessonExtrasAvailable={!!scriptData.stage_extras_available}
+        lessonExtrasAvailable={!!scriptData.lesson_extras_available}
         lessonLevelData={lessonLevelData}
         hasVerifiedResources={scriptData.has_verified_resources}
         hasLessonPlan={scriptData.has_lesson_plan}
