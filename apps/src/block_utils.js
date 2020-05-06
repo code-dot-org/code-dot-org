@@ -1010,7 +1010,9 @@ exports.createJsWrapperBlockCreator = function(
             miniToolboxXml += `\n <block type="${block}"></block>`;
           });
           miniToolboxXml += '\n</xml>';
+          // Block.tray is used in the blockly repo to track whether or not the horizontal flyout is open.
           this.tray = false;
+          // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
             if (this.tray) {
               toggle.setText('+');
