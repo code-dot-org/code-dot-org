@@ -422,9 +422,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       assert_response :success
     end
 
-    id = JSON.parse(@response.body)['id']
-    workshop = Pd::Workshop.find id
-    assert_equal 1, workshop.sessions.length
+    assert_equal 1, response_workshop.sessions.length
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
