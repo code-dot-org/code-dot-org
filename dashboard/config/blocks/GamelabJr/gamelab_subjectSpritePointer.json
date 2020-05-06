@@ -2,8 +2,8 @@
   "category": "Events",
   "config": {
     "simpleValue": true,
-    "name": "clickedSpritePointer",
-    "blockText": "clicked {SPRITE}",
+    "name": "subjectSpritePointer",
+    "blockText": "subject {SPRITE}",
     "args": [
       {
         "name": "SPRITE",
