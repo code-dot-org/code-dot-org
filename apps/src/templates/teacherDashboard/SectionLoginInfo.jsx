@@ -4,6 +4,7 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -104,34 +105,7 @@ class OAuthLogins extends React.Component {
 
     return (
       <div>
-        {loginType === SectionLoginType.google_classroom && (
-          <div>
-            <h1 style={styles.heading}>{i18n.signingInGoogle()}</h1>
-            <p>{i18n.signingInGoogleIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/')
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.signingInGoogle2()}</p>
-            <p style={styles.listAlign}>{i18n.signingInGoogle3()}</p>
-          </div>
-        )}
-        {loginType === SectionLoginType.clever && (
-          <div>
-            <h1 style={styles.heading}>{i18n.signingInClever()}</h1>
-            <p>{i18n.signingInCleverIntro()}</p>
-            <p style={styles.listAlign}>{i18n.signingInClever1()}</p>
-            <div style={styles.sublistAlign}>
-              <SafeMarkdown markdown={i18n.signingInClever1a()} />
-            </div>
-            <p style={styles.sublistAlign}>{i18n.signingInClever1b()}</p>
-            <img
-              style={styles.sublistAlign}
-              src="/shared/images/clever_code_org_logo.png"
-            />
-          </div>
-        )}
+        <SignInInstructions loginType={loginType} />
         <br />
         <h1>{i18n.syncingYourStudents()}</h1>
         <div>
@@ -181,14 +155,7 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
         <br />
-        <h1 style={styles.heading}>{i18n.signingInEmail()}</h1>
-        <p>{i18n.signingInEmailIntro()}</p>
-        <SafeMarkdown
-          markdown={i18n.signingInEmailGoogle1({
-            codeOrgLink: pegasus('/')
-          })}
-        />
-        <p style={styles.listAlign}>{i18n.signingInEmail2()}</p>
+        <SignInInstructions loginType={SectionLoginType.email} />
         <br />
         <h1>{i18n.loginInfo_resetTitle()}</h1>
         <SafeMarkdown
@@ -281,36 +248,7 @@ class WordOrPictureLogins extends React.Component {
 
     return (
       <div>
-        {loginType === SectionLoginType.word && (
-          <div>
-            <h1 style={styles.heading}>{i18n.signingInWord()}</h1>
-            <p>{i18n.signingInWordIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${section.code}`,
-                sectionCode: section.code,
-                codeOrgLink: pegasus('/')
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
-            <p style={styles.listAlign}>{i18n.signingInWord3()}</p>
-          </div>
-        )}
-        {loginType === SectionLoginType.picture && (
-          <div>
-            <h1 style={styles.heading}>{i18n.signingInPic()}</h1>
-            <p>{i18n.signingInPicIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${section.code}`,
-                sectionCode: section.code,
-                codeOrgLink: pegasus('/')
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
-            <p style={styles.listAlign}>{i18n.signingInPic3()}</p>
-          </div>
-        )}
+        <SignInInstructions loginType={loginInfo} />
         <p>
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
