@@ -150,7 +150,7 @@ def snapshot_summer_workshops_from_jotform(course)
   end
 
   # delete all existing
-  Pd::LegacySurveySummary.where(facilitator_id: nil).where(course: course, subject: subject).delete_all
+  Pd::LegacySurveySummary.where(course: course, subject: subject).delete_all
 
   # write all entries
   survey_reports.each_pair do |id, report|
