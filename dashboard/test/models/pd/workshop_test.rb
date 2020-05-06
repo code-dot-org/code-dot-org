@@ -1312,6 +1312,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute potential_organizer_ids.include? program_manager.id
   end
 
+  test 'virtual workshops must suppress email' do
+    workshop = build :workshop
+
+    # Non-virtual workshops may suppress email or not
+    workshop.virtual = false
+    workshop.suppress_email = false
+    assert workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+
+    # Virtual workshops must suppress email
+    workshop.virtual = true
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
   private
 
   def session_on_day(day_offset)
