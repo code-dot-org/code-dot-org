@@ -509,6 +509,9 @@ class ScriptsControllerTest < ActionController::TestCase
     script = create :script
     File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
 
+    # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
+    # which can cause incorrect behavior if it is removed during the Script.add_script while being added via the
+    # update_teacher_resources during the same call to Script.update_text
     2.times do
       post :update, params: {
         id: script.id,
