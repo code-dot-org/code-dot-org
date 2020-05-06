@@ -21279,6 +21279,8 @@ pt-BR:
         > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Compartilhe no Tweeter</h4></a>
       OPD-K5 RepeatBlock: Assista o vídeo abaixo, que explica como laços funcionam
         e introduz o bloco 'Repita' em Fundamentos de CC.
+      OPD-K5 RepeatBlock_copy: Assista o vídeo abaixo, que explica como laços funcionam
+        e introduz o bloco 'Repita' em Fundamentos de CC.
       OPD-K5 Unplugged Video: |-
         ## Olhando à Frente > "Desplugando-se"
 
@@ -21295,6 +21297,92 @@ pt-BR:
         Ou, "Por que alguns programas de computador são escritos com palavras e alguns
         são escritos usando imagens?" Se sim, assista a este vídeo; é uma ótima introdução
         ao campo da ciência da computação.
+      OPD-K5-events-2: "Anexe o bloco `quantidade normal de bater de asas` ao evento
+        `quando clicar`, depois pressione \"Executar\".   \n\n* * *\n\nClique ou toque
+        no espaço de jogo para mover o Flappy para o alvo."
+      OPD-K5-events-3: "O evento \\`quando executar' permite que você execute o código
+        assim que seu jogo iniciar.\n\nTente adicionar um bloco que defina a velocidade
+        do nível quando o botão \"Executar\" for pressionado. \n\n* * *\n\nJogue o
+        jogo e bata asas até o alvo para continuar."
+      OPD-K5-events-4: "Agora nós adicionamos o chão. \n\nAnexe o bloco `fim de jogo`
+        ao evento `quando encostar no chão`.\n\n* * *\n\nJogue o jogo e derrube o
+        pássaro no chão para continuar."
+      OPD-K5-events-5: "Flappy voará através dos obstáculos, a menos que você escreva
+        um código para fazê-lo bater. \n\nAnexe um bloco ao evento `quando acertar
+        um obstáculo` para que o jogo termine quando Flappy colidir com o primeiro
+        conjunto de tubos."
+      OPD-K5-events-6: "Nós adicionamos um placar para contar pontos quando Flappy
+        passa por obstáculos.  \n\nAdicione um bloco ao evento `quando passar um obstáculo`
+        que marca um ponto, então pressione \"Executar\" para Flappy voar através
+        do primeiro conjunto de tubos."
+      OPD-K5-forloops-2: |-
+        Escreve o código para ajudar a abelha a coletar todo o nectar.
+
+        Você vai precisar de muitos blocos para esse desafio, mas aprenderemos uma maneira mais fácil de fazer isso no próximo quebra cabeça.
+      OPD-K5-forloops-6: "Você pode sempre utilizar um laço `para` para contar para
+        baixo. \n\nTente coletar todo o nectar contando de **5** até **1** de **1
+        em 1**."
+      OPD-K5-forloops-7: |-
+        O último número do seu laço `para` é chamado de **incrementar**. Cada vez que o laço roda, a variável contadora altera o valor para **incrementar**.
+
+        Tente coletar essas flores utilizando um **incrementar** de 2.
+      OPD-K5-projects-2: |-
+        É incrível o quanto você aprendeu! Vamos fazer um jogo passo a passo.
+
+        Utilizando novos blocos da caixa de ferramentas, escolha um novo fundo, e então escolha um ator para estar no seu jogo.
+      OPD-K5-projects-3: "Use blocos como \"eventos\" e \"ações\" para fazer seu personagem
+        se mover quando você pressionar as teclas do teclado. \n\nConduza o personagem
+        aos alvos para completar o desafio."
+      OPD-K5-projects-4: |-
+        Vamos adicionar mais alguns personagens ao seu jogo!
+
+        Utilize o bloco `escolher ator` para adicionar personagens e então vá para o objetivo para completar esse quebra-cabeça.
+      OPD-K5-projects-5: |-
+        Ter diversos personagens e fazê-los se mover é uma ótima forma de começar um jogo, mas precisamos de muito mais para isso parecer um jogo de verdade. Vamos adicionar um sistema de pontuação!
+
+        Use blocos de eventos como `quando o ator encosta` para mudar a pontuação ou ganhar o jogo. Faça 5 pontos ou ganhe o jogo para completar o desafio.
+      OPD-K5-projects-6: Bom trabalho! Você tem todos os componentes básicos de um
+        jogo. Agora use seu tempo para verificar se o jogo está funcionando do jeito
+        que você gostaria. Quando estiver tudo pronto, clique em "Finalizar"!
+      OPD-K5-projects-7: Você acabou! Agora você pode jogar o seu jogo ou compartilha-lo
+        com seus amigos e colegas de classe!
+      OPD-K5-spritelab-2: |-
+        Vamos fazer um aquário!
+
+        Mude o sprite da bola de feno por qualquer peixe clicando no <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"bola de feno"</title></block></xml>.
+
+        Lembre-se de atualizar a fantasia do sprite em <xml><block type="gamelab_addBehaviorSimple" block-text="the add behavior block"></block></xml>.
+      OPD-K5-spritelab-3: |-
+        O peixe está ficando tonto!
+
+        Mude o comportamento do peixe para que ele nade para a esquerda e para a direita.
+      OPD-K5-spritelab-4: |-
+        Nosso aquário precisa de água!
+
+        Use o bloco <xml><block type="gamelab_setBackground" inline="true" block-text="the set background color block">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#0000ff</title>
+              </block>
+            </value>
+          </block></xml> para mudar a  cor do fundo. Nós recomendamos a cor azul!
+      OPD-K5-spritelab-6: O peixe é aventureiro e quer conhecer novas criaturas do
+        mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
+        desde que seja diferente da que você usou para o peixe!
+      OPD-K5-spritelab-7: |-
+        O que você quer que o novo amigo do seu peixe faça?
+
+        Adicione um comportamento e veja o que ele faz!
+      OPD-K5-variables-1: "Vamos desenhar um triângulo equilátero. \n\nEle deve ter
+        exatamente 50 pixels de comprimento em cada lado."
+      OPD-K5-variables-2: "Agora utilize outro laço de repetição para desenhar três
+        desses triângulos um ao lado do outro. \n\nVocê pode reutilizar o código do
+        último quebra-cabeça aqui."
+      OPD-K5-variables-5: "Antes das coisas ficarem complicadas, você pode mover o
+        tamanho de 50 para uma variável para que possamos utiliza-la nos próximos
+        quebra-cabeças? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Agora, utilize a variável `tamanho` para fazer com que o
+        artista pule em frente e para baixo `tamanho` pixels entre os triângulos.
       Overworld Chop Tree: Madeira é um recurso muito importante. Muitas coisas são
         feitas com ela. Siga até a árvore e utilize o bloco `destruir` para cortar
         ela.
@@ -23113,6 +23201,10 @@ pt-BR:
         o porco! "
       courseA_maze_seq10_2019: "**Desafio:** Evite a TNT para levar o pássaro até
         o porco! "
+      courseA_maze_seq10_copy: |-
+        -   -   Desafio: \* \* circundar a TNT para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         Hora para um quebra-cabeça menor!  Mova um caminho e, em seguida, mov outro para levar o pássaro até o porco.
 
@@ -23148,6 +23240,10 @@ pt-BR:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Dê uma chance a este.
       courseA_maze_seq5_2019: Dê uma chance a este.
+      courseA_maze_seq5_copy: |-
+        Tente este você mesmo desde o início.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"Aqui, porquinho, porquinho!"_
 
@@ -23164,13 +23260,22 @@ pt-BR:
         o pássaro até o porco!
       courseA_maze_seq6_2019: Mova-me por um caminho, e então por outro para levar
         o pássaro até o porco!
+      courseA_maze_seq6_copy: |-
+        Mova um caminho, então mova o outro para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: Descubra o que está faltando e então adicione blocos para
         levar o pássaro até o porco!![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: Descubra o que está faltando e então adicione blocos
+        para levar o pássaro até o porco!![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq8: |-
         Resolva este nível e leve o pássaro até o porco!
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Resolva este nível e leve o pássaro até o porco!
       courseA_maze_seq8_2019: Resolva este nível e leve o pássaro até o porco!
+      courseA_maze_seq8_copy: |-
+        Resolva este nível e leve o pássaro até o porco!
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Desafio:** Depure esse código adicionando blocos para levar o pássaro até o porco!
 
@@ -24518,6 +24623,10 @@ pt-BR:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vai BB-8!" \_
 
         Para obter toda a sucata, tente criar uma repetição que use apenas um bloco dentro de um bloco `repetir`.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vai BB-8!" \_
+
+        Para obter toda a sucata, tente criar uma repetição que use apenas um bloco dentro de um bloco `repetir`.
       courseC_starWars_loops4: |-
         ![0]\_"Continue assim, BB-8."
 
@@ -24530,9 +24639,14 @@ pt-BR:
         ![0]\_"Continue assim, BB-8."
 
         Nesse quebra-cabeça, dois laços de repetição irão ajudar você a pegar todos os pedaços de metal para o BB-8 com o menor número possível de blocos!
+      courseC_starWars_loops4_copy: |-
+        ![0]\_"Continue assim, BB-8."
+
+        Nesse quebra-cabeça, dois laços de repetição irão ajudar você a pegar todos os pedaços de metal para o BB-8 com o menor número possível de blocos!
       courseC_starWars_loops5: '![0]\_"Vai BB-8!"'
       courseC_starWars_loops5_2018: '![0]\_"Vai BB-8!"'
       courseC_starWars_loops5_2019: '![0]\_"Vai BB-8!"'
+      courseC_starWars_loops5_copy: '![0]\_"Vai BB-8!"'
       courseC_starWars_loops6: |-
         ![0]\_"Você consegue pegar todos?"
 
@@ -24542,6 +24656,10 @@ pt-BR:
 
         Laços funcionam também com mais de um bloco dentro! Você consegue repetir essa sequência?
       courseC_starWars_loops6_2019: |-
+        ![0]\_"Você consegue pegar todos?"
+
+        Laços funcionam também com mais de um bloco dentro! Você consegue repetir essa sequência?
+      courseC_starWars_loops6_copy: |-
         ![0]\_"Você consegue pegar todos?"
 
         Laços funcionam também com mais de um bloco dentro! Você consegue repetir essa sequência?
@@ -24557,6 +24675,10 @@ pt-BR:
         ![0]\_"Você consegue!"
 
         Você pode tentar pegar todos os pedaços de metal utilizando apenas um laço de repetição? Tente ir programando para achar o código de repetição para colocar no laço.
+      courseC_starWars_loops7_copy: |-
+        ![0]\_"Você consegue!"
+
+        Você pode tentar pegar todos os pedaços de metal utilizando apenas um laço de repetição? Tente ir programando para achar o código de repetição para colocar no laço.
       courseC_starWars_loops8: |-
         ![0]\_"Continue assim, BB-8,"
 
@@ -24566,6 +24688,10 @@ pt-BR:
 
         **Desafio:** Combine as ideias dos últimos quebra-cabeças para completar esse nível.
       courseC_starWars_loops8_2019: |-
+        ![0]\_"Continue assim, BB-8,"
+
+        **Desafio:** Combine as ideias dos últimos quebra-cabeças para completar esse nível.
+      courseC_starWars_loops8_copy: |-
         ![0]\_"Continue assim, BB-8,"
 
         **Desafio:** Combine as ideias dos últimos quebra-cabeças para completar esse nível.
@@ -25120,6 +25246,10 @@ pt-BR:
         _"Essa nuvem está bloqueando minha vista!"_
 
         Verifique se existe uma flor atrás da nuvem. Se existir uma flor, colete nectar.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"Essa nuvem está bloqueando minha vista!"_
+
+        Verifique se existe uma flor atrás da nuvem. Se existir uma flor, colete nectar.
       courseD_bee_conditionals2: "Mais nuvens!\n\nVerifique abaixo de cada nuvem e
         observe se ela está escondendo uma flor antes de colher o néctar. Se existir
         uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
@@ -25129,6 +25259,10 @@ pt-BR:
         uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
         Nem todas as nuvem escondem a mesma coisa!"
       courseD_bee_conditionals2_2019: "Mais nuvens!\n\nVerifique abaixo de cada nuvem
+        e observe se ela está escondendo uma flor antes de colher o néctar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
+        Nem todas as nuvem escondem a mesma coisa!"
+      courseD_bee_conditionals2_copy: "Mais nuvens!\n\nVerifique abaixo de cada nuvem
         e observe se ela está escondendo uma flor antes de colher o néctar. Se existir
         uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
         Nem todas as nuvem escondem a mesma coisa!"
@@ -25143,6 +25277,10 @@ pt-BR:
         você pode verificar qualquer espaço para ver se há uma flor. Se existe uma
         flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar _uma
         vez_.
+      courseD_bee_conditionals3_copy: Você só pode coletar nectar das flores, mas
+        você pode verificar qualquer espaço para ver se há uma flor. Se existe uma
+        flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar _uma
+        vez_.
       courseD_bee_conditionals4: |-
         Nesse quebra-cabeça, nós sabemos que toda flor possui exatamente um nectar, mas a flores não estão distribuídas igualmente.
 
@@ -25152,6 +25290,10 @@ pt-BR:
 
         Colete todo o nectar utilizando o menos número possível de blocos.
       courseD_bee_conditionals4_2019: |-
+        Nesse quebra-cabeça, nós sabemos que toda flor possui exatamente um nectar, mas a flores não estão distribuídas igualmente.
+
+        Colete todo o nectar utilizando o menos número possível de blocos.
+      courseD_bee_conditionals4_copy: |-
         Nesse quebra-cabeça, nós sabemos que toda flor possui exatamente um nectar, mas a flores não estão distribuídas igualmente.
 
         Colete todo o nectar utilizando o menos número possível de blocos.
@@ -26031,6 +26173,11 @@ pt-BR:
         -   Para fazer cada hexágono, repita o lado 6 vezes, virando 60 graus.
         -   Pule 25 pixels entre cada hexágono.
         -   Para desenhar um diamante, você vai precisar alterar entre virar 60 graus e 120 graus.
+      courseE_artist_functions1_copy: |-
+        _"Mim ser zumbi artista. Mim amar desenhar!"_
+
+        Ajude o zumbi a desenhar óculos utilizando quadrados com lados de 100 pixels.\
+        A linha entre os óculos possui 75 pixels de tamanho.
       courseE_artist_functions2: |-
         Funções te deixam criar novos blocos!
 
@@ -26051,6 +26198,14 @@ pt-BR:
         * * *
 
         Os quadrados estão separados por 75 pixels.
+      courseE_artist_functions2_copy: |-
+        Funções te deixam criar novos blocos!
+
+        Nós movemos os blocos necessários para desenhar um quadrado para uma função chamada `desenhar um quadrado`. Dessa vez, utilize a função `desenhar um quadrado` para criar os óculos.
+
+        * * *
+
+        Os quadrados ficam a uma distância de 75 pixels.
       courseE_artist_functions3: |-
         Nós voltaremos para funções em breve. Vamos dar uma pausa para treinar fazer essa estrela.
 
@@ -26071,7 +26226,17 @@ pt-BR:
         -   Cada braço da estrela tem 25 pixels de comprimento
         -   Você precisa girar 45 graus para obter 8 braços
         -   Não há problema em ir para frente e para trás no mesmo braço
+      courseE_artist_functions3_copy: |-
+        Nós voltaremos para funções em breve. Vamos dar uma pausa para treinar fazer essa estrela.
+
+        Você pode fazer esse desenho utilizando um bloco de repetição.
       courseE_artist_functions4: |-
+        Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
+
+        -   Cada braço da estrela possui 25 pixels de tamanho.
+        -   Vire 45 graus entre os braços
+        -   Pule 100 pixels entre cada estrela
+      courseE_artist_functions4_copy: |-
         Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
 
         -   Cada braço da estrela possui 25 pixels de tamanho.
@@ -26099,6 +26264,10 @@ pt-BR:
 
         -   O salto entre a primeira e a segunda estrela é de \*\* 200 \*\* pixels
         -   O salto entre o segundo e o terceiro é de \*\* 100 \*\* pixels
+      courseE_artist_functions5_copy: |-
+        Quando é mais difícil desenhar três estrelas em vez de quatro? Quando você também precisa pular por cima da lua!
+
+        Desenhe apenas essas três estrelas para finalizar o quebra-cabeça.
       courseE_artist_functions6: |-
         Você está indo muito bem!
 
@@ -26224,6 +26393,8 @@ pt-BR:
       courseE_artist_functions_predict1_2018: 'Aqui está um quebra-cabeça que usa
         uma função que nós definimos. '
       courseE_artist_functions_predict1_2019: 'Aqui está um quebra-cabeça que usa
+        uma função que nós definimos. '
+      courseE_artist_functions_predict1_copy: 'Aqui está um quebra-cabeça que usa
         uma função que nós definimos. '
       courseE_artist_ramp8: |-
         Ótimo! Agora vamos usar o laço de repetição `repita` para fazer um quadrado usando o Artista! Os blocos para artista são um pouco diferentes dos outros desafios, mas a ideia é a mesma.

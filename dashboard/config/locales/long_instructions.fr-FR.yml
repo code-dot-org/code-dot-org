@@ -5147,10 +5147,11 @@ fr-FR:
         all with 40 pixel sides?\\\r\n\\\r\nRemember, in order to create\na spiral,
         you cannot close the polygon.  This means that each shape will need\nto have
         one fewer sides than usual."
-      Course 4 Artist For Loops inspire: "<br/><br/>\\\r\n<img\nsrc=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\"\nwidth=\"250px\"/>
-        \ \\\r\n<br/><br/>\\\r\n**Free-Play Inspiration:** You've now\nlearned everything
-        you need to know to make a pattern like this! If this picture\ninspires you,
-        try to make something similar. Otherwise, create something all\nyour own."
+      Course 4 Artist For Loops inspire: |-
+        <br/><br/>
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
+        <br/><br/>
+        **À toi de jouer:** Tu sais maintenant tout ce que tu dois savoir pour faire un modèle comme ceci ! Si cette photo t'inspire, essaye d'en faire une similaire. Sinon, crée ce que tu veux.
       Course 4 Artist Functions Inspiration: "<img src=\"https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png\"\nwidth=\"250px\"/>\\\r\n\\\r\n**Free-Play
         Inspiration:** You've now learned everything\nyou need to know to make a pattern
         like this! \\\r\n\\\r\nIf this picture inspires\nyou, try to make something
@@ -5948,6 +5949,53 @@ fr-FR:
         Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
       New Minecraft Hero Project: "**Jeu libre :** à votre tour ! Utilisez le code
         de l'Agent pour explorer ce monde."
+      OPD-K5-events-2: "Attach the `flap a normal amount`\nblock to the `when click`
+        event, then press \"Run\".   \\\r\n\\\r\n\\---\\\r\n\\\r\nClick\nor tap on
+        the play space to move Flappy to the target."
+      OPD-K5-events-3: "The `when run` event allows you\nto run code as soon as your
+        game starts.  \\\r\n\\\r\nTry adding a block that\nsets the level speed when
+        the \"Run\" button is pressed. \\\r\n\\\r\n\\---\\\r\n\\\r\nPlay\nthe game
+        and flap to the target to continue."
+      OPD-K5-events-4: "Now we've added the ground.\n\\\r\n\\\r\nAttach the `end game`
+        block to the `when hit the ground` event. \\\r\n\\\r\n\\---\\\r\n\\\r\nPlay\nthe
+        game and crash the bird into the ground to continue."
+      OPD-K5-events-5: "Flappy will fly right through\nobstacles unless you write
+        code to make him crash. \\\r\n\\\r\nAttach a block\nto the `when hit an obstacle`
+        event so that the game ends when Flappy crashes\ninto the first set of pipes."
+      OPD-K5-events-6: "We've added a scoreboard to\ncount points when Flappy passes
+        obstacles.  \\\r\n\\\r\nAdd a block to the `when\npass an obstacle` event
+        that scores a point, then press \"Run\" to fly Flappy\nthrough the first set
+        of pipes."
+      OPD-K5-forloops-2: "Écris le code pour aider l'abeille à recueillir tout le
+        nectar. \n\nTu auras besoin de beaucoup de blocs pour ce défi, mais nous allons
+        apprendre un moyen plus facile avec la prochaine énigme."
+      OPD-K5-forloops-6: "Une boucle `for` peut également te servir pour compter à
+        rebours. \n\nEssaie de recueillir ce nectar en comptant à rebours de **5**
+        à **1** avec un pas de **1**."
+      OPD-K5-forloops-7: "Le dernier numéro de ta boucle `for` est appelé **\"l'incrément\"**.
+        \ À chaque fois que la boucle est exécutée, la variable du compteur change
+        de la valeur de **l'incrément**. \n\nEssaie de cueillir ces fleurs à l'aide
+        d'un **incrément** de 2."
+      OPD-K5-projects-2: |-
+        C'est incroyable tout ce que tu as appris! Créons un jeu pas à pas.
+
+        En utilisant de nouveaux blocs dans ta boite à outils, choisis un nouvel arrière-plan, puis un acteur pour faire parti de ton jeu.
+      OPD-K5-projects-4: |-
+        Ajoutons des caractères à ton jeu.
+
+        Utilise le bloc `affecter à l'acteur` pour ajouter plus de caractères, puis bouge jusqu'au drapeau pour terminer le puzzle.
+      OPD-K5-projects-7: Tu as terminé! Maintenant tu peux jouer à ton jeu où le partager
+        avec tes amis et camarades de classe!
+      OPD-K5-variables-1: "Dessinons un triangle équilatéral. \n\nChaque côté mesure
+        exactement 50 pixels."
+      OPD-K5-variables-2: "Maintenant, utilise une autre boucle pour dessiner trois
+        de ces triangles, l'un à côté de l'autre. \n\nTu peux imbriquer le code de
+        ta dernière énigme à l'intérieur."
+      OPD-K5-variables-5: "Avant que les choses ne se compliquent, peux-tu déplacer
+        la longueur de 50 dans une variable pour qu'on puisse l'utiliser dans les
+        prochaines énigmes ?  \n\n![extensible](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Maintenant, utilise la variable 'longueur' pour que l'artiste
+        saute en avant et vers le bas de la `longueur` des pixels entre les triangles.
       Overworld Chop Tree: Le bois est une ressource très importante. On fabrique
         beaucoup de choses avec. Marche jusqu’à l’arbre, et utilise le bloc commande
         `détruire` pour le couper en morceaux.
@@ -6780,6 +6828,8 @@ fr-FR:
       courseA_maze_seq1: _"Essaie de m'emmener jusqu'au cochon en utilisant ces blocs!"_
       courseA_maze_seq10: "**Défi:** Contourne la TNT pour que l'oiseau atteigne le
         cochon! \n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
+      courseA_maze_seq10_copy: "**Défi:** Contourne la TNT pour que l'oiseau atteigne
+        le cochon! \n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
       courseA_maze_seq11: |-
         C'est le moment pour un puzzle plus court! Bouge dans une direction, puis dans une autre pour amener l'oiseau jusqu'au cochon.
 
@@ -6817,6 +6867,10 @@ fr-FR:
         Essaie celui la depuis le début.
 
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_copy: |-
+        Essaie celui la depuis le début.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq6: |-
         Bouge dans une direction, puis dans une autre pour amener l'oiseau jusqu'au cochon!
 
@@ -6825,7 +6879,15 @@ fr-FR:
         l'oiseau jusqu'au cochon !
       courseA_maze_seq6_2019: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
+      courseA_maze_seq6_copy: |-
+        Bouge dans une direction, puis dans une autre pour amener l'oiseau jusqu'au cochon!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau jusqu'au cochon!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau jusqu'au cochon!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -6835,6 +6897,10 @@ fr-FR:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
       courseA_maze_seq8_2019: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
+      courseA_maze_seq8_copy: |-
+        Résoud ce niveau et amène l'oiseau jusqu'au cochon!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Défi:** Corrige ce niveau en ajoutant des blocs pour amener l'oiseau jusqu'au cochon
 
@@ -7872,11 +7938,29 @@ fr-FR:
       courseC_maze_programming_challenge2_2019: Parfois il y a plus d'une manière
         de résoudre le même problème. Parfois il est plus rapide de faire marche arrière
         que d'aller tout droit!
+      courseC_starWars_loops2: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Allez BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Peux tu tout obtenir ?"_
@@ -7887,6 +7971,10 @@ fr-FR:
 
         Les boucles fonctionnent même avec plus d'un bloc à l'intérieur ! Peux tu boucler cette séquence ?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Peux tu tout obtenir ?"_
+
+        Les boucles fonctionnent même avec plus d'un bloc à l'intérieur ! Peux tu boucler cette séquence ?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Peux tu tout obtenir ?"_
 
         Les boucles fonctionnent même avec plus d'un bloc à l'intérieur ! Peux tu boucler cette séquence ?
@@ -7902,6 +7990,10 @@ fr-FR:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tu peux le faire !"_
 
         Peux tu essayer de récupérer toute la ferraille en utilisant une seule boucle? Essayez de tout programmer puis de trouver le code répétitif à mettre en boucle.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tu peux le faire !"_
+
+        Peux tu essayer de récupérer toute la ferraille en utilisant une seule boucle? Essayez de tout programmer puis de trouver le code répétitif à mettre en boucle.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
 
@@ -7911,6 +8003,10 @@ fr-FR:
 
         \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
+
+        \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
 
         \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
@@ -8384,6 +8480,10 @@ fr-FR:
         _"Ce nuage bloque mon point de vue !"_
 
         Vérifie s'il y a une fleur sous le nuage. S'il y a une fleur, prends le nectar.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"Ce nuage bloque mon point de vue !"_
+
+        Vérifie s'il y a une fleur sous le nuage. S'il y a une fleur, prends le nectar.
       courseD_bee_conditionals2: |-
         Plus de nuages!
 
@@ -8402,6 +8502,12 @@ fr-FR:
         Vérifie sous chaque nuage s'il cache une fleur avant de ramasser le nectar.  S'il y a une fleur sous le nuage, l'abeille aura besoin de ramasser le nectar _une fois_.
 
         Souviens toi: Tous les nuages ne cachent pas la même chose!
+      courseD_bee_conditionals2_copy: |-
+        Plus de nuages!
+
+        Vérifie sous chaque nuage s'il cache une fleur avant de ramasser le nectar.  S'il y a une fleur sous le nuage, l'abeille aura besoin de ramasser le nectar _une fois_.
+
+        Souviens toi: Tous les nuages ne cachent pas la même chose!
       courseD_bee_conditionals3: Tu peux seulement ramasser le nectar des fleurs,
         mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
         S'il y a une fleur sous un de ces nuages, l'abeille devra ramasser le nectar
@@ -8414,6 +8520,10 @@ fr-FR:
         mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
         S'il y a une fleur sous un de ces nuages, l'abeille devra ramasser le nectar
         _une fois_.
+      courseD_bee_conditionals3_copy: Tu peux seulement ramasser le nectar des fleurs,
+        mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
+        S'il y a une fleur sous un de ces nuages, l'abeille devra ramasser le nectar
+        _une fois_.
       courseD_bee_conditionals4: "Dans cette énigme, nous savons que chaque fleur
         contient exactement un nectar, mais les fleurs ne sont pas espacées uniformément.
         \n\nRecueille tout le nectar en utilisant le moins de blocs possible."
@@ -8421,6 +8531,9 @@ fr-FR:
         contient exactement un nectar, mais les fleurs ne sont pas espacées uniformément.
         \n\nRecueille tout le nectar en utilisant le moins de blocs possible."
       courseD_bee_conditionals4_2019: "Dans cette énigme, nous savons que chaque fleur
+        contient exactement un nectar, mais les fleurs ne sont pas espacées uniformément.
+        \n\nRecueille tout le nectar en utilisant le moins de blocs possible."
+      courseD_bee_conditionals4_copy: "Dans cette énigme, nous savons que chaque fleur
         contient exactement un nectar, mais les fleurs ne sont pas espacées uniformément.
         \n\nRecueille tout le nectar en utilisant le moins de blocs possible."
       courseD_bee_conditionals6: |-
@@ -9135,11 +9248,24 @@ fr-FR:
         -   Pour faire chaque hexagone, répète le côté 6 fois, en tournant de 60 degrés.
         -   Saute en avant de 25 pixels entre chaque hexagone.
         -   Pour dessiner un trésor, tu auras besoin d'alterner entre tourner à 60 degrés et 120 degrés.
+      courseE_artist_functions1_copy: |-
+        _"Moi Artiste zombie. Moi aimer dessiner!"_
+
+        Aide le zombie à dessiner des lunettes de 100 pixels de côté.
+        Le lien entre les carreaux de lunettes fait 75 pixels de long.
       courseE_artist_functions2: |-
         Les fonctions permettent de créer de nouveaux blocs!
 
         Nous avons mis les blocs nécessaires pour dessiner un carré dans une fonction appelée `Dessine un carré`. Cette fois, utilise la fonction `dessine un carré` pour créer les lunettes.
+      courseE_artist_functions2_copy: |-
+        Les fonctions permettent de créer de nouveaux blocs!
+
+        Nous avons mis les blocs nécessaires pour dessiner un carré dans une fonction appelée `Dessine un carré`. Cette fois, utilise la fonction `dessine un carré` pour créer les lunettes.
       courseE_artist_functions3: |-
+        Nous reviendrons aux fonctions rapidement. Faisons une pause pour s'entrainer à faire cette étoile.
+
+        Tu peux faire ce dessin en ajoutant un bloc `répéter`.
+      courseE_artist_functions3_copy: |-
         Nous reviendrons aux fonctions rapidement. Faisons une pause pour s'entrainer à faire cette étoile.
 
         Tu peux faire ce dessin en ajoutant un bloc `répéter`.
@@ -9149,7 +9275,17 @@ fr-FR:
         -   Chaque branche de l'etoile fait 25 pixels de long
         -   Tourne de 45 degrés entre chaque branche
         -   Saute de 100 pixels entre chaque étoile
+      courseE_artist_functions4_copy: |-
+        Maintenant que tu peux dessiner une étoile, essaie de dessiner 4 étoiles!
+
+        -   Chaque branche de l'etoile fait 25 pixels de long
+        -   Tourne de 45 degrés entre chaque branche
+        -   Saute de 100 pixels entre chaque étoile
       courseE_artist_functions5: |-
+        Quand est-ce qu'il est plus dur de dessiner 3 étoiles que 4? Lorsque tu dois en plus sauter par dessus la lune!
+
+        Dessine seulement ces 3 étoiles pour finir ce puzzle.
+      courseE_artist_functions5_copy: |-
         Quand est-ce qu'il est plus dur de dessiner 3 étoiles que 4? Lorsque tu dois en plus sauter par dessus la lune!
 
         Dessine seulement ces 3 étoiles pour finir ce puzzle.
@@ -9210,6 +9346,8 @@ fr-FR:
       courseE_artist_functions_predict1_2018: 'Voici un puzzle aui utilise une fonction
         que nous avons définie. '
       courseE_artist_functions_predict1_2019: 'Voici un puzzle aui utilise une fonction
+        que nous avons définie. '
+      courseE_artist_functions_predict1_copy: 'Voici un puzzle aui utilise une fonction
         que nous avons définie. '
       courseE_artist_ramp8: "Great!  Now let's use that `repeat`\nloop to make a square
         using Artist!  The blocks for artist are a little different\nthan other puzzles,

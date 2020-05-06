@@ -564,17 +564,23 @@ he-IL:
         draw a square: צייר ריבוע
       courseE_artist_functions2_2019:
         draw a square: צייר ריבוע
+      courseE_artist_functions2_copy:
+        draw a square: צייר ריבוע
       courseE_artist_functions3_2018:
         draw a star: צייר כוכב
       courseE_artist_functions3_2019:
         draw a star: צייר כוכב
       courseE_artist_functions4:
         draw a star: צייר כוכב
+      courseE_artist_functions4_copy:
+        draw a star: צייר כוכב
       courseE_artist_functions5:
         draw a star: צייר כוכב
       courseE_artist_functions5_2018:
         draw a star: צייר כוכב
       courseE_artist_functions5_2019:
+        draw a star: צייר כוכב
+      courseE_artist_functions5_copy:
         draw a star: צייר כוכב
       courseE_artist_functions7:
         draw a window: צייר חלון
@@ -669,6 +675,8 @@ he-IL:
       courseE_artist_functions_predict1_2018:
         draw a square: צייר ריבוע
       courseE_artist_functions_predict1_2019:
+        draw a square: צייר ריבוע
+      courseE_artist_functions_predict1_copy:
         draw a square: צייר ריבוע
       courseE_artist_functions_predict2:
         draw line of polygons: צייר קו של מצולע

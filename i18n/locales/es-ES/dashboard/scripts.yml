@@ -7,6 +7,7 @@ es:
         csd_category_name: Descubrimientos CS ('17-'18)
         csd_2018_category_name: Descubrimientos de Informática ('18-'19)
         csd_2019_category_name: Descubrimientos CS ('19-'20)
+        csf_category_name: Fundamentos de CS
         csf_2018_category_name: Fundamentos de Informática (2018)
         csf_international_category_name: Fundamentos de Informática Internacional
         csf2_draft_category_name: 'En desarrollo: Cursos A - F'
@@ -1614,6 +1615,13 @@ es:
               name: '¡Participe en un estudio longitudinal!'
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp1_1:
+              display_name: 'Capítulo 1: Representación y transmisión de información'
+            csp1_2:
+              display_name: 'Capítulo 2: Inventando el Internet'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1634,6 +1642,13 @@ es:
               name: '¡Participe en un estudio longitudinal!'
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            csp2_1:
+              display_name: 'Capítulo 1: Codificación y compresión de información compleja'
+            csp2_2:
+              display_name: 'Capítulo 2: Manipulación y visualización de datos'
+            cspSurvey:
+              display_name: Encuesta
         csp3-2017:
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
@@ -1662,6 +1677,13 @@ es:
               name: Originando funciones con los parámetros
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Lenguajes de programación y algoritmos'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
         csp4-2017:
           stages:
             Cracking the Code:
@@ -1678,6 +1700,13 @@ es:
               name: Encuesta de final de curso
             Student Post-Course Survey:
               name: Encuesta de fin de curso
+          lesson_groups:
+            csp4_1:
+              display_name: 'Capítulo 1: El mundo de los grandes datos y la encriptación'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -1732,6 +1761,13 @@ es:
               name: '¡Participe en un estudio longitudinal!'
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programación orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programación con estructuras de datos'
+            cspSurvey:
+              display_name: Encuesta
         csp6:
           stages:
             Participate in a longitudinal study!:
@@ -1832,6 +1868,21 @@ es:
           stages:
             Sending Binary Messages:
               name: Envío de mensajes binarios
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1866,6 +1917,14 @@ es:
               name: Funciones de artista
         artistExemplar:
           description_audience: Edades de 8 a 18 años
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2016,6 +2075,14 @@ es:
               name: Rebotar
             'Farmer: While Loops':
               name: 'Granjera: Bucles Mientras'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         csd3-2017:
           description_short: Programación
           stages:
@@ -2075,6 +2142,15 @@ es:
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
             Parameters and Randomization:
               name: Parámetros y aleatoriedad
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
+            cspSurvey:
+              display_name: Encuesta
+            csd_survey:
+              display_name: Encuesta de final de curso
         grade2:
           stages:
             Flappy:
@@ -2144,12 +2220,34 @@ es:
             Apps and Problem Solving:
               description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
               description_teacher: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csd1_1:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
         csp-online-test:
           stages:
             'Lessons 1 - 3: Algorithms':
               name: 'Lecciones 1 - 3: Algoritmos'
             Unit 5 Overview:
               name: Unidad 5 visión general
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         basketball:
           title: Elije un equipo y crea un juego de basquetbol
           description_short: Crear un juego de baloncesto
@@ -2190,10 +2288,32 @@ es:
               description_teacher: Esta lección alienta a los estudiantes a pensar más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar información relevante y confiable en línea. Después de ver y debatir un video sobre cómo funcionan los motores de búsqueda, los estudiantes buscarán información sobre varios animales poco comunes. Tendrán que analizar los sitios que encuentran confiables para identificar cuál de los animales son realmente un engaño.
             Lists:
               name: Listas
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Contenido Web y HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo y CCS'
+            csd_survey:
+              display_name: Encuesta de final de curso
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         csd4-2017:
           stages:
             User-Centered Design Micro Activity:
               description_teacher: Esta lección guía a los estudiantes a través de una versión resumida del proceso de diseño que verán a lo largo de esta unidad. Los estudiantes primero generan una lluvia de ideas para una lista de usuarios potenciales de ropa inteligente. Como clase, agrupan estas ideas en categorías amplias y cada grupo elegirá una categoría de usuario. Los grupos repiten este proceso para generar una lluvia de ideas sobre las necesidades o inquietudes de sus usuarios, eventualmente categorizar estas necesidades y eligen una para enfocarse. Finalmente, los estudiantes diseñan una pieza de ropa inteligente, usando las necesidades y preocupaciones específicas que cada uno creó para guiar sus decisiones. Al final de la clase, los estudiantes comparten rápidamente su proceso de toma de decisiones y reciben comentarios sobre qué tan bien sus productos abordan las necesidades del usuario que seleccionaron.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipo de aplicaciones'
+            csd_survey:
+              display_name: Encuesta de final de curso
         minecraft:
           title: Diseñador de Minecraft Hora de Código
           description_short: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
@@ -2264,6 +2384,11 @@ es:
               name: Introducción
             Conditionals:
               name: Condicionales
+          lesson_groups:
+            content:
+              display_name: Contenido
+            extra_course_content:
+              display_name: Contenido adicional del curso
         coursef-draft:
           description_short: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
           stages:
@@ -2283,6 +2408,9 @@ es:
               name: Laboratorio de juegos de la Edad de hielo
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
+          lesson_groups:
+            content:
+              display_name: Contenido
         classic-hoc-impact-study:
           description_short: '¡Prueba los fundamentos de la informática con muchos personajes divertidos!'
           stages:
@@ -2328,10 +2456,25 @@ es:
           stages:
             'Lessons 1 - 3: Algorithms':
               name: 'Lecciones 1 - 3: Algoritmos'
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         csdgraveyard:
           stages:
             new stage:
               name: nueva etapa
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         sciencepd4:
           stages:
             Welcome!:
@@ -2356,6 +2499,9 @@ es:
           stages:
             Binary:
               name: Binario
+          lesson_groups:
+            content:
+              display_name: Contenido
         sciencepd5:
           stages:
             Welcome!:
@@ -2372,6 +2518,13 @@ es:
           stages:
             Unit 5 Overview:
               name: Unidad 5 visión general
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+            practice:
+              display_name: El profesor practica
         csppostap-2017:
           stages:
             Updating Records:
@@ -2382,6 +2535,11 @@ es:
               name: Aplicaciones de ejemplo
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            content:
+              display_name: Contenido
+            cspSurvey:
+              display_name: Encuesta
         csd6-draft:
           stages:
             Lists:
@@ -2392,6 +2550,11 @@ es:
               name: Haciendo música
             Functions with Parameters:
               name: Funciones con parámetros
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construcción de prototipos físicos'
         workshop-gamelab:
           stages:
             Introduction:
@@ -2400,6 +2563,11 @@ es:
           stages:
             new stage:
               name: nueva etapa
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
         applab-2hour:
           stages:
             new stage:
@@ -2430,6 +2598,13 @@ es:
               name: Haciendo música
             Functions with Parameters_:
               name: Funciones con parámetros
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construcción de prototipos físicos'
+            csd_survey:
+              display_name: Encuesta de final de curso
         csd3-draft:
           stages:
             Variables:
@@ -2452,6 +2627,13 @@ es:
           stages:
             Problem Solving with Big Data:
               description_teacher: En esta lección, los alumnos observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentaran tres escenarios que podrían resolverse utilizando datos y una lluvia de ideas sobre los tipos de datos que desearían resolver y cómo podrían recopilar los datos. Cada problema está diseñado para reflejar un servicio existente en el mundo real. Después de una lluvia de ideas, los estudiantes ven un video sobre un servicio en el mundo real y tomar notas sobre qué datos recopila el servicio del mundo real y cómo se usan. Al final de la lección, los estudiantes indicaran si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
+            csd_survey:
+              display_name: Encuesta de final de curso
         csd3-old:
           stages:
             Booleans and Conditionals:
@@ -2514,6 +2696,9 @@ es:
           stages:
             Participate in a longitudinal study!:
               name: '¡Participe en un estudio longitudinal!'
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
         csd2-old:
           stages:
             Website Design:
@@ -2598,6 +2783,13 @@ es:
           assignment_family_title: Curso E
           description_audience: 'Edades de 8 a 12 años'
           description_short: Cubre rápidamente los conceptos en el curso C y D y luego ir más allá con funciones.
+          lesson_groups:
+            csf_e_1:
+              display_name: Aavnzar al Curso E (Opcional)
+            csf_e_2:
+              display_name: Contenido del Curso E
+            extra_course_content:
+              display_name: Contenido adicional del curso
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -2612,10 +2804,94 @@ es:
           assignment_family_title: Curso F
           description_audience: 'Edades de 9 a 13 años'
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
+          lesson_groups:
+            csf_f_1:
+              display_name: Avanzar al Curso F (Opcional)
+            csf_f_2:
+              display_name: Contenido del Curso F
         csp-ap:
           stages:
             Participate in a longitudinal study!:
               name: '¡Participe en un estudio longitudinal!'
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Capítulo 1: Configuración de AP Tech'
+            csp_ap_3:
+              display_name: 'Capítulo 3: AP Crear tareas de rendimiento'
+            csp_ap_2:
+              display_name: 'Capítulo 2: AP Examinar tareas de rendimiento'
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         express-2017:
           stages:
             Introduction:
@@ -2649,6 +2925,9 @@ es:
           title: Curso Rápido
           assignment_family_title: Curso Rápido
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
+          lesson_groups:
+            content:
+              display_name: Contenido
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2692,6 +2971,19 @@ es:
               name: Unidad 3 Capitulo 1 Evaluacion
           description_short: Programación
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Lenguajes de programación y algoritmos'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipo de aplicaciones'
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -2710,6 +3002,13 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
+          lesson_groups:
+            csf_e_1:
+              display_name: Aavnzar al Curso E (Opcional)
+            csf_e_2:
+              display_name: Contenido del Curso E
+            extra_course_content:
+              display_name: Contenido adicional del curso
         new-d:
           stages:
             Introduction:
@@ -2734,6 +3033,9 @@ es:
           stages:
             new stage:
               name: nueva etapa
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Lenguajes de programación y algoritmos'
         new-express:
           stages:
             Introduction:
@@ -2748,6 +3050,9 @@ es:
               name: Construyendo una Base
             Nested Loops:
               name: Bucles anidados
+          lesson_groups:
+            content:
+              display_name: Contenido
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -2768,6 +3073,13 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
+          lesson_groups:
+            csf_e_1:
+              display_name: Aavnzar al Curso E (Opcional)
+            csf_e_2:
+              display_name: Contenido del Curso E
+            extra_course_content:
+              display_name: Contenido adicional del curso
         new-f:
           stages:
             Building a Foundation:
@@ -2786,10 +3098,27 @@ es:
               name: Composicion musical con parámetros
             Build Your Project:
               name: Construye tu proyecto
+          lesson_groups:
+            csf_f_1:
+              display_name: Avanzar al Curso F (Opcional)
+            csf_f_2:
+              display_name: Contenido del Curso F
+        csd5-old:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
         hocali:
           stages:
             new stage:
               name: nueva etapa
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipo de aplicaciones'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -2810,6 +3139,11 @@ es:
               name: Práctica PT - Diseña una Escena Digital
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Lenguajes de programación y algoritmos'
+            cspAssessment:
+              display_name: Evaluación del capítulo
         pwc:
           stages:
             new stage:
@@ -2845,10 +3179,20 @@ es:
               name: nueva etapa
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capítulo 2: AP Examinar tareas de rendimiento'
+            cspSurvey:
+              display_name: Encuesta
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: Encuesta de final de curso
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capítulo 3: AP Crear tareas de rendimiento'
+            cspSurvey:
+              display_name: Encuesta
         aws-demo:
           stages:
             new stage:
@@ -2881,6 +3225,13 @@ es:
               name: Colaboración Abierta
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+          lesson_groups:
+            csf_e_1:
+              display_name: Aavnzar al Curso E (Opcional)
+            csf_e_2:
+              display_name: Contenido del Curso E
+            extra_course_content:
+              display_name: Contenido adicional del curso
         course-f-2018:
           stages:
             Building a Foundation:
@@ -2901,12 +3252,22 @@ es:
               name: Composicion musical con parámetros
             Build Your Project:
               name: Construye tu proyecto
+          lesson_groups:
+            csf_f_1:
+              display_name: Avanzar al Curso F (Opcional)
+            csf_f_2:
+              display_name: Contenido del Curso F
         csd6-old:
           stages:
             Lists:
               name: Listas
             For Loops:
               name: Bucles Para
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construcción de prototipos físicos'
         csd3-1819draft:
           stages:
             Variables:
@@ -2922,6 +3283,13 @@ es:
             Functions:
               name: funciones
           description_short: "Programación"
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
+            cspSurvey:
+              display_name: Encuesta
         textbook:
           stages:
             new stage:
@@ -2977,12 +3345,26 @@ es:
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
             Project - Design a Game:
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
+            cspSurvey:
+              display_name: Encuesta
         csd2-2018:
           stages:
             Lists:
               name: Listas
             Sources and Search Engines:
               description_teacher: Esta lección alienta a los estudiantes a pensar más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar información relevante y confiable en línea. Después de ver y debatir un video sobre cómo funcionan los motores de búsqueda, los estudiantes buscarán información sobre varios animales poco comunes. Tendrán que analizar los sitios que encuentran confiables para identificar cuál de los animales son realmente un engaño.
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Contenido Web y HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo y CCS'
+            cspSurvey:
+              display_name: Encuesta
         coursea-2018:
           assignment_family_title: Curso A
           description_short: Una introducción a la informática para pre-lectores.
@@ -3100,6 +3482,13 @@ es:
               name: Haciendo música
             Functions with Parameters:
               name: Funciones con parámetros
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construcción de prototipos físicos'
+            cspSurvey:
+              display_name: Encuesta
         coursee-2018:
           assignment_family_title: Curso E
           description_audience: 'Edades de 8 a 12 años'
@@ -3129,6 +3518,13 @@ es:
               name: Hora de Code de Minecraft
             Copyright and Creativity:
               name: Compartir digital
+          lesson_groups:
+            csf_e_1:
+              display_name: Aavnzar al Curso E (Opcional)
+            csf_e_2:
+              display_name: Contenido del Curso E
+            extra_course_content:
+              display_name: Contenido adicional del curso
         coursef-2018:
           assignment_family_title: Curso F
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
@@ -3154,6 +3550,11 @@ es:
               name: Construye tu proyecto
             Conditionals with Cards:
               name: Condicionales con tarjetas
+          lesson_groups:
+            csf_f_1:
+              display_name: Avanzar al Curso F (Opcional)
+            csf_f_2:
+              display_name: Contenido del Curso F
         csp1-2018:
           stages:
             Personal Innovations:
@@ -3180,6 +3581,13 @@ es:
               name: Paquetes y realización de una internet que sea de confianza
             The Need for DNS:
               name: La necesidad para el DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp1_1:
+              display_name: 'Capítulo 1: Representación y transmisión de información'
+            csp1_2:
+              display_name: 'Capítulo 2: Inventando el Internet'
         csd1-2018:
           description_short: "  Aprenda cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
@@ -3197,14 +3605,35 @@ es:
               description_teacher: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
             Apps and Storage:
               description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csd1_1:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
         csd4-2018:
           stages:
             User-Centered Design Micro Activity:
               description_teacher: Esta lección guía a los estudiantes a través de una versión resumida del proceso de diseño que verán a lo largo de esta unidad. Los estudiantes primero generan una lluvia de ideas para una lista de usuarios potenciales de ropa inteligente. Como clase, agrupan estas ideas en categorías amplias y cada grupo elegirá una categoría de usuario. Los grupos repiten este proceso para generar una lluvia de ideas sobre las necesidades o inquietudes de sus usuarios, eventualmente categorizar estas necesidades y eligen una para enfocarse. Finalmente, los estudiantes diseñan una pieza de ropa inteligente, usando las necesidades y preocupaciones específicas que cada uno creó para guiar sus decisiones. Al final de la clase, los estudiantes comparten rápidamente su proceso de toma de decisiones y reciben comentarios sobre qué tan bien sus productos abordan las necesidades del usuario que seleccionaron.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipo de aplicaciones'
+            cspSurvey:
+              display_name: Encuesta
         csd5-2018:
           stages:
             Problem Solving with Big Data:
               description_teacher: En esta lección, los alumnos observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentaran tres escenarios que podrían resolverse utilizando datos y una lluvia de ideas sobre los tipos de datos que desearían resolver y cómo podrían recopilar los datos. Cada problema está diseñado para reflejar un servicio existente en el mundo real. Después de una lluvia de ideas, los estudiantes ven un video sobre un servicio en el mundo real y tomar notas sobre qué datos recopila el servicio del mundo real y cómo se usan. Al final de la lección, los estudiantes indicaran si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
+            cspSurvey:
+              display_name: Encuesta
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -3221,6 +3650,11 @@ es:
               name: Unidad 3 Capitulo 1 Evaluacion
             Check Your Assumptions:
               name: Verifica tus suposiciones
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unidad 2: Información Digital'
+            cspAssessment:
+              display_name: Evaluación del capítulo
         csp3-2018:
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
@@ -3245,6 +3679,25 @@ es:
               name: Unidad 3 Capitulo 1 Evaluacion
             Creating Functions with Parameters:
               name: Originando funciones con los parámetros
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unidad 3: Introducción a la Programación'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
+        csp-explore-2018:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capítulo 2: AP Examinar tareas de rendimiento'
+            cspSurvey:
+              display_name: Encuesta
+        csp-create-2018:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capítulo 3: AP Crear tareas de rendimiento'
+            cspSurvey:
+              display_name: Encuesta
         csp4-2018:
           stages:
             Identifying People with Data:
@@ -3257,6 +3710,13 @@ es:
               name: '¡Participe en un estudio longitudinal!'
             Check Your Assumptions:
               name: Verifica tus suposiciones
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unidad 4: Gran data y privacidad'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
         csp5-2018:
           stages:
             Buttons and Events:
@@ -3281,6 +3741,13 @@ es:
               name: 'Practica PT:Crear'
             Participate in a longitudinal study!:
               name: '¡Participe en un estudio longitudinal!'
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programación orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programación con estructuras de datos'
+            cspSurvey:
+              display_name: Encuesta
         csppostap-2018:
           stages:
             Updating Records:
@@ -3291,6 +3758,119 @@ es:
               name: Aplicaciones de ejemplo
             Check Your Assumptions:
               name: Verifica tus suposiciones
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Capítulo 1: Manipulación y visualización de datos'
+            csp_postap_2:
+              display_name: 'Capítulo 2: Aplicaciones y bases de datos'
+            cspSurvey:
+              display_name: Encuesta
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Encuesta de final de curso
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         pre-express-2018:
           description_short: 'Introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
           stages:
@@ -3312,6 +3892,12 @@ es:
               name: Es estupendo crear y jugar limpio
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie y el gran proyecto
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         frozen-2018:
           stages:
             Artist:
@@ -3344,6 +3930,16 @@ es:
           stages:
             Dance Party:
               name: Fiesta para bailar
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
         dance-extras:
           description: Ve más allá de la primera hora con más ideas para proyectos.
         coursef-2019:
@@ -3371,6 +3967,19 @@ es:
             Digital Sharing:
               name: Compartir digital
               description_teacher: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            csf_variables:
+              display_name: variables
+            csf_data:
+              display_name: Datos
+            csf_for_loops:
+              display_name: Bucles Para
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Ciudadanía Digital
         dance-low:
           stages:
             Dance Party:
@@ -3399,6 +4008,19 @@ es:
               description_teacher: En esta lección, los estudiantes pondrán en práctica utilizando eventos para construir un juego que pueden compartir en línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados a través de eventos, luego le dadas espacio para crear su propio juego.
             Dance Party:
               name: Fiesta para bailar
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: vuelta
+            csf_conditionals:
+              display_name: Condicionales
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Ciudadanía Digital
         coursee-2019:
           description_audience: 'Edades de 8 a 12 años'
           stages:
@@ -3430,6 +4052,15 @@ es:
               description_student: Juega un juego y piensa en qué comandos se necesitan para obtener el resultado correcto.
             Songwriting:
               name: Composición Musical
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_nested_loops:
+              display_name: Bucles anidados
+            csf_functions:
+              display_name: funciones
         express-2019:
           title: Curso Rápido (2017)
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -3460,6 +4091,21 @@ es:
               name: Fiesta para bailar
             Concept Practice with Minecraft:
               name: Observando hacia el futuro
+          lesson_groups:
+            csf_warmup:
+              display_name: Calentamiento
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_conditionals:
+              display_name: Condicionales
+            csf_functions:
+              display_name: funciones
+            csf_variables:
+              display_name: variables
+            csf_for_loops:
+              display_name: Bucles Para
         csd1-2019:
           description_short: "  Aprenda cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
@@ -3474,12 +4120,24 @@ es:
               description_teacher: En esta lección, los alumnos consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Los grupos se asignan a un dispositivo informático y, según una definición de entrada y salida proporcionada por el maestro, enumeran las entradas y salidas de su dispositivo. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero las discusiones posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o el hecho de que Internet puede servir como entrada y salida). A lo largo de la lección, el maestro registra las entradas y salidas que se identifican en un cuadro en el frente del salon. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan de la tabla las entradas y salidas utilizadas para esa actividad.
             Apps and Storage:
               description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csd1_1:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
         andrea-test:
           stages:
             new stage:
               name: nueva etapa
             'null':
               name: 'nulo'
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         dance-extras-gallery:
           title: Sigue bailando
           description: Ve más allá de la primera hora con más ideas para proyectos.
@@ -3503,6 +4161,23 @@ es:
               name: Contraseñas fuertes
             Picturing Data:
               name: Datos de gráfico
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Datos
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
         gamelab:
           title: Laboratorio de juego
         coursea-2019:
@@ -3514,6 +4189,15 @@ es:
               name: Ir a Sitios Seguro
             Loops in Artist:
               name: Bucles en Artista
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3526,6 +4210,15 @@ es:
               name: Bucles en Artista
             'Loops: Getting Loopy':
               name: Bucleandose
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
         pre-express-2019:
           description_short: 'Introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
           stages:
@@ -3535,6 +4228,13 @@ es:
               name: Tu huella Digital
             Spelling Bee:
               name: Concurso de Ortografía
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -3549,6 +4249,13 @@ es:
               name: Listas
             Sources and Search Engines:
               description_teacher: Esta lección alienta a los estudiantes a pensar más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar información relevante y confiable en línea. Después de ver y debatir un video sobre cómo funcionan los motores de búsqueda, los estudiantes buscarán información sobre varios animales poco comunes. Tendrán que analizar los sitios que encuentran confiables para identificar cuál de los animales son realmente un engaño.
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Contenido Web y HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo y CCS'
+            cspSurvey:
+              display_name: Encuesta
         csd3-2019:
           description_short: "Programación"
           stages:
@@ -3600,24 +4307,65 @@ es:
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
             Project - Design a Game:
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
+            cspSurvey:
+              display_name: Encuesta
         csd4-2019:
           stages:
             User-Centered Design Micro Activity:
               description_teacher: Esta lección guía a los estudiantes a través de una versión resumida del proceso de diseño que verán a lo largo de esta unidad. Los estudiantes primero generan una lluvia de ideas para una lista de usuarios potenciales de ropa inteligente. Como clase, agrupan estas ideas en categorías amplias y cada grupo elegirá una categoría de usuario. Los grupos repiten este proceso para generar una lluvia de ideas sobre las necesidades o inquietudes de sus usuarios, eventualmente categorizar estas necesidades y eligen una para enfocarse. Finalmente, los estudiantes diseñan una pieza de ropa inteligente, usando las necesidades y preocupaciones específicas que cada uno creó para guiar sus decisiones. Al final de la clase, los estudiantes comparten rápidamente su proceso de toma de decisiones y reciben comentarios sobre qué tan bien sus productos abordan las necesidades del usuario que seleccionaron.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipo de aplicaciones'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
+            cspSurvey:
+              display_name: Encuesta
         csd5-2019:
           stages:
             Problem Solving with Big Data:
               description_teacher: En esta lección, los alumnos observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentaran tres escenarios que podrían resolverse utilizando datos y una lluvia de ideas sobre los tipos de datos que desearían resolver y cómo podrían recopilar los datos. Cada problema está diseñado para reflejar un servicio existente en el mundo real. Después de una lluvia de ideas, los estudiantes ven un video sobre un servicio en el mundo real y tomar notas sobre qué datos recopila el servicio del mundo real y cómo se usan. Al final de la lección, los estudiantes indicaran si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
+            cspSurvey:
+              display_name: Encuesta
         csd6-2019:
           stages:
             Making Music:
               name: Haciendo música
             Functions with Parameters:
               name: Funciones con parámetros
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construcción de prototipos físicos'
+            cspSurvey:
+              display_name: Encuesta
         csp4-pilot:
           stages:
             Surveys:
               name: Encuestas
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
+            required:
+              display_name: Vista previa
         csp1-2019:
           stages:
             Personal Innovations:
@@ -3644,6 +4392,13 @@ es:
               name: Paquetes y realización de una internet que sea de confianza
             The Need for DNS:
               name: La necesidad para el DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp1_1:
+              display_name: 'Capítulo 1: Representación y transmisión de información'
+            csp1_2:
+              display_name: 'Capítulo 2: Inventando el Internet'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -3654,6 +4409,13 @@ es:
               name: Cifrado de las imágenes en blanco y negro
             Encoding Color Images:
               name: Cifrado de las imágenes de color
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unidad 2: Información Digital'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
         csp3-2019:
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
@@ -3676,6 +4438,13 @@ es:
               name: Práctica PT - Diseña una Escena Digital
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unidad 3: Introducción a la Programación'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
         csp4-2019:
           stages:
             Check Your Assumptions:
@@ -3684,6 +4453,13 @@ es:
               name: Identificando personas con datos
             Simple Encryption:
               name: Encripción simple
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unidad 4: Gran data y privacidad'
+            cspAssessment:
+              display_name: Evaluación del capítulo
+            cspSurvey:
+              display_name: Encuesta
         csp5-2019:
           stages:
             Buttons and Events:
@@ -3704,6 +4480,25 @@ es:
               name: Procesando Arrays
             Functions with Return Values:
               name: Funciones con Valores de Retorno
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programación orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programación con estructuras de datos'
+            cspSurvey:
+              display_name: Encuesta
+        csp-explore-2019:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capítulo 2: AP Examinar tareas de rendimiento'
+            cspSurvey:
+              display_name: Encuesta
+        csp-create-2019:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capítulo 3: AP Crear tareas de rendimiento'
+            cspSurvey:
+              display_name: Encuesta
         csppostap-2019:
           stages:
             Updating Records:
@@ -3712,6 +4507,13 @@ es:
               name: Importación y exportación de datos
             Sample Apps:
               name: Aplicaciones de ejemplo
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Capítulo 1: Manipulación y visualización de datos'
+            csp_postap_2:
+              display_name: 'Capítulo 2: Aplicaciones y bases de datos'
+            cspSurvey:
+              display_name: Encuesta
         csp1-pilot:
           stages:
             new stage:
@@ -3724,6 +4526,11 @@ es:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Binary Numbers:
               name: Números binarios
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            required:
+              display_name: Vista previa
         csd-videos:
           stages:
             new stage:
@@ -3740,26 +4547,156 @@ es:
               name: Bucles en Artista
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            time4cs_c1:
+              display_name: 'Everglades y sus Ecosistemas'
+            time4cs_c2:
+              display_name: 'Cadenas de comida en Everglades'
+            time4cs_c3:
+              display_name: 'Vivir en Everglades'
+            time4cs_c4:
+              display_name: 'Impactos Invasivos en Everglades'
+            time4cs_c5:
+              display_name: 'Los ciudadanos afectan el cambio en Everglades'
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
         csp2-pilot-staging:
           title: 'Tema 2: El Internet'
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
         csp3-pilot-staging:
           stages:
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: vuelta
+            csp_traversals:
+              display_name: Recorridos
+            csp_project:
+              display_name: Proyecto
+            csp_libraries:
+              display_name: Librerías
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
         csp7-pilot-staging:
           stages:
             new stage:
               name: nueva etapa
             Libraries:
               name: Librerías
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            csp_libraries:
+              display_name: Librerías
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programación en papel cuadriculado
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
         csp5-pilot:
           stages:
             new stage:
               name: nueva etapa
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: vuelta
+            csp_traversals:
+              display_name: Recorridos
+            csp_project:
+              display_name: Proyecto
+            required:
+              display_name: Vista previa
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         csd1-pilot:
           description_short: "  Aprenda cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
@@ -3774,6 +4711,13 @@ es:
               description_teacher: En esta lección, los alumnos consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Los grupos se asignan a un dispositivo informático y, según una definición de entrada y salida proporcionada por el maestro, enumeran las entradas y salidas de su dispositivo. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero las discusiones posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o el hecho de que Internet puede servir como entrada y salida). A lo largo de la lección, el maestro registra las entradas y salidas que se identifican en un cuadro en el frente del salon. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan de la tabla las entradas y salidas utilizadas para esa actividad.
             Apps and Storage:
               description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csd1_1:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
         csd2-pilot:
           stages:
             Lists:
@@ -3782,6 +4726,13 @@ es:
               description_teacher: Esta lección alienta a los estudiantes a pensar más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar información relevante y confiable en línea. Después de ver y debatir un video sobre cómo funcionan los motores de búsqueda, los estudiantes buscarán información sobre varios animales poco comunes. Tendrán que analizar los sitios que encuentran confiables para identificar cuál de los animales son realmente un engaño.
             CSS Classes:
               name: Clases CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Contenido Web y HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo y CCS'
+            cspSurvey:
+              display_name: Encuesta
         csd3-pilot:
           description_short: "Programación"
           stages:
@@ -3839,6 +4790,13 @@ es:
               name: Números aleatorios
             Sprite Properties:
               name: Propiedades de Sprites
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
+            cspSurvey:
+              display_name: Encuesta
         maddie-test:
           stages:
             new stage:
@@ -3847,20 +4805,94 @@ es:
           stages:
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+          lesson_groups:
+            content:
+              display_name: Contenido
+            required:
+              display_name: Vista previa
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         dlp19-csd-mod-w1:
           stages:
             Step 1:
               name: Paso 1
             Step 2:
               name: Paso 2
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: nueva etapa
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Vista previa
+            content:
+              display_name: Contenido
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
         csp2-pilot:
           stages:
             new stage:
@@ -3869,6 +4901,11 @@ es:
               name: Enrutadores y reiteración
             The Need for Addressing:
               name: La necesidad para el redireccionamiento
+          lesson_groups:
+            content:
+              display_name: Contenido
+            required:
+              display_name: Vista previa
         peru-2019:
           stages:
             new stage:
@@ -3883,6 +4920,12 @@ es:
               name: Eventos en la Guerra de las Galaxias
             Introduction to Debugging:
               name: Introducción a la depuración
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Contenido
+            required:
+              display_name: Vista previa
         dance-2019:
           stages:
             Dance Party:
@@ -3924,6 +4967,13 @@ es:
               name: variables
             For Loops:
               name: Bucles Para
+          lesson_groups:
+            k5_getting_started:
+              display_name: Iniciando
+            k5_basic_concepts:
+              display_name: 'Conceptos Básicos de Programación y Prácticas de Enseñanza: Cursos A-D'
+            k5_next_steps:
+              display_name: Próximos pasos
         dance-extras-2019:
           description: Ve más allá de la primera hora con más ideas para proyectos.
         csp10-pilot:
@@ -3934,6 +4984,15 @@ es:
           stages:
             new stage:
               name: nueva etapa
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -3948,6 +5007,27 @@ es:
               name: Colaboración Abierta
             Conditionals with Cards:
               name: Condicionales con tarjetas
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_conditionals:
+              display_name: Condicionales
+            csf_nested_loops:
+              display_name: Bucles anidados
+            csf_functions:
+              display_name: funciones
+        time4cs-experiment-unit-2:
+          lesson_groups:
+            time4cs_c1:
+              display_name: 'Everglades y sus Ecosistemas'
+            time4cs_c2:
+              display_name: 'Cadenas de comida en Everglades'
+            time4cs_c3:
+              display_name: 'Vivir en Everglades'
+            time4cs_c4:
+              display_name: 'Impactos Invasivos en Everglades'
+            time4cs_c5:
+              display_name: 'Los ciudadanos afectan el cambio en Everglades'
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -3956,6 +5036,19 @@ es:
               name: Simón dice
             Access Ability:
               name: Habilidad de acceso
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_conditionals:
+              display_name: Condicionales
+            csf_events:
+              display_name: Eventos
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            ramp_up:
+              display_name: Avanzar
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -3964,10 +5057,57 @@ es:
               name: Simón dice
             Access Ability:
               name: Habilidad de acceso
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_conditionals:
+              display_name: Condicionales
+            csf_events:
+              display_name: Eventos
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            ramp_up:
+              display_name: Avanzar
+        csp7-pilot:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            csp_libraries:
+              display_name: Librerías
+            required:
+              display_name: Vista previa
         csp8-pilot:
           stages:
             new stage:
               name: nueva etapa
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: funciones
+            csp_project:
+              display_name: Proyecto
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: vuelta
+            csp_traversals:
+              display_name: Recorridos
+            csp_project:
+              display_name: Proyecto
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            csp_libraries:
+              display_name: Librerías
         csp9-pilot:
           stages:
             new stage:
@@ -3976,6 +5116,13 @@ es:
           stages:
             CSS Classes:
               name: Clases CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Contenido Web y HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo y CCS'
+            cspSurvey:
+              display_name: Encuesta
         csd1-2020:
           description_short: "  Aprenda cómo los humanos trabajan con computadoras para resolver problemas."
           stages:
@@ -3991,20 +5138,50 @@ es:
             Apps and Storage:
               description_student: "Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. "
             0:
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csd1_1:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
         csd4-2020:
           stages:
             User-Centered Design Micro Activity:
               description_teacher: Esta lección guía a los estudiantes a través de una versión resumida del proceso de diseño que verán a lo largo de esta unidad. Los estudiantes primero generan una lluvia de ideas para una lista de usuarios potenciales de ropa inteligente. Como clase, agrupan estas ideas en categorías amplias y cada grupo elegirá una categoría de usuario. Los grupos repiten este proceso para generar una lluvia de ideas sobre las necesidades o inquietudes de sus usuarios, eventualmente categorizar estas necesidades y eligen una para enfocarse. Finalmente, los estudiantes diseñan una pieza de ropa inteligente, usando las necesidades y preocupaciones específicas que cada uno creó para guiar sus decisiones. Al final de la clase, los estudiantes comparten rápidamente su proceso de toma de decisiones y reciben comentarios sobre qué tan bien sus productos abordan las necesidades del usuario que seleccionaron.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            csd4_2:
+              display_name: 'Capítulo 2: Prototipo de aplicaciones'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
+            cspSurvey:
+              display_name: Encuesta
         csd5-2020:
           stages:
             Problem Solving with Big Data:
               description_teacher: En esta lección, los alumnos observan cómo las organizaciones recopilan y utilizan los datos para resolver problemas en el mundo real. La lección comienza con una revisión rápida del proceso de resolución de problemas de datos que exploraron en la última lección. A continuación, los estudiantes presentaran tres escenarios que podrían resolverse utilizando datos y una lluvia de ideas sobre los tipos de datos que desearían resolver y cómo podrían recopilar los datos. Cada problema está diseñado para reflejar un servicio existente en el mundo real. Después de una lluvia de ideas, los estudiantes ven un video sobre un servicio en el mundo real y tomar notas sobre qué datos recopila el servicio del mundo real y cómo se usan. Al final de la lección, los estudiantes indicaran si los datos fueron provistos activamente por un usuario, si se registraron de forma pasiva o si fueron recopilados por sensores.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representación de la información'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolviendo problemas de datos'
+            cspSurvey:
+              display_name: Encuesta
         csd6-2020:
           stages:
             Making Music:
               name: Haciendo música
             Functions with Parameters:
               name: Funciones con parámetros
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programación con Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construcción de prototipos físicos'
+            cspSurvey:
+              display_name: Encuesta
         csd3-2020:
           description_short: "Programación"
           stages:
@@ -4063,6 +5240,13 @@ es:
               description_teacher: "Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase."
             Text:
               name: Texto
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
+            cspSurvey:
+              display_name: Encuesta
         coursea-2020:
           description_short: Una introducción a la informática para pre-lectores.
           stages:
@@ -4070,6 +5254,15 @@ es:
               name: Ir a Sitios Seguro
             'Programming: Happy Maps':
               name: Mapas Felices
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -4078,6 +5271,15 @@ es:
               name: Muévelo, Muévelo
             'Loops: Getting Loopy':
               name: Bucleandose
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
         coursec-2020:
           description_short: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
           description_audience: 'Edades de 6 a 10 años'
@@ -4092,6 +5294,19 @@ es:
               name: El Gran Evento
             Picturing Data:
               name: Datos de gráfico
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
+            csf_data:
+              display_name: Datos
         coursed-2020:
           description_audience: 'Edades de 7 a 11 años'
           stages:
@@ -4116,6 +5331,19 @@ es:
               name: Ciudadanía Digital
             Dance Party:
               name: Fiesta para bailar
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: vuelta
+            csf_conditionals:
+              display_name: Condicionales
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Ciudadanía Digital
         coursee-2020:
           description_audience: 'Edades de 8 a 12 años'
           stages:
@@ -4127,6 +5355,15 @@ es:
               description_teacher: Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función.  Las Funciones (a veces llamadas procedimientos) son mini programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase  ayudará a los alumnos a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.  
             Digital Sharing:
               name: Compartir digital
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_nested_loops:
+              display_name: Bucles anidados
+            csf_functions:
+              display_name: funciones
         coursef-2020:
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
           description_audience: 'Edades de 9 a 13 años'
@@ -4142,6 +5379,17 @@ es:
             Digital Sharing:
               name: Compartir digital
               description_teacher: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
+          lesson_groups:
+            ramp_up:
+              display_name: Avanzar
+            csf_digcit:
+              display_name: Ciudadanía Digital
+            csf_variables:
+              display_name: variables
+            csf_data:
+              display_name: Datos
+            csf_for_loops:
+              display_name: Bucles Para
         express-2020:
           title: Curso Rápido (2017)
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -4150,6 +5398,21 @@ es:
               name: Fiesta para bailar
             Loops in Artist:
               name: Bucles en Artista
+          lesson_groups:
+            csf_warmup:
+              display_name: Calentamiento
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_conditionals:
+              display_name: Condicionales
+            csf_functions:
+              display_name: funciones
+            csf_variables:
+              display_name: variables
+            csf_for_loops:
+              display_name: Bucles Para
         pre-express-2020:
           description_short: 'Introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
           stages:
@@ -4159,12 +5422,22 @@ es:
               name: Bucles en la Edad del Hielo
             Loops in Artist:
               name: Bucles en Artista
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secuenciando
+            csf_loops:
+              display_name: vuelta
+            csf_events:
+              display_name: Eventos
         csp1-2020:
           stages:
             new stage:
               name: nueva etapa
             Binary Numbers:
               name: Números binarios
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Tema 1: Información digital'
         csp2-2020:
           stages:
             new stage:
@@ -4173,6 +5446,9 @@ es:
               name: La necesidad para el redireccionamiento
             Routers and Redundancy:
               name: Enrutadores y reiteración
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Tema 2: El Internet'
         csp3-2020:
           stages:
             new stage:
@@ -4221,6 +5497,9 @@ es:
               name: Práctica PT - Diseña una Escena Digital
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unidad 3: Introducción a la Programación'
         csd3-virtual:
           description_short: "Programación"
           stages:
@@ -4278,6 +5557,9 @@ es:
               name: Números aleatorios
             Sprite Properties:
               name: Propiedades de Sprites
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
         jess-test-script:
           stages:
             new stage:
@@ -4286,6 +5568,11 @@ es:
           stages:
             CSS Classes:
               name: Clases CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Contenido Web y HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo y CCS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -4318,6 +5605,11 @@ es:
               name: Colisiones
             Functions:
               name: funciones
+          lesson_groups:
+            content:
+              display_name: Contenido
+            csd3_2:
+              display_name: 'Capítulo 2: Construcción de juegos'
         code-break:
           stages:
             new stage:
@@ -4342,3 +5634,8 @@ es:
               name: Procesando Arrays
             Functions with Return Values:
               name: Funciones con Valores de Retorno
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programación orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programación con estructuras de datos'

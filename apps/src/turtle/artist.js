@@ -899,10 +899,6 @@ Artist.prototype.execute = function(executionInfo) {
     this.studioApp_.playAudio('start', {loop: true});
     // animate the transcript.
     this.pid = window.setTimeout(_.bind(this.animate, this), 100);
-    if (this.studioApp_.isUsingBlockly()) {
-      // Disable toolbox while running
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-    }
   } else {
     while (this.animate()) {}
   }
@@ -1498,11 +1494,6 @@ Artist.prototype.checkAnswer = function() {
     });
   } else {
     this.report();
-  }
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // reenable toolbox
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()

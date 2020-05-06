@@ -237,9 +237,24 @@ nl-NL:
       NEW Course 4 Bee For Loops 5:
         actions_category: De gereedschapskist kreeg een nieuwe look! Hier zijn de
           "Actie" blokken.
+      New Artist Project:
+        New Artist Project_callout1: Klik op de categorieën om de blokken in je gereedschapskist
+          te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.
+        New Artist Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan
+          en uit te voeren
+        sign_in_to_save_project: Wil je later nog bij je project kunnen? Log in om
+          dit project in je account op te slaan!
       New Frozen Project:
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
           te maken!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Klik op de categorieën om de blokken in je
+          gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma
+          toe te voegen.
+        New Play Lab Project_callout2: Druk op 'Uitvoeren' om je programma op te slaan
+          en uit te voeren
+        sign_in_to_save_project: Wil je later nog bij je project kunnen? Log in om
+          dit project in je account op te slaan!
       Overworld Chop Trees:
         craft_callout_preplaced: We hebben hier al wat blokken geplaatst om je op
           weg te helpen
@@ -307,6 +322,9 @@ nl-NL:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
+          heeft. Je hoeft niet voor honingraten te checken.
+      courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: Vergeet niet, controleer of ELKE wolk een BLOEM
           heeft. Je hoeft niet voor honingraten te checken.
       frozen circle function with parameter:

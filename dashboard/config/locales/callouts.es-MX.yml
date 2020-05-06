@@ -513,6 +513,20 @@ es-MX:
           tu programa
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: "¡Aquí encontrarás el bucle 'for'!"
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Lleva al actor a esta bandera para pasar al nivel
+          siguiente.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Usa este bloque para dejarte notas a ti o al docente sobre
+          cómo funciona tu código.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Ten en cuenta que ahora los bloques
+          tienen una nueva forma de ingresar números. ¡Estos bloques "matemáticos"
+          se pueden sacar y mover!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Usa éste para establecer la variable 'longitud'
       Overworld Chop Trees:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
       Overworld Chop Trees_2019:
@@ -895,6 +909,9 @@ es-MX:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Sólo tienes disponible uno de estos bloques en este
           rompecabezas.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Sólo tienes disponible uno de estos bloques en este
+          rompecabezas.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
           desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
@@ -919,6 +936,11 @@ es-MX:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
           tienes que revisar las colmenas.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
+          tienes que revisar las colmenas.
+        4_5_Bee_Conditionals_2_2: "¿Necesitas ayuda? ¡Haz click aquí para un VIDEO
+          de ayuda!"
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
           el néctar (o miel) de una flor (o panal).
@@ -1046,6 +1068,9 @@ es-MX:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
           el primer cuadrado.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
+          el primer cuadrado.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
@@ -1055,6 +1080,10 @@ es-MX:
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
           de dibujar la primera plaza?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
+          códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
+          de dibujar la primera plaza?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
           de dibujar la primera plaza?

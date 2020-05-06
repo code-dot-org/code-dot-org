@@ -292,6 +292,21 @@ id-ID:
           di sini sekarang.
       New Frozen Project:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Anda akan menemukan loop 'for` di sini!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Bawalah aktor ke bendera ini untuk maju ke tahap
+          selanjutnya.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk anda atau
+          guru anda tentang bagaimana kode bekerja.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Perhatikan bahwa blok-blok sekarang
+          memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut
+          bisa ditarik dan dipindah-pindahkan!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Gunakan ini untuk menetapkan nilai dari variabel
+          `panjang`
       Overworld Chop Trees:
         craft_callout_preplaced: Kami meletakkan beberapa balok di sini agar kamu
           dapat memulainya dengan mudah
@@ -662,6 +677,9 @@ id-ID:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Kamu hanya punya satu blok yang tersedia di dalam
           teka-teki ini.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Kamu hanya punya satu blok yang tersedia di dalam
+          teka-teki ini.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Kamu tidak harus menggunakan warna agar teka-teki
           ini benar. Namun jika kamu mau melakukannya, blok `warna acak` ini lebih
@@ -688,6 +706,10 @@ id-ID:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
           memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
+        4_5_Bee_Conditionals_2_2: Butuh bantuan? Klik disini untuk VIDEO petunjuk!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Gunakan loop ini untuk mengumpulkan
           semua nektar (atau madu) dari satu bunga (atau sarang madu).
@@ -788,6 +810,9 @@ id-ID:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Ayo kita mulai dengan menggunakan blok ini untuk
           membantu membuat kotak pertama.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Ayo kita mulai dengan menggunakan blok ini untuk
+          membantu membuat kotak pertama.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Ketika blok hijau ini bekerja, semua kode yang
           berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar
@@ -797,6 +822,10 @@ id-ID:
           berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar
           kotak pertama?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Ketika blok hijau ini bekerja, semua kode yang
+          berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar
+          kotak pertama?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Ketika blok hijau ini bekerja, semua kode yang
           berfungsi akan bekerja. Apa yang harus dikerjakan oleh artis setelah menggambar
           kotak pertama?

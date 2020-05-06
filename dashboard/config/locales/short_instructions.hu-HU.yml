@@ -249,8 +249,19 @@ hu-HU:
       4-5 Maze 12: Rendben, ez egy kicsit más. Meg tudod csinálni csak hat blokkal?
       4-5 Maze 2: Juttass el a napraforgóhoz, de kerüljük el a húsevő virágot!
       4-5 Maze 3: Kell... eljut... napraforgó.
+      4-5 Maze 4: Használd az "ismételd" blokkot, hogy gyorsan megoldd a feladványt...
       4-5 Maze 5: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
       4-5 Maze 6: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
+      4-5 Maze 7: Vidd a zombit gyorsan a napraforgóhoz! Meg tudod oldani 11 blokknál
+        kevesebbel?
+      4-5 Maze 8: Használd az "ismételd" blokkot, hogy eljuttasd a zombit a napraforgóhoz.
+        (Kerüld el a húsevő virágokat!)
+      4-5 Maze 9: "Most van egy `ismételd amíg` ciklusunk.\\\nEz addig fogja ismételni
+        az utasításokat, amíg el nem jut a zombi a napraforgóig.  \n\nHasználd az
+        új `ismételd amíg` blokkot, hogy olyan kevés utasítással oldd meg a feladványt
+        amennyivel csak lehet."
+      4-5 Maze Assessment 1: 'Vizsga: juss el a napraforgóhoz a lehető legkevesebb
+        blokk felhasználásával.'
       4-5 Nested Loops 12: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba
         ágyazott ciklusok segítségével?
       4-5 Nested Loops 5: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot
@@ -963,6 +974,8 @@ hu-HU:
         hogy megtaláljam?"_
       course2_maze_programming_challenge2: Néha egynél több megoldása is lehet ugyanannak
         a feladatnak. Néha gyorsabb, ha hátrafelé mész, mintha előre mennél!
+      course3_maze_debugging_challenge2: _"A motkány szédülni fog, ha túl sokat forog!
+        Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával."_
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
@@ -1113,6 +1126,8 @@ hu-HU:
       courseA_maze_seq1: Vidd a madarat a rossz malachoz!
       courseA_maze_seq10: 'Kihívás: Menj körbe a TNT körül, hogy a madár eljusson
         a malacig! '
+      courseA_maze_seq10_copy: 'Kihívás: Menj körbe a TNT körül, hogy a madár eljusson
+        a malacig! '
       courseA_maze_seq11: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig.
       courseA_maze_seq11_2018: Mozogj az egyik irányba, aztán egy másikba, hogy a
@@ -1131,17 +1146,23 @@ hu-HU:
       courseA_maze_seq3: Javítsd ki a kódot, hogy a madár elkapja a malacot!
       courseA_maze_seq4: Távolítsd el a blokkot, hogy a madár eljusson a malacig!
       courseA_maze_seq5: Próbáld ezt önállóan megoldani az elejétől.
+      courseA_maze_seq5_copy: Próbáld ezt önállóan megoldani az elejétől.
       courseA_maze_seq6: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
       courseA_maze_seq6_2018: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
       courseA_maze_seq6_2019: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
         elérjen a malacig!
+      courseA_maze_seq6_copy: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
+        elérjen a malacig!
       courseA_maze_seq7: Találd ki, mi hiányzik, aztán adj hozzá blokkokat, hogy a
         madár eljusson a malacig!
+      courseA_maze_seq7_copy: Találd ki, mi hiányzik, aztán adj hozzá blokkokat, hogy
+        a madár eljusson a malacig!
       courseA_maze_seq8: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_2018: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq8_2019: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
+      courseA_maze_seq8_copy: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
       courseA_maze_seq9: Javítsd ki ezt a kódot azzal, hogy blokkokat adsz hozzá.
         A cél, hogy a madár eljusson a malacig!
       courseA_maze_seq_challenge1: Valami nem jó itt. Segíts kijavítani a kódot, hogy
@@ -1292,10 +1313,15 @@ hu-HU:
       courseC_starWars_loops4_2019: Ebben a feladványban két 'ismételd' ciklus segíteni
         fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb
         blokkot használod fel!
+      courseC_starWars_loops4_copy: Ebben a feladványban két 'ismételd' ciklus segíteni
+        fog, hogy BB-8 minden fémdarabot megszerezze, miközben a lehető legkevesebb
+        blokkot használod fel!
       courseC_starWars_loops5: BB-8 szedje fel az összes fémdarabot a lehető leggyorsabban!
       courseC_starWars_loops5_2018: BB-8 szedje fel az összes fémdarabot a lehető
         leggyorsabban!
       courseC_starWars_loops5_2019: BB-8 szedje fel az összes fémdarabot a lehető
+        leggyorsabban!
+      courseC_starWars_loops5_copy: BB-8 szedje fel az összes fémdarabot a lehető
         leggyorsabban!
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
@@ -1385,6 +1411,9 @@ hu-HU:
       courseE_artist_functions1: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts
         nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel
         rövidebb, mint a négyzet oldala.'
+      courseE_artist_functions1_copy: 'Helló! Zombi művész vagyok. Szeretek rajzolni.
+        Segíts nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő
+        25 pixellel rövidebb, mint a négyzet oldala.'
       courseE_bee_concept1: Gyűjtsd össze az összes nektárt az összes virágról! Használj
         egymásba ágyazott ciklusokat!
       courseE_bee_concept1_2018: Gyűjtsd össze az összes nektárt az összes virágról!

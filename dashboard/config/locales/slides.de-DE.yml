@@ -4574,10 +4574,13 @@ de:
     what_is_cs:
       1:
         image: notes/what_is_cs.png
-        text: |-
-          Die Programmierung ist der Satz von Anweisungen, die du einem Computer gibst. Die Informatik ist ein Bereich, in dem Menschen die Kraft des Computers nutzen, um große Probleme zu lösen. Die Informatik umfasst die Kodierung, aber auch andere Dinge, wie z. B. wie das Internet funktioniert und die Gesellschaft beeinflusst, was man mit großen Datenmengen macht und wie man große Probleme löst. In der Informatik geht es um Problemlösung, kritisches Denken und Beharrlichkeit.
-
-          Übersetzt mit www. DeepL. com/Translator.
+        text: Die Programmierung ist der Satz von Anweisungen, die du einem Computer
+          gibst. Die Informatik ist ein Bereich, in dem Menschen die Kraft des Computers
+          nutzen, um große Probleme zu lösen. Die Informatik umfasst die Kodierung,
+          aber auch andere Dinge, wie z. B. wie das Internet funktioniert und die
+          Gesellschaft beeinflusst, was man mit großen Datenmengen macht und wie man
+          große Probleme löst. In der Informatik geht es um Problemlösung, kritisches
+          Denken und Beharrlichkeit.
     writing_first_program:
       1:
         image: notes/writing_first_program_1.png
