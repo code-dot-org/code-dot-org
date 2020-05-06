@@ -56,7 +56,7 @@ class StageTest < ActiveSupport::TestCase
   end
 
   test "summary for stage with extras" do
-    script = create :script, stage_extras_available: true
+    script = create :script, lesson_extras_available: true
     level = create :level
     stage = create :lesson, script: script
     create :script_level, script: script, lesson: stage, levels: [level]
