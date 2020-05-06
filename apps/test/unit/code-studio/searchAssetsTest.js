@@ -4,6 +4,7 @@ import assert from 'assert';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import animationLibrary from '@cdo/apps/p5lab/gamelab/animationLibrary.json';
 import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
+import translatedAnimationLibrary from './translatedAnimationLibrary.json';
 
 describe('search assets from animation library', function() {
   it('searchAssets searches the animation library in a category', function() {
@@ -116,5 +117,28 @@ describe('search assets from animation library', function() {
       searchedData.results[0].name,
       'lighthearted_bonus_objective_2'
     );
+  });
+
+  it('can search non-latin characters', function() {
+    const maxResults = 3;
+    const pageCount = 0;
+
+    var searchedData = searchAssets(
+      'медведь',
+      '',
+      translatedAnimationLibrary,
+      pageCount,
+      maxResults
+    );
+    assert.equal(searchedData.results.length, 2);
+
+    searchedData = searchAssets(
+      'медведь с рыбой',
+      '',
+      translatedAnimationLibrary,
+      pageCount,
+      maxResults
+    );
+    assert.equal(searchedData.results.length, 1);
   });
 });
