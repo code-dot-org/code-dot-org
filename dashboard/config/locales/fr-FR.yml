@@ -26,8 +26,8 @@ fr:
       messages:
         blank: est obligatoire
         blank_plural: sont obligatoires
-        invalid: n'est pas valide
-        invalid_plural: ne sont pas valides
+        invalid: est invalide
+        invalid_plural: sont invalides
     attributes:
       user:
         name: Nom à afficher
@@ -36,7 +36,7 @@ fr:
         parent_email: E-mail du parent/tuteur
         personal_email: Adresse email personnelle<a href="%{url}">(cliquer ici si
           vous n’avez pas d'adresse e-mail)</a>
-        personal_email_markdown: Adresse email personnel [(cliquez ici si vous n'avez
+        personal_email_markdown: Adresse email personnelle [(cliquer ici si vous n'avez
           pas d'adresse email)](%{url})
         username: nom d'utilisateur
         password: Mot de passe
@@ -46,18 +46,18 @@ fr:
         age: Age
         gender: Sexe
         edit_header: Modifier les détails du compte
-        finish_sign_up_header: Terminer la création de votre profil
-        finish_sign_up_subheader: Remplir les informations suivantes pour finir de
-          créer un compte Code.org pour <strong>%{email}</strong>.
+        finish_sign_up_header: Terminez la création de votre compte
+        finish_sign_up_subheader: Remplissez les informations suivantes pour finir
+          de créer votre compte Code.org pour <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Remplissez les informations suivantes pour
           finir de créer votre compte Code.org pour **%{email}**.
-        finish_sign_up_subheader_provider: Remplir les informations suivantes pour
-          finir de créer un compte Code.org avec <strong>%{provider}</strong> pour
+        finish_sign_up_subheader_provider: Remplissez les informations suivantes pour
+          compléter la création d'un Code.org avec <strong>%{provider}</strong> de
           <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Remplissez les informations suivantes
           pour compléter la création d'un Code.org avec **%{provider}** de **%{email}**.
-        reset_password_token: Le lien que vous avez suivi pour réinitialiser le mot
-          de passe
+        reset_password_token: Le lien de réinitialisation du mot de passe que vous
+          avez suivi
         error:
           future: ne peut pas être dans le futur
   beta: beta
@@ -136,16 +136,15 @@ fr:
       vous connecter via Clever Portal.
     unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
       compte %{provider}. Veuillez réessayer.
-    already_in_use: Votre compte %{provider} est déjà connecté à un autre compte de
-      Code.org.
+    already_in_use: Votre compte %{provider} est déjà connecté à un autre compte Code.org.
     already_linked: Votre compte %{provider} est déjà lié à votre compte de Code.org.
     existing_account:
       account_exists: Bonnes nouvelles ! Tu as déjà un compte Code.org qui utilise
         %{email}
-      sign_in: Veuillez vous connecter et nous lierons votre %{provider} profil.
+      sign_in: Veuillez vous connecter et nous lierons votre profil %{provider}.
       sign_up: Pas votre adresse électronique ? Souhaitez-vous créer un nouveau compte
-        avec une adresse électronique différente ? Nous lierons votre %{provider}
-        profil si vous choisissez de créer un nouveau compte.
+        avec une adresse électronique différente ? Nous lierons votre profil %{provider}
+        si vous choisissez de créer un nouveau compte.
   signup_form:
     email_signup: Inscrivez-vous avec votre adresse e-mail
     student_count: "%{count} élèves se sont déjà inscrits."
@@ -188,7 +187,7 @@ fr:
     age: Age
     user_type: Êtes-vous un élève ou un enseignant ?
     submit: S’inscrire
-    go_to_account: Me rendre à mon compte
+    go_to_account: Aller à mon compte
     teacher: Êtes-vous un enseignant?
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
@@ -224,6 +223,10 @@ fr:
     email_preference_required: Vous devez spécifier une adresse e-mail préférée.
     parent_account_checkbox: Je suis un parent/tuteur qui s'inscrit au nom de mon
       enfant
+    parent_account_email_progress_permission: Pouvons-nous vous envoyer des courriels
+      avec des mises à jour occasionnelles sur la progression et les projets de votre
+      enfant, et des mises à jour à propos de son cours et de l'informatique? [(Voir
+      notre politique de confidentialité)](%{privacy_policy_url})
     parent_account_email_label: E-mail du parent/tuteur
   school_info:
     title: Informations de l’école (facultatif)
@@ -378,12 +381,12 @@ fr:
       professional_learning: Apprentissage professionnel
       documentation: Documentation
       tutorials: Didacticiels
-      app_lab_documentation: Documentation du Laboratoire d'Applications
-      app_lab_tutorials: Tutoriels sur le Laboratoire d'Applications
-      game_lab_documentation: Documentation du Laboratoire de Jeux
-      game_lab_tutorials: Tutoriels sur le Laboratoire de Jeux
-      sprite_lab_documentation: Documentation du Laboratoire de Lutins
-      sprite_lab_tutorials: Tutoriels sur le Laboratoire de Lutins
+      app_lab_documentation: Documentation sur le Labo des Applis
+      app_lab_tutorials: Tutoriels du Labo des Applis
+      game_lab_documentation: Documentation sur le Labo des Jeux
+      game_lab_tutorials: Tutoriels du Labo des Jeux
+      sprite_lab_documentation: Documentation sur le Labo des Lutins
+      sprite_lab_tutorials: Tutoriels du Labo des Lutins
       educate_overview: Aperçu enseignant
       educate_elementary: École primaire
       educate_middle: Collège
@@ -878,26 +881,6 @@ fr:
         pour votre classe.
       audience: 14 ans et +
       cta: Apprendre comment
-  gallery:
-    students_drew_these_with_code: Les élèves les ont dessiné avec du code!
-    students_made_these_with_code: Les élèves les ont réalisé avec du code !
-    picture_count: Ces <b>%{days}</b> derniers jours, les élèves ont dessiné <b>%{count}</b>
-      des images en écrivant leurs propres programmes informatiques. Clique sur les
-      images pour voir chaque programme en action.
-    activity_count: Ces <b>%{days}</b> derniers jours, les élèves ont développer <b>%{count}</b>
-      des applications et des images en écrivant leurs propres programmes informatiques.
-      Clique sur les images et les captures d'écran pour voir chaque programme en
-      action.
-    want_to_make_your_own: Tu veux faire le tien?
-    how_to_save: Dans le dernier niveau de ces tutoriels, cliquez sur « Terminer »
-      et « Enregistrer » pour enregistrer votre travail dans la Galerie.
-    more: Plus &rarr;
-    caption_by_name_age: par %{name}, %{age} ans
-    caption_time_ago: il y a %{time_ago} heures/jours
-    header: Galerie
-    header_playlab: Histoires et jeux
-    header_artist: L’art du code
-    report_abuse: Signaler un abus
   landing:
     prerelease_tutorial: Ce didacticiel est en version **beta**. Il est sujet à révision,
       en fonction des commentaires, et des améliorations sont ensuite apportées.
@@ -1164,6 +1147,7 @@ fr:
     instructor_feedback: Commentaires de l’instructeur
     peer_feedback: Commentaire par les pairs
     outdated: Ce commentaire a été émis pour une version précédente
+    peer_review: Commentaire par un pair
   flex_category:
     required: Aperçu
     content: Contenu
@@ -1176,7 +1160,7 @@ fr:
     csf_e_2: Contenu du cours E
     csf_f_1: Progression jusqu'au cours F (facultatif)
     csf_f_2: Contenu du cours F
-    csf_digcit: Citoyenneté numérique
+    csf_digcit: Citoyenneté Numérique
     csf_jigsaw: Puzzle
     csf_sequencing: Séquençage
     csf_loops: boucles
@@ -1495,10 +1479,10 @@ fr:
     privacy_policy: politique de confidentialité
     logout: Déconnexion
     true: Oui
-  page_not_found_title: Page introuvable
-  page_not_found_header: '404 : Page introuvable'
+  page_not_found_title: Page Introuvable
+  page_not_found_header: '404 : Page Introuvable'
   page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
-    l’adresse web et réessayez, ou retournez à notre page d’accueil.
+    l’adresse Web et réessayez, ou retournez à notre page d’accueil.
   page_not_found_button: Retourner à la page d’accueil
   copy: Copier
   maker:
@@ -1510,8 +1494,12 @@ fr:
         Maker pour vous connecter à Code.org.
       error_token_expired: Le jeton est expiré. Veuillez vous reconnectez pour un
         nouveau jeton.
+      error_wrong_provider: Mauvais fournisseur. Veuillez vous assurez que vous vous
+        connectez avec Google.
       error_invalid_user: Identifiant invalide. Veuillez vous reconnecter.
       error_no_code: Veuillez entrer votre code de connexion.
   parent_email_banner:
+    text: "**Êtes-vous un parent ou un tuteur?** Relier votre e-mail à ce compte pour
+      rester à jour de la progression et des projets de votre enfant!"
     link_your_email: Associez votre e-mail
     not_now: Plus tard
