@@ -1244,6 +1244,14 @@ ur-PK:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
@@ -1512,6 +1520,14 @@ ur-PK:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

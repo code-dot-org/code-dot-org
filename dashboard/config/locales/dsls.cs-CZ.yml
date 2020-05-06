@@ -1547,6 +1547,20 @@ cs-CZ:
             je tam květina, pak včela musí sebrat nektar **jednou**. Pokud tam květina
             není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
             že se stane, když klikneš na tlačítko "Spustit"?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: Včela se posune k mraku, ať se děje, co se děje.
+        - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
+            květina.
+          correct: true
+          feedback: Správně!
+        - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+        - text: Nevím.
+        questions:
+        - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
+            je tam květina, pak včela musí sebrat nektar **jednou**. Pokud tam květina
+            není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
+            že se stane, když klikneš na tlačítko "Spustit"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
@@ -1962,6 +1976,14 @@ cs-CZ:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

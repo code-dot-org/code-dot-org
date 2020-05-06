@@ -504,23 +504,6 @@ sl:
       audience: Starost 4+
     unplugged_conditionals:
       title: Pogoji
-  gallery:
-    students_drew_these_with_code: Učenci so to narisali s svojimi programi!
-    students_made_these_with_code: Učenci so to ustvarili s svojimi programi!
-    picture_count: V zadnjih <b>%{days}</b> dneh so učenci narisali veliko (<b>%{count}</b>)
-      slik s programe, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja
-      posameznega programa.
-    activity_count: V zadnjih <b>%{days}</b> dneh so učenci izdelali veliko (<b>%{count}</b>)
-      aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja
-      posameznega programa.
-    want_to_make_your_own: Bi poskusil/a še sam/a?
-    more: Več &rarr;
-    caption_by_name_age: po %{name}, %{age} starosti
-    caption_time_ago: pred %{time_ago}
-    header: Galerija
-    header_playlab: Zgodbe in igre
-    header_artist: Umetnik
-    report_abuse: Prijavi zlorabo
   landing:
     report_bug: Sporoči napako
     support: Pomoč

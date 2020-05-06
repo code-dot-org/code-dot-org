@@ -645,10 +645,14 @@ cs-CZ:
       New Sports Project: Vytvoř si vlastní hru! Můžeš měnit všechny pravidla, míchat
         sporty.. Buď kreativní! Až budeš hotov, klepni na tlačítko dokončit, abys
         nechal své přátele vyzkoušet tvou hru na svých telefonech.
-      Overworld Avoid Monsters: Vběhnutí ke Creeperovi je špatný nápad. Opatrně se
-        pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
-      Overworld Avoid Monsters_2019: Vběhnutí ke Creeperovi je špatný nápad. Opatrně
-        se pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
+      OPD-K5-events-2: Připoj blok`mávni normálně` k události `když klikneš`, potom
+        klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
+        K dokončení úlohy se musíš dostat do cíle nahoře.
+      OPD-K5-forloops-5: Pomoz včele sebrat nektar ze všech květů.
+      Overworld Avoid Monsters: 'Pozor na Creepery! Opatrně projdi kolem Creeperů
+        a dostaň se do bezpečí svého přístřešku. '
+      Overworld Avoid Monsters_2019: 'Pozor na Creepery! Opatrně projdi kolem Creeperů
+        a dostaň se do bezpečí svého přístřešku. '
       Overworld Chop Tree: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho
         věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
       Overworld Chop Tree_2019: Dřevo je velmi důležitá surovina. Vyrábí se z něj
@@ -747,9 +751,9 @@ cs-CZ:
         ale nespadni při tom do lávy. Použij příkaz "pokud" k položení dlažebního
         kamene na každou lávu, kterou odkryješ.
       Underground Iron: Vejít do žhavé lávy není dobrý nápad. Postav most položením
-        dlažebního kamene, a pak vytěž nejméně dva bloky železa.
+        kamení, a pak vytěž nejméně dva bloky železa.
       Underground Iron_2019: Vejít do žhavé lávy není dobrý nápad. Postav most položením
-        dlažebního kamene, a pak vytěž nejméně dva bloky železa.
+        kamení, a pak vytěž nejméně dva bloky železa.
       Underground Mining Coal: Nejcennější suroviny najdeš v podzemí, ale je tam tma.
         Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Underground Mining Coal_2019: Nejcennější suroviny najdeš v podzemí, ale je
@@ -903,6 +907,7 @@ cs-CZ:
       courseA_maze_seq1_2019: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq5: Zkus toto sám ze začátku.
+      courseA_maze_seq5_copy: Zkus toto sám ze začátku.
       courseA_maze_seq_challenge2: Najdi cestu a přiveď mě k tomu pošetilému prasátku.
         Vyhni se TNT, nebo bude létat peří!
       courseA_maze_seq_challenge2_2018: Najdi cestu a přiveď mě k tomu pošetilému
@@ -943,6 +948,10 @@ cs-CZ:
         směrem k Olivii (kočka)?
       courseC_PlayLab_events3_2019: Můžete napsat program, aby se Jorge (pes) posunul
         směrem k Olivii (kočka)?
+      courseC_artist_loops1b_2019: 'Teď změň směr, kterým se nálepka nakreslí, přidáním
+        příkazu `otoč se` do tvého kódu. '
+      courseC_artist_loops2a_2019: Teď zkus použít cyklus k nakreslení několika kopií
+        nálepky. Změnou čísel in blocích otočit a opakuj můžeš vyrobit různé obrazce.
       courseC_artist_prog5: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2018: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
@@ -967,9 +976,24 @@ cs-CZ:
         všech **10** kousků pokladu?
       courseC_collector_prog_challenge1_2019: Podívejte se pozorně! Můžete získat
         všech **10** kousků pokladu?
+      courseC_flappy_events1: Připoj blok`mávni normálně` k události `když klikneš`,
+        potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
+        K dokončení úlohy se musíš dostat do cíle nahoře.
       courseC_flappy_events10: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events10_2018: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events10_2019: 'Vytvoř svou vlastní hru Flappy Bird! '
+      courseC_flappy_events1_2018: Připoj blok`mávni normálně` k události `když klikneš`,
+        potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
+        K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events1_2019: Připoj blok`mávni normálně` k události `když klikneš`,
+        potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
+        K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events7: Dále zkus změnit pozadí připojením dalšího bloku k události
+        `při spuštění`.
+      courseC_flappy_events7_2018: Dále zkus změnit pozadí připojením dalšího bloku
+        k události `při spuštění`.
+      courseC_flappy_events7_2019: Dále zkus změnit pozadí připojením dalšího bloku
+        k události `při spuštění`.
       courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops10_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops10_2019: Posbírej všechny kukuřice a dýně.
@@ -1209,6 +1233,8 @@ cs-CZ:
       courseD_bee_conditionals5_2018: Posbírej všechen nektar a pokus se použít co
         nejméně bloků.
       courseD_bee_conditionals5_2019: Posbírej všechen nektar a pokus se použít co
+        nejméně bloků.
+      courseD_bee_conditionals5_copy: Posbírej všechen nektar a pokus se použít co
         nejméně bloků.
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med.
@@ -1478,6 +1504,9 @@ cs-CZ:
       courseD_scrat_ramp5: Vyhni se TNT!
       courseD_scrat_ramp7: Pomoz Scratovi k žaludu!
       courseE_artist_functions1: 'Nazdar. Já jsem zombie umělec. Mám rád kreslení!
+        Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů
+        než strana čtverce.'
+      courseE_artist_functions1_copy: 'Nazdar. Já jsem zombie umělec. Mám rád kreslení!
         Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů
         než strana čtverce.'
       courseE_bee_concept1: Sesbírej všechen nektar z každého květu. Použij vnořené

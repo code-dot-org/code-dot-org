@@ -572,6 +572,12 @@ fi-FI:
           piirrät seuraavan neliön.
         courseE_artist_functions1_b: On sallittua tehdä päällekkäisiä viivoja kun
           teet lasit.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Jokaisella neliöllä on 100 kuvapisteen sivut,
+          se tarkoittaa, että sinun täytyy siirtyä eteenpäin 175 kuvapistettä ennenkuin
+          piirrät seuraavan neliön.
+        courseE_artist_functions1_b: On sallittua tehdä päällekkäisiä viivoja kun
+          teet lasit.
       courseE_artist_functions2:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
@@ -579,5 +585,8 @@ fi-FI:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
+          \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"

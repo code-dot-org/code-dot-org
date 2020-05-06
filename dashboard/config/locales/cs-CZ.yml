@@ -761,25 +761,6 @@ cs:
       title: Widgety
       audience: Věk 14+
       cta: Jak na to
-  gallery:
-    students_drew_these_with_code: Studenti tyto nakreslili kódem!
-    students_made_these_with_code: Studenti tyto vytvořili kódem!
-    picture_count: V posledních dnech <b>%{days}</b> studenti nakreslili obrázky <b>%{count}</b>
-      napsáné vlastními počítačovými programy. Klepněte na obrázky, abys si viděl
-      každý program v akci.
-    activity_count: V posledních dnech <b>%{days}</b> studenti udělali <b>%{count}</b>
-      aplikace a obrázky napsáním vlastních počítačových programů. Klepněte na obrázky
-      a snímky, abys si viděl každý program v akci.
-    want_to_make_your_own: Chcete si vyrobit vlastní?
-    how_to_save: V poslední části těchto výukových programů klepněte na tlačítko "Dokončit"
-      a "Uložit" pro odeslání vaší práce do galerie.
-    more: Více &rarr;
-    caption_by_name_age: podle %{name}, věk %{age}
-    caption_time_ago: před %{time_ago}
-    header: Galerie
-    header_playlab: Play Lab
-    header_artist: Umělec
-    report_abuse: Ohlásit urážlivý příspěvek
   landing:
     report_bug: Nahlásit chybu
     support: Získat pomoc
@@ -998,6 +979,7 @@ cs:
     instructor_feedback: Připomínky instruktora
     peer_feedback: Připomínky spoluřešitele
     outdated: Tato zpětná vazba byla přidána k dříve odeslané verzi
+    peer_review: Nezávislý posudek
   flex_category:
     required: Přehled
     content: Obsah

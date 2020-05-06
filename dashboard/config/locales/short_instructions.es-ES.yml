@@ -1087,6 +1087,19 @@ es-ES:
       New Sports Project: Crea tu propio juego. Puedes cambiar todas las reglas y
         mezclar deportes. ¡Puedes ser creativo! Cuando estés listo haz clic en Terminar
         para que tus amigos prueben tu juego en sus teléfonos.
+      OPD-K5-events-2: Junta el bloque `aletear normalmente` a `Cuando haga click`,
+        después haz click en "Ejecutar".  Haz click o toca en el espacio de juego
+        para llevar a Flappy al objetivo.
+      OPD-K5-events-3: Prueba a añadir un bloque que fije la velocidad cuando hagas
+        click en el botón "Ejecutar".  Juega al juego y aletea hasta el objetivo para
+        continuar.
+      OPD-K5-events-4: Junta el bloque `terminar el juego` al evento `cuando toca
+        el suelo`. Juega y estrella el pájaro contra el suelo para continuar.
+      OPD-K5-events-5: Junta un bloque al evento `cuando choca con un obstáculo` para
+        que el juego termine cuando Flappy se choque contra el primer grupo de tuberías.
+      OPD-K5-events-6: Añade un bloque al evento `cuando pase un obstáculo`, después
+        pulsa `Ejecutar` para anotar un punto haciendo que Flappy atraviese las primeras
+        tuberías.
       Overworld Avoid Monsters: Ir contra un Creeper no es buena idea. Evítalos con
         cuidado y llega a casa para estar a salvo.
       Overworld Avoid Monsters_2019: Ir contra un Creeper no es buena idea. Evítalos
@@ -1765,11 +1778,15 @@ es-ES:
         bucle que use un sólo bloque dentro de un bloque `repetir`.
       courseC_starWars_loops2_2019: Para coger toda la chatarra, intenta hacer un
         bucle que use un sólo bloque dentro de un bloque `repetir`.
+      courseC_starWars_loops2_copy: Para coger toda la chatarra, intenta hacer un
+        bucle que use un sólo bloque dentro de un bloque `repetir`.
       courseC_starWars_loops4: En este puzle, dos bloques `repetir` te ayudarán a
         hacer que BB-8 recoja toda la chatarra ¡con la menor cantidad de bloques!
       courseC_starWars_loops4_2018: En este puzle, dos bloques `repetir` te ayudarán
         a hacer que BB-8 recoja toda la chatarra ¡con la menor cantidad de bloques!
       courseC_starWars_loops4_2019: En este puzle, dos bloques `repetir` te ayudarán
+        a hacer que BB-8 recoja toda la chatarra ¡con la menor cantidad de bloques!
+      courseC_starWars_loops4_copy: En este puzle, dos bloques `repetir` te ayudarán
         a hacer que BB-8 recoja toda la chatarra ¡con la menor cantidad de bloques!
       courseC_starWars_loops5: "¡Haz que BB-8 recoja toda la chatarra tan deprisa
         como sea posible!"
@@ -1777,11 +1794,15 @@ es-ES:
         como sea posible!"
       courseC_starWars_loops5_2019: "¡Haz que BB-8 recoja toda la chatarra tan deprisa
         como sea posible!"
+      courseC_starWars_loops5_copy: "¡Haz que BB-8 recoja toda la chatarra tan deprisa
+        como sea posible!"
       courseC_starWars_loops6: "¡Los bucles también funcionan con más de un bloque
         dentro! ¿Puedes meter en un bucle esta secuencia?"
       courseC_starWars_loops6_2018: "¡Los bucles también funcionan con más de un bloque
         dentro! ¿Puedes meter en un bucle esta secuencia?"
       courseC_starWars_loops6_2019: "¡Los bucles también funcionan con más de un bloque
+        dentro! ¿Puedes meter en un bucle esta secuencia?"
+      courseC_starWars_loops6_copy: "¡Los bucles también funcionan con más de un bloque
         dentro! ¿Puedes meter en un bucle esta secuencia?"
       courseC_starWars_loops7: "¿Puedes coger toda la chatarra con un único bucle?
         Prueba a programarlo todo y después encuentra el código que se repite para
@@ -1790,6 +1811,9 @@ es-ES:
         Prueba a programarlo todo y después encuentra el código que se repite para
         meterlo en el bucle."
       courseC_starWars_loops7_2019: "¿Puedes coger toda la chatarra con un único bucle?
+        Prueba a programarlo todo y después encuentra el código que se repite para
+        meterlo en el bucle."
+      courseC_starWars_loops7_copy: "¿Puedes coger toda la chatarra con un único bucle?
         Prueba a programarlo todo y después encuentra el código que se repite para
         meterlo en el bucle."
       courseC_starWars_loops9: "¡Usa lo que has aprendido para recoger toda la chatarra!"
@@ -1919,6 +1943,9 @@ es-ES:
       courseD_scrat_ramp6: "¡Ayuda a Scrat a coger la bellota usando un bucle!"
       courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
       courseE_artist_functions1: |-
+        Hola. Yo artista zombie. Yo amo dibujar!
+        Ayúdame a dibujar las gafas cuadradas.  Sugerencia: el puente entre las gafas es 25 píxeles más corto que la longitud cuadrada.
+      courseE_artist_functions1_copy: |-
         Hola. Yo artista zombie. Yo amo dibujar!
         Ayúdame a dibujar las gafas cuadradas.  Sugerencia: el puente entre las gafas es 25 píxeles más corto que la longitud cuadrada.
       courseE_bee_concept1: 'Recolecta todo el néctar de cada flor. Utiliza un bucle

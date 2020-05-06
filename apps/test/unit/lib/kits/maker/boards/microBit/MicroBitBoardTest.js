@@ -39,7 +39,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         expect(Object.keys(board.prewiredComponents_)).to.have.length(6);
         expect(board.prewiredComponents_.board).to.be.a('object');
-        expect(board.prewiredComponents_.ledMatrix).to.be.a('object');
+        expect(board.prewiredComponents_.ledScreen).to.be.a('object');
         expect(board.prewiredComponents_.tempSensor).to.be.a('object');
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
         expect(board.prewiredComponents_.buttonA).to.be.a('object');
@@ -178,12 +178,12 @@ describe('MicroBitBoard', () => {
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
-        let ledMatrixSpy = sinon.spy(
-          board.prewiredComponents_.ledMatrix,
+        let ledScreenSpy = sinon.spy(
+          board.prewiredComponents_.ledScreen,
           'clear'
         );
         board.reset();
-        expect(ledMatrixSpy).to.have.been.calledOnce;
+        expect(ledScreenSpy).to.have.been.calledOnce;
       });
     });
   });
