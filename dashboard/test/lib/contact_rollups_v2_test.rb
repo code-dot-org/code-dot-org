@@ -21,7 +21,6 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
   test 'sync new contact' do
     # Create seed data in a source table
-
     email_preference = create :email_preference, email: 'test@domain.com', opt_in: true
     student_with_parent_email = create :student, parent_email: 'caring@parent.com'
 
