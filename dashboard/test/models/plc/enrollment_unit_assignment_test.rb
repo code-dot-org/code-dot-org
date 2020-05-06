@@ -54,8 +54,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal ["/s/#{@script.name}#required", "/s/#{@script.name}#content", "/s/#{@script.name}#practice", "/s/#{@script.name}#peer-review"].sort,
       @unit_enrollment.summarize_progress.map {|summary| summary[:link]}.sort
 
-    assert_equal [Plc::EnrollmentModuleAssignment::NOT_STARTED].sort,
-      @unit_enrollment.summarize_progress.map {|summary| summary[:status]}.uniq.sort
+    assert_equal [Plc::EnrollmentModuleAssignment::NOT_STARTED],
+      @unit_enrollment.summarize_progress.map {|summary| summary[:status]}.uniq
   end
 
   # All the categories except Peer Review will be Content because there is no translation and that is the default
