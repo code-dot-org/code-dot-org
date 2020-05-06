@@ -78,10 +78,14 @@ class LessonProgress extends Component {
 
     const numLevels = levels.length;
 
-    const numAvailableElements = Math.min(
+    let numAvailableElements = Math.min(
       Math.floor((this.props.width - 40) / 18) + 1,
       numLevels
     );
+
+    if (numAvailableElements < 3) {
+      numAvailableElements = 3;
+    }
 
     let firstElement, numElements;
 
@@ -92,7 +96,7 @@ class LessonProgress extends Component {
     } else {
       // If there isn't enough room, show the current level in the middle
       // of the dots we can show.
-      var numSurroundingElements = Math.ceil(numAvailableElements / 2);
+      var numSurroundingElements = Math.floor(numAvailableElements / 2);
 
       firstElement = currentLevelIndex - numSurroundingElements;
       var lastElement = currentLevelIndex + numSurroundingElements;
@@ -108,7 +112,7 @@ class LessonProgress extends Component {
         lastElement -= lastElement - numLevels;
       }
 
-      numElements = lastElement - firstElement;
+      numElements = lastElement - firstElement + 1;
     }
 
     const showLevels = levels.slice(firstElement, firstElement + numElements);
