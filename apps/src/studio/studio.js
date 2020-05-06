@@ -504,6 +504,8 @@ var drawMap = function() {
   svg.setAttribute('height', Studio.MAZE_HEIGHT);
 
   // Attach click handler.
+  // HERE this looks like where we add swipe for playlab. (see on drag below)
+  debugger;
   var hammerSvg = new Hammer(svg);
   hammerSvg.on('tap', Studio.onSvgClicked);
   hammerSvg.on('drag', Studio.onSvgDrag);

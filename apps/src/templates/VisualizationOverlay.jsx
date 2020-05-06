@@ -73,6 +73,7 @@ export class VisualizationOverlay extends React.Component {
   };
 
   onMouseMove = event => {
+    // this is not the droid you're looking for (i.e. this does not trigger on touchmove)
     if (!this.screenSpaceToAppSpaceTransform) {
       return;
     }

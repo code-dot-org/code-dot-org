@@ -273,6 +273,7 @@ export default class Craft {
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
 
             const phaserGame = document.getElementById('phaser-game');
+            // HERE this is where we set up swipe for agent (see onDrag below)
             const hammerToButton = {
               [Hammer.DIRECTION_LEFT]: 'leftButton',
               [Hammer.DIRECTION_RIGHT]: 'rightButton',
