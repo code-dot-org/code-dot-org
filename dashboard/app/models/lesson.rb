@@ -173,7 +173,9 @@ class Lesson < ActiveRecord::Base
       end
 
       unless unplugged?
+        # TODO: remove stage_extras_level_url once corresponding js change is deployed and no longer cached
         lesson_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
+        lesson_data[:lesson_extras_level_url] = lesson_data[:stage_extras_level_url]
       end
 
       lesson_data
