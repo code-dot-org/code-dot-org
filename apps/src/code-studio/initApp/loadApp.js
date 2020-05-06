@@ -107,7 +107,8 @@ export function setupApp(appOptions) {
         $('#clear-puzzle-header').hide();
         // Only show Version History button if the user owns this project
         if (project.isEditable()) {
-          $('#versions-header').show();
+					//TODO max
+          //$('#versions-header').show();
         }
       }
       $(document).trigger('appInitialized');
