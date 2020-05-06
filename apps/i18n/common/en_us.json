@@ -1518,7 +1518,7 @@
   "setUpClassWordPic1": "1. Add each of your students in the table above.",
   "setUpClassWord2": "2. [Print login cards]({printLoginCardLink}) that show each student's name and 'secret words'. Share these with your students.",
   "setUpClassPic2": "2. [Print login cards]({printLoginCardLink}) that show each student's name and picture password. Share these with your students.",
-  "setUpClassEmailIntro": "To get your class set up with picture password accounts, do the following:",
+  "setUpClassEmailIntro": "To get your class set up with personal logins, do the following:",
   "setUpClassEmail1": "1. Have your students [create Code.org accounts]({createAccountLink}) with their own email addresses. If they already have a Code.org account associated with their email address, they can skip this step.",
   "setUpClassEmail2": "2. Have your students visit this link to join your section: [{joinLink}]({joinLink})",
   "setUpClass3": "3. [Share our privacy letter]({parentLetterLink}) with parents to introduce them to Code.org and allow them to review our policies on student privacy.",
