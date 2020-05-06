@@ -1,7 +1,7 @@
 login_required true
 hideable_stages true
 student_detail_progress_view true
-stage_extras_available true
+lesson_extras_available true
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 

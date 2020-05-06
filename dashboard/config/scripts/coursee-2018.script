@@ -2,7 +2,7 @@ tts true
 hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursee/standards/"]]
-stage_extras_available true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursee/{LESSON}'
 project_widget_visible true

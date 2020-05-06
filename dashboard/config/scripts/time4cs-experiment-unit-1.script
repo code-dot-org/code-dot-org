@@ -1,6 +1,6 @@
 login_required true
 hideable_stages true
-stage_extras_available true
+lesson_extras_available true
 editor_experiment 'broward'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'

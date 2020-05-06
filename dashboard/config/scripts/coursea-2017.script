@@ -1,7 +1,7 @@
 tts true
 hidden false
 hideable_stages true
-stage_extras_available true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}'
 project_widget_visible true
