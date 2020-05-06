@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import Button from '@cdo/apps/templates/Button';
@@ -107,7 +108,7 @@ class OAuthLogins extends React.Component {
       <div>
         <SignInInstructions loginType={loginType} />
         <br />
-        <h1>{i18n.syncingYourStudents()}</h1>
+        <h2 style={styles.heading}>{i18n.syncingYourStudents()}</h2>
         <div>
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
@@ -135,7 +136,7 @@ class EmailLogins extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.loginInfo_joinTitle()}</h1>
+        <h2 style={styles.heading}>{i18n.loginInfo_joinTitle()}</h2>
         <p>{i18n.loginInfo_joinBody()}</p>
         <ol>
           <li>
@@ -157,7 +158,7 @@ class EmailLogins extends React.Component {
         <br />
         <SignInInstructions loginType={SectionLoginType.email} />
         <br />
-        <h1>{i18n.loginInfo_resetTitle()}</h1>
+        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
         <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
             url: getManageStudentsUrl(sectionId)
@@ -191,6 +192,10 @@ const styles = {
   img: {
     width: 150,
     marginTop: 10
+  },
+  heading: {
+    color: color.purple,
+    marginTop: 0
   }
 };
 
@@ -238,12 +243,16 @@ class WordOrPictureLogins extends React.Component {
 
     return (
       <div>
-        <SignInInstructions loginType={section.loginType} />
+        <SignInInstructions
+          loginType={section.loginType}
+          studioUrlPrefix={studioUrlPrefix}
+          sectionCode={section.code}
+        />
         <p>
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
         <br />
-        <h1>{i18n.loginInfo_resetTitle()}</h1>
+        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
         {section.loginType === SectionLoginType.picture && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretPicDesc({
@@ -259,7 +268,7 @@ class WordOrPictureLogins extends React.Component {
           />
         )}
         <br />
-        <h1>{i18n.printLoginCards_title()}</h1>
+        <h2 style={styles.heading}>{i18n.printLoginCards_title()}</h2>
         {students.length < 1 && (
           <SafeMarkdown
             markdown={i18n.loginInfo_noStudents({url: manageStudentsUrl})}
