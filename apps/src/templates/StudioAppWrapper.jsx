@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import FixZoomHelper from '../templates/FixZoomHelper';
 import HideToolbarHelper from '../templates/HideToolbarHelper';
 import RotateContainer from '../templates/RotateContainer';
 import {connect} from 'react-redux';
@@ -23,6 +24,7 @@ class StudioAppWrapper extends React.Component {
   render() {
     return (
       <div>
+        <FixZoomHelper />
         <HideToolbarHelper />
         {this.requiresLandscape() && (
           <RotateContainer assetUrl={this.props.assetUrl} />

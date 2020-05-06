@@ -228,7 +228,7 @@ class ManageStudentsTable extends Component {
     ] = i18n.editSectionLoginTypeEmailDesc();
     return (
       <span style={styles.verticalAlign}>
-        <div data-for="password" data-tip="">
+        <div data-for="password" data-tip="" id="password-header">
           {passwordLabels[loginType]}
         </div>
         <ReactTooltip
