@@ -485,6 +485,28 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'can create a virtual workshop with suppressed email' do
+    sign_in @organizer
+    post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: true)}
+    assert_response :success
+    assert response_workshop.virtual?
+  end
+
+  test 'cannot create a virtual workshop without suppressed email' do
+    sign_in @organizer
+    refute_creates(Pd::Workshop) do
+      post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
+      assert_response :bad_request
+    end
+  end
+
+  test 'can create a workshop with suppressed email' do
+    sign_in @organizer
+    post :create, params: {pd_workshop: workshop_params.merge(suppress_email: true)}
+    assert_response :success
+    assert response_workshop.suppress_email?
+  end
+
   # Action: Destroy
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -1127,6 +1149,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
       capacity: 10,
+      virtual: false,
+      suppress_email: false,
       sessions_attributes: [
         {
           start: session_start,
@@ -1134,5 +1158,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
         }
       ]
     }
+  end
+
+  def response_workshop
+    Pd::Workshop.find(JSON.parse(response.body)['id'])
   end
 end
