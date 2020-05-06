@@ -741,6 +741,14 @@ da:
           stages:
             Evaluation Blocks:
               name: Evalueringsblokke
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         allthehiddenthings:
           stages:
             Game Lab:
@@ -751,6 +759,10 @@ da:
               name: Kunstner funktioner
         artistExemplar:
           description_audience: Fra 8 år (efter kursus 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -827,6 +839,10 @@ da:
               name: Hoppe
             'Farmer: While Loops':
               name: 'Landmand: Når sløjfer'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         csd3-2017:
           description_short: Programmering
           stages:
@@ -874,6 +890,14 @@ da:
               name: Design opskrift
             Welcome!:
               name: Velkommen!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         basketball:
           stages:
             Bounce:
@@ -895,6 +919,10 @@ da:
           stages:
             Lists:
               name: Lister
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -983,6 +1011,14 @@ da:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         sciencepd4:
           stages:
             Welcome!:
@@ -1005,6 +1041,10 @@ da:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         csd6-draft:
           stages:
             Lists:
@@ -1111,6 +1151,54 @@ da:
           stages:
             Building a Foundation:
               name: Opbygge et fundament
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         express-2017:
           stages:
             Introduction:
@@ -1410,6 +1498,74 @@ da:
           stages:
             While Loops:
               name: Mens løkker
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1420,6 +1576,10 @@ da:
               name: Flyt det, flyt det
             Your Digital Footprint:
               name: Dit digitale fodspor
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         frozen-2018:
           stages:
             Artist:
@@ -1453,6 +1613,14 @@ da:
           stages:
             Dance Party:
               name: Dance Party
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
         dance-extras:
           description: Overskrid den første time med udvidede projektideer.
         coursef-2019:
@@ -1471,6 +1639,15 @@ da:
               name: Internettet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digital statsborgerskab
         dance-low:
           stages:
             Dance Party:
@@ -1491,6 +1668,17 @@ da:
               name: Kunstner binære
             Dance Party:
               name: Dance Party
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_binary:
+              display_name: Binære
+            csf_digcit:
+              display_name: Digital statsborgerskab
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1507,6 +1695,13 @@ da:
               name: Crowdsourcing
             Songwriting:
               name: Sangskrivning
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+            csf_functions:
+              display_name: Funktioner
         express-2019:
           stages:
             Relay Programming:
@@ -1529,10 +1724,24 @@ da:
               name: Crowdsourcing
             Dance Party:
               name: Dance Party
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funktioner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
         andrea-test:
           stages:
             'null':
               name: 'nul'
+          lesson_groups:
+            required:
+              display_name: Oversigt
         dance-extras-gallery:
           title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
@@ -1544,6 +1753,15 @@ da:
               name: Den store begivenhed
             Binary Bracelets:
               name: Binære armbånd
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_binary:
+              display_name: Binære
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         gamelab:
           title: Spil Laboratoriet
         coursea-2019:
@@ -1552,6 +1770,13 @@ da:
               name: Glade Kort
             Going Places Safely:
               name: Gå til sikre steder
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1560,6 +1785,13 @@ da:
               name: Dit digitale fodspor
             'Loops: Getting Loopy':
               name: Blive Svimmel
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1568,6 +1800,11 @@ da:
               name: Dit digitale fodspor
             Spelling Bee:
               name: Stave-bien
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1593,6 +1830,15 @@ da:
           stages:
             Surveys:
               name: Undersøgelser
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+            required:
+              display_name: Oversigt
         csp1-2019:
           stages:
             The Internet:
@@ -1610,6 +1856,10 @@ da:
           stages:
             While Loops:
               name: Mens løkker
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1618,10 +1868,88 @@ da:
               name: Betingelser med kortspil
             Building a Foundation:
               name: Opbygge et fundament
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+            required:
+              display_name: Oversigt
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         csd2-pilot:
           stages:
             Lists:
@@ -1635,12 +1963,70 @@ da:
               name: Betingelser
             Functions:
               name: Funktioner
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         peru-2019:
           stages:
             Introduction:
               name: Introduktion
             Nested Loops:
               name: Indlejret Løkker
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
         dance-2019:
           stages:
             Dance Party:
@@ -1664,6 +2050,14 @@ da:
               name: For Loops
         dance-extras-2019:
           description: Overskrid den første time med udvidede projektideer.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1674,14 +2068,59 @@ da:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Betingelser med kortspil
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_conditionals:
+              display_name: Betingelser
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+            csf_functions:
+              display_name: Funktioner
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Betingelser
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_events:
+              display_name: Hændelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Betingelser
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_events:
+              display_name: Hændelser
+            csf_digcit:
+              display_name: Digital statsborgerskab
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Oversigt
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funktioner
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1703,6 +2142,13 @@ da:
               name: Gå til sikre steder
             'Programming: Happy Maps':
               name: Glade Kort
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1711,12 +2157,28 @@ da:
               name: Flyt det, flyt det
             'Loops: Getting Loopy':
               name: Blive Svimmel
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binære armbånd
             'Events: The Big Event':
               name: Den store begivenhed
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_binary:
+              display_name: Binære
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1733,10 +2195,28 @@ da:
               name: Digital statsborgerskab
             Dance Party:
               name: Dance Party
+          lesson_groups:
+            csf_events:
+              display_name: Hændelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_binary:
+              display_name: Binære
+            csf_digcit:
+              display_name: Digital statsborgerskab
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Sangskrivning
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_nested_loops:
+              display_name: Indlejret Løkker
+            csf_functions:
+              display_name: Funktioner
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1747,14 +2227,37 @@ da:
               name: Internettet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital statsborgerskab
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
         express-2020:
           stages:
             Dance Party:
               name: Dance Party
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funktioner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For Loops
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Stave-bien
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hændelser
         csp3-virtual:
           description_short: Programmering
           stages:

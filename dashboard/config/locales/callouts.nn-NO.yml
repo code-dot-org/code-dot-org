@@ -279,6 +279,11 @@ nn-NO:
           er her inne nå.
       New Frozen Project:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: For-løkka finn du her!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Få spelaren til dette flagget for å komme til
+          neste nivå.
       Overworld Chop Trees:
         craft_callout_preplaced: Vi har satt saman nokre blokker her for å hjelpe
           deg i gong
@@ -610,6 +615,8 @@ nn-NO:
         courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Du treng ikkje bruke fargar for å løyse denne
           oppgåva. Dersom du ønsker, gjer 'tilfeldig farge'-blokka det lett!
@@ -630,6 +637,9 @@ nn-NO:
         4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje
           å sjå etter bikaker i det heile teke.
       courseD_bee_conditionals2_2019:
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje
+          å sjå etter bikaker i det heile teke.
+      courseD_bee_conditionals2_copy:
         4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje
           å sjå etter bikaker i det heile teke.
       courseD_bee_conditionals_challenge2:

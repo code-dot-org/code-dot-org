@@ -345,30 +345,74 @@ uz:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
         coursef-2019:
           stages:
             The Artist:
               name: Rassom
             Internet:
               name: Internet
+          lesson_groups:
+            csf_variables:
+              display_name: O‘zgaruvchilar
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shart buyruqlari
+        coursee-2019:
+          lesson_groups:
+            csf_functions:
+              display_name: Funksiyalar
         express-2019:
           stages:
             Relay Programming:
               name: Estafetali dasturlash
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shart buyruqlari
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: O‘zgaruvchilar
         andrea-test:
           stages:
             'null':
               name: 'nol'
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
         pre-express-2019:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
         csd2-2019:
           stages:
             Lists:
@@ -385,14 +429,90 @@ uz:
           stages:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
         csp1-2019:
           stages:
             The Internet:
               name: Internet
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Ro‘yxatlar
+            csp_loops:
+              display_name: Sikllar
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Ro‘yxatlar
+            csp_loops:
+              display_name: Sikllar
         csd2-pilot:
           stages:
             Lists:
@@ -407,6 +527,10 @@ uz:
               name: Funksiyalar
             Sprite Properties:
               name: Sprait hususiyatlari
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -417,18 +541,56 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
         time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Shart buyruqlari
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Shart buyruqlari
+            csf_functions:
+              display_name: Funksiyalar
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Shart buyruqlari
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shart buyruqlari
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Shart buyruqlari
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shart buyruqlari
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shart buyruqlari
+            csp_functions:
+              display_name: Funksiyalar
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Ro‘yxatlar
+            csp_loops:
+              display_name: Sikllar
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -445,20 +607,57 @@ uz:
               name: Funksiyalar
             Text:
               name: Matn
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shart buyruqlari
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: Funksiyalar
         coursef-2020:
           stages:
             Internet:
               name: Internet
+          lesson_groups:
+            csf_variables:
+              display_name: O‘zgaruvchilar
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shart buyruqlari
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: O‘zgaruvchilar
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+          lesson_groups:
+            csf_loops:
+              display_name: Sikllar
         csd3-virtual:
           stages:
             Variables:

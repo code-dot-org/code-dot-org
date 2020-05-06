@@ -298,6 +298,20 @@ sk-SK:
           vášho programu
         sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti?
           Prihláste sa pre uloženie projektu do vášho konta!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Cyklus "for" nájdete tu!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Dostaňte herca k tejto vlajočke pre postup do
+          ďaľšieho levelu.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi
+          o tom ako tvoj kód funguje.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Všimnite si, že bloky majú nový spôsob
+          zadávani čísiel. Tieto "matematické" bloky môžu byť vytiahnuté von a popresúvané
+          podľa potreby!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       Overworld Chop Trees:
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
       Overworld Chop Trees_2019:
@@ -339,12 +353,12 @@ sk-SK:
       Virtual Pet 2_2019:
         '': Klikni sem!
       behaviors 1:
-        behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+        behaviors_edit: Klikni sem  a uvidíš, ako toto správanie funguje.
       behaviors 3a:
         behavior_callout: Prečo tento postup nefunguje pri prostrednej hviezde?
         star2_callout: Odstráň blok s kostýmom a použi namiesto neho blok "táto postava".
       behaviors 4:
-        behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+        behaviors_edit: Klikni sem  a uvidíš, ako toto správanie funguje.
       behaviors 5:
         behaviors_edit: Pridaj kód k tomuto správaniu.
       behaviors free play:
@@ -654,6 +668,8 @@ sk-SK:
         courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Nemusíte použiť farby pre vyriešenie tohto
           cvičenia. Ak chcete, tento blok "náhodná farba" vám to uľahčí!
@@ -676,6 +692,10 @@ sk-SK:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať plásty.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
+          Nemusíš vôbec vyhľadávať plásty.
+        4_5_Bee_Conditionals_2_2: Potrebujete pomoc?  Kliknite sem pre videonápovedu!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral
           všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
@@ -778,6 +798,9 @@ sk-SK:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého
           štvorca.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého
+          štvorca.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
           všetok kód vo funkcií. Čo by mal urobiť umelec po nakreslení prvého štvorca?
@@ -785,6 +808,9 @@ sk-SK:
         courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
           všetok kód vo funkcií. Čo by mal urobiť umelec po nakreslení prvého štvorca?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
+          všetok kód vo funkcií. Čo by mal urobiť umelec po nakreslení prvého štvorca?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Keď je spustený tento zelený blok, spustí sa
           všetok kód vo funkcií. Čo by mal urobiť umelec po nakreslení prvého štvorca?
       courseE_artist_functions8:

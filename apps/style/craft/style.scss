@@ -160,6 +160,23 @@ $text-shadow-gray: #5a5a5a;
   @include pixelated();
 }
 
+#soft-buttons.soft-buttons-compact {
+  margin-left: 0;
+  button {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1000px),
+       screen and (max-height: 600px) {
+  #soft-buttons {
+    margin: 0, -5px, 0, 0;
+    button {
+      margin: 0;
+    }
+  }
+}
+
 .left-btn {
   @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   @include flip-horizontal(1);

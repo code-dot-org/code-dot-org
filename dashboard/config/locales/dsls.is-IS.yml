@@ -1656,7 +1656,65 @@ is-IS:
           annan - félaga, hóp eða bekk - og ræða hvað þið hafið uppgötvað og fá staðfestingu
           á að þú hafir skilið þetta rétt og hvernig sé hægt að nota tækið á ýmsan
           hátt.\n\n\n"
+      OPD-K5 Reviewing Reflections:
+        content1: lýsing hér
       OPD-K5 Stage3aGo:
+        content1: lýsing hér
+      OPD-K5 Stage3aGo_copy:
+        content1: lýsing hér
+      OPD-K5 conditionals introduced:
+        content1: lýsing hér
+      OPD-K5 debugging:
+        content1: lýsing hér
+      OPD-K5 diving deeper intro:
+        content1: lýsing hér
+      OPD-K5 events introduced:
+        content1: lýsing hér
+      OPD-K5 for loops:
+        content1: lýsing hér
+      OPD-K5 for loops intro:
+        content1: lýsing hér
+      OPD-K5 for loops introduction:
+        content1: lýsing hér
+      OPD-K5 functions introduced:
+        content1: lýsing hér
+      OPD-K5 journaling:
+        content1: lýsing hér
+      OPD-K5 lesson implementation planning:
+        content1: lýsing hér
+      OPD-K5 lesson plans:
+        content1: lýsing hér
+      OPD-K5 loops introduced:
+        content1: lýsing hér
+      OPD-K5 project:
+        content1: lýsing hér
+      OPD-K5 projects introduction:
+        content1: lýsing hér
+      OPD-K5 role_of_teacher:
+        content1: lýsing hér
+      OPD-K5 sequencing introduced:
+        content1: lýsing hér
+      OPD-K5 sprite lab:
+        content1: lýsing hér
+      OPD-K5 sprite lab introduction:
+        content1: lýsing hér
+      OPD-K5 sprite lab unplugged:
+        content1: lýsing hér
+      OPD-K5 sprite lab video:
+        content1: lýsing hér
+      OPD-K5 types of lessons:
+        content1: lýsing hér
+      OPD-K5 using lesson plans:
+        content1: lýsing hér
+      OPD-K5 variables:
+        content1: lýsing hér
+      OPD-K5 variables introduction:
+        content1: lýsing hér
+      OPD-K5 variables unplugged:
+        content1: lýsing hér
+      OPD-K5 where to next:
+        content1: lýsing hér
+      OPD-K5-projects-1:
         content1: lýsing hér
       'Overview: Design Mode':
         markdown: |
@@ -2388,6 +2446,27 @@ is-IS:
             það er blóm, verður býflugan að safna blómasafa einu sinni. Ef það er
             ekki blóm á býflugan að gera ekkert. Skoðaðu kóðann hér fyrir neðan vandlega.
             Hvað heldur þú að muni gerast eftir að þú smellir á "Keyra"?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: 'Býflugan mun alltaf færast að skýinu og reyna að ná blómasafa. '
+          feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+            reyna að ná blómasafa ef það er blóm undir skýinu.
+        - text: Býflugan mun færast á skýið en aðeins reyna að ná blómasafa ef það
+            er blóm undir skýinu.
+          correct: true
+          feedback: Rétt!
+        - text: 'Býflugan mun færast að skýinu og síðan gera ekki neitt, alveg sama
+            hvað. '
+          feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+            reyna að ná blómasafa ef það er blóm undir skýinu.
+        - text: Veit ekki.
+          feedback: Kubburinn `ef á blómi` tryggir að býflugan mun aðeins reyna að
+            ná blómasafa ef það er blóm undir skýinu.
+        questions:
+        - text: Skýið felur það sem er undir. Það gæti verið blóm undir skýinu. Ef
+            það er blóm, verður býflugan að safna blómasafa einu sinni. Ef það er
+            ekki blóm á býflugan að gera ekkert. Skoðaðu kóðann hér fyrir neðan vandlega.
+            Hvað heldur þú að muni gerast eftir að þú smellir á "Keyra"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: Býflugan mun sækja blómasafa á hverju blómi og búa til hunang í hverri
@@ -2959,6 +3038,20 @@ is-IS:
         questions:
         - text: Hvað mun gerast þegar þú smellir á "Keyra"?
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: Ekkert. Forritið kallar aldrei á fallið.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna einn ferning.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna tvo ferninga sem skarast.
+          feedback: Ekki rétt. Lengd hverrar hliðar á ferningnum er aðeins 100 dílar,
+            en listamaðurinn hoppar um 175 díla á milli fallanna.
+        - text: Listamaðurinn mun teikna tvo ferninga með smá-bil á milli.
+          correct: true
+          feedback: Rétt! Forritið kallar tvisvar á fallið með hopp á milli.
+        questions:
+        - text: Hvað mun gerast þegar þú smellir á "Keyra"?
+      courseE_prediction_artistFunction1_copy:
         answers:
         - text: Ekkert. Forritið kallar aldrei á fallið.
           feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.

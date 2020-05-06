@@ -209,6 +209,9 @@ km-KH:
       courseD_bee_conditionals3_2019: "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou
         can only collect nectar from flowers, but you can check any space\nto see
         if there is a flower."
+      courseD_bee_conditionals3_copy: "Help the bee collect all of the nectar.\n\\\r\n\\\r\nYou
+        can only collect nectar from flowers, but you can check any space\nto see
+        if there is a flower."
       courseD_bee_conditionals8: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
         honey (because there is a honeycomb)."
       courseD_bee_conditionals8_2018: "Collect nectar if there is a flower.\\\r\nOtherwise,\nmake
@@ -225,8 +228,13 @@ km-KH:
         ninja\n    to **chase** the pirate.  "
       courseE_artist_functions1: "Help the zombie draw glasses using\nsquares with
         sides of 100 pixels.  \\\r\nThe bridge between the glasses is 75\npixels long."
+      courseE_artist_functions1_copy: "Help the zombie draw glasses using\nsquares
+        with sides of 100 pixels.  \\\r\nThe bridge between the glasses is 75\npixels
+        long."
       courseE_artist_functions2: "This time, use the `draw a square`\nfunction to
         create the glasses. \\\r"
+      courseE_artist_functions2_copy: "This time, use the `draw a square`\nfunction
+        to create the glasses. \\\r"
       courseE_playLab_challenge1: "Something should happen when\nyou get enough points
         or when you run out of points. Add some code to the\n`win game` and `lose
         game` functions to make the game work the way it should.\n\\\r\nClick the

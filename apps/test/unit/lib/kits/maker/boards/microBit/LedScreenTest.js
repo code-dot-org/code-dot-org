@@ -2,9 +2,9 @@
 import {expect} from '../../../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {MicrobitStubBoard} from '../makeStubBoard';
-import LedMatrix from '@cdo/apps/lib/kits/maker/boards/microBit/LedMatrix';
+import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
 
-describe('LedMatrix', function() {
+describe('LedScreen', function() {
   describe('on() and off()', () => {
     let led;
     let boardClient = new MicrobitStubBoard();
@@ -12,7 +12,7 @@ describe('LedMatrix', function() {
     let displayClearSpy;
 
     before(() => {
-      led = new LedMatrix({
+      led = new LedScreen({
         mb: boardClient
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
@@ -43,7 +43,7 @@ describe('LedMatrix', function() {
     let displaySpy;
 
     before(() => {
-      led = new LedMatrix({
+      led = new LedScreen({
         mb: boardClient
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
@@ -78,7 +78,7 @@ describe('LedMatrix', function() {
     let displaySpy;
 
     before(() => {
-      led = new LedMatrix({
+      led = new LedScreen({
         mb: boardClient
       });
       displaySpy = sinon.spy(boardClient, 'displayShow');
@@ -105,7 +105,7 @@ describe('LedMatrix', function() {
     let scrollNumSpy;
 
     before(() => {
-      led = new LedMatrix({
+      led = new LedScreen({
         mb: boardClient
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
