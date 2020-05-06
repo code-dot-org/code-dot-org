@@ -502,6 +502,41 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal '2017', script.version_year
   end
 
+  test 'set_and_unset_teacher_resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    2.times do
+      post :update, params: {
+        id: script.id,
+        script: {name: script.name},
+        script_text: '',
+        resourceTypes: ['curriculum', 'something_else'],
+        resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
+      }
+      assert_response :redirect
+      script.reload
+
+      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
+    end
+
+    # Unset the properties.
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      resourceTypes: [''],
+      resourceLinks: ['']
+    }
+    assert_response :redirect
+    script.reload
+
+    assert_nil script.teacher_resources
+  end
+
   test 'set and unset all general_params' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -510,7 +545,7 @@ class ScriptsControllerTest < ActionController::TestCase
     File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
 
     # Set most of the properties.
-    # omitted: professional_learning_course, script_announcements, resourceTypes, resourceLinks because
+    # omitted: professional_learning_course, script_announcements because
     # using fake values doesn't seem to work for them.
     general_params = {
       hideable_stages: 'on',
