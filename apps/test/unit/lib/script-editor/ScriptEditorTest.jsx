@@ -8,7 +8,7 @@ describe('ScriptEditor', () => {
     announcements: [],
     curriculumUmbrella: 'CSF',
     i18nData: {
-      lessonDescriptions: []
+      stageDescriptions: []
     },
     isLevelbuilder: true,
     locales: [],
