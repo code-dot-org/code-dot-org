@@ -46,6 +46,8 @@ else
   PARALLEL="xargs -P${PROCS} -d\n -L1 -n1 ${SHELL} -c"
 fi
 
+echo "Using parallel command prefix: ${PARALLEL}"
+
 ${PARALLEL} <<SCRIPT
 npm run lint
 (PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit)
