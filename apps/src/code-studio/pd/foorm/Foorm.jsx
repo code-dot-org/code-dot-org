@@ -38,12 +38,6 @@ export default class Foorm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      submitting: false,
-      submitted: false,
-      errors: []
-    };
-
     Survey.StylesManager.applyTheme('default');
 
     this.surveyModel = new Survey.Model(this.props.formQuestions);
@@ -58,26 +52,45 @@ export default class Foorm extends React.Component {
     if (this.props.submitParams) {
       requestData = {...this.props.submitParams, ...requestData};
     }
+    // Default text says thank you before we send the post. Set to indicate
+    // we are saving and clear any error messages.
+    // We need to call showDataSavingClear() after changing completedHtml to force
+    // the survey component to refresh with the new completedHtml.
+    survey.completedHtml = '<h4>Your responses are being saved...</h4>';
+    options.showDataSavingClear();
     $.ajax({
       url: this.props.submitApi,
       type: 'post',
       dataType: 'json',
       data: requestData
-    });
+    })
+      .done(() => {
+        survey.completedHtml =
+          '<h4>Thank you for completing the survey! Your responses saved successfully.</h4>';
+        options.showDataSavingClear();
+      })
+      .fail(jqXHR => {
+        if (jqXHR.status === 409) {
+          survey.completedHtml =
+            '<h4>You already submitted a response. Thank you!</h4>';
+          options.showDataSavingClear();
+        } else {
+          survey.completedHtml =
+            '<h4>An error occurred and we could not save your response.</h4>';
+          options.showDataSavingError('Please click here to try again.');
+        }
+      });
   };
 
   render() {
-    if (this.state.submitted) {
-      return <div>Thank you for submitting</div>;
-    } else {
-      return (
-        <Survey.Survey
-          model={this.surveyModel}
-          onComplete={this.onComplete}
-          data={this.props.surveyData}
-          css={this.customCss}
-        />
-      );
-    }
+    return (
+      <Survey.Survey
+        model={this.surveyModel}
+        onComplete={this.onComplete}
+        data={this.props.surveyData}
+        css={this.customCss}
+        requiredText={'(Required)'}
+      />
+    );
   }
 }
