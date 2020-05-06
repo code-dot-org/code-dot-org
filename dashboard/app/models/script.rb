@@ -768,7 +768,7 @@ class Script < ActiveRecord::Base
       @all_bonus_script_levels = lessons.map do |stage|
         {
           stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user.id)}
+          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
         }
       end
       @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
