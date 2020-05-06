@@ -164,7 +164,7 @@ class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
     icon: PropTypes.string,

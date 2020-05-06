@@ -5,29 +5,7 @@ import cookies from 'js-cookie';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
-import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
-
-const styles = {
-  closeX: {
-    position: 'absolute',
-    top: 5,
-    right: 5,
-    fontSize: 13,
-    lineHeight: 0,
-    boxShadow: 'unset',
-    borderWidth: 0,
-    backgroundColor: 'unset',
-    paddingRight: 0,
-    color: color.black,
-    ':hover': {
-      boxShadow: 'unset',
-      backgroundColor: 'unset'
-    }
-  }
-};
-
-// Note that additional styling can be found in apps/style/HideToolbarHelper.scss.
+import Callout from '@cdo/apps/code-studio/components/Callout';
 
 const HideToolbarHelperCookieName = 'hide_toolbar_helper';
 
@@ -147,24 +125,14 @@ export default class HideToolbarHelper extends React.Component {
   }
 
   render() {
-    if (this.state.shouldShowHelper) {
-      return (
-        <div className="hide_toolbar_helper" onClick={this.dismissCallout}>
-          <SafeMarkdown markdown={msg.hideToolbarHelper()} />
-          <Button
-            style={styles.closeX}
-            onClick={this.dismissCallout}
-            icon={'times'}
-            color={Button.ButtonColor.white}
-            // Elements that display over minecraft can't use <button> right now
-            // unless they want minecraft styling due to the use of !important
-            // in the minecraft stylesheet.
-            __useDeprecatedTag
-          />
-        </div>
-      );
-    } else {
-      return null;
-    }
+    return (
+      <Callout
+        onCalloutDismissed={this.dismissCallout}
+        shouldShowCallout={this.state.shouldShowHelper}
+        style={{position: 'fixed', top: '22px', left: '6%'}}
+      >
+        <SafeMarkdown markdown={msg.hideToolbarHelper()} />
+      </Callout>
+    );
   }
 }

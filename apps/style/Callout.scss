@@ -1,9 +1,9 @@
-// Style rules associated with the HideToolbarHelper popup
+// Style rules associated with the Callout component
 
-.hide_toolbar_helper {
+.callout {
   position: fixed;
-  top: 22px;
-  left: 6%;
+  top: 20px;
+  left: 0;
   background-color: $white;
   color: $black;
   z-index: 1040;
@@ -24,7 +24,7 @@
   }
 }
 
-.hide_toolbar_helper:after, .hide_toolbar_helper:before {
+.callout:after, .callout:before {
   bottom: 100%;
   left: 50%;
   border: solid transparent;
@@ -35,14 +35,14 @@
   pointer-events: none;
 }
 
-.hide_toolbar_helper:after {
+.callout:after {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: #fff;
   border-width: 20px;
   margin-left: -20px;
 }
 
-.hide_toolbar_helper:before {
+.callout:before {
   border-color: rgba(0, 0, 0, 0);
   border-bottom-color: #000;
   border-width: 21px;
