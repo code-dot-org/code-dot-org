@@ -4122,6 +4122,165 @@ ru-RU:
           Попробуй проделать кое-какие расчеты с переменной «счетчик».
 
           Что нужно сделать со счетчиком у каждого цветка, чтобы уравнять количество нектара, которое необходимо собрать?
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: Перетащи лиловый блок с числом на пусто место в цикле
+          «повторить», чтобы сказать ему, сколько должно быть повторов.
+        courseF_bee_for1_b: Тебе потребуются два блока в цикле «повторить», чтобы
+          собрать весь нектар.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: Если запутаешься, работай над цветками поочередно и тестируй
+          программу почаще.
+        courseF_bee_for2_b: Не забывай перемещаться вперед между всеми циклами, чтобы
+          добраться до каждого цветка.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: Используй цикл for, значение в котором меняется от 1 до
+          7 с шагом 1, чтобы решить эту головоломку.
+        courseF_bee_for4_b: Тебе потребуется вставить в свой цикл for команду «двигаться
+          вперед», а также цикл для сбора нектара.
+        courseF_bee_for4_c: Обязательно используй переменную «счетчик» в своем вложенном
+          цикле «повторить», чтобы получить достаточно нектара!
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: Не забудь использовать переменную «счетчик» в своем цикле
+          «повторить».
+        courseF_bee_for6_b: Тебе потребуется вставить в свой цикл for команду «двигаться
+          вперед», а также цикл для сбора нектара.
+        courseF_bee_for6_c: Твой цикл должен считать **от 5 до 1**.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: Нужно, чтобы твой цикл for считал от 1 до 7 с шагом 2.
+        courseF_bee_for7_b: Тебе потребуется вставить в свой цикл for команду «двигаться
+          вперед», а также цикл для сбора нектара.
+        courseF_bee_for7_c: Не забудь использовать переменную «счетчик» в своем цикле
+          «повторить».
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Чтобы у этого треугольника был внутренний
+          угол 60 градусов, не забудь повернуть художника на 120 градусов.
+        grade5_artist_variables_triangles1_b: Используй цикл «повторить», чтобы сделать
+          свой код короче.
+        grade5_artist_variables_triangles1_c: Внутри цикла тебе потребуется переместиться
+          вперед на 50 точек, а затем повернуть налево на 120 градусов.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Не забудь перемещаться вперед после рисования
+          каждого треугольника.
+        courseF_artist_variables2_b: Твой новый цикл будет содержать цикл для твоего
+          треугольника, а также команду «двигаться вперед».
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 'Переменная «длина» будет использована в двух
+          местах кода: в длине стороны треугольника и в расстоянии для перемещения
+          между треугольниками.'
+        courseF_artist_variables3_b: 'Блок номеров со значением 50 должен находиться
+          только в одном месте: после блока "установить длину".'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_c: |-
+          Художник будет двигаться по следующей схеме:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: Вторая половина кода должна выглядеть почти так
+          же, как первая, за исключением того, что ты будешь поворачивать _налево_,
+          прыгать, а затем поворачивать _направо_.
+        courseF_artist_variables5_b: Первая половина кода нарисует три треугольника,
+          а вторая половина нарисует еще три.
+        courseF_artist_variables5_c: Начни с копирования кода первой половины своей
+          программы, а затем измени его, чтобы он рисовал показанный рисунок.
+        courseF_artist_variables5_d: |-
+          Художник будет двигаться по следующей схеме:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Можно пройти всего несколькими путями. Какой из них самый короткий?
         mc_8_b: Используй цикл «повторить», чтобы упростить свой код.
@@ -7613,6 +7772,9 @@ ru-RU:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Для повтора кода вытащи цикл "повторить", а затем
           помести в него нужный блок.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Для повтора кода вытащи цикл "повторить", а затем
+          помести в него нужный блок.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Если нажать на маленькую стрелку рядом со словом
           "налево" на блоке поворота, то оно изменится на "направо".
@@ -7631,7 +7793,18 @@ ru-RU:
         courseC_starWars_loops4_a: Используй два блока "повторить".
         courseC_starWars_loops4_b: 'У каждого цикла "повторить" будет внутри всего
           одна команда: "двигаться вперед".'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Если нажать на маленькую стрелку рядом со словом
+          "налево" на блоке поворота, то оно изменится на "направо".
+        courseC_starWars_loops4_a: Используй два блока "повторить".
+        courseC_starWars_loops4_b: 'У каждого цикла "повторить" будет внутри всего
+          одна команда: "двигаться вперед".'
       courseC_starWars_loops5:
+        courseC_starWars_loops5_b: Для перемещения вниз тебе придется повернуть, а
+          затем переместиться вперед.
+        courseC_starWars_loops5_a: Лучший вариант кода начинается с поворота, за которым
+          следуют перемещение вперед, еще один поворот и цикл.
+      courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: Для перемещения вниз тебе придется повернуть, а
           затем переместиться вперед.
         courseC_starWars_loops5_a: Лучший вариант кода начинается с поворота, за которым
@@ -7647,6 +7820,11 @@ ru-RU:
         courseC_starWars_loops6_b: Если хочешь, чтобы код был короче, вставь один
           цикл повтора в другой!\\ Это называется \*\*вложенным циклом".
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Попробуй записать все шаги на листе бумаге и найти
+          схему.
+        courseC_starWars_loops6_b: Если хочешь, чтобы код был короче, вставь один
+          цикл повтора в другой!\\ Это называется \*\*вложенным циклом".
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Попробуй записать все шаги на листе бумаге и найти
           схему.
         courseC_starWars_loops6_b: Если хочешь, чтобы код был короче, вставь один
@@ -7672,6 +7850,13 @@ ru-RU:
           попробуй записать все шаги на листе бумаги и найти схему.
         courseC_starWars_loops7_c: Не бойся допустить ошибку! Запусти код и посмотри,
           что получится, даже если не уверен, что уже решил головоломку.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Эта схема проще, чем кажется! Начни с простой ступеньки
+          лестницы. Позволяет ли эта схема собрать весь металлолом?
+        courseC_starWars_loops7_b: Если у тебя возникнут сложности с этим заданием,
+          попробуй записать все шаги на листе бумаги и найти схему.
+        courseC_starWars_loops7_c: Не бойся допустить ошибку! Запусти код и посмотри,
+          что получится, даже если не уверен, что уже решил головоломку.
       courseC_starWars_loops8:
         course_starWars_loops8_a: Попробуй разбить эту задачу на части. Не торопись.
           Не пытайся решить ее с первой попытки!
@@ -7685,6 +7870,12 @@ ru-RU:
           со ступенькой лестницы. Как ты решал ее раньше?
         course_starWars_loops8_c: Взгляни на этот путь. ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Попробуй разбить эту задачу на части. Не торопись.
+          Не пытайся решить ее с первой попытки!
+        course_starWars_loops8_b: Представь, что первая часть этой задачи – задача
+          со ступенькой лестницы. Как ты решал ее раньше?
+        course_starWars_loops8_c: Взгляни на этот путь. ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Попробуй разбить эту задачу на части. Не торопись.
           Не пытайся решить ее с первой попытки!
         course_starWars_loops8_b: Представь, что первая часть этой задачи – задача
@@ -7923,6 +8114,10 @@ ru-RU:
         courseD_bee_conditionals1_a: Тебе потребуется использовать блок "если", чтобы
           проверять, скрывается ли под облачком цветок, прежде, чем пытаться собрать
           нектар.
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: Тебе потребуется использовать блок "если", чтобы
+          проверять, скрывается ли под облачком цветок, прежде, чем пытаться собрать
+          нектар.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: Нуждаешься в помощи, чтобы начать работать?
           Посмотри видео!
@@ -7948,6 +8143,16 @@ ru-RU:
           твой код работал в обоих случаях, обязательно используй оператор «если».
         courseD_bee_conditionals2_c: Проверять на наличие сот не нужно, под облачком
           может быть только цветок или пустое место.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Нуждаешься в помощи, чтобы начать работать?
+          Посмотри видео!
+        courseD_bee_conditionals2_a: Иногда под облачком будет цветок, иногда нет.  Чтобы
+          твой код работал в обоих случаях, обязательно используй оператор «если».
+        courseD_bee_conditionals2_b: Чтобы выйти из лабиринта, можно использовать
+          цикл "повторить" или блок "пока путь впереди".
+        courseD_bee_conditionals2_c: Проверять на наличие сот не нужно, под облачком
+          может быть только цветок или пустое место.
+        courseD_bee_conditionals2_hintVid2: Посмотри видео с советами по решению головоломки.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Нуждаешься в помощи, чтобы начать работать?
           Посмотри видео!
@@ -7973,6 +8178,16 @@ ru-RU:
           каждого места и выяснения, что там – цветок или ничего.
         courseD_bee_conditionals3_c: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если и не решил еще головоломку.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Нуждаешься в помощи, чтобы начать работать?
+          Посмотри видео!
+        courseD_bee_conditionals3_a: Обязательно используй оператор «если» для проверки
+          каждого места и выяснения, что там – цветок или ничего.
+        courseD_bee_conditionals3_b: Заставить пчелу двигаться вперед можно с помощью
+          цикла "повторить" или цикла "пока". Используй из них любой, какой захочешь!
+        courseD_bee_conditionals3_c: Не бойся допустить ошибку! Добавляй блоки, запускай
+          код и смотри, что получится, даже если и не решил еще головоломку.
+        courseD_bee_conditionals3_hintVid2: Посмотри видео с советами по решению головоломки.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Нуждаешься в помощи, чтобы начать работать?
           Посмотри видео!
@@ -8000,6 +8215,17 @@ ru-RU:
           имеется над каждым местом, хотя ты и можешь видеть весь путь.
         courseD_bee_conditionals4_b: Используй оператор «если» внутри своего цикла
           для проверки каждого места на наличие нектара.
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: Нуждаешься в помощи, чтобы начать работать?
+          Посмотри видео!
+        courseD_bee_conditionals4_a: Ты можешь по-прежнему исходить из того, что облачко
+          имеется над каждым местом, хотя ты и можешь видеть весь путь.
+        courseD_bee_conditionals4_b: Используй оператор «если» внутри своего цикла
+          для проверки каждого места на наличие нектара.
+        courseD_bee_conditionals4_c: Используя блок <xml><block type="maze_untilBlocked"/></xml>,
+          ты должен перемещаться вперед и проверять на наличие цветка. Если цветок
+          есть, что обязана сделать пчела?
+        courseD_bee_conditionals4_hintVid2: Посмотри видео с советами по решению головоломки.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Нуждаешься в помощи, чтобы начать работать?
           Посмотри видео!
@@ -8028,6 +8254,23 @@ ru-RU:
         courseD_bee_conditionals5_c: Для продолжения движения по дорожке пчеле потребуется
           "двигаться вперед". В процессе движения пчела должна будет проверять на
           наличие цветка. "Если цветок есть", пчела должна будет "собрать нектар".
+      courseD_bee_conditionals5_copy:
+        courseD_bee_conditionals5_hintVid1: Нуждаешься в помощи, чтобы начать работать?
+          Посмотри видео!
+        courseD_bee_conditionals5_a: Представь себе, что каждая сторона прямоугольной
+          дорожки сама является дорожкой. Создай вложенный цикл с блоком "повторить"
+          на внешней дорожке и цикл "пока путь впереди" – на внутренней. По скольким
+          дорожкам придется перемещаться пчеле, если ей потребуется переместиться
+          по каждой стороне с цветком?
+        courseD_bee_conditionals5_c: У прямоугольника 3 стороны с цветами, поэтому
+          код должен повториться 3 раза. При каждом повторе пчела должна будет двигаться
+          по дорожке, "пока путь впереди".  Для продолжения движения по дорожке пчеле
+          придется "двигаться вперед". Находясь на дорожке, пчела должна будет проверять
+          на наличие цветка. "Если цветок есть", пчела должна будет "собрать нектар".
+        courseD_bee_conditionals5_b: Внутри блока "пока путь впереди" тебе потребуется
+          двигаться вперед и проверять на наличие цветка. Как проверить, нет ли под
+          облачком цветка? Что нужно сделать, если под облачком скрывается цветок?
+        courseD_bee_conditionals5_hintVid2: Посмотри видео с советами по решению головоломки.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Нуждаешься в помощи, чтобы начать работать?
           Посмотри видео!
@@ -9369,6 +9612,12 @@ ru-RU:
           рисовать второй квадрат.
         courseE_artist_functions1_b: Не волнуйся рисовать перекрывающие линии, чтобы
           сделать стёкла.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Каждый квадрат имеет стороны в 100 пикселей,
+          и это значит, что тебе надо двинуться вперёд на 175 пикселей, прежде чем
+          рисовать второй квадрат.
+        courseE_artist_functions1_b: Не волнуйся рисовать перекрывающие линии, чтобы
+          сделать стёкла.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Твоя программа может быть такой:
@@ -9396,6 +9645,13 @@ ru-RU:
           квадрат". для "вызова" своей функции. Иначе код в твоей функции не будет
           выполнен. <xml><block type="procedures_callnoreturn" limit="2"><mutation
           name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          Твоя программа может быть такой:
+
+          -   Используй функцию
+          -   Двигайся вперёд на 100 + 75 пикселей
+          -   Используй функцию
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Твоя программа может быть такой:
 

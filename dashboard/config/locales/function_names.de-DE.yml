@@ -15,10 +15,12 @@ de-DE:
         draw_rect: zeichne_rechteck
       2-3 Artist Debugging 10:
         draw square: zeichne Quadrat
+        jump to controller top left: Springe zum Controller oben links
         jump to middle: springe in die Mitte
         draw a circle: Zeichne einen Kreis
         draw a button: zeichne einen Knopf
         draw cord: zeichne Schnur
+        draw R pad: zeichne das R Pad
       2-3 Artist Debugging 5:
         draw left leg: zeichne linkes Bein
         draw right leg: zeichne rechtes Bein
@@ -598,6 +600,8 @@ de-DE:
         do something: Funktionsblock
         draw hexagon: zeichne Sechseck
         draw line of hexagons: zeichne Linie aus Sechsecken
+      courseE_artist_functions1_copy:
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions2:
         draw a square: zeichne ein Quadrat
         draw ear stems: zeichne Ohrstäbchen
@@ -607,17 +611,24 @@ de-DE:
       courseE_artist_functions2_2019:
         draw a square: zeichne ein Quadrat
         draw ear stems: zeichne Ohrstäbchen
+      courseE_artist_functions2_copy:
+        draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions3_2018:
         draw a star: zeichne einen Stern
       courseE_artist_functions3_2019:
         draw a star: zeichne einen Stern
       courseE_artist_functions4:
         draw a star: zeichne einen Stern
+      courseE_artist_functions4_copy:
+        draw a star: zeichne einen Stern
       courseE_artist_functions5:
         draw a star: zeichne einen Stern
       courseE_artist_functions5_2018:
         draw a star: zeichne einen Stern
       courseE_artist_functions5_2019:
+        draw a star: zeichne einen Stern
+      courseE_artist_functions5_copy:
         draw a star: zeichne einen Stern
       courseE_artist_functions7:
         draw a window: zeichne ein Fenster
@@ -726,6 +737,9 @@ de-DE:
         draw a square: zeichne ein Quadrat
         draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions_predict1_2019:
+        draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
+      courseE_artist_functions_predict1_copy:
         draw a square: zeichne ein Quadrat
         draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions_predict2:
