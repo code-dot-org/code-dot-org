@@ -92,6 +92,7 @@ export class WorkshopIndex extends React.Component {
       ProgramManager
     );
     const canSeeLegacySurveySummaries = this.props.permission.hasAny(
+      Facilitator,
       CsfFacilitator
     );
 

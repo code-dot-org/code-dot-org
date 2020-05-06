@@ -69,6 +69,10 @@ export default class LegacySurveySummaries extends React.Component {
       );
     }
 
+    // Don't show the legacy survey summaries for CSD & CSP until we transition
+    // them to use new Foorm-based surveys.
+    const showSummerSurveys = false;
+
     return (
       <div>
         <LegacySurveySummaryTable
@@ -82,14 +86,18 @@ export default class LegacySurveySummaries extends React.Component {
               .csf_intro_post_workshop_from_pegasus_for_all_workshops
           }
         />
-        <LegacySurveySummaryTable
-          title="CSD summer - my workshops"
-          data={this.state.data.csd_summer_workshops_from_jotform}
-        />
-        <LegacySurveySummaryTable
-          title="CSP summer - my workshops"
-          data={this.state.data.csp_summer_workshops_from_jotform}
-        />
+        {showSummerSurveys && (
+          <div>
+            <LegacySurveySummaryTable
+              title="CSD summer - my workshops"
+              data={this.state.data.csd_summer_workshops_from_jotform}
+            />
+            <LegacySurveySummaryTable
+              title="CSP summer - my workshops"
+              data={this.state.data.csp_summer_workshops_from_jotform}
+            />
+          </div>
+        )}
       </div>
     );
   }
