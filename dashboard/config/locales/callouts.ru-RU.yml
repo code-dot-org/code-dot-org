@@ -193,6 +193,11 @@ ru-RU:
         dance_callout_11_b: Новый блок!
       Dance_Party_11_5:
         dance_party_11_5_groups: Ищите блоки «все утки» здесь
+      Fish Tank 3-validated_2019:
+        spritelab_comment: 'Используй этот блок, чтобы оставить себе или учителю заметки
+          о работе своего кода.
+
+'
       Function intro Ryan:
         Function_intro_Ryan_1: Эта небольшая инструкция дает команду компьютеру выполнить
           БОЛЬШОЙ фрагмент кода с тем же именем в рабочей области.
@@ -272,6 +277,20 @@ ru-RU:
       New Frozen Project:
         snowflake_dropdown: Используй данный раскрывающийся список для создания разных
           снежинок!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Цикл for находится здесь!
+      OPD-K5-spritelab-3:
+        spritelab_comment: 'Используй этот блок, чтобы оставить себе или учителю заметки
+          о работе своего кода.
+
+'
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Обрати внимание, что теперь числа на
+          блоках указываются новым способом. Эти блоки «математика» можно вытаскивать
+          и перемещать!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Используй его, чтобы установить значение переменной
+          «длина».
       Overworld Chop Trees:
         craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь
           тебе начать работу
@@ -312,6 +331,33 @@ ru-RU:
         craft_what_is_iron: Добывайте это железо!
       Underground Iron_2019:
         craft_what_is_iron: Добывайте это железо!
+      behaviors 1:
+        behaviors_edit: 'Нажми здесь, чтобы узнать, как работает это поведение.
+
+'
+      behaviors 3a:
+        behavior_callout: 'Почему это поведение не срабатывает для средней звезды?
+
+'
+        star2_callout: 'Удали этот блок костюма и используй вместо него блок "этот
+          спрайт".
+
+'
+        this_sprite_callout: 'Замени блок костюма, приведенный ниже, на этот блок.
+
+'
+      behaviors 4:
+        behaviors_edit: 'Нажми здесь, чтобы узнать, как работает это поведение.
+
+'
+      behaviors 5:
+        behaviors_edit: 'Добавь код к этому поведению.
+
+'
+      behaviors free play:
+        behaviors_edit: 'Добавь код к этому поведению.
+
+'
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Используй этот цикл для сбора всего
           нектара (или мёда) с одного цветка (или сота).
@@ -424,6 +470,15 @@ ru-RU:
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: Используй зеленую выпадающую стрелку для изменения
           направления.
+      courseC_artist_loops1a_2019:
+        jumpto_callout: 'Этот блок крайне важен для нашего проекта. Обязательно используй
+          его!
+
+'
+      courseC_artist_loops1b_2019:
+        sticker2: 'Добавь его в середину программы.
+
+'
       courseC_collector_prog1:
         courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
@@ -490,11 +545,37 @@ ru-RU:
       courseC_maze_programming5_2019:
         '': На этих блоках нет чисел. Их можно использовать в любом количестве!
       courseC_maze_programming7:
+        courseC_maze_programming7_1: Это твое первое задание-головоломка! Такие задания
+          считаются трудными и могут потребовать нескольких попыток.
         courseC_maze_programming7_2: Эти блоки каменные и не могут быть выкинуты.
       courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: Это твое первое задание-головоломка! Такие задания
+          считаются трудными и могут потребовать нескольких попыток.
         courseC_maze_programming7_2: Эти блоки каменные и не могут быть выкинуты.
       courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: Это твое первое задание-головоломка! Такие задания
+          считаются трудными и могут потребовать нескольких попыток.
         courseC_maze_programming7_2: Эти блоки каменные и не могут быть выкинуты.
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: 'В этой головоломке в твоем распоряжении лишь один
+          из этих блоков.
+
+'
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: 'В этой головоломке в твоем распоряжении лишь один
+          из этих блоков.
+
+'
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: 'В этой головоломке в твоем распоряжении лишь один
+          из этих блоков.
+
+'
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: 'В этой головоломке в твоем распоряжении лишь один
+          из этих блоков.
+
+'
       courseD_artist_ramp11:
         courseD_artist_ramp11_1: Вы можете изменить это число.
       courseD_bee_conditionals2:
@@ -507,6 +588,10 @@ ru-RU:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
           свой цветок. Вам вовсе не нужно проверять для этого соты.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
+        4_5_Bee_Conditionals_2_2: Нужна помощь? Щёлкни здесь для ВИДЕО подсказки!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Используй этот цикл для сбора всего
           нектара (или мёда) с одного цветка (или сота).
@@ -548,9 +633,15 @@ ru-RU:
       courseD_maze_ramp3:
         courseC_maze_programming3_2: Захочешь отбросить дополнительные блоки – перетащи
           их в набор инструментов.
+        stone_block_2: 'Серые блоки сделаны из камня, и их отбросить нельзя.
+
+'
       courseD_maze_ramp3_2018:
         courseC_maze_programming3_2: Захочешь отбросить дополнительные блоки – перетащи
           их в набор инструментов.
+        stone_block_2: 'Серые блоки сделаны из камня, и их отбросить нельзя.
+
+'
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: Захочешь отбросить дополнительные блоки – перетащи
           их в набор инструментов.
@@ -598,7 +689,13 @@ ru-RU:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: Какой бы код ты сюда ни вставил, он повторится столько
           раз, сколько ты ему скажешь. Запусти после этого остальную программу.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Это твое первое задание-головоломка! Такие задания считаются
+          трудными и могут потребовать нескольких попыток.
       courseE_artist_functions1:
+        courseD_artist_functions1_1: Давай начнём использовать этот блок, чтобы помочь
+          создать первый квадрат.
+      courseE_artist_functions1_copy:
         courseD_artist_functions1_1: Давай начнём использовать этот блок, чтобы помочь
           создать первый квадрат.
       courseE_artist_functions2:
@@ -608,6 +705,9 @@ ru-RU:
         courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
           работает. Что должен делать художник после отрисовки первого квадрата?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
+          работает. Что должен делать художник после отрисовки первого квадрата?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
           работает. Что должен делать художник после отрисовки первого квадрата?
       courseE_artist_ramp8:

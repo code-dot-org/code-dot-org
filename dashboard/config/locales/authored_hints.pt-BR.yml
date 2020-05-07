@@ -2845,6 +2845,199 @@ pt-BR:
       New Minecraft Hero Project:
         MC_HOC_2017_13_Cole_a: Tente fazer com que o Agente construa algumas pontes
           para que Alex ou Steve possam andar além dos limites do mapa.
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'O bloco que você precisa adicionar se chama `definir
+          velocidade`. '
+        courseC_flappy_events2_b: Ligue o bloco `definir velocidade` ao bloco`quando
+          correr` para resolver este quebra cabeça.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Se algo não estiver funcionando corretamente, verifique
+          se os blocos estão conectados aos eventos corretos no espaço de trabalho.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Conecte o bloco `fim de jogo` a`quando acertar um
+          obstáculo` para resolver este quebra-cabeça.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Você precisará usar o bloco `marcar um ponto` para
+          passar este nível.
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: Arraste um bloco de número roxo para o espaço em branco
+          no laço `repita` para dizer quantas vezes deve repetir.
+        courseF_bee_for1_b: Você precisará de dois blocos no seu laço "repita" para
+          coletar todo o néctar.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: Se você estiver confuso, trabalhe uma flor por vez e fique
+          testando.
+        courseF_bee_for2_b: Lembre-se de avançar entre cada laço, então você alcançará
+          cada flor.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: Use um laço `para` que vai de 1 para 7 com um incremento
+          de 1 para resolver este desafio.
+        courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
+        courseF_bee_for4_c: Certifique-se de utilizar a variável `contar` dentro do
+          seu laço de `repetir` para conseguir nectar o suficiente!
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: Não se esqueça de usar uma variável `counter` dentro do
+          seu laço `repita`.
+        courseF_bee_for6_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
+        courseF_bee_for6_c: Seu laço deve contar **de 5 a 1**.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: Seu laço `for` precisará contar de 1 a 7 com incremento
+          de 2.
+        courseF_bee_for7_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
+        courseF_bee_for7_c: Lembre-se de usar a variável `counter` no seu laço `repita`.
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: O bloco `setar ator 1 para ??? imagem` pode ser
+          usado para adicionar um ator ao palco.
+        courseE_playLab_scaffold1_b: Coloque o bloco `setar ator` abaixo de `quando
+          rodar` para fazer seu ator aparecer no começo do programa.
+        courseE_playLab_scaffold1_c: Use `setar cor de fundo ???` para escolher uma
+          cor de fundo para sua cena.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: Selecione no menu suspenso do evento `quando
+          ____ seta` para mudar a direção dos controles do bloco.
+        courseE_playLab_scaffold1_b: Você deve ter quatro blocos de evento 'quando
+          seta', com uma direção para mover abaixo de cada um.
+        courseE_playLab_scaffold1_c: Quando estiver pronto, você deve ser capaz de
+          mover seu herói com as setas!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Use `marcar ponto` para adicionar um ponto, e
+          `remover ponto` para subtrair um.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus
+          nesse triângulo, se lembre de virar o artista 120 graus.
+        grade5_artist_variables_triangles1_b: Use a repetição `repetir` para encurtar
+          o seu código.
+        grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer
+          avançar 50 pixels, então virar a esquerda 120 graus.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Lembre-se de mover-se para frente depois de desenhar
+          cada triângulo.
+        courseF_artist_variables2_b: Seu novo laço conterá o laço para seu triângulo,
+          e então um comando `avance`.
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 'A variável `length` será usada em dois lugares
+          no seu código: no comprimento lateral do seu triângulo, e na quantidade
+          que você avança entre triângulos.'
+        courseF_artist_variables3_b: 'Um bloco de número com valor 50 deve estar apenas
+          em um lugar: após o bloco `set variável comprimento`.'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: Seu código não será muito diferente do que estava
+          no último desafio, exceto que você precisará virar o artista para baixo,
+          então volte-o para ficar pronto para saltar novamente.
+        courseF_artist_variables4_c: |-
+          Este é o padrão que seu(sua) artista irá seguir:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: A segunda metade do seu código deve parecer quase
+          o mesmo que a primeira metade, exceto você estará virando para _esquerda_,
+          saltando, e depois virando para _direita_.
+        courseF_artist_variables5_b: A primeira metade do seu código vai desenhar
+          três triângulos, e a segunda metade vai desenhar os outros três.
+        courseF_artist_variables5_c: Comece duplicando o código na primeira metade
+          do seu programa, então altere-o para mostrar o design.
+        courseF_artist_variables5_d: |-
+          Este é o padrão que seu(sua) artista irá seguir:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
         mc_8_b: Use laços `repita` para simplificar seu código.
@@ -5046,6 +5239,11 @@ pt-BR:
           em um pedaço de papel primeiro.
         courseA_maze_seq10_b: Você vai precisar de ir em 3 direções diferentes para
           resolver este quebra-cabeça.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Se você estiver tendo problemas, tente escrever os passos
+          em um pedaço de papel primeiro.
+        courseA_maze_seq10_b: Você vai precisar de ir em 3 direções para resolver
+          este quebra-cabeça.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Se o caminho que você precisa não estiver claro, use
           o seu dedo para traçar seu caminho do pássaro até o porco.
@@ -5121,6 +5319,10 @@ pt-BR:
           Você vai precisar usar este bloco:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Tente escrever os passos no papel para encontrar uma
+          solução!
+        courseA_maze_seq5_b: Você precisará de 2 blocos, apontando para 2 direções.
       courseA_maze_seq5a_2018:
         '1': Diga os passos em voz alta e veja se te ajuda a descobrir a resposta.
       courseA_maze_seq5a_2019:
@@ -5137,7 +5339,17 @@ pt-BR:
         courseA_maze_seq6_a: Seu código final deve ter 3 blocos de movimento.
         courseA_maze_seq6_b: Se você ficar preso, tente resolver esse desafio em 2
           partes, uma parte antes do canto e outra depois do canto.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Seu código final deve ter 3 blocos de movimento.
+        courseA_maze_seq6_b: Se você ficar preso, tente resolver esse desafio em 2
+          partes, uma parte antes do canto e outra depois do canto.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Há 1 bloco que você precisa adicionar para mover o pássaro
+          até o porco.
+        courseA_maze_seq7_b: Se você não consegue descobrir o que fazer, tente desenhar
+          o quebra-cabeça no papel e usar o seu dedo para descobrir em qual caminho
+          seguir.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Há 1 bloco que você precisa adicionar para mover o pássaro
           até o porco.
         courseA_maze_seq7_b: Se você não consegue descobrir o que fazer, tente desenhar
@@ -5150,6 +5362,9 @@ pt-BR:
         courseA_maze_seq8_a: Se você estiver preso, tente desenhar a imagem no papel
           para ver como o pássaro deveria se mover.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Se você estiver preso, tente desenhar a imagem no papel
+          para ver como o pássaro deveria se mover.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Se você estiver preso, tente desenhar a imagem no papel
           para ver como o pássaro deveria se mover.
       courseA_maze_seq9:
@@ -9234,6 +9449,9 @@ pt-BR:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Para repetir o código, arraste um laço `repetir`,
           depois coloque o bloco que você quer dentro dele.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Para repetir o código, arraste um laço `repetir`,
+          depois coloque o bloco que você quer dentro dele.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Clicando na pequena seta ao lado de "esquerda"
           no bloco de virar, vai te deixar mudar para "direita".
@@ -9252,6 +9470,12 @@ pt-BR:
         courseC_starWars_loops4_a: Use dois blocos `repetir`.
         courseC_starWars_loops4_b: 'Cada laço ''repetir'' terá apenas um comando dentro
           dele: ''mover à frente''.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Clicando na pequena seta ao lado de "esquerda"
+          no bloco de virar, vai te deixar mudar para "direita".
+        courseC_starWars_loops4_a: Use dois blocos `repetir`.
+        courseC_starWars_loops4_b: 'Cada laço ''repetir'' terá apenas um comando dentro
+          dele: ''mover à frente''.'
       courseC_starWars_loops5:
         courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
           adiante.
@@ -9263,6 +9487,11 @@ pt-BR:
       courseC_starWars_loops5_2019:
         courseC_starWars_loops5_a: A melhor solução usa um único \`avançar ', depois
           um voltar e depois uma repetição.
+      courseC_starWars_loops5_copy:
+        courseC_starWars_loops5_b: Para mover para baixo você deve virar e então mover
+          adiante.
+        courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
+          'mover à frente', outra volta, e então um laço.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Tente escrever todos os movimentos em um pedaço
           de papel e procure um padrão.
@@ -9276,6 +9505,12 @@ pt-BR:
           um laço `repeat` dentro de outro! \nIsso é chamado de \\*\\* loop aninhado
           \\*\\*."
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Tente escrever todos os movimentos em um pedaço
+          de papel e procure um padrão.
+        courseC_starWars_loops6_b: "Se você quiser usar menos código, você pode colocar
+          um laço `repeat` dentro de outro! \nIsso é chamado de \\*\\* loop aninhado
+          \\*\\*."
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Tente escrever todos os movimentos em um pedaço
           de papel e procure um padrão.
         courseC_starWars_loops6_b: "Se você quiser usar menos código, você pode colocar
@@ -9302,6 +9537,13 @@ pt-BR:
           todos os movimentos em um pedaço de papel e procure por um padrão.
         courseC_starWars_loops7_c: Não tenha medo de cometer um erro! Execute o código
           para ver o que acontece, mesmo que você ainda não tenha resolvido o quebra-cabeça.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Esse padrão parece mais difícil do que realmente
+          é! Comece com um simples degrau de escada. Isso cobre toda a sucata?
+        courseC_starWars_loops7_b: Se tiver problemas com esse desafio tente escrever
+          todos os movimentos em um pedaço de papel e procure por um padrão.
+        courseC_starWars_loops7_c: Não tenha medo de cometer um erro! Execute o código
+          para ver o que acontece, mesmo que você ainda não tenha resolvido o quebra-cabeça.
       courseC_starWars_loops8:
         course_starWars_loops8_a: Tente pensar sobre este problema em pequenas partes.
           Não tenha pressa. Você não precisa resolver isso na primeira tentativa!
@@ -9321,6 +9563,15 @@ pt-BR:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Tente pensar sobre este problema em pequenas partes.
+          Não tenha pressa. Você não precisa resolver isso na primeira tentativa!
+        course_starWars_loops8_b: Pense na primeira metade deste problema como um
+          problema de degrau de escada. Como você resolveu isso antes?
+        course_starWars_loops8_c: |-
+          Dê uma olhada neste caminho.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Tente pensar sobre este problema em pequenas partes.
           Não tenha pressa. Você não precisa resolver isso na primeira tentativa!
         course_starWars_loops8_b: Pense na primeira metade deste problema como um
@@ -10077,6 +10328,9 @@ pt-BR:
       courseD_bee_conditionals1_predict1_2019:
         courseD_bee_conditionals1_a: Você precisará usar um bloco `se` para verificar
           se há uma flor embaixo da nuvem antes de tentar obter o néctar.
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: Você precisará usar um bloco `se` para verificar
+          se há uma flor embaixo da nuvem antes de tentar obter o néctar.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -10107,6 +10361,18 @@ pt-BR:
           de usar uma instrução `se`.
         courseD_bee_conditionals2_c: Você não precisa verificar se há favos de mel,
           só haverá flores ou espaços em branco sob as nuvens.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Precisa de ajuda para começar? Assista
+          o vídeo!
+        courseD_bee_conditionals2_a: Às vezes uma flor vai estar lá, outras vezes
+          não. Se você quiser que seu código seja executado em ambos os casos, certifique-se
+          de usar uma instrução `se`.
+        courseD_bee_conditionals2_b: Você pode usar um laço `repetir` ou`enquanto
+          caminho pela frente` para percorrer este labirinto.
+        courseD_bee_conditionals2_c: Você não precisa verificar se há favos de mel,
+          só haverá flores ou espaços em branco sob as nuvens.
+        courseD_bee_conditionals2_hintVid2: Assista este vídeo para obter ajuda de
+          como resolver este quebra-cabeça.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -10137,6 +10403,18 @@ pt-BR:
         courseD_bee_conditionals3_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Precisa de ajuda para começar? Assista
+          o vídeo!
+        courseD_bee_conditionals3_a: Certifique-se de usar uma instrução 'if' para
+          verificar cada espaço para ver se ele tem uma flor ou nada.
+        courseD_bee_conditionals3_b: Você pode usar um laço `repita` ou `enquanto`
+          para manter a abelha se movendo para frente. Use o que você quiser!
+        courseD_bee_conditionals3_c: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
+        courseD_bee_conditionals3_hintVid2: Assista este vídeo para obter ajuda de
+          como resolver este quebra-cabeça.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -10166,6 +10444,18 @@ pt-BR:
           uma nuvem sobre ele, mesmo que você possa ver todo o caminho.
         courseD_bee_conditionals4_b: Use uma instrução `se` dentro do seu laço para
           checar cada espaço por néctar.
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: Precisa de ajuda para começar? Assista
+          o vídeo!
+        courseD_bee_conditionals4_a: Você ainda pode tratar cada espaço como se houvesse
+          uma nuvem sobre ele, mesmo que você possa ver todo o caminho.
+        courseD_bee_conditionals4_b: Use uma instrução `se` dentro do seu laço para
+          checar cada espaço por néctar.
+        courseD_bee_conditionals4_c: Usando o bloco <xml><block type="maze_untilBlocked"/></xml>,
+          você deve seguir em frente e verificar se há uma flor. Se houver uma flor,
+          o que a abelha deve fazer?
+        courseD_bee_conditionals4_hintVid2: Assista este vídeo para obter ajuda de
+          como resolver este quebra-cabeça.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -10210,6 +10500,25 @@ pt-BR:
         courseD_bee_conditionals5_c: Para continuar o caminho, a abelha precisa `avançar`.
           Conforme se move, a mesma precisa verificar por uma flor. `Se há uma flor`,
           a abelha deve `coletar o nectar`.
+      courseD_bee_conditionals5_copy:
+        courseD_bee_conditionals5_hintVid1: Precisa de ajuda para começar? Assista
+          o vídeo!
+        courseD_bee_conditionals5_a: Pense em todos os lados de um caminho retangular
+          como um caminho por si só. Configure um laço aninhado com um bloco `repita`
+          do lado de fora e um laço `enquanto  houver um caminho à frente` do lado
+          de dentro. Quantos caminhos a abelha precisa zumbir se a abelha precisar
+          zumbir em todos os lados com uma flor?
+        courseD_bee_conditionals5_c: Existem 3 lados do retângulo com flores, então
+          o código precisa 'repetir 3 vezes'. Em cada repetição, a abelha deverá continuar
+          ao longo do caminho, 'enquanto houver um caminho em frente'. Para continuar
+          o caminho, a abelha vai precisar 'Avançar'. Enquanto no caminho, a abelha
+          precisa verificar se há uma flor. 'se há uma flor', a abelha deve 'obter
+          néctar'.
+        courseD_bee_conditionals5_b: Dentro do bloco 'enquanto houver um caminho à
+          frente' você precisará seguir em frente e procurar por uma flor. Como você
+          verifica se há uma flor? O que fazer se houver uma flor?
+        courseD_bee_conditionals5_hintVid2: Assista este vídeo para obter ajuda de
+          como resolver este quebra-cabeça.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Precisa de ajuda para começar? Assista
           o vídeo!
@@ -12264,6 +12573,14 @@ pt-BR:
           Você vê onde este desenho poderia usar uma função chamada 'linha de hexágonos'?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Cada um dos quadrados tem 100 de pixels de lado,
+          o que significa que você terá que movê-lo para frente 175 pixels antes de
+          desenhar o seu segundo quadrado.
+        courseE_artist_functions1_b: Tudo bem desenhar linhas sobrepostas para fazer
+          seus óculos.
+        courseE_artist_functions1_c: Para códigos mais curtos, tente usar um laço
+          `repetir` para desenhar os quadros quadrados dos óculos.
       courseE_artist_functions2:
         courseD_artist_functions2_b: A função que você escreve não deve conter todo
           o seu programa, apenas a parte que desenha um quadrado com 100 lados de
@@ -12292,6 +12609,16 @@ pt-BR:
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: "Seu programa deve: \n\n-   Usar sua função\n-
           \  Mover para frente 100 + 75 pixels\n-   Usar sua função novamente"
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: A função que você escreve não deve conter todo
+          o seu programa, apenas a parte que desenha um quadrado com 100 lados de
+          pixels.
+        courseD_artist_functions2_c: |-
+          Use o bloco verde `desenhar um quadrado` para "chamar" sua função sob o bloco `quando executar`. Caso contrário, o código na sua função não será executado.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: "Seu programa deve: \n\\-Usar função\n\n-   Mover
+          para frente 100 + 75 pixels\n-   Usar função"
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           Para resolver este enigma, você precisa adicionar um laço que repita o código inicial oito vezes.
@@ -12299,7 +12626,23 @@ pt-BR:
           Se você não consegue se lembrar qual era o código inicial, clique em "Reiniciar" no canto superior direito da área de trabalho.
         courseD_artist_functions3_b: Seu laço deve ter todos os blocos de código de
           3 iniciadores dentro dele.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          Para resolver este enigma, você precisa adicionar um laço que repita o código inicial oito vezes.
+
+          Se você não consegue se lembrar qual era o código inicial, clique em "Reiniciar" no canto superior direito da área de trabalho.
+        courseD_artist_functions3_b: Seu laço deve ter todos os blocos de código de
+          3 iniciadores dentro dele.
       courseE_artist_functions4:
+        courseD_artist_functions4_a: Tente usando uma função!
+        courseD_artist_functions4_b: Arraste o bloco de função `desenhar uma estrela`
+          para fora da caixa de ferramentas para começar a construir sua função. Ele
+          deve ter o mesmo código do quebra-cabeça anterior, já que você está desenhando
+          o mesmo padrão de estrela.
+        courseD_artist_functions4_c: Use o bloco verde 'desenhar uma estrela' para
+          chamar esta função no seu programa principal. Não se esqueça de avançar
+          entre cada estrela!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: Tente usando uma função!
         courseD_artist_functions4_b: Arraste o bloco de função `desenhar uma estrela`
           para fora da caixa de ferramentas para começar a construir sua função. Ele
@@ -12327,6 +12670,13 @@ pt-BR:
           qualquer hora e não apenas dentro de um laço!
         courseD_artist_functions5_c: Comece criando sua função `desenhar uma estrela`
           e use esta função para desenhar as três estrelas!
+      courseE_artist_functions5_copy:
+        courseD_artist_functions5_a: Não desista! Lembre-se do que você vem aprendendo.
+        courseD_artist_functions5_b: As funções facilitam chamar o código salvo a
+          qualquer hora e não apenas dentro de um laço!
+        courseD_artist_functions5_c: Comece arrastando o código de uma forma de estrela
+          para a função `desenhar uma estrela`, depois use esta função para desenhar
+          as três estrelas!
       courseE_artist_functions6:
         grade4_artist_functions_windows0_a: Concentre-se apenas em fazer uma janela
           por enquanto. Vamos criar uma função no próximo quebra-cabeça.

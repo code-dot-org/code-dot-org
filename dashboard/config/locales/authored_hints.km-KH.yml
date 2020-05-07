@@ -481,6 +481,10 @@ km-KH:
         courseE_artist_functions1_a: ការ៉េនីមួយៗមានជ្រុង១០០ ភីកសែល នោះមានន័យថាអ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ
           ១៧៥ ភីកសែលមុនពេលគូរការ៉េទីពីររបស់អ្នក។
         courseE_artist_functions1_b: វាមិនអីទេក្នុងការគូរបន្ទាត់ត្រួតគ្នាដើម្បីធ្វើវ៉ែនតារបស់អ្នកនោះ។
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: ការ៉េនីមួយៗមានជ្រុង១០០ ភីកសែល នោះមានន័យថាអ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ
+          ១៧៥ ភីកសែលមុនពេលគូរការ៉េទីពីររបស់អ្នក។
+        courseE_artist_functions1_b: វាមិនអីទេក្នុងការគូរបន្ទាត់ត្រួតគ្នាដើម្បីធ្វើវ៉ែនតារបស់អ្នកនោះ។
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           កម្មវិធីរបស់អ្នកគួរ:
@@ -496,6 +500,13 @@ km-KH:
           -   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល
           -   ប្រើមុខងារ
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          កម្មវិធីរបស់អ្នកគួរ:
+
+          -   ប្រើមុខងារ
+          -   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល
+          -   ប្រើមុខងារ
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           កម្មវិធីរបស់អ្នកគួរ:
 

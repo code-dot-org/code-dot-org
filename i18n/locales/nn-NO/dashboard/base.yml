@@ -461,6 +461,8 @@ nn:
     update: "Oppdater konto"
     account_successfully_updated: "Kontoen er oppdatert."
     update_email: "Oppdater"
+    parent_guardian_email_label: "Epost til foreldre/føresette"
+    none: "Ingen"
     encrypted: "kryptert"
   user_level:
     completed: 'Fullført'
@@ -680,20 +682,6 @@ nn:
       body: "Studentar kan utforske konsept fra informatikkursa våre sjølv ved å bruke desse digitale verktøya. Bruk modulane for seg sjølv, eller lag ei enkeltkonseptøkt for klassen din."
       audience: "Alder 14+"
       cta: "Lær korleis"
-  gallery:
-    students_drew_these_with_code: "Elevar teikna desse ved å kode!"
-    students_made_these_with_code: "Elever laga desse ved å kode!"
-    picture_count: "I løpet av dei siste <b>%{days}</b> dagane har elevar teikna <b>%{count}</b> bilder ved å skrive sine eigne dataprogram. Klikk på bilda for å sjå kvart program køyre."
-    activity_count: "De siste <b>%{days}</b> dagane har elevar laga <b>%{count}</b> apps og bilder ved å skrive sine egne program. Klikk på bilda og skjermbilda for å sjå kvart program i aksjon."
-    want_to_make_your_own: "Vil du lage din eigen?"
-    how_to_save: "På siste nivå i desse rettleiingane, klikkar du \"Avslutt\" og \"Lagre\" for å lagre ditt arbeid for galleriet."
-    more: "Fleire &rarr;"
-    caption_by_name_age: "av %{name}, %{age} år"
-    caption_time_ago: "%{time_ago} sidan"
-    header: "Galleri"
-    header_playlab: "Historier og spel"
-    header_artist: "Kunstnar"
-    report_abuse: "Rapporter misbruk"
   landing:
     prerelease_tutorial: "Denne leksjonen er i **beta**.  Den kan bli endra etter kvart som vi mottek tilbakemeldingar og gjer forbetringar."
     report_bug: "Rapporter feil"
@@ -877,6 +865,7 @@ nn:
     instructor_feedback: 'Tilbakemelding frå instruktør'
     peer_feedback: 'Tilbakemelding frå annan elev'
     outdated: 'Denne tilbakemelding er gitt på eit tidlegare bidrag'
+    peer_review: 'Gjennomgang av annan elev'
   flex_category:
     required: 'Oversyn'
     content: 'Innhald'

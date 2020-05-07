@@ -3,7 +3,7 @@ import {
   apiValidateType,
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
-import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
+import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;

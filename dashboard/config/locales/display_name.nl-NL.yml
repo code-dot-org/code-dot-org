@@ -2,6 +2,21 @@
 nl-NL:
   data:
     display_name:
+      App Lab Intro 8 - Video Design Mode: 'Video: Ontwerp Modus'
+      App Lab Intro 8 - Video Getting Started: 'Video: Beginnen'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Plaatjes en Geluiden'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Maak het interactief'
+      App Lab Intro 8 - Video Share Your App: 'VIdeo: Deel je App'
+      AppLab Intro 7 - Change Screen Color: Verander Scherm Kleur
+      AppLab Intro 7 - Change Text 2: Verander Tekst
+      AppLab Intro 7 - Full Text: Twee Knoppen
+      AppLab Intro 7 - onEvent intro: Maak Knoppen Werkend
+      AppLab Intro 7 - onEvent twoButtons: Meer onEvent Oefening
+      AppLab Intro 7 - playSound: Gebruik maken van playSound
+      AppLab Intro 7 - thisOrThatAddButton: Dit of dat
+      AppLab Intro 7 - thisOrThatAddScreen: Dit of dat
+      AppLab Intro 7 - thisOrThatPersonalize: Dit of dat
+      AppLab Intro 7 - thisOrThatSetScreen: Dit of dat
       CSD U2 Pair Programming Video: Programmeren in Tweetallen
       CSD U2 Pair Programming Video_2018: Programmeren in Tweetallen
       CSD U2 Pair Programming Video_2019: Programmeren in Tweetallen
@@ -79,6 +94,7 @@ nl-NL:
       Dance_Party_extras_speed_2019: Versnellen, vertragen
       Dance_Party_extras_visible: Waar zijn ze heen?
       Dance_Party_extras_visible_2019: Waar zijn ze heen?
+      New Dance Lab Project: Nieuw Dansfeest project
       Oceans_Video_Machine_Learning: 'Video: Machinaal leren'
       Oceans_Video_Societal_Implications: 'Video: Maatschappelijke implicaties'
       Oceans_Video_Training_Data: 'Video: Trainingsgegevens'

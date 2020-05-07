@@ -262,9 +262,29 @@ it-IT:
       NEW Course 4 Bee For Loops 5:
         actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
           "Azioni" ora sono qui.
+      New Artist Project:
+        New Artist Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
       New Frozen Project:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Clicca le categorie nella cassetta degli attrezzi
+          per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area
+          di lavoro per aggiungerli al tuo programma.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
+          per passare all'esercizio successivo.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
+          introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
+          presi e spostati da un blocco all''altro!'
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (lunghezza)
       Overworld Chop Trees:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld Chop Trees_2019:
@@ -631,6 +651,9 @@ it-IT:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
           blocchi.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
+          blocchi.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
           correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
@@ -657,6 +680,10 @@ it-IT:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
+        4_5_Bee_Conditionals_2_2: Hai bisogno di aiuto? Clicca qui per un VIDEO-suggerimento!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
@@ -756,6 +783,9 @@ it-IT:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
+          primo quadrato.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
           eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
@@ -765,6 +795,10 @@ it-IT:
           eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
           eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?

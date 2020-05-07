@@ -603,9 +603,45 @@ cs-CZ:
         svět pomocí agentova kódu."
       New Minecraft Hero Project: "**Volná hra:** Teď je to na vás! Prozkoumejte tento
         svět pomocí agentova kódu."
+      OPD-K5-events-2: |-
+        Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
+
+        * * *
+
+        Klikáním nebo dotekem v obrazovce ovládáš Flappyho. K dokončení úlohy se musíš dostat do cíle nahoře.
+      OPD-K5-events-3: "Událost `při spuštění` ti umožňuje spustit kód na začátku
+        hry.\n\nZkus přidat blok, který nastaví rychlost pohybu obrazovky, když se
+        klikne na \"Spustit\". \n\n* * *\n\nSpusť tu hru a máváním křídly se dostaň
+        k cíli."
+      OPD-K5-events-4: "Teď přidáme zem.\n\nPřipoj blok `konec hry` k události `když
+        se dotkne země`. \n\n* * *\n\nÚlohu vyřešíš, když spustíš hru a necháš ptáčka
+        spadnout."
+      OPD-K5-events-5: |-
+        Flappy prolétne skrz překážky jako nic, dokud nenapíšeš kód, že má nabourat.
+
+        Připoj blok k události `když se dotkne překážky`. Tvůj kód musí zajistit `konec hry`, když Flappy narazí do první dvojice trubek.
+      OPD-K5-events-6: "Teď přidáme počítání bodů, když se Flappy vyhne překážce.
+        \ \n\nPřidej blok k události `když mine překážku` tak, aby se přičetl jeden
+        bod, když klikneš na \"Spustit\" a proletíš s Flappym mezi první dvojicí trubek."
+      Overworld Chop Tree: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho
+        věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
+      Overworld Chop Tree_2019: Dřevo je velmi důležitá surovina. Vyrábí se z něj
+        mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
+      Overworld House Frame Chosen: Postav zbytek tvého domu z jakéhokoliv materiálu
+        chceš. Povel `opakuj` se tady bude hodit.
+      Overworld House Frame Chosen_2019: Postav zbytek tvého domu z jakéhokoliv materiálu
+        chceš. Povel `opakuj` se tady bude hodit.
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
+      Overworld Place Wall: Každý dům začíná stavbou zdí. Vytvoř první část domu tím,
+        že dáš povely `polož` a `posuň se vpřed` do bloku cyklu.
+      Overworld Place Wall_2019: Každý dům začíná stavbou zdí. Vytvoř první část domu
+        tím, že dáš povely `polož` a `posuň se vpřed` do bloku cyklu.
+      Overworld Shear Sheep: Čas stříhání ovcí! Použij povel `ostříhej` k získání
+        vlny z obou ovcí.
+      Overworld Shear Sheep_2019: Čas stříhání ovcí! Použij povel `ostříhej` k získání
+        vlny z obou ovcí.
       Pixelation - Lesson 15 - Color Shades: |-
         # Barevná pixelace: Úkol 2
 
@@ -669,6 +705,18 @@ cs-CZ:
 
         -   Pro každé tlačítko vytvoř událost, která vede na odpovídající obrazovku, když se tlačítko zmáčkne.
         -   Spusť svou aplikaci a otestuj, že všechna tlačítka fungují.
+      Underground Avoiding Lava: Pod některými z těchto bloků je schovaná láva, kterou
+        budeš muset před přesunem vpřed zakrýt. K tomu se hodí příkaz `když`. Přidej
+        jeden příkaz `posuň se vpřed` na správné místo a vytěž bloky.
+      Underground Avoiding Lava_2019: Pod některými z těchto bloků je schovaná láva,
+        kterou budeš muset před přesunem vpřed zakrýt. K tomu se hodí příkaz `když`.
+        Přidej jeden příkaz `posuň se vpřed` na správné místo a vytěž bloky.
+      Underground If Statements: Teď to začíná být obtížnější. Vytěž 3 rudity, ale
+        nespadni při tom do lávy. Použij příkaz `když` k položení kamení, když narazíš
+        na lávu.
+      Underground If Statements_2019: Teď to začíná být obtížnější. Vytěž 3 rudity,
+        ale nespadni při tom do lávy. Použij příkaz `když` k položení kamení, když
+        narazíš na lávu.
       Vigenere: "# Zašifruj a rozšifruj zprávu s Vigenèrovou šifrou\n\nToto je interaktivní
         verze Vigenèrovy šifry, která animuje zašifrování a rozšifrování poté, co
         dostane kousek textu k zašifrování nebo rozšifrování a klíč.\n\n# Udělej toto\n\n###
@@ -745,6 +793,9 @@ cs-CZ:
         dokončil tento kód. Pak zmáčkni "▶ Spustit".
       courseA_maze_seq13_2019: Dostaň to prase jakýmkoliv způsobem!
       courseA_maze_seq5: Zkus toto sám ze začátku
+      courseA_maze_seq5_copy: Zkus toto sám ze začátku
+      courseA_maze_seq_challenge2_2019: Najdi cestu a přiveď mě k tomu pošetilému
+        prasátku. Vyhni se TNT, nebo bude létat peří!
       courseA_playLab_events1_2019: Tady si můžeš hrát podle libosti. Posunuj bloky
         na pracovní plochu a uvidíš, co se stane!
       courseA_playLab_events2_2019: Pes Jorge chce říct "Ahoj všichni". Můžeš mu pomoci?
@@ -779,29 +830,618 @@ cs-CZ:
         se tam Scrat mohl dostat?
       courseB_iceage_loops9_2019: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
         aby se tam Scrat mohl dostat?
+      courseB_starWars_prog1: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nA dej pozor na překážky. Šrot vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog1_2018: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nA dej pozor na překážky. Šrot vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog1_2019: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nA dej pozor na překážky. Šrot vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Posbírej všechen šrot.
+      courseB_starWars_prog8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Posbírej všechen šrot.
+      courseB_starWars_prog8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Posbírej všechen šrot.
+      courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseC_artist_loops1a_2019: |-
+        **Volná hra:** Pojďme vybudovat něco většího hezky krok po kroku!
+
+        Prvně posuň umělce do středu obrazovky pomocí bloku <xml> <block type="jump_to" block-text="jump to the middle center position"><title name="VALUE">13</title></block></xml> a potom pomocí bloku <xml><block type="sticker" block-text="draw sticker"><title name="VALUE">Beaver</title></block></xml> něco nakresli.
+
+        * * *
+
+        Klikni na "Dokončit" až budeš chtít jít dál.
+
+        ![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)
+        ![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)
+        ![expandable](https://images.code.org/8de9e1aa15fdfe30ffed763e0e1d6e04-image-1553096428531.png)
+      courseC_artist_loops1b_2019: "Teď změň směr, kterým se nálepka nakreslí, přidáním
+        příkazu `otoč se` do tvého kódu. \n\n* * *\n\nKlikni na \"Dokončit\" až budeš
+        chtít jít dál.\n\n![expandable](https://images.code.org/30fe9d37758abd27055d9a6e5a890680-image-1553097358155.png)\n![expandable](https://images.code.org/61feed00662019b99ac774322231f084-image-1553097362176.png)\n![expandable](https://images.code.org/fd123bb703ea4c630218a12eb5994053-image-1553097354066.png)"
+      courseC_artist_loops2a_2019: |-
+        Teď zkus použít cyklus k nakreslení několika kopií nálepky. Změnou čísel in blocích otočit a opakuj můžeš vyrobit různé obrazce.
+
+        * * *
+
+        Klikni na "Dokončit" až budeš chtít jít dál.
+
+        ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)
+        ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
+        ![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)
+      courseC_artist_loops3a_2019: "To je legrace!  \n\nZkus přidat další nálepku
+        do přes tu první a uděláš obrázky jako může vidět tady dole.\n\n* * *\n\nKlikni
+        na \"Dokončit\" až budeš chtít jít dál.\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
+      courseC_artist_loops4a_2019: |-
+        Uprav tvůj kód přidáním skoku před mezi nakreslením obou nálepek v cyklu. Nezapomeň na příkaz `skoč na pozici střed` v cyklu, jinak ti umělec uteče z obrazovky!
+
+        * * *
+
+        Klikni na "Dokončit" až budeš chtít jít dál.
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        ![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
+        ![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
+        ![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)
+      courseC_artist_loops5b: "Co se stane, když použiješ  `posuň se vpřed` a potom
+        `posuň se vzad` o 100, 200, nebo 400 pixelů někde uvnitř cyklu?  \n\n-   Zkus
+        použít `nastav vzorek` blok před začátkem cyklu a budeš mít hotové umělecké
+        dílo!\n    * * *\n    ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2018: "Co se stane, když použiješ  `posuň se vpřed` a
+        potom `posuň se vzad` o 100, 200, nebo 400 pixelů někde uvnitř cyklu?  \n\n-
+        \  Zkus použít `nastav vzorek` blok před začátkem cyklu a budeš mít hotové
+        umělecké dílo!\n    * * *\n    ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2019: "Co se stane, když použiješ  `posuň se vpřed` a
+        potom `posuň se vzad` o 100, 200, nebo 400 pixelů někde uvnitř cyklu?  \n\n-
+        \  Zkus použít `nastav vzorek` blok před začátkem cyklu a budeš mít hotové
+        umělecké dílo!\n\n* * *\n\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)\n![expandable](https://images.code.org/55285e9e5c5ae1cf1c895cc0bf92824d-image-1553100970790.png)\n![expandable](https://images.code.org/6b8e67db2a3b341bc56fa53f67c284c2-image-1553100974645.png)"
+      courseC_artist_loops6a: |-
+        Přidej ještě jednu nálepku kdykoliv do cyklu! Tak co, jak to vypadá teď?
+
+        -   Můžeš taky změnit vzorek stopy.
+
+        * * *
+
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2018: |-
+        Přidej ještě jednu nálepku kdykoliv do cyklu! Tak co, jak to vypadá teď?
+
+        -   Můžeš taky změnit vzorek stopy.
+
+        * * *
+
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2019: |-
+        Přidej ještě jednu nálepku kdykoliv do cyklu! Tak co, jak to vypadá teď?
+
+        -   Můžeš taky změnit vzorek stopy.
+
+        * * *
+
+        ![expandable](https://images.code.org/edc53f27379e018e61a6ab9dcc2717ea-image-1560984648573.png)
+        ![expandable](https://images.code.org/c41b00a743f245f98d2cfb66cb18e771-image-1560984690182.png)
+        ![expandable](https://images.code.org/4c8910f72a7f0cd81713ded7b866a883-image-1560984706203.png)
+      courseC_artist_loops7a: |-
+        Zkus upravit cyklus, aby tam byl jiný počet opakování. O kolik stupňů se musíš otočit, aby se umělec udělal úplný kruh?
+
+        -   Změň počet opakování
+            -   Zkus 6 otočení po 60 stupních
+            -   Zkus 18 otočení po 20 stupních
+
+        * * *
+
+        Tento obrázek používá piráta, nidžu a žirafu. Opakují se 18 krát s otočením o 20 stupňů.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2018: |-
+        Zkus upravit cyklus, aby tam byl jiný počet opakování. O kolik stupňů se musíš otočit, aby se umělec udělal úplný kruh?
+
+        -   Změň počet opakování
+            -   Zkus 6 otočení po 60 stupních
+            -   Zkus 18 otočení po 20 stupních
+
+        * * *
+
+        Tento obrázek používá piráta, nidžu a žirafu. Opakují se 18 krát s otočením o 20 stupňů.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2019: |-
+        Zkus upravit cyklus, aby tam byl jiný počet opakování. O kolik stupňů se musíš otočit, aby se umělec udělal úplný kruh?
+
+        -   Změň počet opakování
+            -   Zkus 6 otočení po 60 stupních
+            -   Zkus 18 otočení po 20 stupních
+
+        * * *
+
+        První obrázek používá piráta, nidžu a žirafu. Opakují se 18 krát s otočením o 20 stupňů.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
+        ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
+        ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loops8a: |-
+        Teď zkus vytvořit něco vlastního. Co se stane, když uděláš dva cykly s různými nálepkami?
+
+        * * *
+
+        Potřebuješ inspiraci? Zkus udělat tento obrázek.
+
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2018: |-
+        Teď zkus vytvořit něco vlastního. Co se stane, když uděláš dva cykly s různými nálepkami?
+
+        * * *
+
+        Potřebuješ inspiraci? Zkus udělat tento obrázek.
+
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2019: |-
+        Teď zkus vytvořit něco vlastního. Co se stane, když uděláš dva cykly s různými nálepkami?
+
+        * * *
+
+        Potřebuješ inspiraci? Zkus udělat tento obrázek.
+
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPrePre1a_2019: "Umělec je na špatném místě! \n\nVyužij blok
         <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump to 200 over
         200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>,
         abys dostal umělce do středu herní plochy.\\\nPak nakresli čáru dlouhou 50
         pixelů s blokem <xml><block type=\"draw_move_by_constant\" block-text=\"move
         forward\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_collector_prog1: |-
+        **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
+
+        Přetáhni bloky do pracovního prostoru a pokus se přijít na to, jak získat poklad. Získej alespoň jednu položku a projdeš touto úrovní.
+      courseC_collector_prog1_2018: |-
+        **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
+
+        Přetáhni bloky do pracovního prostoru a pokus se přijít na to, jak získat poklad. Získej alespoň jednu položku a projdeš touto úrovní.
+      courseC_collector_prog1_2019: |-
+        **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
+
+        Přetáhni bloky do pracovního prostoru a pokus se přijít na to, jak získat poklad. Získej alespoň jednu položku a projdeš touto úrovní.
+      courseC_collector_prog3: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které potřebuješ,
+        již jsou v pracovním prostoru, ale nejsou připojeny.\\\nUspořádej tyto bloky,
+        posbírej poklad a vyřeš úkol."
+      courseC_collector_prog3_2018: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.\\\nUspořádej
+        tyto bloky, posbírej poklad a vyřeš úkol."
+      courseC_collector_prog3_2019: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.\\\nUspořádej
+        tyto bloky, posbírej poklad a vyřeš úkol."
+      courseC_collector_prog4: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které potřebuješ,
+        již jsou v pracovním prostoru, ale nejsou připojeny.  \n\nUspořádej tyto bloky,
+        posbírej všechen poklad a vyřeš úkol."
+      courseC_collector_prog4_2018: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.  \n\nUspořádej
+        tyto bloky, posbírej všechen poklad a vyřeš úkol."
+      courseC_collector_prog4_2019: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.  \n\nUspořádej
+        tyto bloky, posbírej všechen poklad a vyřeš úkol."
+      courseC_collector_prog5: |-
+        _"Pomoz mi posbírat každý kousek pokladu!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Zvládneš je opravit?
+      courseC_collector_prog5_2018: |-
+        _"Pomoz mi posbírat každý kousek pokladu!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Zvládneš je opravit?
+      courseC_collector_prog5_2019: |-
+        _"Pomoz mi posbírat každý kousek pokladu!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Zvládneš je opravit?
+      courseC_collector_prog6: |-
+        _"Pomoz mi posbírat všechen poklad!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Uspořádej je a posbírej všechen poklad.
+      courseC_collector_prog6_2018: |-
+        _"Pomoz mi posbírat všechen poklad!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Uspořádej je a posbírej všechen poklad.
+      courseC_collector_prog6_2019: |-
+        _"Pomoz mi posbírat všechen poklad!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Uspořádej je a posbírej všechen poklad.
+      courseC_collector_prog7: |-
+        \*\* Výzva: \*\* \_ „Co se tady děje?“ \_
+
+        I když je dáme do správného pořadí, budou stále nějaké chybět.\
+        Pomocí bloků z panelu posbírejte všechen poklad.
+      courseC_collector_prog7_2018: |-
+        \*\* Výzva: \*\* \_ „Co se tady děje?“ \_
+
+        I když je dáme do správného pořadí, budou stále nějaké chybět.\
+        Pomocí bloků z panelu posbírejte všechen poklad.
+      courseC_collector_prog7_2019: |-
+        \*\* Výzva: \*\* \_ „Co se tady děje?“ \_
+
+        I když je dáme do správného pořadí, budou stále nějaké chybět.\
+        Pomocí bloků z panelu posbírejte všechen poklad.
+      courseC_collector_prog8: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2018: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2019: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
+      courseC_flappy_events1: |-
+        Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
+
+        * * *
+
+        Klikáním nebo dotekem v obrazovce ovládáš Flappyho. K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events1_2018: |-
+        Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
+
+        * * *
+
+        Klikáním nebo dotekem v obrazovce ovládáš Flappyho. K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events1_2019: |-
+        Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
+
+        * * *
+
+        Klikáním nebo dotekem v obrazovce ovládáš Flappyho. K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events2: "Událost `při spuštění` ti umožňuje spustit kód na začátku
+        hry.\n\nZkus přidat blok, který nastaví rychlost pohybu obrazovky, když se
+        klikne na \"Spustit\". \n\n* * *\n\nSpusť tu hru a máváním křídly se dostaň
+        k cíli."
+      courseC_flappy_events2_2018: "Událost `při spuštění` ti umožňuje spustit kód
+        na začátku hry.\n\nZkus přidat blok, který nastaví rychlost pohybu obrazovky,
+        když se klikne na \"Spustit\". \n\n* * *\n\nSpusť tu hru a máváním křídly
+        se dostaň k cíli."
+      courseC_flappy_events2_2019: "Událost `při spuštění` ti umožňuje spustit kód
+        na začátku hry.\n\nZkus přidat blok, který nastaví rychlost pohybu obrazovky,
+        když se klikne na \"Spustit\". \n\n* * *\n\nSpusť tu hru a máváním křídly
+        se dostaň k cíli."
+      courseC_flappy_events3: "Teď přidáme zem.\n\nPřipoj blok `konec hry` k události
+        `když se dotkne země`. \n\n* * *\n\nÚlohu vyřešíš, když spustíš hru a necháš
+        ptáčka spadnout."
+      courseC_flappy_events3_2018: "Teď přidáme zem.\n\nPřipoj blok `konec hry` k
+        události `když se dotkne země`. \n\n* * *\n\nÚlohu vyřešíš, když spustíš hru
+        a necháš ptáčka spadnout."
+      courseC_flappy_events3_2019: "Teď přidáme zem.\n\nPřipoj blok `konec hry` k
+        události `když se dotkne země`. \n\n* * *\n\nÚlohu vyřešíš, když spustíš hru
+        a necháš ptáčka spadnout."
+      courseC_flappy_events4: |-
+        Flappy prolétne skrz překážky jako nic, dokud nenapíšeš kód, že má nabourat.
+
+        Připoj blok k události `když se dotkne překážky`. Tvůj kód musí zajistit `konec hry`, když Flappy narazí do první dvojice trubek.
+      courseC_flappy_events4_2018: |-
+        Flappy prolétne skrz překážky jako nic, dokud nenapíšeš kód, že má nabourat.
+
+        Připoj blok k události `když se dotkne překážky`. Tvůj kód musí zajistit `konec hry`, když Flappy narazí do první dvojice trubek.
+      courseC_flappy_events4_2019: |-
+        Flappy prolétne skrz překážky jako nic, dokud nenapíšeš kód, že má nabourat.
+
+        Připoj blok k události `když se dotkne překážky`. Tvůj kód musí zajistit `konec hry`, když Flappy narazí do první dvojice trubek.
+      courseC_flappy_events5: "Teď přidáme počítání bodů, když se Flappy vyhne překážce.
+        \ \n\nPřidej blok k události `když mine překážku` tak, aby se přičetl jeden
+        bod, když klikneš na \"Spustit\" a proletíš s Flappym mezi první dvojicí trubek."
+      courseC_flappy_events5_2018: "Teď přidáme počítání bodů, když se Flappy vyhne
+        překážce.  \n\nPřidej blok k události `když mine překážku` tak, aby se přičetl
+        jeden bod, když klikneš na \"Spustit\" a proletíš s Flappym mezi první dvojicí
+        trubek."
+      courseC_flappy_events5_2019: "Teď přidáme počítání bodů, když se Flappy vyhne
+        překážce.  \n\nPřidej blok k události `když mine překážku` tak, aby se přičetl
+        jeden bod, když klikneš na \"Spustit\" a proletíš s Flappym mezi první dvojicí
+        trubek."
+      courseC_flappy_events6: "Kliknutím na na šipku uvnitř `mávni` blok uprav sílu
+        mávání.  \n\nVyzkoušej si jestli se dá hra ovládat a získat bod, když bude
+        síla mávání Flappyho vetší nebo menší."
+      courseC_flappy_events6_2018: "Kliknutím na na šipku uvnitř `mávni` blok uprav
+        sílu mávání.  \n\nVyzkoušej si jestli se dá hra ovládat a získat bod, když
+        bude síla mávání Flappyho vetší nebo menší."
+      courseC_flappy_events6_2019: "Kliknutím na na šipku uvnitř `mávni` blok uprav
+        sílu mávání.  \n\nVyzkoušej si jestli se dá hra ovládat a získat bod, když
+        bude síla mávání Flappyho vetší nebo menší."
+      courseC_flappy_events7: Dále zkus změnit pozadí připojením dalšího bloku k události
+        `při spuštění`.
+      courseC_flappy_events7_2018: Dále zkus změnit pozadí připojením dalšího bloku
+        k události `při spuštění`.
+      courseC_flappy_events7_2019: Dále zkus změnit pozadí připojením dalšího bloku
+        k události `při spuštění`.
+      courseC_harvester_loops1: "Cykly se dají použít také na jiné akce než jen pohyb.
+        \ \n\nPoužij cyklus na sklizení dýní."
+      courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops1_2018: "Cykly se dají použít také na jiné akce než jen
+        pohyb.  \n\nPoužij cyklus na sklizení dýní."
+      courseC_harvester_loops1_2019: "Cykly se dají použít také na jiné akce než jen
+        pohyb.  \n\nPoužij cyklus na sklizení dýní."
+      courseC_harvester_loops2: Zkus použít dva odlišné cykly, jeden na pohyb dopředu
+        a jeden na sklízení.
+      courseC_harvester_loops2_2018: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
+      courseC_harvester_loops2_2019: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
+      courseC_harvester_loops3: Posbírej všechny dýně.
+      courseC_harvester_loops3_2018: Posbírej všechny dýně.
+      courseC_harvester_loops3_2019: Posbírej všechny dýně.
+      courseC_harvester_loops4: "Tady nám roste ještě navíc kukuřice.\n\nSkliď dýně
+        i kukuřici. "
+      courseC_harvester_loops4_2018: "Tady nám roste ještě navíc kukuřice.\n\nSkliď
+        dýně i kukuřici. "
+      courseC_harvester_loops4_2019: "Tady nám roste ještě navíc kukuřice.\n\nSkliď
+        dýně i kukuřici. "
+      courseC_harvester_loops5: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops8: |-
+        **Výzva**Posbírej všechny kukuřice a dýně.
+
+        K řešení výzvy můžeš použít jaké řešení budeš chtít, ale nebude to jednoduché!
+      courseC_harvester_loops8_2018: |-
+        **Výzva**Posbírej všechny kukuřice a dýně.
+
+        K řešení výzvy můžeš použít jaké řešení budeš chtít, ale nebude to jednoduché!
+      courseC_harvester_loops8_2019: |-
+        **Výzva**Posbírej všechny kukuřice a dýně.
+
+        K řešení výzvy můžeš použít jaké řešení budeš chtít, ale nebude to jednoduché!
+      courseC_harvester_loops9: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2019: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
       courseC_harvester_loops_challenge2_2018: Sesbírej všechen salát. Ne stromy ani
         pole!
       courseC_harvester_loops_challenge2_2019: Sesbírej všechen salát. Ne stromy ani
         pole!
+      courseC_maze_debugging1: |-
+        Tento kód není zcela správný!\
+        Oprav ho a pomoz veverce dostat se k žaludu.
+      courseC_maze_debugging1_2018: |-
+        Tento kód není zcela správný!\
+        Oprav ho a pomoz veverce dostat se k žaludu.
+      courseC_maze_debugging1_2019: |-
+        Tento kód není zcela správný!\
+        Oprav ho a pomoz veverce dostat se k žaludu.
+      courseC_maze_debugging3: "Něco není úplně správně. \n\nOdstraň bloky a dostaň
+        veverku k žaludu! "
+      courseC_maze_debugging3_2018: "Něco není úplně správně. \n\nOdstraň bloky a
+        dostaň veverku k žaludu! "
+      courseC_maze_debugging3_2019: "Něco není úplně správně. \n\nOdstraň bloky a
+        dostaň veverku k žaludu! "
+      courseC_maze_programming1: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
+      courseC_maze_programming1_2018: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
+      courseC_maze_programming1_2019: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
+      courseC_maze_programming3: |-
+        _"To prasátko mě štve."_
+
+        Je zde ještě jeden blok navíc, který způsobí, že pták narazí.\
+        Zbav se ho tím, že jej uvolníš ze šedých bloků a přetáhneš zpět do panelu.
+      courseC_maze_programming3_2018: |-
+        _"To prasátko mě štve."_
+
+        Je zde ještě jeden blok navíc, který způsobí, že pták narazí.\
+        Zbav se ho tím, že jej uvolníš ze šedých bloků a přetáhneš zpět do panelu.
+      courseC_maze_programming3_2019: |-
+        _"To prasátko mě štve."_
+
+        Je zde ještě jeden blok navíc, který způsobí, že pták narazí.\
+        Zbav se ho tím, že jej uvolníš ze šedých bloků a přetáhneš zpět do panelu.
+      courseC_maze_programming4: "_\"Najdi cestu a přiveď mě k tomu pošetilému prasátku.\"_
+        \nVyhni se TNT, nebo bude létat peří!"
+      courseC_maze_programming4_2018: "_\"Najdi cestu a přiveď mě k tomu pošetilému
+        prasátku.\"_ \nVyhni se TNT, nebo bude létat peří!"
+      courseC_maze_programming4_2019: "_\"Najdi cestu a přiveď mě k tomu pošetilému
+        prasátku.\"_ \nVyhni se TNT, nebo bude létat peří!"
       courseC_maze_programming5: |-
-        _"Sleduj tuto cestu a dostaň mě k praseti!"_
+        _"Sleduj tuto cestu a dostaň mě k prasátku!"_
 
         Vyhni se TNT.
       courseC_maze_programming5_2018: |-
-        _"Sleduj tuto cestu a dostaň mě k praseti!"_
+        _"Sleduj tuto cestu a dostaň mě k prasátku!"_
 
         Vyhni se TNT.
       courseC_maze_programming5_2019: |-
-        _"Sleduj tuto cestu a dostaň mě k praseti!"_
+        _"Sleduj tuto cestu a dostaň mě k prasátku!"_
 
         Vyhni se TNT.
+      courseC_maze_programming6: |-
+        _"Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!"_
+
+        Dostaň ptáčka k prasátku a vyhni se TNT.
+      courseC_maze_programming6_2018: |-
+        _"Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!"_
+
+        Dostaň ptáčka k prasátku a vyhni se TNT.
+      courseC_maze_programming6_2019: |-
+        _"Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!"_
+
+        Dostaň ptáčka k prasátku a vyhni se TNT.
+      courseC_maze_programming7: |-
+        _"Je čas se naštvat!_
+
+        **Výzva:** Tento kód obsahuje mnoho chyb. Odstraň některé bloky a přidej jiné.
+      courseC_maze_programming7_2018: |-
+        _"Je čas se naštvat!_
+
+        **Výzva:** Tento kód obsahuje mnoho chyb. Odstraň některé bloky a přidej jiné.
+      courseC_maze_programming7_2019: |-
+        _"Je čas se naštvat!_
+
+        **Výzva:** Tento kód obsahuje mnoho chyb. Odstraň některé bloky a přidej jiné.
+      courseC_maze_programming8: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_2018: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_2019: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_predict1: _"Zachovej klid a pomoz mi najít to zlé
+        prasátko."_
+      courseC_maze_programming8_predict1_2018: _"Zachovej klid a pomoz mi najít to
+        zlé prasátko."_
+      courseC_maze_programming8_predict1_2019: _"Zachovej klid a pomoz mi najít to
+        zlé prasátko."_
+      courseC_maze_programming9: _"Teď mi pomoz dostat se k prasátku jakýmkoliv způsobem!"_
+      courseC_maze_programming9_2018: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
+        způsobem!"_
+      courseC_maze_programming9_2019: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
+        způsobem!"_
+      courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nK sebrání šrotu použij pět stejných bloků. Šrot
+        vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops10: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Běž BB-8!"_
+
+        Vidíš jak ti to jde! Jen tak dál!
+      courseC_starWars_loops10_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Běž BB-8!"_
+
+        Vidíš jak ti to jde! Jen tak dál!
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Běž BB-8!"_
+
+        Vidíš jak ti to jde! Jen tak dál!
+      courseC_starWars_loops11: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8!"_
+
+        Už je to skoro hotové! Teď si můžeš vybrat jakou cestu chceš!
+      courseC_starWars_loops11_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8!"_
+
+        Už je to skoro hotové! Teď si můžeš vybrat jakou cestu chceš!
+      courseC_starWars_loops11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8!"_
+
+        Už je to skoro hotové! Teď si můžeš vybrat jakou cestu chceš!
+      courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nK sebrání šrotu použij pět stejných bloků. Šrot
+        vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nK sebrání šrotu použij pět stejných bloků. Šrot
+        vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops2: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops2_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops2_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops2_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops6_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops8_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops9: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál!"_
+
+        Použij, co ses zatím naučil(a) a posbírej všechen šrot!
+      courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál!"_
+
+        Použij, co ses zatím naučil(a) a posbírej všechen šrot!
+      courseC_starWars_loops9_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál!"_
+
+        Použij, co ses zatím naučil(a) a posbírej všechen šrot!
       courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Ahoj, já jsem Elsa z Arendellu, pomož mi namalovat tvar.”_\n\nNamaluj šestiúhelník
         se stranami dlouhými 50 pixelů.  \n\n* * *\n\nAbys namaloval(a) šestiúhelník,
@@ -899,6 +1539,12 @@ cs-CZ:
         Než začneš sbírat nektar, podívej se pod každý mrak, jestli se po dním ukrývá květina. Pokud je pod mrakem květina, včela bude muse posbírat nektar _jednou_.
 
         Nezapomeň: Všechny mraky nemusí skrývat tu samou věc!
+      courseD_bee_conditionals2_copy: |-
+        Víc mraků!
+
+        Než začneš sbírat nektar, podívej se pod každý mrak, jestli se po dním ukrývá květina. Pokud je pod mrakem květina, včela bude muse posbírat nektar _jednou_.
+
+        Nezapomeň: Všechny mraky nemusí skrývat tu samou věc!
       courseD_bee_conditionals3: Nektar můžeš posbírat jen z květin, ale můžeš se
         podívat na jakékoliv pole a zjistit, jestli tam květina je. Pokud je květina
         pod některým z těchto mraků, pak bude muset včela sebrat nektar _jednou_.
@@ -906,6 +1552,9 @@ cs-CZ:
         se podívat na jakékoliv pole a zjistit, jestli tam květina je. Pokud je květina
         pod některým z těchto mraků, pak bude muset včela sebrat nektar _jednou_.
       courseD_bee_conditionals3_2019: Nektar můžeš posbírat jen z květin, ale můžeš
+        se podívat na jakékoliv pole a zjistit, jestli tam květina je. Pokud je květina
+        pod některým z těchto mraků, pak bude muset včela sebrat nektar _jednou_.
+      courseD_bee_conditionals3_copy: Nektar můžeš posbírat jen z květin, ale můžeš
         se podívat na jakékoliv pole a zjistit, jestli tam květina je. Pokud je květina
         pod některým z těchto mraků, pak bude muset včela sebrat nektar _jednou_.
       courseD_bee_conditionals4: |-
@@ -917,6 +1566,10 @@ cs-CZ:
 
         Zkus získat všechen nektar za použití co nejméně bloků.
       courseD_bee_conditionals4_2019: |-
+        V této úloze víme, že každá květina má přesně jeden nektar. Květiny ale nejsou rovnoměrně rozmístěné.
+
+        Zkus získat všechen nektar za použití co nejméně bloků.
+      courseD_bee_conditionals4_copy: |-
         V této úloze víme, že každá květina má přesně jeden nektar. Květiny ale nejsou rovnoměrně rozmístěné.
 
         Zkus získat všechen nektar za použití co nejméně bloků.
@@ -1439,19 +2092,33 @@ cs-CZ:
         a připoj všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
       courseD_maze_ramp2_2019: Přetáhni další blok `posuň se vpřed` z panelu bloků
         a připoj všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
+      courseD_maze_ramp3: |-
+        _"To prasátko mě štve."_
+
+        Je zde ještě jeden blok navíc, který způsobí, že ptáček narazí.\
+        Zbav se ho tím, že jej uvolníš ze šedých bloků a přetáhneš zpět do panelu.
+      courseD_maze_ramp3_2018: |-
+        _"To prasátko mě štve."_
+
+        Je zde ještě jeden blok navíc, který způsobí, že ptáček narazí.\
+        Zbav se ho tím, že jej uvolníš ze šedých bloků a přetáhneš zpět do panelu.
       courseD_maze_ramp3_2019: "Pomoz ptákovi dostat se k praseti. Jeden modrý blok
         \ `posuň se vpřed` je navíc.\n\nOdstraň blok navíc tak, že ho vytáhneš od
         ostatních bloků a přetáhneš ho zpět k nabízeným blokům. "
+      courseD_maze_ramp4: "_\"Najdi cestu a přiveď mě k tomu pošetilému prasátku.\"_
+        \nVyhni se TNT, nebo bude létat peří!"
+      courseD_maze_ramp4_2018: "_\"Najdi cestu a přiveď mě k tomu pošetilému prasátku.\"_
+        \nVyhni se TNT, nebo bude létat peří!"
       courseD_maze_ramp5: |-
-        _"Sleduj tuto cestu a dostaň mě k praseti!"_
+        _"Sleduj tuto cestu a dostaň mě k prasátku!"_
 
         Vyhni se TNT.
       courseD_maze_ramp5_2018: |-
-        _"Sleduj tuto cestu a dostaň mě k praseti!"_
+        _"Sleduj tuto cestu a dostaň mě k prasátku!"_
 
         Vyhni se TNT.
       courseD_maze_ramp5_2019: |-
-        _"Sleduj tuto cestu a dostaň mě k praseti!"_
+        _"Sleduj tuto cestu a dostaň mě k prasátku!"_
 
         Vyhni se TNT.
       courseD_maze_ramp5a_2019: Spočítej pečlivě počet míst v mřížce!
@@ -1464,6 +2131,10 @@ cs-CZ:
       courseD_maze_ramp5d: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
+      courseD_maze_ramp6: |-
+        _"Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!"_
+
+        Pokud máš několik stejných bloků v řádku, zkus místo toho použít cyklus `opakovat`. To udělá totéž s menším kódem!
       courseD_maze_until10: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_2018: Pomož zombie dostat se ke slunečnici.
       courseD_maze_until10_2019: Pomož zombie dostat se ke slunečnici.
@@ -1601,6 +2272,15 @@ cs-CZ:
       frozen square snowflake: Dokážeš vytvořit sněhovou vločku tak, že použiješ blok
         "opakuj" pro nakreslení čtverce 10 krát, a blok "otočit" k otočení o 36 stupňů
         mezi všemi čtverci?
+      grade2_collector_10: "Máš skoro hotovo!  \n\nPosbírej co možná nejvíce kousků
+        pokladu a dokonči tuto fázi!"
+      grade2_collector_10_2018: "Máš skoro hotovo!  \n\nPosbírej co možná nejvíce
+        kousků pokladu a dokonči tuto fázi!"
+      grade2_collector_10_2019: "Máš skoro hotovo!  \n\nPosbírej co možná nejvíce
+        kousků pokladu a dokonči tuto fázi!"
+      grade2_collector_A: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2018: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2019: Pomoz Laurel posbírat všechen poklad.
       ramp_artist_loops1: "To je ale krásný den!  \n\nPomoz malíři zakrýt jeho květiny
         dřív, než přijde zima, tak, že se posuneš vpřed o 60 pixelů."
       ramp_artist_loops1_2018: "To je ale krásný den!  \n\nPomoz malíři zakrýt jeho

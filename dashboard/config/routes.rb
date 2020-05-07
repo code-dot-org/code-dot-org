@@ -28,12 +28,6 @@ Dashboard::Application.routes.draw do
 
   get "/congrats", to: "congrats#index"
 
-  resources :gallery_activities, path: '/gallery' do
-    collection do
-      get 'art', to: 'gallery_activities#index', app: Game::ARTIST
-      get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
-    end
-  end
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]
@@ -189,6 +183,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get "/gallery", to: redirect("/projects/public")
+
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
@@ -234,7 +230,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
+  resources :datasets, param: 'dataset_name', only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
@@ -567,7 +563,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
-  get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
     concerns :assessments_routes
@@ -595,7 +590,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
-  get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
@@ -636,6 +630,7 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
       post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
+      post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -709,4 +704,8 @@ Dashboard::Application.routes.draw do
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
+
+  post '/profanity/find', to: 'profanity#find'
+
+  get '/help', to: redirect("https://support.code.org")
 end

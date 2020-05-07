@@ -139,10 +139,44 @@ my:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        coursef-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        coursed-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
         andrea-test:
           stages:
             'null':
               name: 'null'
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         csd2-2019:
           stages:
             Lists:
@@ -151,6 +185,50 @@ my:
           stages:
             Variables:
               name: Variables
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
         csd2-pilot:
           stages:
             Lists:
@@ -159,6 +237,10 @@ my:
           stages:
             Variables:
               name: Variables
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -167,13 +249,69 @@ my:
               name: Loops
             Variables:
               name: Variables
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
         csd3-2020:
           stages:
             Variables:
               name: Variables
             Text:
               name: စာ
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2020:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+        csp5-virtual:
           stages:
             Variables:
               name: Variables

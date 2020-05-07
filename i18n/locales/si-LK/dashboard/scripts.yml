@@ -734,6 +734,22 @@ si:
           stages:
             Introduction to PD:
               name: PD වෙත හඳුන්වාදීම
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -746,6 +762,14 @@ si:
               name: කලාකරුවාගේ ශ්‍රිත
         artistExemplar:
           description_audience: වයස අවුරුදු 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -822,6 +846,14 @@ si:
               name: Bounce
             'Farmer: While Loops':
               name: 'ගොවියා: ලූපයන් අතරේ'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
         csd3-2017:
           description_short: ක්‍රමලේඛනය
           stages:
@@ -871,6 +903,22 @@ si:
               name: නිර්මාණ වට්ටෝරුව
             Welcome!:
               name: ආයුබෝවන්!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
         basketball:
           stages:
             Bounce:
@@ -890,6 +938,14 @@ si:
               name: සමූහ විමර්ශනය
             Lists:
               name: ලැයිස්තු
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -942,6 +998,9 @@ si:
               name: හැදින්වීම
             Conditionals:
               name: කන්ඩිෂනලස්
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -956,6 +1015,9 @@ si:
               name: හැදින්වීම
             Ice Age Play Lab:
               name: අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         classic-hoc-impact-study:
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ කරන්න!
           stages:
@@ -978,6 +1040,22 @@ si:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
         sciencepd4:
           stages:
             Welcome!:
@@ -994,12 +1072,27 @@ si:
           stages:
             Binary:
               name: ද්විමය
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         sciencepd5:
           stages:
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-Up:
               name: වෙළනවා
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+            practice:
+              display_name: ඉගැන්වීමේ පිළිවෙත්
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         csd6-draft:
           stages:
             Lists:
@@ -1110,6 +1203,78 @@ si:
           stages:
             Building a Foundation:
               name: පදනමක් තැනීම
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
         express-2017:
           stages:
             Introduction:
@@ -1130,6 +1295,9 @@ si:
               name: පදනමක් තැනීම
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1180,6 +1348,9 @@ si:
               name: පදනමක් තැනීම
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         new-e:
           stages:
             Building a Foundation:
@@ -1390,14 +1561,124 @@ si:
           stages:
             The Internet:
               name: අන්තර්ජාලය
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2වන ඒකකය: අංකිත තොරතුරු'
         csp3-2018:
           stages:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
+        csp4-2018:
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
         csp5-2018:
           stages:
             While Loops:
               name: නැවත සිදුවන ලුප
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1408,6 +1689,12 @@ si:
               name: එය ගෙන යන්න, ගෙන යන්න
             Your Digital Footprint:
               name: ඔබේ ඩිජිටල් පා සටහන
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
         frozen-2018:
           stages:
             Artist:
@@ -1420,6 +1707,14 @@ si:
           stages:
             Artist:
               name: කලාකරු
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1436,6 +1731,17 @@ si:
               name: අන්තර්ජාලය
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
+          lesson_groups:
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_data:
+              display_name: දත්ත
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+            csf_internet:
+              display_name: අන්තර්ජාලය
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1450,6 +1756,17 @@ si:
               name: ද්විමය පින්තූර
             Artist Binary:
               name: කලාකරු ද්විමය
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_binary:
+              display_name: ද්විමය
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1466,6 +1783,13 @@ si:
               name: Crowdsourcing වැඩසටහන
             Songwriting:
               name: ගීත ලිවීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
+            csf_functions:
+              display_name: ශ්‍රිතයන්
         express-2019:
           stages:
             Relay Programming:
@@ -1486,10 +1810,26 @@ si:
               name: අන්තර්ජාලය
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
         andrea-test:
           stages:
             'null':
               name: 'ශුන්‍ය'
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1498,12 +1838,30 @@ si:
               name: විශාල සිදුවීම
             Binary Bracelets:
               name: ද්විමය වළලු
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_binary:
+              display_name: ද්විමය
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_data:
+              display_name: දත්ත
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: සතුටු සිතියම්
             Going Places Safely:
               name: තැන්වලට සුරක්ෂිතව යාම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1512,6 +1870,13 @@ si:
               name: ඔබේ ඩිජිටල් පා සටහන
             'Loops: Getting Loopy':
               name: ඔල්මාද වීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1520,6 +1885,11 @@ si:
               name: ඔබේ ඩිජිටල් පා සටහන
             Spelling Bee:
               name: අක්ෂර වින්‍යාස බඹරා
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1545,18 +1915,39 @@ si:
           stages:
             Surveys:
               name: සමීක්ෂණ
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+            required:
+              display_name: දළ විශ්ලේෂණය
         csp1-2019:
           stages:
             The Internet:
               name: අන්තර්ජාලය
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2වන ඒකකය: අංකිත තොරතුරු'
         csp3-2019:
           stages:
             Creating Functions:
               name: ශ්‍රිතය නිර්මාණය කරන්න
+        csp4-2019:
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
         csp5-2019:
           stages:
             While Loops:
               name: නැවත සිදුවන ලුප
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1565,10 +1956,92 @@ si:
               name: කාඩ්පත් සමඟ කොන්දේසික
             Building a Foundation:
               name: පදනමක් තැනීම
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: ප්‍රස්තාර රටා වැඩසටහන්
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+            required:
+              display_name: දළ විශ්ලේෂණය
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
         csd2-pilot:
           stages:
             Lists:
@@ -1582,12 +2055,96 @@ si:
               name: කන්ඩිෂනලස්
             Functions:
               name: ශ්‍රිතයන්
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+            content:
+              display_name: අන්තර්ගතය
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
         peru-2019:
           stages:
             Introduction:
               name: හැදින්වීම
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
+            required:
+              display_name: දළ විශ්ලේෂණය
         k5-onlinepd-2019:
           stages:
             Next Steps:
@@ -1604,6 +2161,17 @@ si:
               name: විචල්‍යන්
             For Loops:
               name: ලූපයන් සඳහා
+          lesson_groups:
+            k5_next_steps:
+              display_name: ඉදිරි පියවර
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1614,14 +2182,59 @@ si:
               name: Crowdsourcing වැඩසටහන
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
+            csf_functions:
+              display_name: ශ්‍රිතයන්
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: කන්ඩිෂනලස්
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: කන්ඩිෂනලස්
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: දළ විශ්ලේෂණය
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1643,6 +2256,13 @@ si:
               name: තැන්වලට සුරක්ෂිතව යාම
             'Programming: Happy Maps':
               name: සතුටු සිතියම්
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1651,12 +2271,30 @@ si:
               name: එය ගෙන යන්න, ගෙන යන්න
             'Loops: Getting Loopy':
               name: ඔල්මාද වීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
         coursec-2020:
           stages:
             Binary Bracelets:
               name: ද්විමය වළලු
             'Events: The Big Event':
               name: විශාල සිදුවීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_binary:
+              display_name: ද්විමය
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_data:
+              display_name: දත්ත
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1671,10 +2309,28 @@ si:
               name: කලාකරු ද්විමය
             Digital Citizenship:
               name: ඩිජිටල් පුරවැසිකම
+          lesson_groups:
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_binary:
+              display_name: ද්විමය
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: ගීත ලිවීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_nested_loops:
+              display_name: නැවත නැවත සිදුවන ලුප
+            csf_functions:
+              display_name: ශ්‍රිතයන්
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1685,10 +2341,40 @@ si:
               name: අන්තර්ජාලය
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_data:
+              display_name: දත්ත
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
         pre-express-2020:
           stages:
             Spelling Bee:
               name: අක්ෂර වින්‍යාස බඹරා
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1706,13 +2392,22 @@ si:
           stages:
             While Loops:
               name: නැවත සිදුවන ලුප
+            Variables:
+              name: විචල්‍යන්
         virtual-holding-place:
           stages:
             Functions:
               name: ශ්‍රිතයන්
+          lesson_groups:
+            content:
+              display_name: අන්තර්ගතය
         code-break:
           stages:
             Algorithms:
               name: ඇල්ගොරිතම්
             Events:
               name: වැඩසටහන්
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: නැවත සිදුවන ලුප

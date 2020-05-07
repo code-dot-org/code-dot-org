@@ -2,7 +2,7 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
-
+require 'cdo/redshift'
 self.tags.push key: 'environment', value: rack_env
 -%>
 ---
@@ -23,8 +23,9 @@ Parameters:
     NoEcho: true
   RDSHost:
     Type: String
-  AuroraReaderHost:
+  AuroraClone:
     Type: String
+    Default: <%= RedshiftImport::CLONE_CLUSTER_ID %>
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -83,13 +84,13 @@ Resources:
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
-  AuroraReaderEndpoint:
+  AuroraCloneEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
-      EndpointIdentifier: !Sub "AuroraReaderEndpoint-${AWS::StackName}"
+      EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
-      ServerName: !Ref AuroraReaderHost
+      ServerName: !Ref AuroraClone
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
@@ -129,8 +130,8 @@ Resources:
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref AuroraReaderEndpoint
+      ReplicationTaskIdentifier: <%= task_name %>-task
+      SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>

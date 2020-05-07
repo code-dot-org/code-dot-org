@@ -268,6 +268,10 @@ fil-PH:
       New Frozen Project:
         snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
           mga snowflakes!
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Bigyang-pansin na ang mga bloke ngayon
+          ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math`
+          na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!
       Overworld Chop Trees:
         craft_callout_preplaced: Naglagay tayo ng ilang mga bloke dito para makapagsimula
           ka
@@ -541,6 +545,9 @@ fil-PH:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit
           sa palaisipang ito.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit
+          sa palaisipang ito.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Hindi ko kinakailangang gumamit ng mga kulay
           para makuha nang tama ang palaisipang ito. Kung gusto mo, ang `random color`
@@ -568,6 +575,11 @@ fil-PH:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong
           BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong
+          BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
+        4_5_Bee_Conditionals_2_2: Kailangan ng tulong? Mag-click dito para sa isang
+          VIDEO na pahiwatig!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin
           ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
@@ -675,6 +687,10 @@ fil-PH:
           ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos
           iguhit ang unang parisukat?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Kapag ang berdeng bloke ito ay tumatakbo, lahat
+          ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos
+          iguhit ang unang parisukat?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Kapag ang berdeng bloke ito ay tumatakbo, lahat
           ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos
           iguhit ang unang parisukat?

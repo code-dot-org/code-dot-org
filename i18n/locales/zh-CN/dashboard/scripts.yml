@@ -1910,6 +1910,13 @@ zh-CN:
               name: 计算机科学原理学生课程后调查
             Post-Course Survey:
               name: 课后问卷
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csp1_1:
+              display_name: '第一章：表达和传输信息'
+            csp1_2:
+              display_name: '第二章：发明互联网'
         csp2-2017:
           title: 计算机科学原理单元2 - 数字信息('17-'18)
           description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
@@ -1959,6 +1966,13 @@ zh-CN:
               name: 练习表演任务 - 编码和经验
             Post-Course Survey:
               name: 课后问卷
+          lesson_groups:
+            csp2_1:
+              display_name: '第一章：编码和压缩复杂信息'
+            csp2_2:
+              display_name: '第二章：使用和可视化数据'
+            cspSurvey:
+              display_name: 调查
         csp3-2017:
           title: 计算机科学原理单元3 - 编程介绍('17-'18)
           description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\n\n这个课程最后更新于2017年10月30日。访问 forum.code.org/c/csp/updates 获取更多的教案更新。"
@@ -2004,6 +2018,13 @@ zh-CN:
               name: 请完成 计算机科学原理中期课程调查!
             Post-Course Survey:
               name: 课后问卷
+          lesson_groups:
+            csp3_1:
+              display_name: '第一章：编程语言和算法'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp4-2017:
           title: 计算机科学原理单元4 - 大数据和隐私('17-'18)
           description: "我们生活的世界有丰富的数据，引入了许多关于公共政策、法律、道德和社会影响的复杂问题。本单元的目标是开发一个全面而平衡的方法看待数据，包括正面和负面的影响，以及理解加密工作的基础原理和原因。\n\n本单元最后更新于2017年11月。访问forum.code.org/c/csp/updates获取更多的教案更新。"
@@ -2047,6 +2068,13 @@ zh-CN:
               name: 课后问卷
             Student Post-Course Survey:
               name: 学生课程后调查
+          lesson_groups:
+            csp4_1:
+              display_name: '第一章：大数据和加密的世界'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp5-2017:
           title: 计算机科学原理单元5 - 构建应用('17-'18)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -2158,6 +2186,13 @@ zh-CN:
               name: 布尔表达式和 "如果" 语句
             Post-Course Survey:
               name: 课后问卷
+          lesson_groups:
+            csp5_1:
+              display_name: '第一章：事件驱动编程'
+            csp5_2:
+              display_name: '第二章：用数据结构编程'
+            cspSurvey:
+              display_name: 调查
         csp6:
           stages:
             Create PT:
@@ -2361,6 +2396,13 @@ zh-CN:
               name: 支持同伴学习
             'Tool Talk: Intro to Netsim':
               name: '工具讲座: 网络模拟软件简介'
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2377,6 +2419,13 @@ zh-CN:
               name: 测试单元1练习模块 Foxtrot
             test Unit 1 required reading:
               name: 测试单元1必读
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2583,6 +2632,13 @@ zh-CN:
               name: '第2.3 课: 黑白像素'
             Measuring Student Learning:
               name: 衡量学生学习
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2879,6 +2935,13 @@ zh-CN:
               name: 第 2 课，3
             Test stage with bubbles:
               name: 气泡测试阶段
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         csd3-2017:
           title: CSD单元 3 - 动画和游戏
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵图的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
@@ -3007,6 +3070,15 @@ zh-CN:
               name: 计算机科学发现期末调查
             CSD Post-Course Survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
+            csd_survey:
+              display_name: 课后问卷
         grade2:
           stages:
             At The Dog Park:
@@ -3167,6 +3239,13 @@ zh-CN:
               name: 计算机科学发现预调查
             CS Discoveries Rapid Survey:
               name: 计算机科学发现快速调查
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csd1_1:
+              display_name: '第 1 章︰ 解决问题的流程'
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3241,6 +3320,13 @@ zh-CN:
               name: 处理数组和有返回值的函数
             Unit 5 Overview:
               name: 第5单元概述
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -3267,6 +3353,13 @@ zh-CN:
               name: 衡量学生学习
             AP Preparation and Support:
               name: AP 准备和支持
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         basketball:
           title: 选择你的球队进行一场篮球比赛
           description_short: 选择你的球队进行一场篮球比赛
@@ -3402,6 +3495,13 @@ zh-CN:
               description_teacher: 在本课中, 学生们继续使用 HTML 在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生开始他们将继续在整个单位工作的项目。
             CSD Post-Course Survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章︰ 网站内容和 HTML'
+            csd2_2:
+              display_name: '第 2 章︰ 样式和 CSS'
+            csd_survey:
+              display_name: 课后问卷
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -3426,6 +3526,13 @@ zh-CN:
               name: 衡量学生学习
             AP Preparation and Support:
               name: AP 准备和支持
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         csd4-2017:
           title: 计算机科学发现单元4 - 设计过程('17-'18)
           description_short: "  学习如何设计一个能满足用户需要的程序。"
@@ -3529,6 +3636,13 @@ zh-CN:
               description_teacher: 在这一点上, 小组已经研究了一个个人和社会重要性的主题, 开发和测试了一个纸面原型和一个数字原型, 并对最初的应用程序进行迭代, 合并新功能和 bug 修复。现在是他们回顾他们所做的事情的时候了, 并把一个连贯的演示汇集在一起, 来展示他们的创造过程。使用提供的演示模板, 团队准备介绍他们的应用程序开发过程, 包括他们所解决的问题、他们从测试中获得反馈的方法, 以及他们对未来的计划。
             CSD Post-Course Survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
+            csd_survey:
+              display_name: 课后问卷
         minecraft:
           title: 我的世界 编码时间设计师
           description_short: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
@@ -3744,6 +3858,11 @@ zh-CN:
               name: 条件语句
             'Algorithms: Dice Race':
               name: '算法: 骰子竞赛'
+          lesson_groups:
+            content:
+              display_name: 内容
+            extra_course_content:
+              display_name: 额外的课程内容
         coursef-draft:
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           stages:
@@ -3791,6 +3910,9 @@ zh-CN:
               name: 蜜蜂里的条件和函数
             'Algorithms: Tangrams':
               name: '算法：七巧板'
+          lesson_groups:
+            content:
+              display_name: 内容
         classic-hoc-impact-study:
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           stages:
@@ -3876,6 +3998,13 @@ zh-CN:
               name: 衡量学生学习
             AP Preparation and Support:
               name: AP 准备和支持
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         csdgraveyard:
           stages:
             new stage:
@@ -3908,6 +4037,13 @@ zh-CN:
               name: 衡量学生学习
             Unit 4 Overview:
               name: 第4单元概述
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         sciencepd4:
           stages:
             Welcome!:
@@ -3952,6 +4088,9 @@ zh-CN:
               name: 二进制
             Snowflakes:
               name: 雪花
+          lesson_groups:
+            content:
+              display_name: 内容
         sciencepd5:
           stages:
             Welcome!:
@@ -3987,6 +4126,13 @@ zh-CN:
               name: 发现学习
             Measuring Student Learning:
               name: 衡量学生学习
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
+            practice:
+              display_name: 教学训练
         csppostap-2017:
           title: 计算机科学原理课后AP - 数据库以及在你的应用里使用数据 ('17-'18)
           description_short: 学习在应用程序实验室应用程序中收集和使用数据。
@@ -4011,6 +4157,11 @@ zh-CN:
               name: 最终项目
             Post-Course Survey:
               name: 课后问卷
+          lesson_groups:
+            content:
+              display_name: 内容
+            cspSurvey:
+              display_name: 调查
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -4097,6 +4248,11 @@ zh-CN:
               name: 加速传感器
             Functions with Parameters:
               name: 有参数的函数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
         workshop-gamelab:
           stages:
             Introduction:
@@ -4150,6 +4306,11 @@ zh-CN:
               name: 加密
             Structuring Data:
               name: 构造数据
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
         applab-1hour:
           title: 应用程序实验室1小时工作坊
           description_audience: 初中和高中学生
@@ -4399,6 +4560,13 @@ zh-CN:
               description_teacher: 数组是一个有序的项目的集合，通常是相同类型的项目。在这节课中，学生们学习如何从列表中，用索引来存储某一个或者随机的值。ta'men他们然后会学习到如何存取colorLEDs来控制电路游戏板上的彩色LED等。学生们需要控制每个LED灯的颜色和强度，然后用学到的程序来画一个光线图案，从而在电路游戏板上展示一场灯光秀。
             CSD Post-Course Survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
+            csd_survey:
+              display_name: 课后问卷
         csd3-draft:
           title: 'CSD单元 3 - 编程： 动画和游戏'
           description_short: 动画和游戏
@@ -4532,6 +4700,13 @@ zh-CN:
               description_teacher: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
             CSD Post-Course Survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            csd_survey:
+              display_name: 课后问卷
         csd3-old:
           title: CSD单元3（已弃用）
           description_short: 2016/2017 CSD 单元 3 草稿
@@ -4764,6 +4939,9 @@ zh-CN:
           description_audience: 计算机科学原理学生
           description_short: 计算机科学原理学生课后调查
           description: 欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。  
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -5163,6 +5341,13 @@ zh-CN:
           description_audience: '年龄：8-12'
           description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升到课程E（可选）
+            csf_e_2:
+              display_name: 课程E的内容
+            extra_course_content:
+              display_name: 额外的课程内容
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -5272,6 +5457,11 @@ zh-CN:
           description_audience: '年龄：9-13'
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升到课程F（可选）
+            csf_f_2:
+              display_name: 课程F的内容
         csdnovice:
           stages:
             Tuesday:
@@ -5338,6 +5528,13 @@ zh-CN:
           title: 计算机科学原理AP测验和表演任务
           description_short: 课程引导学生们准备和完成AP测验和表演任务。
           description: 课程引导学生们准备和完成AP测验和表演任务。
+          lesson_groups:
+            csp_ap_1:
+              display_name: '第一章：安装'
+            csp_ap_3:
+              display_name: '第三章：创建性能工具'
+            csp_ap_2:
+              display_name: '第二章：浏览成绩工具'
         cspnovice:
           stages:
             Welcome:
@@ -5354,6 +5551,11 @@ zh-CN:
           description_audience: 计算机科学原理新手主持人
           description_short: 给教师会议新手主持人的反思性问题。
           description: '记录你在教师会议上作为一个新手主持人的反思。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         novice-view:
           stages:
             CSP Tuesday:
@@ -5384,6 +5586,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -5396,6 +5603,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训
           description_short: '单元2的计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元2的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -5406,6 +5618,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训
           description_short: '单元3的计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -5416,6 +5633,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -5426,6 +5648,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元5的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -5436,6 +5663,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -5446,6 +5678,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: 这是为code.org计算机科学原理主持人准备的单元6的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -5456,6 +5693,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: 这是为code.org计算机科学原理主持人准备的单元5的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -5466,6 +5708,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: 这是为code.org计算机科学原理主持人准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -5476,6 +5723,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: 这是为code.org计算机科学原理主持人准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -5486,6 +5738,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: 这是为code.org计算机科学原理主持人准备的单元2的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         allthettsthings:
           stages:
             TTS:
@@ -5597,6 +5854,9 @@ zh-CN:
           description_audience: '年龄：9-18'
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          lesson_groups:
+            content:
+              display_name: 内容
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5690,6 +5950,13 @@ zh-CN:
           title: 计算机科学原理单元3：介绍编程（子目标）
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
+          lesson_groups:
+            csp3_1:
+              display_name: '第一章：编程语言和算法'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csd4-draft:
           stages:
             Analysis of Design:
@@ -5729,6 +5996,11 @@ zh-CN:
             Linking Screens:
               name: 连接屏幕
           title: 计算机科学发现单元4修订草稿
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
         craft17:
           stages:
             craft17 stage:
@@ -5820,6 +6092,13 @@ zh-CN:
             Sequence in Maze:
               name: 迷宫中的序列
           title: 课程 E 和 F 热身
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升到课程E（可选）
+            csf_e_2:
+              display_name: 课程E的内容
+            extra_course_content:
+              display_name: 额外的课程内容
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5874,6 +6153,9 @@ zh-CN:
           title: 计算机科学原理单元3 - 小组A的子目标
           description_short: 计算机科学原理单元3的子目标标签体验小组A的替代版本。
           description: 这个单元为子目标小组A的学生介绍了计算机变成的基础概念。
+          lesson_groups:
+            csp3_1:
+              display_name: '第一章：编程语言和算法'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5955,6 +6237,9 @@ zh-CN:
             Sarah test stage:
               name: 萨拉测试阶段
           title: 新的快速脚本
+          lesson_groups:
+            content:
+              display_name: 内容
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -6019,6 +6304,13 @@ zh-CN:
             Crowdsourcing:
               name: 众包
           title: E 的新脚本
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升到课程E（可选）
+            csf_e_2:
+              display_name: 课程E的内容
+            extra_course_content:
+              display_name: 额外的课程内容
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -6080,6 +6372,11 @@ zh-CN:
             Present Your Project:
               name: 介绍您的项目
           title: F 的新脚本
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升到课程F（可选）
+            csf_f_2:
+              display_name: 课程F的内容
         csd5-old:
           stages:
             Representation Matters:
@@ -6113,6 +6410,11 @@ zh-CN:
           title: CSD 单元5- 数据和社会
           description_short: 了解人们如何使用电脑来解决数据问题。
           description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中, 您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -6188,6 +6490,11 @@ zh-CN:
               name: 应用程序演示
           title: "（被废弃的）计算机科学发现单元4 - 设计过程"
           description_short: 2016/17 计算机科学发现单元4的测试版本
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -6215,6 +6522,11 @@ zh-CN:
           title: 计算机科学原理3建议的改动临时存放地
           description_short: 十月计算机科学原理的临时改动
           description: "这是 /s/csp3的新的和修改过的复制ban'ben版本。不要编辑当前关卡。\n"
+          lesson_groups:
+            csp3_1:
+              display_name: '第一章：编程语言和算法'
+            cspAssessment:
+              display_name: 章节测验
         pwc:
           stages:
             new stage:
@@ -6349,6 +6661,11 @@ zh-CN:
           title: 探索 - AP表演任务准备 ('17-'18)
           description_short: 课程和资源会帮助学生们准备和完成AP探索的表演任务。
           description: "这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\n\n此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
+          lesson_groups:
+            csp_ap_2:
+              display_name: '第二章：浏览成绩工具'
+            cspSurvey:
+              display_name: 调查
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6364,6 +6681,11 @@ zh-CN:
           title: 创建 - AP表演任务准备 ('17-'18)
           description_short: 课程和资源会帮助学生们准备和完成创建AP表演任务。
           description: "这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\n\n此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
+          lesson_groups:
+            csp_ap_3:
+              display_name: '第三章：创建性能工具'
+            cspSurvey:
+              display_name: 调查
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -6458,6 +6780,13 @@ zh-CN:
             Functions in Harvester:
               name: 收割者中的函数
           title: 课程 E 2018 （过期！）
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升到课程E（可选）
+            csf_e_2:
+              display_name: 课程E的内容
+            extra_course_content:
+              display_name: 额外的课程内容
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -6519,6 +6848,11 @@ zh-CN:
             Present Your Project:
               name: 介绍您的项目
           title: 课程 F 2018 （过期）
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升到课程F（可选）
+            csf_f_2:
+              display_name: 课程F的内容
         csd6-old:
           stages:
             Computing Innovations:
@@ -6552,6 +6886,11 @@ zh-CN:
             'Project: Prototype an Innovation':
               name: '项目：创新原型'
           title: "（已弃用）CSD 6 单元- 物理计算"
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
@@ -6617,6 +6956,13 @@ zh-CN:
           title: CSD单元 3 - 动画和游戏
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵图的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
         textbook:
           stages:
             Test Map Level:
@@ -6729,6 +7075,13 @@ zh-CN:
               name: 计算机科学发现期末调查
             CS Discoveries Post-Course Survey:
               name: 计算机科学发现课后调查
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
         csd2-2018:
           title: 计算机科学发现单元2 - 网页开发 ('18-'19)
           description: " 在第2单元中, 您将学习如何在自己的网页上创建和共享内容。在决定要与世界共享哪些内容之后, 您将学习如何使用 HTML 和 CSS 来构造和样式化页面。您还将练习有价值的编程技能, 如调试和注释。 在该单元的末尾, 您将有一个个人的网站可以发布到互联网上。"
@@ -6792,6 +7145,13 @@ zh-CN:
               description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。 他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\n"
             CS Discoveries Post-Course Survey:
               name: 计算机科学发现课后调查
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章︰ 网站内容和 HTML'
+            csd2_2:
+              display_name: '第 2 章︰ 样式和 CSS'
+            cspSurvey:
+              display_name: 调查
         coursea-2018:
           title: 课程 A （2018）
           assignment_family_title: 课程 A
@@ -7303,6 +7663,13 @@ zh-CN:
               name: '项目：创新原型'
             CS Discoveries Post-Course Survey:
               name: 计算机科学发现课后调查
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
+            cspSurvey:
+              display_name: 调查
         coursee-2018:
           title: 课程 E （2018）
           assignment_family_title: 课程 E
@@ -7411,6 +7778,13 @@ zh-CN:
               name: 宠物长颈鹿
             Copyright and Creativity:
               name: 数字共享
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升到课程E（可选）
+            csf_e_2:
+              display_name: 课程E的内容
+            extra_course_content:
+              display_name: 额外的课程内容
         coursef-2018:
           title: 课程 F （2018）
           assignment_family_title: 课程 F
@@ -7534,6 +7908,11 @@ zh-CN:
               name: '《我的世界》中的函数'
             Conditionals in Farmer:
               name: 农夫和条件
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升到课程F（可选）
+            csf_f_2:
+              display_name: 课程F的内容
         csp1-2018:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -7575,6 +7954,13 @@ zh-CN:
               name: 第1单元 第2章 评估
             Sending Text:
               name: 发送文本
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csp1_1:
+              display_name: '第一章：表达和传输信息'
+            csp1_2:
+              display_name: '第二章：发明互联网'
         csd1-2018:
           title: 计算机科学发现单元 1 - 解决问题 ('18-'19)
           description: " \n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\n"
@@ -7622,6 +8008,13 @@ zh-CN:
               name: 应用程序和存储
               description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
               description_teacher: '本课程基于学生们熟悉的应用，回顾了计算机的输入、输出、存储和处理的概念。同时，学生评估了智能手机应用来分析被设计用来解决的特定的问题，需要的输入，然后将输入处理成需要的输出，并将信息存储起来稍后使用。最后结束于讨论，来将课程联系到学生们熟悉的应用上。 '
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csd1_1:
+              display_name: '第 1 章︰ 解决问题的流程'
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
         csd4-2018:
           title: 计算机科学发现单元4 - 设计过程 ('18-'19)
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
@@ -7693,6 +8086,13 @@ zh-CN:
               description_teacher: 在这一点上, 小组已经研究了一个个人和社会重要性的主题, 开发和测试了一个纸面原型和一个数字原型, 并对最初的应用程序进行迭代, 合并新功能和 bug 修复。现在是他们回顾他们所做的事情的时候了, 并把一个连贯的演示汇集在一起, 来展示他们的创造过程。使用提供的演示模板, 团队准备介绍他们的应用程序开发过程, 包括他们所解决的问题、他们从测试中获得反馈的方法, 以及他们对未来的计划。
             CS Discoveries Post-Course Survey:
               name: 计算机科学发现课后调查
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
+            cspSurvey:
+              display_name: 调查
         csd5-2018:
           title: CSD 单元5- 数据和社会
           description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中, 您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
@@ -7760,6 +8160,13 @@ zh-CN:
               description_teacher: 要结束此单元，学生们要在他们所收集的数据和班级分析结果的基础上设计一个推荐引擎。在看完一个推荐应用程序的示范后， 学生们要参照项目指南来完成多天的活动目标。开始的几个步骤是让学生们选择他们要帮助用户做什么样的选择，运用什么数据来做推荐，创建一份调查，并收集全班的选择结果。然后，他们要分析数据并用他们所学到的知识来创建推荐算法。最后，他们要利用这些算法来给一些同学做推荐。在把他们的成果演示给整个班级之前， 学生们要相互进行审核，并对他们的项目做必要的修改。
             CS Discoveries Post-Course Survey:
               name: 计算机科学发现课后调查
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
         csp2-2018:
           title: 计算机科学原理单元2 - 数字信息 ('18-'19)
           description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
@@ -7807,6 +8214,11 @@ zh-CN:
               name: 有损和无损压缩
             Unit 2 Assessment:
               name: 第2单元评估
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '第2单元︰ 数字信息'
+            cspAssessment:
+              display_name: 章节测验
         csp3-2018:
           title: 计算机科学原理单元3 - 编程介绍 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -7842,6 +8254,13 @@ zh-CN:
               name: 中期调查
             CS Principles Post-Course Survey:
               name: 计算机科学原理课后调查
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '单元3：编程入门'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp-explore-2018:
           title: 探索 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。'
@@ -7857,6 +8276,11 @@ zh-CN:
               name: 中期调查
             CS Principles Post-Course Survey:
               name: 计算机科学原理课后调查
+          lesson_groups:
+            csp_ap_2:
+              display_name: '第二章：浏览成绩工具'
+            cspSurvey:
+              display_name: 调查
         csp-create-2018:
           title: 创建 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和创建 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。'
@@ -7870,6 +8294,11 @@ zh-CN:
               name: 创建 表演任务- 完成任务
             CS Principles Post-Course Survey:
               name: 计算机科学原理课后调查
+          lesson_groups:
+            csp_ap_3:
+              display_name: '第三章：创建性能工具'
+            cspSurvey:
+              display_name: 调查
         csp4-2018:
           title: 计算机科学原理单元4 - 大数据和隐私 ('18-'19)
           description: 我们生活的数据丰富的世界，同时也带来了很多复杂的问题，如公共政策，法律，道德和社会影响。本单元的目标是发展全面平衡的视角，来看待全球的数据，它的正面和反面影响，并理解现代加密技术工作的基础。
@@ -7907,6 +8336,13 @@ zh-CN:
               name: 中期调查
             CS Principles Post-Course Survey:
               name: 计算机科学原理课后调查
+          lesson_groups:
+            csp4_1_2018:
+              display_name: '单元4 - 大数据和隐私'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp5-2018:
           title: 计算机科学原理单元5 - 构建应用 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -7964,6 +8400,13 @@ zh-CN:
               name: 中期调查
             CS Principles Post-Course Survey:
               name: 计算机科学原理课后调查
+          lesson_groups:
+            csp5_1:
+              display_name: '第一章：事件驱动编程'
+            csp5_2:
+              display_name: '第二章：用数据结构编程'
+            cspSurvey:
+              display_name: 调查
         csppostap-2018:
           title: Post AP - 数据工具 ('18-'19)
           description: "在本单元的第一章中，学生们开发了表达可视化数据的技能，并使用电子表格和可视化工具来创建自己的数字作品。通过进行的项目 - \"分类数据跟踪\" - 学生们学到了如何收集、清理数据，并用一些工具来计算聚合、可视化数据。\n\n第二章探讨了应用中数据的重要性。应用实验室有许多工具来在应用中收集并使用数据。第二章提供了这些工具的概览，一个用这些工具来创建的示例项目，和创建并提交最终项目的空间。"
@@ -8011,6 +8454,13 @@ zh-CN:
               name: 章节1 测验
             CS Principles Post-Course Survey:
               name: 计算机科学原理课后调查
+          lesson_groups:
+            csp_postap_1:
+              display_name: '第一章：使用和可视化数据'
+            csp_postap_2:
+              display_name: '第二章：应用程序和数据库'
+            cspSurvey:
+              display_name: 调查
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -8039,6 +8489,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8049,6 +8504,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8059,6 +8519,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8071,6 +8536,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8081,6 +8551,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元5的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8093,6 +8568,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元6的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8103,6 +8583,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8113,6 +8598,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元2的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8123,6 +8613,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8135,6 +8630,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8145,6 +8645,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的单元5的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8159,6 +8664,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的探索AP单元的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦提交了自己的反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8169,6 +8679,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的深入学习材料 '
           description: '这是为code.org计算机科学原理主持人准备的创建AP单元的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦提交了自己的反思，在页面的底部还有结对回顾。 '
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd-post-survey:
           stages:
             CSD post-course survey:
@@ -8177,6 +8692,9 @@ zh-CN:
           description_audience: 计算机科学发现学生
           description_short: 计算机科学发现学生课程后调查
           description: 欢迎来到 Code.org 计算机科学发现课后调查。本调查需要大约15分钟。你的回复是匿名且保密的 - 你的老师只能看见匿名的整个班级数据的聚合结果。此结果对你的老师和 Code.org 改进课程非常重要。谢谢你的时间和付出。
+          lesson_groups:
+            csd_survey:
+              display_name: 课后问卷
         csd-novice-18:
           stages:
             Novice Reflections Overview:
@@ -8209,6 +8727,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的新手反思材料 '
           description: 这是为 Code.org 计算机科学发现主持人准备的新手反思，这会用在 5 天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在主持人训练周末来进行。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -8235,6 +8758,11 @@ zh-CN:
           description_audience: 计算机科学发现主持人培训 2018-2019
           description_short: '计算机科学发现主持人培训的初学者反思材料 '
           description: 这是为 Code.org 计算机科学发现主持人准备的学徒反思，这回用在他们5天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在主持人训练周末来进行。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -8261,6 +8789,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的新手反思材料 '
           description: 这是为 Code.org 计算机科学原理主持人准备的新手反思，这会用在他们5天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在主持人训练周末来进行。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -8287,6 +8820,11 @@ zh-CN:
           description_audience: 计算机科学原理主持人培训 2018-2019
           description_short: '计算机科学原理主持人培训的初学者反思材料 '
           description: 这是为 Code.org 计算机科学原理主持人准备的学徒反思，这回用在他们5天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在主持人训练周末来进行。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         pre-express-2018:
           title: 学龄前读者的快速课程
           assignment_family_title: 学龄前读者的快速课程
@@ -8367,6 +8905,11 @@ zh-CN:
           description_audience: 培训中的主持人
           description_short: FIT 培训课程
           description: 用来演示 PLC 课程是如何起作用的。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         spritelab-simple:
           title: 精灵图实验室介绍 (EE)
           description: 这是为code.org新的精灵图实验室工具准备的试验课程E/F。
@@ -8497,6 +9040,15 @@ zh-CN:
             Lists Explore:
               name: 列表探索
           title: 计算机科学原理游戏板
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -8649,6 +9201,19 @@ zh-CN:
               name: 模拟实验
               description_student: 在计算机上模拟运行，并通过修改变量来实验。
               description_teacher: 通过运行精灵图实验室的简单模拟，学生可以体验到计算是如何被用于收集数据来发现趋势或模式。运行几次模拟以后，学生有机会能预测出变量是如何影响到输出的，并测试这些假设。
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            csf_internet:
+              display_name: 互联网
+            csf_sprites:
+              display_name: 精灵图
+            csf_digcit:
+              display_name: 数字公民
         dance-low:
           stages:
             Dance Party:
@@ -8739,6 +9304,19 @@ zh-CN:
               name: 舞蹈派对
               description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
               description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_binary:
+              display_name: 二进制
+            csf_digcit:
+              display_name: 数字公民
         coursee-2019:
           title: 课程 E (2019)
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
@@ -8884,6 +9462,19 @@ zh-CN:
               name: 无障碍环境设计
             Songwriting:
               name: 写歌
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_sprites:
+              display_name: 精灵图
+            csf_digcit:
+              display_name: 数字公民
+            csf_impacts:
+              display_name: 计算的影响
+            csf_nested_loops:
+              display_name: 循环嵌套
+            csf_functions:
+              display_name: 函数
         express-2019:
           title: 速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -8994,6 +9585,23 @@ zh-CN:
               name: '《我的世界：水上航行》的条件'
             Concept Practice with Minecraft:
               name: 与《我的世界》往前看
+          lesson_groups:
+            csf_warmup:
+              display_name: 热身
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_functions:
+              display_name: 函数
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            csf_sprites:
+              display_name: 精灵图
         csd1-2019:
           title: CSD 第一单元——解决问题和计算('19-'20)
           description: " \n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\n"
@@ -9035,6 +9643,13 @@ zh-CN:
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
             Post-Project Test:
               name: 项目后测试
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csd1_1:
+              display_name: '第 1 章︰ 解决问题的流程'
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
         andrea-test:
           stages:
             new stage:
@@ -9077,6 +9692,11 @@ zh-CN:
           description_audience: 6-12 培训中的主持人
           description_short: 这是测试我的课程技能
           description: 关于我创建课程的更长描述...  仍在疑惑概述，内容来自何处......
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -9172,6 +9792,17 @@ zh-CN:
               name: 图片数据
               description_student: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
               description_teacher: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_binary:
+              display_name: 二进制
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -9180,6 +9811,9 @@ zh-CN:
           description_audience: 计算机科学原理学生
           description_short: 计算机科学原理学生年中调查
           description: 欢迎参与 Code.org 计算机科学原则年中调查。本调查需要大约15分钟。你的回复是匿名且保密的 - 你的老师只能看见匿名的整个班级数据的聚合结果。此结果对你的老师和 Code.org 改进课程非常重要。谢谢你的时间和付出。
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
         gamelab:
           stages:
             Start and End Screens:
@@ -9252,6 +9886,15 @@ zh-CN:
               name: 斯奎特和序列
               description_student: 编程让斯奎特到达橡子。
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         courseb-2019:
           title: 课程 B (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -9320,6 +9963,17 @@ zh-CN:
               name: 愤怒的小鸟中的序列
               description_student: 帮助红色《愤怒的小鸟》沿着道路到达顽皮的猪。
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_impacts:
+              display_name: 计算的影响
+            csf_events:
+              display_name: 事件
         pre-express-2019:
           title: 学前儿童的速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -9370,6 +10024,13 @@ zh-CN:
               name: 使用事件的皇室战争
             Ocean Scene with Loops:
               name: 艺术家里的循环
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -9448,6 +10109,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章︰ 网站内容和 HTML'
+            csd2_2:
+              display_name: '第 2 章︰ 样式和 CSS'
+            cspSurvey:
+              display_name: 调查
         csd3-2019:
           title: CSD单元 3 - 动画和游戏
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵图的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
@@ -9550,6 +10218,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
         csd4-2019:
           title: 计算机科学发现单元4 - 设计过程 ('18-'19)
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
@@ -9623,6 +10298,15 @@ zh-CN:
               name: 计算机科学发现课后问卷
             Post-Project Test:
               name: 项目后测试
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
         csd5-2019:
           title: CSD 单元5- 数据和社会
           description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中, 您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
@@ -9692,6 +10376,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
         csd6-2019:
           title: CSD 6 单元- 物理计算 ('18-'19)
           description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和 Adafruit 的电路面板, 您将开发一些利用您在智能设备中看到的相同的硬件输入和输出的程序, 并查看简单粗糙原型是如何变成成品的。该单位的最后是一个设计挑战, 你要以电路操场作为基础来制作自己设计的创新项目。
@@ -9733,6 +10424,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
+            cspSurvey:
+              display_name: 调查
         csp4-pilot:
           stages:
             Variables Explore:
@@ -9806,6 +10504,17 @@ zh-CN:
             "[OLD] Variables Make":
               name: "[OLD]使用变量"
           title: 单元 4：变量、条件、函数
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
+            required:
+              display_name: 概览
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -9845,6 +10554,13 @@ zh-CN:
               name: PT练习 - 互联网和社会
             Unit 1 Chapter 2 Assessment:
               name: 第1单元 第2章 评估
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csp1_1:
+              display_name: '第一章：表达和传输信息'
+            csp1_2:
+              display_name: '第二章：发明互联网'
         csp2-2019:
           title: 计算机科学原理单元2 - 数字信息 ('18-'19)
           description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
@@ -9866,6 +10582,13 @@ zh-CN:
               name: 第2单元评估
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '第2单元︰ 数字信息'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp3-2019:
           title: 计算机科学原理单元3 - 编程介绍 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -9897,6 +10620,13 @@ zh-CN:
               name: 中期调查
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '单元3：编程入门'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp4-2019:
           title: 计算机科学原理单元4 - 大数据和隐私 ('18-'19)
           description: 我们生活的数据丰富的世界，同时也带来了很多复杂的问题，如公共政策，法律，道德和社会影响。本单元的目标是发展全面平衡的视角，来看待全球的数据，它的正面和反面影响，并理解现代加密技术工作的基础。
@@ -9930,6 +10660,13 @@ zh-CN:
               name: '可选：数据问题'
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp4_1_2018:
+              display_name: '单元4 - 大数据和隐私'
+            cspAssessment:
+              display_name: 章节测验
+            cspSurvey:
+              display_name: 调查
         csp5-2019:
           title: 计算机科学原理单元5 - 构建应用 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -9983,6 +10720,13 @@ zh-CN:
               name: 中期调查
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp5_1:
+              display_name: '第一章：事件驱动编程'
+            csp5_2:
+              display_name: '第二章：用数据结构编程'
+            cspSurvey:
+              display_name: 调查
         csp-explore-2019:
           title: 探索 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。'
@@ -9998,6 +10742,11 @@ zh-CN:
               name: 中期调查
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp_ap_2:
+              display_name: '第二章：浏览成绩工具'
+            cspSurvey:
+              display_name: 调查
         csp-create-2019:
           title: 创建 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和创建 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。'
@@ -10011,6 +10760,11 @@ zh-CN:
               name: 创建 表演任务- 完成任务
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp_ap_3:
+              display_name: '第三章：创建性能工具'
+            cspSurvey:
+              display_name: 调查
         csppostap-2019:
           title: Post AP - 数据工具 ('18-'19)
           description: "在本单元的第一章中，学生们开发了表达可视化数据的技能，并使用电子表格和可视化工具来创建自己的数字作品。通过进行的项目 - \"分类数据跟踪\" - 学生们学到了如何收集、清理数据，并用一些工具来计算聚合、可视化数据。\n\n第二章探讨了应用中数据的重要性。应用实验室有许多工具来在应用中收集并使用数据。第二章提供了这些工具的概览，一个用这些工具来创建的示例项目，和创建并提交最终项目的空间。"
@@ -10052,6 +10806,13 @@ zh-CN:
               name: 最终项目
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp_postap_1:
+              display_name: '第一章：使用和可视化数据'
+            csp_postap_2:
+              display_name: '第二章：应用程序和数据库'
+            cspSurvey:
+              display_name: 调查
         csp1-pilot:
           stages:
             new stage:
@@ -10137,6 +10898,11 @@ zh-CN:
             Project - Digital Information Dilemmas Part 2:
               name: 项目 - 数字信息困境 第 2 部分
           title: 计算机科学原理 单元1 试验
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            required:
+              display_name: 概览
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -10247,6 +11013,21 @@ zh-CN:
           description_audience: 4年级
           description_short: 该模块侧重于四年级的科学和社会学习标准。在科学方面，他们认为生命标准包括栖息地、生态系统、本地物种和入侵物种。在社会研究方面，学生们考虑佛罗里达州政府的分支，以及日常公民如何影响当地和州政策。
           description: 该模块侧重于四年级的科学和社会学习标准。在科学方面，他们认为生命标准包括栖息地、生态系统、本地物种和入侵物种。在社会研究方面，学生们考虑佛罗里达州政府的分支，以及日常公民如何影响当地和州政策。
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_sprites:
+              display_name: 精灵图
+            time4cs_c1:
+              display_name: '集合 1：湿地及其生态系统'
+            time4cs_c2:
+              display_name: '集合 2：湿地里的食物链'
+            time4cs_c3:
+              display_name: '集合 3：生活在湿地'
+            time4cs_c4:
+              display_name: '集合 4：对湿地的入侵影响'
+            time4cs_c5:
+              display_name: '集合 5：市民对湿地变化的影响'
         csp1-pilot-staging:
           stages:
             Variables Explore:
@@ -10288,6 +11069,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单位 1：比特和字节'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp2-pilot-staging:
           stages:
             Variables Explore:
@@ -10329,6 +11119,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 2︰ 互联网'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp3-pilot-staging:
           stages:
             Variables Explore:
@@ -10441,6 +11240,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 4：变量、条件和函数'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -10528,6 +11336,17 @@ zh-CN:
             Teacher Survey (Libraries):
               name: 教师调研（库）
           title: '单元 5: 列表、循环和遍历'
+          lesson_groups:
+            csp_lists:
+              display_name: 列表
+            csp_loops:
+              display_name: 循环
+            csp_traversals:
+              display_name: 遍历
+            csp_project:
+              display_name: 项目
+            csp_libraries:
+              display_name: 库
         csp6-pilot-staging:
           stages:
             Variables Explore:
@@ -10569,6 +11388,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 6: 算法'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp7-pilot-staging:
           stages:
             new stage:
@@ -10638,6 +11466,11 @@ zh-CN:
             Libraries Project:
               name: 库项目
           title: '单元 7: 功能和库'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 参数和返回值
+            csp_libraries:
+              display_name: 库
         csp8-pilot-staging:
           stages:
             Variables Explore:
@@ -10679,6 +11512,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 8: 创建 PT'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp9-pilot-staging:
           stages:
             Variables Explore:
@@ -10720,6 +11562,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 9: 数据'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp10-pilot-staging:
           stages:
             Variables Explore:
@@ -10761,6 +11612,15 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 10: 全局影响'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         pluralsight:
           stages:
             Pluralsight LevelGroup:
@@ -10785,6 +11645,9 @@ zh-CN:
           description_audience: 计算机科学发现学生
           description_short: 计算机科学发现学生课程后问卷 2018
           description: "计算机科学发现课后问卷是我们获取反馈，提高课程的重要工具。\\r\n 问卷是保密、匿名的 - 你的老师可以看见整个课堂的匿名汇总结果。结果对你的老师和 Code.org 改善课程非常重要。谢谢你的时间和思考。"
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
         csp-post-survey-2018:
           stages:
             CSP post-course survey:
@@ -10793,6 +11656,9 @@ zh-CN:
           description_audience: 计算机科学原理学生
           description_short: 计算机科学原理学生课后调查
           description: 欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。  
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
         csp5-pilot:
           stages:
             new stage:
@@ -10882,6 +11748,17 @@ zh-CN:
             'Lesson 18: Assessment Day':
               name: '第 18 单元：评估日'
           title: '单元 5: 列表、循环和遍历'
+          lesson_groups:
+            csp_lists:
+              display_name: 列表
+            csp_loops:
+              display_name: 循环
+            csp_traversals:
+              display_name: 遍历
+            csp_project:
+              display_name: 项目
+            required:
+              display_name: 概览
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -10900,6 +11777,11 @@ zh-CN:
           description_audience: 6 - 12 培训中的新主持人
           description_short: '2019 主持人培训的新手反思材料 '
           description: 这是为 Code.org 主持人准备的新手反思，这会用在 5 天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在主持人训练研讨会进行。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -10931,6 +11813,11 @@ zh-CN:
           description_audience: 6 - 12 培训中的新主持人
           description_short: '2019 主持人培训的新手反思材料 '
           description: 这是为 Code.org 新主持人准备的新手反思，这会用在 5 天的夏季研讨会上。在这里能找到每天面对面讨论的反思的提示。这些问题是工作中很基础的问题，我们会在主持人训练研讨会进行。
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd-sample-online:
           stages:
             What is a Computer? - sample progression:
@@ -10979,6 +11866,13 @@ zh-CN:
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
             Post-Project Test:
               name: 项目后测试
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csd1_1:
+              display_name: '第 1 章︰ 解决问题的流程'
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
         csd2-pilot:
           title: 计算机科学发现单元2 - 网页开发 ('18-'19)
           description: " 在第2单元中, 您将学习如何在自己的网页上创建和共享内容。在决定要与世界共享哪些内容之后, 您将学习如何使用 HTML 和 CSS 来构造和样式化页面。您还将练习有价值的编程技能, 如调试和注释。 在该单元的末尾, 您将有一个个人的网站可以发布到互联网上。"
@@ -11076,6 +11970,13 @@ zh-CN:
               name: 同伴评审和最后润色
             Project - Website for a Purpose:
               name: 项目 - 为某个目的的网站
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章︰ 网站内容和 HTML'
+            csd2_2:
+              display_name: '第 2 章︰ 样式和 CSS'
+            cspSurvey:
+              display_name: 调查
         csd3-pilot:
           title: CSD单元 3 - 动画和游戏
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵图的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
@@ -11188,6 +12089,13 @@ zh-CN:
               name: 文字和有字幕的场景
             Sprite Properties:
               name: 精灵图属性
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -11240,6 +12148,11 @@ zh-CN:
             Debugging:
               name: 调试
           title: 计算机科学原理第 3 单元试验 - 介绍应用设计
+          lesson_groups:
+            content:
+              display_name: 内容
+            required:
+              display_name: 概览
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -11255,6 +12168,13 @@ zh-CN:
             Tell a Story in Play Lab:
               name: 在游戏实验室中讲故事
           title: 越南语的计算机科学素养
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -11265,6 +12185,11 @@ zh-CN:
               name: 演示理解
           title: 计算机科学发现进一步学习 2019 为 FiT 准备的模块
           description_audience: 计算机科学发现主持人培训 2019
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -11274,6 +12199,11 @@ zh-CN:
             Demonstrating Understanding:
               name: 演示理解
           title: 计算机科学原理进一步学习 2019 FiT 研讨会
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         pl-csd-bugs:
           stages:
             CSD Workshop 1 Bugs:
@@ -11297,6 +12227,11 @@ zh-CN:
           title: '计算机科学发现进一步学习 2019 为研讨会准备的模块 1 '
           description_audience: 计算机科学发现主持人培训 2019
           description_short: 学年研讨会 1
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csd-mod-w2:
           stages:
             new stage:
@@ -11311,6 +12246,11 @@ zh-CN:
               name: '第 2 步：展示理解'
           title: 计算机科学发现进一步学习 2019 为研讨会准备的模块 2
           description_audience: 计算机科学发现主持人培训 2019
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csd-mod-w3:
           stages:
             CS Discoveries Deeper Learning Module 3:
@@ -11323,6 +12263,11 @@ zh-CN:
               name: '第 2 步：展示理解'
           title: 计算机科学发现进一步学习 2019 为研讨会准备的模块 3
           description_audience: 计算机科学发现主持人培训 2019
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
@@ -11335,6 +12280,11 @@ zh-CN:
               name: '第 2 步：展示理解'
           title: 计算机科学发现进一步学习 2019 为研讨会准备的模块 4
           description_audience: 计算机科学发现主持人培训 2019
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csp-mod-w1:
           stages:
             CS Principles Deeper Learning Module 1:
@@ -11346,6 +12296,11 @@ zh-CN:
             Deeper Learning Overview:
               name: 更深的学习概览
           title: 计算机科学原理进一步学习 2019 为研讨会准备的模块 1
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csp-mod-w2:
           stages:
             CS Principles Deeper Learning Module 2:
@@ -11357,6 +12312,11 @@ zh-CN:
             'Step 2: Demonstrate Understanding':
               name: '第 2 步：展示理解'
           title: 计算机科学原理进一步学习 2019 为研讨会准备的模块 2
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csp-mod-w3:
           stages:
             CS Principles Deeper Learning Module 3:
@@ -11368,6 +12328,11 @@ zh-CN:
             'Step 2: Demonstrate Understanding':
               name: '第 2 步：展示理解'
           title: 计算机科学原理进一步学习 2019 为研讨会准备的模块 3
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         dlp19-csp-mod-w4:
           stages:
             CS Principles Deeper Learning Module 4:
@@ -11379,6 +12344,11 @@ zh-CN:
             'Step 2: Demonstrate Understanding':
               name: '第 2 步：展示理解'
           title: 计算机科学原理进一步学习 2019 为研讨会准备的模块 4
+          lesson_groups:
+            required:
+              display_name: 概览
+            content:
+              display_name: 内容
         csd-pilot:
           stages:
             Pilot Information:
@@ -11457,6 +12427,9 @@ zh-CN:
             Post-Project Test:
               name: 项目后测试
           title: 计算机与解决问题
+          lesson_groups:
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
         csp2-pilot:
           stages:
             new stage:
@@ -11497,6 +12470,11 @@ zh-CN:
               name: 项目 - 互联网困境 第 1 部分
             Project - Internet Dilemmas Part 2:
               name: 项目 - 互联网困境 第 2 部分
+          lesson_groups:
+            content:
+              display_name: 内容
+            required:
+              display_name: 概览
         denny-science:
           stages:
             Earthquake Detector:
@@ -11549,6 +12527,11 @@ zh-CN:
               name: 第 6 单元教师问卷
             'Lesson 6: Assessment Day':
               name: '第 6 单元：评估日'
+          lesson_groups:
+            content:
+              display_name: 内容
+            required:
+              display_name: 概览
         denny-science-8:
           title: 碰撞检测
           stages:
@@ -11647,6 +12630,15 @@ zh-CN:
               name: 评审反思
             End of Course projects:
               name: 结课项目
+          lesson_groups:
+            k5_getting_started:
+              display_name: 开始
+            k5_basic_concepts:
+              display_name: 基本编程概念和教学策略
+            k5_diving_deeper:
+              display_name: '深入学习：课程 E 和 F'
+            k5_next_steps:
+              display_name: 下一步
         dance-extras-2019:
           title: 继续跳舞 (2019)
           description: 通过扩展项目创意，超越第一个小时。
@@ -11736,6 +12728,15 @@ zh-CN:
             'Lesson 15: Assessment Day':
               name: '单元 15：评估日'
           title: '计算机科学原理预览：变量、条件和函数'
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
@@ -11788,6 +12789,15 @@ zh-CN:
             Nested Loops in the Maze:
               name: 迷宫里的嵌套循环
           title: 计算机科学时间 控制 第 2 单元
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_conditionals:
+              display_name: 条件语句
+            csf_nested_loops:
+              display_name: 循环嵌套
+            csf_functions:
+              display_name: 函数
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:
@@ -11845,6 +12855,17 @@ zh-CN:
           title: 计算机科学时间 实验 第 2 单元
           description_short: "[添加描述]"
           description: "[添加描述]"
+          lesson_groups:
+            time4cs_c1:
+              display_name: '集合 1：湿地及其生态系统'
+            time4cs_c2:
+              display_name: '集合 2：湿地里的食物链'
+            time4cs_c3:
+              display_name: '集合 3：生活在湿地'
+            time4cs_c4:
+              display_name: '集合 4：对湿地的入侵影响'
+            time4cs_c5:
+              display_name: '集合 5：市民对湿地变化的影响'
         time4cs-control-unit-1:
           title: 计算机科学时间 控制 第 1 单元
           stages:
@@ -11872,6 +12893,23 @@ zh-CN:
               name: 辅助功能
             Conditionals Review:
               name: 条件的回顾
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_events:
+              display_name: 事件
+            csf_sprites:
+              display_name: 精灵图
+            csf_digcit:
+              display_name: 数字公民
+            csf_impacts:
+              display_name: 计算的影响
+            ramp_up:
+              display_name: 热身
         time4cs-experiment-unit-1:
           title: 计算机科学时间 实验 第 1 单元
           stages:
@@ -11899,6 +12937,23 @@ zh-CN:
               name: 辅助功能
             Conditionals Review:
               name: 条件的回顾
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_events:
+              display_name: 事件
+            csf_sprites:
+              display_name: 精灵图
+            csf_digcit:
+              display_name: 数字公民
+            csf_impacts:
+              display_name: 计算的影响
+            ramp_up:
+              display_name: 热身
         csp7-pilot:
           stages:
             Parameters and Returns Explore:
@@ -11954,6 +13009,13 @@ zh-CN:
             'Lesson 11: Assessment Day':
               name: '第 11 单元：评估日'
           title: 计算机科学原理 第 7 单元 试用 - 参数，返回值和库
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 参数和返回值
+            csp_libraries:
+              display_name: 库
+            required:
+              display_name: 概览
         csp8-pilot:
           stages:
             new stage:
@@ -11998,6 +13060,15 @@ zh-CN:
             'Lesson 15: Assessment Day':
               name: '单元 15：评估日'
           title: 计算机科学原理第 4 单元 - 变量，条件和函数 ('20-'21)
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
         csp5-2020:
           stages:
             Lists Explore:
@@ -12041,6 +13112,15 @@ zh-CN:
             Unit 5 TEACHER Survey:
               name: 第 5 单元教师问卷
           title: 列表、循环和遍历
+          lesson_groups:
+            csp_lists:
+              display_name: 列表
+            csp_loops:
+              display_name: 循环
+            csp_traversals:
+              display_name: 遍历
+            csp_project:
+              display_name: 项目
         csp7-2020:
           stages:
             Parameters and Return Explore:
@@ -12073,6 +13153,11 @@ zh-CN:
               name: 变量制作演示
             'Lesson 11: Assessment Day':
               name: '第 11 单元：评估日'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 参数和返回值
+            csp_libraries:
+              display_name: 库
         csd2-projects-temp:
           stages:
             HTML  Project:
@@ -12119,19 +13204,19 @@ zh-CN:
               name: 探索网页
             Intro to HTML:
               name: HTML介绍
-              description_student: 本课将介绍 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。该课堂在网络实验室中查看 HTML页面, 并讨论 HTML 标记如何帮助解决此问题, 然后使用 HTML 编写该单元的第一个网页。
-              description_teacher: 在本课中, 引入 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。学生然后在网络实验室中查看 HTML页面，并与他们的同学讨论 HTML 标记如何帮助解决此问题。学生然后写他们的第一个 HTML。总结讨论有助于巩固对在整个课程中开发的内容与结构的理解。
+              description_student: "本课将介绍 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。该课堂在网络实验室中查看 HTML页面, 并讨论 HTML 标记如何帮助解决此问题, 然后使用 HTML 编写该单元的第一个网页。"
+              description_teacher: "在本课中, 引入 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始, 演示了有效交流网页结构的挑战。学生然后在网络实验室中查看 HTML页面，并与他们的同学讨论 HTML 标记如何帮助解决此问题。学生然后写他们的第一个 HTML。总结讨论有助于巩固对在整个课程中开发的内容与结构的理解。"
             Headings:
               name: 标题
-              description_student: 本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题, 并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。
-              description_teacher: 在本课中, 学生们继续使用 HTML 在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生开始他们将继续在整个单位工作的项目。
+              description_student: "本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题, 并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。"
+              description_teacher: "在本课中, 学生们继续使用 HTML 在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素, 并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生开始他们将继续在整个单位工作的项目。"
             Digital Footprint:
               name: 数字足迹
-              description_student: 这堂课退后了一步从创建个人网站到谈论人们选择共享数字的个人信息。 该课堂开始讨论哪些类型的信息是可以与他人分享的, 然后看几个社交媒体的页面样本, 以了解哪些类型的个人信息会被有意或无意地共享。最后, 该课堂提出一套在网上发布信息时遵循的准则 。
+              description_student: "这堂课退后了一步从创建个人网站到谈论人们选择共享数字的个人信息。 该课堂开始讨论哪些类型的信息是可以与他人分享的, 然后看几个社交媒体的页面样本, 以了解哪些类型的个人信息会被有意或无意地共享。最后, 该课堂提出一套在网上发布信息时遵循的准则 。"
               description_teacher: "由于学生们最近花了一些时间思考将进入他们的个人网站的实际内容，这一课从一个单元长的项目 (个人网站的发布）中退后一步，以帮助学生阐明他们选择哪些个人数字信息共享以及与谁共享。它还强化了一个概念，即他们选择的数字共享的大部分信息在发布时大部分都失去了控制。 \n \n学生首先各自识别合适的听众, 他们将会感到自在的分享一些个人信息。 然后, 他们查看几个社交媒体页面, 以确定人们在分享自己或彼此的信息的种类。 最后, 学生反思他们认为适合在网上发布信息的指导方针. \n\n这一课的最终目的不是吓唬学生, 而是让学生去体验并准确地认识到，在网络上发布信息时哪些控制级别是他们所没有的。"
             Styling Text with CSS:
               name: 使用 CSS 设置文本样式
-              description_student: 本课介绍了 CSS 作为网页上样式元素的一种方式。该课堂学习 CSS 规则集的基本语法, 然后探讨影响 HTML 文本元素的属性。 最后, 每个人都将文本样式应用于他们的个人网站上。
+              description_student: "本课介绍了 CSS 作为网页上样式元素的一种方式。该课堂学习 CSS 规则集的基本语法, 然后探讨影响 HTML 文本元素的属性。 最后, 每个人都将文本样式应用于他们的个人网站上。"
               description_teacher: "本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响 HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中, 学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\n\n"
             Intellectual Property:
               name: 知识产权
@@ -12139,12 +13224,12 @@ zh-CN:
               name: 图片
             'Websites for Expression ':
               name: '网址表达式 '
-              description_student: '本课介绍了网站作为个人表达的一种手段。 该课程首先讨论了人们表达和分享他们的兴趣和想法的不同方式, 然后看看以前课程中学生所做的一些范例网站。最后大家集思广益，分享包括话题和兴趣列表，以便在该单元的其余部分创建一个用于开发个人网站的资源。 '
-              description_teacher: 在本课中, 学生将研究如何使用网站作为个人表达方式, 并开发出他们希望在个人网站上包含的主题和兴趣列表。开始上课时, 学生们集思广益讨论人们表达和分享他们的兴趣和想法的不同方式。学生然后看一些先前的计算机科学发现课程的学生所做的几个范例网站，以确定他们表达他们的想法的方式。最后, 学生集思广益和分享他们可能想要包括在个人网站上的主题和兴趣列表, 他们可以随着单元的进展来参考想法。
+              description_student: "本课介绍了网站作为个人表达的一种手段。 该课程首先讨论了人们表达和分享他们的兴趣和想法的不同方式, 然后看看以前课程中学生所做的一些范例网站。最后大家集思广益，分享包括话题和兴趣列表，以便在该单元的其余部分创建一个用于开发个人网站的资源。 "
+              description_teacher: "在本课中, 学生将研究如何使用网站作为个人表达方式, 并开发出他们希望在个人网站上包含的主题和兴趣列表。开始上课时, 学生们集思广益讨论人们表达和分享他们的兴趣和想法的不同方式。学生然后看一些先前的计算机科学发现课程的学生所做的几个范例网站，以确定他们表达他们的想法的方式。最后, 学生集思广益和分享他们可能想要包括在个人网站上的主题和兴趣列表, 他们可以随着单元的进展来参考想法。"
             Styling Elements with CSS:
               name: 使用 CSS 设置元素的样式
-              description_student: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。该课堂从调查和修改在甜点世界页面上的新 CSS 样式开始。之后, 每个人都将这些新知识应用到他们的个人网站上。
-              description_teacher: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。学生们从一个关于世界甜点的网站上开始这一课。他们在这个网站上调查和修改新的 CSS 样式, 在页面中添加他们自己的样式。在甜点页面上工作后, 学生们运用他们的新 CSS 属性的知识来对他们的个人网站做更多的造型。
+              description_student: "本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。该课堂从调查和修改在甜点世界页面上的新 CSS 样式开始。之后, 每个人都将这些新知识应用到他们的个人网站上。"
+              description_teacher: "本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。学生们从一个关于世界甜点的网站上开始这一课。他们在这个网站上调查和修改新的 CSS 样式, 在页面中添加他们自己的样式。在甜点页面上工作后, 学生们运用他们的新 CSS 属性的知识来对他们的个人网站做更多的造型。"
             Project - Planning Layout and Style:
               name: 项目 - 计划布局和风格
             Project - Building a Webpage:
@@ -12169,6 +13254,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章︰ 网站内容和 HTML'
+            csd2_2:
+              display_name: '第 2 章︰ 样式和 CSS'
+            cspSurvey:
+              display_name: 调查
         csd1-2020:
           title: CSD 第一单元——解决问题和计算('19-'20)
           description: " \n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\n"
@@ -12178,39 +13270,46 @@ zh-CN:
               name: 计算机科学发现预调查
             Intro to Problem Solving:
               name: 解决问题入门
-              description_student: '该班分组设计铝箔船，让它能承载尽量多的便士。 在课程结束时, 小组会反思他们在活动中的经验, 并与他们在余下的过程中所做的解决问题的类型建立联系。 '
-              description_teacher: 在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时, 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 
+              description_student: "该班分组设计铝箔船，让它能承载尽量多的便士。 在课程结束时, 小组会反思他们在活动中的经验, 并与他们在余下的过程中所做的解决问题的类型建立联系。 "
+              description_teacher: "在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时, 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 "
             The Problem Solving Process:
               name: 解决问题的过程
-              description_student: 本课介绍了该班在接下来的一年中将使用的正式的问题解决流程：定义-准备-尝试-反思。该班将这些步骤与前一课中的铝箔船问题联系起来，然后是他们擅长解决的问题，然后是他们想要改进的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
-              description_teacher: 本课程介绍了学生在一年中将使用的正式的问题解决流程 定义-准备-尝试-反思。这一课的开始是要求学生集思广益集体讨论他们在日常生活中遇到的各种不同类型的问题。然后, 学生将显示问题解决过程的四步骤, 并协同工作, 将这些抽象步骤与他们解决问题的实际经验联系起来。第一个学生将这些步骤与前一课中的铝箔船问题联系起来, 然后是他们擅长解决的问题, 然后是他们想要改进解决的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
+              description_student: "本课介绍了该班在接下来的一年中将使用的正式的问题解决流程：定义-准备-尝试-反思。该班将这些步骤与前一课中的铝箔船问题联系起来，然后是他们擅长解决的问题，然后是他们想要改进的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。"
+              description_teacher: "本课程介绍了学生在一年中将使用的正式的问题解决流程 定义-准备-尝试-反思。这一课的开始是要求学生集思广益集体讨论他们在日常生活中遇到的各种不同类型的问题。然后, 学生将显示问题解决过程的四步骤, 并协同工作, 将这些抽象步骤与他们解决问题的实际经验联系起来。第一个学生将这些步骤与前一课中的铝箔船问题联系起来, 然后是他们擅长解决的问题, 然后是他们想要改进解决的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。"
             Exploring Problem Solving:
               name: 探索解决问题
-              description_student: '在本课中, 班级将解决问题的过程应用于三个不同的问题上: 单词搜索、生日聚会的座位安排和旅行计划。这些问题会越来越复杂, 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。'
+              description_student: "在本课中, 班级将解决问题的过程应用于三个不同的问题上: 单词搜索、生日聚会的座位安排和旅行计划。这些问题会越来越复杂, 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。"
               description_teacher: "在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排, 和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释, 并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 \n\n此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时, 但第三个问题将需要移到第二天。"
             What is a Computer?:
               name: 什么是计算机？
-              description_student: 在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。
+              description_student: "在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。"
               description_teacher: "在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机” 或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。\n"
             Input and Output:
               name: 输入和输出
-              description_student: 在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。总结课程, 课堂检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
-              description_teacher: 在本课中, 学生将考虑一些计算设备来确定他们使用的输入和输出类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。在活动的早期, 学生被提示关注更明显的物理输入和输出 (例如, 键盘作为输入或屏幕作为输出), 但后来的讨论引导学生考虑不太明显的例子 (例如, 触摸屏既是输入, 又是输出, 或互联网可以作为输入和输出的事实）。在整个课程中, 教师将在教室前面的 T- Chart 图表上标识的输入和输出。总结课程, 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
+              description_student: "在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。总结课程, 课堂检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。"
+              description_teacher: "在本课中, 学生将考虑一些计算设备来确定他们使用的输入和输出类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。在活动的早期, 学生被提示关注更明显的物理输入和输出 (例如, 键盘作为输入或屏幕作为输出), 但后来的讨论引导学生考虑不太明显的例子 (例如, 触摸屏既是输入, 又是输出, 或互联网可以作为输入和输出的事实）。在整个课程中, 教师将在教室前面的 T- Chart 图表上标识的输入和输出。总结课程, 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。"
             Processing:
               name: 正在处理中
-              description_student: 这一课深入探讨了作为计算机定义的一部分引入的处理的含义。 结对一起工作, 把一副牌按顺序排列, 一个处理信息的表单。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
-              description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个活动的约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法, 以及产生解决问题的算法的价值。
+              description_student: "这一课深入探讨了作为计算机定义的一部分引入的处理的含义。 结对一起工作, 把一副牌按顺序排列, 一个处理信息的表单。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。"
+              description_teacher: "学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个活动的约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法, 以及产生解决问题的算法的价值。"
             Apps and Storage:
               name: 应用程序和存储
-              description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
-              description_teacher: '本课程基于学生们熟悉的应用，回顾了计算机的输入、输出、存储和处理的概念。同时，学生评估了智能手机应用来分析被设计用来解决的特定的问题，需要的输入，然后将输入处理成需要的输出，并将信息存储起来稍后使用。最后结束于讨论，来将课程联系到学生们熟悉的应用上。 '
+              description_student: "本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 "
+              description_teacher: "本课程基于学生们熟悉的应用，回顾了计算机的输入、输出、存储和处理的概念。同时，学生评估了智能手机应用来分析被设计用来解决的特定的问题，需要的输入，然后将输入处理成需要的输出，并将信息存储起来稍后使用。最后结束于讨论，来将课程联系到学生们熟悉的应用上。 "
             Project - Propose an App:
               name: 项目- 提议一个应用程序
-              description_student: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。
-              description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
+              description_student: "为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。"
+              description_teacher: "为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。"
             Post-Project Test:
               name: 项目后测试
             0:
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csd1_1:
+              display_name: '第 1 章︰ 解决问题的流程'
+            csd1_2:
+              display_name: '第 2 章︰ 计算机和解决问题的能力'
         csd4-2020:
           title: 计算机科学发现单元4 - 设计过程 ('18-'19)
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
@@ -12284,6 +13383,15 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章︰ 用户为中心的设计'
+            csd4_2:
+              display_name: '第 2 章︰ 应用程序原型'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
         csd5-2020:
           title: CSD 单元5- 数据和社会
           description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中, 您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
@@ -12353,6 +13461,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章︰ 表达信息'
+            csd5_2:
+              display_name: '第 2 章︰ 解决数据问题'
+            cspSurvey:
+              display_name: 调查
         csd6-2020:
           title: CSD 6 单元- 物理计算 ('18-'19)
           description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和 Adafruit 的电路面板, 您将开发一些利用您在智能设备中看到的相同的硬件输入和输出的程序, 并查看简单粗糙原型是如何变成成品的。该单位的最后是一个设计挑战, 你要以电路操场作为基础来制作自己设计的创新项目。
@@ -12394,6 +13509,13 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章︰ 用硬件编程'
+            csd6_2:
+              display_name: '第 2 章︰ 创建物理原型'
+            cspSurvey:
+              display_name: 调查
         csd3-2020:
           title: CSD单元 3 - 动画和游戏
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵图的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
@@ -12401,22 +13523,23 @@ zh-CN:
           stages:
             Programming for Entertainment:
               name: 娱乐编程
-              description_student: 该班级被要求考虑无聊和自我表达的 "问题", 并思考他们在自己的生活中如何处理这些问题。从那里，他们将探索一般的计算机科学, 以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。
-              description_teacher: 学生被要求考虑无聊和自我表达的 "问题", 并思考他们如何在自己的生活中处理这些问题。从那里, 学生将探索一般的计算机科学, 以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。
+              description_student: "该班级被要求考虑无聊和自我表达的 \"问题\", 并思考他们在自己的生活中如何处理这些问题。从那里，他们将探索一般的计算机科学, 以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。"
+              description_teacher: "学生被要求考虑无聊和自我表达的 \"问题\", 并思考他们如何在自己的生活中处理这些问题。从那里, 学生将探索一般的计算机科学, 以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。"
             Plotting Shapes:
               name: 绘制形状
-              description_student: 学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下, 快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后, 他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。
-              description_teacher: 学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下, 快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后, 他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。
+              description_student: "学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下, 快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后, 他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。"
+              description_teacher: "学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下, 快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后, 他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。"
             Drawing in Game Lab:
               name: 在游戏实验室绘画
-              description_student: 该班级被引入游戏实验室, 即这个单元的编程环境，并开始使用它来在屏幕上定位形状。课程涵盖了排序和调试的基础知识, 以及一些简单的命令。在本课结束时, 该班级创建了上一课中所设计的图像的在线版本。
-              description_teacher: 学生被引入到游戏实验室, 即这个单元的编程环境, 并开始使用它来在屏幕上定位形状。他们学习了排序和调试的基础知识, 以及一些简单的命令。在课程结束时, 学生将能够像在上一课中使用绘图工具制作的图像一样进行编程。
+              description_student: "该班级被引入游戏实验室, 即这个单元的编程环境，并开始使用它来在屏幕上定位形状。课程涵盖了排序和调试的基础知识, 以及一些简单的命令。在本课结束时, 该班级创建了上一课中所设计的图像的在线版本。"
+              description_teacher: "学生被引入到游戏实验室, 即这个单元的编程环境, 并开始使用它来在屏幕上定位形状。他们学习了排序和调试的基础知识, 以及一些简单的命令。在课程结束时, 学生将能够像在上一课中使用绘图工具制作的图像一样进行编程。"
             Shapes and Parameters:
               name: 形状和参数
             Variables:
               name: 变量
-              description_student: 本课将介绍变量作为在程序中标记数字或保存随机生成的值的方法。课程开始时，对变量的用途和使用新块的实践进行了非常基本的描述。然后，该班级使用变量来保存一个随机数, 使程序可以多次使用相同的随机数。
-              description_teacher: 在本课中, 学生学习如何使用变量在程序中标记一个数字或保存一个随机生成的值。学生从一个变量的用途的非常基本的描述开始这堂课。然后学生完成一个级别的进展, 加强模型的变量, 作为一种方式来标记或命名一个数字。学生使用变量来保存随机数, 以查看变量实际存储或保存其值, 允许他们在程序中多次使用相同的随机数。
+              description_student: "本课将介绍变量作为在程序中标记数字或保存随机生成的值的方法。课程开始时，对变量的用途和使用新块的实践进行了非常基本的描述。然后，该班级使用变量来保存一个随机数, 使程序可以多次使用相同的随机数。"
+              description_teacher: |-
+                在本课中, 学生学习如何使用变量在程序中标记一个数字或保存一个随机生成的值。学生从一个变量的用途的非常基本的描述开始这堂课。然后学生完成一个级别的进展, 加强模型的变量, 作为一种方式来标记或命名一个数字。学生使用变量来保存随机数, 以查看变量实际存储或保存其值, 允许他们在程序中多次使用相同的随机数。
             Random Numbers:
               name: 随机数
             Sprites and Animations:
@@ -12427,16 +13550,16 @@ zh-CN:
               name: 文字和有字幕的场景
             The Draw Loop:
               name: 绘制循环
-              description_student: 本课介绍了游戏实验室中的核心编程范例之一的绘制循环。课堂结合随机数绘制循环来操作一些简单的动画。之后，每个人都利用他们学到的东西更新前一课中的精灵图场景。
-              description_teacher: 在这一课中, 学生被引入到了游戏实验室的核心编程范式之一 "绘制循环" 中。开始上课的学生看一些手翻书, 会看到有许多帧不同的图像创造了运动的印象。然后学生观看一段视频，解释游戏实验室中的绘制循环是如何在他们的程序中产生同样的印象的。学生把绘制循环和随机数结合起来, 先用Dots来操纵一些简单的动画, 然后用精灵图。在课程结束的时候, 学生们用他们学到的东西来更新他们在上一课中的精灵图场景。
+              description_student: "本课介绍了游戏实验室中的核心编程范例之一的绘制循环。课堂结合随机数绘制循环来操作一些简单的动画。之后，每个人都利用他们学到的东西更新前一课中的精灵图场景。"
+              description_teacher: "在这一课中, 学生被引入到了游戏实验室的核心编程范式之一 \"绘制循环\" 中。开始上课的学生看一些手翻书, 会看到有许多帧不同的图像创造了运动的印象。然后学生观看一段视频，解释游戏实验室中的绘制循环是如何在他们的程序中产生同样的印象的。学生把绘制循环和随机数结合起来, 先用Dots来操纵一些简单的动画, 然后用精灵图。在课程结束的时候, 学生们用他们学到的东西来更新他们在上一课中的精灵图场景。"
             The Counter Pattern Unplugged:
               name: 计数器模式的线下活动
               description_student: 这个线下课程探讨了变量的基本行为。使用卡片和字符串来模拟程序中的变量, 该类实现了几个短编程。一旦对此语法感到满意, 该类将使用与精灵图属性相同的过程, 在屏幕上跟踪精灵图的进度。
               description_teacher: 学生通过线下活动探索变量的基本行为。使用卡片和字符串来模拟程序中的变量, 学生可以执行一些简短的程序。一旦习惯了这种语法, 学生就会使用与精灵图属性相同的过程, 在屏幕上跟踪精灵图的进度。
             Sprite Movement:
               name: 精灵图移动
-              description_student: 通过结合绘制回路和计数器模式, 该班级编写程序, 在屏幕上移动精灵图, 以及激活其他精灵图属性。
-              description_teacher: 通过结合绘制回路和计数器模式, 学生编写程序, 在屏幕上移动精灵图, 以及激活其他精灵图属性。
+              description_student: "通过结合绘制回路和计数器模式, 该班级编写程序, 在屏幕上移动精灵图, 以及激活其他精灵图属性。"
+              description_teacher: "通过结合绘制回路和计数器模式, 学生编写程序, 在屏幕上移动精灵图, 以及激活其他精灵图属性。"
             Booleans Unplugged:
               name: 线下布尔
               description_student: 本课介绍布尔值和逻辑，以及条件语句。开始上课时，我们先玩一个简单的站立游戏，坐下来，其中的布尔（真/假）陈述描述了个人的属性（头发或眼睛的颜色，衣服的类型，年龄等）。课堂基于越来越复杂的布尔语句对对象进行分组，然后看看条件会影响程序的流程。
@@ -12448,58 +13571,65 @@ zh-CN:
                 最后揭示条件句作为一种工具来做决定或影响使用布尔语句输入的程序流程。
             Conditionals:
               name: 条件语句
-              description_student: 该班级首先使用布尔比较与目标值的精灵图属性的当前值，然后使用该比较来确定当精灵图到达屏幕上的某个点时, 增长到给定的大小, 或者使用计数器模式以其他方式达到一个值。在直接使用布尔来调查数值或精灵图属性之后, 该班级添加条件的如果语句来编写代码来响应这些布尔的这些比较。
-              description_teacher: 学生首先使用布尔比较与目标值的精灵图属性的当前值，然后使用该比较来确定当精灵图到达屏幕上的某个点时, 增长到给定的大小, 或者使用计数器模式以其他方式达到一个值。在直接使用布尔来调查数值或精灵图属性之后, 学生添加条件的如果语句来编写代码来响应这些布尔的这些比较。
+              description_student: "该班级首先使用布尔比较与目标值的精灵图属性的当前值，然后使用该比较来确定当精灵图到达屏幕上的某个点时, 增长到给定的大小, 或者使用计数器模式以其他方式达到一个值。在直接使用布尔来调查数值或精灵图属性之后, 该班级添加条件的如果语句来编写代码来响应这些布尔的这些比较。"
+              description_teacher: "学生首先使用布尔比较与目标值的精灵图属性的当前值，然后使用该比较来确定当精灵图到达屏幕上的某个点时, 增长到给定的大小, 或者使用计数器模式以其他方式达到一个值。在直接使用布尔来调查数值或精灵图属性之后, 学生添加条件的如果语句来编写代码来响应这些布尔的这些比较。"
             Keyboard Input:
               name: 键盘输入
-              description_student: 在前面的课程中介绍布尔和如果语句之后, 将学生引入一个称为 按下键() 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵图。在本课结束时, 学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵图。
-              description_teacher: 在前面的课程中介绍布尔和_如果_语句之后, 将学生引入一个称为 '按下键()' 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵图。在本课结束时, 学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵图。
+              description_student: "在前面的课程中介绍布尔和如果语句之后, 将学生引入一个称为 按下键() 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵图。在本课结束时, 学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵图。"
+              description_teacher: "在前面的课程中介绍布尔和_如果_语句之后, 将学生引入一个称为 '按下键()' 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵图。在本课结束时, 学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵图。"
             Other Forms of Input:
               name: 其他输入形式
               description_student: 该班级将继续探索使用条件语句进行用户输入的方法。除了昨天学到的简单的 "按下键()" 命令之外, 该班级还将学习其他几个键盘输入命令以及采取鼠标输入的方法。
               description_teacher: 在本课中, 学生将继续探索使用条件语句进行用户输入的方法。除了昨天学到的简单的 "v()" 命令之外, 学生还将学习其他几个键盘输入命令以及采取鼠标输入的方法。
             Project - Interactive Card:
               name: 项目 - 互动卡
-              description_student: 在这个第1章的累积项目中，该班计划使用他们学到的所有编程技巧来开发一个交互式贺卡。
-              description_teacher: 在第1章的这个积累的项目中, 学生将计划使用他们学到的所有编程技巧来开发一个交互式贺卡。
+              description_student: "在这个第1章的累积项目中，该班计划使用他们学到的所有编程技巧来开发一个交互式贺卡。"
+              description_teacher: "在第1章的这个积累的项目中, 学生将计划使用他们学到的所有编程技巧来开发一个交互式贺卡。"
             Velocity:
               name: 矢量
-              description_student: 在简要回顾了如何使用计数器模式移动精灵图后，班级就开始接触设定速度和旋转的属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。
-              description_teacher: 接触在简要的回顾了以前的课堂上如何使用计数器模式移动精灵图后，班级开始设定速度和旋转属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。
+              description_student: "在简要回顾了如何使用计数器模式移动精灵图后，班级就开始接触设定速度和旋转的属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。"
+              description_teacher: "接触在简要的回顾了以前的课堂上如何使用计数器模式移动精灵图后，班级开始设定速度和旋转属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。"
             Collision Detection:
               name: 碰撞检测
-              description_student: 该班级学习有关计算机上的碰撞检测。 学生们配对来探讨计算机如何使用精灵图的位置、大小属性和数学来检测两个精灵图是否有接触。 然后，该类使用 isTouching () 块在精灵图碰撞时创建不同的效果,  包括播放声音。 最后, 他们使用他们的新技能来改进他们在上一课中开始的 sidescroller 游戏。
-              description_teacher: 学生学习有关计算机上的碰撞检测。在配对的学习中, 他们探讨了计算机可以使用精灵图的位置，大小属性和数学来检测两个精灵图是否有接触。 然后, 他们使用 ‘isTouching ()’ 块在精灵图碰撞时，来创建不同的效果 ，比如播放声音。 最后, 他们使用他们的新技能来改进他们在上一课中开始的 sidescroller 游戏。
+              description_student: "该班级学习有关计算机上的碰撞检测。 学生们配对来探讨计算机如何使用精灵图的位置、大小属性和数学来检测两个精灵图是否有接触。 然后，该类使用 isTouching () 块在精灵图碰撞时创建不同的效果,  包括播放声音。 最后, 他们使用他们的新技能来改进他们在上一课中开始的 sidescroller 游戏。"
+              description_teacher: "学生学习有关计算机上的碰撞检测。在配对的学习中, 他们探讨了计算机可以使用精灵图的位置，大小属性和数学来检测两个精灵图是否有接触。 然后, 他们使用 ‘isTouching ()’ 块在精灵图碰撞时，来创建不同的效果 ，比如播放声音。 最后, 他们使用他们的新技能来改进他们在上一课中开始的 sidescroller 游戏。"
             Complex Sprite Movement:
               name: 复杂的精灵图动作
-              description_student: '该班级将学习组合精灵图的速度特性与计数器模式, 以创建更复杂的精灵图运动，如模拟重力、使精灵图跳跃、允许精灵图向左或向右浮动。在最后一级，课堂将这些动作结合起来，对单个精灵图进行动画和控制，并建立一个简单的游戏, 其中一个人物飞来飞去收集硬币。 '
+              description_student: "该班级将学习组合精灵图的速度特性与计数器模式, 以创建更复杂的精灵图运动，如模拟重力、使精灵图跳跃、允许精灵图向左或向右浮动。在最后一级，课堂将这些动作结合起来，对单个精灵图进行动画和控制，并建立一个简单的游戏, 其中一个人物飞来飞去收集硬币。 "
               description_teacher: "学生学习将精灵图的速度特性与计数器模式结合起来, 以创造更复杂的精灵图运动。特别是学生将学习如何模拟重力, 使一个精灵图跳跃, 并允许一个精灵图向左或向右浮动。在最后一级的代码工作室的进步学生结合这些动作, 对单个精灵图进行动画和控制, 并建立一个简单的游戏中的一个人物飞来飞去收集硬币。\n鼓励学生在最后一级对游戏进行创造。"
             Collisions:
               name: 碰撞
-              description_student: 课堂编程他们的精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"推走"、"弹跳" 和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
-              description_teacher: 学生将编码出精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"推走"、"弹跳" 和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
+              description_student: "课堂编程他们的精灵图新的互动方式。在简要回顾他们如何使用 \"isTouching\" 块之后, 课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 \"isTouching\"的四个碰撞模块 (\"碰撞\"、\"推走\"、\"弹跳\" 和 \"反弹\"), 让一个精灵图推走另一个穿过屏幕。"
+              description_teacher: "学生将编码出精灵图新的互动方式。在简要回顾他们如何使用 \"isTouching\" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 \"isTouching\" 的四个碰撞模块 (\"碰撞\"、\"推走\"、\"弹跳\" 和 \"反弹\"), 让一个精灵图推走另一个穿过屏幕。"
             Functions:
               name: 函数
-              description_student: 本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。 在课程结束时, 使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。
-              description_teacher: 学生学习如何创建函数来组织他们的代码, 使其可读性更强, 并删除重复的代码块。线下预热探讨如何在不同的层次细节如何取决于上下文。学生学习更高层次或更抽象的步骤, 使它更容易理解和推理的步骤。之后学生学习在游戏实验室中创建函数。他们将使用函数从其绘制循环中删除长代码块, 并用单个函数替换重复的代码段。在课程结束时, 学生使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。
+              description_student: "本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。 在课程结束时, 使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。"
+              description_teacher: "学生学习如何创建函数来组织他们的代码, 使其可读性更强, 并删除重复的代码块。线下预热探讨如何在不同的层次细节如何取决于上下文。学生学习更高层次或更抽象的步骤, 使它更容易理解和推理的步骤。之后学生学习在游戏实验室中创建函数。他们将使用函数从其绘制循环中删除长代码块, 并用单个函数替换重复的代码段。在课程结束时, 学生使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。"
             The Game Design Process:
               name: 游戏设计过程
-              description_student: 本课介绍了该班级将用于为单元的其余部分设计游戏的过程。该班级在一系列级别中经历这个过程。作为本课的一部分, 该班级还简要地学习在游戏实验室中使用多帧动画。在课程结束时, 他们有机会对游戏进行改进, 做出自己的版本。
-              description_teacher: 本课将向学生介绍他们将用来为剩下的单元设计游戏的过程。这个过程是围绕一个项目指南, 要求学生定义他们的精灵图, 变量, 和函数在他们开始编程他们的游戏之前。在本课中, 学生首先在游戏实验室玩游戏, 代码隐藏在里面。他们讨论认为在游戏中需要的精灵图, 变量, 和函数等。然后给他们一个完整的项目指南, 它显示了一个实现游戏的方法。然后, 学生们通过一系列的水平关卡来完成这个过程。作为这一课的一部分, 学生们还简要地学习了在游戏实验室使用多帧动画。在课程结束时, 学生有机会对游戏进行改进, 做出自己的版本。
+              description_student: "本课介绍了该班级将用于为单元的其余部分设计游戏的过程。该班级在一系列级别中经历这个过程。作为本课的一部分, 该班级还简要地学习在游戏实验室中使用多帧动画。在课程结束时, 他们有机会对游戏进行改进, 做出自己的版本。"
+              description_teacher: "本课将向学生介绍他们将用来为剩下的单元设计游戏的过程。这个过程是围绕一个项目指南, 要求学生定义他们的精灵图, 变量, 和函数在他们开始编程他们的游戏之前。在本课中, 学生首先在游戏实验室玩游戏, 代码隐藏在里面。他们讨论认为在游戏中需要的精灵图, 变量, 和函数等。然后给他们一个完整的项目指南, 它显示了一个实现游戏的方法。然后, 学生们通过一系列的水平关卡来完成这个过程。作为这一课的一部分, 学生们还简要地学习了在游戏实验室使用多帧动画。在课程结束时, 学生有机会对游戏进行改进, 做出自己的版本。"
             Using the Game Design Process:
               name: 使用游戏设计过程
-              description_student: 在这个为期多日的课程中, 该班级使用第1单元的问题解决过程来创建一个平台跳跃游戏。在看了一个示例游戏后，该班级将定义他们的游戏将是什么样子，并使用结构化的过程来构建它们。最后，该班级将反映如何改进游戏，并实现这些改动。
-              description_teacher: 在这个为期多日的课程中, 学生使用第1单元的问题解决过程来创建一个平台跳跃游戏。 他们开始会看一个平台跳线的例子, 然后将定义他们的游戏是什么样子。 接下来, 他们使用一个结构化的过程来规划他们将需要的背景、变量、精灵图和函数，来实现他们的游戏。 在编写游戏代码之后, 学生将思考如何改进游戏, 并实现这些改动。
+              description_student: "在这个为期多日的课程中, 该班级使用第1单元的问题解决过程来创建一个平台跳跃游戏。在看了一个示例游戏后，该班级将定义他们的游戏将是什么样子，并使用结构化的过程来构建它们。最后，该班级将反映如何改进游戏，并实现这些改动。"
+              description_teacher: "在这个为期多日的课程中, 学生使用第1单元的问题解决过程来创建一个平台跳跃游戏。 他们开始会看一个平台跳线的例子, 然后将定义他们的游戏是什么样子。 接下来, 他们使用一个结构化的过程来规划他们将需要的背景、变量、精灵图和函数，来实现他们的游戏。 在编写游戏代码之后, 学生将思考如何改进游戏, 并实现这些改动。"
             Project - Design a Game:
               name: 项目 - 设计一个游戏
-              description_student: 班级使用前两个课程的项目指南计划和构建原始游戏。大家单独或成对一起工作, 班级计划, 开发, 并对游戏提供反馈。结合了相互反馈后，会共享已完成的游戏。
-              description_teacher: 学生将计划和创建自己的游戏，使用头两节课中的项目指南来指导他们的项目。单独或成对地工作, 学生将首先决定他们想要建立的游戏类型, 从一组示例游戏找到灵感。然后, 他们将完成一个空白的项目指南, 他们将描述游戏的行为和范围的变量, 精灵图，和需要建立的函数。在代码工作室中, 一系列级别将提示他们使用可用于实现此计划的序列。完成后，学生将分享他们项目，并进行相互评审。在课程结束时, 学生们将与同学们分享他们完成的游戏。此项目将扩展到多个班级，可以轻松地在合适的场地支持3到5个班一起进行。
+              description_student: "班级使用前两个课程的项目指南计划和构建原始游戏。大家单独或成对一起工作, 班级计划, 开发, 并对游戏提供反馈。结合了相互反馈后，会共享已完成的游戏。"
+              description_teacher: "学生将计划和创建自己的游戏，使用头两节课中的项目指南来指导他们的项目。单独或成对地工作, 学生将首先决定他们想要建立的游戏类型, 从一组示例游戏找到灵感。然后, 他们将完成一个空白的项目指南, 他们将描述游戏的行为和范围的变量, 精灵图，和需要建立的函数。在代码工作室中, 一系列级别将提示他们使用可用于实现此计划的序列。完成后，学生将分享他们项目，并进行相互评审。在课程结束时, 学生们将与同学们分享他们完成的游戏。此项目将扩展到多个班级，可以轻松地在合适的场地支持3到5个班一起进行。"
             Post-Project Test:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
             Text:
               name: 文本
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
+            cspSurvey:
+              display_name: 调查
         coursea-2020:
           title: 课程 A (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -12554,6 +13684,15 @@ zh-CN:
               name: 游戏实验室中的事件
               description_student: 创建自己的游戏或故事。
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         courseb-2020:
           title: 课程 B (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -12608,6 +13747,17 @@ zh-CN:
               name: 游戏实验室中的事件
               description_student: 用事件来创作故事或交互的游戏。
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_impacts:
+              display_name: 计算的影响
+            csf_events:
+              display_name: 事件
         coursec-2020:
           title: 课程 C (2019)
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
@@ -12685,6 +13835,17 @@ zh-CN:
             'End of Course Project: Create a Play Lab Game':
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
+          lesson_groups:
+            csf_digcit:
+              display_name: 数字公民
+            csf_sequencing:
+              display_name: 序列
+            csf_binary:
+              display_name: 二进制
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         coursed-2020:
           title: 课程 D (2019)
           description: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
@@ -12763,6 +13924,19 @@ zh-CN:
               name: 舞蹈派对
               description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
               description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_binary:
+              display_name: 二进制
+            csf_digcit:
+              display_name: 数字公民
         coursee-2020:
           title: 课程 E (2019)
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
@@ -12844,6 +14018,19 @@ zh-CN:
               name: 数字共享
             Designing for Accessibility:
               name: 辅助功能设计
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_sprites:
+              display_name: 精灵图
+            csf_digcit:
+              display_name: 数字公民
+            csf_nested_loops:
+              display_name: 循环嵌套
+            csf_functions:
+              display_name: 函数
+            csf_impacts:
+              display_name: 计算的影响
         coursef-2020:
           title: 课程 F （2019）
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
@@ -12931,6 +14118,17 @@ zh-CN:
               description_teacher: "接下来的 5 堂课会让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要是一次多堂课或数周的项目，学生们需要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r\n\\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它合适的界面。（这可能是项目中最长的一个阶段。）学生们会在测试和相互评审后修改代码。最终，学生们要能在同学前展示最终的作品。"
             AI for Oceans:
               name: 海洋环保中的人工智能
+          lesson_groups:
+            ramp_up:
+              display_name: 热身
+            csf_digcit:
+              display_name: 数字公民
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            csf_sprites:
+              display_name: 精灵图
         express-2020:
           title: 速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -12981,6 +14179,23 @@ zh-CN:
               name: 精灵图实验室中的外星人舞蹈派对
             Virtual Pet with Sprite Lab:
               name: 虚拟宠物
+          lesson_groups:
+            csf_warmup:
+              display_name: 热身
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_conditionals:
+              display_name: 条件语句
+            csf_functions:
+              display_name: 函数
+            csf_variables:
+              display_name: 变量
+            csf_for_loops:
+              display_name: 计数循环
+            csf_sprites:
+              display_name: 精灵图
         pre-express-2020:
           title: 学前儿童的速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -13009,6 +14224,13 @@ zh-CN:
               name: 艺术家里的循环
             Tell a Story in Play Lab:
               name: 在游戏实验室中讲故事
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 循环
+            csf_events:
+              display_name: 事件
         csp1-2020:
           stages:
             new stage:
@@ -13041,6 +14263,9 @@ zh-CN:
               name: 项目 - 数字信息困境 第 2 部分
             'Lesson 14: Assessment Day':
               name: '单元 14：评估日'
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '单元 1︰ 数字信息'
         csp2-2020:
           stages:
             new stage:
@@ -13063,6 +14288,9 @@ zh-CN:
               name: 项目 - 互联网困境 第 2 部分
             'Lesson 9: Assessment Day':
               name: '第 9 单元：评估日'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '单元 2︰ 互联网'
         csp3-2020:
           stages:
             new stage:
@@ -13087,6 +14315,9 @@ zh-CN:
               name: 项目 - 设计一个应用 第 5 部分
             'Lesson 11: Assessment Day':
               name: '第 11 单元：评估日'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: '第3单元：应用设计简介'
         csp6-2020:
           stages:
             new stage:
@@ -13103,6 +14334,9 @@ zh-CN:
               name: 并行和分布式算法
             'Lesson 6: Assessment Day':
               name: '第 6 单元：评估日'
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '单元 6: 算法'
         csp8-2020:
           stages:
             new stage:
@@ -13135,6 +14369,9 @@ zh-CN:
               name: 项目 - 讲述数据的故事 - 第 2 部分
             'Lesson 9: Assessment Day':
               name: '第 9 单元：评估日'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '单元 9: 数据'
         csp10-2020:
           stages:
             new stage:
@@ -13173,6 +14410,9 @@ zh-CN:
               name: '项目：创新模拟 第 7 部分'
             'Lesson 14: Unit Assessment Day':
               name: '第 14 课：单元评估日'
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '第10单元：网络安全和全球影响'
         csp-march-virtual:
           stages:
             new stage:
@@ -13209,6 +14449,9 @@ zh-CN:
               name: 第3单元 第1章 评估
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '单元3：编程入门'
         csd3-virtual:
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           stages:
@@ -13317,6 +14560,9 @@ zh-CN:
               name: 精灵图属性
             Text and Captioned Scenes:
               name: 文字和有字幕的场景
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章︰图像和动画'
         jess-test-script:
           stages:
             new stage:
@@ -13379,6 +14625,11 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章︰ 网站内容和 HTML'
+            csd2_2:
+              display_name: '第 2 章︰ 样式和 CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -13429,6 +14680,8 @@ zh-CN:
               name: 计算机科学原理课后问卷
             Intro to App Lab:
               name: 应用程序实验室简介
+            Variables:
+              name: 变量
         virtual-holding-place:
           stages:
             Velocity:
@@ -13447,6 +14700,11 @@ zh-CN:
               name: 使用游戏设计过程
             Project - Design a Game:
               name: 项目 - 设计一个游戏
+          lesson_groups:
+            content:
+              display_name: 内容
+            csd3_2:
+              display_name: '第 2 章︰ 创建游戏'
         code-break:
           stages:
             new stage:
@@ -13455,3 +14713,36 @@ zh-CN:
               name: 算法
             Events:
               name: 事件
+        no-lg:
+          stages:
+            new stage:
+              name: 新的阶段
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: 第5单元评估2
+            While Loops:
+              name: 当循环
+            Loops and Simulations:
+              name: 循环和模拟
+            Introduction to Arrays:
+              name: 数组的简介
+            'Building an App: Image Scroller':
+              name: '构建应用程序: 图像滚动'
+            Unit 5 Assessment 3:
+              name: 第5单元评估3
+            Processing Arrays:
+              name: 处理数组
+            Functions with Return Values:
+              name: 函数和返回值
+            'Building an App: Canvas Painter':
+              name: '构建应用程序: 油画画家'
+            Unit 5 Assessment 4:
+              name: 第5单元评估4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: 第5单元评估 5 - AP 伪代码练习题
+          lesson_groups:
+            csp5_1:
+              display_name: '第一章：事件驱动编程'
+            csp5_2:
+              display_name: '第二章：用数据结构编程'

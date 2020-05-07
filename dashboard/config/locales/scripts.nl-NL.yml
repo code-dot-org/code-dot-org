@@ -1047,12 +1047,20 @@ nl:
               name: De Nood aan Adressering
             The Need for DNS:
               name: De Nood aan DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+            csp1_2:
+              display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
         csp2-2017:
           stages:
             Encoding B&W Images:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp3-2017:
           description_short: Programmeren
           stages:
@@ -1066,6 +1074,13 @@ nl:
               name: De Nood Aan Programmeertalen
             Using Simple Commands:
               name: Simpele Commando's Gebruiken
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp4-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp5-2017:
           stages:
             Events Unplugged:
@@ -1082,6 +1097,9 @@ nl:
               name: Variabelen Gebruiken In Apps
             While Loops:
               name: Zolang-lussen
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         CSDU3-Draft:
           description_short: Programmeren
           stages:
@@ -1127,6 +1145,21 @@ nl:
           stages:
             Sending Binary Messages:
               name: Binaire berichten verzenden
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1141,6 +1174,14 @@ nl:
               name: Kunstenaar functies
         artistExemplar:
           description_audience: Leeftijden 8 + (na cursus 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1235,6 +1276,14 @@ nl:
               name: Stuiter
             'Farmer: While Loops':
               name: 'Boer: Zolang-lussen'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         csd3-2017:
           description_short: Programmeren
           stages:
@@ -1250,6 +1299,9 @@ nl:
               name: Variabelen
             Conditionals:
               name: Voorwaardelijke instructies
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         grade2:
           stages:
             Flappy:
@@ -1290,6 +1342,26 @@ nl:
               name: Het ontwerp Recept
             Welcome!:
               name: Welkom!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         basketball:
           stages:
             Bounce:
@@ -1309,6 +1381,14 @@ nl:
               name: nieuw niveau
             Lists:
               name: Lijsten
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         minecraft:
           title: Minecraft Code Uur Code Ontwerper
           description_short: Ga dieren en andere Minecraft wezens programmeren in
@@ -1372,6 +1452,11 @@ nl:
               name: Introductie
             Conditionals:
               name: Voorwaardelijke instructies
+          lesson_groups:
+            content:
+              display_name: Content
+            extra_course_content:
+              display_name: Extra cursusinhoud
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1388,6 +1473,9 @@ nl:
               name: Ijs tijd Speel Lab
             'Algorithms: Tangrams':
               name: 'Algoritmen: Tangrams'
+          lesson_groups:
+            content:
+              display_name: Content
         classic-hoc-impact-study:
           description_short: Probeer de grondbeginselen van de informatica met veel
             leuke figuren!
@@ -1416,10 +1504,26 @@ nl:
           stages:
             Welcome Back!:
               name: Welkom Terug!
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         csdgraveyard:
           stages:
             new stage:
               name: nieuw niveau
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
         sciencepd4:
           stages:
             Welcome!:
@@ -1436,12 +1540,29 @@ nl:
           stages:
             Binary:
               name: Binaire
+          lesson_groups:
+            content:
+              display_name: Content
         sciencepd5:
           stages:
             Welcome!:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+            practice:
+              display_name: Leraarpraktijken
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Content
+            cspSurvey:
+              display_name: Vragenlijst
         csd6-draft:
           stages:
             Lists:
@@ -1450,6 +1571,11 @@ nl:
               name: For-lussen
             Functions with Parameters:
               name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
         workshop-gamelab:
           stages:
             Introduction:
@@ -1484,6 +1610,11 @@ nl:
               name: Functies met Parameters
             Functions with Parameters_:
               name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
         csd3-draft:
           stages:
             Variables:
@@ -1536,6 +1667,10 @@ nl:
               name: Introductie
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         artist-and-bb8:
           stages:
             Ice Age Play Lab:
@@ -1590,12 +1725,87 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
+          lesson_groups:
+            extra_course_content:
+              display_name: Extra cursusinhoud
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmen: Tangrams'
             Building a Foundation:
               name: Een Basis Bouwen
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
         express-2017:
           stages:
             Introduction:
@@ -1618,6 +1828,9 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
+          lesson_groups:
+            content:
+              display_name: Content
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1647,6 +1860,9 @@ nl:
             APIs and Function Parameters:
               name: API's en Functieparameters
           description_short: Programmeren
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1661,6 +1877,9 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            extra_course_content:
+              display_name: Extra cursusinhoud
         new-d:
           stages:
             Introduction:
@@ -1689,6 +1908,9 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
+          lesson_groups:
+            content:
+              display_name: Content
         new-e:
           stages:
             Building a Foundation:
@@ -1701,6 +1923,9 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            extra_course_content:
+              display_name: Extra cursusinhoud
         new-f:
           stages:
             Building a Foundation:
@@ -1745,6 +1970,13 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         aws-demo:
           stages:
             new stage:
@@ -1769,6 +2001,9 @@ nl:
               name: Crowdsourcing
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
+          lesson_groups:
+            extra_course_content:
+              display_name: Extra cursusinhoud
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1791,6 +2026,11 @@ nl:
               name: Lijsten
             For Loops:
               name: For-lussen
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
         csd3-1819draft:
           stages:
             Variables:
@@ -1804,6 +2044,9 @@ nl:
             Functions:
               name: Functies
           description_short: Programmeren
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         textbook:
           stages:
             new stage:
@@ -1821,10 +2064,16 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csd2-2018:
           stages:
             Lists:
               name: Lijsten
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         coursea-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1917,6 +2166,13 @@ nl:
               name: Functies met Parameters
             Functions with Parameters:
               name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            cspSurvey:
+              display_name: Vragenlijst
         coursee-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -1943,6 +2199,9 @@ nl:
               name: Statements met Kaarten
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
+          lesson_groups:
+            extra_course_content:
+              display_name: Extra cursusinhoud
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -1977,6 +2236,23 @@ nl:
               name: De Nood aan Adressering
             The Need for DNS:
               name: De Nood aan DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+            csp1_2:
+              display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp2-2018:
           stages:
             Encoding B&W Images:
@@ -1996,6 +2272,21 @@ nl:
               name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp5-2018:
           stages:
             User Input and Strings:
@@ -2008,6 +2299,115 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2024,6 +2424,12 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
         frozen-2018:
           stages:
             Artist:
@@ -2061,6 +2467,14 @@ nl:
           stages:
             Dance Party:
               name: Dansfeest
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
         dance-extras:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         coursef-2019:
@@ -2079,6 +2493,15 @@ nl:
               name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digitaal Burgerschap
         dance-low:
           stages:
             Dance Party:
@@ -2101,6 +2524,17 @@ nl:
               name: Bouw een Star Wars Spel!
             Dance Party:
               name: Dansfeest
+          lesson_groups:
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_binary:
+              display_name: Binaire
+            csf_digcit:
+              display_name: Digitaal Burgerschap
         coursee-2019:
           stages:
             Building a Foundation:
@@ -2125,6 +2559,13 @@ nl:
               name: Crowdsourcing
             Songwriting:
               name: Songwriting
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_nested_loops:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
         express-2019:
           stages:
             Relay Programming:
@@ -2147,12 +2588,32 @@ nl:
               name: Crowdsourcing
             Dance Party:
               name: Dansfeest
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         andrea-test:
           stages:
             new stage:
               name: nieuw niveau
             'null':
               name: niets
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
         dance-extras-gallery:
           title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
@@ -2164,6 +2625,19 @@ nl:
               name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_binary:
+              display_name: Binaire
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -2172,6 +2646,13 @@ nl:
               name: Vrolijke Routes
             Going Places Safely:
               name: Veilig Reizen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2180,6 +2661,13 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Loops: Getting Loopy':
               name: Rondjes lopen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2188,6 +2676,11 @@ nl:
               name: Jouw Digitale Voetafdruk
             Spelling Bee:
               name: Spellingswedstrijd
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2200,6 +2693,9 @@ nl:
           stages:
             Lists:
               name: Lijsten
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csd3-2019:
           description_short: Programmeren
           stages:
@@ -2213,14 +2709,41 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csd6-2019:
           stages:
             Functions with Parameters:
               name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            cspSurvey:
+              display_name: Vragenlijst
         csp4-pilot:
           stages:
             Surveys:
               name: Enquêtes
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            required:
+              display_name: Overzicht
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -2235,12 +2758,20 @@ nl:
               name: De Nood aan Adressering
             The Need for DNS:
               name: De Nood aan DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+            csp1_2:
+              display_name: 'Hoofdstuk 2: Uitvinden van het Internet'
         csp2-2019:
           stages:
             Encoding B&W Images:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp3-2019:
           description_short: Programmeren
           stages:
@@ -2254,6 +2785,13 @@ nl:
               name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp5-2019:
           stages:
             User Input and Strings:
@@ -2266,6 +2804,21 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp1-pilot:
           stages:
             new stage:
@@ -2276,6 +2829,11 @@ nl:
               name: Binaire berichten verzenden
             Binary Numbers:
               name: Binaire getallen
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+            required:
+              display_name: Overzicht
         csd-videos:
           stages:
             new stage:
@@ -2290,26 +2848,122 @@ nl:
               name: Een Basis Bouwen
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
         csp3-pilot-staging:
           stages:
             The Need for Programming Languages:
               name: De Nood Aan Programmeertalen
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
         csp7-pilot-staging:
           stages:
             new stage:
               name: nieuw niveau
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csp5-pilot:
           stages:
             new stage:
               name: nieuw niveau
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
+            required:
+              display_name: Overzicht
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csd2-pilot:
           stages:
             Lists:
               name: Lijsten
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csd3-pilot:
           description_short: Programmeren
           stages:
@@ -2323,6 +2977,9 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         maddie-test:
           stages:
             new stage:
@@ -2333,16 +2990,91 @@ nl:
               name: De Nood Aan Programmeertalen
             Debugging:
               name: Foutopsporing
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overzicht
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: nieuw niveau
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Overzicht
+            content:
+              display_name: Content
         csp2-pilot:
           stages:
             new stage:
               name: nieuw niveau
             The Need for Addressing:
               name: De Nood aan Adressering
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overzicht
         peru-2019:
           stages:
             new stage:
@@ -2351,6 +3083,12 @@ nl:
               name: Introductie
             Nested Loops:
               name: Genestelde lussen
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overzicht
         dance-2019:
           stages:
             Dance Party:
@@ -2374,6 +3112,9 @@ nl:
               name: Variabelen
             For Loops:
               name: For-lussen
+          lesson_groups:
+            k5_next_steps:
+              display_name: Volgende stappen
         dance-extras-2019:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         csp10-pilot:
@@ -2384,6 +3125,13 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -2394,26 +3142,94 @@ nl:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Statements met Kaarten
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_nested_loops:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Voorwaardelijke instructies
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_digcit:
+              display_name: Digitaal Burgerschap
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Voorwaardelijke instructies
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Overzicht
         csp8-pilot:
           stages:
             new stage:
               name: nieuw niveau
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
         csp9-pilot:
           stages:
             new stage:
               name: nieuw niveau
+        csd2-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd4-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         csd6-2020:
           stages:
             Functions with Parameters:
               name: Functies met Parameters
+          lesson_groups:
+            csd6_1:
+              display_name: 'Hoofdstuk 1: Hardware uitgang'
+            csd6_2:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+            cspSurvey:
+              display_name: Vragenlijst
         csd3-2020:
           description_short: Programmeren
           stages:
@@ -2429,12 +3245,22 @@ nl:
               name: Functies
             Text:
               name: Tekst
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
         coursea-2020:
           stages:
             Going Places Safely:
               name: Veilig Reizen
             'Programming: Happy Maps':
               name: Vrolijke Routes
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -2443,12 +3269,28 @@ nl:
               name: verplaats het, verplaats het
             'Loops: Getting Loopy':
               name: Rondjes lopen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binaire armbanden
             'Events: The Big Event':
               name: De grote gebeurtenis
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_binary:
+              display_name: Binaire
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2467,6 +3309,17 @@ nl:
               name: Digitaal Burgerschap
             Dance Party:
               name: Dansfeest
+          lesson_groups:
+            csf_events:
+              display_name: Gebeurtenissen
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_binary:
+              display_name: Binaire
+            csf_digcit:
+              display_name: Digitaal Burgerschap
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -2477,6 +3330,13 @@ nl:
                 grotere geheel van je programma. Deze les helpt leerlingen intuïtief
                 te begrijpen waarom brokken code samenvoegen in functies een nuttige
                 praktijk is.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_nested_loops:
+              display_name: Genestelde lussen
+            csf_functions:
+              display_name: Functies
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2487,14 +3347,37 @@ nl:
               name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaal Burgerschap
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
         express-2020:
           stages:
             Dance Party:
               name: Dansfeest
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_conditionals:
+              display_name: Voorwaardelijke instructies
+            csf_functions:
+              display_name: Functies
+            csf_variables:
+              display_name: Variabelen
+            csf_for_loops:
+              display_name: For-lussen
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Spellingswedstrijd
+          lesson_groups:
+            csf_loops:
+              display_name: Lussen
+            csf_events:
+              display_name: Gebeurtenissen
         csp1-2020:
           stages:
             new stage:
@@ -2579,6 +3462,8 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+            Variables:
+              name: Variabelen
         virtual-holding-place:
           stages:
             Velocity:
@@ -2587,6 +3472,9 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+          lesson_groups:
+            content:
+              display_name: Content
         code-break:
           stages:
             new stage:
@@ -2595,3 +3483,17 @@ nl:
               name: Algoritmen
             Events:
               name: Gebeurtenissen
+        no-lg:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken

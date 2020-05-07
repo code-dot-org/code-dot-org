@@ -905,6 +905,21 @@ hu:
           stages:
             The Internet:
               name: Az internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp1_1:
+              display_name: '1. fejezet: Az információ ábrázolása és továbbítása'
+            csp1_2:
+              display_name: '2. fejezet: Az internet feltalálása'
+        csp2-2017:
+          lesson_groups:
+            csp2_1:
+              display_name: '1. fejezet: Összetett információk kódolása és tömörítése'
+            csp2_2:
+              display_name: '2. fejezet: Adatok manipulálása és megjelenítése'
+            cspSurvey:
+              display_name: Kérdőív
         csp3-2017:
           description_short: Programozás
           stages:
@@ -920,12 +935,32 @@ hu:
               name: 3. lecke 1. fejezet végi értékelés
             'Anonymous student survey: Taking the AP exam':
               name: 'Névtelen tanulói kérdőív: Az AP vizsga letétele'
+          lesson_groups:
+            csp3_1:
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
+        csp4-2017:
+          lesson_groups:
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
         csp5-2017:
           stages:
             Events Unplugged:
               name: Offline események
             While Loops:
               name: Elől tesztelős ciklusok
+          lesson_groups:
+            csp5_1:
+              display_name: '1. fejezet: Eseményvezérelt programozás'
+            csp5_2:
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
+            cspSurvey:
+              display_name: Kérdőív
         CSDU3-Draft:
           description_short: Programozás
           stages:
@@ -951,12 +986,36 @@ hu:
           stages:
             Using Computer Models in Science:
               name: Számítógépes modellek használata a tudományban
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
         MikeTest:
           stages:
             Artist Functions:
               name: 'Művész: függvények'
         artistExemplar:
           description_audience: 8-tól 18 éves korig
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1073,6 +1132,13 @@ hu:
               name: Lecke 1,4
             Lesson 1,6:
               name: Lecke 1,6
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
         csd3-2017:
           description_short: Programozás
           stages:
@@ -1084,6 +1150,9 @@ hu:
               name: Sprite-ok
             Conditionals:
               name: Feltételek
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         grade2:
           stages:
             Flappy:
@@ -1176,6 +1245,29 @@ hu:
               name: 'Projekt: Alkalmazások és problémamegoldás'
             Human vs Computer Processing:
               name: Emberi vs számítógépes feldolgozás
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
         basketball:
           title: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           description_short: Válaszd ki a csapatodat, majd készíts egy kosárlabda
@@ -1199,6 +1291,14 @@ hu:
           stages:
             Lists:
               name: Listák
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
         minecraft:
           title: Minecraft Kódolás órája tervező
           description_short: Programozz állatokat és egyéb Minecraft lényeket a saját
@@ -1260,6 +1360,9 @@ hu:
               name: Bevezető
             Conditionals:
               name: Feltételek
+          lesson_groups:
+            content:
+              display_name: Tartalom
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1274,6 +1377,9 @@ hu:
               name: Bevezető
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
+          lesson_groups:
+            content:
+              display_name: Tartalom
         classic-hoc-impact-study:
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok
             szórakoztató karakterrel!
@@ -1302,6 +1408,22 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
         sciencepd4:
           stages:
             Welcome!:
@@ -1318,12 +1440,29 @@ hu:
           stages:
             Binary:
               name: Bináris
+          lesson_groups:
+            content:
+              display_name: Tartalom
         sciencepd5:
           stages:
             Welcome!:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+            practice:
+              display_name: Tanítási gyakorlatok
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Tartalom
+            cspSurvey:
+              display_name: Kérdőív
         csd6-draft:
           stages:
             Lists:
@@ -1426,6 +1565,10 @@ hu:
               name: Bevezető
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         artist-and-bb8:
           stages:
             Programming with BB-8:
@@ -1474,6 +1617,78 @@ hu:
           stages:
             Building a Foundation:
               name: Alapozás
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         express-2017:
           stages:
             Introduction:
@@ -1494,6 +1709,9 @@ hu:
               name: Alapozás
             Nested Loops:
               name: Egymásba ágyazott ciklusok
+          lesson_groups:
+            content:
+              display_name: Tartalom
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1517,6 +1735,13 @@ hu:
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
           description_short: Programozás
+          lesson_groups:
+            csp3_1:
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1545,6 +1770,10 @@ hu:
               name: 'Művész: a kettes számrendszer'
             Building a Foundation:
               name: Alapozás
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
         new-express:
           stages:
             Introduction:
@@ -1553,6 +1782,9 @@ hu:
               name: Alapozás
             Nested Loops:
               name: Egymásba ágyazott ciklusok
+          lesson_groups:
+            content:
+              display_name: Tartalom
         new-e:
           stages:
             Building a Foundation:
@@ -1587,6 +1819,11 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
+          lesson_groups:
+            csp3_1:
+              display_name: '1. fejezet: Programozási nyelvek és algoritmusok'
+            cspAssessment:
+              display_name: Fejezet végi értékelés
         pwc:
           stages:
             What is a Computer?:
@@ -1597,6 +1834,14 @@ hu:
               name: Minecraft Kódolás Órája
           description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára!
             Utazz végig a Minecraft világán kódok segítségével.
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1642,6 +1887,9 @@ hu:
             Functions:
               name: funkciók
           description_short: Programozás
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         glj-behavior-test:
           stages:
             Cats and Dogs:
@@ -1657,10 +1905,16 @@ hu:
               name: Feltételek
             Functions:
               name: funkciók
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd2-2018:
           stages:
             Lists:
               name: Listák
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         coursea-2018:
           stages:
             'Programming: Happy Maps':
@@ -1755,6 +2009,9 @@ hu:
           stages:
             Functions with Parameters:
               name: Paraméteres függvények
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         coursee-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -1795,6 +2052,13 @@ hu:
           stages:
             The Internet:
               name: Az internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp1_1:
+              display_name: '1. fejezet: Az információ ábrázolása és továbbítása'
+            csp1_2:
+              display_name: '2. fejezet: Az internet feltalálása'
         csd1-2018:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
@@ -1829,6 +2093,27 @@ hu:
                 referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
+        csd4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2. fejezet: Digitális információ'
+            cspAssessment:
+              display_name: Fejezet végi értékelés
         csp3-2018:
           description_short: Programozás
           stages:
@@ -1842,10 +2127,144 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
+          lesson_groups:
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp4-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
         csp5-2018:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+          lesson_groups:
+            csp5_1:
+              display_name: '1. fejezet: Eseményvezérelt programozás'
+            csp5_2:
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
+            cspSurvey:
+              display_name: Kérdőív
+        csppostap-2018:
+          lesson_groups:
+            csp_postap_1:
+              display_name: '2. fejezet: Adatok manipulálása és megjelenítése'
+            cspSurvey:
+              display_name: Kérdőív
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1858,6 +2277,12 @@ hu:
               name: A digitális lábnyomod
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         frozen-2018:
           stages:
             Artist:
@@ -1893,6 +2318,14 @@ hu:
           stages:
             Dance Party:
               name: Táncos buli
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
         dance-extras:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursef-2019:
@@ -1913,6 +2346,17 @@ hu:
               name: Az internet
             Crowdsourcing:
               name: Csoportos megoldás
+          lesson_groups:
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
         dance-low:
           stages:
             Dance Party:
@@ -1933,6 +2377,17 @@ hu:
               name: 'Művész: a kettes számrendszer'
             Dance Party:
               name: Táncos buli
+          lesson_groups:
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_binary:
+              display_name: Bináris
+            csf_digcit:
+              display_name: Digitális állampolgárság
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1949,6 +2404,15 @@ hu:
               name: Csoportos megoldás
             Songwriting:
               name: Dalszerzés paraméterekkel
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_nested_loops:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
         express-2019:
           stages:
             Relay Programming:
@@ -1973,6 +2437,19 @@ hu:
               name: Csoportos megoldás
             Dance Party:
               name: Táncos buli
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: funkciók
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            csf_sprites:
+              display_name: Sprite-ok
         csd1-2019:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
@@ -2007,10 +2484,22 @@ hu:
                 referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
         andrea-test:
           stages:
             'null':
               name: semmi
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         dance-extras-gallery:
           title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
@@ -2029,6 +2518,19 @@ hu:
               name: A nagy esemény
             Binary Bracelets:
               name: Bináris karkötők
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_binary:
+              display_name: Bináris
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         coursea-2019:
           stages:
             'Programming: Happy Maps':
@@ -2041,6 +2543,13 @@ hu:
               description_teacher: Ebben a leckében a diákok újszerű programozási
                 képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
                 BB-8-tet irányítva.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2051,6 +2560,13 @@ hu:
               name: Programozás Rey és BB-8 segítségével
             'Loops: Getting Loopy':
               name: Ciklikusság
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2061,6 +2577,11 @@ hu:
               name: Programozás Rey és BB-8 segítségével
             Spelling Bee:
               name: Betüző méh
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2069,6 +2590,9 @@ hu:
           stages:
             Lists:
               name: Listák
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd3-2019:
           description_short: Programozás
           stages:
@@ -2080,14 +2604,53 @@ hu:
               name: Feltételek
             Functions:
               name: funkciók
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd6-2019:
           stages:
             Functions with Parameters:
               name: Paraméteres függvények
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+            required:
+              display_name: Összefoglaló
         csp1-2019:
           stages:
             The Internet:
               name: Az internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp1_1:
+              display_name: '1. fejezet: Az információ ábrázolása és továbbítása'
+            csp1_2:
+              display_name: '2. fejezet: Az internet feltalálása'
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2. fejezet: Digitális információ'
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
         csp3-2019:
           description_short: Programozás
           stages:
@@ -2101,14 +2664,51 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
+          lesson_groups:
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
+        csp4-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: Fejezet végi értékelés
+            cspSurvey:
+              display_name: Kérdőív
         csp5-2019:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+          lesson_groups:
+            csp5_1:
+              display_name: '1. fejezet: Eseményvezérelt programozás'
+            csp5_2:
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'
+            cspSurvey:
+              display_name: Kérdőív
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csppostap-2019:
+          lesson_groups:
+            csp_postap_1:
+              display_name: '2. fejezet: Adatok manipulálása és megjelenítése'
+            cspSurvey:
+              display_name: Kérdőív
         csp1-pilot:
           stages:
             Representing Information:
               name: Az információ ábrázolása
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            required:
+              display_name: Összefoglaló
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2117,16 +2717,109 @@ hu:
               name: Feltételek kártyákkal
             Building a Foundation:
               name: Alapozás
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite-ok
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Grafikus programozás
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+            required:
+              display_name: Összefoglaló
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         csd-test-saving-state:
           stages:
             What is a Computer?:
               name: Mi az a számítógép?
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         csd1-pilot:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
@@ -2161,12 +2854,22 @@ hu:
                 referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
         csd2-pilot:
           stages:
             Lists:
               name: Listák
             CSS Classes:
               name: CSS osztályok
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd3-pilot:
           description_short: Programozás
           stages:
@@ -2182,20 +2885,109 @@ hu:
               name: Véletlen számok
             Sprite Properties:
               name: Sprite tulajdonságok
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Tartalom
+            required:
+              display_name: Összefoglaló
         csl-vn:
           stages:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+            content:
+              display_name: Tartalom
         csd4-pilot:
           stages:
             What is a Computer?:
               name: Mi az a számítógép?
+          lesson_groups:
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Tartalom
+            required:
+              display_name: Összefoglaló
         peru-2019:
           stages:
             Introduction:
               name: Bevezető
             Nested Loops:
               name: Egymásba ágyazott ciklusok
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Tartalom
+            required:
+              display_name: Összefoglaló
         dance-2019:
           stages:
             Dance Party:
@@ -2221,8 +3013,19 @@ hu:
               name: változók
             For Loops:
               name: Számláló ciklusok
+          lesson_groups:
+            k5_getting_started:
+              display_name: Első lépések
         dance-extras-2019:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -2233,18 +3036,70 @@ hu:
               name: Csoportos megoldás
             Conditionals with Cards:
               name: Feltételek kártyákkal
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_conditionals:
+              display_name: Feltételek
+            csf_nested_loops:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Feltételek
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_events:
+              display_name: Események
+            csf_sprites:
+              display_name: Sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Feltételek
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_events:
+              display_name: Események
+            csf_sprites:
+              display_name: Sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Összefoglaló
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
         csd2-2020:
           stages:
             CSS Classes:
               name: CSS osztályok
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd1-2020:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
@@ -2256,7 +3111,7 @@ hu:
                 A tanóra végén a csoportok reflektálnak a tevékenység során szerzett
                 tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási
                 helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
-              description_teacher: Ebben a leckében a tanulók csoportokban alufóliából
+              description_teacher: 'Ebben a leckében a tanulók csoportokban alufóliából
                 kis hajókat készítenek azokat úgy megtervezve, hogy minél több pénzérmét
                 elbírjanak. A csoportoknak két lehetősége lesz dolgozni a hajókon,
                 természetesen a céljuk az lesz, hogy a második körben több érmét bírjon
@@ -2265,7 +3120,7 @@ hu:
                 is megismerkednek a következő órán. A tanóra végén a csoportok reflektálnak
                 a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek
                 azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán
-                találkozni fognak.
+                találkozni fognak. '
             The Problem Solving Process:
               name: A probléma-megoldási folyamat
               description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot,
@@ -2279,10 +3134,28 @@ hu:
                 referenciaként használ.'
             What is a Computer?:
               name: Mi az a számítógép?
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csd1_1:
+              display_name: '1. fejezet: A probléma-megoldási folyamat'
+            csd1_2:
+              display_name: '2. fejezet: Számítógépek és problémamegoldás'
+        csd4-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd6-2020:
           stages:
             Functions with Parameters:
               name: Paraméteres függvények
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         csd3-2020:
           description_short: Programozás
           stages:
@@ -2298,6 +3171,9 @@ hu:
               name: funkciók
             Text:
               name: szöveg
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
         coursea-2020:
           stages:
             Going Places Safely:
@@ -2310,6 +3186,13 @@ hu:
               description_teacher: Ebben a leckében a diákok újszerű programozási
                 képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
                 BB-8-tet irányítva.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -2318,6 +3201,13 @@ hu:
               name: Mozgás, mozgás
             'Loops: Getting Loopy':
               name: Ciklikusság
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -2331,6 +3221,15 @@ hu:
                 amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_binary:
+              display_name: Bináris
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2347,10 +3246,30 @@ hu:
               name: Digitális állampolgárság
             Dance Party:
               name: Táncos buli
+          lesson_groups:
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_binary:
+              display_name: Bináris
+            csf_digcit:
+              display_name: Digitális állampolgárság
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_nested_loops:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2361,22 +3280,52 @@ hu:
               name: Az internet
             Crowdsourcing:
               name: Csoportos megoldás
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            csf_sprites:
+              display_name: Sprite-ok
         express-2020:
           stages:
             Dance Party:
               name: Táncos buli
             Loops with Rey and BB-8:
               name: Ciklusok Reyjel és BB-8-tel
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: funkciók
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            csf_sprites:
+              display_name: Sprite-ok
         pre-express-2020:
           stages:
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
             Spelling Bee:
               name: Betüző méh
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
         csp1-2020:
           stages:
             Representing Information:
               name: Az információ ábrázolása
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '2. fejezet: Digitális információ'
         csp3-virtual:
           description_short: Programozás
           stages:
@@ -2413,13 +3362,27 @@ hu:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+            Variables:
+              name: változók
         virtual-holding-place:
           stages:
             Functions:
               name: funkciók
+          lesson_groups:
+            content:
+              display_name: Tartalom
         code-break:
           stages:
             Algorithms:
               name: algoritmusok
             Events:
               name: Események
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok
+          lesson_groups:
+            csp5_1:
+              display_name: '1. fejezet: Eseményvezérelt programozás'
+            csp5_2:
+              display_name: '2. fejezet: Programozás adatszerkezetekkel'

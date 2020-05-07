@@ -4,13 +4,17 @@ ro:
   data:
     script:
       category:
+        csd_category_name: Descoperiri Informatice ('17-'18)
         csd_2018_category_name: Descoperiri Informatice ('18-'19)
-        csf_category_name: Fundamentele CS
+        csd_2019_category_name: Descoperiri Informatice ('19-'20)
+        csf_category_name: Fundamentele Informaticii (2017)
         csf_2018_category_name: Fundamentele Informaticii (2018)
+        csf_2019_category_name: Fundamentele Informaticii (2019)
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
         csp_category_name: "Principii de CS 15-16"
         csp_2018_category_name: Pricipii Informatice ('18-'19)
+        csp_2019_category_name: Pricipii Informatice ('19-'20)
         cspexams_category_name: Principiile practicilor test CS
         csp17_category_name: Pricipiile Informaticii ('17-'18)
         full_course_category_name: Toate cursurile
@@ -808,8 +812,12 @@ ro:
           stages:
             Cracking the Code:
               name: Spargerea codului
+            DNS in the Real World:
+              name: DNS în lumea reală
             Encryption Algorithms:
               name: Taste și parole
+            HTTP and Abstraction:
+              name: HTTP și abstractizare în internet
             Invent an Addressing Protocol:
               name: Inventați un protocol de adresare
             Packets and Making a Reliable Internet:
@@ -1330,6 +1338,11 @@ ro:
               name: Nevoia de adresare
             The Need for DNS:
               name: Nevoia de DNS
+            Post-Course Survey:
+              name: Chestionar după curs
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp2-2017:
           description_audience: '[șir gol]'
           stages:
@@ -1341,6 +1354,11 @@ ro:
               name: Codificarea imaginilor color
             Lossy Compression and File Formats:
               name: Compresie lossy şi formatare fișiere
+            Post-Course Survey:
+              name: Chestionar după curs
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp3-2017:
           description_short: Invata bazele programarii JavaScript printr-un design usor folosind desenul.
           description_audience: '[șir gol]'
@@ -1355,6 +1373,13 @@ ro:
               name: Folosirea comenzilor simle
             Creating Functions with Parameters:
               name: Crearea funcțiilor cu parametri
+            Post-Course Survey:
+              name: Chestionar după curs
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp4-2017:
           description_audience: '[șir gol]'
           stages:
@@ -1362,8 +1387,15 @@ ro:
               name: Spargerea codului
             Simple Encryption:
               name: Criptare simplă
+            Post-Course Survey:
+              name: Chestionar după curs
             Student Post-Course Survey:
               name: Studiu post - curs pentru elevi
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp5-2017:
           description_audience: '[șir gol]'
           stages:
@@ -1395,6 +1427,11 @@ ro:
               name: Utilizarea variabilelor în aplicații
             While Loops:
               name: Repetiții While
+            Post-Course Survey:
+              name: Chestionar după curs
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp6:
           description_audience: '[șir gol]'
         CSDU3-Draft:
@@ -1485,10 +1522,24 @@ ro:
           stages:
             Sending Binary Messages:
               name: Transmiterea mesajelor binare
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         test-teaching-ap-cs-unit-1:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1530,6 +1581,13 @@ ro:
               name: 'Lecția 2.2: Compresia de text'
             Lesson 2,3:
               name: 'Lecția 2.3: Pixelate în alb și negru'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         kinderTest:
           title: '[șir gol]'
           description_audience: '[șir gol]'
@@ -1663,6 +1721,13 @@ ro:
               name: Lecția 2,2
             Lesson 2,3:
               name: Lecția 2,3
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         csd3-2017:
           description_short: Programare
           description_audience: '[șir gol]'
@@ -1675,6 +1740,15 @@ ro:
               name: Variabile
             Conditionals:
               name: Condiţionale
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
+            csd_survey:
+              display_name: Chestionar după curs
         grade2:
           stages:
             Flappy:
@@ -1733,6 +1807,13 @@ ro:
           stages:
             Processing:
               description_teacher: Elevii completează două activități fără calculator de sortare de carduri pentru a explora semnificația procesării și legătura acesteia cu rezolvarea problemelor. Prima are puține constrângeri și este folosită pentru a introduce o definiție la nivel înalt a procesării. Următorul introduce mai multe constrângeri care îi obligă pe elevi să dezvolte un algoritm care va procesa întotdeauna cu succes cardurile. Elevii dezvoltă, testează și împart, în mod iterativ, algoritmii lor cu colegii de clasă. O discuție finală va pune elevii să reflecteze la tipurile diferite de rezolvare a problemelor pe care le-au folosit în cadrul acestor activități, precum și la valoarea producerii unui algoritm care să rezolve o problemă.
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csp-online-test:
           description_audience: '[șir gol]'
           stages:
@@ -1764,6 +1845,13 @@ ro:
               name: Prezentare generală - Lecția 3
             Unit 5 Overview:
               name: Prezentare generală - Lecția 5
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         csp1-support:
           description_audience: '[șir gol]'
           stages:
@@ -1777,6 +1865,13 @@ ro:
               name: 'Lecţiile 9: Adresare în internet'
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
               name: 'Lecții 10 - 11: Routere, redundanță și pachete'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         basketball:
           title: Realizeaza un joc de baschet
           description_audience: '[șir gol]'
@@ -1812,13 +1907,34 @@ ro:
               name: Împerecheaţi dispozitivele
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolul 1: Conţinutul Web şi HTML'
+            csd2_2:
+              display_name: 'Capitolul 2: Styling şi CSS'
+            csd_survey:
+              display_name: Chestionar după curs
         csp2-support:
           description_audience: '[șir gol]'
           stages:
             Unit 2 Overview:
               name: Prezentare generală - Lecția 2
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         csd4-2017:
           description_audience: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+            csd_survey:
+              display_name: Chestionar după curs
         minecraft:
           title: Minecraft Designer Hour of Code
           description_audience: '[șir gol]'
@@ -1885,6 +2001,11 @@ ro:
               name: Introducere
             Conditionals:
               name: Condiţionale
+          lesson_groups:
+            content:
+              display_name: Conţinut
+            extra_course_content:
+              display_name: Conținut curs suplimentar
         coursef-draft:
           description_audience: '[șir gol]'
           stages:
@@ -1900,6 +2021,9 @@ ro:
               name: Introducere
             Ice Age Play Lab:
               name: Laboratorul Joaca Ice Age
+          lesson_groups:
+            content:
+              display_name: Conţinut
         classic-hoc-impact-study:
           description_audience: '[șir gol]'
           description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
@@ -1953,6 +2077,13 @@ ro:
           stages:
             Unit 3 Overview:
               name: Prezentare generală - Lecția 3
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         csdgraveyard:
           title: '[șir gol]'
           description_audience: '[șir gol]'
@@ -1963,6 +2094,13 @@ ro:
           stages:
             Unit 3 Overview:
               name: Prezentare generală - Lecția 3
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         sciencepd4:
           description_audience: '[șir gol]'
           stages:
@@ -1991,6 +2129,9 @@ ro:
           stages:
             Binary:
               name: Binar
+          lesson_groups:
+            content:
+              display_name: Conţinut
         sciencepd5:
           description_audience: '[șir gol]'
           stages:
@@ -2003,11 +2144,26 @@ ro:
           stages:
             Unit 5 Overview:
               name: Prezentare generală - Lecția 5
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+            practice:
+              display_name: Practicile de predare
         csp6-support:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
         csppostap-2017:
           description_audience: '[șir gol]'
+          stages:
+            Post-Course Survey:
+              name: Chestionar după curs
+          lesson_groups:
+            content:
+              display_name: Conţinut
+            cspSurvey:
+              display_name: Sondaj
         unit6-csd-draft:
           title: '[șir gol]'
           description_audience: '[șir gol]'
@@ -2027,6 +2183,9 @@ ro:
               name: Bucle Pentru
             Functions with Parameters:
               name: Funcții cu Parametrii
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
         workshop-gamelab:
           stages:
             Introduction:
@@ -2035,6 +2194,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
         applab-1hour:
           description_short: '[șir gol]'
         applab-2hour:
@@ -2068,6 +2232,11 @@ ro:
               name: Funcții cu Parametrii
             Functions with Parameters_:
               name: Funcții cu Parametrii
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
+            csd_survey:
+              display_name: Chestionar după curs
         csd3-draft:
           description_audience: '[șir gol]'
           description: '[șir gol]'
@@ -2085,6 +2254,13 @@ ro:
           stages:
             Representing Images:
               description_teacher: În această lecţie elevii învață cum calculatoarele reprezintă imagini. Pentru a începe lecţia, ei consideră provocarea transformării complexității viziunii într-un model binar. Printr-o serie de imagini care arată cum se face această transformare, eleviilor li se prezintă conceptul de împărțire a imaginilor în pătrate sau "pixeli" care pot fi apoi pornite sau oprite în mod individual pentru a realiza întreaga imagine. Elevii parcurg apoi un set scurt de provocări folosind widget-ul de pixelare pentru a desena imagini alb-negru. Puzzle-uri sunt concepute pentru a apela unele din provocările reprezentării imaginilor în acest fel. În încheiere, elevii fac conexiuni între sistemul de reprezentare a imaginilor și sistemul de reprezentare a textului pe care l-au învățat în lecția anterioară.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            csd_survey:
+              display_name: Chestionar după curs
         csd3-old:
           description_audience: '[șir gol]'
           stages:
@@ -2139,6 +2315,10 @@ ro:
         fmscsd3preview:
           description_short: '[șir gol]'
           description: '[șir gol]'
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         public-key-cryptography:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2226,6 +2406,13 @@ ro:
           title: Curs E
           assignment_family_title: Curs E
           description_short: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
+          lesson_groups:
+            csf_e_1:
+              display_name: Avansare la Cursul E (Opțional)
+            csf_e_2:
+              display_name: Conținut curs E
+            extra_course_content:
+              display_name: Conținut curs suplimentar
         coursef-2017:
           stages:
             Building a Foundation:
@@ -2233,6 +2420,11 @@ ro:
           title: Curs F
           assignment_family_title: Curs F
           description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+          lesson_groups:
+            csf_f_1:
+              display_name: Avansare la Cursul F (Opțional)
+            csf_f_2:
+              display_name: Conținut curs F
         csdnovice:
           stages:
             Wrap Up:
@@ -2251,6 +2443,77 @@ ro:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         express-2017:
           stages:
             Introduction:
@@ -2271,6 +2534,9 @@ ro:
               name: Construirea unei Fundaţii
             Nested Loops:
               name: Repetiții imbricate
+          lesson_groups:
+            content:
+              display_name: Conţinut
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2303,10 +2569,20 @@ ro:
               name: Utilizarea buclelor și numerelor aleatoare
           description_audience: '[șir gol]'
           description_short: Invata bazele programarii JavaScript printr-un design usor folosind desenul.
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csd4-draft:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
         craft17:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2328,6 +2604,13 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csf_e_1:
+              display_name: Avansare la Cursul E (Opțional)
+            csf_e_2:
+              display_name: Conținut curs E
+            extra_course_content:
+              display_name: Conținut curs suplimentar
         new-d:
           stages:
             Introduction:
@@ -2362,6 +2645,9 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            content:
+              display_name: Conţinut
         new-stages-sept-2017:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2379,6 +2665,13 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csf_e_1:
+              display_name: Avansare la Cursul E (Opțional)
+            csf_e_2:
+              display_name: Conținut curs E
+            extra_course_content:
+              display_name: Conținut curs suplimentar
         new-f:
           stages:
             Building a Foundation:
@@ -2394,8 +2687,18 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csf_f_1:
+              display_name: Avansare la Cursul F (Opțional)
+            csf_f_2:
+              display_name: Conținut curs F
         csd5-old:
           description_audience: '[șir gol]'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
         subgoals-assessment-staging:
           title: '[șir gol]'
           description_audience: '[șir gol]'
@@ -2418,6 +2721,11 @@ ro:
         csd4-old:
           description_audience: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -2429,6 +2737,9 @@ ro:
             Looping and Random Numbers:
               name: Utilizarea buclelor și numerelor aleatoare
           description_audience: '[șir gol]'
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
         pwc:
           stages:
             Personal Innovations:
@@ -2454,9 +2765,21 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
         csp-explore-2017:
+          stages:
+            Post-Course Survey:
+              name: Chestionar după curs
           description_audience: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Chestionar după curs
           description_audience: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp3-reovery:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2499,6 +2822,13 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csf_e_1:
+              display_name: Avansare la Cursul E (Opțional)
+            csf_e_2:
+              display_name: Conținut curs E
+            extra_course_content:
+              display_name: Conținut curs suplimentar
         course-f-2018:
           stages:
             Building a Foundation:
@@ -2516,6 +2846,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csf_f_1:
+              display_name: Avansare la Cursul F (Opțional)
+            csf_f_2:
+              display_name: Conținut curs F
         csd6-old:
           stages:
             Lists:
@@ -2525,6 +2860,9 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
         unembeddedlevels:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2545,6 +2883,13 @@ ro:
               name: Funcţii
           description_audience: '[șir gol]'
           description_short: "Programare"
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
         textbook:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -2571,11 +2916,25 @@ ro:
             CS Discoveries End of Semester Survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
         csd2-2018:
           description_audience: '[șir gol]'
           stages:
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolul 1: Conţinutul Web şi HTML'
+            csd2_2:
+              display_name: 'Capitolul 2: Styling şi CSS'
+            cspSurvey:
+              display_name: Sondaj
         coursea-2018:
           assignment_family_title: Curs A
           description_short: O introducere în informatică pentru preșcolari.
@@ -2977,6 +3336,11 @@ ro:
               description_teacher: '[șir gol]'
             Functions with Parameters:
               name: Funcții cu Parametrii
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
+            cspSurvey:
+              display_name: Sondaj
         coursee-2018:
           assignment_family_title: Curs E
           stages:
@@ -3024,6 +3388,13 @@ ro:
               name: Condiționale cu Carduri
             Minecraft Hour of Code:
               name: Ora de Programare Minecraft
+          lesson_groups:
+            csf_e_1:
+              display_name: Avansare la Cursul E (Opțional)
+            csf_e_2:
+              display_name: Conținut curs E
+            extra_course_content:
+              display_name: Conținut curs suplimentar
         coursef-2018:
           assignment_family_title: Curs F
           description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
@@ -3072,6 +3443,11 @@ ro:
               description_teacher: '[șir gol]'
             Conditionals with Cards:
               name: Condiționale cu Carduri
+          lesson_groups:
+            csf_f_1:
+              display_name: Avansare la Cursul F (Opțional)
+            csf_f_2:
+              display_name: Conținut curs F
         csp1-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3137,19 +3513,43 @@ ro:
             Unit 1 Chapter 2 Assessment:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csd1-2018:
           description_audience: '[șir gol]'
           stages:
             CS Discoveries Pre-survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csd4-2018:
           description_audience: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+            cspSurvey:
+              display_name: Sondaj
         csd5-2018:
           description_audience: '[șir gol]'
           stages:
             Representing Images:
               description_teacher: În această lecţie elevii învață cum calculatoarele reprezintă imagini. Pentru a începe lecţia, ei consideră provocarea transformării complexității viziunii într-un model binar. Printr-o serie de imagini care arată cum se face această transformare, eleviilor li se prezintă conceptul de împărțire a imaginilor în pătrate sau "pixeli" care pot fi apoi pornite sau oprite în mod individual pentru a realiza întreaga imagine. Elevii parcurg apoi un set scurt de provocări folosind widget-ul de pixelare pentru a desena imagini alb-negru. Puzzle-uri sunt concepute pentru a apela unele din provocările reprezentării imaginilor în acest fel. În încheiere, elevii fac conexiuni între sistemul de reprezentare a imaginilor și sistemul de reprezentare a textului pe care l-au învățat în lecția anterioară.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
         csp2-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3208,6 +3608,11 @@ ro:
             Unit 2 Chapter 2 Assessment:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unitatea 2: Informaţii digitale'
+            cspAssessment:
+              display_name: Evaluare capitol
         csp3-2018:
           description_short: Invata bazele programarii JavaScript printr-un design usor folosind desenul.
           description_audience: '[șir gol]'
@@ -3254,6 +3659,11 @@ ro:
               description_teacher: '[șir gol]'
             Creating Functions with Parameters:
               name: Crearea funcțiilor cu parametri
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp-explore-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3266,6 +3676,9 @@ ro:
             Explore PT - Complete the Task:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp-create-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3278,6 +3691,9 @@ ro:
             Create PT - Complete the Task:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp4-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3315,6 +3731,11 @@ ro:
             Participate in a longitudinal study!:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp5-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3396,6 +3817,9 @@ ro:
             Participate in a longitudinal study!:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csppostap-2018:
           description_audience: '[șir gol]'
           stages:
@@ -3426,22 +3850,127 @@ ro:
             Final Project:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Chestionar după curs
         csd-novice-18:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         csd-apprentice-18:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         csp-novice-18:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         csp-apprentice-18:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3510,6 +4039,12 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         spritelab-simple:
           stages:
             Fish Tank - Creating Sprites:
@@ -3590,6 +4125,13 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         dance-extras:
           description_audience: '[șir gol]'
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
@@ -3647,6 +4189,17 @@ ro:
               name: Internetul
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Cetățenia Digitală
         dance-low:
           stages:
             Dance Party:
@@ -3680,6 +4233,17 @@ ro:
               name: Binar cu artist
             Dance Party:
               name: Petrecere dansantă
+          lesson_groups:
+            csf_events:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_binary:
+              display_name: Binar
+            csf_digcit:
+              display_name: Cetățenia Digitală
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -3729,6 +4293,15 @@ ro:
               name: Obţinând Informaţii/Critici
             Songwriting:
               name: Compunând Cântece
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_nested_loops:
+              display_name: Repetiții imbricate
+            csf_functions:
+              display_name: Funcţii
         express-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3880,16 +4453,39 @@ ro:
               description_teacher: '[șir gol]'
             Dance Party:
               name: Petrecere dansantă
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_functions:
+              display_name: Funcţii
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
         csd1-2019:
           description_audience: '[șir gol]'
           stages:
             CS Discoveries Pre-survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         andrea-test:
           stages:
             'null':
               name: 'nul'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dance-extras-gallery:
           title: Continuă să dansezi
           description_audience: '[șir gol]'
@@ -3910,6 +4506,19 @@ ro:
               name: Marele eveniment
             Binary Bracelets:
               name: Brăţări Binare
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_binary:
+              display_name: Binar
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         gamelab:
           title: Game Lab
           description_audience: '[șir gol]'
@@ -3931,6 +4540,13 @@ ro:
               name: Mergând în locuri în siguranţă
             Loops in Artist:
               description_student: '[șir gol]'
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3961,6 +4577,13 @@ ro:
               description_teacher: '[șir gol]'
             'Loops: Getting Loopy':
               name: Transformând în Buclă
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4014,6 +4637,11 @@ ro:
               name: Albina de Ortografie
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -4031,6 +4659,13 @@ ro:
           stages:
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolul 1: Conţinutul Web şi HTML'
+            csd2_2:
+              display_name: 'Capitolul 2: Styling şi CSS'
+            cspSurvey:
+              display_name: Sondaj
         csd3-2019:
           description_short: "Programare"
           description_audience: '[șir gol]'
@@ -4049,13 +4684,36 @@ ro:
             CS Discoveries End of Semester Survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
         csd4-2019:
           description_audience: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
         csd5-2019:
           description_audience: '[șir gol]'
           stages:
             Representing Images:
               description_teacher: În această lecţie elevii învață cum calculatoarele reprezintă imagini. Pentru a începe lecţia, ei consideră provocarea transformării complexității viziunii într-un model binar. Printr-o serie de imagini care arată cum se face această transformare, eleviilor li se prezintă conceptul de împărțire a imaginilor în pătrate sau "pixeli" care pot fi apoi pornite sau oprite în mod individual pentru a realiza întreaga imagine. Elevii parcurg apoi un set scurt de provocări folosind widget-ul de pixelare pentru a desena imagini alb-negru. Puzzle-uri sunt concepute pentru a apela unele din provocările reprezentării imaginilor în acest fel. În încheiere, elevii fac conexiuni între sistemul de reprezentare a imaginilor și sistemul de reprezentare a textului pe care l-au învățat în lecția anterioară.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
         csd6-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4108,6 +4766,11 @@ ro:
             'Project: Prototype an Innovation':
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
+            cspSurvey:
+              display_name: Sondaj
         csp4-pilot:
           stages:
             Surveys:
@@ -4115,6 +4778,15 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+            required:
+              display_name: Prezentare generală
         csp1-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4180,6 +4852,9 @@ ro:
             Unit 1 Chapter 2 Assessment:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp2-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4207,6 +4882,13 @@ ro:
             Unit 2 Assessment:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unitatea 2: Informaţii digitale'
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp3-2019:
           description_short: Invata bazele programarii JavaScript printr-un design usor folosind desenul.
           description_audience: '[șir gol]'
@@ -4251,6 +4933,11 @@ ro:
             Mid-Year Survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp4-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4291,6 +4978,11 @@ ro:
             Mid-Year Survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspAssessment:
+              display_name: Evaluare capitol
+            cspSurvey:
+              display_name: Sondaj
         csp5-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4369,6 +5061,9 @@ ro:
             Mid-Year Survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp-explore-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4384,6 +5079,9 @@ ro:
             Mid-Year Survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp-create-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4396,6 +5094,9 @@ ro:
             Create PT - Complete the Task:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csppostap-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4450,6 +5151,9 @@ ro:
             Final Project:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp1-pilot:
           stages:
             Number Systems:
@@ -4463,6 +5167,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            required:
+              display_name: Prezentare generală
         csd-tests:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4477,14 +5186,31 @@ ro:
               name: Condiționale cu Carduri
             Building a Foundation:
               name: Construirea unei Fundaţii
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
         csp1-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp2-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp3-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4493,14 +5219,33 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp5-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Bucle
         csp6-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp7-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4509,14 +5254,35 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp9-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp10-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         pluralsight:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4526,14 +5292,34 @@ ro:
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
           description_audience: '[șir gol]'
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
         csp5-pilot:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Bucle
+            required:
+              display_name: Prezentare generală
         fit2019-novice:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         csd-test-saving-state:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4542,6 +5328,11 @@ ro:
           stages:
             Wrap Up:
               name: Încheiere
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         csd-sample-online:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4555,6 +5346,13 @@ ro:
             Post-Project Test:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csd2-pilot:
           description_audience: '[șir gol]'
           stages:
@@ -4566,6 +5364,13 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolul 1: Conţinutul Web şi HTML'
+            csd2_2:
+              display_name: 'Capitolul 2: Styling şi CSS'
+            cspSurvey:
+              display_name: Sondaj
         csd3-pilot:
           description_short: "Programare"
           description_audience: '[șir gol]'
@@ -4589,6 +5394,13 @@ ro:
               description_teacher: '[șir gol]'
             Sprite Properties:
               name: Proprietăți spiriduș
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
         csd-bugs:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4602,41 +5414,101 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            content:
+              display_name: Conţinut
+            required:
+              display_name: Prezentare generală
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Bucle în Ice Age
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         dlp19-csd-mod-fit:
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csp-mod-fit:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         pl-csd-bugs:
           description_audience: '[șir gol]'
           description: '[șir gol]'
         dlp19-csd-mod-w1:
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csd-mod-w2:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csd-mod-w3:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csd-mod-w4:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csp-mod-w1:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csp-mod-w2:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csp-mod-w3:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         dlp19-csp-mod-w4:
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
+            content:
+              display_name: Conţinut
         csd-pilot:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4645,6 +5517,9 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csp2-pilot:
           stages:
             Routers and Redundancy:
@@ -4654,6 +5529,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            content:
+              display_name: Conţinut
+            required:
+              display_name: Prezentare generală
         denny-science:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4671,6 +5551,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            content:
+              display_name: Conţinut
+            required:
+              display_name: Prezentare generală
         denny-science-8:
           description: '[șir gol]'
           description_short: '[șir gol]'
@@ -4746,6 +5631,9 @@ ro:
               name: Variabile
             For Loops:
               name: Bucle Pentru
+          lesson_groups:
+            k5_next_steps:
+              display_name: Pașii următori
         dance-extras-2019:
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           description_audience: '[șir gol]'
@@ -4761,6 +5649,13 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -4776,6 +5671,15 @@ ro:
               name: Condiționale cu Carduri
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_nested_loops:
+              display_name: Repetiții imbricate
+            csf_functions:
+              display_name: Funcţii
         time4cs-experiment-unit-2:
           description_audience: '[șir gol]'
         time4cs-control-unit-1:
@@ -4820,6 +5724,17 @@ ro:
             Conditionals Review:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_events:
+              display_name: Evenimente
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            ramp_up:
+              display_name: Avansare
         time4cs-experiment-unit-1:
           description: '[șir gol]'
           description_short: '[șir gol]'
@@ -4862,18 +5777,44 @@ ro:
             Conditionals Review:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_events:
+              display_name: Evenimente
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            ramp_up:
+              display_name: Avansare
         csp7-pilot:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            required:
+              display_name: Prezentare generală
         csp8-pilot:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
         csp4-2020:
           description_audience: '[șir gol]'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
         csp5-2020:
           description_audience: '[șir gol]'
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Bucle
         csp7-2020:
           description_audience: '[șir gol]'
         csd2-projects-temp:
@@ -4886,43 +5827,7 @@ ro:
         csd2-2020:
           description_audience: '[șir gol]'
           stages:
-            Exploring Web Pages:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Intellectual Property:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Images:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Project - Planning Layout and Style:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Project - Building a Webpage:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Purpose of a  Websites:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Team Problem Solving:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Sources and Research:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            CSS Classes:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Planning a Multi-page Website:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Linking and Navigation:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Project - Website for a Purpose:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Peer Review and Final Touches:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Post-Project Test:
@@ -4931,6 +5836,13 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolul 1: Conţinutul Web şi HTML'
+            csd2_2:
+              display_name: 'Capitolul 2: Styling şi CSS'
+            cspSurvey:
+              display_name: Sondaj
         csd1-2020:
           description_audience: '[șir gol]'
           stages:
@@ -4941,6 +5853,13 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             0:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csd1_1:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            csd1_2:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csd4-2020:
           description_audience: '[șir gol]'
           stages:
@@ -4950,6 +5869,15 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            csd4_2:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
         csd5-2020:
           description_audience: '[șir gol]'
           stages:
@@ -4961,6 +5889,13 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            csd5_2:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+            cspSurvey:
+              display_name: Sondaj
         csd6-2020:
           description_audience: '[șir gol]'
           stages:
@@ -5019,25 +5954,19 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolul 1: Programare cu hardware'
+            cspSurvey:
+              display_name: Sondaj
         csd3-2020:
           description_short: "Programare"
           description_audience: '[șir gol]'
           stages:
-            Shapes and Parameters:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Variables:
               name: Variabile
-            Random Numbers:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Sprites and Animations:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Sprite Properties:
               name: Proprietăți spiriduș
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Text and Captioned Scenes:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
@@ -5055,6 +5984,13 @@ ro:
               description_teacher: '[șir gol]'
             Text:
               name: Text
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+            cspSurvey:
+              display_name: Sondaj
         coursea-2020:
           description_short: O introducere în informatică pentru preșcolari.
           stages:
@@ -5062,6 +5998,13 @@ ro:
               name: Mergând în locuri în siguranţă
             'Programming: Happy Maps':
               name: Hărţi Fericite
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -5070,12 +6013,28 @@ ro:
               name: Mutaţi-l, mutați-l
             'Loops: Getting Loopy':
               name: Transformând în Buclă
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Brăţări Binare
             'Events: The Big Event':
               name: Marele eveniment
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_binary:
+              display_name: Binar
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5094,10 +6053,30 @@ ro:
               name: Cetățenia Digitală
             Dance Party:
               name: Petrecere dansantă
+          lesson_groups:
+            csf_events:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_binary:
+              display_name: Binar
+            csf_digcit:
+              display_name: Cetățenia Digitală
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Compunând Cântece
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_nested_loops:
+              display_name: Repetiții imbricate
+            csf_functions:
+              display_name: Funcţii
         coursef-2020:
           description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
           stages:
@@ -5109,6 +6088,15 @@ ro:
               name: Internetul
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
+          lesson_groups:
+            ramp_up:
+              display_name: Avansare
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
         express-2020:
           stages:
             Dance Party:
@@ -5196,6 +6184,17 @@ ro:
             Build A Project:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_functions:
+              display_name: Funcţii
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
         pre-express-2020:
           stages:
             Learn to Drag and Drop:
@@ -5236,11 +6235,19 @@ ro:
             Make a Game in Play Lab:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
         csp1-2020:
           stages:
             Binary Numbers:
               name: Numerele binare
           description_audience: '[șir gol]'
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(vechi) Unitatea 1: Informaţii digitale'
         csp2-2020:
           stages:
             The Need for Addressing:
@@ -5341,6 +6348,9 @@ ro:
             Text and Captioned Scenes:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
         jess-test-script:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -5393,6 +6403,11 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolul 1: Conţinutul Web şi HTML'
+            csd2_2:
+              display_name: 'Capitolul 2: Styling şi CSS'
         csp5-virtual:
           description_audience: '[șir gol]'
           stages:
@@ -5471,6 +6486,8 @@ ro:
             CS Principles Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            Variables:
+              name: Variabile
         virtual-holding-place:
           stages:
             Velocity:
@@ -5481,6 +6498,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+          lesson_groups:
+            content:
+              display_name: Conţinut
+            csd3_2:
+              display_name: 'Capitolul 2: Cum facem jocuri'
         code-break:
           stages:
             Algorithms:
@@ -5500,3 +6522,19 @@ ro:
         code-break-younger:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
+        no-lg:
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
+          description_audience: '[șir gol]'

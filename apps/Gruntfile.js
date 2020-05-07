@@ -281,12 +281,6 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'lib/marked',
-          src: ['marked*.js'],
-          dest: 'build/minifiable-lib/marked/'
-        },
-        {
-          expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
           dest: 'build/minifiable-lib/phaser/'
@@ -520,7 +514,6 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
-    blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
@@ -531,6 +524,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/devise/registrations/edit.js',
     essential: './src/sites/studio/pages/essential.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+    'layouts/_parent_email_banner':
+      './src/sites/studio/pages/layouts/_parent_email_banner.js',
     'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
       './src/sites/studio/pages/layouts/_race_interstitial.js',
@@ -553,6 +548,8 @@ describe('entry tests', () => {
     'levels/_external': './src/sites/studio/pages/levels/_external.js',
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
+    'levels/_free_response':
+      './src/sites/studio/pages/levels/_free_response.js',
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
@@ -718,6 +715,10 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
+    // The blockly dependency is huge, so we currently control when it is
+    // loaded explicitly via script tags rather than via normal imports.
+    blockly: './src/sites/studio/pages/blockly.js',
+
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.

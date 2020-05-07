@@ -342,7 +342,7 @@ id:
       help_support: Bantuan dan dukungan
       report_bug: Laporkan masalah
       teacher_community: Komunitas guru
-      professional_learning: Belajar profesional
+      professional_learning: Pembelajaran profesional
       documentation: Dokumentasi
       tutorials: Tutorial
       app_lab_documentation: Dokumentasi aplikasi Lab
@@ -404,17 +404,18 @@ id:
       flappy: Flappy
       frozen: Frozen
       gamelab: Laboratorium Game
-      gamelab_jr: Lab permainan (beta)
+      gamelab_jr: Game Lab (beta)
       gumball: Dunia Gumball yang menakjubkan
       iceage: Zaman Es
       infinity: "∞"
       makerlab: Pembuat Toolkit
       minecraft_adventurer: Petualang Minecraft
+      minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Sambungan Kode'
       minecraft_designer: Minecraft
-      minecraft_hero: Pahlawan Minecraft
+      minecraft_hero: Minecraft Hero
       playlab: Play Lab/Lab Permainan
-      playlab_k1: Lab bermain (pra-pembaca)
+      playlab_k1: Play Lab (pra-pembaca)
       starwars: Perang Bintang
       starwarsblocks: Star wars(blok)
       starwarsblocks_hour: Star wars(blok)
@@ -522,6 +523,8 @@ id:
     update: Perbarui Akun
     account_successfully_updated: Akun sukses diperbarui.
     update_email: Update
+    parent_guardian_email_label: Email orang tua/wali
+    none: Tidak Ada
     encrypted: dienkripsi
   user_level:
     completed: Selesai
@@ -814,25 +817,6 @@ id:
         suatu pelajaran tunggal dan konsep untuk kelas anda.
       audience: Usia 14+
       cta: Pelajari caranya
-  gallery:
-    students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
-    students_made_these_with_code: Siswa membuat ini dengan kode program!
-    picture_count: Masa lalu <b>%{days}</b> hari, siswa-siswa telah membuat <b>%{count}</b>
-      gambar dengan pemrograman komputer. Klik gambar untuk melihat jalannya setiap
-      program.
-    activity_count: Dalam <b>%{days}</b> hari terakhir, para siswa telah membuat <b>%{count}</b>
-      app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar
-      dan tangkapan layar untuk melihat jalannya tiap program.
-    want_to_make_your_own: Mau membuat sendiri ?
-    how_to_save: Tingkat terakhir pada tutorial ini, klik "Finish" dan "Save" untuk
-      menyimpan pekerjaan ke galeri.
-    more: lebih &rarr;
-    caption_by_name_age: oleh %{name}, usia %{age}
-    caption_time_ago: "%{time_ago} yang lalu"
-    header: Galeri
-    header_playlab: Play Lab/Lab Permainan
-    header_artist: Artis
-    report_abuse: Laporkan Penyalahgunaan
   landing:
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
@@ -902,10 +886,10 @@ id:
     correct_body: Itu jawaban yang benar.
   dialog:
     ok: Oke!
-    startover_title: Kamu yakin ingin memulainya dari awal?
+    startover_title: Apakah Anda yakin Anda ingin memulai dari awal?
     startover_body: Ini akan mengembalikan puzzle ke kondisi awal dan membatalkan
       penambahan atau perubahan data.
-    startover_ok: Mulai kembali
+    startover_ok: Memulai kembali
     startover_cancel: Batal
   time:
     hour: 1 jam
@@ -1099,7 +1083,7 @@ id:
     csf_conditionals: Kondisi
     csf_nested_loops: Perulangan bercabang
     csf_functions: fungsi
-    csf_variables: variabel
+    csf_variables: Variables
     csf_for_loops: Untuk Pengulangan
     csf_internet: Internet
     csf_impacts: Dampak dari Komputasi
@@ -1135,11 +1119,11 @@ id:
     csp2_1_2018: 'Unit 2: informasi digital'
     csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
     csp4_1_2018: 'Unit 4: Big data dan privasi'
-    csp_variables: variabel
+    csp_variables: Variables
     csp_conditionals: Kondisi
     csp_functions: fungsi
     csp_project: Proyek
-    csp_lists: List
+    csp_lists: Daftar
     csp_loops: Loop
     csp_traversals: Melintang
     csp_libraries: Perpustakaan
@@ -1249,7 +1233,7 @@ id:
       email_alternate: Email alternatif
       gender: Identitas gender
       school_name: Nama Sekolah
-      school_city: Kota sekolah
+      school_city: Kota Sekolah
       school_country: Negara Sekolah
       ages: Umur berapa kamu mengajar tahun ini?
       subjects: Subjek mana kamu mengajar tahun ini?

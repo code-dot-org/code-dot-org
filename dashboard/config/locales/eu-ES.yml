@@ -186,8 +186,10 @@ eu:
     header:
       finished_hoc: Nire Kode Ordua bukatu dut
       sign_in_to_save: Sartu aurrerapenak gordetzeko
+      course_catalog: Ikastaroak
       project_gallery: Proiektuak
       educate_hoc: Kode Ordua
+      about: Code.org-i buruz
     user:
       classroom: Irakasleen sarrera orria
       district_dashboard: Hezkuntza distritua
@@ -261,6 +263,7 @@ eu:
       zure ikasleen kontuak ezabatuko.'
     delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
     update_email: Eguneratu
+    parent_guardian_email_label: Guraso/tutore emaila
   user_level:
     completed: Amaituta
     tried: Saiatua
@@ -455,23 +458,6 @@ eu:
       title: Minecraft
     unplugged_conditionals:
       title: Baldintzak
-  gallery:
-    students_drew_these_with_code: Ikasleek hauek irudikatu dituzte kodea erabiliz!
-    students_made_these_with_code: Ikasleek hauek egin dituzte kodearekin!
-    picture_count: Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> irudi
-      egin dituzte konputagailu programak idatziz. Egin klik irudietan programak martxan
-      ikusteko.
-    activity_count: Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> app eta
-      irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan eta pantaila-argazkietan
-      programa bakoitza martxan ikusteko.
-    want_to_make_your_own: Zurea egin nahi duzu?
-    more: Gehiago &rarr;
-    caption_by_name_age: "%{name}, adina %{age}"
-    caption_time_ago: orain dela %{time_ago}
-    header: Galeria
-    header_playlab: Istorio eta jokoak
-    header_artist: Arte kodea
-    report_abuse: Erabilera okerra jakinarazi
   landing:
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza

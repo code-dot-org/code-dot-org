@@ -318,6 +318,7 @@ lt:
       panaikintos.'
     delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
     update_email: Atnaujinti
+    none: Nė vienas
   user_level:
     completed: Baigta
     tried: Išbandyta
@@ -532,22 +533,6 @@ lt:
       title: Sąlyginiai sakiniai
     widgets:
       cta: Sužinok, kaip
-  gallery:
-    students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
-    students_made_these_with_code: Mokinių sukurti pavyzdžiai.
-    picture_count: Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b>
-      piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių,
-      kad pamatytum parašytas programas.
-    activity_count: Per pastarąsias <b>%{days}</b> dienas, mokiniai programuodami
-      sukūrė <b>%{count}</b> programėlių ir piešinių.
-    want_to_make_your_own: Norėtum sukurti savo?
-    more: Daugiau &rarr;
-    caption_by_name_age: sukūrė %{name}  (%{age} m.)
-    caption_time_ago: 'prieš %{time_ago} '
-    header: Galerija
-    header_playlab: Istorijos ir žaidimai
-    header_artist: Menininkas
-    report_abuse: Praneškite apie piktnaudžiavimą
   landing:
     report_bug: Pranešti apie problemą
     support: Pagalba
@@ -707,6 +692,7 @@ lt:
     escalated:
       description: Norėčiau, kad instruktorius peržiūrėtų šią pateiktį
     instructor_feedback: Instruktoriaus atsiliepimai
+    peer_review: Tarpusavio peržiūra
   flex_category:
     required: Peržiūra
     content: Turinys

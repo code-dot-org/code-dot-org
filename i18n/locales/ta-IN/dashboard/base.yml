@@ -119,6 +119,7 @@ ta:
       student: 'மாணவர்'
   user:
     update_email: "புதுப்பிக்கவும்"
+    none: "எதுவுமில்லை"
   user_level:
     completed: 'நிறைவடைந்தது'
     tried: 'முயற்சிக்கப்பட்டது'
@@ -140,14 +141,12 @@ ta:
     subtitle: 'இந்த வீடியோக்கள் மற்றும் உதவிக்குறிப்புகளை பார்க்கவும்'
   video:
     tab: 'வீடியோ.'
+    notes: 'வீடியோ இல்லையா? குறிப்புகளைக் காட்டு.'
   upsell:
     dance:
       title: 'நடன விருந்து'
     dance-2019:
       title: 'நடன விருந்து'
-  gallery:
-    header_artist: "கலைஞர்"
-    report_abuse: "தவறான பயன்பாட்டை தெரிவிக்கவும்"
   landing:
     help_support: "உதவி மற்றும் ஆதரவு"
   dialog:

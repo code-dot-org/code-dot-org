@@ -579,6 +579,18 @@ mi:
           stages:
             Teacher Dashboard:
               name: Paemana Pouako
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -589,6 +601,12 @@ mi:
               name: Ngā Taumahi Rehetoi
         artistExemplar:
           description_audience: Ngā Tau 8-18
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -659,6 +677,12 @@ mi:
               name: Tupana
             'Farmer: While Loops':
               name: 'Kaiahuwhenua: Ngā Koromeke I Te'
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
         csd3-2017:
           stages:
             Functions:
@@ -705,6 +729,18 @@ mi:
               name: Paemana Pouako
             The Design Recipe:
               name: Te Tohutohu Hoahoa
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
         basketball:
           title: Hangaia tētahi kēmu poitūkohu
           description_short: Hangaia tētahi kēmu poitūkohu
@@ -727,6 +763,12 @@ mi:
               name: Arotake ā-Hoa
             Lists:
               name: Ngā Rārangi
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
         minecraft:
           title: Pūhoahoa Hour of Code Mahimaina
           description_short: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga Mahimaina.
@@ -784,6 +826,9 @@ mi:
               name: Kupu Whakataki
             Conditionals:
               name: Ngā Here
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -798,6 +843,9 @@ mi:
               name: Kupu Whakataki
             Ice Age Play Lab:
               name: Taiwhanga Tākaro Ice Age
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         classic-hoc-impact-study:
           description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā tini pūāhua ngahau!
           stages:
@@ -823,6 +871,18 @@ mi:
           stages:
             Wrap-Up:
               name: Whakamutunga
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
         sciencepd4:
           stages:
             Wrap-Up:
@@ -835,10 +895,23 @@ mi:
           stages:
             Binary:
               name: Tāhūrua
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         sciencepd5:
           stages:
             Wrap-Up:
               name: Whakamutunga
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         csd6-draft:
           stages:
             Lists:
@@ -949,6 +1022,54 @@ mi:
           stages:
             Building a Foundation:
               name: Te Hanga Tūāpapa
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         express-2017:
           stages:
             Introduction:
@@ -967,6 +1088,9 @@ mi:
               name: Te Hanga Tūāpapa
             Nested Loops:
               name: Ngā Koromeke Tauroto
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1015,6 +1139,9 @@ mi:
               name: Te Hanga Tūāpapa
             Nested Loops:
               name: Ngā Koromeke Tauroto
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         new-e:
           stages:
             Building a Foundation:
@@ -1219,6 +1346,74 @@ mi:
           stages:
             While Loops:
               name: Ngā Koromeke I Te
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1229,6 +1424,10 @@ mi:
               name: E Neke, E Neke
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         frozen-2018:
           stages:
             Artist:
@@ -1256,6 +1455,14 @@ mi:
           stages:
             Dance Party:
               name: Te Pāti Kanikani
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
         dance-extras:
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
         coursef-2019:
@@ -1272,6 +1479,15 @@ mi:
               name: Te Ipurangi
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+          lesson_groups:
+            csf_variables:
+              display_name: Ngā Taurangi
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_internet:
+              display_name: Te Ipurangi
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
         dance-low:
           stages:
             Dance Party:
@@ -1290,6 +1506,17 @@ mi:
               name: Rehetoi Tāhūrua
             Dance Party:
               name: Te Pāti Kanikani
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_binary:
+              display_name: Tāhūrua
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1304,6 +1531,13 @@ mi:
               name: Te Mahi ā-Ohu
             Songwriting:
               name: Te Tito Waiata
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+            csf_functions:
+              display_name: Ngā Taumahi
         express-2019:
           stages:
             Relay Programming:
@@ -1324,10 +1558,24 @@ mi:
               name: Te Mahi ā-Ohu
             Dance Party:
               name: Te Pāti Kanikani
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_variables:
+              display_name: Ngā Taurangi
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
         andrea-test:
           stages:
             'null':
               name: 'korenga'
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         dance-extras-gallery:
           title: Me Kanikani Tonu
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
@@ -1339,12 +1587,28 @@ mi:
               name: Te Takahanga Nui
             Binary Bracelets:
               name: Kōmore Ā-Rua
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_binary:
+              display_name: Tāhūrua
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Ngā Mahere Harikoa
             Going Places Safely:
               name: Te Karore Haumaru
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1353,6 +1617,13 @@ mi:
               name: Tō Tapuwae Matihiko
             'Loops: Getting Loopy':
               name: Kia Koromeke
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1361,6 +1632,11 @@ mi:
               name: Tō Tapuwae Matihiko
             Spelling Bee:
               name: Ohu Takikupu
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1381,6 +1657,14 @@ mi:
           stages:
             Functions with Parameters:
               name: Ngā Taumahi Whai Tawhā
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
         csp1-2019:
           stages:
             The Internet:
@@ -1399,10 +1683,86 @@ mi:
               name: Te Mahi ā-Ohu
             Building a Foundation:
               name: Te Hanga Tūāpapa
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Papatono Pepa Kauwhata
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         csd2-pilot:
           stages:
             Lists:
@@ -1415,12 +1775,70 @@ mi:
               name: Ngā Here
             Functions:
               name: Ngā Taumahi
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         peru-2019:
           stages:
             Introduction:
               name: Kupu Whakataki
             Nested Loops:
               name: Ngā Koromeke Tauroto
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         dance-2019:
           stages:
             Dance Party:
@@ -1441,6 +1859,14 @@ mi:
               name: Mō Ngā Koromeke
         dance-extras-2019:
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1449,14 +1875,55 @@ mi:
           stages:
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+            csf_functions:
+              display_name: Ngā Taumahi
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Ngā Here
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Ngā Here
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1477,6 +1944,13 @@ mi:
               name: Te Karore Haumaru
             'Programming: Happy Maps':
               name: Ngā Mahere Harikoa
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1485,12 +1959,28 @@ mi:
               name: E Neke, E Neke
             'Loops: Getting Loopy':
               name: Kia Koromeke
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Kōmore Ā-Rua
             'Events: The Big Event':
               name: Te Takahanga Nui
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_binary:
+              display_name: Tāhūrua
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1505,10 +1995,28 @@ mi:
               name: Te Kirirarautanga Matihiko
             Dance Party:
               name: Te Pāti Kanikani
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_binary:
+              display_name: Tāhūrua
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Te Tito Waiata
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+            csf_functions:
+              display_name: Ngā Taumahi
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1519,14 +2027,37 @@ mi:
               name: Te Ipurangi
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_variables:
+              display_name: Ngā Taurangi
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
         express-2020:
           stages:
             Dance Party:
               name: Te Pāti Kanikani
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_variables:
+              display_name: Ngā Taurangi
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Ohu Takikupu
+          lesson_groups:
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_events:
+              display_name: Ngā Takunetanga
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1543,13 +2074,22 @@ mi:
           stages:
             While Loops:
               name: Ngā Koromeke I Te
+            Variables:
+              name: Ngā Taurangi
         virtual-holding-place:
           stages:
             Functions:
               name: Ngā Taumahi
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         code-break:
           stages:
             Algorithms:
               name: Ngā Hātepe
             Events:
               name: Ngā Takunetanga
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Ngā Koromeke I Te

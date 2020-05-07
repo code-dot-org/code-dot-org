@@ -278,6 +278,8 @@ da:
   section:
     your_section:
       one: 'Din afdeling:'
+      other: Dine sektioner
+    code_with_teacher: "%{section_code} med %{teacher_name}"
     confirm:
       remove: Er du sikker på du vil forlade denne sektion?
     default_name: Sektion uden titel
@@ -385,6 +387,9 @@ da:
       iceage: Is-tid
       infinity: Uendelig
       makerlab: Skaber-toolkit
+      minecraft_codebuilder: 'Minecraft: Kode Forbindelse
+
+'
       minecraft_designer: Minecraft
       playlab: Play Lab
       spritelab: SpriteLab
@@ -443,6 +448,9 @@ da:
       dine studerendes konti.'
     delete_confirm: Sikker på, at du vil slette din konto?
     deleted_user: slettet bruger
+    create_personal_login: 'Lav et personligt kodeords-login
+
+'
     create_personal_login_under_13_parent_email: Forældres/værges e-mail adresse
     create_personal_login_terms_markdown: Ved å lage ei personleg pålogging godtar
       eg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Eg stadfester at
@@ -452,7 +460,14 @@ da:
       i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få
       epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå
       våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
+    update: Opdater Konto
+    account_successfully_updated: Konto opdateret
+    auth_option_saved: 'Du har linket din %{provider} konto med email %{email}.
+
+'
     update_email: Opdater
+    parent_guardian_email_label: Forældres/værges e-mail adresse
+    none: Ingen
   user_level:
     completed: Fuldført
     tried: Forsøgt
@@ -660,23 +675,6 @@ da:
       audience: Alder 4+
     unplugged_conditionals:
       title: Betingelser
-  gallery:
-    students_drew_these_with_code: Elever har tegnet disse med kode!
-    students_made_these_with_code: Elever har lavet dette med kode!
-    picture_count: I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b>
-      billeder ved at skrive deres egne computerprogrammer. Klik på billederne for
-      at prøve programmerne.
-    activity_count: I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b>
-      apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder
-      og skærmklip for at prøve programmerne.
-    want_to_make_your_own: Vil du lave dit eget?
-    more: Mere &rarr;
-    caption_by_name_age: af %{name}, alder %{age}
-    caption_time_ago: "%{time_ago} siden"
-    header: Galleri
-    header_playlab: Play Lab
-    header_artist: Kunstner
-    report_abuse: Rapporter misbrug
   landing:
     report_bug: Rapporter fejl
     support: Få hjælp

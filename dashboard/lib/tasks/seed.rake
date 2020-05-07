@@ -213,8 +213,12 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task dsls: :environment do
     DSLDefined.transaction do
+      # Allow developers to seed just one dsl-defined level, e.g.
+      # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
+      dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
+
       # Parse each .[dsl] file and setup its model.
-      DSLS_GLOB.each do |filename|
+      dsls_glob.each do |filename|
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
           data, _i18n = dsl_class.parse_file(filename)

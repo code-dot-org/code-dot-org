@@ -1915,6 +1915,13 @@ hi:
               name: CSP छात्रों का कोर्स के बाद का सर्वेक्षण
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csp1_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना और प्रसारित करना'
+            csp1_2:
+              display_name: 'अध्याय 2: इंटरनेट का आविष्कार करना'
         csp2-2017:
           title: CSP इकाई 2 - डिजीटल जानकारी ('17-'18)
           description: यह इकाई उन तरीकों की और पड़ताल करती है, जिनसे डिजीटल जानकारी
@@ -1974,6 +1981,14 @@ hi:
               name: PT का अभ्यास - अनुभव का कूटलेखन करें
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
+          lesson_groups:
+            csp2_1:
+              display_name: 'अध्याय 1: जटिल सूचना का कूटलेखन और संक्षिप्तीकरण'
+            csp2_2:
+              display_name: 'अध्याय 2: डेटा का कुशलतापूर्वर उपयोग करना और दृष्टिगोचर
+                बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp3-2017:
           title: CSP इकाई 3 - प्रोग्रामिंग का परिचय ('17-'18)
           description: "यह इकाई कंप्यूटर प्रोग्रामिंग की बुनियादी अवधारणाओं का परिचय
@@ -2027,6 +2042,13 @@ hi:
               name: कृपया CSP कोर्स के बीच का सर्वेक्षण पूरा करें!
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
+          lesson_groups:
+            csp3_1:
+              display_name: 'अध्याय 1: भाषाओं और कलन गणित की प्रोग्रामिंग'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp4-2017:
           title: CSP इकाई 4 - विशाल डेटा और निजता ('17-'18)
           description: "डेटा-संपंन दुनिया, जिसमें हम रहते हैं, पब्लिक नीति, कानून,
@@ -2078,6 +2100,13 @@ hi:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
             Student Post-Course Survey:
               name: छात्रों का कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp4_1:
+              display_name: 'अध्याय 1: बड़े डेटा और कूटलेखन की दुनिया'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp5-2017:
           title: CSP इकाई 5 - ऐप्स का निर्माण करना ('17-'18)
           description: यह इकाई लगातार कंप्यूटर प्रोग्रामिंग की बुनियादी अवधारणाओं
@@ -2195,6 +2224,13 @@ hi:
               name: बूलियन अभिव्यंजनाएं और "इफ" स्टेटमेंट्स
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
+          lesson_groups:
+            csp5_1:
+              display_name: 'अध्याय 1: इवेंट-संचालित प्रोग्रामिंग'
+            csp5_2:
+              display_name: 'अध्याय 2: डेटा संरचनाओं के साथ प्रोग्रामिंग'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp6:
           stages:
             Create PT:
@@ -2397,6 +2433,9 @@ hi:
               name: सहपाठी प्रशिक्षण को सहयोग करना
             'Tool Talk: Intro to Netsim':
               name: 'टूल संबंधी चर्चा: नेटसिम का परिचय'
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2413,6 +2452,9 @@ hi:
               name: परीक्षण इकाई 1 कंटेट मॉड्यूल फॉक्स्ट्रॉट
             test Unit 1 required reading:
               name: परीक्षण इकाई 1 आवश्यक रीडिंग
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2624,6 +2666,9 @@ hi:
               name: 'पाठ 2.3: काला और सफेद पिक्स्लेशन'
             Measuring Student Learning:
               name: छात्रों के प्रशिक्षण का आकलन करना
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2916,6 +2961,9 @@ hi:
               name: पाठ 2,3
             Test stage with bubbles:
               name: बबल्स के साथ परीक्षण चरण
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd3-2017:
           title: CSD इकाई 3 - ऐनिमेशन और गेम्स ('17-'18)
           description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे, जब आप
@@ -3316,6 +3364,15 @@ hi:
               name: CS अन्वेषण सेमेस्टर का अंत सर्वेक्षण
             CSD Post-Course Survey:
               name: CSD कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csd_survey:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         grade2:
           stages:
             At The Dog Park:
@@ -3622,6 +3679,13 @@ hi:
               name: CS अन्वेषण पूर्व-सर्वेक्षण
             CS Discoveries Rapid Survey:
               name: CS अन्वेषण तीव्र सर्वेक्षण
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csd1_1:
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            csd1_2:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3698,6 +3762,9 @@ hi:
               name: संसाधित श्रृंखला समूह और वापसी मूल्यों के साथ फंक्शन्स
             Unit 5 Overview:
               name: इकाई 5 रूप-रेखा
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -3724,6 +3791,9 @@ hi:
               name: छात्रों के प्रशिक्षण का आकलन करना
             AP Preparation and Support:
               name: AP तैयारी और सहयोग
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         basketball:
           title: अपनी टीम चुनें और बास्केटबॉल गेम बनाएं
           description_short: अपनी टीम चुनें और बास्केटबॉल गेम बनाएं
@@ -4053,6 +4123,13 @@ hi:
                 में काम जारी रखेंगे।
             CSD Post-Course Survey:
               name: CSD कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd2_1:
+              display_name: 'अध्याय 1: वेब सामग्री और HTML'
+            csd2_2:
+              display_name: 'अध्याय 2: बनावट और CSS'
+            csd_survey:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -4078,6 +4155,9 @@ hi:
               name: छात्रों के प्रशिक्षण का आकलन करना
             AP Preparation and Support:
               name: AP तैयारी और सहयोग
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd4-2017:
           title: CSD इकाई 4 - डिज़ाइन प्रक्रिया ('17-'18)
           description_short: "  सीखें कि ऐसा प्रोग्राम कैसे डिज़ाइन किया जाए, जो आपके
@@ -4441,6 +4521,13 @@ hi:
                 से शामिल किया गया फीडबैक होता है, और भविष्य के लिए उनकी योजनाओं सहित।
             CSD Post-Course Survey:
               name: CSD कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd4_1:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            csd4_2:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
+            csd_survey:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         minecraft:
           title: Minecraft आवर ऑफ़ कोड डिज़ाइनर
           description_short: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य
@@ -4660,6 +4747,9 @@ hi:
               name: कंडीशनल्स
             'Algorithms: Dice Race':
               name: 'कलन विधियां: डाइस रेस'
+          lesson_groups:
+            extra_course_content:
+              display_name: अतिरिक्त पाठ्यक्रम सामग्री
         coursef-draft:
           description_short: कंप्यूटर साइंस के मूल सिद्धांत सीखें और अपनी खुद की कला,
             कहानियां या गेम्स बनाएं।
@@ -4795,6 +4885,9 @@ hi:
               name: छात्रों के प्रशिक्षण का आकलन करना
             AP Preparation and Support:
               name: AP तैयारी और सहयोग
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csdgraveyard:
           stages:
             new stage:
@@ -4827,6 +4920,9 @@ hi:
               name: छात्रों के प्रशिक्षण का आकलन करना
             Unit 4 Overview:
               name: इकाई 4 रूप-रेखा
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         sciencepd4:
           stages:
             Welcome!:
@@ -4906,6 +5002,9 @@ hi:
               name: अन्वेषण प्रशिक्षण
             Measuring Student Learning:
               name: छात्रों के प्रशिक्षण का आकलन करना
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csppostap-2017:
           title: CSP पोस्ट-AP - आपके ऐप्स में डेटाबेस और डेटा का उपयोग करना ('17-'18)
           description_short: ऐप लैब ऐप्स में डेटा एकत्र और उपयोग करना सीखें।
@@ -4930,6 +5029,9 @@ hi:
               name: अंतिम प्रोजेक्ट
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -5016,6 +5118,11 @@ hi:
               name: त्वरणमापी
             Functions with Parameters:
               name: मापदंडों के साथ फंक्शन
+          lesson_groups:
+            csd6_1:
+              display_name: 'अध्याय 1: हार्डवेयर के साथ प्रोग्रामिंग'
+            csd6_2:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
         workshop-gamelab:
           stages:
             Introduction:
@@ -5069,6 +5176,11 @@ hi:
               name: कूटलेखन
             Structuring Data:
               name: डेटे की संरचना करना
+          lesson_groups:
+            csd5_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
         applab-1hour:
           title: ऐप लैब 1 घंटे की वर्कशॉप
           description_audience: मिडल और हाई स्कूल के छात्र
@@ -5765,6 +5877,13 @@ hi:
                 करने के लिए सीखे गए कौशल का उपयोग करेंगे।
             CSD Post-Course Survey:
               name: CSD कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd6_1:
+              display_name: 'अध्याय 1: हार्डवेयर के साथ प्रोग्रामिंग'
+            csd6_2:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+            csd_survey:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csd3-draft:
           title: 'CSD इकाई 3 - प्रोग्रामिंग: ऐनिमेशन्स और गेम्स'
           description_short: एनिमेशन्स और गेम्स
@@ -6177,6 +6296,13 @@ hi:
                 के बारे में चर्चा के साथ समाप्त होती है।
             CSD Post-Course Survey:
               name: CSD कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd5_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+            csd_survey:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csd3-old:
           title: CSD इकाई 3 (छोटा किया)
           description_short: CSD इकाई 3 का 2016/2017 ड्राफ्ट
@@ -6423,6 +6549,9 @@ hi:
             लिए गुमनाम संचित परिणाम देख सकता है। परिणाम आपके अध्यापक के लिए और कोर्स
             को बनाए रखने और उसमें संशोधन करने के लिए जरूरी हैं। आपके समय और विचारविमर्श
             के लिए धन्यवाद।
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -7083,6 +7212,13 @@ hi:
           description: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स के साथ कूटलेखन करना
             शुरू करें। इस कोर्स के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिज़ाइन करें
             और बनाएं, जिसे आप अपने दोस्तों व परिवार के साथ साझा कर सकें।
+          lesson_groups:
+            csf_e_1:
+              display_name: रैम्प अप से पाठ्यक्रम E (वैकल्पिक)
+            csf_e_2:
+              display_name: पाठ्यक्रम E की सामग्री
+            extra_course_content:
+              display_name: अतिरिक्त पाठ्यक्रम सामग्री
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -7329,6 +7465,11 @@ hi:
             कंप्यूटिंग व इंटरनेट के समाज पर पड़ने पर प्रभावों की चर्चा करें। इस कोर्स
             के दूसरे भाग में, आच्छादन शिला प्रोजेक्ट डिज़ाइन करें और बनाएं, जिसे आप
             दोस्तों व परिवार के साथ साझा कर सकें।
+          lesson_groups:
+            csf_f_1:
+              display_name: रैम्प अप से पाठ्यक्रम F (वैकल्पिक)
+            csf_f_2:
+              display_name: पाठ्यक्रम F की सामग्री
         csdnovice:
           stages:
             Tuesday:
@@ -7403,6 +7544,13 @@ hi:
             करने और उन्हें पूरा करने में छात्रों का मार्गदर्शन करते हैं।
           description: ये पाठ, AP परीक्षा और प्रदर्शन कार्यों के लिए तैयारी करने और
             उन्हें पूरा करने में छात्रों का मार्गदर्शन करते हैं।
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'अध्याय 1: AP तकनीकी सेटअप'
+            csp_ap_3:
+              display_name: 'अध्याय 3: AP प्रदर्शन कार्य तैयार करना'
+            csp_ap_2:
+              display_name: 'अध्याय 2: AP प्रदर्शन कार्य की पड़ताल'
         cspnovice:
           stages:
             Welcome:
@@ -7420,6 +7568,9 @@ hi:
           description_short: TeacherCon पर नए समन्वयकों के लिए गहन चिंतन के सवाल।
           description: 'नए समन्वयक के रूप में TeacherCon से आपके गहन चिंतन का रिकॉर्ड
             रखने का स्थान। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         novice-view:
           stages:
             CSP Tuesday:
@@ -7454,6 +7605,9 @@ hi:
             को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी
             समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए
             अपने खुद के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7471,6 +7625,9 @@ hi:
             को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी
             समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए
             अपने खुद के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -7486,6 +7643,9 @@ hi:
             को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी
             समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए
             अपने खुद के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -7500,6 +7660,9 @@ hi:
             को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी
             समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए
             अपने खुद के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -7514,6 +7677,9 @@ hi:
             को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी
             समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए
             अपने खुद के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -7529,6 +7695,9 @@ hi:
             इकाई 1 की प्रवीणता को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश
             पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब
             आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -7544,6 +7713,9 @@ hi:
             प्रवीणता को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे।
             सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई
             के लिए अपने खुद के विचार प्रस्तुत कर चुके हों।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -7559,6 +7731,9 @@ hi:
             प्रवीणता को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे।
             सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई
             के लिए अपने खुद के विचार प्रस्तुत कर चुके हों।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -7574,6 +7749,9 @@ hi:
             प्रवीणता को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे।
             सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई
             के लिए अपने खुद के विचार प्रस्तुत कर चुके हों।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -7589,6 +7767,9 @@ hi:
             प्रवीणता को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे।
             सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई
             के लिए अपने खुद के विचार प्रस्तुत कर चुके हों।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7604,6 +7785,9 @@ hi:
             प्रवीणता को दर्शाने के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे।
             सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई
             के लिए अपने खुद के विचार प्रस्तुत कर चुके हों।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         allthettsthings:
           stages:
             TTS:
@@ -7815,6 +7999,13 @@ hi:
           title: CSP इकाई 3 - प्रोग्रामिंग का परिचय (सबगोल्स)
           description_short: क्लासिक टर्टल ड्राइंग का उपयोग करते हुए टॉप-डाउन डिज़ाइन
             दृष्टिकोण के द्वारा JavaScript में प्रोग्रामिंग के मूल सिद्धांत सीखें।
+          lesson_groups:
+            csp3_1:
+              display_name: 'अध्याय 1: भाषाओं और कलन गणित की प्रोग्रामिंग'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7854,6 +8045,11 @@ hi:
             Linking Screens:
               name: स्क्रीनों को लिंक करना
           title: CSD इकाई 4 संशोधन ड्राफ्ट
+          lesson_groups:
+            csd4_1:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            csd4_2:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
         craft17:
           stages:
             craft17 stage:
@@ -7949,6 +8145,13 @@ hi:
             Sequence in Maze:
               name: भूलभुलैया में अनुक्रम
           title: कोर्स E और F रैम्प
+          lesson_groups:
+            csf_e_1:
+              display_name: रैम्प अप से पाठ्यक्रम E (वैकल्पिक)
+            csf_e_2:
+              display_name: पाठ्यक्रम E की सामग्री
+            extra_course_content:
+              display_name: अतिरिक्त पाठ्यक्रम सामग्री
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -8005,6 +8208,9 @@ hi:
             संस्करण।
           description: यह इकाई सबगोल्स ग्रुप A में छात्रों के लिए, कंप्यूटर प्रोग्रामिंग
             की बुनियादी अवधारणाओं का परिचय देती है।
+          lesson_groups:
+            csp3_1:
+              display_name: 'अध्याय 1: भाषाओं और कलन गणित की प्रोग्रामिंग'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -8150,6 +8356,13 @@ hi:
             Crowdsourcing:
               name: क्राउडसोर्सिंग
           title: E के लिए नई स्क्रिप्ट
+          lesson_groups:
+            csf_e_1:
+              display_name: रैम्प अप से पाठ्यक्रम E (वैकल्पिक)
+            csf_e_2:
+              display_name: पाठ्यक्रम E की सामग्री
+            extra_course_content:
+              display_name: अतिरिक्त पाठ्यक्रम सामग्री
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -8211,6 +8424,11 @@ hi:
             Present Your Project:
               name: अपना प्रोजेक्ट प्रस्तुत करें
           title: F के लिए नई स्क्रिप्ट
+          lesson_groups:
+            csf_f_1:
+              display_name: रैम्प अप से पाठ्यक्रम F (वैकल्पिक)
+            csf_f_2:
+              display_name: पाठ्यक्रम F की सामग्री
         csd5-old:
           stages:
             Representation Matters:
@@ -8252,6 +8470,11 @@ hi:
             किया जाता है और कंप्यूटर कैसे इस प्रक्रिया के स्टेप्स को ऑटोमेट करने में
             मदद करते हैं। अध्याय यह विचार करके निष्कर्ष प्रदान करता है कि डेटा समस्या
             हल करने की प्रक्रिया, आपके चयन के क्षेत्र पर कैसे लागू की जा सकती है।
+          lesson_groups:
+            csd5_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -8328,6 +8551,11 @@ hi:
               name: ऐप प्रस्तुति
           title: "(छोटा किया गया) CSD इकाई 4 - डिज़ाइन प्रक्रिया"
           description_short: CSD इकाई 4 का 2016/17 बीटा संस्करण
+          lesson_groups:
+            csd4_1:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            csd4_2:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -8356,6 +8584,11 @@ hi:
           description_short: अक्तूबर के लिए अस्थायी चरणों वाला ग्राउंड csp3 में बदलाव
           description: "यह नए और संशोधित चरणों को शामिल करके /s/csp3 में लाइव स्तरों
             का प्रतिरूप है। लाइव स्तरों को संपादित न करें।\r\n"
+          lesson_groups:
+            csp3_1:
+              display_name: 'अध्याय 1: भाषाओं और कलन गणित की प्रोग्रामिंग'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
         pwc:
           stages:
             new stage:
@@ -8506,6 +8739,11 @@ hi:
             करें और तैयार करें कार्य दोनों के भिन्न एलिमेंट्स को करने में जरूरत है।\r\n\r\nइस
             इकाई को पिछली बार नवंबर, 2017 में अद्यतन किया गया था। पाठ्यक्रम अद्यतनों
             के बारे में forum.code.org/c/csp/updates पर और पढ़ें।"
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'अध्याय 2: AP प्रदर्शन कार्य की पड़ताल'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -8529,6 +8767,11 @@ hi:
             पड़ताल करें और तैयार करें कार्य दोनों के भिन्न एलिमेंट्स को करने में जरूरत
             है।\r\n\r\nइस इकाई को पिछली बार दिसम्बर, 2017 में अद्यतन किया गया था।
             पाठ्यक्रम अद्यतनों के बारे में forum.code.org/c/csp/updates पर और पढ़ें।"
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'अध्याय 3: AP प्रदर्शन कार्य तैयार करना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -8623,6 +8866,13 @@ hi:
             Functions in Harvester:
               name: हार्वेस्टर में फंक्शन
           title: कोर्स E 2018 (पुराना!)
+          lesson_groups:
+            csf_e_1:
+              display_name: रैम्प अप से पाठ्यक्रम E (वैकल्पिक)
+            csf_e_2:
+              display_name: पाठ्यक्रम E की सामग्री
+            extra_course_content:
+              display_name: अतिरिक्त पाठ्यक्रम सामग्री
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -8684,6 +8934,11 @@ hi:
             Present Your Project:
               name: अपना प्रोजेक्ट प्रस्तुत करें
           title: कोर्स F 2018 (पुराना!)
+          lesson_groups:
+            csf_f_1:
+              display_name: रैम्प अप से पाठ्यक्रम F (वैकल्पिक)
+            csf_f_2:
+              display_name: पाठ्यक्रम F की सामग्री
         csd6-old:
           stages:
             Computing Innovations:
@@ -8717,6 +8972,11 @@ hi:
             'Project: Prototype an Innovation':
               name: 'प्रोजेक्ट: अन्वेषण का प्रतिमान बनाएं'
           title: "(छोटा किया) CSD इकाई 6 - भौतिक कंप्यूटिंग"
+          lesson_groups:
+            csd6_1:
+              display_name: 'अध्याय 1: हार्डवेयर के साथ प्रोग्रामिंग'
+            csd6_2:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
@@ -8788,6 +9048,13 @@ hi:
             रोज़ाना उपयोग करते हैं, का उपयोग करते हुए साधारण आकृतियों से शुरू होती
             है और फिर अधिक सरल स्प्राइट-आधारित गेम्स की ओर बढ़ती है। अंतिम प्रोजेक्ट
             में, आप निजी बनाया, संवादात्मक प्रोग्राम विकसित करेंगे।"
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         textbook:
           stages:
             Test Map Level:
@@ -9158,6 +9425,13 @@ hi:
               name: CS अन्वेषण सेमेस्टर का अंत सर्वेक्षण
             CS Discoveries Post-Course Survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd2-2018:
           title: CSD इकाई 2 - वेब विकास ('18-'19)
           description: " इकाई 2 में, आप सीखेंगे कि अपने खुद के वेब पृष्ठ कैसे बनाने
@@ -9404,6 +9678,13 @@ hi:
                 थी।\r\n"
             CS Discoveries Post-Course Survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd2_1:
+              display_name: 'अध्याय 1: वेब सामग्री और HTML'
+            csd2_2:
+              display_name: 'अध्याय 2: बनावट और CSS'
+            cspSurvey:
+              display_name: सर्वेक्षण
         coursea-2018:
           title: कोर्स A (2018)
           assignment_family_title: कोर्स A
@@ -9995,6 +10276,13 @@ hi:
               name: 'प्रोजेक्ट: अन्वेषण का प्रतिमान बनाएं'
             CS Discoveries Post-Course Survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd6_1:
+              display_name: 'अध्याय 1: हार्डवेयर के साथ प्रोग्रामिंग'
+            csd6_2:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         coursee-2018:
           title: कोर्स E (2018)
           assignment_family_title: कोर्स E
@@ -10202,6 +10490,13 @@ hi:
               name: पालतू जानवर जिराफ
             Copyright and Creativity:
               name: डिजीटल शेयरिंग
+          lesson_groups:
+            csf_e_1:
+              display_name: रैम्प अप से पाठ्यक्रम E (वैकल्पिक)
+            csf_e_2:
+              display_name: पाठ्यक्रम E की सामग्री
+            extra_course_content:
+              display_name: अतिरिक्त पाठ्यक्रम सामग्री
         coursef-2018:
           title: कोर्स F (2018)
           assignment_family_title: कोर्स F
@@ -10458,6 +10753,11 @@ hi:
               name: Minecraft के साथ फंक्शन्स
             Conditionals in Farmer:
               name: फार्मर के साथ सापेक्ष
+          lesson_groups:
+            csf_f_1:
+              display_name: रैम्प अप से पाठ्यक्रम F (वैकल्पिक)
+            csf_f_2:
+              display_name: पाठ्यक्रम F की सामग्री
         csp1-2018:
           title: CSP इकाई 1 - इंटरनेट ('18-'19)
           description: यह इकाई उन तकनीकी चुनौतियों और सवालों की पड़ताल करती है, जो
@@ -10504,6 +10804,13 @@ hi:
               name: इकाई 1 अध्याय 2 मूल्यांकन
             Sending Text:
               name: टेक्सट भेजना
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csp1_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना और प्रसारित करना'
+            csp1_2:
+              display_name: 'अध्याय 2: इंटरनेट का आविष्कार करना'
         csd1-2018:
           title: CSD इकाई 1 - सवाल हल करना ('18-'19)
           description: " \r\nइकाई 1 कंप्यूटर साइंस के क्षेत्र में उच्च संवादात्मक
@@ -10715,6 +11022,13 @@ hi:
                 का विश्लेषण करने के लिए स्मार्टफोन ऐप्लिकेशंस का मूल्यांकन करते हैं।
                 कक्षा एक चर्चा के साथ समाप्त होती है, जो पाठ को ऐसे ऐप्स से जोड़ती
                 है, जिनसे छात्र अधिक परिचित हैं। '
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csd1_1:
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            csd1_2:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         csd4-2018:
           title: CSD इकाई 4 - डिज़ाइन प्रक्रिया ('18-'19)
           description: इकाई 4 कंप्यूटिंग के व्यापक सामाजिक प्रभावों का परिचय देती
@@ -10990,6 +11304,13 @@ hi:
                 से शामिल किया गया फीडबैक होता है, और भविष्य के लिए उनकी योजनाओं सहित।
             CS Discoveries Post-Course Survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd4_1:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            csd4_2:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd5-2018:
           title: CSD इकाई 5 - डेटा और समाज ('18-'19)
           description: इकाई 5 सवाल हल करने में डेटा के महत्व के बारे में है और उजागर
@@ -11314,6 +11635,13 @@ hi:
                 प्रोजेक्ट्स में जरूरी बदलाव करते हैं।
             CS Discoveries Post-Course Survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd5_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp2-2018:
           title: CSP इकाई 2 - डिजीटल जानकारी ('18-'19)
           description: यह इकाई उन तरीकों की और पड़ताल करती है, जिनसे डिजीटल जानकारी
@@ -11371,6 +11699,11 @@ hi:
               name: त्रुटिपूर्ण बनाम दोषरहित संक्षिप्तीकरण
             Unit 2 Assessment:
               name: इकाई 2 मूल्यांकन
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
         csp3-2018:
           title: CSP इकाई 3 - प्रोग्रामिंग का परिचय ('18-'19)
           description_short: क्लासिक टर्टल ड्राइंग का उपयोग करते हुए टॉप-डाउन डिज़ाइन
@@ -11406,6 +11739,13 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post-Course Survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'इकाई 3: प्रोग्रामिंग का परिचय'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp-explore-2018:
           title: पड़ताल - AP प्रदर्शन कार्य योजना ('18-'19)
           description: 'ये पाठ AP पड़ताल प्रदर्शन कार्य को समझने, इसकी तैयारी करने
@@ -11428,6 +11768,11 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post-Course Survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'अध्याय 2: AP प्रदर्शन कार्य की पड़ताल'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp-create-2018:
           title: बनाएं - AP प्रदर्शन कार्य योजना ('18-'19)
           description: 'ये पाठ AP तैयार करना प्रदर्शन कार्य को समझने, इसकी तैयारी
@@ -11447,6 +11792,11 @@ hi:
               name: PT बनाएं - कार्य पूरा करें
             CS Principles Post-Course Survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'अध्याय 3: AP प्रदर्शन कार्य तैयार करना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp4-2018:
           title: CSP इकाई 4 - विशाल डेटा और निजता ('18-'19)
           description: डेटा-संपंन दुनिया, जिसमें हम रहते हैं, पब्लिक नीति, कानून,
@@ -11490,6 +11840,13 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post-Course Survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big Data and Privacy'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp5-2018:
           title: CSP इकाई 5 - ऐप्स का निर्माण करना ('18-'19)
           description: यह इकाई लगातार कंप्यूटर प्रोग्रामिंग की बुनियादी अवधारणाओं
@@ -11553,6 +11910,13 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post-Course Survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp5_1:
+              display_name: 'अध्याय 1: इवेंट-संचालित प्रोग्रामिंग'
+            csp5_2:
+              display_name: 'अध्याय 2: डेटा संरचनाओं के साथ प्रोग्रामिंग'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csppostap-2018:
           title: पोस्ट AP - डेटा टूल्स ('18-'19)
           description: "इस इकाई के पहले अध्याय में, छात्र विजुअल डेटा की व्याख्या
@@ -11610,6 +11974,14 @@ hi:
               name: अध्याय 1 मूल्यांकन
             CS Principles Post-Course Survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'अध्याय 1: डेटा का कुशलतापूर्वर उपयोग करना और दृष्टिगोचर
+                बनाना'
+            csp_postap_2:
+              display_name: 'अध्याय 2: ऐप्स और डेटाबेस'
+            cspSurvey:
+              display_name: सर्वेक्षण
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -11646,6 +12018,9 @@ hi:
             सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल
             नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके
             हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11662,6 +12037,9 @@ hi:
             सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल
             नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके
             हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11678,6 +12056,9 @@ hi:
             सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल
             नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके
             हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11696,6 +12077,9 @@ hi:
             सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल
             नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके
             हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11712,6 +12096,9 @@ hi:
             सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल
             नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके
             हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11730,6 +12117,9 @@ hi:
             सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के बिल्कुल
             नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत कर चुके
             हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11746,6 +12136,9 @@ hi:
             त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के
             बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत
             कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11762,6 +12155,9 @@ hi:
             त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के
             बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत
             कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11778,6 +12174,9 @@ hi:
             त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के
             बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत
             कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11796,6 +12195,9 @@ hi:
             त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के
             बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत
             कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11812,6 +12214,9 @@ hi:
             त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा आइटमें इस पृष्ठ के
             बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद के विचार प्रस्तुत
             कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11832,6 +12237,9 @@ hi:
             के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा
             आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद
             के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11848,6 +12256,9 @@ hi:
             के लिए गहन चिंतन के त्वरित सुझाव और दिशानिर्देश पाएंगे। सहपाठी समीक्षा
             आइटमें इस पृष्ठ के बिल्कुल नीचे उपलब्ध हैं, जब आप इकाई के लिए अपने खुद
             के विचार प्रस्तुत कर चुके हों। '
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd-post-survey:
           stages:
             CSD post-course survey:
@@ -11861,6 +12272,9 @@ hi:
             संचित परिणाम देख सकता है। परिणाम आपके अध्यापक के लिए और कोर्स को बनाए
             रखने और उसमें संशोधन करने के लिए जरूरी हैं। आपके समय और विचारविमर्श के
             लिए धन्यवाद।
+          lesson_groups:
+            csd_survey:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
         csd-novice-18:
           stages:
             Novice Reflections Overview:
@@ -11898,6 +12312,9 @@ hi:
             5-दिवसीय समर वर्कशॉप के प्रत्येक दिन के लिए चिंतन संबंधी त्वरित सुझाव
             प्राप्त करेंगे। ये सवाल उस कार्य की नींव होंगे, जो आप समन्वयक प्रशिक्षण
             सप्ताहांत पर करते हैं।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -11929,6 +12346,9 @@ hi:
             5-दिवसीय समर वर्कशॉप के प्रत्येक दिन के लिए चिंतन संबंधी त्वरित सुझाव
             प्राप्त करेंगे। ये सवाल उस कार्य की नींव होंगे, जो आप समन्वयक प्रशिक्षण
             सप्ताहांत पर करते हैं।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -11960,6 +12380,9 @@ hi:
             अपनी व्यक्तिगत 5-दिवसीय समर वर्कशॉप के प्रत्येक दिन के लिए चिंतन संबंधी
             त्वरित सुझाव प्राप्त करेंगे। ये सवाल उस कार्य की नींव होंगे, जो आप समन्वयक
             प्रशिक्षण सप्ताहांत पर करते हैं।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -11991,6 +12414,9 @@ hi:
             अपनी व्यक्तिगत 5-दिवसीय समर वर्कशॉप के प्रत्येक दिन के लिए चिंतन संबंधी
             त्वरित सुझाव प्राप्त करेंगे। ये सवाल उस कार्य की नींव होंगे, जो आप समन्वयक
             प्रशिक्षण सप्ताहांत पर करते हैं।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         pre-express-2018:
           title: आरंभिक-पाठक एक्सप्रेस (2018)
           assignment_family_title: आरंभिक-पाठक एक्सप्रेस
@@ -12076,6 +12502,9 @@ hi:
           description_short: FIT प्रशिक्षण कोर्स
           description: यह दर्शाने के लिए उपयोग किया जाना है कि PLC कोर्स कैसे काम
             करते हैं।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         spritelab-simple:
           title: स्प्राइट लैब का परिचय (EE)
           description: यह कोर्सों E और F के लिए Code.org के नए स्प्राइट लैब टूल के
@@ -12213,6 +12642,15 @@ hi:
             Lists Explore:
               name: सूचियों की पड़ताल
           title: CSP प्लेग्राउंड
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -12541,6 +12979,19 @@ hi:
                 को कई बार चलाने के बाद, छात्रों के पास इस बारे में अनुमान लगाने कि
                 अनुकरण में वेरिएबल को बदलने से परिणाम कैसे प्रभावित हो सकता है, और
                 फिर उस अनुमान का परीक्षण करने का अवसर होगा ।
+          lesson_groups:
+            ramp_up:
+              display_name: रैम्प-अप
+            csf_variables:
+              display_name: चर
+            csf_for_loops:
+              display_name: फॉर लूप्स
+            csf_internet:
+              display_name: इंटरनेट
+            csf_sprites:
+              display_name: स्प्राइट्स
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
         dance-low:
           stages:
             Dance Party:
@@ -12740,6 +13191,19 @@ hi:
               description_teacher: इस पाठ में, आप अपनी खुद की संवादात्मक डांस पार्टी
                 को प्रोग्राम करेंगे। इस गतिविधि के लिए ध्वनि की जरूरत है क्योंकि टूल
                 संगीत पर प्रतिक्रिया करने वाला बनाया गया था।
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_events:
+              display_name: घटनाएँ
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_binary:
+              display_name: युग्मक
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
         coursee-2019:
           title: कोर्स E (2019)
           description: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स के साथ कूटलेखन करना
@@ -13056,6 +13520,19 @@ hi:
               name: सुलभता के लिए डिज़ाइन करना
             Songwriting:
               name: गीत लेखन
+          lesson_groups:
+            ramp_up:
+              display_name: रैम्प-अप
+            csf_sprites:
+              display_name: स्प्राइट्स
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            csf_nested_loops:
+              display_name: नेस्टड लूप्स
+            csf_functions:
+              display_name: कार्य
         express-2019:
           title: एक्सप्रेस कोर्स (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -13169,6 +13646,23 @@ hi:
               name: 'Minecraft में सापेक्ष: समुद्री यात्रा जलचर'
             Concept Practice with Minecraft:
               name: Minecraft के साथ अवधारणा का अभ्यास
+          lesson_groups:
+            csf_warmup:
+              display_name: तैयारी करें
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_functions:
+              display_name: कार्य
+            csf_variables:
+              display_name: चर
+            csf_for_loops:
+              display_name: फॉर लूप्स
+            csf_sprites:
+              display_name: स्प्राइट्स
         csd1-2019:
           title: CSD इकाई 1 - सवाल हल करना और कंप्यूटिंग ('19-'20)
           description: "सवाल हल करना और कंप्यूटिंग, कंप्यूटर साइंस के क्षेत्र में
@@ -13348,6 +13842,13 @@ hi:
                 करके पूरा किया जा सकता है।
             Post-Project Test:
               name: प्रोजेक्ट के बाद परीक्षण
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csd1_1:
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            csd1_2:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         andrea-test:
           stages:
             new stage:
@@ -13392,6 +13893,9 @@ hi:
             है
           description: कोर्स बनाने के लिए मेरे प्रयास पर लंबा वर्णन...   अभी भी हैरानी
             है कि रूप-रेखा, सामग्री कहां से आती है....
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -13585,6 +14089,17 @@ hi:
                 सवालों का जवाब देने में उनकी मदद के लिए किया जा सकता है। इस पाठ में,
                 छात्र प्ले लैब प्रोजेक्ट से डेटा एकत्र करेंगे और इसे विभिन्न प्रकार
                 के ग्राफ्स का उपयोग करते हुए दृष्टिगोचर बनाएंगे।
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_binary:
+              display_name: युग्मक
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -13598,6 +14113,9 @@ hi:
             लिए गुमनाम संचित परिणाम देख सकता है। परिणाम आपके अध्यापक के लिए और कोर्स
             को बनाए रखने और उसमें संशोधन करने के लिए जरूरी हैं। आपके समय और विचारविमर्श
             के लिए धन्यवाद।
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
         gamelab:
           stages:
             Start and End Screens:
@@ -13735,6 +14253,15 @@ hi:
                 लैब के आचरण से परिचय कराते हुए संक्षिप्त चर्चा के साथ शुरू होता है,
                 फिर वे ऑनलाइन पहेलियों को पूरा करने के लिए कंप्यूटर का उपयोग करने
                 में प्रगति करेंगे।
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         courseb-2019:
           title: कोर्स B (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -13865,6 +14392,17 @@ hi:
                 लैब के आचरण से परिचय कराते हुए संक्षिप्त चर्चा के साथ शुरू होता है,
                 फिर वे ऑनलाइन पहेलियों को पूरा करने के लिए कंप्यूटर का उपयोग करने
                 में प्रगति करेंगे।
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            csf_events:
+              display_name: घटनाएँ
         pre-express-2019:
           title: पूर्व-पाठक एक्सप्रेस (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -13919,6 +14457,13 @@ hi:
               name: इवेंट्स के साथ रॉयल बैटल
             Ocean Scene with Loops:
               name: लूप्स के साथ समुद्र का दृश्य
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -14180,6 +14725,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd2_1:
+              display_name: 'अध्याय 1: वेब सामग्री और HTML'
+            csd2_2:
+              display_name: 'अध्याय 2: बनावट और CSS'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd3-2019:
           title: CSD इकाई 3 - ऐनिमेशन्स और गेम्स ('19-'20)
           description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे, जब आप
@@ -14540,6 +15092,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd4-2019:
           title: CSD इकाई 4 - डिज़ाइन प्रक्रिया ('19-'20)
           description: इकाई 4 कंप्यूटिंग के व्यापक सामाजिक प्रभावों का परिचय देती
@@ -14817,6 +15376,15 @@ hi:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
             Post-Project Test:
               name: प्रोजेक्ट के बाद परीक्षण
+          lesson_groups:
+            csd4_1:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            csd4_2:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd5-2019:
           title: CSD इकाई 5 - डेटा और समाज ('19-'20)
           description: इकाई 5 सवाल हल करने में डेटा के महत्व के बारे में है और उजागर
@@ -15143,6 +15711,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd5_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd6-2019:
           title: CSD इकाई 6 - भौतिक संगणना ('19-'20)
           description: इकाई 6 कंप्यूटिंग में हार्डवेयर प्लेटफॉर्मों की भूमिका की और
@@ -15192,6 +15767,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd6_1:
+              display_name: 'अध्याय 1: हार्डवेयर के साथ प्रोग्रामिंग'
+            csd6_2:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp4-pilot:
           stages:
             Variables Explore:
@@ -15249,6 +15831,17 @@ hi:
             Unit 4 TEACHER Survey:
               name: इकाई 4 अध्यापक सर्वेक्षण
           title: 'CSP इकाई 4 पायलट: वेरिएबल्स, सापेक्ष और फंक्शन्स'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
+            required:
+              display_name: रूपरेखा
         csp1-2019:
           title: CSP इकाई 1 - इंटरनेट ('19-'20)
           description: यह इकाई उन तकनीकी चुनौतियों और सवालों की पड़ताल करती है, जो
@@ -15293,6 +15886,13 @@ hi:
               name: PT का अभ्यास - इंटरनेट और समाज
             Unit 1 Chapter 2 Assessment:
               name: इकाई 1 अध्याय 2 मूल्यांकन
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csp1_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना और प्रसारित करना'
+            csp1_2:
+              display_name: 'अध्याय 2: इंटरनेट का आविष्कार करना'
         csp2-2019:
           title: CSP इकाई 2 - डिजीटल जानकारी ('19-'20)
           description: यह इकाई उन तरीकों की और पड़ताल करती है, जिनसे डिजीटल जानकारी
@@ -15324,6 +15924,13 @@ hi:
               name: इकाई 2 मूल्यांकन
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp3-2019:
           title: CSP इकाई 3 - प्रोग्रामिंग का परिचय ('19-'20)
           description_short: क्लासिक टर्टल ड्राइंग का उपयोग करते हुए टॉप-डाउन डिज़ाइन
@@ -15355,6 +15962,13 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'इकाई 3: प्रोग्रामिंग का परिचय'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp4-2019:
           title: CSP इकाई 4 - विशाल डेटा और निजता ('19-'20)
           description: डेटा-संपंन दुनिया, जिसमें हम रहते हैं, पब्लिक नीति, कानून,
@@ -15394,6 +16008,13 @@ hi:
               name: 'वैकल्पिक: डेटे संबंधी सवाल'
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big Data and Privacy'
+            cspAssessment:
+              display_name: अध्याय मूल्यांकन
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp5-2019:
           title: CSP इकाई 5 - ऐप्स का निर्माण करना ('19-'20)
           description: यह इकाई लगातार कंप्यूटर प्रोग्रामिंग की बुनियादी अवधारणाओं
@@ -15453,6 +16074,13 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp5_1:
+              display_name: 'अध्याय 1: इवेंट-संचालित प्रोग्रामिंग'
+            csp5_2:
+              display_name: 'अध्याय 2: डेटा संरचनाओं के साथ प्रोग्रामिंग'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp-explore-2019:
           title: पड़ताल - AP प्रदर्शन कार्य योजना ('19-'20)
           description: 'ये पाठ AP पड़ताल प्रदर्शन कार्य को समझने, इसकी तैयारी करने
@@ -15475,6 +16103,11 @@ hi:
               name: वर्ष के बीच का सर्वेक्षण
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'अध्याय 2: AP प्रदर्शन कार्य की पड़ताल'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp-create-2019:
           title: बनाएं - AP प्रदर्शन कार्य योजना ('19-'20)
           description: 'ये पाठ AP तैयार करना प्रदर्शन कार्य को समझने, इसकी तैयारी
@@ -15494,6 +16127,11 @@ hi:
               name: PT बनाएं - कार्य पूरा करें
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'अध्याय 3: AP प्रदर्शन कार्य तैयार करना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csppostap-2019:
           title: पोस्ट AP - डेटा टूल्स ('19-'20)
           description: "इस इकाई के पहले अध्याय में, छात्र विजुअल डेटा की व्याख्या
@@ -15545,6 +16183,14 @@ hi:
               name: अंतिम प्रोजेक्ट
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'अध्याय 1: डेटा का कुशलतापूर्वर उपयोग करना और दृष्टिगोचर
+                बनाना'
+            csp_postap_2:
+              display_name: 'अध्याय 2: ऐप्स और डेटाबेस'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp1-pilot:
           stages:
             new stage:
@@ -15622,6 +16268,11 @@ hi:
             'Lesson 14: Assessment Day':
               name: 'पाठ 14: मूल्यांकन का दिन'
           title: CSP इकाई 1 पायलट - डिजीटल जानकारी
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            required:
+              display_name: रूपरेखा
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -15742,6 +16393,21 @@ hi:
             हैं। सामाजिक विज्ञानों में, छात्र फ्लोरिडा सरकार की शाखाओं पर और इस पर
             विचार करते हैं कि नागरिक किस प्रकार स्थानीय और राज्य की नीतियों को प्रभावित
             कर सकते हैं।
+          lesson_groups:
+            ramp_up:
+              display_name: रैम्प-अप
+            csf_sprites:
+              display_name: स्प्राइट्स
+            time4cs_c1:
+              display_name: घासी कच्छ और इसके पारिस्थितिकी तंत्र
+            time4cs_c2:
+              display_name: घासी कच्छ में खाद्य श्रृंखलाएं
+            time4cs_c3:
+              display_name: घासी कच्छ में रहन-सहन
+            time4cs_c4:
+              display_name: घासी कच्छ पर आक्रामक प्रभाव
+            time4cs_c5:
+              display_name: घासी कच्छ में नागरिकों पर प्रभाव डालने वाला बदलाव
         csp1-pilot-staging:
           stages:
             Variables Explore:
@@ -15783,6 +16449,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 1: बिट्स और बाइट्स'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp2-pilot-staging:
           stages:
             Variables Explore:
@@ -15824,6 +16499,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 2: इंटरनेट'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp3-pilot-staging:
           stages:
             Variables Explore:
@@ -15936,6 +16620,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 4: वेरिएबल्स, सापेक्ष और फंक्शन्स'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -16023,6 +16716,17 @@ hi:
             Teacher Survey (Libraries):
               name: अध्यापक सर्वेक्षण (पुस्तकालय)
           title: 'इकाई 5: सूचियां, लूप्स और चक्रमण'
+          lesson_groups:
+            csp_lists:
+              display_name: सूचियाँ
+            csp_loops:
+              display_name: फंदे
+            csp_traversals:
+              display_name: चक्रमण
+            csp_project:
+              display_name: प्रोजेक्ट
+            csp_libraries:
+              display_name: पुस्तकालय
         csp6-pilot-staging:
           stages:
             Variables Explore:
@@ -16064,6 +16768,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 6: कलन विधियां'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp7-pilot-staging:
           stages:
             new stage:
@@ -16133,6 +16846,11 @@ hi:
             Libraries Project:
               name: पुस्तकालय प्रोजेक्ट
           title: 'इकाई 7: फंक्शन्स और पुस्तकालय'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: मापदंड और रिटर्न वैल्यूज
+            csp_libraries:
+              display_name: पुस्तकालय
         csp8-pilot-staging:
           stages:
             Variables Explore:
@@ -16174,6 +16892,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 8: PT बनाएं'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp9-pilot-staging:
           stages:
             Variables Explore:
@@ -16215,6 +16942,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 9: डेटा'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp10-pilot-staging:
           stages:
             Variables Explore:
@@ -16256,6 +16992,15 @@ hi:
             Unit 4 Assessment:
               name: इकाई 4 मूल्यांकन
           title: 'इकाई 10: वैश्विक प्रभाव'
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         pluralsight:
           stages:
             Pluralsight LevelGroup:
@@ -16292,6 +17037,9 @@ hi:
             गुमनाम संचित परिणाम देख सकता है। परिणाम आपके अध्यापक के लिए और कोर्स को
             बनाए रखने और उसमें संशोधन करने के लिए जरूरी हैं। आपके समय और विचारविमर्श
             के लिए धन्यवाद।"
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp-post-survey-2018:
           stages:
             CSP post-course survey:
@@ -16305,6 +17053,9 @@ hi:
             लिए गुमनाम संचित परिणाम देख सकता है। परिणाम आपके अध्यापक के लिए और कोर्स
             को बनाए रखने और उसमें संशोधन करने के लिए जरूरी हैं। आपके समय और विचारविमर्श
             के लिए धन्यवाद।
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
         csp5-pilot:
           stages:
             new stage:
@@ -16386,6 +17137,17 @@ hi:
             Semester Exam:
               name: अर्धवार्षिक परीक्षा
           title: 'CSP इकाई 5 पायलट: सूचियां, लूप्स और चक्रमण'
+          lesson_groups:
+            csp_lists:
+              display_name: सूचियाँ
+            csp_loops:
+              display_name: फंदे
+            csp_traversals:
+              display_name: चक्रमण
+            csp_project:
+              display_name: प्रोजेक्ट
+            required:
+              display_name: रूपरेखा
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -16409,6 +17171,9 @@ hi:
             समर वर्कशॉप के प्रत्येक दिन के लिए चिंतन संबंधी त्वरित सुझाव प्राप्त करेंगे।
             यह सवाल उस कार्य की नींव होगा, जो आप समन्वयक प्रशिक्षण सप्ताहांत पर करता
             है।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -16445,6 +17210,9 @@ hi:
             समर वर्कशॉप के प्रत्येक दिन के लिए चिंतन संबंधी त्वरित सुझाव प्राप्त करेंगे।
             यह सवाल उस कार्य की नींव होगा, जो आप समन्वयक प्रशिक्षण सप्ताहांत पर करता
             है।
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd-sample-online:
           stages:
             What is a Computer? - sample progression:
@@ -16631,6 +17399,13 @@ hi:
                 करके पूरा किया जा सकता है।
             Post-Project Test:
               name: प्रोजेक्ट के बाद परीक्षण
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csd1_1:
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            csd1_2:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         csd2-pilot:
           title: CSD इकाई 2 - वेब विकास (पायलट संस्करण)
           description: " इकाई 2 में, आप सीखेंगे कि अपने खुद के वेब पृष्ठ कैसे बनाने
@@ -16909,6 +17684,13 @@ hi:
               name: सहपाठी समीक्षा और अंतिम कार्य करना
             Project - Website for a Purpose:
               name: प्रोजेक्ट - किसी उद्देश्य के लिए वेबसाइट
+          lesson_groups:
+            csd2_1:
+              display_name: 'अध्याय 1: वेब सामग्री और HTML'
+            csd2_2:
+              display_name: 'अध्याय 2: बनावट और CSS'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd3-pilot:
           title: CSD इकाई 3 - ऐनिमेशन्स और गेम्स ('17-'18)
           description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे, जब आप
@@ -17273,6 +18055,13 @@ hi:
               name: दृश्य तैयार करें
             Text and Captioned Scenes:
               name: टेक्सट और अनुशीर्षक वाले दृश्य
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -17319,6 +18108,9 @@ hi:
             Debugging:
               name: डीबगिंग
           title: CSP इकाई 3 पायलट - ऐप डिज़ाइन का परिचय
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -17334,6 +18126,13 @@ hi:
             Tell a Story in Play Lab:
               name: प्ले लैब में कहानी सुनाएं
           title: वियतनाम के लिए कंप्यूटर साइंस साक्षरता
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -17344,6 +18143,9 @@ hi:
               name: समझ को दर्शाना
           title: FiT के लिए CS अन्वेषण गहन प्रशिक्षण 2018-2019 मॉड्यूल
           description_audience: प्रशिक्षण में CS अन्वेषण समन्वयक 2019
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -17353,6 +18155,9 @@ hi:
             Demonstrating Understanding:
               name: समझ को दर्शाना
           title: CS अन्वेषण गहन प्रशिक्षण 2018-2019 FiT वर्कशॉप
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         pl-csd-bugs:
           stages:
             CSD Workshop 1 Bugs:
@@ -17376,6 +18181,9 @@ hi:
           title: 'वर्कशॉप के लिए CS अन्वेषण गहन प्रशिक्षण 2019 मॉड्यूल 1 '
           description_audience: प्रशिक्षण में CS अन्वेषण समन्वयक 2019
           description_short: अकादमिक वर्ष वर्कशॉप 1
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csd-mod-w2:
           stages:
             new stage:
@@ -17390,6 +18198,9 @@ hi:
               name: 'चरण 2: समझ दर्शाना'
           title: CS अन्वेषण गहन प्रशिक्षण वर्कशॉप के लिए मॉड्यूल 2
           description_audience: प्रशिक्षण में CS अन्वेषण समन्वयक 2019
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csd-mod-w3:
           stages:
             CS Discoveries Deeper Learning Module 3:
@@ -17402,6 +18213,9 @@ hi:
               name: 'चरण 2: समझ दर्शाना'
           title: वर्कशॉप के लिए CS अन्वेषण गहन प्रशिक्षण मॉड्यूल 3
           description_audience: प्रशिक्षण में CS अन्वेषण समन्वयक 2019
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
@@ -17414,6 +18228,9 @@ hi:
               name: 'चरण 2: समझ दर्शाना'
           title: वर्कशॉप के लिए CS अन्वेषण गहन प्रशिक्षण मॉड्यूल 4
           description_audience: प्रशिक्षण में CS अन्वेषण समन्वयक 2019
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csp-mod-w1:
           stages:
             CS Principles Deeper Learning Module 1:
@@ -17425,6 +18242,9 @@ hi:
             Deeper Learning Overview:
               name: गहन प्रशिक्षण रूप-रेखा
           title: वर्कशॉप के लिए CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csp-mod-w2:
           stages:
             CS Principles Deeper Learning Module 2:
@@ -17436,6 +18256,9 @@ hi:
             'Step 2: Demonstrate Understanding':
               name: 'चरण 2: समझ दर्शाना'
           title: वर्कशॉप के लिए CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 2
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csp-mod-w3:
           stages:
             CS Principles Deeper Learning Module 3:
@@ -17447,6 +18270,9 @@ hi:
             'Step 2: Demonstrate Understanding':
               name: 'चरण 2: समझ दर्शाना'
           title: वर्कशॉप के लिए CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 3
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         dlp19-csp-mod-w4:
           stages:
             CS Principles Deeper Learning Module 4:
@@ -17458,6 +18284,9 @@ hi:
             'Step 2: Demonstrate Understanding':
               name: 'चरण 2: समझ दर्शाना'
           title: वर्कशॉप के लिए CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 4
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         csd-pilot:
           stages:
             Pilot Information:
@@ -17536,6 +18365,9 @@ hi:
             Post-Project Test:
               name: प्रोजेक्ट के बाद परीक्षण
           title: कंप्यूटिंग और सवाल हल करना
+          lesson_groups:
+            csd1_2:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         csp2-pilot:
           stages:
             new stage:
@@ -17572,6 +18404,9 @@ hi:
               name: 'पाठ 9: मूल्यांकन का दिन'
             The Need for Addressing:
               name: एड्रेसिंग की जरूरत
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         denny-science:
           stages:
             Earthquake Detector:
@@ -17618,6 +18453,9 @@ hi:
               name: समानांतर और वितरित की गईं कलन विधियां
             The Limits of Algorithms:
               name: कलन विधियों की सीमाएं
+          lesson_groups:
+            required:
+              display_name: रूपरेखा
         denny-science-8:
           title: संघट्टन डिटेक्टर
           stages:
@@ -17720,6 +18558,13 @@ hi:
               name: आपके प्रतिबिंबों की समीक्षा करना
             End of Course projects:
               name: कोर्स की समाप्ति प्रोजेक्ट
+          lesson_groups:
+            k5_getting_started:
+              display_name: शुरू करें
+            k5_diving_deeper:
+              display_name: 'गहन अध्ययन करना: कोर्स E और F के लिए'
+            k5_next_steps:
+              display_name: अगले चरण
         dance-extras-2019:
           description: विस्तारित प्रोजेक्ट विचारों के साथ पहले घंटे से आगे बढ़ें।
           description_short: Code.org के डांस पार्टी ट्यूटोरियल के लिए इस फॉलो-अप
@@ -17781,6 +18626,15 @@ hi:
             'Lesson 15: Unit 4 Assessment':
               name: 'इकाई 15: इकाई 4 मूल्यांकन'
           title: वेरिएबल्स, सापेक्ष और फंक्शन्स
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
@@ -17832,6 +18686,15 @@ hi:
             Nested Loops in the Maze:
               name: भूलभुलैया में नेस्टड लूप्स
           title: Time4CS नियंत्रण इकाई 2
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_nested_loops:
+              display_name: नेस्टड लूप्स
+            csf_functions:
+              display_name: कार्य
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:
@@ -17889,6 +18752,17 @@ hi:
           title: Time4CS प्रयोग इकाई 2
           description_short: "[विवरण जोड़ें]"
           description: "[विवरण जोड़ें]"
+          lesson_groups:
+            time4cs_c1:
+              display_name: घासी कच्छ और इसके पारिस्थितिकी तंत्र
+            time4cs_c2:
+              display_name: घासी कच्छ में खाद्य श्रृंखलाएं
+            time4cs_c3:
+              display_name: घासी कच्छ में रहन-सहन
+            time4cs_c4:
+              display_name: घासी कच्छ पर आक्रामक प्रभाव
+            time4cs_c5:
+              display_name: घासी कच्छ में नागरिकों पर प्रभाव डालने वाला बदलाव
         time4cs-control-unit-1:
           title: Time4CS नियंत्रण इकाई 1
           stages:
@@ -17916,6 +18790,23 @@ hi:
               name: पहुंच क्षमता
             Conditionals Review:
               name: सापेक्षों की समीक्षा
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_events:
+              display_name: घटनाएँ
+            csf_sprites:
+              display_name: स्प्राइट्स
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            ramp_up:
+              display_name: रैम्प-अप
         time4cs-experiment-unit-1:
           stages:
             Sequencing in Maze:
@@ -17942,12 +18833,36 @@ hi:
               name: पहुंच क्षमता
             Conditionals Review:
               name: सापेक्षों की समीक्षा
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_events:
+              display_name: घटनाएँ
+            csf_sprites:
+              display_name: स्प्राइट्स
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            ramp_up:
+              display_name: रैम्प-अप
         csp7-pilot:
           stages:
             Libraries Explore:
               name: पुस्तकालयों की पड़ताल
             Libraries Investigate:
               name: पुस्तकालयों का निरीक्षण
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: मापदंड और रिटर्न वैल्यूज
+            csp_libraries:
+              display_name: पुस्तकालय
+            required:
+              display_name: रूपरेखा
         csp8-pilot:
           stages:
             new stage:
@@ -17978,6 +18893,15 @@ hi:
               name: फंक्शन्स का अभ्यास
             Functions Make:
               name: फंक्शन्स बनाना
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
         csp5-2020:
           stages:
             Lists Explore:
@@ -18014,12 +18938,26 @@ hi:
               name: अर्धवार्षिक हैकाथॉन भाग 4
             Semester Hackathon Part 5:
               name: अर्धवार्षिक हैकाथॉन भाग 5
+          lesson_groups:
+            csp_lists:
+              display_name: सूचियाँ
+            csp_loops:
+              display_name: फंदे
+            csp_traversals:
+              display_name: चक्रमण
+            csp_project:
+              display_name: प्रोजेक्ट
         csp7-2020:
           stages:
             Libraries Explore:
               name: पुस्तकालयों की पड़ताल
             Libraries Investigate:
               name: पुस्तकालयों का निरीक्षण
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: मापदंड और रिटर्न वैल्यूज
+            csp_libraries:
+              display_name: पुस्तकालय
         csp9-pilot:
           stages:
             new stage:
@@ -18177,6 +19115,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd2_1:
+              display_name: 'अध्याय 1: वेब सामग्री और HTML'
+            csd2_2:
+              display_name: 'अध्याय 2: बनावट और CSS'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd1-2020:
           title: CSD इकाई 1 - सवाल हल करना और कंप्यूटिंग ('19-'20)
           description: "सवाल हल करना और कंप्यूटिंग, कंप्यूटर साइंस के क्षेत्र में
@@ -18356,6 +19301,13 @@ hi:
                 करके पूरा किया जा सकता है।
             Post-Project Test:
               name: प्रोजेक्ट के बाद परीक्षण
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csd1_1:
+              display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            csd1_2:
+              display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
         csd4-2020:
           title: CSD इकाई 4 - डिज़ाइन प्रक्रिया ('19-'20)
           description: इकाई 4 कंप्यूटिंग के व्यापक सामाजिक प्रभावों का परिचय देती
@@ -18633,6 +19585,15 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd4_1:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            csd4_2:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd5-2020:
           title: CSD इकाई 5 - डेटा और समाज ('19-'20)
           description: इकाई 5 सवाल हल करने में डेटा के महत्व के बारे में है और उजागर
@@ -18959,6 +19920,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd5_1:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            csd5_2:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd6-2020:
           title: CSD इकाई 6 - भौतिक संगणना ('19-'20)
           description: इकाई 6 कंप्यूटिंग में हार्डवेयर प्लेटफॉर्मों की भूमिका की और
@@ -19008,6 +19976,13 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd6_1:
+              display_name: 'अध्याय 1: हार्डवेयर के साथ प्रोग्रामिंग'
+            csd6_2:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         csd3-2020:
           title: CSD इकाई 3 - ऐनिमेशन्स और गेम्स
           description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे, जब आप
@@ -19357,6 +20332,13 @@ hi:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
             Text:
               name: पाठ
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+            cspSurvey:
+              display_name: सर्वेक्षण
         coursea-2020:
           title: कोर्स A (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -19465,6 +20447,15 @@ hi:
                 बनाने के लिए उन्होंने जो कोडिंग कौशल सीखे हैं, उन सभी को उपयोग करने
                 का अवसर होगा। अब रचनात्मक होने और प्ले लैब में कहानी तैयार करने का
                 समय है!
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         courseb-2020:
           title: कोर्स B (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -19581,6 +20572,17 @@ hi:
                 बनाने के लिए उन्होंने जो कोडिंग कौशल सीखे हैं, उन सभी को उपयोग करने
                 का अवसर होगा। अब रचनात्मक होने और प्ले लैब में गेम तैयार करने का समय
                 है!
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
+            csf_events:
+              display_name: घटनाएँ
         coursec-2020:
           title: कोर्स C (2019)
           description: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स और सापेक्षों का
@@ -19756,6 +20758,17 @@ hi:
                 पर कूटलेखन करने तक, छात्रों द्वारा अनुसरण करने के लिए कदम-दर-कदम संरचना
                 प्रदान की है। इसके अलावा, हम अंतिम भाग के प्रदर्शन को आसान बनाने में
                 अध्यापकों की मदद के लिए सुझाव पेश करते हैं। '
+          lesson_groups:
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_binary:
+              display_name: युग्मक
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         coursed-2020:
           title: कोर्स D (2019)
           description: छात्र, लूप्स, सापेक्षों और इवेंट्स के बारे में अपनी समझ विकसित
@@ -19942,6 +20955,19 @@ hi:
               description_teacher: इस पाठ में, आप अपनी खुद की संवादात्मक डांस पार्टी
                 को प्रोग्राम करेंगे। इस गतिविधि के लिए ध्वनि की जरूरत है क्योंकि टूल
                 संगीत पर प्रतिक्रिया करने वाला बनाया गया था।
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_events:
+              display_name: घटनाएँ
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_binary:
+              display_name: युग्मक
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
         coursee-2020:
           title: कोर्स E (2019)
           description: कलन विधियों, लूप्स, सापेक्षों और इवेंट्स के साथ कूटलेखन करना
@@ -20142,6 +21168,19 @@ hi:
               name: डिजीटल शेयरिंग
             Designing for Accessibility:
               name: सुलभता के लिए डिज़ाइन करना
+          lesson_groups:
+            ramp_up:
+              display_name: रैम्प-अप
+            csf_sprites:
+              display_name: स्प्राइट्स
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_nested_loops:
+              display_name: नेस्टड लूप्स
+            csf_functions:
+              display_name: कार्य
+            csf_impacts:
+              display_name: कंप्यूटिंग के प्रभाव
         coursef-2020:
           title: कोर्स F (2019)
           description: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स और सापेक्षों का
@@ -20356,6 +21395,17 @@ hi:
                 करने में सक्षम होंगे।"
             AI for Oceans:
               name: समुद्रों के लिए AI
+          lesson_groups:
+            ramp_up:
+              display_name: रैम्प-अप
+            csf_digcit:
+              display_name: डिजीटल नागरिकता
+            csf_variables:
+              display_name: चर
+            csf_for_loops:
+              display_name: फॉर लूप्स
+            csf_sprites:
+              display_name: स्प्राइट्स
         express-2020:
           title: एक्सप्रेस कोर्स (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -20409,6 +21459,23 @@ hi:
               name: स्प्राइट लैब के साथ एलियन डांस पार्टी
             Virtual Pet with Sprite Lab:
               name: स्प्राइट लैब के साथ वर्चुअल पालतू जानवर
+          lesson_groups:
+            csf_warmup:
+              display_name: तैयारी करें
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_functions:
+              display_name: कार्य
+            csf_variables:
+              display_name: चर
+            csf_for_loops:
+              display_name: फॉर लूप्स
+            csf_sprites:
+              display_name: स्प्राइट्स
         pre-express-2020:
           title: पूर्व-पाठक एक्सप्रेस (2019)
           description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में बुनियादी बातें
@@ -20441,6 +21508,13 @@ hi:
               name: आर्टिस्ट में लूप्स
             Tell a Story in Play Lab:
               name: प्ले लैब में कहानी सुनाएं
+          lesson_groups:
+            csf_sequencing:
+              display_name: अनुक्रमण
+            csf_loops:
+              display_name: फंदे
+            csf_events:
+              display_name: घटनाएँ
         csp1-2020:
           stages:
             new stage:
@@ -20469,6 +21543,9 @@ hi:
               name: बौद्धिक विशेषता
             'Lesson 14: Assessment Day':
               name: 'पाठ 14: मूल्यांकन का दिन'
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Unit 2: Digital Information'
         csp2-2020:
           stages:
             new stage:
@@ -20487,6 +21564,9 @@ hi:
               name: DNS और HTTP
             'Lesson 9: Assessment Day':
               name: 'पाठ 9: मूल्यांकन का दिन'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'इकाई 2: इंटरनेट'
         csp3-2020:
           stages:
             new stage:
@@ -20519,6 +21599,9 @@ hi:
               name: कलन विधियों की सीमाएं
             Parallel and Distributed Algorithms:
               name: समानांतर और वितरित की गईं कलन विधियां
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'इकाई 6: कलन विधियां'
         csp8-2020:
           stages:
             new stage:
@@ -20531,6 +21614,9 @@ hi:
               name: नया चरण
             'Lesson 9: Assessment Day':
               name: 'पाठ 9: मूल्यांकन का दिन'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'इकाई 9: डेटा'
         csp10-2020:
           stages:
             new stage:
@@ -20579,6 +21665,9 @@ hi:
               name: इकाई 3 अध्याय 1 मूल्यांकन
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'इकाई 3: प्रोग्रामिंग का परिचय'
         csd3-virtual:
           description_short: " गेम लैब में ऐनिमेशन्स, संवादात्मक कलाकृति, और गेम्स
             को प्रोग्राम करना सीखें।"
@@ -20934,6 +22023,9 @@ hi:
               name: स्प्राइट्स और ऐनिमेशन्स
             Text and Captioned Scenes:
               name: टेक्सट और अनुशीर्षक वाले दृश्य
+          lesson_groups:
+            csd3_1:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
         jess-test-script:
           stages:
             new stage:
@@ -21083,6 +22175,11 @@ hi:
               name: प्रोजेक्ट के बाद परीक्षण
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+          lesson_groups:
+            csd2_1:
+              display_name: 'अध्याय 1: वेब सामग्री और HTML'
+            csd2_2:
+              display_name: 'अध्याय 2: बनावट और CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -21133,6 +22230,8 @@ hi:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
             Intro to App Lab:
               name: ऐप लैब का परिचय
+            Variables:
+              name: चर
         virtual-holding-place:
           stages:
             Velocity:
@@ -21151,6 +22250,9 @@ hi:
               name: गेम डिज़ाइन प्रक्रिया का उपयोग करना
             Project - Design a Game:
               name: प्रोजेक्ट - गेम डिज़ाइन करें
+          lesson_groups:
+            csd3_2:
+              display_name: 'अध्याय 2: गेम्स बनाना'
         code-break:
           stages:
             new stage:
@@ -21159,3 +22261,36 @@ hi:
               name: कलन विधियां
             Events:
               name: घटनाएँ
+        no-lg:
+          stages:
+            new stage:
+              name: नया चरण
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: इकाई 5 मूल्यांकन 2
+            While Loops:
+              name: व्हाइल लूप्स
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            'Building an App: Image Scroller':
+              name: 'ऐप बनाना: इमेज स्क्रॉलर'
+            Unit 5 Assessment 3:
+              name: इकाई 5 मूल्यांकन 3
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+            'Building an App: Canvas Painter':
+              name: 'ऐप बनाना: कैनवास पेंटर'
+            Unit 5 Assessment 4:
+              name: इकाई 5 मूल्यांकन 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: इकाई 5 मूल्यांकन 5 - AP स्यूडोकोड के अभ्यास संबंधी सवाल
+          lesson_groups:
+            csp5_1:
+              display_name: 'अध्याय 1: इवेंट-संचालित प्रोग्रामिंग'
+            csp5_2:
+              display_name: 'अध्याय 2: डेटा संरचनाओं के साथ प्रोग्रामिंग'

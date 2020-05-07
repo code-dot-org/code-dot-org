@@ -2209,6 +2209,11 @@ vi:
               name: Hỗ trợ học phụ đạo
             'Tool Talk: Intro to Netsim':
               name: 'Công cụ nói: Giới thiệu Netsim'
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2225,6 +2230,11 @@ vi:
               name: thử nghiệm Bài 1 Mô dun nội dung Foxtrot
             test Unit 1 required reading:
               name: thử nghiệm Bài 1 Yêu cầu đọc
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2369,6 +2379,12 @@ vi:
               name: Giai đoạn mẫu
         artistExemplar:
           description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2589,6 +2605,11 @@ vi:
               name: Bài học 2,3
             Test stage with bubbles:
               name: Giai đoạn thử nghiệm với bong bóng
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd3-2017:
           description_short: Lập trình
           stages:
@@ -2805,6 +2826,11 @@ vi:
               name: Xử lý mảng và chức năng với giá trị trả lại
             Unit 5 Overview:
               name: Phần 5 Tổng quan
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -2823,6 +2849,11 @@ vi:
               name: 'Bài học 12-13: Hình tượng trừu tượng trên Internet'
             AP Preparation and Support:
               name: AP chuẩn bị và hỗ trợ
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         basketball:
           title: Chọn đội của bạn và chơi một trò chơi bóng rổ
           description_short: Chọn đội của bạn và chơi một trò chơi bóng rổ
@@ -2901,6 +2932,11 @@ vi:
               name: 'Bài học 12-15: giao tiếp với các kiểu trực quan'
             AP Preparation and Support:
               name: AP chuẩn bị và hỗ trợ
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd4-2017:
           stages:
             Analysis of Design:
@@ -3010,6 +3046,9 @@ vi:
               name: Giới thiệu
             Conditionals:
               name: Điều kiện
+          lesson_groups:
+            content:
+              display_name: Nội dung
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -3026,6 +3065,9 @@ vi:
               name: Giới thiệu
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
+          lesson_groups:
+            content:
+              display_name: Nội dung
         classic-hoc-impact-study:
           description_short: Thử các nền tảng của khoa học máy tính với các đặc tính dãy kí tự vui nhộn!
           stages:
@@ -3088,6 +3130,11 @@ vi:
               name: 'Bài học 7-9: tài liệu hoá, các vòng lặp đơn giản và số ngẫu nhiên'
             AP Preparation and Support:
               name: AP chuẩn bị và hỗ trợ
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csdgraveyard:
           stages:
             new stage:
@@ -3100,6 +3147,11 @@ vi:
               name: Phần 3 Tổng quan
             Unit 4 Overview:
               name: Phần 4 Tổng quan
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         sciencepd4:
           stages:
             Welcome!:
@@ -3124,6 +3176,9 @@ vi:
           stages:
             Binary:
               name: Nhị phân
+          lesson_groups:
+            content:
+              display_name: Nội dung
         sciencepd5:
           stages:
             Welcome!:
@@ -3150,6 +3205,11 @@ vi:
               name: Trong khi Vòng lặp và Giới thiệu về Mảng
             Processing Arrays and Functions with Return Values:
               name: Xử lý mảng và chức năng với giá trị trả lại
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csppostap-2017:
           description_short: Tìm hiểu để thu thập và sử dụng dữ liệu trong các ứng dụng ở Kho ứng dụng.
           stages:
@@ -3171,6 +3231,9 @@ vi:
               name: Ứng dụng mẫu
             Final Project:
               name: Dự án cuối cùng
+          lesson_groups:
+            content:
+              display_name: Nội dung
         csd6-draft:
           stages:
             Lists:
@@ -3547,6 +3610,11 @@ vi:
               name: Thứ năm
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         novice-view:
           stages:
             CSP Tuesday:
@@ -3576,6 +3644,11 @@ vi:
           title: CSP Phần 1 Học tập sâu hơn
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối CSP trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -3587,6 +3660,11 @@ vi:
           title: CSP Phần 2 Học tập sâu hơn
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Phần 2 Tài liệu Học tập Sâu hơn cho người điều phối CSP trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -3596,6 +3674,11 @@ vi:
           title: CSP Phần 3 Học tập sâu hơn
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Phần 3 Tài liệu Học tập Sâu hơn cho người điều phối CSP trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -3605,6 +3688,11 @@ vi:
           title: CSP Phần 4 Học tập sâu hơn
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối CSP trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -3614,6 +3702,11 @@ vi:
           title: CSP Phần 5 Học tập sâu hơn
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối CSP trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -3623,6 +3716,11 @@ vi:
           title: Khám phá KHMT Phần 1 Học tập sâu hơn
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -3632,6 +3730,11 @@ vi:
           title: Khám phá KHMT Phần 6 Học tập sâu hơn
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -3641,6 +3744,11 @@ vi:
           title: Khám phá KHMT Phần 5 Học tập sâu hơn
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -3650,6 +3758,11 @@ vi:
           title: Khám phá KHMT Phần 4 Học tập sâu hơn
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -3658,6 +3771,11 @@ vi:
               name: Hoàn thành Phần 3 Cảm tưởng về việc học sâu hơn
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -3666,6 +3784,11 @@ vi:
               name: Hoàn thành Phần 2 Cảm tưởng về việc học sâu hơn
           description_audience: Người điều phối phần Khám phá KHMT trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         express-2017:
           stages:
             Introduction:
@@ -3684,6 +3807,9 @@ vi:
               name: Xây dựng nền tảng
             Nested Loops:
               name: Vòng lặp lồng nhau
+          lesson_groups:
+            content:
+              display_name: Nội dung
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3846,6 +3972,9 @@ vi:
             Sarah test stage:
               name: Giai đoạn thử nghiệm Sarah
           title: Kịch bản biểu hiện mới
+          lesson_groups:
+            content:
+              display_name: Nội dung
         new-stages-sept-2017:
           stages:
             Sequences with Scrat:
@@ -4576,6 +4705,11 @@ vi:
             Complete Unit 3 Deeper Learning Reflections:
               name: Hoàn thành Phần 3 Cảm tưởng về việc học sâu hơn
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4583,6 +4717,11 @@ vi:
             Complete Unit 2 Deeper Learning Reflections:
               name: Hoàn thành Phần 2 Cảm tưởng về việc học sâu hơn
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4590,6 +4729,11 @@ vi:
             Complete Unit 3 Deeper Learning Reflections:
               name: Hoàn thành Phần 3 Cảm tưởng về việc học sâu hơn
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4599,6 +4743,11 @@ vi:
             Complete Unit 4 Deeper Learning Reflections:
               name: Hoàn thành Phần 4 Cảm tưởng về việc học sâu hơn
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4606,6 +4755,11 @@ vi:
             Complete Unit 5 Deeper Learning Reflections:
               name: Hoàn thành Phần 5 Cảm tưởng về việc học sâu hơn
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4615,24 +4769,44 @@ vi:
             Complete Unit 6 Deeper Learning Reflections:
               name: Hoàn thành Phần 6 Cảm tưởng về việc học sâu hơn
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối phần Khám phá KHMT trong đào tạo '
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
             Complete Unit 1 Deeper Learning Reflections:
               name: Hoàn thành Phần 1 Cảm tưởng về việc học sâu hơn
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
             Complete Unit 2 Deeper Learning Reflections:
               name: Hoàn thành Phần 2 Cảm tưởng về việc học sâu hơn
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
             Complete Unit 3 Deeper Learning Reflections:
               name: Hoàn thành Phần 3 Cảm tưởng về việc học sâu hơn
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4641,22 +4815,42 @@ vi:
               name: Hoàn thành Phần 3 Cảm tưởng về việc học sâu hơn
             Complete Unit 4 Deeper Learning Reflections:
               name: Hoàn thành Phần 4 Cảm tưởng về việc học sâu hơn
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
             Complete Unit 5 Deeper Learning Reflections:
               name: Hoàn thành Phần 5 Cảm tưởng về việc học sâu hơn
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
             Complete Unit 6 Deeper Learning Reflections:
               name: Hoàn thành Phần 6 Cảm tưởng về việc học sâu hơn
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd-novice-18:
           stages:
             Welcome:
@@ -4669,6 +4863,11 @@ vi:
               name: Thứ năm
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd-apprentice-18:
           stages:
             Tuesday:
@@ -4679,6 +4878,11 @@ vi:
               name: Thứ năm
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp-novice-18:
           stages:
             Tuesday:
@@ -4689,6 +4893,11 @@ vi:
               name: Thứ năm
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csp-apprentice-18:
           stages:
             Tuesday:
@@ -4699,6 +4908,11 @@ vi:
               name: Thứ năm
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -4719,6 +4933,11 @@ vi:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         frozen-2018:
           stages:
             Artist:
@@ -4754,6 +4973,14 @@ vi:
           stages:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
         dance-extras:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
         coursef-2019:
@@ -4778,6 +5005,15 @@ vi:
               name: Internet
             Crowdsourcing:
               name: Đa nguồn
+          lesson_groups:
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
+            csf_internet:
+              display_name: Kết nối mạng
+            csf_digcit:
+              display_name: Dân kỹ thuật số
         dance-low:
           stages:
             Dance Party:
@@ -4798,6 +5034,19 @@ vi:
               name: Nghệ sĩ nhị phân
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_events:
+              display_name: Các sự kiện
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_binary:
+              display_name: Nhị phân
+            csf_digcit:
+              display_name: Dân kỹ thuật số
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4820,6 +5069,13 @@ vi:
               name: Chuỗi tuần tự trong mê cung
             Songwriting:
               name: Sáng tác với tham số
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_nested_loops:
+              display_name: Vòng lặp lồng nhau
+            csf_functions:
+              display_name: Các hàm
         express-2019:
           stages:
             Relay Programming:
@@ -4846,6 +5102,19 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Concept Practice with Minecraft:
               name: Nhìn về phía trước
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_functions:
+              display_name: Các hàm
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
         csd1-2019:
           stages:
             CS Discoveries Pre-survey:
@@ -4866,6 +5135,11 @@ vi:
               name: 'giá trị rỗng'
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dance-extras-gallery:
           title: Hãy Tiếp tục Nhảy
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
@@ -4879,6 +5153,17 @@ vi:
               name: Nhìn về phía trước
             Binary Bracelets:
               name: Vòng đeo tay nhị phân
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_binary:
+              display_name: Nhị phân
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         gamelab:
           title: Kho Trò chơi
         coursea-2019:
@@ -4898,6 +5183,15 @@ vi:
             Sequencing with Scrat:
               name: Học về chuỗi tuần tự cùng sóc Scrat
               description_student: Viết chương trình để Scrat tìm đến hạt sồi.
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         courseb-2019:
           stages:
             Move It, Move It:
@@ -4914,6 +5208,15 @@ vi:
               name: Tạo vòng lặp
             Sequencing in Maze:
               name: Chuỗi tuần tự cùng Angry Birds
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4930,6 +5233,13 @@ vi:
               name: Ong tìm chữ
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5020,6 +5330,16 @@ vi:
               name: Tạo âm nhạc
             Functions with Parameters:
               name: Hàm và tham số
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+            required:
+              display_name: Tổng quan
         csp1-2019:
           stages:
             CS Principles Pre-survey:
@@ -5220,6 +5540,9 @@ vi:
               name: Số nhị phân
             Representing Information:
               name: Miêu tả thông tin
+          lesson_groups:
+            required:
+              display_name: Tổng quan
         csd-videos:
           stages:
             new stage:
@@ -5236,10 +5559,72 @@ vi:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Danh sách
+            csp_loops:
+              display_name: Vòng lặp
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
         csp7-pilot-staging:
           stages:
             new stage:
               name: giai đoạn mới
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -5250,10 +5635,22 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+          lesson_groups:
+            csp_lists:
+              display_name: Danh sách
+            csp_loops:
+              display_name: Vòng lặp
+            required:
+              display_name: Tổng quan
         fit2019-novice:
           stages:
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -5262,6 +5659,11 @@ vi:
           stages:
             Wrap Up:
               name: Tổng kết
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd1-pilot:
           stages:
             CS Discoveries Pre-survey:
@@ -5336,6 +5738,12 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Nội dung
+            required:
+              display_name: Tổng quan
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -5350,48 +5758,105 @@ vi:
               name: Vòng lặp trong câu chuyện về biển
             Tell a Story in Play Lab:
               name: Kể chuyện bằng Play Lab
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csd-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: giai đoạn mới
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csd-mod-w3:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csd-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csp-mod-w2:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csp-mod-w3:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+          lesson_groups:
+            required:
+              display_name: Tổng quan
+            content:
+              display_name: Nội dung
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -5404,6 +5869,11 @@ vi:
               name: Bộ định tuyến và dự phòng
             The Need for Addressing:
               name: Sự cần thiết cho các địa chỉ
+          lesson_groups:
+            content:
+              display_name: Nội dung
+            required:
+              display_name: Tổng quan
         peru-2019:
           stages:
             new stage:
@@ -5414,6 +5884,12 @@ vi:
               name: Vòng lặp lồng nhau
             Nested Loops Project in Frozen:
               name: Dự án vòng lặp lồng nhau trong Frozen
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Nội dung
+            required:
+              display_name: Tổng quan
         dance-2019:
           stages:
             Dance Party:
@@ -5457,6 +5933,11 @@ vi:
               name: Các biến
             For Loops:
               name: Cho vòng lặp
+          lesson_groups:
+            k5_getting_started:
+              display_name: Bắt đầu
+            k5_next_steps:
+              display_name: Bước tiếp theo
         dance-extras-2019:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
         csp10-pilot:
@@ -5467,6 +5948,13 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
         time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
@@ -5477,6 +5965,15 @@ vi:
           stages:
             Crowdsourcing:
               name: Đa nguồn
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_nested_loops:
+              display_name: Vòng lặp lồng nhau
+            csf_functions:
+              display_name: Các hàm
         time4cs-experiment-unit-2:
           stages:
             Nested Loops with Frozen:
@@ -5487,18 +5984,58 @@ vi:
               name: Chuỗi tuần tự trong mê cung
             Conditionals:
               name: Điều kiện
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_events:
+              display_name: Các sự kiện
+            csf_digcit:
+              display_name: Dân kỹ thuật số
         time4cs-experiment-unit-1:
           stages:
             Sequencing in Maze:
               name: Chuỗi tuần tự trong mê cung
             Conditionals:
               name: Điều kiện
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_events:
+              display_name: Các sự kiện
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Tổng quan
         csp8-pilot:
           stages:
             new stage:
               name: giai đoạn mới
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Danh sách
+            csp_loops:
+              display_name: Vòng lặp
         csp9-pilot:
           stages:
             new stage:
@@ -5510,13 +6047,13 @@ vi:
               name: Dấu vết số
             Styling Text with CSS:
               name: Tạo phong cách cho văn bản với CSS
-              description_student: Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ.
+              description_student: "Bài học này giới thiệu CSS là một cách để tạo phong cách cho các thành phần trên trang web. Các lớp học tìm hiểu bộ quy tắc cú pháp cơ bản cho CSS và sau đó khám phá các tính chất tác động đến các thành phần văn bản HTML.  Cuối cùng, tất cả mọi người áp dụng phong cách văn bản cho trang web cá nhân của họ."
               description_teacher: "Bài học này giới thiệu CSS là một cách để phong cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học về phong cách cho các thành phần văn bản để thêm vào các trang web cá nhân của họ. \\r \\r \n"
             Intellectual Property:
               name: Sở hữu trí tuệ
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
-              description_student: Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ.
+              description_student: "Bài học này tiếp tục giới thiệu với các thuộc tính phong cách CSS, thời gian này tập trung nhiều vào các thành phần phi văn bản. Lớp học bắt đầu bằng cách điều tra và sửa đổi phong cách CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người áp dụng kiến thức mới này cho các trang web cá nhân của họ."
         csd1-2020:
           stages:
             CS Discoveries Pre-survey:
@@ -5559,8 +6096,8 @@ vi:
           stages:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
-              description_student: Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó.
-              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
+              description_student: "Các lớp học được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Bài học của bạn bao gồm những điều cơ bản của việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, các lớp học tạo ra một phiên bản trực tuyến của hình ảnh mà họ thiết kế ở bài học trước đó."
+              description_teacher: "Sinh viên được giới thiệu đến Kho dữ liệu trò chơi, môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những gì họ đã thực hiện với công cụ vẽ trong bài học trước đó."
             Variables:
               name: Các biến
             Booleans Unplugged:
@@ -5570,20 +6107,20 @@ vi:
             Project - Interactive Card:
               name: 'Dự án: Thẻ tương tác'
             Velocity:
-              description_student: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
-              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản.
+              description_student: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
+              description_teacher: "Sau một đánh giá ngắn gọn về làm thế nào các mô hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi với thanh cuộn cơ bản."
             Collision Detection:
               name: Phát hiện va chạm
-              description_student: Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất.
-              description_teacher: Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất.
+              description_student: "Các lớp học tìm hiểu về các phát hiện va chạm trên máy tính.  Các cặp khám phá việc làm thế nào một máy tính có thể sử dụng vị trí và thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không. Các lớp học sau đó sử dụng  isTouching() các khối lệnh để tạo ra các hiệu ứng khác nhau khi nhân vật va chạm, bao gồm cả phần chạy âm thanh.  Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ bắt đầu ở bài học gần nhất."
+              description_teacher: "Học sinh tìm hiểu về phát hiện va chạm trên máy tính.  Họ làm việc theo cặp, khám phá làm thế nào một máy tính có thể sử dụng vị trí và các thuộc tính kích thước của nhân vật và toán học để phát hiện liệu hai nhân vật có đang chạm vào không.  Họ sau đó sử dụng 'isTouching()'  các khối lệnh để tạo ra các hiệu ứng khác nhau khi các nhân vật va chạm, bao gồm cả phần chạy âm thanh. Cuối cùng, họ sử dụng các kỹ năng mới để cải thiện trò chơi sidescroller mà họ đã bắt đầu ở bài học gần nhất."
             Complex Sprite Movement:
               name: Di chuyển nhân vật phức tạp
-              description_student: 'Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. '
-              description_teacher: Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng.
+              description_student: "Các lớp học tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn, chẳng hạn như mô phỏng trọng lực, làm cho một nhân vật nhảy và cho phép một nhân vật nổi bên trái hoặc bên phải. Ở các cấp độ cuối cùng lớp học kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập tiền xu. "
+              description_teacher: "Học sinh tìm hiểu để kết hợp các thuộc tính vận tốc của các nhân vật với mô hình truy cập để tạo ra sự di chuyển của nhân vật phức tạp hơn. Đặc biệt, học sinh sẽ tìm hiểu làm thế nào để mô phỏng các lực hấp dẫn, làm cho một nhân vật nhảy, và cho phép một nhân vật nổi sang trái hoặc sang phải. Ở các cấp độ cuối cùng của tiến trình Code Studio sinh viên kết hợp các di chuyển để làm cho sinh động và điều khiển một nhân vật duy nhất và xây dựng một trò chơi đơn giản mà trong đó một nhân vật bay xung quanh và thu thập các đồng xu. Học sinh được khuyến khích để tạo ra những nội dung thêm của riêng họ bổ sung cho các trò chơi ở cấp độ cuối cùng."
             Collisions:
               name: Va chạm
-              description_student: Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
-              description_teacher: Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên).
+              description_student: "Lớp học lập trình các nhân vật tương tác theo nhiều cách mới.  Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
+              description_teacher: "Học sinh lập trình các nhân vật của họ tương tác theo nhiều cách mới. Sau một đánh giá ngắn gọn về cách họ sử dụng isTouching các khối lệnh, lớp học khởi động thử các cách khác để 2 nhân vật có thể tương tác. Sau đó chúng có thể sử dụng để tạo ra một nhân vật đẩy nhân vật khác qua màn hình trước khi thực hành với 4 khối lệnh va chạm (va chạm, thuyên chuyển, bật lại, và tung lên)."
             Functions:
               name: Các hàm
             The Game Design Process:
@@ -5607,6 +6144,15 @@ vi:
               name: Lập trình cùng Rey và robot BB-8
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -5617,6 +6163,15 @@ vi:
               name: Chuỗi tuần tự cùng Angry Birds
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -5625,6 +6180,17 @@ vi:
               name: Nhìn về phía trước
             'Events: The Big Event':
               name: Sự kiện lớn
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_binary:
+              display_name: Nhị phân
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5641,6 +6207,19 @@ vi:
               name: Dân kỹ thuật số
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_events:
+              display_name: Các sự kiện
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_binary:
+              display_name: Nhị phân
+            csf_digcit:
+              display_name: Dân kỹ thuật số
         coursee-2020:
           stages:
             Sequencing in the Maze:
@@ -5649,6 +6228,13 @@ vi:
               name: Vòng lặp lồng với Frozen
             'Functions: Songwriting':
               name: Sáng tác với tham số
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_nested_loops:
+              display_name: Vòng lặp lồng nhau
+            csf_functions:
+              display_name: Các hàm
         coursef-2020:
           stages:
             Envelope Variables:
@@ -5661,12 +6247,32 @@ vi:
               name: Đa nguồn
             AI for Oceans:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
+          lesson_groups:
+            csf_digcit:
+              display_name: Dân kỹ thuật số
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
         express-2020:
           stages:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
             Programming in Maze:
               name: Lập trình trong mê cung
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_functions:
+              display_name: Các hàm
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
         pre-express-2020:
           stages:
             Sequencing with Scrat:
@@ -5683,6 +6289,13 @@ vi:
               name: Vòng lặp trong câu chuyện về biển
             Tell a Story in Play Lab:
               name: Kể chuyện bằng Play Lab
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
         csp1-2020:
           stages:
             new stage:
@@ -5857,6 +6470,8 @@ vi:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
             Intro to App Lab:
               name: Giới thiệu về AppLab
+            Variables:
+              name: Các biến
         virtual-holding-place:
           stages:
             Collision Detection:
@@ -5873,6 +6488,9 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            content:
+              display_name: Nội dung
         code-break:
           stages:
             new stage:
@@ -5881,3 +6499,31 @@ vi:
               name: các bước lập trình
             Events:
               name: Các sự kiện
+        no-lg:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Phần 5 Đánh giá 2
+            While Loops:
+              name: Vòng lặp "trong khi"
+            Loops and Simulations:
+              name: Vòng lặp và mô phỏng
+            Introduction to Arrays:
+              name: Giới thiệu Danh sách
+            'Building an App: Image Scroller':
+              name: 'Xây dựng một ứng dụng: Cuộn hình ảnh'
+            Unit 5 Assessment 3:
+              name: Phần 5 Đánh giá 3
+            Processing Arrays:
+              name: Mảng xử lý
+            Functions with Return Values:
+              name: Chức năng với các giá trị trả lại
+            'Building an App: Canvas Painter':
+              name: 'Xây dựng một ứng dụng: Hoạ sĩ Canvas'
+            Unit 5 Assessment 4:
+              name: Phần 5 Đánh giá 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP

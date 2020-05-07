@@ -552,16 +552,27 @@ ja:
               name: インターネット
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp2-2017:
           stages:
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp3-2017:
           stages:
             Creating Functions:
               name: 関数の作成
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            csp3_1:
+              display_name: '章 1: プログラミング言語とアルゴリズム'
+            cspSurvey:
+              display_name: アンケート
         csp4-2017:
           stages:
             Simple Encryption:
@@ -570,12 +581,18 @@ ja:
               name: コース終了後アンケート
             Student Post-Course Survey:
               name: コース後の生徒たちの調査
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp5-2017:
           stages:
             While Loops:
               name: Whileループ
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         CSDU3-Draft:
           stages:
             Functions:
@@ -588,6 +605,22 @@ ja:
           stages:
             Teacher Dashboard:
               name: 先生用のダッシュボード
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
         allthehiddenthings:
           stages:
             Game Lab:
@@ -602,6 +635,14 @@ ja:
               name: アーティスト関数
         artistExemplar:
           description_audience: 8-18 才
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -674,6 +715,14 @@ ja:
               name: バウンド
             'Farmer: While Loops':
               name: '農夫: While Loops'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
         csd3-2017:
           stages:
             Velocity:
@@ -684,6 +733,15 @@ ja:
               name: 変数（へんすう）
             Conditionals:
               name: 条件
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
+            csd_survey:
+              display_name: コース終了後アンケート
         grade2:
           stages:
             Flappy:
@@ -720,6 +778,30 @@ ja:
               name: 先生用のダッシュボード
             Welcome!:
               name: ようこそ!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
         basketball:
           title: チームをえらんで、バスケットボールのゲームを作る
           description_short: チームをえらんで、バスケットボールのゲームを作る
@@ -746,6 +828,29 @@ ja:
               name: ピア ・ レビュー
             Lists:
               name: リスト
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章： Web コンテンツと HTML'
+            csd2_2:
+              display_name: '第 2 章：スタイルと CSS'
+            csd_survey:
+              display_name: コース終了後アンケート
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
+            csd_survey:
+              display_name: コース終了後アンケート
         minecraft:
           title: Minecraft Hour of Code デザイナー
           description_short: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
@@ -845,12 +950,20 @@ ja:
               name: はじめに
             Conditionals:
               name: 条件
+          lesson_groups:
+            content:
+              display_name: 内容
+            extra_course_content:
+              display_name: 追加のコース内容
         coursef-draft:
           stages:
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
             Introduction:
               name: はじめに
+          lesson_groups:
+            content:
+              display_name: 内容
         classic-hoc-impact-study:
           description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           stages:
@@ -877,6 +990,22 @@ ja:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
         sciencepd4:
           stages:
             Welcome!:
@@ -893,16 +1022,32 @@ ja:
           stages:
             Binary:
               name: ２しんすう
+          lesson_groups:
+            content:
+              display_name: 内容
         sciencepd5:
           stages:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+            practice:
+              display_name: 授業実践
         csppostap-2017:
           stages:
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            content:
+              display_name: 内容
+            cspSurvey:
+              display_name: アンケート
         csd6-draft:
           stages:
             Lists:
@@ -911,10 +1056,21 @@ ja:
               name: forループ
             Functions with Parameters:
               name: パラメーター付き関数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：ハードウェア出力'
+            csd6_2:
+              display_name: '第 2 章：ハードウェア入力'
         workshop-gamelab:
           stages:
             Introduction:
               name: はじめに
+        csd5-draft:
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
         coursed-ramp:
           stages:
             Introduction:
@@ -935,6 +1091,13 @@ ja:
               name: パラメーター付き関数
             Functions with Parameters_:
               name: パラメーター付き関数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：ハードウェア出力'
+            csd6_2:
+              display_name: '第 2 章：ハードウェア入力'
+            csd_survey:
+              display_name: コース終了後アンケート
         csd3-draft:
           stages:
             Variables:
@@ -945,6 +1108,14 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+        csd5-2017:
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            csd_survey:
+              display_name: コース終了後アンケート
         csd3-old:
           stages:
             Velocity:
@@ -971,6 +1142,10 @@ ja:
           stages:
             Introduction:
               name: はじめに
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csd2-old:
           stages:
             Peer Review:
@@ -1058,6 +1233,13 @@ ja:
           title: コース E
           assignment_family_title: コース E
           description_short: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
+          lesson_groups:
+            csf_e_1:
+              display_name: コースEへの強化（オプション）
+            csf_e_2:
+              display_name: コースEの内容
+            extra_course_content:
+              display_name: 追加のコース内容
         coursef-2017:
           stages:
             Building a Foundation:
@@ -1067,6 +1249,83 @@ ja:
           title: コース F
           assignment_family_title: コース F
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          lesson_groups:
+            csf_f_1:
+              display_name: コースFへの強化（オプション）
+            csf_f_2:
+              display_name: コースFの内容
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
         express-2017:
           stages:
             Introduction:
@@ -1087,6 +1346,9 @@ ja:
               name: 入れ子のループ
           title: エクスプレス コース
           description_short: 'コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。'
+          lesson_groups:
+            content:
+              display_name: 内容
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1115,6 +1377,17 @@ ja:
           stages:
             Creating Functions:
               name: 関数の作成
+          lesson_groups:
+            csp3_1:
+              display_name: '章 1: プログラミング言語とアルゴリズム'
+            cspSurvey:
+              display_name: アンケート
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1129,6 +1402,13 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+          lesson_groups:
+            csf_e_1:
+              display_name: コースEへの強化（オプション）
+            csf_e_2:
+              display_name: コースEの内容
+            extra_course_content:
+              display_name: 追加のコース内容
         new-d:
           stages:
             Introduction:
@@ -1145,6 +1425,10 @@ ja:
               name: ピラミッドをたてよう
             Loops in Artist:
               name: アーティストくりかえし
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: '章 1: プログラミング言語とアルゴリズム'
         new-express:
           stages:
             Introduction:
@@ -1157,6 +1441,9 @@ ja:
               name: ピラミッドをたてよう
             Nested Loops:
               name: 入れ子のループ
+          lesson_groups:
+            content:
+              display_name: 内容
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -1173,6 +1460,13 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+          lesson_groups:
+            csf_e_1:
+              display_name: コースEへの強化（オプション）
+            csf_e_2:
+              display_name: コースEの内容
+            extra_course_content:
+              display_name: 追加のコース内容
         new-f:
           stages:
             Building a Foundation:
@@ -1181,10 +1475,30 @@ ja:
               name: アーティストくりかえし
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
+          lesson_groups:
+            csf_f_1:
+              display_name: コースFへの強化（オプション）
+            csf_f_2:
+              display_name: コースFの内容
+        csd5-old:
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
         csp3-staging:
           stages:
             Creating Functions:
               name: 関数の作成
+          lesson_groups:
+            csp3_1:
+              display_name: '章 1: プログラミング言語とアルゴリズム'
         pwc:
           stages:
             Simple Encryption:
@@ -1198,10 +1512,16 @@ ja:
           stages:
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: コース終了後アンケート
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1218,6 +1538,13 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+          lesson_groups:
+            csf_e_1:
+              display_name: コースEへの強化（オプション）
+            csf_e_2:
+              display_name: コースEの内容
+            extra_course_content:
+              display_name: 追加のコース内容
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1228,12 +1555,22 @@ ja:
               name: はじめに
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
+          lesson_groups:
+            csf_f_1:
+              display_name: コースFへの強化（オプション）
+            csf_f_2:
+              display_name: コースFの内容
         csd6-old:
           stages:
             Lists:
               name: リスト
             For Loops:
               name: forループ
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：ハードウェア出力'
+            csd6_2:
+              display_name: '第 2 章：ハードウェア入力'
         csd3-1819draft:
           stages:
             Variables:
@@ -1244,6 +1581,13 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
         csd3-2018:
           stages:
             Variables:
@@ -1254,10 +1598,24 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
         csd2-2018:
           stages:
             Lists:
               name: リスト
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章： Web コンテンツと HTML'
+            csd2_2:
+              display_name: '第 2 章：スタイルと CSS'
+            cspSurvey:
+              display_name: アンケート
         coursea-2018:
           assignment_family_title: コース A
           description_short: 低学年向けコンピューター サイエンス入門
@@ -1381,6 +1739,13 @@ ja:
           stages:
             Functions with Parameters:
               name: パラメーター付き関数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：ハードウェア出力'
+            csd6_2:
+              display_name: '第 2 章：ハードウェア入力'
+            cspSurvey:
+              display_name: アンケート
         coursee-2018:
           assignment_family_title: コース E
           stages:
@@ -1402,6 +1767,13 @@ ja:
               name: カードと条件
             Minecraft Hour of Code:
               name: Minecraft Hour of Code プログラミング入門
+          lesson_groups:
+            csf_e_1:
+              display_name: コースEへの強化（オプション）
+            csf_e_2:
+              display_name: コースEの内容
+            extra_course_content:
+              display_name: 追加のコース内容
         coursef-2018:
           assignment_family_title: コース F
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
@@ -1418,22 +1790,185 @@ ja:
               name: パラメーターで歌や曲をつくる
             Conditionals with Cards:
               name: カードと条件
+          lesson_groups:
+            csf_f_1:
+              display_name: コースFへの強化（オプション）
+            csf_f_2:
+              display_name: コースFの内容
         csp1-2018:
           stages:
             The Internet:
               name: インターネット
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
+            cspSurvey:
+              display_name: アンケート
+        csd5-2018:
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '第 2 章: デジタル情報'
         csp3-2018:
           stages:
             Creating Functions:
               name: 関数の作成
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp4-2018:
           stages:
             Simple Encryption:
               name: 単純な暗号化
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp5-2018:
           stages:
             While Loops:
               name: Whileループ
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: コース終了後アンケート
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1460,6 +1995,12 @@ ja:
               name: あなたのデジタルフットプリント
             'Persistence & Frustration: Stevie and the Big Project':
               name: スティーヴィーと大きなプロジェクト
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
         frozen-2018:
           stages:
             Artist:
@@ -1490,6 +2031,14 @@ ja:
           stages:
             Dance Party:
               name: ダンスパーティー
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
         dance-extras:
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         coursef-2019:
@@ -1507,6 +2056,15 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+          lesson_groups:
+            ramp_up:
+              display_name: ランアップ
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+            csf_internet:
+              display_name: インターネット
         dance-low:
           stages:
             Dance Party:
@@ -1527,6 +2085,17 @@ ja:
               name: アーティスト：バイナリ
             Dance Party:
               name: ダンスパーティー
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_events:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_binary:
+              display_name: ２しんすう
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1545,6 +2114,13 @@ ja:
               name: クラウドソーシング
             Songwriting:
               name: 作詞作曲
+          lesson_groups:
+            ramp_up:
+              display_name: ランアップ
+            csf_nested_loops:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう) 
         express-2019:
           stages:
             Programming in Maze:
@@ -1569,10 +2145,38 @@ ja:
               name: クラウドソーシング
             Dance Party:
               name: ダンスパーティー
+          lesson_groups:
+            csf_warmup:
+              display_name: ウォームアップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_functions:
+              display_name: 関数(かんすう) 
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
         andrea-test:
           stages:
             'null':
               name: 'ヌル'
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
         dance-extras-gallery:
           title: ダンスを続ける
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
@@ -1590,6 +2194,19 @@ ja:
               name: バイナリブレスレット
             Sticker Art with Loops:
               name: アーティストくりかえし
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_binary:
+              display_name: ２しんすう
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         gamelab:
           title: ゲーム ラボ
         coursea-2019:
@@ -1614,6 +2231,13 @@ ja:
               name: アーティストくりかえし
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
         courseb-2019:
           description_audience: '5-8 才'
           stages:
@@ -1629,6 +2253,13 @@ ja:
               name: プレイ ラボのイベント
             Programming in Maze:
               name: めいろ のプログラミング
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1657,6 +2288,13 @@ ja:
               name: プレイ ラボのイベント
             Ocean Scene with Loops:
               name: アーティストくりかえし
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1667,6 +2305,13 @@ ja:
           stages:
             Lists:
               name: リスト
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章： Web コンテンツと HTML'
+            csd2_2:
+              display_name: '第 2 章：スタイルと CSS'
+            cspSurvey:
+              display_name: アンケート
         csd3-2019:
           stages:
             Variables:
@@ -1677,30 +2322,107 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
+        csd5-2019:
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
         csd6-2019:
           stages:
             Functions with Parameters:
               name: パラメーター付き関数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：ハードウェア出力'
+            csd6_2:
+              display_name: '第 2 章：ハードウェア入力'
+            cspSurvey:
+              display_name: アンケート
         csp4-pilot:
           stages:
             Surveys:
               name: アンケート
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+            required:
+              display_name: 概要
         csp1-2019:
           stages:
             The Internet:
               name: インターネット
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '第 2 章: デジタル情報'
+            cspSurvey:
+              display_name: アンケート
         csp3-2019:
           stages:
             Creating Functions:
               name: 関数の作成
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp4-2019:
           stages:
             Simple Encryption:
               name: 単純な暗号化
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
         csp5-2019:
           stages:
             While Loops:
               name: Whileループ
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            required:
+              display_name: 概要
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1713,16 +2435,124 @@ ja:
               name: アーティストくりかえし
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+          lesson_groups:
+            ramp_up:
+              display_name: ランアップ
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: リスト
+            csp_loops:
+              display_name: くりかえし
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
             Programming in Maze:
               name: めいろ のプログラミング
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: リスト
+            csp_loops:
+              display_name: くりかえし
+            required:
+              display_name: 概要
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
         csd2-pilot:
           stages:
             Lists:
               name: リスト
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章： Web コンテンツと HTML'
+            csd2_2:
+              display_name: '第 2 章：スタイルと CSS'
+            cspSurvey:
+              display_name: アンケート
         csd3-pilot:
           stages:
             Variables:
@@ -1733,12 +2563,102 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: 内容
+            required:
+              display_name: 概要
         csl-vn:
           stages:
             Programming in Maze:
               name: めいろ のプログラミング
             Ocean Scene with Loops:
               name: アーティストくりかえし
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: 概要
+            content:
+              display_name: 内容
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: 内容
+            required:
+              display_name: 概要
         peru-2019:
           stages:
             Introduction:
@@ -1747,6 +2667,12 @@ ja:
               name: アーティストくりかえし
             Nested Loops:
               name: 入れ子のループ
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: 内容
+            required:
+              display_name: 概要
         dance-2019:
           stages:
             Dance Party:
@@ -1772,6 +2698,14 @@ ja:
               name: ループ用
         dance-extras-2019:
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1784,22 +2718,110 @@ ja:
               name: クラウドソーシング
             Conditionals with Cards:
               name: カードと条件
+          lesson_groups:
+            csf_conditionals:
+              display_name: 条件
+            csf_nested_loops:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう) 
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_events:
+              display_name: イベント
+            ramp_up:
+              display_name: ランアップ
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_events:
+              display_name: イベント
+            ramp_up:
+              display_name: ランアップ
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: 概要
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: 変数（へんすう）
+            csp_conditionals:
+              display_name: 条件
+            csp_functions:
+              display_name: 関数(かんすう) 
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: リスト
+            csp_loops:
+              display_name: くりかえし
+        csd2-2020:
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章： Web コンテンツと HTML'
+            csd2_2:
+              display_name: '第 2 章：スタイルと CSS'
+            cspSurvey:
+              display_name: アンケート
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: '第 2 章コンピューターと問題解決'
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：ユーザーを中心にしたデザイン'
+            csd4_2:
+              display_name: '第 2 章：アプリのプロトタイピング'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
+        csd5-2020:
+          lesson_groups:
+            csd5_1:
+              display_name: '第1章：情報を表現する'
+            csd5_2:
+              display_name: '第 2 章：データ問題を解決'
+            cspSurvey:
+              display_name: アンケート
         csd6-2020:
           stages:
             Functions with Parameters:
               name: パラメーター付き関数
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：ハードウェア出力'
+            csd6_2:
+              display_name: '第 2 章：ハードウェア入力'
+            cspSurvey:
+              display_name: アンケート
         csd3-2020:
           stages:
             Variables:
@@ -1812,6 +2834,13 @@ ja:
               name: 関数(かんすう) 
             Text:
               name: テキスト
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
         coursea-2020:
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: '4-7 才'
@@ -1830,6 +2859,13 @@ ja:
               name: アーティストくりかえし
             Events in Play Lab:
               name: プレイ ラボのイベント
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
         courseb-2020:
           description_audience: '5-8 才'
           stages:
@@ -1845,6 +2881,13 @@ ja:
               name: アーティストくりかえし
             Events in Play Lab:
               name: プレイ ラボのイベント
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
         coursec-2020:
           stages:
             Programming in Maze:
@@ -1855,6 +2898,15 @@ ja:
               name: アーティストくりかえし
             Events in Play Lab:
               name: プレイ ラボのイベント
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_binary:
+              display_name: ２しんすう
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1871,10 +2923,28 @@ ja:
               name: アーティスト：バイナリ
             Dance Party:
               name: ダンスパーティー
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_events:
+              display_name: イベント
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_binary:
+              display_name: ２しんすう
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: 作詞作曲
+          lesson_groups:
+            ramp_up:
+              display_name: ランアップ
+            csf_nested_loops:
+              display_name: 入れ子のループ
+            csf_functions:
+              display_name: 関数(かんすう) 
         coursef-2020:
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
           stages:
@@ -1882,6 +2952,13 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+          lesson_groups:
+            ramp_up:
+              display_name: ランアップ
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
         express-2020:
           stages:
             Dance Party:
@@ -1890,6 +2967,21 @@ ja:
               name: めいろ のプログラミング
             Loops in Artist:
               name: アーティストくりかえし
+          lesson_groups:
+            csf_warmup:
+              display_name: ウォームアップ
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_conditionals:
+              display_name: 条件
+            csf_functions:
+              display_name: 関数(かんすう) 
+            csf_variables:
+              display_name: 変数（へんすう）
+            csf_for_loops:
+              display_name: ループ用
         pre-express-2020:
           stages:
             Learn to Drag and Drop:
@@ -1904,6 +2996,17 @@ ja:
               name: アーティストくりかえし
             Loops in Artist:
               name: アーティストくりかえし
+          lesson_groups:
+            csf_sequencing:
+              display_name: シークエンス
+            csf_loops:
+              display_name: くりかえし
+            csf_events:
+              display_name: イベント
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(old) Unit 1: デジタル情報'
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1918,19 +3021,39 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章： Web コンテンツと HTML'
+            csd2_2:
+              display_name: '第 2 章：スタイルと CSS'
         csp5-virtual:
           stages:
             While Loops:
               name: Whileループ
+            Variables:
+              name: 変数（へんすう）
         virtual-holding-place:
           stages:
             Velocity:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+          lesson_groups:
+            content:
+              display_name: 内容
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
         code-break:
           stages:
             Algorithms:
               name: アルゴリズム
             Events:
               name: イベント
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Whileループ

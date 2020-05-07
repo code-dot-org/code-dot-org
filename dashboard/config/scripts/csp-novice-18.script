@@ -2,9 +2,11 @@ professional_learning_course 'CS Principles Facilitator in Training 2018-2019'
 login_required true
 student_detail_progress_view true
 
-stage 'Novice Reflection Overview', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+stage 'Novice Reflection Overview'
 level 'welcome-novice-18', named: true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Day 1'
 level 'novice-monday-1'
 level 'csp-pushDL-unit1'

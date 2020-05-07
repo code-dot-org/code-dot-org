@@ -1915,6 +1915,13 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Student Post-Course Survey:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csp1_1:
+              display_name: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
+            csp1_2:
+              display_name: 'Kabanata 2: Pag-imbento ng Internet'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1955,6 +1962,14 @@ fil:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
             Practice PT - Encode an Experience:
               name: Pagsasanay PT - Pag-encode ng Karanasan
+          lesson_groups:
+            csp2_1:
+              display_name: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong
+                Impormasyon'
+            csp2_2:
+              display_name: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp3-2017:
           description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga
             konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
@@ -2003,6 +2018,13 @@ fil:
               name: Kalagitnaang Kurso ng CSP na Surbey
             Please complete the CSP Mid-course survey!:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp4-2017:
           stages:
             Cracking the Code:
@@ -2037,6 +2059,13 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Student Post-Course Survey:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
+          lesson_groups:
+            csp4_1:
+              display_name: 'Kabanata 1: Ang Mundo ng Malalaking Datos at Pag-Encrypt'
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2115,6 +2144,13 @@ fil:
               name: Lumahok sa isang longhitudinal na pag-aaral!
             CSP Student Post-Course Survey:
               name: Surbey Pagkatapos ng Kurso sa Estudyante ng CSP
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kabanata 1: Event-Driven na Programming'
+            csp5_2:
+              display_name: 'Kabanata 2: Programming gamit ang mga Data Structures'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp6:
           stages:
             Create PT:
@@ -2319,6 +2355,9 @@ fil:
               name: Pagsusuporta sa Grupong Pag-aaral
             'Tool Talk: Intro to Netsim':
               name: 'Kasangkapan na Usapan: Panimula sa Netsim'
+          lesson_groups:
+            required:
+              display_name: Buod
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2335,6 +2374,9 @@ fil:
               name: Yunit 1 na pagsusulit pagsasanay na module Foxtrot
             test Unit 1 required reading:
               name: yunit 1 na pagsusulit kinakailangang basahin
+          lesson_groups:
+            required:
+              display_name: Buod
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2546,6 +2588,9 @@ fil:
               name: 'Aralin 2.3: Itim at Puti na Pixelation'
             Measuring Student Learning:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2840,6 +2885,9 @@ fil:
               name: Aralin 2,3
             Test stage with bubbles:
               name: Pagsubok na antas ng mga bula
+          lesson_groups:
+            required:
+              display_name: Buod
         csd3-2017:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
@@ -3268,6 +3316,13 @@ fil:
             CS Discoveries End of Semester Survey:
               name: Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa
                 CS
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
         grade2:
           stages:
             At The Dog Park:
@@ -3580,6 +3635,13 @@ fil:
                 pero maaari rin itong gawin na mag-isa lang.
             CS Discoveries Pre-survey:
               name: Pre-surbey ng CS Discoveries
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3659,6 +3721,9 @@ fil:
                 Halaga
             Unit 5 Overview:
               name: Yunit 5 Buod
+          lesson_groups:
+            required:
+              display_name: Buod
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -3685,6 +3750,9 @@ fil:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
             AP Preparation and Support:
               name: Paghahanda at Suporta sa AP
+          lesson_groups:
+            required:
+              display_name: Buod
         basketball:
           title: Pumili ng iyong grupo at gumawa ng isang basketbol na laro
           description_short: Pumili ng iyong grupo at gumawa ng isang basketbol na
@@ -4034,6 +4102,11 @@ fil:
                 din kung paano nila i-organisa ang kanilang nilalaman sa kanilang
                 sariling personal na mga web na pahina. Sa huling antas, ang mga estudyante
                 ay magsisimula sa proyekto na patuloy nilang gagawin sa buong yunit.
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kabanata 1: Web Content at HTML'
+            csd2_2:
+              display_name: 'Kabanata 2: Pag-iistilo at CSS'
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -4060,6 +4133,9 @@ fil:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
             AP Preparation and Support:
               name: Paghahanda at Suporta sa AP
+          lesson_groups:
+            required:
+              display_name: Buod
         csd4-2017:
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
             pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
@@ -4444,6 +4520,11 @@ fil:
                 ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung
                 saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang
                 mga plano para sa hinaharap.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
         minecraft:
           title: Minecraft Hour of Code na Taga-disenyo
           description_short: Mag-program ng mga hayop at iba pang nilalang sa mga
@@ -4644,6 +4725,9 @@ fil:
               name: Mga conditional
             'Algorithms: Dice Race':
               name: 'Mga Algoritmo: Dice Race'
+          lesson_groups:
+            extra_course_content:
+              display_name: Ekstra na Nilalaman ng Kurso
         coursef-draft:
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
@@ -4781,6 +4865,9 @@ fil:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
             AP Preparation and Support:
               name: Paghahanda at Suporta sa AP
+          lesson_groups:
+            required:
+              display_name: Buod
         csdgraveyard:
           stages:
             new stage:
@@ -4813,6 +4900,9 @@ fil:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
             Unit 4 Overview:
               name: Yunit 4 Buod
+          lesson_groups:
+            required:
+              display_name: Buod
         sciencepd4:
           stages:
             Welcome!:
@@ -4894,6 +4984,9 @@ fil:
               name: Pagtuklas na Pag-aaral
             Measuring Student Learning:
               name: Pagsukat ng Pagkatuto ng mga Mag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csppostap-2017:
           description_short: Matutong mangolekta at gumamit ng mga datos sa mga app
             sa App Lab.
@@ -4916,6 +5009,9 @@ fil:
               name: Sample na mga App
             Final Project:
               name: Huling Proyekto
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -5002,6 +5098,11 @@ fil:
               name: Accelerometer
             Functions with Parameters:
               name: Mga function na meron mga parameter
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
         workshop-gamelab:
           stages:
             Introduction:
@@ -5055,6 +5156,11 @@ fil:
               name: Pag-Encrypt
             Structuring Data:
               name: Pagsasaayos ng mga Datos
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
         applab-1hour:
           title: App Lab 1 Oras na Workshop
           description_audience: Mga Estudyante sa Gitna at Mataas na Paaralan
@@ -5239,6 +5345,11 @@ fil:
               name: 'Proyekto: Gumawa ng Laro'
             Arrays and Color LEDs__:
               name: Mga Array at mga LED na mga kulay
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
         csd3-draft:
           title: 'CSD Yunit 3 - Pag-program: Mga Animasyon at mga Laro'
           description_short: Mga Animasyon at Laro
@@ -5694,6 +5805,11 @@ fil:
                 ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman.
                 Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan
                 ng parehong pisikal at diginal na seguridad.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
         csd3-old:
           title: CSD Yunit 3 (LUMA NA)
           description_short: 2016/2017 Draft ng CSD Yunit 3
@@ -5935,6 +6051,9 @@ fil:
           description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso
             na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto
             para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6440,6 +6559,13 @@ fil:
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
             Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
             na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+          lesson_groups:
+            csf_e_1:
+              display_name: Mag-ramp up sa Course E (Opsyonal)
+            csf_e_2:
+              display_name: Nilalaman ng Kurso na E
+            extra_course_content:
+              display_name: Ekstra na Nilalaman ng Kurso
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -6713,6 +6839,11 @@ fil:
             at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo
             at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga
             kaibigan at pamilya.
+          lesson_groups:
+            csf_f_1:
+              display_name: Mag-ramp up sa Kursong F (Opsyonal)
+            csf_f_2:
+              display_name: Nilalaman ng Kursong F
         csdnovice:
           stages:
             Tuesday:
@@ -6789,6 +6920,13 @@ fil:
             at makompleto ang pagsusulit sa AP at mga Performance Tasks.
           description: Ang mga aralin ay naggagabay sa mga estudyante na maghanda
             at makompleto ang pagsusulit sa AP at mga Performance Tasks.
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Kabanata 1: AP Tech na Setup'
+            csp_ap_3:
+              display_name: 'Kabanata 3: AP Maglikha ng Performance Task'
+            csp_ap_2:
+              display_name: 'Kabanata 2: AP Explore na Performance Task'
         cspnovice:
           stages:
             Welcome:
@@ -6808,6 +6946,9 @@ fil:
             tagapangasiwa sa TeacherCon.
           description: 'Isang lugar para subaybayan ang iyong repleksyon mula sa TeacherCon
             bilang isang baguhan na tagapangasiwa. '
+          lesson_groups:
+            required:
+              display_name: Buod
         novice-view:
           stages:
             CSP Tuesday:
@@ -6844,6 +6985,9 @@ fil:
             sa Yunit 1 ng Code.org na CSP Kurikulum. Ang mga aytem para sa pagrepasu
             sa mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag naisumite
             mo na ang iyong sariling mga repleksyon para sa yunit. '
+          lesson_groups:
+            required:
+              display_name: Buod
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -6862,6 +7006,9 @@ fil:
             kahusayan sa Yunit 2 ng Code.org na CSP Kurikulum. Ang mga aytem para
             sa pagrepasu sa mga kasamahan ay makikita sa ilalim ng pahinang ito, kapag
             naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
+          lesson_groups:
+            required:
+              display_name: Buod
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -6878,6 +7025,9 @@ fil:
             kahusayan sa Yunit 3 ng Code.org na CSP Kurikulum. Ang mga aytem para
             sa pagtatasa sa mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag
             naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
+          lesson_groups:
+            required:
+              display_name: Buod
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -6894,6 +7044,9 @@ fil:
             ng kahusayan sa Yunit 4 ng Code.org na CSP Kurikulum. Ang mga aytem para
             sa pagtatasa sa mga kasamahan ay makikita sa ilalim ng pahinang ito, kapag
             naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
+          lesson_groups:
+            required:
+              display_name: Buod
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -6910,6 +7063,9 @@ fil:
             kahusayan sa Yunit 5 ng Code.org na CSP Kurikulum. Ang mga aytem para
             sa pagtatasa ng mga kasamahan ay makikita sa ibaba ng pahinang ito, kapag
             naisumite mo na ang iyong sariling mga repleksyon para sa yunit. '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -6927,6 +7083,9 @@ fil:
             Ang mga aytem para sa pagtatasa sa mga kasamahan ay makikita sa ibaba
             ng pahinang ito, kapag naisumite mo na ang iyong sariling mga repleksyon
             para sa yunit. '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -6944,6 +7103,9 @@ fil:
             mga aytem para sa pagtatasa sa mga kasamahan ay makikita sa baba ng pahinang
             ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para
             sa yunit.
+          lesson_groups:
+            required:
+              display_name: Buod
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -6961,6 +7123,9 @@ fil:
             mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang
             ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para
             sa yunit.
+          lesson_groups:
+            required:
+              display_name: Buod
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -6978,6 +7143,9 @@ fil:
             mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang
             ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para
             sa yunit.
+          lesson_groups:
+            required:
+              display_name: Buod
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -6995,6 +7163,9 @@ fil:
             mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang
             ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para
             sa yunit.
+          lesson_groups:
+            required:
+              display_name: Buod
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7012,6 +7183,9 @@ fil:
             mga aytem para sa pagtatasa sa mga kasamahay ay makikita sa baba ng pahinang
             ito, kapag tapos ka nang magsumite ng iyong sariling mga repleksyon para
             sa yunit.
+          lesson_groups:
+            required:
+              display_name: Buod
         allthettsthings:
           stages:
             TTS:
@@ -7197,6 +7371,13 @@ fil:
             at mga kagamitan.\r\n\r\nAng yunit na ito ay huling binago noong ika-30
             ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa
             forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7236,6 +7417,11 @@ fil:
             Linking Screens:
               name: Pag-uugnay sa mga Screen
           title: CSD Yunit 4 Mga Rebisyon na Draft
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
         craft17:
           stages:
             craft17 stage:
@@ -7331,6 +7517,13 @@ fil:
             Sequence in Maze:
               name: Pagkakasunod-sunod sa Maze
           title: Kursong E & F na Rampa
+          lesson_groups:
+            csf_e_1:
+              display_name: Mag-ramp up sa Course E (Opsyonal)
+            csf_e_2:
+              display_name: Nilalaman ng Kurso na E
+            extra_course_content:
+              display_name: Ekstra na Nilalaman ng Kurso
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7384,6 +7577,9 @@ fil:
           description: Ang yunit na ito ay nagpapakilala sa mga batayang konsepto
             ng pag-program sa kompyuter, para sa mga estudyante sa Subgoals na Grupong
             A.
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7521,6 +7717,13 @@ fil:
             Crowdsourcing:
               name: Pag-crowdsourcing
           title: Bagong Iskript para sa E
+          lesson_groups:
+            csf_e_1:
+              display_name: Mag-ramp up sa Course E (Opsyonal)
+            csf_e_2:
+              display_name: Nilalaman ng Kurso na E
+            extra_course_content:
+              display_name: Ekstra na Nilalaman ng Kurso
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -7580,6 +7783,11 @@ fil:
             Present Your Project:
               name: Ipakita ang Iyong Proyekto
           title: Bagong Iskript para sa F
+          lesson_groups:
+            csf_f_1:
+              display_name: Mag-ramp up sa Kursong F (Opsyonal)
+            csf_f_2:
+              display_name: Nilalaman ng Kursong F
         csd5-old:
           stages:
             Representation Matters:
@@ -7623,6 +7831,11 @@ fil:
             para i-automate ang prosesong ito. Ang kabanata ay nagtatapos sa pamamagitan
             ng pagbigay diin sa kung paano ang proseso ng paglutas ng mga problema
             sa datos ay maaaring gamitin sa bahagi na iyong napili.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -7700,6 +7913,11 @@ fil:
               name: Pagpresenta ng App
           title: "(LUMA NA) CSD Yunit 4 - Ang Proseso ng Pag-Disenyo"
           description_short: 2016/17 na Beta bersyon ng CSD Yunit 4
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -7731,6 +7949,11 @@ fil:
           description: "Ito ay isang replika ng live na mga antas sa /s/csp3 na may
             mga bago at binagong mga yugto na idinagdag. HUWAG BAGUHIN ANG MGA LIVE
             NA MGA ANTAS.\r\n"
+          lesson_groups:
+            csp3_1:
+              display_name: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
         pwc:
           stages:
             new stage:
@@ -7865,6 +8088,11 @@ fil:
             mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
             na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga
             nabago sa kurikulum sa forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Kabanata 2: AP Explore na Performance Task'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7888,6 +8116,11 @@ fil:
             mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
             na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga
             nabago sa kurikulum sa forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Kabanata 3: AP Maglikha ng Performance Task'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -7978,6 +8211,13 @@ fil:
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
           title: Kursong E 2018
+          lesson_groups:
+            csf_e_1:
+              display_name: Mag-ramp up sa Course E (Opsyonal)
+            csf_e_2:
+              display_name: Nilalaman ng Kurso na E
+            extra_course_content:
+              display_name: Ekstra na Nilalaman ng Kurso
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -8037,6 +8277,11 @@ fil:
             Present Your Project:
               name: Ipakita ang Iyong Proyekto
           title: Kursong F 2018
+          lesson_groups:
+            csf_f_1:
+              display_name: Mag-ramp up sa Kursong F (Opsyonal)
+            csf_f_2:
+              display_name: Nilalaman ng Kursong F
         csd6-old:
           stages:
             Computing Innovations:
@@ -8070,6 +8315,11 @@ fil:
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
           title: "(LUMA NA) CSD Yunit 6 - Pisikal na Pag-Compute"
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
         csd3-1819draft:
           stages:
             Programming for Entertainment:
@@ -8121,6 +8371,13 @@ fil:
                 CS
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
         textbook:
           stages:
             new stage:
@@ -8529,6 +8786,13 @@ fil:
             CS Discoveries End of Semester Survey:
               name: Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa
                 CS
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd2-2018:
           description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi
             ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung
@@ -8805,6 +9069,13 @@ fil:
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
                 na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kabanata 1: Web Content at HTML'
+            csd2_2:
+              display_name: 'Kabanata 2: Pag-iistilo at CSS'
+            cspSurvey:
+              display_name: Pagsisiyasat
         coursea-2018:
           assignment_family_title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science
@@ -9199,6 +9470,13 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
+            cspSurvey:
+              display_name: Pagsisiyasat
         coursee-2018:
           assignment_family_title: Kursong E
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
@@ -9420,6 +9698,13 @@ fil:
               name: Mga Conditional gamit ang mga Card
             Minecraft Hour of Code:
               name: Minecraft na Hour of Code
+          lesson_groups:
+            csf_e_1:
+              display_name: Mag-ramp up sa Course E (Opsyonal)
+            csf_e_2:
+              display_name: Nilalaman ng Kurso na E
+            extra_course_content:
+              display_name: Ekstra na Nilalaman ng Kurso
         coursef-2018:
           assignment_family_title: Kursong F
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
@@ -9694,6 +9979,11 @@ fil:
                 makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
+          lesson_groups:
+            csf_f_1:
+              display_name: Mag-ramp up sa Kursong F (Opsyonal)
+            csf_f_2:
+              display_name: Nilalaman ng Kursong F
         csp1-2018:
           stages:
             CS Principles Pre-survey:
@@ -9730,6 +10020,13 @@ fil:
               name: Pagsasanay sa PT - Ang Internet at ang Lipunan
             Unit 1 Chapter 2 Assessment:
               name: Yunit 1 Kabanata 2 Pagtatasa
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csp1_1:
+              display_name: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
+            csp1_2:
+              display_name: 'Kabanata 2: Pag-imbento ng Internet'
         csd1-2018:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
@@ -9940,6 +10237,13 @@ fil:
                 ay nagtatapos sa isang mga pag-talakay sa mga app na ito, pati na
                 rin ang isang diskusyon na pinanguluhan ng isang guro tungkol sa epekto
                 ng mga app sa lipunan. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
         csd4-2018:
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
             pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
@@ -10249,6 +10553,13 @@ fil:
                 ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung
                 saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang
                 mga plano para sa hinaharap.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd5-2018:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas
@@ -10626,6 +10937,13 @@ fil:
                 Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit
                 anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda
                 ng presentasyon sa klase.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -10660,6 +10978,11 @@ fil:
               name: Pagsasanay sa PT - Pagkuwento ng isang Datos na Istorya
             Unit 2 Chapter 2 Assessment:
               name: Yunit 2 Kabanata 2 Pagtatasa
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Yunit 2: Digital na Impormasyon'
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
         csp3-2018:
           description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga
             konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
@@ -10697,6 +11020,11 @@ fil:
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
             Creating Functions with Parameters:
               name: Paglikha ng mga Functions na may mga Parameter
+          lesson_groups:
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp-explore-2018:
           title: Tuklasin - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
@@ -10718,6 +11046,11 @@ fil:
               name: Pagtuklas sa PT - Paggawa ng Plano
             Explore PT - Complete the Task:
               name: Pagtuklas sa PT - Kompletuhin ang Gawain
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Kabanata 2: AP Explore na Performance Task'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp-create-2018:
           title: Paglikha - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
@@ -10739,6 +11072,11 @@ fil:
               name: Lumikha ng PT Prep - Paggawa ng Plano
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Kabanata 3: AP Maglikha ng Performance Task'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp4-2018:
           stages:
             What is Big Data?:
@@ -10767,6 +11105,11 @@ fil:
               name: Paghahanap ng mga Uso sa Pagpapakita
             Check Your Assumptions:
               name: Suriin ang Iyong mga Palagay
+          lesson_groups:
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp5-2018:
           stages:
             Buttons and Events:
@@ -10817,6 +11160,13 @@ fil:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
             Participate in a longitudinal study!:
               name: Lumahok sa isang longhitudinal na pag-aaral!
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kabanata 1: Event-Driven na Programming'
+            csp5_2:
+              display_name: 'Kabanata 2: Programming gamit ang mga Data Structures'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csppostap-2018:
           description_short: Matutong mangolekta at gumamit ng mga datos sa mga app
             sa App Lab.
@@ -10857,6 +11207,11 @@ fil:
               name: Paglikha ng mga Sumaryong Talahanayan
             Unit 2 Chapter 2 Assessment:
               name: Yunit 2 Kabanata 2 Pagtatasa
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10869,6 +11224,9 @@ fil:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga
             nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10877,6 +11235,9 @@ fil:
               name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga
             nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10885,6 +11246,9 @@ fil:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga
             nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10895,6 +11259,9 @@ fil:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga
             nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10903,6 +11270,9 @@ fil:
               name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga
             nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          lesson_groups:
+            required:
+              display_name: Buod
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10913,24 +11283,36 @@ fil:
               name: Kompletong Yunit 6 Mga Repleksyon sa Mas Malalim na Pag-aaral
           description_short: 'Mga materyales para sa Mas Malalim na Pag-aaral sa mga
             nagsasanay na mga tagapangasiwa ng CS Discoveries '
+          lesson_groups:
+            required:
+              display_name: Buod
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 1 Deeper Learning Reflections:
               name: Kumpletong Yunit 1 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 2 Deeper Learning Reflections:
               name: Kumpletong Yunit 2 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 3 Deeper Learning Reflections:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -10939,22 +11321,34 @@ fil:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
             Complete Unit 4 Deeper Learning Reflections:
               name: Kompletong Yunit 3 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 5 Deeper Learning Reflections:
               name: Kompletong Yunit 5 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
             Complete Unit 6 Deeper Learning Reflections:
               name: Kompletong Yunit 6 Mga Repleksyon sa Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csd-novice-18:
           stages:
             Welcome:
@@ -10967,6 +11361,9 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+          lesson_groups:
+            required:
+              display_name: Buod
         csd-apprentice-18:
           stages:
             Tuesday:
@@ -10977,6 +11374,9 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+          lesson_groups:
+            required:
+              display_name: Buod
         csp-novice-18:
           stages:
             Tuesday:
@@ -10987,6 +11387,9 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+          lesson_groups:
+            required:
+              display_name: Buod
         csp-apprentice-18:
           stages:
             Tuesday:
@@ -10997,6 +11400,9 @@ fil:
               name: Huwebes
             Wrap Up:
               name: Tapusin Na
+          lesson_groups:
+            required:
+              display_name: Buod
         pre-express-2018:
           title: Hindi Marunong Magbasa Express
           assignment_family_title: Hindi Marunong Magbasa Express
@@ -11038,6 +11444,9 @@ fil:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         frozen-2018:
           stages:
             Artist:
@@ -11072,6 +11481,14 @@ fil:
           stages:
             Dance Party:
               name: Dance Party
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
         coursef-2019:
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
             mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
@@ -11281,6 +11698,19 @@ fil:
                 ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling
                 ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong
                 ang pagtutulungan sa industriya ng computer science.
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Mga Sprites
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
         dance-low:
           stages:
             Dance Party:
@@ -11330,6 +11760,17 @@ fil:
                 ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             Dance Party:
               name: Dance Party
+          lesson_groups:
+            csf_events:
+              display_name: Mga event
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
         coursee-2019:
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
@@ -11514,6 +11955,19 @@ fil:
               name: Mga Kondisyonal sa Minecraft
             Songwriting:
               name: Pagsusulat ng Awit
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_sprites:
+              display_name: Mga Sprites
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            csf_nested_loops:
+              display_name: Mga Loops na naka-nest
+            csf_functions:
+              display_name: Mga function
         express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -11597,6 +12051,19 @@ fil:
               name: Dance Party
             Concept Practice with Minecraft:
               name: Masdan ang Hinaharap
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_functions:
+              display_name: Mga function
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Mga Sprites
         csd1-2019:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
@@ -11763,6 +12230,13 @@ fil:
                 para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
                 mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
                 pero maaari rin itong gawin na mag-isa lang.
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
         andrea-test:
           stages:
             new stage:
@@ -11771,6 +12245,9 @@ fil:
               name: blangko
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         coursec-2019:
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
             at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang
@@ -11814,8 +12291,20 @@ fil:
               name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -11908,6 +12397,13 @@ fil:
                 sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
                 uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
                 na mga palaisipan.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         courseb-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -11942,6 +12438,15 @@ fil:
                 sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
                 uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
                 na mga palaisipan.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            csf_events:
+              display_name: Mga event
         pre-express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -11969,6 +12474,11 @@ fil:
               name: Matutong Mag-Drag at Mag-Drop
             Programming in Maze:
               name: Pag-Program sa Maze
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -12255,6 +12765,13 @@ fil:
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
                 na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kabanata 1: Web Content at HTML'
+            csd2_2:
+              display_name: 'Kabanata 2: Pag-iistilo at CSS'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd3-2019:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
@@ -12659,6 +13176,13 @@ fil:
             CS Discoveries End of Semester Survey:
               name: Pangkatapusan ng Semestre na Pagsisiyasat sa Mga Natuklasan sa
                 CS
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd4-2019:
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
             pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
@@ -12968,6 +13492,15 @@ fil:
                 ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung
                 saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang
                 mga plano para sa hinaharap.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd5-2019:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas
@@ -13345,6 +13878,13 @@ fil:
                 Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit
                 anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda
                 ng presentasyon sa klase.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd6-2019:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga
@@ -13391,10 +13931,26 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp4-pilot:
           stages:
             Surveys:
               name: Mga Pagsisiyasat
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+            required:
+              display_name: Buod
         csp1-2019:
           stages:
             CS Principles Pre-survey:
@@ -13429,6 +13985,13 @@ fil:
               name: Pagsasanay sa PT - Ang Internet at ang Lipunan
             Unit 1 Chapter 2 Assessment:
               name: Yunit 1 Kabanata 2 Pagtatasa
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csp1_1:
+              display_name: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
+            csp1_2:
+              display_name: 'Kabanata 2: Pag-imbento ng Internet'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -13437,6 +14000,13 @@ fil:
               name: Pag-eencode ng B&W na mga Larawan
             Encoding Color Images:
               name: Pag-eencode ng mga Makulay na mga Larawan
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Yunit 2: Digital na Impormasyon'
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp3-2019:
           description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga
             konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
@@ -13470,6 +14040,11 @@ fil:
               name: Pagsasanay sa PT - Pagdisenyo ng isang digital na tagpo
             Unit 3 Chapter 1 Assessment:
               name: Yunit 3 Kabanata 1 Pagtatasa
+          lesson_groups:
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp4-2019:
           stages:
             What is Big Data?:
@@ -13492,6 +14067,11 @@ fil:
               name: Publikong Key Crypto
             Rapid Research - Cybercrime:
               name: Mabilis na Pananaliksik - Cybercrime
+          lesson_groups:
+            cspAssessment:
+              display_name: Pagsusuri sa Kabanata
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp5-2019:
           stages:
             Buttons and Events:
@@ -13538,6 +14118,13 @@ fil:
               name: Yunit 5 Pagtatasa 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kabanata 1: Event-Driven na Programming'
+            csp5_2:
+              display_name: 'Kabanata 2: Programming gamit ang mga Data Structures'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp-explore-2019:
           title: Tuklasin - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
@@ -13559,6 +14146,11 @@ fil:
               name: Pagtuklas sa PT - Paggawa ng Plano
             Explore PT - Complete the Task:
               name: Pagtuklas sa PT - Kompletuhin ang Gawain
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Kabanata 2: AP Explore na Performance Task'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp-create-2019:
           title: Paglikha - Paghahanda sa AP Performance Task
           description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
@@ -13580,6 +14172,11 @@ fil:
               name: Lumikha ng PT Prep - Paggawa ng Plano
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Kabanata 3: AP Maglikha ng Performance Task'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csppostap-2019:
           description_short: Matutong mangolekta at gumamit ng mga datos sa mga app
             sa App Lab.
@@ -13614,6 +14211,11 @@ fil:
               name: Sample na mga App
             Final Project:
               name: Huling Proyekto
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp1-pilot:
           stages:
             new stage:
@@ -13632,6 +14234,11 @@ fil:
               name: Binary na mga Numero
             Representing Information:
               name: Pagrepresenta ng Impormasyon
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            required:
+              display_name: Buod
         csd-videos:
           stages:
             new stage:
@@ -13668,10 +14275,77 @@ fil:
               name: Mga Function sa Artist
             Determine the Concept:
               name: Tukuyin ang Konsepto
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_sprites:
+              display_name: Mga Sprites
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Mga listahan
+            csp_loops:
+              display_name: Mga loop
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
         csp7-pilot-staging:
           stages:
             new stage:
               name: bagong yugto
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -13680,6 +14354,10 @@ fil:
               name: Pag-Program sa Maze
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp-post-survey-2018:
           description_audience: CSP na mga Estudyante
           description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng
@@ -13687,14 +14365,27 @@ fil:
           description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso
             na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto
             para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
         csp5-pilot:
           stages:
             new stage:
               name: bagong yugto
+          lesson_groups:
+            csp_lists:
+              display_name: Mga listahan
+            csp_loops:
+              display_name: Mga loop
+            required:
+              display_name: Buod
         fit2019-novice:
           stages:
             Wrap Up:
               name: Tapusin Na
+          lesson_groups:
+            required:
+              display_name: Buod
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -13703,6 +14394,9 @@ fil:
           stages:
             Wrap Up:
               name: Tapusin Na
+          lesson_groups:
+            required:
+              display_name: Buod
         csd1-pilot:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
@@ -13869,6 +14563,13 @@ fil:
                 para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
                 mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
                 pero maaari rin itong gawin na mag-isa lang.
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
         csd2-pilot:
           description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi
             ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung
@@ -14149,6 +14850,13 @@ fil:
               name: Intelektwal na Pag-aari
             Images:
               name: Mga Larawan
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kabanata 1: Web Content at HTML'
+            csd2_2:
+              display_name: 'Kabanata 2: Pag-iistilo at CSS'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd3-pilot:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
@@ -14550,6 +15258,13 @@ fil:
                 estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang
                 mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring
                 aabot kahit saan hanggang sa 3-5 na oras ng klase.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
         maddie-test:
           stages:
             new stage:
@@ -14558,54 +15273,92 @@ fil:
           stages:
             Debugging:
               name: Pagdedebug
+          lesson_groups:
+            required:
+              display_name: Buod
         csl-vn:
           stages:
             Programming in Maze:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csd-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: bagong yugto
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csd-mod-w3:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csd-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csp-mod-w2:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csp-mod-w3:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+          lesson_groups:
+            required:
+              display_name: Buod
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -14616,6 +15369,9 @@ fil:
               name: Pagproseso
             Project - Propose an App:
               name: Proyekto - Pagmungkahi ng App
+          lesson_groups:
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
         csp2-pilot:
           stages:
             new stage:
@@ -14624,6 +15380,9 @@ fil:
               name: Mga Routers at Redundancy
             The Need for Addressing:
               name: Ang Pangangailangan ng Addressing
+          lesson_groups:
+            required:
+              display_name: Buod
         peru-2019:
           stages:
             new stage:
@@ -14642,6 +15401,10 @@ fil:
               name: Mga Pangyayari sa Star Wars
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Buod
         dance-2019:
           stages:
             Dance Party:
@@ -14682,6 +15445,11 @@ fil:
               name: Mga variable
             For Loops:
               name: For Loops
+          lesson_groups:
+            k5_getting_started:
+              display_name: Pagsisimula
+            k5_next_steps:
+              display_name: Mga susunod na Hakbang
         csp10-pilot:
           stages:
             new stage:
@@ -14690,6 +15458,13 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -14712,6 +15487,15 @@ fil:
               name: 'Mga Function: Pagsusulat ng Awit'
             Functions in Artist:
               name: Mga Function sa Artist
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_nested_loops:
+              display_name: Mga Loops na naka-nest
+            csf_functions:
+              display_name: Mga function
         time4cs-experiment-unit-2:
           stages:
             Nested Loops in Maze:
@@ -14728,18 +15512,66 @@ fil:
               name: Mga conditional
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_events:
+              display_name: Mga event
+            csf_sprites:
+              display_name: Mga Sprites
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            ramp_up:
+              display_name: Pabilisin
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Mga conditional
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_events:
+              display_name: Mga event
+            csf_sprites:
+              display_name: Mga Sprites
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            ramp_up:
+              display_name: Pabilisin
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Buod
         csp8-pilot:
           stages:
             new stage:
               name: bagong yugto
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Mga variable
+            csp_conditionals:
+              display_name: Mga conditional
+            csp_functions:
+              display_name: Mga function
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Mga listahan
+            csp_loops:
+              display_name: Mga loop
         csp9-pilot:
           stages:
             new stage:
@@ -14888,6 +15720,13 @@ fil:
                 pahina, ang mga estudyante ay gagamit sa kanilang kaalaman sa mga
                 bagong katangian ng CSS para makagawa pa na ibang pag-istilo sa kanilang
                 mga personal na website.
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kabanata 1: Web Content at HTML'
+            csd2_2:
+              display_name: 'Kabanata 2: Pag-iistilo at CSS'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd1-2020:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
@@ -14902,17 +15741,17 @@ fil:
                 ay mag-iisip sa kanilang karanasan sa gawain at gumawa ng koneksyon
                 sa mga tipo ng paglutas ng problema na gagawin nila sa natirang bahagi
                 ng kurso. '
-              description_teacher: Sa araling ito, ang mga estudyante ay magtatrabaho
+              description_teacher: 'Sa araling ito, ang mga estudyante ay magtatrabaho
                 sa loob ng mga grupo para makadisenyo ng aluminum foil na mga bangka
-                na susuporta sa maraming mga barya hangga't maaari. Ang mga grupo
+                na susuporta sa maraming mga barya hangga''t maaari. Ang mga grupo
                 ay mayroong dalawang pagkakataon para magawa ang kanilang mga bangka,
                 na may layunin na makakarga ng mas marami pang barya kaysa sa nagawa
                 nila sa unang pagkakataon. Ang istraktura ng gawain ay nagpapahiwatig
-                sa iba't ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
+                sa iba''t ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
                 ng mas detalyado sa sumusunod na mga aralin. Sa pagtatapos ng aralin,
                 ang mga estudyante ay mag-iisip sa kanilang mga karanasan sa gawain
                 at gagawa ng mga koneksyon sa mga uri ng paglutas ng problema na gagawin
-                nila sa natitirang bahagi ng kurso.
+                nila sa natitirang bahagi ng kurso. '
             The Problem Solving Process:
               name: Ang Proseso ng Pagtuklas ng Problema
               description_student: Ang araling ito ay nagpapakila sa pormal na proseso
@@ -15054,6 +15893,13 @@ fil:
                 para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
                 mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
                 pero maaari rin itong gawin na mag-isa lang.
+          lesson_groups:
+            cspSurvey:
+              display_name: Pagsisiyasat
+            csd1_1:
+              display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            csd1_2:
+              display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
         csd4-2020:
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
             pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
@@ -15363,6 +16209,15 @@ fil:
                 ang mga problema na itinakda nilang lutasin, ang mga pamamaraan kung
                 saan nila inilakip ang mga feedback mula sa pagsubok, at ang kanilang
                 mga plano para sa hinaharap.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            csd4_2:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd5-2020:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description: Ang Yunit 5 ay tungkol sa kahalagahan ng mga datos sa paglutas
@@ -15740,6 +16595,13 @@ fil:
                 Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit
                 anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda
                 ng presentasyon sa klase.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            csd5_2:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd6-2020:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga
@@ -15786,6 +16648,13 @@ fil:
               name: Mga Circuit at Pisikal na mga Prototype
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Kabanata 1: Output ng Hardware'
+            csd6_2:
+              display_name: 'Kabanata 2: Input ng Hardware'
+            cspSurvey:
+              display_name: Pagsisiyasat
         csd3-2020:
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
@@ -16172,6 +17041,13 @@ fil:
                 aabot kahit saan hanggang sa 3-5 na oras ng klase.
             Text:
               name: Text
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+            cspSurvey:
+              display_name: Pagsisiyasat
         coursea-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -16244,6 +17120,13 @@ fil:
                 sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code
                 na natutunan nila para lumikha ng isang laro na naka-animate. Oras
                 na para maging malikhain at gumawa ng istorya sa Play Lab!
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         courseb-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -16272,6 +17155,15 @@ fil:
                 ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
                 ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
                 kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_loops:
+              display_name: Mga loop
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
+            csf_events:
+              display_name: Mga event
         coursec-2020:
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
             at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang
@@ -16311,6 +17203,15 @@ fil:
             'End of Course Project: Create a Play Lab Game':
               description_student: Ihanda ang iyong mga kamay para sa maraming pag-code!
                 Oras na para magsimulang bumuo ng iyong proyekto.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -16350,6 +17251,17 @@ fil:
               name: Digital na Pagkamamamayan
             Dance Party:
               name: Dance Party
+          lesson_groups:
+            csf_events:
+              display_name: Mga event
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
         coursee-2020:
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
@@ -16409,6 +17321,19 @@ fil:
                 mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng
                 mga function sa pamamagitan ng pagtawag ng isang function sa loob
                 ng isa pa.
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_sprites:
+              display_name: Mga Sprites
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_nested_loops:
+              display_name: Mga Loops na naka-nest
+            csf_functions:
+              display_name: Mga function
+            csf_impacts:
+              display_name: Epekto ng Pag-Compute
         coursef-2020:
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
             mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
@@ -16523,6 +17448,17 @@ fil:
                 ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling
                 ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong
                 ang pagtutulungan sa industriya ng computer science.
+          lesson_groups:
+            ramp_up:
+              display_name: Pabilisin
+            csf_digcit:
+              display_name: Digital na Pagkamamamayan
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Mga Sprites
         express-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -16560,6 +17496,19 @@ fil:
               name: Mga For Loops sa Bee
             For Loops in Artist:
               name: Mga Loops sa Artist
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_conditionals:
+              display_name: Mga conditional
+            csf_functions:
+              display_name: Mga function
+            csf_variables:
+              display_name: Mga variable
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Mga Sprites
         pre-express-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -16577,6 +17526,11 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             Spelling Bee:
               name: Spelling Bee
+          lesson_groups:
+            csf_loops:
+              display_name: Mga loop
+            csf_events:
+              display_name: Mga event
         csp1-2020:
           stages:
             new stage:
@@ -16587,6 +17541,9 @@ fil:
               name: Binary na mga Numero
             Intellectual Property:
               name: Intelektwal na Pag-aari
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(luma) Yunit 1: Digital na Impormasyon"
         csp2-2020:
           stages:
             new stage:
@@ -17057,6 +18014,9 @@ fil:
                 estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang
                 mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring
                 aabot kahit saan hanggang sa 3-5 na oras ng klase.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
         jess-test-script:
           stages:
             new stage:
@@ -17199,6 +18159,11 @@ fil:
                 pahina, ang mga estudyante ay gagamit sa kanilang kaalaman sa mga
                 bagong katangian ng CSS para makagawa pa na ibang pag-istilo sa kanilang
                 mga personal na website.
+          lesson_groups:
+            csd2_1:
+              display_name: 'Kabanata 1: Web Content at HTML'
+            csd2_2:
+              display_name: 'Kabanata 2: Pag-iistilo at CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -17247,6 +18212,8 @@ fil:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
             Intro to App Lab:
               name: Panimula sa App Lab
+            Variables:
+              name: Mga variable
         virtual-holding-place:
           stages:
             Velocity:
@@ -17265,6 +18232,9 @@ fil:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
             Project - Design a Game:
               name: Proyekto - Pagdisenyo ng Laro
+          lesson_groups:
+            csd3_2:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
         code-break:
           stages:
             new stage:
@@ -17273,3 +18243,36 @@ fil:
               name: Mga algorithm
             Events:
               name: Mga event
+        no-lg:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Yunit 5 Pagtatasa 2
+            While Loops:
+              name: While Loops
+            Loops and Simulations:
+              name: Mga Loop at Mga Simulasyon
+            Introduction to Arrays:
+              name: Introduksyon sa mga Array
+            'Building an App: Image Scroller':
+              name: 'Pagbubuo ng App: Scroller ng Larawan'
+            Unit 5 Assessment 3:
+              name: Yunit 5 Pagtatasa 3
+            Processing Arrays:
+              name: Processing na mga Array
+            Functions with Return Values:
+              name: Mga Function na may Sinauling mga Halaga
+            'Building an App: Canvas Painter':
+              name: 'Pagbubuo ng App: Pintor sa Canvas'
+            Unit 5 Assessment 4:
+              name: Yunit 5 Pagtatasa 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
+          lesson_groups:
+            csp5_1:
+              display_name: 'Kabanata 1: Event-Driven na Programming'
+            csp5_2:
+              display_name: 'Kabanata 2: Programming gamit ang mga Data Structures'

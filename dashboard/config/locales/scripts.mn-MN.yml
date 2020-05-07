@@ -1919,6 +1919,13 @@ mn:
               name: CSР сурагчийн хичээлийн дараах судалгаа
             Post-Course Survey:
               name: Хичээлийн дараах судалгаа
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp1_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлж дамжуулах'
+            csp1_2:
+              display_name: '2-р бүлэг: Интернэтийг бүтээх'
         csp2-2017:
           title: CSP Нэгж 2 - Дижитал мэдээлэл ('17 -'18)
           description: Энэ нэгж нь дижитал мэдээллийг кодлох, дүрслэх, удирдах арга
@@ -1975,6 +1982,13 @@ mn:
               name: PT дадлага хийх - Туршилтыг кодлох
             Post-Course Survey:
               name: Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp2_1:
+              display_name: '1-р бүлэг: Нарийн төвөгтэй мэдээллийг кодолж шахах'
+            csp2_2:
+              display_name: '2-р бүлэг: Өгөгдлийг удирдаж дүрслэх'
+            cspSurvey:
+              display_name: Судалгаа
         csp3-2017:
           title: CSP Нэгж 3 - Програмчлалын танилцуулга ('17 -'18)
           description: "Энэ нэгж нь компьютерийн програмчлалын суурь ойлголтуудыг
@@ -2028,6 +2042,13 @@ mn:
               name: CSP хичээлийн дундуурх судалгааг бөглөнө үү!
             Post-Course Survey:
               name: Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp3_1:
+              display_name: '1-р бүлэг: Программчлалын хэл ба алгоритм'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp4-2017:
           title: CSP Нэгж 4 - Том өгөгдөл ба нууцлал ('17 -'18)
           description: "Бидний амьдарч буй өгөгдөл баялаг ертөнцөд төрийн бодлого,
@@ -2080,6 +2101,13 @@ mn:
               name: Хичээлийн дараах судалгаа
             Student Post-Course Survey:
               name: Сурагчийн хичээлийн дараах судалгаа
+          lesson_groups:
+            csp4_1:
+              display_name: '1-р бүлэг: Том өгөгдлийн ертөнц ба шифрлэх'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp5-2017:
           title: CSP Нэгж 5 - Аппыг бүтээх ('17 -'18)
           description: Энэ нэгж нь компьютерийн програмчлалын суурь ойлголтуудыг танилцуулж
@@ -2197,6 +2225,13 @@ mn:
               name: Бүүлийн илэрхийлэл болон "хэрэв" мэдэгдэл
             Post-Course Survey:
               name: Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp5_1:
+              display_name: '1-р бүлэг: Үйл явдалд суурилсан программчлал'
+            csp5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн бүтэцтэй программчлах'
+            cspSurvey:
+              display_name: Судалгаа
         csp6:
           stages:
             Create PT:
@@ -2398,6 +2433,9 @@ mn:
               name: Бие биенээсээ сурахыг дэмжих
             'Tool Talk: Intro to Netsim':
               name: 'Хэрэгслийн тухай яриа: Нетсимтэй танилцах'
+          lesson_groups:
+            required:
+              display_name: Тойм
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2414,6 +2452,9 @@ mn:
               name: туршилтын нэгж 1 дадлагын модуль Фокстрот
             test Unit 1 required reading:
               name: туршилтын нэгж 1 уншихыг шаарддаг
+          lesson_groups:
+            required:
+              display_name: Тойм
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2622,6 +2663,9 @@ mn:
               name: 'Хичээл 2.3: Хар ба цагаан пиксель'
             Measuring Student Learning:
               name: Сурагчийн сурах түвшинг хэмжих
+          lesson_groups:
+            required:
+              display_name: Тойм
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2914,6 +2958,9 @@ mn:
               name: Хичээл 2,3
             Test stage with bubbles:
               name: Хөөс бүхий туршилтын үе шат
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd3-2017:
           title: CSD Нэгж 3 - Анимейшн ба тоглоомууд ('17 -'18)
           description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив
@@ -3292,6 +3339,15 @@ mn:
               name: КШУ-ны нээлтүүд улирлын судалгааны төгсгөл
             CSD Post-Course Survey:
               name: CSD Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
+            csd_survey:
+              display_name: Хичээлийн дараах судалгаа
         grade2:
           stages:
             At The Dog Park:
@@ -3573,6 +3629,13 @@ mn:
               name: КШУ-ны нээлтүүдийн урьдчилсан судалгаа
             CS Discoveries Rapid Survey:
               name: КШУ-ны нээлтүүдийн шуурхай судалгаа
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csd1_1:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3647,6 +3710,9 @@ mn:
               name: Матриц ба буцах утгатай функцийг боловсруулах
             Unit 5 Overview:
               name: Нэгж 5-н Тойм
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -3673,6 +3739,9 @@ mn:
               name: Сурагчийн сурах түвшинг хэмжих
             AP Preparation and Support:
               name: AP бэлтгэх, дэмжих
+          lesson_groups:
+            required:
+              display_name: Тойм
         basketball:
           title: Багаа сонгоод сагсан бөмбөг тоглоорой
           description_short: Багаа сонгоод сагсан бөмбөг тоглоорой
@@ -3980,6 +4049,13 @@ mn:
                 ажиллах төслийг хэрэгжүүлж эхэлдэг.
             CSD Post-Course Survey:
               name: CSD Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd2_1:
+              display_name: '1-р бүлэг: Вэбийн агуулга ба HTML'
+            csd2_2:
+              display_name: '2-р бүлэг: Стиль ба CSS'
+            csd_survey:
+              display_name: Хичээлийн дараах судалгаа
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -4004,6 +4080,9 @@ mn:
               name: Сурагчийн сурах түвшинг хэмжих
             AP Preparation and Support:
               name: AP бэлтгэх, дэмжих
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd4-2017:
           title: CSD Нэгж 4 - Дизайн боловсруулалт ('17 -'18)
           description_short: "  Хэрэглэгчдийнхээ хэрэгцээ шаардлагад нийцсэн програм
@@ -4339,6 +4418,13 @@ mn:
                 бэлтгэдэг.
             CSD Post-Course Survey:
               name: CSD Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
+            csd_survey:
+              display_name: Хичээлийн дараах судалгаа
         minecraft:
           title: Майнкрафт Кодын цаг Дизайнер
           description_short: Майнкрафтын өөрийн ертөнц дээрээ амьтад болон Майнкрафтын
@@ -4558,6 +4644,9 @@ mn:
               name: Нөхцлүүд
             'Algorithms: Dice Race':
               name: 'Алгоритмууд: Шооны уралдаан'
+          lesson_groups:
+            extra_course_content:
+              display_name: Нэмэлт хичээлийн агуулга
         coursef-draft:
           description_short: Компьютерийн шинжлэх ухааны үндсийг мэдэж, өөрийн урлаг,
             түүх, тоглоом зохиох.
@@ -4693,6 +4782,9 @@ mn:
               name: Сурагчийн сурах түвшинг хэмжих
             AP Preparation and Support:
               name: AP бэлтгэх, дэмжих
+          lesson_groups:
+            required:
+              display_name: Тойм
         csdgraveyard:
           stages:
             new stage:
@@ -4725,6 +4817,9 @@ mn:
               name: Сурагчийн сурах түвшинг хэмжих
             Unit 4 Overview:
               name: Нэгж 4-н Тойм
+          lesson_groups:
+            required:
+              display_name: Тойм
         sciencepd4:
           stages:
             Welcome!:
@@ -4804,6 +4899,9 @@ mn:
               name: Илрүүлж сурах
             Measuring Student Learning:
               name: Сурагчийн сурах түвшинг хэмжих
+          lesson_groups:
+            required:
+              display_name: Тойм
         csppostap-2017:
           title: CSP AP-н дараах - Өгөгдлийн сан ба апп-д өгөгдөл ашиглах ('17 -'18)
           description_short: Апп Лабораторийн аппууд дотроос өгөгдөл цуглуулж ашиглахыг
@@ -4829,6 +4927,9 @@ mn:
               name: Эцсийн төсөл
             Post-Course Survey:
               name: Хичээлийн дараах судалгаа
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -4915,6 +5016,11 @@ mn:
               name: Хурдасгуур хэмжигч
             Functions with Parameters:
               name: Параметртэй функцүүд
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
         workshop-gamelab:
           stages:
             Introduction:
@@ -4968,6 +5074,11 @@ mn:
               name: Шифрлэлт
             Structuring Data:
               name: Өгөгдлийг бүтэцчилэх
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
         applab-1hour:
           title: Апп Лаб 1 цагийн семинар
           description_audience: Дунд болон ахлах сургуулийн сурагчид
@@ -5624,6 +5735,13 @@ mn:
                 загвар зохион бүтээхэд ашиглана.
             CSD Post-Course Survey:
               name: CSD Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            csd_survey:
+              display_name: Хичээлийн дараах судалгаа
         csd3-draft:
           title: 'CSD Нэгж 3 - Програмчлал: Анимейшн ба тоглоомууд'
           description_short: Анимейшн ба тоглоомууд
@@ -6004,6 +6122,13 @@ mn:
                 холбогдлын талаархи хэлэлцүүлгээр өндөрлөнө.
             CSD Post-Course Survey:
               name: CSD Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            csd_survey:
+              display_name: Хичээлийн дараах судалгаа
         csd3-old:
           title: CSD Нэгж 3 (ХУУЧИРСАН)
           description_short: 2016/2017 CSD 3-ын нэгжийн төсөл
@@ -6249,6 +6374,9 @@ mn:
             үр дүнг харах боломжтой. Үр дүн нь таны багш болон Code.org-ийн хувьд
             сургалтын явцыг сайжруулж, тогтворжуулахад чухал ач холбогдолтой юм. Цаг
             зав гаргаж, анхаарлаа хандуулсанд баярлалаа.
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6891,6 +7019,13 @@ mn:
             эхлүүлж, дараа нь та функцүүд дээр шилжих болно. Энэ сургалтын хоёрдугаар
             хэсэгт найз нөхөд, гэр бүлийнхэнтэйгээ хуваалцах боломжтой capstone төсөл
             зохиож, бүтээгээрэй.
+          lesson_groups:
+            csf_e_1:
+              display_name: Е хичээлийн босголт (сонголтот)
+            csf_e_2:
+              display_name: Хичээлийн Е агуулга
+            extra_course_content:
+              display_name: Нэмэлт хичээлийн агуулга
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -7115,6 +7250,11 @@ mn:
             нийгэмд үзүүлэх нөлөөллийг судлаарай. Энэ сургалтын хоёрдугаар хэсэгт
             найз нөхөд, гэр бүлийнхэнтэйгээ хуваалцах боломжтой capstone төсөл зохиож,
             бүтээгээрэй.
+          lesson_groups:
+            csf_f_1:
+              display_name: F хичээл рүү босгох (сонголтот)
+            csf_f_2:
+              display_name: Хичээлийн F агуулга
         csdnovice:
           stages:
             Tuesday:
@@ -7189,6 +7329,13 @@ mn:
             бэлтгэх, дуусгахыг чиглүүлдэг.
           description: Хичээлүүд нь сурагчдад AP шалгалт, гүйцэтгэлийн даалгаврыг
             бэлтгэх, дуусгахыг чиглүүлдэг.
+          lesson_groups:
+            csp_ap_1:
+              display_name: '1-р бүлэг: АР техникийн тохиргоо'
+            csp_ap_3:
+              display_name: '3-р бүлэг: АР Гүйцэтгэлийн даалгавар үүсгэх'
+            csp_ap_2:
+              display_name: '2-р бүлэг: АР гүйцэтгэлийн даалгаврыг судлах'
         cspnovice:
           stages:
             Welcome:
@@ -7206,6 +7353,9 @@ mn:
           description_short: TeacherCon дахь шинэ сургагч нарт зориулсан тусгах асуултууд.
           description: 'Шинэ сургагчаар ажиллаж байхдаа TeacherCon-ээс авсан тусгалаа
             хянах боломжтой газар. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         novice-view:
           stages:
             CSP Tuesday:
@@ -7241,6 +7391,9 @@ mn:
             1-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7258,6 +7411,9 @@ mn:
             2-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -7273,6 +7429,9 @@ mn:
             3-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -7288,6 +7447,9 @@ mn:
             4-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -7303,6 +7465,9 @@ mn:
             5-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -7318,6 +7483,9 @@ mn:
             1-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -7333,6 +7501,9 @@ mn:
             6-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -7348,6 +7519,9 @@ mn:
             5-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -7363,6 +7537,9 @@ mn:
             4-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -7378,6 +7555,9 @@ mn:
             3-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7393,6 +7573,9 @@ mn:
             2-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой.
+          lesson_groups:
+            required:
+              display_name: Тойм
         allthettsthings:
           stages:
             TTS:
@@ -7605,6 +7788,13 @@ mn:
           title: CSP Нэгж 3 - Програмчлалын танилцуулга (дэд зорилго)
           description_short: Сонгодог яст мэлхийг зурах аргыг ашиглан дээрээс доошоо
             чиглэсэн дизайны аргаар JavaScript програмчлалын үндсийг сур.
+          lesson_groups:
+            csp3_1:
+              display_name: '1-р бүлэг: Программчлалын хэл ба алгоритм'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7644,6 +7834,11 @@ mn:
             Linking Screens:
               name: Дэлгэцүүдийг холбож байна
           title: CSD Нэгж 4-ийн засварын төсөл
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
         craft17:
           stages:
             craft17 stage:
@@ -7739,6 +7934,13 @@ mn:
             Sequence in Maze:
               name: Ээдрээ дээрх дараалал
           title: Хичээл E & F-н налуу
+          lesson_groups:
+            csf_e_1:
+              display_name: Е хичээлийн босголт (сонголтот)
+            csf_e_2:
+              display_name: Хичээлийн Е агуулга
+            extra_course_content:
+              display_name: Нэмэлт хичээлийн агуулга
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7795,6 +7997,9 @@ mn:
             бүлэг А-д зориулсан.
           description: Энэ нэгж нь Дэд зорилгын бүлэг A-н сурагчдад зориулагдсан компьютерийн
             програмын суурь ойлголтыг танилцуулж байна.
+          lesson_groups:
+            csp3_1:
+              display_name: '1-р бүлэг: Программчлалын хэл ба алгоритм'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7940,6 +8145,13 @@ mn:
             Crowdsourcing:
               name: Краудсорсинг
           title: Е-д зориулсан шинэ скрипт
+          lesson_groups:
+            csf_e_1:
+              display_name: Е хичээлийн босголт (сонголтот)
+            csf_e_2:
+              display_name: Хичээлийн Е агуулга
+            extra_course_content:
+              display_name: Нэмэлт хичээлийн агуулга
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -8001,6 +8213,11 @@ mn:
             Present Your Project:
               name: Төслөө танилцуулах
           title: F-д зориулсан шинэ скрипт
+          lesson_groups:
+            csf_f_1:
+              display_name: F хичээл рүү босгох (сонголтот)
+            csf_f_2:
+              display_name: Хичээлийн F агуулга
         csd5-old:
           stages:
             Representation Matters:
@@ -8042,6 +8259,11 @@ mn:
             ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг
             болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг
             таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -8118,6 +8340,11 @@ mn:
               name: Апп танилцуулга
           title: "(ХУУЧИРСАН) CSD Нэгж 4 - Зураг төслийн явц"
           description_short: 2016/17 CSD Нэгж 4-ийн бета хувилбар
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -8146,6 +8373,11 @@ mn:
           description_short: 10-р сарын түр суурийн газрыг csp3 болгож өөрчилнө
           description: "Энэ бол шинэ болон өөрчлөгдсөн үе шатуудыг нэмж, /s/csp3 дэх
             амьд түвшний хуулбар юм. АМЬД ТҮВШИНГ ЗАСАХГҮЙ.\r\n"
+          lesson_groups:
+            csp3_1:
+              display_name: '1-р бүлэг: Программчлалын хэл ба алгоритм'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
         pwc:
           stages:
             new stage:
@@ -8296,6 +8528,11 @@ mn:
             хийх ерөнхий технологийн тохиргоо, хэрэгслийг багтаасан болно.\r\n\r\nЭнэ
             төхөөрөмжийг хамгийн сүүлд 2017 оны 11-р сард шинэчилсэн. Сургалтын хөтөлбөрийн
             шинэчлэлтийн талаар forum.code.org/c/csp/updates дээрээс уншина уу."
+          lesson_groups:
+            csp_ap_2:
+              display_name: '2-р бүлэг: АР гүйцэтгэлийн даалгаврыг судлах'
+            cspSurvey:
+              display_name: Судалгаа
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -8319,6 +8556,11 @@ mn:
             хийх ерөнхий технологийн тохиргоо, хэрэгслийг багтаасан болно.\r\n\r\nЭнэ
             төхөөрөмжийг хамгийн сүүлд 2017 оны 12-р сард шинэчилсэн. Сургалтын хөтөлбөрийн
             шинэчлэлтийн талаар forum.code.org/c/csp/updates дээрээс уншина уу."
+          lesson_groups:
+            csp_ap_3:
+              display_name: '3-р бүлэг: АР Гүйцэтгэлийн даалгавар үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -8413,6 +8655,13 @@ mn:
             Functions in Harvester:
               name: Ургац хураагчийн функцүүд
           title: Хичээл E 2018 (Хуучирсан!)
+          lesson_groups:
+            csf_e_1:
+              display_name: Е хичээлийн босголт (сонголтот)
+            csf_e_2:
+              display_name: Хичээлийн Е агуулга
+            extra_course_content:
+              display_name: Нэмэлт хичээлийн агуулга
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -8474,6 +8723,11 @@ mn:
             Present Your Project:
               name: Төслөө танилцуулах
           title: Хичээл F 2018 (Хуучирсан)
+          lesson_groups:
+            csf_f_1:
+              display_name: F хичээл рүү босгох (сонголтот)
+            csf_f_2:
+              display_name: Хичээлийн F агуулга
         csd6-old:
           stages:
             Computing Innovations:
@@ -8507,6 +8761,11 @@ mn:
             'Project: Prototype an Innovation':
               name: 'Төсөл: Инновацийг загварчлах'
           title: "(ХУУЧИРСАН) CSD Нэгж 6 - Биет тооцоолол"
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
@@ -8579,6 +8838,13 @@ mn:
             компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг.
             Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах
             болно."
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
         textbook:
           stages:
             Test Map Level:
@@ -8929,6 +9195,13 @@ mn:
               name: КШУ-ны нээлтүүд улирлын судалгааны төгсгөл
             CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
         csd2-2018:
           title: CSD Нэгж 2 - Вэб Хөгжил ('18 -'19)
           description: " 2-р нэгжээс та өөрийн вэб хуудсан дээр хэрхэн контент үүсгэж,
@@ -9151,6 +9424,13 @@ mn:
                 авсан процессын тоймыг хуваалцах болно.\r\n"
             CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd2_1:
+              display_name: '1-р бүлэг: Вэбийн агуулга ба HTML'
+            csd2_2:
+              display_name: '2-р бүлэг: Стиль ба CSS'
+            cspSurvey:
+              display_name: Судалгаа
         coursea-2018:
           title: Хичээл А (2018)
           assignment_family_title: Хичээл А
@@ -9735,6 +10015,13 @@ mn:
               name: 'Төсөл: Инновацийг загварчлах'
             CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
         coursee-2018:
           title: Хичээл E (2018)
           assignment_family_title: Хичээл E
@@ -9933,6 +10220,13 @@ mn:
               name: Гэрийн тэжээвэр анааш
             Copyright and Creativity:
               name: Дижитал хуваалцах
+          lesson_groups:
+            csf_e_1:
+              display_name: Е хичээлийн босголт (сонголтот)
+            csf_e_2:
+              display_name: Хичээлийн Е агуулга
+            extra_course_content:
+              display_name: Нэмэлт хичээлийн агуулга
         coursef-2018:
           title: Хичээл F (2018)
           assignment_family_title: Хичээл F
@@ -10168,6 +10462,11 @@ mn:
               name: Майнкрафттай хамтарсан функцүүд
             Conditionals in Farmer:
               name: Фермертэй хамтарсан нөхцлүүд
+          lesson_groups:
+            csf_f_1:
+              display_name: F хичээл рүү босгох (сонголтот)
+            csf_f_2:
+              display_name: Хичээлийн F агуулга
         csp1-2018:
           title: CSP Нэгж 1 - Интернэт ('18 -'19)
           description: Энэ нэгж нь компьютерт дижитал мэдээллийг илэрхийлэх, хүмүүс
@@ -10214,6 +10513,13 @@ mn:
               name: Нэгж 1 Бүлэг 2 Үнэлгээ
             Sending Text:
               name: Текст илгээж байна
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp1_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлж дамжуулах'
+            csp1_2:
+              display_name: '2-р бүлэг: Интернэтийг бүтээх'
         csd1-2018:
           title: CSD Нэгж 1 - Асуудлыг шийдвэрлэх ('18 -'19)
           description: " \r\nНэгж 1 нь асуудлыг шийдвэрлэх өргөн хүрээний хүрээнд
@@ -10402,6 +10708,13 @@ mn:
                 шаардлагатай орцууд, хэрэглэгчдэд өгдөг гарцуудыг үнэлдэг. Анги нь
                 эдгээр програмуудыг ажиглаж, багш нар апп-уудын нийгэмд үзүүлэх нөлөөллийн
                 талаарх ярилцлагаар өндөрлөв. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csd1_1:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
         csd4-2018:
           title: CSD Нэгж 4 - Дизайны үйл явц ('18 -'19)
           description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд
@@ -10654,6 +10967,13 @@ mn:
                 бэлтгэдэг.
             CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
+            cspSurvey:
+              display_name: Судалгаа
         csd5-2018:
           title: CSD Нэгж 5 - Өгөгдөл ба нийгэм ('18 -'19)
           description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар
@@ -10948,6 +11268,13 @@ mn:
                 хийдэг.
             CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
         csp2-2018:
           title: CSP Нэгж 2 - Дижитал мэдээлэл ('18 -'19)
           description: Энэ нэгж нь дижитал мэдээллийг кодлох, дүрслэх, удирдах арга
@@ -11002,6 +11329,11 @@ mn:
               name: Алдагдсан ба алдагдаагүй шахалт
             Unit 2 Assessment:
               name: Нэгж 2 Үнэлгээ
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2-р нэгж: Дижитал мэдээлэл'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
         csp3-2018:
           title: CSP Нэгж 3 - Програмчлалын танилцуулга ('18 -'19)
           description_short: Сонгодог яст мэлхийг зурах аргыг ашиглан дээрээс доошоо
@@ -11037,6 +11369,13 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post-Course Survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '3-р нэгж: Программчлалын танилцуулга'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp-explore-2018:
           title: Судлах - AP Гүйцэтгэлийн даалгаварын бэлтгэл ('18 -'19)
           description: 'Эдгээр хичээлүүд нь AP Гүйцэтгэлийн даалгаврыг судлахыг ойлгох,
@@ -11058,6 +11397,11 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post-Course Survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp_ap_2:
+              display_name: '2-р бүлэг: АР гүйцэтгэлийн даалгаврыг судлах'
+            cspSurvey:
+              display_name: Судалгаа
         csp-create-2018:
           title: Бүтээх - AP Гүйцэтгэлийн даалгаварын бэлтгэл ('18 -'19)
           description: 'Эдгээр хичээлүүд нь AP Гүйцэтгэлийн даалгаврыг судлахыг ойлгох,
@@ -11077,6 +11421,11 @@ mn:
               name: PT үүсгэх - Даалгаврыг дуусгах
             CS Principles Post-Course Survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp_ap_3:
+              display_name: '3-р бүлэг: АР Гүйцэтгэлийн даалгавар үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
         csp4-2018:
           title: CSP Нэгж 4 - Том өгөгдөл ба нууцлал ('18 -'19)
           description: Бидний амьдарч буй өгөгдөл баялаг ертөнцөд төрийн бодлого,
@@ -11121,6 +11470,13 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post-Course Survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp4_1_2018:
+              display_name: '4-р нэгж: Том өгөгдөл ба нууцлал'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp5-2018:
           title: CSP Нэгж 5 - Аппыг бүтээх ('18 -'19)
           description: Энэ нэгж нь компьютерийн програмчлалын суурь ойлголтуудыг танилцуулж
@@ -11184,6 +11540,13 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post-Course Survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp5_1:
+              display_name: '1-р бүлэг: Үйл явдалд суурилсан программчлал'
+            csp5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн бүтэцтэй программчлах'
+            cspSurvey:
+              display_name: Судалгаа
         csppostap-2018:
           title: AP бичих - Өгөгдлийн хэрэгслүүд ('18 -'19)
           description: "Энэ бүлгийн эхний бүлэгт сурагчид харааны мэдээллийг тайлбарлах,
@@ -11241,6 +11604,13 @@ mn:
               name: Бүлэг 1 Үнэлгээ
             CS Principles Post-Course Survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp_postap_1:
+              display_name: '1-р бүлэг: Өгөгдлийг удирдаж дүрслэх'
+            csp_postap_2:
+              display_name: '2-р бүлэг: Программ ба өгөгдлийн сан'
+            cspSurvey:
+              display_name: Судалгаа
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -11276,6 +11646,9 @@ mn:
             1-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11291,6 +11664,9 @@ mn:
             2-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11306,6 +11682,9 @@ mn:
             3-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11323,6 +11702,9 @@ mn:
             4-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11338,6 +11720,9 @@ mn:
             5-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11355,6 +11740,9 @@ mn:
             6-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11370,6 +11758,9 @@ mn:
             1-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11385,6 +11776,9 @@ mn:
             2-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11400,6 +11794,9 @@ mn:
             3-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11417,6 +11814,9 @@ mn:
             4-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11432,6 +11832,9 @@ mn:
             5-р ангийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11451,6 +11854,9 @@ mn:
             АР нэгжийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11466,6 +11872,9 @@ mn:
             АР нэгжийн мэдлэг чадварыг харуулах уриалга, зааварчилгааг олж харах болно.
             Нэгжийг харуулсан тохиолдолд энэ хуудасны доод хэсэгт байрлах тусгалаа
             хянах боломжтой. '
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd-post-survey:
           stages:
             CSD post-course survey:
@@ -11479,6 +11888,9 @@ mn:
             үр дүнг харах боломжтой. Үр дүн нь таны багш болон Code.org-ийн хувьд
             сургалтын явцыг сайжруулж, тогтворжуулахад чухал ач холбогдолтой юм. Цаг
             зав гаргаж, анхаарлаа хандуулсанд баярлалаа.
+          lesson_groups:
+            csd_survey:
+              display_name: Хичээлийн дараах судалгаа
         csd-novice-18:
           stages:
             Novice Reflections Overview:
@@ -11516,6 +11928,9 @@ mn:
             та 5 хоногийн зуны семинарын өдөр бүрийн тусгалын зааврыг олох болно.
             Энэхүү асуултууд нь Сургагч багшийн сургалтын долоо хоногт бидний хийх
             ажлын үндэс болно.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -11547,6 +11962,9 @@ mn:
             та 5 хоногийн зуны семинарын өдөр бүрийн тусгалын зааврыг олох болно.
             Энэхүү асуултууд нь Сургагч багшийн сургалтын долоо хоногт бидний хийх
             ажлын үндэс болно.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -11578,6 +11996,9 @@ mn:
             та 5 хоногийн зуны семинарын өдөр бүрийн тусгалын зааврыг олох болно.
             Энэхүү асуултууд нь Сургагч багшийн сургалтын долоо хоногт бидний хийх
             ажлын үндэс болно.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -11609,6 +12030,9 @@ mn:
             та 5 хоногийн зуны семинарын өдөр бүрийн тусгалын зааврыг олох болно.
             Энэхүү асуултууд нь Сургагч багшийн сургалтын долоо хоногт бидний хийх
             ажлын үндэс болно.
+          lesson_groups:
+            required:
+              display_name: Тойм
         pre-express-2018:
           title: Урьдчилан унших Шуурхай (2018)
           assignment_family_title: Урьдчилан унших Шуурхай
@@ -11693,6 +12117,9 @@ mn:
           description_audience: Сургалтанд хамрагдсан сургагчид
           description_short: FIT сургалтын хичээл
           description: PLC сургалт хэрхэн ажилладгийг харуулахад ашигладаг.
+          lesson_groups:
+            required:
+              display_name: Тойм
         spritelab-simple:
           title: Шидтэний лабораторийн танилцуулга (ЕЕ)
           description: Энэ бол Code.org-ийн E ба F хичээлүүдэд зориулсан Шидтэний
@@ -11829,6 +12256,15 @@ mn:
             Lists Explore:
               name: Жагсаалтууд судлах
           title: CSP тоглоомын талбай
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -12135,6 +12571,19 @@ mn:
                 дараа сурагчид симуляци дахь хувьсагч хэрхэн өөрчлөгдөж байгаа нь
                 үр дүнд хэрхэн нөлөөлж болохыг урьдчилан таамаглах, тэр таамаглалыг
                 туршиж үзэх боломжтой болно.
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+            csf_internet:
+              display_name: Интернэт
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            csf_digcit:
+              display_name: Дижитал иргэншил
         dance-low:
           stages:
             Dance Party:
@@ -12328,6 +12777,19 @@ mn:
               description_teacher: Энэ хичээл дээр сурагчид интерактив бүжгийн үдэшлэгээ
                 зохиох болно. Энэ хэрэгсэл нь дуу хөгжимд хариу өгөх зорилгоор бүтээгдсэн
                 тул дуу чимээ шаардагдана.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_binary:
+              display_name: Хоёрт
+            csf_digcit:
+              display_name: Дижитал иргэншил
         coursee-2019:
           title: Хичээл E (2019)
           description: Алгоритм, гогцоо, нөхцлүүд, үйл явдлууд ашиглан кодчилолоо
@@ -12633,6 +13095,19 @@ mn:
               name: Хүртээмжтэй болгохын тулд дизайн хийх
             Songwriting:
               name: Дуу бичих
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            csf_nested_loops:
+              display_name: Сараалжсан гогцоо
+            csf_functions:
+              display_name: Функцүүд
         express-2019:
           title: Шуурхай хичээл (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -12747,6 +13222,23 @@ mn:
               name: 'Minecraft дахь нөхцлүүд: Усан аялал'
             Concept Practice with Minecraft:
               name: Minecraft-тай хамтарсан ойлголтын дадлага
+          lesson_groups:
+            csf_warmup:
+              display_name: Бие халаалт
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_functions:
+              display_name: Функцүүд
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+            csf_sprites:
+              display_name: Шидтэнгүүд
         csd1-2019:
           title: CSD Нэгж 1 - Асуудлыг шийдвэрлэх ба тооцоолох ('19 -'20)
           description: "Асуудлыг шийдвэрлэх өргөн хүрээний хүрээнд боловсруулагдсан,
@@ -12903,6 +13395,13 @@ mn:
                 нь хийж гүйцэтгэхээр төлөвлөсөн болно.
             Post-Project Test:
               name: Төслийн дараах тест
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csd1_1:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
         andrea-test:
           stages:
             new stage:
@@ -12946,6 +13445,9 @@ mn:
           description_short: энэ бол миний сургалт хийх чадвараа шалгах явдал юм
           description: хичээл зохиох оролдлогын талаар илүү дэлгэрэнгүй тайлбарыг....
             тойм, агуулга хаанаас ирсэнийг гайхаж байна....
+          lesson_groups:
+            required:
+              display_name: Тойм
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -13137,6 +13639,17 @@ mn:
                 сонирхолтой асуултанд хариулахад тусалдаг. Энэ хичээл дээр оюутнууд
                 Play Lab төслөөс өгөгдөл цуглуулж, янз бүрийн график ашиглан дүрслэн
                 харуулах болно.
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_binary:
+              display_name: Хоёрт
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -13150,6 +13663,9 @@ mn:
             үр дүнг харах боломжтой. Үр дүн нь таны багш болон Code.org-ийн хувьд
             сургалтын явцыг сайжруулж, тогтворжуулахад чухал ач холбогдолтой юм. Цаг
             зав гаргаж, анхаарлаа хандуулсанд баярлалаа.
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
         gamelab:
           stages:
             Start and End Screens:
@@ -13276,6 +13792,15 @@ mn:
                 очиход юу хүлээж болох талаархи ойлголтыг өгөх болно. Энэ нь тэднийг
                 компьютерын лабораторийн ажлын талаар танилцуулах товч хэлэлцүүлгээс
                 эхэлж, дараа нь онлайнаар таавраа бөглөхөд компьютер ашиглана.
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         courseb-2019:
           title: Хичээл В (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -13400,6 +13925,17 @@ mn:
                 очиход юу хүлээж болох талаархи ойлголтыг өгөх болно. Энэ нь тэднийг
                 компьютерын лабораторийн ажлын талаар танилцуулах товч хэлэлцүүлгээс
                 эхэлж, дараа нь онлайнаар таавраа бөглөхөд компьютер ашиглана.
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            csf_events:
+              display_name: Үйл явдлууд
         pre-express-2019:
           title: Урьдчилан унших Шуурхай (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -13454,6 +13990,13 @@ mn:
               name: Үйл явдлуудтай хааны тулаан
             Ocean Scene with Loops:
               name: Гогцоо бүхий далайн үзэгдэл
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -13691,6 +14234,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd2_1:
+              display_name: '1-р бүлэг: Вэбийн агуулга ба HTML'
+            csd2_2:
+              display_name: '2-р бүлэг: Стиль ба CSS'
+            cspSurvey:
+              display_name: Судалгаа
         csd3-2019:
           title: CSD Нэгж 3 - Анимейшн ба тоглоомууд ('19 -'20)
           description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив
@@ -14031,6 +14581,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
         csd4-2019:
           title: CSD Нэгж 4 - Дизайны үйл явц ('19 -'20)
           description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд
@@ -14285,6 +14842,15 @@ mn:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
             Post-Project Test:
               name: Төслийн дараах тест
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
         csd5-2019:
           title: CSD Нэгж 5 - Өгөгдөл ба нийгэм ('19 -'20)
           description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар
@@ -14581,6 +15147,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
         csd6-2019:
           title: CSD Нэгж 6 - Биет тооцоолол ('19 -'20)
           description: 6-р нэгж нь тооцоолол хийхэд техник хангамжийн платформын үүргийг
@@ -14629,6 +15202,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
         csp4-pilot:
           stages:
             Variables Explore:
@@ -14688,6 +15268,17 @@ mn:
             'Lesson 15: Assessment Day':
               name: 'Хичээл 15: Үнэлгээний өдөр'
           title: CSP нэгж 4 туршилтын - Хувьсагч, нөхцөл ба функц
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
+            required:
+              display_name: Тойм
         csp1-2019:
           title: CSP Нэгж 1 - Интернэт ('19 -'20)
           description: Энэ нэгж нь компьютерт дижитал мэдээллийг илэрхийлэх, хүмүүс
@@ -14732,6 +15323,13 @@ mn:
               name: Дадлагын PT - Интернет ба нийгэм
             Unit 1 Chapter 2 Assessment:
               name: Нэгж 1 Бүлэг 2 Үнэлгээ
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csp1_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлж дамжуулах'
+            csp1_2:
+              display_name: '2-р бүлэг: Интернэтийг бүтээх'
         csp2-2019:
           title: CSP Нэгж 2 - Дижитал мэдээлэл ('19 -'20)
           description: Энэ нэгж нь дижитал мэдээллийг кодлох, дүрслэх, удирдах арга
@@ -14760,6 +15358,13 @@ mn:
               name: Нэгж 2 Үнэлгээ
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '2-р нэгж: Дижитал мэдээлэл'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp3-2019:
           title: CSP Нэгж 3 - Програмчлалын танилцуулга ('19 -'20)
           description_short: Сонгодог яст мэлхийг зурах аргыг ашиглан дээрээс доошоо
@@ -14791,6 +15396,13 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '3-р нэгж: Программчлалын танилцуулга'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp4-2019:
           title: CSP Нэгж 4 - Том өгөгдөл ба нууцлал ('19 -'20)
           description: Бидний амьдарч буй өгөгдөл баялаг ертөнцөд төрийн бодлого,
@@ -14831,6 +15443,13 @@ mn:
               name: 'Сонголтот: Өгөгдлийн асуултууд'
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp4_1_2018:
+              display_name: '4-р нэгж: Том өгөгдөл ба нууцлал'
+            cspAssessment:
+              display_name: Бүлгийн шалгалт
+            cspSurvey:
+              display_name: Судалгаа
         csp5-2019:
           title: CSP Нэгж 5 - Аппыг бүтээх ('19 -'20)
           description: Энэ нэгж нь компьютерийн програмчлалын суурь ойлголтуудыг танилцуулж
@@ -14890,6 +15509,13 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp5_1:
+              display_name: '1-р бүлэг: Үйл явдалд суурилсан программчлал'
+            csp5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн бүтэцтэй программчлах'
+            cspSurvey:
+              display_name: Судалгаа
         csp-explore-2019:
           title: Судлах - AP Гүйцэтгэлийн даалгаварын бэлтгэл ('19 -'20)
           description: 'Эдгээр хичээлүүд нь AP Гүйцэтгэлийн даалгаврыг судлахыг ойлгох,
@@ -14911,6 +15537,11 @@ mn:
               name: Жилийн дундын судалгаа
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp_ap_2:
+              display_name: '2-р бүлэг: АР гүйцэтгэлийн даалгаврыг судлах'
+            cspSurvey:
+              display_name: Судалгаа
         csp-create-2019:
           title: Бүтээх - AP Гүйцэтгэлийн даалгаварын бэлтгэл ('19 -'20)
           description: 'Эдгээр хичээлүүд нь AP Гүйцэтгэлийн даалгаврыг судлахыг ойлгох,
@@ -14930,6 +15561,11 @@ mn:
               name: PT үүсгэх - Даалгаврыг дуусгах
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp_ap_3:
+              display_name: '3-р бүлэг: АР Гүйцэтгэлийн даалгавар үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
         csppostap-2019:
           title: AP бичих - Өгөгдлийн хэрэгслүүд ('19 -'20)
           description: "Энэ бүлгийн эхний бүлэгт сурагчид харааны мэдээллийг тайлбарлах,
@@ -14981,6 +15617,13 @@ mn:
               name: Эцсийн төсөл
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp_postap_1:
+              display_name: '1-р бүлэг: Өгөгдлийг удирдаж дүрслэх'
+            csp_postap_2:
+              display_name: '2-р бүлэг: Программ ба өгөгдлийн сан'
+            cspSurvey:
+              display_name: Судалгаа
         csp1-pilot:
           stages:
             new stage:
@@ -15058,6 +15701,11 @@ mn:
             'Lesson 14: Assessment Day':
               name: 'Хичээл 14: Үнэлгээний өдөр'
           title: CSP Нэгж 1-н туршилт - Дижитал мэдээлэл
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            required:
+              display_name: Тойм
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -15178,6 +15826,21 @@ mn:
             судалгаанд оюутнууд Флорида мужийн засгийн газрын салбарууд болон өдөр
             тутмын иргэд орон нутгийн болон мужийн бодлогод хэрхэн нөлөөлж болох талаар
             эргэцүүлж үздэг.
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            time4cs_c1:
+              display_name: Намагтай газар ба түүний экосистем
+            time4cs_c2:
+              display_name: Намагтай газрын хүнсний сүлжээ
+            time4cs_c3:
+              display_name: Намагтай газар амьдрах
+            time4cs_c4:
+              display_name: Намагтай газарт үзүүлэх хортой нөлөө
+            time4cs_c5:
+              display_name: Иргэд намагтай газрын өөрчлөлтөд муугаар нөлөөлж байна
         csp1-pilot-staging:
           stages:
             Variables Explore:
@@ -15219,6 +15882,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 1: Бит ба байт'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp2-pilot-staging:
           stages:
             Variables Explore:
@@ -15260,6 +15932,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 2: Интернэт'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp3-pilot-staging:
           stages:
             Variables Explore:
@@ -15372,6 +16053,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 4: Хувьсагч, нөхцөл ба функц'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -15459,6 +16149,17 @@ mn:
             Teacher Survey (Libraries):
               name: Багшийн судалгаа (Номын сангууд)
           title: 'Нэгж 5: Жагсаалт, гогцоо ба traversals'
+          lesson_groups:
+            csp_lists:
+              display_name: Жагсаалтууд
+            csp_loops:
+              display_name: Гогцоонууд
+            csp_traversals:
+              display_name: Нэвтрэлтүүд
+            csp_project:
+              display_name: Төсөл
+            csp_libraries:
+              display_name: Номын сангууд
         csp6-pilot-staging:
           stages:
             Variables Explore:
@@ -15500,6 +16201,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 6: Алгоритмууд'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp7-pilot-staging:
           stages:
             new stage:
@@ -15569,6 +16279,11 @@ mn:
             Libraries Project:
               name: Номын сангийн төсөл
           title: 'Нэгж 7: Функцүүд ба номын сан'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            csp_libraries:
+              display_name: Номын сангууд
         csp8-pilot-staging:
           stages:
             Variables Explore:
@@ -15610,6 +16325,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 8: PT үүсгэх'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp9-pilot-staging:
           stages:
             Variables Explore:
@@ -15651,6 +16375,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 9: Өгөгдөл'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp10-pilot-staging:
           stages:
             Variables Explore:
@@ -15692,6 +16425,15 @@ mn:
             Unit 4 Assessment:
               name: Нэгж 4 Үнэлгээ
           title: 'Нэгж 10: Дэлхийн нөлөө'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         pluralsight:
           stages:
             Pluralsight LevelGroup:
@@ -15727,6 +16469,9 @@ mn:
             нэргүй нийт үр дүнг харах боломжтой. Үр дүн нь таны багш болон Code.org-ийн
             хувьд сургалтын явцыг сайжруулж, сайжруулахад чухал ач холбогдолтой юм.
             Цаг зав гаргаж байгаад анхаарлаа хандуулсанд баярлалаа."
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
         csp-post-survey-2018:
           stages:
             CSP post-course survey:
@@ -15740,6 +16485,9 @@ mn:
             үр дүнг харах боломжтой. Үр дүн нь таны багш болон Code.org-ийн хувьд
             сургалтын явцыг сайжруулж, тогтворжуулахад чухал ач холбогдолтой юм. Цаг
             зав гаргаж, анхаарлаа хандуулсанд баярлалаа.
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
         csp5-pilot:
           stages:
             new stage:
@@ -15823,6 +16571,17 @@ mn:
             'Lesson 13: Assessment Day':
               name: 'Хичээл 13: Үнэлгээний өдөр'
           title: Нэгж 5 Туршилт - Жагсаалт, гогцоо ба traversals
+          lesson_groups:
+            csp_lists:
+              display_name: Жагсаалтууд
+            csp_loops:
+              display_name: Гогцоонууд
+            csp_traversals:
+              display_name: Нэвтрэлтүүд
+            csp_project:
+              display_name: Төсөл
+            required:
+              display_name: Тойм
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -15846,6 +16605,9 @@ mn:
             та 5 хоногийн зуны семинарын өдөр бүрийн тусгалын зааврыг олох болно.
             Энэхүү асуултууд нь Сургагч багшийн сургалтын долоо хоногт бидний хийх
             ажлын үндэс болно.
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -15882,6 +16644,9 @@ mn:
             та 5 хоногийн зуны семинарын өдөр бүрийн тусгалын зааврыг олох болно.
             Энэхүү асуултууд нь Сургагч багшийн сургалтын долоо хоногт бидний хийх
             ажлын үндэс болно
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd-sample-online:
           stages:
             What is a Computer? - sample progression:
@@ -16045,6 +16810,13 @@ mn:
                 нь хийж гүйцэтгэхээр төлөвлөсөн болно.
             Post-Project Test:
               name: Төслийн дараах тест
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csd1_1:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
         csd2-pilot:
           title: CSD Нэгж 2 - Вэб Хөгжил (Туршилтын хувилбар)
           description: " 2-р нэгжээс та өөрийн вэб хуудсан дээр хэрхэн контент үүсгэж,
@@ -16299,6 +17071,13 @@ mn:
               name: Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд
             Project - Website for a Purpose:
               name: Төсөл - Зорилго бүхий вэбсайт
+          lesson_groups:
+            csd2_1:
+              display_name: '1-р бүлэг: Вэбийн агуулга ба HTML'
+            csd2_2:
+              display_name: '2-р бүлэг: Стиль ба CSS'
+            cspSurvey:
+              display_name: Судалгаа
         csd3-pilot:
           title: CSD Нэгж 3 - Анимейшн ба тоглоомууд (Туршилтын хувилбар)
           description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив
@@ -16643,6 +17422,13 @@ mn:
               name: Үзэгдэл үүсгэх
             Text and Captioned Scenes:
               name: Текст ба тайлбартай үзэгдэл
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -16691,6 +17477,9 @@ mn:
             Debugging:
               name: Алдааг засах
           title: CSP Нэгж 3 туршилт - Аппын дизайнтай танилцах
+          lesson_groups:
+            required:
+              display_name: Тойм
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -16714,6 +17503,13 @@ mn:
             Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng
             trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng
             cho phù hợp với học sinh Việt Nam. '
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -16724,6 +17520,9 @@ mn:
               name: Ойлгосноо харуулах
           title: КШУ-ны нээлтийг гүн гүнзгий сурах 2019 модуль FiT
           description_audience: КШУ-ны нээлтийн сургагч нар сургалтад хамрагдах 2019
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -16733,6 +17532,9 @@ mn:
             Demonstrating Understanding:
               name: Ойлгосноо харуулах
           title: CS зарчмуудыг гүнзгийрүүлэн сурах 2019 FiT семинар
+          lesson_groups:
+            required:
+              display_name: Тойм
         pl-csd-bugs:
           stages:
             CSD Workshop 1 Bugs:
@@ -16757,6 +17559,9 @@ mn:
           title: 'КШУ-ны нээлтийг гүн гүнзгий сурах 2019 оны Семинар 1-н модуль '
           description_audience: КШУ-ны нээлтийн сургагч нар сургалтад хамрагдах 2019
           description_short: Хичээлийн жилийн семинар 1
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csd-mod-w2:
           stages:
             new stage:
@@ -16771,6 +17576,9 @@ mn:
               name: 'Алхам 2: Ойлголтыг харуулах'
           title: КШУ-ны нээлтийг гүн гүнзгий сурах Семинар 2-н модуль
           description_audience: КШУ-ны нээлтийн сургагч нар сургалтад хамрагдах 2019
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csd-mod-w3:
           stages:
             CS Discoveries Deeper Learning Module 3:
@@ -16783,6 +17591,9 @@ mn:
               name: 'Алхам 2: Ойлголтыг харуулах'
           title: КШУ-ны нээлтийг гүн гүнзгий сурах Семинар 3-н модуль
           description_audience: КШУ-ны нээлтийн сургагч нар сургалтад хамрагдах 2019
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
@@ -16795,6 +17606,9 @@ mn:
               name: 'Алхам 2: Ойлголтыг харуулах'
           title: КШУ-ны нээлтийг гүн гүнзгий сурах Семинар 4-н модуль
           description_audience: КШУ-ны нээлтийн сургагч нар сургалтад хамрагдах 2019
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csp-mod-w1:
           stages:
             CS Principles Deeper Learning Module 1:
@@ -16806,6 +17620,9 @@ mn:
             Deeper Learning Overview:
               name: Илүү гүнзгий сурах тойм
           title: КШУ-ны зарчмыг гүн гүнзгий сурах Семинар 1-н модуль
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csp-mod-w2:
           stages:
             CS Principles Deeper Learning Module 2:
@@ -16817,6 +17634,9 @@ mn:
             'Step 2: Demonstrate Understanding':
               name: 'Алхам 2: Ойлголтыг харуулах'
           title: КШУ-ны зарчмыг гүн гүнзгий сурах Семинар 2-н модуль
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csp-mod-w3:
           stages:
             CS Principles Deeper Learning Module 3:
@@ -16828,6 +17648,9 @@ mn:
             'Step 2: Demonstrate Understanding':
               name: 'Алхам 2: Ойлголтыг харуулах'
           title: КШУ-ны зарчмыг гүн гүнзгий сурах Семинар 3-н модуль
+          lesson_groups:
+            required:
+              display_name: Тойм
         dlp19-csp-mod-w4:
           stages:
             CS Principles Deeper Learning Module 4:
@@ -16839,6 +17662,9 @@ mn:
             'Step 2: Demonstrate Understanding':
               name: 'Алхам 2: Ойлголтыг харуулах'
           title: КШУ-ны зарчмыг гүн гүнзгий сурах Семинар 4-н модуль
+          lesson_groups:
+            required:
+              display_name: Тойм
         csd-pilot:
           stages:
             Pilot Information:
@@ -16917,6 +17743,9 @@ mn:
             Post-Project Test:
               name: Төслийн дараах тест
           title: Тооцоолох ба асуудал шийдэх
+          lesson_groups:
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
         csp2-pilot:
           stages:
             new stage:
@@ -16953,6 +17782,9 @@ mn:
               name: 'Хичээл 9: Үнэлгээний өдөр'
             The Need for Addressing:
               name: Хаяглах хэрэгцээ
+          lesson_groups:
+            required:
+              display_name: Тойм
         denny-science:
           stages:
             Earthquake Detector:
@@ -16999,6 +17831,9 @@ mn:
               name: Зэрэгцээ ба тархсан алгоритмууд
             The Limits of Algorithms:
               name: Алгоритмын хязгаар
+          lesson_groups:
+            required:
+              display_name: Тойм
         denny-science-8:
           title: Мөргөлдөөнийг илрүүлэх
           stages:
@@ -17100,6 +17935,15 @@ mn:
               name: Таны ойлголтыг шалгах
             End of Course projects:
               name: Хичээлийн төслийн төгсгөл
+          lesson_groups:
+            k5_getting_started:
+              display_name: Эхлүүлэх
+            k5_basic_concepts:
+              display_name: 'Кодлох үндсэн ойлголтууд ба заах практикууд: А-D хичээлүүд'
+            k5_diving_deeper:
+              display_name: 'Илүү гүн шумбах: Е ба F хичээлүүд'
+            k5_next_steps:
+              display_name: Дараагийн Алхамууд
         dance-extras-2019:
           title: Үргэлжлүүлэн бүжиглэх (2019)
           description: Өргөтгөсөн төслийн санаануудын хамт эхний цагаас цааш яваарай.
@@ -17171,6 +18015,15 @@ mn:
             'Lesson 15: Assessment Day':
               name: 'Хичээл 15: Үнэлгээний өдөр'
           title: Хувьсагч, нөхцөл ба функц
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
@@ -17222,6 +18075,15 @@ mn:
             Nested Loops in the Maze:
               name: Ээдрээ дээрх сараалжилсан гогцоо
           title: Time4CS Хяналтын нэгж 2
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_nested_loops:
+              display_name: Сараалжсан гогцоо
+            csf_functions:
+              display_name: Функцүүд
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:
@@ -17279,6 +18141,17 @@ mn:
           title: Time4CS туршилтын нэгж 2
           description_short: "[Тайлбар нэмэх]"
           description: "[Тайлбар нэмэх]"
+          lesson_groups:
+            time4cs_c1:
+              display_name: Намагтай газар ба түүний экосистем
+            time4cs_c2:
+              display_name: Намагтай газрын хүнсний сүлжээ
+            time4cs_c3:
+              display_name: Намагтай газар амьдрах
+            time4cs_c4:
+              display_name: Намагтай газарт үзүүлэх хортой нөлөө
+            time4cs_c5:
+              display_name: Иргэд намагтай газрын өөрчлөлтөд муугаар нөлөөлж байна
         time4cs-control-unit-1:
           title: Time4CS Хяналтын нэгж 1
           stages:
@@ -17306,6 +18179,23 @@ mn:
               name: Хандалтын боломж
             Conditionals Review:
               name: Нөхцлүүдийн хяналт
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            ramp_up:
+              display_name: Босгох
         time4cs-experiment-unit-1:
           stages:
             Sequencing in Maze:
@@ -17332,6 +18222,23 @@ mn:
               name: Хандалтын боломж
             Conditionals Review:
               name: Нөхцлүүдийн хяналт
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            ramp_up:
+              display_name: Босгох
         csp7-pilot:
           stages:
             Libraries Explore:
@@ -17340,6 +18247,13 @@ mn:
               name: Номын сангуудыг мөрдөх
             'Lesson 11: Assessment Day':
               name: 'Хичээл 11: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            csp_libraries:
+              display_name: Номын сангууд
+            required:
+              display_name: Тойм
         csp8-pilot:
           stages:
             new stage:
@@ -17372,6 +18286,15 @@ mn:
               name: Функцүүдийг хийх
             'Lesson 15: Assessment Day':
               name: 'Хичээл 15: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_variables:
+              display_name: Хувьсагчууд
+            csp_conditionals:
+              display_name: Нөхцлүүд
+            csp_functions:
+              display_name: Функцүүд
+            csp_project:
+              display_name: Төсөл
         csp5-2020:
           stages:
             Lists Explore:
@@ -17408,6 +18331,15 @@ mn:
               name: Семестрийн Hackathon Хэсэг 4
             Semester Hackathon Part 5:
               name: Семестрийн Hackathon Хэсэг 5
+          lesson_groups:
+            csp_lists:
+              display_name: Жагсаалтууд
+            csp_loops:
+              display_name: Гогцоонууд
+            csp_traversals:
+              display_name: Нэвтрэлтүүд
+            csp_project:
+              display_name: Төсөл
         csp7-2020:
           stages:
             Libraries Explore:
@@ -17416,6 +18348,11 @@ mn:
               name: Номын сангуудыг мөрдөх
             'Lesson 11: Assessment Day':
               name: 'Хичээл 11: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметрүүд ба буцаах утгууд
+            csp_libraries:
+              display_name: Номын сангууд
         csp9-pilot:
           stages:
             new stage:
@@ -17565,6 +18502,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd2_1:
+              display_name: '1-р бүлэг: Вэбийн агуулга ба HTML'
+            csd2_2:
+              display_name: '2-р бүлэг: Стиль ба CSS'
+            cspSurvey:
+              display_name: Судалгаа
         csd1-2020:
           title: CSD Нэгж 1 - Асуудлыг шийдвэрлэх ба тооцоолох ('19 -'20)
           description: "Асуудлыг шийдвэрлэх өргөн хүрээний хүрээнд боловсруулагдсан,
@@ -17721,6 +18665,13 @@ mn:
                 нь хийж гүйцэтгэхээр төлөвлөсөн болно.
             Post-Project Test:
               name: Төслийн дараах тест
+          lesson_groups:
+            cspSurvey:
+              display_name: Судалгаа
+            csd1_1:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            csd1_2:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
         csd4-2020:
           title: CSD Нэгж 4 - Дизайны үйл явц ('19 -'20)
           description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд
@@ -17975,6 +18926,15 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd4_1:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            csd4_2:
+              display_name: '2-р бүлэг: Программын ноорог'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
         csd5-2020:
           title: CSD Нэгж 5 - Өгөгдөл ба нийгэм ('19 -'20)
           description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар
@@ -18271,6 +19231,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd5_1:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            csd5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            cspSurvey:
+              display_name: Судалгаа
         csd6-2020:
           title: CSD Нэгж 6 - Биет тооцоолол ('19 -'20)
           description: 6-р нэгж нь тооцоолол хийхэд техник хангамжийн платформын үүргийг
@@ -18319,6 +19286,13 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd6_1:
+              display_name: '1-р бүлэг: Техник хангамжтай хамт программчлах'
+            csd6_2:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            cspSurvey:
+              display_name: Судалгаа
         csd3-2020:
           title: CSD Нэгж 3 - Анимейшн ба тоглоомууд
           description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив
@@ -18648,6 +19622,13 @@ mn:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
             Text:
               name: Текст
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            cspSurvey:
+              display_name: Судалгаа
         coursea-2020:
           title: Хичээл А (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -18746,6 +19727,15 @@ mn:
                 лаборатори дээр үйл явдлыг хэрхэн ашиглаж сурах, хүүхэлдэйн тоглоом
                 үүсгэхэд сурсан кодчлолын бүх чадвараа ашиглах боломжтой болно. Тоглоомын
                 лаборатори дээр бүтээлчээр тоглож түүх бүтээх цаг боллоо!
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         courseb-2020:
           title: Хичээл В (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -18856,6 +19846,17 @@ mn:
                 лаборатори дээр үйл явдлыг хэрхэн ашиглаж сурах, хүүхэлдэйн тоглоом
                 үүсгэхэд сурсан кодчлолын бүх чадвараа ашиглах боломжтой болно. Тоглоомын
                 лаборатори дээр бүтээлчээр тоглох цаг боллоо!
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            csf_events:
+              display_name: Үйл явдлууд
         coursec-2020:
           title: Хичээл С (2019)
           description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ
@@ -19028,6 +20029,17 @@ mn:
                 эхлээд вэбсайтаа кодлох хүртэл алхам алхмаар бүтэц зохион бүтээсэн.
                 Нэмж дурдахад бид багш нарт үзэсгэлэнгийн ширээг зохион байгуулахад
                 туслах санаануудыг санал болгож байна! '
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_binary:
+              display_name: Хоёрт
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         coursed-2020:
           title: Хичээл D (2019)
           description: Сурагчид сараалжилсан гогцоо, нөхцлүүд, үйл явдлын талаарх
@@ -19208,6 +20220,19 @@ mn:
               description_teacher: Энэ хичээл дээр сурагчид интерактив бүжгийн үдэшлэгээ
                 зохиох болно. Энэ хэрэгсэл нь дуу хөгжимд хариу өгөх зорилгоор бүтээгдсэн
                 тул дуу чимээ шаардагдана.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_binary:
+              display_name: Хоёрт
+            csf_digcit:
+              display_name: Дижитал иргэншил
         coursee-2020:
           title: Хичээл E (2019)
           description: Алгоритм, гогцоо, нөхцлүүд, үйл явдлууд ашиглан кодчилолоо
@@ -19403,6 +20428,19 @@ mn:
               name: Дижитал хуваалцах
             Designing for Accessibility:
               name: Хүртээмжтэй болгохын тулд дизайн хийх
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_nested_loops:
+              display_name: Сараалжсан гогцоо
+            csf_functions:
+              display_name: Функцүүд
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
         coursef-2020:
           title: Хичээл F (2019)
           description: Төрөл бүрийн гогцоо, үйл явдал, функц, нөхцлийг ашиглаж сур.
@@ -19612,6 +20650,17 @@ mn:
                 танилцуулах боломжтой болно."
             AI for Oceans:
               name: Далайд зориулсан ХОУ
+          lesson_groups:
+            ramp_up:
+              display_name: Босгох
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+            csf_sprites:
+              display_name: Шидтэнгүүд
         express-2020:
           title: Шуурхай хичээл (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -19666,6 +20715,23 @@ mn:
               name: Шидтэний лабтай хамтарсан Харийнхны бүжгийн үдэшлэг
             Virtual Pet with Sprite Lab:
               name: Шидтэний лабтай хамтарсан виртуал гэрийн тэжээвэр амьтан
+          lesson_groups:
+            csf_warmup:
+              display_name: Бие халаалт
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_functions:
+              display_name: Функцүүд
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+            csf_sprites:
+              display_name: Шидтэнгүүд
         pre-express-2020:
           title: Урьдчилан унших Шуурхай (2019)
           description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг
@@ -19698,6 +20764,13 @@ mn:
               name: Зураач дээрх гогцоо
             Tell a Story in Play Lab:
               name: Тоглоомын лаб дээр түүх ярих
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
         csp1-2020:
           stages:
             new stage:
@@ -19726,6 +20799,9 @@ mn:
               name: Оюуны өмч
             'Lesson 14: Assessment Day':
               name: 'Хичээл 14: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '2-р нэгж: Дижитал мэдээлэл'
         csp2-2020:
           stages:
             new stage:
@@ -19744,6 +20820,9 @@ mn:
               name: DNS ба HTTP
             'Lesson 9: Assessment Day':
               name: 'Хичээл 9: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Нэгж 2: Интернэт'
         csp3-2020:
           stages:
             new stage:
@@ -19778,6 +20857,9 @@ mn:
               name: Алгоритмын хязгаар
             Parallel and Distributed Algorithms:
               name: Зэрэгцээ ба тархсан алгоритмууд
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Нэгж 6: Алгоритмууд'
         csp8-2020:
           stages:
             new stage:
@@ -19790,6 +20872,9 @@ mn:
               name: шинэ шат
             'Lesson 9: Assessment Day':
               name: 'Хичээл 9: Үнэлгээний өдөр'
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Нэгж 9: Өгөгдөл'
         csp10-2020:
           stages:
             new stage:
@@ -19844,6 +20929,9 @@ mn:
               name: Нэгж 3 Бүлэг 1 Үнэлгээ
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '3-р нэгж: Программчлалын танилцуулга'
         csd3-virtual:
           description_short: " Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом
             программчилж сурах."
@@ -20178,6 +21266,9 @@ mn:
               name: Шидтэнүүд ба анимейшн
             Text and Captioned Scenes:
               name: Текст ба тайлбартай үзэгдэл
+          lesson_groups:
+            csd3_1:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
         jess-test-script:
           stages:
             new stage:
@@ -20320,6 +21411,11 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+          lesson_groups:
+            csd2_1:
+              display_name: '1-р бүлэг: Вэбийн агуулга ба HTML'
+            csd2_2:
+              display_name: '2-р бүлэг: Стиль ба CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -20370,6 +21466,8 @@ mn:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
             Intro to App Lab:
               name: Апп Лаб-н танилцуулга
+            Variables:
+              name: Хувьсагчууд
         virtual-holding-place:
           stages:
             Velocity:
@@ -20388,6 +21486,9 @@ mn:
               name: Тоглоомын дизайн боловсруулах үйл явцыг ашиглах
             Project - Design a Game:
               name: Төсөл - Тоглоом зохиох
+          lesson_groups:
+            csd3_2:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
         code-break:
           stages:
             new stage:
@@ -20396,3 +21497,36 @@ mn:
               name: Алгоритм
             Events:
               name: Үйл явдлууд
+        no-lg:
+          stages:
+            new stage:
+              name: шинэ шат
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Нэгж 5 Үнэлгээ 2
+            While Loops:
+              name: Байхад гогцоо
+            Loops and Simulations:
+              name: Гогцоо ба симуляци
+            Introduction to Arrays:
+              name: Матрицын танилцуулга
+            'Building an App: Image Scroller':
+              name: 'Апп үүсгэх: Зураг гүйлгэгч'
+            Unit 5 Assessment 3:
+              name: Нэгж 5 Үнэлгээ 3
+            Processing Arrays:
+              name: Матрицыг боловсруулж байна
+            Functions with Return Values:
+              name: Буцаах утга бүхий функцүүд
+            'Building an App: Canvas Painter':
+              name: 'Апп бүтээх: Самбар будагч'
+            Unit 5 Assessment 4:
+              name: Нэгж 5 Үнэлгээ 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Нэгж 5 Үнэлгээ 5 - AP хуурамч кодын практик асуултууд
+          lesson_groups:
+            csp5_1:
+              display_name: '1-р бүлэг: Үйл явдалд суурилсан программчлал'
+            csp5_2:
+              display_name: '2-р бүлэг: Өгөгдлийн бүтэцтэй программчлах'

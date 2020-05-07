@@ -99,6 +99,7 @@ ar-SA:
       Alien Defender:
         game has been won: قد فاز أحد باللعبة
       Choose Your Own Adventure:
+        witch ending: نهاية الساحرة
         story: قصة
         starting path: طريق البداية
       Course 4 Artist Binary 1:
@@ -158,6 +159,7 @@ ar-SA:
       Course 4 Play Lab Params 1:
         jump: قفز
       Course 4 Play Lab Params 10:
+        level_up: مستوى_أعلى
         score_points: سجل_نقاط
       Course 4 Play Lab Params 2:
         jump: قفز
@@ -203,6 +205,7 @@ ar-SA:
         check guess: تحقق من تخمين
         do something: القيام بشيء ما
       FoodFight:
+        level_up: مستوى_أعلى
         score_points: سجل_نقاط
       Function intro Ryan:
         build bridge: ابن جسراً
@@ -232,6 +235,14 @@ ar-SA:
         square: مربع
       Guess The Number:
         check guess: تحقق من تخمين
+      InspirationalArtwork:
+        n-sided shape: شكل بحواف -n
+        draw a loop: ارسم حلقة
+        draw spiral circle: قم برسم دائرة حلزونية
+      InspirationalArtwork_2018:
+        draw a loop: ارسم حلقة
+        n-sided shape: شكل بحواف -n
+        draw spiral circle: قم برسم دائرة حلزونية
       MC_HOC_2017_07_Cole:
         clear path: طريق سالك
       MC_HOC_2017_07_Cole_2019:
@@ -294,6 +305,8 @@ ar-SA:
         draw a polygon: ارسم مضلع
       NEW Course 4 Artist Params 13:
         draw a polygon: ارسم مضلع
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge: قم برسم حافة حلزونية
       NEW Course 4 Artist Params 15:
         draw a star: رسم نجمة
         draw a circle: رسم دائرة
@@ -589,17 +602,23 @@ ar-SA:
         draw a square: رسم مربع
       courseE_artist_functions2_2019:
         draw a square: رسم مربع
+      courseE_artist_functions2_copy:
+        draw a square: رسم مربع
       courseE_artist_functions3_2018:
         draw a star: رسم نجمة
       courseE_artist_functions3_2019:
         draw a star: رسم نجمة
       courseE_artist_functions4:
         draw a star: رسم نجمة
+      courseE_artist_functions4_copy:
+        draw a star: رسم نجمة
       courseE_artist_functions5:
         draw a star: رسم نجمة
       courseE_artist_functions5_2018:
         draw a star: رسم نجمة
       courseE_artist_functions5_2019:
+        draw a star: رسم نجمة
+      courseE_artist_functions5_copy:
         draw a star: رسم نجمة
       courseE_artist_functions7:
         draw a window: ارسم نافذة
@@ -688,6 +707,8 @@ ar-SA:
       courseE_artist_functions_predict1_2018:
         draw a square: رسم مربع
       courseE_artist_functions_predict1_2019:
+        draw a square: رسم مربع
+      courseE_artist_functions_predict1_copy:
         draw a square: رسم مربع
       courseE_artist_functions_predict2:
         draw line of polygons: ارسم خط من المضلعات
@@ -792,18 +813,33 @@ ar-SA:
         do something: القيام بشيء ما
       courseF_artist_fwp1:
         draw a square: رسم مربع
+        checker: فاحص
         do something: القيام بشيء ما
+        Make gingham: إنشاء نسيج مخطط
+        black outline: مخطط تفصيلي أسود
       courseF_artist_fwp2:
         draw a square: رسم مربع
+        checker: فاحص
         do something: القيام بشيء ما
+        Make gingham: إنشاء نسيج مخطط
+        black outline: مخطط تفصيلي أسود
       courseF_artist_fwp2_predict1:
         draw a square: رسم مربع
       courseF_artist_fwp3:
         draw a square: رسم مربع
+        draw a square2: رسم المربع2
+        filled square: مربع معبأ
+        black outline: مخطط تفصيلي أسود
       courseF_artist_fwp4:
         draw a polygon: ارسم مضلع
       courseF_artist_fwp5:
         draw a polygon: ارسم مضلع
+      courseF_artist_fwp6:
+        draw a spiral edge: قم برسم حافة حلزونية
+      courseF_artist_fwp7:
+        draw a spiral edge: قم برسم حافة حلزونية
+      courseF_artist_fwp8:
+        draw a spiral edge: قم برسم حافة حلزونية
       courseF_artist_fwp9:
         draw a star: رسم نجمة
         draw a circle: رسم دائرة
@@ -812,6 +848,7 @@ ar-SA:
         draw a shape: ارسم شكل
         draw a house: رسم منزل
         draw a square: رسم مربع
+        draw a spiral edge: قم برسم حافة حلزونية
       courseF_artist_fwp_challenge1:
         draw background: ارسم خلفية
         draw a polygon: ارسم مضلع
@@ -830,6 +867,10 @@ ar-SA:
         move and get nectar with counter: انتقل واحصل على الرحيق مع العداد
       courseF_bee_for_challenge1_2019:
         move and get nectar with counter: انتقل واحصل على الرحيق مع العداد
+      courseF_bee_functions2:
+        get only nectar: احصل على رحيق العسل فقط
+      courseF_bee_functions3:
+        only make honey: صنع العسل فقط
       courseF_bee_functions3a:
         check nectar or honey: تحقق من الرحيق أو العسل
       courseF_bee_functions4:
@@ -865,10 +906,36 @@ ar-SA:
         rowOfNectar: سطر_من_الرحيق
       courseF_bee_fwp6:
         rowOfNectar: سطر_من_الرحيق
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
       courseF_bee_fwp_challenge1:
         pick row: اختر سطر
       courseF_bee_fwp_challenge2:
         pick row: اختر سطر
+      courseF_bee_variables_1_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_1_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_2_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_2_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_3_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_3_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_4_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_4_2019:
+        collect row: جمع الصف
+      courseF_bee_variables_5_2018:
+        collect row: جمع الصف
+      courseF_bee_variables_5_2019:
+        collect row: جمع الصف
       courseF_bee_variables_7_2018:
         collect: اجمع
       courseF_bee_variables_7_2019:

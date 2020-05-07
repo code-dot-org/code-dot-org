@@ -265,6 +265,7 @@ lv:
     create_personal_login_under_13_username: Lietotājvārds (neizmanto savu īsto vārdu!)
     create_personal_login_under_13_parent_email: Vecāka/aizbildņa e-pasta adrese
     update_email: Atjaunināt
+    parent_guardian_email_label: Vecāka/aizbildņa e-pasts
   user_level:
     completed: Pabeigts
     tried: Mēģināts
@@ -424,22 +425,6 @@ lv:
       title: Sazarojumi
     widgets:
       audience: Vecums 14+
-  gallery:
-    students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
-    students_made_these_with_code: Skolēni izveidoja šos ar kodu!
-    picture_count: Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b>
-      attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu
-      katru programmu darbībā.
-    activity_count: Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus
-      un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem
-      un ekrānšāviņiem, lai apskatītu katru programmu darbībā.
-    want_to_make_your_own: Vēlies uzveidot pats savu?
-    more: Vēl &rarr;
-    caption_by_name_age: "%{name}, vecums %{age}"
-    caption_time_ago: "%{time_ago} pirms"
-    header: Galerija
-    header_playlab: Spēles laboratorija
-    header_artist: Mākslinieks
   landing:
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību

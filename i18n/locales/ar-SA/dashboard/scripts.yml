@@ -5,6 +5,7 @@ ar:
     script:
       category:
         csf_category_name: أساسيات علوم الكمبيوتر
+        full_course_category_name: الدورات الكاملة
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
       name:
@@ -666,19 +667,39 @@ ar:
               name: إرسال رسائل بالنظام الثنائي
             The Internet:
               name: الانترنت
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csp2-2017:
           stages:
             Bytes and File Sizes:
               name: بايت واحجام الملفات
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csp3-2017:
           description_short: البرمجة
           stages:
             Creating Functions:
               name: إضافة الدوال
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
+        csp4-2017:
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
         csp5-2017:
           stages:
             While Loops:
               name: حلقات بينما
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         CSDU3-Draft:
           description_short: البرمجة
           stages:
@@ -696,12 +717,35 @@ ar:
           stages:
             Sending Binary Messages:
               name: إرسال رسائل بالنظام الثنائي
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
         MikeTest:
           stages:
             Artist Functions:
               name: وظائف الرسام
         artistExemplar:
           description_audience: الأعمار 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -778,6 +822,14 @@ ar:
               name: الارتداد
             'Farmer: While Loops':
               name: 'المُزارع : حلقات طالما'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
         csd3-2017:
           description_short: البرمجة
           stages:
@@ -787,6 +839,13 @@ ar:
               name: المتغيرات
             Conditionals:
               name: الجمل الشرطية
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
         grade2:
           stages:
             Flappy:
@@ -827,6 +886,30 @@ ar:
               name: وصفه التصميم
             Welcome!:
               name: مرحبا ! 
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csd1_1:
+              display_name: 'الفصل 1: عملية حل المشكل'
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
         basketball:
           stages:
             Bounce:
@@ -844,6 +927,25 @@ ar:
           stages:
             Lists:
               name: القوائم
+          lesson_groups:
+            csd2_1:
+              display_name: 'الفصل 1: محتوى الويب و HTML'
+            csd2_2:
+              display_name: 'الفصل 2: التصميم و CSS'
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
         minecraft:
           title: ساعة من البرمجة مع ماينكرافت نسخة المصمم
           description_short: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
@@ -903,6 +1005,11 @@ ar:
               name: مقدمة
             Conditionals:
               name: الجمل الشرطية
+          lesson_groups:
+            content:
+              display_name: محتوى
+            extra_course_content:
+              display_name: محتوى الدورة الممتازة
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -915,6 +1022,9 @@ ar:
               name: تأليف الأغاني مع المعلمات
             Introduction:
               name: مقدمة
+          lesson_groups:
+            content:
+              display_name: محتوى
         classic-hoc-impact-study:
           description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات الممتعة!
           stages:
@@ -937,6 +1047,22 @@ ar:
               name: مرحبا ! 
             Wrap-Up:
               name: الجلسة الختامية
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
         sciencepd4:
           stages:
             Welcome!:
@@ -953,12 +1079,29 @@ ar:
           stages:
             Binary:
               name: ثنائي
+          lesson_groups:
+            content:
+              display_name: محتوى
         sciencepd5:
           stages:
             Welcome!:
               name: مرحبا ! 
             Wrap-Up:
               name: الجلسة الختامية
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+            practice:
+              display_name: تمارين معلم الرياضيات
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: محتوى
+            cspSurvey:
+              display_name: استبيان
         csd6-draft:
           stages:
             Lists:
@@ -1023,6 +1166,10 @@ ar:
           stages:
             Introduction:
               name: مقدمة
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         artist-and-bb8:
           stages:
             Bounce:
@@ -1065,12 +1212,96 @@ ar:
               name: الحلقات المتداخلة
           title: الدورة E
           assignment_family_title: الدورة E
+          lesson_groups:
+            csf_e_1:
+              display_name: اذهب إلى الدروة E (اختياري)
+            csf_e_2:
+              display_name: محتوى الدورة E
+            extra_course_content:
+              display_name: محتوى الدورة الممتازة
         coursef-2017:
           stages:
             Building a Foundation:
               name: بناء قاعدة
           title: الدورة F
           assignment_family_title: الدورة F
+          lesson_groups:
+            csf_f_1:
+              display_name: اذهب إلى الدروة F (اختياري)
+            csf_f_2:
+              display_name: محتوى الدورة F
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
         express-2017:
           stages:
             Introduction:
@@ -1091,6 +1322,9 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
+          lesson_groups:
+            content:
+              display_name: محتوى
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1106,6 +1340,17 @@ ar:
             Creating Functions:
               name: إضافة الدوال
           description_short: البرمجة
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1118,6 +1363,13 @@ ar:
               name: الإنترنت
             Crowdsourcing:
               name: حشد المصادر
+          lesson_groups:
+            csf_e_1:
+              display_name: اذهب إلى الدروة E (اختياري)
+            csf_e_2:
+              display_name: محتوى الدورة E
+            extra_course_content:
+              display_name: محتوى الدورة الممتازة
         new-d:
           stages:
             Introduction:
@@ -1144,6 +1396,9 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
+          lesson_groups:
+            content:
+              display_name: محتوى
         new-e:
           stages:
             Building a Foundation:
@@ -1154,6 +1409,13 @@ ar:
               name: الإنترنت
             Crowdsourcing:
               name: حشد المصادر
+          lesson_groups:
+            csf_e_1:
+              display_name: اذهب إلى الدروة E (اختياري)
+            csf_e_2:
+              display_name: محتوى الدورة E
+            extra_course_content:
+              display_name: محتوى الدورة الممتازة
         new-f:
           stages:
             Building a Foundation:
@@ -1164,10 +1426,24 @@ ar:
               name: حلقة فور، مرح
             Songwriting with Parameters:
               name: تأليف الأغاني مع المعلمات
+          lesson_groups:
+            csf_f_1:
+              display_name: اذهب إلى الدروة F (اختياري)
+            csf_f_2:
+              display_name: محتوى الدورة F
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
         csp3-staging:
           stages:
             Creating Functions:
               name: إضافة الدوال
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
@@ -1177,6 +1453,14 @@ ar:
           title: 'ماين كرافت: رحلة البطل'
           description_short: ماين كرافت عادت بنشاط جديد من انشطة ساعة من البرمجة!
           description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة! رحلة عبر Minecraft مع البرمجة.
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1191,6 +1475,13 @@ ar:
               name: الإنترنت
             Crowdsourcing:
               name: حشد المصادر
+          lesson_groups:
+            csf_e_1:
+              display_name: اذهب إلى الدروة E (اختياري)
+            csf_e_2:
+              display_name: محتوى الدورة E
+            extra_course_content:
+              display_name: محتوى الدورة الممتازة
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1203,6 +1494,11 @@ ar:
               name: حلقة فور، مرح
             Songwriting with Parameters:
               name: تأليف الأغاني مع المعلمات
+          lesson_groups:
+            csf_f_1:
+              display_name: اذهب إلى الدروة F (اختياري)
+            csf_f_2:
+              display_name: محتوى الدورة F
         csd6-old:
           stages:
             Lists:
@@ -1218,6 +1514,13 @@ ar:
             Functions:
               name: دوال
           description_short: "البرمجة"
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
         csd3-2018:
           description_short: "البرمجة"
           stages:
@@ -1227,10 +1530,24 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
         csd2-2018:
           stages:
             Lists:
               name: القوائم
+          lesson_groups:
+            csd2_1:
+              display_name: 'الفصل 1: محتوى الويب و HTML'
+            csd2_2:
+              display_name: 'الفصل 2: التصميم و CSS'
+            cspSurvey:
+              display_name: استبيان
         coursea-2018:
           assignment_family_title: الدورة A
           stages:
@@ -1322,6 +1639,9 @@ ar:
           stages:
             Functions with Parameters:
               name: الدوال والمعاملات
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         coursee-2018:
           assignment_family_title: الدورة E
           stages:
@@ -1341,6 +1661,13 @@ ar:
               name: الشرطية مع بطاقات
             Minecraft Hour of Code:
               name: ساعة البرمجة ماين كرافت
+          lesson_groups:
+            csf_e_1:
+              display_name: اذهب إلى الدروة E (اختياري)
+            csf_e_2:
+              display_name: محتوى الدورة E
+            extra_course_content:
+              display_name: محتوى الدورة الممتازة
         coursef-2018:
           assignment_family_title: الدورة F
           stages:
@@ -1358,6 +1685,11 @@ ar:
               name: تأليف الأغاني مع المعلمات
             Conditionals with Cards:
               name: الشرطية مع بطاقات
+          lesson_groups:
+            csf_f_1:
+              display_name: اذهب إلى الدروة F (اختياري)
+            csf_f_2:
+              display_name: محتوى الدورة F
         csp1-2018:
           stages:
             Sending Binary Messages:
@@ -1366,19 +1698,175 @@ ar:
               name: أرقام ثنائية
             The Internet:
               name: الانترنت
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csd1_1:
+              display_name: 'الفصل 1: عملية حل المشكل'
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
+            cspSurvey:
+              display_name: استبيان
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csp2-2018:
           stages:
             Bytes and File Sizes:
               name: بايت واحجام الملفات
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '(قديم) الوحدة 1: معلومات رقمية'
+            cspAssessment:
+              display_name: تقييم الفصل
         csp3-2018:
           description_short: البرمجة
           stages:
             Creating Functions:
               name: إضافة الدوال
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp4-2018:
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
         csp5-2018:
           stages:
             While Loops:
               name: حلقات بينما
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1389,6 +1877,12 @@ ar:
               name: حركها , حركها
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
         frozen-2018:
           stages:
             Artist:
@@ -1422,6 +1916,16 @@ ar:
           stages:
             Dance Party:
               name: حفلة الرقص
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
         dance-extras:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursef-2019:
@@ -1440,6 +1944,15 @@ ar:
               name: الانترنت
             Crowdsourcing:
               name: حشد المصادر
+          lesson_groups:
+            csf_variables:
+              display_name: المتغيرات
+            csf_for_loops:
+              display_name: للحلقات
+            csf_internet:
+              display_name: الإنترنت
+            csf_digcit:
+              display_name: المواطنة الرقمية
         dance-low:
           stages:
             Dance Party:
@@ -1462,6 +1975,19 @@ ar:
               name: ثنائي الفنان
             Dance Party:
               name: حفلة الرقص
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_events:
+              display_name: الأحداث
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_binary:
+              display_name: ثنائي
+            csf_digcit:
+              display_name: المواطنة الرقمية
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1478,6 +2004,13 @@ ar:
               name: حشد المصادر
             Songwriting:
               name: تأليف الأغاني
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_nested_loops:
+              display_name: الحلقات المتداخلة
+            csf_functions:
+              display_name: دوال
         express-2019:
           stages:
             Relay Programming:
@@ -1500,10 +2033,36 @@ ar:
               name: حشد المصادر
             Dance Party:
               name: حفلة الرقص
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_functions:
+              display_name: دوال
+            csf_variables:
+              display_name: المتغيرات
+            csf_for_loops:
+              display_name: للحلقات
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csd1_1:
+              display_name: 'الفصل 1: عملية حل المشكل'
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
         andrea-test:
           stages:
             'null':
               name: 'خالي'
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
         dance-extras-gallery:
           title: استمر في الرقص
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
@@ -1515,12 +2074,36 @@ ar:
               name: الحدث الكبير
             Binary Bracelets:
               name: أساور الثنائية
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_binary:
+              display_name: ثنائي
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: الخرائط السعيدة
             Going Places Safely:
               name: الذهاب للأماكن بأمان
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1531,6 +2114,15 @@ ar:
               name: الحلقات في العصر الجليدي
             'Loops: Getting Loopy':
               name: القبض على المعتوهون
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1539,6 +2131,13 @@ ar:
               name: البصمة الرقمية الخاصة بك
             Spelling Bee:
               name: مسابقة التهجئة
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1547,6 +2146,13 @@ ar:
           stages:
             Lists:
               name: القوائم
+          lesson_groups:
+            csd2_1:
+              display_name: 'الفصل 1: محتوى الويب و HTML'
+            csd2_2:
+              display_name: 'الفصل 2: التصميم و CSS'
+            cspSurvey:
+              display_name: استبيان
         csd3-2019:
           description_short: "البرمجة"
           stages:
@@ -1556,14 +2162,47 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
+            cspSurvey:
+              display_name: استبيان
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csd6-2019:
           stages:
             Functions with Parameters:
               name: الدوال والمعاملات
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csp4-pilot:
           stages:
             Surveys:
               name: استبيانات
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+            required:
+              display_name: لمحة عامة
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -1572,25 +2211,66 @@ ar:
               name: أرقام ثنائية
             The Internet:
               name: الانترنت
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csp2-2019:
           stages:
             Bytes and File Sizes:
               name: بايت واحجام الملفات
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '(قديم) الوحدة 1: معلومات رقمية'
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
         csp3-2019:
           description_short: البرمجة
           stages:
             Creating Functions:
               name: إضافة الدوال
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
+        csp4-2019:
+          lesson_groups:
+            cspAssessment:
+              display_name: تقييم الفصل
+            cspSurvey:
+              display_name: استبيان
         csp5-2019:
           stages:
             While Loops:
               name: حلقات بينما
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csp1-pilot:
           stages:
             Sending Binary Messages:
               name: إرسال رسائل بالنظام الثنائي
             Binary Numbers:
               name: أرقام ثنائية
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            required:
+              display_name: لمحة عامة
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1599,18 +2279,152 @@ ar:
               name: الشرطية مع بطاقات
             Building a Foundation:
               name: بناء قاعدة
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: القوائم
+            csp_loops:
+              display_name: الحلقات
+            csp_traversals:
+              display_name: الاجتيازات
+            csp_project:
+              display_name: مشروع
+            csp_libraries:
+              display_name: المكتبات
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
         csp7-pilot-staging:
           stages:
             Libraries:
               name: المكتبات
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: برمجة ورقة الرسم البياني
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: القوائم
+            csp_loops:
+              display_name: الحلقات
+            csp_traversals:
+              display_name: الاجتيازات
+            csp_project:
+              display_name: مشروع
+            required:
+              display_name: لمحة عامة
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csd1_1:
+              display_name: 'الفصل 1: عملية حل المشكل'
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
         csd2-pilot:
           stages:
             Lists:
               name: القوائم
+          lesson_groups:
+            csd2_1:
+              display_name: 'الفصل 1: محتوى الويب و HTML'
+            csd2_2:
+              display_name: 'الفصل 2: التصميم و CSS'
+            cspSurvey:
+              display_name: استبيان
         csd3-pilot:
           description_short: "البرمجة"
           stages:
@@ -1620,16 +2434,112 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: محتوى
+            required:
+              display_name: لمحة عامة
         csl-vn:
           stages:
             Loops in Ice Age:
               name: الحلقات في العصر الجليدي
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: لمحة عامة
+            content:
+              display_name: محتوى
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: محتوى
+            required:
+              display_name: لمحة عامة
         peru-2019:
           stages:
             Introduction:
               name: مقدمة
             Nested Loops:
               name: الحلقات المتداخلة
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: محتوى
+            required:
+              display_name: لمحة عامة
         dance-2019:
           stages:
             Dance Party:
@@ -1653,6 +2563,16 @@ ar:
               name: للحلقات
         dance-extras-2019:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1663,18 +2583,116 @@ ar:
               name: حشد المصادر
             Conditionals with Cards:
               name: الشرطية مع بطاقات
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_nested_loops:
+              display_name: الحلقات المتداخلة
+            csf_functions:
+              display_name: دوال
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: الجمل الشرطية
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_events:
+              display_name: الأحداث
+            csf_digcit:
+              display_name: المواطنة الرقمية
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: الجمل الشرطية
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_events:
+              display_name: الأحداث
+            csf_digcit:
+              display_name: المواطنة الرقمية
+        csp7-pilot:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+            required:
+              display_name: لمحة عامة
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: القوائم
+            csp_loops:
+              display_name: الحلقات
+            csp_traversals:
+              display_name: الاجتيازات
+            csp_project:
+              display_name: مشروع
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+        csd2-2020:
+          lesson_groups:
+            csd2_1:
+              display_name: 'الفصل 1: محتوى الويب و HTML'
+            csd2_2:
+              display_name: 'الفصل 2: التصميم و CSS'
+            cspSurvey:
+              display_name: استبيان
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csd1_1:
+              display_name: 'الفصل 1: عملية حل المشكل'
+            csd1_2:
+              display_name: 'الفصل 2: الحواسيب وحل المشكل'
+            csd1_3:
+              display_name: دروس بديلة
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            csd4_2:
+              display_name: 'الفصل 2: نمذجة التطبيق'
+            cspSurvey:
+              display_name: استبيان
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csd6-2020:
           stages:
             Functions with Parameters:
               name: الدوال والمعاملات
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
         csd3-2020:
           description_short: "البرمجة"
           stages:
@@ -1686,12 +2704,28 @@ ar:
               name: دوال
             Text:
               name: النص
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+            cspSurvey:
+              display_name: استبيان
         coursea-2020:
           stages:
             Going Places Safely:
               name: الذهاب للأماكن بأمان
             'Programming: Happy Maps':
               name: الخرائط السعيدة
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1700,12 +2734,32 @@ ar:
               name: حركها , حركها
             'Loops: Getting Loopy':
               name: القبض على المعتوهون
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         coursec-2020:
           stages:
             Binary Bracelets:
               name: أساور الثنائية
             'Events: The Big Event':
               name: الحدث الكبير
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_sequencing:
+              display_name: التجزيء
+            csf_binary:
+              display_name: ثنائي
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1724,10 +2778,30 @@ ar:
               name: المواطنة الرقمية
             Dance Party:
               name: حفلة الرقص
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_events:
+              display_name: الأحداث
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_binary:
+              display_name: ثنائي
+            csf_digcit:
+              display_name: المواطنة الرقمية
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: تأليف الأغاني
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_nested_loops:
+              display_name: الحلقات المتداخلة
+            csf_functions:
+              display_name: دوال
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1738,20 +2812,50 @@ ar:
               name: الانترنت
             Crowdsourcing:
               name: حشد المصادر
+          lesson_groups:
+            csf_digcit:
+              display_name: المواطنة الرقمية
+            csf_variables:
+              display_name: المتغيرات
+            csf_for_loops:
+              display_name: للحلقات
         express-2020:
           stages:
             Dance Party:
               name: حفلة الرقص
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_conditionals:
+              display_name: الجمل الشرطية
+            csf_functions:
+              display_name: دوال
+            csf_variables:
+              display_name: المتغيرات
+            csf_for_loops:
+              display_name: للحلقات
         pre-express-2020:
           stages:
             Spelling Bee:
               name: مسابقة التهجئة
             Loops in Ice Age:
               name: الحلقات في العصر الجليدي
+          lesson_groups:
+            csf_sequencing:
+              display_name: التجزيء
+            csf_loops:
+              display_name: الحلقات
+            csf_events:
+              display_name: الأحداث
         csp1-2020:
           stages:
             Binary Numbers:
               name: أرقام ثنائية
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(قديم) الوحدة 1: معلومات رقمية'
         csp3-virtual:
           description_short: البرمجة
           stages:
@@ -1766,17 +2870,37 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+          lesson_groups:
+            csd3_1:
+              display_name: 'الفصل 1: الصور والمتحركات'
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: 'الفصل 1: محتوى الويب و HTML'
+            csd2_2:
+              display_name: 'الفصل 2: التصميم و CSS'
         csp5-virtual:
           stages:
             While Loops:
               name: حلقات بينما
+            Variables:
+              name: المتغيرات
         virtual-holding-place:
           stages:
             Functions:
               name: دوال
+          lesson_groups:
+            content:
+              display_name: محتوى
+            csd3_2:
+              display_name: 'الفصل 2: إنشاء الألعاب'
         code-break:
           stages:
             Algorithms:
               name: الخوارزميات
             Events:
               name: الأحداث
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: حلقات بينما

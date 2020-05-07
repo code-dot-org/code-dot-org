@@ -411,6 +411,8 @@ ja:
     enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
     update: "アカウントを更新"
     update_email: "更新"
+    parent_guardian_email_label: "親/保護者Eメール"
+    none: "設定なし"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -620,20 +622,6 @@ ja:
       body: "これらのデジタル ツールを使用して、学生は実践的なコンピューターサイエンス入門コースを学ぶことができます。ウィジェットを自分で使うか、クラス向けの共通レッスンを作成します。"
       audience: "14才以上"
       cta: "もっと知る"
-  gallery:
-    students_drew_these_with_code: "これらの作品は、生徒たちがコードを使って描きました！"
-    students_made_these_with_code: "これらの作品は、生徒たちがコードを使って創りました！"
-    picture_count: "コンピュータ・プログラムを用いて生徒たちが描いた絵は、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれの絵をクリックすると、その絵を描くプログラムを見ることができます。"
-    activity_count: "コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。"
-    want_to_make_your_own: "自分でも創ってみたいですか？"
-    how_to_save: "これらのチュートリアルの最終レベルでは、「完了」と「保存」をクリックし、ギャラリーにあなたの作品を保存してください。"
-    more: "つづきを読む &rarr;"
-    caption_by_name_age: "作成者： %{name} (%{age} 才)"
-    caption_time_ago: "%{time_ago} 前"
-    header: "ギャラリー"
-    header_playlab: "プレイラボ"
-    header_artist: "アーティスト"
-    report_abuse: "不正を報告"
   landing:
     report_bug: "バグを報告"
     support: "説明を見る"
@@ -808,6 +796,7 @@ ja:
     instructor_feedback: 'インストラクターからのフィードバック'
     peer_feedback: 'ピア ・ フィードバック'
     outdated: 'このフィードバックは、以前提出したバージョンに追加されました'
+    peer_review: 'ピア ・ レビュー'
   flex_category:
     required: '概要'
     content: '内容'

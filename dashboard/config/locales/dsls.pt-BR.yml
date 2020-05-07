@@ -4579,6 +4579,8 @@ pt-BR:
           de CC](http://studio.code.org/) por conta própria, a qualquer momento. Mas
           este curso dará a você uma boa noção sobre o que esperar, ao apresentar
           a você alguns dos desafios mais fundamentais em um curto espaço de tempo.\n"
+      OPD-K5 Reviewing Reflections:
+        content1: descrição aqui
       OPD-K5 Stage10Start:
         markdown: |
           # Próximos Passos > Vamos Revisar
@@ -4725,6 +4727,8 @@ pt-BR:
           volte aqui e clique abaixo para seguir em frente.\n\nNa próxima etapa, iremos
           acrescentar alguma complexidade aos nossos programadas através da adição
           de laços.\n"
+      OPD-K5 Stage3aGo_copy:
+        content1: descrição aqui
       OPD-K5 Stage4Go:
         markdown: "Laços > Lições Desplugadas\n\nNesta etapa, vimos como adicionar
           laços em um programa é mais eficiente ao codificar ações repetitivas. Na
@@ -5148,6 +5152,60 @@ pt-BR:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publique seu plano >></button></a>
 
           Após comentar no fórum, volte aqui e clique abaixo para continuar.
+      OPD-K5 conditionals introduced:
+        content1: descrição aqui
+      OPD-K5 debugging:
+        content1: descrição aqui
+      OPD-K5 diving deeper intro:
+        content1: descrição aqui
+      OPD-K5 events introduced:
+        content1: descrição aqui
+      OPD-K5 for loops:
+        content1: descrição aqui
+      OPD-K5 for loops intro:
+        content1: descrição aqui
+      OPD-K5 for loops introduction:
+        content1: descrição aqui
+      OPD-K5 functions introduced:
+        content1: descrição aqui
+      OPD-K5 journaling:
+        content1: descrição aqui
+      OPD-K5 lesson implementation planning:
+        content1: descrição aqui
+      OPD-K5 lesson plans:
+        content1: descrição aqui
+      OPD-K5 loops introduced:
+        content1: descrição aqui
+      OPD-K5 project:
+        content1: descrição aqui
+      OPD-K5 projects introduction:
+        content1: descrição aqui
+      OPD-K5 role_of_teacher:
+        content1: descrição aqui
+      OPD-K5 sequencing introduced:
+        content1: descrição aqui
+      OPD-K5 sprite lab:
+        content1: descrição aqui
+      OPD-K5 sprite lab introduction:
+        content1: descrição aqui
+      OPD-K5 sprite lab unplugged:
+        content1: descrição aqui
+      OPD-K5 sprite lab video:
+        content1: descrição aqui
+      OPD-K5 types of lessons:
+        content1: descrição aqui
+      OPD-K5 using lesson plans:
+        content1: descrição aqui
+      OPD-K5 variables:
+        content1: descrição aqui
+      OPD-K5 variables introduction:
+        content1: descrição aqui
+      OPD-K5 variables unplugged:
+        content1: descrição aqui
+      OPD-K5 where to next:
+        content1: descrição aqui
+      OPD-K5-projects-1:
+        content1: descrição aqui
       OPD-Stage3Start:
         markdown: |
           # Olhando à Frente > Visão Geral desta Etapa
@@ -5557,6 +5615,8 @@ pt-BR:
           # Recursos
 
           * [Filtragem de pixels] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Guia de atividades ([PDF] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
+        teacher_markdown: "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
+          - Soluções"
       Unit 2 Lesson 10 Overview:
         markdown: |
           # Visão global
@@ -6176,6 +6236,27 @@ pt-BR:
             Se houver uma flor, a abelha precisará coletar néctar uma vez. Se não
             houver uma flor, a abelha não deve fazer nada. Dê uma boa olhada no código
             abaixo. O que você acha que acontecerá depois que você clicar em "Executar"?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
+            o que aconteça. '
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
+            obter néctar se houver uma flor embaixo da nuvem.
+        - text: A abelha se moverá para a nuvem e só tentará obter o néctar se houver
+            uma flor por baixo.
+          correct: true
+          feedback: Correto!
+        - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
+          feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
+            obter néctar se houver uma flor embaixo da nuvem.
+        - text: Eu não sei.
+          feedback: O bloco 'if na flor' assegura que a abelha só tentará obter néctar
+            se houver uma flor embaixo da nuvem.
+        questions:
+        - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
+            Se houver uma flor, a abelha precisará coletar néctar uma vez. Se não
+            houver uma flor, a abelha não deve fazer nada. Dê uma boa olhada no código
+            abaixo. O que você acha que acontecerá depois que você clicar em "Executar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: A abelha terá néctar em cada flor e mel em cada favo de mel.
@@ -6769,6 +6850,22 @@ pt-BR:
         questions:
         - text: O que irá acontecer quando você pressionar o "Executar"?
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: Nada. A função não é chamada neste programa.
+          feedback: Incorreto. Na verdade, a função é chamada duas vezes no programa.
+        - text: O artista desenhará um único quadrado.
+          feedback: Incorreto. Na verdade, a função é chamada duas vezes no programa.
+        - text: O artista irá desenhar dois quadrados que se sobrepõem.
+          feedback: Incorreto. A largura de cada lado do quadrado é apenas 100 pixels,
+            mas o artista faz saltos de 175 pixels entre funções.
+        - text: O artista irá desenhar dois quadrados com um pequeno espaço entre
+            eles.
+          correct: true
+          feedback: Correto! A função é chamada duas vezes no programa, com um salto
+            entre elas.
+        questions:
+        - text: O que irá acontecer quando você pressionar o "Executar"?
+      courseE_prediction_artistFunction1_copy:
         answers:
         - text: Nada. A função não é chamada neste programa.
           feedback: Incorreto. Na verdade, a função é chamada duas vezes no programa.

@@ -908,6 +908,84 @@ it-IT:
         le intestazioni siano in ordine dal più grande al più piccolo, ed il testo
         dica la dimensione corretta come nell'immagine sotto.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Sizes_2019: "# Dimensioni delle intestazioni\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Cosa sono le intestazioni?**]\nLe
+        intestazioni sono titoli di diversa dimensione con cui iniziano le varie sezioni
+        della pagina web. Le intestazioni permettono di suddividere il contenuto della
+        pagina web rendendola più facile da leggere.\n:::\n\n::: details [**Come si
+        fanno intestazioni di diversa dimensione?**]\nLe intestazioni possono avere
+        6 diverse dimensioni.  L'intestazione più comune è definita dall'etichetta
+        HTML '<h1>'. Il numero '1' nell'etichetta HTML indica che questa intestazione
+        è quella di dimensione maggiore. L'intestazione più piccola è indicata dall'etichetta
+        '<h6>'. Le dimensioni intermedie sono indicate con i numeri da 2 a 5: '<h2>',
+        '<h3>', '<h4>', '<h5>'. L'intestazione risulterà più piccola quanto più alto
+        il numero nell'etichetta.\n:::\n\n::: details [**Cos'è HTML?**]\nHTML è la
+        contrazione di Hypertext Markup Language (linguaggio a marcatori per ipertesti).
+        HTML è usato per dare una struttura al contenuto delle pagine Web. HTML utilizza
+        'etichette' (tag) per definire dove iniziano e finiscono le diverse strutture
+        della pagina. Le etichette sono gruppi di simboli e lettere che non costituiscono
+        parole di senso compiuto nel normale linguaggio così che si possono distinguere
+        dal testo della pagina.\n:::\n\n::: details [**What is an HTML element?**]\nUn
+        'elemento' HTML è una porzione della pagina Web che è contrassegnato da un'etichetta
+        di inizio (opening tag) e solitamente da un'etichetta di fine (closing tag).
+        L'elemento HTML comprende, oltre alle etichette, il testo racchiuso tra esse.
+        Ad esempio: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n::: details [**What is an HTML tag?**]\n\nUn'etichetta
+        (tag) HTML è una speciale sequenza di caratteri (lettere, numeri, simboli)
+        che permette al computer di capire dove inizia e dove finisce un elemento
+        HTML e di che tipo di elemento si tratta.\n\n:::\n\n</div>\n\nLe intestazioni
+        possono avere diverse dimensioni. In questa pagina potete vedere intestazioni
+        con 6 diverse dimensioni in ordine casuale. Insieme al tuo compagno/a riuscite
+        a correggere la dimensione di ciascuna in modo che risultino con dimensione
+        decrescente?\n\nProvate così:\n\n-   Usate lo strumento ispettore per scoprire
+        cosa rende di dimensione diversa le intestazioni.\n-   Stabilite di comune
+        accordo qual'è il risultato delle diverse etichette di intestazione.\n-   Modificate
+        le etichette delle intestazioni in modo che appaiano nella pagina in ordine
+        dalla più grande alla più piccola così che il testo dell'intestazione corrisponda
+        alla vera dimensione come nell'immagine qui sotto.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Test_2019: "# Intestazioni e Paragrafi\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Cos'è un elemento Paragrafo?**]\n\nI
+        paragrafi sono racchiusi tra l'etichetta di inizio (opening tag) '<p>' e l'etichetta
+        di fine (closing tag) '</p>'. I paragrafi HTML possono avere una lunghezza
+        qualsiasi: da una sola parola fino a più frasi. Tutto il testo che compare
+        in una pagina Web deve essere contenuto in un elemento HTML (paragrafo o intestazione).
+        I paragrafi permettono di raggruppare le frasi contenute e inserire uno spazio
+        tra un gruppo e il successivo.\n\n:::\n\n::: details [**Come creare più paragrafi?**]\n\nI
+        singoli paragrafi sono sempre racchiusi tra l'etichetta di inizio (opening
+        tag) '<p>' e l'etichetta di fine (closing tag) '</p>'. Per creare più paragrafi
+        è sufficiente usare più volte le etichette di inizio e fine. Ad esempio:\n\n
+        \       <p>\n            Questo è un paragrafo.\n        </p>\n        <p>\n
+        \           Questo è un'altro paragrafo.\n        </p>\n\n:::\n\n::: details
+        [**Cosa sono le Intestazioni?**]\nLe intestazioni sono titoli di diversa dimensioni
+        all'interno della pagina Web. Le intestazioni creano una struttura nella pagina
+        Web e la suddividono in parti facilitandone la lettura.\n:::\n\n::: details
+        [**Come fare intestazioni di diversa dimensione?**]\nLe intestazioni hanno
+        6 possibili dimensioni. Finora avete usato la dimensione maggiore \\<h1>.
+        Il numero '1' nell'etichetta HTML indica l'intestazione più grande. L'intestazione
+        più piccola ha l'etichetta \\<h6>. Provate anche le dimensioni \\<h2>, \\<h3>,
+        \\<h4> e \\<h5> con dimensione via via decrescente. \n:::\n\n::: details [**Cos'è
+        HTML?**]\nHTML è la contrazione di Hypertext Markup Language (linguaggio a
+        marcatori per ipertesti). HTML è usato per dare una struttura al contenuto
+        delle pagine Web. HTML utilizza 'etichette' (tag) per definire dove iniziano
+        e finiscono le diverse strutture della pagina. Le etichette sono gruppi di
+        simboli e lettere che non costituiscono parole di senso compiuto nel normale
+        linguaggio così che si possono distinguere dal testo della pagina.\n:::\n\n:::
+        details [**Cos'è un elemento HTML?**]\nUn 'elemento' HTML è una porzione della
+        pagina Web che è contrassegnato da un'etichetta di inizio (opening tag) e
+        solitamente da un'etichetta di fine (closing tag). L'elemento HTML comprende,
+        oltre alle etichette, il testo racchiuso tra esse. Ad esempio: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n::: details [**Cos'è un'etichetta (tag) HTML?**]\n\nUn'etichetta
+        (tag) HTML è una speciale sequenza di caratteri (lettere, numeri, simboli)
+        che permette al computer di capire dove inizia e dove finisce un elemento
+        HTML e di che tipo di elemento si tratta.\n\n:::\n\n</div>\n\nL'autore di
+        questa pagina ha inserito molte frasi ma senza dare una struttura al testo.
+        Infatti, il testo viene rappresentato tutto unito. \n\nProcedi come segue:\n\n-
+        \  Osserva il testo con il tuo compagno/a e decidete quale dovrebbe essere
+        la migliore struttura della pagina.\n-   Usate le etichette di intestazione
+        e paragrafo per dire al computer come suddividere il testo nella pagina."
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -1009,6 +1087,56 @@ it-IT:
             -   Almeno **due intestazioni di dimensioni differenti**
             -   Almeno **un paragrafo**
         -   **Rifletti** sulla tua pagina comparandola al tuo schizzo e mostrandolo al tuo partner
+      CSD U2 lists intro_2019: |-
+        # Elenchi
+
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        ::: details [**Quali sono i due tipi di elenchi?**]
+         In HTML si possono creare due tipi di elenco: numerato e non numerato.
+        :::
+
+        ::: details [**Cos'è un elenco non numerato?**]
+
+        Un elenco non numerato è un elenco di voci ognuna preceduta da un 'pallino'.
+
+        Un elenco non numerato è un elemento HTML racchiuso tra le etichette '<ul>' e '</ul>'.
+        La sigla 'ul' è l'abbreviazione delle parole inglesi <strong>U</strong>nordered <strong>L</strong>ist = non numerato elenco. Ogni voce dell'elenco è a sua volta un elemento HTLM racchiuso tra le etichette '<li>' e '</li>. Di nuovo 'li' è l'abbreviazione delle parole inglesi  <strong>L</strong>ist <strong>I</strong>tem = elenco elemento. Le voci dell'elenco sono elementi 'figli' perché si trovano all'interno dell'elemento 'elenco non numerato'.
+
+        :::
+
+        ::: details [**Come si fa un elenco non numerato?**]
+
+        Un elenco non numerato si ottiene in due passi: creando un elemento elenco e aggiungendo gli elementi per le voci dell'elenco. Il primo passo consiste nello scrivere le etichette per creare un elenco non numerato: '<ul>' e '</ul>'. Il secondo passo consiste nell'aggiungere le voci dell'elenco aggiungendo una o più coppie di etichette  '<li>' e '</li> all'interno delle etichette che definiscono l'elenco.  Il testo di ciascuna voce deve essere scritto all'interno di una coppia di etichette '<li>' e '</li>'.
+        <br /><br />
+        Aiuta la comprensione del testo HTML se si lasciano alcuni spazi all'inizio delle righe (righe indentate) che definiscono le voci dell'elenco.Così è più evidente che sono racchiuse dalle etichette dell'elenco non numerato '<ul>' e  '</ul>'.
+        :::
+
+        ::: details [**Cos'è un elenco numerato?**]
+
+        Un elenco numerato è un elenco di voci ognuna preceduta da un numero.
+
+        Un elenco numerato è un elemento HTML racchiuso tra le etichette '<ol>' e '</ol>'. La sigla 'ol' è l'abbreviazione delle parole inglesi <strong>O</strong>rdered <strong>L</strong>ist = ordinato elenco. Ogni voce dell'elenco è a sua volta un elemento HTLM racchiuso tra le etichette '<li>' e '</li>. Di nuovo 'li' è l'abbreviazione delle parole inglesi  <strong>L</strong>ist <strong>I</strong>tem = elenco elemento. Le voci dell'elenco sono elementi 'figli' perché si trovano all'interno dell'elemento 'elenco numerato'.
+
+        :::
+
+        ::: details [**Come si fa un elenco numerato?**]
+
+        Un elenco numerato si ottiene in due passi: creando un elemento elenco e aggiungendo gli elementi per le voci dell'elenco. Il primo passo consiste nello scrivere le etichette per creare un elenco numerato: '<ol>' e '</ol>'. Il secondo passo consiste nell'aggiungere le voci dell'elenco aggiungendo una o più coppie di etichette  '<li>' e '</li> all'interno delle etichette che definiscono l'elenco.  Il testo di ciascuna voce deve essere scritto all'interno di una coppia di etichette '<li>' e '</li>'.
+        <br /><br/>
+        Aiuta la comprensione del testo HTML se si lasciano alcuni spazi all'inizio delle righe (righe indentate) che definiscono le voci dell'elenco così è più evidente che sono racchiuse dalle etichette dell'elenco numerato '<ol>' e  '</ol>'.
+
+        :::
+
+        </div>
+
+        Con HTML si possono creare diversi tipi di elenco nella pagina web. Ad esempio, questa ricetta comprende due elenchi: uno numerato e uno non numerato (con i 'pallini').
+
+        # Provate così
+
+        -   Usate lo strumento ispettore per scoprire quale parte del codice HTML produce i due diversi elenchi.
+        -   Stabilite di comune accordo qual'è il risultato delle diverse etichette per elenchi e voci.
+        -   Correggete il codice HTML per far sì che la seconda voce di ciascun elenco sia visualizzata correttamente.
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
@@ -2218,16 +2346,27 @@ it-IT:
 
         > ## Rifletti
         >
-        > Quali sono le tue prime impressioni sui "Fondamenti di informatica"?
+        > Quali sono le tue prime impressioni sul corso "Fondamenti di informatica"?
         >
-        > Se sai l'inglese, [Twitta i tuoi pensieri][0]  (in inglese) taggando @teachcode.
+        > Condividi i tuoi pensieri taggando Programma il Futuro sui social network:
         >
-        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
-        > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook][1] o [Instagram][2].
+        > -   su <a href="https://www.facebook.com/pg/programmailfuturo" target="blank">Facebook</a>: @programmailfuturo
+        > -   su \<a <https://twitter.com/ProgrammaFuturo>" target="blank">Twitter</a>: @ProgrammaFuturo
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect
+        >
+        > What are your first impressions of CS Fundamentals?
+        >
+        > [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
+        > Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2].
       OPD-K5 Closing: |-
-        > **Se ti è piaciuto il corso, iscriviti ad un seminario (solo per gli Stati Uniti):**
+        > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
         >
-        > [Iscriviti ora][0] per continuare a studiare l'informatica e la sua pedagogia. I seminari gratuiti sono un eccellente occasione per collaborare ed impegnarsi con altri insegnanti appassionati della tua zona.
+        > [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
       OPD-K5 EventsVid: |-
         Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in qui occorre  programmare con gli eventi.
 
@@ -2254,56 +2393,29 @@ it-IT:
 
         Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Le strategie di "problem solving metacognitivo" portano a pensare al processo di ragionamento in quanto tale e a riflettere su "come" risolveresti il problema. Guarda il video a fondo pagina per scoprire come la "Ricetta di Code.org per risolvere gli esercizi" può aiutare gli alunni ad affrontare con successo problemi difficili:
 
-        [Questa scheda (in inglese)][0] illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi" (sotto all'immagine trovi la traduzione in italiano).
+        [Questa scheda](https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.pdf) illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi".
 
-        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
-
-        **La ricetta di Code.org per risolvere gli esercizi**<br>
-        Metodologia a 4 passaggi basata sul Polya's Four Step Problem Solving Process.<br>
-        Questi suggerimenti posso aiutare a sbloccarsi nella risoluzione degli esercizi di Code.org.<br>
-        <br>
-        **PASSO 1 - Capisci l'esercizio**<br>
-        – Cosa ti chiede di fare l'esercizio?<br>
-        – Riesci ad esprimere il problema con parole tue?<br>
-        – Ti viene dato del codice già pronto?<br>
-           – Cosa fa?<br>
-           – Perché pensi che sia lì?<br>
-        – Qual è l'obiettivo dell'esercizio?<br>
-        – Hai già risolto altri esercizi simili a questo?<br>
-        <br>
-        **PASSO 2 - Fai un piano** (scegli una o più di queste tecniche)<br>
-        – Scrivi un algoritmo.<br>
-        – Fai delle prove e controlla man mano se vai nella direzione corretta.<br>
-        – Fai un disegno di cosa vuoi fare.<br>
-        – Prova a lavorare all'indietro.<br>
-        – Risolvi il problema un pezzettino alla volta.<br>
-        – Confrontalo con un esercizio che hai già risolto.<br>
-        <br>
-        **PASSO 3 - Esegui e perfeziona il piano**<br>
-        – Hai risolto l'esercizio?<br>
-        – In caso negativo, cerca e correggi un errore alla volta.<br>
-        – Azzera il tuo piano dopo ogni cambiamento.<br>
-        – Se cominci a sentirti perso, fai un respiro profondo o allontanati dal PC per un minuto. Quando tornerai, potresti capire la causa dei tuoi problemi!<br>
-        – Fai domande. Magari uno dei tuoi compagni può aiutarti a capire dove il tuo piano va storto.<br>
-        <br>
-        \*\*PASSO 4 - Controlla il risultato del tuo lavoro<br>
-        – La tua risposta risolve l'esercizio?<br>
-        – Hai raggiunto tutti gli obiettivi dell'esercizio?<br>
-        – Ora che hai trovato una soluzione, pensi ce ne possa essere una migliore?<br>
-        – Se cambi un po' questa soluzione, potrebbe funzionare per altri esercizi?<br>
-        – Potresti spiegare la soluzione per aiutare qualcun altro a risolvere questo esercizio?<br>
-        <br>
+        <img src="https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.png" width="650px" style="margin-right:45px; border-radius:10px;">
 
         > ## Riflettiamo:
         >
-        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza?
+        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza? <a href="https://programmailfuturo.it/forum/corso-online-per-l-insegnamento">Condividi i tuoi pensieri nel forum di Programma il Futuro</a>.
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect:
         >
-        > [Twitta i tuoi pensieri][1] (in inglese) taggando @teachcode.
+        > How might you explicitly teach problem solving in your CS classroom?
         >
-        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Condividi su Twitter</h4></a>
+        > [Tweet your thoughts][1] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Share on Twitter</h4></a>
       OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
         di ripetizione (cicli) ed introduce il blocco "ripeti ... volte" nei corsi
         di "Fondamenti di informatica".
+      OPD-K5 RepeatBlock_copy: Guarda il seguente video che spiega come funzionano
+        le istruzioni di ripetizione (cicli) ed introduce il blocco "ripeti ... volte"
+        nei corsi di "Fondamenti di informatica".
       OPD-K5 Unplugged Video: |-
         ## Uno sguardo avanti > "Senza computer"
 
@@ -2319,6 +2431,87 @@ it-IT:
       OPD-K5 WhatIsCS: Ti sei mai chiesto "Cos'è esattamente l'informatica?" oppure
         "Perché alcuni programmi informatici sono scritti con delle parole ed altri
         usando delle immagini?" Guarda questo video, è un'ottima introduzione all'informatica.
+      OPD-K5-events-2: "Collega il blocco `sbatti le ali per un numero di volte normale`
+        all'evento `quando si clicca`, quindi premi \"Esegui\". \n\n* * *\n\nClicca
+        o tocca nello spazio di gioco per far volare Flappy verso la sua destinazione."
+      OPD-K5-events-3: "L'evento `quando si clicca su \"Esegui\"` ti permette di eseguire
+        del codice all'inizio del gioco.  \n\nProva ad aggiungere un blocco che imposti
+        la velocità quando viene premuto il pulsante \"Esegui\". \n\n* * *\n\nGioca
+        volando fino a destinazione per continuare."
+      OPD-K5-events-4: "Ora abbiamo aggiunto il terreno. \n\nCollega il blocco `fine
+        del gioco` all'evento `quando precipita a terra`.\n\n* * *\n\nGioca facendo
+        precipitare a terra l'uccellino per continuare."
+      OPD-K5-events-5: |-
+        Flappy volerà attraverso gli ostacoli, a meno che tu scriva del codice che lo fa schiantare.
+
+        Collega un blocco all'evento `quando colpisce un ostacolo` in modo che il gioco finisca quando Flappy si schianta contro la prima serie di tubi.
+      OPD-K5-events-6: |-
+        Ora guadagnerai dei punti quando Flappy oltrepasserà gli ostacoli.
+
+        Aggiungi un blocco all'evento `quando supera un ostacolo`, quindi premi "Esegui" per segnare un punto facendo volare Flappy oltre la prima serie di tubi.
+      OPD-K5-forloops-2: |-
+        Scrivi il codice per aiutare l'ape a raccogliere tutto il nettare.
+
+        Dovrai usare molti blocchi in questa sfida, ma imparerai un metodo più semplice nel prossimo esercizio.
+      OPD-K5-forloops-6: "Puoi usare un _ciclo con contatore_ anche per contare alla
+        rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5**
+        a **1** a passi di **1**."
+      OPD-K5-forloops-7: |-
+        L'ultimo numero del _ciclo con contatore_ viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (_contatore_) si modifica del valore indicato  dal  **"passo"**.
+
+        Prova a raccogliere questi fiori usando un  **"passo"** di 2.
+      OPD-K5-projects-2: |-
+        È sorprendente quanto tu abbia imparato! Ora creiamo insieme un vero videogioco.
+
+        Usando i nuovi blocchi che trovi nella cassetta degli attrezzi, scegli un nuovo sfondo e un personaggio per il tuo gioco.
+      OPD-K5-projects-3: |-
+        Collega le azioni da svolgere ai blocchi verdi dei gestori di eventi per far muovere il tuo giocatore con le frecce della tastiera (o cliccando su quelle arancioni poste sotto all'area di gioco).
+
+        Per completare l'esercizio, fai in modo che il protagonista raggiunga tutte le bandierine.
+      OPD-K5-projects-4: |-
+        Aggiungiamo altri personaggi al tuo gioco!
+
+        Usa il blocco `imposta il personaggio ... come` per aggiungere altri personaggi, poi sposta il personaggio 1 fino alla bandierina.
+      OPD-K5-projects-5: |-
+        Usare diversi personaggi e farli muovere è un ottimo inizio, ma dobbiamo fare di più per farlo diventare un vero videogioco. Aggiungiamo un punteggio!
+
+        Usa dei blocchi verdi gestori di eventi come `quando il personaggio ... tocca ...` per modificare il punteggio. Per completare l'esercizio, fai in modo che giocando il punteggio diventi uguale a 10 e vai a toccare la bandierina.
+      OPD-K5-projects-6: |-
+        Ottimo lavoro! Hai tutto il necessario per far funzionare bene il gioco.
+        Ora dedica un po' di tempo a controllare che il gioco funzioni proprio come desideravi. Aggiungi un modo per vincere e perdere, quindi gioca fino a raggiungere una di queste due condizioni.
+      OPD-K5-projects-7: Hai finito! Ora puoi giocare con il tuo videogioco o condividerlo
+        con i tuoi amici e compagni di classe!
+      OPD-K5-spritelab-2: "Facciamo un acquario!  \n\nTrasforma Dusty (il cespuglio
+        rotolante) in un pesce."
+      OPD-K5-spritelab-3: "Così, al pesce gira la testa! \n\nModifica il comportamento
+        del pesce, in modo che nuoti avanti e indietro nell'acquario."
+      OPD-K5-spritelab-4: |-
+        Serve un po' d'acqua nel nostro acquario!
+
+        Usa il blocco <xml><block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#0000ff</title>
+              </block>
+            </value>
+          </block></xml> per impostare lo sfondo blu.
+      OPD-K5-spritelab-6: Il nostro pesce si sente un po' solo. Aggiungi un altro
+        personaggio nell'acquario.
+      OPD-K5-spritelab-7: "Cosa vuoi che faccia il nuovo amico del pesce?  \n\nAggiungi
+        un comportamento al nuovo amico del pesce!"
+      OPD-K5-variables-1: |-
+        Disegniamo un triangolo equilatero.
+
+        Ogni lato deve essere lungo esattamente 50 pixel.
+      OPD-K5-variables-2: "Ora usa un altro ciclo per disegnare tre di quei triangoli
+        uno accanto all'altro.   \n\nPuoi annidare il codice del tuo ultimo esercizio
+        all'interno."
+      OPD-K5-variables-5: "Prima che le cose si complichino, puoi spostare la lunghezza
+        di 50 in una variabile (`length`) , in modo da poterla usare nei prossimi
+        esercizi? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Ora, usa la variabile `length` (_lunghezza_) per fare in
+        modo che l'artista disegni i vari triangoli spostati ognuno in avanti di `length`
+        pixel e verso il basso di `length` pixel.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
       Overworld Chop Tree_2019: 'Il legno è una risorsa molto importante: serve per
@@ -2816,6 +3009,9 @@ it-IT:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: 'Raccogli tutti e tre i diamanti! Muovi Laura
         su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2019: 'Raccogli tutti e tre i diamanti! Muovi Laura
+        su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"
+        block-text="get treasure"/></xml>. '
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -2956,6 +3152,10 @@ it-IT:
         l'uccellino fino al maialino! "
       courseA_maze_seq10_2019: "**Sfida:** Evita la dinamite (TNT) per far arrivare
         l'uccellino fino al maialino! "
+      courseA_maze_seq10_copy: |-
+        **Sfida:** aggira la dinamite (TNT) per far arrivare l'uccellino fino al maialino!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         E ora un esercizio più breve! Muovi in una direzione, poi in un'altra, per far arrivare l'uccellino fino al maialino.
 
@@ -2995,6 +3195,10 @@ it-IT:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Fai un tentativo.
       courseA_maze_seq5_2019: Fai un tentativo.
+      courseA_maze_seq5_copy: |-
+        Prova questo da solo dall'inizio.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"Maialino, maialino, aspettami che arrivo!"_
 
@@ -3011,7 +3215,15 @@ it-IT:
         l'uccellino fino al maialino!
       courseA_maze_seq6_2019: Muovi in una direzione, poi in un'altra per far arrivare
         l'uccellino fino al maialino!
+      courseA_maze_seq6_copy: |-
+        Muovi in una direzione, poi in un'altra per far arrivare l'uccellino fino al maialino!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        Cerca di capire cosa manca, quindi aggiungi i blocchi necessari per far arrivare l'uccellino fino al maialino!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         Cerca di capire cosa manca, quindi aggiungi i blocchi necessari per far arrivare l'uccellino fino al maialino!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -3023,6 +3235,10 @@ it-IT:
         fino al maialino!
       courseA_maze_seq8_2019: Risolvi questo esercizio per far arrivare l'uccellino
         fino al maialino!
+      courseA_maze_seq8_copy: |-
+        Risolvi questo esercizio per far arrivare l'uccellino fino al maialino!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Sfida:** Correggi gli errori in questo esercizio, aggiungendo i blocchi necessari per far arrivare l'uccellino fino al maialino!
 
@@ -4400,6 +4616,10 @@ it-IT:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Vai BB-8!"_
 
         Per recuperare tutti i rottami metallici, prova a creare un ciclo `ripeti ... volte` con un solo blocco all'interno.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Vai BB-8!"_
+
+        Per recuperare tutti i rottami metallici, prova a creare un ciclo `ripeti ... volte` con un solo blocco all'interno.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
@@ -4412,11 +4632,17 @@ it-IT:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
         In questo esercizio, due cicli `ripeti ... volte` ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con il minor numero possibile di blocchi!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
+
+        In questo esercizio, due cicli `ripeti ... volte` ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con il minor numero possibile di blocchi!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Vai BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Vai BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Vai BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Vai BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Riesci a prenderli tutti?"_
@@ -4427,6 +4653,10 @@ it-IT:
 
         I cicli funzionano anche con più di un blocco al loro interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Riesci a prenderli tutti?"_
+
+        I cicli funzionano anche con più di un blocco al loro interno!  Puoi far ripetere questa sequenza?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Riesci a prenderli tutti?"_
 
         I cicli funzionano anche con più di un blocco al loro interno!  Puoi far ripetere questa sequenza?
@@ -4442,6 +4672,10 @@ it-IT:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Puoi farcela!"_
 
         Riesci a recuperare tutti i rottami metallici usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca il codice ripetuto da mettere nel ciclo.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Puoi farcela!"_
+
+        Riesci a recuperare tutti i rottami metallici usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca il codice ripetuto da mettere nel ciclo.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
@@ -4451,6 +4685,10 @@ it-IT:
 
         **Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo esercizio.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
+
+        **Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo esercizio.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua così, BB-8."_
 
         **Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo esercizio.
@@ -5074,6 +5312,12 @@ it-IT:
         Prima di prendere il nettare, controlla sotto ogni nuvola, per vedere se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
 
         Ricorda: le nuvole non nascondono sempre la stessa cosa!
+      courseD_bee_conditionals2_copy: |-
+        Ancora più nuvole!
+
+        Prima di prendere il nettare, controlla sotto ogni nuvola, per vedere se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere _una_ dose di nettare.
+
+        Ricorda: le nuvole non nascondono sempre la stessa cosa!
       courseD_bee_conditionals3: Visto che puoi raccogliere il nettare solo dai fiori,
         devi prima controllare in ogni casella se c'è un fiore. Per ogni casella,
         se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
@@ -5081,6 +5325,9 @@ it-IT:
         fiori, devi prima controllare in ogni casella se c'è un fiore. Per ogni casella,
         se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
       courseD_bee_conditionals3_2019: Visto che puoi raccogliere il nettare solo dai
+        fiori, devi prima controllare in ogni casella se c'è un fiore. Per ogni casella,
+        se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
+      courseD_bee_conditionals3_copy: Visto che puoi raccogliere il nettare solo dai
         fiori, devi prima controllare in ogni casella se c'è un fiore. Per ogni casella,
         se sotto la nuvola c'è un fiore, l'ape deve raccogliere _una dose_ di nettare.
       courseD_bee_conditionals4: |-
@@ -5092,6 +5339,10 @@ it-IT:
 
         Raccogli tutto il nettare usando il minor numero possibile di blocchi.
       courseD_bee_conditionals4_2019: |-
+        In questo esercizio, sappiamo che ogni fiore ha esattamente una dose di nettare, ma i fiori non sono distanziati in modo uniforme.
+
+        Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseD_bee_conditionals4_copy: |-
         In questo esercizio, sappiamo che ogni fiore ha esattamente una dose di nettare, ma i fiori non sono distanziati in modo uniforme.
 
         Raccogli tutto il nettare usando il minor numero possibile di blocchi.
@@ -5819,9 +6070,9 @@ it-IT:
 
         Modifica il programma in modo da assegnare un punto al pirata (personaggio 1) ogni volta che riesce a raggiungere il drago (personaggio 2).
       courseD_playLab_cond3: Usa un ciclo `ripeti per sempre` per fare in modo che
-        ogni secondo il drago (attore 2) cambi umore in modo casuale.
+        ogni secondo il drago (personaggio 2) cambi umore in modo casuale.
       courseD_playLab_cond3_2018: Usa un ciclo `ripeti per sempre` per fare in modo
-        che ogni secondo il drago (attore 2) cambi umore in modo casuale.
+        che ogni secondo il drago (personaggio 2) cambi umore in modo casuale.
       courseD_playLab_cond3a: |-
         È ora di sfruttare ciò che abbiamo imparato sulle istruzioni condizionali per rendere questo gioco fantastico.
 
@@ -5957,6 +6208,11 @@ it-IT:
         -   Per fare ogni esagono, ripeti il lato 6 volte, girando di 60 gradi.
         -   Salta in avanti di 25 pixel tra un esagono e l'altro.
         -   Per disegnare il rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
+      courseE_artist_functions1_copy: |-
+        _"Io zombie artista. Io amare disegnare!"_
+
+        Aiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.\
+        L'asta tra le lenti è lunga 75 pixel.
       courseE_artist_functions2: "Le funzioni ti permettono di definire nuovi blocchi!
         \n\nAbbiamo spostato i blocchi per disegnare un quadrato all'interno di una
         funzione chiamata `disegna un quadrato`. Questa volta, usa la funzione `disegna
@@ -5968,6 +6224,11 @@ it-IT:
       courseE_artist_functions2_2019: "Qui c'è una funzione chiamata `disegna un quadrato`.
         Usala per completare questo disegno. \n\n* * *\n\nI quadrati si trovano a
         75 pixel di distanza uno dall'altro."
+      courseE_artist_functions2_copy: "Le funzioni ti permettono di definire nuovi
+        blocchi! \n\nAbbiamo spostato i blocchi per disegnare un quadrato all'interno
+        di una funzione chiamata `disegna un quadrato`. Questa volta, usa la funzione
+        `disegna un quadrato` per creare gli occhiali. \n\n* * *\n\nI quadrati sono
+        distanti 75 pixel."
       courseE_artist_functions3: |-
         Torneremo alle funzioni tra poco. Ora facciamo una breve pausa esercitandoci a disegnare questa stella.
 
@@ -5988,7 +6249,17 @@ it-IT:
         -   Ogni braccio della stella ha una lunghezza di 25 pixel
         -   È necessario ruotare di 45 gradi per ottenere 8 braccia
         -   Il modo migliore di procedere, è di andare avanti e indietro lungo ogni braccio
+      courseE_artist_functions3_copy: |-
+        Torneremo alle funzioni tra poco. Ora facciamo una breve pausa esercitandoci a disegnare questa stella.
+
+        Puoi realizzare questo disegno aggiungendo un blocco `ripeti ... volte`.
       courseE_artist_functions4: |-
+        Ora che sai disegnare una stella, prova a disegnarne quattro!
+
+        -   Ogni raggio della stella è lungo 25 pixel
+        -   Gira di 45 gradi tra un raggio e l'altro
+        -   Salta avanti di 100 pixel tra una stella e l'altra
+      courseE_artist_functions4_copy: |-
         Ora che sai disegnare una stella, prova a disegnarne quattro!
 
         -   Ogni raggio della stella è lungo 25 pixel
@@ -6016,6 +6287,10 @@ it-IT:
 
         -   Il salto tra la prima e la seconda stella è di **200** pixel.
         -   Il salto tra la seconda e la terza stella è di **100** pixel.
+      courseE_artist_functions5_copy: |-
+        In che caso è più difficile disegnare tre stelle invece di quattro? Quando devi anche saltare oltre la luna!
+
+        Devi disegnare solo queste tre stelle per completare questo esercizio.
       courseE_artist_functions6: |-
         Stai andando alla grande!
 
@@ -6138,6 +6413,8 @@ it-IT:
       courseE_artist_functions_predict1_2018: 'Ecco un esercizio che utilizza una
         funzione che abbiamo definito. '
       courseE_artist_functions_predict1_2019: 'Ecco un esercizio che utilizza una
+        funzione che abbiamo definito. '
+      courseE_artist_functions_predict1_copy: 'Ecco un esercizio che utilizza una
         funzione che abbiamo definito. '
       courseE_artist_ramp8: |-
         Grandioso! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.

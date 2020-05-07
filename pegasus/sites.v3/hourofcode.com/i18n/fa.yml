@@ -173,6 +173,9 @@ fa:
   codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
     or see resources for students, parents, and teachers.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: درصورت ادامه‌ی استفاده از سایت ما و یا با کلیک بر روی "من
     موافقم"، شما موافقت خود را با ذخیره‌ی کوکی‌ها بر روی کامپیوتر و یا دستگاه خود
     اعلام کرده‌اید.
@@ -853,7 +856,7 @@ fa:
   title_stats: Blurbs and Stats
   title_partners: شرکا
   title_resources: منابع
-  title_past_posters: Past Hour of Code Posters
+  title_past_posters: پوستر های ساعت کدنویسی های قبلی
   title_signup_thanks: تشکر برای ورود به میزبانی ساعت کدنويسی!
   title_tutorial_guidelines: Activity Guidelines
   title_whole_school: مشارکت کل مدرسه

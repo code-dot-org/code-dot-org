@@ -1257,7 +1257,65 @@ id-ID:
         content1: desekripsi di sini
       New Challenge Introduction:
         content1: desekripsi di sini
+      OPD-K5 Reviewing Reflections:
+        content1: desekripsi di sini
       OPD-K5 Stage3aGo:
+        content1: desekripsi di sini
+      OPD-K5 Stage3aGo_copy:
+        content1: desekripsi di sini
+      OPD-K5 conditionals introduced:
+        content1: desekripsi di sini
+      OPD-K5 debugging:
+        content1: desekripsi di sini
+      OPD-K5 diving deeper intro:
+        content1: desekripsi di sini
+      OPD-K5 events introduced:
+        content1: desekripsi di sini
+      OPD-K5 for loops:
+        content1: desekripsi di sini
+      OPD-K5 for loops intro:
+        content1: desekripsi di sini
+      OPD-K5 for loops introduction:
+        content1: desekripsi di sini
+      OPD-K5 functions introduced:
+        content1: desekripsi di sini
+      OPD-K5 journaling:
+        content1: desekripsi di sini
+      OPD-K5 lesson implementation planning:
+        content1: desekripsi di sini
+      OPD-K5 lesson plans:
+        content1: desekripsi di sini
+      OPD-K5 loops introduced:
+        content1: desekripsi di sini
+      OPD-K5 project:
+        content1: desekripsi di sini
+      OPD-K5 projects introduction:
+        content1: desekripsi di sini
+      OPD-K5 role_of_teacher:
+        content1: desekripsi di sini
+      OPD-K5 sequencing introduced:
+        content1: desekripsi di sini
+      OPD-K5 sprite lab:
+        content1: desekripsi di sini
+      OPD-K5 sprite lab introduction:
+        content1: desekripsi di sini
+      OPD-K5 sprite lab unplugged:
+        content1: desekripsi di sini
+      OPD-K5 sprite lab video:
+        content1: desekripsi di sini
+      OPD-K5 types of lessons:
+        content1: desekripsi di sini
+      OPD-K5 using lesson plans:
+        content1: desekripsi di sini
+      OPD-K5 variables:
+        content1: desekripsi di sini
+      OPD-K5 variables introduction:
+        content1: desekripsi di sini
+      OPD-K5 variables unplugged:
+        content1: desekripsi di sini
+      OPD-K5 where to next:
+        content1: desekripsi di sini
+      OPD-K5-projects-1:
         content1: desekripsi di sini
       PowerOfWords-Unplugged:
         markdown: |
@@ -1275,6 +1333,21 @@ id-ID:
         content1: desekripsi di sini
       Terminology Recap:
         content1: desekripsi di sini
+        markdown: "# Berhenti Sebentar dan Mengulang\n\nPesan yang telah di-enkripsi
+          dengan **Caesar cipher** sebenarnya sangat mudah untuk dipecahkan menggunakan
+          komputer. Nah, sekarang karena kamu sudah tahu bagaimana caranya memecahkan
+          alphabetic shift cipher (lumayan gampang, kan?) mari kita coba memecahkan
+          hal yang lebih menantang.\n\n**Review istilah:**\n\n* **Encryption** - enkripsi
+          adalah proses mengamankan pesan rahasia sehingga hanya pihak yang dituju
+          yang bisa membaca isi pesan tersebut.\n* **Decryption** - dekripsi adalah
+          proses memecahkan enkripsi, mengubah pesan rahasia yang telah di-enkripsi
+          menjadi tulisan yang bisa dibaca oleh manusia\n* **Cipher** - istilah umum
+          untuk teknik (atau algortima) yang digunakan dalam proses enkripsi\n* **Caesar's
+          Cipher** - sebuah teknik enkripsi yang memindahkan alfabet sejumlah beberapa
+          karakter.\n* **Cracking encryption** - saat kamu sedang berusaha memecahkan
+          sebuah pesan rahasia *tanpa* mengetahui seluruh bagian dari cipher, kamu
+          sedang menge-**crack** sebuah enkripsi. \n\n\nKlik Lanjutkan untuk melihat
+          **Tantangan Selanjutnya**...\n\n \n"
       behaviors 1 predict:
         answers:
         - {}
@@ -1445,7 +1518,7 @@ id-ID:
         - text: A
         - text: B
         - text: C
-        - text: S
+        - text: D
           correct: true
         questions:
         - {}
@@ -1454,7 +1527,7 @@ id-ID:
         - text: A
         - text: B
         - text: C
-        - text: S
+        - text: D
           correct: true
         questions:
         - {}
@@ -1463,7 +1536,7 @@ id-ID:
         - text: A
         - text: B
         - text: C
-        - text: S
+        - text: D
           correct: true
         questions:
         - {}
@@ -1511,6 +1584,14 @@ id-ID:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1793,6 +1874,14 @@ id-ID:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseE_project_exemplars_2019:
         content1: Tes halaman teksbook Markdown
       courseF_bee_variables_8a_2018:
@@ -2032,3 +2121,7 @@ id-ID:
         questions:
         - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
             programnya dijalankan?
+      gradek1_activity_beNice:
+        markdown: "# Berperilaku di Lab Komputer\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nBuka rencana pelajaran\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Lanjutkan</a>\n"

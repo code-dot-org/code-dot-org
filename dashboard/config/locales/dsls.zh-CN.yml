@@ -631,6 +631,10 @@ zh-CN:
           <hr>
 
           **现在试试吧！**
+        teacher_markdown: |-
+          ### 设计为先
+
+          有些学生可能迫不及待想体验“代码模式”，但是在本课程中，我们只需要模拟“用户界面”，使学生大致了解将要很快使用的代码。 在前几个级别中，学生可以使用“应用实验室”中的所有可用元素来构建自己的设计屏幕，而不必担心所创建的实际应用程序。
       CSD - Getters and Setters:
         markdown: |
           # 取值器 (getter) 和设置器 (setter)
@@ -3240,6 +3244,9 @@ zh-CN:
           **\"Camelcase（首字母大写）\"** -- `aCamelcaseNameMightLookLikeThis`\n* **Underscores（下划线隔开）**
           -- `Some_people_like_to_use_underscores_to_separate_words`\n* **dashes（连字符隔开）**
           -- `Others-like-to-use-hyphens-or-dashes`\n\n选择什么风格由自己决定。这是自己的风格。有助于保持一致。\n\n\n\n\n"
+        teacher_markdown: |-
+          #### 养成良好的编程习惯
+          遵循清晰且一致的命名规则是一个重要的习惯，但从学生的角度出发，这种习惯带来的好处很难立刻见到成效。长远的看，坚持好的命名规则确实是值得的，特别是当你需要阅读学生的程序时，与此同时，这也会极大简化将多个学生代码组合成一个完整团队应用程序的过程。
       ConditionalsWithCards-Unplugged:
         markdown: |
           # 纸牌和条件语句
@@ -4251,6 +4258,8 @@ zh-CN:
           弹球\n\n![](//code.org/images/bounce.png)\n\n在弹球游戏中，要创建自己的游戏。 \n和像素鸟类似，此游戏的难题，会帮助学习创建自己游戏所需要的代码。\n\n*
           * *\n\n本系列中，将介绍 [计算机科学基础](http://code.org/educate/k5) 中的难题。这些难题可作为在线教程，帮助学生学习循环，事件，条件和函数等概念。\n\n在此专业发展体验中，将穿插一些难题的过程，使得有机会熟悉计算机科学基础中的编程概念以及学生会喜欢的角色。在本课程中，会注意到在不同的环境之间快速切换；是让愤怒的小鸟抓到猪，画图，或者让蜜蜂收集花蜜。在本课程中，这些切换会很快，以展示计算机科学基础中提供的一系列难题。学生将在每种环境上花费更多的时间。\n\n如果要更熟悉学生的体验，随时可以自行完成
           [计算机科学基础](http://studio.code.org/) 课程。但本课程通过提供一些最基本的难题和课程，将在短时间内提供很好预期的结果。\n"
+      OPD-K5 Reviewing Reflections:
+        content1: 描述
       OPD-K5 Stage10Start:
         markdown: |
           # 下一步 > 开始回顾
@@ -4356,6 +4365,8 @@ zh-CN:
           ## 反思\n> 如何像学生解释编程的概念（包括顺序和算法）？在<a href=\"http://forum.code.org/t/teaching-sequencing/408\">论坛上</a>分享。\n\n>
           <a href=\"http://forum.code.org/t/teaching-sequencing/408\" target=\"blank\"><button
           class=\"plc\">在论坛上讨论 >></button></a>\n\n在论坛中发表评论后，返回此处，然后点击下面的继续。\n\n下个阶段，会增加循环来让程序更复杂一些。\n"
+      OPD-K5 Stage3aGo_copy:
+        content1: 描述
       OPD-K5 Stage4Go:
         markdown: "# 循环 > 线下课程\n\n在这个阶段中，会看到将循环添加到有重复动作的程序中，会多么有效率。下个阶段，会编码 **如果语句**
           和其它条件语句。  \n<br/>\n\n**1. 观看 2 年级的课程 C \"[开始循环](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)\"
@@ -4715,6 +4726,60 @@ zh-CN:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">发布自己的计划 >></button></a>
 
           在论坛中发表评论后，返回此处，然后单击下面的按钮继续。
+      OPD-K5 conditionals introduced:
+        content1: 描述
+      OPD-K5 debugging:
+        content1: 描述
+      OPD-K5 diving deeper intro:
+        content1: 描述
+      OPD-K5 events introduced:
+        content1: 描述
+      OPD-K5 for loops:
+        content1: 描述
+      OPD-K5 for loops intro:
+        content1: 描述
+      OPD-K5 for loops introduction:
+        content1: 描述
+      OPD-K5 functions introduced:
+        content1: 描述
+      OPD-K5 journaling:
+        content1: 描述
+      OPD-K5 lesson implementation planning:
+        content1: 描述
+      OPD-K5 lesson plans:
+        content1: 描述
+      OPD-K5 loops introduced:
+        content1: 描述
+      OPD-K5 project:
+        content1: 描述
+      OPD-K5 projects introduction:
+        content1: 描述
+      OPD-K5 role_of_teacher:
+        content1: 描述
+      OPD-K5 sequencing introduced:
+        content1: 描述
+      OPD-K5 sprite lab:
+        content1: 描述
+      OPD-K5 sprite lab introduction:
+        content1: 描述
+      OPD-K5 sprite lab unplugged:
+        content1: 描述
+      OPD-K5 sprite lab video:
+        content1: 描述
+      OPD-K5 types of lessons:
+        content1: 描述
+      OPD-K5 using lesson plans:
+        content1: 描述
+      OPD-K5 variables:
+        content1: 描述
+      OPD-K5 variables introduction:
+        content1: 描述
+      OPD-K5 variables unplugged:
+        content1: 描述
+      OPD-K5 where to next:
+        content1: 描述
+      OPD-K5-projects-1:
+        content1: 描述
       OPD-Stage3Start:
         markdown: |
           # 展望 > 阶段概述
@@ -5584,6 +5649,20 @@ zh-CN:
         questions:
         - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
             “运行” 后会发生什么？
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        - text: 蜜蜂会移动到云中，只有在下面有花朵的情况下，才会尝试采花粉。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂会采花粉。
+        - text: 我不知道。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        questions:
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
@@ -6032,6 +6111,19 @@ zh-CN:
         questions:
         - text: 当您单击“运行”时，会发生什么情况？
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: 什么都没有发生，函数没有被调用。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家只会绘制一个正方形。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家将绘制两个部分重叠的正方形。
+          feedback: 不正确！正方形的每条边的长度只有100像素，但是艺术家在不同的函数之间跳跃了175像素。
+        - text: 艺术家将绘制两个正方形，中间有空隙隔开。
+          correct: true
+          feedback: 正确的！该函数在程序中被调用两次，其间有一个跳转。
+        questions:
+        - text: 当您单击“运行”时，会发生什么情况？
+      courseE_prediction_artistFunction1_copy:
         answers:
         - text: 什么都没有发生，函数没有被调用。
           feedback: 不正确！这个函数实际上在程序中被调用了两次。

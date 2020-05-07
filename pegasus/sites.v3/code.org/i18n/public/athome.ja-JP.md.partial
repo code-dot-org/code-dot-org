@@ -1,28 +1,21 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: コロナウィルス感染拡大の影響で臨時休校の今、コンピュータサイエンスを学ぼう！
 video_player: true
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# 臨時休校中のコンピュータサイエンス学習
 
-<div class="col-66" style="padding-right: 20px;">
+<div style="padding-left: 20px; float: right; margin-top: 0">
+{{ athome_vid_intro }}
+</div>
 
 <p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
 <p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
 <p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
-</div>
-
-<div class="col-33">
-
-<img src="/images/learningathome.jpg" style="width: 100%"/>
-
-</div>
-
-<div style="clear: both"></div>
+<p><a href="#apps">手元にコンピュータがありませんか？ See smartphone options</a></p>
 
 <br>
 
@@ -46,19 +39,19 @@ theme: responsive
 
 </div>
 
-## Hour of Code: Try these engaging, introductory tutorials
+## アワーオブコード：チュートリアル付きの自習教材に取り組んでみましょう
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+* [ダンスパーティ](https://code.org/dance)：ケイティ・ペリーやショーン・メンデスなどなど豪華なスターの曲とダンスパーティをプログラムしよう
+* [マインクラフト](https://code.org/api/hour/begin/mc)：想像力と問題解決のチカラを使って、新しいワールドの旅をたのしもう
+* [海のAI](https://code.org/oceans)：AI（人工知能）や機械学習が世界のさまざまな問題にどのように使われるのかについて学習しよう！
+* [フラッピーコード](http://studio.code.org/s/flappy/reset)：自分だけのフラッピーゲームのコードをかいてみよう
+* [宇宙のコーディング](https://quorumlanguage.com/hourofcode/astro1.html)：クオラム（目の不自由なかたでも使いこなせるプログラミング言語）をつかって天文学の学習をしてみよう
+* [そのほかのチュートリアル](https://code.org/hourofcode/overview)
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## 動画：教育用の3-5分の動画をみてみましょう
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -89,32 +82,75 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 [Visit our video library.](https://code.org/educate/resources/videos)
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our express courses
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <i>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. To see what's available in your language, visit <a href="https://studio.code.org/courses">studio.code.org</a>.</i>
+## Learn the fundamentals with our self-paced courses
+### **Express courses**
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
-<div class="col-50" style="padding-right: 20px; padding-bottom:40px">
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/express-2019"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://studio.code.org/s/express-2019">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
 
 </div>
 
-<div class="col-50" style="padding-right: 20px; padding-bottom:40px">
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
 <a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
 
 </div>
-<div style="clear: both; margin-bottom: 15px"></div>
+<div style="clear: both"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<hr />
+
+### **Programming Modules for older students**
+
+Adapted from our CS Principles courses, these short, self-paced modules for middle and high school students are a great way to learn concepts that span all programming languages and tools.
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+#### Turtle Programming in App Lab
+
+<div class="col-25" style="padding-right: 20px;">
+
+<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
+
+</div>
+
+<div class="col-75">
+
+<p>Begin working in App Lab where you’ll use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Learn to break down big programming problems into manageable pieces. Design and program your own digital scene! For middle and high school students.</p>
+<a href="https://studio.code.org/s/csp3-virtual"><button>Try it out</button></a>
+
+</div>
+
+<div style="clear: both; margin-bottom: 30px"></div>
+
+#### Event-Driven Programming in App Lab
+
+<div class="col-25" style="text-align:center; padding-right: 20px;">
+
+<a href="https://studio.code.org/s/csp5-virtual"><img src="/images/athome/events.png" style="width: 60%"/></a>
+
+</div>
+
+<div class="col-75">
+
+<p>Program in the JavaScript language using App Lab. Learn to design apps that respond to user interaction like clicks and key presses. Create a series of simple applications (apps) that live on the web! For middle and high school students.</p>
+<a href="https://studio.code.org/s/csp5-virtual"><button>Try it out</button></a>
+
+</div>
+
+<div style="clear: both; margin-bottom: 30px"></div>
+
+<p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## アプリ制作についてApp Labで学ぶ
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -131,11 +167,11 @@ A great option for students getting started on their own. You'll learn the funda
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## 手元にコンピュータがありませんか？ スマートフォンアプリをためしてみる
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -156,19 +192,19 @@ A great option for students getting started on their own. You'll learn the funda
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">トップにもどる</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## インターネット接続環境が十分でないですか？ アンプラグドのアクティビティもみてみましょう
+* [ルビィのぼうけん](https://www.helloruby.com/play)：コンピュータやテクノロジー、プログラミングについて学習する世界一きまぐれな方法です。 コンピュータサイエンスに関して、たとえば問題の分解やパターンをみつけること、アルゴリズムを使って考えること、デバッグやコラボレーションがについて学習することができます。 *(4-10歳向け)*
+* [CSアンプラグド](https://csunplugged.org/en/)：コンピュータサイエンスに関して、カード、ひも、クレヨン、ときには体を動かしてゲームや問題をとくことで学習できる無料の指導教材を用意しています。 *(5-14歳向け)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
+## 先生向けの支援
 We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them. 
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
@@ -193,6 +229,6 @@ A guide for teachers with resources to materials that students can use at home t
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">トップにもどる</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>

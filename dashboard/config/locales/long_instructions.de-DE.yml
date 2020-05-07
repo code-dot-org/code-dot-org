@@ -13,8 +13,8 @@ de-DE:
       2-3 Artist 2 new: Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100
         Pixel, aber die halbfertige nur 50. Vervollständige die Wand.
       2-3 Artist 3.4: "Der \"springe\"-Baustein bewegt den Künstler, ohne eine Linie
-        zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
-        und \"bewegen\"-Bausteine."
+        zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe
+        vorwärts\" und \"vorwärts bewegen\"-Bausteine."
       2-3 Artist 3new: |-
         Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende.
 
@@ -79,6 +79,9 @@ de-DE:
         \ \n\nHilf dem Zombie, quadratische Gläser zu zeichnen.  \n\nDie Brücke zwischen
         den Brillengläsern ist 25 Pixel kürzer als die Breite der Quadrate, die 100
         Pixel beträgt."
+      2-3 Artist Functions 10: "**Freies Spielen:** Hier sind zwei Funktionen, um
+        ein großes und ein kleines Zahnrad zu zeichnen. \n\nVerwende sie, um das Innere
+        einer Maschine zu zeichnen!"
       2-3 Artist Functions 11: "Wir haben die Funktion \"Ein Quadrat zeichnen\" in
         \"Ein Sechseck zeichnen\" umbenannt, aber sie gibt uns immer noch Felder!
         \ \n\nKannst du die Funktion \"Draw a hexagon\" ändern, um ein Hexagon mit
@@ -86,6 +89,11 @@ de-DE:
       2-3 Artist Functions 11.5: "Hier ist die gleiche „Zeichne ein Sechseck“-Funktion.
         \n\nWas passiert, wenn du das Hauptprogramm 6 Mal wiederholst und dich dabei
         jedes Mal um 60 Grad drehst?"
+      2-3 Artist Functions 12: |-
+        Funktionen sind sehr gut zum mehrfachen Zeichnen von komplexen Dingen.
+
+        Kannst du die "Zeichne eine Blume" Funktion verwenden, um den Rest des Blumenkasten zu füllen?
+        Die Pflanzen sind alle 100 Pixel voneinander entfernt.
       2-3 Artist Functions 2: "Mit Funktionen können Sie neue Bausteine definieren!
         \n\nWir haben die Blöcke, die zum Zeichnen eines Quadrats benötigt werden,
         in eine Funktion namens \"Zeichne ein Quadrat\" verschoben. Verwende diesmal
@@ -96,6 +104,9 @@ de-DE:
         sind nun 45 Pixel voneinander entfernt."
       2-3 Artist Functions 4: Platziere die Funktion nun in eine Schleife, um diese
         drei Quadrate zu zeichnen.
+      2-3 Artist Functions 9: "**Freies Spielen:** Hier ist eine Schneeflocken-Funktion.
+        Experimentiere damit, um ein Winterbild zu erstellen! \n\nDies ist ein freies
+        Spiel, daher gibt es kein zu lösendes Rätsel. Viel Spaß!"
       2-3 Artist Loops New 1: |-
         Lasst uns den Kopf des Roboters malen! Kannst du ein Quadrat malen, dessen Seiten 100 Pixel lang sind?
 
@@ -118,7 +129,7 @@ de-DE:
         Zeichne etwas, wozu du gerade Lust hast!
         <br/><br/>
       2-3 Artist Loops New 2: |-
-        Hier ist das gleiche Rätsel, das wir gerade gelöst haben, aber diesmal können wir nur einen "bewege vorwärts"-Baustein und einen "Drehe"-Baustein verwenden.
+        Hier ist das gleiche Rätsel, das wir gerade gelöst haben, aber diesmal können wir nur einen "vorwärts bewegen"-Baustein und einen "Drehe"-Baustein verwenden.
 
         Kannst du einen `wiederhole` Baustein benutzen, um dieses Rätsel zu lösen?
       2-3 Artist Loops New 9: Zeichne ein einfaches V (beide Seiten haben 50 Pixel),
@@ -198,6 +209,8 @@ de-DE:
         Diese Bausteine nerven mich wirklich!
 
         Bereinige den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 10: Dieses Puzzle artet in Schleifen aus! Löse die Fehler,
+        sammle allen Nektar und erzeuge den Honig.
       2-3 Bee Debugging 2: |-
         Kannst du das Problem hier finden?
 
@@ -213,6 +226,14 @@ de-DE:
         Was für eine süße Herausforderung!
 
         Beseitige den/die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 9: |-
+        Sei geduldig mit dieser Bienen-Aufgabe!
+
+        Du musst einige Dinge in diesem Programm lösen, um allen Nektar einzusammeln und Honig daraus zu machen.
+      2-3 Bee Debugging Assessment 1: |-
+        **Prüfung:** Jetzt ist es an der Zeit zu zeigen was du weißt!
+
+        Löse die Fehler, sammle den Nektar und erzeuge den Honig.
       2-3 Bee Functions 10: Lila Blüten haben entweder 1 oder 0 Nektar.  Erstelle
         eine Funktion, die Nektar nur aus den lila Blüten sammelt, die Nektar haben.
       2-3 Bee Functions 2: "Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen.
@@ -250,14 +271,14 @@ de-DE:
 
         Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: `Nektar > 0`.
       2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
-        `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
+        `vorwärts bewegen` Bausteine unter dem `wenn Ausführen` Baustein ein und drücke
         auf "Ausführen". '
       2-3 Maze 12: |-
         Plötzlich erscheint ein magischer Baustein!  Mit dem Baustein `widerhole` kannst du Code immer wieder wiederholen.
 
-        Kannst du zum Schwein gelangen, indem du eine Schleife erstellst, die nur einen `bewege vorwärts`-Baustein innerhalb eines `wiederhole` verwendet?
-      2-3 Maze 13: Bringt mich zum Schwein! Du kannst diesmal nur einen `bewege vorwärts`
-        Baustein verwenden
+        Kannst du zum Schwein gelangen, indem du eine Schleife erstellst, die nur einen `vorwärts bewegen`-Baustein innerhalb eines `wiederhole` verwendet?
+      2-3 Maze 13: Bringt mich zum Schwein! Du kannst diesmal nur einen `vorwärts
+        bewegen` Baustein verwenden
       2-3 Maze 15: In diesem Rätsel werden dir zwei `wiederhole` Schleifen helfen,
         das Schwein mit der geringsten Anzahl an Schleifen zu erreichen!
       2-3 Maze Loops 18: "Bring mich mit den wenigsten Bausteinen zur Sonnenblume!
@@ -372,14 +393,24 @@ de-DE:
         Verwende den "Wiederhole bis"-Baustein, um die Aufgabe mit so wenig Blöcken wie möglich zu lösen.
       4-5 Maze Assessment 1: "**Aufgabe:** Gehe zur Sonnenblume und verwende dabei
         so wenig Bausteine wie möglich."
+      4-5 Maze Conditionals 1: Benutze den `Wiederholen`-Baustein, um den Zombie zur
+        Sonnenblume zu bringen.
       4-5 Maze Conditionals 10: "Kannst du nur 3 Blöcke hinzufügen, um dem Zombie
         zu helfen, ein komplexeres Labyrinth zu lösen? \n\nWenn du es richtig machst,
         kann er jeden kurvigen Weg gehen, egal wie lang er ist!"
+      4-5 Maze Conditionals 2: Benutze den `Wiederholen`-Baustein, um den Zombie zur
+        Sonnenblume zu bringen.
       4-5 Maze Conditionals 3: 'Benutze den `if`-Baustein, um zu entscheiden, wann
         gedreht werden soll. '
       4-5 Maze Conditionals 4: Ok, löse dieses wie das letzte Puzzle, aber du musst
         dich daran erinnern, wie du den `wenn`-Baustein und `wiederhole bis`-Baustein
         verwendet hast.
+      4-5 Maze Conditionals 5: "Ich will Sonnenblume! \n\nVerwende einen `Wenn`-Baustein,
+        um den Zomie mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen."
+      4-5 Maze Conditionals 6: |-
+        "Iss Sonnenblume!"
+
+        Verwenden Sie eine `Wenn`-Anweisung, um den Zombie mit der geringsten Anzahl an Bausteinen zur Sonnenblume zu bringen.
       4-5 Maze Conditionals 7: Die Lösung dieses Rätsels ist nicht viel anders, aber
         Vorsicht vor dem Mampfern!
       4-5 Nested Loops 1: 'Vervollständige den Code um die Dreiecke zu zeichnen. Das
@@ -400,7 +431,7 @@ de-DE:
       4-5 While Loops 1: Bringe mich zu dem Loch und fülle es mit zwei Schaufeln Dreck,
         indem Du den `füllen`-Baustein benutzt.
       4-5 While Loops 2: Bringe mich zu dem Erdhaufen und entferne ihn mit 5 Schaufelladungen,
-        indem due den `entferne 1` Baustein verwendest.
+        indem du den `entferne 1` Baustein verwendest.
       4-5 While Loops 3: "Benutze so wenige Blöcke wie möglich, um dieses Puzzle zu
         vervollständigen!  \n\nBewege mich zum Haufen und entferne ihn vollständig,
         dann bewege mich zu dem Loch und fülle es komplett aus."
@@ -891,6 +922,33 @@ de-DE:
 
         -   Warum glauben Sie, dass professionelle Programmierer die Paarprogrammierung verwenden?
         -   Was glauben Sie, wie die Paarprogrammierung Ihnen helfen wird, besser zu programmieren?
+      CSD U2 add content: |-
+        # HTML hinzufügen
+
+        Als Nächstes solltest du den HTML-Code zu deinen Seiten hinzufügen.
+
+        # Mache Folgendes
+
+        -   Füge für jede der neuen Seiten, die du erstellt hast, HTML hinzu, um die Seite zu erstellen, die du in deinem Projektleitfaden skizziert hast.
+        -   Du kannst auch mehr HTML zu den Seiten hinzufügen, die du bereits erstellt hast.
+      CSD U2 add content_2018: |-
+        # HTML hinzufügen
+
+        Als Nächstes solltest du den HTML-Code zu deinen Seiten hinzufügen.
+
+        # Mache Folgendes
+
+        -   Füge für jede der neuen Seiten, die du erstellt hast, HTML hinzu, um die Seite zu erstellen, die du in deinem Projektleitfaden skizziert hast.
+        -   Du kannst auch mehr HTML zu den Seiten hinzufügen, die du bereits erstellt hast.
+      CSD U2 add content_2019: |-
+        # HTML hinzufügen
+
+        Als Nächstes solltest du den HTML-Code zu deinen Seiten hinzufügen.
+
+        # Mache Folgendes
+
+        -   Füge für jede der neuen Seiten, die du erstellt hast, HTML hinzu, um die Seite zu erstellen, die du in deinem Projektleitfaden skizziert hast.
+        -   Du kannst auch mehr HTML zu den Seiten hinzufügen, die du bereits erstellt hast.
       CSD U2 add style_2019: |-
         # Probier es aus!
 
@@ -1143,6 +1201,33 @@ de-DE:
         in eine geordnete Liste zu strukturieren, die wie die untenstehende aussieht.\n\n_Hinweis:
         Es wird KEINE NUMMER in Ihrem Code enthalten sein._ \n\n![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03
         PM.png>)"
+      CSD U2 project share: |-
+        # Veröffentliche Dein Projekt
+
+        Es ist an der Zeit, dein Projekt mit der Welt zu teilen!
+
+        # Mache Folgendes
+
+        -   Klicke auf die Schaltfläche ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png>) oben auf dieser Seite.
+        -   Kopiere die URL, die du dort findest, und sende sie per E-Mail an die Personen, die deine Seite sehen soll.
+      CSD U2 project share_2018: |-
+        # Veröffentliche Dein Projekt
+
+        Es ist an der Zeit, dein Projekt mit der Welt zu teilen!
+
+        # Mache Folgendes
+
+        -   Klicke auf die Schaltfläche ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png>) oben auf dieser Seite.
+        -   Kopiere die URL, die du dort findest, und sende sie per E-Mail an die Personen, die deine Seite sehen soll.
+      CSD U2 project share_2019: |-
+        # Veröffentliche Dein Projekt
+
+        Es ist an der Zeit, dein Projekt mit der Welt zu teilen!
+
+        # Mache Folgendes
+
+        -   Klicke auf die Schaltfläche ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png>) oben auf dieser Seite.
+        -   Kopiere die URL, die du dort findest, und sende sie per E-Mail an die Personen, die deine Seite sehen soll.
       CSD U2 publish video: |-
         ## Zu berücksichtigende Fragen
 
@@ -1325,6 +1410,174 @@ de-DE:
         -   Füge eine `if else` -Anweisung hinzu, nachdem du die Position der Bienen aktualisiert hast.
         -   In der Eingabe von if verwende ein Boolean, um zu überprüfen, ob die x-Position der Maus auf der Seite des Bildschirms mit der Blume liegt.
         -   Stelle die "sichtbare" Eigenschaft jeder Biene sowohl innerhalb der if- als auch der else-Anweisung angemessen ein, damit die Bienen nur in der Nähe der Blume erscheinen.
+      CSD U3 L11 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L11 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L11 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L12 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L12 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L12 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L13 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L13 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L13 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L15 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L15 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L15 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L16 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L16 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L16 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L17 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L17 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L17 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L18 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L18 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L18 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L19 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L19 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L19 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L3 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L3 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L3 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L4 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L4 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L4 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L5 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L5 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L5 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L6 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L6 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L6 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L7 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L7 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L7 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L9 Freeplay: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L9 Freeplay_2018: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
+      CSD U3 L9 Freeplay_2019: |-
+        # Freiespiel
+
+        Setze das Gelernte ein, um das zu schaffen, was dir gefällt.  Wenn du fertig bist, kannst du auf ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) klicken, um deine Kreation an einen Freund zu schicken, oder auf ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>), um sie an deine Projektgalerie zu schicken.
       CSD U3 Random rainbow snake_2018_2019: |-
         <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png" style="float:right;height:150px">
 
@@ -1386,6 +1639,39 @@ de-DE:
         [//]\: # (<https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png>)
 
         [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
+      CSD U3 ellipse: |-
+        <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png" style="float:right;width:150px;">
+
+        # ellipse
+
+        Du kannst `ellipse` verwenden, um einen Kreis zu zeichnen.
+
+        # Mache Folgendes
+
+        -   Schau dir den Code an, aus dem die Ellipse besteht.
+        -   Füge eine neue Ellipse mit einer anderen Farbe hinzu.
+      CSD U3 ellipse_2018: |-
+        <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png" style="float:right;width:150px;">
+
+        # ellipse
+
+        Du kannst `ellipse` verwenden, um einen Kreis zu zeichnen.
+
+        # Mache Folgendes
+
+        -   Schau dir den Code an, aus dem die Ellipse besteht.
+        -   Füge eine neue Ellipse mit einer anderen Farbe hinzu.
+      CSD U3 ellipse_2019: |-
+        <img src="https://images.code.org/2ef29be10261f6a2c5df8f214d524f4d-image-1493060602794.02.44 PM.png" style="float:right;width:150px;">
+
+        # ellipse
+
+        Du kannst `ellipse` verwenden, um einen Kreis zu zeichnen.
+
+        # Mache Folgendes
+
+        -   Schau dir den Code an, aus dem die Ellipse besteht.
+        -   Füge eine neue Ellipse mit einer anderen Farbe hinzu.
       CSD U3 function video: |-
         ## Zu berücksichtigende Fragen
 
@@ -1469,6 +1755,15 @@ de-DE:
         nach, welche Daten gesammelt werden und woher sie kommen.
       CSD U5 Amazon Data Video_2019: Sieh Dir dieses Video an, um zu erfahren, wie
         dieses Problem von Amazon gelöst wird. Während du zusiehst, denke darüber
+        nach, welche Daten gesammelt werden und woher sie kommen.
+      CSD U5 Netflix Data Video: Sieh dir dieses Video an, um zu erfahren, wie dieses
+        Problem von Netflix gelöst wird. Während du zusiehst, denke darüber nach,
+        welche Daten gesammelt werden und woher sie kommen.
+      CSD U5 Netflix Data Video_2018: Sieh dir dieses Video an, um zu erfahren, wie
+        dieses Problem von Netflix gelöst wird. Während du zusiehst, denke darüber
+        nach, welche Daten gesammelt werden und woher sie kommen.
+      CSD U5 Netflix Data Video_2019: Sieh dir dieses Video an, um zu erfahren, wie
+        dieses Problem von Netflix gelöst wird. Während du zusiehst, denke darüber
         nach, welche Daten gesammelt werden und woher sie kommen.
       CSD U5 Waze Data Video: Sieh Dir dieses Video an, um zu erfahren, wie dieses
         Problem von Waze gelöst wird. Während du zusiehst, denke darüber nach, welche
@@ -2383,6 +2678,8 @@ de-DE:
         \  dem Raum mehr Stil zu geben\n-   weitere Dinge hinzuzufügen, mit denen
         Benutzer im Raum interagieren kann.\n-   versuche den Geheimcode zufällig
         zu machen.\n-   füge weiterer Räume hinzu"
+      Fish Tank 1-validated: "**Mach eine Prognose**: Was wird deiner Meinung nach
+        passieren, wenn du diesen Code ausführst?"
       Fish Tank 2-validated_2019: "Lasst uns ein Aquarium bauen!  \n\nVerwandle das
         Ambrosia-Sprite in jede Art von Fisch, indem du auf <xml><block type=\"gamelab_allSpritesWithAnimation\"
         block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>
@@ -2397,6 +2694,8 @@ de-DE:
         \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
         \ </block></xml>, um den Hintergrund in einer beliebigen Farbe darzustellen.
         Wir empfehlen blau!"
+      Fish Tank 5-validated: Unser Fisch ist ein wenig einsam. Füge dem Aquarium einen
+        weiteren Sprite hinzu.
       Fish Tank 5-validated_2019: Der Fisch ist abenteuerlustig und will neue Kreaturen
         im Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
         kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
@@ -2404,6 +2703,14 @@ de-DE:
         Was soll der neue Freund deines Fisches tun?
 
         Füge ein Verhalten hinzu und beobachte die Beiden!
+      Fish Tank 7-validated: "Wir haben eine Menge neuer Blöcke in die Werkzeugkiste
+        gelegt. \n\nSpiel mit ihnen, um dein Aquarium außergewöhnlich zu gestalten!"
+      Fish Tank 7-validated_2019: "Wir haben eine Menge neuer Blöcke in die Werkzeugkiste
+        gelegt. \n\nSpiel mit ihnen, um dein Aquarium außergewöhnlich zu gestalten!"
+      Fish Tank Predict: "**Mach eine Prognose**: Was wird deiner Meinung nach passieren,
+        wenn du diesen Code ausführst?"
+      Fish Tank Predict_2019: "**Mach eine Prognose**: Was wird deiner Meinung nach
+        passieren, wenn du diesen Code ausführst?"
       Frequency Analysis: |-
         # Knacke ein zufällige Substitutions-Verschlüsselung!
 
@@ -2547,6 +2854,10 @@ de-DE:
         ## Mache Folgendes
 
         Lies den Code, insbesondere den Code vor der Zeichnenschleife (Zeilen 1-24), innerhalb des Zeichnenschleife (Zeilen 27-43) und innerhalb der `gameStatus` Funktion (Zeilen 209-224).  Es ist in Ordnung, wenn Du nicht alles im Spiel verstehst, aber Du solltest sehen, dass der Code vor der Schleife die Sprites aufbaut, und der Code innerhalb der Schleife das Spiel steuert.
+      Geometric Sun: "**Projektidee:** Erstelle ein Muster mit geometrischen Ideen
+        wie Formen. Dies erfordert Ausdauer und Planung!"
+      Geometric Sun_2018: "**Projektidee:** Erstelle ein Muster mit geometrischen
+        Ideen wie Formen. Dies erfordert Ausdauer und Planung!"
       HOC 2018 Level_1: Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -2759,10 +3070,73 @@ de-DE:
       OPD-K5 RepeatBlock: Sehen Sie sich das folgende Video an, das die Funktionsweise
         von Schleifen erklärt und den 'Repeat'-Block in den Informatik-Grundlagen
         einführt.
+      OPD-K5 RepeatBlock_copy: Sehen Sie sich das folgende Video an, das die Funktionsweise
+        von Schleifen erklärt und den 'Repeat'-Block in den Informatik-Grundlagen
+        einführt.
       OPD-K5 WhatIsCS: 'Hast du dich jemals gefragt: "Was genau ist Informatik?" Oder:
         "Warum werden manche Computerprogramme mit Worten geschrieben und manche mit
         Bildern?" Wenn ja, dann schau dir dieses Video an; es ist eine großartige
         Einführung in das Gebiet der Informatik.'
+      OPD-K5-events-2: "Hänge den `normal flattern`-Baustein an das Ereignis `beim
+        Klicken` an und drücke dann \"Ausführen\".  \n\n* * *\n\nKlicke oder tippe
+        auf die Abspielfläche, um Flappy zum Ziel zu bewegen."
+      OPD-K5-events-4: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen Sie den
+        `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden` an. \n\n*
+        * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
+      OPD-K5-forloops-2: "Schreibe den Code, um der Biene beim Sammeln des gesamten
+        Nektars zu helfen. \n\nFür diese Aufgabe wirst du viele Blöcke brauchen, aber
+        wir werden im nächsten Rätsel einen einfacheren Weg kennenlernen."
+      OPD-K5-forloops-6: "Du kannst auch eine \"Für\"-Schleife zum Herunterzählen
+        verwenden. \n\nVersuche, diesen Nektar zu sammeln, indem du um **1** von **5**
+        in **1**-er-Schritten herunterzählst."
+      OPD-K5-forloops-7: |-
+        Die letzte Zahl in deiner "Für"-Schleife wird als die **"Steigerung"** bezeichnet. Jedes Mal, wenn die Schleife ausgeführt wird, ändert sich die Zählervariable um den Wert dieser **Steigerung**.
+
+        Versuche, diese Blüten mit einer **Steigerung** um 2 zu sammeln.
+      OPD-K5-projects-3: "Verwende Bausteine wie Ereignisse und Aktionen, damit sich
+        Ihr Spieler bewegt, wenn du die Pfeiltasten drückst.  \n\nBringe den Spieler
+        zu den Zielen, um dieses Rätsel zu lösen."
+      OPD-K5-projects-5: |-
+        Viele Charaktere und die Bewegung der Schauspieler ist ein großartiger Anfang für ein Spiel, aber wir müssen mehr tun, damit es sich wie ein echtes Spiel anfühlt. Lasst uns eine Punktzahl hinzufügen!
+
+        Verwende Ereignisblöcke wie den `Wenn der Schauspieler berührt...`, um die Punktzahl zu ändern oder das Spiel zu gewinnen. Erreiche 5 Punkte oder gewinne das Spiel, um dieses Rätsel zu lösen.
+      OPD-K5-projects-6: Tolle Arbeit! Du hast alle grundlegenden Komponenten für
+        ein funktionierendes Spiel. Verbringe nun Zeit damit, sicherzustellen, dass
+        das Spiel so funktioniert, wie du es dir vorstellst. Wenn du fertig bist,
+        klicke "Fertig"!
+      OPD-K5-spritelab-2: "Lasst uns ein Aquarium bauen!  \n\nVerwandle das Ambrosia-Sprite
+        in jede Art von Fisch, indem du auf <xml><block type=\"gamelab_allSpritesWithAnimation\"
+        block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>
+        klickst.\n\nAchte darauf, dass du auch das Kostüm dieses Sprites in <xml><block
+        type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>
+        aktualisierst."
+      OPD-K5-spritelab-3: "Dem Fisch wird schwindelig! \n\nÄndere das Verhalten der
+        Fische so, dass sie nach links und rechts schwimmen."
+      OPD-K5-spritelab-4: "Unser Aquarium braucht etwas Wasser! \n\nVerwende <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background
+        color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
+        \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
+        \ </block></xml>, um den Hintergrund in einer beliebigen Farbe darzustellen.
+        Wir empfehlen blau!"
+      OPD-K5-spritelab-6: Der Fisch ist abenteuerlustig und will neue Kreaturen im
+        Meer treffen. Füge ein weiteres Sprite in das Aquarium hinzu. Dieses Sprite
+        kann jedes andere Kostüm haben, außer dem, das du für deine Fische benutzt!
+      OPD-K5-spritelab-7: |-
+        Was soll der neue Freund deines Fisches tun?
+
+        Füge ein Verhalten hinzu und beobachte die Beiden!
+      OPD-K5-variables-1: |-
+        Lass uns ein gleichseitiges Dreieck zeichnen.
+
+        Es muss auf jeder Seite genau 50 Pixel lang sein.
+      OPD-K5-variables-2: "Verwende nun eine weitere Schleife, um drei dieser Dreiecke
+        direkt nebeneinander zu zeichnen. \n\nDu kannst den Code aus deinem letzten
+        Rätsel darin verschachteln."
+      OPD-K5-variables-5: "Bevor es schwierig wird, kannst du die Länge von 50 in
+        eine Variable verschieben, damit wir sie bei den nächsten Rätseln verwenden
+        können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Jetzt nutze die `length` Variable, damit der Künster vorwärts
+        springt und runter `length` Pixel zwischen den Dreiecken.
       Overworld Chop Tree: Holz ist ein sehr wichtiger Rohstoff. Viele Dinge werden
         daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm und benutze
         den „Zerstören“-Baustein.
@@ -3238,12 +3612,15 @@ de-DE:
       course2_collector_prog_challenge2: Es gibt **20** Schätze in dieser Höhle zu
         finden. Sammle mindestens die Hälfte, um diese Herausforderung zu beenden!
       course2_harvester_loops_challenge1: Sammle den gesamten Mais ein.
-      course2_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
-        die Bäume und Felder!
+      course2_harvester_loops_challenge2: Ernte den gesamten Salat. Vermeide die Bäume
+        und Felder!
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      course3_bee_debugging_challenge1: Beobachte, wie sich die Biene den Nektar holt.
+        Kannst du die gleiche Art Muster verwenden, um der Biene bei der Herstellung
+        des gesamten Honigs zu helfen?
       course3_bee_functions_challenge2: Für diese Herausforderung bist du auf dich
         allein gestellt!
       course3_bee_functions_challenge3: Erstelle eine neue Funktion, um den gesamten
@@ -3251,12 +3628,14 @@ de-DE:
         um das Rätsel abzuschließen!
       course3_bee_functions_challenge4: Wende alles an, was du gelernt hast, um dieses
         Rätsel abzuschließen!
+      course3_collector_debugging_challenge2: Bist du ein Spezialist für verschachtelte
+        Schleifen? Nutze das bisher Gelernte, um dir den ganzen Schatz zu holen!
       course3_farmer_condLoops_challenge1: "Die Kürbisse markieren die Stelle, an
         der du dich drehen solltest. Andernfalls fahre weiter vorwärts, aber denke
         daran, den gesamten Salat oder Mais auf dem Weg zu sammeln. \n\n**Jede versteckte
         Erntestelle hat nur einen Mais oder Salat.**"
-      course3_farmer_until_challenge2: Verwende Wenn/Sonst-Blöcke, um dem gewundenen
-        Pfad zu folgen. Verwende an jeder Ecke den Befehl `1 entfernen` in einer Schleife,
+      course3_farmer_until_challenge2: Verwende Wenn/Sonst-Bausteine, um dem gewundenen
+        Pfad zu folgen. Verwende an jeder Ecke den Befehl `entferne 1` in einer Schleife,
         um die Erdhaufen zu entfernen.
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course3_maze_debugging_challenge2: _"Wenn ich mich zu oft drehe, wird mir schwindelig!
@@ -3269,6 +3648,8 @@ de-DE:
       course4_artist_binary_challenge2: |-
         Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      course4_artist_concept_challenge2: Erstelle fünf Windrädchen-Entwürfe unter
+        Verwendung des untenstehenden Programm-Codes.
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
@@ -3281,7 +3662,7 @@ de-DE:
         Hilf dem Sammler, mindestens zwei Stapel Schätze zu erreichen und verwende dabei nur die Blöcke in deinem Werkzeugkasten. Es ist möglich, alle 4 einzusammeln.
       course4_harvester_nested_loops_challenge1: _"Ich brauche etwas Hilfe auf dem
         Bauernhof! Hilf mir bei der Ernte von diesem Mais, indem du nur die Blöcke
-        aus deinem Werkzeugkiste verwendest."_
+        aus deiner Werkzeugkiste verwendest."_
       course4_playlab_variables_challenge1: Verwende diese Blöcke, um die Teilnehmer
         eine Klopf-Klopf-Witz teilen zu lassen. Ändere die Pointe und die Umstände,
         um deinen eigenen Witz zu erzählen!
@@ -3530,16 +3911,18 @@ de-DE:
       courseA_collector_preLoops7: |-
         Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
         <xml><block type="collector_collect"/></xml>
-      courseA_harvester_loops1: Hilf dem Mähdrescher, den gesamten Mais zu ernten!
-      courseA_harvester_loops10: Hilf dem Mähdrescher alle fünf Ähren Mais zu ernten!
-      courseA_harvester_loops10_2019: Hilf dem Mähdrescher alle fünf Ähren Mais zu
+      courseA_harvester_loops1: Hilf der Erntearbeiterin, den gesamten Mais zu ernten!
+      courseA_harvester_loops10: Hilf der Erntearbeiterin alle fünf Ähren Mais zu
         ernten!
+      courseA_harvester_loops10_2019: Hilf der Erntearbeiterin alle fünf Ähren Mais
+        zu ernten!
       courseA_harvester_loops11: 'Versuchs noch einmal alleine! '
       courseA_harvester_loops11_2019: 'Versuchs noch einmal alleine! '
-      courseA_harvester_loops1_2019: Hilf dem Mähdrescher, den gesamten Mais zu ernten!
-      courseA_harvester_loops2: Der Mähdrescher muss den gesamten Mais ernten! Erkennst
-        du ein Muster?
-      courseA_harvester_loops2_2019: Der Mähdrescher muss den gesamten Mais ernten!
+      courseA_harvester_loops1_2019: Hilf der Erntearbeiterin, den gesamten Mais zu
+        ernten!
+      courseA_harvester_loops2: Die Erntearbeiterin muss den gesamten Mais ernten!
+        Erkennst du ein Muster?
+      courseA_harvester_loops2_2019: Die Erntearbeiterin muss den gesamten Mais ernten!
         Erkennst du ein Muster?
       courseA_harvester_loops3: Kannst du den ganzen Mais mit nur **einem** Gehe-Baustein
         pflücken?
@@ -3548,11 +3931,11 @@ de-DE:
       courseA_harvester_loops4: |-
         _"Ich brauche Hilfe, um zu herausfinden, was hier falsch läuft!"_
 
-        Kannst du dem Mähdrescher helfen, den Fehler in ihrem Code zu finden?
+        Kannst du der Erntearbeiterin helfen, den Fehler in ihrem Code zu finden?
       courseA_harvester_loops4_2019: |-
         _"Ich brauche Hilfe, um zu herausfinden, was hier falsch läuft!"_
 
-        Kannst du dem Mähdrescher helfen, den Fehler in ihrem Code zu finden?
+        Kannst du der Erntearbeiterin helfen, den Fehler in ihrem Code zu finden?
       courseA_harvester_loops5: Versuchs selbst! Kannst du auch den Mais am Ende ernten?
       courseA_harvester_loops5_2019: Versuchs selbst! Kannst du auch den Mais am Ende
         ernten?
@@ -3560,10 +3943,10 @@ de-DE:
         alleine ernten?
       courseA_harvester_loops5a_2019: Sieh dir den gesamten Mais an? Kannst du ihn
         ganz alleine ernten?
-      courseA_harvester_loops5b: Kannst du deinen Code ändern, damit der Mähdrescher
-        den gesamten Mais pflückt?
-      courseA_harvester_loops5b_2019: Kannst du deinen Code ändern, damit der Mähdrescher
-        den gesamten Mais pflückt?
+      courseA_harvester_loops5b: Kannst du deinen Code ändern, damit die Erntearbeiterin
+        den gesamten Mais erntet?
+      courseA_harvester_loops5b_2019: Kannst du deinen Code ändern, damit die Erntearbeiterin
+        den gesamten Mais erntet?
       courseA_harvester_loops6: Du brauchst **einen**<xml><block type="maze_moveWest"
         block-text="move west"></block></xml> Baustein und **einen**<xml><block type="maze_moveNorth"
         block-text="move north"></block></xml> Baustein, um dieses Puzzle zu lösen!
@@ -3576,10 +3959,10 @@ de-DE:
         erntet?
       courseA_harvester_loops9_2019: Kannst du herausfinden, wie man den _gesamten_
         Mais erntet?
-      courseA_harvester_seq1: Hilf dem Mähdrescher, den Mais zu finden!
-      courseA_harvester_seq10: Der Mähdrescher muss den gesamten Mais ernten! Erkennst
-        du ein Muster?
-      courseA_harvester_seq10_2019: Der Mähdrescher muss den gesamten Mais ernten!
+      courseA_harvester_seq1: Hilf der Erntearbeiterin, den Mais zu finden!
+      courseA_harvester_seq10: Die Erntearbeiterin muss den gesamten Mais ernten!
+        Erkennst du ein Muster?
+      courseA_harvester_seq10_2019: Die Erntearbeiterin muss den gesamten Mais ernten!
         Erkennst du ein Muster?
       courseA_harvester_seq11: Versuche es selbst! Ernte den gesamten Mais.
       courseA_harvester_seq11_2019: Versuche es selbst! Ernte den gesamten Mais.
@@ -3587,36 +3970,36 @@ de-DE:
         Mais."
       courseA_harvester_seq12_2019: "_Danke, dass du mir hilfst!_ \n\nErnte den gesamten
         Mais."
-      courseA_harvester_seq13: Hilf dem Mähdrescher den Mais zu ernten!
-      courseA_harvester_seq13_2019: Hilf dem Mähdrescher den Mais zu ernten!
-      courseA_harvester_seq1_2019: Hilf dem Mähdrescher, den Mais zu finden!
+      courseA_harvester_seq13: Hilf der Erntearbeiterin den Mais zu ernten!
+      courseA_harvester_seq13_2019: Hilf der Erntearbeiterin den Mais zu ernten!
+      courseA_harvester_seq1_2019: Hilf der Erntearbeiterin, den Mais zu finden!
       courseA_harvester_seq2: 'Verwende <xml><block type="maze_moveWest"/></xml> **drei**
         mal, um den Mähdrescher zum Mais zu bringen! '
       courseA_harvester_seq2_2019: 'Benutze **drei** <xml><block type="maze_moveWest"
-        block-text="move west"/></xml> Bausteine, um die Erntemaschine zum Mais zu
-        bringen! '
-      courseA_harvester_seq3: Benutzer <xml><block type="maze_moveNorth"/></xml> **drei**
-        mal, um den Mähdrescher zum Mais zu bringen! Vergiss nicht, den Mais am Ende
-        zu pflücken.
+        block-text="move west"/></xml> Bausteine, um die Erntearbeiterin zum Mais
+        zu bringen! '
+      courseA_harvester_seq3: Verwende <xml><block type="maze_moveNorth"/></xml> **drei**
+        mal, um die Erntearbeiterin zum Mais zu bringen! Vergiss nicht, den Mais am
+        Ende auch zu pflücken.
       courseA_harvester_seq3_2019: Benutze **drei** <xml><block type="maze_moveNorth"
-        block-text="move north"/></xml> Bausteine, um die Erntemaschine zum Mais zu
-        bringen! Vergiss nicht, den Mais am Ende aufzunehmen.
-      courseA_harvester_seq4: Füge _einen_ Baustein hinzu, um dem Mähdrescher zu helfen,
-        den Mais zu ernten.
-      courseA_harvester_seq4_2019: Füge _einen_ Baustein hinzu, um dem Mähdrescher
+        block-text="move north"/></xml> Bausteine, um die Erntearbeiterin zum Mais
+        zu bringen! Vergiss nicht, den Mais am Ende zu ernten.
+      courseA_harvester_seq4: Füge _einen_ Baustein hinzu, um der Erntehelferin zu
+        helfen, den Mais zu ernten.
+      courseA_harvester_seq4_2019: Füge _einen_ Baustein hinzu, um der Erntehelferin
         zu helfen, den Mais zu ernten.
       courseA_harvester_seq5: Kannst du herausfinden, was mit diesem Code nicht stimmt?
-        Hilf dem Mähdrescher den Mais zu pflücken!
+        Hilf der Erntearbeiterin den Mais zu pflücken!
       courseA_harvester_seq5_2019: Kannst du herausfinden, was mit diesem Code nicht
-        stimmt? Hilf dem Mähdrescher den Mais zu pflücken!
+        stimmt? Hilf der Erntearbeiterin den Mais zu pflücken!
       courseA_harvester_seq6: Versuche es selbst!
       courseA_harvester_seq6_2019: Versuche es selbst!
       courseA_harvester_seq7: Man muss sich in zwei Richtungen bewegen, um zum Mais
-        zu gelangen! Hilf dem Mähdrescher die richtige Richtung zu finden.
+        zu gelangen! Hilf der Erntearbeiterin die richtige Richtung zu finden.
       courseA_harvester_seq7_2019: Man muss sich in zwei Richtungen bewegen, um zum
-        Mais zu gelangen! Hilf dem Mähdrescher die richtige Richtung zu finden.
-      courseA_harvester_seq8: Jetzt muss der Mähdrescher zweimal Mais ernten!
-      courseA_harvester_seq8_2019: Jetzt muss der Mähdrescher zweimal Mais ernten!
+        Mais zu gelangen! Hilf der Erntearbeiterin die richtige Richtung zu finden.
+      courseA_harvester_seq8: Jetzt muss die Erntearbeiterin zweimal Mais ernten!
+      courseA_harvester_seq8_2019: Jetzt muss die Erntearbeiterin zweimal Mais ernten!
       courseA_harvester_seq9: Füge zwei Bausteine hinzu, um diese Aufgabe zu beenden!
       courseA_harvester_seq9_2019: Füge zwei Bausteine hinzu, um diese Aufgabe zu
         beenden!
@@ -3652,6 +4035,10 @@ de-DE:
         zum Schwein zu bringen!"
       courseA_maze_seq10_2019: "**Herausforderung:** Vermeide das TNT, um den Vogel
         zum Schwein zu bringen!"
+      courseA_maze_seq10_copy: |-
+        **Herausforderung:** Geh um das TNT herum, um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         Es ist zeit für eine kleinere Aufgabe! Gehe zuerst in eine Richtung und dann in eine andere, um den Vogel zum Schwein zu bringen.
 
@@ -3691,6 +4078,10 @@ de-DE:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Probiere dies hier mal aus.
       courseA_maze_seq5_2019: Probiere dies hier mal aus.
+      courseA_maze_seq5_copy: |-
+        Versuche diese Aufgabe von Anfang an allein zu schaffen.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"Hier Schweinchen, hier!"_
 
@@ -3707,7 +4098,15 @@ de-DE:
         um den Vogel zum Schwein zu bringen!
       courseA_maze_seq6_2019: Gehe zuerst in eine Richtung und dann in eine andere,
         um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_copy: |-
+        Gehe zuerst in eine Richtung und dann in eine andere, um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        Finde heraus was fehlt, und füge dann Blöcke hinzu, um den Vogel zum Schwein zu bringen!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         Finde heraus was fehlt, und füge dann Blöcke hinzu, um den Vogel zum Schwein zu bringen!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -3717,6 +4116,10 @@ de-DE:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
+      courseA_maze_seq8_copy: |-
+        Löse dieses Level und bring den Vogel zum Schwein!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Herausforderung:**Repariere dieses Level, indem Du Blöcke hinzufügst um den Vogel zum Schwein zu bewegen!
 
@@ -3893,6 +4296,14 @@ de-DE:
       courseB_collector_loops10_2019: Hilf Laurel, alle Schätze aus dieser Höhle zu
         holen.
       courseB_collector_loops11_2019: Heureka! Hol dir so viele Schätze wie möglich!
+      courseB_collector_loops1_2018: "**Freispiel:** Bewege Laurel und hole dir so
+        viele Schätze, wie du kannst. Hole mindestens einen Gegenstand ohne Fehler,
+        um diesen Level zu bestehen.  \n\n* * *\n\nZiehe Bausteine in den Arbeitsbereich
+        und versuche herauszufinden, wie man an Schätze kommt.  "
+      courseB_collector_loops1_2019: "**Freispiel:** Bewege Laurel und hole dir so
+        viele Schätze, wie du kannst. Hole mindestens einen Gegenstand ohne Fehler,
+        um diesen Level zu bestehen.  \n\n* * *\n\nZiehe Bausteine in den Arbeitsbereich
+        und versuche herauszufinden, wie man an Schätze kommt.  "
       courseB_collector_loops2: "Bewege Laurel zum Schatz und benutze dann den <xml><block
         type=\"collector_collect\"/></xml>-Block, um ihn aufzuheben. \n\nHole alle
         vier Stapel, um diesen Level zu schaffen."
@@ -3971,6 +4382,8 @@ de-DE:
       courseB_maze_seq10_2019: Behebe die Fehler, um Scrat zur Eichel zu bringen.
       courseB_maze_seq11_2019: Es ist an Dir!  Bring Scrat zur Eichel.
       courseB_maze_seq12_2019: Erreiche die Eichel nun auf irgendeine Art und Weise!
+      courseB_maze_seq1_2019: "Spiele mit diesen Bausteinen, um zu sehen, wozu sie
+        Scrat veranlassen! \n\nBringe Scrat zur Eichel, um das Level abzuschließen."
       courseB_maze_seq3: '"Repariere den Code, um mich zu dem Schwein zu bringen!"'
       courseB_maze_seq4_2019: Benutze **2** Bewegungsbausteine, um den Scrat zur Eichel
         zu bringen.
@@ -4277,6 +4690,13 @@ de-DE:
         um 100, 200 oder 400 Pixel irgendwo innerhalb der Schleife bewegst?  \n\n-
         \  Versuche den Baustein `Setze Muster` zu verwenden bevor die Schleife beginnt,
         um ein Kunstwerk zu erstellen!\n\n* * *\n\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)\n![expandable](https://images.code.org/55285e9e5c5ae1cf1c895cc0bf92824d-image-1553100970790.png)\n![expandable](https://images.code.org/6b8e67db2a3b341bc56fa53f67c284c2-image-1553100974645.png)"
+      courseC_artist_loops6a: "Füge einen dritten Sticker an einer beliebiger Stelle
+        in der Schleife hinzu, ganz wie es dir gefällt! Wie sieht es jetzt aus? \n\n-
+        \  Ändere das Muster auf deinem Pinsel für mehr Vielfalt! \n\n* * *\n\n![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)"
+      courseC_artist_loops6a_2018: "Füge einen dritten Sticker an einer beliebiger
+        Stelle in der Schleife hinzu, ganz wie es dir gefällt! Wie sieht es jetzt
+        aus? \n\n-   Ändere das Muster auf deinem Pinsel für mehr Vielfalt! \n\n*
+        * *\n\n![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)"
       courseC_artist_loops6a_2019: |-
         Füge einen dritten Aufkleber an beliebiger Stelle in der Schleife hinzu! Wie sieht es jetzt aus?
 
@@ -4287,6 +4707,21 @@ de-DE:
         ![expandable](https://images.code.org/edc53f27379e018e61a6ab9dcc2717ea-image-1560984648573.png)
         ![expandable](https://images.code.org/c41b00a743f245f98d2cfb66cb18e771-image-1560984690182.png)
         ![expandable](https://images.code.org/4c8910f72a7f0cd81713ded7b866a883-image-1560984706203.png)
+      courseC_artist_loops7a: "Versuche , die `Wiederholen`-Schleife\\` so zu ändern,
+        dass sie eine andere Anzahl von Ausführungen ausführt. Wie weit musst du dich
+        drehen, um einen Kreis zu schließen?\n\n-   Versuche zu verändern, wie oft
+        du dich drehst\n    -   Versuche, eine 60-Grad-Drehung mit 6 Umdrehungen durchzuführen
+        \n    -   Versuche, eine 20-Grad-Drehung mit 18 Umdrehungen durchzuführen
+        \n\n* * *\n\nDieses Bild zeigt einen Piraten, einen Ninja und eine Giraffe.
+        Sie durchlaufen 18 Mal eine Schleife mit einer 20-Grad-Drehung. \n\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
+      courseC_artist_loops7a_2018: "Versuche , die `Wiederholen`-Schleife\\` so zu
+        ändern, dass sie eine andere Anzahl von Ausführungen ausführt. Wie weit musst
+        du dich drehen, um einen Kreis zu schließen?\n\n-   Versuche zu verändern,
+        wie oft du dich drehst\n    -   Versuche, eine 60-Grad-Drehung mit 6 Umdrehungen
+        durchzuführen \n    -   Versuche, eine 20-Grad-Drehung mit 18 Umdrehungen
+        durchzuführen \n\n* * *\n\nDieses Bild zeigt einen Piraten, einen Ninja und
+        eine Giraffe. Sie durchlaufen 18 Mal eine Schleife mit einer 20-Grad-Drehung.
+        \n\n![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
       courseC_artist_loops7a_2019: |-
         Versuche die `wiederhole`-Schleife so zu ändern, dass sie eine andere Anzahl von Malen ausführt wird.  Wie weit muss man sich drehen, um im Kreis zu gehen?
 
@@ -4338,6 +4773,76 @@ de-DE:
         dann eine 50 Pixel lange Linie mit dem <xml><block type=\"draw_move_by_constant\"
         block-text=\"move forward\"><title name=\"DIR\">moveForward</title><title
         name=\"VALUE\">50</title></block></xml> Baustein."
+      courseC_artist_prog1: "_“Hallo, ich bin ein Künstler. Du kannst Code schreiben,
+        mit dem ich fast alles zeichnen kann.\"\"_ \n\nSpiele mit den Blöcken in der
+        Werkzeugkiste, um zu sehen, was sie bewirken!"
+      courseC_artist_prog1_2018: "_“Hallo, ich bin ein Künstler. Du kannst Code schreiben,
+        mit dem ich fast alles zeichnen kann.\"\"_ \n\nSpiele mit den Blöcken in der
+        Werkzeugkiste, um zu sehen, was sie bewirken!"
+      courseC_artist_prog1_2019: "_“Hallo, ich bin ein Künstler. Du kannst Code schreiben,
+        mit dem ich fast alles zeichnen kann.\"\"_ \n\nSpiele mit den Blöcken in der
+        Werkzeugkiste, um zu sehen, was sie bewirken!"
+      courseC_artist_prog2: |-
+        _“Lass uns einen Käfig für mein Monster-Haustier bauen“_
+
+        Ziehe Blöcke auf den Bildschirm, damit der Künstler über die grauen Linien im Bild zeichnen kann.\\
+
+        (Jede Linie ist 100 Pixel lang)
+      courseC_artist_prog2_2018: |-
+        _“Lass uns einen Käfig für mein Monster-Haustier bauen“_
+
+        Ziehe Blöcke auf den Bildschirm, damit der Künstler über die grauen Linien im Bild zeichnen kann.\\
+
+        (Jede Linie ist 100 Pixel lang)
+      courseC_artist_prog2_2019: |-
+        _“Lass uns einen Käfig für mein Monster-Haustier bauen“_
+
+        Ziehe Blöcke auf den Bildschirm, damit der Künstler über die grauen Linien im Bild zeichnen kann.\\
+
+        (Jede Linie ist 100 Pixel lang)
+      courseC_artist_prog3: |-
+        _""Dieses Raumschiff braucht ein Fenster!""_
+
+        Jede Seite des inneren Quadrats ist 100 Pixel lang und alle Winkel betragen 90 Grad.
+      courseC_artist_prog3_2018: |-
+        _""Dieses Raumschiff braucht ein Fenster!""_
+
+        Jede Seite des inneren Quadrats ist 100 Pixel lang und alle Winkel betragen 90 Grad.
+      courseC_artist_prog3_2019: |-
+        _""Dieses Raumschiff braucht ein Fenster!""_
+
+        Jede Seite des inneren Quadrats ist 100 Pixel lang und alle Winkel betragen 90 Grad.
+      courseC_artist_prog4: "_\"\"Oh nein!  Starlas Lieblings-Alien ist gerade weggeflogen!
+        Lasst uns der Raumfahrerin helfen!\"\"_ \n\nBaue Starlas Rakete fertig, damit
+        sie ihr Haustier fangen kann\n(Jede Seite des Dreiecks ist 100 Pixel lang
+        und hat Außenwinkel von 120 Grad)"
+      courseC_artist_prog4_2018: "_\"\"Oh nein!  Starlas Lieblings-Alien ist gerade
+        weggeflogen! Lasst uns der Raumfahrerin helfen!\"\"_ \n\nBaue Starlas Rakete
+        fertig, damit sie ihr Haustier fangen kann\n(Jede Seite des Dreiecks ist 100
+        Pixel lang und hat Außenwinkel von 120 Grad)"
+      courseC_artist_prog4_2019: "_\"\"Oh nein!  Starlas Lieblings-Alien ist gerade
+        weggeflogen! Lasst uns der Raumfahrerin helfen!\"\"_ \n\nBaue Starlas Rakete
+        fertig, damit sie ihr Haustier fangen kann\n(Jede Seite des Dreiecks ist 100
+        Pixel lang und hat Außenwinkel von 120 Grad)"
+      courseC_artist_prog5: |-
+        _""Vielleicht sollten wir für jedes unserer Haustiere ein Schildchen für den Fall machen, dass sie sich verlaufen!""_
+
+        Stelle dieses Schild fertig, indem du ein Rechteck um die Außenseite zeichnest.\
+        (Die langen Seiten sind jeweils 200 Pixel und die kurzen Seiten jeweils 100 Pixel lang)
+      courseC_artist_prog5_2018: |-
+        _""Vielleicht sollten wir für jedes unserer Haustiere ein Schildchen für den Fall machen, dass sie sich verlaufen!""_
+
+        Stelle dieses Schild fertig, indem du ein Rechteck um die Außenseite zeichnest.\
+        (Die langen Seiten sind jeweils 200 Pixel und die kurzen Seiten jeweils 100 Pixel lang)
+      courseC_artist_prog5_2019: |-
+        _""Vielleicht sollten wir für jedes unserer Haustiere ein Schildchen für den Fall machen, dass sie sich verlaufen!""_
+
+        Stelle dieses Schild fertig, indem du ein Rechteck um die Außenseite zeichnest.\
+        (Die langen Seiten sind jeweils 200 Pixel und die kurzen Seiten jeweils 100 Pixel lang)
+      courseC_artist_prog6: |-
+        _“Jetzt ein Tag für Belle!“_
+
+        Zeichne diese Raute mit 200 Pixel langen Seiten.
       courseC_artist_prog6_2018: |-
         _"Jetzt ein Schild für Belle!"_
 
@@ -4346,6 +4851,24 @@ de-DE:
         _"Jetzt ein Schild für Belle!"_
 
         Zeichne dieses Quadrat mit 200 Pixel Seiten.
+      courseC_artist_prog7: "**Aufgabe:** Dieser Tag ist ganz besonderes!  \n\nWeißt
+        du, wie du den Umriss zeichnen kannst?\\\n(Die lange Seite ist 150 Pixel und
+        jede der kurzen Seiten ist 75 Pixel lang)"
+      courseC_artist_prog7_2018: "**Aufgabe:** Dieser Tag ist ganz besonderes!  \n\nWeißt
+        du, wie du den Umriss zeichnen kannst?\\\n(Die lange Seite ist 150 Pixel und
+        jede der kurzen Seiten ist 75 Pixel lang)"
+      courseC_artist_prog7_2019: "**Aufgabe:** Dieser Tag ist ganz besonderes!  \n\nWeißt
+        du, wie du den Umriss zeichnen kannst?\\\n(Die lange Seite ist 150 Pixel und
+        jede der kurzen Seiten ist 75 Pixel lang)"
+      courseC_artist_prog8: |-
+        Noch ein Tag.  Dies ist ein Dreieck für Pi.\
+        (Jede Seite ist 150 Pixel lang)
+      courseC_artist_prog8_2018: |-
+        Noch ein Tag.  Dies ist ein Dreieck für Pi.\
+        (Jede Seite ist 150 Pixel lang)
+      courseC_artist_prog8_2019: |-
+        Noch ein Tag.  Dies ist ein Dreieck für Pi.\
+        (Jede Seite ist 150 Pixel lang)
       courseC_collector_loops_challenge2: |-
         _„Lass uns zusammen nach Schätzen suchen!“_
 
@@ -4487,6 +5010,15 @@ de-DE:
       courseC_flappy_events1_2019: "Hänge den `normal flattern`-Baustein an das Ereignis
         `beim Klicken` an und drücke dann \"Ausführen\".  \n\n* * *\n\nKlicke oder
         tippe auf die Abspielfläche, um Flappy zum Ziel zu bewegen."
+      courseC_flappy_events3: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen Sie
+        den `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden` an.
+        \n\n* * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
+      courseC_flappy_events3_2018: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen
+        Sie den `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden`
+        an. \n\n* * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
+      courseC_flappy_events3_2019: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen
+        Sie den `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden`
+        an. \n\n* * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
       courseC_flappy_events6: "Klicke auf den Abwärtspfeil innerhalb des Bausteins
         \"schlage normal mit den Flügeln\", um eine andere Schlagkraft auszuwählen.
         \ \n\nSchau, ob du immer noch einen Punkt erzielen kannst, nachdem du Flappy
@@ -4528,9 +5060,30 @@ de-DE:
       courseC_harvester_loops11: Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops11_2018: Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops11_2019: Sammele den ganzen Mais und alle Kürbisse ein.
+      courseC_harvester_loops2: Kannst du zwei verschiedene Schleifen so kombinieren,
+        dass sich die Erntearbeiterin auf die Kürbisse zubewegt, und sie dann alle
+        einsammelt?
+      courseC_harvester_loops2_2018: Kannst du zwei verschiedene Schleifen so kombinieren,
+        dass sich die Erntearbeiterin auf die Kürbisse zubewegt, und sie dann alle
+        einsammelt?
+      courseC_harvester_loops2_2019: Kannst du zwei verschiedene Schleifen so kombinieren,
+        dass sich die Erntearbeiterin auf die Kürbisse zubewegt, und sie dann alle
+        einsammelt?
       courseC_harvester_loops3: Sammle alle Kürbisse ein.
       courseC_harvester_loops3_2018: Sammle alle Kürbisse ein.
       courseC_harvester_loops3_2019: Sammle alle Kürbisse ein.
+      courseC_harvester_loops4: |-
+        Jetzt wird zusätzlich auch Mais angebaut!
+
+        Sammele den ganzen Mais und alle Kürbisse ein.
+      courseC_harvester_loops4_2018: |-
+        Jetzt wird zusätzlich auch Mais angebaut!
+
+        Sammele den ganzen Mais und alle Kürbisse ein.
+      courseC_harvester_loops4_2019: |-
+        Jetzt wird zusätzlich auch Mais angebaut!
+
+        Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops5: Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops5_2018: Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops5_2019: Sammele den ganzen Mais und alle Kürbisse ein.
@@ -4543,12 +5096,24 @@ de-DE:
       courseC_harvester_loops9: Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops9_2018: Sammele den ganzen Mais und alle Kürbisse ein.
       courseC_harvester_loops9_2019: Sammele den ganzen Mais und alle Kürbisse ein.
-      courseC_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+      courseC_harvester_loops_challenge2: Ernte den gesamten Salat. Vermeide die Bäume
+        und Felder!
+      courseC_harvester_loops_challenge2_2018: Ernte den gesamten Salat. Vermeide
         die Bäume und Felder!
-      courseC_harvester_loops_challenge2_2018: Sammle den gesamten Salat ein. Vermeide
+      courseC_harvester_loops_challenge2_2019: Ernte den gesamten Salat. Vermeide
         die Bäume und Felder!
-      courseC_harvester_loops_challenge2_2019: Sammle den gesamten Salat ein. Vermeide
-        die Bäume und Felder!
+      courseC_maze_debugging1: "Dieser Code ist nicht ganz richtig!  \n\nRepariere
+        den Code, um Scrat zu helfen, an die Eichel zu kommen."
+      courseC_maze_debugging1_2018: "Dieser Code ist nicht ganz richtig!  \n\nRepariere
+        den Code, um Scrat zu helfen, an die Eichel zu kommen."
+      courseC_maze_debugging1_2019: "Dieser Code ist nicht ganz richtig!  \n\nRepariere
+        den Code, um Scrat zu helfen, an die Eichel zu kommen."
+      courseC_maze_debugging3: "Irgendetwas stimmt da nicht ganz. \n\nEntferne Bausteine,
+        um Scrat zur Eichel zu bringen!"
+      courseC_maze_debugging3_2018: "Irgendetwas stimmt da nicht ganz. \n\nEntferne
+        Bausteine, um Scrat zur Eichel zu bringen!"
+      courseC_maze_debugging3_2019: "Irgendetwas stimmt da nicht ganz. \n\nEntferne
+        Bausteine, um Scrat zur Eichel zu bringen!"
       courseC_maze_debugging_challenge2: Wenn Scrat zu oft abbiegt, könnte ihm schwindlig
         werden! Hilf ihm dabei, die Eichel mit nur vier `Abbiege`-Befehlen zu erreichen.
       courseC_maze_debugging_challenge2_2018: Wenn Scrat zu oft abbiegt, könnte ihm
@@ -4585,6 +5150,24 @@ de-DE:
 
         Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
         Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
+      courseC_maze_programming4: "_\"Verfolge den Pfad und führe mich zum Schwein\"._
+        \n\nVermeide das TNT, sonst fliegen die Federn!"
+      courseC_maze_programming4_2018: "_\"Verfolge den Pfad und führe mich zum Schwein\"._
+        \n\nVermeide das TNT, sonst fliegen die Federn!"
+      courseC_maze_programming4_2019: "_\"Verfolge den Pfad und führe mich zum Schwein\"._
+        \n\nVermeide das TNT, sonst fliegen die Federn!"
+      courseC_maze_programming5: |-
+        _""Folge diesem Weg, um mich zu dem Schwein zu bringen!""_
+
+        \_ Vermeide den Sprengstoff.
+      courseC_maze_programming5_2018: |-
+        _""Folge diesem Weg, um mich zu dem Schwein zu bringen!""_
+
+        \_ Vermeide den Sprengstoff.
+      courseC_maze_programming5_2019: |-
+        _""Folge diesem Weg, um mich zu dem Schwein zu bringen!""_
+
+        \_ Vermeide den Sprengstoff.
       courseC_maze_programming6: |-
         _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
 
@@ -4689,6 +5272,10 @@ de-DE:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Los, BB-8!"_
 
         Um den ganzen Metallschrott aufzusammeln, versuche eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet wird.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Los, BB-8!"_
+
+        Um den ganzen Metallschrott aufzusammeln, versuche eine Schleife zu erstellen, in der nur ein Block im 'wiederholen' Block verwendet wird.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
 
@@ -4701,11 +5288,17 @@ de-DE:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
 
         Um in dieser Aufgabe BB-8 zum ganzen Metallschrott zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2 'wiederholen' Schleifen helfen!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        Um in dieser Aufgabe BB-8 zum ganzen Metallschrott zu bringen und dabei so wenig Blöcke wie möglich zu verwenden werden dir 2 'wiederholen' Schleifen helfen!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Los, BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Los, BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Los, BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Los, BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Kannst du alles aufsammeln?"_
@@ -4716,6 +5309,10 @@ de-DE:
 
         Schleifen funktionieren auch mit mehr als einem Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Kannst du alles aufsammeln?"_
+
+        Schleifen funktionieren auch mit mehr als einem Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Kannst du alles aufsammeln?"_
 
         Schleifen funktionieren auch mit mehr als einem Block drin! Kannst du diese Abfolge in einer Schleife zusammenfassen?
@@ -4731,6 +5328,10 @@ de-DE:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Du schaffst das!"_
 
         Schaffst du es mit nur einer Schleife den ganzen Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben kannst.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Du schaffst das!"_
+
+        Schaffst du es mit nur einer Schleife den ganzen Metallschrott zu sammeln? Versuche zuerst alle Schritte einzeln zu programmieren und finde dann heraus, welchen wiederholenden Code du in ein Schleife geben kannst.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
 
@@ -4740,6 +5341,10 @@ de-DE:
 
         **Herausforderung:** Kombiniere Ideen aus den letzten paar Aufgaben um dieses Level abzuschließen.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
+
+        **Herausforderung:** Kombiniere Ideen aus den letzten paar Aufgaben um dieses Level abzuschließen.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter, BB-8."_
 
         **Herausforderung:** Kombiniere Ideen aus den letzten paar Aufgaben um dieses Level abzuschließen.
@@ -4755,6 +5360,27 @@ de-DE:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Mach so weiter!"_
 
         Benutze, was du bisher gelernt hast um den ganzen Metallschrott aufzusammeln!
+      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"\"Hallo, ich bin Elsa von Arendelle, helfe mir, eine Form zu zeichnen.\"\"_
+        \n\nZeichne ein Sechseck mit 50 Pixel langen Seiten. \n\n* * *\n\nEin Sechseck
+        zeichnest du so: \n\n-   um **50** Pixel vorwärts bewegen \n-   um **60**
+        Grad nach rechts drehen \n-   insgesamt **6** Mal wiederholen"
+      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"\"Hallo, ich bin Elsa von Arendelle, helfe mir, eine Form zu zeichnen.\"\"_
+        \n\nZeichne ein Sechseck mit 50 Pixel langen Seiten. \n\n* * *\n\nEin Sechseck
+        zeichnest du so: \n\n-   um **50** Pixel vorwärts bewegen \n-   um **60**
+        Grad nach rechts drehen \n-   insgesamt **6** Mal wiederholen"
+      courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \"Gut gemacht!“\\_ \n\nNach deinem Sechseck drehe dich um **60** Grad nach
+        rechts und zeichne dann eine Linie, die **150** Pixel lang ist. \n\nBeende
+        dein Programm, indem du Elsa mit dem <xml><block type=\"jump_to\"><title name=\"VALUE\">middle
+        center</title></block></xml> Block wieder in die Mitte des Spielfeldes bringst."
+      courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \"Gut gemacht!“\\_ \n\nNach deinem Sechseck drehe dich um **60** Grad nach
+        rechts und zeichne dann eine Linie, die **150** Pixel lang ist. \n\nBeende
+        dein Programm, indem du Elsa mit dem <xml><block type=\"jump_to\" block-text=\"jump
+        to the middle center position\"><title name=\"VALUE\">middle center</title></block></xml>
+        Block wieder in die Mitte des Spielfeldes bringst."
       courseD_artist_3_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Lass uns eine Schneeflocke machen..”_
 
@@ -4763,12 +5389,62 @@ de-DE:
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Lass uns eine Schneeflocke machen..”_
 
         Um diesen Code in eine Schneeflocke zu verwandeln, schachtele den gesamten Code in eine weitere `wiederhole`-Schleife und lasse diese insgesamt **6** Mal laufen.  Du solltest nur einen Block hinzufügen müssen.
+      courseD_artist_4_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Lasst uns ganz besondere Schneeflocken machen!\"_ \n\n**Inspiration:** Wo
+        musst du Code hinzufügen, wenn du ein winziges Quadrat an der Spitze jeder
+        langen Linie zeichnen willst? \n\n* * *\n\nDu kannst in diesem Rätsel verschiedene
+        Dinge versuchen, aber hier ein Vorschlag für dich: \n\nVersuche , am Ende
+        jeder Zeile ein winziges Quadrat zu erstellen \n\n-   Jede Seite sollte 15
+        Pixel lang sein \n-   du solltest dich um 90 Grad drehen \n-   Wiederhole
+        diese Aktionen insgesamt 4 Mal"
+      courseD_artist_4_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Lasst uns ganz besondere Schneeflocken machen!\"_ \n\n**Inspiration:** Wo
+        musst du Code hinzufügen, wenn du ein winziges Quadrat an der Spitze jeder
+        langen Linie zeichnen willst? \n\n* * *\n\nDu kannst in diesem Rätsel verschiedene
+        Dinge versuchen, aber hier ein Vorschlag für dich: \n\nVersuche , am Ende
+        jeder Zeile ein winziges Quadrat zu erstellen \n\n-   Jede Seite sollte 15
+        Pixel lang sein \n-   du solltest dich um 90 Grad drehen \n-   Wiederhole
+        diese Aktionen insgesamt 4 Mal"
+      courseD_artist_5_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \"Versuche , die Formen oder die Länge der Linien zu ändern, um deine eigene
+        Variante zu erstellen!\"\\_ \n\n**Inspiration:** Du kannst deine Zeichnung
+        nach Belieben ändern, aber hier ist ein Vorschlag für dich: \n\n-   Versuche
+        , die unterschiedlichen Formen in der Mitte der Schneeflocke mit denen am
+        Ende jeder Linie zu vertauschen!"
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Versuche, die Formen oder die Längen der Linien zu ändern, um diese nach
         deinem Geschmack aussehen zu lassen!\"_\n\n<br/>  \n\n**Inspiration:** Du
         kannst deine Zeichnung beliebig ändern, aber hier ist eine Idee:\n\n-   Versuche,
         die Formen in der Mitte der Schneeflocke mit denen am Ende jeder Linie zu
         tauschen!"
+      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \"Lass uns etwas Neues ausprobieren. Laufe diesmal im Zickzack.\"\\_ \n\n<br/>
+        \n\n**Inspiration:** Versuche , deine 150 Pixel lange Linie in 6 kurze Linien
+        mit **25** Pixel Länge umzuwandeln \n\n-   Drehe nach jeder kurzen Zeile um
+        **45** Grad in abwechselnde Richtungen, um einen Zickzack-Muster zu erhalten
+        \n-   Wo musst du einen neuen `Wiederholen`-Block\\` einfügen, um das zu erreichen?
+        \n-   Wie oft musst du dein Muster von 2 kurzen Linien wiederholen, um insgesamt
+        6 zu erhalten?"
+      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \"Lass uns etwas Neues ausprobieren. Laufe diesmal im Zickzack.\"\\_ \n\n<br/>
+        \n\n**Inspiration:** Versuche , deine 150 Pixel lange Linie in 6 kurze Linien
+        mit **25** Pixel Länge umzuwandeln \n\n-   Drehe nach jeder kurzen Zeile um
+        **45** Grad in abwechselnde Richtungen, um einen Zickzack-Muster zu erhalten
+        \n-   Wo musst du einen neuen `Wiederholen`-Block\\` einfügen, um das zu erreichen?
+        \n-   Wie oft musst du dein Muster von 2 kurzen Linien wiederholen, um insgesamt
+        6 zu erhalten?"
+      courseD_artist_binary1: |-
+        Wir haben dir ein Raster von "Pixeln" zur Verfügung gestellt, das du benutzen kannst, um Entwürfe zu machen, indem du nur bestimmte Quadrate einschaltest.
+
+        Verwende die untenstehenden Bausteine, um den Zeichner "01010101" in binärer Form in der ersten Reihe zeichnen zu lassen.
+      courseD_artist_binary1_2018: |-
+        Wir haben dir ein Raster von "Pixeln" zur Verfügung gestellt, das du benutzen kannst, um Entwürfe zu machen, indem du nur bestimmte Quadrate einschaltest.
+
+        Verwende die untenstehenden Bausteine, um den Zeichner "01010101" in binärer Form in der ersten Reihe zeichnen zu lassen.
+      courseD_artist_binary1_2019: |-
+        Wir haben dir ein Raster von "Pixeln" zur Verfügung gestellt, das du benutzen kannst, um Entwürfe zu machen, indem du nur bestimmte Quadrate einschaltest.
+
+        Verwende die untenstehenden Bausteine, um den Zeichner "01010101" in binärer Form in der ersten Reihe zeichnen zu lassen.
       courseD_artist_binary_challenge1_2018: Du kannst jeden Binärwert (0 oder 1)
         nur jeweils einmal in diesem Rätsel verwenden. Versuche verschachtelte Schleifen
         zu verwenden, um diese Zeichnung zu vervollständigen.
@@ -5009,6 +5685,10 @@ de-DE:
         _"Diese Wolke versperrt mir die Sicht!"_
 
         Prüfe, ob sich unter der Wolke eine Blüte befindet. Wenn es dort eine Blüte gibt, sammele Nektar.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"Diese Wolke versperrt mir die Sicht!"_
+
+        Prüfe, ob sich unter der Wolke eine Blüte befindet. Wenn es dort eine Blüte gibt, sammele Nektar.
       courseD_bee_conditionals4: |-
         In diesem Puzzle wissen wir, dass jede Blüte genau eine Einheit Nektar hat, aber die Blüten sind nicht gleichmäßig verteilt.
 
@@ -5018,6 +5698,10 @@ de-DE:
 
         Hol dir mit so wenigen Blöcken wie möglich den ganzen Nektar.
       courseD_bee_conditionals4_2019: |-
+        In diesem Puzzle wissen wir, dass jede Blüte genau eine Einheit Nektar hat, aber die Blüten sind nicht gleichmäßig verteilt.
+
+        Hol dir mit so wenigen Blöcken wie möglich den ganzen Nektar.
+      courseD_bee_conditionals4_copy: |-
         In diesem Puzzle wissen wir, dass jede Blüte genau eine Einheit Nektar hat, aber die Blüten sind nicht gleichmäßig verteilt.
 
         Hol dir mit so wenigen Blöcken wie möglich den ganzen Nektar.
@@ -5142,10 +5826,74 @@ de-DE:
         * * *
 
         Lasse den Ball so lange prallen, bis er das Ziel erreicht hat.
+      courseD_collector_debugging1: |-
+        _"Oh nein! Ich sehe ein Problem."_
+
+        Behebe den/die Fehler, um alle Schätze einzusammeln.
+      courseD_collector_debugging10_predict1: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging1a_2018: |-
+        _"Oh nein! Ich sehe ein Problem."_
+
+        Behebe den/die Fehler, um alle Schätze einzusammeln.
+      courseD_collector_debugging1a_2019: |-
+        _"Oh nein! Ich sehe ein Problem."_
+
+        Behebe den/die Fehler, um alle Schätze einzusammeln.
+      courseD_collector_debugging2: |-
+        _"Du kannst es schaffen!"_
+
+        Behebe den/die Fehler, um den gesamten Schatz einzusammeln.
+      courseD_collector_debugging2a_2018: |-
+        _"Du kannst es schaffen!"_
+
+        Behebe den/die Fehler, um den gesamten Schatz einzusammeln.
+      courseD_collector_debugging2a_2019: |-
+        _"Du kannst es schaffen!"_
+
+        Behebe den/die Fehler, um den gesamten Schatz einzusammeln.
+      courseD_collector_debugging4: |-
+        _"Lass dich nicht unterkriegen. Du schaffst das!"_
+
+        Behebe den/die Fehler, um den gesamten Schatz einzusammeln.
+      courseD_collector_debugging4a_2018: |-
+        _"Lass dich nicht unterkriegen. Du schaffst das!"_
+
+        Behebe den/die Fehler, um den gesamten Schatz einzusammeln.
+      courseD_collector_debugging4a_2019: |-
+        _"Lass dich nicht unterkriegen. Du schaffst das!"_
+
+        Behebe den/die Fehler, um den gesamten Schatz einzusammeln.
       courseD_collector_debugging6a_2018: 'Herausforderung: Verwende den Code im Arbeitsbereich,
         um mindestens **6** Schätze zu erreichen!'
       courseD_collector_debugging6a_2019: 'Herausforderung: Verwende den Code im Arbeitsbereich,
         um mindestens **6** Schätze zu erreichen!'
+      courseD_collector_debugging8: |-
+        _"So viele Schätze!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging8a_2018: |-
+        _"So viele Schätze!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging8a_2019: |-
+        _"So viele Schätze!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging9: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging9a_2018: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging9a_2019: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
       courseD_collector_nested_loops_challenge2: |-
         _“Lass uns auf die Schatzsuche gehen - mit Schleifen!“_
 
@@ -5171,27 +5919,27 @@ de-DE:
       courseD_farmer_condLoops1: |-
         _“Kannst du mir heute bei der Ernte helfen?“_
 
-        "Hilf der Erntemaschine dabei, ihre Reihe Mais zu kontrollieren, um zu sehen, ob etwas geerntet werden kann. Verwende Bedingungen, um jeden Sprössling zu untersuchen. Jeder Stängel hat entweder **0 oder 1** erntereife Maiskolben.
+        Hilf der Erntearbeiterin dabei, ihre Reihe Mais zu überwachen, um zu sehen, ob etwas geerntet werden kann. Verwende Bedingungen, um jeden Sprössling zu untersuchen. Jeder Stängel hat entweder **0 oder 1** erntereife Maiskolben.
       courseD_farmer_condLoops1_2018: |-
         _“Kannst du mir heute bei der Ernte helfen?“_
 
-        "Hilf der Erntemaschine dabei, ihre Reihe Mais zu kontrollieren, um zu sehen, ob etwas geerntet werden kann. Verwende Bedingungen, um jeden Sprössling zu untersuchen. Jeder Stängel hat entweder **0 oder 1** erntereife Maiskolben.
+        Hilf der Erntearbeiterin dabei, ihre Reihe Mais zu überwachen, um zu sehen, ob etwas geerntet werden kann. Verwende Bedingungen, um jeden Sprössling zu untersuchen. Jeder Stängel hat entweder **0 oder 1** erntereife Maiskolben.
       courseD_farmer_condLoops1_2019: |-
         _“Kannst du mir heute bei der Ernte helfen?“_
 
-        "Hilf der Erntemaschine dabei, ihre Reihe Mais zu kontrollieren, um zu sehen, ob etwas geerntet werden kann. Verwende Bedingungen, um jeden Sprössling zu untersuchen. Jeder Stängel hat entweder **0 oder 1** erntereife Maiskolben.
-      courseD_farmer_condLoops2: "_“Lass uns beide Ernten aus dieser Reihe einsammeln!“_\n\n\"Dieser
-        Garten ist ganz durcheinander, es gibt sowohl **Mais als auch Salat**! \n\nHilf
-        dem Mähdrescher, die erntereifen Pflanzen zu pflücken. Jede Pflanze verfügt
-        entweder über **einen** Maiskolben oder **einen** Salatkopf."
-      courseD_farmer_condLoops2_2018: "_“Lass uns beide Ernten aus dieser Reihe einsammeln!“_\n\n\"Dieser
-        Garten ist ganz durcheinander, es gibt sowohl **Mais als auch Salat**! \n\nHilf
-        dem Mähdrescher, die erntereifen Pflanzen zu pflücken. Jede Pflanze verfügt
-        entweder über **einen** Maiskolben oder **einen** Salatkopf."
-      courseD_farmer_condLoops2_2019: "_“Lass uns beide Ernten aus dieser Reihe einsammeln!“_\n\n\"Dieser
-        Garten ist ganz durcheinander, es gibt sowohl **Mais als auch Salat**! \n\nHilf
-        dem Mähdrescher, die erntereifen Pflanzen zu pflücken. Jede Pflanze verfügt
-        entweder über **einen** Maiskolben oder **einen** Salatkopf."
+        Hilf der Erntearbeiterin dabei, ihre Reihe Mais zu überwachen, um zu sehen, ob etwas geerntet werden kann. Verwende Bedingungen, um jeden Sprössling zu untersuchen. Jeder Stängel hat entweder **0 oder 1** erntereife Maiskolben.
+      courseD_farmer_condLoops2: "_“Lass uns beide Ernten aus dieser Reihe einsammeln!“_\n\nDieser
+        Garten ist ganz durcheinander, es gibt **Mais und Salat**! \n\nHilf der Erntearbeiterin,
+        die erntereifen Pflanzen zu pflücken. Jede Pflanze verfügt entweder über **einen**
+        Maiskolben oder **einen** Salatkopf."
+      courseD_farmer_condLoops2_2018: "_“Lass uns beide Ernten aus dieser Reihe einsammeln!“_\n\nDieser
+        Garten ist ganz durcheinander, es gibt **Mais und Salat**! \n\nHilf der Erntearbeiterin,
+        die erntereifen Pflanzen zu pflücken. Jede Pflanze verfügt entweder über **einen**
+        Maiskolben oder **einen** Salatkopf."
+      courseD_farmer_condLoops2_2019: "_“Lass uns beide Ernten aus dieser Reihe einsammeln!“_\n\nDieser
+        Garten ist ganz durcheinander, es gibt **Mais und Salat**! \n\nHilf der Erntearbeiterin,
+        die erntereifen Pflanzen zu pflücken. Jede Pflanze verfügt entweder über **einen**
+        Maiskolben oder **einen** Salatkopf."
       courseD_farmer_condLoops3: |-
         _"Mais, Salat UND Kürbisse! Hilf mir, das alles zu ernten."_
 
@@ -5204,12 +5952,21 @@ de-DE:
         _"Mais, Salat UND Kürbisse! Hilf mir, das alles zu ernten."_
 
         Auf jeder Pflanze wird es entweder einen Maiskolben, einen Salatkopf oder einen Kürbis geben.
-      courseD_farmer_condLoops4: |-
-        \_"Meine Güte! Jetzt wächst der Salat in Büscheln!"
-
-        \_Die Erntemaschine will alles aus ihrem Salatgarten pflücken. Auf jeder Pflanze wird nun mehr als ein Salatkopf wachsen, so dass der Bauer weiter pflücken muss, während der Salat noch wächst.
-
-        ###### (Denk daran: In diesem Garten gibt es nur Salat!)
+      courseD_farmer_condLoops4: "_\"Meine Güte! Jetzt wächst der Salat in Büscheln!\"_
+        \n\nDie Erntearbeiterin will alles aus ihrem Salatgarten ernten. Aus jeder
+        Pflanze wird nun mehr als ein Salatkopf wachsen, sodass die Erntearbeiterin
+        weiter pflücken muss, während der Salat noch wächst. \n\n##### (Denk daran:
+        In diesem Garten gibt es nur Salat!)"
+      courseD_farmer_condLoops4_2018: "_\"Meine Güte! Jetzt wächst der Salat in Büscheln!\"_
+        \n\nDie Erntearbeiterin will alles aus ihrem Salatgarten ernten. Aus jeder
+        Pflanze wird nun mehr als ein Salatkopf wachsen, sodass die Erntearbeiterin
+        weiter pflücken muss, während der Salat noch wächst. \n\n##### (Denk daran:
+        In diesem Garten gibt es nur Salat!)"
+      courseD_farmer_condLoops4_2019: "_\"Meine Güte! Jetzt wächst der Salat in Büscheln!\"_
+        \n\nDie Erntearbeiterin will alles aus ihrem Salatgarten ernten. Aus jeder
+        Pflanze wird nun mehr als ein Salatkopf wachsen, sodass die Erntearbeiterin
+        weiter pflücken muss, während der Salat noch wächst. \n\n##### (Denk daran:
+        In diesem Garten gibt es nur Salat!)"
       courseD_farmer_condLoops5: |-
         _“Was für eine großartige Ernte“_
 
@@ -5282,8 +6039,8 @@ de-DE:
         \_"Es ist ein sehr vielseitiges Gemüselabyrinth!"
 
         Bei den Kürbissen rechts, bei den Salatköpfen links abbiegen. Sammele alles ein, um den Level abzuschließen.
-      courseD_farmer_until_challenge2: Verwende `Wenn/Sonst`-Blöcke, um dem gewundenen
-        Pfad zu folgen. Verwende an jeder Ecke den Befehl `1 entfernen` in einer Schleife,
+      courseD_farmer_until_challenge2: Verwende Wenn/Sonst-Bausteine, um dem gewundenen
+        Pfad zu folgen. Verwende an jeder Ecke den Befehl `entferne 1` in einer Schleife,
         um die Erdhaufen zu entfernen.
       courseD_farmer_while1: "_\"Hallo, ich bin Landwirt. Ich brauche deine Hilfe,
         um das Feld auf meinem Hof zu ebnen, damit es für das Pflanzen bereit ist!\"_
@@ -5354,13 +6111,13 @@ de-DE:
       courseD_farmer_while_challenge2: Fülle alle Löcher und entferne alle Erdhaufen.
       courseD_harvester_nested_loops_challenge1: _"Ich brauche etwas Hilfe auf dem
         Bauernhof! Hilf mir bei der Ernte von diesem Mais, indem du nur die Blöcke
-        aus deinem Werkzeugkiste verwendest."_
+        aus deiner Werkzeugkiste verwendest."_
       courseD_harvester_nested_loops_challenge1_2018: _"Ich brauche etwas Hilfe auf
         dem Bauernhof! Hilf mir bei der Ernte von diesem Mais, indem du nur die Blöcke
-        aus deinem Werkzeugkiste verwendest."_
+        aus deiner Werkzeugkiste verwendest."_
       courseD_harvester_nested_loops_challenge1_2019: _"Ich brauche etwas Hilfe auf
         dem Bauernhof! Hilf mir bei der Ernte von diesem Mais, indem du nur die Blöcke
-        aus deinem Werkzeugkiste verwendest."_
+        aus deiner Werkzeugkiste verwendest."_
       courseD_iceage_loops1: Hilf Scrat über das glitschige Eis, um an die Eichel
         zu gelangen!
       courseD_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
@@ -5447,12 +6204,48 @@ de-DE:
       courseD_maze_ramp2_2019: Ziehe einen zusätzlichen Block `Vorwärts bewegen` aus
         der Werkzeugkiste und hänge ihn dann alle Blöcke an `wenn ausgeführt` an,
         um deinen Code abzuschließen.
+      courseD_maze_ramp3: |-
+        _""Dieses Schwein zerzaust mein Gefieder.“_
+
+        Es gibt einen zusätzlichen Block, der den Vogel zum Absturz bringen wird
+        Wirf ihn weg, indem du ihn von den anderen Blocks entfernst und ihn zurück in die Werkzeugkiste ziehst.
+      courseD_maze_ramp3_2018: |-
+        _""Dieses Schwein zerzaust mein Gefieder.“_
+
+        Es gibt einen zusätzlichen Block, der den Vogel zum Absturz bringen wird
+        Wirf ihn weg, indem du ihn von den anderen Blocks entfernst und ihn zurück in die Werkzeugkiste ziehst.
       courseD_maze_ramp3_2019: |-
         Hilf dem Vogel, zum Schwein zu kommen. Es gibt einen zusätzlichen blauen `Vorwärts bewegen` Baustein.
 
         Wirf den übeflüssigen Baustein weg, indem du ihn von den anderen Bausteinen entfernst und ihn zurück in den Werkzeugkasten ziehst.
+      courseD_maze_ramp4: "_\"Verfolge den Pfad und führe mich zum Schwein\"._ \n\nVermeide
+        das TNT, sonst fliegen die Federn!"
+      courseD_maze_ramp4_2018: "_\"Verfolge den Pfad und führe mich zum Schwein\"._
+        \n\nVermeide das TNT, sonst fliegen die Federn!"
       courseD_maze_ramp4_2019: '\_"Verfolge den Weg und führe mich zum Eichel." \_ '
+      courseD_maze_ramp5: |-
+        _""Folge diesem Weg, um mich zu dem Schwein zu bringen!""_
+
+        \_ Vermeide den Sprengstoff.
+      courseD_maze_ramp5_2018: |-
+        _""Folge diesem Weg, um mich zu dem Schwein zu bringen!""_
+
+        \_ Vermeide den Sprengstoff.
+      courseD_maze_ramp5_2019: |-
+        _""Folge diesem Weg, um mich zu dem Schwein zu bringen!""_
+
+        \_ Vermeide den Sprengstoff.
+      courseD_maze_ramp5a: Achte auf die Reihenfolge und schau, ob du herausfinden
+        kannst, wie du zu diesem Schwein kommst!
+      courseD_maze_ramp5a_2018: Achte auf die Reihenfolge und schau, ob du herausfinden
+        kannst, wie du zu diesem Schwein kommst!
       courseD_maze_ramp5a_2019: Zähle die Felder auf dem Gitter sorgfältig!
+      courseD_maze_ramp5b: "**Aufgabe:** Navigiere durch dieses Labyrinth, um dem
+        Vogel zu helfen, das Schwein zu finden!"
+      courseD_maze_ramp5b_2018: "**Aufgabe:** Navigiere durch dieses Labyrinth, um
+        dem Vogel zu helfen, das Schwein zu finden!"
+      courseD_maze_ramp5b_2019: "**Aufgabe:** Navigiere durch dieses Labyrinth, um
+        dem Vogel zu helfen, das Schwein zu finden!"
       courseD_maze_ramp5c: Hilf dem Vogel, an das Schwein zu kommen.
       courseD_maze_ramp5c_2018: Hilf dem Vogel, an das Schwein zu kommen.
       courseD_maze_ramp5c_2019: Hilf Scrat zur Eichel zu gelangen.
@@ -5561,12 +6354,235 @@ de-DE:
         hinzu! Lasse jedes deiner Sprites anders reagieren, wenn es angeklickt wird.\n-
         \  Füge weitere Events hinzu! Verwende die anderen Bausteine in der Kategorie
         `Events`."
+      courseE_artist_concept_challenge2: Erstelle fünf Windrädchen-Entwürfe unter
+        Verwendung des untenstehenden Programm-Codes.
+      courseE_artist_concept_challenge2_2018: Erstelle fünf Windrädchen-Entwürfe unter
+        Verwendung des untenstehenden Programm-Codes.
+      courseE_artist_functions10: "Verwende diesmal Linien aus 8 Sechsecken mit 25
+        Pixel langen Seiten. \n\n-   Um die Sechsecke herzustellen, wiederhole die
+        Seite 6 Mal und drehe dich dabei um 60 Grad. \n-   Springe 25 Pixel zwischen
+        jedem Sechseck. \n-   Um eine Raute zu zeichnen, musst du dich abwechselnd
+        um **60 Grad und 120 Grad** drehen."
+      courseE_artist_functions10_2018: "Verwende diesmal Linien aus 8 Sechsecken mit
+        25 Pixel langen Seiten. \n\n-   Um die Sechsecke herzustellen, wiederhole
+        die Seite 6 Mal und drehe dich dabei um 60 Grad. \n-   Springe 25 Pixel zwischen
+        jedem Sechseck. \n-   Um eine Raute zu zeichnen, musst du dich abwechselnd
+        um **60 Grad und 120 Grad** drehen."
+      courseE_artist_functions10_2019: "Verwende diesmal Linien aus 8 Sechsecken mit
+        25 Pixel langen Seiten. \n\n-   Um die Sechsecke herzustellen, wiederhole
+        die Seite 6 Mal und drehe dich dabei um 60 Grad. \n-   Springe 25 Pixel zwischen
+        jedem Sechseck. \n-   Um eine Raute zu zeichnen, musst du dich abwechselnd
+        um **60 Grad und 120 Grad** drehen."
+      courseE_artist_functions2_2018: Hier ist eine Funktion mit dem Namen `Zeichne
+        ein Quadrat`. Benutze sie, um diese Zeichnung zu vervollständigen. \* \* \*
+        Die Quadrate sind 75 Pixel voneinander entfernt.
+      courseE_artist_functions2_2019: Hier ist eine Funktion mit dem Namen `Zeichne
+        ein Quadrat`. Benutze sie, um diese Zeichnung zu vervollständigen. \* \* \*
+        Die Quadrate sind 75 Pixel voneinander entfernt.
+      courseE_artist_functions3_2018: Erstelle eine Funktion, die diesen Stern erzeugt.
+        \* \* \* - Jeder Achse des Sterns ist 25 Pixel lang - Du musst dich um 45
+        Grad drehen, um 8 Achsen zu erhalten - Es ist in zulässig, sich über dieselbe
+        Achse vorwärts und rückwärts zu bewegen
+      courseE_artist_functions3_2019: Erstelle eine Funktion, die diesen Stern erzeugt.
+        \* \* \* - Jeder Achse des Sterns ist 25 Pixel lang - Du musst dich um 45
+        Grad drehen, um 8 Achsen zu erhalten - Es ist in zulässig, sich über dieselbe
+        Achse vorwärts und rückwärts zu bewegen
+      courseE_artist_functions5_2018: Wann ist es schwieriger, drei Sterne zu ziehen
+        als vier? Wenn man auch noch über den Mond springen muss! Zeichne nur diese
+        drei Sterne, um dieses Rätsel zu lösen. \* \* \* - Der Sprung zwischen dem
+        ersten und zweiten Stern beträgt **200** Pixel - Der Sprung zwischen dem zweiten
+        und dritten Stern beträgt **100** Pixel
+      courseE_artist_functions5_2019: Wann ist es schwieriger, drei Sterne zu ziehen
+        als vier? Wenn man auch noch über den Mond springen muss! Zeichne nur diese
+        drei Sterne, um dieses Rätsel zu lösen. \* \* \* - Der Sprung zwischen dem
+        ersten und zweiten Stern beträgt **200** Pixel - Der Sprung zwischen dem zweiten
+        und dritten Stern beträgt **100** Pixel
+      courseE_artist_functions7_2018: Es wäre sehr umständlich, alle diese Fenster
+        einzeln zu zeichnen. Versuche, dieses Rätsel zu lösen, indem du `Ein Fenster
+        zeichnen` erstellst und es fünfmal aufrufst. Achtung bei der Tür! \* \* \*
+        - Jedes Fenster besteht aus vier **25** Pixel langen/breiten Quadraten. -
+        Die oberen Fenster sind einen **100** Pixel-Sprung voneinander entfernt. -
+        Die unteren Fenster sind einen **150** Pixel-Sprung unterhalb des oberen Satzes.
+      courseE_artist_functions7_2019: Es wäre sehr umständlich, alle diese Fenster
+        einzeln zu zeichnen. Versuche, dieses Rätsel zu lösen, indem du `Ein Fenster
+        zeichnen` erstellst und es fünfmal aufrufst. Achtung bei der Tür! \* \* \*
+        - Jedes Fenster besteht aus vier **25** Pixel langen/breiten Quadraten. -
+        Die oberen Fenster sind einen **100** Pixel-Sprung voneinander entfernt. -
+        Die unteren Fenster sind einen **150** Pixel-Sprung unterhalb des oberen Satzes.
+      courseE_artist_functions8a_2018: _"Funktioniert ganz einfach!"_ Wir werden jetzt
+        etwas Ausgefallenes bauen! Beginne mit der Erstellung einer Funktion für dieses
+        Quadrat.
+      courseE_artist_functions8a_2019: _"Funktioniert ganz einfach!"_ Wir werden jetzt
+        etwas Ausgefallenes bauen! Beginne mit der Erstellung einer Funktion für dieses
+        Quadrat.
+      courseE_artist_functions8b_2018: _"Dem Zombie wird es schwindlig“_ Rufe die
+        Funktion `Ein Quadrat zeichnen` aus dem Inneren Ihrer Funktion `Eine Linie
+        von Quadraten zeichnen` auf, um es dir noch einfacher zu machen! \* \* Die
+        Quadrate sind _50_ Pixel voneinander entfernt.
+      courseE_artist_functions8b_2019: _"Dem Zombie wird es schwindlig“_ Rufe die
+        Funktion `Ein Quadrat zeichnen` aus dem Inneren Ihrer Funktion `Eine Linie
+        von Quadraten zeichnen` auf, um es dir noch einfacher zu machen! \* \* Die
+        Quadrate sind _50_ Pixel voneinander entfernt.
+      courseE_artist_functions8c_2018: Füge eine weitere Funktion hinzu, die diesen
+        Stapel von versetzten Quadraten mit Hilfe der Funktion `Eine Linie von Quadraten
+        zeichnen` erzeugt.
+      courseE_artist_functions8c_2019: Füge eine weitere Funktion hinzu, die diesen
+        Stapel von versetzten Quadraten mit Hilfe der Funktion `Eine Linie von Quadraten
+        zeichnen` erzeugt.
+      courseE_artist_functions9_2018: "**Aufgabe:** Erstelle dieses Bild mit der begrenzten
+        Zahl der zur Verfügung gestellten Blöcke. - Jedes Dreieck hat **50 Pixel**
+        lange Seiten - Um eine Raute zu zeichnen, musst du dich abwechselnd um **60
+        Grad und 120 Grad** drehen."
+      courseE_artist_functions9_2019: "**Aufgabe:** Erstelle dieses Bild mit der begrenzten
+        Zahl der zur Verfügung gestellten Blöcke. - Jedes Dreieck hat **50 Pixel**
+        lange Seiten - Um eine Raute zu zeichnen, musst du dich abwechselnd um **60
+        Grad und 120 Grad** drehen."
+      courseE_artist_functionsProj_2018: "**Inspiration:** Verwende, das was du gelernt
+        hast, wie immer du willst! Kannst du so etwas wie dieses Windrädchen erstellen?"
+      courseE_artist_functionsProj_2019: "**Inspiration:** Verwende, das was du gelernt
+        hast, wie immer du willst! Kannst du so etwas wie dieses Windrädchen erstellen?"
+      courseE_artist_functions_predict1: 'Hier ist ein Rätsel, das eine Funktion verwendet,
+        die wir bereits definiert haben. '
+      courseE_artist_functions_predict1_2018: 'Hier ist ein Rätsel, das eine Funktion
+        verwendet, die wir bereits definiert haben. '
+      courseE_artist_functions_predict1_2019: 'Hier ist ein Rätsel, das eine Funktion
+        verwendet, die wir bereits definiert haben. '
+      courseE_artist_functions_predict1_copy: 'Hier ist ein Rätsel, das eine Funktion
+        verwendet, die wir bereits definiert haben. '
       courseE_bee_functions3: Funktionen sind Programm-Bausteine, die eine Aufgabe
         ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
         zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
         Blockzählung ermöglicht.
+      courseE_farmer_functions1: |-
+        _"Sind wir uns schon einmal begegnet? Ich bin die Erntearbeiterin!"_
+
+        Hilf der Erntearbeiterin, zum Kürbis zu kommen und ihn zu pflücken.
+      courseE_farmer_functions10a1_2018: "**Aufgabe:** Nutze alles, was du bisher
+        gelernt hast, um dieses Rätsel mit höchstens 19 Blöcken zu lösen!"
+      courseE_farmer_functions10a1_2019: "**Aufgabe:** Nutze alles, was du bisher
+        gelernt hast, um dieses Rätsel mit höchstens 19 Blöcken zu lösen!"
+      courseE_farmer_functions10b: Verwende deine neue Funktion zweimal, um dieses
+        Rätsel zu lösen.
+      courseE_farmer_functions11_predict: Finde heraus, welche Funktion du verwenden
+        und welche du löschen musst, dann löse dieses Rätsel!
+      courseE_farmer_functions11_predict_2018: Finde heraus, welche Funktion du verwenden
+        und welche du löschen musst, dann löse dieses Rätsel!
+      courseE_farmer_functions11_predict_2019: Finde heraus, welche Funktion du verwenden
+        und welche du löschen musst, dann löse dieses Rätsel!
+      courseE_farmer_functions13_2018: 'Löse dieses Rätsel mit höchstens 23 Blöcken.
+        \* \* \* \* ###### Aus jedem Sprössling wächst entweder _ein_ Maiskolben oder
+        nichts. Um die beste Lösung zu finden, musst du die Funktionen direkt bearbeiten.'
+      courseE_farmer_functions13_2019: 'Löse dieses Rätsel mit höchstens 23 Blöcken.
+        \* \* \* \* ###### Aus jedem Sprössling wächst entweder _ein_ Maiskolben oder
+        nichts. Um die beste Lösung zu finden, musst du die Funktionen direkt bearbeiten.'
+      courseE_farmer_functions1_2018: |-
+        _"Sind wir uns schon einmal begegnet? Ich bin die Erntearbeiterin!"_
+
+        Hilf der Erntearbeiterin, zum Kürbis zu kommen und ihn zu pflücken.
+      courseE_farmer_functions1_2019: |-
+        _"Sind wir uns schon einmal begegnet? Ich bin die Erntearbeiterin!"_
+
+        Hilf der Erntearbeiterin, zum Kürbis zu kommen und ihn zu pflücken.
+      courseE_farmer_functions1a_2018: "\"Nun helfe dem Mähdrescher, den gesamten
+        Mais auf dem Weg zum Kürbis am Ende des Weges zu pflücken. \\* \\* \\* \\*
+        ####### Hinweis: Jedes Quadrat auf dem Weg zum Kürbis enthält entweder **1**
+        Einheit Mais oder überhaupt nichts. Benutze die mitgelieferte Funktion `Mais
+        suchen`, um sicherzustellen, dass dass du alles mitnimmst."
+      courseE_farmer_functions1a_2019: "\"Nun helfe dem Mähdrescher, den gesamten
+        Mais auf dem Weg zum Kürbis am Ende des Weges zu pflücken. \\* \\* \\* \\*
+        ####### Hinweis: Jedes Quadrat auf dem Weg zum Kürbis enthält entweder **1**
+        Einheit Mais oder überhaupt nichts. Benutze die mitgelieferte Funktion `Mais
+        suchen`, um sicherzustellen, dass dass du alles mitnimmst."
+      courseE_farmer_functions2b: |-
+        Hilf der Erntearbeiterin bei der Ernte von Mais und Kürbissen.
+
+        * * *
+
+        ##### Aus jedem Trieb wird entweder _ein_ Mais oder nichts wachsen.
+      courseE_farmer_functions2b_2018: |-
+        Verwende die Funktion, um der Erntearbeiterin bei der Ernte von Mais und Kürbissen zu helfen.
+
+        * * *
+
+        ##### Aus jedem Trieb wird entweder _ein_ Mais oder nichts wachsen.
+      courseE_farmer_functions2b_2019: |-
+        Verwende die Funktion, um der Erntearbeiterin bei der Ernte von Mais und Kürbissen zu helfen.
+
+        * * *
+
+        ##### Aus jedem Trieb wird entweder _ein_ Mais oder nichts wachsen.
+      courseE_farmer_functions2ba_2018: '_"Ich fühle mich so funktional!"_ Jetzt gibt
+        es mehrere Kürbisse in jedem Patch! Schaue dir die nachstehenden Funktionsdefinitionen
+        genau an, um zu verstehen, wie jede von ihnen verwendet wird. \* \* \* \*
+        ###### Aus jedem Sprössling wächst entweder _ein_ Maiskolben oder nichts.'
+      courseE_farmer_functions2ba_2019: '_"Ich fühle mich so funktional!"_ Jetzt gibt
+        es mehrere Kürbisse in jedem Patch! Schaue dir die nachstehenden Funktionsdefinitionen
+        genau an, um zu verstehen, wie jede von ihnen verwendet wird. \* \* \* \*
+        ###### Aus jedem Sprössling wächst entweder _ein_ Maiskolben oder nichts.'
+      courseE_farmer_functions3c1_2018: Habe bemerkt, dass dieses letzten Rätsel eine
+        Menge von Code-Wiederholungen enthielt? Wir können Platz sparen, indem wir
+        diesen Code `am Weg sammeln` nennen und eine neue Funktion verwenden, um die
+        anderen Funktionen aufzurufen! Verwende `am Weg sammeln`, um dieses Rätsel
+        noch einmal mit weniger Blöcken zu lösen.
+      courseE_farmer_functions3c1_2019: Habe bemerkt, dass dieses letzten Rätsel eine
+        Menge von Code-Wiederholungen enthielt? Wir können Platz sparen, indem wir
+        diesen Code `am Weg sammeln` nennen und eine neue Funktion verwenden, um die
+        anderen Funktionen aufzurufen! Verwende `am Weg sammeln`, um dieses Rätsel
+        noch einmal mit weniger Blöcken zu lösen.
+      courseE_farmer_functions3c_2018: Toll! Teste deine Funktionen auf einem längeren
+        Weg.
+      courseE_farmer_functions3c_2019: Toll! Teste deine Funktionen auf einem längeren
+        Weg.
       courseE_farmer_functions4b: Verwende deine neue Funktion, um dieses Rätsel zu
         lösen.
+      courseE_farmer_functions7a1_2018: |-
+        _"Die Funktion **Salat** macht mehr mit weniger Arbeit!"_
+
+        Erstelle eine Funktion, die der Erntearbeiterin einen quadratischen Weg entlang schickt, um einen einzelnen Salatkopf aus der Mitte jeder Reihe zu pflücken.
+      courseE_farmer_functions7a1_2019: |-
+        _"Die Funktion **Salat** macht mehr mit weniger Arbeit!"_
+
+        Erstelle eine Funktion, die der Erntearbeiterin einen quadratischen Weg entlang schickt, um einen einzelnen Salatkopf aus der Mitte jeder Reihe zu pflücken.
+      courseE_farmer_functions8a1_2018: Versuche, deine Funktion noch einmal zu schreiben.
+        Ist sie noch nützlich? Wie kannst du sie verwenden, um dieses Rätsel lösen?
+      courseE_farmer_functions8a1_2019: Versuche, deine Funktion noch einmal zu schreiben.
+        Ist sie noch nützlich? Wie kannst du sie verwenden, um dieses Rätsel lösen?
+      courseE_farmer_functions9a1_2018: "\\*\\*Dieses Rätsel ist IRR-sinnig. \\* Ist
+        deine Funktion für dieses Rätsel noch nützlich?"
+      courseE_farmer_functions9a1_2019: "\\*\\*Dieses Rätsel ist IRR-sinnig. \\* Ist
+        deine Funktion für dieses Rätsel noch nützlich?"
+      courseE_farmer_ramp11a: "Ach du meine Güte!  Dieser Haufen ist so groß, dass
+        es schwer zu erraten ist, wie viel Schmutz sich darin befindet.  \n\n* * *\n\nWir
+        haben der Toolbox einen neuen Baustein mit dem Namen `solange es einen Haufen
+        gibt`-Baustein hinzugefügt.  Benutze diesen, um Erde zu entfernen, solange
+        es noch etwas zu schaufeln gibt! "
+      courseE_farmer_ramp11a_2018: "Ach du meine Güte!  Dieser Haufen ist so groß,
+        dass es schwer zu erraten ist, wie viel Schmutz sich darin befindet.  \n\n*
+        * *\n\nWir haben der Toolbox einen neuen Baustein mit dem Namen `solange es
+        einen Haufen gibt`-Baustein hinzugefügt.  Benutze diesen, um Erde zu entfernen,
+        solange es noch etwas zu schaufeln gibt! "
+      courseE_farmer_ramp11a_2019: "Ach du meine Güte!  Dieser Haufen ist so groß,
+        dass es schwer zu erraten ist, wie viel Schmutz sich darin befindet.  \n\n*
+        * *\n\nWir haben der Toolbox einen neuen Baustein mit dem Namen `solange es
+        einen Haufen gibt`-Baustein hinzugefügt.  Benutze diesen, um Erde zu entfernen,
+        solange es noch etwas zu schaufeln gibt! "
+      courseE_farmer_ramp11b: Lass es uns noch einmal versuchen, aber mit weiteren
+        Haufen!
+      courseE_farmer_ramp11b_2018: Lass es uns noch einmal versuchen, aber mit weiteren
+        Haufen!
+      courseE_farmer_ramp11b_2019: Lass es uns noch einmal versuchen, aber mit weiteren
+        Haufen!
+      courseE_farmer_ramp12_forswap: Pflücke den ganzen Salat.
+      courseE_farmer_ramp12_forswap_2018: Ernte den ganzen Salat.
+      courseE_farmer_ramp12_forswap_2019: Ernte den ganzen Salat.
+      courseE_farmer_ramp12b: Jetzt muss die Erntearbeiterin den ganzen Salat ernten.  Benutze
+        `solange es Salat gibt` in einer `wiederhole`-Schleife, um alles zu ernten!
+      courseE_farmer_ramp12b_2018: Jetzt muss die Erntearbeiterin den ganzen Salat
+        ernten.  Benutze `solange es Salat gibt` in einer `wiederhole`-Schleife, um
+        alles zu ernten!
+      courseE_farmer_ramp12b_2019: Jetzt muss die Erntearbeiterin den ganzen Salat
+        ernten.  Benutze `solange es Salat gibt` in einer `wiederhole`-Schleife, um
+        alles zu ernten!
       courseF_artist_for1: |-
         **Freie Gestaltung:** Experimentiere mit der "Für"-Schleife und spiele mit der "Zähler"-Variablen.
 
@@ -6029,6 +7045,16 @@ de-DE:
         zu verschiedenen Maximalwerten hochzählen, indem du den Parameter `Länge`
         verwendest. Verwende ein möglichst kurzes Programm, indem du eine zweite `für-Schleife`
         außerhalb der Funktion verwendest. \n\nViel Erfolg!"
+      courseF_bee_variables_3_2018: _“Ein IRR-sinniger Garten!“_ "In diesem Rätsel
+        muss im jedem Patch die Variable um eins kleiner sein als im vorherigen Patch.
+        Subtrahiere jedes Mal durch die Schleife eins von der Variablen, wenn du die
+        gleiche Funktion zur Lösung dieses Levels verwenden möchtest.
+      courseF_bee_variables_3_2019: _“Ein IRR-sinniger Garten!“_ "In diesem Rätsel
+        muss im jedem Patch die Variable um eins kleiner sein als im vorherigen Patch.
+        Subtrahiere jedes Mal durch die Schleife eins von der Variablen, wenn du die
+        gleiche Funktion zur Lösung dieses Levels verwenden möchtest.
+      courseF_bee_variables_4_2018: "\"Unglaublich!\" \n\nBearbeite den Code, damit
+        er für dieses Rätsel funktioniert."
       courseF_bee_variables_4_2019: |-
         "Lasst uns weitermachen!"
 
@@ -6200,6 +7226,8 @@ de-DE:
         -   Vielleicht möchtest du zuerst etwas auf Millimeterpapier planen und skizzieren.
         -   Stelle etwas dar, vielleicht deinen ausgeschriebenen Namen, deine Initialen, ein Symbol oder Logo irgendeiner Art.
         -   Werde kreativ! Das Bild muss kein perfektes Quadrat sein, es kann lang und dünn sein.
+      iceage_move_to_flag: Scrat sucht nach seiner Eichel! Kannst du ihm helfen, die
+        letzten 200 Pixel zu verschieben?
       mike3bit: "# 3-Bit-Farbe\n\n**Anweisungen**\n\n-   Wir beginnen mit dem 4x2-Bild
         das Maddie erstellt hat, aber wir haben die letzten Pixel weggelassen. \n-
         \  Beende das Bild, indem Du herausfindest, welche Farben fehlt und kodieren

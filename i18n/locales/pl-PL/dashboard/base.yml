@@ -417,6 +417,8 @@ pl:
     confirm_secret_words: 'Potwierdź, że to ty, wprowadzając swoje aktualne sekretne słowa'
     enter_parent_email: "Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)"
     update_email: "Uaktualnij"
+    parent_guardian_email_label: "Adres e-mail rodzica/opiekuna"
+    none: "Żaden"
     encrypted: "zaszyfrowane"
   user_level:
     completed: 'Ukończono'
@@ -632,20 +634,6 @@ pl:
       body: "Uczniowie mogą odkrywać pojęcia z naszego kursu Zasady Informatyki w praktyczny sposób, za pomocą tych narzędzi cyfrowych. Użyj samych widżetów lub stwórz jednowymiarową lekcję dla swojej klasy."
       audience: "Wiek 14+"
       cta: "Zobacz instrukcję"
-  gallery:
-    students_drew_these_with_code: "Uczniowie narysowali to z pomocą kodu!"
-    students_made_these_with_code: "Uczniowie wykonali to z pomocą kodu!"
-    picture_count: "Przez ostatnie <b>%{days}</b> dni, uczniowie rysowali  <b>%{count}</b> obrazki pisząc własne programy komputerowe. Klikaj na obrazkach, aby zobaczyć każdy z programów w akcji."
-    activity_count: "W ciągu ostatnich dni <b>%{days}</b>, uczniowie wykonali <b>%{count}</b> aplikacje i obrazki pisząc własne programy komputerowe. Klikaj na obrazkach i zrzutach z ekranu, aby zobaczyć każdy program w akcji."
-    want_to_make_your_own: "Chcesz zrobić własną?"
-    how_to_save: "Na ostatnim poziomie tych samouczków, kliknij przycisk \"Zakończ\" i \"Zapisz\", aby zapisać swoją pracę w galerii."
-    more: "Więcej &rarr;"
-    caption_by_name_age: "przez %{name}, w wieku %{age}"
-    caption_time_ago: "%{time_ago} temu"
-    header: "Galeria"
-    header_playlab: "Opowiadania i gry"
-    header_artist: "Sztuka kodu"
-    report_abuse: "Zgłoś nadużycie"
   landing:
     report_bug: "Zgłoś błędy"
     support: "Uzyskaj pomoc"
@@ -824,6 +812,7 @@ pl:
     instructor_feedback: 'Opinie instruktora'
     peer_feedback: 'Wzajemne opinie'
     outdated: 'Ta opinia została dodana do wcześniej zgłoszonej wersji'
+    peer_review: 'Wzajemne recenzje'
   flex_category:
     required: 'Streszczenie'
     content: 'Treści'

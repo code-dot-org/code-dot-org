@@ -44,7 +44,7 @@ sk:
         locale: 'Jazyk'
         age: 'Vek'
         gender: 'Pohlavie'
-        edit_header: 'Upraviť údaje o účte'
+        edit_header: 'Upraviť nastavenia účtu'
         finish_sign_up_header: 'Dokonči vytvorenie svojho účtu'
         finish_sign_up_subheader: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre **%{email}**.'
@@ -142,7 +142,7 @@ sk:
     school_name: 'Názov školy (voliteľné)'
     school_address: 'Adresa školy (voliteľné)'
     address_placeholder: 'adresa, mesto, štát, PSČ'
-    gender: 'Pohlavie (voliteľné)'
+    gender: 'Pohlavie (nepovinné)'
     birthday: 'Narodeniny (voliteľné)'
     age: 'Vek'
     user_type: 'Ste študent/žiak alebo učiteľ?'
@@ -205,7 +205,7 @@ sk:
     try_hoc: 'Skúste najprv jednu Hodinu Kódu'
     try_20hours: 'Skúste náš 20 hodinový Úvod do informatiky'
   signinsection:
-    welcome: 'Vitajte v %{section_name}'
+    welcome: 'Vitaj v triede %{section_name}'
     name: 'Vyber si meno'
     picture: 'Vyber tvoj tajný obrázok'
     words: 'Teraz zadajte vaše tajné slová'
@@ -367,7 +367,7 @@ sk:
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'Úžasný svet s Gumball'
       iceage: 'Doba ľadová'
-      infinity: 'Infinity'
+      infinity: 'nekonečne'
       makerlab: 'Výrobcovo náradie'
       minecraft_adventurer: 'Minecraft Objavovateľ'
       minecraft_aquatic: 'Minecraft Aquatic'
@@ -427,8 +427,8 @@ sk:
     email_confirm_wrong_email: '(Zlá emailová adresa?)'
     email_resend_confirm: 'Poslať potvrdzovacie inštrukcie znova'
     new_email_hint: '(uistite sa, že môžete prijímať emaily na túto adresu)'
-    new_password_hint: "(nechajte prázdne, ak to nechcete zmeniť)"
-    current_password_hint: '(potrebujeme Vaše aktuálne heslo na potvrdenie týchto zmien)'
+    new_password_hint: "(nechaj prázdne, ak ho nechceš zmeniť)"
+    current_password_hint: '(tvoje aktuálne heslo potrebujeme na potvrdenie oprávnenia vykonať tieto zmeny)'
     delete: 'Vymazať účet'
     delete_text: "Vymazaním svojho účtu odstránite všetky informácie a pokrok spojený s týmto účtom."
     delete_text_teacher_managed_note: "Nemáš oprávnenie vymazať tento účet pretože je spravovaný tvojím učiteľom. Tvoj učiteľ (učitelia) ťa bude (budú) musieť odstrániť zo svojej trieby predtým, ako si budeš môcť vymazať svoj účet."
@@ -438,25 +438,27 @@ sk:
     no_password_because_oauth: 'Heslo nie je požadované, pretože ste prihlásený cez poskytovateľa služieb.'
     no_password_because_sponsored: 'Pre správu hesla vyhľadaj svojho učiteľa.'
     create_personal_login: 'Vytvorte si vlastné prihlasovacie údaje'
-    create_personal_login_under_13_info: 'Ak si chcete ponechať Vaše konto na Code.org aj po skončení školského roka, poproste vášho rodiča/zákonného zástupcu, aby vám pomohol vytvoriť váš osobný účet nižšie.'
-    create_personal_login_under_13_username: "Prihlasovacie meno (nepoužívaj tvoje skutočné meno!)"
+    create_personal_login_under_13_info: 'Ak si svoje konto na Code.org chceš ponechať aj po skončení školského roka, popros svojho rodiča/zákonného zástupcu, aby ti pomohol vytvoriť si vlastný účet.'
+    create_personal_login_under_13_username: "Prihlasovacie meno (nepoužívaj svoje skutočné meno!)"
     create_personal_login_under_13_parent_email: 'Emailová adresa rodiča/zákonného zástupcu'
-    create_personal_login_info: 'Ak si chceš ponechať svoje konto na Code.org aj po skončení školského roka, tu si môžeš vytvoriť vlastný účet.'
-    create_personal_login_link_account: 'Namiesto toho si tiež môžeš vybrať pripojenie sa k osobného účtu v sekcii “Spravovanie prepojených účtov”.'
+    create_personal_login_info: 'Ak si svoje konto na Code.org chceš ponechať aj po skončení školského roka, tu si môžeš vytvoriť vlastný účet.'
+    create_personal_login_link_account: 'Alebo si vyber pripojenie k vlastnému účtu v časti “Spravovanie prepojených účtov”.'
     create_personal_login_terms: "Vytvorením užívateľského konta súhlasím s <a href='%{terms_of_service_url}', target='_blank'>podmienkami používania</a> Code.org. Potvrdzujem, že mám súhlás rodiča alebo zákonného zástupcu používať Code.org aj bez prítomnosti učiteľa."
     create_personal_login_terms_markdown: "Vytvorením užívateľského konta súhlasím s [podmienkami používania](%{terms_of_service_url}) Code.org. Potvrdzujem, že mám súhlás rodiča alebo zákonného zástupcu používať Code.org aj bez prítomnosti učiteľa."
     create_personal_login_email_note: "Poznámka: Emailové adresy neukladáme vo formáte, ktorý by nám umožňoval kontaktovať študentov. Študenti od nás nikdy nedostanú emaily s výnimkou obnovenia hesla. Prečítajte si naše <a href='%{privacy_policy_url}', target='_blank'>podmienky ochrany súkromia</a> pre viac informácií."
     create_personal_login_email_note_markdown: 'Poznámka: Emailové adresy neukladáme vo formáte, ktorý by nám umožňoval kontaktovať študentov. Študenti od nás nikdy nedostanú emaily s výnimkou obnovenia hesla. Prečítajte si naše [podmienky ochrany súkromia](%{privacy_policy_url}) pre viac informácií.'
-    enter_new_login_info: 'Zadajte Vaše nové prihlasovacie informácie'
+    enter_new_login_info: 'Zadaj nové prihlasovacie informácie'
     confirm_secret_words: 'Potvrď, že si to ty zadaním tvojich tajných slov'
     parent_email_label: "Email rodiča / zákonného zástupcu (nepovinné)"
     parent_email_hint: "(môže byť použité pre obnovenie hesla)"
     enter_parent_email: "Zadaj emailovú adresu rodiča alebo zákonného zástupcu (pre obnovenie hesla)"
-    update: "Aktualizujte konto"
+    update: "Aktualizovať informácie"
     account_successfully_updated: "Konto bolo úspešne aktualizované."
     auth_option_saved: "Úspešné prepojenie tvojho účtu %{provider} s tvojím emailom %{email}."
     auth_option_saved_no_email: "Úspešne si si prepojil/a svoj %{provider} účet."
     update_email: "Aktualizovať"
+    parent_guardian_email_label: "Email rodiča/zákonného zástupcu"
+    none: "Žiadne"
     encrypted: "šifrované"
   user_level:
     completed: 'Dokončené'
@@ -676,20 +678,6 @@ sk:
       body: "Študenti môžu použitím týchto digitálnych nástrojovpreskúmať koncepty z našich kurzov Základov informatiky priamo na vlas tnej koži. Použite widgety podľa vlastnej vôle alebo vytvorte lekciu zameranú na konkrétny koncept pre Vašu triedu."
       audience: "Vek 14+"
       cta: "Nauč sa ako"
-  gallery:
-    students_drew_these_with_code: "Študenti nakreslili tieto obrázky pomocou kódu!"
-    students_made_these_with_code: "Študenti vytvorili tieto výtvory pomocou kódu!"
-    picture_count: "V posledných <b>%{days}</b> dňoch, študenti nakreslili <b>%{count}</b> obrázkov pomocou vlastných počítačovách programov. Kliknite na obrázky a uvidíte každý program v akcii."
-    activity_count: "V posledných <b>%{days}</b> dňoch, študenti vytvorili<b>%{count}</b> appiek a obrázkov pomocou vlastných počítačovách programov. Kliknite na obrázky a uvidíte každý program v akcii."
-    want_to_make_your_own: "Chceš vytvoriť svoj vlastný?"
-    how_to_save: "Na konci všetkých návodov klikni na \"Ukončiť\" a \"Uložiť\", pre uloženie svojej práce do galérie."
-    more: "Viac &rarr;"
-    caption_by_name_age: "podľa %{name}, vek %{age}"
-    caption_time_ago: "%{time_ago} v minulosti"
-    header: "Galéria"
-    header_playlab: "Príbehy a hry"
-    header_artist: "Code umenie"
-    report_abuse: "Nahlásenie zneužitia"
   landing:
     prerelease_tutorial: "Tento tutoriál je v **beta** verzii a je predmetom revízie a vylepšení, ktoré sú vykonané na základe pripomienok."
     report_bug: "Nahlásiť chybu"
@@ -874,6 +862,7 @@ sk:
     instructor_feedback: 'Spätná väzba inštruktora'
     peer_feedback: 'Spätná väzba spoluriešiteľa'
     outdated: 'Táto spätná väzba bola pridaná k predchádzajúcej verzii'
+    peer_review: 'Recenzia'
   flex_category:
     required: 'Prehľad'
     content: 'Obsah'
@@ -895,7 +884,7 @@ sk:
     csf_online_safety: 'Bezpečnosť na internete'
     csf_binary: 'Binárny'
     csf_conditionals: 'Podmienky'
-    csf_sprites: 'Postavy'
+    csf_sprites: 'Sprites'
     csf_nested_loops: 'Vnorené cykly'
     csf_functions: 'Funkcie'
     csf_variables: 'Premenné'

@@ -397,6 +397,8 @@ hu:
     update: "Adatok frissítése"
     account_successfully_updated: "Az adatok frissítése sikeres volt."
     update_email: "Frissítés"
+    parent_guardian_email_label: "Szülő/gondviselő e-mail"
+    none: "Egyik sem"
     encrypted: "titkosítva"
   user_level:
     completed: 'Befejezve'
@@ -578,19 +580,6 @@ hu:
       title: "Feltételek"
     widgets:
       cta: "Ismerd meg hogyan"
-  gallery:
-    students_drew_these_with_code: "Diákok rajzolták ezeket a kódot."
-    students_made_these_with_code: "Ezeket diákok készítették kódolással!"
-    picture_count: "Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden egyes programot láthass működés közben."
-    activity_count: "Az elmúlt <b>%{days}</b> nap a diákok <b>%{count}</b> alkalmazást és a képet készítettek saját maguk, számítógépprogram írással. Kattints a képekre illetve képernyőmentésekre, hogy megnézesd az egyes programokat működés közben."
-    want_to_make_your_own: "Szeretnéd elkészíteni a sajátodat?"
-    more: "Több &rarr;"
-    caption_by_name_age: "készítette %{name}, %{age} éves"
-    caption_time_ago: "ennyi ideje: %{time_ago}"
-    header: "Galéria"
-    header_playlab: "Játéklabor"
-    header_artist: "Művész"
-    report_abuse: "Visszaélés jelentése"
   landing:
     report_bug: "Hiba bejelentése"
     support: "Segítség kérés"

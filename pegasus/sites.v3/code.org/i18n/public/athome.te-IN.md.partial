@@ -8,21 +8,14 @@ theme: responsive
 
 # Learning computer science when schools are closed
 
-<div class="col-66" style="padding-right: 20px;">
+<div style="padding-left: 20px; float: right; margin-top: 0">
+{{ athome_vid_intro }}
+</div>
 
 <p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
 <p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
 <p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
 <p><a href="#apps">No computer at home? See smartphone options</a></p>
-</div>
-
-<div class="col-33">
-
-<img src="/images/learningathome.jpg" style="width: 100%"/>
-
-</div>
-
-<div style="clear: both"></div>
 
 <br>
 
@@ -94,22 +87,65 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 
 <a id="express"></a>
 
-## Learn the fundamentals with our express courses
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <i>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. To see what's available in your language, visit <a href="https://studio.code.org/courses">studio.code.org</a>.</i>
+## Learn the fundamentals with our self-paced courses
+### **Express courses**
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
-<div class="col-50" style="padding-right: 20px; padding-bottom:40px">
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/express-2019"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://studio.code.org/s/express-2019">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
 
 </div>
 
-<div class="col-50" style="padding-right: 20px; padding-bottom:40px">
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
 <a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
 
 </div>
-<div style="clear: both; margin-bottom: 15px"></div>
+<div style="clear: both"></div>
+
+<hr />
+
+### **Programming Modules for older students**
+
+Adapted from our CS Principles courses, these short, self-paced modules for middle and high school students are a great way to learn concepts that span all programming languages and tools.
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+#### Turtle Programming in App Lab
+
+<div class="col-25" style="padding-right: 20px;">
+
+<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
+
+</div>
+
+<div class="col-75">
+
+<p>Begin working in App Lab where you’ll use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Learn to break down big programming problems into manageable pieces. Design and program your own digital scene! For middle and high school students.</p>
+<a href="https://studio.code.org/s/csp3-virtual"><button>Try it out</button></a>
+
+</div>
+
+<div style="clear: both; margin-bottom: 30px"></div>
+
+#### Event-Driven Programming in App Lab
+
+<div class="col-25" style="text-align:center; padding-right: 20px;">
+
+<a href="https://studio.code.org/s/csp5-virtual"><img src="/images/athome/events.png" style="width: 60%"/></a>
+
+</div>
+
+<div class="col-75">
+
+<p>Program in the JavaScript language using App Lab. Learn to design apps that respond to user interaction like clicks and key presses. Create a series of simple applications (apps) that live on the web! For middle and high school students.</p>
+<a href="https://studio.code.org/s/csp5-virtual"><button>Try it out</button></a>
+
+</div>
+
+<div style="clear: both; margin-bottom: 30px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>

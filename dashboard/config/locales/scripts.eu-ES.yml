@@ -757,6 +757,14 @@ eu:
               name: Ebaluazio blokeak
             Teacher Dashboard:
               name: Irakaslearen arbela
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         CSDU5-Draft:
           description_short: Datu
         MikeTest:
@@ -765,6 +773,10 @@ eu:
               name: 'Artista: Funtzioak'
         artistExemplar:
           description_audience: 8-18 bitarteko adina
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -837,6 +849,10 @@ eu:
               name: Errebotea
             'Farmer: While Loops':
               name: 'Nekazaria: While begiztak'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         csd3-2017:
           stages:
             Functions:
@@ -885,6 +901,14 @@ eu:
               name: Diseinuaren errezeta
             Welcome!:
               name: Ongi etorri!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         basketball:
           stages:
             Bounce:
@@ -902,6 +926,10 @@ eu:
           stages:
             Lists:
               name: Zerrendak
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -990,6 +1018,14 @@ eu:
               name: Ongi etorri!
             Wrap-Up:
               name: Itxi
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         sciencepd4:
           stages:
             Welcome!:
@@ -1012,6 +1048,10 @@ eu:
               name: Ongi etorri!
             Wrap-Up:
               name: Itxi
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         csd6-draft:
           stages:
             Lists:
@@ -1118,6 +1158,54 @@ eu:
           stages:
             Building a Foundation:
               name: Oinarri bat Eraikitzen
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         express-2017:
           stages:
             Introduction:
@@ -1408,6 +1496,74 @@ eu:
           stages:
             While Loops:
               name: '"Bitartean" begiztak'
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         pre-express-2018:
           stages:
             'Persistence & Frustration: Stevie and the Marbles':
@@ -1422,6 +1578,10 @@ eu:
               name: Zure aztarna digitala
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie eta Big Proiektua
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         frozen-2018:
           stages:
             Artist:
@@ -1434,6 +1594,14 @@ eu:
           stages:
             Artist:
               name: Artista
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1450,6 +1618,17 @@ eu:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Aldagaiak
+            csf_data:
+              display_name: Datu
+            csf_for_loops:
+              display_name: For begiztak
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Hiritartasun digitala
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1464,6 +1643,17 @@ eu:
               name: Irudi bitarrak
             Artist Binary:
               name: Artista bitarra
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_binary:
+              display_name: Bitarra
+            csf_digcit:
+              display_name: Hiritartasun digitala
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1480,6 +1670,13 @@ eu:
               name: Crowdsourcing
             Songwriting:
               name: Musika idazten
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_nested_loops:
+              display_name: Kabiatutako begiztak
+            csf_functions:
+              display_name: Funtzioak
         express-2019:
           stages:
             Relay Programming:
@@ -1500,10 +1697,24 @@ eu:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_functions:
+              display_name: Funtzioak
+            csf_variables:
+              display_name: Aldagaiak
+            csf_for_loops:
+              display_name: For begiztak
         andrea-test:
           stages:
             'null':
               name: baliogabea
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1512,12 +1723,30 @@ eu:
               name: Gertaera Handia
             Binary Bracelets:
               name: Eskumuturreko bitarrak
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_binary:
+              display_name: Bitarra
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+            csf_data:
+              display_name: Datu
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Mapa Zoriontsuak
             Going Places Safely:
               name: Joan segurtasunez
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1526,6 +1755,13 @@ eu:
               name: Zure aztarna digitala
             'Loops: Getting Loopy':
               name: Iteratzen
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1534,6 +1770,11 @@ eu:
               name: Zure aztarna digitala
             Spelling Bee:
               name: Letraz-letra
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1554,6 +1795,16 @@ eu:
           stages:
             Functions with Parameters:
               name: Parametrodun funtzioak
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+            required:
+              display_name: Bista orokorra
         csp1-2019:
           stages:
             The Internet:
@@ -1566,6 +1817,10 @@ eu:
           stages:
             While Loops:
               name: '"Bitartean" begiztak'
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1574,10 +1829,88 @@ eu:
               name: Baldintzak Txartelekin
             Building a Foundation:
               name: Oinarri bat Eraikitzen
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Paper grafiko programazioa
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
+            required:
+              display_name: Bista orokorra
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         csd2-pilot:
           stages:
             Lists:
@@ -1592,12 +1925,70 @@ eu:
               name: Funtzioak
             Sprite Properties:
               name: Sprite-n Propietateak
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         peru-2019:
           stages:
             Introduction:
               name: Sarrera
             Nested Loops:
               name: Kabiatutako begiztak
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -1612,6 +2003,14 @@ eu:
               name: Aldagaiak
             For Loops:
               name: For begiztak
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1622,14 +2021,59 @@ eu:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Baldintzak Txartelekin
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_nested_loops:
+              display_name: Kabiatutako begiztak
+            csf_functions:
+              display_name: Funtzioak
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Baldintzak
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_events:
+              display_name: Gertaerak
+            csf_digcit:
+              display_name: Hiritartasun digitala
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Baldintzak
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_events:
+              display_name: Gertaerak
+            csf_digcit:
+              display_name: Hiritartasun digitala
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Bista orokorra
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1652,6 +2096,13 @@ eu:
               name: Joan segurtasunez
             'Programming: Happy Maps':
               name: Mapa Zoriontsuak
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1660,12 +2111,30 @@ eu:
               name: Mugi ezazu, mugi ezazu!
             'Loops: Getting Loopy':
               name: Iteratzen
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Eskumuturreko bitarrak
             'Events: The Big Event':
               name: Gertaera Handia
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_binary:
+              display_name: Bitarra
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+            csf_data:
+              display_name: Datu
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1680,10 +2149,28 @@ eu:
               name: Artista bitarra
             Digital Citizenship:
               name: Hiritartasun digitala
+          lesson_groups:
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_binary:
+              display_name: Bitarra
+            csf_digcit:
+              display_name: Hiritartasun digitala
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Musika idazten
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_nested_loops:
+              display_name: Kabiatutako begiztak
+            csf_functions:
+              display_name: Funtzioak
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1694,10 +2181,36 @@ eu:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_variables:
+              display_name: Aldagaiak
+            csf_data:
+              display_name: Datu
+            csf_for_loops:
+              display_name: For begiztak
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_functions:
+              display_name: Funtzioak
+            csf_variables:
+              display_name: Aldagaiak
+            csf_for_loops:
+              display_name: For begiztak
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Letraz-letra
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1716,6 +2229,8 @@ eu:
           stages:
             While Loops:
               name: '"Bitartean" begiztak'
+            Variables:
+              name: Aldagaiak
         virtual-holding-place:
           stages:
             Functions:
@@ -1726,3 +2241,7 @@ eu:
               name: Algoritmoak
             Events:
               name: Gertaerak
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '"Bitartean" begiztak'

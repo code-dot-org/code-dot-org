@@ -2073,6 +2073,13 @@ pt-BR:
               name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csp1_1:
+              display_name: 'Capítulo 1: Representando e Transmitindo Informação'
+            csp1_2:
+              display_name: 'Capítulo 2: Inventando a Internet'
         csp2-2017:
           title: CSP Unidade 2 - Informação Digital ('17 -'18)
           description: Esta unidade explora ainda mais as maneiras pelas quais as
@@ -2134,6 +2141,13 @@ pt-BR:
               name: Prática PT - Codifique uma Experiência
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          lesson_groups:
+            csp2_1:
+              display_name: 'Capítulo 1: Codificando e Comprimindo Informações Complexas'
+            csp2_2:
+              display_name: 'Capítulo 2: Manipulando e Visualizando Dados'
+            cspSurvey:
+              display_name: Questionário
         csp3-2017:
           title: CSP Unidade 3 - Programação
           description: "Esta unidade introduz os conceitos fundamentais de programação
@@ -2187,6 +2201,13 @@ pt-BR:
               name: Por favor, preencha a pesquisa CSP do curso intermediário!
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Programando Linguagens e Algoritmos'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp4-2017:
           title: CSP Unidade 4 do - Big Data e Privacidade ('17 -'18)
           description: "O mundo rico em dados em que vivemos introduz muitas questões
@@ -2240,6 +2261,13 @@ pt-BR:
               name: Pesquisa Pós-Curso
             Student Post-Course Survey:
               name: Pesquisa pós-curso do estudante
+          lesson_groups:
+            csp4_1:
+              display_name: 'Capítulo 1: O mundo do "Big Data" e criptografia'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp5-2017:
           title: CSP Unidade 5 - Construindo aplicações ('17 -'18)
           description: Esta unidade continua a introdução de conceitos fundamentais
@@ -2359,6 +2387,13 @@ pt-BR:
               name: Expressões Booleanas e Declarações "if"
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programação orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programando com Estruturas de Dados'
+            cspSurvey:
+              display_name: Questionário
         csp6:
           stages:
             Create PT:
@@ -2573,6 +2608,13 @@ pt-BR:
               name: Apoiando o Aprendizado entre Pares
             'Tool Talk: Intro to Netsim':
               name: 'Ferramenta de conversa: Introdução ao Netsim'
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2589,6 +2631,13 @@ pt-BR:
               name: teste unidade 1 prática do módulo Foxtrot
             test Unit 1 required reading:
               name: teste unidade 1 leitura obrigatória
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2806,6 +2855,13 @@ pt-BR:
               name: 'Lição 2.3: Pixelização Preta e Branca'
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -3098,6 +3154,13 @@ pt-BR:
               name: Lição 2,3
             Test stage with bubbles:
               name: Fase de Teste com Bolhas
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         csd3-2017:
           title: CSD Unidade 3 - Animações e Jogos ('17-'18)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
@@ -3474,6 +3537,15 @@ pt-BR:
               name: CS Discoveries - Pesquisa de fim de semestre
             CSD Post-Course Survey:
               name: Pesquisa Pós-Curso CSD
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
+            csd_survey:
+              display_name: Pesquisa Pós-Curso
         grade2:
           stages:
             At The Dog Park:
@@ -3773,6 +3845,13 @@ pt-BR:
               name: CS Descobertas pré-pesquisa
             CS Discoveries Rapid Survey:
               name: Pesquisa rápida do CS Discoveries
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3849,6 +3928,13 @@ pt-BR:
               name: Processando vetores e funções com valores de retorno
             Unit 5 Overview:
               name: Visão geral da unidade 5
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -3875,6 +3961,13 @@ pt-BR:
               name: Medindo a Aprendizagem dos Estudantes
             AP Preparation and Support:
               name: Preparação e Suporte de AP
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -4188,6 +4281,13 @@ pt-BR:
                 no qual continuarão trabalhando em toda a unidade.
             CSD Post-Course Survey:
               name: Pesquisa Pós-Curso CSD
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo e CSS'
+            csd_survey:
+              display_name: Pesquisa Pós-Curso
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -4213,6 +4313,13 @@ pt-BR:
               name: Medindo a Aprendizagem dos Estudantes
             AP Preparation and Support:
               name: Preparação e Suporte de AP
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         csd4-2017:
           title: CSD Unidade 4 - O Processo de Design ('17-'18)
           description_short: "  Aprenda a criar um programa que atenda às necessidades
@@ -4570,6 +4677,13 @@ pt-BR:
                 planos para o futuro.
             CSD Post-Course Survey:
               name: Pesquisa Pós-Curso CSD
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
+            csd_survey:
+              display_name: Pesquisa Pós-Curso
         minecraft:
           title: Designer Minecraft Hora do Código
           description_short: Crie animais e outras criaturas de Minecraft em sua própria
@@ -4790,6 +4904,11 @@ pt-BR:
               name: Condições
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+            extra_course_content:
+              display_name: Conteúdo do curso extra
         coursef-draft:
           description_short: Aprenda o básico da ciência da computação e crie sua
             própria arte, histórias e jogos.
@@ -4838,6 +4957,9 @@ pt-BR:
               name: Condicionais e funções na abelha
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
+          lesson_groups:
+            content:
+              display_name: Conteúdo
         classic-hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
@@ -4925,6 +5047,13 @@ pt-BR:
               name: Medindo a Aprendizagem dos Estudantes
             AP Preparation and Support:
               name: Preparação e Suporte de AP
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         csdgraveyard:
           stages:
             new stage:
@@ -4957,6 +5086,13 @@ pt-BR:
               name: Medindo a Aprendizagem dos Estudantes
             Unit 4 Overview:
               name: Revisão da Unidade 4
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         sciencepd4:
           stages:
             Welcome!:
@@ -5001,6 +5137,9 @@ pt-BR:
               name: Binário
             Snowflakes:
               name: Flocos de neve
+          lesson_groups:
+            content:
+              display_name: Conteúdo
         sciencepd5:
           stages:
             Welcome!:
@@ -5037,6 +5176,13 @@ pt-BR:
               name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
+            practice:
+              display_name: Práticas de ensino
         csppostap-2017:
           title: CSP pós-AP - Bancos de dados e dados utilizados em seus aplicativos
             ('17 -'18)
@@ -5063,6 +5209,11 @@ pt-BR:
               name: Projeto final
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+            cspSurvey:
+              display_name: Questionário
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -5149,6 +5300,11 @@ pt-BR:
               name: Acelerômetro
             Functions with Parameters:
               name: Funções com Parâmetros
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programando com Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
         workshop-gamelab:
           stages:
             Introduction:
@@ -5202,6 +5358,11 @@ pt-BR:
               name: Criptografia
             Structuring Data:
               name: Estruturação de dados
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
         applab-1hour:
           title: Oficina de 1 hora do Laboratório de Aplicativos
           description_audience: Alunos do ensino fundamental e médio
@@ -5888,6 +6049,13 @@ pt-BR:
                 do circuito.
             CSD Post-Course Survey:
               name: Pesquisa Pós-Curso CSD
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programando com Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            csd_survey:
+              display_name: Pesquisa Pós-Curso
         csd3-draft:
           title: 'CSD Unidade 3 - Programando: Animações e Jogos'
           description_short: Animações e Jogos
@@ -6291,6 +6459,13 @@ pt-BR:
                 sobre a importância da segurança física e digital.
             CSD Post-Course Survey:
               name: Pesquisa Pós-Curso CSD
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            csd_survey:
+              display_name: Pesquisa Pós-Curso
         csd3-old:
           title: CSD Unidade 3 (descontinuada)
           description_short: Projeto 2016/2017 da Unidade 3
@@ -6540,6 +6715,9 @@ pt-BR:
             anônimos para toda a turma. Os resultados são vitais para o seu professor
             e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
             e consideração.
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -7192,6 +7370,13 @@ pt-BR:
             e, em seguida, você passará às funções. Na segunda parte deste curso,
             projete e crie um projeto principal que você possa compartilhar com seus
             amigos e familiares.
+          lesson_groups:
+            csf_e_1:
+              display_name: Treinamento até Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do curso E
+            extra_course_content:
+              display_name: Conteúdo do curso extra
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -7424,6 +7609,11 @@ pt-BR:
             e discuta os impactos sociais da computação e da Internet. Na segunda
             parte deste curso, projete e crie um projeto principal que você possa
             compartilhar com amigos e familiares.
+          lesson_groups:
+            csf_f_1:
+              display_name: Treinamento até Curso F (Opcional)
+            csf_f_2:
+              display_name: Conteúdo do curso F
         csdnovice:
           stages:
             Tuesday:
@@ -7500,6 +7690,13 @@ pt-BR:
             o exame de AP e as Tarefas de desempenho.
           description: As lições orientam os alunos a se prepararem e concluírem o
             exame de AP e as Tarefas de desempenho.
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Capítulo 1: Configuração do AP Tech'
+            csp_ap_3:
+              display_name: 'Capítulo 3: Tarefa de Criação de Performance AP'
+            csp_ap_2:
+              display_name: 'Capítulo 2: Tarefa de Exploração de Performance AP'
         cspnovice:
           stages:
             Welcome:
@@ -7518,6 +7715,11 @@ pt-BR:
             TeacherCon.
           description: 'Um local para acompanhar sua reflexão do TeacherCon como facilitador
             iniciante. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         novice-view:
           stages:
             CSP Tuesday:
@@ -7554,6 +7756,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7572,6 +7779,11 @@ pt-BR:
             CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
             inferior desta página, depois de enviar suas próprias reflexões para a
             unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -7588,6 +7800,11 @@ pt-BR:
             CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
             inferior desta página, depois de enviar suas próprias reflexões para a
             unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -7604,6 +7821,11 @@ pt-BR:
             CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
             inferior desta página, depois de enviar suas próprias reflexões para a
             unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -7620,6 +7842,11 @@ pt-BR:
             CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
             inferior desta página, depois de enviar suas próprias reflexões para a
             unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -7636,6 +7863,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -7652,6 +7884,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -7668,6 +7905,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -7684,6 +7926,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -7700,6 +7947,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -7716,6 +7968,11 @@ pt-BR:
             do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
             na parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         allthettsthings:
           stages:
             TTS:
@@ -7830,6 +8087,9 @@ pt-BR:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
             ser compartilhada.
+          lesson_groups:
+            content:
+              display_name: Conteúdo
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -7931,6 +8191,13 @@ pt-BR:
             de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
             mas os conceitos aprendidos nessas lições envolvem todas as ferramentas
             e linguagens de programação.
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Programando Linguagens e Algoritmos'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7970,6 +8237,11 @@ pt-BR:
             Linking Screens:
               name: Telas de vinculação
           title: CSD Unit 4 Revisions Draft
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
         craft17:
           stages:
             craft17 stage:
@@ -8070,6 +8342,13 @@ pt-BR:
             Sequence in Maze:
               name: Sequência no labirinto
           title: Curso E & F Ramp
+          lesson_groups:
+            csf_e_1:
+              display_name: Treinamento até Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do curso E
+            extra_course_content:
+              display_name: Conteúdo do curso extra
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -8126,6 +8405,9 @@ pt-BR:
             A.
           description: Esta unidade apresenta os conceitos fundamentais de programação
             de computadores para estudantes do grupo de sub objetivos A.
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Programando Linguagens e Algoritmos'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -8207,6 +8489,9 @@ pt-BR:
             Sarah test stage:
               name: Sarah fase de teste
           title: Novo script expresso
+          lesson_groups:
+            content:
+              display_name: Conteúdo
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -8271,6 +8556,13 @@ pt-BR:
             Crowdsourcing:
               name: Crowdsourcing
           title: Novo script para E
+          lesson_groups:
+            csf_e_1:
+              display_name: Treinamento até Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do curso E
+            extra_course_content:
+              display_name: Conteúdo do curso extra
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -8332,6 +8624,11 @@ pt-BR:
             Present Your Project:
               name: Apresente seu projeto
           title: Novo script para F
+          lesson_groups:
+            csf_f_1:
+              display_name: Treinamento até Curso F (Opcional)
+            csf_f_2:
+              display_name: Conteúdo do curso F
         csd5-old:
           stages:
             Representation Matters:
@@ -8373,6 +8670,11 @@ pt-BR:
             para resolver problemas e como os computadores ajudam a automatizar as
             etapas desse processo. O capítulo conclui considerando como o processo
             de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -8449,6 +8751,11 @@ pt-BR:
               name: Apresentação de aplicativos
           title: "(DESCONTINUADO) Unidade CSD 4 - O Processo de Design"
           description_short: 2016/17 Versão beta da CSD Unidade 4
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -8478,6 +8785,11 @@ pt-BR:
             no csp3
           description: "Esta é uma réplica de níveis ao vivo em / s/ csp3 com estágios
             novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.\r\n"
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capítulo 1: Programando Linguagens e Algoritmos'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
         pwc:
           stages:
             new stage:
@@ -8635,6 +8947,11 @@ pt-BR:
             necessárias para executar vários elementos das tarefas Explorar e Criar.\r\n\r\nEsta
             unidade foi atualizada pela última vez em novembro de 2017.Leia mais sobre
             atualizações de currículo em forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capítulo 2: Tarefa de Exploração de Performance AP'
+            cspSurvey:
+              display_name: Questionário
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -8658,6 +8975,11 @@ pt-BR:
             necessárias para executar vários elementos das tarefas Explorar e Criar.\r\n\r\nEsta
             unidade foi atualizada pela última vez em dezembro de 2017. Leia mais
             sobre atualizações de currículo em forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capítulo 3: Tarefa de Criação de Performance AP'
+            cspSurvey:
+              display_name: Questionário
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -8752,6 +9074,13 @@ pt-BR:
             Functions in Harvester:
               name: Funções em Colheitadeira
           title: Curso E 2018 (Desatualizado!)
+          lesson_groups:
+            csf_e_1:
+              display_name: Treinamento até Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do curso E
+            extra_course_content:
+              display_name: Conteúdo do curso extra
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -8813,6 +9142,11 @@ pt-BR:
             Present Your Project:
               name: Apresente seu projeto
           title: Curso F 2018 (desatualizado)
+          lesson_groups:
+            csf_f_1:
+              display_name: Treinamento até Curso F (Opcional)
+            csf_f_2:
+              display_name: Conteúdo do curso F
         csd6-old:
           stages:
             Computing Innovations:
@@ -8846,6 +9180,11 @@ pt-BR:
             'Project: Prototype an Innovation':
               name: 'Projeto: Protótipo de Inovação'
           title: "(Descontinuada) Unidade 6 de CSD - Computação Física"
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programando com Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
@@ -8916,6 +9255,13 @@ pt-BR:
             em sprites, usando os mesmos conceitos de programação e o processo de
             design que os cientistas da computação usam diariamente. No projeto final,
             você desenvolverá um programa interativo personalizado."
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
         textbook:
           stages:
             Test Map Level:
@@ -9262,6 +9608,13 @@ pt-BR:
               name: CS Discoveries - Pesquisa de fim de semestre
             CS Discoveries Post-Course Survey:
               name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
         csd2-2018:
           title: CSD Unidade 2 - Desenvolvimento Web ('18 -'19)
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo
@@ -9491,6 +9844,13 @@ pt-BR:
                 final.\r\n"
             CS Discoveries Post-Course Survey:
               name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo e CSS'
+            cspSurvey:
+              display_name: Questionário
         coursea-2018:
           title: Curso A (2018)
           assignment_family_title: Curso A
@@ -10086,6 +10446,13 @@ pt-BR:
               name: 'Projeto: Protótipo de Inovação'
             CS Discoveries Post-Course Survey:
               name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programando com Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            cspSurvey:
+              display_name: Questionário
         coursee-2018:
           title: Curso E (2018)
           assignment_family_title: Curso E
@@ -10287,6 +10654,13 @@ pt-BR:
               name: Girafa Pet
             Copyright and Creativity:
               name: Compartilhamento Digital
+          lesson_groups:
+            csf_e_1:
+              display_name: Treinamento até Curso E (Opcional)
+            csf_e_2:
+              display_name: Conteúdo do curso E
+            extra_course_content:
+              display_name: Conteúdo do curso extra
         coursef-2018:
           title: Curso F (2018)
           assignment_family_title: Curso F
@@ -10530,6 +10904,11 @@ pt-BR:
               name: Funções com Minecraft
             Conditionals in Farmer:
               name: Estruturas condicionais o Fazendeiro
+          lesson_groups:
+            csf_f_1:
+              display_name: Treinamento até Curso F (Opcional)
+            csf_f_2:
+              display_name: Conteúdo do curso F
         csp1-2018:
           title: CSP Unidade 1 - A Internet ('18 -'19)
           description: Esta unidade explora os desafios e questões técnicas que surgem
@@ -10575,6 +10954,13 @@ pt-BR:
               name: Unidade 1 Capítulo 2 Avaliação
             Sending Text:
               name: Enviando texto
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csp1_1:
+              display_name: 'Capítulo 1: Representando e Transmitindo Informação'
+            csp1_2:
+              display_name: 'Capítulo 2: Inventando a Internet'
         csd1-2018:
           title: Unidade 1 CSD - Solução de problemas ('18 -'19)
           description: " \r\nA Unidade 1 é uma introdução altamente interativa e colaborativa
@@ -10789,6 +11175,13 @@ pt-BR:
                 e quais informações eles gostariam de armazenar posteriormente. A
                 turma termina com uma discussão que conecta a lição aos aplicativos
                 com os quais os alunos estão mais familiarizados. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         csd4-2018:
           title: CSD Unidade 4 - O processo de design ('18 -'19)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
@@ -11057,6 +11450,13 @@ pt-BR:
                 planos para o futuro.
             CS Discoveries Post-Course Survey:
               name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
+            cspSurvey:
+              display_name: Questionário
         csd5-2018:
           title: DCC Unidade 5 - Data e Sociedade (18 -19)
           description: A unidade 5 trata da importância dos dados na solução de problemas
@@ -11372,6 +11772,13 @@ pt-BR:
                 uma apresentação para a classe.
             CS Discoveries Post-Course Survey:
               name: Pesquisa pós-curso da CS Discoveries
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            cspSurvey:
+              display_name: Questionário
         csp2-2018:
           title: CSP Unidade 2 - Informação digital ('18-'19)
           description: Esta unidade explora ainda mais as maneiras pelas quais as
@@ -11429,6 +11836,11 @@ pt-BR:
               name: Compressão com perdas vs sem perdas
             Unit 2 Assessment:
               name: Unidade 2 Avaliação
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unidade 2: Informação Digital'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
         csp3-2018:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -11469,6 +11881,13 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post-Course Survey:
               name: Pesquisa pós-curso de princípios do CS
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unidade 3: Introdução à Programação'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp-explore-2018:
           title: Explorar - Preparação de tarefas de desempenho do AP ('18 -'19)
           description: 'Estas lições estão aqui para ajudá-lo a entender, se preparar
@@ -11490,6 +11909,11 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post-Course Survey:
               name: Pesquisa pós-curso de princípios do CS
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capítulo 2: Tarefa de Exploração de Performance AP'
+            cspSurvey:
+              display_name: Questionário
         csp-create-2018:
           title: Criar - Preparação da tarefa de desempenho do AP ('18 -'19)
           description: 'Estas lições estão aqui para ajudá-lo a entender, preparar
@@ -11509,6 +11933,11 @@ pt-BR:
               name: Criar PT - Complete a Tarefa
             CS Principles Post-Course Survey:
               name: Pesquisa pós-curso de princípios do CS
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capítulo 3: Tarefa de Criação de Performance AP'
+            cspSurvey:
+              display_name: Questionário
         csp4-2018:
           title: Unidade CSP 4 - Big Data e Privacidade ('18 -'19)
           description: O mundo rico em dados em que vivemos introduz muitas questões
@@ -11553,6 +11982,13 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post-Course Survey:
               name: Pesquisa pós-curso de princípios do CS
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big Data e Privacy'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp5-2018:
           title: CSP Unidade 5 - Criação de aplicativos ('18 -'19)
           description: Esta unidade continua a introdução de conceitos fundamentais
@@ -11616,6 +12052,13 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post-Course Survey:
               name: Pesquisa pós-curso de princípios do CS
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programação orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programando com Estruturas de Dados'
+            cspSurvey:
+              display_name: Questionário
         csppostap-2018:
           title: Pós AP - Ferramentas de dados ('18 -'19)
           description: |-
@@ -11667,6 +12110,13 @@ pt-BR:
               name: 'Capítulo 1: Avaliação'
             CS Principles Post-Course Survey:
               name: Pesquisa pós-curso de princípios do CS
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Capítulo 1: Manipulando e Visualizando Dados'
+            csp_postap_2:
+              display_name: 'Capítulo 2: Aplicativos e Bancos de Dados'
+            cspSurvey:
+              display_name: Questionário
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -11703,6 +12153,11 @@ pt-BR:
             da Unidade 1 do Currículo de Descobertas de CS do Code.org. Os itens de
             revisão por pares estão disponíveis na parte inferior desta página, depois
             de enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11719,6 +12174,11 @@ pt-BR:
             da Unidade 2 do Currículo de Descobertas CS do Code.org. Os itens de revisão
             por pares estão disponíveis na parte inferior desta página, depois de
             enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11735,6 +12195,11 @@ pt-BR:
             da Unidade 3 do Currículo de Descobertas de CS do Code.org. Os itens de
             revisão por pares estão disponíveis na parte inferior desta página, depois
             de enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11753,6 +12218,11 @@ pt-BR:
             da Unidade 4 do Currículo de Descobertas de CS do Code.org. Os itens de
             revisão por pares estão disponíveis na parte inferior desta página, depois
             de enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11769,6 +12239,11 @@ pt-BR:
             da Unidade 5 do Currículo de Descobertas CS do Code.org. Os itens de revisão
             por pares estão disponíveis na parte inferior desta página, depois de
             enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11787,6 +12262,11 @@ pt-BR:
             da Unidade 6 do Currículo de Descobertas CS do Code.org. Os itens de revisão
             por pares estão disponíveis na parte inferior desta página, depois de
             enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11804,6 +12284,11 @@ pt-BR:
             da Unidade 1 do Currículo de Princípios de CS do Code.org. Os itens de
             revisão por pares estão disponíveis na parte inferior desta página, depois
             de enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11821,6 +12306,11 @@ pt-BR:
             2 do Currículo de Princípios de CS do Code.org. Os itens de revisão por
             pares estão disponíveis na parte inferior desta página, depois de enviar
             suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11838,6 +12328,11 @@ pt-BR:
             3 do Currículo de Princípios de CS do Code.org. Os itens de revisão por
             pares estão disponíveis na parte inferior desta página, depois de enviar
             suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11857,6 +12352,11 @@ pt-BR:
             4 do Currículo de Princípios de CS do Code.org. Os itens de revisão por
             pares estão disponíveis na parte inferior desta página, depois de enviar
             suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11874,6 +12374,11 @@ pt-BR:
             da Unidade 5 do Currículo de Princípios de CS do Code.org. Os itens de
             revisão por pares estão disponíveis na parte inferior desta página, depois
             de enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11895,6 +12400,11 @@ pt-BR:
             como facilitador da Unidade Explore AP do Currículo de Princípios CS do
             Code.org. Os itens de revisão por pares estão disponíveis na parte inferior
             desta página, depois de enviar suas próprias reflexões para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -11913,6 +12423,11 @@ pt-BR:
             de CS do Code.org. Os itens de revisão por pares estão disponíveis na
             parte inferior desta página, depois de enviar suas próprias reflexões
             para a unidade. '
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd-post-survey:
           stages:
             CSD post-course survey:
@@ -11926,6 +12441,9 @@ pt-BR:
             anônimos para toda a turma. Os resultados são vitais para o seu professor
             e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
             e consideração.
+          lesson_groups:
+            csd_survey:
+              display_name: Pesquisa Pós-Curso
         csd-novice-18:
           stages:
             Novice Reflections Overview:
@@ -11964,6 +12482,11 @@ pt-BR:
             dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas
             serão a base do trabalho que realizamos no fim de semana de treinamento
             de facilitadores.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -11995,6 +12518,11 @@ pt-BR:
             de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do
             seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a
             base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -12028,6 +12556,11 @@ pt-BR:
             dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas
             serão a base do trabalho que realizamos no fim de semana de treinamento
             de facilitadores.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -12061,6 +12594,11 @@ pt-BR:
             dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas
             serão a base do trabalho que realizamos no fim de semana de treinamento
             de facilitadores.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         pre-express-2018:
           title: Pré-leitor Express (2018)
           assignment_family_title: Pré-leitor Express
@@ -12144,6 +12682,11 @@ pt-BR:
           description_audience: Facilitadores no treinamento
           description_short: Curso de Treinamento FIT
           description: Para ser usado para demonstrar como os cursos de CLP funcionam.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         spritelab-simple:
           title: Introdução ao Sprite Lab (EE)
           description: Este é um curso piloto da nova ferramenta Sprite Lab do Code.org
@@ -12280,6 +12823,15 @@ pt-BR:
             Lists Explore:
               name: Lista Explorar
           title: CSP Parque Infantil
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -12590,6 +13142,19 @@ pt-BR:
                 simulação várias vezes, os alunos terão a oportunidade de fazer uma
                 previsão sobre como a alteração de uma variável na simulação pode
                 impactar o resultado e depois testar essa hipótese.
+          lesson_groups:
+            ramp_up:
+              display_name: Treinamento
+            csf_variables:
+              display_name: variáveis
+            csf_for_loops:
+              display_name: Laços para
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Sprite
+            csf_digcit:
+              display_name: Cidadania digital
         dance-low:
           stages:
             Dance Party:
@@ -12785,6 +13350,19 @@ pt-BR:
               description_teacher: Nesta lição, os alunos irão programar sua própria
                 festa de dança interativa. Esta atividade requer som, pois a ferramenta
                 foi criada para responder à música.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_binary:
+              display_name: Binário
+            csf_digcit:
+              display_name: Cidadania digital
         coursee-2019:
           title: Curso E (2019)
           description: Comece a codificar com algoritmos, loops, condicionais e eventos
@@ -13094,6 +13672,19 @@ pt-BR:
               name: Projetando para Acessibilidade
             Songwriting:
               name: Composição
+          lesson_groups:
+            ramp_up:
+              display_name: Treinamento
+            csf_sprites:
+              display_name: Sprite
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_impacts:
+              display_name: Impacto da computação
+            csf_nested_loops:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: funções
         express-2019:
           title: Curso Expresso (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -13207,6 +13798,23 @@ pt-BR:
               name: 'Condicionais no Minecraft: Viagem Aquática'
             Concept Practice with Minecraft:
               name: Prática conceitual com Minecraft
+          lesson_groups:
+            csf_warmup:
+              display_name: Aquecimento
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_functions:
+              display_name: funções
+            csf_variables:
+              display_name: variáveis
+            csf_for_loops:
+              display_name: Laços para
+            csf_sprites:
+              display_name: Sprite
         csd1-2019:
           title: Unidade 1 de CSD - Solução de problemas e computação ('19 -'20)
           description: "Resolução de Problemas e Computação é uma introdução altamente
@@ -13385,6 +13993,13 @@ pt-BR:
                 concluído em pares, embora possa ser concluído individualmente.
             Post-Project Test:
               name: Teste pós-projeto
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         andrea-test:
           stages:
             new stage:
@@ -13428,6 +14043,11 @@ pt-BR:
           description_short: isso é para testar minhas habilidades em fazer um curso
           description: descrição mais longa na minha tentativa de criar um curso....
             ainda me perguntando de onde vem a visão geral, o conteúdo....
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -13616,6 +14236,17 @@ pt-BR:
                 a entender seu mundo e responder a perguntas interessantes. Nesta
                 lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão
                 usando diferentes tipos de gráficos.
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_binary:
+              display_name: Binário
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -13629,6 +14260,9 @@ pt-BR:
             anônimos para toda a turma. Os resultados são vitais para o seu professor
             e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
             e consideração.
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
         gamelab:
           stages:
             Start and End Screens:
@@ -13761,6 +14395,15 @@ pt-BR:
                 começa com uma breve discussão introduzindo à eles as condutas do
                 laboratório de informática, então eles irão progredir usando um computador
                 para completar quebra-cabeças online.
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         courseb-2019:
           title: Curso B (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -13888,6 +14531,17 @@ pt-BR:
                 começa com uma breve discussão introduzindo à eles as condutas do
                 laboratório de informática, então eles irão progredir usando um computador
                 para completar quebra-cabeças online.
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_impacts:
+              display_name: Impacto da computação
+            csf_events:
+              display_name: Eventos
         pre-express-2019:
           title: Pré-leitor Express (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -13941,6 +14595,13 @@ pt-BR:
               name: Um Battle Royal com eventos
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -14185,6 +14846,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo e CSS'
+            cspSurvey:
+              display_name: Questionário
         csd3-2019:
           title: CSD Unidade 3 - Animações e jogos ('19 -'20)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
@@ -14521,6 +15189,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
         csd4-2019:
           title: CDS Unidade 4 - O Processo de Design ('19 -'20)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
@@ -14791,6 +15466,15 @@ pt-BR:
               name: Pesquisa do CS Discoveries pós curso
             Post-Project Test:
               name: Teste pós-projeto
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            cspSurvey:
+              display_name: Questionário
         csd5-2019:
           title: CSD Unidade 5 - Dados e sociedade ('19 -'20)
           description: A unidade 5 trata da importância dos dados na solução de problemas
@@ -15108,6 +15792,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            cspSurvey:
+              display_name: Questionário
         csd6-2019:
           title: CDS Unidade 6 - Computação física ('19 -'20)
           description: A unidade 6 explora o papel das plataformas de hardware na
@@ -15156,6 +15847,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programando com Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            cspSurvey:
+              display_name: Questionário
         csp4-pilot:
           stages:
             Variables Explore:
@@ -15233,6 +15931,17 @@ pt-BR:
             "[OLD] Functions Make":
               name: "[ANTIGO] Criar funções"
           title: CSP Unidade 4 Piloto - Variáveis, Condicionais e Funções
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
+            required:
+              display_name: Visão geral
         csp1-2019:
           title: CSP Unidade 1 - A Internet ('19-'20)
           description: Esta unidade explora os desafios e questões técnicas que surgem
@@ -15276,6 +15985,13 @@ pt-BR:
               name: Prática PT - A Internet e a Sociedade
             Unit 1 Chapter 2 Assessment:
               name: Unidade 1 Capítulo 2 Avaliação
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csp1_1:
+              display_name: 'Capítulo 1: Representando e Transmitindo Informação'
+            csp1_2:
+              display_name: 'Capítulo 2: Inventando a Internet'
         csp2-2019:
           title: CSP Unidade 2 - Informação Digital ('19-'20)
           description: Esta unidade explora ainda mais as maneiras pelas quais as
@@ -15305,6 +16021,13 @@ pt-BR:
               name: Unidade 2 Avaliação
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unidade 2: Informação Digital'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp3-2019:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -15341,6 +16064,13 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unidade 3: Introdução à Programação'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp4-2019:
           title: CSP Unidade 4 - Big Data e Privacidade ('19 -'20)
           description: O mundo rico em dados em que vivemos introduz muitas questões
@@ -15381,6 +16111,13 @@ pt-BR:
               name: 'Opcional: Perguntas sobre dados'
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big Data e Privacy'
+            cspAssessment:
+              display_name: Avaliação do Capítulo
+            cspSurvey:
+              display_name: Questionário
         csp5-2019:
           title: CSP Unidade 5 - Criação de aplicativos ('19 -'20)
           description: Esta unidade continua a introdução de conceitos fundamentais
@@ -15440,6 +16177,13 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programação orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programando com Estruturas de Dados'
+            cspSurvey:
+              display_name: Questionário
         csp-explore-2019:
           title: Explorar - Preparação de tarefas de desempenho de AP ('19 -'20)
           description: 'Estas lições estão aqui para ajudá-lo a entender, se preparar
@@ -15461,6 +16205,11 @@ pt-BR:
               name: Pesquisa Semestral
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capítulo 2: Tarefa de Exploração de Performance AP'
+            cspSurvey:
+              display_name: Questionário
         csp-create-2019:
           title: Criar - Preparação da tarefa de desempenho do AP ('19 -'20)
           description: 'Estas lições estão aqui para ajudá-lo a entender, preparar
@@ -15480,6 +16229,11 @@ pt-BR:
               name: Criar PT - Complete a Tarefa
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capítulo 3: Tarefa de Criação de Performance AP'
+            cspSurvey:
+              display_name: Questionário
         csppostap-2019:
           title: Pós AP - Ferramentas de dados ('19 -'20)
           description: |-
@@ -15525,6 +16279,13 @@ pt-BR:
               name: Projeto final
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Capítulo 1: Manipulando e Visualizando Dados'
+            csp_postap_2:
+              display_name: 'Capítulo 2: Aplicativos e Bancos de Dados'
+            cspSurvey:
+              display_name: Questionário
         csp1-pilot:
           stages:
             new stage:
@@ -15610,6 +16371,11 @@ pt-BR:
             Project - Digital Information Dilemmas Part 2:
               name: Projeto - Dilemas da Informação Digital Parte 2
           title: CSP Unidade 1 Piloto - Informações Digitais
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            required:
+              display_name: Visão geral
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -15728,6 +16494,21 @@ pt-BR:
             ecossistemas, espécies nativas e espécies invasoras. Em estudos sociais,
             os alunos contemplam os ramos do governo da Flórida e como os cidadãos
             comuns podem impactar as políticas locais e estaduais.
+          lesson_groups:
+            ramp_up:
+              display_name: Treinamento
+            csf_sprites:
+              display_name: Sprite
+            time4cs_c1:
+              display_name: Everglades e seus ecossistemas
+            time4cs_c2:
+              display_name: Cadeias de comida em Everglades
+            time4cs_c3:
+              display_name: Viver em Everglades
+            time4cs_c4:
+              display_name: Impactos Invasivos em Everglades
+            time4cs_c5:
+              display_name: Cidadãos influenciam as mudanças em Everglades
         csp1-pilot-staging:
           stages:
             Variables Explore:
@@ -15769,6 +16550,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 1: Bits e Bytes'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp2-pilot-staging:
           stages:
             Variables Explore:
@@ -15810,6 +16600,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 2: A internet'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp3-pilot-staging:
           stages:
             Variables Explore:
@@ -15922,6 +16721,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 4: Variáveis, Condicionais e Funções'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -16009,6 +16817,17 @@ pt-BR:
             Teacher Survey (Libraries):
               name: Pesquisa de professores (Biblioteca)
           title: 'Unidade 5: Listas, Loops e Traversals'
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: laços
+            csp_traversals:
+              display_name: Traversais
+            csp_project:
+              display_name: Projeto
+            csp_libraries:
+              display_name: Bibliotecas
         csp6-pilot-staging:
           stages:
             Variables Explore:
@@ -16050,6 +16869,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 6: Algoritmos'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp7-pilot-staging:
           stages:
             new stage:
@@ -16119,6 +16947,11 @@ pt-BR:
             Libraries Project:
               name: Projeto de Bibliotecas
           title: 'Unidade 7: Funções e Bibliotecas'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parâmetros e valores de retorno
+            csp_libraries:
+              display_name: Bibliotecas
         csp8-pilot-staging:
           stages:
             Variables Explore:
@@ -16160,6 +16993,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 8: Criar PT'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp9-pilot-staging:
           stages:
             Variables Explore:
@@ -16201,6 +17043,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 9: Dados'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp10-pilot-staging:
           stages:
             Variables Explore:
@@ -16242,6 +17093,15 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
           title: 'Unidade 10: Impacto Global'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         pluralsight:
           stages:
             Pluralsight LevelGroup:
@@ -16278,6 +17138,9 @@ pt-BR:
             anônimos para toda a turma. Os resultados são vitais para o seu professor
             e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
             e consideração."
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
         csp-post-survey-2018:
           stages:
             CSP post-course survey:
@@ -16291,6 +17154,9 @@ pt-BR:
             anônimos para toda a turma. Os resultados são vitais para o seu professor
             e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
             e consideração.
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
         csp5-pilot:
           stages:
             new stage:
@@ -16386,6 +17252,17 @@ pt-BR:
             "[OLD] Traversals Make":
               name: "[ANTIGO] Criar travessias"
           title: CSP Unidade Piloto Pilot - Listas, Loops e Travessias
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: laços
+            csp_traversals:
+              display_name: Traversais
+            csp_project:
+              display_name: Projeto
+            required:
+              display_name: Visão geral
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -16409,6 +17286,11 @@ pt-BR:
             Aqui, você encontrará dicas de reflexão para cada dia do seu workshop
             de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho
             que realizamos no Workshop de Treinamento do Facilitador.
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -16445,6 +17327,11 @@ pt-BR:
             Aqui, você encontrará dicas de reflexão para cada dia do seu workshop
             de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho
             que realizamos no Workshop de Treinamento do Facilitador
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd-sample-online:
           stages:
             What is a Computer? - sample progression:
@@ -16630,6 +17517,13 @@ pt-BR:
                 concluído em pares, embora possa ser concluído individualmente.
             Post-Project Test:
               name: Teste pós-projeto
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         csd2-pilot:
           title: CDS Unidade 2 - Desenvolvimento Web (Versão Piloto)
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo
@@ -16893,6 +17787,13 @@ pt-BR:
               name: Revisão por pares e retoques finais
             Project - Website for a Purpose:
               name: Projeto - Site para uma finalidade
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo e CSS'
+            cspSurvey:
+              display_name: Questionário
         csd3-pilot:
           title: Unidade CSD 3 - Animações e Jogos (Versão Piloto)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
@@ -17239,6 +18140,13 @@ pt-BR:
               name: Texto e cenas legendadas
             Sprite Properties:
               name: Propriedades do Sprite
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -17291,6 +18199,11 @@ pt-BR:
             Debugging:
               name: Analisando
           title: CSP Unidade 3 Piloto - Introdução ao design de aplicativos
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+            required:
+              display_name: Visão geral
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -17306,6 +18219,13 @@ pt-BR:
             Tell a Story in Play Lab:
               name: Conte uma história no Play Lab
           title: Alfabetização em Ciência da Computação no Vietnã
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -17318,6 +18238,11 @@ pt-BR:
             FiT
           description_audience: Facilitadores de descobertas da CS em treinamento
             2019
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -17327,6 +18252,11 @@ pt-BR:
             Demonstrating Understanding:
               name: Demonstrando entendimento
           title: Princípios do CS Aprendizado Mais Profundo do Workshop FiT 2019
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         pl-csd-bugs:
           stages:
             CSD Workshop 1 Bugs:
@@ -17352,6 +18282,11 @@ pt-BR:
           description_audience: Facilitadores de descobertas da CS em treinamento
             2019
           description_short: Workshop Ano Acadêmico 1
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csd-mod-w2:
           stages:
             new stage:
@@ -17368,6 +18303,11 @@ pt-BR:
             2
           description_audience: Facilitadores de descobertas da CS em treinamento
             2019
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csd-mod-w3:
           stages:
             CS Discoveries Deeper Learning Module 3:
@@ -17382,6 +18322,11 @@ pt-BR:
             3
           description_audience: Facilitadores de descobertas da CS em treinamento
             2019
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
@@ -17396,6 +18341,11 @@ pt-BR:
             4
           description_audience: Facilitadores de descobertas da CS em treinamento
             2019
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csp-mod-w1:
           stages:
             CS Principles Deeper Learning Module 1:
@@ -17408,6 +18358,11 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
           title: Princípios de CS Módulo de aprendizagem mais profunda para o workshop
             1
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csp-mod-w2:
           stages:
             CS Principles Deeper Learning Module 2:
@@ -17420,6 +18375,11 @@ pt-BR:
               name: 'Etapa 2: Demonstrar Entendimento'
           title: Princípios de CS Módulo de aprendizado mais profundo para o Workshop
             2
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csp-mod-w3:
           stages:
             CS Principles Deeper Learning Module 3:
@@ -17432,6 +18392,11 @@ pt-BR:
               name: 'Etapa 2: Demonstrar Entendimento'
           title: Princípios de CS Módulo de aprendizagem mais profunda para o workshop
             3
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         dlp19-csp-mod-w4:
           stages:
             CS Principles Deeper Learning Module 4:
@@ -17444,6 +18409,11 @@ pt-BR:
               name: 'Etapa 2: Demonstrar Entendimento'
           title: Princípios de CS Módulo de aprendizagem mais profunda para o Workshop
             4
+          lesson_groups:
+            required:
+              display_name: Visão geral
+            content:
+              display_name: Conteúdo
         csd-pilot:
           stages:
             Pilot Information:
@@ -17522,6 +18492,9 @@ pt-BR:
             Post-Project Test:
               name: Teste pós-projeto
           title: Computação e Resolução de Problemas
+          lesson_groups:
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         csp2-pilot:
           stages:
             new stage:
@@ -17562,6 +18535,11 @@ pt-BR:
               name: Projeto - Dilemas da Internet Parte 1
             Project - Internet Dilemmas Part 2:
               name: Projeto - Dilemas da Internet - Parte 2
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+            required:
+              display_name: Visão geral
         denny-science:
           stages:
             Earthquake Detector:
@@ -17614,6 +18592,11 @@ pt-BR:
               name: Pesquisa de PROFESSORES Unidade 6
             'Lesson 6: Assessment Day':
               name: 'Lição 6: Dia da Avaliação'
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+            required:
+              display_name: Visão geral
         denny-science-8:
           title: Detector de colisão
           stages:
@@ -17714,6 +18697,15 @@ pt-BR:
               name: Revendo suas reflexões
             End of Course projects:
               name: Projetos de fim de curso
+          lesson_groups:
+            k5_getting_started:
+              display_name: Iniciando
+            k5_basic_concepts:
+              display_name: Conceitos Básicos de Programação e Prática de Ensino
+            k5_diving_deeper:
+              display_name: 'Aprofundamento: Cursos E e F'
+            k5_next_steps:
+              display_name: Próximas etapas
         dance-extras-2019:
           title: Continue Dançando (2019)
           description: Vá além da primeira hora com ideias de projeto estendido.
@@ -17804,6 +18796,15 @@ pt-BR:
             'Lesson 15: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
           title: 'Visualização do CSP: variáveis, condicionais e funções'
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
@@ -17856,6 +18857,15 @@ pt-BR:
             Nested Loops in the Maze:
               name: Laços Aninhados no Labirinto
           title: Unidade de controle Time4CS 2
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_conditionals:
+              display_name: Condições
+            csf_nested_loops:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: funções
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:
@@ -17913,6 +18923,17 @@ pt-BR:
           title: Time4CS Experimento Unidade 2
           description_short: "[Adicionar uma descrição]"
           description: "[Adicionar uma descrição]"
+          lesson_groups:
+            time4cs_c1:
+              display_name: Everglades e seus ecossistemas
+            time4cs_c2:
+              display_name: Cadeias de comida em Everglades
+            time4cs_c3:
+              display_name: Viver em Everglades
+            time4cs_c4:
+              display_name: Impactos Invasivos em Everglades
+            time4cs_c5:
+              display_name: Cidadãos influenciam as mudanças em Everglades
         time4cs-control-unit-1:
           title: Time4CS Unidade de Controle 1
           stages:
@@ -17940,6 +18961,23 @@ pt-BR:
               name: Habilidade de acesso
             Conditionals Review:
               name: Revisão de Condicionais
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_events:
+              display_name: Eventos
+            csf_sprites:
+              display_name: Sprite
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_impacts:
+              display_name: Impacto da computação
+            ramp_up:
+              display_name: Treinamento
         time4cs-experiment-unit-1:
           title: Time4CS Experimento Unidade 1
           stages:
@@ -17967,6 +19005,23 @@ pt-BR:
               name: Habilidade de acesso
             Conditionals Review:
               name: Revisão de Condicionais
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_events:
+              display_name: Eventos
+            csf_sprites:
+              display_name: Sprite
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_impacts:
+              display_name: Impacto da computação
+            ramp_up:
+              display_name: Treinamento
         csp7-pilot:
           stages:
             Parameters and Returns Explore:
@@ -18024,6 +19079,13 @@ pt-BR:
             "[OLD] Parameters and Return Make":
               name: "[ANTIGO] Criar parâmetros e retorno"
           title: CSP Unidade 7 Piloto - Parâmetros, retorno e bibliotecas
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parâmetros e valores de retorno
+            csp_libraries:
+              display_name: Bibliotecas
+            required:
+              display_name: Visão geral
         csp8-pilot:
           stages:
             new stage:
@@ -18068,6 +19130,15 @@ pt-BR:
             'Lesson 15: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
           title: CSP Unidade 4 - Variáveis, condicionais e funções ('20 -'21)
+          lesson_groups:
+            csp_variables:
+              display_name: variáveis
+            csp_conditionals:
+              display_name: Condições
+            csp_functions:
+              display_name: funções
+            csp_project:
+              display_name: Projeto
         csp5-2020:
           stages:
             Lists Explore:
@@ -18111,6 +19182,15 @@ pt-BR:
             Unit 5 TEACHER Survey:
               name: Pesquisa do Professor da Unidade 5
           title: CSP Unidade 5 – Listas, laços e travessias (2020–2021)
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: laços
+            csp_traversals:
+              display_name: Traversais
+            csp_project:
+              display_name: Projeto
         csp7-2020:
           stages:
             Parameters and Return Explore:
@@ -18143,6 +19223,11 @@ pt-BR:
               name: Variáveis ​​fazem demonstração
             'Lesson 11: Assessment Day':
               name: 'Lição 11: Dia de Avaliação'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parâmetros e valores de retorno
+            csp_libraries:
+              display_name: Bibliotecas
         csd2-projects-temp:
           stages:
             HTML  Project:
@@ -18329,6 +19414,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo e CSS'
+            cspSurvey:
+              display_name: Questionário
         csd1-2020:
           title: Unidade 1 de CSD - Solução de problemas e computação ('19 -'20)
           description: "Resolução de Problemas e Computação é uma introdução altamente
@@ -18521,6 +19613,13 @@ pt-BR:
               name: 'Lição 3: Explorando a solução de problemas – Tema de jogos'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'Lição 3: Explorando a solução de problemas – Tema de animais'
+          lesson_groups:
+            cspSurvey:
+              display_name: Questionário
+            csd1_1:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            csd1_2:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
         csd4-2020:
           title: CDS Unidade 4 - O Processo de Design ('19 -'20)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
@@ -18791,6 +19890,15 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            csd4_2:
+              display_name: 'Capítulo 1: Prototipando o App'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            cspSurvey:
+              display_name: Questionário
         csd5-2020:
           title: CSD Unidade 5 - Dados e sociedade ('19 -'20)
           description: A unidade 5 trata da importância dos dados na solução de problemas
@@ -19108,6 +20216,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capítulo 1: Representando Informação'
+            csd5_2:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+            cspSurvey:
+              display_name: Questionário
         csd6-2020:
           title: CDS Unidade 6 - Computação física ('19 -'20)
           description: A unidade 6 explora o papel das plataformas de hardware na
@@ -19156,6 +20271,13 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capítulo 1: Programando com Hardware'
+            csd6_2:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+            cspSurvey:
+              display_name: Questionário
         csd3-2020:
           title: CSD Unidade 3 - Animações e Jogos
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
@@ -19489,6 +20611,13 @@ pt-BR:
               name: Pesquisa do CS Discoveries pós curso
             Text:
               name: Texto
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
+            cspSurvey:
+              display_name: Questionário
         coursea-2020:
           title: Curso A (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -19591,6 +20720,15 @@ pt-BR:
                 todas as habilidades de programação que eles aprenderam para criar
                 um jogo animado. É hora de ser criativo e criar uma história no Laboratório
                 de Jogos!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         courseb-2020:
           title: Curso B (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -19704,6 +20842,17 @@ pt-BR:
                 de aprender a usar eventos no Play Lab e aplicar todas as habilidades
                 de codificação que aprenderam para criar um jogo animado. É hora de
                 ser criativo e criar um jogo no Play Lab!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_impacts:
+              display_name: Impacto da computação
+            csf_events:
+              display_name: Eventos
         coursec-2020:
           title: Curso C (2019)
           description: Crie programas com sequenciamento, loops e eventos. Traduza
@@ -19875,6 +21024,17 @@ pt-BR:
                 uma estrutura passo a passo para os alunos seguirem, desde o planejamento
                 em papel até a codificação em nosso site. Além disso, oferecemos idéias
                 para ajudar os professores a facilitar um final de demonstração! '
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_binary:
+              display_name: Binário
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         coursed-2020:
           title: Curso D (2019)
           description: Os alunos desenvolvem sua compreensão de loops, condicionais
@@ -20059,6 +21219,19 @@ pt-BR:
                 foi criada para responder à música.
             Dance Part:
               name: Festa dançante
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_binary:
+              display_name: Binário
+            csf_digcit:
+              display_name: Cidadania digital
         coursee-2020:
           title: Curso E (2019)
           description: Comece a codificar com algoritmos, loops, condicionais e eventos
@@ -20257,6 +21430,19 @@ pt-BR:
               name: Compartilhamento Digital
             Designing for Accessibility:
               name: Projetando para Acessibilidade
+          lesson_groups:
+            ramp_up:
+              display_name: Treinamento
+            csf_sprites:
+              display_name: Sprite
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_nested_loops:
+              display_name: Laços aninhados
+            csf_functions:
+              display_name: funções
+            csf_impacts:
+              display_name: Impacto da computação
         coursef-2020:
           title: Curso F (2019)
           description: Aprenda a usar diferentes tipos de loops, eventos, funções
@@ -20468,6 +21654,17 @@ pt-BR:
                 seu trabalho final aos colegas de classe."
             AI for Oceans:
               name: IA para oceanos
+          lesson_groups:
+            ramp_up:
+              display_name: Treinamento
+            csf_digcit:
+              display_name: Cidadania digital
+            csf_variables:
+              display_name: variáveis
+            csf_for_loops:
+              display_name: Laços para
+            csf_sprites:
+              display_name: Sprite
         express-2020:
           title: Curso Expresso (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -20533,6 +21730,23 @@ pt-BR:
               name: Pet Virtual com Sprite Lab
             Build A Project:
               name: Desenvolva um projeto
+          lesson_groups:
+            csf_warmup:
+              display_name: Aquecimento
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_conditionals:
+              display_name: Condições
+            csf_functions:
+              display_name: funções
+            csf_variables:
+              display_name: variáveis
+            csf_for_loops:
+              display_name: Laços para
+            csf_sprites:
+              display_name: Sprite
         pre-express-2020:
           title: Pré-leitor Express (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -20566,6 +21780,13 @@ pt-BR:
               name: Conte uma história no Play Lab
             Make a Game in Play Lab:
               name: Faça um jogo no Play Lab
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenciamento
+            csf_loops:
+              display_name: laços
+            csf_events:
+              display_name: Eventos
         csp1-2020:
           stages:
             new stage:
@@ -20599,6 +21820,9 @@ pt-BR:
             'Lesson 14: Assessment Day':
               name: 'Lição 14: Dia da Avaliação'
           title: CSP Unidade 1 – Informação digital (2020-2021)
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Unidade 1: Informação digital'
         csp2-2020:
           stages:
             new stage:
@@ -20622,6 +21846,9 @@ pt-BR:
             'Lesson 9: Assessment Day':
               name: 'Lição 9: Dia da Avaliação'
           title: CSP Unidade 2 – A Internet (2020-2021)
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidade 2: A internet'
         csp3-2020:
           stages:
             new stage:
@@ -20647,6 +21874,9 @@ pt-BR:
             'Lesson 11: Assessment Day':
               name: 'Lição 11: Dia de Avaliação'
           title: CSP Unidade 3 – Introdução ao design de aplicativos (2020-2021)
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidade 3: Introdução ao design de aplicativos'
         csp6-2020:
           stages:
             new stage:
@@ -20664,6 +21894,9 @@ pt-BR:
             'Lesson 6: Assessment Day':
               name: 'Lição 6: Dia da Avaliação'
           title: CSP Unidade 6 – Algoritmos (2020-2021)
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unidade 6: Algoritmos'
         csp8-2020:
           stages:
             new stage:
@@ -20698,6 +21931,9 @@ pt-BR:
             'Lesson 9: Assessment Day':
               name: 'Lição 9: Dia da Avaliação'
           title: CSP Unidade 9 – Dados (2020-2021)
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidade 9: Dados'
         csp10-2020:
           stages:
             new stage:
@@ -20737,6 +21973,9 @@ pt-BR:
             'Lesson 14: Unit Assessment Day':
               name: 'Lição 14: Dia da Avaliação da Unidade'
           title: CSP Unidade 10 – Segurança cibernética e impactos globais (2020-2021)
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidade 10: Segurança cibernética e impactos globais'
         csp-march-virtual:
           stages:
             Kick-off:
@@ -20758,6 +21997,7 @@ pt-BR:
             Part 2:
               name: Parte 2
           title: Formação curricular em princípios de ciência da computação para facilitadores
+            2020-2021
         csp3-virtual:
           description: Esta unidade introduz os conceitos fundamentais de programação
             de computadores, que ajudam na habilidade de criar ricos aplicativos interativos.
@@ -20791,6 +22031,9 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unidade 3: Introdução à Programação'
         csd3-virtual:
           description_short: Programação
           stages:
@@ -21128,6 +22371,9 @@ pt-BR:
               name: Propriedades do Sprite
             Text and Captioned Scenes:
               name: Texto e cenas legendadas
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capítulo 1: Imagens e Amimações'
         jess-test-script:
           stages:
             new stage:
@@ -21274,6 +22520,11 @@ pt-BR:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_2:
+              display_name: 'Capítulo 2: Estilo e CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -21324,6 +22575,8 @@ pt-BR:
               name: CS Pesquisa de pós-curso sobre princípios
             Intro to App Lab:
               name: Introdução Laboratório de Aplicativos
+            Variables:
+              name: variáveis
         virtual-holding-place:
           stages:
             Velocity:
@@ -21342,6 +22595,11 @@ pt-BR:
               name: Usando o processo de design de jogos
             Project - Design a Game:
               name: Projeto - Projetar um Jogo
+          lesson_groups:
+            content:
+              display_name: Conteúdo
+            csd3_2:
+              display_name: 'Capítulo 2: Construindo Jogos'
         code-break:
           stages:
             new stage:
@@ -21350,3 +22608,36 @@ pt-BR:
               name: Algoritmos
             Events:
               name: Eventos
+        no-lg:
+          stages:
+            new stage:
+              name: nova fase
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
+            While Loops:
+              name: Laços enquanto
+            Loops and Simulations:
+              name: Laços e Simulações
+            Introduction to Arrays:
+              name: Introdução a Arrays
+            'Building an App: Image Scroller':
+              name: 'Construindo um aplicativo: Rolagem de Imagem'
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
+            Processing Arrays:
+              name: Processando Listas
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
+            'Building an App: Canvas Painter':
+              name: 'Construindo um aplicativo: Pintor de Tela'
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unidade 5 Avaliação 5 - Questões práticas sobre pseudocódigo AP
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capítulo 1: Programação orientada a eventos'
+            csp5_2:
+              display_name: 'Capítulo 2: Programando com Estruturas de Dados'

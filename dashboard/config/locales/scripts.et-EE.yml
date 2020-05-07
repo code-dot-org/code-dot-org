@@ -884,18 +884,34 @@ et:
               name: Binaararvud
             The Internet:
               name: Internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp2-2017:
           stages:
             Bytes and File Sizes:
               name: Baidid ja faili suurused
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp3-2017:
           stages:
             Creating Functions:
               name: Loomisfunktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp5-2017:
           stages:
             While Loops:
               name: "„Kui“ tsüklid"
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         CSDU3-Draft:
           stages:
             Functions:
@@ -918,6 +934,22 @@ et:
           stages:
             What to Expect:
               name: Mida oodata
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
         allthehiddenthings:
           stages:
             Game Lab:
@@ -932,6 +964,14 @@ et:
               name: Kunstniku funktsioonid
         artistExemplar:
           description_audience: Vanustele 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1036,6 +1076,13 @@ et:
               name: Õppetund 2,2
             Lesson 2,3:
               name: Õppetund 2,3
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
         csd3-2017:
           stages:
             Velocity:
@@ -1046,6 +1093,9 @@ et:
               name: Muutujad
             Conditionals:
               name: Tingimuslaused
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         grade2:
           stages:
             Flappy:
@@ -1086,6 +1136,26 @@ et:
               name: Disaini retsept
             Welcome!:
               name: Tere tulemast!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
         basketball:
           title: Vali oma meeskond ja tee korvpallimäng
           description_short: Vali oma meeskond ja tee korvpallimäng
@@ -1108,6 +1178,14 @@ et:
               name: Vastastikune hindamine
             Lists:
               name: Loendid
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
         minecraft:
           title: KoodiTund Minecraft Designer
           description_short: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
@@ -1169,6 +1247,9 @@ et:
               name: Sissejuhatus
             Conditionals:
               name: Tingimuslaused
+          lesson_groups:
+            content:
+              display_name: Sisu
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1183,6 +1264,9 @@ et:
               name: Sissejuhatus
             Ice Age Play Lab:
               name: Jääaja Play Lab
+          lesson_groups:
+            content:
+              display_name: Sisu
         classic-hoc-impact-study:
           description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
             tegelastega!
@@ -1215,6 +1299,22 @@ et:
           stages:
             Welcome Back!:
               name: Tere tulemast tagasi!
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
         sciencepd4:
           stages:
             Welcome!:
@@ -1231,12 +1331,29 @@ et:
           stages:
             Binary:
               name: Binaarne
+          lesson_groups:
+            content:
+              display_name: Sisu
         sciencepd5:
           stages:
             Welcome!:
               name: Tere tulemast!
             Wrap-Up:
               name: Kokkuvõte
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            cspSurvey:
+              display_name: Uuring
         csd6-draft:
           stages:
             Lists:
@@ -1309,6 +1426,10 @@ et:
               name: Sissejuhatus
             Ice Age Play Lab:
               name: Jääaja Play Lab
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd2-old:
           stages:
             Peer Review:
@@ -1353,6 +1474,81 @@ et:
           stages:
             Building a Foundation:
               name: Vundamendi ehitus
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursuse F sisu
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
         express-2017:
           stages:
             Introduction:
@@ -1373,6 +1569,9 @@ et:
               name: Vundamendi ehitus
             Nested Loops:
               name: Korduvad tsüklid
+          lesson_groups:
+            content:
+              display_name: Sisu
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1387,6 +1586,9 @@ et:
           stages:
             Creating Functions:
               name: Loomisfunktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1425,6 +1627,9 @@ et:
               name: Vundamendi ehitus
             Nested Loops:
               name: Korduvad tsüklid
+          lesson_groups:
+            content:
+              display_name: Sisu
         new-e:
           stages:
             Building a Foundation:
@@ -1447,6 +1652,9 @@ et:
               name: For Loop Fun
             Songwriting with Parameters:
               name: Laulukirjutamine parameetritega
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursuse F sisu
         csp3-staging:
           stages:
             Creating Functions:
@@ -1461,6 +1669,14 @@ et:
           description_short: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
           description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond
             läbi Minecrafti koos koodiga.
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1489,6 +1705,9 @@ et:
               name: For Loop Fun
             Songwriting with Parameters:
               name: Laulukirjutamine parameetritega
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursuse F sisu
         csd6-old:
           stages:
             Lists:
@@ -1505,6 +1724,9 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd3-2018:
           stages:
             Variables:
@@ -1515,10 +1737,16 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd2-2018:
           stages:
             Lists:
               name: Loendid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         coursea-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1611,6 +1839,9 @@ et:
           stages:
             Functions with Parameters:
               name: Parameetritega funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         coursee-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -1647,12 +1878,30 @@ et:
               name: Laulukirjutamine parameetritega
             Conditionals with Cards:
               name: Tingimuslaused kaartidel
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursuse F sisu
         csp1-2018:
           stages:
             Binary Numbers:
               name: Binaararvud
             The Internet:
               name: Internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -1661,10 +1910,134 @@ et:
           stages:
             Creating Functions:
               name: Loomisfunktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp5-2018:
           stages:
             While Loops:
               name: "„Kui“ tsüklid"
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1681,6 +2054,12 @@ et:
               name: Sinu digitaalne jalajälg
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie ja suur projekt
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
         frozen-2018:
           stages:
             Artist:
@@ -1708,6 +2087,14 @@ et:
           stages:
             Dance Party:
               name: Tantsuõhtu
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
         dance-extras:
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
         coursef-2019:
@@ -1726,6 +2113,15 @@ et:
               name: Internet
             Crowdsourcing:
               name: Ühistegevused
+          lesson_groups:
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
         dance-low:
           stages:
             Dance Party:
@@ -1748,6 +2144,17 @@ et:
               name: Kunstnik Binaar
             Dance Party:
               name: Tantsuõhtu
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_binary:
+              display_name: Binaarne
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1764,6 +2171,13 @@ et:
               name: Ühistegevused
             Songwriting:
               name: Laulude kirjutamine
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
         express-2019:
           stages:
             Relay Programming:
@@ -1786,10 +2200,30 @@ et:
               name: Ühistegevused
             Dance Party:
               name: Tantsuõhtu
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         andrea-test:
           stages:
             'null':
               name: tühi
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
         dance-extras-gallery:
           title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
@@ -1801,6 +2235,19 @@ et:
               name: Suursündmus
             Binary Bracelets:
               name: Binaarsed käevõrud
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_binary:
+              display_name: Binaarne
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -1809,6 +2256,13 @@ et:
               name: Happy Maps
             Going Places Safely:
               name: Läheb asukohta turvaliselt
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1819,6 +2273,13 @@ et:
               name: Tsüklik - Jääaeg
             'Loops: Getting Loopy':
               name: Muutub tsükliliseks
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1827,6 +2288,11 @@ et:
               name: Sinu digitaalne jalajälg
             Spelling Bee:
               name: Sõnamesilane
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1835,6 +2301,9 @@ et:
           stages:
             Lists:
               name: Loendid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd3-2019:
           stages:
             Variables:
@@ -1845,32 +2314,89 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd6-2019:
           stages:
             Functions with Parameters:
               name: Parameetritega funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            required:
+              display_name: Ülevaade
         csp1-2019:
           stages:
             Binary Numbers:
               name: Binaararvud
             The Internet:
               name: Internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp2-2019:
           stages:
             Bytes and File Sizes:
               name: Baidid ja faili suurused
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp3-2019:
           stages:
             Creating Functions:
               name: Loomisfunktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp5-2019:
           stages:
             While Loops:
               name: "„Kui“ tsüklid"
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csp1-pilot:
           stages:
             Binary Numbers:
               name: Binaararvud
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+            required:
+              display_name: Ülevaade
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1879,14 +2405,111 @@ et:
               name: Tingimuslaused kaartidel
             Building a Foundation:
               name: Vundamendi ehitus
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+            required:
+              display_name: Ülevaade
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd2-pilot:
           stages:
             Lists:
               name: Loendid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd3-pilot:
           stages:
             Variables:
@@ -1897,16 +2520,102 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+            content:
+              display_name: Sisu
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
         peru-2019:
           stages:
             Introduction:
               name: Sissejuhatus
             Nested Loops:
               name: Korduvad tsüklid
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
         dance-2019:
           stages:
             Dance Party:
@@ -1927,8 +2636,19 @@ et:
               name: Muutujad
             For Loops:
               name: For tsükkel
+          lesson_groups:
+            k5_next_steps:
+              display_name: Järgmised sammud
         dance-extras-2019:
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1939,18 +2659,82 @@ et:
               name: Ühistegevused
             Conditionals with Cards:
               name: Tingimuslaused kaartidel
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Tingimuslaused
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_events:
+              display_name: Sündmused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Tingimuslaused
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_events:
+              display_name: Sündmused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        csd2-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd6-2020:
           stages:
             Functions with Parameters:
               name: Parameetritega funktsioonid
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         csd3-2020:
           stages:
             Variables:
@@ -1963,12 +2747,22 @@ et:
               name: Funktsioonid
             Text:
               name: Tekst
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
         coursea-2020:
           stages:
             Going Places Safely:
               name: Läheb asukohta turvaliselt
             'Programming: Happy Maps':
               name: Happy Maps
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1977,12 +2771,28 @@ et:
               name: Liiguta, liiguta
             'Loops: Getting Loopy':
               name: Muutub tsükliliseks
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binaarsed käevõrud
             'Events: The Big Event':
               name: Suursündmus
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_binary:
+              display_name: Binaarne
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2001,10 +2811,28 @@ et:
               name: Digitaalne kodakondsus
             Dance Party:
               name: Tantsuõhtu
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_binary:
+              display_name: Binaarne
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Laulude kirjutamine
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2015,16 +2843,39 @@ et:
               name: Internet
             Crowdsourcing:
               name: Ühistegevused
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
         express-2020:
           stages:
             Dance Party:
               name: Tantsuõhtu
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Sõnamesilane
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
         csp1-2020:
           stages:
             Binary Numbers:
@@ -2047,15 +2898,24 @@ et:
           stages:
             While Loops:
               name: "„Kui“ tsüklid"
+            Variables:
+              name: Muutujad
         virtual-holding-place:
           stages:
             Velocity:
               name: Velocity
             Functions:
               name: Funktsioonid
+          lesson_groups:
+            content:
+              display_name: Sisu
         code-break:
           stages:
             Algorithms:
               name: Algoritmid
             Events:
               name: Sündmused
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: "„Kui“ tsüklid"

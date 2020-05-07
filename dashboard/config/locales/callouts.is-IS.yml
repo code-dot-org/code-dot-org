@@ -282,8 +282,35 @@ is-IS:
       NEW Course 4 Bee For Loops 5:
         actions_category: Verkfærakassinn er með nýtt útlit! Kubbarnir "Aðgerðir"
           hafa nú bæst við.
+      New Artist Project:
+        New Artist Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum!
+          Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
+        New Artist Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið
+          þitt
+        sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig
+          inn til að vista verkefnið undir aðgangi þínum!
       New Frozen Project:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum!
+          Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
+        New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið
+          þitt
+        sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig
+          inn til að vista verkefnið undir aðgangi þínum!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Þú finnur `frá` lykkjuna hér!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Komdu leikmanninum til flaggsins til að komast
+          í næsta áfanga.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Notaðu þennan kubb til að skilja eftir athugasemdir fyrir
+          þig eða kennarann um það hvernig kóðinn virkar.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Nú er komin ný aðferð til að setja tölur
+          í kubba. Þessa kubba undir `Reikningur` má draga fram og færa til!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Notaðu þetta til að stilla gildi breytunnar `lengd`
       Overworld Chop Trees:
         craft_callout_preplaced: Við höfum sett kubba hér til að koma þér af stað
       Overworld Chop Trees_2019:
@@ -652,6 +679,8 @@ is-IS:
         courseC_starWars_loops2: Þú hefur ekki nema einn svona kubb í þessari þraut.
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Þú hefur ekki nema einn svona kubb í þessari þraut.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Þú hefur ekki nema einn svona kubb í þessari þraut.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Þú þarft ekki að nota liti til að leysa þessa
           þraut. Ef þú vilt nota liti, er það auðvelt með kubbnum "einhver litur"!
@@ -675,6 +704,10 @@ is-IS:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM.
           Þú þarft ekkert að athuga með hunang.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Mundu að athuga með HVERT ský hvort það hafi BLÓM.
+          Þú þarft ekkert að athuga með hunang.
+        4_5_Bee_Conditionals_2_2: Þarftu aðstoð?  Smelltu hér til að sjá hjálparmyndband!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum
           blómasafanum (eða hunangi) frá einu blómi (eða búi).
@@ -791,6 +824,9 @@ is-IS:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa
           til fyrsta ferninginn.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa
+          til fyrsta ferninginn.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Þegar þessi græni kubbur er keyrður er allur
           kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta
@@ -800,6 +836,10 @@ is-IS:
           kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta
           ferninginn?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Þegar þessi græni kubbur er keyrður er allur
+          kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta
+          ferninginn?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Þegar þessi græni kubbur er keyrður er allur
           kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta
           ferninginn?

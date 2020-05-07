@@ -99,6 +99,8 @@ class RegistrationsController < Devise::RegistrationsController
 
     should_send_new_teacher_email = current_user && current_user.teacher?
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
+    should_send_parent_email = current_user && current_user.parent_email.present?
+    ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
     if current_user
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
@@ -143,16 +145,22 @@ class RegistrationsController < Devise::RegistrationsController
       require(:user).
       tap do |user|
         user[:parent_email_preference_email] = user[:parent_email]
-        user[:parent_email_preference_opt_in_required] = '1'
-        user[:parent_email_preference_request_ip] = request.ip
-        user[:parent_email_preference_source] = EmailPreference::PARENT_EMAIL_CHANGE
+        if user[:parent_email_preference_opt_in].empty?
+          user[:parent_email_preference_opt_in_required] = '0'
+          user[:parent_email_update_only] = '1'
+        else
+          user[:parent_email_update_only] = '0'
+          user[:parent_email_preference_opt_in_required] = '1'
+          user[:parent_email_preference_request_ip] = request.ip
+        end
       end.
       permit(
         :parent_email_preference_email,
         :parent_email_preference_opt_in,
         :parent_email_preference_request_ip,
         :parent_email_preference_source,
-        :parent_email_preference_opt_in_required
+        :parent_email_preference_opt_in_required,
+        :parent_email_update_only
       )
   end
 
@@ -236,9 +244,10 @@ class RegistrationsController < Devise::RegistrationsController
   def set_parent_email
     return head(:bad_request) if params[:user].nil?
 
-    successfully_updated = update_parent_email
+    successfully_updated = current_user.update_without_password(parent_email_params)
 
     if successfully_updated
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now
       head :no_content
     else
       render status: :unprocessable_entity,
@@ -312,10 +321,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   private
-
-  def update_parent_email
-    current_user.update_without_password(parent_email_params)
-  end
 
   def update_user_email
     return false if forbidden_change?(current_user, params)

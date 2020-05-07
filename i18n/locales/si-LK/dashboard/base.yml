@@ -293,6 +293,7 @@ si:
     delete_text_teacher_note: "සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ."
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
     update_email: "යාවත්කාලීන කරන්න"
+    parent_guardian_email_label: "මාපිය/භාරකරු e-තැපෑල"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -476,20 +477,6 @@ si:
       title: "කන්ඩිෂනලස්"
     widgets:
       cta: "කෙසේදැයි දැනගන්න"
-  gallery:
-    students_drew_these_with_code: "සිසුන් මේවා ඇන්දේ කේත මගිනි!"
-    students_made_these_with_code: "සිසුන් මේවා කේත මගින් නිර්මාණය කර ඇත!"
-    picture_count: "පසුගිය දවස් <b>%{days}</b> තුල සිසුන් ඔවුන්ගේම වැඩසටහන් කේතනය කිරීමෙන් චිත්‍ර <b>%{count}</b> ක් අඳින ලදි. වැඩසටහන ධාවනය කිරීමට චිත්‍ර මත ක්ලික් කරන්න."
-    activity_count: "අතීතයේ, <b>%{days}</b>  , සිසුන් apps සහ පින්තුර <b>%{count}</b> නිමානය කරේ ඔවුන්ගේම \nපරිගණක වැඩසටහන්, එක් එක් වැඩසටහන බැලීමට පින්තූර සහ තිරපිටපත් මත ක්ලික් කරන්න."
-    want_to_make_your_own: "ඔබේම නිර්මාණයක් හදමු ද?"
-    how_to_save: "මෙම නිබන්ධන අවසන් මට්ටම වලදී , ගැලරිය හි  ගබඩා කිරීම සදහා \"අවසානයි\" සහ \"සුරකින්න\" බොත්තම් මත ඔබන්න "
-    more: "තව &rarr;"
-    caption_by_name_age: "%{name} විසින්, වයස %{age}"
-    caption_time_ago: "%{time_ago} පෙර"
-    header: "ගැලරිය"
-    header_playlab: "කථා සහ ක්‍රීඩා"
-    header_artist: "කේත කලාව"
-    report_abuse: "අනිසි භාවිතයක් වාර්තා කරන්න"
   landing:
     report_bug: "දෝෂය වාර්තා කරන්න"
     support: "උපකාර ලබාගන්න"
@@ -659,6 +646,7 @@ si:
     outdated: 'කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී'
     review_in_progress: 'සමාලෝචනයට සූදානම්'
     review_new_submission: 'අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න'
+    peer_review: 'සමූහ විමර්ශනය'
   flex_category:
     required: 'දළ විශ්ලේෂණය'
     content: 'අන්තර්ගතය'

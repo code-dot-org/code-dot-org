@@ -365,6 +365,8 @@ sv:
     parent_email_label: Förälder/vårdnadshavares emailadress (valfritt)
     update: Uppdatera konto
     update_email: Uppdatera
+    parent_guardian_email_label: Förälder/vårdnadshavares e-postadress
+    none: Ingen
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -617,25 +619,6 @@ sv:
       title: Villkor
     widgets:
       cta: Läs mer
-  gallery:
-    students_drew_these_with_code: Elever ritade dessa med kod!
-    students_made_these_with_code: Elever gjorde dessa med kod!
-    picture_count: Under de senaste <b>%{days}</b> dagarna, har elever ritat <b>%{count}</b>
-      bilder genom att skriva egna datorprogram. Klicka på bilderna för att se varje
-      program i aktion.
-    activity_count: Under de senaste <b>%{days}</b> dagarna, har selever gjort <b>%{count}</b>
-      appar och bilder genom att skriva egna datorprogram. Klicka på bilderna och
-      skärmdumparna för att se varje program i aktion.
-    want_to_make_your_own: Vill du göra din egen?
-    how_to_save: På den sista nivån av dessa uppgifter, klicka på "Finish" (Avsluta)
-      och "Save" (Spara) för att spara ditt arbete i galleriet.
-    more: Mer &rarr;
-    caption_by_name_age: av %{name}, ålder %{age}
-    caption_time_ago: "%{time_ago} tid sedan"
-    header: Galleri
-    header_playlab: Spel-labb
-    header_artist: Konstnären
-    report_abuse: Rapportera missbruk
   landing:
     report_bug: Rapportera bugg
     support: Få hjälp
@@ -855,6 +838,7 @@ sv:
     instructor_feedback: Återkoppling till instruktör
     peer_feedback: Din feedback
     outdated: Denna feedback skapades för en tidigare skickad version
+    peer_review: Din recension
   flex_category:
     required: Översikt
     content: Innehåll

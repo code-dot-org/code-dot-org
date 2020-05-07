@@ -27,31 +27,36 @@ el:
     Η πληροφορική είναι μια από τις θεμελιώδεις γνώσεις κάθε μαθητή.
   social_hoc2019_dance: Με ονόματα όπως Katy Perry, Jonas Brothers, Lil Nas X, Panic
     at the Disco και πολλούς άλλους!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
-  cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_landing_title: ΤΝ για τους Ωκεανούς
+  oceans_landing_description: Μάθετε για τη μηχανική μάθηση και την ηθική χρήση της
+    ΤΝ.
+  cs_for_good_hashtag: "#ΕΥγιαΚαλό"
+  oceans_landing_specs: Διαθέσιμο σε 25+ γλώσσες 1 | Τάξεις 3+
+  oceans_landing_explanation: Η Επιστήμη των Υπολογιστών είναι πολλά περισσότερα από
+    τον προγραμματισμό! Μάθετε για την τεχνητή νοημοσύνη (ΤΝ), τη μηχανική μάθηση,
+    τα δεδομένα εκπαίδευσης και τη μεροληψία, καθώς εξετάζετε ηθικά θέματα και το
+    πώς μπορεί να χρησιμοποιηθεί η ΤΝ ώστε να αντιμετωπίσει παγκόσμια προβλήματα.  Απολαύστε
+    το πρώτο βήμα του Code.org σε ένα νέο ταξίδι για να διδάξετε περισσότερα για την
+    ΤΝ. Όταν χρησιμοποιείτε τη δραστηριότητα ΤΝ για τους Ωκεανούς, εκπαιδεύετε πραγματικά
+    μοντέλα μηχανικής μάθησης. <a href='#behind-the-scenes'>Μάθετε περισσότερα</a>.
+  oceans_landing_explanation_markdown: Η Επιστήμη των Υπολογιστών είναι πολλά περισσότερα
+    από τον προγραμματισμό! Μάθετε για την τεχνητή νοημοσύνη (ΤΝ), τη μηχανική μάθηση,
+    τα δεδομένα εκπαίδευσης και τη μεροληψία, καθώς εξετάζετε ηθικά θέματα και το
+    πώς μπορεί να χρησιμοποιηθεί η ΤΝ ώστε να αντιμετωπίσει παγκόσμια προβλήματα.  Απολαύστε
+    το πρώτο βήμα του Code.org σε ένα νέο ταξίδι για να διδάξετε περισσότερα για την
+    ΤΝ. Όταν χρησιμοποιείτε τη δραστηριότητα ΤΝ για τους Ωκεανούς, εκπαιδεύετε πραγματικά
+    μοντέλα μηχανικής μάθησης. [Μάθετε περισσότερα](#behind-the-scenes).
+  oceans_landing_teacher_resources: Πόροι για Εκπαιδευτικούς
+  oceans_landing_teacher_resources_desc: Σχέδια μαθημάτων και δραστηριότητες που θα
+    σας βοηθήσουν να διδάξετε ΤΝ, μηχανική μάθηση, δεδομένα εκπαίδευσης και μεροληψία,
+    καθώς εξετάζετε ηθικά θέματα.
+  oceans_landing_resource_button: Προβολή Πόρων
+  oceans_landing_cs_for_good: ΕΥ για Καλό
+  oceans_landing_cs_for_good_desc: Πόροι για να βοηθήσουν τους μαθητές να κατανοήσουν
+    το ρόλο που θα μπορούσε να παίξει η επιστήμη των υπολογιστών στη δημιουργία ενός
+    πιο δίκαιου κόσμου.
+  oceans_landing_videos: Βίντεο για την ΤΝ και την Μηχανική Μάθηση
+  oceans_behind_the_scenes: 'ΤΝ για τους Ωκεανούς: Πίσω από τα Παρασκήνια'
   oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
     href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
@@ -92,37 +97,39 @@ el:
     on the training data, the SVM separates the "space" of all possible fish into
     two parts, which correspond to the classes we are trying to learn (such as "blue"
     or "not blue").
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
-    learning, training data, and bias, while exploring ethical issues and how AI can
-    be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
+  social_hoc2019_oceans_title: 'ΤΝ για τους Ωκεανούς #ΕΥγιαΚαλό'
+  social_hoc2019_oceans_desc: Μάθετε για την ΤΝ, τη μηχανική μάθηση, τα δεδομένα εκπαίδευσης
+    και τη μεροληψία, καθώς εξετάζετε ηθικά θέματα και το πώς μπορεί να χρησιμοποιηθεί
+    η ΤΝ ώστε να αντιμετωπίσει παγκόσμια προβλήματα. Η Επιστήμη των Υπολογιστών είναι
+    πολλά περισσότερα από τον προγραμματισμό! Απολαύστε το πρώτο βήμα του Code.org
+    σε ένα νέο ταξίδι για να διδάξετε περισσότερα για την ΤΝ σε όλο το πρόγραμμα σπουδών
+    μας.
+  hoc_overview_oceans_tutorial_header: ΤΝ για τους Ωκεανούς
+  hoc_overview_oceans_tutorial_desc: Μάθετε για την ΤΝ, τη μηχανική μάθηση, τα δεδομένα
+    εκπαίδευσης και τη μεροληψία, καθώς εξετάζετε ηθικά θέματα και το πώς μπορεί να
+    χρησιμοποιηθεί η ΤΝ ώστε να αντιμετωπίσει παγκόσμια προβλήματα.
+  ai_video_title_what_is_ai: Τι είναι η ΤΝ;
+  ai_video_title_algorithm_bias: Πολεμώντας τη μεροληψία στους αλγόριθμους
+  ai_video_title_phone_knows_dog: Πώς ξέρει το τηλέφωνό σας ότι αυτός είναι ένας σκύλος;
+  ai_video_title_what_is_ml: Τι είναι η Μηχανική Μάθηση;
+  ai_video_title_ml_big_small_prickly: 'Μηχανική Μάθηση: Λύνοντας Προβλήματα Μεγάλα,
+    Μικρά και Ακανθώδη'
+  ai_video_title_ethics_of_ai: Ηθική της ΤΝ
+  ai_video_title_ml_human_bias: Μηχανική Μάθηση και Ανθρώπινη Μεροληψία
+  ai_video_title_seeing_ai: 'Βλέποντας την ΤΝ: Κάνοντας τον οπτικό κόσμο πιο προσιτό'
+  activity: Δραστηριότητα
+  name: Όνομα
+  description: Περιγραφή
+  audience: Κοινό
   ai_resource_header: Teach and Learn about AI
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
     computer science curriculum, and teacher trainings. (Requires Minecraft: Education
     Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids: Μηχανική Μάθηση για Παιδιά
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_ibm_ml_for_kids: 'IBM: Μηχανική Μάθηση για Παιδιά'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
@@ -177,6 +184,9 @@ el:
   codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
     or see resources for students, parents, and teachers.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Μάθετε περισσότερα
   cookie_banner_message: Συνεχίζοντας την περιήγηση στην ιστοσελίδα μας ή κάνοντας
     κλικ στο "Συμφωνώ", συμφωνείτε με την αποθήκευση cookies στον υπολογιστή ή τη
     συσκευή σας.
@@ -899,7 +909,7 @@ el:
   title_stats: Blurbs και στατιστικά
   title_partners: Συνεργάτες
   title_resources: Πόροι
-  title_past_posters: Προηγούμενα Posters της Ώρας του Κώδικα
+  title_past_posters: Προηγούμενες Αφίσες της Ώρας του Κώδικα
   title_signup_thanks: Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα
     του Κώδικα!
   title_tutorial_guidelines: Οδηγίες για τα μαθήματα
@@ -8548,7 +8558,7 @@ el:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft: Ώρα του Κώδικα: Τεχνητή νοημοσύνη για τα καλά'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: ΤΝ για τους Ωκεανούς
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while

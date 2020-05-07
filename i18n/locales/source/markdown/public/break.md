@@ -2,73 +2,59 @@
 title: Take a Code Break
 ---
 
-<div style="background-color: #00adbc; padding: 25px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
-
-<h1>Take a Code Break</h1>
-<div class="col-66" style="padding-right: 30px; padding-bottom: 20px;">
+<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<h1>Take a Code Break!</h1>
+<div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
 With schools closed and tens of millions of students at home, join Code.org each week for Code Break — help us build the world's largest live interactive classroom, with weekly challenges to engage students of all abilities, even those without computers.
 
-<h3>Let us teach your children:</h3>
+<h2>Let us support you</h2>
+When you <a href="#signup">sign up</a>, you'll receive: 
 <ul>
-<li>A <a href="http://code.org/codebreaknow">weekly interactive classroom</a> featuring our founder <a href="/about/leadership/hadi_partovi">Hadi Partovi</a> and special guests. <a href="https://www.addevent.com/event/LA4771254">Add to calendar</a>.</li>
-<li>A <a href="#activities">weekly activity</a> or challenge. <a href="#signup">Sign up</a>.</li>
+<li>A <a href="http://code.org/codebreaknow">weekly interactive classroom</a> featuring our founder <a href="/about/leadership/hadi_partovi">Hadi Partovi</a> and special guests. Every Wednesday at 10am PT / 1pm ET - <a href="https://www.addevent.com/event/Qu4803077">add to calendar</a>.</li>
+<li>A <a href="#activities">new activity</a> or challenge every week.</li>
 <li>Options for beginners, experienced students, and even students without computers.</li>
 </ul>
-
-<a href="https://code.org/codebreaknow">
-<button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Tune In</button></a>
-
+<h2>Every Wednesday at 10am PT / 1pm ET</h2>
+<div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>
+<p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
+<h2>Fun and foundational</h2>
+<p>Computer science is <i>super fun</i> because it is creative and playful. Whether it’s solving a puzzle, coding art, or designing an app, students prefer learning by exploring rather than memorizing. Students even rank CS their <a href="https://code.org/promote">favorite subject</a> after art, music, and dance.</p>
+<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity. Plus, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</font></b>.</p>
 </div>
 
-<div class="col-33">
-
-<img src="/images/marketing/CodeBreakGuest-AshtonK.jpg" style="max-width:100%">
-
-</div>
-
-<div style="clear: both;"></div>
-<h2>Tired of studying? Take a Code Break!</h2>
-<p>Computer science is <i>super fun</i> because it is creative and playful. Whether it’s solving a puzzle, coding art, or designing an app, students prefer learning by exploring rather than memorizing.</p>
-<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity.</p>
+<div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
+<img src="/images/marketing/khan-vaughn-callout.jpg" style="max-width:100%">
+<p style="margin: 10px 18px 0 8px;">In celebration of Teacher Appreciation Week, we'll welcome the founder and CEO of Khan Academy, Sal Khan, as well as computer science educator, Flo Vaughn.</p>
 <a id="signup"></a>
-<h2> Sign up to receive each week’s Code Break:</h2>
-Join to receive each week's classroom updates, weekly activities, and unique opportunities to participate interactively with our special guests. 
-<iframe src="http://go.pardot.com/l/153401/2020-03-16/n7j6zc" width="100%" height="280" type="text/html" frameborder="0" allowTransparency="true" style="border: 100"></iframe>
-Or, follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.
+<div style="padding:8px 18px 0 8px;">
+<a href="https://code.org/codebreaknow"><button style="background-color: #ffa400;border-color: #e7e8ea;color: #FFFFFF;font-size: 16px;">Tune In</button></a>
+<p style="margin: 10px 0 0 0;">Sign up to receive each week's activities, general updates, and unique opportunities to interact with our special guests.</p>
+<iframe src="http://go.pardot.com/l/153401/2020-03-16/n7j6zc" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
 
-<h2>Tune in weekly: Wednesdays at 10am PT / 1pm ET</h2>
-[col-33]
+</div></div>
 
-<div style="margin:0 auto;"><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" width="275px" style="padding-right: 5px"></a></div>
-[/col-33]
+<div style="clear: both;margin-bottom:30px;"></div>
+<div class="col-33" style="padding:0 25px 25px 0;"><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" max-width="100%"></a></div>
+<div class="col-66">
+<p><a href="http://code.org/codebreaknow">Tune in</a> with students across the globe to join our founder <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, special guests, and Code.org's best teachers to learn different computer science concepts in a live interactive classroom. To get the classroom projects each week, <a href="#signup">sign up</a> above and <a href="https://www.addevent.com/event/Qu4803077">add Code Break to your calendar.</a></p>
 
-[col-66]
+<a title="Add to Calendar" class="addeventatc" data-id="Qu4803077" href="https://www.addevent.com/event/Qu4803077" target="_blank" rel="nofollow">Add to Calendar</a>
 
-[Tune in](http://code.org/codebreaknow) with students to join our founder [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), special guests, and Code.org's best teachers to learn different computer science concepts in a live interactive classroom. To get the classroom projects each week, <a href="#signup">sign up</a> above and [add Code Break to your calendar](https://www.addevent.com/event/LA4771254).
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script> 
+<p style="margin-top: 15px;">All ages welcome, via phone or computer. To participate in the episode, make sure to <a href="https://zoom.us/download">download Zoom</a> beforehand. Or, you can simply tune in on YouTube to <a href="https://www.youtube.com/user/CodeOrg/live">watch the show live</a>. You can also find more resources for at home learning <a href="https://code.org/athome">here</a>.</p>
+<a href="https://code.org/codebreaknow"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;font-size: 16px;">Tune In</button></a>
 
-<a title="Add to Calendar" class="addeventatc" data-id="LA4771254" href="https://www.addevent.com/event/LA4771254" target="_blank" rel="nofollow">Add to Calendar</a>
-	<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script> 
-	
-<p>All ages welcome, via phone or computer. Just make sure to <a href="https://zoom.us/download">download Zoom</a> beforehand. You can also find more resources for at home learning <a href="https://code.org/athome">here</a>.</p>
-<a href="https://code.org/codebreaknow">
-<button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Tune In</button></a>
-
-[/col-66]
-
-[clear-both]
-
-[/clear-both]
+</div>
 
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<h1 style="border-top:2px solid #7665a0; padding-top: 30px;">Weekly Activities &amp; Past Episodes</h1>
-
-<h2>Episode 1 - March 25 - Algorithms with Hill Harper</h2>
+<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Weekly Activities &amp; Past Episodes</h1></div>
+<h2>Episode 1 - Algorithms with Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
 <h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 3/25 episode</h4>
-<a href="https://www.facebook.com/Code.org/videos/212168439992679/"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a></div>
+<a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>View on Youtube</a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">View on Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
 <h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Algorithms</h4>
@@ -85,11 +71,10 @@ Or, follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a hr
 </div>
 
 <div style="clear: both;"></div>
-
-<h2>Episode 2 - April 1 - Prototypes with Mark Cuban & Lyndsey Scott</h2>
+<h2>Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
 <h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/1 episode</h4>
-<a href="https://www.facebook.com/Code.org/videos/231140824935457/"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a></div>
+<a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>View on Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>View on Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
 <h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Prototypes</h4>
@@ -105,4 +90,93 @@ Or, follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a hr
 
 </div>
 
+<a id="episode3"></a>
 <div style="clear: both;"></div>
+<h2>Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epner</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/8 episode</h4>
+<a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>View on Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>View on Facebook</i></a></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Encryption</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
+<a href="https://studio.code.org/s/code-break/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+</div>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<a id="episode4"></a>
+<div style="clear: both;"></div>
+<h2>Episode 4 - Digital Information with Mike Krieger & Alice Keeler</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/15 episode</h4>
+<a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
+">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Digital Information</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
+<a href="https://studio.code.org/s/code-break/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+</div>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<a id="episode5"></a>
+<div style="clear: both;"></div>
+<h2>Episode 5 - Simulations & Data with Bill Gates</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/22 episode</h4>
+<a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Simulations & Data</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
+<a href="https://studio.code.org/s/code-break/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+</div>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<a id="episode6"></a>
+<div style="clear: both;"></div>
+<h2>Episode 6 - The Internet with Keegan-Michael Key & Vint Cerf</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/29 episode</h4>
+<a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - The Internet</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
+<a href="https://studio.code.org/s/code-break/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+</div>
+
+</div>

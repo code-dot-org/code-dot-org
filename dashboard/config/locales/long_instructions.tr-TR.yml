@@ -1021,6 +1021,72 @@ tr-TR:
         ve yazı aşağıdaki resimde olduğu gibi doğru boyutu belirtir.\n\r\n\r\n<img
         src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\"
         style=\"width:100px\" style=\"float:left\">\r"
+      CSD U2 Heading Test: |-
+        # Başlıklar ve Paragraflar
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Paragraf ögesi nedir?</strong>
+        </summary>
+
+        Paragraflar, etiketleri açarak(`<p>`) ve ayrıca kapatarak(`</p>`) işaretlenir. HTML'deki paragraflar, bir kelimeden bir grup cümleye kadar herhangi uzunlukta bir metin olabilir. Web sayfanızdaki metninizin tamamı bir HTML ögesinde (başlıklar veya paragraflar)  bulunmalıdır. Paragraflar, bir grup cümleyi birleştirir ve bu metin grubu ile bir sonraki metin grubu arasına biraz boşluk bırakır.
+
+        </details>
+        <details>
+        <summary><strong>Birden çok paragrafı nasıl oluştururum?</strong>
+        </summary>
+
+        Paragraflar, etiketleri(`<p>`) açarak ve ayrıca (`</p>`) kapatarak işaretlenir. Birden fazla paragraf oluşturmak için birden fazla açma ve kapama `<p>` etiket seti isteyeceksiniz. Örneğin;
+
+        <pre>
+        &lt;p&gt;
+          Bu bir paragraf.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Bu başka bir paragraf.
+        &lt;/p&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary><strong>Başlıklar nelerdir?</strong>
+        </summary>
+
+        Başlıklar, bir web sayfası boyunca farklı boyutlarda bölüm başlıklarıdır. Başlıklar, web sayfanıza ayırarak yapı ekleyerek kullanıcının okumasını kolaylaştırır.
+
+        </details>
+        <details>
+        <summary><strong>Farklı boyutlu başlıkları nasıl oluşturabilirim?</strong>
+        </summary>
+
+        Başlıklar 6 farklı boyutta gelir. Şimdiye kadar, öncelikle en büyük olanı \<h1> kullandınız. HTML etiketindeki 1 sayısı bunun en büyük başlık olduğunu gösterir. En küçük başlık \<h6>.  Sayı büyüdükçe küçülen \<h2>, \<h3>, \<h4> ve \<h5> etiketlerini de deneyebilirsiniz.
+
+        </details>
+        <details>
+        <summary><strong>HTLM nedir?</strong>
+        </summary>
+
+        HTML, Hiper Metin İşaretleme Dili anlamına gelir. HTML bir web sayfasının içeriğine yapı eklemek için kullanılır. HTML, belirli yapıların nerede başlayıp nerede biteceğini belirtmek için etiketleri kullanır. Bu etiketler, içerik ve yapının ayırt edilebilmesi için İngilizce dilinde kullanılmayan bir grup karakterdir.
+
+        </details>
+        <details>
+        <summary><strong>HTML ögesi nedir?</strong>
+        </summary>
+
+        Bir HTML ögesi bir başlangıç etiketiyle işaretlenen ve bazen bir bitiş etiketiyle kapatılan, bir web sitesinin parçasıdır. Öge ayrıca etiketlerin içindeki içeriği de içerir. Örneğin;
+
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+
+        </details>
+        <details>
+        <summary><strong>HTML etiketi nedir?</strong>
+        </summary>
+
+        HTML etiketi, makineye bir HTML ögesinin başlangıç veya bitişinin nerede ve ne tür olduğunu söyleyen özel karakter kümesidir.
+
+        </details>
+        </div>
       CSD U2 Heading Test_2018: "# Başlıklar ve Paragraflar\\\r\n\n\\\r\n\n<div\nstyle=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px;
         font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**Bir paragraf öğesi
@@ -1743,6 +1809,60 @@ tr-TR:
         \   AM.png>) butonuna tıklayın.\\\r\n-   Üretilen URL' yi kopyalayın, sayfanızı
         görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\\r\n
         \   \\\r"
+      CSD U2 unordered list: |-
+        # Sıralı Listeler
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>İki tür liste nedir?</strong>
+        </summary>
+         HTLM'de sıralı ve sırasız olmak üzere iki tür liste vardır.
+        </details>
+        <details>
+        <summary><strong>What is an unordered list?</strong>
+        </summary>
+
+        An unordered list is just a set of bulleted items.
+        <br /><br />An unordered list element has the tag \<ul> . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each item in the list is marked by a list item element \<li>. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the unordered list (\<ul>).
+
+        </details>
+
+        <details>
+        <summary><strong>How do I make an unordered list?</strong>
+        </summary>
+
+        Making an unordered list has two steps: making the list and adding the list items.  To make the unordered list, write the unordered list tags `<ul></ul>`.  Next, add your list items **inside** the unordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.
+
+        It can be helpful to indent your \<li> tags so it's clear they are contained in the \<ul> tag.
+
+        </details>
+
+        <details>
+        <summary><strong>Show me working code.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Example</td>
+        <td>Result</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt; <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        This page should have an unordered list, but it's missing the list tags.
+
+        # Do This
+
+        -   Use the `<ul>` and `<li>` tags to structure the content into an unordered list like the picture below.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD U2 upload images: "# Resimleri Yükle\\\r\n\n\\\r\nSonra, tüm resimleri projenize
         yüklemeniz gerekecek.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\*\nTüm resimleri bilgisayarına
         indir. Yardıma ihtiyacın varsa [Lesson 8 Level\n5](/s/csd2/stage/8/puzzle/5)
@@ -5422,6 +5542,43 @@ tr-TR:
       New Minecraft Hero Project: |-
         **Serbest Oyun** Şimdi her şey sana bağlı!
         Bu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan.
+      OPD-K5-events-2: "'Tıklandığı zaman' olayına 'normal miktarda kanat çırp' bloğunu
+        ekleyin, sonra 'Çalıştır' a basın.   \\\r\n\\\r\n\\---\\\r\n\\\r\nFlappy'
+        i hedefe hareket ettirmek için oyun alanına dokunun veya tıklayın."
+      OPD-K5-events-3: "'Çalıştığı zaman' olayı oyun başlar başlamaz kodu çalıştırmanızı
+        sağlar.  \\\r\n\\\r\n\"Çalıştır\" butonuna basıldığında bölümün hızının ayarlanacağı
+        bir blok eklemeyi deneyin. \\\r\n\\\r\n\\---\\\r\n\\\r\nOyunu oynayın ve devam
+        etmek için hedefe kanat çırpın."
+      OPD-K5-events-4: "Şimdi zemin ekledik.\n\\\r\n\\\r\n'Zemine çarptığında' olayına
+        'oyunu bitir' bloğunu bağla. \\\r\n\\\r\n\\---\\\r\n\\\r\nOyunu oyna ve devam
+        etmek için kuşu zemine çarptır."
+      OPD-K5-events-5: "Flappy için çarpışma kodunu yazmadığınız sürece Flappy engellerin
+        içinden uçacaktır. \\\r\n\\\r\n'Bir engele çarptığı zaman' olayına bir blok
+        ekleyin böylece Flappy ilk borulara çarptığı zaman oyun sona erer."
+      OPD-K5-events-6: "Flappy engelleri geçtiğinde puanları saymak için bir skor
+        tabelası ekledik  \\\r\n\\\r\n'Bir engel geçildiğinde' olayına, puanları sayacak
+        bir kod bloğu ekle, ardından Flappy'nin ilk grup borular arasında uçması için
+        \"Çalıştır\" butonuna tıkla."
+      OPD-K5-projects-2: "Ne kadar öğrendiğin hayret verici! Adım adım bir oyun hazırlayalım.\\\r\n\\\r\nAraç
+        kutusunda yeni bloklar kullanarak, yeni bir arka plan seçin, ardından oyununuzda
+        olabilecek bir oyuncu seçin."
+      OPD-K5-projects-3: "Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek için
+        olay işleyicileri ve işlemler gibi blokları kullan.\\\r\n\\\r\nBu bulmacayı
+        tamamlamak için oyuncuyu hedeflere götürün."
+      OPD-K5-projects-4: "Oyununa biraz daha karakter katalım!\\\r\n\\\r\nDaha fazla
+        karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı
+        tamamlamak için hedefe ilerleyin."
+      OPD-K5-projects-5: "Birden fazla karakter ve aktörlerin hareket ettirilmesi
+        oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek
+        için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\\\r\n\\\r\nSkoru
+        değiştirmek için 'aktör dokunursa' gibi etkinlik bloklarını kullanın. Bu bulmacayı
+        tamamlamak için 10 puan topla."
+      OPD-K5-projects-6: İyi iş! Çalışan bir oyunun bütün temel bileşenlerine sahipsin.
+        Şimdi oyunu oynamak istediğine emin olmak için biraz vakit geçir. Oyunu kazanmak
+        ya da kaybetmek için bir yol ekle, sonra bu koşullardan birini yerine getirene
+        kadar oyna.
+      OPD-K5-projects-7: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
+        ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       Overworld Chop Tree: |-
         Odun çok önemli bir kaynaktır.
         Birçok şey odundan yapılır. Ağaca doğru yürü ve devirmek için 'yok et' bloğunu kullan.
@@ -5766,6 +5923,9 @@ tr-TR:
       courseA_maze_seq10: "\\*\\* Meydan Okuma: \\*\\* domuza ulaşmak için kuşu TNT
         etrafından dolaştır! \\\r \\\r <img src=\"https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif\"
         width=\"200px\"/>"
+      courseA_maze_seq10_copy: "\\*\\* Meydan Okuma: \\*\\* domuza ulaşmak için kuşu
+        TNT etrafından dolaştır! \\\r \\\r <img src=\"https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif\"
+        width=\"200px\"/>"
       courseA_maze_seq11: "Daha kısa bir bulmaca Zamanı!  Önce bir yana sonra öbür
         yöne giderek kuşu domuza ulaştır <img src=\"https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif\"
         width=\"200px\"/> \\\r"
@@ -5788,14 +5948,21 @@ tr-TR:
       courseA_maze_seq4: "_\"Bir şeyler doğru değil.\"_ \\\r \\\r Blok kaldır ve kuşu
         domuza ulaştır!\\\r \\\r <img src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq5: "Bunu kendin dene. \\\r <img\nsrc=\"https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif\"\nwidth=\"200px\"/>"
+      courseA_maze_seq5_copy: "Bunu kendin dene. \\\r <img\nsrc=\"https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq6: "Bir yöne ilerle sonra öteki yöne ve kuşu domuza ulaştır!\\\r
         \\\r <img src=\"https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq6_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq6_2019: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
+      courseA_maze_seq6_copy: "Bir yöne ilerle sonra öteki yöne ve kuşu domuza ulaştır!\\\r
+        \\\r <img src=\"https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq7: "Eksik bloğu bul be kuşu domuza ulaştır!\\\r \\\r <img src=\"https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif\"\nwidth=\"200px\"/>"
+      courseA_maze_seq7_copy: "Eksik bloğu bul be kuşu domuza ulaştır!\\\r \\\r <img
+        src=\"https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq8: "Bu seviyeyi çöz ve kuşu domuza ulaştır!\\\r \\\r <img src=\"https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq8_2018: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq8_2019: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
+      courseA_maze_seq8_copy: "Bu seviyeyi çöz ve kuşu domuza ulaştır!\\\r \\\r <img
+        src=\"https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq9: "**Meydan okuma:** Blok ekleyerek kodu düzelt ve kuşu domuza
         ulaştır!\\\r \\\r <img src=\"https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq_challenge1: |-
@@ -6423,6 +6590,9 @@ tr-TR:
       courseC_starWars_loops2_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hadi
         BB-8!\"_\\\r\n\\\r\nTüm hurda metalleri toplamak için, 'tekrarla' bloğu içinde
         yalnızca bir blok bulunan bir döngü oluşturmaya çalış."
+      courseC_starWars_loops2_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hadi
+        BB-8!\"_\\\r\n\\\r\nTüm hurda metalleri toplamak için, 'tekrarla' bloğu içinde
+        yalnızca bir blok bulunan bir döngü oluşturmaya çalış."
       courseC_starWars_loops4: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et, BB-8.\"_\\\r\n\\\r\nBu bulmacada, BB-8'in en az sayıda blok ile tüm hurda
         metalleri toplaması için iki 'tekrarla' dönügüsü sana yardım edecektir!\\\r"
@@ -6432,11 +6602,16 @@ tr-TR:
       courseC_starWars_loops4_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et, BB-8.\"_\\\r\n\\\r\nBu bulmacada, BB-8'in en az sayıda blok ile tüm hurda
         metalleri toplaması için iki 'tekrarla' dönügüsü sana yardım edecektir!\\\r"
+      courseC_starWars_loops4_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
+        et, BB-8.\"_\\\r\n\\\r\nBu bulmacada, BB-8'in en az sayıda blok ile tüm hurda
+        metalleri toplaması için iki 'tekrarla' dönügüsü sana yardım edecektir!\\\r"
       courseC_starWars_loops5: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hadi
         BB-8!\"_\\\r"
       courseC_starWars_loops5_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hadi
         BB-8!\"_\\\r"
       courseC_starWars_loops5_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hadi
+        BB-8!\"_\\\r"
+      courseC_starWars_loops5_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hadi
         BB-8!\"_\\\r"
       courseC_starWars_loops6: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hepsini
         alabilir misin?\"_\\\r\n\\\r\nDöngüler içinde birden fazla blokla da çalışır!
@@ -6445,6 +6620,9 @@ tr-TR:
         alabilir misin?\"_\\\r\n\\\r\nDöngüler içinde birden fazla blokla da çalışır!
         \ Bu diziyi döngü haline getirebilir misiniz?"
       courseC_starWars_loops6_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hepsini
+        alabilir misin?\"_\\\r\n\\\r\nDöngüler içinde birden fazla blokla da çalışır!
+        \ Bu diziyi döngü haline getirebilir misiniz?"
+      courseC_starWars_loops6_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hepsini
         alabilir misin?\"_\\\r\n\\\r\nDöngüler içinde birden fazla blokla da çalışır!
         \ Bu diziyi döngü haline getirebilir misiniz?"
       courseC_starWars_loops7: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu
@@ -6459,6 +6637,10 @@ tr-TR:
         yapabilirsin!\"_\\\r\n\\\r\nSadece bir döngü kullanarak bütün hurda metalleri
         toplamayı dener misin? Hepsini almak için programlamaya, ardından da döngünün
         içine koymak için tekrar eden kodu bulmaya çalış."
+      courseC_starWars_loops7_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu
+        yapabilirsin!\"_\\\r\n\\\r\nSadece bir döngü kullanarak bütün hurda metalleri
+        toplamayı dener misin? Hepsini almak için programlamaya, ardından da döngünün
+        içine koymak için tekrar eden kodu bulmaya çalış."
       courseC_starWars_loops8: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et, BB-8.\"_\\\r\n\\\r\n**Meydan Okuma:** Bu seviyeyi tamamlamak için son
         birkaç bulmacada kullandığın fikirleri birleştir."
@@ -6466,6 +6648,9 @@ tr-TR:
         et, BB-8.\"_\\\r\n\\\r\n**Meydan Okuma:** Bu seviyeyi tamamlamak için son
         birkaç bulmacada kullandığın fikirleri birleştir."
       courseC_starWars_loops8_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
+        et, BB-8.\"_\\\r\n\\\r\n**Meydan Okuma:** Bu seviyeyi tamamlamak için son
+        birkaç bulmacada kullandığın fikirleri birleştir."
+      courseC_starWars_loops8_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
         et, BB-8.\"_\\\r\n\\\r\n**Meydan Okuma:** Bu seviyeyi tamamlamak için son
         birkaç bulmacada kullandığın fikirleri birleştir."
       courseC_starWars_loops9: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Devam
@@ -6709,6 +6894,9 @@ tr-TR:
       courseD_bee_conditionals1_predict1_2019: "-   \"Bu bulut görüşümü engelliyor!\"
         \\* \\\r \\\r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek
         ise, nektar al."
+      courseD_bee_conditionals1_predict1_copy: "-   \"Bu bulut görüşümü engelliyor!\"
+        \\* \\\r \\\r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek
+        ise, nektar al."
       courseD_bee_conditionals3: Sadece çiçeklerden nektar toplayabilirsiniz, ancak
         bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
         Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
@@ -6718,6 +6906,10 @@ tr-TR:
         Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
         **ilk defasında** ihtiyaç duyacaktır.
       courseD_bee_conditionals3_2019: Sadece çiçeklerden nektar toplayabilirsiniz,
+        ancak bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
+        Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
+        **ilk defasında** ihtiyaç duyacaktır.
+      courseD_bee_conditionals3_copy: Sadece çiçeklerden nektar toplayabilirsiniz,
         ancak bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
         Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
         **ilk defasında** ihtiyaç duyacaktır.

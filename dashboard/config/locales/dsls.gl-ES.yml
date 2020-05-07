@@ -491,6 +491,9 @@ gl-ES:
 
           * [A finalidade dos sitios web - Guía de actividades] (en inglés)
           (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [A finalidade dos sitios web - Guía de ￼actividades￼]
+          (en inglés)(https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L2 Overview:
         markdown: "# Resumo\n\nEsta lección presenta os sitios web como un medio de
           expresión persoal. A clase primeiro discute os diferentes xeitos en que
@@ -501,6 +504,10 @@ gl-ES:
           * Contido da páxina web** - O texto sen procesar, imaxes e outros elementos
           incluídos nunha páxina web\n\n\n## Recursos\n\n* [Bosquexo da páxina web
           persoal - Guía de actividades] (en inglés)(https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
+        teacher_markdown: "* [Bosquexo da páxina web persoal - Guía de ￼actividades￼]
+          (en inglés)(https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
         markdown: |
           # Resumo
@@ -581,6 +588,8 @@ gl-ES:
 
           * [Resumo dos Creative Commons](￼￼￼￼￼￼https://www.youtube.com/watch?v=HKfqoPYJdVc￼￼) – Vídeo
           * [Licencia do teu traballo - Guía de ￼actividades￼ en inglés](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licencia do teu traballo - Guía de ￼actividades￼ en
+          inglés](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
       CSD U2 Top Websites:
         markdown: |-
           # Os mellores sitios web dos EE. UU.
@@ -1338,6 +1347,14 @@ gl-ES:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - {}
@@ -1603,6 +1620,14 @@ gl-ES:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

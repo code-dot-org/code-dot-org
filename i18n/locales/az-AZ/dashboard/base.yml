@@ -271,6 +271,7 @@ az:
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: '(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)'
     update_email: "Yenilə"
+    none: "Heç biri"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Yoxlanıldı'
@@ -384,15 +385,6 @@ az:
       audience: "4+ yaş"
     unplugged_conditionals:
       title: "Şərti ifadələr"
-  gallery:
-    students_made_these_with_code: "Şagirdlər bunları kod yazmaqla edib!"
-    picture_count: "Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını yazaraq <b>%{count}</b> şəkil çəkib. Hər proqramın necə işlədiyini görmək üçün şəkilləri klikləyin."
-    activity_count: "Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini görmək üçün şəkil və ekran təsvirlərini klikləyin."
-    want_to_make_your_own: "Özünüz üçün də birini düzəltmək istərdiniz?"
-    more: "Daha çox &rarr;"
-    header: "Qalereya"
-    header_playlab: "Oyun labı"
-    header_artist: "Rəssam"
   landing:
     support: "Kömək istə"
     support_url: "//support.code.org"

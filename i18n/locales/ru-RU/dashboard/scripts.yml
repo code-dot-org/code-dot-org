@@ -1154,6 +1154,13 @@ ru:
               name: Необходимость DNS
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp1_1:
+              display_name: 'Глава 1: Представления и передача информации'
+            csp1_2:
+              display_name: 'Глава 2: Изобретение Интернета'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1166,6 +1173,13 @@ ru:
               name: Сжатие с потерями и форматы файлов
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            csp2_1:
+              display_name: 'Глава 1: Кодирования и сжатия комплексной информации'
+            csp2_2:
+              display_name: 'Глава 2: Манипулирование и визуализация данных'
+            cspSurvey:
+              display_name: Опрос
         csp3-2017:
           description_short: Программирование
           stages:
@@ -1183,6 +1197,13 @@ ru:
               name: Создание функций с параметрами
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Языки программирования и алгоритмы'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
         csp4-2017:
           stages:
             Simple Encryption:
@@ -1193,6 +1214,13 @@ ru:
               name: Опрос после окончания курса
             Student Post-Course Survey:
               name: Опрос учащихся после обучения
+          lesson_groups:
+            csp4_1:
+              display_name: 'Глава 1: Мир больших объемов данных и шифрование'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
         csp5-2017:
           stages:
             Compound Conditional Logic:
@@ -1219,6 +1247,13 @@ ru:
               name: Операторы Если
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+            csp5_2:
+              display_name: 'Глава 2: Программирование с использованием структуры данных'
+            cspSurvey:
+              display_name: Опрос
         CSDU3-Draft:
           description_short: Программирование
           stages:
@@ -1272,6 +1307,21 @@ ru:
           stages:
             Sending Binary Messages:
               name: Отправка двоичных сообщений
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1292,6 +1342,14 @@ ru:
               name: 'Художник: Процедуры'
         artistExemplar:
           description_audience: Возраст 8-18 лет
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1396,6 +1454,14 @@ ru:
               name: 'Фермер: Циклы с проверкой условия'
             'Maze: Nested Loops':
               name: 'Лабиринт: вложенные циклы'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         csd3-2017:
           description_short: Программирование
           stages:
@@ -1411,6 +1477,15 @@ ru:
               name: переменные
             Conditionals:
               name: Условные команды
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
+            csd_survey:
+              display_name: Опрос после окончания курса
         grade2:
           stages:
             Flappy:
@@ -1451,6 +1526,14 @@ ru:
               name: Создание рецепта
             Welcome!:
               name: Добро пожаловать!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
         csp-online-test:
           stages:
             'Lessons 2-3: Binary Messages':
@@ -1469,6 +1552,13 @@ ru:
               name: 'Уроки 3-4: кодирование изображений'
             'Lessons 1 - 3: Algorithms':
               name: 'Уроки 1-3: алгоритмы'
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         csp1-support:
           stages:
             'Lessons 4 - 6: Encoding and Sending Numbers':
@@ -1477,6 +1567,13 @@ ru:
               name: 'Урок 7: кодирование и отправка текста'
             'Lesson 9: Internet Addressing':
               name: 'Урок 9: адресация в интернете'
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         basketball:
           title: Выбери свою команду и создай игру в баскетбол
           description_short: Выбери свою команду и создай игру в баскетбол
@@ -1509,12 +1606,34 @@ ru:
               name: Рецензирование
             Lists:
               name: Списки
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент и HTML'
+            csd2_2:
+              display_name: 'Глава 2: Дизайн и CSS'
+            csd_survey:
+              display_name: Опрос после окончания курса
         csp2-support:
           stages:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Уроки 1-2: байты, размеры файлов и сжатие текста'
             'Lessons 3 - 4 : Encoding Images':
               name: 'Уроки 3-4: кодирование изображений'
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
+            csd_survey:
+              display_name: Опрос после окончания курса
         minecraft:
           title: Редактор для «Часа Кода» Minecraft
           description_short: Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.
@@ -1594,6 +1713,11 @@ ru:
               name: Введение
             Conditionals:
               name: Условные команды
+          lesson_groups:
+            content:
+              display_name: Содержимое
+            extra_course_content:
+              display_name: Дополнительный материал для курса
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1616,6 +1740,9 @@ ru:
               name: Лаборатория игр Ледниковый период
             'Algorithms: Tangrams':
               name: 'Алгоритмы: Танграмы'
+          lesson_groups:
+            content:
+              display_name: Содержимое
         classic-hoc-impact-study:
           description_short: Постигай азы программирования с забавными персонажами!
           stages:
@@ -1650,6 +1777,21 @@ ru:
           stages:
             'Lessons 1 - 3: Algorithms':
               name: 'Уроки 1-3: алгоритмы'
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         sciencepd4:
           stages:
             Welcome!:
@@ -1666,6 +1808,9 @@ ru:
           stages:
             Binary:
               name: Двоичный
+          lesson_groups:
+            content:
+              display_name: Содержимое
         sciencepd5:
           stages:
             Welcome!:
@@ -1674,6 +1819,13 @@ ru:
               name: Итоги
         csp5-support:
           description_short: Профессиональный курс изучения курса "CSP Глава 5" для учителей
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+            practice:
+              display_name: Практика учителя
         csppostap-2017:
           stages:
             Importing and Exporting Data:
@@ -1684,6 +1836,11 @@ ru:
               name: Финальный проект
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            content:
+              display_name: Содержимое
+            cspSurvey:
+              display_name: Опрос
         csd6-draft:
           stages:
             Lists:
@@ -1708,6 +1865,11 @@ ru:
               name: Множества и цикл for
             Functions with Parameters:
               name: Процедуры с параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
         workshop-gamelab:
           stages:
             Introduction:
@@ -1726,6 +1888,11 @@ ru:
               name: Представления чисел
             8-bit Numbers:
               name: 8-битные числа
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
         applab-1hour:
           description_audience: Учащиеся средних и старших классов
           stages:
@@ -1776,6 +1943,13 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation_':
               name: 'Проект: Прототип Инновации'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
+            csd_survey:
+              display_name: Опрос после окончания курса
         csd3-draft:
           description_short: Анимация и игры
           stages:
@@ -1803,6 +1977,13 @@ ru:
               name: Представления чисел
             8-bit Numbers:
               name: 8-битные числа
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            csd_survey:
+              display_name: Опрос после окончания курса
         csd3-old:
           stages:
             Velocity:
@@ -1845,6 +2026,10 @@ ru:
           stages:
             Plotting Shapes:
               name: Рисование фигур
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
         csd2-old:
           stages:
             Peer Review:
@@ -1935,6 +2120,13 @@ ru:
           title: Курс E
           assignment_family_title: Курс E
           description_audience: 'Возраст: 8-12'
+          lesson_groups:
+            csf_e_1:
+              display_name: Продвинуться к Курсу Е (опционально)
+            csf_e_2:
+              display_name: Содержание Курса Е
+            extra_course_content:
+              display_name: Дополнительный материал для курса
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -1952,6 +2144,11 @@ ru:
           title: Курс F
           assignment_family_title: Курс F
           description_audience: 'Возраст: 9-13'
+          lesson_groups:
+            csf_f_1:
+              display_name: Продвинуться к Курсу Ф (опционально)
+            csf_f_2:
+              display_name: Содержание Курса Ф
         csdnovice:
           stages:
             Tuesday:
@@ -1962,6 +2159,14 @@ ru:
               name: Четверг
             Welcome:
               name: Добро пожаловать
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Глава 1: AP Tech Setup'
+            csp_ap_3:
+              display_name: 'Глава 3: AP Create Performance Task'
+            csp_ap_2:
+              display_name: 'Глава 2: AP Explore Performance Task'
         cspnovice:
           stages:
             Welcome:
@@ -1972,6 +2177,77 @@ ru:
               name: Среда
             Thursday:
               name: Четверг
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         express-2017:
           stages:
             Introduction:
@@ -2009,6 +2285,9 @@ ru:
           title: Экспресс-курс
           assignment_family_title: Экспресс-курс
           description_audience: 'Возраст: 9-18'
+          lesson_groups:
+            content:
+              display_name: Содержимое
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2037,6 +2316,19 @@ ru:
             Creating functions with Parameters:
               name: Создание функций с параметрами
           description_short: Программирование
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Языки программирования и алгоритмы'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -2055,6 +2347,13 @@ ru:
               name: Краудсорсинг
             Nested Loops in Bee:
               name: Вложенные циклы в Пчеле
+          lesson_groups:
+            csf_e_1:
+              display_name: Продвинуться к Курсу Е (опционально)
+            csf_e_2:
+              display_name: Содержание Курса Е
+            extra_course_content:
+              display_name: Дополнительный материал для курса
         new-d:
           stages:
             Introduction:
@@ -2083,6 +2382,10 @@ ru:
               name: Вложенные циклы в Пчеле
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Языки программирования и алгоритмы'
         new-express:
           stages:
             Introduction:
@@ -2101,6 +2404,9 @@ ru:
               name: Создание основы
             Nested Loops:
               name: Вложенные циклы
+          lesson_groups:
+            content:
+              display_name: Содержимое
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -2119,6 +2425,13 @@ ru:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            csf_e_1:
+              display_name: Продвинуться к Курсу Е (опционально)
+            csf_e_2:
+              display_name: Содержание Курса Е
+            extra_course_content:
+              display_name: Дополнительный материал для курса
         new-f:
           stages:
             Building a Foundation:
@@ -2141,6 +2454,11 @@ ru:
               name: Написание песен с параметрами
             Build Your Project:
               name: Создать свой проект
+          lesson_groups:
+            csf_f_1:
+              display_name: Продвинуться к Курсу Ф (опционально)
+            csf_f_2:
+              display_name: Содержание Курса Ф
         csd5-old:
           stages:
             ASCII and Binary Representation:
@@ -2153,6 +2471,17 @@ ru:
               name: 8-битные числа
             Making Decisions with Data:
               name: Использование данных для принятия решений
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -2165,6 +2494,11 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Языки программирования и алгоритмы'
+            cspAssessment:
+              display_name: Оценка главы
         pwc:
           stages:
             Simple Encryption:
@@ -2182,10 +2516,20 @@ ru:
           stages:
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Глава 2: AP Explore Performance Task'
+            cspSurvey:
+              display_name: Опрос
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: Опрос после окончания курса
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Глава 3: AP Create Performance Task'
+            cspSurvey:
+              display_name: Опрос
         course-e-2018:
           stages:
             Building a Foundation:
@@ -2204,6 +2548,13 @@ ru:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            csf_e_1:
+              display_name: Продвинуться к Курсу Е (опционально)
+            csf_e_2:
+              display_name: Содержание Курса Е
+            extra_course_content:
+              display_name: Дополнительный материал для курса
         course-f-2018:
           stages:
             Building a Foundation:
@@ -2228,6 +2579,11 @@ ru:
               name: Написание песен с параметрами
             Build Your Project:
               name: Создать свой проект
+          lesson_groups:
+            csf_f_1:
+              display_name: Продвинуться к Курсу Ф (опционально)
+            csf_f_2:
+              display_name: Содержание Курса Ф
         csd6-old:
           stages:
             Lists:
@@ -2242,6 +2598,11 @@ ru:
               name: Датчик Приложений
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
         csd3-1819draft:
           stages:
             Plotting Shapes:
@@ -2257,6 +2618,13 @@ ru:
             Functions:
               name: функции
           description_short: "Программирование"
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
         csd3-2018:
           description_short: "Программирование"
           stages:
@@ -2272,10 +2640,24 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
         csd2-2018:
           stages:
             Lists:
               name: Списки
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент и HTML'
+            csd2_2:
+              display_name: 'Глава 2: Дизайн и CSS'
+            cspSurvey:
+              display_name: Опрос
         coursea-2018:
           assignment_family_title: Курс A
           description_audience: 'Возраст: 4-7'
@@ -2428,6 +2810,13 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
+            cspSurvey:
+              display_name: Опрос
         coursee-2018:
           assignment_family_title: Курс E
           description_audience: 'Возраст: 8-12'
@@ -2455,6 +2844,13 @@ ru:
               name: Условные выражения с картами
             Minecraft Hour of Code:
               name: Час кода с Minecraft
+          lesson_groups:
+            csf_e_1:
+              display_name: Продвинуться к Курсу Е (опционально)
+            csf_e_2:
+              display_name: Содержание Курса Е
+            extra_course_content:
+              display_name: Дополнительный материал для курса
         coursef-2018:
           assignment_family_title: Курс F
           description_audience: 'Возраст: 9-13'
@@ -2487,6 +2883,11 @@ ru:
               name: Создать свой проект
             Conditionals with Cards:
               name: Условные выражения с картами
+          lesson_groups:
+            csf_f_1:
+              display_name: Продвинуться к Курсу Ф (опционально)
+            csf_f_2:
+              display_name: Содержание Курса Ф
         csp1-2018:
           stages:
             Sending Binary Messages:
@@ -2505,6 +2906,29 @@ ru:
               name: Маршрутизаторы и резервирование
             The Need for DNS:
               name: Необходимость DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp1_1:
+              display_name: 'Глава 1: Представления и передача информации'
+            csp1_2:
+              display_name: 'Глава 2: Изобретение Интернета'
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
+            cspSurvey:
+              display_name: Опрос
         csd5-2018:
           stages:
             ASCII and Binary Representation:
@@ -2515,6 +2939,13 @@ ru:
               name: Представления чисел
             Making Decisions with Data:
               name: Использование данных для принятия решений
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -2525,6 +2956,11 @@ ru:
               name: Кодирование цветных изображений
             Lossy Compression and File Formats:
               name: Сжатие с потерями и форматы файлов
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Урок 2: Цифровая информация'
+            cspAssessment:
+              display_name: Оценка главы
         csp3-2018:
           description_short: Программирование
           stages:
@@ -2540,12 +2976,38 @@ ru:
               name: Создание функций с параметрами
             Creating Functions with Parameters:
               name: Создание функций с параметрами
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Блок 3: Введение в программирование'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
+        csp-explore-2018:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Глава 2: AP Explore Performance Task'
+            cspSurvey:
+              display_name: Опрос
+        csp-create-2018:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Глава 3: AP Create Performance Task'
+            cspSurvey:
+              display_name: Опрос
         csp4-2018:
           stages:
             What is Big Data?:
               name: Что такое Большие Данные?
             Simple Encryption:
               name: Простое шифрование
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Раздел 4: Большие данные и конфиденциальность'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
         csp5-2018:
           stages:
             Controlling Memory with Variables:
@@ -2560,6 +3022,13 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+            csp5_2:
+              display_name: 'Глава 2: Программирование с использованием структуры данных'
+            cspSurvey:
+              display_name: Опрос
         csppostap-2018:
           stages:
             Importing and Exporting Data:
@@ -2568,6 +3037,95 @@ ru:
               name: Визуализация данных
             Final Project:
               name: Финальный проект
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Глава 1: Манипулирование и визуализация данных'
+            csp_postap_2:
+              display_name: 'Глава 2: Приложения и базы данных'
+            cspSurvey:
+              display_name: Опрос
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Опрос после окончания курса
         csd-novice-18:
           stages:
             Welcome:
@@ -2578,6 +3136,11 @@ ru:
               name: Среда
             Thursday:
               name: Четверг
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         csd-apprentice-18:
           stages:
             Tuesday:
@@ -2586,6 +3149,11 @@ ru:
               name: Среда
             Thursday:
               name: Четверг
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         csp-novice-18:
           stages:
             Tuesday:
@@ -2594,6 +3162,11 @@ ru:
               name: Среда
             Thursday:
               name: Четверг
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         csp-apprentice-18:
           stages:
             Tuesday:
@@ -2602,6 +3175,11 @@ ru:
               name: Среда
             Thursday:
               name: Четверг
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         pre-express-2018:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -2623,6 +3201,12 @@ ru:
               name: Твой цифровой след
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         frozen-2018:
           stages:
             Artist:
@@ -2653,6 +3237,16 @@ ru:
           stages:
             Dance Party:
               name: Танцевальная вечеринка
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
         dance-extras:
           description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
         coursef-2019:
@@ -2683,6 +3277,17 @@ ru:
               name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            csf_variables:
+              display_name: переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
+            csf_internet:
+              display_name: интернет
+            csf_digcit:
+              display_name: Цифровое гражданство
         dance-low:
           stages:
             Dance Party:
@@ -2714,6 +3319,19 @@ ru:
               name: 'Художник: двоичная система'
             Dance Party:
               name: Танцевальная вечеринка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_events:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_binary:
+              display_name: Двоичный
+            csf_digcit:
+              display_name: Цифровое гражданство
         coursee-2019:
           description_audience: 'Возраст: 8-12'
           stages:
@@ -2741,6 +3359,15 @@ ru:
               name: Вложенные циклы в Художнике
             Songwriting:
               name: Написание песен
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_nested_loops:
+              display_name: Вложенные циклы
+            csf_functions:
+              display_name: функции
         express-2019:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -2777,10 +3404,38 @@ ru:
               name: Краудсорсинг
             Dance Party:
               name: Танцевальная вечеринка
+          lesson_groups:
+            csf_warmup:
+              display_name: Разогреть
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_functions:
+              display_name: функции
+            csf_variables:
+              display_name: переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
         andrea-test:
           stages:
             'null':
               name: 'нуль'
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
         dance-extras-gallery:
           title: Продолжайте танцевать
           description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
@@ -2796,6 +3451,21 @@ ru:
               name: Двоичные браслеты
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_binary:
+              display_name: Двоичный
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
         gamelab:
           title: Лаборатория игр
         coursea-2019:
@@ -2813,6 +3483,15 @@ ru:
               name: Циклы в исполнителе Художник
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2827,6 +3506,15 @@ ru:
               name: Циклы в исполнителе Художник
             'Loops: Getting Loopy':
               name: Зацикливание
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         pre-express-2019:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -2842,6 +3530,13 @@ ru:
               name: Пчела
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2850,6 +3545,13 @@ ru:
           stages:
             Lists:
               name: Списки
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент и HTML'
+            csd2_2:
+              display_name: 'Глава 2: Дизайн и CSS'
+            cspSurvey:
+              display_name: Опрос
         csd3-2019:
           description_short: "Программирование"
           stages:
@@ -2865,6 +3567,23 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
         csd5-2019:
           stages:
             ASCII and Binary Representation:
@@ -2875,6 +3594,13 @@ ru:
               name: Представления чисел
             Making Decisions with Data:
               name: Использование данных для принятия решений
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
         csd6-2019:
           description_short: Программирование с физическими устройствами
           stages:
@@ -2886,10 +3612,28 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
+            cspSurvey:
+              display_name: Опрос
         csp4-pilot:
           stages:
             Surveys:
               name: Опросы
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+            required:
+              display_name: Краткий обзор
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -2908,6 +3652,13 @@ ru:
               name: Маршрутизаторы и резервирование
             The Need for DNS:
               name: Необходимость DNS
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csp1_1:
+              display_name: 'Глава 1: Представления и передача информации'
+            csp1_2:
+              display_name: 'Глава 2: Изобретение Интернета'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -2916,6 +3667,13 @@ ru:
               name: Кодирование чёрно-белых изображений
             Encoding Color Images:
               name: Кодирование цветных изображений
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Урок 2: Цифровая информация'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
         csp3-2019:
           description_short: Программирование
           stages:
@@ -2929,12 +3687,26 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Блок 3: Введение в программирование'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
         csp4-2019:
           stages:
             What is Big Data?:
               name: Что такое Большие Данные?
             Simple Encryption:
               name: Простое шифрование
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Раздел 4: Большие данные и конфиденциальность'
+            cspAssessment:
+              display_name: Оценка главы
+            cspSurvey:
+              display_name: Опрос
         csp5-2019:
           stages:
             Controlling Memory with Variables:
@@ -2949,6 +3721,25 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+            csp5_2:
+              display_name: 'Глава 2: Программирование с использованием структуры данных'
+            cspSurvey:
+              display_name: Опрос
+        csp-explore-2019:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Глава 2: AP Explore Performance Task'
+            cspSurvey:
+              display_name: Опрос
+        csp-create-2019:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Глава 3: AP Create Performance Task'
+            cspSurvey:
+              display_name: Опрос
         csppostap-2019:
           stages:
             Importing and Exporting Data:
@@ -2957,6 +3748,13 @@ ru:
               name: Визуализация данных
             Final Project:
               name: Финальный проект
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Глава 1: Манипулирование и визуализация данных'
+            csp_postap_2:
+              display_name: 'Глава 2: Приложения и базы данных'
+            cspSurvey:
+              display_name: Опрос
         csp1-pilot:
           stages:
             Sending Binary Messages:
@@ -2965,6 +3763,11 @@ ru:
               name: Отправка двоичных сообщений с интернет симулятором
             Binary Numbers:
               name: Двоичные числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            required:
+              display_name: Краткий обзор
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2975,26 +3778,172 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            time4cs_c1:
+              display_name: 'Эверглейдс и его экосистемы'
+            time4cs_c2:
+              display_name: 'Пищевые цепи в Эверглейдс'
+            time4cs_c3:
+              display_name: 'Жизнь в Эверглейдс'
+            time4cs_c4:
+              display_name: 'Инвазивные воздействия на Эверглейдс'
+            time4cs_c5:
+              display_name: 'Граждане влияют на изменения в Эверглейдс'
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
         csp2-pilot-staging:
           title: 'Урок 2: Интернет'
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
         csp3-pilot-staging:
           stages:
             The Need for Programming Languages:
               name: Необходимость языков программирования
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Циклы
+            csp_traversals:
+              display_name: Обходов
+            csp_project:
+              display_name: Проект
+            csp_libraries:
+              display_name: Библиотеки
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
         csp7-pilot-staging:
           stages:
             Libraries:
               name: Библиотеки
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            csp_libraries:
+              display_name: Библиотеки
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Программирование на бумаге в клеточку
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Циклы
+            csp_traversals:
+              display_name: Обходов
+            csp_project:
+              display_name: Проект
+            required:
+              display_name: Краткий обзор
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
         csd2-pilot:
           stages:
             Lists:
               name: Списки
             CSS Classes:
               name: CSS классы
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент и HTML'
+            csd2_2:
+              display_name: 'Глава 2: Дизайн и CSS'
+            cspSurvey:
+              display_name: Опрос
         csd3-pilot:
           description_short: "Программирование"
           stages:
@@ -3012,22 +3961,110 @@ ru:
               name: функции
             Random Numbers:
               name: Случайные числа
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
         csp3-pilot:
           stages:
             The Need for Programming Languages:
               name: Необходимость языков программирования
+          lesson_groups:
+            content:
+              display_name: Содержимое
+            required:
+              display_name: Краткий обзор
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Краткий обзор
+            content:
+              display_name: Содержимое
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
         csp2-pilot:
           stages:
             Routers and Redundancy:
               name: Маршрутизаторы и резервирование
             The Need for Addressing:
               name: Необходимость адресации
+          lesson_groups:
+            content:
+              display_name: Содержимое
+            required:
+              display_name: Краткий обзор
         peru-2019:
           stages:
             Introduction:
@@ -3036,6 +4073,12 @@ ru:
               name: Циклы в исполнителе Художник
             Nested Loops:
               name: Вложенные циклы
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Содержимое
+            required:
+              display_name: Краткий обзор
         dance-2019:
           stages:
             Dance Party:
@@ -3079,8 +4122,27 @@ ru:
               name: переменные
             For Loops:
               name: Циклы с параметром
+          lesson_groups:
+            k5_getting_started:
+              display_name: Приступить к работе
+            k5_basic_concepts:
+              display_name: Основы принципов программирования и практики обучения
+            k5_diving_deeper:
+              display_name: 'Погружаемся глубже: курсы E и F'
+            k5_next_steps:
+              display_name: Следующие шаги
         dance-extras-2019:
           description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -3095,24 +4157,129 @@ ru:
               name: Вложенные циклы в Пчеле
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_conditionals:
+              display_name: Условные команды
+            csf_nested_loops:
+              display_name: Вложенные циклы
+            csf_functions:
+              display_name: функции
         time4cs-experiment-unit-2:
           stages:
             Nested Loops in Maze:
               name: Вложенные циклы в Лабиринте
             Fancy Shapes using Nested Loops:
               name: Вложенные циклы в Художнике
+          lesson_groups:
+            time4cs_c1:
+              display_name: 'Эверглейдс и его экосистемы'
+            time4cs_c2:
+              display_name: 'Пищевые цепи в Эверглейдс'
+            time4cs_c3:
+              display_name: 'Жизнь в Эверглейдс'
+            time4cs_c4:
+              display_name: 'Инвазивные воздействия на Эверглейдс'
+            time4cs_c5:
+              display_name: 'Граждане влияют на изменения в Эверглейдс'
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Условные команды
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_events:
+              display_name: События
+            csf_digcit:
+              display_name: Цифровое гражданство
+            ramp_up:
+              display_name: Продвинуться
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Условные команды
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_events:
+              display_name: События
+            csf_digcit:
+              display_name: Цифровое гражданство
+            ramp_up:
+              display_name: Продвинуться
+        csp7-pilot:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            csp_libraries:
+              display_name: Библиотеки
+            required:
+              display_name: Краткий обзор
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: переменные
+            csp_conditionals:
+              display_name: Условные команды
+            csp_functions:
+              display_name: функции
+            csp_project:
+              display_name: Проект
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Циклы
+            csp_traversals:
+              display_name: Обходов
+            csp_project:
+              display_name: Проект
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметры и возвращаемые значения
+            csp_libraries:
+              display_name: Библиотеки
         csd2-2020:
           stages:
             CSS Classes:
               name: CSS классы
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент и HTML'
+            csd2_2:
+              display_name: 'Глава 2: Дизайн и CSS'
+            cspSurvey:
+              display_name: Опрос
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опрос
+            csd1_1:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            csd1_2:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            csd4_2:
+              display_name: 'Глава 2: Прототипирование приложения'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
         csd5-2020:
           stages:
             ASCII and Binary Representation:
@@ -3123,6 +4290,13 @@ ru:
               name: Представления чисел
             Making Decisions with Data:
               name: Использование данных для принятия решений
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представление информации'
+            csd5_2:
+              display_name: 'Глава 2: Решение информационных проблем'
+            cspSurvey:
+              display_name: Опрос
         csd6-2020:
           description_short: Программирование с физическими устройствами
           stages:
@@ -3134,6 +4308,13 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Программирование с оборудованием'
+            csd6_2:
+              display_name: 'Глава 2: Создание физических прототипов'
+            cspSurvey:
+              display_name: Опрос
         csd3-2020:
           description_short: "Программирование"
           stages:
@@ -3153,6 +4334,13 @@ ru:
               name: функции
             Text:
               name: Текст
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
+            cspSurvey:
+              display_name: Опрос
         coursea-2020:
           description_audience: 'Возраст: 4-7'
           stages:
@@ -3166,6 +4354,15 @@ ru:
               name: Циклы в Собирателе
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -3178,6 +4375,15 @@ ru:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -3186,6 +4392,17 @@ ru:
               name: Циклы в исполнителе Художник
             'Events: The Big Event':
               name: Большое Событие
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_binary:
+              display_name: Двоичный
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         coursed-2020:
           description_audience: 'Возраст: 7-11'
           stages:
@@ -3211,6 +4428,19 @@ ru:
               name: Цифровое гражданство
             Dance Party:
               name: Танцевальная вечеринка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_events:
+              display_name: События
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_binary:
+              display_name: Двоичный
+            csf_digcit:
+              display_name: Цифровое гражданство
         coursee-2020:
           description_audience: 'Возраст: 8-12'
           stages:
@@ -3222,6 +4452,15 @@ ru:
             'Functions: Songwriting':
               name: Написание песен
               description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.  
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_nested_loops:
+              display_name: Вложенные циклы
+            csf_functions:
+              display_name: функции
         coursef-2020:
           description_audience: 'Возраст: 9-13'
           stages:
@@ -3240,6 +4479,15 @@ ru:
               name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            ramp_up:
+              display_name: Продвинуться
+            csf_digcit:
+              display_name: Цифровое гражданство
+            csf_variables:
+              display_name: переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
         express-2020:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -3256,6 +4504,21 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+          lesson_groups:
+            csf_warmup:
+              display_name: Разогреть
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_conditionals:
+              display_name: Условные команды
+            csf_functions:
+              display_name: функции
+            csf_variables:
+              display_name: переменные
+            csf_for_loops:
+              display_name: Циклы с параметром
         pre-express-2020:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -3269,16 +4532,29 @@ ru:
               name: Циклы в исполнителе Художник
             Loops in Artist:
               name: Циклы в исполнителе Художник
+          lesson_groups:
+            csf_sequencing:
+              display_name: Последовательность действий
+            csf_loops:
+              display_name: Циклы
+            csf_events:
+              display_name: События
         csp1-2020:
           stages:
             Binary Numbers:
               name: Двоичные числа
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифровая информация'
         csp2-2020:
           stages:
             The Need for Addressing:
               name: Необходимость адресации
             Routers and Redundancy:
               name: Маршрутизаторы и резервирование
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Урок 2: Интернет'
         csp3-2020:
           stages:
             The Need for Programming Languages:
@@ -3296,6 +4572,9 @@ ru:
               name: API и параметры функции
             Creating functions with Parameters:
               name: Создание функций с параметрами
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Блок 3: Введение в программирование'
         csd3-virtual:
           description_short: "Программирование"
           stages:
@@ -3313,10 +4592,18 @@ ru:
               name: функции
             Random Numbers:
               name: Случайные числа
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Изображения и анимации'
         csd2-virtual:
           stages:
             CSS Classes:
               name: CSS классы
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент и HTML'
+            csd2_2:
+              display_name: 'Глава 2: Дизайн и CSS'
         csp5-virtual:
           stages:
             Controlling Memory with Variables:
@@ -3331,6 +4618,8 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+            Variables:
+              name: переменные
         virtual-holding-place:
           stages:
             Velocity:
@@ -3339,9 +4628,29 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+          lesson_groups:
+            content:
+              display_name: Содержимое
+            csd3_2:
+              display_name: 'Глава 2: Создание игры'
         code-break:
           stages:
             Algorithms:
               name: Алгоритмы
             Events:
               name: События
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Циклы «пока»
+            Introduction to Arrays:
+              name: Введение в массивы
+            Processing Arrays:
+              name: Обработка массивов
+            Functions with Return Values:
+              name: Функции с возвращаемыми значениями
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Программирование управляемое событиями'
+            csp5_2:
+              display_name: 'Глава 2: Программирование с использованием структуры данных'

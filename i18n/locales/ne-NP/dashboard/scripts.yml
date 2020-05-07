@@ -585,6 +585,22 @@ ne:
           stages:
             Teacher Dashboard:
               name: Teacher Dashboard
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -595,6 +611,14 @@ ne:
               name: Artist Functions
         artistExemplar:
           description_audience: Ages 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -665,6 +689,14 @@ ne:
               name: Bounce
             'Farmer: While Loops':
               name: 'Farmer: While Loops'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         csd3-2017:
           stages:
             Functions:
@@ -711,6 +743,22 @@ ne:
               name: Teacher Dashboard
             The Design Recipe:
               name: The Design Recipe
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         basketball:
           title: Choose your team and make a basketball game
           description_short: Choose your team and make a basketball game
@@ -733,6 +781,14 @@ ne:
               name: Peer Review
             Lists:
               name: Lists
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         minecraft:
           title: Minecraft Hour of Code Designer
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -792,6 +848,9 @@ ne:
               name: Introduction
             Conditionals:
               name: Conditionals
+          lesson_groups:
+            content:
+              display_name: Content
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -806,6 +865,9 @@ ne:
               name: Introduction
             Ice Age Play Lab:
               name: Ice Age Play Lab
+          lesson_groups:
+            content:
+              display_name: Content
         classic-hoc-impact-study:
           description_short: Try the basics of computer science with many fun characters!
           stages:
@@ -828,6 +890,22 @@ ne:
           stages:
             Wrap-Up:
               name: Wrap-Up
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         sciencepd4:
           stages:
             Wrap-Up:
@@ -840,10 +918,25 @@ ne:
           stages:
             Binary:
               name: Binary
+          lesson_groups:
+            content:
+              display_name: Content
         sciencepd5:
           stages:
             Wrap-Up:
               name: Wrap-Up
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Content
         csd6-draft:
           stages:
             Lists:
@@ -954,6 +1047,78 @@ ne:
           stages:
             Building a Foundation:
               name: Building a Foundation
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         express-2017:
           stages:
             Introduction:
@@ -974,6 +1139,9 @@ ne:
               name: Building a Foundation
             Nested Loops:
               name: Nested Loops
+          lesson_groups:
+            content:
+              display_name: Content
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1024,6 +1192,9 @@ ne:
               name: Building a Foundation
             Nested Loops:
               name: Nested Loops
+          lesson_groups:
+            content:
+              display_name: Content
         new-e:
           stages:
             Building a Foundation:
@@ -1232,6 +1403,10 @@ ne:
           stages:
             The Internet:
               name: The Internet
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
         csp3-2018:
           stages:
             Creating Functions:
@@ -1240,6 +1415,108 @@ ne:
           stages:
             While Loops:
               name: While Loops
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1250,6 +1527,12 @@ ne:
               name: Move It, Move It
             Your Digital Footprint:
               name: Your Digital Footprint
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         frozen-2018:
           stages:
             Artist:
@@ -1262,6 +1545,14 @@ ne:
           stages:
             Artist:
               name: Artist
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1278,6 +1569,15 @@ ne:
               name: The Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digital Citizenship
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1292,6 +1592,17 @@ ne:
               name: Binary Images
             Artist Binary:
               name: Artist Binary
+          lesson_groups:
+            csf_events:
+              display_name: कार्य 
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1308,6 +1619,13 @@ ne:
               name: Crowdsourcing
             Songwriting:
               name: Songwriting
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
         express-2019:
           stages:
             Relay Programming:
@@ -1328,10 +1646,26 @@ ne:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
         andrea-test:
           stages:
             'null':
               name: 'null'
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1340,12 +1674,28 @@ ne:
               name: The Big Event
             Binary Bracelets:
               name: Binary Bracelets
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Happy Maps
             Going Places Safely:
               name: Going Places Safely
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1354,6 +1704,13 @@ ne:
               name: Your Digital Footprint
             'Loops: Getting Loopy':
               name: Getting Loopy
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1362,6 +1719,11 @@ ne:
               name: Your Digital Footprint
             Spelling Bee:
               name: Spelling Bee
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1386,10 +1748,23 @@ ne:
           stages:
             Surveys:
               name: Surveys
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            required:
+              display_name: Overview
         csp1-2019:
           stages:
             The Internet:
               name: The Internet
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
         csp3-2019:
           stages:
             Creating Functions:
@@ -1398,6 +1773,10 @@ ne:
           stages:
             While Loops:
               name: While Loops
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Overview
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1406,10 +1785,92 @@ ne:
               name: Conditionals with Cards
             Building a Foundation:
               name: Building a Foundation
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Graph Paper Programming
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            required:
+              display_name: Overview
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd2-pilot:
           stages:
             Lists:
@@ -1422,12 +1883,96 @@ ne:
               name: Conditionals
             Functions:
               name: Functions
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
         peru-2019:
           stages:
             Introduction:
               name: Introduction
             Nested Loops:
               name: Nested Loops
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -1442,6 +1987,14 @@ ne:
               name: Variables
             For Loops:
               name: For Loops
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1452,14 +2005,59 @@ ne:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Conditionals with Cards
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_conditionals:
+              display_name: Conditionals
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Conditionals
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_events:
+              display_name: कार्य 
+            csf_digcit:
+              display_name: Digital Citizenship
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Conditionals
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_events:
+              display_name: कार्य 
+            csf_digcit:
+              display_name: Digital Citizenship
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Overview
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1480,6 +2078,13 @@ ne:
               name: Going Places Safely
             'Programming: Happy Maps':
               name: Happy Maps
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1488,12 +2093,28 @@ ne:
               name: Move It, Move It
             'Loops: Getting Loopy':
               name: Getting Loopy
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binary Bracelets
             'Events: The Big Event':
               name: The Big Event
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1508,10 +2129,28 @@ ne:
               name: Artist Binary
             Digital Citizenship:
               name: Digital Citizenship
+          lesson_groups:
+            csf_events:
+              display_name: कार्य 
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Songwriting
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1522,10 +2161,38 @@ ne:
               name: The Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Spelling Bee
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: कार्य 
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(old) Unit 1: Digital Information'
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1542,13 +2209,22 @@ ne:
           stages:
             While Loops:
               name: While Loops
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Functions:
               name: Functions
+          lesson_groups:
+            content:
+              display_name: Content
         code-break:
           stages:
             Algorithms:
               name: Algorithms
             Events:
               name: कार्य 
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: While Loops

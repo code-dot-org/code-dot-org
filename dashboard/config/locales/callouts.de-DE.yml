@@ -29,24 +29,87 @@ de-DE:
         CSD_U3_variables: Ändere die Zahl hier
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Ändere die Zahl hier
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Füge hier deinen Code hinzu.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Füge hier deinen Code hinzu.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Füge hier deinen Code hinzu.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Füge hier deinen Code hinzu.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Füge hier deinen Code hinzu.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Füge hier deinen Code hinzu.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Sieh dir diese if-Anweisung an
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Füge hier deinen Block hinzu.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Füge hier deinen Block hinzu.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Füge hier deinen Block hinzu.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Füge hier deinen Block hinzu.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Füge hier deinen Block hinzu.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Füge hier deinen Code hinzu.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Füge hier deinen Code hinzu.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Füge hier deinen Code hinzu.
       CSD U3 debug:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 debug_2018:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 debug_2019:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 ellipse:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 ellipse_2018:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 ellipse_2019:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 fill:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 fill_2018:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 game backgrounds:
         CSD_U3_L18_S4_C2: Funktionensbereich
       CSD U3 game backgrounds_2018:
@@ -54,23 +117,36 @@ de-DE:
       CSD U3 game backgrounds_2019:
         CSD_U3_L18_S4_C2: Funktionensbereich
       CSD U3 game variables:
+        CSD_U3_S18_L3_C1: Dieser Baustein erstellt eine neue Variable.
         CSD_U3_L18_S3_C2: Variablenbereich
       CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: Dieser Baustein erstellt eine neue Variable.
         CSD_U3_L18_S3_C2: Variablenbereich
       CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: Dieser Baustein erstellt eine neue Variable.
         CSD_U3_L18_S3_C2: Variablenbereich
       CSD U3 rect:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Hier ist die "Ausführen"-Knopf
       CSD U3 rect_2018:
         CSD_U3_rect_c1: Hier ist der Code
       CSD U3 rect_2019:
         CSD_U3_rect_c1: Hier ist der Code
       CSD U3 sequence:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 sequence_2018:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
       CSD U3 sequence_2019:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Ziehe diesen Baustein in den Codebereich.
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Füge hier deinen Block hinzu.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Füge hier deinen Block hinzu.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Füge hier deinen Block hinzu.
       CSDU4 - Design Mode - 3:
         '': Verwende den setText-Baustein, um den Text von titleLabel zu ändern
       Course 4 Artist 4:
@@ -238,9 +314,34 @@ de-DE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Die Werkzeugkiste hat einen neuen Look! Die „Aktion“-Bausteine
           sind jetzt hier drin.
+      New Artist Project:
+        New Artist Project_callout2: Drücke "Ausführen" um dein Programm zu speichern
+          und auszuführen
+        sign_in_to_save_project: Möchtest du später auf dein Projekt zugreifen? Melde
+          dich an, um dieses Projekt in deinem Konto zu speichern!
       New Frozen Project:
         snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
           zu erstellen!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Klicke auf die Kategorien, um die Bausteine
+          in deinem Werkzeugkasten zu sehen! Ziehe Bausteine in den Arbeitsbereich
+          und füge sie zu deinem Programm hinzu
+        New Play Lab Project_callout2: Drücke "Ausführen" um dein Programm zu speichern
+          und auszuführen
+        sign_in_to_save_project: Möchtest du später auf dein Projekt zugreifen? Melde
+          dich an, um dieses Projekt in deinem Konto zu speichern!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Die "Für"-Schleife findest du hier!
+      OPD-K5-spritelab-3:
+        spritelab_comment: Verwende diesen Baustein, um dir selbst oder Deinem Lehrer
+          Notizen darüber zu machen, wie Dein Code funktioniert.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Beachte dabei, dass es bei den Blöcken
+          jetzt eine neue Art der Zahleneingabe gibt. Diese `Mathe`-Blöcke können
+          herausgezogen und verschoben werden!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Verwende ihn, um den Wert der Variablen `Länge`
+          zu bestimmen.
       Overworld Chop Trees:
         craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
       Overworld Chop Trees_2019:
@@ -608,15 +709,23 @@ de-DE:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
           zur Verfügung.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
+          zur Verfügung.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe?  Klicke hier für einen VIDEO-Hinweis!
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe?  Klicke hier für einen VIDEO-Hinweis!
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Verwende diesen Befehl, um die
           Biene rückwärts zu bewegen.
@@ -659,9 +768,11 @@ de-DE:
       courseD_maze_ramp3:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
+        stone_block_2: Graue Blöcke sind aus Stein und können nicht weggeworfen werden.
       courseD_maze_ramp3_2018:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
+        stone_block_2: Graue Blöcke sind aus Stein und können nicht weggeworfen werden.
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
@@ -726,6 +837,44 @@ de-DE:
           du sie gelöst hast.
       courseE_aboutme_2:
         '': Klicke hier!
+      courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Du kannst diese Zahl ändern
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: Der Werkzeugkasten ist diesmal ein wenig anders
+          organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche
+          Bausteine Sie enthalten.
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: Der Werkzeugkasten ist diesmal ein wenig anders
+          organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche
+          Bausteine Sie enthalten.
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: Der Werkzeugkasten ist diesmal ein wenig anders
+          organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche
+          Bausteine Sie enthalten.
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
+          bei jeder Ausführung des Programms.
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
           in verschiedene Bereiche des Spielraums verschieben.
@@ -827,9 +976,9 @@ de-DE:
         courseF_playlab_variables1a_1: Der Werkzeugkasten wurde in Kategorien organisiert,
           um dir das Auffinden der benötigten Blöcke leichter zu machen.
       courseF_playlab_variables5c:
-        courseF_playlab_variables5c_1: Du finden deinen variablen Block hier.
+        courseF_playlab_variables5c_1: Du findest deinen variablen Baustein hier drin.
       courseF_playlab_variables6c:
-        courseF_playlab_variables5c_1: Du finden deinen variablen Block hier.
+        courseF_playlab_variables5c_1: Du findest deinen variablen Baustein hier drin.
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: Hier findest du den Block "Frage"!
       coursea_maze_ramp1_2018:

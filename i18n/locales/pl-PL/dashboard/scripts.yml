@@ -5,6 +5,7 @@ pl:
     script:
       category:
         csf_category_name: Podstawy Informatyki
+        csf_2019_category_name: Podstawy informatyki 2019)
         csf_international_category_name: Mędzynarodowe Podstawy Informatyki
         csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
         csp_category_name: "Podstawy Informatyki '15-'16"
@@ -1436,6 +1437,13 @@ pl:
               name: Oszacowanie Jednostki 1 rozdziału 1
             Unit 1 Chapter 2 Assessment:
               name: Oszacowanie Jednostki 1 rozdziału 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp1_1:
+              display_name: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
+            csp1_2:
+              display_name: 'Rozdział 2: Wynalezienie Internetu'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1468,6 +1476,13 @@ pl:
               name: Oszacowanie Jednostki 2 rozdziału 1
             Unit 2 Chapter 2 Assessment:
               name: Oszacowanie Jednostki 2 rozdziału 2
+          lesson_groups:
+            csp2_1:
+              display_name: 'Rozdział 1: Kodowanie i Kompresja Złożonych Danych'
+            csp2_2:
+              display_name: 'Rozdział 2: Manipulowanie i Wizualizacja Danych'
+            cspSurvey:
+              display_name: Ankieta
         csp3-2017:
           description_short: Programowanie
           stages:
@@ -1491,6 +1506,13 @@ pl:
               name: Oszacowanie Jednostki 3 rozdziału 1
             Creating Functions with Parameters:
               name: Tworzenie funkcji z parametrami
+          lesson_groups:
+            csp3_1:
+              display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csp4-2017:
           stages:
             Cracking the Code:
@@ -1501,6 +1523,13 @@ pl:
               name: Co to jest Big Data?
             Unit 4 Chapter 1 Assessment:
               name: Oszacowanie Jednostki 4 rozdziału 1
+          lesson_groups:
+            csp4_1:
+              display_name: 'Rozdział 1: Świat Big Data i Szyfrowania'
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csp5-2017:
           stages:
             Controlling Memory with Variables:
@@ -1533,6 +1562,13 @@ pl:
               name: Wyrażenie boolowskie i instrukcje "if"
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" oraz logika warunkowa'
+          lesson_groups:
+            csp5_1:
+              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            csp5_2:
+              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+            cspSurvey:
+              display_name: Ankieta
         CSDU3-Draft:
           description_short: Programowanie
           stages:
@@ -1630,6 +1666,13 @@ pl:
               name: Wstęp do jednostki
             Sending Binary Messages:
               name: Wysyłanie wiadomości binarnych
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -1638,6 +1681,13 @@ pl:
               name: test jednostki 1 zawartość modułu Bravo
             test Unit 1 content module Charlie:
               name: test jednostki 1 zawartość modułu Charlie
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1762,6 +1812,13 @@ pl:
               name: 'Lekcja 2.10: Dobre i złe wizualizacje danych'
             Lesson 2,2:
               name: 'Lekcja 2.2: Kompresja tekstu'
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1982,6 +2039,13 @@ pl:
               name: Lekcja 2,2
             Lesson 2,3:
               name: Lekcja 2,3
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         csd3-2017:
           description_short: Programowanie
           stages:
@@ -2029,6 +2093,13 @@ pl:
               name: Projekt - Zaprojektuj grę
             Shapes and Randomization:
               name: Kształty oraz losowość
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
+            cspSurvey:
+              display_name: Ankieta
         grade2:
           stages:
             At The Dog Park:
@@ -2129,6 +2200,13 @@ pl:
               name: Aplikacja i rozwiązywanie problemów
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csd1_1:
+              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -2175,6 +2253,13 @@ pl:
               name: Przetwarzanie tablic oraz funkcje zwracające wartości
             Unit 5 Overview:
               name: Przegląd 5 jednostki
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -2193,6 +2278,13 @@ pl:
               name: 'Lekcje 12 - 13: Abstrakcja w internecie'
             Discovery Learning:
               name: Odkrywanie nauki
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         basketball:
           title: Wybierz swoją drużynę i zrób grę w koszykówkę
           description_short: Utwórz grę w koszykówkę
@@ -2269,6 +2361,11 @@ pl:
               name: Projekt - Własna strona portfolio
             Headings:
               name: Nagłówki
+          lesson_groups:
+            csd2_1:
+              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+            csd2_2:
+              display_name: 'Rozdział 2: Style i CSS'
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -2279,6 +2376,13 @@ pl:
               name: 'Lekcje 3 - 4: Kodowanie obrazów'
             Discovery Learning:
               name: Odkrywanie nauki
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         csd4-2017:
           stages:
             Analysis of Design:
@@ -2309,6 +2413,11 @@ pl:
               name: Interfejsy użytkownika
             Project - App Presentation:
               name: Projekt - Prezentacja aplikacji
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
         minecraft:
           title: Minecraft w Godzinie Kodowania - Projektant
           description_short: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta.
@@ -2415,6 +2524,11 @@ pl:
               name: Wstęp
             Conditionals:
               name: Zdania z warunkami
+          lesson_groups:
+            content:
+              display_name: Treści
+            extra_course_content:
+              display_name: Dodatki do Kursu
         coursef-draft:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           stages:
@@ -2444,6 +2558,9 @@ pl:
               name: Wstęp
             Ice Age Play Lab:
               name: Ice Age (Epoka Lodowcowa) Play Lab
+          lesson_groups:
+            content:
+              display_name: Treści
         classic-hoc-impact-study:
           description_short: Poznaj podstawy informatyki z wieloma zabawnymi postaciami!
           stages:
@@ -2483,6 +2600,13 @@ pl:
               name: 'Lekcje 1 - 3: Algorytmy'
             Discovery Learning:
               name: Odkrywanie nauki
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         csdgraveyard:
           stages:
             new stage:
@@ -2501,6 +2625,13 @@ pl:
               name: Odkrywanie nauki
             Unit 4 Overview:
               name: Omówienie jednostki 4
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         sciencepd4:
           stages:
             Welcome!:
@@ -2523,6 +2654,9 @@ pl:
               name: Binarny
             Snowflakes:
               name: Śnieżynki
+          lesson_groups:
+            content:
+              display_name: Treści
         sciencepd5:
           stages:
             Welcome!:
@@ -2541,6 +2675,13 @@ pl:
               name: Przetwarzanie tablic oraz funkcje zwracające wartości
             Discovery Learning:
               name: Odkrywanie nauki
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+            practice:
+              display_name: Doświadczenia nauczycieli
         csppostap-2017:
           stages:
             Creating Javascript Objects:
@@ -2561,6 +2702,11 @@ pl:
               name: Przykładowe aplikacje
             Final Project:
               name: Projekt końcowy
+          lesson_groups:
+            content:
+              display_name: Treści
+            cspSurvey:
+              display_name: Ankieta
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -2615,6 +2761,11 @@ pl:
               name: Akcelerometr
             Functions with Parameters:
               name: Funkcje z parametrami
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Wejście Sprzętowe'
         workshop-gamelab:
           stages:
             Introduction:
@@ -2629,6 +2780,11 @@ pl:
               name: Reprezentacja liczb
             8-bit Numbers:
               name: Liczby 8 bitowe
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
         applab-1hour:
           stages:
             Event Types:
@@ -2715,6 +2871,11 @@ pl:
               name: Funkcje z parametrami
             'Project: Make a Game__':
               name: 'Projekt: Stwórz grę'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Wejście Sprzętowe'
         csd3-draft:
           description_short: Animacje i gry
           stages:
@@ -2760,6 +2921,11 @@ pl:
               name: Reprezentacja liczb
             8-bit Numbers:
               name: Liczby 8 bitowe
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
         csd3-old:
           stages:
             Drawing in Game Lab:
@@ -2906,6 +3072,10 @@ pl:
               name: Rysowanie kształtów
             Drawing in Game Lab:
               name: Rysowanie w laboratorium gier
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
         csd2-old:
           stages:
             Quality Websites:
@@ -3050,6 +3220,13 @@ pl:
           assignment_family_title: Kurs E
           description_audience: 'Wiek 8-12'
           description_short: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
+          lesson_groups:
+            csf_e_1:
+              display_name: Przygotuj się do Kursu E (opcjonalnie)
+            csf_e_2:
+              display_name: Zawartość Kursu E
+            extra_course_content:
+              display_name: Dodatki do Kursu
         coursef-2017:
           stages:
             Introduction:
@@ -3080,6 +3257,11 @@ pl:
           assignment_family_title: Kurs F
           description_audience: 'Wiek 9-13'
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          lesson_groups:
+            csf_f_1:
+              display_name: Przejdź do Kursu F (opcjonalnie)
+            csf_f_2:
+              display_name: Zawartość Kursu F
         csdnovice:
           stages:
             Tuesday:
@@ -3092,6 +3274,14 @@ pl:
               name: Witaj
             Congrats:
               name: Gratulacje
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Rozdział 1: AP Konfiguracja Techniczna'
+            csp_ap_3:
+              display_name: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
+            csp_ap_2:
+              display_name: 'Rozdział 2: AP Zbadaj Wydajność'
         cspnovice:
           stages:
             Welcome:
@@ -3102,6 +3292,77 @@ pl:
               name: Środa
             Thursday:
               name: Czwartek
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         express-2017:
           stages:
             Introduction:
@@ -3145,6 +3406,9 @@ pl:
           title: Szybki Kurs
           description_audience: 'W wieku 9-18'
           description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy nauczania w szkole podstawowej dla starszych uczniów.'
+          lesson_groups:
+            content:
+              display_name: Treści
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3199,6 +3463,13 @@ pl:
             foo:
               name: foo
           description_short: Programowanie
+          lesson_groups:
+            csp3_1:
+              display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csd4-draft:
           stages:
             Analysis of Design:
@@ -3221,6 +3492,11 @@ pl:
               name: Prezentacja aplikacji
             Linking Screens:
               name: Łączenie ekranów
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -3261,6 +3537,13 @@ pl:
               name: Zagnieżdżone pętle w pszczole
             Sequence in Maze:
               name: Sekwencje w labiryncie
+          lesson_groups:
+            csf_e_1:
+              display_name: Przygotuj się do Kursu E (opcjonalnie)
+            csf_e_2:
+              display_name: Zawartość Kursu E
+            extra_course_content:
+              display_name: Dodatki do Kursu
         new-d:
           stages:
             Introduction:
@@ -3287,6 +3570,9 @@ pl:
           stages:
             new stage:
               name: nowy etap
+          lesson_groups:
+            csp3_1:
+              display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
         new-express:
           stages:
             Introduction:
@@ -3319,6 +3605,9 @@ pl:
               name: Pętle w artyście (UAKTUALNIONE!)
             Sarah test stage:
               name: Etap testowy Sary
+          lesson_groups:
+            content:
+              display_name: Treści
         new-stages-sept-2017:
           stages:
             Testing Template:
@@ -3342,6 +3631,13 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+          lesson_groups:
+            csf_e_1:
+              display_name: Przygotuj się do Kursu E (opcjonalnie)
+            csf_e_2:
+              display_name: Zawartość Kursu E
+            extra_course_content:
+              display_name: Dodatki do Kursu
         new-f:
           stages:
             Sequence in Maze:
@@ -3372,12 +3668,22 @@ pl:
               name: Funkcje z parametrami w pszczole
             Explore Project Ideas:
               name: Odkrywanie pomysłów na projekt
+          lesson_groups:
+            csf_f_1:
+              display_name: Przejdź do Kursu F (opcjonalnie)
+            csf_f_2:
+              display_name: Zawartość Kursu F
         csd5-old:
           stages:
             Representing Numbers:
               name: Reprezentacja liczb
             8-bit Numbers:
               name: Liczby 8 bitowe
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
         hocali:
           stages:
             new stage:
@@ -3402,6 +3708,11 @@ pl:
               name: Polepszanie i iterowanie
             App Presentation:
               name: Prezentacja aplikacji
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -3422,6 +3733,11 @@ pl:
               name: Zapętlanie i losowe liczby
             Unit 3 Chapter 1 Assessment:
               name: Oszacowanie Jednostki 3 rozdziału 1
+          lesson_groups:
+            csp3_1:
+              display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
+            cspAssessment:
+              display_name: Ocena Rozdziału
         pwc:
           stages:
             new stage:
@@ -3469,6 +3785,17 @@ pl:
           stages:
             new stage:
               name: nowy etap
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Rozdział 2: AP Zbadaj Wydajność'
+            cspSurvey:
+              display_name: Ankieta
+        csp-create-2017:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
+            cspSurvey:
+              display_name: Ankieta
         aws-demo:
           stages:
             new stage:
@@ -3500,6 +3827,13 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
           title: Kurs E 2018 (Przestarzały!)
+          lesson_groups:
+            csf_e_1:
+              display_name: Przygotuj się do Kursu E (opcjonalnie)
+            csf_e_2:
+              display_name: Zawartość Kursu E
+            extra_course_content:
+              display_name: Dodatki do Kursu
         course-f-2018:
           stages:
             Sequence in Maze:
@@ -3532,6 +3866,11 @@ pl:
               name: Funkcje z parametrami w pszczole
             Explore Project Ideas:
               name: Odkrywanie pomysłów na projekt
+          lesson_groups:
+            csf_f_1:
+              display_name: Przejdź do Kursu F (opcjonalnie)
+            csf_f_2:
+              display_name: Zawartość Kursu F
         csd6-old:
           stages:
             Event Types:
@@ -3552,6 +3891,11 @@ pl:
               name: Wejście fizyczne
             Analog Input:
               name: Wejście analogowe
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Wejście Sprzętowe'
         csd3-1819draft:
           stages:
             Plotting Shapes:
@@ -3587,6 +3931,13 @@ pl:
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
           description_short: "Programowanie"
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
+            cspSurvey:
+              display_name: Ankieta
         textbook:
           stages:
             new stage:
@@ -3626,6 +3977,13 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
+            cspSurvey:
+              display_name: Ankieta
         csd2-2018:
           stages:
             Exploring Websites:
@@ -3648,6 +4006,13 @@ pl:
               name: Kolory RGB i klasy
             Project - Personal Portfolio Website:
               name: Projekt - Własna strona portfolio
+          lesson_groups:
+            csd2_1:
+              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+            csd2_2:
+              display_name: 'Rozdział 2: Style i CSS'
+            cspSurvey:
+              display_name: Ankieta
         coursea-2018:
           assignment_family_title: Kurs A
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
@@ -3829,6 +4194,13 @@ pl:
               name: Akcelerometr
             Functions with Parameters:
               name: Funkcje z parametrami
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Wejście Sprzętowe'
+            cspSurvey:
+              display_name: Ankieta
         coursee-2018:
           assignment_family_title: Kurs E
           description_audience: 'Wiek 8-12'
@@ -3857,6 +4229,13 @@ pl:
               name: Warunkowe z kartami
             Minecraft Hour of Code:
               name: Godzina Kodowania z Minecraft
+          lesson_groups:
+            csf_e_1:
+              display_name: Przygotuj się do Kursu E (opcjonalnie)
+            csf_e_2:
+              display_name: Zawartość Kursu E
+            extra_course_content:
+              display_name: Dodatki do Kursu
         coursef-2018:
           assignment_family_title: Kurs F
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -3900,6 +4279,11 @@ pl:
               description_student: Nareszcie możesz zacząć budować swój projekt!
             Conditionals with Cards:
               name: Warunkowe z kartami
+          lesson_groups:
+            csf_f_1:
+              display_name: Przejdź do Kursu F (opcjonalnie)
+            csf_f_2:
+              display_name: Zawartość Kursu F
         csp1-2018:
           stages:
             Sending Binary Messages:
@@ -3930,6 +4314,13 @@ pl:
               name: HTTP i abstrakcja
             Unit 1 Chapter 2 Assessment:
               name: Oszacowanie Jednostki 1 rozdziału 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp1_1:
+              display_name: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
+            csp1_2:
+              display_name: 'Rozdział 2: Wynalezienie Internetu'
         csd1-2018:
           stages:
             Intro to Problem Solving:
@@ -3950,6 +4341,13 @@ pl:
               name: Aplikacja i rozwiązywanie problemów
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csd1_1:
+              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
         csd4-2018:
           stages:
             Analysis of Design:
@@ -3974,10 +4372,24 @@ pl:
               name: Polepszanie i iterowanie
             Project - App Presentation:
               name: Projekt - Prezentacja aplikacji
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+            cspSurvey:
+              display_name: Ankieta
         csd5-2018:
           stages:
             Representing Numbers:
               name: Reprezentacja liczb
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+            cspSurvey:
+              display_name: Ankieta
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -4010,6 +4422,11 @@ pl:
               name: Tworzenie tabeli podsumowujących
             Unit 2 Chapter 2 Assessment:
               name: Oszacowanie Jednostki 2 rozdziału 2
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Cyfrowe informacje'
+            cspAssessment:
+              display_name: Ocena Rozdziału
         csp3-2018:
           description_short: Programowanie
           stages:
@@ -4033,6 +4450,23 @@ pl:
               name: Oszacowanie Jednostki 3 rozdziału 1
             Creating Functions with Parameters:
               name: Tworzenie funkcji z parametrami
+          lesson_groups:
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
+        csp-explore-2018:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Rozdział 2: AP Zbadaj Wydajność'
+            cspSurvey:
+              display_name: Ankieta
+        csp-create-2018:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
+            cspSurvey:
+              display_name: Ankieta
         csp4-2018:
           stages:
             What is Big Data?:
@@ -4045,6 +4479,11 @@ pl:
               name: Odkrywanie trendów z wizualizacjami
             Check Your Assumptions:
               name: Sprawdź swoje założenia
+          lesson_groups:
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csp5-2018:
           stages:
             Buttons and Events:
@@ -4069,6 +4508,13 @@ pl:
               name: Przetwarzanie tablic
             Functions with Return Values:
               name: Funkcje zwracające wartości
+          lesson_groups:
+            csp5_1:
+              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            csp5_2:
+              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+            cspSurvey:
+              display_name: Ankieta
         csppostap-2018:
           stages:
             Creating Javascript Objects:
@@ -4107,6 +4553,89 @@ pl:
               name: Tworzenie tabeli podsumowujących
             Unit 2 Chapter 2 Assessment:
               name: Oszacowanie Jednostki 2 rozdziału 2
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Rozdział 2: Manipulowanie i Wizualizacja Danych'
+            cspSurvey:
+              display_name: Ankieta
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csd-novice-18:
           stages:
             Welcome:
@@ -4117,6 +4646,11 @@ pl:
               name: Środa
             Thursday:
               name: Czwartek
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csd-apprentice-18:
           stages:
             Tuesday:
@@ -4125,6 +4659,11 @@ pl:
               name: Środa
             Thursday:
               name: Czwartek
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csp-novice-18:
           stages:
             Tuesday:
@@ -4133,6 +4672,11 @@ pl:
               name: Środa
             Thursday:
               name: Czwartek
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csp-apprentice-18:
           stages:
             Tuesday:
@@ -4141,6 +4685,11 @@ pl:
               name: Środa
             Thursday:
               name: Czwartek
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         pre-express-2018:
           description_audience: 'W wieku 4-8'
           stages:
@@ -4164,6 +4713,12 @@ pl:
               name: Twój cyfrowy ślad
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie i Duży Projekt (the Big Project)
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         frozen-2018:
           stages:
             Artist:
@@ -4203,6 +4758,14 @@ pl:
           stages:
             Dance Party:
               name: Potańcówka
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -4242,6 +4805,15 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+          lesson_groups:
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
         dance-low:
           stages:
             Dance Party:
@@ -4271,6 +4843,17 @@ pl:
               name: 'Artysta: Binarny'
             Dance Party:
               name: Potańcówka
+          lesson_groups:
+            csf_events:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_binary:
+              display_name: Binarny
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
         coursee-2019:
           description_audience: 'Wiek 8-12'
           stages:
@@ -4294,6 +4877,13 @@ pl:
               name: Zagnieżdżone pętle w labiryncie
             Songwriting:
               name: Pisanie piosenek
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_nested_loops:
+              display_name: Zagnieżdżające się  pętle
+            csf_functions:
+              display_name: Funkcje
         express-2019:
           description_audience: 'W wieku 9-18'
           stages:
@@ -4339,6 +4929,17 @@ pl:
               name: Potańcówka
             Concept Practice with Minecraft:
               name: Patrząc w przyszłość
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_functions:
+              display_name: Funkcje
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -4355,12 +4956,24 @@ pl:
               name: Przetwarzanie
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csd1_1:
+              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
         andrea-test:
           stages:
             new stage:
               name: nowy etap
             'null':
               name: 'wartość null'
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -4388,6 +5001,19 @@ pl:
               name: Patrząc w przyszłość
             Binary Bracelets:
               name: Binarne bransoletki
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_binary:
+              display_name: Binarny
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
         gamelab:
           title: Laboratorium Gier (Game Lab)
         coursea-2019:
@@ -4404,6 +5030,13 @@ pl:
               name: 'Pętle: Szczęśliwe pętle'
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         courseb-2019:
           description_audience: 'Wiek 5-8'
           stages:
@@ -4417,6 +5050,13 @@ pl:
               name: Poznając pętle
             Programming in Maze:
               name: Programowanie w labiryncie
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         pre-express-2019:
           description_audience: 'W wieku 4-8'
           stages:
@@ -4432,6 +5072,11 @@ pl:
               name: Nauka metody "przeciągnij i upuść"
             Programming in Maze:
               name: Programowanie w labiryncie
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4464,6 +5109,13 @@ pl:
               name: Kolory RGB i klasy
             Project - Personal Portfolio Website:
               name: Projekt - Własna strona portfolio
+          lesson_groups:
+            csd2_1:
+              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+            csd2_2:
+              display_name: 'Rozdział 2: Style i CSS'
+            cspSurvey:
+              display_name: Ankieta
         csd3-2019:
           description_short: "Programowanie"
           stages:
@@ -4499,6 +5151,13 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
+            cspSurvey:
+              display_name: Ankieta
         csd4-2019:
           stages:
             Analysis of Design:
@@ -4523,10 +5182,26 @@ pl:
               name: Polepszanie i iterowanie
             Project - App Presentation:
               name: Projekt - Prezentacja aplikacji
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+            cspSurvey:
+              display_name: Ankieta
         csd5-2019:
           stages:
             Representing Numbers:
               name: Reprezentacja liczb
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+            cspSurvey:
+              display_name: Ankieta
         csd6-2019:
           stages:
             Getting Properties:
@@ -4545,10 +5220,26 @@ pl:
               name: Akcelerometr
             Functions with Parameters:
               name: Funkcje z parametrami
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Wejście Sprzętowe'
+            cspSurvey:
+              display_name: Ankieta
         csp4-pilot:
           stages:
             Surveys:
               name: Ankiety
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+            required:
+              display_name: Streszczenie
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -4577,6 +5268,13 @@ pl:
               name: HTTP i abstrakcja
             Unit 1 Chapter 2 Assessment:
               name: Oszacowanie Jednostki 1 rozdziału 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp1_1:
+              display_name: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
+            csp1_2:
+              display_name: 'Rozdział 2: Wynalezienie Internetu'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -4587,6 +5285,13 @@ pl:
               name: Kodowanie czarno-białych obrazów
             Encoding Color Images:
               name: Kodowanie kolorów obrazów
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Cyfrowe informacje'
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csp3-2019:
           description_short: Programowanie
           stages:
@@ -4608,6 +5313,11 @@ pl:
               name: Zapętlanie i losowe liczby
             Unit 3 Chapter 1 Assessment:
               name: Oszacowanie Jednostki 3 rozdziału 1
+          lesson_groups:
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csp4-2019:
           stages:
             What is Big Data?:
@@ -4618,6 +5328,11 @@ pl:
               name: Sprawdź swoje założenia
             Simple Encryption:
               name: Proste szyfrowanie
+          lesson_groups:
+            cspAssessment:
+              display_name: Ocena Rozdziału
+            cspSurvey:
+              display_name: Ankieta
         csp5-2019:
           stages:
             Buttons and Events:
@@ -4642,6 +5357,25 @@ pl:
               name: Przetwarzanie tablic
             Functions with Return Values:
               name: Funkcje zwracające wartości
+          lesson_groups:
+            csp5_1:
+              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            csp5_2:
+              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'
+            cspSurvey:
+              display_name: Ankieta
+        csp-explore-2019:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Rozdział 2: AP Zbadaj Wydajność'
+            cspSurvey:
+              display_name: Ankieta
+        csp-create-2019:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
+            cspSurvey:
+              display_name: Ankieta
         csppostap-2019:
           stages:
             Intro to Data:
@@ -4674,6 +5408,11 @@ pl:
               name: Przykładowe aplikacje
             Final Project:
               name: Projekt końcowy
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Rozdział 2: Manipulowanie i Wizualizacja Danych'
+            cspSurvey:
+              display_name: Ankieta
         csp1-pilot:
           stages:
             new stage:
@@ -4688,6 +5427,11 @@ pl:
               name: Własność intelektualna
             Binary Numbers:
               name: Liczby binarne
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            required:
+              display_name: Streszczenie
         csd-videos:
           stages:
             new stage:
@@ -4704,10 +5448,72 @@ pl:
               name: Kładąc podwaliny (Building a Foundation)
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listy
+            csp_loops:
+              display_name: Pętle
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
         csp7-pilot-staging:
           stages:
             new stage:
               name: nowy etap
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -4716,14 +5522,41 @@ pl:
               name: Programowanie w labiryncie
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
         csp5-pilot:
           stages:
             new stage:
               name: nowy etap
+          lesson_groups:
+            csp_lists:
+              display_name: Listy
+            csp_loops:
+              display_name: Pętle
+            required:
+              display_name: Streszczenie
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csd-test-saving-state:
           stages:
             What is a Computer?:
               name: Czym jest komputer?
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csd1-pilot:
           stages:
             Intro to Problem Solving:
@@ -4740,6 +5573,13 @@ pl:
               name: Przetwarzanie
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csd1_1:
+              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
         csd2-pilot:
           stages:
             Exploring Websites:
@@ -4768,6 +5608,13 @@ pl:
               name: Obrazki
             CSS Classes:
               name: Klasy CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+            csd2_2:
+              display_name: 'Rozdział 2: Style i CSS'
+            cspSurvey:
+              display_name: Ankieta
         csd3-pilot:
           description_short: "Programowanie"
           stages:
@@ -4807,6 +5654,13 @@ pl:
               name: Losowe liczby
             Sprite Properties:
               name: Właściwości duszka
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
+            cspSurvey:
+              display_name: Ankieta
         maddie-test:
           stages:
             new stage:
@@ -4815,16 +5669,85 @@ pl:
           stages:
             Debugging:
               name: Debugowanie
+          lesson_groups:
+            content:
+              display_name: Treści
+            required:
+              display_name: Streszczenie
         csl-vn:
           stages:
             Programming in Maze:
               name: Programowanie w labiryncie
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: nowy etap
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
+            content:
+              display_name: Treści
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -4835,6 +5758,9 @@ pl:
               name: Przetwarzanie
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+          lesson_groups:
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
         csp2-pilot:
           stages:
             new stage:
@@ -4843,6 +5769,11 @@ pl:
               name: Routery i nadmiarowość
             The Need for Addressing:
               name: Potrzeba adresowania
+          lesson_groups:
+            content:
+              display_name: Treści
+            required:
+              display_name: Streszczenie
         peru-2019:
           stages:
             new stage:
@@ -4853,6 +5784,12 @@ pl:
               name: Zagnieżdżające się  pętle
             Events in Star Wars:
               name: Wydarzenia w Star Wars
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Treści
+            required:
+              display_name: Streszczenie
         dance-2019:
           stages:
             Dance Party:
@@ -4894,6 +5831,11 @@ pl:
               name: Zmienne
             For Loops:
               name: Pętle dla (for)
+          lesson_groups:
+            k5_getting_started:
+              display_name: Pierwsze kroki
+            k5_next_steps:
+              display_name: Następne Kroki
         dance-extras-2019:
           title: Nie przestawaj tańczyć (2019)
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
@@ -4909,6 +5851,13 @@ pl:
           stages:
             new stage:
               name: nowy etap
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -4921,6 +5870,15 @@ pl:
               name: Warunkowe z kartami
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w pszczole
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_nested_loops:
+              display_name: Zagnieżdżające się  pętle
+            csf_functions:
+              display_name: Funkcje
         time4cs-experiment-unit-2:
           stages:
             Nested Loops in Maze:
@@ -4929,14 +5887,50 @@ pl:
           stages:
             Conditionals:
               name: Zdania z warunkami
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_events:
+              display_name: Zdarzenia
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Zdania z warunkami
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_events:
+              display_name: Zdarzenia
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Streszczenie
         csp8-pilot:
           stages:
             new stage:
               name: nowy etap
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listy
+            csp_loops:
+              display_name: Pętle
         csp9-pilot:
           stages:
             new stage:
@@ -4965,6 +5959,13 @@ pl:
               name: 'Twoja strona internetowa - Zdefiniuj'
             Your Web Page - Prepare:
               name: Twoja strona internetowa - Przygotuj
+          lesson_groups:
+            csd2_1:
+              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+            csd2_2:
+              display_name: 'Rozdział 2: Style i CSS'
+            cspSurvey:
+              display_name: Ankieta
         csd1-2020:
           stages:
             Intro to Problem Solving:
@@ -5031,6 +6032,13 @@ pl:
               name: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna lekcja 3)
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               name: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna lekcja 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csd1_1:
+              display_name: 'Rozdział 1: Proces Rozwiązywania Problemów'
+            csd1_2:
+              display_name: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5055,10 +6063,26 @@ pl:
               name: Polepszanie i iterowanie
             Project - App Presentation:
               name: Projekt - Prezentacja aplikacji
+          lesson_groups:
+            csd4_1:
+              display_name: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
+            csd4_2:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+            cspSurvey:
+              display_name: Ankieta
         csd5-2020:
           stages:
             Representing Numbers:
               name: Reprezentacja liczb
+          lesson_groups:
+            csd5_1:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            csd5_2:
+              display_name: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
+            cspSurvey:
+              display_name: Ankieta
         csd6-2020:
           stages:
             Getting Properties:
@@ -5077,6 +6101,13 @@ pl:
               name: Akcelerometr
             Functions with Parameters:
               name: Funkcje z parametrami
+          lesson_groups:
+            csd6_1:
+              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+            csd6_2:
+              display_name: 'Rozdział 2: Wejście Sprzętowe'
+            cspSurvey:
+              display_name: Ankieta
         csd3-2020:
           description_short: "Programowanie"
           stages:
@@ -5122,6 +6153,13 @@ pl:
               name: 'Mini-Projekt: Animacja'
             Mouse Input:
               name: Użycie myszy
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
+            cspSurvey:
+              display_name: Ankieta
         coursea-2020:
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: 'Wiek 4-7'
@@ -5136,6 +6174,13 @@ pl:
               name: 'Pętle: Szczęśliwe pętle'
             Safety in My Online Neighborhood:
               name: Bezpieczeństwo w moim otoczeniu online
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         courseb-2020:
           description_audience: 'Wiek 5-8'
           stages:
@@ -5149,6 +6194,13 @@ pl:
               name: Poznając pętle
             Digital Trails:
               name: Cyfrowe szlaki
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         coursec-2020:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: 'Wiek 6-10'
@@ -5171,6 +6223,15 @@ pl:
               name: Stawianie STOP świństwom online
             Password Power-Up:
               name: Włączenie na hasło
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_binary:
+              display_name: Binarny
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         coursed-2020:
           description_audience: 'Wiek 7-11'
           stages:
@@ -5198,6 +6259,17 @@ pl:
               name: Potańcówka
             Be A Super Digital Citizen:
               name: Bądź Super Cyfrowym Obywatelem
+          lesson_groups:
+            csf_events:
+              display_name: Zdarzenia
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_binary:
+              display_name: Binarny
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
         coursee-2020:
           description_audience: 'Wiek 8-12'
           stages:
@@ -5205,6 +6277,13 @@ pl:
               name: Zagnieżdżone pętle w labiryncie
             'Functions: Songwriting':
               name: Pisanie piosenek
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_nested_loops:
+              display_name: Zagnieżdżające się  pętle
+            csf_functions:
+              display_name: Funkcje
         coursef-2020:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description_audience: 'Wiek 9-13'
@@ -5225,6 +6304,13 @@ pl:
               name: Moc Słów
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+          lesson_groups:
+            csf_digcit:
+              display_name: Cyfrowe obywatelstwo
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
         express-2020:
           description_audience: 'W wieku 9-18'
           stages:
@@ -5244,6 +6330,17 @@ pl:
               name: Pętle for w pszczole
             For Loops in Artist:
               name: Pętle for w artyście
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_conditionals:
+              display_name: Zdania z warunkami
+            csf_functions:
+              display_name: Funkcje
+            csf_variables:
+              display_name: Zmienne
+            csf_for_loops:
+              display_name: Pętle dla (for)
         pre-express-2020:
           description_audience: 'W wieku 4-8'
           stages:
@@ -5255,6 +6352,11 @@ pl:
               name: Literująca Pszczółka
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
+          lesson_groups:
+            csf_loops:
+              display_name: Pętle
+            csf_events:
+              display_name: Zdarzenia
         csp1-2020:
           stages:
             new stage:
@@ -5263,6 +6365,9 @@ pl:
               name: Liczby binarne
             Intellectual Property:
               name: Własność intelektualna
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(stary) Unit 1: Informacje cyfrowe'
         csp2-2020:
           stages:
             new stage:
@@ -5357,6 +6462,9 @@ pl:
               name: Losowe liczby
             Sprite Properties:
               name: Właściwości duszka
+          lesson_groups:
+            csd3_1:
+              display_name: 'Rozdział 1: Obrazy i Animacje'
         jess-test-script:
           stages:
             new stage:
@@ -5379,6 +6487,11 @@ pl:
               name: Obrazki
             CSS Classes:
               name: Klasy CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+            csd2_2:
+              display_name: 'Rozdział 2: Style i CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -5403,6 +6516,14 @@ pl:
               name: Przetwarzanie tablic
             Functions with Return Values:
               name: Funkcje zwracające wartości
+            Variables:
+              name: Zmienne
+            If-Statements:
+              name: Instrukcje-if
+            Keep Going:
+              name: Tak trzymaj
+            Keep Going!:
+              name: Tak trzymaj!
         virtual-holding-place:
           stages:
             Velocity:
@@ -5419,6 +6540,11 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+          lesson_groups:
+            content:
+              display_name: Treści
+            csd3_2:
+              display_name: 'Rozdział 2: Budowanie Gier'
         code-break:
           stages:
             new stage:
@@ -5439,12 +6565,24 @@ pl:
               name: Odcinek 2 - Wkrótce!
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
             Episode 1 - Algorithms with Hill Harper:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
           title: Inscenizacja Code Break
         code-break-younger-staging:
           stages:
@@ -5452,6 +6590,12 @@ pl:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
         code-break-younger:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -5460,3 +6604,32 @@ pl:
               name: Odcinek 2 - Wkrótce!
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
+          title: Code Break dla młodszych uczniów
+          description: 'Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.'
+        no-lg:
+          stages:
+            new stage:
+              name: nowy etap
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Pętle Dopóki (While)
+            Loops and Simulations:
+              name: Pętle i symulacje
+            Introduction to Arrays:
+              name: Wprowadzenie do tablic
+            Processing Arrays:
+              name: Przetwarzanie tablic
+            Functions with Return Values:
+              name: Funkcje zwracające wartości
+          lesson_groups:
+            csp5_1:
+              display_name: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
+            csp5_2:
+              display_name: 'Rozdział 2: Programowanie ze Strukturami Danych'

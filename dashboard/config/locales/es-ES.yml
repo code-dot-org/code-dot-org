@@ -528,6 +528,8 @@ es:
     update: Actualizar cuenta de usuario
     account_successfully_updated: Cuenta actualizada exitosamente.
     update_email: Actualizar
+    parent_guardian_email_label: Email del padre o guardián
+    none: Ninguno
     encrypted: encriptado
   user_level:
     completed: Completada
@@ -825,25 +827,6 @@ es:
         para su clase.
       audience: Edad +14
       cta: Cómo hacerlo
-  gallery:
-    students_drew_these_with_code: "¡Los estudiantes dibujaron esto con Code!"
-    students_made_these_with_code: "¡Los estudiantes hicieron esto con Code!"
-    picture_count: En los últimos <b>%{days}</b> días, los estudiantes han dibujado
-      <b>%{count}</b> imágenes con programas escritos por ellos mismos. Haz clic en
-      las imágenes para ver cada programa en acción.
-    activity_count: En los últimos <b>%{days}</b> días, los estudiantes han hecho
-      <b>%{count}</b> aplicaciones y fotos escribiendo sus propios programas informáticos.
-      Haz clic en las fotos y capturas de pantalla para ver cada programa en acción.
-    want_to_make_your_own: "¿Quieres hacer el tuyo?"
-    how_to_save: En el último nivel de estos tutoriales, pulsa "Terminar" y "Guardar"
-      para guardar tu trabajo en la galería.
-    more: Más →
-    caption_by_name_age: por %{name}, edad %{age}
-    caption_time_ago: hace %{time_ago}
-    header: Galería
-    header_playlab: Laboratorio de Juegos
-    header_artist: Artista
-    report_abuse: Reportar Abuso
   landing:
     prerelease_tutorial: Este tutorial está en **beta**.  Está sujeto a revisión a
       medida que se reciben comentarios y se realizan mejoras.
@@ -1097,6 +1080,7 @@ es:
     instructor_feedback: Retroalimentación del instructor
     peer_feedback: Retroalimentación de los compañeros
     outdated: Esta retroalimientación se añadió para una versión previamente presentada
+    peer_review: Revisión por pares
   flex_category:
     required: Vista previa
     content: Contenido

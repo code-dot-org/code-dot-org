@@ -63,8 +63,10 @@ cs:
   heading_x_of_y: "%{heading} (stránky %{x} %{y})"
   join_section:
     code:
+      title: 'Přidej se k sekci na Code.org'
       placeholder: "Kód sekce (ABCDEF)"
-      instructions_short: "Zadejte svůj 6-místný kód"
+      instructions: "Pro připojení k sekci tvého učitele zadej její 6-místný kód (příklad: \"ABCDEF\")"
+      instructions_short: "Zadej 6-místný kód sekce"
       submit: 'Připojit se'
   add_hint_form:
     placeholder: 'Zadej zde svůj tip'
@@ -194,11 +196,12 @@ cs:
   signinsection:
     welcome: 'Vítejte v %{section_name}'
     name: 'Vyber si své jméno'
-    picture: 'Najít nyní utajený obrázek'
-    words: 'Nyní zadejte utajená slova'
+    picture: 'Nyní vyhledej svůj tajný obrázek'
+    words: 'Nyní zadej své tajná slova'
     login: 'Přihlásit'
-    invalid_login: 'Neplatné přihlašovací jméno, zkuste to prosím znovu'
-    pair_programming: 'Mám partnera u počítače'
+    invalid_login: 'Neplatné přihlašovací jméno, zkus znovu'
+    pair_programming: 'Mám u počítače partnera'
+    student_privacy_markdown: "Další informace o tom, proč se nezobrazuje tvé celé jméno najdeš tady: [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Zapomněl jsi heslo?'
@@ -231,8 +234,8 @@ cs:
     delete_teacher_subject: 'Oznámení od Code.org: Váš účet byl odstraněn'
   section:
     your_section:
-      one: 'Vaše sekce:'
-      other: 'Vaše sekce:'
+      one: 'Tvá sekce:'
+      other: 'Tvé sekce:'
     code_with_teacher: '%{section_code} s učitelem %{teacher_name}'
     confirm:
       remove: 'Jste si jisti, že chcete opustit tuto sekci?'
@@ -247,16 +250,16 @@ cs:
   follower:
     invite_sent: 'Pozvánka odeslána'
     added_teacher: '%{name} přidán jako tvůj učitel'
-    registered: "Zaregistroval ses k %{section_name}."
+    registered: "Připojili jste se do sekce %{section_name}."
     error:
       signed_in: 'Dříve než budeš pokračovat se, prosím, odhlas'
       username_not_found: 'Uživatelské jméno %{username} nebylo nalezeno'
       username_in_use: '%{username} je již obsazeno, vyber si jiný, prosím'
       no_teacher: "Nebyl nalezený nikdo přihlášený jako '%{teacher_email_or_code}'. Požádejte je prosím, aby se zde přihlásili a poté je zkuste znovu přidat"
-      section_not_found: "Nelze nalézt sekci s kódem \"%{section_code}\"."
-      blank_code: "Zadej prosím kód sekce"
-      cant_join_own_section: "Lituji, ale nemůžete se připojit s vlastní sekcí."
-      provider_managed_section: "Tento oddíl je spravován jiným poskytovatelem a nelze se k němu připojit. Požádejte Vašeho učitele, aby Vás prostřednictvím %{provider} přidal a provedl opětovnou synchronizaci své sekce."
+      section_not_found: "Sekce s kódem \"%{section_code}\" nebyla nalezena."
+      blank_code: "Zadej, prosím, kód sekce"
+      cant_join_own_section: "Je nám líto, ale ke své vlastní sekci se nemůžete připojit."
+      provider_managed_section: "Tuto sekci spravuje jiný poskytovatel a nelze se k ní připojit. Požádej svého učitele, aby tě prostřednictvím %{provider} přidal a pak sekci zosynchronizoval."
     mail:
       student_disassociated:
         subject: "Code.org upozornění: %{student_name} už není vašim studentem."
@@ -290,7 +293,7 @@ cs:
       my_dashboard: "Můj přehled"
       course_catalog: "Katalog kurzů"
       project_gallery: "Projekty"
-      sections: "Oddíly"
+      sections: "Sekce"
       help_support: "Pomoc a podpora"
       report_bug: "Nahlásit chybu"
       teacher_community: "Komunita učitelů"
@@ -387,7 +390,7 @@ cs:
     students:
       dashboard: 'Přejít na přehled učitele'
     user_not_found: 'Učitel nebyl nalezen.'
-    student_teacher_disassociated: 'Odebrali jste %{teacher_name} jako svého učitele.'
+    student_teacher_disassociated: 'Opustili jste sekci %{section_code} učitele %{teacher_name}.'
     panel:
       answer_viewer: 'Učitelský panel'
       student: 'Student'
@@ -412,7 +415,7 @@ cs:
     current_password_hint: '(potřebujeme tvé aktuální heslo pro potvrzení změn)'
     delete: 'Vymazat účet'
     delete_text: "Klepnutím na následující tlačítko se vymaže váš účet."
-    delete_text_teacher_managed_note: "Nemáte oprávnění smazat tento účet, protože je spravován vaším učitelem, který Vás bude muset nejprve odstranit ze svých oddílů, než budete moci smazat svůj účet."
+    delete_text_teacher_managed_note: "Nemáš oprávnění smazat tento účet, protože je spravován tvým učitelem. Před smazáním svého účtu musíš požádat sve učitele, aby tě nejprve odstranili ze svých sekcí."
     delete_text_teacher_note: "Upozornění: smazáním účtu nebudou vymazané vaše studentské účty."
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
     deleted_user: 'odstraněný uživatel'
@@ -435,6 +438,8 @@ cs:
     update: "Aktualizovat účet"
     account_successfully_updated: "Účet úspěšně aktualizován."
     update_email: "Aktualizovat"
+    parent_guardian_email_label: "E-mail rodiče/zákonného zástupce"
+    none: "Žádný"
     encrypted: "šifrováno"
   user_level:
     completed: 'Dokončeno'
@@ -475,13 +480,13 @@ cs:
     choose_next_course: "Zkuste kurz Code Studio výběrem níže"
     print_certificate: "Vytisknout certifikát"
   move_students:
-    new_section_dne: "Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte jiný kód sekce."
-    section_code_cant_be_current_section: "Aktuální sekce nemůže být stejná jako nová sekce."
-    current_section_dne: "Omlouvám se, ale sekce %{current_section_code} neexistuje. Zadejte jiný kód sekce."
+    new_section_dne: "Je nám líto, ale sekce %{new_section_code} neexistuje. Zadej jiný kód sekce."
+    section_code_cant_be_current_section: "Aktuální sekce nemůže být shodná s novou sekcí."
+    current_section_dne: "Je nám líto, ale sekce %{current_section_code} neexistuje. Zadej jiný kód sekce."
     student_ids_not_entered: "Zadejte prosím student_ids."
     student_not_found: "Nelze nalézt jednoho nebo více studentů."
-    all_students_must_be_in_current_section: "Všichni studenti musí být zapsáni v tvoji v sekci."
-    already_enrolled_in_new_section: "Tyto studenty nelze přesunout, protože tento učitel je již má v další části."
+    all_students_must_be_in_current_section: "Všichni žáci musí být zapsáni ve vaší sekci."
+    already_enrolled_in_new_section: "Tyto žáky nelze přesunout, protože se již nacházejí v nové sekci."
   share:
     title: "Code studio"
     description: "Každý se může naučit informatiku. Udělejte hry, aplikace a umění s kódem."
@@ -641,20 +646,6 @@ cs:
       title: "Widgety"
       audience: "Věk 14+"
       cta: "Jak na to"
-  gallery:
-    students_drew_these_with_code: "Studenti tyto nakreslili kódem!"
-    students_made_these_with_code: "Studenti tyto vytvořili kódem!"
-    picture_count: "V posledních dnech <b>%{days}</b> studenti nakreslili obrázky <b>%{count}</b> napsáné vlastními počítačovými programy. Klepněte na obrázky, abys si viděl každý program v akci."
-    activity_count: "V posledních dnech <b>%{days}</b> studenti udělali <b>%{count}</b> aplikace a obrázky napsáním vlastních počítačových programů. Klepněte na obrázky a snímky, abys si viděl každý program v akci."
-    want_to_make_your_own: "Chcete si vyrobit vlastní?"
-    how_to_save: "V poslední části těchto výukových programů klepněte na tlačítko \"Dokončit\" a \"Uložit\" pro odeslání vaší práce do galerie."
-    more: "Více &rarr;"
-    caption_by_name_age: "podle %{name}, věk %{age}"
-    caption_time_ago: "před %{time_ago}"
-    header: "Galerie"
-    header_playlab: "Play Lab"
-    header_artist: "Umělec"
-    report_abuse: "Ohlásit urážlivý příspěvek"
   landing:
     report_bug: "Nahlásit chybu"
     support: "Získat pomoc"
@@ -713,7 +704,7 @@ cs:
     correct_body: "To je správná odpověď."
   dialog:
     ok: "OK"
-    startover_title: "Jste si jisti, že chcete začít znovu?"
+    startover_title: "Určitě chceš začít znovu?"
     startover_body: "Toto znovu nastaví puzzle do původního stavu a odstraní všechny bloky, které jsi přidal nebo změnil."
     startover_ok: "Začít znovu"
     startover_cancel: "Zrušit"
@@ -826,6 +817,7 @@ cs:
     instructor_feedback: 'Připomínky instruktora'
     peer_feedback: 'Připomínky spoluřešitele'
     outdated: 'Tato zpětná vazba byla přidána k dříve odeslané verzi'
+    peer_review: 'Nezávislý posudek'
   flex_category:
     required: 'Přehled'
     content: 'Obsah'
@@ -843,7 +835,7 @@ cs:
     csf_nested_loops: 'Vnořené cykly'
     csf_functions: 'Funkce'
     csf_variables: 'Proměnné'
-    csf_for_loops: 'For cykly'
+    csf_for_loops: 'Cykly "For"'
     csf_internet: 'Internet'
     csd1_1: 'Kapitola 1: Proces řešení problémů'
     csd1_2: 'Kapitola 2: Počítače a řešení problémů'
@@ -861,14 +853,14 @@ cs:
     csp2_2: 'Kapitola 2: Práce s daty a jejich zobrazení'
     csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
     csp_postap_1: 'Kapitola 2: Práce s daty a jejich zobrazení'
-    csp2_1_2018: '2. lekce: Digitální informace'
-    csp3_1_2018: 'Jednotka 3: Úvod do programování'
+    csp2_1_2018: 'Kapitola 2: Digitální informace'
+    csp3_1_2018: 'Kapitola 3: Úvod do programování'
     csp_variables: 'Proměnné'
     csp_conditionals: 'Podmínky'
     csp_functions: 'Funkce'
     csp_lists: 'Seznamy'
     csp_loops: 'Cykly'
-    csp_unit1_2020: '1. lekce: Digitální informace'
+    csp_unit1_2020: 'Kapitola 1: Digitální informace'
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností Code.org.
@@ -929,9 +921,9 @@ cs:
     mac: 'Mac OS X'
   locked_stage: 'Obsah této úrovně není viditelný, protože tato úroveň je momentálně zamčená. Tvůj učitel odemkne tuto úroveň hned, jakmile se na ní bude pracovat anebo až bude procházet tvoje odpovědi.'
   hidden_stage: "Tvůj učitel nepředpokládal, že bude zrovna tady. Prosím zeptej se ho, na které lekci máš pracovat."
-  return_unit_overview: 'Přejít na přehled jednotky'
+  return_unit_overview: 'Přejít na přehled kapitoly'
   return_course_overview: 'Přejít na přehled'
-  view_all_units: 'Zobrazit všechny jednotky'
+  view_all_units: 'Zobrazit všechny kapitoly'
   view_teacher_guide: 'Zobrazit příručku učitele'
   pd:
     form_labels:

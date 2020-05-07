@@ -489,6 +489,8 @@
     update: Oppdater konto
     account_successfully_updated: Kontoen er oppdatert.
     update_email: Oppdater
+    parent_guardian_email_label: Foreldre/foresatt epost
+    none: Ingen
     encrypted: kryptert
   user_level:
     completed: Fullført
@@ -771,25 +773,6 @@
         lag en enkeltkonseptøkt for klassen din.
       audience: Alder 14+
       cta: Lær hvordan
-  gallery:
-    students_drew_these_with_code: Elever tegnet disse ved å kode.
-    students_made_these_with_code: Elever laget disse ved å kode.
-    picture_count: I løpet av de siste <b>%{days}</b> dager har elever tegnet <b>%{count}</b>
-      bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program
-      kjøre.
-    activity_count: De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b>
-      apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder
-      for å se hvert program i aksjon.
-    want_to_make_your_own: Vil du lage din egen?
-    how_to_save: På siste nivå i disse opplæringene, klikker du "Avslutt" og "Lagre"
-      for å lagre ditt arbeid i galleriet.
-    more: Flere &rarr;
-    caption_by_name_age: av %{name}, %{age} år
-    caption_time_ago: "%{time_ago} siden"
-    header: Galleri
-    header_playlab: Spill-lab
-    header_artist: Kunstner
-    report_abuse: Rapporter misbruk
   landing:
     report_bug: Rapporter feil
     support: Få hjelp
@@ -1022,6 +1005,7 @@
     instructor_feedback: Tilbakemelding fra instruktør
     peer_feedback: Gi tilbakemelding
     outdated: Denne tilbakemeldingen ble gitt på en tidligere versjon av bidraget
+    peer_review: Tilbakemelding
   flex_category:
     required: Oversikt
     content: Innhold

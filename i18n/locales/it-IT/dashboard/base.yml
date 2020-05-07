@@ -459,6 +459,8 @@ it:
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
     update_email: "Aggiorna"
+    parent_guardian_email_label: "E-mail del genitore/tutore"
+    none: "Nessuno"
     encrypted: "crittografato"
   user_level:
     completed: 'Completato'
@@ -678,20 +680,6 @@ it:
       body: "Gli studenti possono esplorare concetti dal nostro corso Cs Principles usando questi strumenti digitali sul campo. Possono utilizzare i componenti per conto proprio o creare una lezione su un singolo concetto per la classe."
       audience: "Dai 14 anni in su"
       cta: "Scopri come"
-  gallery:
-    students_drew_these_with_code: "Gli studenti li hanno disegnati con dei programmi!"
-    students_made_these_with_code: "Gli studenti li hanno creati scrivendo del codice!"
-    picture_count: "Nei <b>%{days}</b> giorni passati, gli studenti hanno realizzato <b>%{count}</b> disegni scrivendo da soli i programmi per disegnarli. Clicca sulle immagini per vedere ogni programma in azione."
-    activity_count: "Negli ultimi <b>%{days}</b> giorni,  gli studenti hanno realizzato <b>%{count}</b> applicazioni e immagini scrivendo i loro programmi. Clicca sulle immagini per vedere ogni programma in azione."
-    want_to_make_your_own: "Vuoi farne uno tu?"
-    how_to_save: "Al termine dell'ultimo esercizio di questi corsi, clicca su \"Salva e Pubblica\" per salvare il tuo progetto nella collezione."
-    more: "Di più &rarr;"
-    caption_by_name_age: "da %{name}, età %{age}"
-    caption_time_ago: "%{time_ago} fa"
-    header: "La tua collezione"
-    header_playlab: "Laboratorio"
-    header_artist: "Artista"
-    report_abuse: "Segnala un abuso"
   landing:
     prerelease_tutorial: "Questa esercitazione è in **versione provvisoria**. È soggetta a revisioni man mano che arrivano osservazioni, al fine di migliorarla."
     report_bug: "Report Bug"
@@ -876,6 +864,7 @@ it:
     instructor_feedback: 'Feedback dell''istruttore'
     peer_feedback: 'Feedback di un collega'
     outdated: 'Questo commento è stato aggiunto per una versione precedentemente inviata'
+    peer_review: 'Valutazioni dei parigrado'
   flex_category:
     required: 'Panoramica'
     content: 'Contenuto'
@@ -953,7 +942,7 @@ it:
     time4cs_c3: 'Vivere negli Everglades'
     time4cs_c4: 'Impatti Invasivi sugli Everglades'
     time4cs_c5: 'I Cittadini Influenzano il Cambiamento negli Everglades'
-    k5_getting_started: 'Per cominciare'
+    k5_getting_started: '1. Per cominciare'
     k5_next_steps: 'I prossimi passi'
   external_links:
     disclaimer: Limiti di responsabilità

@@ -130,7 +130,7 @@ const scriptDataByScript = {
         relative_position: 1,
         name: 'Going Places Safely',
         title: 'Lesson 1: Going Places Safely',
-        flex_category: 'Digital Citizenship',
+        lesson_group_display_name: 'Digital Citizenship',
         lockable: false,
         levels: [],
         description_student: 'Learn the rules to safely visit places online.',
@@ -140,7 +140,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/1',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
       },
       {
@@ -152,7 +152,7 @@ const scriptDataByScript = {
         relative_position: 2,
         name: 'Learn to Drag and Drop',
         title: 'Lesson 2: Learn to Drag and Drop',
-        flex_category: 'Sequencing',
+        lesson_group_display_name: 'Sequencing',
         lockable: false,
         levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
         description_student: 'Click and drag to finish the puzzles.',
@@ -162,7 +162,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/2',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
       },
       {
@@ -174,7 +174,7 @@ const scriptDataByScript = {
         relative_position: 3,
         name: 'Happy Maps',
         title: 'Lesson 3: Happy Maps',
-        flex_category: 'Sequencing',
+        lesson_group_display_name: 'Sequencing',
         lockable: false,
         levels: [],
         description_student:
@@ -185,7 +185,7 @@ const scriptDataByScript = {
         lesson_plan_html_url: 'https://curriculum.code.org/csf-19/coursea/3',
         lesson_plan_pdf_url:
           '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
-        stage_extras_level_url:
+        lesson_extras_level_url:
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/3/extras'
       }
     ]

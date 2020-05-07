@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
-import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import ProjectsGallery from '@cdo/apps/templates/projects/ProjectsGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
@@ -19,6 +17,7 @@ import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/delet
 
 $(document).ready(() => {
   const projectsData = getScriptData('projects');
+  const specialAnnouncement = projectsData.specialAnnouncement;
   registerReducers({
     projects,
     publishDialog: publishDialogReducer,
@@ -47,14 +46,12 @@ $(document).ready(() => {
         <ProjectHeader
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
+          specialAnnouncement={specialAnnouncement}
         />
         <ProjectsGallery
           limitedGallery={projectsData.limitedGallery}
           canShare={projectsData.canShare}
         />
-        {/* TODO: Move components below into <PersonalProjectsTable/>? */}
-        <PublishDialog />
-        <DeleteProjectDialog />
       </div>
     </Provider>,
     document.querySelector('#projects-page')

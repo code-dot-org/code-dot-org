@@ -48,10 +48,10 @@ class ApiControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :stage, name: 'Stage1', script: script, lockable: true
+    stage = create :lesson, name: 'Stage1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
 
     [script, level, stage]
   end
@@ -127,19 +127,19 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
-    stage1 = create :stage, script: script, name: 'First Stage'
-    stage2 = create :stage, script: script, name: 'Second Stage'
+    stage1 = create :lesson, script: script, name: 'First Stage'
+    stage2 = create :lesson, script: script, name: 'Second Stage'
 
     # create 2 text_match levels
     level1 = create :text_match
     level1.properties['title'] = 'Text Match 1'
     level1.save!
-    create :script_level, script: script, levels: [level1], stage: stage1
+    create :script_level, script: script, levels: [level1], lesson: stage1
 
     level2 = create :text_match
     level2.properties['title'] = 'Text Match 2'
     level2.save!
-    create :script_level, script: script, levels: [level2], stage: stage2
+    create :script_level, script: script, levels: [level2], lesson: stage2
     # create some other random levels
     5.times do
       create :script_level, script: script
@@ -642,10 +642,10 @@ class ApiControllerTest < ActionController::TestCase
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
     script = create :script
-    stage = create :stage, script: script
+    stage = create :lesson, script: script
     contained_level = create :multi, name: 'multi level'
     level = create :maze, name: 'maze level', contained_level_names: ['multi level']
-    create :script_level, script: script, stage: stage, levels: [level]
+    create :script_level, script: script, lesson: stage, levels: [level]
 
     user = create :user
     sign_in user
@@ -725,11 +725,11 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for stage with swapped level" do
     sign_in @student_1
     script = create :script
-    stage = create :stage, script: script
+    stage = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
     level_source = create :level_source, level: level1a, data: 'level source'
-    create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    create :script_level, script: script, lesson: stage, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
@@ -929,9 +929,9 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should not return progress for bonus levels" do
     script = create :script
-    stage = create :stage, script: script
-    create :script_level, script: script, stage: stage
-    create :script_level, script: script, stage: stage, bonus: true
+    stage = create :lesson, script: script
+    create :script_level, script: script, lesson: stage
+    create :script_level, script: script, lesson: stage, bonus: true
 
     get :section_progress, params: {
       section_id: @flappy_section.id,
@@ -944,48 +944,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, response["students"][0]["levels"].length
     assert_equal 1, response["script"]["levels_count"]
     assert_equal 1, response["script"]["stages"][0]["length"]
-  end
-
-  test "should get progress for student in section" do
-    get :student_progress, params: {
-      student_id: @student_1.id,
-      section_id: @section.id
-    }
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-
-    assert_not_nil response["progressHtml"]
-    expected_student = {"id" => @student_1.id, "name" => @student_1.name}
-    assert_equal expected_student, response["student"]
-    expected_script = {"id" => Script.twenty_hour_script.id, "name" => Script.twenty_hour_script.localized_title}
-    assert_equal expected_script, response["script"]
-  end
-
-  test "should get progress for student in section with section script" do
-    get :student_progress, params: {
-      student_id: @student_flappy_1.id,
-      section_id: @flappy_section.id
-    }
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    expected_script = {"id" => Script.flappy_script.id, "name" => Script.flappy_script.localized_title}
-    assert_equal expected_script, response["script"]
-  end
-
-  test "should get progress for student in section with specified script" do
-    script = Script.find_by_name('algebra')
-    get :student_progress, params: {
-      student_id: @student_flappy_1.id,
-      section_id: @flappy_section.id,
-      script_id: script.id
-    }
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    expected_script = {"id" => script.id, "name" => script.localized_title}
-    assert_equal expected_script, response["script"]
   end
 
   test "script_structure returns summarized script" do
@@ -1100,11 +1058,6 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "section_progress", section_id: '2'}
     )
 
-    assert_routing(
-      {method: "get", path: "/dashboardapi/student_progress/2/15"},
-      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'}
-    )
-
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
@@ -1114,11 +1067,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
       {method: "get", path: "/api/section_progress/2"}
-    )
-
-    assert_recognizes(
-      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
-      {method: "get", path: "/api/student_progress/2/15"}
     )
   end
 

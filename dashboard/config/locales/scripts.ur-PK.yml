@@ -262,12 +262,21 @@ ur:
           stages:
             Dance Party:
               name: ڈانس پارٹی
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
         coursef-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
             The Artist:
               name: مصور
+          lesson_groups:
+            csf_variables:
+              display_name: متغیرات
         dance-low:
           stages:
             Dance Party:
@@ -278,16 +287,54 @@ ur:
               name: ثنائی تصاویر
             Dance Party:
               name: ڈانس پارٹی
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
         express-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
             Dance Party:
               name: ڈانس پارٹی
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
         andrea-test:
           stages:
             'null':
               name: نَل
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
         csd2-2019:
           stages:
             Lists:
@@ -298,6 +345,66 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
         csd2-pilot:
           stages:
             Lists:
@@ -308,6 +415,12 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
         dance-2019:
           stages:
             Dance Party:
@@ -322,18 +435,54 @@ ur:
               name: ایونٹس/واقعات
             Variables:
               name: متغیرات
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
         time4cs-original-unit-1:
           stages:
             Conditionals:
               name: شرائط
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: شرائط
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: شرائط
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_events:
+              display_name: ایونٹس/واقعات
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: شرائط
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_events:
+              display_name: ایونٹس/واقعات
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
         csd3-2020:
           stages:
             Variables:
@@ -342,26 +491,71 @@ ur:
               name: شرائط
             Text:
               name: متن
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
         coursed-2020:
           stages:
             'Unplugged: Binary':
               name: ثنائی تصاویر
             Dance Party:
               name: ڈانس پارٹی
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
         coursef-2020:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+          lesson_groups:
+            csf_variables:
+              display_name: متغیرات
         express-2020:
           stages:
             Dance Party:
               name: ڈانس پارٹی
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
         csd3-virtual:
           stages:
             Variables:
               name: متغیرات
             Conditionals:
               name: شرائط
+        csp5-virtual:
+          stages:
+            Variables:
+              name: متغیرات
         code-break:
           stages:
             Events:

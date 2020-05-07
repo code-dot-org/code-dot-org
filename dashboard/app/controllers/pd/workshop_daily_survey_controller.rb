@@ -227,7 +227,7 @@ module Pd
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
       session = workshop.sessions.last
-      session_count = workshop.sessions.size
+      session_count = workshop.last_valid_day
       return render_404 unless session
 
       begin
@@ -449,6 +449,9 @@ module Pd
 
     def render_csf_survey_foorm(survey_name, workshop)
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
+      facilitator_data = workshop.facilitators.map do |facilitator|
+        {facilitatorId: facilitator.id, facilitatorName: facilitator.name}
+      end
 
       @script_data = {
         props: {
@@ -459,6 +462,10 @@ module Pd
           submitParams: {
             user_id: current_user.id,
             pd_workshop_id: workshop.id
+          },
+          surveyData: {
+            facilitators: facilitator_data,
+            workshop_course: workshop.course
           }
         }.to_json
       }

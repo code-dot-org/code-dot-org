@@ -283,6 +283,14 @@ zh-TW:
         actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
       New Frozen Project:
         snowflake_dropdown: 使用下拉清單來創建不同的雪花！
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: 您將在這裡找到「for」迴圈！
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: 請注意，現在模塊有輸入數字的新方法。這些「數學」模塊可以拉出並移動！
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
       Overworld Chop Trees:
         craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
       Overworld Chop Trees_2019:
@@ -319,12 +327,23 @@ zh-TW:
         behaviors_edit: 給這個行為添加程式。
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_1: 您應該在該函式中輸入什麼代碼？
         courseF_bee_functions_challenge1_2: 如果進行編輯以多次釀造蜂蜜，則可以在此處使用「check nectar or
           honey」函式。
+      course3_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
       course4_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: 這個函式可以很好地完成玉米任務，但對其他蔬菜呢？
       courseA_artist_loops4:
@@ -339,6 +358,12 @@ zh-TW:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_2019:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: 你知道嗎，只要有需要，你可以隨時畫一條線出來？
       courseA_collector_loops1:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops1_2019:
@@ -387,6 +412,12 @@ zh-TW:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events5_2019:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: 這個是讓你選擇一種「隨機」聲音，這意味著你在聽到聲音之前都不知道會得到什麼！
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseB_Scrat_ramp1_2019:
@@ -425,12 +456,36 @@ zh-TW:
         courseB_playlab_events6_a: 使用綠色的下拉箭頭來改變方向。
       courseC19_playLab_EOC3:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: 當企鵝碰到恐龍時，使用此積木！
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: 首先使用此積木將小藝術家帶到畫面中央。
       courseC_collector_prog1:
         courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseC_collector_prog1_2018:
         courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseC_collector_prog1_2019:
         courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: 如果需要，可以從工具箱中拖出來更多積木！
       courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_harvester_loops1_2018:
@@ -453,10 +508,16 @@ zh-TW:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseC_maze_programming3:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        courseC_maze_programming3_3: You can drag extra blocks to the toolbox to throw
+          them away.
       courseC_maze_programming3_2018:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        courseC_maze_programming3_3: You can drag extra blocks to the toolbox to throw
+          them away.
       courseC_maze_programming3_2019:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        courseC_maze_programming3_3: You can drag extra blocks to the toolbox to throw
+          them away.
       courseC_maze_programming4:
         courseC_maze_programming4_1: 這是您的模塊限制。它會告訴您還剩下多少模塊可以使用。
       courseC_maze_programming4_2018:
@@ -470,11 +531,22 @@ zh-TW:
       courseC_maze_programming5_2019:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseC_maze_programming7:
+        courseC_maze_programming7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
         courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
       courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
         courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
       courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
         courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
+      courseC_starWars_loops2:
+        courseC_starWars_loops2: 此關卡中只有這些積木可以用。
+      courseC_starWars_loops2_2018:
+        courseC_starWars_loops2: 此關卡中只有這些積木可以用。
+      courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: 此關卡中只有這些積木可以用。
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: 此關卡中只有這些積木可以用。
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
       courseD_artist_nestedLoops1a_2018:
@@ -486,10 +558,14 @@ zh-TW:
         courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+        4_5_Bee_Conditionals_2_2: 需要幫忙？點擊此處獲取影片提示！
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+        4_5_Bee_Conditionals_2_2: 需要幫忙？點擊此處獲取影片提示！
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       courseD_bee_conditionals_challenge2_2018:
@@ -520,8 +596,10 @@ zh-TW:
         courseC_maze_programming2_1: 這是工具箱。在這裡您可以找到完成本關的額外模塊。
       courseD_maze_ramp3:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        stone_block_2: 灰色積木是用石頭製成的，不能扔掉。
       courseD_maze_ramp3_2018:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
+        stone_block_2: 灰色積木是用石頭製成的，不能扔掉。
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: 您可以將多餘的模塊拖到工具箱移除。
       courseD_maze_ramp4:
@@ -544,6 +622,10 @@ zh-TW:
         '': 這些模塊上沒有數字。您可以想用多少就用多少！
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: 我們已將代碼積木分類好了，為你提供更多代碼供你使用！點擊此處查看。
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: 我們已將代碼積木分類好了，為你提供更多代碼供你使用！點擊此處查看。
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_scrat_ramp2:
@@ -558,12 +640,74 @@ zh-TW:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: 這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: 讓我們首先使用此積木來畫出第一個正方形。
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: 讓我們首先使用此積木來畫出第一個正方形。
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_1: 當這個綠色積木運行時，該函式中的所有代碼都將運行。在繪製第一個正方形後，小藝術家應該怎麼做？
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: 用於創建函式的積木已移至工具箱中的這個標籤下面。
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: 在底部添加更多代碼，讓該程式繼續進行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜歡這種設計，可將其更改為您想要的任何內容！
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: 你可以修改這個數字。
         courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: 你可以修改這個數字。
         courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: 這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: 這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: 這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: 這個蔬菜是未知的。每次你運行該程式時，它都會變化。
+      courseE_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: 此積木可以將角色移動到遊戲區的不同部分。
       courseE_playLab_scaffold3:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
       courseF_artist_for1:

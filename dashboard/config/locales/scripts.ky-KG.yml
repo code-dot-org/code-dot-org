@@ -1100,6 +1100,14 @@ ky:
           stages:
             Artist:
               name: Сүрөтчү
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
         coursef-2019:
           stages:
             Programming in Artist:
@@ -1164,6 +1172,9 @@ ky:
               name: Сүрөтчү
             Internet:
               name: Интернет
+          lesson_groups:
+            csf_variables:
+              display_name: Өзгөрмөлөр
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1178,6 +1189,13 @@ ky:
               name: Тоңгондогу салынган циклдар
             Artist Binary:
               name: Сүрөтчү менен бинардык сүрөттөр
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
         coursee-2019:
           stages:
             Programming in Artist:
@@ -1222,6 +1240,9 @@ ky:
               name: Салынган циклдар менен укмуштуу формалар
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
         express-2019:
           stages:
             Relay Programming:
@@ -1242,6 +1263,15 @@ ky:
               name: Сүрөтчү менен for циклдары
             Artist Binary:
               name: Сүрөтчү бинардык система
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Өзгөрмөлөр
         andrea-test:
           stages:
             'null':
@@ -1254,6 +1284,11 @@ ky:
               name: Сүрөтчүдөгү циклдар
             Sticker Art with Loops:
               name: Чаптама өнөрү циклдар менен
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         gamelab:
           title: Оюн лабы
         coursea-2019:
@@ -1272,10 +1307,20 @@ ky:
                 циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
                 циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
                 колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         courseb-2019:
           stages:
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         pre-express-2019:
           stages:
             Loops in Artist:
@@ -1284,6 +1329,11 @@ ky:
               name: Spelling Bee
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         csd2-2019:
           stages:
             Lists:
@@ -1300,6 +1350,14 @@ ky:
           stages:
             Functions with Parameters:
               name: Параметри бар функциялар
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
         csp1-2019:
           stages:
             The Internet:
@@ -1314,10 +1372,78 @@ ky:
               name: Тоңгондогу салынган циклдар
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Графикалык кагазды програмдоо
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
         csd2-pilot:
           stages:
             Lists:
@@ -1334,6 +1460,11 @@ ky:
           stages:
             Ocean Scene with Loops:
               name: Океан көрүнүшү циклдар менен
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         peru-2019:
           stages:
             Loops in Artist:
@@ -1354,6 +1485,14 @@ ky:
               name: Функциялар
             Variables:
               name: Өзгөрмөлөр
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1366,6 +1505,11 @@ ky:
               name: Тоңгондогу салынган циклдар
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
         time4cs-experiment-unit-2:
           stages:
             Fancy Shapes using Nested Loops:
@@ -1378,10 +1522,38 @@ ky:
           stages:
             Conditionals:
               name: Шартуулар
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Шартуулар
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1405,16 +1577,31 @@ ky:
                 циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде
                 циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды
                 колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         courseb-2020:
           stages:
             Loops in Artist:
               name: Циклдар менен бакчаларды тартуу
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         coursec-2020:
           stages:
             Programming in Artist:
               name: Код менен Сүрөт жаратуу
             Sticker Art with Loops:
               name: Чаптама өнөрү циклдар менен
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1425,6 +1612,13 @@ ky:
               name: Циклдар менен формаларды тартуу
             Artist Binary:
               name: Сүрөтчү менен бинардык сүрөттөр
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
         coursee-2020:
           stages:
             Nested Loops in Artist:
@@ -1438,6 +1632,9 @@ ky:
                 Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз.
                 Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
                 биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
         coursef-2020:
           stages:
             Variables as Constant in Artist:
@@ -1462,6 +1659,9 @@ ky:
                 оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
             Internet:
               name: Интернет
+          lesson_groups:
+            csf_variables:
+              display_name: Өзгөрмөлөр
         express-2020:
           stages:
             Programming in Artist:
@@ -1474,6 +1674,15 @@ ky:
               name: Сүрөтчүдөгү функциялар
             For Loops in Artist:
               name: Сүрөтчүдөгү for циклдары
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Өзгөрмөлөр
         pre-express-2020:
           stages:
             Spelling Bee:
@@ -1482,6 +1691,11 @@ ky:
               name: Океан көрүнүшү циклдар менен
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
+          lesson_groups:
+            csf_loops:
+              display_name: Циклдер
+            csf_events:
+              display_name: Окуялар
         csd3-virtual:
           stages:
             Variables:
@@ -1490,6 +1704,10 @@ ky:
               name: Шартуулар
             Functions:
               name: Функциялар
+        csp5-virtual:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
         virtual-holding-place:
           stages:
             Functions:

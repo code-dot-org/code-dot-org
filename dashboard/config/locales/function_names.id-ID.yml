@@ -182,6 +182,8 @@ id-ID:
         draw a flower: menggambar bunga
       Standalone_Artist_9:
         my function: Fungsiku
+      course1_artist_loops_challenge2:
+        potential solution: Kemungkinan solusi
       course3_artist_functions_challenge1:
         do something: buat sesuatu
       course3_artist_functions_challenge2:
@@ -194,6 +196,12 @@ id-ID:
         do something: buat sesuatu
       course4_artist_fwp_challenge1:
         do something: buat sesuatu
+      courseB_artist_loops_challenge2:
+        potential solution: Kemungkinan solusi
+      courseB_artist_loops_challenge2_2018:
+        potential solution: Kemungkinan solusi
+      courseB_artist_loops_challenge2_2019:
+        potential solution: Kemungkinan solusi
       courseC_data wizard:
         do something: buat sesuatu
       courseE_artist_concept1:
@@ -221,17 +229,23 @@ id-ID:
         draw a square: menggambar sebuah persegi empat
       courseE_artist_functions2_2019:
         draw a square: menggambar sebuah persegi empat
+      courseE_artist_functions2_copy:
+        draw a square: menggambar sebuah persegi empat
       courseE_artist_functions3_2018:
         draw a star: menggambar bintang
       courseE_artist_functions3_2019:
         draw a star: menggambar bintang
       courseE_artist_functions4:
         draw a star: menggambar bintang
+      courseE_artist_functions4_copy:
+        draw a star: menggambar bintang
       courseE_artist_functions5:
         draw a star: menggambar bintang
       courseE_artist_functions5_2018:
         draw a star: menggambar bintang
       courseE_artist_functions5_2019:
+        draw a star: menggambar bintang
+      courseE_artist_functions5_copy:
         draw a star: menggambar bintang
       courseE_artist_functions7:
         draw a house: gambar sebuah rumah
@@ -294,6 +308,8 @@ id-ID:
       courseE_artist_functions_predict1_2018:
         draw a square: menggambar sebuah persegi empat
       courseE_artist_functions_predict1_2019:
+        draw a square: menggambar sebuah persegi empat
+      courseE_artist_functions_predict1_copy:
         draw a square: menggambar sebuah persegi empat
       courseE_artist_functions_predict2:
         do something: buat sesuatu

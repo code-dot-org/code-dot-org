@@ -175,6 +175,9 @@ hu:
   codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
     or see resources for students, parents, and teachers.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Tudj meg többet
   cookie_banner_message: Az oldal további használatával, valamint az egyetértek gombra
     kattintással elfogadod a Cookie-k számítógépen történő tárolását.
   cookie_banner_more_information: Itt találod a Code.org adatvédelmi elveit.
@@ -8627,10 +8630,10 @@ hu:
     (virtual or hardware) using a drag-and-drop interface. They will also learn about
     the important concept of loops and get practice using the Pythagorean theorem
     to traverse triangular paths.
-  tutorial_baroboobstacle_longdescription: This series of 6 activities will introduce
-    students to basic coding and robotics concepts by using a drag-and-drop interface
-    to maneuver Linkbot robots (virtual and/or hardware) through a variety of obstacle
-    courses.
+  tutorial_baroboobstacle_longdescription: Ez a 6 tevékenységből álló sorozat megismerteti
+    a tanulókat a kódolás és robotika koncepcióival 'fogd és vidd' kezelőfelületet
+    használva, miközben Linkbot robotokat (virtuális és/vagy hardver) manővereztetnek
+    különféle akadálypályákon keresztül.
   tutorial_pbstorytelling_longdescription: Dive into the world of interactive storytelling.
     Learn the basics of how to create a story in Twine. Examine different story patterns
     and structures that are unique to interactive stories. See some ways that interactive
@@ -8758,34 +8761,38 @@ hu:
     familiar with how Cubelets robot blocks work in general.  Visit modrobotics.com/thehub
     for free "Meet Your Cubelets" lessons to introduce this computational thinking
     tool to your students. '
-  tutorial_codestersmicro_longdescription: Connect your micro:bit to Codesters and
-    unlock a world of possibilities. Use your micro:bit as a game controller to help
-    your player head a soccer ball. Don't let the ball hit the ground! Micro Ball
-    is a simple, fun game that even a beginning coder can make.
-  tutorial_codestersdata_longdescription: Connect your micro:bit to Codesters and
-    unlock a world of possibilities. Learn how to collect and store data from micro:bit
-    sensors. Then graph the data as a scatter plot in Codesters. Prior knowledge of
-    loops, lists, and events is encouraged.
-  tutorial_ikodexmas_longdescription: This teacher-led activity, adapted for the Hour
-    of Code, introduces children to using a tile-based programming language to develop
-    coding skills. The children use algorithms, programming and computational thinking
-    skills to program Kodu to deliver presents on Christmas Eve. Includes step-by-step
-    lesson plan, pupil tutorial and assessment guidance.
-  tutorial_rpisensehat_longdescription: Learn how use the Sense HAT hardware to build
-    a data-logging device which can capture a range of information about its immediate
-    environment.
-  tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
-    to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_codestersmicro_longdescription: Csatlakoztasd micro:bit-od Codesters-hez,
+    és megnyílik előtted a lehetőségek tárháza. Használd micro:bit-ed mint egy játékkontrollert,
+    hogy segíts a focistádnak elfejelni egy focilabdát. Ne engedd, hogy a labda földet
+    érjen! A Micro Ball egy egyszerű, szórakoztató játék, ami kezdő programozóknak
+    is való.
+  tutorial_codestersdata_longdescription: Csatlakoztasd micro:bit-od Codesters-hez,
+    és megnyílik előtted a lehetőségek tárháza. Tanuld meg hogyan gyűjtsd össze és
+    tárold az adatokat a micro:bit sensorokból. Ezek után ábrázold az adatokat egy
+    'scatter plot' ábrán. Ajánlott a loopok, listák és események előzetes ismerete.
+  tutorial_ikodexmas_longdescription: Ez a tanár által vezetett tevékenység, mely
+    a Kódolás órájához lett igazitva, bevezeti a gyermekeket a csempe alapú programozási
+    nyelv használatába, hogy ezáltal tegyenek szert kódolási képességekre. A gyermekek
+    algoritmusokhoz, programozáshoz és informatikai gondolkodáshoz kapcsolódó képességeket
+    használnak, hogy arra programozzák Kodut, hogy szenteste ajándékokat szállítson
+    ki. Tartalmaz lépésről lépésre szóló tervet, tanulói bemutatót és értékelési útmutatót.
+  tutorial_rpisensehat_longdescription: Ismerje meg hogyan lehet a Sense HAT hardvert
+    felhasználni olyan adatnaplózási eszköz felépítésére, amely számos információt
+    képes rögzíteni a közvetlen környezetéről.
+  tutorial_modtraits_longdescription: 'A tanulók az informatikai gondolkodás lépéseit
+    használják jellemvonások elemzésére, és készitsenek egy olyan algoritmust, ami
+    bemutatja ezeket a vonásokat. '
   tutorial_mee_longdescription: 'A falut tűzvész fenyegeti, segítened kell egy kódolási
     megoldással! Ismerd meg kódolási segéded, a Minecraft Agentet, majd programozd
     az Agentet, hogy bejárja az erdőt és adatokat gyűjtsön a tüzek kialakulását segítő
     feltételekről. '
-  tutorial_kuborobo_longdescription: In this activity, students put their logic and
-    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
-    to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_kuborobo_longdescription: Ebben a tevékenységben a tanulók logikai és sorbarendezési
+    képességeiket tesztelhetik, miközben a TagTile-okat használva programozzák be
+    KUBO robotjukat, hogy különböző helyekre utazzon egy nyomtatott térképen.
+  tutorial_ai-oceans_longdescription: A számtástechnika sokkal több, mint csak kódolás!
+    Tanulj többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez
+    kapcsolódó foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI
+    hogyan oldhatja meg a világ problémáit!
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Magyar
   tutorial_googlehero_language: English, Spanish
@@ -8987,7 +8994,7 @@ hu:
   tutorial_modtraits_string_detail_grades: 2. osztálytól
   tutorial_mee_string_detail_grades: 2. osztálytól
   tutorial_kuborobo_string_detail_grades: Óvodától 8. osztályig
-  tutorial_ai-oceans_string_detail_grades: Grades 3+
+  tutorial_ai-oceans_string_detail_grades: 3. osztálytól
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -9095,8 +9102,8 @@ hu:
   tutorial_modtraits_string_platforms: Minden modern böngésző
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
-  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
-    iPads, modern Android phones, iPhones
+  tutorial_ai-oceans_string_platforms: Minden modern böngésző, modern Androidos tabletek,
+    iPad-ek, modern Androidos telefonok, iPhone-ok
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9266,12 +9273,12 @@ hu:
   tutorial_baroboobstacle_string_detail_programming_languages: Blokk programozás,
     C/C++
   tutorial_pbstorytelling_string_detail_programming_languages: Twine (Harlowe variant)
-  tutorial_kibosnow_string_detail_programming_languages: Blocks, Tangible blocks (no
-    screen use)
-  tutorial_kibohappy_string_detail_programming_languages: Blocks, Tangible blocks
-    (no screen use)
-  tutorial_rubylove_string_detail_programming_languages: Blocks, Language independent
-    (can be taught in multiple languages)
+  tutorial_kibosnow_string_detail_programming_languages: Blokkok, kézzel fogható blokkok
+    (nincs képernyőhasználat)
+  tutorial_kibohappy_string_detail_programming_languages: Blokkok, kézzel fogható
+    blokkok (nincs képernyőhasználat)
+  tutorial_rubylove_string_detail_programming_languages: Blokkok, nyelvfüggetlen (több
+    nyelven tanítható)
   tutorial_spherosmiles_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_spherobaby_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_toxarchitect_string_detail_programming_languages: JavaScript
@@ -9315,7 +9322,7 @@ hu:
   tutorial_mee_string_detail_programming_languages: Blokk programozás
   tutorial_kuborobo_string_detail_programming_languages: A TagTile-k, amiket a tanulók
     összeraknak
-  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_ai-oceans_string_detail_programming_languages: MI és gépi tanulás
   school_not_found_heading: Nem találtuk meg iskoládat. Kérjük írj róla több információt!
   school_name: Iskola neve
   school_name_error: Iskolanév megadása kötelező.

@@ -39,6 +39,8 @@ mr:
   teacher:
     panel:
       student: 'विध्यार्थी'
+  user:
+    none: "कुठलेच नाही"
   home:
     student_reg_link: 'विध्यार्थी'
   user_type:
@@ -60,8 +62,6 @@ mr:
       title: 'डांस पार्टी'
     dance-2019:
       title: 'डांस पार्टी'
-  gallery:
-    report_abuse: "गैरवर्तनाची रिपोर्ट करा"
   landing:
     help_support: "सहाय्य आणि मदत"
   dialog:

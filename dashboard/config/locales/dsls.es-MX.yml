@@ -577,6 +577,10 @@ es-MX:
           <hr>
 
           **¡Ahora inténtalo tú!**
+        teacher_markdown: |
+          ###Primero Diseña
+
+          Algunos estudiantes pueden tener la tentación de comenzar a jugar en el Modo Código desde el principio, pero para esta lección nos centraremos únicamente en bosquejar una Interfaz de Usuario. Hágales saber a los estudiantes que llegarán al código pronto. Estos primeros niveles permitirán a los estudiantes construir una pantalla de su propio diseño utilizando todos los elementos disponibles en App Lab sin preocuparse por la aplicación en si que están creando.
       CSD - Getters and Setters:
         markdown: |
           # Getters y Setters
@@ -657,6 +661,9 @@ es-MX:
           ## Recursos
 
           * [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: "[Entrada y Salida - Ejemplo](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Guia de Actividades ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))"
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Resumen
@@ -670,6 +677,9 @@ es-MX:
           ## Recursos
 
           * [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+        teacher_markdown: "* [Algoritmo de Clasificación de tarjetas](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Ejemplo ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Resumen
@@ -679,6 +689,9 @@ es-MX:
           ## Recursos
 
           * [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Almacenamiento y Procesamiento - Ejemplo](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Guia de Actividades ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))"
       CSD U1 Lesson 8 Overview:
         markdown: |
           # Resumen
@@ -688,6 +701,9 @@ es-MX:
           ## Recursos
 
           * [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [App exploración de CLAVE](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Guia de Actividades ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)"
       CSD U1 Lesson 9 Overview:
         markdown: |
           # Resumen
@@ -699,6 +715,9 @@ es-MX:
           * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |
+          * [Apps y problema solventado](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Ejemplo de guia de proyecto ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Apps y Problema Solventado](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
       CSD U2 Design Project:
         content1: descripción aquí
       CSD U2 Design Project_2018:
@@ -755,6 +774,8 @@ es-MX:
 
 
 
+        teacher_markdown: "* [La Propuest de los Sitios Web - Ejemplo](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L12 Overview:
         markdown: |
           # Resumen
@@ -788,6 +809,9 @@ es-MX:
           ## Recursos
 
           * [Personal Website Sketch - Activity Guide](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+        teacher_markdown: "* [Boceto del Sitio Web Personal](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Ejemplo ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
         content1: descripción aquí
         markdown: |
@@ -2250,6 +2274,10 @@ es-MX:
           `unNombreCamelcasePodríaLucirAsí`\n* **Guiones bajos**: `Algunas_Personas_Prefieren_Usar_Guiones_Bajos_Para_Separar_Palabras`\n*
           **guiones**: `Otras_Prefieren_Guiones_O_Rayas'\n\nLo que elijas depende
           de ti. Es tu estilo. Simplemente ayuda a ser consistente.\n\n\n\n\n"
+        teacher_markdown: |-
+          #### Desarrollando Buenos Habitos de Programacion
+
+          Seguir convenciones de nomenclatura claras y consistentes es un hábito importante a desarrollar, pero los beneficios rara vez son inmediatamente obvios para los estudiantes. Realmente vale la pena a largo plazo ser riguroso en bien nombrados ID, particularmente porque le ayudara a mantener la cordura cuando llegue el momento de leer los programas de sus estudiantes, pero también simplificará el proceso de combinar la pantalla de cada estudiante en un aplicación de todo el equipo.
       Dance_Party_extras_intro:
         markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
           proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes
@@ -3303,6 +3331,8 @@ es-MX:
           Durante esta experiencia de desarrollo profesional, intercalaremos varias progresiones de desafíos, y te brindaremos la oportunidad de familiarizarte con los conceptos de programación en Fundamentos de la Ciencia de la Computación y los personajes de los que tus estudiantes se enamorarán. Durante este curso, notarás que se mueve rápidamente entre diferentes entornos; ya sea acercando el pájaro enojado al cerdo, dibujando o haciendo que una abeja recolecte néctar. Estas transiciones suceden rápidamente en este curso para mostrarte una variedad de acertijos ofrecidos en Fundamentos de la Ciencia de la Computación. Tus estudiantes podrán pasar más tiempo con cada entorno.
 
           Si deseas familiarizarte con la experiencia del estudiante, siempre puedes completar los cursos [Fundamento de la Ciencia de la Computación] (http://studio.code.org/) por tu cuenta en cualquier momento. Pero este curso te dará un claro panorama de lo que puedes esperar sacando algunos de los desafíos y lecciones más fundamentales para ti en un corto período de tiempo.
+      OPD-K5 Reviewing Reflections:
+        content1: descripción aquí
       OPD-K5 Stage10Start:
         markdown: |
           # Pasos siguientes > Repasemos
@@ -3446,6 +3476,8 @@ es-MX:
           en el foro, regresa aquí y haz clic más abajo para continuar.\n\nEn la siguiente
           etapa, agregaremos algo de complejidad a nuestros programas mediante la
           adición de bucles.\n"
+      OPD-K5 Stage3aGo_copy:
+        content1: descripción aquí
       OPD-K5 Stage4Go:
         markdown: |+
           # Bucles > Lecciones desconectadas
@@ -3929,6 +3961,60 @@ es-MX:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publica tu plan>></button></a>
 
           Después de comentar en el foro, regresa aquí y haz clic a continuación para continuar.
+      OPD-K5 conditionals introduced:
+        content1: descripción aquí
+      OPD-K5 debugging:
+        content1: descripción aquí
+      OPD-K5 diving deeper intro:
+        content1: descripción aquí
+      OPD-K5 events introduced:
+        content1: descripción aquí
+      OPD-K5 for loops:
+        content1: descripción aquí
+      OPD-K5 for loops intro:
+        content1: descripción aquí
+      OPD-K5 for loops introduction:
+        content1: descripción aquí
+      OPD-K5 functions introduced:
+        content1: descripción aquí
+      OPD-K5 journaling:
+        content1: descripción aquí
+      OPD-K5 lesson implementation planning:
+        content1: descripción aquí
+      OPD-K5 lesson plans:
+        content1: descripción aquí
+      OPD-K5 loops introduced:
+        content1: descripción aquí
+      OPD-K5 project:
+        content1: descripción aquí
+      OPD-K5 projects introduction:
+        content1: descripción aquí
+      OPD-K5 role_of_teacher:
+        content1: descripción aquí
+      OPD-K5 sequencing introduced:
+        content1: descripción aquí
+      OPD-K5 sprite lab:
+        content1: descripción aquí
+      OPD-K5 sprite lab introduction:
+        content1: descripción aquí
+      OPD-K5 sprite lab unplugged:
+        content1: descripción aquí
+      OPD-K5 sprite lab video:
+        content1: descripción aquí
+      OPD-K5 types of lessons:
+        content1: descripción aquí
+      OPD-K5 using lesson plans:
+        content1: descripción aquí
+      OPD-K5 variables:
+        content1: descripción aquí
+      OPD-K5 variables introduction:
+        content1: descripción aquí
+      OPD-K5 variables unplugged:
+        content1: descripción aquí
+      OPD-K5 where to next:
+        content1: descripción aquí
+      OPD-K5-projects-1:
+        content1: descripción aquí
       OPD-Stage3Start:
         markdown: |
           # Mirando hacia el futuro > Descripción del escenario
@@ -4216,6 +4302,9 @@ es-MX:
           ## Recursos
 
           * [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [El Proceso de Solventación del Problema](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Guia de la actividad ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Resumen
@@ -4225,6 +4314,9 @@ es-MX:
           ## Recursos
 
           * [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[Solventando problemas de CLAVE](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Guia de Actividades ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
       Unit 1 Lesson 4 Overview:
         markdown: |
           # Resumen
@@ -4234,6 +4326,9 @@ es-MX:
           ## Recursos
 
           * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[Que es una computadora - Ejemplo](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Guia de Actividades ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
       Unit 1 Lesson 6 Overview:
         markdown: |
           # Resolución de problemas - Computadoras y lógica: Lección 6 - Procesamiento con bits
@@ -4833,6 +4928,27 @@ es-MX:
             hay una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
+            lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
+            obtener néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+            flor debajo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+            néctar solamente si hay una flor debajo de la nube.
+        - text: No lo sé.
+          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+            néctar solamente si hay una flor debajo de la nube.
+        questions:
+        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
+            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
+            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
@@ -5467,6 +5583,23 @@ es-MX:
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: Nada. No se llama a la función en el programa.
+          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
+            programa.
+        - text: El artista dibujará un solo cuadrado.
+          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
+            programa.
+        - text: El artista dibujará dos cuadrados que se superponen.
+          feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
+            pixeles, pero el artista salta a 175 pixeles entre funciones.
+        - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
+          correct: true
+          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+            un salto en el medio de ambas."
+        questions:
+        - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_project_exemplars_2019:
         content1: Prueba de reducción de la página del libro de texto
       courseF_bee_variables_8a_2018:
@@ -5866,6 +5999,10 @@ es-MX:
             polígono".
         questions:
         - text: ¿Qué sucederá cuando presiones el botón "Ejecutar"?
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Encuesta de estudiante CS Discoveries de final del curso
+      csd-post-survey-levelgroup-2018:
+        title: Encuesta de estudiante CS Discoveries de final del curso
       csd-pre-survey-2017-levelgroup:
         markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
           papel aluminio que puedan cargar tantas monedas como sea posible. Al final
@@ -5874,6 +6011,9 @@ es-MX:
           adelante durante el resto del curso. \n\n\n## Recursos\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
+          - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.

@@ -1931,6 +1931,13 @@ tr:
               name: Boyuna bir araştırmaya katılın!
             CSP Student Post-Course Survey:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csp1_1:
+              display_name: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
+            csp1_2:
+              display_name: Interneti icat etme
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1973,6 +1980,13 @@ tr:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Practice PT - Encode an Experience:
               name: Uygulama PT - Bir deneyim kodlamak
+          lesson_groups:
+            csp2_1:
+              display_name: Karmaşık bilgileri kodlama ve sıkıştırma
+            csp2_2:
+              display_name: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
+            cspSurvey:
+              display_name: Anket
         csp3-2017:
           description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
             ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir.
@@ -2017,6 +2031,13 @@ tr:
               name: Parametreli Fonksiyonlar yaratma
             Please complete the CSP Mid-course survey!:
               name: Lütfen CSP kurs ortası anketini tamamlayın!
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp4-2017:
           stages:
             Alice and Bob and Asymmetric Keys:
@@ -2053,6 +2074,13 @@ tr:
               name: Boyuna bir araştırmaya katılın!
             CSP Student Post-Course Survey:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
+          lesson_groups:
+            csp4_1:
+              display_name: 'Bölüm 1: Büyük Verilerin Dünyası ve Şifreleme'
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2159,6 +2187,13 @@ tr:
               name: '"eğer" deyimleri serbest'
             Boolean Expressions and "if" Statements:
               name: Mantıksal ifadeler ve "Eğer" deyimleri
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bölüm 1: Olay Temelli Programlama'
+            csp5_2:
+              display_name: 'Bölüm 2: Programlama ve Veri Yapıları'
+            cspSurvey:
+              display_name: Anket
         csp6:
           stages:
             Create PT:
@@ -2362,6 +2397,13 @@ tr:
               name: Akran Öğrenmeyi Destekleme
             'Tool Talk: Intro to Netsim':
               name: 'Konuşma Aracı: Netsim ile tanış'
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2378,6 +2420,13 @@ tr:
               name: test Ünite 1 içerik modülü Foxtrot
             test Unit 1 required reading:
               name: test Ünite 1 gerekli okuma
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2593,6 +2642,13 @@ tr:
               name: 'Ders 2.3: Siyah ve Beyaz Pikselleşme'
             Measuring Student Learning:
               name: Öğrenci Öğrenmesini Ölçme
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2883,6 +2939,13 @@ tr:
               name: Ders 2,3
             Test stage with bubbles:
               name: Baloncuklar ile Sahne Testi
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         csd3-2017:
           description_short: Programlama
           stages:
@@ -3263,6 +3326,13 @@ tr:
               name: Şekiller ve Rastgelelik
             CSD Post-Course Survey:
               name: CSP Kurs-Sonu Anketi
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
         grade2:
           stages:
             At The Dog Park:
@@ -3537,6 +3607,13 @@ tr:
                 tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
             CS Discoveries Pre-survey:
               name: CS Keşifleri Anket öncesi
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csd1_1:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -3611,6 +3688,13 @@ tr:
               name: Geri Dönen Değerler ile Fonksiyonları ve Dizileri İşleme
             Unit 5 Overview:
               name: Ünite 5 genel bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -3637,6 +3721,13 @@ tr:
               name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         basketball:
           title: Besketbol oynayın
           description_short: Besketbol oynayın
@@ -3952,6 +4043,11 @@ tr:
                 ünitenin tamamında üstünde çalışmaya devam edecekleri projeye başlarlar.
             CSD Post-Course Survey:
               name: CSP Kurs-Sonu Anketi
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bölüm 1: Web içerik ve HTML'
+            csd2_2:
+              display_name: 'Bölüm 2: Stil oluşturma ve CSS'
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -3976,6 +4072,13 @@ tr:
               name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         csd4-2017:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
@@ -4329,6 +4432,11 @@ tr:
                 sunum yapmak için hazırlanırlar.
             CSD Post-Course Survey:
               name: CSP Kurs-Sonu Anketi
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
         minecraft:
           title: Minecraft Kodlama Saati Tasarımcısı
           description_short: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın
@@ -4537,6 +4645,11 @@ tr:
               name: Koşullar
             'Algorithms: Dice Race':
               name: 'Algoritmalar: Zar yarışı'
+          lesson_groups:
+            content:
+              display_name: İçerik
+            extra_course_content:
+              display_name: İlave kurs içeriği
         coursef-draft:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -4585,6 +4698,9 @@ tr:
               name: Koşullar ve fonksiyonlar- Arı
             'Algorithms: Tangrams':
               name: 'Algoritmalar: Tangramlar'
+          lesson_groups:
+            content:
+              display_name: İçerik
         classic-hoc-impact-study:
           description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
             biliminin temel öğelerini dene!
@@ -4672,6 +4788,13 @@ tr:
               name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         csdgraveyard:
           stages:
             new stage:
@@ -4704,6 +4827,13 @@ tr:
               name: Öğrenci Öğrenmesini Ölçme
             Unit 4 Overview:
               name: Ünite 4 genel bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         sciencepd4:
           stages:
             Welcome!:
@@ -4748,6 +4878,9 @@ tr:
               name: İkili
             Snowflakes:
               name: Kar taneleri
+          lesson_groups:
+            content:
+              display_name: İçerik
         sciencepd5:
           stages:
             Welcome!:
@@ -4783,6 +4916,13 @@ tr:
               name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
               name: Öğrenci Öğrenmesini Ölçme
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
+            practice:
+              display_name: Öğretmen Uygulamaları
         csppostap-2017:
           description_short: App Lab uygulamalarında veri toplama ve kullanmayı öğren
           stages:
@@ -4804,6 +4944,11 @@ tr:
               name: Örnek uygulamalar
             Final Project:
               name: Final projesi
+          lesson_groups:
+            content:
+              display_name: İçerik
+            cspSurvey:
+              display_name: Anket
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -4888,6 +5033,11 @@ tr:
               name: İvme Ölçer
             Functions with Parameters:
               name: Fonksiyon parametreleri
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
         workshop-gamelab:
           stages:
             Introduction:
@@ -4941,6 +5091,11 @@ tr:
               name: Şifreleme
             Structuring Data:
               name: Verilerin Yapılandırılması
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
         applab-1hour:
           title: Uygulama Laboratuvarı 1 saatlik atölye
           description_audience: Orta ve lise öğrencileri
@@ -5315,6 +5470,11 @@ tr:
                 nasıl saklayabileceğini öğrenmek.
             CSD Post-Course Survey:
               name: CSP Kurs-Sonu Anketi
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
         csd3-draft:
           title: 'CSD ünite 3 - programlama: Animasyonlar ve Oyunlar'
           description_short: Animasyonlar ve Oyunlar
@@ -5685,6 +5845,11 @@ tr:
                 sonuçlanır.
             CSD Post-Course Survey:
               name: CSP Kurs-Sonu Anketi
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
         csd3-old:
           title: CSD ünite 3 (kullanım dışı)
           description_short: CSD ünite 3 taslağı 2016/2017
@@ -5918,6 +6083,9 @@ tr:
           description_short: CSP Öğrenci Kurs Sonu Anketi
           description: Code.org CS Principles Post-Course Survey' e hoşgeldiniz. Bu
             anketi tamamlamak 10 dakikanızı alır. Yanıtlarınız özel ve anonimdir.
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6525,6 +6693,13 @@ tr:
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
             ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
+          lesson_groups:
+            csf_e_1:
+              display_name: Kurs E ye hazırlık (isteğe bağlı)
+            csf_e_2:
+              display_name: E Kursu İçeriği
+            extra_course_content:
+              display_name: İlave kurs içeriği
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -6732,6 +6907,11 @@ tr:
             bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci
             bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık
             projesi tasarlayınız ve oluşturunuz.
+          lesson_groups:
+            csf_f_1:
+              display_name: Kurs F'ye hazırlık (isteğe bağlı)
+            csf_f_2:
+              display_name: F Kursu İçeriği
         csdnovice:
           stages:
             Tuesday:
@@ -6789,6 +6969,13 @@ tr:
             hazırlıklı olmalarını ve tamamlamalarını sağlar.
           description: Dersler, öğrencilere AP sınavına ve Performans Görevleri'ne
             hazırlıklı olmalarını ve tamamlamalarını sağlar.
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Bölüm 1: AP teknik kurulum'
+            csp_ap_3:
+              display_name: 'Bölüm 2: AP performans görevini yarat'
+            csp_ap_2:
+              display_name: 'Bölüm 2: AP performans görevini keşfet'
         cspnovice:
           stages:
             Welcome:
@@ -6802,6 +6989,11 @@ tr:
             Wrap Up:
               name: Özet
           description_audience: CSP Acemi Kolaylaştırıcılar
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         novice-view:
           stages:
             CSP Tuesday:
@@ -6822,50 +7014,105 @@ tr:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
           description_audience: CS İlkeleri Eğitimde Kolaylaştırıcılar
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp2-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
           description_audience: CS İlkeleri Eğitimde Kolaylaştırıcılar
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp3-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
           description_audience: CS İlkeleri Eğitimde Kolaylaştırıcılar
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp4-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
           description_audience: CS İlkeleri Eğitimde Kolaylaştırıcılar
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp5-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
           description_audience: CS İlkeleri Eğitimde Kolaylaştırıcılar
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd1-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd6-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd5-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd4-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd3-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd2-dlp:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         express-2017:
           stages:
             Introduction:
@@ -6956,6 +7203,9 @@ tr:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
+          lesson_groups:
+            content:
+              display_name: İçerik
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -7035,6 +7285,13 @@ tr:
             kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r\n\r\nBu
             ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle
             ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7073,6 +7330,11 @@ tr:
               name: Uygulama Sunumu
             Linking Screens:
               name: Bağlama Ekranları
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -7155,6 +7417,13 @@ tr:
             Sequence in Maze:
               name: Labirentte dizi
           title: Kurs E & F Rampası
+          lesson_groups:
+            csf_e_1:
+              display_name: Kurs E ye hazırlık (isteğe bağlı)
+            csf_e_2:
+              display_name: E Kursu İçeriği
+            extra_course_content:
+              display_name: İlave kurs içeriği
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7205,6 +7474,9 @@ tr:
           title: CSP Ünitesi 3 - Alt Gruplar A Grubu
           description: Bu birim, Alt Gruplar A Grubu'ndaki öğrenciler için bilgisayar
             programlamanın temel kavramlarını tanıtır.
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7269,6 +7541,9 @@ tr:
               name: İç İçe Döngüler
             Loops in Artist (UPDATED!):
               name: Sanatçıların Döngüleri (GÜNCELLENDİ!)
+          lesson_groups:
+            content:
+              display_name: İçerik
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -7325,6 +7600,13 @@ tr:
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
           title: E için yeni senaryo
+          lesson_groups:
+            csf_e_1:
+              display_name: Kurs E ye hazırlık (isteğe bağlı)
+            csf_e_2:
+              display_name: E Kursu İçeriği
+            extra_course_content:
+              display_name: İlave kurs içeriği
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -7380,6 +7662,11 @@ tr:
             Present Your Project:
               name: Projeni sun
           title: F için yeni senaryo
+          lesson_groups:
+            csf_f_1:
+              display_name: Kurs F'ye hazırlık (isteğe bağlı)
+            csf_f_2:
+              display_name: F Kursu İçeriği
         csd5-old:
           stages:
             Representation Matters:
@@ -7421,6 +7708,11 @@ tr:
             toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede
             nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede
             seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -7473,6 +7765,11 @@ tr:
               name: Geliştirme ve Tekrarlama
             App Presentation:
               name: Uygulama Sunumu
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -7497,6 +7794,11 @@ tr:
               name: PT pratik - dijital bir sahne tasarımı
             Unit 3 Chapter 1 Assessment:
               name: Ünite 3 Bölüm 1 değerlendirme
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
         pwc:
           stages:
             new stage:
@@ -7587,6 +7889,11 @@ tr:
             unsurlarının araçlarını kapsar.\r\n\r\nBu ünite en son  Kasım 2017'de
             güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates
             adresinden alabilirsiniz."
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Bölüm 2: AP performans görevini keşfet'
+            cspSurvey:
+              display_name: Anket
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7605,6 +7912,11 @@ tr:
             için gerekli olan genel teknik kurulumu ve araçları kapsar.\r\n\r\nBu
             birim son olarak Aralık, 2017 ‘de güncellendi. Müfredat güncellemeleri
             hakkında forum.code.org/c/csp/updates adresinden devamını okuyunuz."
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Bölüm 2: AP performans görevini yarat'
+            cspSurvey:
+              display_name: Anket
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -7683,6 +7995,13 @@ tr:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+          lesson_groups:
+            csf_e_1:
+              display_name: Kurs E ye hazırlık (isteğe bağlı)
+            csf_e_2:
+              display_name: E Kursu İçeriği
+            extra_course_content:
+              display_name: İlave kurs içeriği
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -7737,6 +8056,11 @@ tr:
               name: Projenizi Gözden Geçirme
             Present Your Project:
               name: Projeni sun
+          lesson_groups:
+            csf_f_1:
+              display_name: Kurs F'ye hazırlık (isteğe bağlı)
+            csf_f_2:
+              display_name: F Kursu İçeriği
         csd6-old:
           stages:
             Computing Innovations:
@@ -7769,6 +8093,11 @@ tr:
               name: Sensör uygulamaları
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
         csd3-1819draft:
           stages:
             Programming for Entertainment:
@@ -7816,6 +8145,13 @@ tr:
             Project - Design a Game:
               name: Proje - Bir oyun tasarla
           description_short: Programlama
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
         textbook:
           stages:
             new stage:
@@ -8155,6 +8491,13 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
         csd2-2018:
           description: " 2. Ünitede, kendi web sayfanızda nasıl içerik oluşturacağınız
             ve paylaşacağınızı öğreneceksiniz. Dünyayla ne tür içerik paylaşacağınıza
@@ -8387,6 +8730,13 @@ tr:
                 ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
                 katacaklardır.\r\n"
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bölüm 1: Web içerik ve HTML'
+            csd2_2:
+              display_name: 'Bölüm 2: Stil oluşturma ve CSS'
+            cspSurvey:
+              display_name: Anket
         coursea-2018:
           assignment_family_title: Kurs A
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
@@ -8760,6 +9110,13 @@ tr:
               name: Devreler ve Fiziksel Prototipler
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
+            cspSurvey:
+              display_name: Anket
         coursee-2018:
           assignment_family_title: Kurs E
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
@@ -8939,6 +9296,13 @@ tr:
               name: Minecraft Kod Saati
             Copyright and Creativity:
               name: Dijital Paylaşım
+          lesson_groups:
+            csf_e_1:
+              display_name: Kurs E ye hazırlık (isteğe bağlı)
+            csf_e_2:
+              display_name: E Kursu İçeriği
+            extra_course_content:
+              display_name: İlave kurs içeriği
         coursef-2018:
           assignment_family_title: Kurs F
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
@@ -9142,6 +9506,11 @@ tr:
                 bulunabilir.
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
+          lesson_groups:
+            csf_f_1:
+              display_name: Kurs F'ye hazırlık (isteğe bağlı)
+            csf_f_2:
+              display_name: F Kursu İçeriği
         csp1-2018:
           stages:
             CS Principles Pre-survey:
@@ -9178,6 +9547,13 @@ tr:
               name: Uygulama PT - Internet ve toplum
             Unit 1 Chapter 2 Assessment:
               name: Ünite 1 Bölüm 2 değerlendirme
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csp1_1:
+              display_name: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
+            csp1_2:
+              display_name: Interneti icat etme
         csd1-2018:
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
@@ -9349,6 +9725,13 @@ tr:
                 ve kullanıcılara verdikleri çıktıları değerlendirir. Ders, uygulamalar
                 üzerine gözlemler ve uygulamaların topluma etkisi hakkında öğretmen
                 tarafından yönlendirilen bir tartışma ile biter. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csd1_1:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
         csd4-2018:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
@@ -9614,6 +9997,13 @@ tr:
                 yöntemleri ve gelecek planları da dâhil olmak üzere tedarik edilen
                 sunum şablonunu kullanarak uygulama geliştirme süreçleri hakkında
                 sunum yapmak için hazırlanırlar.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+            cspSurvey:
+              display_name: Anket
         csd5-2018:
           title: CSD ünite 5 - veri ve toplum
           description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
@@ -9896,6 +10286,13 @@ tr:
                 En sonunda birkaç sınıf arkadaşına tavsiyelerde bulunmak için algoritmalarını
                 kullanıyorlar. Öğrenciler sınıfa sunum hazırlamadan önce bir akran
                 değerlendirmesi ve projeleri için gerekli güncellemeleri yaparlar.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -9930,6 +10327,11 @@ tr:
               name: Performans Görevini Uygulama - Bir Veri Hikayesi Anlat
             Unit 2 Chapter 2 Assessment:
               name: Ünite 2 Bölüm 2 değerlendirme
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Ünite 2: Sayısal bilgi'
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
         csp3-2018:
           description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
             ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir.
@@ -9966,6 +10368,11 @@ tr:
               name: Lütfen CSP kurs ortası anketini tamamlayın!
             Creating Functions with Parameters:
               name: Parametreli Fonksiyonlar yaratma
+          lesson_groups:
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp-explore-2018:
           description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun
             için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\",
@@ -9983,6 +10390,11 @@ tr:
               name: Performans Görevini Keşfet - Bir Plan Hazırla
             Explore PT - Complete the Task:
               name: Performans Gorevini Kesfet - Görevi Tamamla
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Bölüm 2: AP performans görevini keşfet'
+            cspSurvey:
+              display_name: Anket
         csp-create-2018:
           description: "Bu dersler, AP Performans ödevini anlamanıza, hazırlanmanıza
             ve yapmanıza yardımcı olmak için buradadır. Her “ders”, öğretmeninizin
@@ -9999,6 +10411,11 @@ tr:
               name: Performans Görevi Hazırlığı Oluştur - Bir Plan Hazırla
             Create PT - Complete the Task:
               name: Performans Görevini Oluştur - Görevi Tamamla
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Bölüm 2: AP performans görevini yarat'
+            cspSurvey:
+              display_name: Anket
         csp4-2018:
           stages:
             What is Big Data?:
@@ -10027,6 +10444,11 @@ tr:
               name: Görselleştirmeler ile Tendleri Bulma
             Check Your Assumptions:
               name: Varsayımlarını kontrol et
+          lesson_groups:
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp5-2018:
           stages:
             Buttons and Events:
@@ -10077,6 +10499,13 @@ tr:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
             Participate in a longitudinal study!:
               name: Boyuna bir araştırmaya katılın!
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bölüm 1: Olay Temelli Programlama'
+            csp5_2:
+              display_name: 'Bölüm 2: Programlama ve Veri Yapıları'
+            cspSurvey:
+              display_name: Anket
         csppostap-2018:
           description_short: App Lab uygulamalarında veri toplama ve kullanmayı öğren
           stages:
@@ -10116,58 +10545,128 @@ tr:
               name: Özet Tablo oluşturma
             Unit 2 Chapter 2 Assessment:
               name: Ünite 2 Bölüm 2 değerlendirme
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
+            cspSurvey:
+              display_name: Anket
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd-post-survey:
           description_short: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
         csd-novice-18:
@@ -10182,6 +10681,11 @@ tr:
               name: Perşembe
             Wrap Up:
               name: Özet
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd-apprentice-18:
           stages:
             Tuesday:
@@ -10192,6 +10696,11 @@ tr:
               name: Perşembe
             Wrap Up:
               name: Özet
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp-novice-18:
           stages:
             Tuesday:
@@ -10202,6 +10711,11 @@ tr:
               name: Perşembe
             Wrap Up:
               name: Özet
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csp-apprentice-18:
           stages:
             Tuesday:
@@ -10212,6 +10726,11 @@ tr:
               name: Perşembe
             Wrap Up:
               name: Özet
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         pre-express-2018:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10253,6 +10772,11 @@ tr:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         frozen-2018:
           stages:
             Artist:
@@ -10296,6 +10820,16 @@ tr:
           stages:
             Dance Party:
               name: Dans Partisi
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
         dance-extras:
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         coursef-2019:
@@ -10461,6 +10995,19 @@ tr:
                 nasıl faydalı olabileceğini gösterecektir.
             Digital Sharing:
               name: Dijital Paylaşım
+          lesson_groups:
+            csf_variables:
+              display_name: Değişkenler
+            csf_data:
+              display_name: Veri
+            csf_for_loops:
+              display_name: For Döngüleri
+            csf_internet:
+              display_name: İnternet
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
         dance-low:
           stages:
             Dance Party:
@@ -10600,6 +11147,17 @@ tr:
                 ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             Dance Party:
               name: Dans Partisi
+          lesson_groups:
+            csf_events:
+              display_name: Olaylar
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_binary:
+              display_name: İkili
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
         coursee-2019:
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
@@ -10762,6 +11320,17 @@ tr:
               name: Dijital Paylaşım
             Songwriting:
               name: Şarkı yazma
+          lesson_groups:
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
+            csf_nested_loops:
+              display_name: İç İçe Döngüler
+            csf_functions:
+              display_name: Fonksiyonlar
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10844,6 +11413,21 @@ tr:
               name: Dans Partisi
             Concept Practice with Minecraft:
               name: Geleceğe bakış
+          lesson_groups:
+            csf_warmup:
+              display_name: Isınma
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_functions:
+              display_name: Fonksiyonlar
+            csf_variables:
+              display_name: Değişkenler
+            csf_for_loops:
+              display_name: For Döngüleri
+            csf_sprites:
+              display_name: Hareketli Nesneler
         csd1-2019:
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
@@ -10979,6 +11563,13 @@ tr:
                 rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
                 organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
                 tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csd1_1:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
         andrea-test:
           stages:
             new stage:
@@ -10987,6 +11578,11 @@ tr:
               name: boş
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dance-extras-gallery:
           title: Dans Etmeye Devam
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
@@ -11040,8 +11636,22 @@ tr:
               name: 'Döngüler: Loopy robot dostlarım'
             Sticker Art with Loops:
               name: Sanatçıların Döngüleri
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_binary:
+              display_name: İkili
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
+            csf_data:
+              display_name: Veri
         csp-mid-survey:
           description_audience: CSP Öğrencileri
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
         gamelab:
           title: Oyun Laboratuvarı
         coursea-2019:
@@ -11123,6 +11733,13 @@ tr:
                 Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
                 bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
                 içi bulmacaları tamamlayarak ilerleyecekler.
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
         courseb-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -11170,6 +11787,15 @@ tr:
                 Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa
                 bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
                 içi bulmacaları tamamlayarak ilerleyecekler.
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_loops:
+              display_name: Döngüler
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
+            csf_events:
+              display_name: Olaylar
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -11209,6 +11835,11 @@ tr:
               name: Play Lab' da Olaylar
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+          lesson_groups:
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -11451,6 +12082,13 @@ tr:
                 ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
                 katacaklardır.\r\n"
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bölüm 1: Web içerik ve HTML'
+            csd2_2:
+              display_name: 'Bölüm 2: Stil oluşturma ve CSS'
+            cspSurvey:
+              display_name: Anket
         csd3-2019:
           description_short: Programlama
           stages:
@@ -11786,6 +12424,13 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
         csd4-2019:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
@@ -12051,6 +12696,15 @@ tr:
                 yöntemleri ve gelecek planları da dâhil olmak üzere tedarik edilen
                 sunum şablonunu kullanarak uygulama geliştirme süreçleri hakkında
                 sunum yapmak için hazırlanırlar.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
         csd5-2019:
           title: CSD ünite 5 - veri ve toplum
           description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
@@ -12333,6 +12987,13 @@ tr:
                 En sonunda birkaç sınıf arkadaşına tavsiyelerde bulunmak için algoritmalarını
                 kullanıyorlar. Öğrenciler sınıfa sunum hazırlamadan önce bir akran
                 değerlendirmesi ve projeleri için gerekli güncellemeleri yaparlar.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
         csd6-2019:
           title: CSD bilgisayar birimi 6 - fiziksel
           description: Altıncı bölüm Bilgisayarı keşvetme, Öğrenciler App laboratuvar
@@ -12368,10 +13029,30 @@ tr:
               name: Devreler ve Fiziksel Prototipler
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
+            cspSurvey:
+              display_name: Anket
         csp4-pilot:
           stages:
             Surveys:
               name: Anketler
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+            required:
+              display_name: Genel Bakış
+            optional_stages:
+              display_name: İsteğe bağlı aşamalar
         csp1-2019:
           stages:
             CS Principles Pre-survey:
@@ -12406,6 +13087,13 @@ tr:
               name: Uygulama PT - Internet ve toplum
             Unit 1 Chapter 2 Assessment:
               name: Ünite 1 Bölüm 2 değerlendirme
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csp1_1:
+              display_name: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
+            csp1_2:
+              display_name: Interneti icat etme
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -12414,6 +13102,13 @@ tr:
               name: Siyah beyaz resimlerini kodlama
             Encoding Color Images:
               name: Renkli resimlerini kodlama
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Ünite 2: Sayısal bilgi'
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp3-2019:
           description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
             ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir.
@@ -12446,6 +13141,11 @@ tr:
               name: PT pratik - dijital bir sahne tasarımı
             Unit 3 Chapter 1 Assessment:
               name: Ünite 3 Bölüm 1 değerlendirme
+          lesson_groups:
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp4-2019:
           stages:
             What is Big Data?:
@@ -12468,6 +13168,11 @@ tr:
               name: Genel anahtar şifrelemesi
             Rapid Research - Cybercrime:
               name: Hızlı araştırma - Siber Suçlar
+          lesson_groups:
+            cspAssessment:
+              display_name: Bölüm Değerlendirme
+            cspSurvey:
+              display_name: Anket
         csp5-2019:
           stages:
             Buttons and Events:
@@ -12514,6 +13219,13 @@ tr:
               name: 5. Ünite 4. Değerlendirme
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bölüm 1: Olay Temelli Programlama'
+            csp5_2:
+              display_name: 'Bölüm 2: Programlama ve Veri Yapıları'
+            cspSurvey:
+              display_name: Anket
         csp-explore-2019:
           description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun
             için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\",
@@ -12531,6 +13243,11 @@ tr:
               name: Performans Görevini Keşfet - Bir Plan Hazırla
             Explore PT - Complete the Task:
               name: Performans Gorevini Kesfet - Görevi Tamamla
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Bölüm 2: AP performans görevini keşfet'
+            cspSurvey:
+              display_name: Anket
         csp-create-2019:
           description: "Bu dersler, AP Performans ödevini anlamanıza, hazırlanmanıza
             ve yapmanıza yardımcı olmak için buradadır. Her “ders”, öğretmeninizin
@@ -12547,6 +13264,11 @@ tr:
               name: Performans Görevi Hazırlığı Oluştur - Bir Plan Hazırla
             Create PT - Complete the Task:
               name: Performans Görevini Oluştur - Görevi Tamamla
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Bölüm 2: AP performans görevini yarat'
+            cspSurvey:
+              display_name: Anket
         csppostap-2019:
           description_short: App Lab uygulamalarında veri toplama ve kullanmayı öğren
           stages:
@@ -12580,6 +13302,11 @@ tr:
               name: Örnek uygulamalar
             Final Project:
               name: Final projesi
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
+            cspSurvey:
+              display_name: Anket
         csp1-pilot:
           stages:
             new stage:
@@ -12598,6 +13325,11 @@ tr:
               name: İkili Sayılar
             Representing Information:
               name: Sunulan Bilgi
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            required:
+              display_name: Genel Bakış
         csd-videos:
           stages:
             new stage:
@@ -12632,18 +13364,103 @@ tr:
               name: Sanatçı- Fonksiyonlar
             Determine the Concept:
               name: Kavramı Belirme
+          lesson_groups:
+            csf_sprites:
+              display_name: Hareketli Nesneler
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
         csp2-pilot-staging:
           title: 'Ünite 2: Internet'
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
         csp3-pilot-staging:
           stages:
             The Need for Programming Languages:
               name: Programlama dilleri ne duyulan ihtiyaç
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listeler
+            csp_loops:
+              display_name: Döngüler
+            csp_project:
+              display_name: Proje
+            csp_libraries:
+              display_name: Kütüphaneler
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
         csp7-pilot-staging:
           stages:
             new stage:
               name: yeni kademe
             Libraries:
               name: Kütüphaneler
+          lesson_groups:
+            csp_libraries:
+              display_name: Kütüphaneler
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -12652,19 +13469,42 @@ tr:
               name: Labirentte Programlama
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
         csp-post-survey-2018:
           description_audience: CSP Öğrencileri
           description_short: CSP Öğrenci Kurs Sonu Anketi
           description: Code.org CS Principles Post-Course Survey' e hoşgeldiniz. Bu
             anketi tamamlamak 10 dakikanızı alır. Yanıtlarınız özel ve anonimdir.
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
         csp5-pilot:
           stages:
             new stage:
               name: yeni kademe
+          lesson_groups:
+            csp_lists:
+              display_name: Listeler
+            csp_loops:
+              display_name: Döngüler
+            csp_project:
+              display_name: Proje
+            required:
+              display_name: Genel Bakış
+            optional_stages:
+              display_name: İsteğe bağlı aşamalar
         fit2019-novice:
           stages:
             Wrap Up:
               name: Özet
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -12673,6 +13513,11 @@ tr:
           stages:
             Wrap Up:
               name: Özet
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd1-pilot:
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
@@ -12808,6 +13653,13 @@ tr:
                 rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
                 organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
                 tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csd1_1:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
         csd2-pilot:
           description: " 2. Ünitede, kendi web sayfanızda nasıl içerik oluşturacağınız
             ve paylaşacağınızı öğreneceksiniz. Dünyayla ne tür içerik paylaşacağınıza
@@ -13046,6 +13898,13 @@ tr:
               name: Görüntüler
             CSS Classes:
               name: CSS Sınıfları
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bölüm 1: Web içerik ve HTML'
+            csd2_2:
+              display_name: 'Bölüm 2: Stil oluşturma ve CSS'
+            cspSurvey:
+              display_name: Anket
         csd3-pilot:
           description_short: Programlama
           stages:
@@ -13387,6 +14246,13 @@ tr:
               name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
         maddie-test:
           stages:
             new stage:
@@ -13397,6 +14263,11 @@ tr:
               name: Programlama dilleri ne duyulan ihtiyaç
             Debugging:
               name: Hata Ayıklama (Debugging)
+          lesson_groups:
+            content:
+              display_name: İçerik
+            required:
+              display_name: Genel Bakış
         csl-vn:
           stages:
             Programming in Maze:
@@ -13405,48 +14276,103 @@ tr:
               name: Rey ve BB-8 ile programlama
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
+          lesson_groups:
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csd-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: yeni kademe
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csd-mod-w3:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csd-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csp-mod-w2:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csp-mod-w3:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+          lesson_groups:
+            required:
+              display_name: Genel Bakış
+            content:
+              display_name: İçerik
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -13457,6 +14383,9 @@ tr:
               name: İşleme
             Project - Propose an App:
               name: Proje - bir uygulama önermek
+          lesson_groups:
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
         csp2-pilot:
           stages:
             new stage:
@@ -13465,6 +14394,11 @@ tr:
               name: Yönlendiriciler ve yedeklilik
             The Need for Addressing:
               name: Adresleme için ihtiyaç
+          lesson_groups:
+            content:
+              display_name: İçerik
+            required:
+              display_name: Genel Bakış
         peru-2019:
           stages:
             new stage:
@@ -13483,6 +14417,12 @@ tr:
               name: Hata ayıklamaya giriş
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: İçerik
+            required:
+              display_name: Genel Bakış
         dance-2019:
           stages:
             Dance Party:
@@ -13526,6 +14466,11 @@ tr:
               name: Değişkenler
             For Loops:
               name: For Döngüleri
+          lesson_groups:
+            k5_getting_started:
+              display_name: İlk adım
+            k5_next_steps:
+              display_name: Sonraki Adımlar
         dance-extras-2019:
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         csp10-pilot:
@@ -13536,6 +14481,15 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -13560,6 +14514,15 @@ tr:
               name: 'Fonksiyonlar: şarkı yazma'
             Functions in Artist:
               name: Sanatçı- Fonksiyonlar
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_conditionals:
+              display_name: Koşullar
+            csf_nested_loops:
+              display_name: İç İçe Döngüler
+            csf_functions:
+              display_name: Fonksiyonlar
         time4cs-experiment-unit-2:
           stages:
             Nested Loops in Maze:
@@ -13576,6 +14539,19 @@ tr:
               name: 'Olaylar: Büyük Olay'
             Private and Personal Information:
               name: Özel ve Kişisel Bilgiler
+          lesson_groups:
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_events:
+              display_name: Olaylar
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -13584,12 +14560,55 @@ tr:
               name: 'Olaylar: Büyük Olay'
             Private and Personal Information:
               name: Özel ve Kişisel Bilgiler
+          lesson_groups:
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_events:
+              display_name: Olaylar
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
+        csp7-pilot:
+          lesson_groups:
+            csp_libraries:
+              display_name: Kütüphaneler
+            required:
+              display_name: Genel Bakış
+            optional_stages:
+              display_name: İsteğe bağlı aşamalar
         csp8-pilot:
           stages:
             new stage:
               name: yeni kademe
             Create PT - Complete the Task:
               name: Performans Görevini Oluştur - Görevi Tamamla
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listeler
+            csp_loops:
+              display_name: Döngüler
+            csp_project:
+              display_name: Proje
+        csp7-2020:
+          lesson_groups:
+            csp_libraries:
+              display_name: Kütüphaneler
         csp9-pilot:
           stages:
             new stage:
@@ -13718,6 +14737,13 @@ tr:
                 daha fazla biçimlendirmek için kullanırlar.
             CSS Classes:
               name: CSS Sınıfları
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bölüm 1: Web içerik ve HTML'
+            csd2_2:
+              display_name: 'Bölüm 2: Stil oluşturma ve CSS'
+            cspSurvey:
+              display_name: Anket
         csd1-2020:
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
@@ -13853,6 +14879,13 @@ tr:
                 rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
                 organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
                 tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csd1_1:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            csd1_2:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
         csd4-2020:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
@@ -14118,6 +15151,15 @@ tr:
                 yöntemleri ve gelecek planları da dâhil olmak üzere tedarik edilen
                 sunum şablonunu kullanarak uygulama geliştirme süreçleri hakkında
                 sunum yapmak için hazırlanırlar.
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            csd4_2:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
         csd5-2020:
           title: CSD ünite 5 - veri ve toplum
           description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
@@ -14400,6 +15442,13 @@ tr:
                 En sonunda birkaç sınıf arkadaşına tavsiyelerde bulunmak için algoritmalarını
                 kullanıyorlar. Öğrenciler sınıfa sunum hazırlamadan önce bir akran
                 değerlendirmesi ve projeleri için gerekli güncellemeleri yaparlar.
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            csd5_2:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+            cspSurvey:
+              display_name: Anket
         csd6-2020:
           title: CSD bilgisayar birimi 6 - fiziksel
           description: Altıncı bölüm Bilgisayarı keşvetme, Öğrenciler App laboratuvar
@@ -14435,6 +15484,13 @@ tr:
               name: Devreler ve Fiziksel Prototipler
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bölüm 1: Donanım çıktısı'
+            csd6_2:
+              display_name: 'Bölüm 1: Donanım girdisi'
+            cspSurvey:
+              display_name: Anket
         csd3-2020:
           description_short: Programlama
           stages:
@@ -14763,6 +15819,13 @@ tr:
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
             Text:
               name: yazı
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+            cspSurvey:
+              display_name: Anket
         coursea-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -14826,6 +15889,13 @@ tr:
                 Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin
                 tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
                 ve yaratıcı olmanın zamanı!
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
         courseb-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -14867,6 +15937,15 @@ tr:
                 etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
                 kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
                 için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_loops:
+              display_name: Döngüler
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
+            csf_events:
+              display_name: Olaylar
         coursec-2020:
           description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin
             baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini
@@ -14911,6 +15990,17 @@ tr:
             'End of Course Project: Create a Play Lab Game':
               description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya
                 başlamanın zamanı geldi.
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_binary:
+              display_name: İkili
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
+            csf_data:
+              display_name: Veri
         coursed-2020:
           description_audience: 'Yaş: 7-11'
           stages:
@@ -15040,6 +16130,17 @@ tr:
                 keşfedecekler."
             Dance Party:
               name: Dans Partisi
+          lesson_groups:
+            csf_events:
+              display_name: Olaylar
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_binary:
+              display_name: İkili
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
         coursee-2020:
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
@@ -15104,6 +16205,17 @@ tr:
                 bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
             Digital Sharing:
               name: Dijital Paylaşım
+          lesson_groups:
+            csf_sprites:
+              display_name: Hareketli Nesneler
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_nested_loops:
+              display_name: İç İçe Döngüler
+            csf_functions:
+              display_name: Fonksiyonlar
+            csf_impacts:
+              display_name: Bilgisayarın Etkileri
         coursef-2020:
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
             hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve
@@ -15205,6 +16317,17 @@ tr:
                 nasıl faydalı olabileceğini gösterecektir.
             Digital Sharing:
               name: Dijital Paylaşım
+          lesson_groups:
+            csf_digcit:
+              display_name: Sayısal Vatandaşlık
+            csf_variables:
+              display_name: Değişkenler
+            csf_data:
+              display_name: Veri
+            csf_for_loops:
+              display_name: For Döngüleri
+            csf_sprites:
+              display_name: Hareketli Nesneler
         express-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -15241,6 +16364,21 @@ tr:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
               name: Sanatçı-Şununla say Döngüleri
+          lesson_groups:
+            csf_warmup:
+              display_name: Isınma
+            csf_loops:
+              display_name: Döngüler
+            csf_conditionals:
+              display_name: Koşullar
+            csf_functions:
+              display_name: Fonksiyonlar
+            csf_variables:
+              display_name: Değişkenler
+            csf_for_loops:
+              display_name: For Döngüleri
+            csf_sprites:
+              display_name: Hareketli Nesneler
         pre-express-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -15262,6 +16400,11 @@ tr:
               name: Sanatçıların Döngüleri
             Loops in Artist:
               name: Sanatçı- Döngüler
+          lesson_groups:
+            csf_loops:
+              display_name: Döngüler
+            csf_events:
+              display_name: Olaylar
         csp1-2020:
           stages:
             new stage:
@@ -15272,6 +16415,9 @@ tr:
               name: İkili Sayılar
             Intellectual Property:
               name: Fikri Mülkiyet
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Ünite 1: Sayısal bilgi'
         csp2-2020:
           stages:
             new stage:
@@ -15280,6 +16426,9 @@ tr:
               name: Adresleme için ihtiyaç
             Routers and Redundancy:
               name: Yönlendiriciler ve yedeklilik
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Ünite 2: Internet'
         csp3-2020:
           stages:
             new stage:
@@ -15683,6 +16832,9 @@ tr:
               name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bölüm 1: Resim ve animasyon'
         jess-test-script:
           stages:
             new stage:
@@ -15805,6 +16957,11 @@ tr:
                 daha fazla biçimlendirmek için kullanırlar.
             CSS Classes:
               name: CSS Sınıfları
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bölüm 1: Web içerik ve HTML'
+            csd2_2:
+              display_name: 'Bölüm 2: Stil oluşturma ve CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -15853,6 +17010,8 @@ tr:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
             Intro to App Lab:
               name: Uygulama Labına Giriş
+            Variables:
+              name: Değişkenler
         virtual-holding-place:
           stages:
             Velocity:
@@ -15871,6 +17030,11 @@ tr:
               name: Oyun tasarım süreci kullanarak
             Project - Design a Game:
               name: Proje - Bir oyun tasarla
+          lesson_groups:
+            content:
+              display_name: İçerik
+            csd3_2:
+              display_name: 'Bölüm 2: Oyun geliştirme'
         code-break:
           stages:
             new stage:
@@ -15879,3 +17043,36 @@ tr:
               name: Algoritmalar
             Events:
               name: Olaylar
+        no-lg:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: 5. Ünite 2. Değerlendirme
+            While Loops:
+              name: While(...durumunda) Döngüleri
+            Loops and Simulations:
+              name: Döngüler ve simülasyonlar
+            Introduction to Arrays:
+              name: Dizilere Giriş
+            'Building an App: Image Scroller':
+              name: 'Bir Uygulama Oluşturma: Resim Kaydırma'
+            Unit 5 Assessment 3:
+              name: 5. Ünite 3. Değerlendirme
+            Processing Arrays:
+              name: Dizileri işleme
+            Functions with Return Values:
+              name: Fonksiyonlar ve dönüş değerleri
+            'Building an App: Canvas Painter':
+              name: 'Bir uygulama inşa etme: Kanvas ressamı'
+            Unit 5 Assessment 4:
+              name: 5. Ünite 4. Değerlendirme
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bölüm 1: Olay Temelli Programlama'
+            csp5_2:
+              display_name: 'Bölüm 2: Programlama ve Veri Yapıları'
