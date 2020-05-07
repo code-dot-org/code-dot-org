@@ -665,10 +665,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @plc_script.update(professional_learning_course: 'My course name')
     @stage = create(:lesson)
     @level1 = create(:maze)
-    evaluation_multi = create(:evaluation_multi, name: 'Evaluation Multi')
-    @evaluation_level = create(:level_group, name: 'Evaluation Quiz')
-    @evaluation_level.properties['title'] = @evaluation_level.name
-    @evaluation_level.properties['pages'] = [{'levels' => [evaluation_multi.name]}]
+    create(:evaluation_multi, name: 'Evaluation Multi')
+    evaluation_level_dsl = <<~DSL
+      name 'Evaluation Quiz'
+      title 'Evaluation Quiz'
+      page
+      level 'Evaluation Multi'
+    DSL
+    @evaluation_level = LevelGroup.create_from_level_builder({}, {name: 'Evaluation Quiz', dsl_text: evaluation_level_dsl})
     @level2 = create(:maze)
     @script_level1 = create(:script_level, script: @plc_script, lesson: @stage, position: 1, levels: [@level1])
     @evaluation_script_level = create(:script_level, script: @plc_script, lesson: @stage, position: 2, levels: [@evaluation_level])
