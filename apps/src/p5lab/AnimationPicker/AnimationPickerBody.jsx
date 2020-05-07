@@ -7,7 +7,6 @@ import {AnimationCategories} from '../gamelab/constants';
 import {CostumeCategories} from '../spritelab/constants';
 var msg = require('@cdo/locale');
 import animationLibrary from '../gamelab/animationLibrary.json';
-//import spriteCostumeLibrary from '../spritelab/spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
@@ -60,9 +59,13 @@ class AnimationPickerBody extends React.Component {
   };
 
   componentDidMount() {
-    fetch('/spriteCostumeLibrary.json')
-      .then(response => response.json())
-      .then(result => this.setState({libraryManifest: result}));
+    if (this.props.spriteLab) {
+      fetch('/api/v1/animation-library/manifest/spritelab')
+        .then(response => response.json())
+        .then(result => this.setState({libraryManifest: result}));
+    } else {
+      this.setState({libraryManifst: animationLibrary});
+    }
   }
 
   onSearchQueryChange = value => {
@@ -110,7 +113,7 @@ class AnimationPickerBody extends React.Component {
   render() {
     const {libraryManifest} = this.state;
     if (!libraryManifest) {
-      return <div>Loading...</div>;
+      return <div>i18n.loading()</div>;
     }
     let categories = this.props.spriteLab
       ? CostumeCategories
