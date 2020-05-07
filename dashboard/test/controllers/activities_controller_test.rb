@@ -1023,9 +1023,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     script = create :script
 
     # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
     level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
     level.properties['submittable'] = true
     level.save!
 

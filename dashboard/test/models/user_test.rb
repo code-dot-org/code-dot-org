@@ -1074,8 +1074,14 @@ class UserTest < ActiveSupport::TestCase
     sub_level1 = create :text_match, name: 'sublevel1'
     create :text_match, name: 'sublevel2'
 
-    level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+
+      page
+      level 'sublevel1'
+      level 'sublevel2'
+    DSL
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
     create(:script_level, script: script, levels: [level_group])
     create :user_script, user: user, script: script
