@@ -125,8 +125,8 @@ class StageTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: stage2
     create :script_level, script: script, lesson: stage2
 
-    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, stage1.next_level_path_for_stage_extras(@student)
-    assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
+    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, stage1.next_level_path_for_lesson_extras(@student)
+    assert_equal '/', stage2.next_level_path_for_lesson_extras(@student)
   end
 
   class StagePublishedTests < ActiveSupport::TestCase

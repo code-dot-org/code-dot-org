@@ -9,6 +9,7 @@ family_name 'csd5'
 version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit5/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-20/unit5/standards/"]]
 
 lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
 stage 'Representation Matters'
