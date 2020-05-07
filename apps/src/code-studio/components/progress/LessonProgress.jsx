@@ -42,6 +42,66 @@ const styles = {
   }
 };
 
+// return the ideal desired width of this control.  it will be up to the parent
+// to decide how much of that space it's
+//function getFullWidthForLevels() {}
+
+// given a set of levels, and a width, return which levels we will actually
+// render.
+function getShowLevels(levels, width) {
+  // which dot is current level?
+  var currentLevelIndex = 0;
+  for (const [i, l] of levels.entries()) {
+    if (l.isCurrentLevel) {
+      currentLevelIndex = i;
+      break;
+    }
+  }
+
+  const numLevels = levels.length;
+
+  let numAvailableElements = Math.min(
+    Math.floor((width - 40) / 18) + 1,
+    numLevels
+  );
+
+  if (numAvailableElements < 3) {
+    numAvailableElements = 3;
+  }
+
+  let firstElement, numElements;
+
+  if (numAvailableElements >= numLevels) {
+    // If there is enough room for all dots, just show them all.
+    firstElement = 0;
+    numElements = numLevels;
+  } else {
+    // If there isn't enough room, show the current level in the middle
+    // of the dots we can show.
+    var numSurroundingElements = Math.floor(numAvailableElements / 2);
+
+    firstElement = currentLevelIndex - numSurroundingElements;
+    var lastElement = currentLevelIndex + numSurroundingElements;
+
+    // Adjust beginning and ending so they don't go off the ends of the range.
+    if (firstElement < 0) {
+      lastElement += 0 - firstElement;
+      firstElement = 0;
+    }
+
+    if (lastElement >= numLevels) {
+      firstElement = Math.max(0, firstElement - (lastElement - numLevels));
+      lastElement -= lastElement - numLevels;
+    }
+
+    numElements = lastElement - firstElement + 1;
+  }
+
+  const showLevels = levels.slice(firstElement, firstElement + numElements);
+
+  return showLevels;
+}
+
 /**
  * Lesson progress component used in level header and course overview.
  */
@@ -56,7 +116,12 @@ class LessonProgress extends Component {
   };
 
   render() {
-    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
+    const {
+      lessonExtrasUrl,
+      onLessonExtras,
+      lessonTrophyEnabled,
+      width
+    } = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
@@ -67,55 +132,7 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    // which dot is current level?
-    var currentLevelIndex = 0;
-    for (const [i, l] of levels.entries()) {
-      if (l.isCurrentLevel) {
-        currentLevelIndex = i;
-        break;
-      }
-    }
-
-    const numLevels = levels.length;
-
-    let numAvailableElements = Math.min(
-      Math.floor((this.props.width - 40) / 18) + 1,
-      numLevels
-    );
-
-    if (numAvailableElements < 3) {
-      numAvailableElements = 3;
-    }
-
-    let firstElement, numElements;
-
-    if (numAvailableElements >= numLevels) {
-      // If there is enough room for all dots, just show them all.
-      firstElement = 0;
-      numElements = numLevels;
-    } else {
-      // If there isn't enough room, show the current level in the middle
-      // of the dots we can show.
-      var numSurroundingElements = Math.floor(numAvailableElements / 2);
-
-      firstElement = currentLevelIndex - numSurroundingElements;
-      var lastElement = currentLevelIndex + numSurroundingElements;
-
-      // Adjust beginning and ending so they don't go off the ends of the range.
-      if (firstElement < 0) {
-        lastElement += 0 - firstElement;
-        firstElement = 0;
-      }
-
-      if (lastElement >= numLevels) {
-        firstElement = Math.max(0, firstElement - (lastElement - numLevels));
-        lastElement -= lastElement - numLevels;
-      }
-
-      numElements = lastElement - firstElement + 1;
-    }
-
-    const showLevels = levels.slice(firstElement, firstElement + numElements);
+    const showLevels = getShowLevels(levels, width);
 
     return (
       <div
