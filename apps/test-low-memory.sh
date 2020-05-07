@@ -49,7 +49,7 @@ GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 $GRUNT_CMD preconcat
 
 echo "Running with parallelism: ${PROCS}"
-PARALLEL="xargs -I{} -P${PROCS} -L1 /bin/bash -c {}"
+PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
 ${PARALLEL} <<SCRIPT
 npm run lint
