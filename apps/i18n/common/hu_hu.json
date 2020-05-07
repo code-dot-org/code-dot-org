@@ -806,7 +806,6 @@
   "loginCard_secretWords": "Titkos szavak:",
   "loginCard_sectionName": "Csoport neve",
   "loginInfo": "Belépési adatok",
-  "loginInformation": "Bejelentkezési információk",
   "loginInfo_joinTitle": "Csatlakozás a szekciódhoz (csak egyszer)",
   "loginInfo_joinBody": "Ha egy diák még nem csatlakozott a szekciódhoz, kérjük, kérd meg őket, hogy hajtsák végre az alábbi lépéseket. Ne feledje, hogy ezt csak egyszer kell elvégeznie. A szekcióhoz való csatlakozással a diákok láthatják a hozzájuk rendelt kurzust, és képes leszel arra, hogy nyomon követhesd az elvégzett munka előrehaladását, amikor be vannak jelentkezve.",
   "loginInfo_joinStep1": "Hozzon létre egy Code.org-fiókot, ha még nem tette meg. Ezt a következő címen teheti meg: {url}. Ne feledje, hogy az alábbi gombok valamelyikére kattintva regisztrálhatnak egy e-mail címmel és jelszóval, vagy regisztrálhatnak a Google, a Facebook vagy a Microsoft segítségével:",

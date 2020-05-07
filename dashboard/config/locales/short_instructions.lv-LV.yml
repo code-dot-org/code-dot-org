@@ -98,6 +98,14 @@ lv-LV:
       K-1 Bee 9: Iegūsti divus nektārus un pagatavo divus medus!
       K-1 Maze Loops 1: Palīdzi man tikt līdz cūkai!
       K-1 artist 1 level 9: Uzzīmē šo, lietojot trīs līnijas
+      New Artist Project: Uzzīmē kaut ko satriecošu! Tavs kods būs saglabāts kā projekts,
+        pie kura varēsi atgriezties jebkurā laikā.
+      New Basketball Project: Izveido savu spēli "Basketbols". Vari mainīt visus noteikumus,
+        pielāgot izskatu. Kad pabeigts, spied "Pabeigt" un aicini draugus spēlēt tavu
+        spēli.
+      New Bounce Project: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos
+        efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt,
+        lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
       Overworld Avoid Monsters: |-
         Ieskriet ložņā ir bīstami.
         Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
@@ -229,6 +237,8 @@ lv-LV:
       courseA_maze_seq1: Palīdzi putnam nokļūt līdz ļaunajai cūkai!
       courseA_maze_seq10: 'Izaicinājums: tiec apkārt dinamītam, lai palīdzētu putnam
         nokļūt līdz cūkai! '
+      courseA_maze_seq10_copy: 'Izaicinājums: tiec apkārt dinamītam, lai palīdzētu
+        putnam nokļūt līdz cūkai! '
       courseA_maze_seq11: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam
         nokļūt līdz cūkai.
       courseA_maze_seq11_2018: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
@@ -252,11 +262,16 @@ lv-LV:
         putnam nokļūt līdz cūkai!
       courseA_maze_seq6_2019: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
         putnam nokļūt līdz cūkai!
+      courseA_maze_seq6_copy: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu
+        putnam nokļūt līdz cūkai!
       courseA_maze_seq7: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai palīdzētu
         putnam tikt līdz cūkai!
+      courseA_maze_seq7_copy: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai
+        palīdzētu putnam tikt līdz cūkai!
       courseA_maze_seq8: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_2018: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_2019: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
+      courseA_maze_seq8_copy: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq9: Atrodi kļūdas šajā līmenī, pievienojot blokus, lai palīdzētu
         putnam tikt līdz cūkai!
       courseB_maze_seq12: Tagad notver to cūku, kā vien māki!
@@ -284,6 +299,9 @@ lv-LV:
       courseE_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\\r\n\\\r\nPalīdzi
         zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums starp lēcām
         ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      courseE_artist_functions1_copy: "\"Es zombij mākslinieks. Es patīk zīmēt!\"
+        \\\r\n\\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums
+        starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
       courseE_bee_functions1: Iegūsti visu nektāru no katra zieda.
       flappy_1: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist".
         Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.

@@ -1203,6 +1203,39 @@ es-ES:
         NEW_Course_4_Bee_For_Loops_8_a: "Si tu bucle cuenta hacia arriba, el incremento
           es añadido a tu variable de contabilidad cada vez a través. \n\n¿Qué necesitas
           agregarle a cada número para obtener el número tras ese?"
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'El bloque que tienes que añadir se llama `establecer
+          velocidad`. '
+        courseC_flappy_events2_b: Conecta el bloque `establecer velocidad` al bloque
+          `al ejecutar` para resolver este puzle.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Si algo no funciona bien, asegúrate de que tus bloques
+          están conectados a los eventos correctos.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Junta el bloque `terminar el juego` con `cuando
+          choca con un obstáculo` para solucionar este puzle.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Necesitas usar el bloque `anotar un punto` para
+          pasar este nivel.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Para formar un ángulo interno de 60
+          grados en este triángulo, recuerda girar el artista 120 grados.
+        grade5_artist_variables_triangles1_b: Use el bucle `repetir` para acortar
+          su código.
+        grade5_artist_variables_triangles1_c: Dentro de tu bucle, querras avanzar
+          50 píxeles, luego gira a la izquierda 120 grados.
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: Tu código no será muy diferente de lo que fue
+          en el último desafío, excepto que tendrás que girar al artista para saltar
+          hacia abajo, y luego hacerlo dar una vuelta para estar listo a dibujar el
+          último triángulo.
+      OPD-K5-variables-7:
+        courseF_artist_variables5_b: La primera mitad de tu código dibujará tres triángulos,
+          y la segunda mitad dibujará los otros tres.
+        courseF_artist_variables5_c: Comienza por duplicar el código en la primera
+          mitad de su programa, luego modifícalo para que se muestre el diseño.
       Overworld Avoid Monsters:
         mc_8_a: Hay pocos caminos que puede tomar. ¿Cuál es el más corto?
         mc_8_b: Utilice 'repetir' lazos' para simplificar su código.
@@ -2608,6 +2641,11 @@ es-ES:
           en un papel.
         courseA_maze_seq10_b: Necesitarás moverte en 3 direcciones para solucionar
           este puzzle.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Si tienes problemas, primero intenta escribir los pasos
+          en un papel.
+        courseA_maze_seq10_b: Necesitarás moverte en 3 direcciones para solucionar
+          este puzzle.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Si el camino que necesitas no está claro, usa tu dedo
           para trazar una ruta desde el pájaro hasta el cerdo.
@@ -2681,6 +2719,10 @@ es-ES:
           Necesitarás usar este bloque:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: "¡Intenta escribir los pasos en un papel para encontrar
+          la solución!"
+        courseA_maze_seq5_b: Necesitarás 2 bloques, apuntando en 2 direcciones.
       courseA_maze_seq5a_2018:
         '1': Di los pasos en voz alta y mira si te ayuda a encontrar la respuesta.
       courseA_maze_seq5a_2019:
@@ -2697,7 +2739,16 @@ es-ES:
         courseA_maze_seq6_a: Tu código final debería tener 3 bloques de movimiento.
         courseA_maze_seq6_b: Si te quedas atascado/a, intenta solucionar el puzzle
           en 2 partes, una antes de la esquina y otra después de la esquina.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Tu código final debería tener 3 bloques de movimiento.
+        courseA_maze_seq6_b: Si te quedas atascado/a, intenta solucionar el puzzle
+          en 2 partes, una antes de la esquina y otra después de la esquina.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Hay 1 bloque que necesitas añadir para que el pájaro
+          se mueva hacia el cerdo.
+        courseA_maze_seq7_b: Si no puedes descubrir qué hacer, intenta dibujar el
+          puzzle en un papel y usa un dedo para averiguar en qué dirección moverte.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Hay 1 bloque que necesitas añadir para que el pájaro
           se mueva hacia el cerdo.
         courseA_maze_seq7_b: Si no puedes descubrir qué hacer, intenta dibujar el
@@ -2709,6 +2760,9 @@ es-ES:
         courseA_maze_seq8_a: Si estas atascado/a, intenta dibujar la imagen en un
           papel para ver cómo se debería mover el pájaro.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Si estas atascado/a, intenta dibujar la imagen en un
+          papel para ver cómo se debería mover el pájaro.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Si estas atascado/a, intenta dibujar la imagen en un
           papel para ver cómo se debería mover el pájaro.
       courseA_maze_seq9:
@@ -5444,6 +5498,9 @@ es-ES:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Para repetir algo, arrastra un `repetir` y pon
           lo que quieras repetir dentro de él.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Para repetir algo, arrastra un `repetir` y pon
+          lo que quieras repetir dentro de él.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Haz clic en la pequeña flecha que hay al lado de
           "izquierda" en el bloque de girar para poder cambiarlo a "derecha".
@@ -5459,7 +5516,17 @@ es-ES:
           "izquierda" en el bloque de girar para poder cambiarlo a "derecha".
         courseC_starWars_loops4_a: Utiliza dos bloques `repetir`.
         courseC_starWars_loops4_b: 'Cada `repetir` tendrá sólo una órden dentro: `avanzar`.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Haz clic en la pequeña flecha que hay al lado de
+          "izquierda" en el bloque de girar para poder cambiarlo a "derecha".
+        courseC_starWars_loops4_a: Utiliza dos bloques `repetir`.
+        courseC_starWars_loops4_b: 'Cada `repetir` tendrá sólo una órden dentro: `avanzar`.'
       courseC_starWars_loops5:
+        courseC_starWars_loops5_b: Para moverte hacia abajo, tienes que girar y luego
+          avanzar.
+        courseC_starWars_loops5_a: La mejor solución utiliza un giro, un único `avanzar`,
+          otro giro y después un bucle.
+      courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: Para moverte hacia abajo, tienes que girar y luego
           avanzar.
         courseC_starWars_loops5_a: La mejor solución utiliza un giro, un único `avanzar`,
@@ -5475,6 +5542,11 @@ es-ES:
         courseC_starWars_loops6_b: "¡Si quieres usar menos código, puedes meter un
           bucle `repetir` dentro de otro!\\\\A esto se le llama **bucles anidados**."
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Prueba escribiendo todos los movimientos en un
+          trozo de papel y buscando un patrón (algo que se repita).
+        courseC_starWars_loops6_b: "¡Si quieres usar menos código, puedes meter un
+          bucle `repetir` dentro de otro!\\\\A esto se le llama **bucles anidados**."
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Prueba escribiendo todos los movimientos en un
           trozo de papel y buscando un patrón (algo que se repita).
         courseC_starWars_loops6_b: "¡Si quieres usar menos código, puedes meter un
@@ -5503,6 +5575,14 @@ es-ES:
         courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
           el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
           \ "
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
+          Prueba con un paso de escalera. ¿Cubre eso toda la chatarra?"
+        courseC_starWars_loops7_b: Si tienes problemas con este puzle, prueba a escribir
+          todos los pasos en un trozo de papel y busca un patrón.
+        courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops8:
         course_starWars_loops8_a: Prueba dividiendo el problema en trozos más pequeños.
           Tómate tu tiempo. ¡No tienes que resolverlo todo en el primer intento!
@@ -5522,6 +5602,15 @@ es-ES:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Prueba dividiendo el problema en trozos más pequeños.
+          Tómate tu tiempo. ¡No tienes que resolverlo todo en el primer intento!
+        course_starWars_loops8_b: Piensa en la primera parte de este problema como
+          en una escalera. ¿Cómo lo resolviste antes?
+        course_starWars_loops8_c: |-
+          Mira este camino.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Prueba dividiendo el problema en trozos más pequeños.
           Tómate tu tiempo. ¡No tienes que resolverlo todo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
@@ -5813,6 +5902,12 @@ es-ES:
           de dibijar el segundo cuadrado.
         courseE_artist_functions1_b: Está bien dibujar líneas superpuestas para realizar
           los anteojos.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Los cuadrados tienen 100 píxeles de lado cada
+          uno, lo que significa que te habrás movido 175 píxeles hacia adelante antes
+          de dibijar el segundo cuadrado.
+        courseE_artist_functions1_b: Está bien dibujar líneas superpuestas para realizar
+          los anteojos.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Tu programa deberá:
@@ -5828,6 +5923,13 @@ es-ES:
           -   Mover hacia adelante 100 + 75 píxeles
           -   Usar función
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          Tu programa deberá:
+
+          -   Usar función
+          -   Mover hacia adelante 100 + 75 píxeles
+          -   Usar función
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Tu programa deberá:
 

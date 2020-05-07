@@ -361,19 +361,23 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(user_id = nil)
+    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
       id: id,
-      level_id: level.id,
-      name: level.display_name || level.name,
       type: level.type,
-      map: JSON.parse(level.try(:maze) || '[]'),
-      serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
-      skin: level.try(:skin),
-      thumbnail_url: level.try(:thumbnail_url),
-      solution_image_url: level.try(:solution_image_url),
-      level: level.summarize_as_bonus.camelize_keys,
-    }.camelize_keys
+      description: level.try(:bubble_choice_description),
+      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
+      url: build_script_level_url(self),
+      perfect: perfect,
+      maze_summary: {
+        map: JSON.parse(level.try(:maze) || '[]'),
+        serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
+        skin: level.try(:skin),
+        level: level.summarize_as_bonus.camelize_keys
+      }.camelize_keys
+    }
   end
 
   def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)

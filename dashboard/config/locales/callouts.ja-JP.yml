@@ -146,6 +146,16 @@ ja-JP:
         actions_category: ツール ボックスが新しくなりました！「アクション」ブロックがここにあります。
       New Frozen Project:
         snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: "`まつ`は、ここにあります。"
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: はたを目指して 主人公を動かそう。
+      OPD-K5-spritelab-3:
+        spritelab_comment: このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: 注意 数字を入れるだけのブロックがあります。数字のブロックは、他のブロックに入れて使います。
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 変数`length`に 値をセットして使ってみよう。
       Overworld Chop Trees:
         craft_callout_preplaced: 用意されたブロックを使って始めましょう
       Overworld Chop Trees_2019:
@@ -414,6 +424,8 @@ ja-JP:
         courseC_starWars_loops2: １つだけブロックを入れます。
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: １つだけブロックを入れます。
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: １つだけブロックを入れます。
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。
       courseD_artist_nestedLoops1a_2018:
@@ -430,6 +442,9 @@ ja-JP:
         4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。
+        4_5_Bee_Conditionals_2_2: わからないときは、ここをクリックしてビデオを見てみよう。
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
       courseD_bee_conditionals_challenge2_2018:
@@ -515,11 +530,15 @@ ja-JP:
         '': ここクリック！
       courseE_artist_functions1:
         courseD_artist_functions1_1: この命令で正方形をかくことから始めよう。
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: この命令で正方形をかくことから始めよう。
       courseE_artist_functions2:
         courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
       courseE_artist_functions2_2018:
         courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: 緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？
       courseE_artist_functions8:
         courseD_artist_functions8_1: 関数を作る命令は、ここをクリックすると出てきます。

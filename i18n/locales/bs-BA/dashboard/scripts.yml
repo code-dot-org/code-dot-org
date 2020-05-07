@@ -1048,6 +1048,13 @@ bs:
           stages:
             Sending Binary Messages:
               name: Slanje Binarnih Poruka
+          lesson_groups:
+            required:
+              display_name: Pregled
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Pregled
         CSDU4-Draft:
           stages:
             Analyzing Interviews:
@@ -1070,6 +1077,10 @@ bs:
               name: Umjetnik funkcije
         artistExemplar:
           description_audience: Godine 8+ (poslije Kursa 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Pregled
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1160,6 +1171,10 @@ bs:
               name: Napravi igru
             'Farmer: While Loops':
               name: 'Farmer: Dok Petlje'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Pregled
         csd3-2017:
           stages:
             Velocity:
@@ -1214,6 +1229,14 @@ bs:
           stages:
             Apps and Problem Solving:
               name: Aplikacije i riješavanje problema
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
         basketball:
           stages:
             Bounce:
@@ -1231,6 +1254,10 @@ bs:
               name: Razredi
             Lists:
               name: Liste
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
         csd4-2017:
           stages:
             Analyzing Interviews:
@@ -1327,6 +1354,14 @@ bs:
           stages:
             Welcome!:
               name: Dobrodošli!
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
         sciencepd4:
           stages:
             Welcome!:
@@ -1345,6 +1380,10 @@ bs:
           stages:
             Welcome!:
               name: Dobrodošli!
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
         csppostap-2017:
           stages:
             Creating Javascript Objects:
@@ -1373,6 +1412,10 @@ bs:
           stages:
             Introduction:
               name: Uvod
+        csd5-draft:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         applab-1hour:
           stages:
             Event Types:
@@ -1421,6 +1464,9 @@ bs:
               name: Funkcije
         csd5-2017:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd3-old:
           stages:
             Velocity:
@@ -1518,6 +1564,54 @@ bs:
               name: Predstavite Vaš projekat
             Building a Foundation:
               name: Izrada Temelja
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
         express-2017:
           stages:
             Introduction:
@@ -1630,6 +1724,9 @@ bs:
               name: Predstavite Vaš projekat
         csd5-old:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csp3-staging:
           stages:
             The Need for Algorithms:
@@ -1862,6 +1959,9 @@ bs:
               name: Aplikacije i riješavanje problema
         csd5-2018:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csp2-2018:
           stages:
             Cleaning Data:
@@ -1890,6 +1990,74 @@ bs:
               name: Završni projekat
             Cleaning Data:
               name: Čišćenje podataka
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
         pre-express-2018:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -1905,6 +2073,10 @@ bs:
               name: Digitalni otisak stopala
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stivi i veliki projekat
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Pregled
         frozen-2018:
           stages:
             Artist:
@@ -1930,6 +2102,14 @@ bs:
           stages:
             Dance Party:
               name: Plesna zabava
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
         dance-extras:
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursef-2019:
@@ -1948,6 +2128,15 @@ bs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
         dance-low:
           stages:
             Dance Party:
@@ -1966,6 +2155,17 @@ bs:
               name: Umjetnik Binarno
             Dance Party:
               name: Plesna zabava
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1986,6 +2186,13 @@ bs:
               name: Crowdsourcing
             Songwriting:
               name: Pisanje pjesama
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_nested_loops:
+              display_name: Ugniježdene Petlje
+            csf_functions:
+              display_name: Funkcije
         express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2009,10 +2216,24 @@ bs:
               name: Crowdsourcing
             Dance Party:
               name: Plesna zabava
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
         andrea-test:
           stages:
             'null':
               name: 'ništa'
+          lesson_groups:
+            required:
+              display_name: Pregled
         dance-extras-gallery:
           title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
@@ -2024,6 +2245,15 @@ bs:
               name: Veliki Događaj
             Binary Bracelets:
               name: Binarne narukvice
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         coursea-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2036,6 +2266,13 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             Sequencing with Scrat:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         courseb-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2047,6 +2284,13 @@ bs:
               name: Zapetljavanje
             Sequencing in Maze:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         pre-express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2056,6 +2300,11 @@ bs:
               name: Digitalni otisak stopala
             Spelling Bee:
               name: Spelovanje
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2074,14 +2323,31 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+        csd4-2019:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd5-2019:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd6-2019:
           stages:
             Making Music:
               name: Pravljenje muzike
             Functions with Parameters:
               name: Funkcije sa Parametrima
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            required:
+              display_name: Pregled
         csp1-2019:
           stages:
             Sending Binary Messages:
@@ -2126,6 +2392,9 @@ bs:
               name: Slanje Binarnih Poruka
             Binary Numbers:
               name: Binarni Brojevi
+          lesson_groups:
+            required:
+              display_name: Pregled
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2134,10 +2403,88 @@ bs:
               name: Uvjeti s Kartama
             Building a Foundation:
               name: Izrada Temelja
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Papirno Programiranje Grafikona
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+            required:
+              display_name: Pregled
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Pregled
         csd2-pilot:
           stages:
             Lists:
@@ -2154,12 +2501,70 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
         peru-2019:
           stages:
             Introduction:
               name: Uvod
             Nested Loops:
               name: Ugniježdene Petlje
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
         dance-2019:
           stages:
             Dance Party:
@@ -2182,8 +2587,19 @@ bs:
               name: Varijable
             For Loops:
               name: Od-Do-Za Petlje
+          lesson_groups:
+            k5_next_steps:
+              display_name: Slijedeći Koraci
         dance-extras-2019:
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -2194,20 +2610,72 @@ bs:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Uvjeti s Kartama
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_nested_loops:
+              display_name: Ugniježdene Petlje
+            csf_functions:
+              display_name: Funkcije
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Uvjeti
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_events:
+              display_name: Događaji
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Uvjeti
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_events:
+              display_name: Događaji
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
         csd2-2020:
           stages:
             Images:
               name: Slike
+        csd4-2020:
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd5-2020:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+          lesson_groups:
+            csd5_2:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd6-2020:
           stages:
             Making Music:
@@ -2238,6 +2706,13 @@ bs:
               description_teacher: 'Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.'
             Sequencing with Scrat:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         courseb-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2249,12 +2724,28 @@ bs:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Loops: Getting Loopy':
               name: Zapetljavanje
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binarne narukvice
             'Events: The Big Event':
               name: Veliki Događaj
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2269,26 +2760,67 @@ bs:
               name: Digitalno Državljanstvo
             Dance Party:
               name: Plesna zabava
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Pisanje pjesama
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_nested_loops:
+              display_name: Ugniježdene Petlje
+            csf_functions:
+              display_name: Funkcije
         coursef-2020:
           stages:
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno Državljanstvo
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
         express-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
             Dance Party:
               name: Plesna zabava
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Od-Do-Za Petlje
         pre-express-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
             Spelling Bee:
               name: Spelovanje
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
         csp1-2020:
           stages:
             Binary Numbers:

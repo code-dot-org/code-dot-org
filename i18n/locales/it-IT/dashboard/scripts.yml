@@ -7,6 +7,7 @@ it:
         csd_category_name: Alla scoperta dell'informatica ('17-'18)
         csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
         csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
+        csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
@@ -803,25 +804,25 @@ it:
             Best Practices for Teaching Computer Science:
               name: Linee guida per l'insegnamento dell'informatica
             Computer Science Fundamentals:
-              name: Fondamenti di informatica
+              name: 2. Fondamenti di informatica
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
             Looking Ahead:
-              name: Uno sguardo avanti
+              name: 3. Uno sguardo avanti
             'Mastering the Basics: Conditionals':
-              name: 'I concetti fondamentali: istruzioni condizionali'
+              name: '6. I concetti fondamentali: istruzioni condizionali'
             'Mastering the Basics: Events':
-              name: 'I concetti fondamentali: eventi'
+              name: '8. I concetti fondamentali: eventi'
             'Mastering the Basics: Functions':
-              name: 'I concetti fondamentali: funzioni'
+              name: '7. I concetti fondamentali: funzioni'
             'Mastering the Basics: Loops':
-              name: 'I concetti fondamentali: cicli'
+              name: '5. I concetti fondamentali: cicli'
             'Mastering the Basics: Sequencing':
-              name: 'I concetti fondamentali: sequenze di istruzioni'
+              name: '4. I concetti fondamentali: sequenze di istruzioni'
             Next Steps:
               name: I prossimi passi
             Planning:
-              name: Gestione della classe
+              name: 10. Gestione della classe
         ECSPD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -865,7 +866,7 @@ it:
         Equity-OnlinePD:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
             Next Steps:
               name: I prossimi passi
         sciencePD2b-iZone:
@@ -907,7 +908,7 @@ it:
         CSPPD2:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -935,23 +936,23 @@ it:
         ECSPD3-Unit2:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ECSPD3-Unit3:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ECSPD3-Unit4:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ECSPD3-Unit5:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ECSPD3-Unit6:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -961,11 +962,11 @@ it:
         algebraPD3b:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         CSPPD3-Unit2:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         Special Fun:
           description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
@@ -984,7 +985,7 @@ it:
         CSPPD3-Unit3:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         cspunit3temp:
           description_short: Programmazione
           stages:
@@ -1040,11 +1041,11 @@ it:
         CSPPD3-Unit4:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         CSPPD3-Unit5:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -1108,7 +1109,7 @@ it:
         algebraPD3c:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         csp1-2017:
           stages:
             Binary Numbers:
@@ -1127,6 +1128,13 @@ it:
               name: Internet
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp1_1:
+              display_name: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
+            csp1_2:
+              display_name: 'Capitolo 2: Inventare Internet'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1139,6 +1147,13 @@ it:
               name: Compressione del testo
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            csp2_1:
+              display_name: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
+            csp2_2:
+              display_name: 'Capitolo 2: Manipolazione e Visualizzazione dei dati'
+            cspSurvey:
+              display_name: Sondaggio
         csp3-2017:
           description_short: Programmazione
           stages:
@@ -1146,6 +1161,13 @@ it:
               name: Creazione di funzioni
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp4-2017:
           stages:
             Simple Encryption:
@@ -1154,6 +1176,13 @@ it:
               name: Sondaggio Post-corso
             Student Post-Course Survey:
               name: Sondaggio per studenti che hanno partecipato al corso
+          lesson_groups:
+            csp4_1:
+              display_name: 'Capitolo 1: Il mondo di grandi quantità di dati e la crittografia'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp5-2017:
           stages:
             Introduction to Arrays:
@@ -1164,6 +1193,13 @@ it:
               name: Cicli "mentre"
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capitolo 1: Programmazione guidata dagli eventi'
+            csp5_2:
+              display_name: 'Capitolo 2: Programmazione con strutture di dati'
+            cspSurvey:
+              display_name: Sondaggio
         CSDU3-Draft:
           description_short: Programmazione
           stages:
@@ -1206,6 +1242,21 @@ it:
           stages:
             Sending Binary Messages:
               name: Inviare Messaggi Binari
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1228,6 +1279,14 @@ it:
               name: 'Artista: Funzioni'
         artistExemplar:
           description_audience: Da 8 anni in su (dopo il Corso 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1321,23 +1380,23 @@ it:
         ecs-unit2:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ecs-unit3:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ecs-unit4:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ecs-unit5:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         ecs-unit6:
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -1348,6 +1407,14 @@ it:
               name: Ping-Pong
             'Farmer: While Loops':
               name: 'Contadina: Cicli "Mentre"'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
         csd3-2017:
           description_short: Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi.
           stages:
@@ -1365,6 +1432,15 @@ it:
               name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
+            csd_survey:
+              display_name: Sondaggio Post-corso
         grade2:
           stages:
             Flappy:
@@ -1409,6 +1485,29 @@ it:
           stages:
             Intro to Problem Solving:
               description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
         basketball:
           title: Scegli la tua squadra e fai una partita di basket
           description_short: Scegli la tua squadra e fai una partita di basket
@@ -1436,6 +1535,29 @@ it:
               name: Valutazioni dei parigrado
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolo 1: Contenuti Web e HTML'
+            csd2_2:
+              display_name: 'Capitolo 2: Styling e CSS'
+            csd_survey:
+              display_name: Sondaggio Post-corso
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            csd_survey:
+              display_name: Sondaggio Post-corso
         minecraft:
           title: Programma il tuo Minecraft
           description_short: Programma animali e altre creature di Minecraft nella tua versione di questo gioco.
@@ -1606,6 +1728,13 @@ it:
               name: Istruzioni condizionali
             'Algorithms: Dice Race':
               name: 'Algoritmi: Gara con i Dadi'
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            extra_course_content:
+              display_name: Contenuti supplementari
         coursef-draft:
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           stages:
@@ -1647,6 +1776,11 @@ it:
               name: Laboratorio con L'Era Glaciale
             'Algorithms: Tangrams':
               name: 'Algoritmi: Tangram'
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            end_of_course_project:
+              display_name: Progetto di fine corso
         classic-hoc-impact-study:
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!
           stages:
@@ -1680,6 +1814,22 @@ it:
           stages:
             Welcome Back!:
               name: Bentornato!
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
         sciencepd4:
           stages:
             Welcome!:
@@ -1704,16 +1854,34 @@ it:
               name: Fissare i concetti
             Binary:
               name: Binario
+          lesson_groups:
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            content:
+              display_name: Contenuto
         sciencepd5:
           stages:
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+            practice:
+              display_name: Pratiche d'insegnante
         csppostap-2017:
           stages:
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            cspSurvey:
+              display_name: Sondaggio
         csd6-draft:
           stages:
             Lists:
@@ -1724,12 +1892,23 @@ it:
               name: Mappa
             Functions with Parameters:
               name: Funzioni con parametri
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
         workshop-gamelab:
           stages:
             Introduction:
               name: Introduzione
             Sprites:
               name: Personaggi
+        csd5-draft:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
         applab-1hour:
           stages:
             Extra:
@@ -1760,6 +1939,13 @@ it:
               name: Funzioni con parametri
             Functions with Parameters_:
               name: Funzioni con parametri
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
+            csd_survey:
+              display_name: Sondaggio Post-corso
         csd3-draft:
           stages:
             Drawing in Game Lab:
@@ -1776,6 +1962,14 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+        csd5-2017:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            csd_survey:
+              display_name: Sondaggio Post-corso
         csd3-old:
           stages:
             Drawing in Game Lab:
@@ -1822,6 +2016,10 @@ it:
           stages:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
         csd2-old:
           stages:
             Peer Review:
@@ -2134,6 +2332,15 @@ it:
           description_audience: 'Da 8 a 12 anni'
           description_short: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
           description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          lesson_groups:
+            csf_e_1:
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_e_2:
+              display_name: Contenuti del Corso E
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            extra_course_content:
+              display_name: Contenuti supplementari
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -2221,6 +2428,93 @@ it:
           description_audience: 'Da 9 a 13 anni'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          lesson_groups:
+            csf_f_1:
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_f_2:
+              display_name: Contenuti del Corso F
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Capitolo 1: Installazione di AP Tech'
+            csp_ap_3:
+              display_name: 'Capitolo 3: AP creare il Task Performance'
+            csp_ap_2:
+              display_name: 'Capitolo 2: AP analizzare il Task Performance'
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
         express-2017:
           stages:
             Introduction:
@@ -2315,6 +2609,11 @@ it:
           assignment_family_title: Corso Rapido (2018)
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            end_of_course_project:
+              display_name: Progetto di fine corso
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2358,6 +2657,19 @@ it:
             Creating Functions:
               name: Creazione di funzioni
           description_short: Programmazione
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -2425,6 +2737,15 @@ it:
               name: Cicli Annidati con l'Ape e lo Zombie
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
+          lesson_groups:
+            csf_e_1:
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_e_2:
+              display_name: Contenuti del Corso E
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            extra_course_content:
+              display_name: Contenuti supplementari
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2464,6 +2785,10 @@ it:
             Loops in Ice Age:
               name: Cicli con l'Era glaciale
           title: Corso D
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2522,6 +2847,11 @@ it:
               name: Debugging con Scrat
             Nested Loops:
               name: Cicli annidati
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            end_of_course_project:
+              display_name: Progetto di fine corso
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -2576,6 +2906,15 @@ it:
               name: Internet
             Crowdsourcing:
               name: Intelligenza collettiva
+          lesson_groups:
+            csf_e_1:
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_e_2:
+              display_name: Contenuti del Corso E
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            extra_course_content:
+              display_name: Contenuti supplementari
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -2634,10 +2973,34 @@ it:
               name: Riesamina il tuo progetto
             Present Your Project:
               name: Presenta il tuo progetto
+          lesson_groups:
+            csf_f_1:
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_f_2:
+              display_name: Contenuti del Corso F
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        csd5-old:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
         csp3-staging:
           stages:
             Creating Functions:
               name: Creazione di funzioni
+          lesson_groups:
+            csp3_1:
+              display_name: 'Capitolo 1: Linguaggi di programmazione e algoritmi'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
         pwc:
           stages:
             Personal Innovations:
@@ -2673,10 +3036,20 @@ it:
           stages:
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capitolo 2: AP analizzare il Task Performance'
+            cspSurvey:
+              display_name: Sondaggio
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: Sondaggio Post-corso
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capitolo 3: AP creare il Task Performance'
+            cspSurvey:
+              display_name: Sondaggio
         course-e-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2731,6 +3104,15 @@ it:
               name: Realizza un gioco con Star Wars
             Functions in Harvester:
               name: Funzioni con la Contadina
+          lesson_groups:
+            csf_e_1:
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_e_2:
+              display_name: Contenuti del Corso E
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            extra_course_content:
+              display_name: Contenuti supplementari
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2791,12 +3173,24 @@ it:
               name: Riesamina il tuo progetto
             Present Your Project:
               name: Presenta il tuo progetto
+          lesson_groups:
+            csf_f_1:
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_f_2:
+              display_name: Contenuti del Corso F
+            end_of_course_project:
+              display_name: Progetto di fine corso
         csd6-old:
           stages:
             Lists:
               name: Liste
             For Loops:
               name: Cicli con contatore
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
         csd3-1819draft:
           stages:
             Drawing in Game Lab:
@@ -2814,6 +3208,13 @@ it:
             Functions:
               name: Funzioni
           description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
         csd3-2018:
           description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
           stages:
@@ -2831,11 +3232,25 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
         csd2-2018:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
           stages:
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolo 1: Contenuti Web e HTML'
+            csd2_2:
+              display_name: 'Capitolo 2: Styling e CSS'
+            cspSurvey:
+              display_name: Sondaggio
         coursea-2018:
           title: Corso A (2018)
           assignment_family_title: Corso A
@@ -3176,6 +3591,13 @@ it:
               name: Funzioni con parametri
             Functions with Parameters:
               name: Funzioni con parametri
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
+            cspSurvey:
+              display_name: Sondaggio
         coursee-2018:
           title: Corso E (2018)
           assignment_family_title: Corso E
@@ -3268,6 +3690,15 @@ it:
               name: Giraffa domestica
             Copyright and Creativity:
               name: Condivisione digitale
+          lesson_groups:
+            csf_e_1:
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_e_2:
+              display_name: Contenuti del Corso E
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            extra_course_content:
+              display_name: Contenuti supplementari
         coursef-2018:
           title: Corso F (2018)
           assignment_family_title: Corso F
@@ -3373,6 +3804,13 @@ it:
               name: Funzioni con Minecraft
             Conditionals in Farmer:
               name: Istruzioni condizionali con la contadina
+          lesson_groups:
+            csf_f_1:
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)
+            csf_f_2:
+              display_name: Contenuti del Corso F
+            end_of_course_project:
+              display_name: Progetto di fine corso
         csp1-2018:
           stages:
             Personal Innovations:
@@ -3389,10 +3827,40 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp1_1:
+              display_name: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
+            csp1_2:
+              display_name: 'Capitolo 2: Inventare Internet'
         csd1-2018:
           stages:
             Intro to Problem Solving:
               description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            cspSurvey:
+              display_name: Sondaggio
+        csd5-2018:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -3403,6 +3871,11 @@ it:
               name: Codifica Immagini B&N
             Encoding Color Images:
               name: Codifica Immagini Colori
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unità 2: Informazioni digitali'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
         csp3-2018:
           description_short: Programmazione
           stages:
@@ -3410,16 +3883,41 @@ it:
               name: Creazione di funzioni
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Introduzione alla Programmazione'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp-explore-2018:
           stages:
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capitolo 2: AP analizzare il Task Performance'
+            cspSurvey:
+              display_name: Sondaggio
+        csp-create-2018:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capitolo 3: AP creare il Task Performance'
+            cspSurvey:
+              display_name: Sondaggio
         csp4-2018:
           stages:
             Simple Encryption:
               name: Crittografia semplice
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unità 4: Big Data e Privacy'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp5-2018:
           stages:
             While Loops:
@@ -3428,10 +3926,131 @@ it:
               name: Introduzione agli array
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capitolo 1: Programmazione guidata dagli eventi'
+            csp5_2:
+              display_name: 'Capitolo 2: Programmazione con strutture di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csppostap-2018:
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Capitolo 1: Manipolare e visualizzare dati'
+            csp_postap_2:
+              display_name: 'Capitolo 2: Apps e Database'
+            cspSurvey:
+              display_name: Sondaggio
         spritelab:
           stages:
             Alien Dance Party - Input:
               name: La festa degli alieni - Ingressi
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Sondaggio Post-corso
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
         pre-express-2018:
           title: Corso Rapido pre-scolare (2018)
           assignment_family_title: Corso rapido pre-scolare
@@ -3486,6 +4105,12 @@ it:
           stages:
             Labyrinth:
               name: Labirinto
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
         spritelab-simple:
           stages:
             Alien Dance Party - Input:
@@ -3535,6 +4160,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -3646,6 +4280,21 @@ it:
               description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
             Running Simulations:
               name: Simulazioni in corso
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            end_of_course_project:
+              display_name: Progetto di fine corso
         dance-low:
           stages:
             Dance Party:
@@ -3720,6 +4369,21 @@ it:
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             Dance Party:
               name: Ballando col codice
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_events:
+              display_name: Eventi
+            csf_loops:
+              display_name: Ripetizioni
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            end_of_course_project:
+              display_name: Progetto di fine corso
         coursee-2019:
           description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Dopo aver ripassato i principi introdotti nei Corsi C & D, ci si spinge oltre, aggiungendo il concetto di funzione.
@@ -3810,6 +4474,19 @@ it:
               name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
             Songwriting:
               name: Composizione di canzoni
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_nested_loops:
+              display_name: Cicli annidati
+            csf_functions:
+              display_name: Funzioni
+            end_of_course_project:
+              display_name: Progetto di fine corso
         express-2019:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -3915,14 +4592,43 @@ it:
               name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
             Concept Practice with Minecraft:
               name: Teoria e pratica con Minecraft
+          lesson_groups:
+            csf_warmup:
+              display_name: Riscaldamento
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_functions:
+              display_name: Funzioni
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
         csd1-2019:
           stages:
             Intro to Problem Solving:
               description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
         andrea-test:
           stages:
             'null':
               name: 'nullo'
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -3974,6 +4680,23 @@ it:
               name: I miei ciclici amici robotici (per i più piccoli)
             Sticker Art with Loops:
               name: Cicli con l'artista
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
@@ -4022,6 +4745,15 @@ it:
             Sequencing with Scrat:
               name: Sequenze di istruzioni con Scrat
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
         courseb-2019:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
@@ -4067,6 +4799,15 @@ it:
             Sequencing in Maze:
               name: Sequenze di istruzioni con Angry Birds
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
         pre-express-2019:
           title: Corso Rapido pre-scolare (2019)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -4116,6 +4857,13 @@ it:
               name: Una battaglia con gli eventi
             Ocean Scene with Loops:
               name: Al mare con i cicli
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4129,6 +4877,13 @@ it:
           stages:
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolo 1: Contenuti Web e HTML'
+            csd2_2:
+              display_name: 'Capitolo 2: Styling e CSS'
+            cspSurvey:
+              display_name: Sondaggio
         csd3-2019:
           description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
           stages:
@@ -4146,10 +4901,42 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd5-2019:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
         csd6-2019:
           stages:
             Functions with Parameters:
               name: Funzioni con parametri
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
+            cspSurvey:
+              display_name: Sondaggio
         csp4-pilot:
           stages:
             Surveys:
@@ -4162,6 +4949,17 @@ it:
               name: Sondaggio studente (variabili)
             Teacher Surveys (Variables):
               name: Sondaggio insegnante (variabili)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+            required:
+              display_name: Panoramica
         csp1-2019:
           stages:
             Personal Innovations:
@@ -4178,6 +4976,13 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp1_1:
+              display_name: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
+            csp1_2:
+              display_name: 'Capitolo 2: Inventare Internet'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -4188,6 +4993,13 @@ it:
               name: Codifica Immagini B&N
             Encoding Color Images:
               name: Codifica Immagini Colori
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unità 2: Informazioni digitali'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp3-2019:
           description_short: Programmazione
           stages:
@@ -4195,12 +5007,26 @@ it:
               name: Creazione di funzioni
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Introduzione alla Programmazione'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp4-2019:
           stages:
             Simple Encryption:
               name: Crittografia semplice
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unità 4: Big Data e Privacy'
+            cspAssessment:
+              display_name: Valutazione del Capitolo
+            cspSurvey:
+              display_name: Sondaggio
         csp5-2019:
           stages:
             While Loops:
@@ -4209,10 +5035,36 @@ it:
               name: Introduzione agli array
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capitolo 1: Programmazione guidata dagli eventi'
+            csp5_2:
+              display_name: 'Capitolo 2: Programmazione con strutture di dati'
+            cspSurvey:
+              display_name: Sondaggio
         csp-explore-2019:
           stages:
             Mid-Year Survey:
               name: Sondaggio di metà anno
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Capitolo 2: AP analizzare il Task Performance'
+            cspSurvey:
+              display_name: Sondaggio
+        csp-create-2019:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Capitolo 3: AP creare il Task Performance'
+            cspSurvey:
+              display_name: Sondaggio
+        csppostap-2019:
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Capitolo 1: Manipolare e visualizzare dati'
+            csp_postap_2:
+              display_name: 'Capitolo 2: Apps e Database'
+            cspSurvey:
+              display_name: Sondaggio
         csp1-pilot:
           stages:
             Number Systems:
@@ -4223,6 +5075,11 @@ it:
               name: Inviare Messaggi Binari con il Simulatore di Internet
             Binary Numbers:
               name: Numeri Binari
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            required:
+              display_name: Panoramica
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -4265,6 +5122,21 @@ it:
               name: Funzioni con l'artista
             Determine the Concept:
               name: Fissare i concetti
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_sprites:
+              display_name: Personaggi
+            time4cs_c1:
+              display_name: 'Everglades ed i Suoi Ecosistemi'
+            time4cs_c2:
+              display_name: 'Catene Alimentari negli Everglades'
+            time4cs_c3:
+              display_name: 'Vivere negli Everglades'
+            time4cs_c4:
+              display_name: 'Impatti Invasivi sugli Everglades'
+            time4cs_c5:
+              display_name: 'I Cittadini Influenzano il Cambiamento negli Everglades'
         csp1-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4275,6 +5147,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         csp2-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4286,6 +5167,15 @@ it:
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
           title: 'Princìpi dell''Informatica - Unità 2'
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         csp3-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4306,6 +5196,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         csp5-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4316,6 +5215,17 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Ripetizioni
+            csp_traversals:
+              display_name: Traversali
+            csp_project:
+              display_name: Progetto
+            csp_libraries:
+              display_name: Librerie
         csp6-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4326,6 +5236,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         csp7-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4338,6 +5257,11 @@ it:
               name: Sondaggio insegnante (istruzioni condizionali)
             Libraries:
               name: Librerie
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
         csp8-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4348,6 +5272,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         csp9-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4358,6 +5291,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         csp10-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -4368,6 +5310,15 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -4376,15 +5327,61 @@ it:
               name: Programmazione nel labirinto
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Ripetizioni
+            csp_traversals:
+              display_name: Traversali
+            csp_project:
+              display_name: Progetto
+            required:
+              display_name: Panoramica
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
         csd1-pilot:
           stages:
             Intro to Problem Solving:
               description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
         csd2-pilot:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
           stages:
             Lists:
               name: Liste
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolo 1: Contenuti Web e HTML'
+            csd2_2:
+              display_name: 'Capitolo 2: Styling e CSS'
+            cspSurvey:
+              display_name: Sondaggio
         csd3-pilot:
           description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
           stages:
@@ -4402,10 +5399,22 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
         csp3-pilot:
           stages:
             Debugging:
               name: Correzione errori (debugging)
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            required:
+              display_name: Panoramica
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -4420,6 +5429,83 @@ it:
               name: Al mare con i cicli
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Panoramica
+            content:
+              display_name: Contenuto
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            required:
+              display_name: Panoramica
         peru-2019:
           stages:
             Introduction:
@@ -4436,6 +5522,12 @@ it:
               name: Introduzione al Debugging
             Nested Loops in Frozen:
               name: Cicli annidati con Frozen
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            required:
+              display_name: Panoramica
         dance-2019:
           stages:
             Dance Party:
@@ -4448,25 +5540,25 @@ it:
           description_short: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
           stages:
             Getting Started:
-              name: Per cominciare
+              name: 1. Per cominciare
             Computer Science Fundamentals:
-              name: Fondamenti di informatica
+              name: 2. Fondamenti di informatica
             Looking Ahead:
-              name: Uno sguardo avanti
+              name: 3. Uno sguardo avanti
             'Mastering the Basics: Sequencing':
-              name: 'I concetti fondamentali: sequenze di istruzioni'
+              name: '4. I concetti fondamentali: sequenze di istruzioni'
             'Mastering the Basics: Loops':
-              name: 'I concetti fondamentali: cicli'
+              name: '5. I concetti fondamentali: cicli'
             'Mastering the Basics: Conditionals':
-              name: 'I concetti fondamentali: istruzioni condizionali'
+              name: '6. I concetti fondamentali: istruzioni condizionali'
             'Mastering the Basics: Functions':
-              name: 'I concetti fondamentali: funzioni'
+              name: '7. I concetti fondamentali: funzioni'
             'Mastering the Basics: Events':
-              name: 'I concetti fondamentali: eventi'
+              name: '8. I concetti fondamentali: eventi'
             Best Practices for Teaching Computer Science:
               name: Linee guida per l'insegnamento dell'informatica
             Planning:
-              name: Gestione della classe
+              name: 10. Gestione della classe
             Next Steps:
               name: I prossimi passi
             Understanding the Computer Science Fundamentals Courses:
@@ -4478,7 +5570,7 @@ it:
             Understanding the Computer Science Fundamentals courses:
               name: Per capire i corsi di Fondamenti di informatica (titolo originale CSF - Computer Science Fundamentals)
             Best practices for teaching computer science:
-              name: Linee guida per l'insegnamento dell'informatica
+              name: 9. Linee guida per l'insegnamento dell'informatica
             Sequencing:
               name: Sequenze
             Loops:
@@ -4492,7 +5584,7 @@ it:
             Diving Deeper:
               name: Andando più a fondo
             Next steps:
-              name: I prossimi passi
+              name: 11. I prossimi passi
             Diving deeper:
               name: Andando più a fondo
             Diving deeper (for Courses E and F):
@@ -4517,6 +5609,11 @@ it:
               name: Esamina le tue riflessioni
             End of Course projects:
               name: Progetti di fine corso
+          lesson_groups:
+            k5_getting_started:
+              display_name: 1. Per cominciare
+            k5_next_steps:
+              display_name: I prossimi passi
         dance-extras-2019:
           title: Continua a ballare (2019)
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
@@ -4524,6 +5621,16 @@ it:
           stages:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
         time4cs-original-unit-1:
           stages:
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4558,6 +5665,17 @@ it:
               name: Funzioni con l'artista
             End of Course Project:
               name: Progetto di fine corso
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_nested_loops:
+              display_name: Cicli annidati
+            csf_functions:
+              display_name: Funzioni
+            end_of_course_project:
+              display_name: Progetto di fine corso
         time4cs-experiment-unit-2:
           stages:
             Nested Loops in Maze:
@@ -4572,6 +5690,17 @@ it:
               name: Funzioni con la contadina
             Functions with Artist:
               name: Funzioni con l'artista
+          lesson_groups:
+            time4cs_c1:
+              display_name: 'Everglades ed i Suoi Ecosistemi'
+            time4cs_c2:
+              display_name: 'Catene Alimentari negli Everglades'
+            time4cs_c3:
+              display_name: 'Vivere negli Everglades'
+            time4cs_c4:
+              display_name: 'Impatti Invasivi sugli Everglades'
+            time4cs_c5:
+              display_name: 'I Cittadini Influenzano il Cambiamento negli Everglades'
         time4cs-control-unit-1:
           stages:
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4584,6 +5713,21 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_events:
+              display_name: Eventi
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            ramp_up:
+              display_name: Introduzione
         time4cs-experiment-unit-1:
           stages:
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4596,17 +5740,105 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_events:
+              display_name: Eventi
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            ramp_up:
+              display_name: Introduzione
+        csp7-pilot:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
+            required:
+              display_name: Panoramica
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Ripetizioni
+            csp_traversals:
+              display_name: Traversali
+            csp_project:
+              display_name: Progetto
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
         csd2-2020:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolo 1: Contenuti Web e HTML'
+            csd2_2:
+              display_name: 'Capitolo 2: Styling e CSS'
+            cspSurvey:
+              display_name: Sondaggio
         csd1-2020:
           stages:
             Intro to Problem Solving:
               description_student: "La classe lavora in gruppi per progettare barche di \"carta stagnola\" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull'esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. "
             0:
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd5-2020:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
         csd6-2020:
           stages:
             Functions with Parameters:
               name: Funzioni con parametri
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
+            cspSurvey:
+              display_name: Sondaggio
         csd3-2020:
           description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
           stages:
@@ -4624,6 +5856,13 @@ it:
               name: Funzioni
             Text:
               name: Testo
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
         coursea-2020:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
@@ -4662,6 +5901,15 @@ it:
             Events in Play Lab:
               name: In movimento con gli eventi
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
         courseb-2020:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
@@ -4693,6 +5941,15 @@ it:
             Events in Play Lab:
               name: Una battaglia con gli eventi
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
         coursec-2020:
           description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
@@ -4731,6 +5988,19 @@ it:
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
+            end_of_course_project:
+              display_name: Progetto di fine corso
         coursed-2020:
           description: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara le istruzioni condizionali e sviluppa le tue capacità artistiche per cerare un disegno, una storia o un gioco.
@@ -4795,6 +6065,21 @@ it:
               name: Ballando col codice
             End of Course Project:
               name: Progetto di fine corso
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_events:
+              display_name: Eventi
+            csf_loops:
+              display_name: Ripetizioni
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            end_of_course_project:
+              display_name: Progetto di fine corso
         coursee-2020:
           description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Dopo aver ripassato i principi introdotti nei Corsi C & D, ci si spinge oltre, aggiungendo il concetto di funzione.
@@ -4834,6 +6119,19 @@ it:
               name: Progetto di fine corso
             Digital Sharing:
               name: Condivisione digitale
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_nested_loops:
+              display_name: Cicli annidati
+            csf_functions:
+              display_name: Funzioni
+            end_of_course_project:
+              display_name: Progetto di fine corso
         coursef-2020:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
@@ -4886,6 +6184,19 @@ it:
               name: Progetto di fine corso
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
+            end_of_course_project:
+              display_name: Progetto di fine corso
         express-2020:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -4931,6 +6242,23 @@ it:
               name: Cicli con contatore con l'artista
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
+          lesson_groups:
+            csf_warmup:
+              display_name: Riscaldamento
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_functions:
+              display_name: Funzioni
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
         pre-express-2020:
           title: Corso Rapido pre-scolare (2019)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -4958,10 +6286,24 @@ it:
               name: Cicli con l'artista
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze
+            csf_loops:
+              display_name: Ripetizioni
+            csf_events:
+              display_name: Eventi
         csp1-2020:
           stages:
             Binary Numbers:
               name: Numeri Binari
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Princìpi dell''Informatica - Unità 1'
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Princìpi dell''Informatica - Unità 2'
         csp3-2020:
           stages:
             Debugging:
@@ -4971,6 +6313,9 @@ it:
           stages:
             Creating Functions:
               name: Creazione di funzioni
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Introduzione alla Programmazione'
         csd3-virtual:
           description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
           stages:
@@ -4988,10 +6333,19 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
         jess-test-script:
           stages:
             Debugging:
               name: Correzione errori (debugging)
+        csd2-virtual:
+          lesson_groups:
+            csd2_1:
+              display_name: 'Capitolo 1: Contenuti Web e HTML'
+            csd2_2:
+              display_name: 'Capitolo 2: Styling e CSS'
         csp5-virtual:
           stages:
             While Loops:
@@ -5010,6 +6364,11 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+          lesson_groups:
+            content:
+              display_name: Contenuto
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
         code-break:
           stages:
             Algorithms:
@@ -5022,3 +6381,8 @@ it:
               name: Cicli "mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+          lesson_groups:
+            csp5_1:
+              display_name: 'Capitolo 1: Programmazione guidata dagli eventi'
+            csp5_2:
+              display_name: 'Capitolo 2: Programmazione con strutture di dati'
