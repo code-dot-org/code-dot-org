@@ -10,7 +10,7 @@ const styles = {
   }
 };
 
-const SPINNER_WAIT_MS = 1000;
+const SPINNER_WAIT_MS = 2000;
 
 export default class Foorm extends React.Component {
   static propTypes = {
@@ -110,10 +110,10 @@ export default class Foorm extends React.Component {
 
   setCompletedStatusMessage(startTime, statusMessage, hasError, survey) {
     const elapsedTime = Date.now() - startTime;
-    // if the api request took less than 1 second, wait until 1 second has
+    // if the api request took less than SPINNER_WAIT_MS, wait until SPINNER_WAIT_MS have
     // passed so spinner does not flash on the screen.
     const timeout =
-      elapsedTime > SPINNER_WAIT_MS ? 0 : SPINNER_WAIT_MS - elapsedTime;
+      elapsedTime >= SPINNER_WAIT_MS ? 0 : SPINNER_WAIT_MS - elapsedTime;
     setTimeout(() => {
       this.setState({
         statusMessage: statusMessage,
