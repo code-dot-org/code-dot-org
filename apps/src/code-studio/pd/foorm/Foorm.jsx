@@ -1,6 +1,16 @@
 import * as Survey from 'survey-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button} from 'react-bootstrap';
+
+const styles = {
+  statusMessage: {
+    textAlign: 'center'
+  },
+  tryAgainButton: {
+    textAlign: 'right'
+  }
+};
 
 export default class Foorm extends React.Component {
   static propTypes = {
@@ -38,6 +48,12 @@ export default class Foorm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      hasError: false,
+      statusMessage: '',
+      survey: null
+    };
+
     Survey.StylesManager.applyTheme('default');
 
     this.surveyModel = new Survey.Model(this.props.formQuestions);
@@ -52,9 +68,10 @@ export default class Foorm extends React.Component {
     if (this.props.submitParams) {
       requestData = {...this.props.submitParams, ...requestData};
     }
-    // Set generic thank you text and show data as saving
-    survey.completedHtml = '<h4>Thank you for completing the survey!</h4>';
-    options.showDataSaving('Your responses are being submitted...');
+    this.setState({
+      statusMessage: 'Your responses are being submitted...',
+      hasError: false
+    });
     $.ajax({
       url: this.props.submitApi,
       type: 'post',
@@ -62,32 +79,52 @@ export default class Foorm extends React.Component {
       data: requestData
     })
       .done(() => {
-        survey.completedHtml =
-          '<h4>Thank you for completing the survey! Your responses saved successfully.</h4>';
-        options.showDataSavingClear();
+        this.setState({
+          statusMessage:
+            'Thank you for completing the survey! Your responses saved successfully.'
+        });
       })
       .fail(jqXHR => {
         if (jqXHR.status === 409) {
-          survey.completedHtml =
-            '<h4>You already submitted a response. Thank you!</h4>';
-          options.showDataSavingClear();
+          this.setState({
+            statusMessage: 'You already submitted a response. Thank you!'
+          });
         } else {
-          survey.completedHtml =
-            '<h4>An error occurred and we could not save your response.</h4>';
-          options.showDataSavingError('Please click here to try again.');
+          this.setState({
+            statusMessage:
+              'An error occurred and we could not save your response.',
+            hasError: true,
+            survey: survey
+          });
         }
       });
   };
 
   render() {
     return (
-      <Survey.Survey
-        model={this.surveyModel}
-        onComplete={this.onComplete}
-        data={this.props.surveyData}
-        css={this.customCss}
-        requiredText={'(Required)'}
-      />
+      <div>
+        <Survey.Survey
+          model={this.surveyModel}
+          onComplete={this.onComplete}
+          data={this.props.surveyData}
+          css={this.customCss}
+          requiredText={'(Required)'}
+          showCompletedPage={false}
+        />
+        {this.state.statusMessage && (
+          <div style={styles.statusMessage}>
+            <h4>{this.state.statusMessage}</h4>
+            {this.state.hasError && this.state.survey && (
+              <Button
+                style={styles.tryAgainButton}
+                onClick={() => this.onComplete(this.state.survey)}
+              >
+                Try Again
+              </Button>
+            )}
+          </div>
+        )}
+      </div>
     );
   }
 }
