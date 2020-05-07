@@ -1173,6 +1173,23 @@ tr-TR:
       New Sports Project: Kendi oyununu yarat! Burada sen ne dersen o olur bütün kuralları
         değiştirebilirsin, yaratıcı ol! Tamamladığında arkadaşlarının telefonlarında
         oyunu denemeleri için Bitir düğmesine bas.
+      OPD-K5-events-2: '''tıklandığında'' olayına ''normal miktarda kanat çırp'' bloğunu
+        ekleyin, sonra "Çalıştır"a basın. Flappy''yi hedefe hareket ettirmek için
+        oyun alanına tıklayın veya basın.'
+      OPD-K5-events-3: '"Çalıştır" butonuna basıldığında seviyenin hızını ayarlamak
+        için bir blok eklemeyi dene. Oyunu oyna ve devam etmek için hedefe doğru kanat
+        çırp.'
+      OPD-K5-events-4: "'Yere çarptığında' olayına 'oyunu sonlandır' bloğunu ekle.
+        Oyunu oyna ve devam etmek için kuşu yere çarptır"
+      OPD-K5-events-5: Flappy borulara çarptığında oyunu sonlandırabilmek için 'bir
+        engele çarptığında' olayına bir nlok ekle.
+      OPD-K5-events-6: '''bir engeli aştığında'' olayına bir blok ekleyin, sonra ilk
+        boru setinden Flappy''yi geçirerek bir puan almak için "Çalıştır"a basın.'
+      OPD-K5-projects-6: Şimdi oyunun sizin istediğiniz gibi çalıştığına emin olmak
+        için biraz zaman harcayın. Oyun kazanma ve kaybetme durumlarını belirleyin
+        ve bunları oluşturana kadar oynayın.
+      OPD-K5-projects-7: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
+        ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       Overworld Avoid Monsters: Bir Creeper'a rastlamak hiç iyiye işaret değildir.
         Creeper'ları dikkatlice geçin ve güvenli evinize ulaşın.
       Overworld Avoid Monsters_2019: Bir Creeper'a rastlamak hiç iyiye işaret değildir.
@@ -1558,6 +1575,8 @@ tr-TR:
       courseA_maze_ramp5a_2019: "\\*\\* Meydan okuma: \\*\\* kKuşu domuza ulaştır!"
       courseA_maze_seq1: Kuşu domuza ulaştırın!
       courseA_maze_seq10: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu domuza eriştirin! '
+      courseA_maze_seq10_copy: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu domuza
+        eriştirin! '
       courseA_maze_seq11: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür.
       courseA_maze_seq11_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza
         götür.
@@ -1577,11 +1596,15 @@ tr-TR:
       courseA_maze_seq6: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq6_2018: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq6_2019: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
+      courseA_maze_seq6_copy: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza götür!
       courseA_maze_seq7: Ne eksik olduğunu bulun ve bana domuza ulaşmak için blok
         ekleyin!
+      courseA_maze_seq7_copy: Ne eksik olduğunu bulun ve bana domuza ulaşmak için
+        blok ekleyin!
       courseA_maze_seq8: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq8_2018: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq8_2019: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
+      courseA_maze_seq8_copy: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
       courseA_maze_seq9: Blok ekleyerek kuşu domuza ulaştırın!
       courseA_maze_seq_challenge1: Hata ayıklama. İlave blokları kaldırın ve eksik
         blokları ekleyin. Kuşu domuza ulaştırın!
@@ -2160,17 +2183,23 @@ tr-TR:
         bloğunun içinde bir blok kullanan bir döngü oluşturmaya çalışın.
       courseC_starWars_loops2_2019: Tüm hurda metalleri toplamak için bir `tekrar`
         bloğunun içinde bir blok kullanan bir döngü oluşturmaya çalışın.
+      courseC_starWars_loops2_copy: Tüm hurda metalleri toplamak için bir `tekrar`
+        bloğunun içinde bir blok kullanan bir döngü oluşturmaya çalışın.
       courseC_starWars_loops4: Bu bulmacada iki adet 'tekrarla' döngüsü, daha az sayıda
         blok ile BB-8'in tüm hurda metalleri almasına yardımcı olacak!
       courseC_starWars_loops4_2018: Bu bulmacada iki adet 'tekrarla' döngüsü, daha
         az sayıda blok ile BB-8'in tüm hurda metalleri almasına yardımcı olacak!
       courseC_starWars_loops4_2019: Bu bulmacada iki adet 'tekrarla' döngüsü, daha
         az sayıda blok ile BB-8'in tüm hurda metalleri almasına yardımcı olacak!
+      courseC_starWars_loops4_copy: Bu bulmacada iki adet 'tekrarla' döngüsü, daha
+        az sayıda blok ile BB-8'in tüm hurda metalleri almasına yardımcı olacak!
       courseC_starWars_loops5: BB-8'in tüm hurda metalleri mümkün olduğunca çabuk
         almasını sağla!
       courseC_starWars_loops5_2018: BB-8'in tüm hurda metalleri mümkün olduğunca çabuk
         almasını sağla!
       courseC_starWars_loops5_2019: BB-8'in tüm hurda metalleri mümkün olduğunca çabuk
+        almasını sağla!
+      courseC_starWars_loops5_copy: BB-8'in tüm hurda metalleri mümkün olduğunca çabuk
         almasını sağla!
       courseC_starWars_loops7: Sadece tek bir döngü kullanarak tüm hurda metalleri
         toplamayı dener misin? Bütünüyle programlamaya ve döngü içine koymak için
@@ -2179,6 +2208,9 @@ tr-TR:
         toplamayı dener misin? Bütünüyle programlamaya ve döngü içine koymak için
         tekrarlayan kodu bulmaya çalış.
       courseC_starWars_loops7_2019: Sadece tek bir döngü kullanarak tüm hurda metalleri
+        toplamayı dener misin? Bütünüyle programlamaya ve döngü içine koymak için
+        tekrarlayan kodu bulmaya çalış.
+      courseC_starWars_loops7_copy: Sadece tek bir döngü kullanarak tüm hurda metalleri
         toplamayı dener misin? Bütünüyle programlamaya ve döngü içine koymak için
         tekrarlayan kodu bulmaya çalış.
       courseC_starWars_loops9: Bütün hurda metalleri toplamak için daha önce öğrendiklerini
@@ -2328,11 +2360,15 @@ tr-TR:
         kontrol edin. eğer çiçek varsa, nektar alın.
       courseD_bee_conditionals1_predict1_2019: Bulut altında çiçek olup olmadığını
         kontrol edin. eğer çiçek varsa, nektar alın.
+      courseD_bee_conditionals1_predict1_copy: Bulut altında çiçek olup olmadığını
+        kontrol edin. eğer çiçek varsa, nektar alın.
       courseD_bee_conditionals2: 'Nektarı almadan önce bulutların bir çiçek saklayıp
         saklamadığını görmek için her bulutun altını kontrol edin.  '
       courseD_bee_conditionals2_2018: 'Nektarı almadan önce bulutların bir çiçek saklayıp
         saklamadığını görmek için her bulutun altını kontrol edin.  '
       courseD_bee_conditionals2_2019: 'Nektarı almadan önce bulutların bir çiçek saklayıp
+        saklamadığını görmek için her bulutun altını kontrol edin.  '
+      courseD_bee_conditionals2_copy: 'Nektarı almadan önce bulutların bir çiçek saklayıp
         saklamadığını görmek için her bulutun altını kontrol edin.  '
       courseD_bee_conditionals7: "' Eğer Değilse' bloğu, kullanarak çiçekten nektarı
         topla ve Peteklere Bal yap."
@@ -2623,11 +2659,16 @@ tr-TR:
       courseE_artist_functions1: 'Merhaba! Ben zombi sanatçısı. Ben çizim yapmayı
         seviyorum. Bana kare gözlük yapmak için yardımcı olur musun? İpucu: Gözlük
         camı arasındaki köprü kare uzunluğundan 25 piksel daha kısadır.'
+      courseE_artist_functions1_copy: 'Merhaba! Ben zombi sanatçısı. Ben çizim yapmayı
+        seviyorum. Bana kare gözlük yapmak için yardımcı olur musun? İpucu: Gözlük
+        camı arasındaki köprü kare uzunluğundan 25 piksel daha kısadır.'
       courseE_artist_functions2: 'Bu sefer, `bir kare çiz` fonksiyonunu kullanarak
         bir gözlük yapın. '
       courseE_artist_functions2_2018: 'Bu sefer, `bir kare çiz` fonksiyonunu kullanarak
         bir gözlük yapın. '
       courseE_artist_functions2_2019: 'Bu sefer, `bir kare çiz` fonksiyonunu kullanarak
+        bir gözlük yapın. '
+      courseE_artist_functions2_copy: 'Bu sefer, `bir kare çiz` fonksiyonunu kullanarak
         bir gözlük yapın. '
       courseE_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra
         onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını

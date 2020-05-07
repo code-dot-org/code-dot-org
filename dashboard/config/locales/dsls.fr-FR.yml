@@ -1320,7 +1320,65 @@ fr-FR:
           Après avoir passé du temps à jouer avec, tu devrais te réunir avec un partenaire, un petit groupe, une classe entière, pour discuter ce que tu as trouvé et vérifier que tu sais ce qui se passe et les différents moyens d'utiliser l'outil.
 
 
+      OPD-K5 Reviewing Reflections:
+        content1: description ici
       OPD-K5 Stage3aGo:
+        content1: description ici
+      OPD-K5 Stage3aGo_copy:
+        content1: description ici
+      OPD-K5 conditionals introduced:
+        content1: description ici
+      OPD-K5 debugging:
+        content1: description ici
+      OPD-K5 diving deeper intro:
+        content1: description ici
+      OPD-K5 events introduced:
+        content1: description ici
+      OPD-K5 for loops:
+        content1: description ici
+      OPD-K5 for loops intro:
+        content1: description ici
+      OPD-K5 for loops introduction:
+        content1: description ici
+      OPD-K5 functions introduced:
+        content1: description ici
+      OPD-K5 journaling:
+        content1: description ici
+      OPD-K5 lesson implementation planning:
+        content1: description ici
+      OPD-K5 lesson plans:
+        content1: description ici
+      OPD-K5 loops introduced:
+        content1: description ici
+      OPD-K5 project:
+        content1: description ici
+      OPD-K5 projects introduction:
+        content1: description ici
+      OPD-K5 role_of_teacher:
+        content1: description ici
+      OPD-K5 sequencing introduced:
+        content1: description ici
+      OPD-K5 sprite lab:
+        content1: description ici
+      OPD-K5 sprite lab introduction:
+        content1: description ici
+      OPD-K5 sprite lab unplugged:
+        content1: description ici
+      OPD-K5 sprite lab video:
+        content1: description ici
+      OPD-K5 types of lessons:
+        content1: description ici
+      OPD-K5 using lesson plans:
+        content1: description ici
+      OPD-K5 variables:
+        content1: description ici
+      OPD-K5 variables introduction:
+        content1: description ici
+      OPD-K5 variables unplugged:
+        content1: description ici
+      OPD-K5 where to next:
+        content1: description ici
+      OPD-K5-projects-1:
         content1: description ici
       'Overview: Design Mode':
         markdown: |
@@ -1913,6 +1971,29 @@ fr-FR:
             n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
             Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
             ?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qu’il se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            seulement de ramasser le nectar si une fleur est sous le nuage.
+        - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
+            du nectar s'il y a une fleur dessous.
+          correct: true
+          feedback: Correct!
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qui se passe. '
+          feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
+            de ramasser le nectar si une fleur est sous le nuage.
+        - text: Je ne sais pas.
+          feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
+            le nectar si une fleur est sous le nuage.
+        questions:
+        - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
+            S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
+            n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
+            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
+            ?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
@@ -2477,6 +2558,21 @@ fr-FR:
         questions:
         - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: Rien. La fonction n'est appelée dans le programme.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera un carré simple.
+          feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
+        - text: L'artiste dessinera 2 carrés qui se chevauchent.
+          feedback: Incorrect. La longueur de chaque côté du carré fait seulement
+            100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
+        - text: L’artiste dessinera 2 carrés avec un petit écart entre les 2.
+          correct: true
+          feedback: Correct! La fonction est appelée 2 fois dans le programme avec
+            un saut entre les 2.
+        questions:
+        - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+      courseE_prediction_artistFunction1_copy:
         answers:
         - text: Rien. La fonction n'est appelée dans le programme.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.

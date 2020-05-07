@@ -16,7 +16,7 @@ zh-CN:
     white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
-  csedweek_banner_teachers_text: 你是电脑科学课的老师吗？看其他的电脑科学教育周的资料吧
+  csedweek_banner_teachers_text: 你是计算机科学课的老师吗？看看其他的计算机科学教育周的资料吧
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
   try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
   try_hoc_num_served_markdown: |-
@@ -1727,3 +1727,4 @@ zh-CN:
   hoc2019_dance_previous_versions: |-
     虚招以前版本的舞蹈派对？
     电机这里打开去年的[第一部分](%{dance_2018_link})和[第二部分](%{dance_extras_2018_link})。
+  homepage_slot_text_title_at_home: 在家学习

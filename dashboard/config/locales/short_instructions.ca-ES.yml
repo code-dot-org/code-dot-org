@@ -345,6 +345,9 @@ ca-ES:
       courseE_artist_functions1: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m
         a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels
         més curts que la llargada del quadrat.'
+      courseE_artist_functions1_copy: 'Hola. Jo artista zombie. Jo agrada dibuixar!
+        Ajuda''m a dibuixar les ulleres quadrades. Pista: el pont entre les vidres
+        és 25 píxels més curts que la llargada del quadrat.'
       courseE_bee_functions1: Recull tot el nèctar de cada flor.
       courseE_bee_functions3: Les funcions són blocs de codi que realitzen una tasca.
         Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar

@@ -631,6 +631,10 @@ vi-VN:
         đến được chỗ chú lợn!
       courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
+      courseA_maze_seq6_copy: |-
+        Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến được chỗ chú lợn!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq8: |-
         Giải quyết câu đố này và đưa chú chim đến chỗ chú lợn!
 
@@ -639,6 +643,10 @@ vi-VN:
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
+      courseA_maze_seq8_copy: |-
+        Giải quyết câu đố này và đưa chú chim đến chỗ chú lợn!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
         các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
       courseA_playLab_events3_2019: |-

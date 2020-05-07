@@ -456,11 +456,6 @@ th:
       title: "เงื่อนไข "
     widgets:
       audience: "อายุ 14+"
-  gallery:
-    header: "แกลเลอรี่"
-    header_playlab: "เรื่องราวและเกม"
-    header_artist: "ศิลปิน"
-    report_abuse: "รายงานการละเมิด"
   landing:
     support: "ขอความช่วยเหลือ"
     help_support: "การช่วยเหลือและสนับสนุน"

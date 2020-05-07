@@ -595,17 +595,23 @@ hu-HU:
         draw a square: rajzoljon egy négyzetet
       courseE_artist_functions2_2019:
         draw a square: rajzoljon egy négyzetet
+      courseE_artist_functions2_copy:
+        draw a square: rajzoljon egy négyzetet
       courseE_artist_functions3_2018:
         draw a star: rajzolj egy csillagot
       courseE_artist_functions3_2019:
         draw a star: rajzolj egy csillagot
       courseE_artist_functions4:
         draw a star: rajzolj egy csillagot
+      courseE_artist_functions4_copy:
+        draw a star: rajzolj egy csillagot
       courseE_artist_functions5:
         draw a star: rajzolj egy csillagot
       courseE_artist_functions5_2018:
         draw a star: rajzolj egy csillagot
       courseE_artist_functions5_2019:
+        draw a star: rajzolj egy csillagot
+      courseE_artist_functions5_copy:
         draw a star: rajzolj egy csillagot
       courseE_artist_functions7:
         draw a window: rajzolj ablakot
@@ -694,6 +700,8 @@ hu-HU:
       courseE_artist_functions_predict1_2018:
         draw a square: rajzoljon egy négyzetet
       courseE_artist_functions_predict1_2019:
+        draw a square: rajzoljon egy négyzetet
+      courseE_artist_functions_predict1_copy:
         draw a square: rajzoljon egy négyzetet
       courseE_artist_functions_predict2:
         draw line of polygons: rajzolj egy sor sokszöget

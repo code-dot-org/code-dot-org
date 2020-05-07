@@ -3331,6 +3331,8 @@ es-MX:
           Durante esta experiencia de desarrollo profesional, intercalaremos varias progresiones de desafíos, y te brindaremos la oportunidad de familiarizarte con los conceptos de programación en Fundamentos de la Ciencia de la Computación y los personajes de los que tus estudiantes se enamorarán. Durante este curso, notarás que se mueve rápidamente entre diferentes entornos; ya sea acercando el pájaro enojado al cerdo, dibujando o haciendo que una abeja recolecte néctar. Estas transiciones suceden rápidamente en este curso para mostrarte una variedad de acertijos ofrecidos en Fundamentos de la Ciencia de la Computación. Tus estudiantes podrán pasar más tiempo con cada entorno.
 
           Si deseas familiarizarte con la experiencia del estudiante, siempre puedes completar los cursos [Fundamento de la Ciencia de la Computación] (http://studio.code.org/) por tu cuenta en cualquier momento. Pero este curso te dará un claro panorama de lo que puedes esperar sacando algunos de los desafíos y lecciones más fundamentales para ti en un corto período de tiempo.
+      OPD-K5 Reviewing Reflections:
+        content1: descripción aquí
       OPD-K5 Stage10Start:
         markdown: |
           # Pasos siguientes > Repasemos
@@ -3474,6 +3476,8 @@ es-MX:
           en el foro, regresa aquí y haz clic más abajo para continuar.\n\nEn la siguiente
           etapa, agregaremos algo de complejidad a nuestros programas mediante la
           adición de bucles.\n"
+      OPD-K5 Stage3aGo_copy:
+        content1: descripción aquí
       OPD-K5 Stage4Go:
         markdown: |+
           # Bucles > Lecciones desconectadas
@@ -3957,6 +3961,60 @@ es-MX:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publica tu plan>></button></a>
 
           Después de comentar en el foro, regresa aquí y haz clic a continuación para continuar.
+      OPD-K5 conditionals introduced:
+        content1: descripción aquí
+      OPD-K5 debugging:
+        content1: descripción aquí
+      OPD-K5 diving deeper intro:
+        content1: descripción aquí
+      OPD-K5 events introduced:
+        content1: descripción aquí
+      OPD-K5 for loops:
+        content1: descripción aquí
+      OPD-K5 for loops intro:
+        content1: descripción aquí
+      OPD-K5 for loops introduction:
+        content1: descripción aquí
+      OPD-K5 functions introduced:
+        content1: descripción aquí
+      OPD-K5 journaling:
+        content1: descripción aquí
+      OPD-K5 lesson implementation planning:
+        content1: descripción aquí
+      OPD-K5 lesson plans:
+        content1: descripción aquí
+      OPD-K5 loops introduced:
+        content1: descripción aquí
+      OPD-K5 project:
+        content1: descripción aquí
+      OPD-K5 projects introduction:
+        content1: descripción aquí
+      OPD-K5 role_of_teacher:
+        content1: descripción aquí
+      OPD-K5 sequencing introduced:
+        content1: descripción aquí
+      OPD-K5 sprite lab:
+        content1: descripción aquí
+      OPD-K5 sprite lab introduction:
+        content1: descripción aquí
+      OPD-K5 sprite lab unplugged:
+        content1: descripción aquí
+      OPD-K5 sprite lab video:
+        content1: descripción aquí
+      OPD-K5 types of lessons:
+        content1: descripción aquí
+      OPD-K5 using lesson plans:
+        content1: descripción aquí
+      OPD-K5 variables:
+        content1: descripción aquí
+      OPD-K5 variables introduction:
+        content1: descripción aquí
+      OPD-K5 variables unplugged:
+        content1: descripción aquí
+      OPD-K5 where to next:
+        content1: descripción aquí
+      OPD-K5-projects-1:
+        content1: descripción aquí
       OPD-Stage3Start:
         markdown: |
           # Mirando hacia el futuro > Descripción del escenario
@@ -4890,6 +4948,27 @@ es-MX:
             Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
             hay una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
+            lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
+            obtener néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+            flor debajo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+            néctar solamente si hay una flor debajo de la nube.
+        - text: No lo sé.
+          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
+            néctar solamente si hay una flor debajo de la nube.
+        questions:
+        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
+            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
+            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
@@ -5488,6 +5567,23 @@ es-MX:
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: Nada. No se llama a la función en el programa.
+          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
+            programa.
+        - text: El artista dibujará un solo cuadrado.
+          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
+            programa.
+        - text: El artista dibujará dos cuadrados que se superponen.
+          feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
+            pixeles, pero el artista salta a 175 pixeles entre funciones.
+        - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
+          correct: true
+          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+            un salto en el medio de ambas."
+        questions:
+        - text: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseE_prediction_artistFunction1_copy:
         answers:
         - text: Nada. No se llama a la función en el programa.
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el

@@ -15,7 +15,6 @@ import {
   Facilitator,
   ProgramManager
 } from './permission';
-import queryString from 'query-string';
 import $ from 'jquery';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
@@ -92,9 +91,10 @@ export class WorkshopIndex extends React.Component {
       Organizer,
       ProgramManager
     );
-    const canSeeLegacySurveySummaries =
-      queryString.parse(window.location.search).legacysurveys &&
-      this.props.permission.hasAny(Facilitator, CsfFacilitator);
+    const canSeeLegacySurveySummaries = this.props.permission.hasAny(
+      Facilitator,
+      CsfFacilitator
+    );
 
     return (
       <div>

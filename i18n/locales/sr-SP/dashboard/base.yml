@@ -423,11 +423,6 @@ sr:
       body: "Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а."
     unplugged_conditionals:
       title: "Кондиционали"
-  gallery:
-    header: "Галерија"
-    header_playlab: "Играоница"
-    header_artist: "Уметник"
-    report_abuse: "Пријави злоупотребу"
   multi-submittable:
     wrong_title: "Хвала"
     correct_title: "Хвала"

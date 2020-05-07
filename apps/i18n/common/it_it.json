@@ -792,7 +792,6 @@
   "loginCard_secretWords": "Parole Segrete:",
   "loginCard_sectionName": "Nome della classe:",
   "loginInfo": "Codice Classe",
-  "loginInformation": "Informazioni di accesso",
   "loginInfo_joinTitle": "Iscrizione alla tua classe (una tantum)",
   "loginInfo_joinBody": "Se alcuni studenti non si sono ancora iscritti alla tua classe, chiedigli di eseguire i seguenti passaggi. È una procedura una tantum. Iscrivendosi alla tua classe, gli studenti potranno vedere il corso assegnato e tu potrai monitorare i progressi di quanto faranno ogni volta che accederanno con utenza e password.",
   "loginInfo_joinStep1": "Crea un account su Code.org se non ne hanno già uno. Lo possono fare su {url}. Nota: lo possono anche fare con un indirizzo email ed una password o tramite Google, Facebook o Microsoft premendo su uno di questi pulsanti:",

@@ -405,19 +405,6 @@ hr:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Uvjeti"
-  gallery:
-    students_drew_these_with_code: "Učenici su nacrtali ovo kodiranjem!"
-    students_made_these_with_code: "Učenici su nacrtali ovo kodiranjem!"
-    picture_count: "U proteklih <b>%{days}</b> dana, učenici su nacrtali <b>%{count}</b> slika pisanjem vlastitih računalnih programa. Kliknite na slike da biste vidjeli svaki program na djelu."
-    activity_count: "U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b> aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike i snimke ekrana da biste vidjeli svaki program na djelu."
-    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
-    more: "Više &rarr;"
-    caption_by_name_age: "od %{name}, dob %{age}"
-    caption_time_ago: "prije %{time_ago}"
-    header: "Galerija"
-    header_playlab: "Laboratorij igara"
-    header_artist: "Umjetnik"
-    report_abuse: "Prijava zloupotrebe"
   landing:
     report_bug: "Prijavi grešku"
     support: "Dobivanje pomoći"

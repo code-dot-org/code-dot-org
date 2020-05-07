@@ -154,6 +154,17 @@ ar-SA:
         New Play Lab Project_callout2: انقر على "تشغيل" لحفظ و تشغيل برنامجك
         sign_in_to_save_project: هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل
           الدخول لحفظ هذا المشروع في حسابك!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
+      OPD-K5-spritelab-3:
+        spritelab_comment: استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول
+          كيفية عمل التعليمات البرمجية الخاصة بك.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: قم بملاحظة أن المربعات البرمجية لديها
+          الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
+          للخارج والتحرك حولها!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
       Overworld Chop Trees:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld Chop Trees_2019:
@@ -372,6 +383,9 @@ ar-SA:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
       courseC_starWars_loops2_2019:
+        courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
+          في هذا اللغز.
+      courseC_starWars_loops2_copy:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
       courseD_bee_debugging_challenge1:

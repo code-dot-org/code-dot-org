@@ -4401,6 +4401,108 @@ es-MX:
       New Minecraft Hero Project:
         MC_HOC_2017_13_Cole_a: Haz que el Agente construya algunos puentes para que
           Alex o Steve puedan caminar más allá de los límites del mapa.
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'El bloque que necesitas agregar se llama `` establecer
+          velocidad '' ''. '
+        courseC_flappy_events2_b: Conecta el bloque ´establecer velocidad´ al bloque
+          ´cuando se ejecuta´ para resolver este desafío.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Si algo no está funcionando correctamente, asegúrate
+          de que tus bloques estén conectados a los eventos correctos en el espacio
+          de trabajo.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Conecta el bloque `final del juego` a`cuando golpee
+          un obstáculo` para resolver este desafío.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Deberás usar el bloque `marcar un punto` para pasar
+          este nivel.
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: Arrastra un bloque de numero morado en el espacio en blanco
+          dentro del loop 'repetir' para decirle cuantas veces repetir.
+        courseF_bee_for1_b: Necesitas dos bloques en tu loop 'repetir' para recoger
+          todo el néctar.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: Si estas confundido, trabaja con una flor a la vez y prueba
+          continuamente.
+        courseF_bee_for2_b: Recuerda avanzar entre cada loop para llegar a cada flor.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: Utiliza un ciclo 'for' que vaya de 1 a 7 con un incremento
+          de 1 para resolver este desafío.
+        courseF_bee_for4_b: Dentro de tu loop 'para', querrás tener un comando 'avanzar'
+          y un loop para recolectar néctar.
+        courseF_bee_for4_c: "¡Asegúrate de usar la variable `contador` dentro de tu
+          bucle `repetir` anidado para obtener suficiente néctar!"
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: No te olvides de utilizar una variable 'contador' dentro
+          de tu loop 'para'.
+        courseF_bee_for6_b: Dentro de tu loop 'para', querrás tener un comando 'avanzar'
+          y un loop para recolectar néctar.
+        courseF_bee_for6_c: Tu ciclo debe contar \*\* de 5 a 1 \*\*.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: Tu loop 'para' deberá contar de 1 a 7 en incrementos de
+          2.
+        courseF_bee_for7_b: Dentro de tu loop 'para', querrás tener un comando 'avanzar'
+          y un loop para recolectar néctar.
+        courseF_bee_for7_c: No te olvides de utilizar una variable 'contador' dentro
+          de tu loop 'repetir'.
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: El bloque 'establecer actor 1 ??? imagen' puede
+          usarse para agregar un actor al escenario.
+        courseE_playLab_scaffold1_b: Coloca el bloque de 'actor' de 'debajo del' cuando
+          'para que su actor aparezca al principio del programa.
+        courseE_playLab_scaffold1_c: Usa ¨set ??? Fondo¨para elegir un fondo para
+          tu escena.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: Abre el menú desplegable del evento 'cuando \_\_\_
+          flecha' para cambiar la dirección de los controles de bloqueo.
+        courseE_playLab_scaffold1_b: Debes tener cuatro 'cuando flecha' bloques de
+          eventos, con una dirección para abrir debajo de cada uno.
+        courseE_playLab_scaffold1_c: Cuando hayas terminado, ¡podrás mover a tu héroe
+          con las teclas de flecha!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Usa `anotar punto` para agregar un punto, y`quitar
+          punto` para restar uno.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Para hacer un ángulo interior de 60
+          grados en este triángulo, recuerda girar al artista en 120 grados.
+        grade5_artist_variables_triangles1_b: Usa el loop `repetir` para acortar tu
+          código.
+        grade5_artist_variables_triangles1_c: Dentro de tu loop, tienes que avanzar
+          50 píxeles, luego girar a la izquierda 120 grados.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Recuerda seguir adelante después de dibujar cada
+          triángulo.
+        courseF_artist_variables2_b: Tu nuevo loop contendrá el loop para tu triángulo,
+          luego un comando 'avanzar'.
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 'La variable ''longitud'' se utilizará en dos
+          lugares en tu código: la longitud del lado de tu triángulo y la cantidad
+          a avanzar entre triángulos.'
+        courseF_artist_variables3_b: 'Un bloque de número con valor 50 sólo debería
+          estar en un lugar: después del bloque ''establecer longitud de variable''.'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: El código no será muy diferente de lo que fue
+          en el último desafío, excepto que tendrás que girar al artista para saltar
+          hacia abajo, y luego hacerlo dar la vuelta para estar listo para saltar
+          hacia adelante otra vez.
+        courseF_artist_variables4_c: |-
+          Este es el patrón que seguirá tu artista:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: La segunda mitad de tu código debe tener casi
+          el mismo aspecto que la primera mitad, salvo que girarás a la _izquierda_,
+          saltarás y girarás a la _derecha_.
+        courseF_artist_variables5_b: La primera mitad de tu código dibujará tres triángulos,
+          y la segunda mitad dibujará los otros tres.
+        courseF_artist_variables5_c: Comienza por duplicar el código en la primera
+          mitad de tu programa, luego modifícalo para que se muestre el diseño.
+        courseF_artist_variables5_d: |-
+          Este es el patrón que seguirá tu artista:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?
         mc_8_b: Use los loops "repetir" para simplificar su código.
@@ -6710,6 +6812,10 @@ es-MX:
           en una hoja de papel.
         courseA_maze_seq10_b: Tendrá que ir en 3 direcciones diferentes para resolver
           este rompecabezas.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Si tienes problemas, primero intenta anotar los pasos
+          en una hoja de papel.
+        courseA_maze_seq10_b: Tendrá que ir en 3 direcciones para resolver este rompecabezas.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Si el camino que necesita no está claro, use su dedo
           para seguir el camino del pájaro hasta el cerdo.
@@ -6780,6 +6886,10 @@ es-MX:
       courseA_maze_seq5_2019:
         '1': "¡Intenta escribir los pasos en papel para encontrar una solución!"
         '2': "Deberá usar este bloque: \n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: "¡Intenta escribir los pasos en papel para encontrar
+          una solución!"
+        courseA_maze_seq5_b: Necesitarás 2 bloques, apuntando en 2 direcciones.
       courseA_maze_seq5a_2018:
         '1': Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta.
       courseA_maze_seq5a_2019:
@@ -6796,7 +6906,16 @@ es-MX:
         courseA_maze_seq6_a: Tu código final debe tener 3 bloques de movimiento.
         courseA_maze_seq6_b: Si te quedas atascado, intenta resolver el rompecabezas
           en 2 partes, una parte antes de la esquina y una parte después de la esquina.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Tu código final debe tener 3 bloques de movimiento.
+        courseA_maze_seq6_b: Si te quedas atascado, intenta resolver el rompecabezas
+          en 2 partes, una parte antes de la esquina y una parte después de la esquina.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Hay 1 bloque que debes agregar para mover el pájaro al
+          cerdo.
+        courseA_maze_seq7_b: Si no puede descubrir qué hacer, intente dibujar el rompecabezas
+          en papel y use su dedo para descubrir en qué dirección moverse.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Hay 1 bloque que debes agregar para mover el pájaro al
           cerdo.
         courseA_maze_seq7_b: Si no puede descubrir qué hacer, intente dibujar el rompecabezas
@@ -6808,6 +6927,9 @@ es-MX:
         courseA_maze_seq8_a: Si estás atascado, intenta dibujar la imagen en papel
           para ver cómo se debe mover el pájaro.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Si estás atascado, intenta dibujar la imagen en papel
+          para ver cómo se debe mover el pájaro.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Si estás atascado, intenta dibujar la imagen en papel
           para ver cómo se debe mover el pájaro.
       courseA_maze_seq9:
@@ -10986,6 +11108,9 @@ es-MX:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Para repetir código, arrastra un ciclo ´repetir´,
           luego coloca dentro el bloque que quieres repetir.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Para repetir código, arrastra un ciclo ´repetir´,
+          luego coloca dentro el bloque que quieres repetir.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Haciendo clic en la flecha pequeña al lado "izquierdo"
           en el bloque girar te permitirá cambiarlo a la "derecha".
@@ -11004,7 +11129,17 @@ es-MX:
         courseC_starWars_loops4_a: Usa dos bloques "repetir".
         courseC_starWars_loops4_b: 'Cada loop ''repetir'' tendrá sólo un comando dentro
           de él: `avanzar`.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Haciendo clic en la flecha pequeña al lado "izquierdo"
+          en el bloque girar te permitirá cambiarlo a la "derecha".
+        courseC_starWars_loops4_a: Usa dos bloques "repetir".
+        courseC_starWars_loops4_b: 'Cada loop ''repetir'' tendrá sólo un comando dentro
+          de él: `avanzar`.'
       courseC_starWars_loops5:
+        courseC_starWars_loops5_b: Para moverte hacia abajo, debes girar y luego avanzar.
+        courseC_starWars_loops5_a: La mejor solución utiliza un giro, luego solo un
+          \`avanzar ', otro giro y luego un loop.
+      courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: Para moverte hacia abajo, debes girar y luego avanzar.
         courseC_starWars_loops5_a: La mejor solución utiliza un giro, luego solo un
           \`avanzar ', otro giro y luego un loop.
@@ -11019,6 +11154,11 @@ es-MX:
         courseC_starWars_loops6_b: "Si deseas utilizar menos código, ¡puedes poner
           un bucle `repetir'`dentro de otro!\\\\ \nA esto se lo llama **bucle anidado**."
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Intenta escribir todos los movimientos en un papel
+          y busca un patrón.
+        courseC_starWars_loops6_b: "Si deseas utilizar menos código, ¡puedes poner
+          un bucle `repetir'`dentro de otro!\\\\ \nA esto se lo llama **bucle anidado**."
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Intenta escribir todos los movimientos en un papel
           y busca un patrón.
         courseC_starWars_loops6_b: "Si deseas utilizar menos código, ¡puedes poner
@@ -11044,6 +11184,13 @@ es-MX:
           todos los movimientos en un papel y buscar un patrón.
         courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
           el código para ver qué sucede, incluso si aún no has resuelto el desafío."
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
+          Comienza con un simple escalón. ¿Eso cubre toda la chatarra?"
+        courseC_starWars_loops7_b: Si tienes problemas con este desafío, intenta escribir
+          todos los movimientos en un papel y buscar un patrón.
+        courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver qué sucede, incluso si aún no has resuelto el desafío."
       courseC_starWars_loops8:
         course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
@@ -11057,6 +11204,12 @@ es-MX:
           un problema del escalón. ¿Cómo resolviste eso antes?
         course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
+          partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
+        course_starWars_loops8_b: Piensa en la primera parte de este problema como
+          un problema del escalón. ¿Cómo resolviste eso antes?
+        course_starWars_loops8_c: "Echa un vistazo a este camino. \n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Trata de pensar sobre este problema en pequeñas
           partes. Tómate tu tiempo. ¡No es necesario resolverlo en el primer intento!
         course_starWars_loops8_b: Piensa en la primera parte de este problema como
@@ -11791,6 +11944,10 @@ es-MX:
         courseD_bee_conditionals1_a: Usted tendrá que utilizar un bloque `si` para
           comprobar si hay una flor debajo de la nube antes de tratar de obtener el
           néctar.
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: Usted tendrá que utilizar un bloque `si` para
+          comprobar si hay una flor debajo de la nube antes de tratar de obtener el
+          néctar.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11821,6 +11978,18 @@ es-MX:
           afirmación  `si`.
         courseD_bee_conditionals2_c: No tienes buscar panales, solo habrá flores o
           espacios en blanco debajo de las nubes.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
+          vídeo!"
+        courseD_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
+          quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una
+          afirmación  `si`.
+        courseD_bee_conditionals2_b: Puedes usar un loop 'repetir' o un 'mientras
+          camino por delante' para moverse a través de este laberinto.
+        courseD_bee_conditionals2_c: No tienes buscar panales, solo habrá flores o
+          espacios en blanco debajo de las nubes.
+        courseD_bee_conditionals2_hintVid2: Mire este vídeo para ayudar a resolver
+          este desafío.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11851,6 +12020,18 @@ es-MX:
         courseD_bee_conditionals3_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
           no has resuelto el desafío."
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
+          vídeo!"
+        courseD_bee_conditionals3_a: Asegúrate de usar una afirmación 'si' para verificar
+          cada espacio para ver sí tiene una flor o nada.
+        courseD_bee_conditionals3_b: Puedes utilizar un loop 'repetir' o un loop 'mientras'
+          para que la abeja se mantenga en movimiento. ¡Usa el que más te guste!
+        courseD_bee_conditionals3_c: "¡No tengas miedo de cometer un error! Intenta
+          agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
+          no has resuelto el desafío."
+        courseD_bee_conditionals3_hintVid2: Mire este vídeo para ayudar a resolver
+          este desafío.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11880,6 +12061,18 @@ es-MX:
           una nube sobre él, aunque puedas ver todo el camino.
         courseD_bee_conditionals4_b: 'Usa una afirmación \`si'' dentro de tu loop
           para comprobar si hay néctar en cada espacio. '
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
+          vídeo!"
+        courseD_bee_conditionals4_a: Todavía puedes tratar cada espacio como si hubiera
+          una nube sobre él, aunque puedas ver todo el camino.
+        courseD_bee_conditionals4_b: 'Usa una afirmación \`si'' dentro de tu loop
+          para comprobar si hay néctar en cada espacio. '
+        courseD_bee_conditionals4_c: Usa un bloque <xml><block type="maze_untilBlocked"/></xml>
+          para avanzar y comprobar si hay una flor. Si hay una flor, ¿qué debería
+          hacer la abeja?
+        courseD_bee_conditionals4_hintVid2: Mire este vídeo para ayudar a resolver
+          este desafío.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
@@ -11900,6 +12093,25 @@ es-MX:
         courseD_bee_conditionals5_hintVid2: Mire este vídeo para ayudar a resolver
           este desafío.
       courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
+          vídeo!"
+        courseD_bee_conditionals5_a: Piensa en cada lado de la ruta rectangular como
+          un camino en sí mismo. Configura un loop anidado con un bloque `repetir`
+          en el exterior y un ciclo`cuando hay un camino por delante` en el interior.
+          ¿Cuántos caminos necesita recorrer la abeja si la abeja necesita recorrer
+          cada lado con una flor?
+        courseD_bee_conditionals5_c: Hay 3 lados del rectángulo con flores, por lo
+          que el código se debe `repetir 3 veces`. En cada repetición, la abeja deberá
+          continuar por el camino, "mientras haya un camino por delante". Para continuar
+          por el camino, la abeja deberá 'avanzar'. Mientras que en el camino, la
+          abeja tiene que comprobar si hay una flor. `si hay una flor`, la abeja debería`obtener
+          néctar`.
+        courseD_bee_conditionals5_b: En el interior del bloque`mientras que hay un
+          camino adelante` tendrás que seguir adelante y comprobar si hay una flor.
+          ¿Cómo se comprueba si hay una flor? ¿Qué haces si hay una flor?
+        courseD_bee_conditionals5_hintVid2: Mire este vídeo para ayudar a resolver
+          este desafío.
+      courseD_bee_conditionals5_copy:
         courseD_bee_conditionals5_hintVid1: "¿Necesitas ayuda para comenzar? ¡Ve el
           vídeo!"
         courseD_bee_conditionals5_a: Piensa en cada lado de la ruta rectangular como
@@ -13864,6 +14076,14 @@ es-MX:
           crea una función 'dibujar hexágono' y llámala varias veces.
         courseD_artist_functions10_c: "¿Ves en qué lugar este dibujo podría usar una
           función llamada `línea de hexágonos`? \n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Los cuadrados tienen 100 pixeles por lado cada
+          uno, eso significa que tendrás que moverte hacia adelante 175 pixeles antes
+          de dibujar tu segundo cuadrado.
+        courseE_artist_functions1_b: Está correcto dibujar líneas superpuestas para
+          hacer tus anteojos.
+        courseE_artist_functions1_c: Para código más corto, intenta usar un loop 'repetir'
+          para dibujar los cuadrados de los anteojos.
       courseE_artist_functions2:
         courseD_artist_functions2_b: La función que escribes no debería contener el
           programa completo, sólo la parte que dibuja un cuadrado con lado de 100
@@ -13904,6 +14124,20 @@ es-MX:
           -   Usar la función
           -   Avanzar 100 + 75 pixeles
           -   Volver a usar la función
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: La función que escribes no debería contener el
+          programa completo, sólo la parte que dibuja un cuadrado con lado de 100
+          pixeles.
+        courseD_artist_functions2_c: |-
+          Utiliza el bloque verde 'dibujar un cuadrado' para "llamar" a tu función debajo del bloque 'cuando ejecutar'. De lo contrario, el código en la función no se ejecutará.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          El programa debe:
+
+          -   Usar la función
+          -   Avanzar 100 + 75 pixeles
+          -   Usar la función
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           Para resolver este desafío, sólo necesitas agregar un loop que repita el código de inicio 8 veces.
@@ -13911,7 +14145,23 @@ es-MX:
           Si no puedes recordar cuál era el código de inicio, haz clic en "comenzar de nuevo" en la esquina superior derecha del espacio de trabajo.
         courseD_artist_functions3_b: Tu loop debe tener los 3 bloques de código de
           inicio dentro de él.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          Para resolver este desafío, sólo necesitas agregar un loop que repita el código de inicio 8 veces.
+
+          Si no puedes recordar cuál era el código de inicio, haz clic en "comenzar de nuevo" en la esquina superior derecha del espacio de trabajo.
+        courseD_artist_functions3_b: Tu loop debe tener los 3 bloques de código de
+          inicio dentro de él.
       courseE_artist_functions4:
+        courseD_artist_functions4_a: "¡Intenta usar una función!"
+        courseD_artist_functions4_b: Arrastra el bloque de función `dibujar estrella`
+          fuera de la caja de herramientas para comenzar a construir tu función. Debería
+          tener el mismo código que el desafío anterior, ya que estás dibujando el
+          mismo patrón de estrella.
+        courseD_artist_functions4_c: Usa el bloque verde `dibujar estrella` para llamar
+          a esta función a tu programa principal. ¡No te olvides de saltar hacia adelante
+          entre cada estrella!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: "¡Intenta usar una función!"
         courseD_artist_functions4_b: Arrastra el bloque de función `dibujar estrella`
           fuera de la caja de herramientas para comenzar a construir tu función. Debería
@@ -13941,6 +14191,13 @@ es-MX:
         courseD_artist_functions5_c: Comience arrastrando el código de una forma de
           estrella en la función \` dibujar una estrella de Estados Unidos, a continuación,
           utilizar esta función para dibujar las tres estrellas!
+      courseE_artist_functions5_copy:
+        courseD_artist_functions5_a: "¡No te rindas! Recuerda lo que has estado aprendiendo."
+        courseD_artist_functions5_b: Las funciones facilitan la llamada al código
+          guardado en cualquier momento, ¡no solo desde dentro de un loop!
+        courseD_artist_functions5_c: Comienza arrastrando el código para una forma
+          de estrella en la función 'dibujar estrella', entonces utiliza esta función
+          para dibujar las tres estrellas!
       courseE_artist_functions6:
         grade4_artist_functions_windows0_a: Concéntrese sólo en hacer una ventana
           por ahora. Vamos a crear una función para el siguiente desafío.

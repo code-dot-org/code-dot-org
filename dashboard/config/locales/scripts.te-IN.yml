@@ -40,10 +40,33 @@ te:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         express-2019:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         dance-2019:
           stages:
             Dance Party:
@@ -52,14 +75,41 @@ te:
           stages:
             Events:
               name: ఈవెంట్లు
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         coursed-2020:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         express-2020:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
         code-break:
           stages:
             Events:
