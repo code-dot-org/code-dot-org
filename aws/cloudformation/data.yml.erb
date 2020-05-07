@@ -25,7 +25,9 @@ Parameters:
     Type: String
   AuroraClone:
     Type: String
-    Default: <%= RedshiftImport::CLONE_CLUSTER_ID %>
+    # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
+    # endpoints API to get this server name.
+    Default: '<%= RedshiftImport::CLONE_CLUSTER_ID %>.cluster-ceidnfhvpbck.us-east-1.rds.amazonaws.com'
   ReportingCluster:
     Type: String
   RedshiftDatabase:
