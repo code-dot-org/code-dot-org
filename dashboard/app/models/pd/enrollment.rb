@@ -173,12 +173,18 @@ class Pd::Enrollment < ActiveRecord::Base
     new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
       [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
+    csf_intro_foorm_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
+      enrollment.workshop.course == Pd::Workshop::COURSE_CSF &&
+        enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSF_101 &&
+        enrollment.workshop.workshop_ending_date > Date.new(2020, 5, 8)
+    end
 
     (
       filter_for_regular_survey_completion(other_enrollments, select_completed) +
       filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed) +
       filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed) +
-      filter_for_academic_year_survey_completion(new_academic_year_enrollments, select_completed)
+      filter_for_academic_year_survey_completion(new_academic_year_enrollments, select_completed) +
+      filter_for_csf_intro_foorm_survey_completion(csf_intro_foorm_enrollments, select_completed)
     )
   end
 
@@ -210,7 +216,10 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def exit_survey_url
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+    if workshop.course == Pd::Workshop::COURSE_CSF && workshop.subject == Pd::Workshop::SUBJECT_CSF_101 &&
+      workshop.workshop_ending_date >= Date.new(2020, 5, 8)
+      CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
+    elsif [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
       # TODO: This is a temporary, fake URL. Wire up a real one!
@@ -412,6 +421,16 @@ class Pd::Enrollment < ActiveRecord::Base
     completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
       workshop = enrollment.workshop
       Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+    end
+
+    select_completed ? completed_surveys : uncompleted_surveys
+  end
+
+  private_class_method def self.filter_for_csf_intro_foorm_survey_completion(enrollments, select_completed)
+    completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
+      workshop = enrollment.workshop
+      # there is only 1 CSF Intro survey
+      Pd::WorkshopSurveyFoormSubmission.exists?(pd_workshop: workshop, user: enrollment.user)
     end
 
     select_completed ? completed_surveys : uncompleted_surveys
