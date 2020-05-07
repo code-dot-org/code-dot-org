@@ -1,50 +1,49 @@
 #!/bin/bash
 set -e
 
-NPROC=$(nproc)
 MEM_PER_PROCESS=4096
-GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
+
+if [ "$(uname)" = "Darwin" ]; then
+  PROCS=2 # TODO: set this dynamically like in linux
+elif [ "$(uname)" = "Linux" ]; then
+  NPROC=$(nproc)
+
+  # Use MemAvailable when available, otherwise fall back to MemFree
+  if grep -q MemAvailable /proc/meminfo; then
+    MEM_METRIC=MemAvailable
+  else
+    MEM_METRIC=MemFree
+  fi
+
+  # Don't run more processes than can fit in free memory.
+  MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
+  PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
+
+  if [ $PROCS -eq 0 ]; then
+    FREE_KB=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
+    echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${FREE_KB}KB"
+    PROCS=1
+  fi
+else
+  echo "$(uname) not supported"
+  exit 1
+fi
 
 if [ -n "$DRONE" ]; then
   CODECOV=/tmp/codecov.sh
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
   CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
-
-  # Limit parallelism on Drone to reduce chances of PhantomJS crashes.
-  NPROC=2
 else
   # For non-Drone runs, stub-out codecov.
   CODECOV=: # stub
 fi
 
-# Use MemAvailable when available, otherwise fall back to MemFree
-if grep -q MemAvailable /proc/meminfo; then
-  MEM_METRIC=MemAvailable
-else
-  MEM_METRIC=MemFree
-fi
-
-# Don't run more processes than can fit in free memory.
-MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
-PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
-
-if [ $PROCS -eq 0 ]; then
-  FREE_KB=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
-  echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${FREE_KB}KB"
-  PROCS=1
-fi
-
-echo "Running with parallelism: ${PROCS}"
-
+GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 $GRUNT_CMD preconcat
 
-export SHELL=/bin/bash
-if command -v parallel 2>/dev/null; then
-  PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
-else
-  PARALLEL="xargs -P${PROCS} -d\n -L1 -n1 ${SHELL} -c"
-fi
+echo "Running with parallelism: ${PROCS}"
+PARALLEL="xargs -I{} -P${PROCS} -L1 /bin/bash -c {}"
 
 ${PARALLEL} <<SCRIPT
 npm run lint
