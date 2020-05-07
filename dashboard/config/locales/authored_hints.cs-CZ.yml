@@ -762,30 +762,144 @@ cs-CZ:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'Blok, který budeš potřebovat, se jmenuje `nastavit`. '
+        courseC_flappy_events2_b: Úlohu vyřešíš připojením bloku `nastavit` k události
+          `při spuštění`.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Pokud ti to nefunguje, ujisti se, že jsou všechny
+          bloku správně připojené k událostem na pracovní ploše.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: K vyřešení úlohy připoj blok `konec hry` k události
+          `když se dotkne překážky`.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: K dokončení úlohy bude potřeba blok `přidej bod`.
+      Overworld Avoid Monsters:
+        mc_8_a: Je tady na výběr z několika cest. Která je nejkratší?
+        mc_8_b: Aby byl kód jednoduší, použij `opakuj` cykly.
+        mc_8_c: Tvůj cíl je vchod do přístřešku v hodní části obrazovky.
+      Overworld Avoid Monsters_2019:
+        mc_8_a: Je tady na výběr z několika cest. Která je nejkratší?
+        mc_8_b: Aby byl kód jednoduší, použij `opakuj` cykly.
+        mc_8_c: Tvůj cíl je vchod do přístřešku v hodní části obrazovky.
+      Overworld Chop Tree:
+        mc_2_a: Prvně musíš dostat ke stromu, k tomu bude třeba použít dva bloky `posuň
+          se vpřed`.
+        mc_2_b: Blokem `znič blok` pokácíš strom před sebou.
+      Overworld Chop Tree_2019:
+        mc_2_a: Prvně musíš dostat ke stromu, k tomu bude třeba použít dva bloky `posuň
+          se vpřed`.
+        mc_2_b: Blokem `znič blok` pokácíš strom před sebou.
+      Overworld Chop Trees:
+        mc_4_a: Stromy můžeš pokácet v jakémkoliv pořadí, ale zkus použít co nejméně
+          příkazů.
+        mc_4_b: Blokem `znič blok` pokácíš strom před sebou.
+      Overworld Chop Trees_2019:
+        mc_4_a: Stromy můžeš pokácet v jakémkoliv pořadí, ale zkus použít co nejméně
+          příkazů.
+        mc_4_b: Blokem `znič blok` pokácíš strom před sebou.
       Overworld House Frame Chosen:
+        mc_6_a: Kliknutím na `polož` blok si můžeš vybrat materiál.
         mc_6_b: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
+        mc_6_c: Do bloku `opakuj` můžeš dát více než jeden příkaz.
       Overworld House Frame Chosen_2019:
+        mc_6_a: Kliknutím na `polož` blok si můžeš vybrat materiál.
         mc_6_b: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
+        mc_6_c: Do bloku `opakuj` můžeš dát více než jeden příkaz.
+      Overworld Move to Sheep:
+        mc_1_a: Blok `posuň se vpřed` najdeš v levém bočním panelu nahoře.
+        mc_1_b: Oba bloky `posuň se vpřed` je třeba připnout k bloku `při spuštění`.
+      Overworld Move to Sheep_2019:
+        mc_1_a: Blok `posuň se vpřed` najdeš v levém bočním panelu nahoře.
+        mc_1_b: Oba bloky `posuň se vpřed` je třeba připnout k bloku `při spuštění`.
       Overworld Place Wall:
+        mc_5_a: Prvně použij příkaz `polož` a potom `posuň se vpřed`.
+        mc_5_b: Ujisti se,  že jsou oba příkazy v `opakuj` cyklu, aby se kód spustil
+          opakovaně.
         mc_5_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
       Overworld Place Wall_2019:
+        mc_5_a: Prvně použij příkaz `polož` a potom `posuň se vpřed`.
+        mc_5_b: Ujisti se,  že jsou oba příkazy v `opakuj` cyklu, aby se kód spustil
+          opakovaně.
         mc_5_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
+      Overworld Plant Crops:
+        mc_7_a: K zasazení plodiny přímo pod sebe použij blok `zasaď plodinu`.
+        mc_7_b: 'Do obou řádek tmavě hnědé země u vody je třeba dát sazeničky. '
+        mc_7_c: Do bloku `opakuj` můžeš dát více než jeden příkaz.
+      Overworld Plant Crops_2019:
+        mc_7_a: K zasazení plodiny přímo pod sebe použij blok `zasaď plodinu`.
+        mc_7_b: 'Do obou řádek tmavě hnědé země u vody je třeba dát sazeničky. '
+        mc_7_c: Do bloku `opakuj` můžeš dát více než jeden příkaz.
+      Overworld Powered Minecart:
+        mc_13_a: Polož koleje přímo pod sebe použitím `polož koleje`.
+        mc_13_b: Můžeš kód zjednodušit použitím cyklů `opakuj`?
+      Overworld Powered Minecart_2019:
+        mc_13_a: Polož koleje přímo pod sebe použitím `polož koleje`.
+        mc_13_b: Můžeš kód zjednodušit použitím cyklů `opakuj`?
       Overworld Shear Sheep:
+        mc_3_a: Příkazem `ostříhej` dosáhneš pouze na ovci, která je přímo před tebou.
+          Jsi dost blízko?
+        mc_3_b: Když se potřebuješ otočit, použij příkaz `otoč se`.
         mc_3_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
       Overworld Shear Sheep_2019:
+        mc_3_a: Příkazem `ostříhej` dosáhneš pouze na ovci, která je přímo před tebou.
+          Jsi dost blízko?
+        mc_3_b: Když se potřebuješ otočit, použij příkaz `otoč se`.
         mc_3_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
+      Underground Avoiding Lava:
+        mc_11_a: Kód na zkontrolování jestli je pod bloky láva už je připravený. Jen
+          je potřeba přidat přesunutí vpřed.
+        mc_11_b: Otázka je, jestli dát `posuň se vpřed` příkaz dovnitř podmínky `když`,
+          nebo až za ní?
+      Underground Avoiding Lava_2019:
+        mc_11_a: Kód na zkontrolování jestli je pod bloky láva už je připravený. Jen
+          je potřeba přidat přesunutí vpřed.
+        mc_11_b: Otázka je, jestli dát `posuň se vpřed` příkaz dovnitř podmínky `když`,
+          nebo až za ní?
+      Underground If Statements:
+        mc_12_a: Bloky s červenými fleky jsou rudit.
+        mc_12_b: Můžeš kód zjednodušit použitím cyklů `opakuj`?
+        mc_12_c: Zkontroluj, jestli se na políčku nachází láva pomocí `když`, potom
+          umísti kamení.
+      Underground If Statements_2019:
+        mc_12_a: Bloky s červenými fleky jsou rudit.
+        mc_12_b: Můžeš kód zjednodušit použitím cyklů `opakuj`?
+        mc_12_c: Zkontroluj, jestli se na políčku nachází láva pomocí `když`, potom
+          umísti kamení.
       Underground Iron:
+        mc_10_a: Ty flekaté bloky u té pochodně jsou železo! Jak se tam dostaneš?
+        mc_10_b: Až se dostaneš na kraj lávy, udělej si bezpečnou cestu použitím `polož
+          kamení před tebou`. Potom můžeš projít!
         mc_10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
       Underground Iron_2019:
+        mc_10_a: Ty flekaté bloky u té pochodně jsou železo! Jak se tam dostaneš?
+        mc_10_b: Až se dostaneš na kraj lávy, udělej si bezpečnou cestu použitím `polož
+          kamení před tebou`. Potom můžeš projít!
         mc_10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
           jsi úlohu zatím ještě úplně nerozluštil(a).
+      Underground Mining Coal:
+        mc_9_a: Stojíš správně? Blok `znič blok` vytěží jen blok, který je přímo před
+          tebou.
+        mc_9_b: Ty černé fleky jsou uhlí! Když na uhlí použiješ `znič blok`, vytěžíš
+          ho.
+        mc_9_c: K umístění pochodně na políčko pod sebou použij `umísti pochodeň`
+          blok.
+      Underground Mining Coal_2019:
+        mc_9_a: Stojíš správně? Blok `znič blok` vytěží jen blok, který je přímo před
+          tebou.
+        mc_9_b: Ty černé fleky jsou uhlí! Když na uhlí použiješ `znič blok`, vytěžíš
+          ho.
+        mc_9_c: K umístění pochodně na políčko pod sebou použij `umísti pochodeň`
+          blok.
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_a: |-
           Můžeš použít podobný cyklus k vytvoření zdí a střechy. Zkus opakovat různé bloky.
@@ -932,6 +1046,8 @@ cs-CZ:
         '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_maze_seq5_2019:
         '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseB_Scrat_ramp1_2018:
         '2': Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej
           něco jiného.
@@ -989,6 +1105,305 @@ cs-CZ:
       courseB_starWars_prog9_2019:
         courseB_starWars_prog9_a: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_artist_loops1a:
+        courseC_artist_loops1a_a: |-
+          Budeš potřebovat tento blok:
+
+          <xml>
+          <block type="jump_to_xy">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Nakresli nálepku tímto blokem!
+
+          <xml>
+          <block type="sticker">
+              <title name="VALUE">Bird</title>
+            </block>
+          </xml>
+      courseC_artist_loops1a_2018:
+        courseC_artist_loops1a_a: |-
+          Budeš potřebovat tento blok:
+
+          <xml>
+          <block type="jump_to_xy">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Nakresli nálepku tímto blokem!
+
+          <xml>
+          <block type="sticker">
+              <title name="VALUE">Bird</title>
+            </block>
+          </xml>
+      courseC_artist_loops1a_2019:
+        courseC_artist_loops1a_a: |-
+          Budeš potřebovat tento blok:
+
+          <xml>
+            <block type="jump_to">
+              <title name="VALUE">13</title>
+            </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Nakresli nálepku tímto blokem!
+
+          <xml>
+          <block type="sticker">
+              <title name="VALUE">Bird</title>
+            </block>
+          </xml>
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          Budeš potřebovat tento blok:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          Můžeš si vybrat jestli to bude doprava nebo doleva and jakýkoliv úhel.
+      courseC_artist_loops2a:
+        courseC_artist_loops2a_b: Můžeš změnit počet opakování cyklu kliknutím na
+          číslo nahoře v bloku `opakuj`.
+      courseC_artist_loops2a_2018:
+        courseC_artist_loops2a_b: Můžeš změnit počet opakování cyklu kliknutím na
+          číslo nahoře v bloku `opakuj`.
+      courseC_artist_loops2a_2019:
+        courseC_artist_loops2a_a: Uvnitř cyklu budeš potřebovat skok do středu, otočení
+          a nakreslení nálepky.
+        courseC_artist_loops2a_b: Můžeš změnit počet opakování cyklu kliknutím na
+          číslo nahoře v bloku `opakuj`.
+      courseC_artist_loops3a_2019:
+        courseC_artist_loops3a_a: Stačí jenom přidat další nálepku hned za tu první
+          uvnitř cyklu.
+        courseC_artist_loops3a_b: |-
+          Tvůj program může vypadat třeba takto:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          Ale můžou tam být jaké nálepky budeš chtít.
+      courseC_artist_loops4a:
+        courseC_artist_loops4a_a: |-
+          Použij tento blok na pohyb vpřed:
+
+          <xml>
+          <block type="jump_by_constant">
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">100</title>
+            </block>
+          </xml>
+
+          A nezapomeň nastavit jak daleko.
+      courseC_artist_loops4a_2018:
+        courseC_artist_loops4a_a: |-
+          Použij tento blok na pohyb vpřed:
+
+          <xml>
+          <block type="jump_by_constant">
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">100</title>
+            </block>
+          </xml>
+
+          A nezapomeň nastavit jak daleko.
+      courseC_artist_loops4a_2019:
+        courseC_artist_loops4a_a: |-
+          Použij tento blok na pohyb vpřed:
+
+          <xml>
+          <block type="jump_by_constant">
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">???</title>
+            </block>
+          </xml>
+
+          A nezapomeň nastavit jak daleko.
+        courseC_artist_loops4a_b: |-
+          Tvůj program může vypadat třeba takto:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseC_artist_loops5b:
+        courseC_artist_loops5b_a: |-
+          Tímhle nastavíš vzorek stopy:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+        courseC_artist_loops5b_b: Jestli chceš nakreslit stejný obrazec, jako byl
+          v příkladu, budeš se muset posunout dozadu a stejný počet pixelů, jako se
+          posouváš dopředu.
+      courseC_artist_loops5b_2018:
+        courseC_artist_loops5b_a: |-
+          Tímhle nastavíš vzorek stopy:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+        courseC_artist_loops5b_b: Jestli chceš nakreslit stejný obrazec, jako byl
+          v příkladu, budeš se muset posunout dozadu a stejný počet pixelů, jako se
+          posouváš dopředu.
+      courseC_artist_loops5b_2019:
+        courseC_artist_loops5b_a: |-
+          Tímhle nastavíš vzorek stopy:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+        courseC_artist_loops5b_b: Jestli chceš nakreslit stejný obrazec, jako byl
+          v příkladu, budeš se muset posunout dozadu a stejný počet pixelů, jako se
+          posouváš dopředu.
+        courseC_artist_loops5b_c: |-
+          Tvůj program může vypadat třeba takto:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseC_artist_loops6a:
+        courseC_artist_loops6a_a: Na obrázek z příkladu nahoře použij skok dopředu
+          o méně než 75 mezi každou nálepkou.
+      courseC_artist_loops6a_2018:
+        courseC_artist_loops6a_a: Na obrázek z příkladu nahoře použij skok dopředu
+          o méně než 75 mezi každou nálepkou.
+      courseC_artist_loops6a_2019:
+        courseC_artist_loops6a_a: Na obrázek z příkladu nahoře použij skok dopředu
+          o méně než 75 mezi každou nálepkou.
+      courseC_artist_loops7a:
+        courseC_artist_loops7a_a: Kruh má 360 stupňů. Když vynásobíš počet opakování
+          a úhel otočení, tak by mělo vyjít 360. Vyzkoušej to s čísly nahoře.
+      courseC_artist_loops7a_2018:
+        courseC_artist_loops7a_a: Kruh má 360 stupňů. Když vynásobíš počet opakování
+          a úhel otočení, tak by mělo vyjít 360. Vyzkoušej to s čísly nahoře.
+      courseC_artist_loops7a_2019:
+        courseC_artist_loops7a_a: Kruh má 360 stupňů. Když vynásobíš počet opakování
+          a úhel otočení, tak by mělo vyjít 360. Vyzkoušej to s čísly nahoře.
       courseC_artist_prog5:
         courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
@@ -1145,6 +1560,48 @@ cs-CZ:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events2:
+        courseC_flappy_events2_a: 'Blok, který budeš potřebovat, se jmenuje `nastavit`. '
+        courseC_flappy_events2_b: Úlohu vyřešíš připojením bloku `nastavit` k události
+          `při spuštění`.
+      courseC_flappy_events2_2018:
+        courseC_flappy_events2_a: 'Blok, který budeš potřebovat, se jmenuje `nastavit`. '
+        courseC_flappy_events2_b: Úlohu vyřešíš připojením bloku `nastavit` k události
+          `při spuštění`.
+      courseC_flappy_events2_2019:
+        courseC_flappy_events2_a: 'Blok, který budeš potřebovat, se jmenuje `nastavit`. '
+        courseC_flappy_events2_b: Úlohu vyřešíš připojením bloku `nastavit` k události
+          `při spuštění`.
+      courseC_flappy_events3:
+        courseC_flappy_events3_a: Pokud ti to nefunguje, ujisti se, že jsou všechny
+          bloku správně připojené k událostem na pracovní ploše.
+      courseC_flappy_events3_2018:
+        courseC_flappy_events3_a: Pokud ti to nefunguje, ujisti se, že jsou všechny
+          bloku správně připojené k událostem na pracovní ploše.
+      courseC_flappy_events3_2019:
+        courseC_flappy_events3_a: Pokud ti to nefunguje, ujisti se, že jsou všechny
+          bloku správně připojené k událostem na pracovní ploše.
+      courseC_flappy_events4:
+        courseC_flappy_events4_a: K vyřešení úlohy připoj blok `konec hry` k události
+          `když se dotkne překážky`.
+      courseC_flappy_events4_2018:
+        courseC_flappy_events4_a: K vyřešení úlohy připoj blok `konec hry` k události
+          `když se dotkne překážky`.
+      courseC_flappy_events4_2019:
+        courseC_flappy_events4_a: K vyřešení úlohy připoj blok `konec hry` k události
+          `když se dotkne překážky`.
+      courseC_flappy_events5:
+        courseC_flappy_events5_a: K dokončení úlohy bude potřeba blok `přidej bod`.
+      courseC_flappy_events5_2018:
+        courseC_flappy_events5_a: K dokončení úlohy bude potřeba blok `přidej bod`.
+      courseC_flappy_events5_2019:
+        courseC_flappy_events5_a: K dokončení úlohy bude potřeba blok `přidej bod`.
+      courseC_flappy_events6:
+        courseC_flappy_events6_a: Připoj blok `mávni` blok k události `při kliknutí`.
+      courseC_flappy_events6_2018:
+        courseC_flappy_events6_a: Připoj blok `mávni` blok k události `při kliknutí`.
+      courseC_flappy_events6_2019:
+        courseC_flappy_events6_a: Připoj blok `mávni` blok k události `při kliknutí`.
       courseC_harvester_loops1:
         courseC_harvester_loops1_a: Až se dostaneš k dýním, použij <xml><block type="harvester_pumpkin"/></xml>
           na sklizení.
@@ -1659,6 +2116,12 @@ cs-CZ:
         courseC_starWars_loops6_b: |-
           Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
           Říká se tomu **vnořený cyklus**.
+      courseC_starWars_loops6_copy:
+        courseC_starWars_loops6_a: 'Zkus napsat všechny kroky na na papír a najdi
+          skupinu, která se opakuje. '
+        courseC_starWars_loops6_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: Není to tak těžké, jak to vypadá. Začni jedním
           schodem. Pokryje to všechny kusy šrotu?
@@ -1674,6 +2137,13 @@ cs-CZ:
         courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
       courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_a: Není to tak těžké, jak to vypadá. Začni jedním
+          schodem. Pokryje to všechny kusy šrotu?
+        courseC_starWars_loops7_b: Pokud to to nejde, napiš si všechny kroky na papír
+          a zkus najít opakující se úsek kódu.
+        courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops7_copy:
         courseC_starWars_loops7_a: Není to tak těžké, jak to vypadá. Začni jedním
           schodem. Pokryje to všechny kusy šrotu?
         courseC_starWars_loops7_b: Pokud to to nejde, napiš si všechny kroky na papír
@@ -1699,6 +2169,15 @@ cs-CZ:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Tahle úloha je lepší řešit po částech. Máš čas.
+          Nemusíš to vyřešit na první pokus.
+        course_starWars_loops8_b: První část jsou podobné schody jako v předchozím
+          problému. Jak se to řešilo před tím?
+        course_starWars_loops8_c: |-
+          Podívej se na plánek.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Tahle úloha je lepší řešit po částech. Máš čas.
           Nemusíš to vyřešit na první pokus.
         course_starWars_loops8_b: První část jsou podobné schody jako v předchozím
@@ -1840,6 +2319,9 @@ cs-CZ:
       courseD_bee_conditionals2_2019:
         courseD_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
           chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
+          chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_a: 'Nezapomeň zkontrolovat každé pole pomocí příkazu
           `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
@@ -1855,6 +2337,11 @@ cs-CZ:
           `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
         courseD_bee_conditionals3_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_a: 'Nezapomeň zkontrolovat každé pole pomocí příkazu
+          `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
+        courseD_bee_conditionals3_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
           byl mrak, ačkoliv můžeš vidět celou cestu.
@@ -1866,6 +2353,11 @@ cs-CZ:
         courseD_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
           každé pole a ujisti se, jestli na něm není nektar.
       courseD_bee_conditionals4_2019:
+        courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
+          byl mrak, ačkoliv můžeš vidět celou cestu.
+        courseD_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
+          každé pole a ujisti se, jestli na něm není nektar.
+      courseD_bee_conditionals4_copy:
         courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
           byl mrak, ačkoliv můžeš vidět celou cestu.
         courseD_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
@@ -2479,7 +2971,19 @@ cs-CZ:
           znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete
           kreslit druhý čtverec.
         courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Každý čtverec má strany o délce 100 pixelů, to
+          znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete
+          kreslit druhý čtverec.
+        courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
       courseE_artist_functions2:
+        courseD_artist_functions2_a: |-
+          Váš program by měl:
+
+          -   použít funkci
+          -   posunout se vpřed o 100 + 75 pixelů
+          -   použít funkci
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Váš program by měl:
 

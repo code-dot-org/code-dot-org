@@ -797,6 +797,14 @@ nn-NO:
         reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig,
         trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det på
         sine telefonar!'
+      OPD-K5-events-3: Prøv å legge til ei blokk som setter nivåhastigheit når "Køyr"-knappen
+        blir trykka på. Spel spelet og sikt mot målet for å halde fram.
+      OPD-K5-events-4: Knytt 'avslutt spelet'-blokka til 'når treff bakken'-hendinga.
+        Spel spelet og krasj fuglen i bakken for å halde fram.
+      OPD-K5-events-5: Knytt ei blogg til 'når treff ei hindring'-hending slik at
+        spelet sluttar når Flakse krasjer inn i dei første røyra.
+      OPD-K5-events-6: Knytt ei blogg til 'når treff ei hindring'-hending, trykk deretter
+        'Køyr' for å skåre poeng ved å få Flakse til å fly gjennom dei første røyra.
       Overworld Avoid Monsters: Å springe inn i ein kjøttetande plante er ein dårleg
         ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Avoid Monsters_2019: Å springe inn i ein kjøttetande plante er ein
@@ -1131,6 +1139,8 @@ nn-NO:
       courseA_maze_seq1: Få fuglen til den slemme grisen!
       courseA_maze_seq10: 'Utfordring: Gå rundt dynamitten for å få fuglen bort til
         grisen! '
+      courseA_maze_seq10_copy: 'Utfordring: Gå rundt dynamitten for å få fuglen bort
+        til grisen! '
       courseA_maze_seq11: Flytt meg først ein veg og så ein anna veg for å få meg
         bort til grisen.
       courseA_maze_seq11_2018: Flytt meg først ein veg og så ein anna veg for å få
@@ -1154,11 +1164,16 @@ nn-NO:
         meg bort til grisen!
       courseA_maze_seq6_2019: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
+      courseA_maze_seq6_copy: Flytt meg først ein veg og så ein anna veg for å få
+        meg bort til grisen!
       courseA_maze_seq7: Finn ut kva som manglar og legg så til dei manglande blokkane
         for å få fuglen bort til grisen!
+      courseA_maze_seq7_copy: Finn ut kva som manglar og legg så til dei manglande
+        blokkane for å få fuglen bort til grisen!
       courseA_maze_seq8: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq8_2018: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq8_2019: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq8_copy: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq9: Feilsøk dette nivået ved å leggje til blokkar for å få fuglen
         bort til grisen!
       courseA_maze_seq_challenge1: Noko er galt her. Endre koden for å få fuglen bort
@@ -1612,6 +1627,8 @@ nn-NO:
         inni for å få tak i alt skrapmetallet.
       courseC_starWars_loops2_2019: Prøv å lage ei løkke som bruker berre ei blokk
         inni for å få tak i alt skrapmetallet.
+      courseC_starWars_loops2_copy: Prøv å lage ei løkke som bruker berre ei blokk
+        inni for å få tak i alt skrapmetallet.
       courseC_starWars_loops4: I denne oppgava treng du to gjenta-løkker inni kvarandre
         for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg blokker!
       courseC_starWars_loops4_2018: I denne oppgava treng du to gjenta-løkker inni
@@ -1620,10 +1637,15 @@ nn-NO:
       courseC_starWars_loops4_2019: I denne oppgava treng du to gjenta-løkker inni
         kvarandre for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg
         blokker!
+      courseC_starWars_loops4_copy: I denne oppgava treng du to gjenta-løkker inni
+        kvarandre for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg
+        blokker!
       courseC_starWars_loops5: Få BB-8 til å plukke opp skrapmetall så fort som mogleg!
       courseC_starWars_loops5_2018: Få BB-8 til å plukke opp skrapmetall så fort som
         mogleg!
       courseC_starWars_loops5_2019: Få BB-8 til å plukke opp skrapmetall så fort som
+        mogleg!
+      courseC_starWars_loops5_copy: Få BB-8 til å plukke opp skrapmetall så fort som
         mogleg!
       courseC_starWars_loops7: Kan du prøve å få tak i alt skrapmetallet med berre
         ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som blir
@@ -1632,6 +1654,9 @@ nn-NO:
         berre ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som
         blir repetert.
       courseC_starWars_loops7_2019: Kan du prøve å få tak i alt skrapmetallet med
+        berre ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som
+        blir repetert.
+      courseC_starWars_loops7_copy: Kan du prøve å få tak i alt skrapmetallet med
         berre ei løkke? Prøv å programmere alt først og sett ei løkke rundt det som
         blir repetert.
       courseC_starWars_loops9: Bruk kva du har lært til å plukke opp alt skrapmetallet!
@@ -1738,11 +1763,15 @@ nn-NO:
         skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals1_predict1_2019: Kontroller om det er ein blome under
         skya. Om det er ein blome, få nektar.
+      courseD_bee_conditionals1_predict1_copy: Kontroller om det er ein blome under
+        skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals2: 'Sjekk under kvar sky for å sjå om det skjular ein
         blome før du får nektar.  '
       courseD_bee_conditionals2_2018: 'Sjekk under kvar sky for å sjå om det skjular
         ein blome før du får nektar.  '
       courseD_bee_conditionals2_2019: 'Sjekk under kvar sky for å sjå om det skjular
+        ein blome før du får nektar.  '
+      courseD_bee_conditionals2_copy: 'Sjekk under kvar sky for å sjå om det skjular
         ein blome før du får nektar.  '
       courseD_bee_conditionals9: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals9_2018: Få tak i all nektaren og lag honning.
@@ -1842,6 +1871,9 @@ nn-NO:
         så eit poeng så lenge han held seg under brekksprutlinja.
       courseE_artist_functions1: "Hjelp zombien med å teikne vindauga med sider på
         100 pikslar. \nMellomrommet mellom vindauga er 25 pikslar kortare enn lengda
+        på kvadrata."
+      courseE_artist_functions1_copy: "Hjelp zombien med å teikne vindauga med sider
+        på 100 pikslar. \nMellomrommet mellom vindauga er 25 pikslar kortare enn lengda
         på kvadrata."
       courseE_artist_functions_challenge2: Prøv denne koden for å sjå korleis den
         fungerer. Deretter gjer du programmet om til ditt eige!

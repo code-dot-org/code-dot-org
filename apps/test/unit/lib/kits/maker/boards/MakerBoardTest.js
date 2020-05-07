@@ -34,7 +34,7 @@ const CP_COMPONENTS = [
   'TouchSensor'
 ];
 const MB_COMPONENTS = [
-  'LedMatrix',
+  'LedScreen',
   'MicroBitButton',
   'Accelerometer',
   'MicroBitThermometer'
@@ -324,9 +324,9 @@ export function itImplementsTheMakerBoardInterface(
             });
           });
 
-          describe('ledMatrix', () => {
+          describe('ledScreen', () => {
             function expectLedToHaveFunction(fnName) {
-              expect(jsInterpreter.globalProperties.ledMatrix[fnName]).to.be.a(
+              expect(jsInterpreter.globalProperties.ledScreen[fnName]).to.be.a(
                 'function'
               );
             }

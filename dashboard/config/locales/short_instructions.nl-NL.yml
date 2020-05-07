@@ -1122,6 +1122,14 @@ nl-NL:
         3, 6, 9, 12, 15 nectar te verzamelen?\\\r"
       NEW Course 4 Play Lab Params 11: 'Het is vrije speel tijd! Veel plezier met
         alle blokken in je gereedschapskist. '
+      New Artist Project: Teken iets geweldigs! Je code wordt opgeslagen als een project
+        waaraan je op elk moment kunt werken.
+      New Basketball Project: Creëer je eigen basketbal spel. Je kan alle regels veranderen.
+        Wanneer je klaar bent, klik dan op Klaar om je vrienden je spel uit te laten
+        proberen op hun telefoons.
+      New Bounce Project: Maak je eigen stuiterspel. Je kan de hele vormgeving en
+        alle regels veranderen. Als je klaar bent, klik op Delen, dan kunnen je vrienden
+        jouw spel op hun telefoon spelen.
       New Gumball Project: Maak wat je maar wilt en deel het!
       New Ice Age Project: Maak wat je maar wilt en deel het!
       New Infinity Project: Maak wat je maar wilt en deel het!
@@ -1130,6 +1138,19 @@ nl-NL:
         regels wijzigen. Meng verschillende sporten of bouw er één na. Wees creatief!
         Klik wanneer je klaar bent op ''Voltooien'' om je vrienden je spel te laten
         proberen op hun telefoons.'
+      OPD-K5-events-2: Voeg het `normaal flapperen` blokje toe aan de `bij een klik`
+        gebeurtenis, klik dan op "Start". Klik of tik op de speelruimte om Flappy
+        naar het doelwit te bewegen.
+      OPD-K5-events-3: |-
+        Probeer een blok toe te voegen dat de snelheid van het level instelt wanneer op de "Start" wordt ingeduwd.
+        Speel het spel en flap naar het doelwit om verder te gaan.
+      OPD-K5-events-4: Plak het `einde spel` blok aan het `wanneer grond geraakt`
+        evenement. Speel het spel en crash de vogel op de grond om door te gaan.
+      OPD-K5-events-5: Plak een blok aan het `wanneer een obstakel geraakt` evenement
+        zodat het spel eindigt wanneer Flappy crasht in de eerste paar pijpen.
+      OPD-K5-events-6: |-
+        Voeg een blok toe aan de `bij het raken van een obstakel` gebeurtenis,
+        klik dan op "Start" om een punt te scoren door Flappy door de eerste reeks buizen te laten vliegen.
       Overworld Avoid Monsters: Het is een slecht idee om tegen een Creeper aan te
         botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
       Overworld Avoid Monsters_2019: Het is een slecht idee om tegen een Creeper aan
@@ -1202,16 +1223,16 @@ nl-NL:
       Standalone_Artist_5: Hoeveel keer moet de diamant in een lus gestopt worden
         om de bloem te tekenen?
       Standalone_Artist_5.5: 'Kijk hoe we de diamant code vereenvoudigd hebben door
-        de code te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om
+        de code te veranderen in een lus. Je kan de hele reeks 12 keer herhalen om
         een bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
         je niet over dezelfde diamant blijft tekenen.'
       Standalone_Artist_6: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp
-        te tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+        te tekenen. Hoeveel graden moet je iedere keer draaien? Tip: deel het aantal
         graden in een cirkel door het aantal maal dat je een lus gebruikt.'
       Standalone_Artist_7: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
-        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
-        waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
-        spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van mekaar'
+        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze telkens
+        gebruiken wanneer je een bloem wil tekenen. Gebruik deze en het nieuwe spring
+        blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van elkaar.'
       Standalone_Artist_8: Hier is een functie "Draw a shape" die zeshoeken tekent.
         Voer de code uit om te zien wat ze doet en experimenteer dan maar met de functie
         om te zien wat er gebeurt. Kan je zelf een functie maken die vierhoeken, driehoeken
@@ -1249,6 +1270,11 @@ nl-NL:
         maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken
         steenkool.
       Vigenere: Test
+      'Widget: Text Compression': Zoek naar patronen (herhaalde woorden of stukken
+        van een zin) in de tekst. Voeg de patronen die je ziet toe aan het woordenboek
+        aan de rechterkant. Wanneer je woorden toevoegt aan het woordenboek, zal het
+        symbool voor die vermelding opgenomen worden in de tekst in plaats van het
+        oorspronkelijke patroon.
       bounce_1: Plak een blok aan het "als pijltje naar links" blok en druk op 'Uitvoeren'.
         Verplaats het batje met behulp van de pijl naar links om het doel te bereiken.
       bounce_10: Nu is het doel boven. Plak het "Punten" en "Punten tegenstander"
@@ -1320,9 +1346,9 @@ nl-NL:
       bounce_7: Plak blokken aan elk "als" blok. Laat de bal stuiteren totdat hij
         het doel raakt.
       bounce_7_basketball: Koppel blokken aan ieder "als" blok. Stuiter de bal totdat
-        het de vlag raakt.
+        deze de vlag raakt.
       bounce_7_sports: Koppel blokken aan ieder "als" blok. Stuiter de bal totdat
-        het de vlag raakt.
+        deze de vlag raakt.
       course1_artist_loops_challenge1: "Je kan een lus gebruiken om meerdere lijnen
         in één keer te tekenen.\\\r\n\\\r\nKan je een huis tekenen? Pas het aan zodat
         je iets krijgt naar jouw smaak! Zoek naar patronen die zich herhalen!"
@@ -1521,9 +1547,12 @@ nl-NL:
       courseA_maze_seq4: VERWIJDER een blok om de vogel naar het varken te krijgen!
       courseA_maze_seq7: Zoek uit wat er mist en voeg dan blokken toe om de vogel
         tot aan het varken te krijgen!
+      courseA_maze_seq7_copy: Zoek uit wat er mist en voeg dan blokken toe om de vogel
+        tot aan het varken te krijgen!
       courseA_maze_seq8: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq8_2018: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq8_2019: Los dit niveau op en krijg de vogel naar het varken!
+      courseA_maze_seq8_copy: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq9: Debug dit level door blokken toe te voegen om de vogel naar
         het varken te krijgen!
       courseA_maze_seq_challenge1: Er is iets fout hier. Repareer de code om de vogel
@@ -2045,16 +2074,22 @@ nl-NL:
         te creëren dat gebruik maakt van slechts één blok binnen een `herhaal` lus.
       courseC_starWars_loops2_2019: Om al het schroot te verzamelen, probeer een loop
         te creëren dat gebruik maakt van slechts één blok binnen een `herhaal` lus.
+      courseC_starWars_loops2_copy: Om al het schroot te verzamelen, probeer een loop
+        te creëren dat gebruik maakt van slechts één blok binnen een `herhaal` lus.
       courseC_starWars_loops4: In deze puzzel zullen twee `herhaal` lussen je helpen
         om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
       courseC_starWars_loops4_2018: In deze puzzel zullen twee `herhaal` lussen je
         helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
       courseC_starWars_loops4_2019: In deze puzzel zullen twee `herhaal` lussen je
         helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
+      courseC_starWars_loops4_copy: In deze puzzel zullen twee `herhaal` lussen je
+        helpen om BB-8 alle schroot te laten verzamelen met het minst aantal blokken!
       courseC_starWars_loops5: Laat BB-8 zo snel mogelijk alle stukken schroot oppikken!
       courseC_starWars_loops5_2018: Laat BB-8 zo snel mogelijk alle stukken schroot
         oppikken!
       courseC_starWars_loops5_2019: Laat BB-8 zo snel mogelijk alle stukken schroot
+        oppikken!
+      courseC_starWars_loops5_copy: Laat BB-8 zo snel mogelijk alle stukken schroot
         oppikken!
       courseC_starWars_loops7: Kan jij alle stukken schroot oprapen binnen slechts
         één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde
@@ -2063,6 +2098,9 @@ nl-NL:
         één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde
         code en plaats het in een lus.
       courseC_starWars_loops7_2019: Kan jij alle stukken schroot oprapen binnen slechts
+        één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde
+        code en plaats het in een lus.
+      courseC_starWars_loops7_copy: Kan jij alle stukken schroot oprapen binnen slechts
         één lus? Probeer het eerst volledig zonder lus, zoek dan het stukje herhaalde
         code en plaats het in een lus.
       courseC_starWars_loops9: Gebruik wat je geleerd hebt om al het schroot op te
@@ -2213,11 +2251,15 @@ nl-NL:
         wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals1_predict1_2019: Controleer of er een bloem onder de
         wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
+      courseD_bee_conditionals1_predict1_copy: Controleer of er een bloem onder de
+        wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals2: 'Controleer onder elke wolk of het een bloem verstopt
         voordat je nectar verzamelt.  '
       courseD_bee_conditionals2_2018: 'Controleer onder elke wolk of het een bloem
         verstopt voordat je nectar verzamelt.  '
       courseD_bee_conditionals2_2019: 'Controleer onder elke wolk of het een bloem
+        verstopt voordat je nectar verzamelt.  '
+      courseD_bee_conditionals2_copy: 'Controleer onder elke wolk of het een bloem
         verstopt voordat je nectar verzamelt.  '
       courseD_bee_debugging_challenge1: |-
         Bekijk hoe de bijen de nektar verzamelt.
@@ -2260,6 +2302,9 @@ nl-NL:
       courseD_scrat_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseE_artist_functions1: |-
+        Hallo. Ik zombie kunstenaar. Mij houd van tekenen!
+        Help me de bril met vierkante glazen tekenen. Tip: De brug tussen de glazen is 25 pixels korter dan de lengte van een glas.
+      courseE_artist_functions1_copy: |-
         Hallo. Ik zombie kunstenaar. Mij houd van tekenen!
         Help me de bril met vierkante glazen tekenen. Tip: De brug tussen de glazen is 25 pixels korter dan de lengte van een glas.
       courseE_artist_ramp8: Teken nu een vorm met de artiest!

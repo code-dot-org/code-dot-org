@@ -737,6 +737,22 @@ pl-PL:
       New Sports Project: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
         zasady i pomieszać różne zawody - bądź kreatywny. Kiedy skończysz, kliknij
         przycisk "Zakończ", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.
+      OPD-K5-events-2: Dołącz block "pofruń na normalną wysokość" do zdarzenia "po
+        kliknięciu", a następnie naciśnij "Uruchom". Kliknij lub dotknij ekranu, aby
+        przesunąć Flappy'ego do miejsca docelowego.
+      OPD-K5-events-3: Spróbuj dodać blok, który ustawia poziom prędkości po naciśnięciu
+        przycisku "Uruchom".  Zagraj w grę i doleć do obiektu docelowego, aby kontynuować.
+      OPD-K5-events-4: Dołącz blok "zakończ grę" do zdarzenia "kiedy spadnie na ziemię".
+        Zagraj w grę i uderz Flappym w ziemię aby kontynuować.
+      OPD-K5-events-5: Dołącz blok do zdarzenia "kiedy uderzy w przeszkodę" tak, żeby
+        gra się zakończyła, kiedy Flappy rozbije się na pierwszym zestawie rur.
+      OPD-K5-events-6: Dołącz blok do zdarzenia "kiedy minie przeszkodę", a następnie
+        naciśnij "Uruchom" i zdobądź punkt przelatując Flappym przez pierwszy zestaw
+        rur.
+      OPD-K5-forloops-5: Pomóż pszczółce zebrać cały nektar.
+      OPD-K5-projects-6: Teraz poświęć trochę czasu, żeby upewnić się, że gra działa
+        tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją grę,
+        a następnie zagraj, aby spełnić jeden z tych warunków.
       Overworld Avoid Monsters: Wpadnięcie na Pełzaka to zły pomysł. Ostrożnie omijaj
         Pełzaki, aby bezpiecznie dotrzeć do domu.
       Overworld Avoid Monsters_2019: Wpadnięcie na Pełzaka to zły pomysł. Ostrożnie
@@ -1326,6 +1342,8 @@ pl-PL:
         Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_2019: Sprawdź, czy pod chmurką jest kwiat.
         Jeśli jest, zbierz nektar.
+      courseD_bee_conditionals1_predict1_copy: Sprawdź, czy pod chmurką jest kwiat.
+        Jeśli jest, zbierz nektar.
       courseD_bee_conditionals7: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać
         nektar z kwiatów i zrobić miód na plastrze.
       courseD_bee_conditionals7_2018: Użyj bloku 'jeśli/w przeciwnym razie', żeby
@@ -1483,6 +1501,8 @@ pl-PL:
         Nie oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij tutaj,
         jeśli chcesz zobaczyć więcej wskazówek!
       courseE_artist_functions1: "Pomóż zombie narysować okulary używając kwadratów
+        o bokach 100 pikseli.  \\\r Połączenie między szkłami okularów ma 75 pikseli."
+      courseE_artist_functions1_copy: "Pomóż zombie narysować okulary używając kwadratów
         o bokach 100 pikseli.  \\\r Połączenie między szkłami okularów ma 75 pikseli."
       courseE_artist_functions2_2018: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '

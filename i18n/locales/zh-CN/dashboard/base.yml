@@ -687,20 +687,6 @@ zh-CN:
       body: "学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。"
       audience: "14 岁或以上"
       cta: "了解操作方法"
-  gallery:
-    students_drew_these_with_code: "学生使用代码画了这些图案!"
-    students_made_these_with_code: "学生使用代码做了这些内容！"
-    picture_count: "在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。"
-    activity_count: "在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。"
-    want_to_make_your_own: "想要做你自己的作品？"
-    how_to_save: "在这些教程的最后一个级别，单击\"完成\"和\"保存\"以在画廊里保存您的作品。"
-    more: "更多 →"
-    caption_by_name_age: "%{name}，%{age} 岁"
-    caption_time_ago: "%{time_ago}之前"
-    header: "作品"
-    header_playlab: "游戏实验室"
-    header_artist: "艺术家"
-    report_abuse: "举报滥用"
   landing:
     prerelease_tutorial: "本教程为 **beta** 版，将根据反馈信息对其进行改进和修订。"
     report_bug: "报告错误"
@@ -885,6 +871,7 @@ zh-CN:
     instructor_feedback: '教师反馈'
     peer_feedback: '同伴反馈'
     outdated: '这个反馈是添加给以前提交的版本'
+    peer_review: '互相检查'
   flex_category:
     required: '概览'
     content: '内容'

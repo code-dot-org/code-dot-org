@@ -6,6 +6,7 @@ id:
       category:
         csd_2018_category_name: Penemuan CS('18-19')
         csd_2019_category_name: Penemuan CS('19-'20)
+        csf_category_name: Dasar dasar CS
         csf_2018_category_name: Dasar dasar CS (2018)
         csf_international_category_name: Dasar dasar internasional CS
         csf2_draft_category_name: 'Dalam pengembangan: Kursus A-F'
@@ -266,7 +267,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: variabel
+              name: Variables
         algebra:
           title: Ilmu Komputer dalam Aljabar
           description: Belajar pemrograman fungsional melalui aljabar
@@ -1851,6 +1852,13 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Post-Course Survey:
               name: Survei Pasca Kursus
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp1_1:
+              display_name: 'Bab 1: Mewakili dan Transmisi Informasi'
+            csp1_2:
+              display_name: 'Bab 2: Menciptakan Internet'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1889,6 +1897,13 @@ id:
               name: Praktek PT - Mengkodekan pengalaman
             Post-Course Survey:
               name: Survei Pasca Kursus
+          lesson_groups:
+            csp2_1:
+              display_name: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
+            csp2_2:
+              display_name: 'Bab 2: Memanipulasi dan Visualing Data'
+            cspSurvey:
+              display_name: Survei
         csp3-2017:
           description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer, agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif. kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat pemograman. \\r\n\\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017. baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
           description_short: Pemrograman
@@ -1921,6 +1936,13 @@ id:
               name: Membuat fungsi dengan parameter
             Post-Course Survey:
               name: Survei Pasca Kursus
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bab 1: Bahasa Pemrograman dan Algoritma'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp4-2017:
           stages:
             Cracking the Code:
@@ -1955,6 +1977,13 @@ id:
               name: Survei Pasca Kursus
             Student Post-Course Survey:
               name: Pos siswa-survei kursus
+          lesson_groups:
+            csp4_1:
+              display_name: 'Bab 1: Dunia Big Data dan Enkripsi'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2019,6 +2048,13 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Post-Course Survey:
               name: Survei Pasca Kursus
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bab 1: Pemrograman Event-Driven'
+            csp5_2:
+              display_name: 'Bab 2: Pemrograman dengan Struktur Data'
+            cspSurvey:
+              display_name: Survei
         csp6:
           stages:
             Create PT Prep - Reviewing the Task:
@@ -2189,6 +2225,11 @@ id:
               name: Mendukung Rekan belajar
             'Tool Talk: Intro to Netsim':
               name: 'Alat untuk bicara: introduksi ke netsim'
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2205,6 +2246,11 @@ id:
               name: menguji unit 1 latihan modul Foxtrot
             test Unit 1 required reading:
               name: menguji unit 1 Membaca wajib
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2383,6 +2429,11 @@ id:
               name: 'Pelajaran 2.3: Hitam dan Putih Pixelasi'
             Measuring Student Learning:
               name: Mengukur Belajar Siswa
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2625,6 +2676,11 @@ id:
               name: Pelajaran 2,3
             Test stage with bubbles:
               name: Tahap ujian dengan gelembung
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csd3-2017:
           description_short: Pemrograman
           stages:
@@ -2669,7 +2725,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: variabel
+              name: Variables
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -2685,6 +2741,15 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
+            csd_survey:
+              display_name: Survei Pasca Kursus
         grade2:
           stages:
             Caring for My New Pet:
@@ -2728,7 +2793,7 @@ id:
             Nested Loops:
               name: Perulangan bercabang
             Variables:
-              name: variabel
+              name: Variables
             While Loops:
               name: Perulangan Selagi
         algebrapdnext:
@@ -2782,6 +2847,13 @@ id:
             Apps and Problem Solving:
               name: Aplikasi dan Pemecahan Masalah
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -2808,6 +2880,11 @@ id:
               name: 3 satuan ikhtisar
             Unit 5 Overview:
               name: Peninjauan Unit 5
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -2822,6 +2899,11 @@ id:
               name: Mempelajari Penemuan
             Measuring Student Learning:
               name: Mengukur Belajar Siswa
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         basketball:
           title: Pilih tim Anda dan buat permainan basket
           description_short: Pilih tim Anda dan buat permainan basket
@@ -2889,11 +2971,18 @@ id:
             'Websites for Expression ':
               name: 'Situs-situs untuk Ekspresi '
             Lists:
-              name: List
+              name: Daftar
             Project - Personal Portfolio Website:
               name: Proyek - Situs web Portfolio Pribadi
             Headings:
               name: Tajuk
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bab 1: Konten Web dan HTML'
+            csd2_2:
+              display_name: 'Bab 2: Styling dan CSS'
+            csd_survey:
+              display_name: Survei Pasca Kursus
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -2906,6 +2995,11 @@ id:
               name: Mempelajari Penemuan
             Measuring Student Learning:
               name: Mengukur Belajar Siswa
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csd4-2017:
           stages:
             Analysis of Design:
@@ -2934,6 +3028,13 @@ id:
               name: Penyajian aplikasi
             Feedback and Testing:
               name: Umpan balik dan Pengujian
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+            csd_survey:
+              display_name: Survei Pasca Kursus
         minecraft:
           description_short: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri.
           description: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri.
@@ -3005,6 +3106,11 @@ id:
               name: Pendahuluan
             Conditionals:
               name: Kondisi
+          lesson_groups:
+            content:
+              display_name: Konten
+            extra_course_content:
+              display_name: Isi Kursus Tambahan
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -3027,6 +3133,9 @@ id:
               name: Pendahuluan
             Ice Age Play Lab:
               name: Laboratorium Bermain Ice Age
+          lesson_groups:
+            content:
+              display_name: Konten
         classic-hoc-impact-study:
           description_short: Coba dasar-dasar ilmu komputer dengan banyak karakter yang menyenangkan!
           stages:
@@ -3089,6 +3198,11 @@ id:
               name: Mempelajari Penemuan
             Measuring Student Learning:
               name: Mengukur Belajar Siswa
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csdgraveyard:
           stages:
             Introduction to Styling with CSS:
@@ -3109,6 +3223,11 @@ id:
               name: Mengukur Belajar Siswa
             Unit 4 Overview:
               name: Rangkuman unit 4
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         sciencepd4:
           stages:
             Welcome!:
@@ -3135,6 +3254,9 @@ id:
           stages:
             Binary:
               name: Biner
+          lesson_groups:
+            content:
+              display_name: Konten
         sciencepd5:
           stages:
             Welcome!:
@@ -3159,6 +3281,11 @@ id:
               name: Mempelajari Penemuan
             Measuring Student Learning:
               name: Mengukur Belajar Siswa
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csppostap-2017:
           stages:
             Creating Javascript Objects:
@@ -3181,6 +3308,11 @@ id:
               name: Tugas Akhir
             Post-Course Survey:
               name: Survei Pasca Kursus
+          lesson_groups:
+            content:
+              display_name: Konten
+            cspSurvey:
+              display_name: Survei
         unit6-csd-draft:
           stages:
             Computing Innovations:
@@ -3196,7 +3328,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: List
+              name: Daftar
             For Loops:
               name: Untuk Pengulangan
             Map:
@@ -3209,6 +3341,11 @@ id:
               name: Membuat musik
             Functions with Parameters:
               name: Fungsi dengan parameter
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
         workshop-gamelab:
           stages:
             Introduction:
@@ -3231,6 +3368,11 @@ id:
               name: Pemecahan masalah dengan Data Besar
             Structuring Data:
               name: Penataan Data
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
         applab-1hour:
           description_audience: Sekolah Dan Siswa Menengah Tinggi
           stages:
@@ -3262,7 +3404,7 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: List
+              name: Daftar
             For Loops:
               name: Untuk Pengulangan
             Designing Screens with Code:
@@ -3287,6 +3429,13 @@ id:
               name: Membuat musik
             Functions with Parameters_:
               name: Fungsi dengan parameter
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+            csd_survey:
+              display_name: Survei Pasca Kursus
         csd3-draft:
           description_short: Permainan Dan Animasi
           stages:
@@ -3297,7 +3446,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: variabel
+              name: Variables
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Conditionals:
@@ -3330,6 +3479,13 @@ id:
               name: Pemecahan masalah dengan Data Besar
             Structuring Data:
               name: Penataan Data
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            csd_survey:
+              display_name: Survei Pasca Kursus
         csd3-old:
           stages:
             Drawing in Game Lab:
@@ -3393,7 +3549,7 @@ id:
             Project - Personal Portfolio Website:
               name: Proyek - Situs web Portfolio Pribadi
             Lists:
-              name: List
+              name: Daftar
         csd1-draft:
           stages:
             The Problem Solving Process:
@@ -3419,7 +3575,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: variabel
+              name: Variables
             Conditionals:
               name: Kondisi
             'Project: Interactive Card':
@@ -3453,6 +3609,10 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
           description_audience: Falmouth Sekolah Menengah (Mike Harvey)
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
         csd2-old:
           stages:
             Quality Websites:
@@ -3549,6 +3709,13 @@ id:
           title: Kursus E
           assignment_family_title: Kursus E
           description_short: Segera berpindah konsep di kursus C&D kemudian lanjutkan dengan fungsi.
+          lesson_groups:
+            csf_e_1:
+              display_name: Jalur naik tujuan E (opsional)
+            csf_e_2:
+              display_name: Isi kursus E
+            extra_course_content:
+              display_name: Isi Kursus Tambahan
         coursef-2017:
           stages:
             Introduction:
@@ -3569,6 +3736,11 @@ id:
           title: Kursus F
           assignment_family_title: Kursus F
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+          lesson_groups:
+            csf_f_1:
+              display_name: Jalur naik tujuan F (opsional)
+            csf_f_2:
+              display_name: Isi kursus F
         csdnovice:
           stages:
             Wrap Up:
@@ -3612,13 +3784,91 @@ id:
               name: Jelajahi PT - Menyelesaikan tugas
           description_short: Pelajaran membimbing siswa untuk mempersiapkan dan menyelesaikan ujian AP dan Kinerja Tugas.
           description: Pelajaran membimbing siswa untuk mempersiapkan dan menyelesaikan ujian AP dan Kinerja Tugas.
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Bab 1: Pengaturan Teknologi AP'
+            csp_ap_3:
+              display_name: 'Bab 3: AP Membuat Kinerja Tugas'
+            csp_ap_2:
+              display_name: 'Bab 2: AP Tepat Kinerja Tugas'
         cspnovice:
           stages:
             Wrap Up:
               name: Penutupan
           description_short: Pertanyaan refleksi bagi pemula fasilitator di TeacherCon.
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         novice-view:
           title: melihat tanggapan pemula
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         express-2017:
           stages:
             Introduction:
@@ -3645,6 +3895,9 @@ id:
               name: Membangun dasar
             Nested Loops:
               name: Perulangan bercabang
+          lesson_groups:
+            content:
+              display_name: Konten
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -3681,6 +3934,13 @@ id:
               name: Unit 3 Penilaian bab 3
           description_short: Pemrograman
           description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer, agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif. kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat pemograman. \\r\n\\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017. baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bab 1: Bahasa Pemrograman dan Algoritma'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csd4-draft:
           stages:
             Analysis of Design:
@@ -3697,6 +3957,11 @@ id:
               name: Meningkatkan dan menguraikan
             App Presentation:
               name: Penyajian aplikasi
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -3711,6 +3976,13 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+          lesson_groups:
+            csf_e_1:
+              display_name: Jalur naik tujuan E (opsional)
+            csf_e_2:
+              display_name: Isi kursus E
+            extra_course_content:
+              display_name: Isi Kursus Tambahan
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3729,6 +4001,10 @@ id:
               name: Artis Biner
             Building a Foundation:
               name: Membangun dasar
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bab 1: Bahasa Pemrograman dan Algoritma'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3743,6 +4019,9 @@ id:
               name: Membangun dasar
             Nested Loops:
               name: Perulangan bercabang
+          lesson_groups:
+            content:
+              display_name: Konten
         new-e:
           stages:
             Building a Foundation:
@@ -3755,6 +4034,13 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+          lesson_groups:
+            csf_e_1:
+              display_name: Jalur naik tujuan E (opsional)
+            csf_e_2:
+              display_name: Isi kursus E
+            extra_course_content:
+              display_name: Isi Kursus Tambahan
         new-f:
           stages:
             Building a Foundation:
@@ -3773,6 +4059,11 @@ id:
               name: Merevisi Proyek Anda
             Present Your Project:
               name: Menyajikan Proyek Anda
+          lesson_groups:
+            csf_f_1:
+              display_name: Jalur naik tujuan F (opsional)
+            csf_f_2:
+              display_name: Isi kursus F
         csd5-old:
           stages:
             Problem Solving and Data:
@@ -3781,6 +4072,11 @@ id:
               name: Mengotomatisasi Data Keputusan
             Problem Solving with Big Data:
               name: Pemecahan masalah dengan Data Besar
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
         csd4-old:
           stages:
             Analysis of Design:
@@ -3797,6 +4093,11 @@ id:
               name: Meningkatkan dan menguraikan
             App Presentation:
               name: Penyajian aplikasi
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -3821,6 +4122,11 @@ id:
               name: Latihan PT - desain sebuah adegan digital
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
+          lesson_groups:
+            csp3_1:
+              display_name: 'Bab 1: Bahasa Pemrograman dan Algoritma'
+            cspAssessment:
+              display_name: Bab Penilaian
         pwc:
           stages:
             Personal Innovations:
@@ -3850,6 +4156,11 @@ id:
             Post-Course Survey:
               name: Survei Pasca Kursus
           description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Bab 2: AP Tepat Kinerja Tugas'
+            cspSurvey:
+              display_name: Survei
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -3862,6 +4173,11 @@ id:
               name: Membuat PT - Menyelesaikan tugas
             Post-Course Survey:
               name: Survei Pasca Kursus
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Bab 3: AP Membuat Kinerja Tugas'
+            cspSurvey:
+              display_name: Survei
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -3886,6 +4202,13 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+          lesson_groups:
+            csf_e_1:
+              display_name: Jalur naik tujuan E (opsional)
+            csf_e_2:
+              display_name: Isi kursus E
+            extra_course_content:
+              display_name: Isi Kursus Tambahan
         course-f-2018:
           stages:
             Building a Foundation:
@@ -3906,6 +4229,11 @@ id:
               name: Merevisi Proyek Anda
             Present Your Project:
               name: Menyajikan Proyek Anda
+          lesson_groups:
+            csf_f_1:
+              display_name: Jalur naik tujuan F (opsional)
+            csf_f_2:
+              display_name: Isi kursus F
         csd6-old:
           stages:
             Computing Innovations:
@@ -3913,9 +4241,14 @@ id:
             The Circuit Playground:
               name: Sirkuit Bermain Anak
             Lists:
-              name: List
+              name: Daftar
             For Loops:
               name: Untuk Pengulangan
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
         csd3-1819draft:
           stages:
             Programming for Entertainment:
@@ -3923,7 +4256,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: variabel
+              name: Variables
             Booleans Unplugged:
               name: Booleans dicabut
             Conditionals:
@@ -3945,6 +4278,13 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
           description_short: "Pemrograman"
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
         csd3-2018:
           description_short: "Pemrograman"
           stages:
@@ -3954,7 +4294,7 @@ id:
               name: Menggambar dalam lab permaianan
               description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya.
             Variables:
-              name: variabel
+              name: Variables
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -3989,6 +4329,13 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
         csd2-2018:
           stages:
             Exploring Websites:
@@ -4001,7 +4348,7 @@ id:
               name: Jejak Digital
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
             Lists:
-              name: List
+              name: Daftar
             Clean Code and Debugging:
               name: Kode yang bersih dan Debugging
             Sources and Search Engines:
@@ -4009,6 +4356,13 @@ id:
               description_teacher: Pelajaran ini mendorong siswa agar dapat berpikir lebih kritis tentang bagaimana situs pencari bekerja dan bagaimana menemukan informasi yang relevan dan dapat dipercaya. setelah melihat video dan mendiskusikan tentang mesin pencari bekerja, para murid akan mencari informasi tentang beberapa hewan yang langka. mereka perlu menganalisis situs yang mereka temukan apakah bisa diandalkan untuk mengenali hewan mana yang bohongan.
             Project - Personal Portfolio Website:
               name: Proyek - Situs web Portfolio Pribadi
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bab 1: Konten Web dan HTML'
+            csd2_2:
+              display_name: 'Bab 2: Styling dan CSS'
+            cspSurvey:
+              display_name: Survei
         coursea-2018:
           assignment_family_title: Kursus A
           description_short: Pengenalan ilmu komputer untuk pra-pembaca.
@@ -4125,6 +4479,13 @@ id:
               name: Membuat musik
             Functions with Parameters:
               name: Fungsi dengan parameter
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+            cspSurvey:
+              display_name: Survei
         coursee-2018:
           assignment_family_title: Kursus E
           stages:
@@ -4158,6 +4519,13 @@ id:
               name: Bersyarat dengan kartu
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          lesson_groups:
+            csf_e_1:
+              display_name: Jalur naik tujuan E (opsional)
+            csf_e_2:
+              display_name: Isi kursus E
+            extra_course_content:
+              display_name: Isi Kursus Tambahan
         coursef-2018:
           assignment_family_title: Kursus F
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
@@ -4190,6 +4558,11 @@ id:
               description_student: Waktu untuk menunjukkan pekerjaan anda! Di sini anda akan menyajikan proyek mengagumkan untuk teman-teman anda.
             Conditionals with Cards:
               name: Bersyarat dengan kartu
+          lesson_groups:
+            csf_f_1:
+              display_name: Jalur naik tujuan F (opsional)
+            csf_f_2:
+              display_name: Isi kursus F
         csp1-2018:
           stages:
             Personal Innovations:
@@ -4224,6 +4597,13 @@ id:
               name: Praktek PT - Internet dan Masyarakat
             Unit 1 Chapter 2 Assessment:
               name: Unit 1 penilaian bab 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp1_1:
+              display_name: 'Bab 1: Mewakili dan Transmisi Informasi'
+            csp1_2:
+              display_name: 'Bab 2: Menciptakan Internet'
         csd1-2018:
           stages:
             The Problem Solving Process:
@@ -4244,6 +4624,13 @@ id:
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
             Apps and Storage:
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         csd4-2018:
           stages:
             Analysis of Design:
@@ -4260,6 +4647,13 @@ id:
               name: Pengujian Prototipe
             Improving and Iterating:
               name: Meningkatkan dan menguraikan
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+            cspSurvey:
+              display_name: Survei
         csd5-2018:
           stages:
             Problem Solving and Data:
@@ -4270,6 +4664,13 @@ id:
               name: Penataan Data
             Automating Data Decisions:
               name: Mengotomatisasi Data Keputusan
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -4304,6 +4705,11 @@ id:
               name: Membuat Tabel Ringkasan
             Unit 2 Chapter 2 Assessment:
               name: Unit 2 penilaian bab 2
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: informasi digital'
+            cspAssessment:
+              display_name: Bab Penilaian
         csp3-2018:
           description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer, agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif. kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat pemograman. \\r\n\\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017. baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
           description_short: Pemrograman
@@ -4332,6 +4738,13 @@ id:
               name: Unit 3 Penilaian bab 3
             Creating Functions with Parameters:
               name: Membuat fungsi dengan parameter
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Pengenalan Pemrograman'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp-explore-2018:
           description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
           stages:
@@ -4341,6 +4754,11 @@ id:
               name: Jelajahi PT - Membuat rencana
             Explore PT - Complete the Task:
               name: Jelajahi PT - Menyelesaikan tugas
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Bab 2: AP Tepat Kinerja Tugas'
+            cspSurvey:
+              display_name: Survei
         csp-create-2018:
           stages:
             Create PT Prep - Reviewing the Task:
@@ -4349,6 +4767,11 @@ id:
               name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
               name: Membuat PT - Menyelesaikan tugas
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Bab 3: AP Membuat Kinerja Tugas'
+            cspSurvey:
+              display_name: Survei
         csp4-2018:
           stages:
             What is Big Data?:
@@ -4375,6 +4798,13 @@ id:
               name: Menemukan tren dengan visualisasi
             Check Your Assumptions:
               name: Periksa asumsi anda
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big data dan privasi'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp5-2018:
           stages:
             Buttons and Events:
@@ -4417,6 +4847,13 @@ id:
               name: Unit 5 penilaian 4
             'Practice PT: Create':
               name: 'Latihan PT: membuat'
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bab 1: Pemrograman Event-Driven'
+            csp5_2:
+              display_name: 'Bab 2: Pemrograman dengan Struktur Data'
+            cspSurvey:
+              display_name: Survei
         csppostap-2018:
           stages:
             Creating Javascript Objects:
@@ -4455,22 +4892,131 @@ id:
               name: Membuat Tabel Ringkasan
             Unit 2 Chapter 2 Assessment:
               name: Unit 2 penilaian bab 2
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
+            csp_postap_2:
+              display_name: 'Bab 2: Aplikasi dan Basis data'
+            cspSurvey:
+              display_name: Survei
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Survei Pasca Kursus
         csd-novice-18:
           stages:
             Wrap Up:
               name: Penutupan
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csd-apprentice-18:
           stages:
             Wrap Up:
               name: Penutupan
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csp-novice-18:
           stages:
             Wrap Up:
               name: Penutupan
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csp-apprentice-18:
           stages:
             Wrap Up:
               name: Penutupan
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -4481,6 +5027,12 @@ id:
               name: Gerakkan itu, Gerakkan itu
             Your Digital Footprint:
               name: Digital Footprint Kamu
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         frozen-2018:
           stages:
             Artist:
@@ -4507,6 +5059,16 @@ id:
           stages:
             Dance Party:
               name: Pesta Tari
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
         dance-extras:
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursef-2019:
@@ -4538,6 +5100,17 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Untuk Pengulangan
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
         dance-low:
           stages:
             Dance Party:
@@ -4562,6 +5135,19 @@ id:
               description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
             Dance Party:
               name: Pesta Tari
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_events:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_binary:
+              display_name: Biner
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4592,6 +5178,17 @@ id:
               name: Sumber kerumunan
             Songwriting:
               name: Menulis lagu
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_nested_loops:
+              display_name: Perulangan bercabang
+            csf_functions:
+              display_name: fungsi
         express-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4628,6 +5225,21 @@ id:
               name: Pesta Tari
             Concept Practice with Minecraft:
               name: Melihat ke depan
+          lesson_groups:
+            csf_warmup:
+              display_name: Berlatih
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_functions:
+              display_name: fungsi
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Untuk Pengulangan
         csd1-2019:
           stages:
             The Problem Solving Process:
@@ -4642,10 +5254,22 @@ id:
               name: Sedang memproses
             Apps and Storage:
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         andrea-test:
           stages:
             'null':
               name: 'null'
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         dance-extras-gallery:
           title: Tetaplah berdansa
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
@@ -4663,6 +5287,21 @@ id:
               name: Gelang biner
             'End of Course Project: Create a Play Lab Game':
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_binary:
+              display_name: Biner
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
         gamelab:
           title: Laboratorium Game
         coursea-2019:
@@ -4672,6 +5311,15 @@ id:
               name: Pemetaan bahagia
             Going Places Safely:
               name: Pergi ke tempat-tempat dengan aman
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
         courseb-2019:
           stages:
             Move It, Move It:
@@ -4680,6 +5328,17 @@ id:
               name: Digital Footprint Kamu
             'Loops: Getting Loopy':
               name: Dapat berulang-ulang
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_events:
+              display_name: kegiatan
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -4688,6 +5347,13 @@ id:
               name: Digital Footprint Kamu
             Spelling Bee:
               name: Spelling Bee
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -4704,7 +5370,7 @@ id:
               name: Jejak Digital
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
             Lists:
-              name: List
+              name: Daftar
             Clean Code and Debugging:
               name: Kode yang bersih dan Debugging
             Sources and Search Engines:
@@ -4712,6 +5378,13 @@ id:
               description_teacher: Pelajaran ini mendorong siswa agar dapat berpikir lebih kritis tentang bagaimana situs pencari bekerja dan bagaimana menemukan informasi yang relevan dan dapat dipercaya. setelah melihat video dan mendiskusikan tentang mesin pencari bekerja, para murid akan mencari informasi tentang beberapa hewan yang langka. mereka perlu menganalisis situs yang mereka temukan apakah bisa diandalkan untuk mengenali hewan mana yang bohongan.
             Project - Personal Portfolio Website:
               name: Proyek - Situs web Portfolio Pribadi
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bab 1: Konten Web dan HTML'
+            csd2_2:
+              display_name: 'Bab 2: Styling dan CSS'
+            cspSurvey:
+              display_name: Survei
         csd3-2019:
           description_short: "Pemrograman"
           stages:
@@ -4721,7 +5394,7 @@ id:
               name: Menggambar dalam lab permaianan
               description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya.
             Variables:
-              name: variabel
+              name: Variables
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -4756,6 +5429,13 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
         csd4-2019:
           stages:
             Analysis of Design:
@@ -4772,6 +5452,15 @@ id:
               name: Pengujian Prototipe
             Improving and Iterating:
               name: Meningkatkan dan menguraikan
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
         csd5-2019:
           stages:
             Problem Solving and Data:
@@ -4782,6 +5471,13 @@ id:
               name: Penataan Data
             Automating Data Decisions:
               name: Mengotomatisasi Data Keputusan
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
         csd6-2019:
           description_short: Belajar program dengan perangkat fisik.
           stages:
@@ -4797,10 +5493,28 @@ id:
               name: Membuat musik
             Functions with Parameters:
               name: Fungsi dengan parameter
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+            cspSurvey:
+              display_name: Survei
         csp4-pilot:
           stages:
             Surveys:
               name: Survei
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+            required:
+              display_name: Tinjauan
         csp1-2019:
           stages:
             Personal Innovations:
@@ -4833,6 +5547,13 @@ id:
               name: Praktek PT - Internet dan Masyarakat
             Unit 1 Chapter 2 Assessment:
               name: Unit 1 penilaian bab 2
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csp1_1:
+              display_name: 'Bab 1: Mewakili dan Transmisi Informasi'
+            csp1_2:
+              display_name: 'Bab 2: Menciptakan Internet'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -4843,6 +5564,13 @@ id:
               name: Pengkodean gambar B&W
             Encoding Color Images:
               name: Pengkodean Gambar Berwarna
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: informasi digital'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp3-2019:
           description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer, agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif. kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat pemograman. \\r\n\\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017. baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
           description_short: Pemrograman
@@ -4869,6 +5597,13 @@ id:
               name: Latihan PT - desain sebuah adegan digital
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Pengenalan Pemrograman'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp4-2019:
           stages:
             What is Big Data?:
@@ -4891,6 +5626,13 @@ id:
               name: Kunci umum Kripto
             Rapid Research - Cybercrime:
               name: Penelitian cepat - Keamanan cyber
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big data dan privasi'
+            cspAssessment:
+              display_name: Bab Penilaian
+            cspSurvey:
+              display_name: Survei
         csp5-2019:
           stages:
             Buttons and Events:
@@ -4931,6 +5673,13 @@ id:
               name: 'Membangun aplikasi: Kanvas pelukis'
             Unit 5 Assessment 4:
               name: Unit 5 penilaian 4
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bab 1: Pemrograman Event-Driven'
+            csp5_2:
+              display_name: 'Bab 2: Pemrograman dengan Struktur Data'
+            cspSurvey:
+              display_name: Survei
         csp-explore-2019:
           description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan dan menyelesaikan AP Tepat Kinerja Tugas.
           stages:
@@ -4940,6 +5689,11 @@ id:
               name: Jelajahi PT - Membuat rencana
             Explore PT - Complete the Task:
               name: Jelajahi PT - Menyelesaikan tugas
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Bab 2: AP Tepat Kinerja Tugas'
+            cspSurvey:
+              display_name: Survei
         csp-create-2019:
           stages:
             Create PT Prep - Reviewing the Task:
@@ -4948,6 +5702,11 @@ id:
               name: Membuat persiapan PT - Membuat rencana
             Create PT - Complete the Task:
               name: Membuat PT - Menyelesaikan tugas
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Bab 3: AP Membuat Kinerja Tugas'
+            cspSurvey:
+              display_name: Survei
         csppostap-2019:
           stages:
             Intro to Data:
@@ -4980,6 +5739,13 @@ id:
               name: Contoh aplikasi
             Final Project:
               name: Tugas Akhir
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
+            csp_postap_2:
+              display_name: 'Bab 2: Aplikasi dan Basis data'
+            cspSurvey:
+              display_name: Survei
         csp1-pilot:
           stages:
             Number Systems:
@@ -4994,6 +5760,11 @@ id:
               name: Bilangan Biner
             Representing Information:
               name: Menunjukkan informasi
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            required:
+              display_name: Tinjauan
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5002,18 +5773,143 @@ id:
               name: Bersyarat dengan kartu
             Building a Foundation:
               name: Membangun dasar
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            time4cs_c1:
+              display_name: 'Everglades dan Ekosistemnya'
+            time4cs_c2:
+              display_name: 'Tantai Makanan di Everglades'
+            time4cs_c3:
+              display_name: 'Hidup di Everglades'
+            time4cs_c4:
+              display_name: 'Dampak Invasi pada Everglades'
+            time4cs_c5:
+              display_name: 'Masyarakat Mempengaruhi Perubahan di Everglades'
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Daftar
+            csp_loops:
+              display_name: Loop
+            csp_traversals:
+              display_name: Melintang
+            csp_project:
+              display_name: Proyek
+            csp_libraries:
+              display_name: Perpustakaan
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
         csp7-pilot-staging:
           stages:
             Libraries:
               name: Perpustakaan
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            csp_libraries:
+              display_name: Perpustakaan
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Pemrograman grafis diatas kertas
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Daftar
+            csp_loops:
+              display_name: Loop
+            csp_traversals:
+              display_name: Melintang
+            csp_project:
+              display_name: Proyek
+            required:
+              display_name: Tinjauan
         fit2019-novice:
           stages:
             Wrap Up:
               name: Penutupan
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -5022,6 +5918,11 @@ id:
           stages:
             Wrap Up:
               name: Penutupan
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csd1-pilot:
           stages:
             The Problem Solving Process:
@@ -5036,6 +5937,13 @@ id:
               name: Sedang memproses
             Apps and Storage:
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         csd2-pilot:
           stages:
             Exploring Websites:
@@ -5048,7 +5956,7 @@ id:
               name: Jejak Digital
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
             Lists:
-              name: List
+              name: Daftar
             Clean Code and Debugging:
               name: Kode yang bersih dan Debugging
             Sources and Search Engines:
@@ -5060,6 +5968,13 @@ id:
               name: Hak milik intelektual
             CSS Classes:
               name: Kelas CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bab 1: Konten Web dan HTML'
+            csd2_2:
+              display_name: 'Bab 2: Styling dan CSS'
+            cspSurvey:
+              display_name: Survei
         csd3-pilot:
           description_short: "Pemrograman"
           stages:
@@ -5069,7 +5984,7 @@ id:
               name: Menggambar dalam lab permaianan
               description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya.
             Variables:
-              name: variabel
+              name: Variables
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -5104,24 +6019,119 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Konten
+            required:
+              display_name: Tinjauan
+        csl-vn:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Tinjauan
+            content:
+              display_name: Konten
         csd4-pilot:
           stages:
             What is a Computer?:
               name: Apa itu komputer?
             Processing:
               name: Sedang memproses
+          lesson_groups:
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         csp2-pilot:
           stages:
             Routers and Redundancy:
               name: Router dan Kualitas
             The Need for Addressing:
               name: Dibutuhkan untuk Pengalamatan
+          lesson_groups:
+            content:
+              display_name: Konten
+            required:
+              display_name: Tinjauan
         peru-2019:
           stages:
             Introduction:
               name: Pendahuluan
             Nested Loops:
               name: Perulangan bercabang
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Konten
+            required:
+              display_name: Tinjauan
         dance-2019:
           stages:
             Dance Party:
@@ -5161,11 +6171,26 @@ id:
             Functions:
               name: fungsi
             Variables:
-              name: variabel
+              name: Variables
             For Loops:
               name: Untuk Pengulangan
+          lesson_groups:
+            k5_getting_started:
+              display_name: Dapat Dimulai
+            k5_next_steps:
+              display_name: Langkah berikutnya
         dance-extras-2019:
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -5176,18 +6201,103 @@ id:
               name: Sumber kerumunan
             Conditionals with Cards:
               name: Bersyarat dengan kartu
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_conditionals:
+              display_name: Kondisi
+            csf_nested_loops:
+              display_name: Perulangan bercabang
+            csf_functions:
+              display_name: fungsi
+        time4cs-experiment-unit-2:
+          lesson_groups:
+            time4cs_c1:
+              display_name: 'Everglades dan Ekosistemnya'
+            time4cs_c2:
+              display_name: 'Tantai Makanan di Everglades'
+            time4cs_c3:
+              display_name: 'Hidup di Everglades'
+            time4cs_c4:
+              display_name: 'Dampak Invasi pada Everglades'
+            time4cs_c5:
+              display_name: 'Masyarakat Mempengaruhi Perubahan di Everglades'
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Kondisi
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_events:
+              display_name: kegiatan
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            ramp_up:
+              display_name: Jalan-Naik
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Kondisi
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_events:
+              display_name: kegiatan
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            ramp_up:
+              display_name: Jalan-Naik
+        csp7-pilot:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            csp_libraries:
+              display_name: Perpustakaan
+            required:
+              display_name: Tinjauan
         csp8-pilot:
           stages:
             Create PT - Complete the Task:
               name: Membuat PT - Menyelesaikan tugas
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Kondisi
+            csp_functions:
+              display_name: fungsi
+            csp_project:
+              display_name: Proyek
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Daftar
+            csp_loops:
+              display_name: Loop
+            csp_traversals:
+              display_name: Melintang
+            csp_project:
+              display_name: Proyek
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter dan Nilai Balik
+            csp_libraries:
+              display_name: Perpustakaan
         csd2-2020:
           stages:
             Headings:
@@ -5201,6 +6311,13 @@ id:
               name: 'Situs-situs untuk Ekspresi '
             CSS Classes:
               name: Kelas CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bab 1: Konten Web dan HTML'
+            csd2_2:
+              display_name: 'Bab 2: Styling dan CSS'
+            cspSurvey:
+              display_name: Survei
         csd1-2020:
           stages:
             The Problem Solving Process:
@@ -5216,6 +6333,13 @@ id:
             Apps and Storage:
               description_student: "Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. "
             0:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survei
+            csd1_1:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            csd1_2:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5232,6 +6356,15 @@ id:
               name: Pengujian Prototipe
             Improving and Iterating:
               name: Meningkatkan dan menguraikan
+          lesson_groups:
+            csd4_1:
+              display_name: 'Bab 1: User Centered Design'
+            csd4_2:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
         csd5-2020:
           stages:
             Problem Solving and Data:
@@ -5242,6 +6375,13 @@ id:
               name: Penataan Data
             Automating Data Decisions:
               name: Mengotomatisasi Data Keputusan
+          lesson_groups:
+            csd5_1:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            csd5_2:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+            cspSurvey:
+              display_name: Survei
         csd6-2020:
           description_short: Belajar program dengan perangkat fisik.
           stages:
@@ -5257,6 +6397,13 @@ id:
               name: Membuat musik
             Functions with Parameters:
               name: Fungsi dengan parameter
+          lesson_groups:
+            csd6_1:
+              display_name: 'Bab 1: Pemrograman dengan Hardware'
+            csd6_2:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+            cspSurvey:
+              display_name: Survei
         csd3-2020:
           description_short: "Pemrograman"
           stages:
@@ -5266,7 +6413,7 @@ id:
               name: Menggambar dalam lab permaianan
               description_teacher: "Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya."
             Variables:
-              name: variabel
+              name: Variables
               description_student: "Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali."
               description_teacher: |-
                 Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
@@ -5302,6 +6449,13 @@ id:
               description_student: "Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai."
             Text:
               name: Teks
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
+            cspSurvey:
+              display_name: Survei
         coursea-2020:
           description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           stages:
@@ -5309,6 +6463,15 @@ id:
               name: Pergi ke tempat-tempat dengan aman
             'Programming: Happy Maps':
               name: Pemetaan bahagia
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -5317,6 +6480,17 @@ id:
               name: Gerakkan itu, Gerakkan itu
             'Loops: Getting Loopy':
               name: Dapat berulang-ulang
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_impacts:
+              display_name: Dampak dari Komputasi
+            csf_events:
+              display_name: kegiatan
         coursec-2020:
           stages:
             Screen Out the Mean:
@@ -5329,6 +6503,17 @@ id:
               name: Acara besar
             'End of Course Project: Create a Play Lab Game':
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+          lesson_groups:
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_sequencing:
+              display_name: Urutan
+            csf_binary:
+              display_name: Biner
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5349,12 +6534,36 @@ id:
               name: Kewarganegaraaan Digital
             Dance Party:
               name: Pesta Tari
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_events:
+              display_name: kegiatan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_binary:
+              display_name: Biner
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
         coursee-2020:
           stages:
             Private and Personal Information:
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
             'Functions: Songwriting':
               name: Menulis lagu
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_nested_loops:
+              display_name: Perulangan bercabang
+            csf_functions:
+              display_name: fungsi
+            csf_impacts:
+              display_name: Dampak dari Komputasi
         coursef-2020:
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
           stages:
@@ -5369,14 +6578,45 @@ id:
               description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
             Crowdsourcing:
               name: Sumber kerumunan
+          lesson_groups:
+            ramp_up:
+              display_name: Jalan-Naik
+            csf_digcit:
+              display_name: Kewarganegaraaan Digital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Untuk Pengulangan
         express-2020:
           stages:
             Dance Party:
               name: Pesta Tari
+          lesson_groups:
+            csf_warmup:
+              display_name: Berlatih
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_conditionals:
+              display_name: Kondisi
+            csf_functions:
+              display_name: fungsi
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Untuk Pengulangan
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Spelling Bee
+          lesson_groups:
+            csf_sequencing:
+              display_name: Urutan
+            csf_loops:
+              display_name: Loop
+            csf_events:
+              display_name: kegiatan
         csp1-2020:
           stages:
             Representing Information:
@@ -5385,6 +6625,9 @@ id:
               name: Bilangan Biner
             Intellectual Property:
               name: Hak milik intelektual
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '(Lama) Unit 1: Informasi Digital'
         csp2-2020:
           stages:
             The Need for Addressing:
@@ -5421,6 +6664,9 @@ id:
               name: Latihan PT - desain sebuah adegan digital
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Pengenalan Pemrograman'
         csd3-virtual:
           description_short: "Pemrograman"
           stages:
@@ -5430,7 +6676,7 @@ id:
               name: Menggambar dalam lab permaianan
               description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya.
             Variables:
-              name: variabel
+              name: Variables
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
               description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
@@ -5465,6 +6711,9 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+          lesson_groups:
+            csd3_1:
+              display_name: 'Bab 1: Gambar dan Animasi'
         csd2-virtual:
           stages:
             Headings:
@@ -5478,6 +6727,11 @@ id:
               name: 'Situs-situs untuk Ekspresi '
             CSS Classes:
               name: Kelas CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Bab 1: Konten Web dan HTML'
+            csd2_2:
+              display_name: 'Bab 2: Styling dan CSS'
         csp5-virtual:
           stages:
             Buttons and Events:
@@ -5519,7 +6773,7 @@ id:
             Unit 5 Assessment 4:
               name: Unit 5 penilaian 4
             Variables:
-              name: variabel
+              name: Variables
         virtual-holding-place:
           stages:
             Velocity:
@@ -5536,6 +6790,11 @@ id:
               name: Proses menggunakan desain permainan
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
+          lesson_groups:
+            content:
+              display_name: Konten
+            csd3_2:
+              display_name: 'Bab 2: Bangunan Permainan'
         code-break:
           stages:
             Algorithms:
@@ -5564,3 +6823,8 @@ id:
               name: 'Membangun aplikasi: Kanvas pelukis'
             Unit 5 Assessment 4:
               name: Unit 5 penilaian 4
+          lesson_groups:
+            csp5_1:
+              display_name: 'Bab 1: Pemrograman Event-Driven'
+            csp5_2:
+              display_name: 'Bab 2: Pemrograman dengan Struktur Data'

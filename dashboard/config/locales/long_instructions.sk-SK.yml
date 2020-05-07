@@ -104,6 +104,8 @@ sk-SK:
         Tieto kvetinky vyzerajú lákavo!
 
         Pozbieraj nektár z každého kvetu použitím čo možno najmenej blokov.
+      2-3 Bee Loops 13: "\\*\\*Hodnotenie: Pozbierajte všetok nektár použitím čo najmenšieho
+        možného počtu blokov."
       2-3 Bee Loops 3A: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       2-3 Bee Loops 3B: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru
         a vyrobenie všetkého medu.
@@ -239,62 +241,118 @@ sk-SK:
         zasypávať jamu až kým nebude zem vyrovnaná?  "
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
         AM.png\" style=\"height:150px\"> \n</div>\n\n**Cieľ:** Nastaviť obrazovku
-        na zeleno. \n\n**Ako:** Potiahni si na plochu blok `nastavVlastnosť(). Použi
-        rozbaľovacie šípky nadol na nastavenie`\"farby-pozadia\"`obrazovky na`\"zelená\"\\`.
-        Potom stlač \"Spustiť\".\n\n**Nejde to? Klikni tu:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+        na zeleno. \n\n**Ako:** Pretiahni si na plochu blok `setProperty()`. Použi
+        rozbaľovacie šípky nadol na nastavenie farby pozadia`\"background-color\"`
+        obrazovky na zelená `\"green\"`. Potom stlač \"Spustiť\".\n\n**Nedarí sa ti?
+        Klikni sem:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: "<div style=\"float:right\">\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29
         PM.png\" style=\"height:200px;\">\n</div>\n\n**Cieľ:** Nastaviť väčší text
         a zmeniť ho na modrý. \n\n**Ako:** Budeš potrebovať dva riadky kódu. Zmeň
-        pre `\"label1\"` `\"veľkosť-písma\"` na `80` a`\"farba-textu\"` na `\"modrú\"`\n\n**Nejde
-        to? Klikni tu:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
+        pre `\"label1\"` veľkosť písma `\"font-size\"` na `80` a farbu textu `\"text-color\"`
+        na modrú `\"blue\"`\n\n**Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
       AppLab Intro 7 - Full Text: |-
         <div style="float:right">
         <img src="https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png" style="height:200px">
         </div>
 
-        **Cieľ:** Zmeniť tlačidlá na `"červené"` a \`"modré". Potom zmeň text vo veľkom orandžovom rámčeku.
+        **Cieľ:** Zmeniť tlačidlá na červené `"red"` a modré `"blue"`. Potom zmeň text vo veľkom oranžovom rámčeku.
 
         **Ako:**
 
-        -   Neabudni, že keď kurzorom prejdeš ponad objekty, tak uvidíš ich `"id"`.
-        -   Nastav `"farbu-pozadia"` pre tlačidlá na `"červenú"` a \`"modrú".
-        -   Zmeň vlastnosť rámčeka `"text"` na ˇˇcokoľvek chceš, ako napríklad \`"Vitajte v mojej appke!"
+        -   Neabudni, že keď kurzorom prejdeš ponad prvky, tak uvidíš ich `"id"`.
+        -   Nastav farbu pozadia `"background-color"` pre tlačidlá na červenú `"red"` a modrú `"blue"`.
+        -   Zmeň vlastnosť rámčeka `"text"` na čokoľvek chceš, ako napríklad `"Vitajte v mojej appke!"`
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
       AppLab Intro 7 - onEvent intro: |-
         <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
 
-        **Cieľ:** Obrazovka bude na začiatku modrá. Pridaj kód tak, aby sa zmenila na zelenú po kliknutí na tlačidlo "Zozeleniť".
+        **Cieľ:** Obrazovka bude na začiatku modrá. Pridaj kód tak, aby sa zmenila na zelenú po kliknutí na tlačidlo Zozeleniť "Green-ify".
 
-        **Ako:**  Pridaj kód do vnútra `priUdalosti()` , ktoré nastaví `"farbu-pozadia"` obrazovky na `"zelenú"`.
+        **Ako:**  Pridaj kód do vnútra `setProperty()` , ktorý nastaví farbu pozadia `"background-color"` obrazovky na zelenú `"green"`.
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons: |-
         <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
 
-        **Cieľ:** Pomôž s dokončním tejto aplikácie baterky. Tlačidlo "Zapnúť" už mení obrazovku na bielu. Spusti si aplikáciu a vyskúšaj to. Potom napíš kód tak aby tlačidlo "Vypnúť" menilo obrazovku naspäť na čiernu.
+        **Cieľ:** Pomôž s dokončním tejto aplikácie baterky. Tlačidlo Zapnúť "On" už mení obrazovku na bielu. Spusti si aplikáciu a vyskúšaj to. Potom napíš kód tak aby tlačidlo Vypnúť "Off" menilo obrazovku naspäť na čiernu.
 
-        **Ako:**  Pridaj kód do prázdneho `priUdalosti()`, ktoré nastaví `"farbu-pozadia"` obrazovky na `"čiernu"` a `"farbu-textu"` rámčeka na `"bielu"`.
+        **Ako:**  Pridaj kód do prázdneho `setProperty()`, ktorý nastaví farbu pozadia `"background-color"` obrazovky na  čiernu `"black"` a farbu textu `"text-color"` nápisu na bielu `"white"`.
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
-        AM.png\" style=\"float:right;height:200px\">\n\n**Cieľ:** Táto doska so zvukmi
-        už je skoro hotová! Spusti ju a zisti ako funguje. Potom pridaj obrázok, text
-        a zvuk pre posledné tlačidlo.\n\n**Ako:** \n\n-   Pridaj do porogramu `priUdalosti()`
-        a nastav \"id\" na `\"tlačidlo4\"`. Potiahnu `prehrajZvuk()` do bloku  `priUdalosti()`
-        a vyber si nejaký zvuk z knižnice. \n-   Pridaj `nastavVlastnosť()` (von z
-        bloku `priUdalosti()`), aby si zmenil/a vlastnosť tlačidla `\"obrázok\"`.
-        Vyber so obrázok pomocou tretieho rozbaľovacieho menu.\n-   Pridaj ešte jednu
-        \ `nastavVlastnosť()`, aby si zmenil `\"text\"` tlačidla.\n\n**Nejde to? Klikni
-        tu:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+        AM.png\" style=\"float:right;height:200px\">\n\n**Cieľ:** Táto zvuková aplikácia
+        so zvieratami je už skoro hotová! Spusti ju a zisti ako funguje. Potom pridaj
+        obrázok, text a zvuk pre posledné tlačidlo.\n\n**Ako:** \n\n-   Pridaj `onEvent()`
+        do programu a nastav \"id\" na `\"button4\"`. Pretiahni `playSound()` do bloku
+        `onEvent()` a vyber si nejaký zvuk z knižnice. \n-   Pridaj `setProperty()`
+        (mimo bloku `onEvent()`), a zmeň obrázok `\"image\"` tlačidla. Vyber obrázok
+        pomocou tretieho rozbaľovacieho menu.\n-   Pridaj ešte jeden blok `setProperty()`,
+        a zmeň text `\"text\"` tlačidla.\n\n**Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
       AppLab Intro 7 - thisOrThatAddButton: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
 
-        **Cieľ:** Pridaj na obrazovku druhé tlačidlo, ktoré bude mať na sebe napísané "Doprava!" s `"id"` `"pravéTlačidlo"`
+        **Cieľ:** Pridaj na obrazovku druhé tlačidlo `"Button"`, ktoré bude mať na sebe napísané Doprava! "Right!" s id `"id"` pravéTlačidlo `"rightButton"`.
 
-        **Ako:**  V móde dizajnovania pritiahni nové tlačidlo. Umiestni ho a uprav jeho veľkosť. Potom nastav jeho `"id"`, `"text"`, `"farbu pozadia"`, and `"veľkosť písma"`.
+        **Ako:**  V móde dizajnu pretiahni prvok nového tlačidla `"Button"`. Umiestni ho a uprav jeho veľkosť. Potom nastav jeho id `"id"`, text `"text"`, farbu pozadia `"background color"`, a veľkosť písma `"font size"`.
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Cieľ:** Vytvor novú obrazovku `"Screen"` s id `"id"` praváObrazovka `"rightScreen"`. Pridaj štítok `"Label"` s textom Už si vpravo! "You went right!".
+
+        **Ako:**  V móde dizajnu pretiahni prvok novej obrazovky `"Screen"`. Zmeň jeho id `"id"` na praváObrazovka `"rightScreen"`. Potom pretiahni štítok `"Label"` na túto obrazovku a zmeň jeho text na Už si vpravo! "You went right!".
+
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: |-
+        <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank"><img src="https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank"><img src="https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40 PM.png" style="float:right;height:200px"></a>
+
+        **Cieľ:** Vytvor vlastnú aplikáciu rozšírením tohto projektu. Potom ju s niekým zdieľaj kliknutím na "Zdieľať"!
+
+        **Ako:** Rozhodni sa, aký typ aplikácie chceš vytvoriť. Potom ju vytvor pridaním obrazoviek, tlačidiel, textov, zvukov a interakcií. V paneli nástrojov je ešte niekoľko blokov, ktoré môžeš vyskúšať. Po dokončení aplikácie klikni na "Zdieľať" a pošli ju sebe alebo kamarátom!
+
+        <details>
+
+        <summary><b>Nápady pre svoje vlastné dobrodružstvá</b></summary>
+
+        Pozri si túto applikáciu <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank">Príklad: Vyber si vlastné dobrodružstvo</a> , ktorá ti ukáže ako to môže fungovať. Nižšie je niekoľko nápadov, ktoré ti môžu pomôcť vymyslieť svoj vlastný príbeh.
+
+        <li>Vytvor dobrodružstvo so svojou obľúbenou postavou, skutočnou alebo vymyslenou.</li>
+        <li>Vytvor dobrodružstvo, ktorým vyrozprávaš príbeh zo svojej obľúbenej knihy, filmu alebo si nejaký príbeh vymysli.</li>
+        <li>Vytvor dobrodružstvo, ktoré má veľa nečakaných zvratov alebo má ťažké morálne rozhodnutia.</li>
+        <br>
+        </details>
+
+        <details><summary><b>Nápady pre blahoželania</b></summary>
+
+        Pozri si túto applikáciu <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank">Príklad: Blahoželania</a> , ktorá ti ukáže ako to môže fungovať. Nižšie je niekoľko nápadov, ktoré ti môžu pomôcť vymyslieť svoje vlastné blahoželnie.
+
+        <li>Zamysli sa nad narodeninami, sviatkom alebo iným špeciálnym dňom, ktorý sa blíží a vytvor to správne blahoželanie!</li>
+        <li>Vytvor blahoželanie ako poďakovanie niekomu, koho si vážiš.</li>
+        <li>Vytvor pozvánku na blížiacu sa udalosť.</li>
+        <br>
+        </details>
+
+        <details><summary><b>Nápady pre kvíz</b></summary>
+
+        Pozri si túto applikáciu <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank">Príklad: Kvíz</a> , ktorá ti ukáže ako to môže fungovať. Nižšie je niekoľko nápadov, ktoré ti môžu pomôcť vymyslieť svoj vlastný kvíz.
+
+        <li>Vytvor kvíz, ktorý kamarátom navrhne niečo čo môžu mať radi, napríklad jedlo, obľúbený tím, knihu alebo miesto.</li>
+        <li>Vytvor kvíz, ktorý "predpovedá budúcnosť" na základe odpovedí kamarátov.</li>
+        <li>Vytvor kvíz, ktorý pomôže kamarátom urobiť ťažké rozhodnutia.</li>
+
+        </details>
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Cieľ:** Obrazovka sa prepne na pravú obrazovku `"rightScreen"` keď klikneš na tlačidlo Doprava! `"Right!"` s id `"rightButton"`.
+
+        **Ako:** V móde kódu pridaj nový blok `onEvent()` do svojho programu pre tvoje tlačidlo Doprava! "Right!". Ďalej pridaj blok `setScreen()` do jeho vnútra, ktorý prepne obrazovku na pravú obrazovku `"rightScreen"`.
+
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD U3 - conditionals - first conditional 2_2018: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
         style=\"width:200px;float:right\">\n\n# Viditeľnosť\n\nNiekedy sa hodí obrázok
         na chvíľu skryť a potom ho zas zobraziť. Toto sa dá urobiť pomocou nastavenia
@@ -461,7 +519,7 @@ sk-SK:
 
         Náš program momentálne pohybuje myškou rovno nadol. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
 
-        _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
+        _Výzva: Vieš nastaviť myšku tak, aby sa otočila rovnakým smerom ako na obrázku?_
       CSD U3 Diagonal Movement_2019: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
 
@@ -471,7 +529,7 @@ sk-SK:
 
         Náš program momentálne pohybuje myškou rovno nadol. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
 
-        _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
+        _Výzva: Vieš nastaviť myšku tak, aby sa otočila rovnakým smerom ako na obrázku?_
       CSD U3 Direction Arrows_2018: "# Posun do všetkých smerov\n\nKeďže už vieš posunúť
         \"sprite\" pomocou príkazu `keyDown` jedným smerom, posun do všetkých smerov
         by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré sa naučíš
@@ -1512,6 +1570,77 @@ sk-SK:
         si pozbieral 3, 6, 9, 12, 15 nektárov?"
       New Minecraft Hero Project: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta
         a preskúmaj s ním tento svet."
+      OPD-K5-events-2: "Pripoj blok `mávni normálne` k bloku `keď klikneš`, potom
+        stlač tlačidlo \"Spustiť\". \n\n* * *\n\nKlikni na hernú plochu aby si dostal
+        Flappyho k cieľu."
+      OPD-K5-events-3: "Blok `pri spustení` ti umožní spustiť tvoj kód hneď ako tvoja
+        hra začne. \n\nVyskúšaj pridať blok, ktorým zmeníš rýchlosť hry po stlačení
+        tlačidla \"Spustiť\". \n\n* * *\n\nZahraj si túto hru a doleť až k cieľu,
+        aby si mohol pokračovať."
+      OPD-K5-events-4: "Teraz sme pridali aj zem. \n\nUmiestni blok `ukonči hru` pod
+        blok `keď dopadne na zem`. \n\n* * *\n\nZahraj si hru a na jej konci nechaj
+        Flappyho spadnúť na zem."
+      OPD-K5-events-5: "Flappy skrz prekážky preletí, pokiaľ ho nenaprogramuješ tak,
+        aby do nich narazil ak sa im nevyhne. \n\nPripoj blok `ukonči hru` ku bloku
+        `keď narazí na prekážku`, aby sa hra skončila akonáhle Flappy narazí do prvej
+        prekážky."
+      OPD-K5-events-6: "Pridali sme počítadlo bodov, Flappy získa jeden zakaždým,
+        keď sa vyhne prekážke. \n\nPridaj blok `pridaj bod` pod udalosť `keď obíde
+        prekážku`, potom stlač \"Spustiť\" a dostaň Flappyho cez prvé prekážky."
+      OPD-K5-forloops-2: |-
+        Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+
+        Potrebuješ veľa blokov pre túto výzvu, ale v ďalšej úlohe sa naučíme jednoduchší spôsob.
+      OPD-K5-forloops-6: |-
+        Cyklus `for` môžeš použiť aj na odpočítavanie.
+
+        Skús pozbierať nektár odpočítavaním od **5** do **1** počítané po **1**.
+      OPD-K5-forloops-7: |-
+        Posledné číslo v tvojom cykle `for` sa nazýva **"prírastok"**. Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu  **prírastku**.
+
+        Skús pozbierať tieto kvety s použitím **prírastku** 2.
+      OPD-K5-projects-3: "Použi bloky ako udalosti a akcie, aby si hráčom mohol hýbať
+        pomocou šípok. \n\n Úlohu dokončíš posunutím hráča ku všetkým terčom."
+      OPD-K5-projects-5: |-
+        Viacero postáv, ktoré sa hýbu je dobrý začiatok na vytvorenie hry. Potrebujeme ešte niečo pridať, aby sa to viac podobalo na ozajstnú hru. Pridajme skóre!
+
+        Použi bloky s udalosťami ako napríklad 'keď sa postava dotkne', aby si ovplyvnil skóre alebo vyhral. Nazbieraj 5 bodov alebo vyhraj, aby si vyriešil túto úlohu.
+      OPD-K5-projects-6: Skvelá práca! Máš všetky základné časti fungujúcej hry. Teraz
+        si skontroluj, či hra funguje presne tak, ako chceš. A nakoniec klikni na
+        "Dokončiť"!
+      OPD-K5-spritelab-2: "Vytvor akvárium!  \n\nZmeň Pracháča (kôpku slamy) na akúkoľvek
+        rybu kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the
+        sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nNezabudni
+        tiež zmeniť kostým v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the
+        add behavior block\"></block></xml>."
+      OPD-K5-spritelab-3: "Rybe sa začala točiť hlava! \n\nZmeň správanie ryby tak,
+        aby plávala vľavo a vpravo."
+      OPD-K5-spritelab-4: "Naše akvárium bude potrebovať vodu! \n\nPouži <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background
+        color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
+        \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
+        \ </block></xml> na nastavenie farby pozadia. Odporúčame modrú!"
+      OPD-K5-spritelab-6: Ryba má dobrodružnú povahu a chcela by stretnúť ďalšie morské
+        živočíchy. Pridaj do akvária ďašiu postavu. Postava môže mať hociaký kostým,
+        okrem toho, ktorý už má ryba.
+      OPD-K5-spritelab-7: |-
+        Čo chceš, aby robil nový kamarát tvojej ryby?
+
+        Pridaj mu správanie a sleduj ich!
+      OPD-K5-variables-1: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
+      OPD-K5-variables-2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      OPD-K5-variables-5: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      OPD-K5-variables-6: Teraz použi premennú `dĺžka`, aby umelec skočil dopredu
+        a dole o `dĺžka` pixelov medzi trojuhoníkmi.
       Overworld Chop Tree: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí.
         Kráčaj ku stromu a použi príkaz`znič blok` na to, aby si ho vyrúbal.
       Overworld Chop Tree_2019: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa
@@ -2029,6 +2158,10 @@ sk-SK:
         ku prasiatku!
       courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
         ku prasiatku!
+      courseA_maze_seq6_copy: |-
+        Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal ku prasiatku!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
@@ -2070,6 +2203,9 @@ sk-SK:
         po stlačení šípiek na klávensnici.
       courseA_playLab_events5_2018: Pridaj udalosti tak, aby sa Jorge hýbal hore a
         dole po stlačení šípiek na klávensnici.
+      courseA_playLab_events5_2019: Pridaj udalosti tak, aby sa Jorge hýbal hore a
+        dole po stlačení tlačidla \`hore\` a \`dole\`. Pre dokončenie úlohy pomôž
+        Jorgemu získať všetky vlajky!
       courseA_playLab_events6_2019: Sprav to ešte zaujímavejšie, zmeň aj pozadie a
         prehraj náhodný zvuk po kliknutí na Jorgeho. Keď bude tvoj kód hotový, klikni
         na Jorgeho aby si to vyskúšal/a!
@@ -3234,6 +3370,10 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ideš BB-8!"_
 
         Ak chceš pozbierať všetky kusy šrotu, vytvor cyklus použitím len jedného bloku vo vnútri opakovania.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ideš BB-8!"_
+
+        Ak chceš pozbierať všetky kusy šrotu, vytvor cyklus použitím len jedného bloku vo vnútri opakovania.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
 
@@ -3246,11 +3386,17 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
 
         V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
+
+        V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8, ideš!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
@@ -3261,6 +3407,10 @@ sk-SK:
 
         Cykly fungujú dokonca aj s viac ako jedným blokom vo vnútri! Dokážeš dať túto postupnosť do cyklu?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
+
+        Cykly fungujú dokonca aj s viac ako jedným blokom vo vnútri! Dokážeš dať túto postupnosť do cyklu?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
 
         Cykly fungujú dokonca aj s viac ako jedným blokom vo vnútri! Dokážeš dať túto postupnosť do cyklu?
@@ -3276,6 +3426,10 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ty to dokážeš!!"_
 
         Pokúsiš sa pozbierať všetky kusy kovu s použitím iba jedného cyklu? Pokús sa to najskôr naprogramovať celé bez cyklu, potom nájdi opakujúci sa kód a daj ho do cyklu.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ty to dokážeš!!"_
+
+        Pokúsiš sa pozbierať všetky kusy kovu s použitím iba jedného cyklu? Pokús sa to najskôr naprogramovať celé bez cyklu, potom nájdi opakujúci sa kód a daj ho do cyklu.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
 
@@ -3285,6 +3439,10 @@ sk-SK:
 
         **Výzva:** Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
+
+        **Výzva:** Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
 
         **Výzva:** Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.
@@ -3828,6 +3986,10 @@ sk-SK:
         _"Tento oblak mi zacláňa vo výhľade!"_
 
          Skontroluj, či je pod oblakom kvet. Ak sa tam kvet nachádza, pozberaj  nektár.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"Tento oblak mi zacláňa vo výhľade!"_
+
+         Skontroluj, či je pod oblakom kvet. Ak sa tam kvet nachádza, pozberaj  nektár.
       courseD_bee_conditionals2: |-
         Viac oblakov!
 
@@ -3846,6 +4008,12 @@ sk-SK:
         Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
 
         Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
+      courseD_bee_conditionals2_copy: |-
+        Viac oblakov!
+
+        Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
+
+        Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
       courseD_bee_conditionals3: Nektár môžeš zbierať len z kvetov, ale musíš skontrolovať
         každé miestečko, aby si si overil, či sa tam nenachádza kvet. Ak sa pod oblakom
         nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
@@ -3853,6 +4021,9 @@ sk-SK:
         skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
         Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
       courseD_bee_conditionals3_2019: Nektár môžeš zbierať len z kvetov, ale musíš
+        skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
+        Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
+      courseD_bee_conditionals3_copy: Nektár môžeš zbierať len z kvetov, ale musíš
         skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
         Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
       courseD_bee_conditionals4: |-
@@ -3864,6 +4035,10 @@ sk-SK:
 
         Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
       courseD_bee_conditionals4_2019: |-
+        Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
+
+        Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
+      courseD_bee_conditionals4_copy: |-
         Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
 
         Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
@@ -4037,18 +4212,12 @@ sk-SK:
         aby sa lopta odrazila od steny a trafila do koša."
       courseD_bounce_events6s_2019: "Teraz máme kôš hore.  \n\nPridaj kód (bloky),
         aby sa lopta odrazila od steny a trafila do koša."
-      courseD_bounce_events7s_2018: |-
-        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku. Odrážaj loptu, kým nezasiahne svoj cieľ.
-
-        * * *
-
-        Odrážaj loptu, kým nezasiahne svoj cieľ.
-      courseD_bounce_events7s_2019: |-
-        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku. Odrážaj loptu, kým nezasiahne svoj cieľ.
-
-        * * *
-
-        Odrážaj loptu, kým nezasiahne svoj cieľ.
+      courseD_bounce_events7s_2018: "Pridaj bloky so zvukom, aby zašuchotala sieťka,
+        keď lopta trafí kôš, a aby zapískala píšťalka, keď lopta netrafí ruku. \n\n*
+        * *\n\nOdrážaj loptu, kým nezasiahne svoj cieľ."
+      courseD_bounce_events7s_2019: "Pridaj bloky so zvukom, aby zašuchotala sieťka,
+        keď lopta trafí kôš, a aby zapískala píšťalka, keď lopta netrafí ruku. \n\n*
+        * *\n\nOdrážaj loptu, kým nezasiahne svoj cieľ."
       courseD_collector_debugging1: |-
         _"Oh nie! Vidím tu problém"_
 
@@ -4607,6 +4776,24 @@ sk-SK:
         vylepšiť:\n\n-   Pridaj pozadie! Vyber si pozadie, ktoré sa hodí k tvojmu
         plagátu.\n-   Pridaj správanie! Pridel každej postave iné správanie po kliknutí
         na ňu.\n-   Pridaj viac udalostí! Využi ďalšie bloky v kategórii blokov `Udalosti`."
+      courseE_artist_functions10: |-
+        Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+
+        -   Na vytvorenie šesť uholníka opakuj stranu 6-krát s pootočením o 60 stupňov.
+        -   Skoč 25 pixelov medzi šesťuholníkmi.
+        -   Na kresbu diamantu budeš potrebovať meniť veľkosť supňa 60 a 120.
+      courseE_artist_functions10_2018: |-
+        Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+
+        -   Na vytvorenie šesť uholníka opakuj stranu 6-krát s pootočením o 60 stupňov.
+        -   Skoč 25 pixelov medzi šesťuholníkmi.
+        -   Na kresbu diamantu budeš potrebovať meniť veľkosť supňa 60 a 120.
+      courseE_artist_functions10_2019: |-
+        Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+
+        -   Na vytvorenie šesť uholníka opakuj stranu 6-krát s pootočením o 60 stupňov.
+        -   Skoč 25 pixelov medzi šesťuholníkmi.
+        -   Na kresbu diamantu budeš potrebovať meniť veľkosť supňa 60 a 120.
       courseE_artist_functions2_2018: "Tu je funkcia `nakresli štvorec`. Použi ju
         na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       courseE_artist_functions2_2019: "Tu je funkcia `nakresli štvorec`. Použi ju
@@ -4691,6 +4878,22 @@ sk-SK:
         a vytvor čo len chceš! \n\nDokážeš vytvoriť niečo ako táto ružica?"
       courseE_artist_functionsProj_2019: "**Inšpirácia:** Použi čo si sa naučil/a
         a vytvor čo len chceš! \n\nDokážeš vytvoriť niečo ako táto ružica?"
+      courseE_bee_concept1: |-
+        _"Môžeš oVČIELKOvať  všetky tieto kvety?"_
+
+        Pozberaj nekátr zo všetkých kvetov.
+      courseE_bee_concept1_2018: |-
+        _"Môžeš oVČIELKOvať  všetky tieto kvety?"_
+
+        Pozberaj nekátr zo všetkých kvetov.
+      courseE_bee_concept2: |-
+        Pomôž včele vyrobiť med.
+
+        Med môžeš vyorbiť len pri úli, ale môžeš skontrolovať miesta, či sa tam úľ nachádza.
+      courseE_bee_concept2_2018: |-
+        Pomôž včele vyrobiť med.
+
+        Med môžeš vyorbiť len pri úli, ale môžeš skontrolovať miesta, či sa tam úľ nachádza.
       courseE_bee_concept5: "Pomôž včele pozbierať všetok nektár. \n\nNektár môžeš
         zbierať len z kvetov, ale musíš skontrolovať každé miestečko, aby si overil,
         či sa tam nenachádza kvet."
@@ -4811,11 +5014,11 @@ sk-SK:
       courseE_farmer_functions8a1_2019: Skús znovu napísať svoju funkciu. Je stále
         užitočná?  Ako ju môžeš použiť pri riešení tejto úlohy?
       courseE_farmer_functions9a1_2018: |-
-        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+        \*Táto úloha je a-MAZE-ing! (amazing - úžasná, maze - bludisko)\*\*
 
         Je tvoja funkcia užitočná aj pri tejto úlohe?
       courseE_farmer_functions9a1_2019: |-
-        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+        \*Táto úloha je a-MAZE-ing! (amazing - úžasná, maze - bludisko)\*\*
 
         Je tvoja funkcia užitočná aj pri tejto úlohe?
       courseE_farmer_ramp11a: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť
