@@ -124,7 +124,7 @@ export default class WorkshopDashboard extends React.Component {
               component={DailySurveyResultsLoader}
             />
             <Route
-              path="daily_survey_results_foorm(/:workshopId)"
+              path="workshop_daily_survey_results(/:workshopId)"
               breadcrumbs="Survey Results"
               component={FoormDailySurveyResultsLoader}
             />
