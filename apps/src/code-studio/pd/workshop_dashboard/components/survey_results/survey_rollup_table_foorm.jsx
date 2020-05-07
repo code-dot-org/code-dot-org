@@ -457,8 +457,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
           <br />
           Earlier averages can be found at{' '}
           <a href="/pd/workshop_dashboard/legacy_survey_summaries">
-            Legacy Facilitator Survey Summaries.
+            Legacy Facilitator Survey Summaries
           </a>
+          .
         </div>
       </div>
     );
