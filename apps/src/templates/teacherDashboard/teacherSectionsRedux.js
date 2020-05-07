@@ -13,6 +13,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'stageExtras',
   'pairingAllowed',
+  'autoplayEnabled',
   'courseId',
   'scriptId',
   'grade',
@@ -44,6 +45,9 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
+const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
+  'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
+const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
@@ -101,6 +105,14 @@ export const __testInterface__ = {
 export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
 export const setStageExtrasScriptIds = ids => ({
   type: SET_STAGE_EXTRAS_SCRIPT_IDS,
+  ids
+});
+export const setTextToSpeechScriptIds = ids => ({
+  type: SET_TEXT_TO_SPEECH_SCRIPT_IDS,
+  ids
+});
+export const setPreReaderScriptIds = ids => ({
+  type: SET_PREREADER_SCRIPT_IDS,
   ids
 });
 export const setAuthProviders = providers => ({
@@ -439,6 +451,8 @@ const initialState = {
   showSectionEditDialog: false,
   saveInProgress: false,
   stageExtrasScriptIds: [],
+  textToSpeechScriptIds: [],
+  preReaderScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -471,6 +485,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: true,
     pairingAllowed: true,
+    autoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
     code: '',
@@ -518,6 +533,20 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       stageExtrasScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
+    return {
+      ...state,
+      textToSpeechScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_PREREADER_SCRIPT_IDS) {
+    return {
+      ...state,
+      preReaderScriptIds: action.ids
     };
   }
 
@@ -745,7 +774,10 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const stageExtraSettings = {};
+    const autoplayEnabledSettings = {};
     if (action.props.scriptId) {
+      autoplayEnabledSettings.autoplayEnabled =
+        state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
@@ -759,6 +791,7 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
         ...stageExtraSettings,
+        ...autoplayEnabledSettings,
         ...action.props
       }
     };
@@ -1021,6 +1054,7 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  autoplayEnabled: serverSection.autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
@@ -1056,6 +1090,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     stage_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    autoplay_enabled: section.autoplayEnabled,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined
@@ -1106,6 +1141,14 @@ export const assignmentPaths = (validAssignments, section) => {
  */
 export const stageExtrasAvailable = (state, id) =>
   state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
+
+/**
+ * Is the given script ID a text to speech enabled course? `script.rb` owns the list.
+ * @param state
+ * @param id
+ */
+export const ttsAvailable = (state, id) =>
+  state.teacherSections.textToSpeechScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using

@@ -79,6 +79,7 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
+    @section_summary = current_user&.sections&.find_by(id: params[:section_id])&.summarize
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
