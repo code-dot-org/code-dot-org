@@ -99,8 +99,8 @@ namespace :build do
         # will be unable to find them.
         raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
 
-        ChatClient.log 'Cleaning <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:clean'
+        ChatClient.log 'Clobbering <b>dashboard</b> assets...'
+        RakeUtils.rake 'assets:clobber'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:precompile'
       end
