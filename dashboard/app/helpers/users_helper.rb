@@ -240,16 +240,8 @@ module UsersHelper
     level.pages.each do |page|
       page_valid_result_count = 0
 
-      # Construct an array of the embedded level names used on the page.
-      embedded_level_names = []
-      page.levels.each do |sublevel|
-        embedded_level_names << sublevel.name
-      end
-
-      # Retrieve the level information for those embedded levels.  These results
-      # won't necessarily match the order of level names as requested, but
-      # fortunately we are just accumulating a count and don't mind the order.
-      embedded_levels = Level.where(name: embedded_level_names).to_a
+      # Retrieve the level information for the embedded levels.
+      embedded_levels = page.levels
       embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
       embedded_levels.each do |embedded_level|
         level_id = embedded_level.id
