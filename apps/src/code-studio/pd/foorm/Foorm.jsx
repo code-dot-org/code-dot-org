@@ -2,6 +2,7 @@ import * as Survey from 'survey-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap';
+import Spinner from '../components/spinner';
 
 const styles = {
   statusMessage: {
@@ -50,8 +51,9 @@ export default class Foorm extends React.Component {
 
     this.state = {
       hasError: false,
-      statusMessage: '',
-      survey: null
+      statusMessage: null,
+      survey: null,
+      submitting: false
     };
 
     Survey.StylesManager.applyTheme('default');
@@ -70,7 +72,8 @@ export default class Foorm extends React.Component {
     }
     this.setState({
       statusMessage: 'Your responses are being submitted...',
-      hasError: false
+      hasError: false,
+      submitting: true
     });
     $.ajax({
       url: this.props.submitApi,
@@ -81,20 +84,23 @@ export default class Foorm extends React.Component {
       .done(() => {
         this.setState({
           statusMessage:
-            'Thank you for completing the survey! Your responses saved successfully.'
+            'Thank you for completing the survey! Your responses saved successfully.',
+          submitting: false
         });
       })
       .fail(jqXHR => {
         if (jqXHR.status === 409) {
           this.setState({
-            statusMessage: 'You already submitted a response. Thank you!'
+            statusMessage: 'You already submitted a response. Thank you!',
+            submitting: false
           });
         } else {
           this.setState({
             statusMessage:
               'An error occurred and we could not save your response.',
             hasError: true,
-            survey: survey
+            survey: survey,
+            submitting: false
           });
         }
       });
@@ -114,6 +120,7 @@ export default class Foorm extends React.Component {
         {this.state.statusMessage && (
           <div style={styles.statusMessage}>
             <h4>{this.state.statusMessage}</h4>
+            {this.state.submitting && <Spinner />}
             {this.state.hasError && this.state.survey && (
               <Button
                 style={styles.tryAgainButton}
