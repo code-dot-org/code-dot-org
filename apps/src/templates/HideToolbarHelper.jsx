@@ -46,11 +46,16 @@ export default class HideToolbarHelper extends React.Component {
   }
 
   isToolbarShowing() {
-    // window.innerHeight is smaller than document.body.offsetHeight when
-    // the iOS 13 Safari toolbar is showing.  It becomes equal when the toolbar
-    // is hidden.  (Interestingly, document.documentElement.clientHeight is
-    // the same as document.body.offsetHeight in both cases.)
-    return window.innerHeight < document.body.offsetHeight;
+    // In general, window.innerHeight is smaller than document.body.offsetHeight
+    // and document.documentElement.clientHeight when the iOS 13 Safari toolbar
+    // is showing. However, as the page is loading, these three values change at
+    // different times when the viewport is loading. Therefore we check the
+    // innerHeight against the offsetHeight and the clientHeight. When the
+    // toolbar is hidden, all values are the same.
+    return (
+      window.innerHeight < document.body.offsetHeight ||
+      window.innerHeight < document.documentElement.clientHeight
+    );
   }
 
   updateLayout = () => {
@@ -64,16 +69,19 @@ export default class HideToolbarHelper extends React.Component {
     if (
       !((this.forceShowHelper || isiOS13) && isLandscape && !isHideCookieSet)
     ) {
+      // alert('blocking helper forceShowHelper: ' + this.forceShowHelper + ' isiOS13: ' + isiOS13 + ' isLandscape: ' + isLandscape + ' isHideCookieSet: ' + isHideCookieSet + ' window.innerHeight: ' + window.innerHeight + ' document.body.offsetHeight: ' + document.body.offsetHeigh + ' document.documentElement.clientHeight: ' + document.documentElement.clientHeight)
       this.setState({shouldShowHelper: false});
       return;
     }
 
     // Let's show the helper if we think the toolbar is showing.
     const shouldShowHelper = this.isToolbarShowing() || this.forceShowHelper;
+    // alert('not blocking helper. shouldShowHelper: ' + shouldShowHelper + ' window.innerHeight: ' + window.innerHeight + ' document.body.offsetHeight: ' + document.body.offsetHeight + ' document.documentElement.clientHeight: ' + document.documentElement.clientHeight)
 
     // If we previously have shown the helper, and aren't now, and it's the
     // first time we've encountered this situation, then do a couple things.
     if (this.wasHelperShowing && !shouldShowHelper) {
+      // alert('setting cookie this.wasHelperShowing: ' + this.wasHelperShowing + ' shouldShowHelper: ' + shouldShowHelper)
       // Let's track the disapearance of the toolbar after we had previously
       // shown the helper.
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
@@ -90,7 +98,7 @@ export default class HideToolbarHelper extends React.Component {
   componentDidMount() {
     this.updateLayout();
 
-    this.updateLayoutListener = _.throttle(this.updateLayout, 1000);
+    this.updateLayoutListener = _.throttle(this.updateLayout, 200);
     window.addEventListener('orientationchange', this.updateLayoutListener);
 
     /* These two events catch all viewport changes. */
