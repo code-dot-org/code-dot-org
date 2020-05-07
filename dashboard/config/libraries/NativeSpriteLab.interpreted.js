@@ -1,4 +1,4 @@
-var extraArgs = null;
+var extraArgs = {};
 var other = [];
 
 function draw() {

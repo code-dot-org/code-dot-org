@@ -21,7 +21,7 @@
 require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
-# (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
+# (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ActiveRecord::Base
   include LevelsHelper
   include SharedConstants
@@ -37,13 +37,12 @@ class Lesson < ActiveRecord::Base
   self.table_name = 'stages'
 
   serialized_attrs %w(
-    stage_extras_disabled
     visible_after
   )
 
-  # A stage has an absolute position and a relative position. The difference between the two is that relative_position
-  # only accounts for other stages that have the same lockable setting, so if we have two lockable stages followed
-  # by a non-lockable stage, the third stage will have an absolute_position of 3 but a relative_position of 1
+  # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
+  # only accounts for other lessons that have the same lockable setting, so if we have two lockable lessons followed
+  # by a non-lockable lesson, the third lesson will have an absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
   validates_uniqueness_of :name, scope: :script_id
@@ -81,13 +80,13 @@ class Lesson < ActiveRecord::Base
   end
 
   def localized_title
-    # The standard case for localized_title is something like "Stage 1: Maze".
-    # In the case of lockable stages, we don't want to include the Stage 1
+    # The standard case for localized_title is something like "Lesson 1: Maze".
+    # In the case of lockable lessons, we don't want to include the Lesson 1
     return localized_name if lockable
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
-    else # script only has one stage/game, use the script name
+    else # script only has one lesson, use the script name
       script.localized_title
     end
   end
@@ -125,13 +124,14 @@ class Lesson < ActiveRecord::Base
   end
 
   def summarize(include_bonus_levels = false)
-    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}/#{include_bonus_levels}") do
+    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
-      stage_data = {
+      lesson_data = {
         script_id: script.id,
         script_name: script.name,
-        script_stages: script.lessons.to_a.size,
+        script_stages: script.lessons.to_a.size, # TODO: remove once corresponding js change is deployed and no longer cached
+        num_script_lessons: script.lessons.to_a.size,
         id: id,
         position: absolute_position,
         relative_position: relative_position,
@@ -149,48 +149,51 @@ class Lesson < ActiveRecord::Base
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
 
-      # The last level in a stage might be a long assessment, so add extra information
+      # The last level in a lesson might be a long assessment, so add extra information
       # related to that.  This might include information for additional pages if it
       # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
-        last_level_summary = stage_data[:levels].last
+        last_level_summary = lesson_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        stage_data[:levels] += extra_levels
+        lesson_data[:levels] += extra_levels
         last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
         last_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels
       if !lockable && script.has_lesson_plan?
-        stage_data[:lesson_plan_html_url] = lesson_plan_html_url
-        stage_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
+        lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
       end
 
       if script.hoc?
-        stage_data[:finishLink] = script.hoc_finish_url
-        stage_data[:finishText] = I18n.t('nav.header.finished_hoc')
+        lesson_data[:finishLink] = script.hoc_finish_url
+        lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      if !unplugged? && !stage_extras_disabled
-        stage_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
+      unless unplugged?
+        # TODO: remove stage_extras_level_url once corresponding js change is deployed and no longer cached
+        lesson_data[:stage_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position)
+        lesson_data[:lesson_extras_level_url] = lesson_data[:stage_extras_level_url]
       end
 
-      stage_data
+      lesson_data
     end
-    stage_summary.freeze
+    lesson_summary.freeze
   end
 
   def summarize_for_edit
     summary = summarize.dup
-    # Do not let script name override stage name when there is only one stage
+    # Do not let script name override lesson name when there is only one lesson
     summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
     summary.freeze
   end
 
-  # Provides a JSON summary of a particular stage, that is consumed by tools used to
-  # build lesson plans
+  # Provides a JSON summary of a particular lesson, that is consumed by tools used to
+  # build lesson plans (Curriculum Builder)
   def summary_for_lesson_plans
     {
+      # TODO: should be renamed after we combine CurriculumBuilder into LevelBuilder, if we still need this.
       stageName: localized_name,
       lockable: lockable?,
       levels: script_levels.map do |script_level|
@@ -212,20 +215,20 @@ class Lesson < ActiveRecord::Base
     }
   end
 
-  # For a given set of students, determine when the given stage is locked for
+  # For a given set of students, determine when the given lesson is locked for
   # each student.
-  # The design of a lockable stage is that there is (optionally) some number of
+  # The design of a lockable lesson is that there is (optionally) some number of
   # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
-  # only one which is truly locked/unlocked. The stage is considered locked if
-  # and only ifthe final assessment level is locked. When in this state, the UI
-  # will show the entire stage as being locked, but if you know the URL of the other
+  # only one which is truly locked/unlocked. The lesson is considered locked if
+  # and only if the final assessment level is locked. When in this state, the UI
+  # will show the entire lesson as being locked, but if you know the URL of the other
   # levels, you're still able to go to them and submit answers.
   def lockable_state(students)
     return unless lockable?
 
     script_level = script_levels.last
     unless script_level.assessment?
-      raise 'Expect lockable stages to have an assessment as their last level'
+      raise 'Expect lockable lessons to have an assessment as their last level'
     end
     return students.map do |student|
       user_level = student.last_attempt_for_any script_level.levels, script_id: script.id
@@ -256,20 +259,20 @@ class Lesson < ActiveRecord::Base
     script_levels.reverse.find(&:valid_progression_level?)
   end
 
-  def next_level_for_stage_extras(user)
+  def next_level_for_lesson_extras(user)
     level_to_follow = script_levels.last.next_level
     level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     level_to_follow
   end
 
-  def next_level_path_for_stage_extras(user)
-    next_level = next_level_for_stage_extras(user)
+  def next_level_path_for_lesson_extras(user)
+    next_level = next_level_for_lesson_extras(user)
     next_level ?
       build_script_level_path(next_level) : script_completion_redirect(script)
   end
 
-  def next_level_number_for_stage_extras(user)
-    next_level = next_level_for_stage_extras(user)
+  def next_level_number_for_lesson_extras(user)
+    next_level = next_level_for_lesson_extras(user)
     next_level ? next_level.lesson.relative_position : nil
   end
 
