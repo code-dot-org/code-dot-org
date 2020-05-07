@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200504010945) do
+ActiveRecord::Schema.define(version: 20200504210058) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1755,14 +1755,6 @@ ActiveRecord::Schema.define(version: 20200504010945) do
     t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true, using: :btree
   end
 
-  add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
-  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
-  add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_overrides", "schools"
-  add_foreign_key "census_submission_form_maps", "census_submissions"
-  add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "ib_school_codes", "schools"
   add_foreign_key "level_concept_difficulties", "levels"
