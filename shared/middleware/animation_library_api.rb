@@ -40,6 +40,24 @@ class AnimationLibraryApi < Sinatra::Base
     end
   end
 
+  # Retrieve the manifest from S3. This will be extended to take in
+  # a locale to get a language-specific version as well as supporting
+  # the gamelab animation manifest
+  get %r{/api/v1/animation-library/manifest/spritelab} do
+    begin
+      result = Aws::S3::Bucket.
+        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        object("spritelabCostumeLibrary.json").
+        find {|version| !version.head.delete_marker}.
+        get
+      content_type result.content_type
+      cache_for 3600
+      result.body
+    rescue
+      not_found
+    end
+  end
+
   #
   # GET /api/v1/animation-library/<version-id>/<filename>
   #
