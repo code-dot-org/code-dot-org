@@ -34,7 +34,6 @@ function showHomepage() {
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
-  console.log(homepageData.preReaderScriptIds);
   store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
