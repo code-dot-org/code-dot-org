@@ -65,7 +65,7 @@
     "palette_category_at_start": "sprites",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "encrypted_examples": "Flcbc2793f/DmNNHqb3y4y34/lvxcfPndg+9KQdMr1m2btA3ri7emfzzh3/H\ntIvr\n",
+    "encrypted_examples": "tyHHimAobd8c3k7nKvPNS0ue2Aq5W9tvFc7y9k0ob9KFpBB1tn2z7H7Re1Ar\nGE2ee2zLLlsIMoEsWVbxLt35Xw==\n",
     "instructions_important": "false",
     "show_debug_watch": "true",
     "parent_level_id": 18657,
@@ -78,16 +78,16 @@
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "display_name": "Bounciness",
     "bubble_choice_description": "Control how much sprites bounce when they interact.",
     "libraries_enabled": "false",
-    "thumbnail_url": "https://images.code.org/5976aca3356455b4882d2e5d0a62a26f-image-1585825944588.gif"
+    "thumbnail_url": "https://images.code.org/5976aca3356455b4882d2e5d0a62a26f-image-1585825944588.gif",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 19:11:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 11:03:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 11:13:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 19:11:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 11:03:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 11:13:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-07 20:09:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
