@@ -237,13 +237,13 @@ module UsersHelper
     end
 
     # Go through each page.
-    level.properties["pages"].each do |page|
+    level.pages.each do |page|
       page_valid_result_count = 0
 
       # Construct an array of the embedded level names used on the page.
       embedded_level_names = []
-      page["levels"].each do |level_name|
-        embedded_level_names << level_name
+      page.levels.each do |sublevel|
+        embedded_level_names << sublevel.name
       end
 
       # Retrieve the level information for those embedded levels.  These results
