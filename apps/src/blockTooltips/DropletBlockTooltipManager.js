@@ -139,6 +139,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
                   lib => lib.name === libraryName
                 );
                 if (library) {
+                  $('.tooltipstered').tooltipster('hide');
                   $('body').append("<div id='libraryFunctionTooltipModal' />");
                   ReactDOM.render(
                     <LibraryViewCode
