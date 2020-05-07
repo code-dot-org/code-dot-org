@@ -222,10 +222,10 @@ class ScriptLevelsController < ApplicationController
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
-      next_stage_number: @stage.next_level_number_for_stage_extras(current_user),
+      next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
       stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_stage_extras(current_user),
-      bonus_levels: @script.get_bonus_script_levels(@stage),
+      next_level_path: @stage.next_level_path_for_lesson_extras(current_user),
+      bonus_levels: @script.get_bonus_script_levels(@stage, current_user),
     }.camelize_keys
     @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
 
