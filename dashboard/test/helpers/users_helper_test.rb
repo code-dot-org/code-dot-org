@@ -66,11 +66,20 @@ class UsersHelperTest < ActionView::TestCase
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
 
-    # Create a LevelGroup level.
-    level = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level.properties['title'] =  'Long assessment 1'
-    level.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}]
-    level.save!
+    # Create a LevelGroup level from DSL.
+    level_group_dsl = <<-DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+    DSL
+    level = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
     # Create a ScriptLevel joining this level to the script.
     script_level = create :script_level, script: script, levels: [level], assessment: true
