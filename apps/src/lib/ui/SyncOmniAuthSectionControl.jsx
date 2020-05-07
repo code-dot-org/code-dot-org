@@ -111,10 +111,11 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
       __useDeprecatedTag
       text={buttonText(buttonState, providerName)}
       color={ButtonColor.white}
-      size={ButtonSize.large}
+      size={ButtonSize.default}
       disabled={buttonState === IN_PROGRESS}
       onClick={onClick}
       {...iconProps(buttonState)}
+      style={{float: 'left'}}
     />
   );
 }
