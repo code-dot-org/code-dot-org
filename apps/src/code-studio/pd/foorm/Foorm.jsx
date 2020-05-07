@@ -7,11 +7,10 @@ import Spinner from '../components/spinner';
 const styles = {
   statusMessage: {
     textAlign: 'center'
-  },
-  tryAgainButton: {
-    textAlign: 'right'
   }
 };
+
+const SPINNER_WAIT_MS = 1000;
 
 export default class Foorm extends React.Component {
   static propTypes = {
@@ -75,6 +74,7 @@ export default class Foorm extends React.Component {
       hasError: false,
       submitting: true
     });
+    const startTime = Date.now();
     $.ajax({
       url: this.props.submitApi,
       type: 'post',
@@ -82,29 +82,47 @@ export default class Foorm extends React.Component {
       data: requestData
     })
       .done(() => {
-        this.setState({
-          statusMessage:
-            'Thank you for completing the survey! Your responses saved successfully.',
-          submitting: false
-        });
+        this.setCompletedStatusMessage(
+          startTime,
+          'Thank you for completing the survey! Your responses saved successfully.',
+          false,
+          null
+        );
       })
       .fail(jqXHR => {
         if (jqXHR.status === 409) {
-          this.setState({
-            statusMessage: 'You already submitted a response. Thank you!',
-            submitting: false
-          });
+          this.setCompletedStatusMessage(
+            startTime,
+            'You already submitted a response. Thank you!',
+            false,
+            null
+          );
         } else {
-          this.setState({
-            statusMessage:
-              'An error occurred and we could not save your response.',
-            hasError: true,
-            survey: survey,
-            submitting: false
-          });
+          this.setCompletedStatusMessage(
+            startTime,
+            'An error occurred and we could not save your response.',
+            true,
+            survey
+          );
         }
       });
   };
+
+  setCompletedStatusMessage(startTime, statusMessage, hasError, survey) {
+    const elapsedTime = Date.now() - startTime;
+    // if the api request took less than 1 second, wait until 1 second has
+    // passed so spinner does not flash on the screen.
+    const timeout =
+      elapsedTime > SPINNER_WAIT_MS ? 0 : SPINNER_WAIT_MS - elapsedTime;
+    setTimeout(() => {
+      this.setState({
+        statusMessage: statusMessage,
+        hasError: hasError,
+        survey: survey,
+        submitting: false
+      });
+    }, timeout);
+  }
 
   render() {
     return (
@@ -122,10 +140,7 @@ export default class Foorm extends React.Component {
             <h4>{this.state.statusMessage}</h4>
             {this.state.submitting && <Spinner />}
             {this.state.hasError && this.state.survey && (
-              <Button
-                style={styles.tryAgainButton}
-                onClick={() => this.onComplete(this.state.survey)}
-              >
+              <Button onClick={() => this.onComplete(this.state.survey)}>
                 Try Again
               </Button>
             )}
