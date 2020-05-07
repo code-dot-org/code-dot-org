@@ -130,7 +130,7 @@ export default class WorkshopDashboard extends React.Component {
             />
             <Route
               path="legacy_survey_summaries"
-              breadcrumbs="Legacy Survey Summaries"
+              breadcrumbs="Legacy Facilitator Survey Summaries"
               component={LegacySurveySummaries}
             />
             <Route
