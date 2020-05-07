@@ -768,7 +768,7 @@ class Script < ActiveRecord::Base
       @all_bonus_script_levels = lessons.map do |stage|
         {
           stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user.id)}
+          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
         }
       end
       @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
@@ -1125,7 +1125,6 @@ class Script < ActiveRecord::Base
       end
 
       raw_lesson = raw_lessons.find {|rs| rs[:stage].downcase == lesson.name.downcase}
-      lesson.stage_extras_disabled = raw_lesson[:stage_extras_disabled]
       lesson.visible_after = raw_lesson[:visible_after]
       lesson.save! if lesson.changed?
     end
@@ -1575,7 +1574,6 @@ class Script < ActiveRecord::Base
       :student_detail_progress_view,
       :project_widget_visible,
       :project_widget_types,
-      :teacher_resources,
       :stage_extras_available,
       :curriculum_path,
       :script_announcements,
@@ -1592,12 +1590,16 @@ class Script < ActiveRecord::Base
       :project_sharing,
       :tts
     ]
+    not_defaulted_keys = [
+      :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
+    ]
 
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
     nonboolean_keys.each {|k| result[k] = script_data[k]}
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!script_data[k]}
+    not_defaulted_keys.each {|k| result[k] = script_data[k] if script_data.keys.include?(k)}
 
     result
   end

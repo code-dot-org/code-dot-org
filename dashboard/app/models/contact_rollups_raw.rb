@@ -23,7 +23,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_email_preferences
-    query = get_extraction_query("#{CDO.dashboard_db_name}.email_preferences", 'email', ['opt_in'])
+    query = get_extraction_query('email_preferences', 'email', ['opt_in'])
     ActiveRecord::Base.connection.execute(query)
   end
 
@@ -34,7 +34,7 @@ class ContactRollupsRaw < ApplicationRecord
       GROUP BY parent_email
     SQL
 
-    query = get_extraction_query(source_sql, 'parent_email', [], true, "#{CDO.dashboard_db_name}.users.parent_email")
+    query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
     ActiveRecord::Base.connection.execute(query)
   end
 
@@ -46,10 +46,10 @@ class ContactRollupsRaw < ApplicationRecord
   # @return [String] A SQL statement to extract and reshape data from the source table.
   def self.get_extraction_query(source, email_column, data_columns, source_is_subquery=false, source_name=nil)
     if source_name.nil? && source_is_subquery
-      raise "Source name required if source is a subquery"
+      raise 'Source name required if source is a subquery'
     end
 
-    source_name ||= source
+    source_name ||= "dashboard.#{source}"
     wrapped_source = source_is_subquery ? "(#{source}) AS subquery" : source
 
     <<~SQL
