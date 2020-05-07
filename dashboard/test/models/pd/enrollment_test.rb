@@ -111,7 +111,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url' do
-    csf_workshop = create :csf_workshop, :ended
+    csf_workshop_legacy = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 4)
+    csf_enrollment_legacy = create :pd_enrollment, workshop: csf_workshop_legacy
+
+    csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
@@ -130,11 +133,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
 
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment_legacy.code}"], csf_enrollment_legacy.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
