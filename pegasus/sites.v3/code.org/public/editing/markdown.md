@@ -135,7 +135,7 @@ Links can be created by using brackets `[ ]` for the text of the link and parent
 
 ## Images
 ***
-You can include any image by first uploading it to Dropbox in the code.org/public/images folder. If you are uploading several images, try to create a folder inside images so you don't upload all of your images in the main images folder. Including an image is very similar to a link, except starting with an exclamation point at the beginning.
+You can include any image by first uploading it to Dropbox in the code.org/public/images folder. If you are uploading several images, try to create a folder inside `images/` so you don't upload all of your images in the main images folder. Including an image is very similar to a link, except starting with an exclamation point at the beginning.
 
 ### What your code looks like
 
