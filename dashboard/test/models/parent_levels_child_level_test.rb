@@ -24,12 +24,12 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
       kind: ParentLevelsChildLevel::SUBLEVEL
     )
 
-    # kind defaults to 'sublevel'
     child = create :level
-    ParentLevelsChildLevel.find_or_create_by!(
+    pc = ParentLevelsChildLevel.find_or_create_by!(
       parent_level: parent,
       child_level: child
     )
+    assert_equal ParentLevelsChildLevel::SUBLEVEL, pc.kind
 
     child = create :level
     assert_raises ActiveRecord::RecordInvalid do
