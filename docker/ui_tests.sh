@@ -69,12 +69,10 @@ set -x
 RAKE_VERBOSE=true bundle exec rake install --trace
 
 # name: rake build
-# RAKE_VERBOSE=true bundle exec rake build --trace
-
-echo "skipping rake build"
+RAKE_VERBOSE=true bundle exec rake build --trace
 
 # name: seed ui tests
-# bundle exec rake circle:seed_ui_test --trace
+bundle exec rake circle:seed_ui_test --trace
 
 # name: run ui tests
-# bundle exec rake circle:run_ui_tests --trace
+bundle exec rake circle:run_ui_tests --trace
