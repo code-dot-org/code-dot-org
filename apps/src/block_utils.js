@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import xml from './xml';
+import experiments from '@cdo/apps/util/experiments';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -331,7 +332,7 @@ exports.calcBlockGetVar = function(variableName) {
 /**
  * Generate the xml for a math block (either calc or eval apps).
  * @param {string} type Type for this block
- * @param {Object.<string,string} inputs Dictionary mapping input name to the
+ * @param {Object.<string,string>} inputs Dictionary mapping input name to the
      xml for that input
  * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
  */
@@ -606,7 +607,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         type: arg.type,
         options: arg.options,
         assignment: arg.assignment,
-        defer: arg.defer
+        defer: arg.defer,
+        customOptions: arg.customOptions
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -866,6 +868,7 @@ exports.createJsWrapperBlockCreator = function(
    * @param {boolean} opts.simpleValue Just return the field value of the block.
    * @param {string[]} opts.extraArgs Additional arguments to pass into the generated function.
    * @param {string[]} opts.callbackParams Parameters to add to the generated callback function.
+   * @param {string[]} opts.miniToolboxBlocks
    * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
@@ -889,7 +892,8 @@ exports.createJsWrapperBlockCreator = function(
       inline,
       simpleValue,
       extraArgs,
-      callbackParams
+      callbackParams,
+      miniToolboxBlocks
     },
     helperCode,
     pool
@@ -994,6 +998,34 @@ exports.createJsWrapperBlockCreator = function(
         } else {
           this.setNextStatement(true);
           this.setPreviousStatement(true);
+        }
+
+        if (
+          miniToolboxBlocks &&
+          experiments.isEnabled(experiments.MINI_TOOLBOX)
+        ) {
+          var toggle = new Blockly.FieldIcon('+');
+          var miniToolboxXml = '<xml>';
+          miniToolboxBlocks.forEach(block => {
+            miniToolboxXml += `\n <block type="${block}"></block>`;
+          });
+          miniToolboxXml += '\n</xml>';
+          // Block.tray is used in the blockly repo to track whether or not the horizontal flyout is open.
+          this.tray = false;
+          // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
+          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.tray) {
+              toggle.setText('+');
+            } else {
+              toggle.setText('-');
+            }
+            this.tray = !this.tray;
+            this.render();
+          });
+          this.appendDummyInput()
+            .appendTitle(toggle)
+            .appendTitle(' ');
+          this.initMiniFlyout(miniToolboxXml);
         }
 
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag

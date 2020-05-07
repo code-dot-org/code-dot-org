@@ -79,7 +79,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
+    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.lesson.lockable?
       user_level = UserLevel.find_by(
         user_id: current_user.id,
         level_id: @script_level.level.id,
@@ -90,7 +90,7 @@ class ActivitiesController < ApplicationController
       # so having no user_level is equivalent to bein glocked
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.stage) || user_level.try(:readonly_answers?)
+      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
         return head 403
       end
     end
@@ -204,17 +204,6 @@ class ActivitiesController < ApplicationController
       current_user.total_lines += lines
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
-    end
-
-    # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
-    # string value.
-    if params[:save_to_gallery] == 'true' && @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(
-        user: current_user,
-        user_level_id: @user_level.try(:id),
-        level_source_id: @level_source_image.level_source_id,
-        autosaved: true
-      )
     end
   end
 

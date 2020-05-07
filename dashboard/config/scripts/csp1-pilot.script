@@ -5,7 +5,8 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}'
 pilot_experiment 'csp-piloters'
 
-stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+stage 'CS Principles Pre-survey', lockable: true
 level 'csp-pre-survey-2017-levelgroup_2020 pilot', assessment: true
 
 stage 'Welcome to CSP'
@@ -90,8 +91,9 @@ level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding
 stage 'Lesson 14: Assessment Day', lockable: true
 level 'CSP Unit 1 AP-Style Assessment _2020', progression: 'Unit 1 Exam', assessment: true
 
-stage 'Unit 1 STUDENT Survey', lockable: true, flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+stage 'Unit 1 STUDENT Survey', lockable: true
 level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true
 
-stage 'Unit 1 TEACHER Survey', lockable: true, flex_category: 'required'
+stage 'Unit 1 TEACHER Survey', lockable: true
 level 'CSP U1 20-21 Teacher Pilot Survey', progression: 'Unit 1 TEACHER Survey', assessment: true

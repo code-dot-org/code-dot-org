@@ -89,8 +89,32 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
+  test 'pre_workshop_survey_url' do
+    csp_summer_workshop = build :csp_summer_workshop
+    csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
+
+    csp_academic_year_workshop = build :csp_academic_year_workshop
+    csp_academic_year_workshop_enrollment = build :pd_enrollment, workshop: csp_academic_year_workshop
+
+    csf_deep_dive_workshop = build :csf_deep_dive_workshop
+    csf_201_workshop_enrollment = build :pd_enrollment, workshop: csf_deep_dive_workshop
+
+    csf_intro_workshop = build :csf_intro_workshop
+    csf_intro_workshop_enrollment = build :pd_enrollment, workshop: csf_intro_workshop
+
+    assert_equal "/pd/workshop_survey/day/0?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
+      URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
+    assert_equal "/pd/pre_workshop_survey/#{csp_academic_year_workshop_enrollment.code}",
+      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path
+    assert_equal 'https://studio.code.org/pd/workshop_survey/csf/pre201', csf_201_workshop_enrollment.pre_workshop_survey_url
+    assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
+  end
+
   test 'exit_survey_url' do
-    csf_workshop = create :csf_workshop, :ended
+    csf_workshop_legacy = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 4)
+    csf_enrollment_legacy = create :pd_enrollment, workshop: csf_workshop_legacy
+
+    csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
@@ -109,14 +133,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
 
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment_legacy.code}"], csf_enrollment_legacy.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+  end
+
+  test 'exit_survey_url falls back to last valid day' do
+    csd_workshop = create :workshop,
+      :ended,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: SUBJECT_CSD_WORKSHOP_4,
+      num_sessions: 2
+    csd_enrollment = create :pd_enrollment, workshop: csd_workshop
+
+    studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    assert_equal studio_url["/pd/workshop_survey/day/1?enrollmentCode=#{csd_enrollment.code}"],
+      csd_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do

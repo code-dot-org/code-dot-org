@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
+
 /**
  * Attempt to construct an absolute Pegasus url (that is,
  * starting with https://code.org or the appropriate
@@ -17,6 +18,17 @@ export function pegasus(relativeUrl) {
 }
 
 /**
+ * Sets the global URL prefix for pegasus
+ * (e.g. "https://code.org") allowing the pegasus()
+ * method above to generate absolute URLs.
+ * @param {string} origin
+ */
+export function setPegasusOrigin(origin) {
+  window.dashboard = window.dashboard || {};
+  window.dashboard.CODE_ORG_URL = origin;
+}
+
+/**
  * Attempt to construct an absolute Studio url (that is,
  * starting with https://studio.code.org or the appropriate
  * equivalent for the current environment) from a given
@@ -30,6 +42,17 @@ export function studio(relativeUrl) {
     return window.pegasus.STUDIO_URL + relativeUrl;
   }
   return relativeUrl;
+}
+
+/**
+ * Sets the global URL prefix for code studio
+ * (e.g. "https://studio.code.org") allowing the studio()
+ * method above to generate absolute URLs.
+ * @param {string} origin
+ */
+export function setStudioOrigin(origin) {
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = origin;
 }
 
 /**

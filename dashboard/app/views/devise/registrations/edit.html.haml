@@ -100,10 +100,10 @@
     = f.hidden_field :password_confirmation
 
 - if current_user.student?
-  %div#add-parent-email{style: "display: none"}
+  %div#add-parent-email
     %hr
     %h2= t('user.for_parents_and_guardians')
-    %p= "#{t('user.link_a_parent_email')}:"
+    %p= t('user.link_a_parent_email')
     %p
       %b= "#{t('user.parent_guardian_email_label')}:"
       %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
@@ -213,6 +213,7 @@
     ) do |f|
     = f.hidden_field :parent_email
     = f.hidden_field :parent_email_preference_opt_in
+    = f.hidden_field :parent_email_preference_source, value: EmailPreference::PARENT_EMAIL_CHANGE
 
 :ruby
   script_data = {

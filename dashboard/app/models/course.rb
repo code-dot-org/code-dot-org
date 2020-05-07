@@ -43,6 +43,7 @@ class Course < ApplicationRecord
     family_name
     version_year
     is_stable
+    visible
     pilot_experiment
   )
 
@@ -206,6 +207,8 @@ class Course < ApplicationRecord
     info[:is_stable] = stable?
     info[:pilot_experiment] = pilot_experiment
     info[:category] = I18n.t('courses_category')
+    # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
+    info[:category_priority] = -1
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
       default_course_scripts.map(&:script_id)
@@ -227,7 +230,7 @@ class Course < ApplicationRecord
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache(user: user)
+      return Course.valid_courses_without_cache
     end
 
     courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
@@ -236,10 +239,14 @@ class Course < ApplicationRecord
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
-      courses = courses.concat(pilot_courses.map(&:assignable_info))
+      courses += pilot_courses
     end
 
     courses
+  end
+
+  def self.valid_course_infos(user: nil)
+    return Course.valid_courses(user: user).map {|c| c.assignable_info(user)}
   end
 
   # @param user [User]
@@ -249,26 +256,16 @@ class Course < ApplicationRecord
     Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
   end
 
-  # Get the set of valid courses for the dropdown in our sections table, using
-  # any alternate scripts based on any experiments the user belongs to.
-  def self.valid_courses_without_cache(user: nil)
-    course_infos = Course.
-      where(name: ScriptConstants::CATEGORIES[:full_course]).
-      map {|course| course.assignable_info(user)}
-
-    # Only return stable course versions.
-    # * Currently, all course versions are stable.
-    # * In the future, stability will be set as a property by the levelbuilder.
-    #
-    # Group courses by family when showing multiple versions of each course.
-    course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]}
+  # Get the set of valid courses for the dropdown in our sections table.
+  def self.valid_courses_without_cache
+    Course.all.select(&:visible?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses.any? {|course| course[:id] == course_id.to_i}
+    valid_courses.any? {|course| course.id == course_id.to_i}
   end
 
   # @param user [User]
@@ -288,6 +285,8 @@ class Course < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
+      visible: visible?,
+      is_stable: is_stable?,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
@@ -320,8 +319,13 @@ class Course < ApplicationRecord
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
-    versions = Course.
-      where("properties -> '$.family_name' = ?", family_name).
+
+    # Include visible courses, plus self if not already included
+    courses = Course.valid_courses(user: user).clone
+    courses.append(self) unless courses.any? {|c| c.id == id}
+
+    versions = courses.
+      select {|c| c.family_name == family_name}.
       map do |c|
         {
           name: c.name,

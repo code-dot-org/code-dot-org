@@ -9,11 +9,12 @@ export default class SectionResults extends React.Component {
   static propTypes = {
     section: PropTypes.string.isRequired,
     answers: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired
+    questions: PropTypes.object.isRequired,
+    facilitators: PropTypes.object
   };
 
   renderQuestionResults(surveyQuestions, questionId, surveyId) {
-    const {answers, section} = this.props;
+    const {answers, section, facilitators} = this.props;
     let question = surveyQuestions[questionId];
     let answer = answers[surveyId][questionId];
     if (!answer) {
@@ -27,6 +28,7 @@ export default class SectionResults extends React.Component {
           questionId={questionId}
           answer={answer}
           section={section}
+          facilitators={facilitators}
         />
       );
     } else if (question['type'] === 'matrix') {
@@ -39,6 +41,7 @@ export default class SectionResults extends React.Component {
           questionId={questionId}
           answer={answer}
           section={section}
+          facilitators={facilitators}
         />
       );
     } else if (question['type'] === 'text') {
@@ -47,6 +50,7 @@ export default class SectionResults extends React.Component {
           question={question['title'] || questionId}
           answers={answer}
           key={questionId}
+          facilitators={facilitators}
         />
       );
     }
@@ -56,7 +60,6 @@ export default class SectionResults extends React.Component {
     const {answers, questions} = this.props;
     return (
       <div>
-        <h3>General Questions</h3>
         {_.compact(
           Object.keys(answers).map(surveyId => {
             let surveyQuestions = questions[surveyId];

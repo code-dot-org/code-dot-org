@@ -11,7 +11,7 @@ import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeCo
 import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import experiments from '@cdo/apps/util/experiments';
+import color from '@cdo/apps/util/color';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -42,6 +42,24 @@ $(document).ready(() => {
     );
   }
 
+  const updateDisplayedParentEmail = parentEmail => {
+    const displayedParentEmail = $('#displayed-parent-email');
+    displayedParentEmail.text(parentEmail);
+    displayedParentEmail.effect('highlight', {
+      duration: 1500,
+      color: color.orange
+    });
+  };
+  new AddParentEmailController({
+    form: $('#add-parent-email-modal-form'),
+    formParentEmailField: $('#add-parent-email-modal_user_parent_email'),
+    formParentOptInField: $(
+      '#add-parent-email-modal_user_parent_email_preference_opt_in'
+    ),
+    link: $('#add-parent-email-link'),
+    onSuccessCallback: updateDisplayedParentEmail
+  });
+
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
     link: $('#edit-email-link'),
@@ -51,15 +69,6 @@ $(document).ready(() => {
     isPasswordRequired,
     emailChangedCallback: onEmailChanged
   });
-
-  if (experiments.isEnabled(experiments.PARENT_EMAIL_PREFERENCE)) {
-    $('#add-parent-email').show();
-    new AddParentEmailController({
-      form: $('#add-parent-email-modal-form'),
-      link: $('#add-parent-email-link'),
-      displayedParentEmail: $('#displayed-parent-email')
-    });
-  }
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
 

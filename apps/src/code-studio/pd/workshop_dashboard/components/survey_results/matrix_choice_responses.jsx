@@ -12,18 +12,41 @@ export default class MatrixChoiceResponses extends React.Component {
     answer: PropTypes.object.isRequired,
     question: PropTypes.object.isRequired,
     section: PropTypes.string.isRequired,
-    questionId: PropTypes.string.isRequired
+    questionId: PropTypes.string.isRequired,
+    facilitators: PropTypes.object
   };
 
+  // facilitator responses are in form {facilitator1: {question1: <answer>,...}, facilitator2: {...}}
+  // Extract out facilitator answers for a given question id and return in the format
+  // {facilitator1: answer, facilitator2: answer}
+  getFacilitatorAnswers(innerQuestionId) {
+    const {answer} = this.props;
+    let facilitatorAnswers = {};
+    for (const facilitatorId in answer) {
+      if (answer[facilitatorId][innerQuestionId]) {
+        facilitatorAnswers[facilitatorId] =
+          answer[facilitatorId][innerQuestionId];
+      }
+    }
+    return facilitatorAnswers;
+  }
+
   render() {
-    const {section, answer, question, questionId} = this.props;
+    const {section, answer, question, questionId, facilitators} = this.props;
 
     return (
       <div>
         {_.compact(
           Object.keys(question['rows']).map(innerQuestionId => {
-            const innerAnswer = answer[innerQuestionId];
-            if (!innerAnswer) {
+            // innerAnswer is answer for innerQuestionId (question for this row)
+            let innerAnswer = null;
+            if (section === 'facilitator') {
+              innerAnswer = this.getFacilitatorAnswers(innerQuestionId);
+            } else {
+              innerAnswer = answer[innerQuestionId];
+            }
+
+            if (!innerAnswer || _.isEmpty(innerAnswer)) {
               return null;
             }
             const numRespondents = answer.num_respondents;
@@ -41,6 +64,7 @@ export default class MatrixChoiceResponses extends React.Component {
                 possibleAnswersMap={possibleAnswersMap}
                 key={`${questionId}-${innerQuestionId}`}
                 answerType={'singleSelect'}
+                facilitators={facilitators}
               />
             );
           })

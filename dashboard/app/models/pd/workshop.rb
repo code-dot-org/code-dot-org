@@ -33,6 +33,7 @@
 class Pd::Workshop < ActiveRecord::Base
   include Pd::WorkshopConstants
   include SerializedProperties
+  include Pd::WorkshopSurveyConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -47,9 +48,25 @@ class Pd::Workshop < ActiveRecord::Base
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
-  serialized_attrs %w(
-    fee
-  )
+  serialized_attrs [
+    'fee',
+
+    # Indicates that this workshop will be conducted virtually, which has the
+    # following effects in our system:
+    #   - Ensures `suppress_email` is set (see below)
+    #   - Makes `location_address` optional, and does not autofill a value
+    #     when it is left blank.
+    #   - Uses a different, virtual-specific post-workshop survey.
+    'virtual',
+
+    # If true, our system will not send any emails related to this workshop
+    # *except* for the post-workshop survey, which is exempt from this policy
+    # because it is important for our measurement of workshop outcomes.
+    # This option is useful to regional partners who may wish to have more
+    # direct control over workshop communication, at the cost of managing it
+    # themselves.
+    'suppress_email'
+  ]
 
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -59,6 +76,7 @@ class Pd::Workshop < ActiveRecord::Base
   validate :subject_must_be_valid_for_course
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
+  validate :all_virtual_workshops_suppress_email
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -85,6 +103,12 @@ class Pd::Workshop < ActiveRecord::Base
   def subject_must_be_valid_for_course
     unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
+    end
+  end
+
+  def all_virtual_workshops_suppress_email
+    if virtual? && !suppress_email?
+      errors.add :properties, 'All virtual workshops must suppress email.'
     end
   end
 
@@ -288,6 +312,7 @@ class Pd::Workshop < ActiveRecord::Base
   # 4. no location address at all? use TBA
   def friendly_location
     return 'Location TBA' if location_address_tba?
+    return 'Virtual Workshop' if location_address_virtual?
     return "#{location_city} #{location_state}" if processed_location
     location_address.presence || 'Location TBA'
   end
@@ -477,10 +502,14 @@ class Pd::Workshop < ActiveRecord::Base
     %w(tba tbd n/a).include?(location_address.try(:downcase))
   end
 
+  def location_address_virtual?
+    ['virtual', 'virtual workshop'].include? location_address.try(:downcase)
+  end
+
   def process_location
     result = nil
 
-    unless location_address.blank? || location_address_tba?
+    unless location_address.blank? || location_address_tba? || location_address_virtual?
       begin
         Geocoder.with_errors do
           # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
@@ -668,6 +697,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def pre_survey?
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
     PRE_SURVEY_BY_COURSE.key? course
   end
 
@@ -692,7 +722,7 @@ class Pd::Workshop < ActiveRecord::Base
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
       unit_name = script.localized_title
-      stage_names = script.stages.where(lockable: false).pluck(:name)
+      stage_names = script.lessons.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|
         "Lesson #{i + 1}: #{stage_name}"
       end
@@ -729,5 +759,13 @@ class Pd::Workshop < ActiveRecord::Base
 
   def can_user_delete?(user)
     state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
+  end
+
+  def last_valid_day
+    last_day = sessions.size
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+      last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
+    end
+    last_day
   end
 end

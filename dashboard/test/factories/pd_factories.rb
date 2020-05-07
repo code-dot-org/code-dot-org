@@ -1440,135 +1440,122 @@ FactoryGirl.define do
     questions '{}'
   end
 
+  factory :basic_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/sample"
+    foorm_submission_metadata
+    answers '{}'
+  end
+
+  factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 5
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_daily_survey_day_5"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+        "overall_success": {
+          "more_prepared": "1",
+          "know_help":"1",
+          "pd_suitable_experience":"1",
+          "connected_community": "1",
+          "would_recommend":"1",
+          "absolute_best_pd":"1"
+        },
+        "teacher_engagement": {
+          "activities_engaging": "1",
+          "participated":"1",
+          "frequently_talk_about":"1",
+          "planning_to_use": "1"
+        },
+        "teaching_in_general_matrix": {
+          "formally_assess_learning": "1",
+          "recruit_strategies":"1",
+          "retain_strategies":"1"
+        },
+       "expertise_rating": 1,
+       "two_things_liked": "things",
+       "permission_promotional": "yes_with_name"
+      }'
+    end
+
+    trait :answers_high do
+      answers '{
+        "overall_success": {
+          "more_prepared": "7",
+          "know_help":"7",
+          "pd_suitable_experience":"7",
+          "connected_community": "7",
+          "would_recommend":"7",
+          "absolute_best_pd":"7"
+        },
+        "teacher_engagement": {
+          "activities_engaging": "7",
+          "participated":"7",
+          "frequently_talk_about":"7",
+          "planning_to_use": "7"
+        },
+        "teaching_in_general_matrix": {
+          "formally_assess_learning": "7",
+          "recruit_strategies":"7",
+          "retain_strategies":"7"
+        },
+       "expertise_rating": 5,
+       "two_things_liked": "things",
+       "permission_promotional": "yes_with_name"
+      }'
+    end
+  end
+
+  factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 0
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_high]
+    end
+  end
+
   factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/workshop_daily_survey_day_0"
-    form_version 0
-    answers "{'question1':'answer1'}"
-  end
+    foorm_submission_metadata
 
-  factory :pd_workshop_survey_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :foorm_submission, factory: :daily_workshop_day_0_foorm_submission
-    association :pd_workshop, factory: :csp_summer_workshop
-    association :user, factory: :teacher
-    day 0
-  end
+    trait :answers_low do
+      answers '{
+        "course_length_weeks":"5_fewer",
+        "teaching_cs_matrix":{"committed_to_teaching_cs": "1", "like_teaching_cs": "1", "understand_cs": "1", "skills_cs": "1"},
+        "expertise_rating":1,
+        "birth_year": "1990",
+        "racial_ethnic_identity": ["black_aa","white"]
+      }'
+    end
 
-  factory :day_5_workshop_foorm_submission_low, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :foorm_submission, factory: :daily_workshop_day_5_foorm_submission_low
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    day 5
-  end
-
-  factory :day_5_workshop_foorm_submission_high, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :foorm_submission, factory: :daily_workshop_day_5_foorm_submission_high
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    day 5
-  end
-
-  factory :daily_workshop_day_5_foorm_submission_low, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_5"
-    form_version 0
-    created_at "2020-03-26 21:58:28"
-    updated_at "2020-03-26 21:58:28"
-    answers '{
-      "overall_success": {
-        "more_prepared": "1",
-        "know_help":"1",
-        "pd_suitable_experience":"1",
-        "connected_community": "1",
-        "would_recommend":"1",
-        "absolute_best_pd":"1"
-      },
-      "teacher_engagement": {
-        "activities_engaging": "1",
-        "participated":"1",
-        "frequently_talk_about":"1",
-        "planning_to_use": "1"
-      },
-      "teaching_in_general_matrix": {
-        "formally_assess_learning": "1",
-        "recruit_strategies":"1",
-        "retain_strategies":"1"
-      },
-     "expertise_rating": 1,
-     "two_things_liked": "things",
-     "permission_promotional": "yes_with_name"
-    }'
-  end
-
-  factory :daily_workshop_day_5_foorm_submission_high, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_5"
-    form_version 0
-    created_at "2020-03-26 21:58:28"
-    updated_at "2020-03-26 21:58:28"
-    answers '{
-    "overall_success": {
-      "more_prepared": "7",
-      "know_help":"7",
-      "pd_suitable_experience":"7",
-      "connected_community": "7",
-      "would_recommend":"7",
-      "absolute_best_pd":"7"
-    },
-    "teacher_engagement": {
-      "activities_engaging": "7",
-      "participated":"7",
-      "frequently_talk_about":"7",
-      "planning_to_use": "7"
-    },
-    "teaching_in_general_matrix": {
-      "formally_assess_learning": "7",
-      "recruit_strategies":"7",
-      "retain_strategies":"7"
-    },
-   "expertise_rating": 5,
-   "two_things_liked": "things",
-   "permission_promotional": "yes_with_name"
-  }'
-  end
-
-  factory :day_0_workshop_foorm_submission_low, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :foorm_submission, factory: :daily_workshop_day_0_foorm_submission_low
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    day 0
-  end
-
-  factory :day_0_workshop_foorm_submission_high, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :foorm_submission, factory: :daily_workshop_day_0_foorm_submission_high
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    day 0
-  end
-
-  factory :daily_workshop_day_0_foorm_submission_high, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_0"
-    form_version 0
-    created_at "2020-03-26 21:58:28"
-    updated_at "2020-03-26 21:58:28"
-    answers '{
-      "course_length_weeks":"30_more",
-      "teaching_cs_matrix":{"committed_to_teaching_cs": "7", "like_teaching_cs": "7", "understand_cs": "7", "skills_cs": "7"},
-      "expertise_rating":5,
-      "birth_year": "1983",
-      "racial_ethnic_identity": ["black_aa","hispanic_latino"]
-    }'
-  end
-
-  factory :daily_workshop_day_0_foorm_submission_low, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_0"
-    form_version 0
-    created_at "2020-03-26 21:58:28"
-    updated_at "2020-03-26 21:58:28"
-    answers '{
-      "course_length_weeks":"5_fewer",
-      "teaching_cs_matrix":{"committed_to_teaching_cs": "1", "like_teaching_cs": "1", "understand_cs": "1", "skills_cs": "1"},
-      "expertise_rating":1,
-      "birth_year": "1990",
-      "racial_ethnic_identity": ["black_aa","white"]
-    }'
+    trait :answers_high do
+      answers '{
+        "course_length_weeks":"30_more",
+        "teaching_cs_matrix":{"committed_to_teaching_cs": "7", "like_teaching_cs": "7", "understand_cs": "7", "skills_cs": "7"},
+        "expertise_rating":5,
+        "birth_year": "1983",
+        "racial_ethnic_identity": ["black_aa","hispanic_latino"]
+      }'
+    end
   end
 
   factory :foorm_form_with_inconsistent_questions, class: 'Foorm::Form' do
@@ -1594,5 +1581,117 @@ FactoryGirl.define do
           }
         ]
       }'
+  end
+
+  factory :csf_intro_post_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :user, factory: :teacher
+    association :pd_workshop, factory: :csf_101_workshop
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :csf_intro_post_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+      "overall_success": {
+        "more_prepared": "1",
+        "where_to_go":"1",
+        "suitable_my_level":"1",
+        "feel_community": "1",
+        "would_recommend":"1",
+        "best_pd":"1"
+      },
+      "teacher_engagement": {
+        "engaging": "1",
+        "active":"1",
+        "ideas":"1"
+      },
+      "supported": "lots",
+      "permission": "no"
+    }'
+    end
+
+    trait :answers_high do
+      answers '{
+      "overall_success": {
+        "more_prepared": "7",
+        "where_to_go":"7",
+        "suitable_my_level":"7",
+        "feel_community": "7",
+        "would_recommend":"7",
+        "best_pd":"7"
+      },
+      "teacher_engagement": {
+        "engaging": "7",
+        "active":"7",
+        "ideas":"7"
+      },
+      "supported": "lots",
+      "permission": "yes_name"
+    }'
+    end
+  end
+
+  factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csf_101_workshop
+    association :user, factory: :teacher
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :csf_intro_post_facilitator_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers '{
+      "facilitatorId": 1,
+      "facilitatorName": "Facilitator1",
+      "facilitator_effectiveness":{
+        "demonstrated_knowledge":"1",
+        "built_equitable":"1",
+        "on_track":"1",
+        "productive_discussions":"1",
+        "ways_equitable":"1",
+        "healthy_relationship":"1"
+      },
+      "k5_facilitator_did_well":"things done well"
+    }'
+    end
+
+    trait :answers_high do
+      answers '{
+      "facilitatorId": 1,
+      "facilitatorName": "Facilitator1",
+      "facilitator_effectiveness":{
+        "demonstrated_knowledge":"7",
+        "built_equitable":"7",
+        "on_track":"7",
+        "productive_discussions":"7",
+        "ways_equitable":"7",
+        "healthy_relationship":"7"
+      },
+      "k5_facilitator_did_well":"things done well"
+    }'
+    end
+  end
+
+  trait :foorm_submission_metadata do
+    form_version 0
   end
 end

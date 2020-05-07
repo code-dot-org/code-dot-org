@@ -135,7 +135,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       previous_courses: params[:previous_courses],
       replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
-      csf_intro_other_factors: params[:csf_intro_other_factors]
+      csf_intro_other_factors: params[:csf_intro_other_factors],
+      # params only collected in CSP returning teachers workshop
+      years_teaching: params[:years_teaching],
+      years_teaching_cs: params[:years_teaching_cs],
+      taught_ap_before: params[:taught_ap_before],
+      planning_to_teach_ap: params[:planning_to_teach_ap]
     }
   end
 

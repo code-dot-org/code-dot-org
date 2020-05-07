@@ -45,6 +45,7 @@ export default class ScriptEditor extends React.Component {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
+    isStable: PropTypes.bool,
     loginRequired: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
@@ -78,8 +79,6 @@ export default class ScriptEditor extends React.Component {
     super(props);
 
     this.state = {
-      hidden: this.props.hidden,
-      pilotExperiment: this.props.pilotExperiment,
       curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
@@ -234,15 +233,24 @@ export default class ScriptEditor extends React.Component {
                 ))}
               </select>
             </label>
-            <VisibleInTeacherDashboard
-              checked={!this.state.hidden}
-              disabled={!!this.state.pilotExperiment}
-              onChange={e => this.setState({hidden: !e.target.checked})}
+            <VisibleAndPilotExperiment
+              visible={!this.props.hidden}
+              pilotExperiment={this.props.pilotExperiment}
             />
-            <PilotExperiment
-              value={this.state.pilotExperiment}
-              onChange={e => this.setState({pilotExperiment: e.target.value})}
-            />
+            <label>
+              Can be recommended (aka stable)
+              <input
+                name="is_stable"
+                type="checkbox"
+                defaultChecked={this.props.isStable}
+                style={styles.checkbox}
+              />
+              <p>
+                If checked, this unit will be eligible to be the recommended
+                version of the unit. The most recent eligible version will be
+                the recommended version.
+              </p>
+            </label>
           </div>
         )}
         <label>
@@ -510,7 +518,10 @@ export default class ScriptEditor extends React.Component {
               name="script_text"
               rows={textAreaRows}
               style={styles.input}
-              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              defaultValue={
+                this.props.stageLevelData ||
+                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new stage'\n"
+              }
               ref={textArea => (this.scriptTextArea = textArea)}
             />
           </div>
@@ -528,11 +539,55 @@ export default class ScriptEditor extends React.Component {
   }
 }
 
+/**
+ * Component which renders two input fields: a checkbox which controls whether the course/script
+ * should be available in the dropdown on Teacher Dashboard, and a text field which controls whether
+ * the course/script is in a pilot experiment. This component also ensures that if there is a pilot experiment,
+ * then the visible checkbox will be unchecked and greyed out, to maintain consistency between the two.
+ */
+export class VisibleAndPilotExperiment extends React.Component {
+  static propTypes = {
+    visible: PropTypes.bool.isRequired,
+    pilotExperiment: PropTypes.string,
+    paramName: PropTypes.string
+  };
+
+  static defaultProps = {
+    paramName: 'visible_to_teachers'
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: this.props.visible,
+      pilotExperiment: this.props.pilotExperiment
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <VisibleInTeacherDashboard
+          checked={this.state.visible}
+          disabled={!!this.state.pilotExperiment}
+          onChange={e => this.setState({visible: e.target.checked})}
+          paramName={this.props.paramName}
+        />
+        <PilotExperiment
+          value={this.state.pilotExperiment}
+          onChange={e => this.setState({pilotExperiment: e.target.value})}
+        />
+      </div>
+    );
+  }
+}
+
 const VisibleInTeacherDashboard = props => (
   <label style={props.disabled ? {opacity: 0.5} : {}}>
     Visible in Teacher Dashboard
     <input
-      name="visible_to_teachers"
+      name={props.paramName}
       type="checkbox"
       disabled={props.disabled}
       checked={props.checked && !props.disabled}
@@ -549,6 +604,7 @@ const VisibleInTeacherDashboard = props => (
   </label>
 );
 VisibleInTeacherDashboard.propTypes = {
+  paramName: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired

@@ -6,8 +6,8 @@ theme: responsive
 <a id="top"></a>
 # Learning computer science when schools are closed
 
-<div style="padding-right: 20px; float: right; margin-top: 10px">
-  <%= view :display_video_thumbnail, id: 'athome', video_code: 'zN9DmouPpIU', play_button: 'center', letterbox: 'false'%>
+<div style="padding-left: 20px; float: right; margin-top: 0">
+{{ athome_vid_intro }}
 </div>
 
 <p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>

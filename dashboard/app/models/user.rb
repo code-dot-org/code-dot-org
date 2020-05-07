@@ -113,6 +113,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
+    parent_email_banner_dismissed
   )
 
   # Include default devise modules. Others available are:
@@ -235,9 +236,6 @@ class User < ActiveRecord::Base
         source: parent_email_preference_source,
         form_kind: nil
       )
-      if parent_email_changed?
-        ParentMailer.parent_email_added_to_student_account(parent_email, self).deliver_now
-      end
     end
   end
 
@@ -385,6 +383,7 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
 
+  attr_accessor :parent_email_update_only
   attr_accessor :parent_email_preference_opt_in_required
   attr_accessor :parent_email_preference_opt_in
   attr_accessor :parent_email_preference_email
@@ -396,8 +395,6 @@ class User < ActiveRecord::Base
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-
-  has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -462,7 +459,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
   # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: :parent_email_preference_opt_in_required?
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
   validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
@@ -472,6 +469,10 @@ class User < ActiveRecord::Base
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
     # user_type 'student' is the only type which supports have a parent_email associated with it.
     parent_email_preference_opt_in_required == '1' && user_type == 'student'
+  end
+
+  def parent_email_update_only?
+    parent_email_update_only == '1' && user_type == 'student'
   end
 
   def parent_email_preference_setup
@@ -639,8 +640,9 @@ class User < ActiveRecord::Base
     nil
   end
 
-  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
-  validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
@@ -805,7 +807,28 @@ class User < ActiveRecord::Base
     new_without_password || is_changing_password
   end
 
-  def email_required?
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
+
+  # Determines if email is a required field for a teacher.
+  # Currently, we have some old teacher accounts which don't have an email
+  # address associated with them because it wasn't required when they were
+  # created. Those old accounts are allowed to skip the email validation.
+  def teacher_email_required?
+    # non-teachers are not relevant to this method.
+    return false unless teacher? && purged_at.nil?
+
+    # new teacher accounts should always require an email
+    return true unless created_at.present?
+
+    # existing accounts created after the email requirement must have an email.
+    # FND-1130: The created_at exception will no longer be required
+    # Remove the created_at > '2016-06-14 00:00:00' once all teachers have
+    # emails.
+    return created_at.to_datetime > DATE_TEACHER_EMAIL_REQUIREMENT_ADDED
+  end
+
+  def email_or_hashed_email_required?
     return true if teacher?
     return false if manual?
     return false if sponsored?
@@ -936,6 +959,8 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+    # teachers do not need another adult to have access to their account.
+    self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
 

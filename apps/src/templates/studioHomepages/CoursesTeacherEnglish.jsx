@@ -8,7 +8,6 @@ import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 /**
  * This is the main content for the Courses page for a teacher using English,
@@ -37,15 +36,7 @@ class CoursesTeacherEnglish extends Component {
 
           <CourseBlocksTeacherGradeBands />
 
-          <ContentContainer
-            heading={i18n.teacherCourseHoc()}
-            description={i18n.teacherCourseHocDescription()}
-            linkText={i18n.teacherCourseHocLinkText()}
-            link={pegasus('/hourofcode/overview')}
-            showLink={true}
-          >
-            <CourseBlocksHoc />
-          </ContentContainer>
+          <CourseBlocksHoc />
 
           <CourseBlocksTools isEnglish={true} />
 
