@@ -10,6 +10,7 @@ version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit4/code/"]]
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 stage 'Analysis of Design'
