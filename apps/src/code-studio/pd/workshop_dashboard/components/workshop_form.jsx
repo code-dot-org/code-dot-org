@@ -42,6 +42,7 @@ import {
   Courses,
   Subjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import HelpTip from '../../../../lib/ui/HelpTip';
 
 const styles = {
   readOnlyInput: {
@@ -992,7 +993,23 @@ export class WorkshopForm extends React.Component {
           <Row>
             <Col sm={5}>
               <FormGroup validationState={validation.style.virtual}>
-                <ControlLabel>Is this a virtual workshop?</ControlLabel>
+                <ControlLabel>
+                  Is this a virtual workshop?
+                  <HelpTip>
+                    <p>When a workshop is virtual, our system:</p>
+                    <ul>
+                      <li>Does not require you to enter a location address</li>
+                      <li>
+                        Will not send email notifications, such as enrollment
+                        receipts and workshop reminders
+                      </li>
+                      <li>
+                        Will send a post-workshop survey designed for virtual
+                        workshops
+                      </li>
+                    </ul>
+                  </HelpTip>
+                </ControlLabel>
                 <SelectIsVirtual
                   value={this.state.virtual || false}
                   onChange={this.handleVirtualChange}
@@ -1003,7 +1020,26 @@ export class WorkshopForm extends React.Component {
             </Col>
             <Col sm={5}>
               <FormGroup validationState={validation.style.suppress_email}>
-                <ControlLabel>Enable email notifications?</ControlLabel>
+                <ControlLabel>
+                  Enable email notifications?
+                  <HelpTip>
+                    <p>
+                      Code.org can send email notifications about this workshop
+                      to your attendees on your behalf. Notifications may
+                      include:
+                    </p>
+                    <ul>
+                      <li>Enrollment receipts</li>
+                      <li>10-day and 3-day workshop reminders</li>
+                      <li>Updates when workshop details change</li>
+                    </ul>
+                    <p>
+                      Code.org will always email a post-workshop survey to
+                      participants, even if you disable workshop notifications
+                      here.
+                    </p>
+                  </HelpTip>
+                </ControlLabel>
                 <SelectSuppressEmail
                   onChange={this.handleSuppressEmailChange}
                   value={this.state.suppress_email || false}
