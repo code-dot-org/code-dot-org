@@ -17,7 +17,7 @@ describe('HideToolbarHelper', function() {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.true;
+    expect(instance.state.shouldShowHelper).to.be.true;
   });
 
   it('does not show the hide toolbar helper', function() {
@@ -32,7 +32,7 @@ describe('HideToolbarHelper', function() {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.false;
+    expect(instance.state.shouldShowHelper).to.be.false;
   });
 
   it('we set a cookie when the toolbar goes away', function() {
@@ -51,7 +51,7 @@ describe('HideToolbarHelper', function() {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.true;
+    expect(instance.state.shouldShowHelper).to.be.true;
     expect(setHideHelperCookie).not.to.have.been.called;
 
     isToolbarShowing.restore();
@@ -59,7 +59,7 @@ describe('HideToolbarHelper', function() {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.false;
+    expect(instance.state.shouldShowHelper).to.be.false;
     expect(setHideHelperCookie).to.have.been.called;
   });
 });

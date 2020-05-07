@@ -69,19 +69,16 @@ export default class HideToolbarHelper extends React.Component {
     if (
       !((this.forceShowHelper || isiOS13) && isLandscape && !isHideCookieSet)
     ) {
-      // alert('blocking helper forceShowHelper: ' + this.forceShowHelper + ' isiOS13: ' + isiOS13 + ' isLandscape: ' + isLandscape + ' isHideCookieSet: ' + isHideCookieSet + ' window.innerHeight: ' + window.innerHeight + ' document.body.offsetHeight: ' + document.body.offsetHeigh + ' document.documentElement.clientHeight: ' + document.documentElement.clientHeight)
       this.setState({shouldShowHelper: false});
       return;
     }
 
     // Let's show the helper if we think the toolbar is showing.
     const shouldShowHelper = this.isToolbarShowing() || this.forceShowHelper;
-    // alert('not blocking helper. shouldShowHelper: ' + shouldShowHelper + ' window.innerHeight: ' + window.innerHeight + ' document.body.offsetHeight: ' + document.body.offsetHeight + ' document.documentElement.clientHeight: ' + document.documentElement.clientHeight)
 
     // If we previously have shown the helper, and aren't now, and it's the
     // first time we've encountered this situation, then do a couple things.
     if (this.wasHelperShowing && !shouldShowHelper) {
-      // alert('setting cookie this.wasHelperShowing: ' + this.wasHelperShowing + ' shouldShowHelper: ' + shouldShowHelper)
       // Let's track the disapearance of the toolbar after we had previously
       // shown the helper.
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
