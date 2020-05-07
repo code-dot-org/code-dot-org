@@ -1,5 +1,8 @@
 /*globals dashboard*/
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
 
@@ -136,8 +139,21 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
                   lib => lib.name === libraryName
                 );
                 if (library) {
-                  console.log(library.source);
-                  // TODO: Open LibraryViewCode React component
+                  $('body').append("<div id='libraryFunctionTooltipModal' />");
+                  ReactDOM.render(
+                    <LibraryViewCode
+                      title={library.name}
+                      description={library.description}
+                      onClose={() => {
+                        var element = document.getElementById(
+                          'libraryFunctionTooltipModal'
+                        );
+                        element.parentNode.removeChild(element);
+                      }}
+                      sourceCode={library.source}
+                    />,
+                    document.querySelector('#libraryFunctionTooltipModal')
+                  );
                 }
               }.bind(this)
             );
