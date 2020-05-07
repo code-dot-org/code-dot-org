@@ -105,11 +105,20 @@ class InlineAudio extends React.Component {
     playing: false,
     error: false,
     hover: false,
-    loaded: false
+    loaded: false,
+    autoplayed: false
   };
 
   componentDidMount() {
     this.getAudioElement();
+    if (
+      this.props.section &&
+      this.props.section.autoplayEnabled &&
+      !this.state.autoplayed
+    ) {
+      this.setState({autoplayed: true});
+      this.playAudio();
+    }
   }
 
   componentWillUpdate(nextProps) {

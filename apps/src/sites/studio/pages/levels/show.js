@@ -11,10 +11,11 @@ function initPage() {
   const script = document.querySelector('script[data-level]');
   const config = JSON.parse(script.dataset.level);
   const section = config.section;
-  console.log(section);
-  registerReducers(sectionData);
+  registerReducers({sectionData});
   const store = getStore();
-  store.dispatch(setSection(section));
+  if (section) {
+    store.dispatch(setSection(section));
+  }
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(
