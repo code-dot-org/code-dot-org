@@ -3,27 +3,33 @@ set -e
 
 MEM_PER_PROCESS=4096
 
-if [ "$(uname)" = "Darwin" ]; then
-  PROCS=2 # TODO: set this dynamically like in linux
-elif [ "$(uname)" = "Linux" ]; then
-  NPROC=$(nproc)
+function linuxNumProcs() {
+  local nprocs=$(nproc)
 
   # Use MemAvailable when available, otherwise fall back to MemFree
   if grep -q MemAvailable /proc/meminfo; then
-    MEM_METRIC=MemAvailable
+    local mem_metric=MemAvailable
   else
-    MEM_METRIC=MemFree
+    local mem_metric=MemFree
   fi
 
   # Don't run more processes than can fit in free memory.
-  MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
-  PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
+  local mem_procs=$(awk "/${mem_metric}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
+  local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
-  if [ $PROCS -eq 0 ]; then
-    FREE_KB=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
-    echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${FREE_KB}KB"
-    PROCS=1
-  fi
+  if [ "$PROCS" -eq 0 ]; then
+    local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
+    echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${free_kb}KB"
+    procs=1
+  fi 
+
+  echo $procs
+}
+
+if [ "$(uname)" = "Darwin" ]; then
+  PROCS=2 # TODO: set this dynamically like in linux
+elif [ "$(uname)" = "Linux" ]; then
+  PROCS=$(linuxNumProcs)
 else
   echo "$(uname) not supported"
   exit 1
