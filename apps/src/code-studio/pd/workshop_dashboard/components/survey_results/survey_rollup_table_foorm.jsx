@@ -27,6 +27,9 @@ const styles = {
   },
   headerRow: {
     borderTop: 'solid'
+  },
+  dateNotice: {
+    textAlign: 'right'
   }
 };
 
@@ -438,16 +441,26 @@ export default class SurveyRollupTableFoorm extends React.Component {
     const rows = this.getTableRows();
     const columns = this.getTableColumns();
     return (
-      <Table.Provider className="table table-bordered" columns={columns}>
-        <Table.Header />
-        <Table.Body
-          rows={rows}
-          rowKey="id"
-          onRow={row => {
-            return {style: row.isHeader ? styles.headerRow : {}};
-          }}
-        />
-      </Table.Provider>
+      <div>
+        <Table.Provider className="table table-bordered" columns={columns}>
+          <Table.Header />
+          <Table.Body
+            rows={rows}
+            rowKey="id"
+            onRow={row => {
+              return {style: row.isHeader ? styles.headerRow : {}};
+            }}
+          />
+        </Table.Provider>
+        <div style={styles.dateNotice}>
+          The averages shown above are for workshops from May 2020 onwards.{' '}
+          <br />
+          Earlier averages can be found at{' '}
+          <a href="/pd/workshop_dashboard/legacy_survey_summaries">
+            Legacy Facilitator Survey Summaries.
+          </a>
+        </div>
+      </div>
     );
   }
 }
