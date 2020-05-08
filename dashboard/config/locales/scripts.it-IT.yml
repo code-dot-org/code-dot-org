@@ -859,25 +859,25 @@ it:
             Best Practices for Teaching Computer Science:
               name: Linee guida per l'insegnamento dell'informatica
             Computer Science Fundamentals:
-              name: 2. Fondamenti di informatica
+              name: Fondamenti di informatica
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
             Looking Ahead:
-              name: 3. Uno sguardo avanti
+              name: Uno sguardo avanti
             'Mastering the Basics: Conditionals':
-              name: '6. I concetti fondamentali: istruzioni condizionali'
+              name: 'I concetti fondamentali: istruzioni condizionali'
             'Mastering the Basics: Events':
-              name: '8. I concetti fondamentali: eventi'
+              name: 'I concetti fondamentali: eventi'
             'Mastering the Basics: Functions':
-              name: '7. I concetti fondamentali: funzioni'
+              name: 'I concetti fondamentali: funzioni'
             'Mastering the Basics: Loops':
-              name: '5. I concetti fondamentali: cicli'
+              name: 'I concetti fondamentali: cicli'
             'Mastering the Basics: Sequencing':
-              name: '4. I concetti fondamentali: sequenze di istruzioni'
+              name: 'I concetti fondamentali: sequenze di istruzioni'
             Next Steps:
               name: I prossimi passi
             Planning:
-              name: 10. Gestione della classe
+              name: Gestione della classe
         ECSPD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -925,7 +925,7 @@ it:
         Equity-OnlinePD:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
             Next Steps:
               name: I prossimi passi
         sciencePD2b-iZone:
@@ -970,7 +970,7 @@ it:
         CSPPD2:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -998,23 +998,23 @@ it:
         ECSPD3-Unit2:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ECSPD3-Unit3:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ECSPD3-Unit4:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ECSPD3-Unit5:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ECSPD3-Unit6:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -1024,11 +1024,11 @@ it:
         algebraPD3b:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         CSPPD3-Unit2:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         Special Fun:
           description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
             Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
@@ -1055,7 +1055,7 @@ it:
         CSPPD3-Unit3:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         cspunit3temp:
           description_short: Programmazione
           stages:
@@ -1120,11 +1120,11 @@ it:
         CSPPD3-Unit4:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         CSPPD3-Unit5:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -1189,7 +1189,7 @@ it:
         algebraPD3c:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         csp1-2017:
           stages:
             Binary Numbers:
@@ -1462,23 +1462,23 @@ it:
         ecs-unit2:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ecs-unit3:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ecs-unit4:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ecs-unit5:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         ecs-unit6:
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -6682,25 +6682,25 @@ it:
             insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
           stages:
             Getting Started:
-              name: 1. Per cominciare
+              name: Per cominciare
             Computer Science Fundamentals:
-              name: 2. Fondamenti di informatica
+              name: Fondamenti di informatica
             Looking Ahead:
-              name: 3. Uno sguardo avanti
+              name: Uno sguardo avanti
             'Mastering the Basics: Sequencing':
-              name: '4. I concetti fondamentali: sequenze di istruzioni'
+              name: 'I concetti fondamentali: sequenze di istruzioni'
             'Mastering the Basics: Loops':
-              name: '5. I concetti fondamentali: cicli'
+              name: 'I concetti fondamentali: cicli'
             'Mastering the Basics: Conditionals':
-              name: '6. I concetti fondamentali: istruzioni condizionali'
+              name: 'I concetti fondamentali: istruzioni condizionali'
             'Mastering the Basics: Functions':
-              name: '7. I concetti fondamentali: funzioni'
+              name: 'I concetti fondamentali: funzioni'
             'Mastering the Basics: Events':
-              name: '8. I concetti fondamentali: eventi'
+              name: 'I concetti fondamentali: eventi'
             Best Practices for Teaching Computer Science:
               name: Linee guida per l'insegnamento dell'informatica
             Planning:
-              name: 10. Gestione della classe
+              name: Gestione della classe
             Next Steps:
               name: I prossimi passi
             Understanding the Computer Science Fundamentals Courses:
@@ -6714,7 +6714,7 @@ it:
               name: Per capire i corsi di Fondamenti di informatica (titolo originale
                 CSF - Computer Science Fundamentals)
             Best practices for teaching computer science:
-              name: 9. Linee guida per l'insegnamento dell'informatica
+              name: Linee guida per l'insegnamento dell'informatica
             Sequencing:
               name: Sequenze
             Loops:
@@ -6728,7 +6728,7 @@ it:
             Diving Deeper:
               name: Andando più a fondo
             Next steps:
-              name: 11. I prossimi passi
+              name: I prossimi passi
             Diving deeper:
               name: Andando più a fondo
             Diving deeper (for Courses E and F):
@@ -6755,7 +6755,7 @@ it:
               name: Progetti di fine corso
           lesson_groups:
             k5_getting_started:
-              display_name: 1. Per cominciare
+              display_name: Per cominciare
             k5_next_steps:
               display_name: I prossimi passi
         dance-extras-2019:
