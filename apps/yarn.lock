@@ -7160,12 +7160,6 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-access@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fs-access/-/fs-access-1.0.1.tgz#d6a87f262271cefebec30c553407fb995da8777a"
-  dependencies:
-    null-check "^1.0.0"
-
 fs-extra@^0.30.0:
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.30.0.tgz#f233ffcc08d4da7d432daa449776989db1df93f0"
@@ -9701,11 +9695,11 @@ just-extend@^4.0.2:
   resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-4.0.2.tgz#f3f47f7dfca0f989c55410a7ebc8854b07108afc"
   integrity sha512-FrLwOgm+iXrPV+5zDU6Jqu4gCRXbWEQg2O3SKONsWE4w7AXFRkryS53bpWdaL9cNol+AmR3AEYz6kn+o0fCPnw==
 
-karma-chrome-launcher@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/karma-chrome-launcher/-/karma-chrome-launcher-2.2.0.tgz#cf1b9d07136cc18fe239327d24654c3dbc368acf"
+karma-chrome-launcher@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/karma-chrome-launcher/-/karma-chrome-launcher-3.1.0.tgz#805a586799a4d05f4e54f72a204979f3f3066738"
+  integrity sha512-3dPs/n7vgz1rxxtynpzZTvb9y/GIaW8xjAwcIGttLbycqoFtI7yo1NGnQi6oFTherRE+GIhCAHZC4vEqWGhNvg==
   dependencies:
-    fs-access "^1.0.0"
     which "^1.2.1"
 
 karma-coverage-istanbul-reporter@^2.1.0:
@@ -11411,10 +11405,6 @@ nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-null-check@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/null-check/-/null-check-1.0.0.tgz#977dffd7176012b9ec30d2a39db5cf72a0439edd"
-
 num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
@@ -12111,6 +12101,13 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+pixelmatch@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/pixelmatch/-/pixelmatch-5.2.0.tgz#6433386c6a830b0d9ee3962f9ad59695500677cd"
+  integrity sha512-TdleROuanI+Uo/4PcOAH7b7qgO4kjzJO8K4y/TBAo1wx/5BE8cn1B0I6Jfk3mKcJsGpWvX7zjM8OjU5o9i+aog==
+  dependencies:
+    pngjs "^4.0.1"
+
 pkcs7@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pkcs7/-/pkcs7-1.0.2.tgz#b6dba527528c2942bfc122ce2dafcdb5e59074e7"
@@ -12156,6 +12153,11 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
+
+pngjs@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-4.0.1.tgz#f803869bb2fc1bfe1bf99aa4ec21c108117cfdbe"
+  integrity sha512-rf5+2/ioHeQxR6IxuYNYGFytUyG3lma/WW1nsmjeHlWwtb2aByla6dkVc8pmJ9nplzkTA0q2xx7mMWrOTqT4Gg==
 
 popper.js@^1.14.1:
   version "1.14.3"
@@ -15509,10 +15511,10 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-survey-react@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.5.8.tgz#acd34b1eb234ea3f38ee12a3fe5c18495bfbd389"
-  integrity sha512-BgjTiPnzs7Tlp8D0VZZ2Rz+fjyQ3uKMkAJQWtY6OiOXtfeQvHlIiUrCd+CYaUjslzXugTgDK+qLWfFuqjUzQAg==
+survey-react@1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.4.tgz#41194f0c4c4a96a88676a19f812ff362aa62f243"
+  integrity sha512-s6MsZvHUbp9YYoMsmpxcGEL3hz0iWLUQQ3aR+C1V6EBQrHwnhUN0nl7llpQsTc5pn0l4r0kwlGpKMFArVVInIA==
 
 svg-tag-names@^1.1.0:
   version "1.1.1"

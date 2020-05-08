@@ -58,21 +58,23 @@ class ContactRollupsPardotMemory < ApplicationRecord
   # @param [Integer] limit the maximum number of Pardot prospects to download
   def self.download_pardot_prospects(last_id = nil, limit = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
+
+    # Note: db_* fields are sorted alphabetically
     fields = %w(
       id
       email
-      db_Opt_In
-      db_State
+      db_City
       db_Country
-      db_Roles
-      db_Has_Teacher_Account
-      db_Hour_of_Code_Organizer
       db_Form_Roles
       db_Forms_Submitted
-      db_City
+      db_Has_Teacher_Account
+      db_Hour_of_Code_Organizer
+      db_Opt_In
       db_Postal_Code
       db_Professional_Learning_Attended
       db_Professional_Learning_Enrolled
+      db_Roles
+      db_State
     )
 
     PardotV2.retrieve_prospects(last_id, fields, limit) do |prospects|

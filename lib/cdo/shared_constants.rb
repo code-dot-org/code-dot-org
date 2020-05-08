@@ -55,7 +55,6 @@ module SharedConstants
   # The set of artist autorun options
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
-      limited_auto_run: 'LIMITED_AUTO_RUN',
       full_auto_run: 'FULL_AUTO_RUN',
     }
   ).freeze

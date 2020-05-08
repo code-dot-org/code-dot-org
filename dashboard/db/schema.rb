@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200427204950) do
+ActiveRecord::Schema.define(version: 20200504210058) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -266,16 +266,6 @@ ActiveRecord::Schema.define(version: 20200427204950) do
     t.integer "level_id"
     t.index ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
-  end
-
-  create_table "contact_rollups_comparisons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "email",               null: false
-    t.json     "old_data"
-    t.datetime "old_data_updated_at"
-    t.json     "new_data"
-    t.datetime "new_data_updated_at"
-    t.datetime "created_at"
-    t.index ["email"], name: "index_contact_rollups_comparisons_on_email", unique: true, using: :btree
   end
 
   create_table "contact_rollups_final", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -615,6 +605,15 @@ ActiveRecord::Schema.define(version: 20200427204950) do
     t.datetime "updated_at",              null: false
     t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
     t.index ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
+  end
+
+  create_table "parent_levels_child_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "parent_level_id",                      null: false
+    t.integer "child_level_id",                       null: false
+    t.integer "position"
+    t.string  "kind",            default: "sublevel", null: false
+    t.index ["child_level_id"], name: "index_parent_levels_child_levels_on_child_level_id", using: :btree
+    t.index ["parent_level_id"], name: "index_parent_levels_child_levels_on_parent_level_id", using: :btree
   end
 
   create_table "pd_accepted_programs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1419,7 +1418,6 @@ ActiveRecord::Schema.define(version: 20200427204950) do
     t.integer  "script_id",                                       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "flex_category"
     t.boolean  "lockable",                        default: false, null: false
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
@@ -1743,14 +1741,6 @@ ActiveRecord::Schema.define(version: 20200427204950) do
     t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true, using: :btree
   end
 
-  add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
-  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
-  add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_overrides", "schools"
-  add_foreign_key "census_submission_form_maps", "census_submissions"
-  add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "ib_school_codes", "schools"
   add_foreign_key "level_concept_difficulties", "levels"

@@ -48,4 +48,32 @@ describe('AnimationPickerBody', function() {
       expect(warnings).not.to.exist;
     });
   });
+
+  describe('handleScroll', () => {
+    it('fetches next results if scrolled through 90% of content', () => {
+      const mockEvent = {
+        target: {
+          scrollTop: 30,
+          scrollHeight: 500
+        }
+      };
+      const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
+      expect(wrapper.state('currentPage')).to.equal(0);
+      wrapper.instance().handleScroll(mockEvent);
+      expect(wrapper.state('currentPage')).to.equal(1);
+    });
+
+    it('does not fetch next results if not scrolled through 90% of content', () => {
+      const mockEvent = {
+        target: {
+          scrollTop: 0,
+          scrollHeight: 600
+        }
+      };
+      const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
+      expect(wrapper.state('currentPage')).to.equal(0);
+      wrapper.instance().handleScroll(mockEvent);
+      expect(wrapper.state('currentPage')).to.equal(0);
+    });
+  });
 });
