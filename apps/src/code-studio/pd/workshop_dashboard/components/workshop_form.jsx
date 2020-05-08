@@ -42,8 +42,8 @@ import {
   Courses,
   Subjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import HelpTip from '../../../../lib/ui/HelpTip';
-import experiments from '../../../../util/experiments';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   readOnlyInput: {
