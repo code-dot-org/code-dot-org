@@ -1,14 +1,13 @@
 import React from 'react';
-import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
+import SignInInstructions from './SignInInstructions';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
-  storybook = storybook.storiesOf('ManageStudentsLoginInfo', module);
+  storybook = storybook.storiesOf('SignInInstructions', module);
 
   Object.values(SectionLoginType).forEach(loginType => {
     storybook = storybook.add(loginType, () => (
-      <ManageStudentsLoginInfo
-        sectionId={7}
+      <SignInInstructions
         sectionCode="ABCDEF"
         loginType={loginType}
         studioUrlPrefix="http://localhost-studio.code.org:3000"
