@@ -379,25 +379,6 @@ bn:
       report_abuse_form:
         abuse_type:
           other: 'অন্যান্য'
-  flex_category:
-    required: 'সংক্ষিপ্ত বিবরণ'
-    csf_jigsaw: 'টুকরো কাঠের ধাঁধা'
-    csf_loops: 'চক্র'
-    csf_events: 'ঘটনাবলী'
-    csf_binary: 'দ্বি-আঙ্কিক'
-    csf_conditionals: 'শর্তযুক্ত'
-    csf_nested_loops: 'নেষ্টেড লুপ'
-    csf_functions: 'ফাংশনগুলি'
-    csf_variables: 'চলকগুলো'
-    csf_for_loops: 'ফর লুপ'
-    csf_internet: 'ইন্টারনেট'
-    csp2_1_2018: '(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য'
-    csp_variables: 'চলকগুলো'
-    csp_conditionals: 'শর্তযুক্ত'
-    csp_functions: 'ফাংশনগুলি'
-    csp_lists: 'তালিকা'
-    csp_loops: 'চক্র'
-    csp_unit1_2020: '(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য'
   hoc_download:
     minecraft_name: 'মাইনক্র্যাফট এক ঘণ্টার কোড'
   pd:
