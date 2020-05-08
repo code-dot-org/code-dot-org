@@ -170,7 +170,7 @@ export class LibraryManagerDialog extends React.Component {
   setLibraryToImport = event => {
     this.setState({
       importLibraryId: event.target.value,
-      errorMessages: {...this.state.errorMessages, importFromId: null}
+      errorMessages: {...this.state.errorMessages, importFromId: undefined}
     });
   };
 
