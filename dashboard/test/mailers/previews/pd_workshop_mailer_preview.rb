@@ -264,6 +264,11 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
 
+  def exit_survey__csf_pre_foorm
+    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      workshop_params: {sessions_from: Date.new(2020, 5, 4)}
+  end
+
   private
 
   def mail(method, course = nil, subject = nil, options: nil, target: :enrollment, workshop_params: {})

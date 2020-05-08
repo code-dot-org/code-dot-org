@@ -80,11 +80,20 @@ style_min: true
 
 In addition to supporting us, our donors also provide these CS learning opportunities.
 
-### [CS First](http://cs-first.com/)
+### [CS First](https://csfirst.withgoogle.com/)
 Free curriculum from Google that uses online, project-based tutorials for elementary and middle school students and offers free club plans and resources to create an easy computer science entry point for educators and students alike.
+
+### [Grow Google](https://grow.google/)
+Access the best of Google’s training and tools to grow your skills and career. With resources that are accessible online and for free, you can explore industries and earn resume-boosting credentials and certificates.
+
+### [Microsoft Learn](https://docs.microsoft.com/en-us/learn/)
+Master industry-recognized Microsoft technologies at your own pace with free modules, tutorials, and learning paths designed to prepare you for [Microsoft certifications](https://www.microsoft.com/learning/certification-overview.aspx).
 
 ### [Riot Games](https://www.riotgames.com/en/urf-academy)
 Riot Games’ Game Design curriculum is an entry-level course that teaches high school students the fundamental elements of game design using a framework and interactive workshops created by professional game designers. Course includes 6 modules containing 14 lessons.
+
+### [TechPrep by Facebook](https://techprep.org/get-started/)
+Created for students and families looking to better understand computer science and programming pathways, TechPrep by Facebook is a collection of helpful videos and resources to help you with your journey.
 
 <a id="more"></a>
 ## More resources &mdash; for classrooms, afterschool clubs or learning online
