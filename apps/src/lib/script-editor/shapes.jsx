@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const levelShape = PropTypes.shape({
-  // The position of this level within the stage in the UI.
+  // The position of this level within the lesson in the UI.
   position: PropTypes.number.isRequired,
 
   // level id, or -1 if no level is selected.
