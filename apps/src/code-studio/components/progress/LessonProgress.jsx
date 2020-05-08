@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import {getStore} from '../../redux';
 
 const styles = {
   headerContainer: {
@@ -43,8 +44,12 @@ const styles = {
 };
 
 // return the ideal desired width of this control.  it will be up to the parent
-// to decide how much of that space it's
-//function getFullWidthForLevels() {}
+// container to decide how much of that space it's able to give us.
+export function getFullWidthForLevels() {
+  const progress = getStore().getState().progress;
+  const levels = levelsForLessonId(progress, progress.currentStageId);
+  return (levels.length - 1) * 18 + 40;
+}
 
 // given a set of levels, and a width, return which levels we will actually
 // render.

@@ -7,7 +7,9 @@ import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import _ from 'lodash';
 
-import LessonProgress from '../progress/LessonProgress.jsx';
+import LessonProgress, {
+  getFullWidthForLevels
+} from '../progress/LessonProgress.jsx';
 
 export default class HeaderMiddle extends React.Component {
   static propTypes = {
@@ -63,13 +65,13 @@ export default class HeaderMiddle extends React.Component {
     if (thirdItem === 'finish') {
       return {
         scriptName: width / 3,
-        progress: width / 3,
+        progress: Math.min(getFullWidthForLevels(), width / 3),
         finishLink: width / 3
       };
     } else if (thirdItem === 'popup') {
       return {
         scriptName: (width - 40) / 2 - 1,
-        progress: (width - 40) / 2 - 1,
+        progress: Math.min(getFullWidthForLevels(), (width - 40) / 2 - 1),
         popup: 40
       };
     }
