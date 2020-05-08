@@ -3523,14 +3523,14 @@ class UserTest < ActiveSupport::TestCase
     section3 = create :section, stage_extras: true, script_id: other_script.id
     section3.add_student(teacher)
 
-    assert student.stage_extras_enabled?(script)
-    refute student.stage_extras_enabled?(other_script)
+    assert student.lesson_extras_enabled?(script)
+    refute student.lesson_extras_enabled?(other_script)
 
-    assert teacher.stage_extras_enabled?(script)
-    assert teacher.stage_extras_enabled?(other_script)
+    assert teacher.lesson_extras_enabled?(script)
+    assert teacher.lesson_extras_enabled?(other_script)
 
-    refute (create :student).stage_extras_enabled?(script)
-    assert (create :teacher).stage_extras_enabled?(script)
+    refute (create :student).lesson_extras_enabled?(script)
+    assert (create :teacher).lesson_extras_enabled?(script)
   end
 
   class HiddenIds < ActiveSupport::TestCase

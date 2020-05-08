@@ -107,7 +107,7 @@
   - user_progress = current_user == nil ? 'null' : summarize_user_progress(script, view_as, view_as == current_user && @public_caching).to_json
 
   - if view_as
-    - stage_extras_enabled = view_as.stage_extras_enabled?(script)
+    - stage_extras_enabled = view_as.lesson_extras_enabled?(script)
 
   -# don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
   - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
