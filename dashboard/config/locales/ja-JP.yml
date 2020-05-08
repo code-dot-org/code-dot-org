@@ -837,52 +837,6 @@ ja:
     peer_feedback: ピア ・ フィードバック
     outdated: このフィードバックは、以前提出したバージョンに追加されました
     peer_review: ピア ・ レビュー
-  flex_category:
-    required: 概要
-    content: 内容
-    practice: 授業実践
-    peer_review: ピア ・ レビュー
-    ramp_up: ランアップ
-    main_course: メイン コース
-    extra_course_content: 追加のコース内容
-    csf_e_1: コースEへの強化（オプション）
-    csf_e_2: コースEの内容
-    csf_f_1: コースFへの強化（オプション）
-    csf_f_2: コースFの内容
-    csf_jigsaw: ジグソーパズル
-    csf_sequencing: シークエンス
-    csf_loops: くりかえし
-    csf_events: イベント
-    csf_binary: ２しんすう
-    csf_conditionals: 条件
-    csf_nested_loops: 入れ子のループ
-    csf_functions: '関数(かんすう) '
-    csf_variables: 変数（へんすう）
-    csf_for_loops: ループ用
-    csf_internet: インターネット
-    csf_warmup: ウォームアップ
-    csd1_1: '第 1章: 問題解決プロセス'
-    csd1_2: 第 2 章コンピューターと問題解決
-    csd2_1: 第 1 章： Web コンテンツと HTML
-    csd2_2: 第 2 章：スタイルと CSS
-    csd3_1: '第 1 章: 画像とアニメーション'
-    csd3_2: '第2章: ゲームを作る'
-    csd4_1: 第 1 章：ユーザーを中心にしたデザイン
-    csd4_2: 第 2 章：アプリのプロトタイピング
-    csd5_1: 第1章：情報を表現する
-    csd5_2: 第 2 章：データ問題を解決
-    csd6_1: 第 1 章：ハードウェア出力
-    csd6_2: 第 2 章：ハードウェア入力
-    csd_survey: コース終了後アンケート
-    csp3_1: '章 1: プログラミング言語とアルゴリズム'
-    cspSurvey: アンケート
-    csp2_1_2018: '第 2 章: デジタル情報'
-    csp_variables: 変数（へんすう）
-    csp_conditionals: 条件
-    csp_functions: '関数(かんすう) '
-    csp_lists: リスト
-    csp_loops: くりかえし
-    csp_unit1_2020: "(old) Unit 1: デジタル情報"
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。
