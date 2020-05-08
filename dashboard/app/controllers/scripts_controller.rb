@@ -200,7 +200,7 @@ class ScriptsController < ApplicationController
       project_widget_types: [],
       supported_locales: [],
     ).to_h
-    h[:lesson_extras_available] = h[:stage_extras_available] # TODO: remove once corresopnding js change is deployed and no longer cached
+    h[:lesson_extras_available] ||= h[:stage_extras_available] # TODO: remove once corresponding js change is deployed and no longer cached
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
     h[:script_announcements] = JSON.parse(h[:script_announcements]) if h[:script_announcements]
