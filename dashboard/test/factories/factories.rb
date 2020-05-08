@@ -641,12 +641,6 @@ FactoryGirl.define do
     level_source
   end
 
-  factory :gallery_activity do
-    user
-    user_level {create(:user_level)}
-    level_source {create(:level_source, :with_image, level: user_level.level)}
-  end
-
   factory :assessment_activity do
     user
     script
