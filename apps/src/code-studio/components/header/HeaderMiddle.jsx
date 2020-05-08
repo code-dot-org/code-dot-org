@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 import {getStore} from '../../redux';
 import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
+import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import _ from 'lodash';
 
@@ -84,9 +85,9 @@ export default class HeaderMiddle extends React.Component {
 
     return (
       <div ref="header_middle_parent" style={{width: '100%'}}>
-        {/*<Provider store={getStore()}>
+        <Provider store={getStore()}>
           <ProjectInfo />
-        </Provider>*/}
+        </Provider>
 
         <div style={{float: 'left', width: widths.scriptName}}>
           <Provider store={getStore()}>
