@@ -303,22 +303,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     enrollments = [
       enrollment_no_survey = create(:pd_enrollment),
-      enrollment_with_unprocessed_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234),
+      enrollment_with_processed_survey = create(:pd_enrollment, :from_user),
       enrollment_in_unfinished_teachercon = teachercon1.enrollments.first,
       enrollment_in_finished_teachercon = teachercon2.enrollments.first,
       enrollment_in_finished_teachercon_did_survey = teachercon3.enrollments.first,
     ]
 
-    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey, enrollment_in_finished_teachercon_did_survey]
-    without_surveys = [enrollment_no_survey, enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon]
-    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
-        [
-          {source_id: enrollment_with_unprocessed_survey.id.to_s},
-          {source_id: enrollment_with_processed_survey.id.to_s}
-        ]
-      )
-    )
+    create :csf_intro_post_workshop_submission,
+      :answers_high,
+      user: enrollment_with_processed_survey.user,
+      pd_workshop_id: enrollment_with_processed_survey.workshop.id
+
+    with_surveys = [enrollment_in_finished_teachercon_did_survey, enrollment_with_processed_survey]
+    without_surveys = [enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon, enrollment_no_survey]
 
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
