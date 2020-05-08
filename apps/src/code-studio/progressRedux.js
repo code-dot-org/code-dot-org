@@ -564,7 +564,7 @@ export const levelsForLessonId = (state, lessonId) =>
 
 export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
-    ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
+    ? state.stages.find(stage => stage.id === stageId).lesson_extras_level_url
     : '';
 
 export const isPerfect = (state, levelId) =>

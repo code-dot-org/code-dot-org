@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ControlTypes} from './constants';
-import {moveGroup, moveStage, removeGroup, removeStage} from './editorRedux';
+import {moveGroup, moveLesson, removeGroup, removeLesson} from './editorRedux';
 import Dialog from '../../templates/Dialog';
 
 const styles = {
@@ -98,12 +98,12 @@ const OrderControls = connect(
     move(type, position, direction) {
       type === ControlTypes.Group
         ? dispatch(moveGroup(position, direction))
-        : dispatch(moveStage(position, direction));
+        : dispatch(moveLesson(position, direction));
     },
     remove(type, position) {
       type === ControlTypes.Group
         ? dispatch(removeGroup(position))
-        : dispatch(removeStage(position));
+        : dispatch(removeLesson(position));
     }
   })
 )(UnconnectedOrderControls);
