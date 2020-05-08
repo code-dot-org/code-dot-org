@@ -7938,6 +7938,45 @@ fr-FR:
       courseC_maze_programming_challenge2_2019: Parfois il y a plus d'une manière
         de résoudre le même problème. Parfois il est plus rapide de faire marche arrière
         que d'aller tout droit!
+      courseC_starWars_loops1: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vas chercher la ferraille, BB-8 !" \_
+
+        Prends cinq des mêmes blocs pour obtenir la ferraille. Elle brille comme cela : ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops10: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+          \_ "Allez BB-8 !" \_
+
+        Tu te débrouilles bien ! Continues !
+      courseC_starWars_loops10_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+          \_ "Allez BB-8 !" \_
+
+        Tu te débrouilles bien ! Continues !
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+          \_ "Allez BB-8 !" \_
+
+        Tu te débrouilles bien ! Continues !
+      courseC_starWars_loops11: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues, BB-8 !" \_
+
+        Tu y es presque ! Cette fois, prends le chemin que tu veux !
+      courseC_starWars_loops11_2018: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues, BB-8 !" \_
+
+        Tu y es presque ! Cette fois, prends le chemin que tu veux !
+      courseC_starWars_loops11_2019: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues, BB-8 !" \_
+
+        Tu y es presque ! Cette fois, prends le chemin que tu veux !
+      courseC_starWars_loops1_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vas chercher la ferraille, BB-8 !" \_
+
+        Prends cinq des mêmes blocs pour obtenir la ferraille. Elle brille comme cela : ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vas chercher la ferraille, BB-8 !" \_
+
+        Prends cinq des mêmes blocs pour obtenir la ferraille. Elle brille comme cela : ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseC_starWars_loops2: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
 
@@ -7954,6 +7993,22 @@ fr-FR:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
 
         Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops4: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues comme ça, BB-8." \_
+
+        Dans ce puzzle, avec les deux boucles de répétition, tu auras BB-8 sur toute la ferraille avec le moins de blocs !
+      courseC_starWars_loops4_2018: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues comme ça, BB-8." \_
+
+        Dans ce puzzle, avec les deux boucles de répétition, tu auras BB-8 sur toute la ferraille avec le moins de blocs !
+      courseC_starWars_loops4_2019: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues comme ça, BB-8." \_
+
+        Dans ce puzzle, avec les deux boucles de répétition, tu auras BB-8 sur toute la ferraille avec le moins de blocs !
+      courseC_starWars_loops4_copy: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Continues comme ça, BB-8." \_
+
+        Dans ce puzzle, avec les deux boucles de répétition, tu auras BB-8 sur toute la ferraille avec le moins de blocs !
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -8010,6 +8065,18 @@ fr-FR:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
 
         \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
+      courseC_starWars_loops9: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going!"_
+
+        Use what you have learned to pick up all of the scrap metal!
+      courseC_starWars_loops9_2018: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going!"_
+
+        Use what you have learned to pick up all of the scrap metal!
+      courseC_starWars_loops9_2019: |2-
+         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep going!"_
+
+        Use what you have learned to pick up all of the scrap metal!
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
         try something new. This time, skate in a zig-zag.\"_\\\r\n\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
         style=\"float: left; margin: 0 15px 15px 0;\" />\\\r\nDraw a\nstair-step pattern
