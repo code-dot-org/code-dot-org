@@ -927,35 +927,6 @@ bg:
     peer_feedback: Изпрати обратна връзка
     outdated: Тази обратна връзка е добавена в по-ранна версия
     peer_review: Вашаят отзив
-  flex_category:
-    required: Общ преглед
-    content: Съдържание
-    practice: Учителски практики
-    peer_review: Вашаят отзив
-    extra_course_content: Допълнително учебно съдържание
-    csf_digcit: Цифрови граждани
-    csf_jigsaw: Мозайка
-    csf_loops: Повторения
-    csf_events: Събития
-    csf_binary: Двоичен код
-    csf_data: Данни
-    csf_conditionals: Условия
-    csf_nested_loops: Вмъкнати цикли
-    csf_functions: Функции
-    csf_variables: Променливи
-    csf_for_loops: За циклите
-    csf_internet: Интернет
-    csp5_2: 'Глава 2: Програмиране със структури от данни'
-    cspSurvey: Проучване
-    csp_ap_1: 'Глава 1: AP техническа настройка'
-    csp2_1_2018: Част 1 - Дигитална информация
-    csp_variables: Променливи
-    csp_conditionals: Условия
-    csp_functions: Функции
-    csp_lists: Списъци
-    csp_loops: Повторения
-    csp_unit1_2020: 'Урок 1: Цифрова информация'
-    k5_next_steps: Следващи стъпки
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се
