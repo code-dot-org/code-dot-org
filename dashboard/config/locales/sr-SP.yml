@@ -481,22 +481,6 @@ sr:
       report_abuse_form:
         abuse_type:
           other: Други
-  flex_category:
-    required: Преглед
-    csf_digcit: Дигитално држављанство
-    csf_jigsaw: Слагалица
-    csf_loops: Петље
-    csf_events: Догађаји
-    csf_conditionals: Кондиционали
-    csf_functions: Функције
-    csf_variables: Променљиве
-    csf_for_loops: Бројачке петље
-    csf_internet: Интернет
-    csp_variables: Променљиве
-    csp_conditionals: Кондиционали
-    csp_functions: Функције
-    csp_lists: Листе
-    csp_loops: Петље
   hoc_download:
     minecraft_name: Мајнкрафт час програмирања
   pd:
