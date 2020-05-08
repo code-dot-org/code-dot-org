@@ -12,17 +12,17 @@ import {valueOr} from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
-  const stageLevelData = scriptEditorData.stageLevelData;
-  const stages = (scriptData.stages || [])
-    .filter(stage => stage.id)
-    .map(stage => ({
-      position: stage.position,
-      relativePosition: stage.relative_position,
-      flex_category: stage.flex_category,
-      lockable: stage.lockable,
-      name: stage.name,
+  const lessonLevelData = scriptEditorData.stageLevelData;
+  const lessons = (scriptData.stages || [])
+    .filter(lesson => lesson.id)
+    .map(lesson => ({
+      position: lesson.position,
+      relativePosition: lesson.relative_position,
+      flex_category: lesson.flex_category,
+      lockable: lesson.lockable,
+      name: lesson.name,
       // Only include the first level of an assessment (uid ending with "_0").
-      levels: stage.levels
+      levels: lesson.levels
         .filter(level => !level.uid || /_0$/.test(level.uid))
         .map(level => ({
           position: level.position,
@@ -44,7 +44,7 @@ export default function initPage(scriptEditorData) {
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(stages, scriptEditorData.levelKeyList, flexCategoryMap));
+  store.dispatch(init(lessons, scriptEditorData.levelKeyList, flexCategoryMap));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
@@ -62,7 +62,7 @@ export default function initPage(scriptEditorData) {
         hidden={valueOr(scriptData.hidden, true)}
         isStable={scriptData.is_stable}
         loginRequired={scriptData.loginRequired}
-        hideableStages={scriptData.hideable_stages}
+        hideableLessons={scriptData.hideable_stages}
         studentDetailProgressView={scriptData.student_detail_progress_view}
         professionalLearningCourse={scriptData.professionalLearningCourse}
         peerReviewsRequired={scriptData.peerReviewsRequired}
@@ -70,8 +70,8 @@ export default function initPage(scriptEditorData) {
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
         teacherResources={teacherResources}
-        stageExtrasAvailable={!!scriptData.stage_extras_available}
-        stageLevelData={stageLevelData}
+        lessonExtrasAvailable={!!scriptData.stage_extras_available}
+        lessonLevelData={lessonLevelData}
         hasVerifiedResources={scriptData.has_verified_resources}
         hasLessonPlan={scriptData.has_lesson_plan}
         curriculumPath={scriptData.curriculum_path}
