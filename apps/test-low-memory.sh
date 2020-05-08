@@ -17,9 +17,8 @@ function linuxNumProcs() {
   local mem_procs=$(awk "/${mem_metric}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
   local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
-  if [ "$PROCS" -eq 0 ]; then
+  if ((procs == 0)); then
     local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
-    echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${free_kb}KB"
     procs=1
   fi 
 
