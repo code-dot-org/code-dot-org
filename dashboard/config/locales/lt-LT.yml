@@ -693,28 +693,6 @@ lt:
       description: Norėčiau, kad instruktorius peržiūrėtų šią pateiktį
     instructor_feedback: Instruktoriaus atsiliepimai
     peer_review: Tarpusavio peržiūra
-  flex_category:
-    required: Peržiūra
-    content: Turinys
-    practice: Mokymo praktikos
-    peer_review: Tarpusavio peržiūra
-    csf_digcit: Virtuali pilietybė
-    csf_jigsaw: Dėlionės
-    csf_loops: Kartojimas
-    csf_events: Įvykiai
-    csf_binary: Dvejetainis
-    csf_conditionals: Sąlyginiai sakiniai
-    csf_nested_loops: Kartojimas kartojime
-    csf_functions: Komandų kūrimas
-    csf_variables: Kintamieji
-    csf_for_loops: Kartojimas
-    csf_internet: Internetas
-    csp_variables: Kintamieji
-    csp_conditionals: Sąlyginiai sakiniai
-    csp_functions: Komandų kūrimas
-    csp_lists: Sąrašai
-    csp_loops: Kartojimas
-    k5_next_steps: Kiti žingsniai
   hoc_download:
     title: "„Programavimo valandos” parsisiuntimai"
     capsule_title: Ar turite internetą?
