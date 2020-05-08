@@ -761,6 +761,36 @@ sk-SK:
       New Sports Project: 'Vytvor si vlastný zápas! Tu si šéfom ty: môžeš zmeniť všetky
         pravidlá, zmiešať športy, čo ti len napadne. Keď budeš hotový, klikni na "Dokončiť",
         aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.'
+      OPD-K5-events-2: Pod blok 'keď klikneš' umiestni blok 'mávni normálne' a stlač
+        'spustiť'. Klikni na hraciu plochu aby sa Flappy dostal k terču.
+      OPD-K5-events-3: Vyskúšaj pridať blok 'nastav normálnu rýchlosť' pod blok 'pri
+        spustení'. Zahraj si túto hru a doleť až k terču.
+      OPD-K5-events-4: Umiestni blok `ukonči hru` pod blok `keď dopadne na zem`. Zahraj
+        si hru a na jej konci nechaj Flappyho spadnúť na zem.
+      OPD-K5-events-5: Umiestni blok 'ukonči hru' pod blok 'keď narazí na prekážku'
+        aby sa hra skončila, keď Flappy narazí do prvého potrubia.
+      OPD-K5-events-6: Pridaj blok 'pridaj bod' pod blok 'keď obíde prekážku' a stlač
+        'spustiť'. Flappy tak získa bod zato, že obíde prvé potrubie.
+      OPD-K5-forloops-1: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho
+        počtu blokov.
+      OPD-K5-forloops-2: Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+      OPD-K5-forloops-5: Pomôž včele pozbierať všetok nektár.
+      OPD-K5-forloops-6: Skús pozbierať nektár odpočítavaním od 5 do 1.
+      OPD-K5-forloops-7: Skús pozbierať tieto kvety s použitím prírastku 2.
+      OPD-K5-spritelab-2: Zmeňte Pracháča (kôpku slamy) na rybu.
+      OPD-K5-spritelab-3: Zmeň správanie ryby tak aby plávala vpravo a vľavo.
+      OPD-K5-spritelab-4: Použi blok `nastav farmu pozadia` na nastavenie akejkoľvek
+        farby pozadia.
+      OPD-K5-spritelab-6: Ryba má dobrodružnú povahu a chcela by stretnúť ďalšie morské
+        živočíchy. Pridaj do akvária ďašiu postavu. Postava môže mať hociaký kostým,
+        okrem toho, ktorý už má ryba.
+      OPD-K5-spritelab-7: Pridajte správanie k novému rybkinmu kamarátovi.
+      OPD-K5-variables-5: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať
+        v zopár ďalších úlohách.
+      OPD-K5-variables-6: Teraz použi premennú `dĺžka`, aby umelec skočil dopredu
+        a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      OPD-K5-variables-7: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu, ktoré pridajú
+        ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
       Overworld Avoid Monsters: |-
         Naraziť do Creepera nie je dobrý nápad.
         Opatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova.
@@ -1132,9 +1162,12 @@ sk-SK:
         ku prasiatku!
       courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
         ku prasiatku!
+      courseA_maze_seq6_copy: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseA_maze_seq8: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
+      courseA_maze_seq8_copy: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
@@ -1154,6 +1187,9 @@ sk-SK:
         pomôcť?
       courseA_playLab_events4_2018: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
         posunul doprava po kliknutí na tlačidlo `vpravo`.
+      courseA_playLab_events5_2019: Pridaj udalosti tak, aby sa Jorge hýbal hore a
+        dole po stlačení šípiek na klávensnici. Pre dokončenie úlohy pomôž Jorgemu
+        získať všetky vlajky!
       courseA_playLab_events6: Sprav to ešte zaujímavejšie, zmeň aj pozadie a prehraj
         náhodný zvuk po kliknutí na Jorgeho.
       courseA_playLab_events6_2018: Sprav to ešte zaujímavejšie, zmeň aj pozadie a
@@ -1989,22 +2025,30 @@ sk-SK:
         v ňom len jeden blok vnútri bloku "opakovať".
       courseC_starWars_loops2_2019: Na získanie všetkého kovu vytvor cyklus. Použi
         v ňom len jeden blok vnútri bloku "opakovať".
+      courseC_starWars_loops2_copy: Na získanie všetkého kovu vytvor cyklus. Použi
+        v ňom len jeden blok vnútri bloku "opakovať".
       courseC_starWars_loops4: V tejto úlohe, použi dva bloky "opakovať". Pomôžu BB-8
         získať všetok kov s čo najmenším počtom blokov.
       courseC_starWars_loops4_2018: V tejto úlohe, použi dva bloky "opakovať". Pomôžu
         BB-8 získať všetok kov s čo najmenším počtom blokov.
       courseC_starWars_loops4_2019: V tejto úlohe, použi dva bloky "opakovať". Pomôžu
         BB-8 získať všetok kov s čo najmenším počtom blokov.
+      courseC_starWars_loops4_copy: V tejto úlohe, použi dva bloky "opakovať". Pomôžu
+        BB-8 získať všetok kov s čo najmenším počtom blokov.
       courseC_starWars_loops5: BB-8 musí pozbierať všetok šrot najrýchlejšie ako vie!
       courseC_starWars_loops5_2018: BB-8 musí pozbierať všetok šrot najrýchlejšie
         ako vie!
       courseC_starWars_loops5_2019: BB-8 musí pozbierať všetok šrot najrýchlejšie
+        ako vie!
+      courseC_starWars_loops5_copy: BB-8 musí pozbierať všetok šrot najrýchlejšie
         ako vie!
       courseC_starWars_loops6: Opakovania fungujú aj keď dnu vložíš viac ako jeden
         blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_starWars_loops6_2018: Opakovania fungujú aj keď dnu vložíš viac ako
         jeden blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_starWars_loops6_2019: Opakovania fungujú aj keď dnu vložíš viac ako
+        jeden blok! Vieš zopakovať celú  túto sekvenciu?
+      courseC_starWars_loops6_copy: Opakovania fungujú aj keď dnu vložíš viac ako
         jeden blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_starWars_loops7: Pokús sa pozbierať všetok kov s použitím len jedného
         cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce
@@ -2013,6 +2057,9 @@ sk-SK:
         cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce
         sa skupiny blokov.
       courseC_starWars_loops7_2019: Pokús sa pozbierať všetok kov s použitím len jedného
+        cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce
+        sa skupiny blokov.
+      courseC_starWars_loops7_copy: Pokús sa pozbierať všetok kov s použitím len jedného
         cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce
         sa skupiny blokov.
       courseC_starWars_loops9: Využi všetko, čo si sa doteraz naučil a pozbieraj všetok
@@ -2250,11 +2297,15 @@ sk-SK:
         Ak tam je kvet, pozbieraj nektár.
       courseD_bee_conditionals1_predict1_2019: Skontroluj, či je pod oblakom kvet.
         Ak tam je kvet, pozbieraj nektár.
+      courseD_bee_conditionals1_predict1_copy: Skontroluj, či je pod oblakom kvet.
+        Ak tam je kvet, pozbieraj nektár.
       courseD_bee_conditionals2: 'Skontroluj každý oblak, či sa pod ním nenachádza
         kvet predtým, ako pozbieraš nektár.  '
       courseD_bee_conditionals2_2018: 'Skontroluj každý oblak, či sa pod ním nenachádza
         kvet predtým, ako pozbieraš nektár.  '
       courseD_bee_conditionals2_2019: 'Skontroluj každý oblak, či sa pod ním nenachádza
+        kvet predtým, ako pozbieraš nektár.  '
+      courseD_bee_conditionals2_copy: 'Skontroluj každý oblak, či sa pod ním nenachádza
         kvet predtým, ako pozbieraš nektár.  '
       courseD_bee_conditionals3: "Pomôž včele pozbierať všetok nektár. \n\nNektár
         môžeš zbierať len z kvetov, ale musíš skontrolovať každé miestečko, aby si
@@ -2265,17 +2316,24 @@ sk-SK:
       courseD_bee_conditionals3_2019: "Pomôž včele pozbierať všetok nektár. \n\nNektár
         môžeš zbierať len z kvetov, ale musíš skontrolovať každé miestečko, aby si
         overil, či sa tam nenachádza kvet."
+      courseD_bee_conditionals3_copy: "Pomôž včele pozbierať všetok nektár. \n\nNektár
+        môžeš zbierať len z kvetov, ale musíš skontrolovať každé miestečko, aby si
+        overil, či sa tam nenachádza kvet."
       courseD_bee_conditionals4: Pozbieraj všetok nektár s použitím čo najmenšieho
         počtu blokov.
       courseD_bee_conditionals4_2018: Pozbieraj všetok nektár s použitím čo najmenšieho
         počtu blokov.
       courseD_bee_conditionals4_2019: Pozbieraj všetok nektár s použitím čo najmenšieho
         počtu blokov.
+      courseD_bee_conditionals4_copy: Pozbieraj všetok nektár s použitím čo najmenšieho
+        počtu blokov.
       courseD_bee_conditionals5: Pozbieraj všetok nektár s použitím čo najmenšieho
         počtu blokov
       courseD_bee_conditionals5_2018: Pozbieraj všetok nektár s použitím čo najmenšieho
         počtu blokov
       courseD_bee_conditionals5_2019: Pozbieraj všetok nektár s použitím čo najmenšieho
+        počtu blokov
+      courseD_bee_conditionals5_copy: Pozbieraj všetok nektár s použitím čo najmenšieho
         počtu blokov
       courseD_bee_conditionals6: Po niektorými z týchto oblakov sa môžu skrývať plásty.
         Určite pohľadaj plást pod každým oblakom!
@@ -2718,16 +2776,23 @@ sk-SK:
         štvorec ''. '
       courseE_artist_functions2_2019: 'Na vytvorenie okuliarov použi funkciu '' nakresli
         štvorec ''. '
+      courseE_artist_functions2_copy: Tentokrát použi na vytvorenie okuliarov funkciu
+        ' nakresli štvorec '.
       courseE_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
       courseE_artist_functions3_2018: Vytvor funkciu, ktorá spraví túto hviezdu.
       courseE_artist_functions3_2019: Vytvor funkciu, ktorá spraví túto hviezdu.
+      courseE_artist_functions3_copy: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
       courseE_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť
+        štyri hviezdy!
+      courseE_artist_functions4_copy: Teraz keď už vieš nakresliť hviezdu, skús nakresliť
         štyri hviezdy!
       courseE_artist_functions5: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby
         si dokončil túto úlohu.
       courseE_artist_functions5_2018: Nakresli len tie tri hviezdy, ktoré potrebuješ,
         aby si dokončil túto úlohu.
       courseE_artist_functions5_2019: Nakresli len tie tri hviezdy, ktoré potrebuješ,
+        aby si dokončil túto úlohu.
+      courseE_artist_functions5_copy: Nakresli len tie tri hviezdy, ktoré potrebuješ,
         aby si dokončil túto úlohu.
       courseE_artist_functions6: Vytvor toto okno tak, že nakreslíš štvorec, potom
         sa otočís o 90 stupňov, nakreslíš ďalší, a tak ďalej.
@@ -2766,6 +2831,12 @@ sk-SK:
       courseE_artist_ramp8_2: Teraz s pomocu Umelca nakresli štvorec!
       courseE_bee_concept1: Zozbieraj všetok nektár z každého kvetu.
       courseE_bee_concept1_2018: Zozbieraj všetok nektár z každého kvetu.
+      courseE_bee_concept2: Pomôž včele vyrobiť med.
+      courseE_bee_concept2_2018: Pomôž včele vyrobiť med.
+      courseE_bee_concept3: Pozbieraj všetok nektár s použitím čo najmenšieho počtu
+        blokov.
+      courseE_bee_concept3_2018: Pozbieraj všetok nektár s použitím čo najmenšieho
+        počtu blokov.
       courseE_bee_functions1: Zozbieraj všetok nektár z každého kvetu.
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
@@ -2773,6 +2844,10 @@ sk-SK:
       courseE_bee_functions4: Funkcia "move and get nectar" prikáže včele otočiť sa,
         zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok
         nektár.
+      courseE_farmer_concept1: Môžeš napísať program, ktorý vyplní tieto jamy až kým
+        je zemina zarovno?
+      courseE_farmer_concept1_2018: Môžeš napísať program, ktorý vyplní tieto jamy
+        až kým je zemina zarovno?
       courseE_farmer_concept2: Pozbieraj všetky tekvice.
       courseE_farmer_concept2_2018: Pozbieraj všetky tekvice.
       courseE_farmer_concept3: Vyplň dieru na konci každej z týchto ciest.

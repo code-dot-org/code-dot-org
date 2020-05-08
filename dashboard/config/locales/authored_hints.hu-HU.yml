@@ -263,12 +263,27 @@ hu-HU:
       2-3 Maze Loops 21:
         2-3_Maze_Loops_21_a: Ha gondban vagy, hogy megtaláld a lépcsős mintát, próbáld
           az ujjaddal követni az útvonalat.
+      4-5 Maze 10:
+        4-5_Maze_10_a: |-
+          Ha nem érted, hogyan kell ciklusok használatával helyesen megoldani a feladványokat, akkor először próbáld meg a hosszabb utat, és keresd az ismétlődéseket.
+
+          Melyik utasítások köré kellene raknod az `ismételd` blokkot, hogy a kódod rövidebb legyen?
+      4-5 Maze 4:
+        4-5_Maze_4_a: Ha nehéz kitalálni, hogy hova kell rakni az ismétlést, akkor
+          próbálj meg mindent lekódolni, és figyeld meg az ismétlődéseket!
       4-5 Maze 5:
+        4-5_Maze_5_a: Próbáld az `ismételd` ciklust használni, amikor több mint kétszer
+          kell alkalmaznod az `előrelépni` blokkot!
         4-5_Maze_5_b: Több `repeat` ciklust is használhatsz a feladványban.
       4-5 Maze 6:
         4-5_Maze_6_a: |-
           Próbáld követni az utat az ujjaddal!
           Ez a legrövidebb út, amit találhatsz?
+      4-5 Maze 7:
+        4-5_Maze_7_a: |-
+          **Szeretnéd a kódodat olyan rövidre írni, amennyire csak lehet?**
+
+          Keress ismétlődéseket a blokkjaidban. Találtál valamit? Próbáld berakni az ismétlődést egy ciklus belsejébe!
       4-5 Nested Loops 7:
         4-5_Nested_Loops_7_a: A minta tízszer ismétlődik, és összesen 360 fokot fordul.
           **360/10=?**
@@ -1014,6 +1029,15 @@ hu-HU:
           </xml>
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
+        courseC_maze_debugging_challenge1_b: A motkány útvonala valójában egy téglalap!
+          Ugyanúgy kell fordulnia minden alkalommal!
+        courseC_maze_debugging_challenge1_c: Ha pácban vagy, mindig kezdheted elölről,
+          vagy töröld az egész kódot, és találd meg a saját utadat!
+      course3_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_a: Az egyik lehetséges megoldás, hogy több
+          `előrelépni`-t adsz a fordulások közé.
+        courseC_maze_debugging_challenge2_b: Ha pácban vagy, mindig kezdheted elölről,
+          vagy töröld az egész kódot, és találd meg a saját utadat!
       course4_collector_nested_loops_challenge2:
         courseD_bee_nested_loops_challenge2_d: |-
           **Megoldás:**
@@ -1556,6 +1580,11 @@ hu-HU:
       courseA_maze_seq10_2019:
         courseA_maze_seq10_a: Ha problémád lenne, először próbáld meg leírni a lépéseket
           egy darab papírra.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Ha problémád lenne, először próbáld meg leírni a lépéseket
+          egy darab papírra.
+        courseA_maze_seq10_b: 3 különböző irányba kell menned, hogy megoldd ezt a
+          feladványt.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Ha nem tiszta az út előtted, használd az ujjaidat, hogy
           megszámold, hány lépésből juthat el a madár a malacig.
@@ -1621,6 +1650,10 @@ hu-HU:
         '1': Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!
       courseA_maze_seq5_2019:
         '1': Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Próbáld leírni a lépéseket papírra, hogy megtaláld a
+          megoldást!
+        courseA_maze_seq5_b: 2 blokkra van szükséged, ami 2 irányba mutat.
       courseA_maze_seq6:
         courseA_maze_seq6_a: A végső kódodnak 3 mozgásos blokkból kell állnia.
         courseA_maze_seq6_b: Ha elakadnál, próbáld meg 2 részben megoldani a feladványt,
@@ -1633,7 +1666,17 @@ hu-HU:
         courseA_maze_seq6_a: A végső kódodnak 3 mozgásos blokkból kell állnia.
         courseA_maze_seq6_b: Ha elakadnál, próbáld meg 2 részben megoldani a feladványt,
           az első rész a sarokig tart, a második a saroknál kezdődik.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: A végső kódodnak 3 mozgásos blokkból kell állnia.
+        courseA_maze_seq6_b: Ha elakadnál, próbáld meg 2 részben megoldani a feladványt,
+          az első rész a sarokig tart, a második a saroknál kezdődik.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Van 1 blokk, amit hozzá kell adnod, hogy a madár eljusson
+          a malacig.
+        courseA_maze_seq7_b: Ha nem tudod kitalálni, mit kell tenned, próbáld meg
+          lerajzolni a feladványt papírra, és használd az ujjaidat, hogy megtaláld,
+          merre is kell menned.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Van 1 blokk, amit hozzá kell adnod, hogy a madár eljusson
           a malacig.
         courseA_maze_seq7_b: Ha nem tudod kitalálni, mit kell tenned, próbáld meg
@@ -1646,6 +1689,9 @@ hu-HU:
         courseA_maze_seq8_a: Ha elakadtál, próbáld meg lerajzolni a képet egy lapra,
           hogy lásd, a madárnak merre is kellene mennie.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Ha elakadtál, próbáld meg lerajzolni a képet egy lapra,
+          hogy lásd, a madárnak merre is kellene mennie.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Ha elakadtál, próbáld meg lerajzolni a képet egy lapra,
           hogy lásd, a madárnak merre is kellene mennie.
       courseA_maze_seq9:
@@ -2606,6 +2652,11 @@ hu-HU:
           hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
         courseE_artist_functions1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
           a szemüveged.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
+          hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
+        courseE_artist_functions1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd
+          a szemüveged.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           A programodnak kell:
@@ -2621,6 +2672,13 @@ hu-HU:
           -   előrehaladni 100 + 75 pixelt
           -   függvényt használni
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          A programodnak kell:
+
+          -   függvényt használni
+          -   előrehaladni 100 + 75 pixelt
+          -   függvényt használni
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           A programodnak kell:
 

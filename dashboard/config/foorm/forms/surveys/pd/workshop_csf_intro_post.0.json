@@ -1,5 +1,5 @@
 {
-  "title": "Satisfaction Survey for Code.org's CS Fundamentals 5-day Summer Professional Development Workshop",
+  "title": "Satisfaction Survey for Code.org's CS Fundamentals Intro Professional Development Workshop",
   "pages": [
     {
       "name": "page1",
@@ -282,7 +282,9 @@
           "type": "text",
           "name": "year_of_birth",
           "title": "What is your year of birth?",
-          "inputType": "number"
+          "inputType": "number",
+          "min":"1920",
+          "max": "2020"
         },
         {
           "type": "radiogroup",

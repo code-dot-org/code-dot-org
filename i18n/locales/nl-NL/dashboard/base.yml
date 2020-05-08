@@ -401,6 +401,7 @@ nl:
     update_email: "Bijwerken"
     parent_guardian_email_label: "E-mail van de ouder/voogd"
     none: "Geen"
+    encrypted: "Versleuteld"
   user_level:
     completed: 'Voltooid'
     tried: 'Geprobeerd'
@@ -599,19 +600,6 @@ nl:
       title: "Widgets"
       audience: "Leeftijd 14+"
       cta: "Leer hoe"
-  gallery:
-    students_drew_these_with_code: "Leerlingen wonnen deze met programmeren!"
-    students_made_these_with_code: "Leerlingen hebben dit gemaakt met code!"
-    picture_count: "In het afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b> afbeeldingen getekend door hun eigen computerprogramma te schrijven. Klik op de afbeeldingen om elk programma uit te voeren."
-    activity_count: "In de afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b> apps en plaatjes gemaakt door hun eigen computerprogramma's te schrijven. Klik op de plaatjes en screenshots om ieder programma in actie te zien."
-    want_to_make_your_own: "Wil je dit zelf doen?"
-    more: "Meer &rarr;"
-    caption_by_name_age: "door %{name}, %{age} jaar"
-    caption_time_ago: "%{time_ago} geleden"
-    header: "Galerij"
-    header_playlab: "Speel Lab"
-    header_artist: "Kunstenaar"
-    report_abuse: "Misbruik Melden"
   landing:
     report_bug: "Meld Bug"
     support: "Help"

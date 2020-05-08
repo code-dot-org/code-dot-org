@@ -1844,6 +1844,27 @@ sk-SK:
         - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
             kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
             nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu
+            na to, čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, len ak je pod oblakom kvet.
+        - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
+            ním kvet.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
+            čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár ak je pod oblakom kvet.
+        - text: Neviem.
+          feedback: Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár,
+            len ak je pod oblakom kvet.
+        questions:
+        - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
+            kvet, včela pozberá nektár. Ak tam kvet nie je, včela by nemala robiť
+            nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
@@ -2212,7 +2233,8 @@ sk-SK:
         - {}
         - text: Neviem.
         questions:
-        - {}
+        - text: Tento kód používa nový blok. Čo si myslíš, že sa stane, keď stlačíš
+            "Spustiť"?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -2265,28 +2287,40 @@ sk-SK:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
         questions:
-        - {}
+        - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
         questions:
-        - {}
+        - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
         questions:
-        - {}
+        - text: Čo sa stane ak stlačíš "Spustiť"?
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: Nič. Program funkciu nevolá.
+        - text: Umelec nakreslí len jeden štvorec.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslé 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
+        questions:
+        - text: Čo sa stane ak stlačíš "Spustiť"?
       courseE_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
         markdown: |-
@@ -2715,31 +2749,34 @@ sk-SK:
         content1: Strana učebnice s obodovaním testu
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
-        - {}
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
-        - {}
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
           feedback: Správne!
-        - {}
-        - {}
+        - text: Umelec nakreslí len jeden rad štvorcov.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
         questions:
-        - {}
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
       csd-post-survey-2018-markdown-with-link-to-survey_v2:

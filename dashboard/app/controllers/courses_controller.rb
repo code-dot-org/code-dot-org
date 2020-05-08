@@ -20,8 +20,8 @@ class CoursesController < ApplicationController
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
-        courses = Course.valid_courses(user: current_user)
-        render json: courses
+        course_infos = Course.valid_course_infos(user: current_user)
+        render json: course_infos
       end
     end
   end
@@ -103,8 +103,8 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    # Convert has_verified_resources from a string ("on") to a boolean.
-    params[:has_verified_resources] = !!params[:has_verified_resources]
+    # Convert checkbox values from a string ("on") to a boolean.
+    [:has_verified_resources, :visible, :is_stable].each {|key| params[key] = !!params[key]}
     course.update(course_params)
     redirect_to course
   end
@@ -129,7 +129,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment).to_h
+    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment, :visible, :is_stable).to_h
   end
 
   def set_redirect_override

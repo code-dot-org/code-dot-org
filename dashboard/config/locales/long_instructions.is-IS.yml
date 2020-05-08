@@ -7074,6 +7074,80 @@ is-IS:
         </h5>
       New Minecraft Hero Project: "**Frjáls æfing:** Nú er þetta í þínum höndum! Notaðu
         kóða Umbans til að hjálpa þér að kanna þennan heim."
+      OPD-K5-events-2: "Festu `blaka venjulega oft` kubb við `þegar smellt` atburðinn
+        og smelltu svo á \"Keyra\".  \n\n* * *\n\nSmelltu eða sláðu á leiksvæðið til
+        að koma Flappy til marksins."
+      OPD-K5-events-3: "Atvikið `þegar keyrt` verður þegar þú ýtir á \"Keyra\" og
+        leikurinn fer af stað. \n\nPrófaðu að bæta við kubbi sem stillir hraðann þegar
+        ýtt er á \"Keyra\". \n\n* * *\n\nSpilaðu leikinn og fljúgðu í mark til að
+        halda áfram."
+      OPD-K5-events-4: "Nú höfum við bætt við jörð. \n\nFestu kubbinn `ljúka leik`
+        við atvikið `þegar rekst á jörð`. \n\n\\--\n\nSpilaðu leikinn og láttu fuglinn
+        hrapa til jarðar til að halda áfram."
+      OPD-K5-events-5: "Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða
+        til að láta hann rekast á. \n\nTengdu kubb við kubbinn \"þegar rekst á hindrun\".
+        Kóðinn þinn verður að ljúka leiknum þegar Flappy rekst á fyrstu pípurnar."
+      OPD-K5-events-6: "Við höfum bætt við stigatöflu til að telja stig þegar Flappy
+        kemst fram hjá hindrunum. \n\nBætti kubbi sem skorar stig við atvikið `þegar
+        kemst framhjá hindrun` og ýttu svo á \"Keyra\" til að láta Flappy fljúga í
+        gegnum fyrstu pípurnar."
+      OPD-K5-forloops-2: |-
+        Skrifaðu kóðann sem hjálpar býflugunni að safna öllum blómasafanum.
+
+        Þú þarft marga kubba fyrir þessa áskorun, en við munum sýna auðveldari leið í næstu þraut.
+      OPD-K5-forloops-6: "Þú getur líka látið `frá` lykkju telja niður. \n\nPrófaðu
+        að safna þessum blómasafa með því að telja niður frá **5** til **1** um **1**
+        í einu."
+      OPD-K5-forloops-7: "Síðasta talan í `frá` lykkjunni er kölluð **\"aukinn\"**
+        (increment). Í hverri umferð lykkjunnar breytist innihald teljarabreytunnar
+        um **aukann**. \n\nPrófaðu að safna úr þessum blómum með **aukann** 2."
+      OPD-K5-projects-2: |-
+        Það er ótrúlegt hvað þú hefur lært mikið! Búum nú til leik skref fyrir skref.
+
+        Notaðu nýja kubba í verkfærakassanum til að búa til bakgrunn og velja svo leikmann fyrir leikinn.
+      OPD-K5-projects-3: "Notaðu kubba fyrir atvik og aðgerðir til að láta leikmanninn
+        færast þegar þú ýtir á örvarlyklana. \n\nKomdu leikmanninum á mörkin til að
+        klára þrautina."
+      OPD-K5-projects-4: |-
+        Við skulum bæta fleiri persónum í leikinn!
+
+        Notaðu kubbinn `hafa leikmann` til að bæta fleiri persónum við og komast svo að markinu til að ljúka þrautinni.
+      OPD-K5-projects-5: |-
+        Margar leikverur og leikmenn sem færast er ágæt byrjun á leik, en við þurfum að gera meira til að þetta sé meira eins og alvöru leikur. Bætum við stigaskori!
+
+        Notaðu atvikskubba eins og `þegar leikmaður snertir` til að breyta skorinu eða vinna leikinn. Skoraðu 5 stig eða sigraðu í leiknum til að ljúka þessari þraut.
+      OPD-K5-projects-6: Vel gert! Þú hefur alla helstu hluta leiks sem virkar. Leggðu
+        nú vinnu í að láta leikinn virka eins og þú vilt að hann geri. Smelltu svo
+        á "Ljúka".
+      OPD-K5-projects-7: Þú hefur lokið þessu! Nú getur þú spilað leikinn eða deilt
+        honum með vinum og bekkjarfélögum!
+      OPD-K5-spritelab-2: "Búum til fiskabúr!  \n\nBreyttu runnaflækjuverunni í veru
+        sem er fiskur með því að smella á <xml><block type=\"gamelab_allSpritesWithAnimation\"
+        block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nGættu
+        þess að breyta líka hegðun verunnar í kubbnum <xml><block type=\"gamelab_addBehaviorSimple\"
+        block-text=\"the add behavior block\"></block></xml>."
+      OPD-K5-spritelab-3: "Fiskinn er farið að svima! \n\nBreyttu hegðun hans svo
+        að hann syndi til vinstri og hægri."
+      OPD-K5-spritelab-4: "Það vantar vatn í fiskabúrið! \n\nNotaðu <xml><block type=\"gamelab_setBackground\"
+        inline=\"true\" block-text=\"the set background color block\">\n    <value
+        name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n
+        \     </block>\n    </value>\n  </block></xml> til að setja lit í bakgrunninn.
+        Við mælum með bláum!"
+      OPD-K5-spritelab-6: Fiskurinn er ævintýragjarn og vill hitta nýjar skepnur í
+        hafinu. Bættu annarri veru í fiskabúrið. Þessi vera getur haft hvaða búning
+        sem er nema þann sem þú ert að nota fyrir fiskinn!
+      OPD-K5-spritelab-7: |-
+        Hvað vilt þú að nýi vinur fisksins geri?
+
+        Gefðu honum hegðun og sjáðu hvað gerist!
+      OPD-K5-variables-1: "Við skulum teikna jafnhliða þríhyrning. \n\nHver hlið verður
+        að vera nákvæmlega 50 dílar."
+      OPD-K5-variables-2: "Notaðu nú aðra lykkju til að teikna þrjá svona þríhyrninga
+        hlið við hlið.   \n\nÞú getur sett kóðann frá síðustu þraut inn í hana."
+      OPD-K5-variables-5: "Áður en þetta verður flóknara: Geturðu sett lengdina 50
+        í breytu svo að við getum notað hana í næstu þrautum? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      OPD-K5-variables-6: Notaðu nú breytuna `lengd` til að láta listamanninn hoppa
+        áfram og niður um `lengd` díla á milli þríhyrninga.
       Overworld Chop Tree: Viður er mjög mikilvægt hráefni. Alls konar hlutir eru
         búnir til úr viði. Gakktu að trénu og notaðu `eyða blokk` kubbinn til að höggva
         það niður.
@@ -7947,6 +8021,10 @@ is-IS:
         til svínsins!"
       courseA_maze_seq10_2019: "**Áskorun:** Gættu þín á TNT sprengjum en komdu fuglinum
         til svínsins!"
+      courseA_maze_seq10_copy: |-
+        **Áskorun:** Farðu í kringum TNT sprengiefnið til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         Hér er styttri þraut!  Farðu í eina átt, svo aðra til að koma fuglinum til svínsins.
 
@@ -7982,6 +8060,10 @@ is-IS:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: Reyndu þig við þessa þraut.
       courseA_maze_seq5_2019: Reyndu þig við þessa þraut.
+      courseA_maze_seq5_copy: |-
+        Spreyttu þig á þessu alveg frá byrjun.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"Ég er hér svínka!"_
 
@@ -7998,7 +8080,15 @@ is-IS:
         svíninu!
       courseA_maze_seq6_2019: Farðu í eina átt, svo í aðra, til að koma fuglinum að
         svíninu!
+      courseA_maze_seq6_copy: |-
+        Farðu í eina átt, svo aðra til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        Finndu út hvað er að og bættu svo við kubbum til að koma fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         Finndu út hvað er að og bættu svo við kubbum til að koma fuglinum til svínsins!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -8008,6 +8098,10 @@ is-IS:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: Leystu þetta borð og komdu fuglinum til svínsins!
       courseA_maze_seq8_2019: Leystu þetta borð og komdu fuglinum til svínsins!
+      courseA_maze_seq8_copy: |-
+        Leystu þessa þraut og komdu fuglinum til svínsins!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **Áskorun:** Lagaðu þennan áfanga með því að bæta við kubbum svo fuglinn nái svíninu!
 
@@ -9213,6 +9307,10 @@ is-IS:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_
 
         Til að ná öllum brotamálminum ættirðu að prófa að búa til lykkju úr `endurtaka` kubbi sem inniheldur einn kubb.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Áfram BB-8!"_
+
+        Til að ná öllum brotamálminum ættirðu að prófa að búa til lykkju úr `endurtaka` kubbi sem inniheldur einn kubb.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
 
@@ -9225,11 +9323,17 @@ is-IS:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
 
         Í þessari þraut munu tvær `endurtaka` lykkjur hjálpa þér að koma BB-8 að öllum brotamálminum með sem fæstum kubbum!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        Í þessari þraut munu tvær `endurtaka` lykkjur hjálpa þér að koma BB-8 að öllum brotamálminum með sem fæstum kubbum!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Áfram BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Áfram BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Áfram BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Áfram BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu honum öllum?"_
@@ -9240,6 +9344,10 @@ is-IS:
 
         Lykkjur geta innihaldið fleiri en einn kubb!  Getur þú sett þessa runu í lykkju?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu honum öllum?"_
+
+        Lykkjur geta innihaldið fleiri en einn kubb!  Getur þú sett þessa runu í lykkju?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Nærðu honum öllum?"_
 
         Lykkjur geta innihaldið fleiri en einn kubb!  Getur þú sett þessa runu í lykkju?
@@ -9255,6 +9363,10 @@ is-IS:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_
 
         Getur þú reynt að ná öllum brotamálminum með bara einni lykkju? Prófaðu að forrita þetta skref fyrir skref og finna endurtekinn kóða sem mætti setja í lykkju.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Þú getur þetta!"_
+
+        Getur þú reynt að ná öllum brotamálminum með bara einni lykkju? Prófaðu að forrita þetta skref fyrir skref og finna endurtekinn kóða sem mætti setja í lykkju.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
 
@@ -9264,6 +9376,10 @@ is-IS:
 
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
+
+        **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Haltu áfram, BB-8."_
 
         **Áskorun:** Notaðu hugmyndir úr síðustu þrautum saman til að ljúka þessu stigi.
@@ -9846,6 +9962,8 @@ is-IS:
         hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er."
       courseD_bee_conditionals1_predict1_2019: "\\*\"Þetta ský er fyrir mér!\"\\\r\n\\\r\nAthugaðu
         hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er."
+      courseD_bee_conditionals1_predict1_copy: "\\*\"Þetta ský er fyrir mér!\"\\\r\n\\\r\nAthugaðu
+        hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er."
       courseD_bee_conditionals2: "Meiri ský! \n\nAthugaðu undir hvert ský til að sjá
         hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm undir
         skýinu á býflugan að safna blómasafa _einu sinni_. \n\nMundu: Skýin fela ekki
@@ -9858,6 +9976,10 @@ is-IS:
         að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm
         undir skýinu á býflugan að safna blómasafa _einu sinni_. \n\nMundu: Skýin
         fela ekki öll það sama!"
+      courseD_bee_conditionals2_copy: "Meiri ský! \n\nAthugaðu undir hvert ský til
+        að sjá hvort það feli blóm áður en þú reynir að ná blómasafa. Ef það er blóm
+        undir skýinu á býflugan að safna blómasafa _einu sinni_. \n\nMundu: Skýin
+        fela ekki öll það sama!"
       courseD_bee_conditionals3: Þú getur aðeins safnað blómasafa á blómum, en þú
         getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
         undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
@@ -9865,6 +9987,9 @@ is-IS:
         þú getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
         undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
       courseD_bee_conditionals3_2019: Þú getur aðeins safnað blómasafa á blómum, en
+        þú getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
+        undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
+      courseD_bee_conditionals3_copy: Þú getur aðeins safnað blómasafa á blómum, en
         þú getur athugað hvaða bil sem er til að gá hvort þar er blóm. Ef það er blóm
         undir skýi, þarf býflugan að safna blómasafa _einu sinni_.
       courseD_bee_conditionals4: |-
@@ -9876,6 +10001,10 @@ is-IS:
 
         Náðu öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_conditionals4_2019: |-
+        Í þessari þraut vitum við að hvert blóm hefur nákvæmlega einn af blómasafa, en það eru misjafnlega mörg bil á milli blómanna.
+
+        Náðu öllum blómasafanum með eins fáum kubbum og mögulegt er.
+      courseD_bee_conditionals4_copy: |-
         Í þessari þraut vitum við að hvert blóm hefur nákvæmlega einn af blómasafa, en það eru misjafnlega mörg bil á milli blómanna.
 
         Náðu öllum blómasafanum með eins fáum kubbum og mögulegt er.
@@ -10680,6 +10809,10 @@ is-IS:
 
         -   Teiknaðu hvern sexhyrning með því að endurtaka hliðina 6 sinnum með 60 gráðu snúningum.
         -   Til að teikna tígul þarftu að snúa til skiptis 60 gráður og 120 gráður.
+      courseE_artist_functions1_copy: |-
+        _"Ég listauppvakningur. Mig elska teikna!"_
+
+        Hjálpaðu uppvakningnum að teikna gleraugu úr ferningum með 100 díla hliðar. Bilið á milli glerjanna er 75 dílar.
       courseE_artist_functions2: "Með föllum getur þú búið til nýja kubba! \n\nVið
         höfum fært kubbana sem teikna ferning inn í fall, sem heitir `teikna ferning`.
         Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \n\n* * *\n\nÞað
@@ -10690,6 +10823,10 @@ is-IS:
       courseE_artist_functions2_2019: "Hér er fall sem heitir `teikna ferning`. Notaðu
         það til að ljúka þessari teikningu. \n\n* * *\n\nÞað er 75 díla bil á milli
         ferninganna."
+      courseE_artist_functions2_copy: "Með föllum getur þú búið til nýja kubba! \n\nVið
+        höfum fært kubbana sem teikna ferning inn í fall, sem heitir `teikna ferning`.
+        Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \n\n* * *\n\nÞað
+        eru 75 dílar á milli ferninganna."
       courseE_artist_functions3: "Við munum bráðum fara meira í föll. En fyrst skulum
         við æfa að teikna þessa stjörnu. \n\nÞú getur búið hana til með því að nota
         \"endurtaka\" kubb."
@@ -10709,7 +10846,16 @@ is-IS:
         -   Hver armur stjörnunnar er 25 dílar á lengd
         -   Þú þarft að snúa um 45 gráður til að fá 8 arma
         -   Það er í lagi að fara fram og til baka á sama arminum
+      courseE_artist_functions3_copy: "Við munum bráðum fara meira í föll. En fyrst
+        skulum við æfa að teikna þessa stjörnu. \n\nÞú getur búið hana til með því
+        að nota \"endurtaka\" kubb."
       courseE_artist_functions4: |-
+        Þar sem þú kannt nú að teikna eina stjörnu, skulum við teikna fjórar!
+
+        -   Hver armur er 25 díla langur
+        -   Snúðu um 45 gráður á milli arma
+        -   Hoppaðu um 100 díla á milli stjarna
+      courseE_artist_functions4_copy: |-
         Þar sem þú kannt nú að teikna eina stjörnu, skulum við teikna fjórar!
 
         -   Hver armur er 25 díla langur
@@ -10737,6 +10883,10 @@ is-IS:
 
         -   Hoppið frá fyrstu til annarrar stjörnu er **200** dílar
         -   Hoppið frá annarri til þriðju stjörnu er **100** dílar
+      courseE_artist_functions5_copy: |-
+        Hvenær er erfiðara að teikna þrjár stjörnur heldur en fjórar? Þegar þú þarft líka að stökkva yfir tunglið!
+
+        Teiknaðu bara þessar þrjár stjörnur til að ljúka þrautinni.
       courseE_artist_functions6: "Þetta gengur bara vel hjá þér! \n\nBúðu til þennan
         glugga með því að teikna ferning og snúa svo um 90 gráður. Endurtaktu þetta
         svo."
@@ -10844,6 +10994,8 @@ is-IS:
       courseE_artist_functions_predict1_2018: 'Hér er þraut sem notar fall (function)
         sem við höfum skilgreint. '
       courseE_artist_functions_predict1_2019: 'Hér er þraut sem notar fall (function)
+        sem við höfum skilgreint. '
+      courseE_artist_functions_predict1_copy: 'Hér er þraut sem notar fall (function)
         sem við höfum skilgreint. '
       courseE_artist_ramp8: |-
         Fínt!  Nú skulum nota þessa `endurtaka` lykkju til að búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.

@@ -152,6 +152,29 @@ sk-SK:
         nasledovných podmienok:\n\n-   Študent musí mať aspoň jednu aktívnu rybaciu
         postavu.\n-   Ryba sa musí hýbať vľavo a vpravo, čo sa dá docieliť zmenou
         správania na `plávať vľavo a vpravo`."
+      OPD-K5-spritelab-2: "Táto lekcia obsahuje **mini projekt** s názvom _Plávajúca
+        ryba #1_. Postup v nej je trochu odlišný od predchádzajúcich úloh v kurze.
+        Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými novými vlastnosťami.
+        \n\n-   Kód, ktorý študenti vytvoria v jednej úrovni sa automaticky prenesie
+        do ostatných úrovní, čo im umožní zopakovať si nápady a učiť sa postupne.\n-
+        \  Tieto úrovne neobsahujú **kontrolu správnosti** a tak sú otvorené volnejšej
+        kreativite. Umožnite študentom nech sa sami rozhodujú, kedy je úloha ukončená.
+        Neexistuje len jedna správna odpoveď! \n-   Príklady riešení si môžete pozrieť
+        v panely pre učiteľov vpravo.\n\nŠtudentov kód bude overený na základe splnenia
+        nasledovných podmienok:\n\n-   Študent musí mať aspoň jednu aktívnu rybaciu
+        postavu."
+      OPD-K5-spritelab-3: "Táto lekcia obsahuje **mini projekt** s názvom _Plávajúca
+        ryba #1_. Postup v nej je trochu odlišný od predchádzajúcich úloh v kurze.
+        Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými novými vlastnosťami.
+        \n\n-   Kód, ktorý študenti vytvoria v jednej úrovni sa automaticky prenesie
+        do ostatných úrovní, čo im umožní zopakovať si nápady a učiť sa postupne.\n-
+        \  Tieto úrovne neobsahujú **kontrolu správnosti** a tak sú otvorené volnejšej
+        kreativite. Umožnite študentom nech sa sami rozhodujú, kedy je úloha ukončená.
+        Neexistuje len jedna správna odpoveď! \n-   Príklady riešení si môžete pozrieť
+        v panely pre učiteľov vpravo.\n\nŠtudentov kód bude overený na základe splnenia
+        nasledovných podmienok:\n\n-   Študent musí mať aspoň jednu aktívnu rybaciu
+        postavu.\n-   Ryba sa musí hýbať vľavo a vpravo, čo sa dá docieliť zmenou
+        správania na `plávať vľavo a vpravo`."
       Virtual Pet 4_2019: "Táto lekcia obsahuje **mini projekt** s názvom \\*Virtuálne
         zvieratko. Postup v nej je trochu odlišný od predchádzajúcich úloh v kurze.
         Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými novými vlastnosťami.
@@ -162,6 +185,11 @@ sk-SK:
         Neexistuje len jedna správna odpoveď! \n-   Príklady riešení si môžete pozrieť
         v panely pre učiteľov vpravo.\n\nŠtudentov kód bude overený na základe splnenia
         nasledovných podmienok:\n\n-   Študent musí vytvoriť aspoň tri postavy."
+      behaviors free play: |-
+        Táto lekcia je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
+
+        -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
+        -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
       courseA_artist_loops12_2019: |-
         To to je voľná disciplína. Nie je to len skvelé miesto na to, aby ste nasmerovali študentov, ktorí napredujú rýchlo, ale tiež miesto pre všetkých študentov, aby naozaj prejavili svoju kreativitu. Aj keď sa od študentov v skutočnosti nevyžaduje, aby na tomto leveli napísali akýkoľvek kód, umožní im to použiť to, čo sa naučili spôsobom, ktorý je pre nich zmysluplnejší. Povzbuďte svojich študentov, aby si na toto našli čas.
 
@@ -169,6 +197,11 @@ sk-SK:
         -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
       courseA_artist_loops_challenge1_2019: |-
         Táto lekcia navyše je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
+
+        -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
+        -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
+      courseA_playLab_events7_2019: |-
+        Táto lekcia je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
 
         -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
         -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
@@ -223,6 +256,16 @@ sk-SK:
         správne v druhom kroku?\n\n8.  Čo ten tretí?\n\n9.  Ak niečo nesedí, poobzeraj
         sa tam po nejakom \"bugu\".\n\n10. Keď ten bug nájdeš, daj mu meno a povedz
         ho nahlas!"
+      courseC_PlayLab_eventsFP_2019: |-
+        Táto lekcia je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
+
+        -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
+        -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
+      courseC_artist_loops8a_2019: |-
+        Táto lekcia je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
+
+        -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
+        -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
       courseD_artist_project1_2019: "Táto lekcia obsahuje **mini projekt** s názvom
         _Snehová vločka #1_. Postup v nej je trochu odlišný od predchádzajúcich úloh
         v kurze. Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými novými
@@ -349,6 +392,16 @@ sk-SK:
         kreativite. Umožnite študentom nech sa sami rozhodujú, kedy je úloha ukončená.
         Neexistuje len jedna správna odpoveď! \n-   Príklady riešení si môžete pozrieť
         v panely pre učiteľov vpravo."
+      courseF_artist_for10_2019: |-
+        Táto lekcia je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
+
+        -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
+        -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
+      courseF_artist_variablesFP_2019: |-
+        Táto lekcia je voľná disciplína.  Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými vlastnosťami.
+
+        -   Tieto úrovne neobsahujú **kontrolu správnosti**, a tak sú otvorené voľnej kreativite. Umožnite svojim študentom, aby sa sami rozhodli vytvoriť niečo, čo sa im páči. Neexistuje len jedna správna odpoveď!
+        -   Príklady riešení si môžete pozrieť v paneli pre učiteľov vpravo.
       csd-pre-survey-2017-levelgroup_2018: |-
         [key]
 

@@ -868,26 +868,6 @@ es-MX:
         único para tu clase.
       audience: Desde 14 años
       cta: Aprende cómo
-  gallery:
-    students_drew_these_with_code: "¡Los estudiantes usaron código para dibujar esto!"
-    students_made_these_with_code: "¡Los estudiantes usaron código para crear estos!"
-    picture_count: En los pasados <b>%{days}</b> días, los estudiantes han dibujado
-      <b>%{count}</b> imágenes con programas escritos por ellos mismos. Haz clic en
-      las imágenes para ver cada programa en acción.
-    activity_count: En los últimos <b>%{days}</b> días, los estudiantes han escrito
-      sus propios programas informáticos y han creado <b>%{count}</b> aplicaciones
-      y fotos Haz clic en las fotos y capturas de pantalla para ver cada programa
-      en acción.
-    want_to_make_your_own: "¿Quieres crear el tuyo?"
-    how_to_save: En el último nivel de estos tutoriales, haz clic en "Finalizar" y
-      "Guardar" para guardar tu trabajo en la galería.
-    more: Más →
-    caption_by_name_age: por %{name}, edad %{age}
-    caption_time_ago: hace %{time_ago}
-    header: Galería
-    header_playlab: Historias y juegos
-    header_artist: El arte en código
-    report_abuse: Reportar Abuso
   landing:
     prerelease_tutorial: Este tutorial es una versión **beta**. Es objeto de revisión
       a medida que se reciben comentarios y se hacen mejoras.
@@ -1139,6 +1119,7 @@ es-MX:
     instructor_feedback: Comentarios del instructor
     peer_feedback: Comentarios de los compañeros
     outdated: Se añadieron estos comentarios a una versión presentada anteriormente
+    peer_review: Revisión por pares
   flex_category:
     required: Resumen
     content: Contenido

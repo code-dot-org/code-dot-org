@@ -848,7 +848,6 @@
   "loginCard_secretWords": "Gizli Sözcük:",
   "loginCard_sectionName": "Bölüm İsmi",
   "loginInfo": "Kişisel Oturum bilgisi",
-  "loginInformation": "Giriş Bilgileri",
   "loginInfo_joinTitle": "Bölümünüze Giriş (sadece bir kerelik)",
   "loginInfo_joinBody": "Bir öğrenci bölümünüze henüz katılmadıysa, lütfen aşağıdaki adımları yapmalarını isteyin. Bunu yalnızca bir kez yapmaları gerektiğini unutmayın. Bölümünüze katılarak, öğrenciler kendilerine verilen kursu görebilecek ve oturum açarken tamamladıkları işin ilerlemesini izleyebileceksiniz.",
   "loginInfo_joinStep1": "Henüz giriş yapmadıysanız bir Code.org hesabı oluşturun. Bunu {url} adresinden yapabilirsiniz. Bu düğmelerden birine tıklayarak bir e-posta adresi ve şifre ile kaydolabileceklerini veya Google, Facebook veya Microsoft üzerinden kaydolabileceklerini unutmayın:",

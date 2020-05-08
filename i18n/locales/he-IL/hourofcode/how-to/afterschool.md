@@ -6,7 +6,7 @@ title: מדריך כיצד ל...
 
 # איך ללמד "שעה של קוד" בשיעורים לאחר שעות הלימודים ובמועדוניות
 
-### הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! אם תצטרכו עזרה נוספת, תוכלו למצוא [מתנדב/ת מקומי/ת]({{ urls/volunteer_local }}) שיעזור לכם/ן להעביר שעת קוד בשיעורים שלאחר שעות הלימודים ובמועדוניות.
 
 * * *
 
@@ -14,19 +14,19 @@ title: מדריך כיצד ל...
 
 ## 2. בחרו סרטון הדרכה
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+אנחנו מציעים מגוון רחב של [מדריכים כיפיים באורך של שעה אחת]({{ urls/learn }}) למשתתפים בכל הגילאים, אשר נוצרו על ידי אנשים רבים. [נסו אותם!]({{ urls/learn }})
 
 **כל מדריכי 'שעה של קוד'** דורשים הכנה מזערית מצד המארגנים וכולל הסברים, מה שמאפשר לילדים לעבוד בקצב שלהם ובהתאם לרמתם.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**צריכים תוכנית לשיעור 'שעה של קוד' שלכם** בדקו את [התבנית הזו](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**צריכים תוכנית לשיעור 'שעה של קוד' שלכם?** בדקו את [התבנית הזו](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. קדמו את שעת הקוד שלכם
+## 3. קדמו את שעת הקוד שלכם/ן
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+קדמו את שעת הקוד שלכם/ן [עם הכלים האלו]({{ urls/promote }}) ועודדו אחרים לארח אירועים משלהם.
 
-## 4. תכננו את הצרכים הטכונולוגיים שלכם - מחשבים הם לא חובה
+## 4. תכננו את הצרכים הטכונולוגיים - מחשבים הם לא חובה
 
 The best Hour of Code experience includes Internet-connected computers. אבל **אינך** נדרש למחשב עבור כל ילד, וגם באפשרותך לבצע "שעה של קוד" ללא מחשב כלל.
 
@@ -36,7 +36,7 @@ The best Hour of Code experience includes Internet-connected computers. אבל *
 
 **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). כאשר תלמידים מתחברים יחד, הם עוזרים אחד לשני ונסמכים פחות על המורה. They’ll also see that computer science is social and collaborative.
 
-## 5. התחל את "שעה של קוד" עם סרטון מעורר השראה
+## 5. התחילו את "שעה של קוד" עם סרטון מעורר השראה
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 

@@ -1238,6 +1238,8 @@ fil-PH:
           ang increment ay idinagdag sa iyong counter na variable bawat beses. \n\nAno
           ang kailangan mong idagdag sa bawat numero para makuha ang numero pagkatapos
           nito?"
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Overworld Avoid Monsters:
         mc_8_a: Mayroong iilang mga landas ang kailangan mong tahakin. Alin ang pinkamaikli?
         mc_8_b: Gumamit ng `repeat` na mga loops para magawang simple ang iyong code.
@@ -2142,6 +2144,11 @@ fil-PH:
           mga hakbang sa isang pirasong papel.
         courseA_maze_seq10_b: Kailanganin mong pumunta sa 3 mga direksyon para malutas
           ang palaisipang ito.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Kung ikaw ay nagkaproblema, subukang isulat muna ang
+          mga hakbang sa isang pirasong papel.
+        courseA_maze_seq10_b: Kailanganin mong pumunta sa 3 mga direksyon para malutas
+          ang palaisipang ito.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang
           iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
@@ -2207,6 +2214,11 @@ fil-PH:
         '1': Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!
       courseA_maze_seq5_2019:
         '1': Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Subukang isulat ang mga hakbang sa papel para mahanap
+          ang solusyon!
+        courseA_maze_seq5_b: Kakailanganin mo nang 2 mga bloke, nag natuturo sa 2
+          mga direksyon.
       courseA_maze_seq6:
         courseA_maze_seq6_a: Ang iyong huling code ay dapat mayroong 3 mga paggalaw
           na bloke.
@@ -2222,7 +2234,18 @@ fil-PH:
           na bloke.
         courseA_maze_seq6_b: Kung ikaw ay hindi makausad, subukang lutasin ang palaisipan
           sa 2 mga bahagi, isa parte bago ang kanto at isa pagkatapos ng kanto.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Ang iyong huling code ay dapat mayroong 3 mga paggalaw
+          na bloke.
+        courseA_maze_seq6_b: Kung ikaw ay hindi makausad, subukang lutasin ang palaisipan
+          sa 2 mga bahagi, isa parte bago ang kanto at isa pagkatapos ng kanto.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Mayroong 1 bloke na kailangan mong idagdag para mapagalaw
+          ang ibon papunta sa baboy.
+        courseA_maze_seq7_b: Kung hindi mo alam kung ano ang gagawin, subukang iguhit
+          ang palaisipan sa papel at gamitin ang iyong mga daliri para matukoy kung
+          aling daan ang dapat dadaanan.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Mayroong 1 bloke na kailangan mong idagdag para mapagalaw
           ang ibon papunta sa baboy.
         courseA_maze_seq7_b: Kung hindi mo alam kung ano ang gagawin, subukang iguhit
@@ -2235,6 +2258,9 @@ fil-PH:
         courseA_maze_seq8_a: Kung hindi ka makausad, subukang iguhit ang larawan sa
           papel para makita kung paano dapat gagalaw ang ibon.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Kung hindi ka makausad, subukang iguhit ang larawan sa
+          papel para makita kung paano dapat gagalaw ang ibon.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Kung hindi ka makausad, subukang iguhit ang larawan sa
           papel para makita kung paano dapat gagalaw ang ibon.
       courseA_maze_seq9:
@@ -2974,6 +3000,10 @@ fil-PH:
         courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
           ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
           ang palaisipan.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "Subukang gumamit ng `jump forward` na bloke
           para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula
@@ -3023,6 +3053,12 @@ fil-PH:
           mo iguguhit ang iyong pangalawang parisukat.
         courseE_artist_functions1_b: Okey lang na gumuhit ng nakapatung-patong na
           mga linya para magawa ang iyong mga baso.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Ang bawat parisukat ay 100 pixel ang mga gilid,
+          ibig sabihin nito na kailangan mong gumalaw pasulong nang 175 pixels bago
+          mo iguguhit ang iyong pangalawang parisukat.
+        courseE_artist_functions1_b: Okey lang na gumuhit ng nakapatung-patong na
+          mga linya para magawa ang iyong mga baso.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
@@ -3038,6 +3074,13 @@ fil-PH:
           -   Gumalawa pasulong nang 100 + 75 pixels
           -   Gamitin ang function
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          Ang iyong programa ay dapat:
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
 
