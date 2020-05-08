@@ -23,7 +23,6 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    console.log(wrapper.debug());
     expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
   });
 
