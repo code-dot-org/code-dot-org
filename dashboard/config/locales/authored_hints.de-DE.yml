@@ -349,10 +349,16 @@ de-DE:
       4-5 Artist Assessment 1:
         4-5_Artist_Assessment_1_a: Du musst nur das äußere Dreieck zeichnen, um dieses
           Rätsel zu lösen.
+      4-5 Artist Patterns 11:
+        4-5_Artist_Patterns_11_a: Wenn ein Kreis 360 Grad hat und jede Schleife sich
+          um 3 Grad dreht, wie oft müsstest du eine Schleife laufen lassen um die
+          Hälfte eines vollen Kreises zu zeichnen?
       4-5 Artist Patterns 2:
         4-5_Artist_Patterns_2_a: Beachte, dass du, da die Quadrate 20 Pixel lang sind,
           20 Pixel springen musst, bevor du dein nächstes Quadrat beginnst.
       4-5 Artist Patterns 3:
+        4-5_Artist_Patterns_3_a: Achte darauf, bei jedem Versuch einen neuen Codeblock
+          aus der Symbolleiste zu ziehen.
         4-5_Artist_Patterns_3_b: Wenn Dein Code zu unübersichtlich wird, kannst Du
           jederzeit auf "Neu starten" klicken und es noch einmal versuchen!
       4-5 Artist Patterns 5:
@@ -373,6 +379,9 @@ de-DE:
           werden?
         4-5 Bee Conditionals 6_b: Stelle sicher, zu überprüfen das die Blume mehr
           als **0** und maximal **3** mal Nektar enthält, um dieses Rätsel zu lösen.
+      4-5 Bee Debugging 1:
+        4-5_Bee_Debugging_1_a: Wenn du Schwierigkeiten hast den Fehler herauszufinden,
+          versuche das Programm laufen zu lassen, um zu sehen was schief läuft.
       4-5 Bee Nested Loops Rows:
         4-5_Bee_Nested_Loops_Rows_a: Versuche dieses Rätsel wie ein langes Rechteck
           zu behandeln, in dem sich die Biene vorwärts bewegen muss, und biege dann
@@ -407,6 +416,11 @@ de-DE:
           Du wirst 6 Dreiecke über 360 Grad zeichnen.
 
           **360 / 6 = ?**
+      4-5 Nested Loops 7:
+        4-5_Nested_Loops_7_a: |-
+          Das Design läuft 10 mal durch eine Schleife bis 360 Grad erreicht sind.
+
+          **360 / 10 = ?**
       4-5 Nested Loops 8:
         4-5_Nested_Loops_8_a: |-
           Du wirst diese Form 6 Mal über 360 Grad wiederholen.
@@ -4680,6 +4694,21 @@ de-DE:
                 </block>
               </next>
             </block></xml>
+      course2_artist_nestedLoops_challenge1:
+        courseD_artist_nestedLoops_challenge1_a: Erstelle zunächst eine verschachtelte
+          Schleife, um vier Achtecke zu erstellen. Drehe dich um 45 Grad, um das Achteck
+          zu erstellen. Springe und drehe dich nach jedem Achteck um 90 Grad.
+        courseD_artist_nestedLoops_challenge1_b: Füge Code hinzu, um ein Dreieck innerhalb
+          der verschachtelten Schleife zu zeichnen. Verwende 120-Grad-Drehungen für
+          das Dreieck.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          Verwende eine verschachtelte Schleife:
+
+          -   Wiederhole 8 mal
+          -   zeichne ein Achteck
+          -   zeichne ein Dreieck
+          -   springe vorwärts um 50 Pixel
+          -   nach rechts drehen um 90 Grad
       course2_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: 'Das Rechteck ist 200 Pixel breit und 100
           Pixel hoch. '
@@ -4927,6 +4956,14 @@ de-DE:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Beginne damit, nur ZWEI Edelsteine
+          von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Als nächstes sammele die restlichen
           Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
           AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n

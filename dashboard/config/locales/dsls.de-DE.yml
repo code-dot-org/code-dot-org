@@ -408,7 +408,8 @@ de-DE:
             <br/> Husch, fliege, Husch, <br/> spring zu my Lou, mein Liebling.
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Welches ist der längste als Refrain definierbare Teil des Songs, der
+            bei exakt jedem Aufruf wiederholt wird?
         title: Multiple-Choice
       4-5 Suncatchers Match 1:
         answers:
@@ -476,6 +477,9 @@ de-DE:
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: Eine lila Blume kann entweder 3, 2 oder 1 Portion Nektar haben,
+          aber du weißt nicht genau. Welche Bausteine überprüfen und sammeln den gesamten
+          Nektar einer lila Blume?"
         questions:
         - text: Wähle die besten Bausteine.
         title: Biene Bedingungen Multiple-Choice

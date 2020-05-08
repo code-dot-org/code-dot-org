@@ -270,6 +270,8 @@ de-DE:
         Benutze die „Solange Nektar“- Schleife, um den ganzen Nektar zu sammeln.
 
         Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: `Nektar > 0`.
+      2-3 Bee Loops Assessment 1: "**Prüfung:** Benutze eine Solange-Schleife, um
+        den ganzen Nektar dieser Blüten zu sammeln."
       2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
         `vorwärts bewegen` Bausteine unter dem `wenn Ausführen` Baustein ein und drücke
         auf "Ausführen". '
@@ -323,8 +325,15 @@ de-DE:
         Zeichne dieses Quadrat mit einer Schleife.
 
         Jede Seite ist 20 Pixel lang.
+      4-5 Artist Patterns 10: "Dieser Code zeichnet zwei Spalten Sechsecke - wiederhole
+        das ganze 4 Mal per Schleife und zeichne das ganze Wabenwerk. \n\nDu musst
+        in deiner äußeren Schleife 120 Pixel zurückspringen um sicherzustellen, dass
+        der Künstler nicht außerhalb des Bildschirms zeichnet."
       4-5 Artist Patterns 11: Wie oft muss die Schleife durchlaufen werden, damit
         ein Halbkreis gezeichnet wird?
+      4-5 Artist Patterns 12: "Was passiert wenn du die Schleife kopierst und eine
+        Linksdrehung anstelle einer Rechtsdrehung ausführst? \n\nKannst du das wiederholen,
+        um diese Welle zu zeichnen?"
       4-5 Artist Patterns 13: "Nun lass uns das Ganze viermal in einer Schleife wiederholen,
         um diesen Bilderrahmen zu erstellen. Achte auf die Ecken - Du kannst dich
         nicht einfach um 90 Grad drehen! \n\nWenn eine 3-Grad-Drehung 60 Mal einen
@@ -343,6 +352,10 @@ de-DE:
         Dieser Diamant hat 50 Pixel Seiten und Winkel von 120 und 60 Grad.
 
         Benutze eine Schleife, um ihn zu zeichnen.
+      4-5 Artist Patterns 5: |-
+        Wiederhole diesen Code, so dass eine Reihe von 6 Diamanten entsteht.
+
+        Beachte, dass der Diamantencode so verändert wurde, dass 3 statt 2 Wiederholungen stattfinden - was glaubst du warum?
       4-5 Artist Patterns 6: Wie oft musst du diesen Baustein wiederholen, damit das
         ganze Diamantenraster gezeichnet wird?
       4-5 Artist Patterns 7: Wir wollen den Code der letzten Aufgabe etwas verändern
@@ -352,6 +365,12 @@ de-DE:
         beim zweiten "springe rückwärts" Baustein gehen?
       4-5 Artist Patterns 8: Verwende eine Schleife, um dieses Sechseck mit 40 Pixel
         Seiten und 60 Grad Winkel zu zeichnen.
+      4-5 Artist Patterns 9: "Wiederhole nun den Code dreimal, um die ganze Zeile
+        zu zeichnen. \n\nJedes Sechseck ist von den weitesten Punkten von rechts nach
+        links 80 Pixel breit."
+      4-5 Artist Patterns 9.5: "Wir wollen diesen Code in einer Schleife laufen lassen,
+        um zwei Reihen Sechsecke zu zeichnen. \n\nBeachte, wie unsere zweite Reihe
+        nach rechts verschoben wird."
       4-5 Artist Patterns Free Play: Freies Spielen - versuche dein Glück beim Entwerfen
         deines eigenen Musters!
       4-5 Bee Conditionals 1: |-
@@ -372,18 +391,30 @@ de-DE:
         bedingten Blöcke (`if` und/oder `if/else`), um nur so viel Nektar zu erhalten,
         wie die Blume hat. \n\nDenke daran, dass sich die Menge des Nektars jedes
         Mal, wenn du das Puzzle ausführst, ändern kann!"
+      4-5 Bee Conditionals 7: "Bedenke, dass lila Blüten 3, 2, oder 1 Nektar tragen
+        können. \n\nVervollständige die „Prüfe lila Blüte\"- Funktion und benutze
+        sie, um den ganzen Nektar bei den Blüten zu sammeln."
       4-5 Bee Conditionals 8: "Schreibe die Funktion für `Prüfe Blüte, erzeuge Honig`.
         \n\nDeine Funktion sollte prüfen, ob die violette Blüte 3, 2 oder 1 Nektar
         hat und den gesamten Nektar sammeln. \nDann gehe vorwärts und machen Honig."
+      4-5 Bee Conditionals Assessment 1: |-
+        **Prüfung:** Hinter Wolke ist entweder eine Blume mit einem Nektar oder eine Honigwabe mit einem Honig.
+
+        Vervollständige die „sammle Nektar oder erzeuge Honig"- Funktion, dann rufe sie auf um den ganzen Nektar einzusammeln und den Honig zu erzeugen.
       4-5 Bee Debugging 1: |-
         Diese Bausteine nerven mich wirklich.
 
         Kannst du sie in Ordnung bringen?
+      4-5 Bee Debugging 6: "Die lila Blüte hat eine unbekannte Menge Nektar. \n\nBringe
+        die Bausteine in Ordnung, so dass der ganze Nektar aus der Blüte herausgeholt
+        wird."
       4-5 Bee Debugging Assessment 1: "**Prüfung:** Repariere den Code."
       4-5 Bee Nested Loops 2: "Sammle den ganzen Nektar von allen Blumen. \n\nBenutze
         eine verschachtelte Schleife. "
       4-5 Bee Nested Loops 4: "Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. \n\nBenutze eine verschachtelte Schleife. "
+      4-5 Bee Nested Loops Assessment 1: "**Prüfung:** Sammle den gesamten Nektar
+        und erzeuge den gesamten Honig, indem du Schleifen benutzt."
       4-5 Maze 7: "Bringe den Zombie auf schnellstem Weg zur Sonnenblume. \nKannst
         Du die Aufgabe mit weniger als 11 Blöcken lösen?"
       4-5 Maze 9: |-
@@ -413,12 +444,29 @@ de-DE:
         Verwenden Sie eine `Wenn`-Anweisung, um den Zombie mit der geringsten Anzahl an Bausteinen zur Sonnenblume zu bringen.
       4-5 Maze Conditionals 7: Die Lösung dieses Rätsels ist nicht viel anders, aber
         Vorsicht vor dem Mampfern!
+      4-5 Maze Conditionals 8: "Die „Wenn-Ansonsten“-Bausteine überprüfen eine Bedingung
+        und führen dann entweder eine ODER eine andere Anweisung aus. \n\nVerwende
+        diesen neuen Baustein, um mich zur Sonnenblume zu bringen."
+      4-5 Maze Conditionals 9: |-
+        Noch eine Übung mit dem „Wenn-Ansonsten" Baustein!
+
+        Schaffst du es mit dem ersten Versuch?
+      4-5 Maze Conditionals Assessment 1: '**Prüfung:** Benutze einen „Wiederholen
+        bis"- und einen „Wenn-Ansonsten"- Baustein und bringe mich so mit der geringstmöglichen
+        Anzahl an Bausteinen zur Sonnenblume.'
       4-5 Nested Loops 1: 'Vervollständige den Code um die Dreiecke zu zeichnen. Das
         erste ist bereits fertig. Hinweis: Drei Dreiecke in einer 360- Grad- Drehung.'
+      4-5 Nested Loops 11: "Kannst du diese 10 Quadrate dieses Gehsteigs mit einer
+        verschachtelten Schleife zeichnen? \n\nJedes Quadrat hat eine Seitenlänge
+        von 30 Pixeln."
       4-5 Nested Loops 12: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife
         zeichnen?
       4-5 Nested Loops 2: 'Erstelle nun eine Schleife in einer weiteren Schleife um
         10 Dreiecke zu zeichnen.\\ Dies nennt man eine verschachtelte Schleife.  '
+      4-5 Nested Loops 3: |-
+        Male eine Sonne indem du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+
+        Um dieses coole Design zu erhalten, musst du vor dem Drehen um eine Dreiecklänge nach vorne springen.
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 6: Kannst du ein Sechseck zeichnen, indem du den Dreieckscode
@@ -428,6 +476,8 @@ de-DE:
       4-5 Nested Loops 8: "Wiederhole diese Form 6 Mal. \n\nWie viel musst du jedes
         Mal drehen, wenn du eine Schleife machst? "
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
+      4-5 Nested Loops Assessment 1: "**Prüfung:** Verwende eine verschachtelte Schleife
+        um das Design fertigzustellen."
       4-5 While Loops 1: Bringe mich zu dem Loch und fülle es mit zwei Schaufeln Dreck,
         indem Du den `füllen`-Baustein benutzt.
       4-5 While Loops 2: Bringe mich zu dem Erdhaufen und entferne ihn mit 5 Schaufelladungen,
@@ -2216,6 +2266,10 @@ de-DE:
         nur die Aufgabe!"
       Course 4 Maze 4: Versuche, das Rätsel mit dem „Wiederholen“-Baustein zu lösen,
         damit du weniger Bausteine benötigst...
+      Course 4 SCF 3: "**Die Funktionen Challenge:** Verwende das, was du im vorherigen
+        Level gelernt hast, um ein Bild wie dieses zu zeichnen.\n\n_Hinweis: Verwende
+        Parameter, um deinen Code einfacher zu gestalten._ \n\n<br/> \n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"
+        width=\"300px\"/> \n<br/>  "
       Course 4 SCFL 3: "**For-Schleifen Super Challenge:** Kannst Du herausfinden,
         wie Du diese Zeichnung wiederherstellen kannst? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
         width=\"350px\"/>"
@@ -3596,6 +3650,12 @@ de-DE:
         Achte bei diesem Rätsel darauf, dass du auf Hinweise klickst! Die Hinweise werden dir lustige Dinge zum Ausprobieren geben!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course2_artist_nestedLoops_challenge2: |-
+        Weißt du wie man dieses Bild erstellt?
+
+        -   Die erste innere Schleife sollte ein Achteck erstellen
+        -   Die zweite innere Schleife sollte ein Sechseck erstellen
+        -   Die dritte innere Schleife sollte ein Quadrat erstellen
       course2_artist_prog_challenge1: Zeichne Räume für jedes Tier. Es gibt viele
         verschiedene Möglichkeiten, dieses Rätsel zu lösen, also viel Spaß!
       course2_artist_prog_challenge2: _Hilf mir, die gelben Linien auf dieser Straße
@@ -3634,6 +3694,10 @@ de-DE:
         der du dich drehen solltest. Andernfalls fahre weiter vorwärts, aber denke
         daran, den gesamten Salat oder Mais auf dem Weg zu sammeln. \n\n**Jede versteckte
         Erntestelle hat nur einen Mais oder Salat.**"
+      course3_farmer_condLoops_challenge2: |-
+        _"Es ist ein vielseitiges Gemüselabyrinth!"_
+
+        Bei den Kürbissen rechts, bei den Salatköpfen links abbiegen. Sammele alles ein, um den Level abzuschließen.
       course3_farmer_until_challenge2: Verwende Wenn/Sonst-Bausteine, um dem gewundenen
         Pfad zu folgen. Verwende an jeder Ecke den Befehl `entferne 1` in einer Schleife,
         um die Erdhaufen zu entfernen.
