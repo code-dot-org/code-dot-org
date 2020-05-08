@@ -1099,6 +1099,18 @@ cs-CZ:
         * * *
 
         Klikáním nebo dotekem v obrazovce ovládáš Flappyho. K dokončení úlohy se musíš dostat do cíle nahoře.
+      courseC_flappy_events10: |-
+        Vytvoř si vlastní Flappy hru!
+
+        Můžeš měnit vzhled, pravidla a dokonce i gravitaci! Až budeš mít hotovo, klikni na tlačítko 'Sdílet' a můžeš poslat hru svým kamarádům do telefonu.
+      courseC_flappy_events10_2018: |-
+        Vytvoř si vlastní Flappy hru!
+
+        Můžeš měnit vzhled, pravidla a dokonce i gravitaci! Až budeš mít hotovo, klikni na tlačítko 'Sdílet' a můžeš poslat hru svým kamarádům do telefonu.
+      courseC_flappy_events10_2019: |-
+        Vytvoř si vlastní Flappy hru!
+
+        Můžeš měnit vzhled, pravidla a dokonce i gravitaci! Až budeš mít hotovo, klikni na tlačítko 'Sdílet' a můžeš poslat hru svým kamarádům do telefonu.
       courseC_flappy_events1_2018: |-
         Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
 
@@ -1170,6 +1182,24 @@ cs-CZ:
         k události `při spuštění`.
       courseC_flappy_events7_2019: Dále zkus změnit pozadí připojením dalšího bloku
         k události `při spuštění`.
+      courseC_flappy_events8: |-
+        Pozadí můžeš nastavit kdykoliv, ne jen na začátku hry.
+
+        Vyzkoušej nastavení **náhodné** scény při jiných událostech jako například, když mineš překážku.
+      courseC_flappy_events8_2018: |-
+        Pozadí můžeš nastavit kdykoliv, ne jen na začátku hry.
+
+        Vyzkoušej nastavení **náhodné** scény při jiných událostech jako například, když mineš překážku.
+      courseC_flappy_events8_2019: |-
+        Pozadí můžeš nastavit kdykoliv, ne jen na začátku hry.
+
+        Vyzkoušej nastavení **náhodné** scény při jiných událostech jako například, když mineš překážku.
+      courseC_flappy_events9: Teď pro změnu, můžeš nastavit body na nulu místo toho,
+        aby hra skončila, když Flappy narazí do překážky.
+      courseC_flappy_events9_2018: Teď pro změnu, můžeš nastavit body na nulu místo
+        toho, aby hra skončila, když Flappy narazí do překážky.
+      courseC_flappy_events9_2019: Teď pro změnu, můžeš nastavit body na nulu místo
+        toho, aby hra skončila, když Flappy narazí do překážky.
       courseC_harvester_loops1: "Cykly se dají použít také na jiné akce než jen pohyb.
         \ \n\nPoužij cyklus na sklizení dýní."
       courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.

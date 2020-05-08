@@ -1602,6 +1602,33 @@ cs-CZ:
         courseC_flappy_events6_a: Připoj blok `mávni` blok k události `při kliknutí`.
       courseC_flappy_events6_2019:
         courseC_flappy_events6_a: Připoj blok `mávni` blok k události `při kliknutí`.
+      courseC_flappy_events7:
+        courseC_flappy_events7_a: Jestli chceš, můžeš nastavit pozadí pomocí bloku
+          `nastav scénu`.
+      courseC_flappy_events7_2018:
+        courseC_flappy_events7_a: Jestli chceš, můžeš nastavit pozadí pomocí bloku
+          `nastav scénu`.
+      courseC_flappy_events7_2019:
+        courseC_flappy_events7_a: Jestli chceš, můžeš nastavit pozadí pomocí bloku
+          `nastav scénu`.
+      courseC_flappy_events8:
+        courseC_flappy_events8_a: K vyřešení úlohy budeš potřebovat připojit blok
+          `nastav scénu` k události `když mine překážku`.
+      courseC_flappy_events8_2018:
+        courseC_flappy_events8_a: K vyřešení úlohy budeš potřebovat připojit blok
+          `nastav scénu` k události `když mine překážku`.
+      courseC_flappy_events8_2019:
+        courseC_flappy_events8_a: K vyřešení úlohy budeš potřebovat připojit blok
+          `nastav scénu` k události `když mine překážku`.
+      courseC_flappy_events9:
+        courseC_flappy_events9_a: K vyřešení úlohy připoj blok `nastav body 0` k události  `když
+          se dotkne překážky`.
+      courseC_flappy_events9_2018:
+        courseC_flappy_events9_a: K vyřešení úlohy připoj blok `nastav body 0` k události  `když
+          se dotkne překážky`.
+      courseC_flappy_events9_2019:
+        courseC_flappy_events9_a: K vyřešení úlohy připoj blok `nastav body 0` k události  `když
+          se dotkne překážky`.
       courseC_harvester_loops1:
         courseC_harvester_loops1_a: Až se dostaneš k dýním, použij <xml><block type="harvester_pumpkin"/></xml>
           na sklizení.
