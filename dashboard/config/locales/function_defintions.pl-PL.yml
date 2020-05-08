@@ -1,0 +1,588 @@
+---
+pl-PL:
+  data:
+    function_defintions:
+      2-3 Artist 11:
+        x:
+          name: x
+      2-3 Artist 12:
+        details:
+          name: szczegóły
+        draw eyebrow:
+          name: narysuj brwi
+        draw pupil:
+          name: narysuj źrenice
+      2-3 Artist 3.4:
+        draw a circle:
+          name: narysuj okrąg
+        draw a car:
+          name: narysuj samochod
+      2-3 Artist 7:
+        draw_rect:
+          name: narysuj trojkat
+      2-3 Artist Debugging 10:
+        draw square:
+          name: narysuj kwadrat
+        jump to controller top left:
+          name: skocz do lewego górnego kontrolera
+        jump to middle:
+          name: skocz do środka
+        draw a circle:
+          name: narysuj okrąg
+        draw a button:
+          name: narysuj przycisk
+        draw cord:
+          name: narysuj kabel
+        draw R pad:
+          name: narysuj pad R
+      2-3 Artist Debugging 5:
+        draw left leg:
+          name: narysuj lewą nogę
+        draw right leg:
+          name: narysuj prawą nogę
+        draw body and arms:
+          name: narysuj ciało i ręce
+        draw a head:
+          name: narysuj głowę
+      2-3 Artist Debugging 6:
+        draw right leg:
+          name: narysuj prawą nogę
+        draw sitting stick figure:
+          name: narysuj siedzącego patyczaka
+        draw arms:
+          name: narysuj ręce
+        jump to neck:
+          name: skocz do szyi
+        draw left leg:
+          name: narysuj lewą nogę
+      2-3 Artist Debugging 7:
+        draw O:
+          name: narysuj O
+        draw D:
+          name: narysuj D
+        draw E:
+          name: narysuj E
+      2-3 Artist Functions 11:
+        draw a hexagon:
+          name: narysuj sześciokąt
+      2-3 Artist Functions 11.5:
+        draw a hexagon:
+          name: narysuj sześciokąt
+      2-3 Artist Functions 12:
+        draw a flower:
+          name: narysuj kwiatka
+      2-3 Artist Functions 2:
+        draw a square:
+          name: narysuj kwadrat
+      2-3 Artist Functions 3:
+        draw a square:
+          name: narysuj kwadrat
+      2-3 Artist Functions 4:
+        draw a square:
+          name: narysuj kwadrat
+      2-3 Artist Functions 9:
+        draw a snowflake:
+          name: narysuj płatek śniegu
+      2-3 Bee Functions 1:
+        get 2 nectar:
+          name: zbierz 2 nektary
+      2-3 Bee Functions 4:
+        move and get nectar:
+          name: idź i zbierz nektar
+      2-3 Bee Functions 8:
+        get 7 nectar make 7 honey:
+          name: zbierz 7 nektarów zrób 7 miodów
+      2-3 Bee Functions 9:
+        get 7 make 7:
+          name: zbierz 7 zrób 7
+      4-5 Artist 3:
+        draw a flower:
+          name: narysuj kwiatka
+      4-5 Artist 6:
+        draw a tree:
+          name: narysuj drzewo
+      4-5 Artist 7:
+        draw a circle:
+          name: narysuj okrąg
+        draw a car:
+          name: narysuj samochod
+      4-5 Bee Conditionals 7:
+        check purple flower:
+          name: sprawdź fioletowy kwiat
+      4-5 Bee Conditionals Assessment 1:
+        get nectar or make honey:
+          name: zbierz nektar lub zrób miód
+      4-5 Bee Debugging 8:
+        get 5 nectar:
+          name: zbierz 5 nektarów
+      Choose Your Own Adventure:
+        story:
+          name: opowieść
+        starting path:
+          name: początkowa droga
+      Course 4 Bee Params 1:
+        get 3 nectar:
+          name: zbierz 3 nektary
+      Course 4 Bee Params 2:
+        get 3 nectar:
+          name: zbierz 3 nektary
+      Course 4 Bee Params 3:
+        get 3 nectar:
+          name: zbierz 3 nektary
+      Course 4 Bee Params 4:
+        get 3 nectar:
+          name: zbierz 3 nektary
+      Course 4 Bee Params 5:
+        get 5 nectar:
+          name: zbierz 5 nektarów
+      Course 4 Bee Params 6:
+        get 5 nectar:
+          name: zbierz 5 nektarów
+      Course 4 Bee Params 8:
+        get nectar make honey:
+          name: zbierz nektar zrób miód
+      Course 4 Play Lab Params 1:
+        jump:
+          name: skocz
+      Course 4 Play Lab Params 2:
+        jump:
+          name: skocz
+      Course 4 Play Lab Params 3:
+        jump:
+          name: skocz
+      Course 4 Play Lab Params 4:
+        do something:
+          name: wykonaj coś
+      Course 4 Play Lab Vars 1:
+        set score:
+          name: ustaw wynik
+      Course 4 Play Lab Vars 2:
+        set score:
+          name: ustaw wynik
+      Course 4 SCF 1:
+        draw a hexagon:
+          name: narysuj sześciokąt
+      Course 4 SCF 1a:
+        get nectar:
+          name: pobierz nektar
+      Course 4 SCF 3:
+        do something:
+          name: wykonaj coś
+      'Course E: Play Lab Project':
+        do something:
+          name: wykonaj coś
+      Find the Wizard:
+        do something:
+          name: wykonaj coś
+      Geometric Sun:
+        diamond:
+          name: diament
+        draw a house:
+          name: narysuj dom
+      Geometric Sun_2018:
+        diamond:
+          name: diament
+        draw a house:
+          name: narysuj dom
+      NEW Course 4 Artist Functions 3:
+        draw a square:
+          name: narysuj kwadrat
+      NEW Course 4 Artist Functions 4:
+        draw a square:
+          name: narysuj kwadrat
+      NEW Course 4 Artist Functions 7:
+        draw a square:
+          name: narysuj kwadrat
+      NEW Course 4 Artist Functions 8:
+        draw a triangle:
+          name: narysuj trójkąt
+      NEW Course 4 Artist Functions 9:
+        draw a square:
+          name: narysuj kwadrat
+        draw a triangle:
+          name: narysuj trójkąt
+      NEW Course 4 Artist Params 1:
+        draw a square:
+          name: narysuj kwadrat
+      NEW Course 4 Artist Params 10:
+        do something:
+          name: wykonaj coś
+        draw a hexagon:
+          name: narysuj sześciokąt
+      NEW Course 4 Artist Params 11:
+        do something:
+          name: wykonaj coś
+      NEW Course 4 Artist Params 15:
+        draw a star:
+          name: narysuj gwiazdę
+        draw a circle:
+          name: narysuj okrąg
+        draw a triangle:
+          name: narysuj trójkąt
+        draw a house:
+          name: narysuj dom
+        draw a square:
+          name: narysuj kwadrat
+      NEW Course 4 Artist Params 2:
+        do something:
+          name: wykonaj coś
+        draw a triangle:
+          name: narysuj trójkąt
+          description: narysuj trójkąt
+      NEW Course 4 Artist Params 3:
+        draw a triangle:
+          name: narysuj trójkąt
+      NEW Course 4 Artist Params 6:
+        draw a triangle:
+          name: narysuj trójkąt
+        draw a hexagon:
+          name: narysuj sześciokąt
+        draw a square:
+          name: narysuj kwadrat
+      NEW Course 4 Artist Params 7:
+        draw a triangle:
+          name: narysuj trójkąt
+      NEW Course 4 Artist Params 9:
+        draw a square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      NEW Course 4 Play Lab Params 11:
+        jump:
+          name: skocz
+      New Artist Project:
+        draw a star:
+          name: narysuj gwiazdę
+        draw a circle:
+          name: narysuj okrąg
+        draw a triangle:
+          name: narysuj trójkąt
+        draw a house:
+          name: narysuj dom
+        draw a square:
+          name: narysuj kwadrat
+      New Play Lab Project:
+        jump:
+          name: skocz
+      Standalone_Artist_7:
+        draw a flower:
+          name: narysuj kwiatka
+      Standalone_Artist_9:
+        my function:
+          name: moja funkcja
+      course3_artist_functions_challenge1:
+        do something:
+          name: wykonaj coś
+      course3_artist_functions_challenge2:
+        do something:
+          name: wykonaj coś
+      course3_bee_functions_challenge1:
+        do something:
+          name: wykonaj coś
+      course3_bee_functions_challenge2:
+        do something:
+          name: wykonaj coś
+      course3_bee_functions_challenge3:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      course3_bee_functions_challenge4:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      course4_artist_functions_challenge2:
+        do something:
+          name: wykonaj coś
+      course4_artist_fwp_challenge1:
+        do something:
+          name: wykonaj coś
+      courseC_data wizard:
+        do something:
+          name: wykonaj coś
+      courseE_artist_concept1:
+        do something:
+          name: wykonaj coś
+        draw a hexagon:
+          name: narysuj sześciokąt
+      courseE_artist_concept1_2018:
+        draw a hexagon:
+          name: narysuj sześciokąt
+      courseE_artist_concept4:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_concept4_2018:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_concept_challenge1:
+        do something:
+          name: wykonaj coś
+      courseE_artist_concept_challenge1_2018:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions10:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions10_2018:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions10_2019:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions2:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions2_2018:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions2_2019:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions2_copy:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions3_2018:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions3_2019:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions4:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions4_copy:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions5:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions5_2018:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions5_2019:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions5_copy:
+        draw a star:
+          name: narysuj gwiazdę
+      courseE_artist_functions7:
+        draw a house:
+          name: narysuj dom
+      courseE_artist_functions7_2018:
+        draw a house:
+          name: narysuj dom
+      courseE_artist_functions8:
+        do something:
+          name: wykonaj coś
+        draw square:
+          name: narysuj kwadrat
+      courseE_artist_functions8_2018:
+        do something:
+          name: wykonaj coś
+        draw square:
+          name: narysuj kwadrat
+      courseE_artist_functions8_2019:
+        do something:
+          name: wykonaj coś
+        draw square:
+          name: narysuj kwadrat
+      courseE_artist_functions8a_2018:
+        draw a square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions8a_2019:
+        draw a square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions8b_2018:
+        draw square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions8b_2019:
+        draw square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions8c_2018:
+        draw square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions8c_2019:
+        draw square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions9:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions9_2018:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions9_2019:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functionsProj_2018:
+        draw square:
+          name: narysuj kwadrat
+      courseE_artist_functionsProj_2019:
+        draw square:
+          name: narysuj kwadrat
+      courseE_artist_functions_challenge1:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_challenge1_2018:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_challenge1_2019:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_challenge2:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_challenge2_2018:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_challenge2_2019:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_predict1:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions_predict1_2018:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions_predict1_2019:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions_predict1_copy:
+        draw a square:
+          name: narysuj kwadrat
+      courseE_artist_functions_predict2:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_predict2_2018:
+        do something:
+          name: wykonaj coś
+      courseE_artist_functions_predict2_2019:
+        do something:
+          name: wykonaj coś
+      courseE_bee_functions1:
+        do something:
+          name: wykonaj coś
+      courseE_bee_functions2:
+        get 2 nectar:
+          name: zbierz 2 nektary
+      courseE_bee_functions4:
+        move and get nectar:
+          name: idź i zbierz nektar
+      courseE_bee_functions6:
+        get 7 nectar make 7 honey:
+          name: zbierz 7 nektarów zrób 7 miodów
+      courseE_bee_functions7:
+        get 7 make 7:
+          name: zbierz 7 zrób 7
+      courseE_bee_functions_challenge1:
+        do something:
+          name: wykonaj coś
+      courseE_bee_functions_challenge2:
+        do something:
+          name: wykonaj coś
+      courseE_farmer_concept1:
+        do something:
+          name: wykonaj coś
+      courseE_farmer_concept2:
+        do something:
+          name: wykonaj coś
+      courseE_farmer_concept3:
+        do something:
+          name: wykonaj coś
+      courseE_playLab_scaffold1:
+        do something:
+          name: wykonaj coś
+      courseE_playLab_scaffold2:
+        do something:
+          name: wykonaj coś
+      courseE_playLab_scaffold3:
+        do something:
+          name: wykonaj coś
+      courseE_playLab_scaffold4:
+        do something:
+          name: wykonaj coś
+      courseF_artist_fwp1:
+        draw a square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseF_artist_fwp2:
+        draw a square:
+          name: narysuj kwadrat
+        do something:
+          name: wykonaj coś
+      courseF_artist_fwp2_predict1:
+        draw a square:
+          name: narysuj kwadrat
+      courseF_artist_fwp3:
+        draw a square:
+          name: narysuj kwadrat
+      courseF_artist_fwp9:
+        draw a star:
+          name: narysuj gwiazdę
+        draw a circle:
+          name: narysuj okrąg
+        draw a triangle:
+          name: narysuj trójkąt
+        draw a house:
+          name: narysuj dom
+        draw a square:
+          name: narysuj kwadrat
+      courseF_artist_fwp_challenge1:
+        do something:
+          name: wykonaj coś
+      courseF_artist_fwp_challenge2:
+        do something:
+          name: wykonaj coś
+      courseF_bee_conditionals2:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      courseF_bee_functions3a:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      courseF_bee_functions4:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      courseF_bee_functions5a:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      courseF_bee_functions6:
+        get nectar make honey:
+          name: zbierz nektar zrób miód
+      courseF_bee_functions7:
+        get nectar make honey:
+          name: zbierz nektar zrób miód
+      courseF_bee_functions8a:
+        do something:
+          name: wykonaj coś
+        get nectar make honey:
+          name: zbierz nektar zrób miód
+      courseF_bee_functionsPre7:
+        get nectar make honey:
+          name: zbierz nektar zrób miód
+      courseF_bee_functions_challenge1:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      courseF_bee_functions_challenge2:
+        check nectar or honey:
+          name: sprawdź nektar czy miód
+      courseF_bee_variables_7_2018:
+        collect:
+          name: zbierz
+      courseF_bee_variables_7_2019:
+        collect:
+          name: zbierz
+      courseF_bee_variables_8_2018:
+        collect:
+          name: zbierz
+      courseF_bee_variables_8_2019:
+        collect:
+          name: zbierz
