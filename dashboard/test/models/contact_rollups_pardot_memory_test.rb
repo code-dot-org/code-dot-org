@@ -68,14 +68,16 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     pardot_memory_records = [
       {email: 'alpha', pardot_id: nil},
-      {email: 'beta', pardot_id: 1}
+      {email: 'beta', pardot_id: 1},
+      {email: 'omega', pardot_id: nil, data_rejected_reason: PardotHelpers::PROSPECT_DELETED_FROM_PARDOT}
     ]
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
     processed_contact_records = [
       {email: 'alpha'},
       {email: 'beta'},
-      {email: 'gamma'}
+      {email: 'gamma'},
+      {email: 'omega'}
     ]
     processed_contact_records.each {|record| create :contact_rollups_processed, record}
 
@@ -128,13 +130,21 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         data_synced_at: base_time + 1.day,
         data_synced: {db_Opt_In: 'Yes'}
       },
+      {
+        email: 'omega',
+        pardot_id: 5,
+        pardot_id_updated_at: base_time + 2.days,
+        data_synced_at: base_time + 1.day,
+        data_synced: {db_Opt_In: 'Yes'},
+        data_rejected_reason: PardotHelpers::PROSPECT_DELETED_FROM_PARDOT
+      },
       # dummy records
       {email: 'delta', pardot_id: nil},
       {email: 'epsilon', pardot_id: 4},
     ]
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
-    # 3 cases that require updating contacts
+    # 3 cases that require updating contacts, and one that doesn't (deleted prospect)
     processed_contact_records = [
       # Case 1: data_synced_at is null
       {email: 'alpha', data: {opt_in: 0}, data_updated_at: base_time},
@@ -142,6 +152,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'beta', data: {opt_in: 0}, data_updated_at: base_time},
       # Case 3: pardot_id_updated_at > data_synced_at
       {email: 'gamma', data: {opt_in: 1}, data_updated_at: base_time},
+      # Case 4 (should be ignored): prospect has been deleted from Pardot
+      {email: 'omega', data: {opt_in: 1}, data_updated_at: base_time},
       # dummy records
       {email: 'delta'},
       {email: 'zeta'},

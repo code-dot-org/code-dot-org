@@ -95,6 +95,27 @@ class ContactRollupsPardotMemory < ApplicationRecord
     end
   end
 
+  def self.download_deleted_pardot_prospects(last_id = 0, limit = nil)
+    PardotV2.retrieve_prospects(last_id, %w(id email), limit, true) do |deleted_prospects|
+      current_time = Time.now.utc
+      batch = deleted_prospects.map do |item|
+        {
+          email: item['email'],
+          pardot_id: item['id'].to_i,
+          pardot_id_updated_at: current_time,
+          data_synced: {},
+          data_synced_at: current_time,
+          data_rejected_at: current_time,
+          data_rejected_reason: PardotHelpers::PROSPECT_DELETED_FROM_PARDOT
+        }
+      end
+
+      import! batch,
+        validate: false,
+        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at, :data_rejected_at, :data_rejected_reason]
+    end
+  end
+
   def self.create_new_pardot_prospects
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
@@ -138,7 +159,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
   def self.query_new_contacts
     # New contacts are the ones exist in the production database but not in Pardot
     # (i.e., no valid Pardot IDs in contact_rollups_pardot_memory.)
-    # In addition, they must not be previously rejected by Pardot as invalid emails.
+    # In addition, they must not be previously rejected by Pardot as invalid emails
+    # or have been deleted by someone in Pardot.
     <<-SQL.squish
       SELECT processed.email, processed.data
       FROM contact_rollups_processed AS processed
@@ -146,6 +168,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
         ON processed.email = pardot.email
       WHERE pardot.pardot_id IS NULL
         AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_INVALID_EMAIL}')
+        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::PROSPECT_DELETED_FROM_PARDOT}')
     SQL
   end
 
@@ -153,6 +176,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # Updated contacts are contacts that exist in both the production database and Pardot
     # (have valid Pardot IDs). However, their content or Pardot ID mappings have changed since the
     # last sync.
+    # We explicitly exclude contacts that have been deleted from Pardot,
+    # as attemping to update a prospect that has been deleted from Pardot
+    # will resuscitate it as an active prospect.
     <<-SQL.squish
       SELECT
         processed.email, processed.data,
@@ -167,6 +193,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
           OR (processed.data->>'$.updated_at' > pardot.data_synced_at)
           OR (pardot.pardot_id_updated_at > pardot.data_synced_at)
         )
+        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::PROSPECT_DELETED_FROM_PARDOT}')
     SQL
   end
 
