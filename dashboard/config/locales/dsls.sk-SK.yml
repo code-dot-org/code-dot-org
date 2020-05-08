@@ -610,43 +610,55 @@ sk-SK:
         - {}
       CSD U3 - conditionals - Matching:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.x &lt; cat.x
+        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
+            „mačka“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
+            „mačka“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.x &lt; cat.x
+        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
+            „mačka“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
+            „mačka“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.x &lt; cat.x
+        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
+            „mačka“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
+            „mačka“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 AnimationsMulti STOP project guide:
         markdown: |
           # Zastav sa
@@ -664,30 +676,57 @@ sk-SK:
           Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
       CSD U3 Boolean MC:
         answers:
-        - correct: true
+        - text: "true  \nfalse  \ntrue"
+          correct: true
         - {}
-        - {}
-        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          Rozhodovanie v programovaní je založené na výrokoch, ktoré sa nazývajú **logické výrazy**. Ide o **výrazy, krorých jediným výsledkom môže byť vyhodnotenie `TRUE` (PRAVDA) alebo `FALSE` (NEPRAVDA)**. Toto môže byť užitočné napríklad pri porovnaní vlastností dvoch „sprite“ objektov. Môžeš napríklad porovnať, ktorý z nich je väčší alebo vyššie položený. V nasledujúcich príkladoch použijeme jednoduché logické výrazy na porovnanie vlastností „sprite“ objektov.
+
+          # Zamysli sa
+
+          Prečítaj si kód dole. Obsahuje niekoľko nových symbolov, ktoré ešte nepoznáš. Porozmýšľaj, čo môžu znamenať a pokús sa zodpovedať nasledovnú otázku:
         questions:
-        - {}
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Boolean MC_2018:
         answers:
-        - correct: true
+        - text: "true  \nfalse  \ntrue"
+          correct: true
         - {}
-        - {}
-        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          Rozhodovanie v programovaní je založené na výrokoch, ktoré sa nazývajú **logické výrazy**. Ide o **výrazy, krorých jediným výsledkom môže byť vyhodnotenie `TRUE` (PRAVDA) alebo `FALSE` (NEPRAVDA)**. Toto môže byť užitočné napríklad pri porovnaní vlastností dvoch „sprite“ objektov. Môžeš napríklad porovnať, ktorý z nich je väčší alebo vyššie položený. V nasledujúcich príkladoch použijeme jednoduché logické výrazy na porovnanie vlastností „sprite“ objektov.
+
+          # Zamysli sa
+
+          Prečítaj si kód dole. Obsahuje niekoľko nových symbolov, ktoré ešte nepoznáš. Porozmýšľaj, čo môžu znamenať a pokús sa zodpovedať nasledovnú otázku:
         questions:
-        - {}
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - correct: true
+        - text: "true  \nfalse  \ntrue"
+          correct: true
         - {}
-        - {}
-        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          Rozhodovanie v programovaní je založené na výrokoch, ktoré sa nazývajú **logické výrazy**. Ide o **výrazy, krorých jediným výsledkom môže byť vyhodnotenie `TRUE` (PRAVDA) alebo `FALSE` (NEPRAVDA)**. Toto môže byť užitočné napríklad pri porovnaní vlastností dvoch „sprite“ objektov. Môžeš napríklad porovnať, ktorý z nich je väčší alebo vyššie položený. V nasledujúcich príkladoch použijeme jednoduché logické výrazy na porovnanie vlastností „sprite“ objektov.
+
+          # Zamysli sa
+
+          Prečítaj si kód dole. Obsahuje niekoľko nových symbolov, ktoré ešte nepoznáš. Porozmýšľaj, čo môžu znamenať a pokús sa zodpovedať nasledovnú otázku:
         questions:
-        - {}
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Card Examples_2018:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
@@ -756,6 +795,38 @@ sk-SK:
         - {}
         - {}
         - {}
+      CSD U3 Lesson Overview 10:
+        markdown: |-
+          # Prehľad
+
+          V tejto lekcii si vysvetlíme logické výrazy a taktiež podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie logických (pravda/nepravda) výrokov s použitím osobných vlastností (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to, ako sa dajú spolu s podmienkami použiť pri programovaní.
+          ## Slovník
+
+          * **Logický výraz** - hodnota, ktorá buď platí alebo neplatí.
+          * **Podmienky** - výroky, ktoré platia len za splnení určitých podmienok.
+          * **Výraz** - akákoľvek časť kódu, ktorej výsledkom je hodnota.
+
+
+          ## Zdroje
+
+          * [Pracovný zošit](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
+      CSD U3 Lesson Overview 11:
+        markdown: "# Prehľad\n\nV tejto lekcii budeš používať logické výrazy na porovnanie
+          aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou hodnotou. Toto
+          porovnanie použijeme na určenie toho, či „sprite“ dosiahol určený bod na
+          obrazovke, narástol do definovanej veľkosti alebo dosiahol inú hodnotu pri
+          použití kódu na počítanie. Po tejto aktvite začneme používať podmienkové
+          výroky, ktoré využívajú logické výrazy.\n## Slovník\n\n* **Logický výraz**
+          - v programovaní ide o výraz, ktorý hodnotí, či ide o pravdu alebo nepravdu.
+          \n* **Podmienkový výrok („If“ výrok)** - bežný programovací nástroj, ktorý
+          definuje podmienky.\n\n## Nový kód\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/)
+          – „if“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
+          – znamienko „menší ako“\n* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)
+          – znamienko „nerovná sa“\n* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
+          – znamienko „menší alebo rovný ako“\n* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)
+          – znamienko „väčší ako“\n* [Equality operator](//studio.code.org/docs/gamelab/equalityOperator/)
+          – znamienko „rovná sa“\n* [Greater than or equal operator](//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)
+          – znamienko „väčší alebo rovný ako“"
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}

@@ -353,6 +353,16 @@ sk-SK:
         **Ako:** V móde kódu pridaj nový blok `onEvent()` do svojho programu pre tvoje tlačidlo Doprava! "Right!". Ďalej pridaj blok `setScreen()` do jeho vnútra, ktorý prepne obrazovku na pravú obrazovku `"rightScreen"`.
 
         **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD U3 - conditionals - first conditional: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
+        PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
+        výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
+        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
+        autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
+        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
+        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        (alebo „Víťaz“)."
       CSD U3 - conditionals - first conditional 2_2018: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
         style=\"width:200px;float:right\">\n\n# Viditeľnosť\n\nNiekedy sa hodí obrázok
         na chvíľu skryť a potom ho zas zobraziť. Toto sa dá urobiť pomocou nastavenia
@@ -383,6 +393,56 @@ sk-SK:
         dva výroky.\n    -   Jeden, ktorý nastaví `visible` pre neprasknutý balón
         - ten by sa mal skryť, keď dosiahne okraj plochy.\n    -   Druhý, ktorý zobrazí
         prasknutie balóna."
+      CSD U3 - conditionals - first conditional_2018: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
+        PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
+        výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
+        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
+        autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
+        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
+        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        (alebo „Víťaz“)."
+      CSD U3 - conditionals - first conditional_2019: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
+        PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
+        výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
+        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
+        autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
+        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
+        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        (alebo „Víťaz“)."
+      CSD U3 - conditionals - transition: "# Logické výrazy\n\nV predchádzajúcich
+        lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
+        daný výrok pravdivý alebo nepravdivý. Poďme sa teraz na to pozrieť z pohľadu
+        animácie. \n\n# Urob toto\n\nProgram nakreslí pretekárske auto a cieľovú čiaru.
+        Skús uhádnuť, kedy ju pretkárske auto prejde. Všekty „sprite“ objekty už pre
+        teba boli nastavené..\n\n-   Pridaj `console.log` prvok do cyklu kreslenia.
+        ( [Ukáž mi kde](#triggercallout=callout) )\n-   Do `console.log` pridaj logický
+        výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
+        x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
+        sa výstup zmení? A prečo?"
+      CSD U3 - conditionals - transition_2018: "# Logické výrazy\n\nV predchádzajúcich
+        lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
+        daný výrok pravdivý alebo nepravdivý. Poďme sa teraz na to pozrieť z pohľadu
+        animácie. \n\n# Urob toto\n\nProgram nakreslí pretekárske auto a cieľovú čiaru.
+        Skús uhádnuť, kedy ju pretkárske auto prejde. Všekty „sprite“ objekty už pre
+        teba boli nastavené..\n\n-   Pridaj `console.log` prvok do cyklu kreslenia.
+        ( [Ukáž mi kde](#triggercallout=callout) )\n-   Do `console.log` pridaj logický
+        výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
+        x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
+        sa výstup zmení? A prečo?"
+      CSD U3 - conditionals - transition_2019: "# Logické výrazy\n\nV predchádzajúcich
+        lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
+        daný výrok pravdivý alebo nepravdivý. Poďme sa teraz na to pozrieť z pohľadu
+        animácie. \n\n# Urob toto\n\nProgram nakreslí pretekárske auto a cieľovú čiaru.
+        Skús uhádnuť, kedy ju pretkárske auto prejde. Všekty „sprite“ objekty už pre
+        teba boli nastavené..\n\n-   Pridaj `console.log` prvok do cyklu kreslenia.
+        ( [Ukáž mi kde](#triggercallout=callout) )\n-   Do `console.log` pridaj logický
+        výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
+        x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
+        sa výstup zmení? A prečo?"
       CSD U3 AnimationsMulti defender move up down_2018: |-
         # Pohyb hore a dole
 
@@ -414,26 +474,26 @@ sk-SK:
       CSD U3 Boolean Modify_2018: |-
         # Logické výrazy
 
-        Najjednoduchšie logické výrazy sú tie, na ktoré sa dá odpovedať pravda alebo nepravda. Tieto výrazy sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.
+        Najjednoduchšie logické výrazy sú tie, na ktoré sa dá odpovedať pravda `true` alebo nepravda `false`. Tieto výrazy sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.
 
-        |                                               Porovnávacie zmamienko                                              | Logický výraz         | Význam              |
-        | :---------------------------------------------------------------------------------------------------------------: | --------------------- | ------------------- |
-        |                                                 :----------------:                                                | :-------------------: |                     |
-        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> | `1 < 9`               | Je 1 menšie ako 9?  |
-        |                                                                                                                   | `1 > 9`               | Je 1 väčšie ako 9 ? |
-        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> | `1 == 9`              | Je 1 rovné 9?       |
+        |                                               Porovnávacie zmamienko                                              | Logický výraz         | Význam            |
+        | :---------------------------------------------------------------------------------------------------------------: | --------------------- | ----------------- |
+        |                                                 :----------------:                                                | :-------------------: |                   |
+        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> | `1 < 9`               | Je 1 menej ako 9? |
+        |                                                                                                                   | `1 > 9`               | Je 1 viac ako 9?  |
+        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> | `1 == 9`              | Je 1 rovné 9?     |
 
-        **Poznámka:** Ak by si uvidel/a výrok 3 \< 2 na matematike, mohol/mohla by si si myslieť, že niekde nastala chyba. Ale toto nie je hodina matematiky. V informatike sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať `true` (pravda) alebo `false` (nepravda). V našom prípade tento výraz čítaj ako otázku: **„Je 3 menšie ako 2?"** Odpoveď znie nie, čiže `false`.
+        **Poznámka:** Ak uvidíš výrok 3 \< 2 na matematike, môžeš si myslieť, že je niečo nesprávne. Ale toto nie je hodina matematiky. V informatike sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať `true` (pravda) alebo `false` (nepravda). V našom prípade tento výraz čítaj ako otázku: **„Je 3 menšie ako 2?"** Odpoveď znie „nie", teda `false` (nepravda).
 
-        Iná možnosť, ako prečítať tento logickývýraz je, že `3 < 2` **sa rovná** `false`.
+        Iná možnosť, ako prečítať tento logický výraz je, že `3 < 2` **sa rovná** `false` (nepravda).
 
         # Urob toto
 
-        Vedel/a by si upraviť hodnoty "sprite" atribútov tak, aby bol každý logický výraz `true`?
+        Vieš si upraviť hodnoty „sprite" atribútov tak, aby sa každý logický výraz rovnal `true` (pravda)?
 
         -   Prejdi si celý program a zisti, ako sú `sprite1` a `sprite2` vytvorené a ktoré ich vlastnosti sú porovnávané.
         -   Pre každý z logických výrazov urči vlastnosti, ktoré sú poronávané.
-        -   Zmeň kód _iba v prvých **11-tich** riadkoch_ tak, aby každý výraz v `console.log()` vrátil odpoveď `true`.
+        -   Zmeň kód len v prvých **11-tich** riadkoch tak, aby každý výraz v `console.log()` vrátil `true`.
       CSD U3 Compound Nested Challenge_2018: |-
         # Výzva: Kontrola viacerých podmienok
 
@@ -475,41 +535,41 @@ sk-SK:
       CSD U3 Conditionals Apple 2_2018: |-
         # Meniace sa ovocie
 
-        Teraz keď poznáme _podmienkové_ výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+        Teraz keď poznáme podmienkové výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
 
         # Urob toto
 
         Použi podmienku v cykle kreslenia, ktorá overí, že `fruit.scale` je väčšie ako 2. Ak je to tak, zmeň animáciu ovocia na "hruška".
 
-        _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
+        **Výzva**: Vieš program nastaviť tak, aby ovocie prestalo rásť, keď sa z neho stane hruška?
       CSD U3 Conditionals Apple 2_2018_2019: |-
         # Meniace sa ovocie
 
-        Teraz keď poznáme _podmienkové_ výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+        Teraz keď poznáme podmienkové výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
 
         # Urob toto
 
         Použi podmienku v cykle kreslenia, ktorá overí, že `fruit.scale` je väčšie ako 2. Ak je to tak, zmeň animáciu ovocia na "hruška".
 
-        _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
+        **Výzva**: Vieš program nastaviť tak, aby ovocie prestalo rásť, keď sa z neho stane hruška?
       CSD U3 Conditionals Apple_2018: |-
         # Ďalšie precvičenie logických výrazov
 
-        Poďme použiť ešte jeden logický výraz na kontrolu podmienok "sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
+        Poďme použiť ešte jeden logický výraz na kontrolu podmienok „sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
 
         # Urob toto
 
         -   Pridaj `console.log` výrok
-        -   Do `console.log` pridaj logický výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+        -   Do `console.log` pridaj logický výraz, ktorý overí, či `fruit.scale` je väčšie ako 2.
       CSD U3 Conditionals Apple_2018_2019: |-
         # Ďalšie precvičenie logických výrazov
 
-        Poďme použiť ešte jeden logický výraz na kontrolu podmienok "sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
+        Poďme použiť ešte jeden logický výraz na kontrolu podmienok „sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
 
         # Urob toto
 
         -   Pridaj `console.log` výrok
-        -   Do `console.log` pridaj logický výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+        -   Do `console.log` pridaj logický výraz, ktorý overí, či `fruit.scale` je väčšie ako 2.
       CSD U3 Diagonal Movement_2018: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
 

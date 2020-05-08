@@ -321,7 +321,7 @@ sk:
             'Play Lab: Defining Variables (Big Game)':
               name: Veľká hra - premenné
             'Unplugged: Booleans':
-              name: Bez počítača - booleovské výrazy a logika
+              name: Bez počítača - logické výrazy
             'Unplugged: Collision Detection and the Distance Formula':
               name: 'Bez počítača: vyhľadávanie rozporov a pytagorova veta'
             'Unplugged: Conditionals and Piecewise Functions':
@@ -799,6 +799,8 @@ sk:
               name: Štúdio
             Web Lab:
               name: Web Lab
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           stages:
             Booleans:
@@ -1102,6 +1104,8 @@ sk:
         AlgebraB:
           title: 'Informatika v Algebre: Kurz B'
           stages:
+            'Unplugged: Booleans':
+              name: Logické výrazy – lekcia bez počítača
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Bez počítača: podmienky a čiastkové funkcie'
             'Unplugged: Video Games and Coordinate Planes':
@@ -1219,6 +1223,8 @@ sk:
               display_name: Anketa
         CSDU3-Draft:
           stages:
+            Sprites and Properties:
+              name: „Sprites" a vlastnosti
             Functions:
               name: Funkcie
             Velocity:
@@ -1480,6 +1486,8 @@ sk:
           stages:
             Drawing in Game Lab:
               name: Kreslenie v Game Labe
+            Sprites and Properties:
+              name: „Sprites" a vlastnosti
             Velocity:
               name: Rýchlosť
             Functions:
@@ -1487,9 +1495,23 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
             Conditionals:
               name: Podmienky
+              description_student: V tejto lekcii budeš používať logické výrazy na
+                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
+                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
+                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
+                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
+                používať podmienkové výroky, ktoré využívajú logické výrazy.
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
+              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
+                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
+                logických (pravda/nepravda) výrokov s použitím osobných vlastností
+                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
+                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
+                ako sa dajú spolu s podmienkami použiť pri programovaní.
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -2025,7 +2047,7 @@ sk:
             Introduction:
               name: Úvod
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2074,7 +2096,7 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
             Conditionals:
               name: Podmienky
             Velocity:
@@ -2091,6 +2113,8 @@ sk:
               display_name: Hodnotenie kurzu
         csd3-old:
           stages:
+            Sprites and Properties:
+              name: „Sprites" a vlastnosti
             Velocity:
               name: Rýchlosť
             Functions:
@@ -2110,7 +2134,7 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
             Conditionals:
               name: Podmienky
             Velocity:
@@ -3472,7 +3496,9 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
             Conditionals:
               name: Podmienky
             Velocity:
@@ -3491,9 +3517,23 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
+              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
+                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
+                logických (pravda/nepravda) výrokov s použitím osobných vlastností
+                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
+                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
+                ako sa dajú spolu s podmienkami použiť pri programovaní.
             Conditionals:
               name: Podmienky
+              description_student: V tejto lekcii budeš používať logické výrazy na
+                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
+                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
+                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
+                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
+                používať podmienkové výroky, ktoré využívajú logické výrazy.
             Velocity:
               name: Rýchlosť
             Functions:
@@ -4799,7 +4839,7 @@ sk:
             csf_internet:
               display_name: Internet
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             csf_digcit:
               display_name: Digitálne občianstvo
             end_of_course_project:
@@ -5088,7 +5128,7 @@ sk:
             ramp_up:
               display_name: Príprava
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_impacts:
@@ -5222,7 +5262,7 @@ sk:
             csf_for_loops:
               display_name: Cykly "For"
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -5586,9 +5626,23 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
+              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
+                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
+                logických (pravda/nepravda) výrokov s použitím osobných vlastností
+                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
+                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
+                ako sa dajú spolu s podmienkami použiť pri programovaní.
             Conditionals:
               name: Podmienky
+              description_student: V tejto lekcii budeš používať logické výrazy na
+                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
+                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
+                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
+                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
+                používať podmienkové výroky, ktoré využívajú logické výrazy.
             Velocity:
               name: Rýchlosť
             Functions:
@@ -5804,7 +5858,7 @@ sk:
             ramp_up:
               display_name: Príprava
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             time4cs_c1:
               display_name: Everglades a jeho ekosystémy
             time4cs_c2:
@@ -5990,9 +6044,23 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
+              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
+                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
+                logických (pravda/nepravda) výrokov s použitím osobných vlastností
+                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
+                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
+                ako sa dajú spolu s podmienkami použiť pri programovaní.
             Conditionals:
               name: Podmienky
+              description_student: V tejto lekcii budeš používať logické výrazy na
+                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
+                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
+                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
+                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
+                používať podmienkové výroky, ktoré využívajú logické výrazy.
             Velocity:
               name: Rýchlosť
             Functions:
@@ -6151,6 +6219,8 @@ sk:
               name: Funkcie
             'Diving Deeper: Courses E and F':
               name: 'Ponárame sa hlbšie: Kurzy E a F'
+            Sprite Lab:
+              name: Sprite Lab
             Variables:
               name: Premenné
             For Loops:
@@ -6277,7 +6347,7 @@ sk:
             csf_events:
               display_name: Udalosti
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_impacts:
@@ -6308,7 +6378,7 @@ sk:
             csf_events:
               display_name: Udalosti
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_impacts:
@@ -6418,6 +6488,14 @@ sk:
               name: Premenné
             Sprite Properties:
               name: Vlastnosti postáv
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
+              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
+                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
+                logických (pravda/nepravda) výrokov s použitím osobných vlastností
+                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
+                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
+                ako sa dajú spolu s podmienkami použiť pri programovaní.
             Conditionals:
               name: Podmienky
             Velocity:
@@ -6787,7 +6865,7 @@ sk:
             ramp_up:
               display_name: Príprava
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_nested_loops:
@@ -6875,7 +6953,7 @@ sk:
             csf_for_loops:
               display_name: Cykly "For"
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
             end_of_course_project:
               display_name: Záverečný projekt
         express-2020:
@@ -6937,7 +7015,7 @@ sk:
             csf_for_loops:
               display_name: Cykly "For"
             csf_sprites:
-              display_name: Sprites
+              display_name: Objekt Sprite
         pre-express-2020:
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
@@ -6986,9 +7064,23 @@ sk:
             Variables:
               name: Premenné
             Sprites:
-              name: Sprites
+              name: Objekt Sprite
+            Booleans Unplugged:
+              name: Logické výrazy – lekcia bez počítača
+              description_student: V tejto lekcii si vysvetlíme logické výrazy a taktiež
+                podmienky. Najskôr si v triede zahráte jednoduchú hru na vysvetlenie
+                logických (pravda/nepravda) výrokov s použitím osobných vlastností
+                (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
+                pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
+                ako sa dajú spolu s podmienkami použiť pri programovaní.
             Conditionals:
               name: Podmienky
+              description_student: V tejto lekcii budeš používať logické výrazy na
+                porovnanie aktuálnej hodnoty atribútu „sprite“ objektu s jej cieľovou
+                hodnotou. Toto porovnanie použijeme na určenie toho, či „sprite“ dosiahol
+                určený bod na obrazovke, narástol do definovanej veľkosti alebo dosiahol
+                inú hodnotu pri použití kódu na počítanie. Po tejto aktvite začneme
+                používať podmienkové výroky, ktoré využívajú logické výrazy.
             Velocity:
               name: Rýchlosť
             Functions:
