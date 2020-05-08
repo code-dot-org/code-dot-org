@@ -4,6 +4,7 @@ module PardotHelpers
   STATUS_OK = 'ok'.freeze
   ERROR_INVALID_EMAIL = 'Invalid prospect email address'
   ERROR_INVALID_API_KEY = 'Invalid API key or user key'
+  PROSPECT_DELETED_FROM_PARDOT = 'Prospect deleted from Pardot'
 
   class InvalidApiKeyException < RuntimeError
   end
@@ -66,8 +67,8 @@ module PardotHelpers
 
   # Make an API request. This method may raise exceptions.
   #
-  # @param url [String] URL to post to - must already include Pardot auth params
-  # @param params [Hash] hash of POST params (may be empty hash)
+  # @param url [String] URL to post to
+  # @param params [Hash] hash of POST params (may be empty hash or contain API and user keys)
   # @return [Nokogiri::XML, nil] XML response from Pardot
   def post_request(url, params)
     uri = URI(url)
