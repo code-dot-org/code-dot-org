@@ -18,7 +18,8 @@
 class Pd::RegionalPartnerMiniContact < ApplicationRecord
   include Pd::Form
 
-  UNMATCHED_FORM_EMAIL = 'support@code.org'
+  # Most unmatched contacts are from an international source
+  UNMATCHED_FORM_EMAIL = 'international@code.org'
 
   belongs_to :user
   belongs_to :regional_partner
