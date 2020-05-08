@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -91,7 +90,7 @@ class InlineAudio extends React.Component {
     src: PropTypes.string,
     message: PropTypes.string,
     style: PropTypes.object,
-    section: sectionDataPropType,
+    autoplayEnabled: PropTypes.bool,
 
     // Provided by redux
     // To Log TTS usage
@@ -111,11 +110,7 @@ class InlineAudio extends React.Component {
 
   componentDidMount() {
     this.getAudioElement();
-    if (
-      this.props.section &&
-      this.props.section.autoplayEnabled &&
-      !this.state.autoplayed
-    ) {
+    if (this.props.autoplayEnabled && !this.state.autoplayed) {
       this.setState({autoplayed: true});
       this.playAudio();
     }
@@ -297,6 +292,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    section: state.sectionData.section
+    section: state.sectionData.section.autoplayEnabled
   };
 })(StatelessInlineAudio);
