@@ -1007,28 +1007,6 @@ vi:
       name: Bị từ chối
     escalated:
       name: Đã tăng cấp
-  flex_category:
-    required: Tổng quan
-    content: Nội dung
-    csf_digcit: Dân kỹ thuật số
-    csf_jigsaw: Ghép hình
-    csf_sequencing: Chuỗi tuần tự
-    csf_loops: Vòng lặp
-    csf_events: Các sự kiện
-    csf_binary: Nhị phân
-    csf_conditionals: Điều kiện
-    csf_nested_loops: Vòng lặp lồng nhau
-    csf_functions: Các hàm
-    csf_variables: Các biến
-    csf_for_loops: Cho vòng lặp
-    csf_internet: Kết nối mạng
-    csp_variables: Các biến
-    csp_conditionals: Điều kiện
-    csp_functions: Các hàm
-    csp_lists: Danh sách
-    csp_loops: Vòng lặp
-    k5_getting_started: Bắt đầu
-    k5_next_steps: Bước tiếp theo
   external_links:
     disclaimer: Miễn trừ trách nhiệm
   hoc_download:
