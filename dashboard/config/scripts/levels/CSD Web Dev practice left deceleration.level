@@ -67,9 +67,6 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -87,12 +84,13 @@
     "display_name": "Decelerating Bike",
     "bubble_choice_description": "Avoid the bunny by making the bike decelerate and move left",
     "libraries_enabled": "false",
+    "thumbnail_url": "https://images.code.org/bf1b6c44d38177206b3d12125325d2af-image-1587667804486.png",
     "preload_asset_list": null,
-    "thumbnail_url": "https://images.code.org/bf1b6c44d38177206b3d12125325d2af-image-1587667804486.png"
+    "encrypted_examples": "8fmGJR1B8p2p1708x2u+EJPXuqIc8drdhrzBs/t26yfdyRdAZ/zJDkkmOYtu\nGn7POnyxmLZ9AWRFpbs8619L/Q==\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-11 17:51:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-11 17:58:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-03-05 18:36:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:05:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-23 18:43:18 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-23 18:50:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-11 17:51:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-11 17:58:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-03-05 18:36:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:05:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-23 18:43:18 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-23 18:50:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-07 19:44:49 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
