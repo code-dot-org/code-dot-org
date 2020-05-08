@@ -1,5 +1,7 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 
+export const ACCEL_EVENT_ID = 27;
+
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(SerialPort) {
     super(SerialPort);
