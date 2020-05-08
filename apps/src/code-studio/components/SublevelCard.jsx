@@ -10,7 +10,7 @@ import queryString from 'query-string';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
-const LESSON_EXTRAS_WIDTH = 400;
+const LESSON_EXTRAS_WIDTH = 435;
 const BUBBLE_CHOICE_WIDTH = 600;
 
 const styles = {
