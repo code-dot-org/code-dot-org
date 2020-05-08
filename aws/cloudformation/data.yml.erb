@@ -24,9 +24,9 @@ Parameters:
     NoEcho: true
   RDSHost:
     Type: String
-  AuroraClone:
+  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
+  RDSClusterEndpointRootDomain:
     Type: String
-    Default: <%= RedshiftImport::CLONE_CLUSTER_ID %>
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -91,7 +91,9 @@ Resources:
       EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
-      ServerName: !Ref AuroraClone
+      # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
+      # endpoints API to get this server name.
+      ServerName: !Sub "<%= RedshiftImport::CLONE_CLUSTER_ID %>.${RDSClusterEndpointRootDomain}"
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
