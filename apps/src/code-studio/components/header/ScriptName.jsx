@@ -8,8 +8,12 @@ const styles = {
   scriptLinkWithUpdatedAt: {
     display: 'block'
   },
+  outerContainer: {
+    textAlign: 'right'
+  },
   containerWithUpdatedAt: {
-    verticalAlign: 'bottom'
+    verticalAlign: 'bottom',
+    display: 'inline-block'
   }
 };
 
@@ -45,9 +49,11 @@ class ScriptName extends React.Component {
     }
 
     return (
-      <div style={styles.containerWithUpdatedAt}>
-        {this.renderScriptLink()}
-        <ProjectUpdatedAt />
+      <div style={styles.outerContainer}>
+        <div style={styles.containerWithUpdatedAt}>
+          {this.renderScriptLink()}
+          <ProjectUpdatedAt />
+        </div>
       </div>
     );
   }
