@@ -506,26 +506,6 @@ lv:
       report_abuse_form:
         abuse_type:
           other: Citi
-  flex_category:
-    required: Pārskats
-    csf_e_2: Kursa E saturs
-    csf_f_2: Kursa F saturs
-    csf_digcit: Digitālā pilsonība
-    csf_jigsaw: Puzle
-    csf_loops: Cikli
-    csf_events: Pasākumi
-    csf_binary: Binārie
-    csf_conditionals: Sazarojumi
-    csf_nested_loops: Cikls ciklā
-    csf_functions: Funkcijas
-    csf_variables: Mainīgie
-    csf_for_loops: '"par" cikli'
-    csf_internet: Internets
-    csp_variables: Mainīgie
-    csp_conditionals: Sazarojumi
-    csp_functions: Funkcijas
-    csp_lists: Saraksti
-    csp_loops: Cikli
   hoc_download:
     capsule_title: Vai Tev ir internets?
     instructions_headline: Nav interneta?
