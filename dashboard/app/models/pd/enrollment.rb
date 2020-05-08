@@ -176,7 +176,7 @@ class Pd::Enrollment < ActiveRecord::Base
     csf_intro_foorm_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
       enrollment.workshop.course == Pd::Workshop::COURSE_CSF &&
         enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSF_101 &&
-        enrollment.workshop.workshop_ending_date > Date.new(2020, 5, 8)
+        enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8)
     end
 
     (
