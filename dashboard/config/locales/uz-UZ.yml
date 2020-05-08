@@ -170,17 +170,6 @@ uz:
       report_abuse_form:
         abuse_type:
           other: Boshqa
-  flex_category:
-    csf_jigsaw: Topishmoq
-    csf_loops: Sikllar
-    csf_conditionals: Shart buyruqlari
-    csf_functions: Funksiyalar
-    csf_variables: O‘zgaruvchilar
-    csp_variables: O‘zgaruvchilar
-    csp_conditionals: Shart buyruqlari
-    csp_functions: Funksiyalar
-    csp_lists: Ro‘yxatlar
-    csp_loops: Sikllar
   hoc_download:
     minecraft_name: Maynkraft Dasturlash soati
   pd:
