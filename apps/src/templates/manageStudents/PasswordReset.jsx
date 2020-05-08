@@ -4,13 +4,18 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   input: {
-    width: 100,
+    width: '90%',
     height: 29,
-    marginTop: -25,
-    marginRight: 10
+    marginRight: 10,
+    marginLeft: 5,
+    padding: 5
+  },
+  button: {
+    margin: 5
   }
 };
 
@@ -59,6 +64,19 @@ class PasswordReset extends Component {
           isResetting: false,
           input: ''
         });
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students',
+            event: 'reset-secret',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              studentId: studentId,
+              loginType: 'email'
+            })
+          },
+          {includeUserId: true}
+        );
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -109,15 +127,15 @@ class PasswordReset extends Component {
               onClick={this.save}
               color={Button.ButtonColor.blue}
               text={i18n.save()}
+              style={styles.button}
             />
-            <div>
-              <Button
-                __useDeprecatedTag
-                onClick={this.cancel}
-                color={Button.ButtonColor.white}
-                text={i18n.cancel()}
-              />
-            </div>
+            <Button
+              __useDeprecatedTag
+              onClick={this.cancel}
+              color={Button.ButtonColor.white}
+              text={i18n.cancel()}
+              style={styles.button}
+            />
           </div>
         )}
       </div>
