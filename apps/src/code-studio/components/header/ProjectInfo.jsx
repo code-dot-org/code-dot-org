@@ -6,8 +6,8 @@ import ProjectHeader from './ProjectHeader';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
-
 import {possibleHeaders} from '../../headerRedux';
+import Measure from 'react-measure';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
@@ -18,7 +18,8 @@ const headerComponents = {
 
 class ProjectInfo extends React.Component {
   static propTypes = {
-    currentHeader: PropTypes.oneOf(Object.values(possibleHeaders))
+    currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
+    onComponentResize: PropTypes.func.isRequired
   };
 
   render() {
@@ -27,7 +28,22 @@ class ProjectInfo extends React.Component {
     }
 
     const HeaderComponent = headerComponents[this.props.currentHeader];
-    return <HeaderComponent />;
+    return (
+      <Measure
+        bounds
+        onResize={contentRect => {
+          //this.setState({ dimensions: contentRect.bounds })
+          //console.log(contentRect.bounds);
+          this.props.onComponentResize(contentRect.bounds.width);
+        }}
+      >
+        {({measureRef}) => (
+          <div ref={measureRef}>
+            <HeaderComponent />
+          </div>
+        )}
+      </Measure>
+    );
   }
 }
 

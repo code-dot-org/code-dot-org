@@ -20,7 +20,8 @@ export default class HeaderMiddle extends React.Component {
   };
 
   state = {
-    width: -1
+    width: -1,
+    projectInfoWidth: 0
   };
 
   componentDidMount() {
@@ -42,7 +43,7 @@ export default class HeaderMiddle extends React.Component {
   updateLayout = () => {
     //console.log(this.refs.header_middle_parent.clientWidth);
     //this.setState({width: this.refs.header_middle_parent.clientWidth});
-    console.log($('.header_middle').width());
+    //console.log($('.header_middle').width());
     this.setState({width: $('.header_middle').width()});
   };
 
@@ -60,7 +61,7 @@ export default class HeaderMiddle extends React.Component {
 
   // Return the desired widths for the items that are showing.
   getWidths() {
-    const width = this.state.width;
+    const width = this.state.width - this.state.projectInfoWidth;
     const thirdItem = this.thirdItem();
 
     if (thirdItem === 'finish') {
@@ -84,38 +85,45 @@ export default class HeaderMiddle extends React.Component {
     const widths = this.getWidths();
 
     return (
-      <div ref="header_middle_parent" style={{width: '100%'}}>
-        <Provider store={getStore()}>
-          <ProjectInfo />
-        </Provider>
+      <Provider store={getStore()}>
+        <div style={{width: '100%'}}>
+          <div
+            style={{
+              float: 'left'
+              //width: widths.projectInfo,
+              //overflow: 'scroll'
+            }}
+          >
+            <ProjectInfo
+              onComponentResize={projectInfoWidth => {
+                this.setState({projectInfoWidth});
+              }}
+            />
+          </div>
 
-        <div style={{float: 'left', width: widths.scriptName}}>
-          <Provider store={getStore()}>
+          <div style={{float: 'left', width: widths.scriptName}}>
             <ScriptName {...scriptNameData} />
-          </Provider>
-        </div>
+          </div>
 
-        <div style={{float: 'left', width: widths.progress}}>
-          {/*<div className="progress_container">{children}</div>*/}
-          <Provider store={getStore()}>
+          <div style={{float: 'left', width: widths.progress}}>
             <LessonProgress width={widths.progress} />
-          </Provider>
-        </div>
+          </div>
 
-        {stageData.finishLink && (
-          <div style={{float: 'left', width: widths.finishLink}}>
-            <div className="header_finished_link">
-              <a href={stageData.finishLink}>{stageData.finishText}</a>
+          {stageData.finishLink && (
+            <div style={{float: 'left', width: widths.finishLink}}>
+              <div className="header_finished_link">
+                <a href={stageData.finishLink}>{stageData.finishText}</a>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {stageData.script_stages > 1 && (
-          <div style={{float: 'left', width: widths.popup}}>
-            <ProtectedStatefulDiv ref="header_popup_components" />
-          </div>
-        )}
-      </div>
+          {stageData.script_stages > 1 && (
+            <div style={{float: 'left', width: widths.popup}}>
+              <ProtectedStatefulDiv ref="header_popup_components" />
+            </div>
+          )}
+        </div>
+      </Provider>
     );
   }
 }
