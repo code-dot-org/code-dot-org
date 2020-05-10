@@ -36,15 +36,15 @@ class PardotV2
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
   # @param [Integer] last_id retrieves only Pardot ID greater than this value
-  # @param [Array<String>] a list of fields. Must have 'id' the list. Field names must be url-safe.
-  # @param [Integer] limit maximum number of prospects to retrieve
-  # @param [Boolean] get deleted prospects (default false). Note this is in place of non-deleted prospects, not in addition to.
+  # @param [Array<String>] fields prospect fields. Must have 'id' the list. Field names must be url-safe.
+  # @param [Integer] limit the maximum number of prospects to retrieve
+  # @param [Boolean] only_deleted get deleted prospects (default false). Note this is in place of non-deleted prospects, not in addition to.
   # @return [Integer] number of results retrieved
   #
   # @yieldreturn [Array<Hash>] an array of hash of prospect data
   # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
-  def self.retrieve_prospects(last_id, fields, limit = nil, retrieve_deleted=false)
+  def self.retrieve_prospects(last_id, fields, limit = nil, only_deleted = false)
     raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
 
@@ -55,7 +55,7 @@ class PardotV2
     # Run repeated requests querying for prospects above our highest known Pardot ID.
     # Stop when receiving no prospects or reaching the download limit.
     loop do
-      url = create_query_url(last_id, fields, limit_in_query, retrieve_deleted)
+      url = build_prospect_query_url(last_id, fields, limit_in_query, only_deleted)
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
 
@@ -79,12 +79,12 @@ class PardotV2
   end
 
   # Creates URL and query string for use with Pardot prospect query API
-  def self.create_query_url(last_id, fields, limit_in_query, retrieve_deleted)
+  def self.build_prospect_query_url(last_id, fields, limit_in_query, only_deleted)
     # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
     url = "#{PROSPECT_QUERY_URL}?output=bulk"
     url += "&id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
     url += "&limit=#{limit_in_query}" if limit_in_query
-    url += "&deleted=true" if retrieve_deleted
+    url += "&deleted=true" if only_deleted
 
     return url
   end

@@ -43,10 +43,18 @@ class PardotV2Test < Minitest::Test
     assert_equal [{'id' => pardot_id, 'email' => email}], yielded_result
   end
 
-  def create_query_url_with_deleted_prospects
-    expected_url = "#{PardotV2::PROSPECT_QUERY_URL}?output=bulk&id_greater_than=0&fields=id,email&sort_by=id&deleted=true"
+  def test_build_prospect_query_url
+    # Create query to retrieve active prospects
+    assert_equal(
+      "#{PardotV2::PROSPECT_QUERY_URL}?output=bulk&id_greater_than=0&fields=id,email&sort_by=id",
+      PardotV2.build_prospect_query_url(0, %w(id email), nil, false)
+    )
 
-    assert_equal expected_url, PardotV2.create_query_url(0, %w(id email), nil, true)
+    # Create query to retrieve only deleted prospects
+    assert_equal(
+      "#{PardotV2::PROSPECT_QUERY_URL}?output=bulk&id_greater_than=0&fields=id,email&sort_by=id&deleted=true",
+      PardotV2.build_prospect_query_url(0, %w(id email), nil, true)
+    )
   end
 
   def test_batch_create_prospects_single_contact
