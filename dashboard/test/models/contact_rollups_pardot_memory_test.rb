@@ -63,6 +63,25 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     end
   end
 
+  test 'download_deleted_pardot_prospects' do
+    deleted_prospects = [
+      {'id' => '1', 'email' => 'earth@rollups.com'},
+      {'id' => '2', 'email' => 'mars@rollups.com'},
+      # There could be multiple prospects with the same email address, but with different pardot_id.
+      {'id' => '3', 'email' => 'earths@rollups.com'}
+    ]
+    PardotV2.stubs(:retrieve_prospects).once.yields(deleted_prospects)
+
+    ContactRollupsPardotMemory.download_deleted_pardot_prospects
+
+    deleted_prospects.each do |prospect|
+      record = ContactRollupsPardotMemory.find_by(email: prospect['email'])
+      refute_nil record
+      refute_nil record.data_rejected_at
+      assert_equal PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT, record.data_rejected_reason
+    end
+  end
+
   test 'query_new_contacts' do
     assert_equal 0, ContactRollupsProcessed.count
 
