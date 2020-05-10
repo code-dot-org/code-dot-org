@@ -4,7 +4,7 @@ module PardotHelpers
   STATUS_OK = 'ok'.freeze
   ERROR_INVALID_EMAIL = 'Invalid prospect email address'
   ERROR_INVALID_API_KEY = 'Invalid API key or user key'
-  PROSPECT_DELETED_FROM_PARDOT = 'Prospect deleted from Pardot'
+  ERROR_PROSPECT_DELETED_FROM_PARDOT = 'Prospect deleted from Pardot'
 
   class InvalidApiKeyException < RuntimeError
   end
