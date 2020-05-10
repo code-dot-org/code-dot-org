@@ -95,8 +95,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
     end
   end
 
-  def self.download_deleted_pardot_prospects(last_id = 0, limit = nil)
-    PardotV2.retrieve_prospects(last_id, %w(id email), limit, true) do |deleted_prospects|
+  def self.download_deleted_pardot_prospects(last_id = nil, limit = nil)
+    PardotV2.retrieve_prospects(last_id || 0,  %w(id email), limit, true) do |deleted_prospects|
       current_time = Time.now.utc
       batch = deleted_prospects.map do |item|
         {

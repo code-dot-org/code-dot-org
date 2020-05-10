@@ -36,7 +36,7 @@ class PardotV2
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
   # @param [Integer] last_id retrieves only Pardot ID greater than this value
-  # @param [Array<String>] fields prospect fields. Must have 'id' the list. Field names must be url-safe.
+  # @param [Array<String>] fields url-safe prospect field names. Must have 'id' the list.
   # @param [Integer] limit the maximum number of prospects to retrieve
   # @param [Boolean] only_deleted get deleted prospects (default false). Note this is in place of non-deleted prospects, not in addition to.
   # @return [Integer] number of results retrieved
