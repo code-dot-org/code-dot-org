@@ -51,18 +51,14 @@ class LevelGroup < DSLDefined
 
   # Returns a flattened array of all the Levels in this LevelGroup, in order.
   def levels
-    pages.map(&:levels).flatten
+    child_levels.all
   end
 
   class LevelGroupPage
-    def initialize(page_properties, page_number, offset)
-      @levels = []
-      page_properties["levels"].each do |level_name|
-        level = Level.find_by_name(level_name)
-        @levels << level
-      end
-      @offset = offset
+    def initialize(page_number, offset, levels)
       @page_number = page_number
+      @offset = offset
+      @levels = levels
     end
 
     attr_reader :levels
@@ -77,11 +73,11 @@ class LevelGroup < DSLDefined
 
   def pages
     offset = 0
-    page_count = 0
-    @pages ||= properties['pages'].map do |page|
-      page_count += 1
-      page_object = LevelGroupPage.new(page, page_count, offset)
-      offset += page_object.levels.count
+    @pages ||= properties['levels_per_page'].map.with_index do |page_size, page_index|
+      page_number = page_index + 1
+      page_levels = levels[offset..(offset + page_size - 1)]
+      page_object = LevelGroupPage.new(page_number, offset, page_levels)
+      offset += page_size
       page_object
     end
   end
