@@ -69,7 +69,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     pardot_memory_records = [
       {email: 'alpha', pardot_id: nil},
       {email: 'beta', pardot_id: 1},
-      {email: 'omega', pardot_id: nil, data_rejected_reason: PardotHelpers::PROSPECT_DELETED_FROM_PARDOT}
+      {email: 'delta', pardot_id: nil, data_rejected_reason: PardotHelpers::ERROR_INVALID_EMAIL},
+      {email: 'omega', pardot_id: nil, data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}
     ]
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
@@ -77,17 +78,18 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'alpha'},
       {email: 'beta'},
       {email: 'gamma'},
+      {email: 'delta'},
       {email: 'omega'}
     ]
     processed_contact_records.each {|record| create :contact_rollups_processed, record}
 
-    # Execute SQL query
+    # Execute SQL query to find new contacts to add to Pardot
     results = ActiveRecord::Base.connection.
       exec_query(ContactRollupsPardotMemory.query_new_contacts).map do |record|
       record['email']
     end
 
-    # Should find only 2 new contacts that don't have valid Pardot IDs.
+    # Should find only 2 new contacts that don't have valid Pardot IDs and are not rejected by Pardot.
     assert_equal %w(alpha gamma), results
   end
 
@@ -136,7 +138,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         pardot_id_updated_at: base_time + 2.days,
         data_synced_at: base_time + 1.day,
         data_synced: {db_Opt_In: 'Yes'},
-        data_rejected_reason: PardotHelpers::PROSPECT_DELETED_FROM_PARDOT
+        data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT
       },
       # dummy records
       {email: 'delta', pardot_id: nil},

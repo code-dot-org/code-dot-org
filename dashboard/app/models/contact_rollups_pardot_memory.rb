@@ -101,18 +101,14 @@ class ContactRollupsPardotMemory < ApplicationRecord
       batch = deleted_prospects.map do |item|
         {
           email: item['email'],
-          pardot_id: item['id'].to_i,
-          pardot_id_updated_at: current_time,
-          data_synced: {},
-          data_synced_at: current_time,
           data_rejected_at: current_time,
-          data_rejected_reason: PardotHelpers::PROSPECT_DELETED_FROM_PARDOT
+          data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT
         }
       end
 
       import! batch,
         validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at, :data_rejected_at, :data_rejected_reason]
+        on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
     end
   end
 
@@ -168,7 +164,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
         ON processed.email = pardot.email
       WHERE pardot.pardot_id IS NULL
         AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_INVALID_EMAIL}')
-        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::PROSPECT_DELETED_FROM_PARDOT}')
+        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}')
     SQL
   end
 
@@ -177,7 +173,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # (have valid Pardot IDs). However, their content or Pardot ID mappings have changed since the
     # last sync.
     # We explicitly exclude contacts that have been deleted from Pardot,
-    # as attemping to update a prospect that has been deleted from Pardot
+    # as attempting to update a prospect that has been deleted from Pardot
     # will resuscitate it as an active prospect.
     <<-SQL.squish
       SELECT
@@ -193,7 +189,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
           OR (processed.data->>'$.updated_at' > pardot.data_synced_at)
           OR (pardot.pardot_id_updated_at > pardot.data_synced_at)
         )
-        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::PROSPECT_DELETED_FROM_PARDOT}')
+        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT}')
     SQL
   end
 
