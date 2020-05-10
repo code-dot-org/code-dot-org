@@ -863,11 +863,8 @@ FactoryGirl.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
-        lg.properties['pages'] = [
-          {levels: [sublevels[0].name, sublevels[1].name]},
-          {levels: [sublevels[2].name]}
-        ]
+        pages = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        lg.update_pages(pages)
       end
     end
   end
