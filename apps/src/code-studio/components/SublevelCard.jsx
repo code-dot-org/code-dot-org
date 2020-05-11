@@ -8,7 +8,7 @@ import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagI
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import queryString from 'query-string';
 
-const THUMBNAIL_IMAGE_SIZE = 150;
+const THUMBNAIL_IMAGE_SIZE = 200;
 const MARGIN = 10;
 const LESSON_EXTRAS_WIDTH = 435;
 const BUBBLE_CHOICE_WIDTH = 600;
@@ -65,7 +65,7 @@ const styles = {
   title: {
     minHeight: 30,
     fontSize: 20,
-    lineHeight: '20px',
+    lineHeight: '25px',
     fontFamily: '"Gotham 5r"',
     color: color.teal,
     marginLeft: 10,
@@ -76,7 +76,7 @@ const styles = {
     alignItems: 'center'
   },
   description: {
-    marginTop: MARGIN
+    marginTop: 5
   }
 };
 
@@ -167,7 +167,10 @@ export default class SublevelCard extends React.Component {
     if (isLessonExtra) {
       return (
         <a style={styles.flagBubble} href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon perfect={sublevel.perfect} />
+          <LessonExtrasFlagIcon
+            perfect={sublevel.perfect}
+            style={styles.flagBubble}
+          />
         </a>
       );
     }
