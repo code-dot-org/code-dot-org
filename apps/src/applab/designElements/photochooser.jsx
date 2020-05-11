@@ -7,8 +7,6 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import EnumPropertyRow from './EnumPropertyRow';
-import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import themeValues from '../themeValues';
 import {ICON_PREFIX_REGEX} from '../constants';
@@ -58,11 +56,6 @@ class PhotoChooserProperties extends React.Component {
           isIdRow
         />
         <PropertyRow
-          desc={'text'}
-          initialValue={$(element).text()}
-          handleChange={this.props.handleChange.bind(this, 'text')}
-        />
-        <PropertyRow
           desc={'width (px)'}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
@@ -87,32 +80,9 @@ class PhotoChooserProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'text color'}
-          initialValue={elementUtils.rgb2hex(element.style.color)}
-          handleChange={this.props.handleChange.bind(this, 'textColor')}
-        />
-        <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
-        />
-        <FontFamilyPropertyRow
-          initialValue={designMode.fontFamilyOptionFromStyle(
-            element.style.fontFamily
-          )}
-          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
-        />
-        <PropertyRow
-          desc={'font size (px)'}
-          isNumber
-          initialValue={parseInt(element.style.fontSize, 10)}
-          handleChange={this.props.handleChange.bind(this, 'fontSize')}
-        />
-        <EnumPropertyRow
-          desc={'text alignment'}
-          initialValue={element.style.textAlign || 'center'}
-          options={['left', 'right', 'center', 'justify']}
-          handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         {iconColorPicker}
         <BorderProperties
@@ -160,6 +130,9 @@ class PhotoChooserEvents extends React.Component {
       '  console.log("' +
       id +
       ' photo selected!");\n' +
+      '  console.log(getImageURL("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -194,20 +167,16 @@ class PhotoChooserEvents extends React.Component {
 export default {
   PropertyTab: PhotoChooserProperties,
   EventTab: PhotoChooserEvents,
-  themeValues: themeValues.button,
+  themeValues: themeValues.photoSelect,
 
   create: function() {
     const element = document.createElement('label');
     element.setAttribute('class', 'img-upload');
     element.setAttribute('data-canonical-image-url', 'icon://fa-camera');
-    //element.setAttribute('src',
-    //assetPrefix.renderIconToString('icon://fa-camera', element));
-    //element.src = assetPrefix.renderIconToString('icon://fa-camera', element);
     element.style.margin = '0px';
     element.style.lineHeight = '1';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
-    element.textContent = '';
     element.style.borderStyle = 'solid';
 
     element.style.textRendering = 'optimizeSpeed';
@@ -215,15 +184,15 @@ export default {
       element,
       designMode.activeScreen()
     );
+    element.style.backgroundSize = 'contain';
+    element.style.backgroundRepeat = 'no-repeat';
+    element.style.backgroundPosition = '50% 50%';
     element.style.backgroundImage =
       'url(' +
       assetPrefix.renderIconToString('icon://fa-camera', element) +
       ')';
-    element.style.backgroundSize = 'contain';
-    element.style.backgroundRepeat = 'no-repeat';
-    element.style.backgroundPosition = '50% 50%';
 
-    element.style.width = '200px';
+    element.style.width = '75px';
     element.style.height = '50px';
     const newInput = document.createElement('input');
     newInput.type = 'file';
@@ -234,6 +203,14 @@ export default {
     return element;
   },
   onDeserialize: function(element, updateProperty) {
+    // Disable image upload events unless running
+    $(element).on('click', function(e) {
+      if (!Applab.isRunning()) {
+        element.childNodes[0].disabled = true;
+      } else {
+        element.childNodes[0].disabled = false;
+      }
+    });
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);
