@@ -133,7 +133,7 @@
     "json-parse-better-errors": "^1.0.1",
     "jsonic": "^0.3.0",
     "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.2.0",
+    "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-junit-reporter": "^1.2.0",
     "karma-mocha": "^1.3.0",
@@ -250,7 +250,7 @@
     "selectize": "^0.12.4",
     "snack-build": "0.0.1",
     "snack-sdk": "2.3.6",
-    "survey-react": "^1.7.4",
+    "survey-react": "1.7.4",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }

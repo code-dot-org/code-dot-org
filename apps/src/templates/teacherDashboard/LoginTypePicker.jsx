@@ -15,6 +15,7 @@ import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from './shapes';
+import styleConstants from '../../styleConstants';
 
 /**
  * UI for selecting the login type of a class section:
@@ -57,8 +58,14 @@ class LoginTypePicker extends Component {
       (withGoogle || withMicrosoft || withClever) &&
       typeof handleImportOpen === 'function';
 
+    // explicitly constrain the container as a whole to the width of the
+    // content. We expect that differing length of translations versus english
+    // source text can cause unexpected layout changes, and this constraint
+    // should help mitigate some of them.
+    const containerStyle = {maxWidth: styleConstants['content-width']};
+
     return (
-      <div>
+      <div style={containerStyle}>
         <Heading1>{title}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructions()}</Heading2>
         {anyImportOptions && (

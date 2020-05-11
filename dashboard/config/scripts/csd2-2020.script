@@ -10,6 +10,7 @@ version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/"], ["teacherForum", "https://forum.code.org/c/csd"]]
 
 lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
 stage 'Exploring Web Pages'

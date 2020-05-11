@@ -12,4 +12,13 @@
 
 class Foorm::Submission < ActiveRecord::Base
   belongs_to :foorm_form
+  before_validation :strip_emoji_from_answers
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the submission answers
+  # We can remove this once our database has utf8mb4 support everywhere.
+  def strip_emoji_from_answers
+    # Drop emoji and other unsupported characters
+    self.answers = answers&.strip_utf8mb4&.strip
+  end
 end

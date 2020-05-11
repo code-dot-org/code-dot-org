@@ -2,7 +2,7 @@
 // each theme will look like
 import PropTypes from 'prop-types';
 import React from 'react';
-import {themeOptionsForSelect} from '../constants';
+import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
@@ -39,9 +39,14 @@ export default class ThemeDropdown extends React.Component {
   state = {
     selectedValue: this.props.initialValue
   };
+
   handleChange = event => {
-    this.props.handleChange(event.value);
-    this.setState({selectedValue: event.value});
+    const newValue = event
+      ? event.value
+      : themeOptionsForSelect[DEFAULT_THEME_INDEX].option;
+
+    this.props.handleChange(newValue);
+    this.setState({selectedValue: newValue});
   };
 
   render() {

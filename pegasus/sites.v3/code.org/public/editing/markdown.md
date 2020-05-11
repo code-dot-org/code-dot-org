@@ -1,12 +1,12 @@
 ---
-title: Markdown Basics
-nav: markdown_nav
+title: Markdown
+nav: editing_nav
 theme: responsive
 ---
 
-# Markdown Basics
+# Markdown
 
-This is a quick introduction to the basic syntax of Markdown that you can use to help style your pages. 
+This is a quick introduction to the basic syntax of Markdown that you can use to help style your pages. For a complete reference, see [the official documentation](https://daringfireball.net/projects/markdown/syntax).
 
 ## Headers
 ***
@@ -39,6 +39,22 @@ Every page should start with a title like the one above. Simply use one `#` and 
 [/col-50]
 
 <div style="clear:both;"></div>
+
+## Horizontal rule
+***
+Use three asterisks to create a horizontal rule or horizontal line across the page.
+
+### What your code looks like
+
+```
+#### Example Header
+***
+```
+
+### What your page will look like
+
+#### Example Header
+***
 
 ## Lists
 ***
@@ -117,30 +133,9 @@ Links can be created by using brackets `[ ]` for the text of the link and parent
 * This is an [absolute link to an external page](https://www.youtube.com/watch?v=AI_dayIQWV4), in this case a YouTube video
 * You can also link to an email address by surrounding in `<>`. For example, please contact: <support@code.org>.
 
-## Buttons
-***
-In addition to links, you can use a button for the primary action you'd like the user to make. Keep your button text short and actionable/start with a verb. For example, "Learn more" is preferred over "Resources for teachers on this page". Also, button text should be sentence case where the first word is capitalized and all later words are not. Similar to regular links, you can also have relative and absolute links for your buttons. Be judicious with which one to use! In the event that you have two buttons next to each other, use two `&nbsp;` between the buttons to give them a little more breathing room between each other.
-
-
-### What your code looks like
-
-```
-[<button>Sign up</button>](/professional-development-workshops)
-&nbsp;&nbsp;
-[<button>Join us</button>](https://hourofcode.com)
-```
-
-
-### What your page will look like
-
-[<button>Sign up</button>](/professional-development-workshops)
-&nbsp;&nbsp;
-[<button>Join us</button>](https://hourofcode.com)
-
-
 ## Images
 ***
-You can include any image by first uploading it to Dropbox in the code.org/public/images folder. If you are uploading several images, try to create a folder inside images so you don't upload all of your images in the main images folder. Including an image is very similar to a link, except starting with an exclamation point at the beginning.
+You can include any image by first uploading it to Dropbox in the code.org/public/images folder. If you are uploading several images, try to create a folder inside `images/` so you don't upload all of your images in the main images folder. Including an image is very similar to a link, except starting with an exclamation point at the beginning.
 
 ### What your code looks like
 
@@ -170,3 +165,17 @@ You don't need to manually crop images! When you include an image, you can use s
 ![K5PD](/images/fill-200x400/k5pd.jpg)
 
 <br>
+
+## Tables
+***
+A table is created using vertical bars to separate columns. Use the vertical bar before the first column and after the last column. A simple table looks like this:
+
+### 3rd Party Educator Resources: Elementary School
+
+| Organization | Curriculum | Professional Development |
+| ------------ | ---------- | ------------------------ |
+| [Code Studio](/educate/k5) | 4 courses blend online tutorials with “unplugged” activities, FREE   | 1-day weekend workshops across the US, FREE |
+| [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school | Face-to-face and online, $700 for school-level lead teacher |
+| [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
+| [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
+
