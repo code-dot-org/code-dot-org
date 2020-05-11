@@ -26,7 +26,8 @@ export class WorkshopManagement extends React.Component {
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
     showSurveyUrl: PropTypes.bool,
-    date: PropTypes.string
+    date: PropTypes.string,
+    endDate: PropTypes.string
   };
 
   static defaultProps = {
@@ -79,7 +80,9 @@ export class WorkshopManagement extends React.Component {
   };
 
   use_foorm_route = () => {
-    let workshop_date = new Date(this.props.date);
+    let workshop_date = this.props.endDate
+      ? new Date(this.props.endDate)
+      : new Date(this.props.date);
 
     return (
       workshop_date >= new Date('2020-05-08') &&

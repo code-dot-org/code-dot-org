@@ -274,7 +274,7 @@ export default class EnrollmentsPanel extends React.Component {
         .format('MMMM Do');
 
       const lastSessionDate = new Date(
-        workshop.sessions[workshop.sessions.length - 1].start
+        workshop.sessions[workshop.sessions.length - 1].end
       );
 
       let viewSurveyUrl = this.getViewSurveyUrl(
