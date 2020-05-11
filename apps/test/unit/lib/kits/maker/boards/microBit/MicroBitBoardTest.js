@@ -32,16 +32,14 @@ describe('MicroBitBoard', () => {
   });
 
   describe('Maker Board Interface', () => {
-    describe('implements shared Maker Board Interface', () => {
-      itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
-        sinon.stub(board.boardClient_, 'connect').callsFake(() => {
-          board.boardClient_.myPort = {write: () => {}};
-          sinon.stub(board.boardClient_.myPort, 'write');
-        });
-
-        sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
-        sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
+    itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
+      sinon.stub(board.boardClient_, 'connect').callsFake(() => {
+        board.boardClient_.myPort = {write: () => {}};
+        sinon.stub(board.boardClient_.myPort, 'write');
       });
+
+      sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
+      sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
 
     /**
