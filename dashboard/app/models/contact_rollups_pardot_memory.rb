@@ -179,7 +179,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
     deleted_emails = []
     emails.each do |email|
-      deleted_emails << email if PardotV2.delete_all_prospects_by_email(email)
+      deleted_emails << email if PardotV2.delete_prospects_by_email(email)
     end
 
     # clean-up step to delete rows once they've been deleted from Pardot

@@ -238,7 +238,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       email: email_to_delete,
       marked_for_deletion_at: Time.now.utc
 
-    PardotV2.expects(:delete_all_prospects_by_email).
+    PardotV2.expects(:delete_prospects_by_email).
       once.with(email_to_delete).
       returns(true)
 
@@ -252,7 +252,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       email: email_to_delete,
       marked_for_deletion_at: Time.now.utc
 
-    PardotV2.expects(:delete_all_prospects_by_email).
+    PardotV2.expects(:delete_prospects_by_email).
       once.with(email_to_delete).
       returns(false)
 
@@ -264,7 +264,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal 0, ContactRollupsPardotMemory.count
     create_list :contact_rollups_pardot_memory, 3
 
-    contacts_to_delete = create_list :contact_rollups_pardot_memory, 4, marked_for_deletion_at: Time.now.utc
+    contacts_to_delete = create_list :contact_rollups_pardot_memory, 2, marked_for_deletion_at: Time.now.utc
     emails_to_delete = contacts_to_delete.pluck(:email)
 
     PardotV2.expects(:delete_all_prospects_by_email).
