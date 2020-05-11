@@ -7,6 +7,7 @@ import {getStore} from '../redux';
 import {mergeProgress} from '../progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setAppLoaded} from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
@@ -584,10 +585,12 @@ export default function loadAppOptions() {
       // when we just "embed" an app (i.e. via LevelsHelper#match_answer_as_iframe),
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
+      getStore().dispatch(setAppLoaded());
       resolve(appOptions);
     } else {
       loadAppAsync(appOptions).then(appOptions => {
         project.init(sourceHandler);
+        getStore().dispatch(setAppLoaded());
         resolve(appOptions);
       });
     }

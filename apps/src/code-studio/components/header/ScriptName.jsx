@@ -13,6 +13,9 @@ const styles = {
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
     display: 'inline-block'
   }
 };
@@ -22,7 +25,8 @@ class ScriptName extends React.Component {
     name: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
     smallText: PropTypes.bool,
-    showProjectUpdatedAt: PropTypes.bool
+    showProjectUpdatedAt: PropTypes.bool,
+    width: PropTypes.number
   };
 
   renderScriptLink() {
@@ -35,7 +39,9 @@ class ScriptName extends React.Component {
         href={this.props.href}
         className={className}
         style={
-          this.props.showProjectUpdatedAt ? styles.scriptLinkWithUpdatedAt : {}
+          this.props.showProjectUpdatedAt
+            ? {...styles.scriptLinkWithUpdatedAt}
+            : {}
         }
       >
         {this.props.name}
@@ -50,7 +56,9 @@ class ScriptName extends React.Component {
 
     return (
       <div style={styles.outerContainer}>
-        <div style={styles.containerWithUpdatedAt}>
+        <div
+          style={{...styles.containerWithUpdatedAt, maxWidth: this.props.width}}
+        >
           {this.renderScriptLink()}
           <ProjectUpdatedAt />
         </div>

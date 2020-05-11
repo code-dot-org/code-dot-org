@@ -19,6 +19,7 @@ import {
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
 import msg from '@cdo/locale';
@@ -97,9 +98,11 @@ header.build = function(
   );
 
   ReactDOM.render(
-    <HeaderMiddle scriptNameData={scriptNameData} stageData={stageData}>
-      {renderedProgress}
-    </HeaderMiddle>,
+    <Provider store={getStore()}>
+      <HeaderMiddle scriptNameData={scriptNameData} stageData={stageData}>
+        {renderedProgress}
+      </HeaderMiddle>
+    </Provider>,
     document.querySelector('.header_level')
   );
 
