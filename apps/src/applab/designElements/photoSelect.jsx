@@ -22,7 +22,7 @@ class PhotoChooserProperties extends React.Component {
     onDepthChange: PropTypes.func.isRequired
   };
 
-  handleIconColorChange = value => {
+  handleChangeWrapper = value => {
     this.props.handleChange('icon-color', value);
     this.props.handleChange(
       'image',
@@ -42,7 +42,7 @@ class PhotoChooserProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(
             element.getAttribute('data-icon-color') || '#000000'
           )}
-          handleChange={this.handleIconColorChange}
+          handleChange={this.handleChangeWrapper}
         />
       );
     }
