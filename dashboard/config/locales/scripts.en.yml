@@ -17802,3 +17802,8 @@ en:
               display_name: 'Chapter 1: Event-Driven Programming'
             csp5_2:
               display_name: 'Chapter 2: Programming with Data Structures'
+        bethanys-levels:
+          stages:
+            1st stage:
+              name: 1st stage
+          lesson_groups: {}

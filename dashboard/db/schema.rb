@@ -102,14 +102,16 @@ ActiveRecord::Schema.define(version: 20200504210058) do
   end
 
   create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",                                   null: false
-    t.string   "pool",                      default: "", null: false
+    t.string   "name",                                      null: false
+    t.string   "pool",                         default: "", null: false
     t.string   "category"
-    t.text     "config",      limit: 65535
-    t.text     "helper_code", limit: 65535
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.text     "config",         limit: 65535
+    t.text     "helper_code",    limit: 65535
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.datetime "deleted_at"
+    t.text     "xml_definition", limit: 65535
+    t.string   "description"
     t.index ["deleted_at"], name: "index_blocks_on_deleted_at", using: :btree
     t.index ["pool", "name"], name: "index_blocks_on_pool_and_name", unique: true, using: :btree
   end

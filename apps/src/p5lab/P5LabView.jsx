@@ -18,6 +18,10 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
+import animationLibrary from './gamelab/animationLibrary.json';
+import spriteCostumeLibrary from './spritelab/spriteCostumeLibrary.json';
+import {AnimationCategories} from './gamelab/constants';
+import {CostumeCategories} from './spritelab/constants';
 
 /**
  * Top-level React wrapper for GameLab
@@ -59,7 +63,8 @@ class P5LabView extends React.Component {
       isResponsive,
       hideSource,
       pinWorkspaceToBottom,
-      showFinishButton
+      showFinishButton,
+      spriteLab
     } = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
@@ -76,6 +81,8 @@ class P5LabView extends React.Component {
       responsive: isResponsive,
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
+    const libraryManifest = spriteLab ? spriteCostumeLibrary : animationLibrary;
+    let categories = spriteLab ? CostumeCategories : AnimationCategories;
 
     return (
       <div style={codeModeStyle}>
@@ -90,6 +97,9 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
+              libraryManifest={libraryManifest}
+              categories={categories}
+              hideUploadOption={true}
             />
           )}
         </div>
@@ -110,10 +120,17 @@ class P5LabView extends React.Component {
   }
 
   renderAnimationMode() {
-    const {allowAnimationMode, interfaceMode} = this.props;
+    const {allowAnimationMode, interfaceMode, spriteLab} = this.props;
+    const libraryManifest = spriteLab ? spriteCostumeLibrary : animationLibrary;
+    let categories = spriteLab ? CostumeCategories : AnimationCategories;
     return allowAnimationMode &&
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
-      <AnimationTab channelId={this.getChannelId()} />
+      <AnimationTab
+        channelId={this.getChannelId()}
+        libraryManifest={libraryManifest}
+        categories={categories}
+        hideUploadOption={true}
+      />
     ) : (
       undefined
     );

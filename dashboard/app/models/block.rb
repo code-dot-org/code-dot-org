@@ -2,15 +2,17 @@
 #
 # Table name: blocks
 #
-#  id          :integer          not null, primary key
-#  name        :string(255)      not null
-#  pool        :string(255)      default(""), not null
-#  category    :string(255)
-#  config      :text(65535)
-#  helper_code :text(65535)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  deleted_at  :datetime
+#  id             :integer          not null, primary key
+#  name           :string(255)      not null
+#  pool           :string(255)      default(""), not null
+#  category       :string(255)
+#  config         :text(65535)
+#  helper_code    :text(65535)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  deleted_at     :datetime
+#  xml_definition :text(65535)
+#  description    :string(255)
 #
 # Indexes
 #
