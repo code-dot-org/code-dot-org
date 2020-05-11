@@ -17908,28 +17908,31 @@ zh-CN:
         >
         > 对计算机科学基础的第一印象是什么？
         >
-        > [发送推特][0] 并加上 @teachcode 标签，以便我们能反馈。
+        > [发送推特](https://twitter.com/teachcode) 并加上 @teachcode 标签，以便我们能反馈。
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">通过推特分享 >></button></a><br><br>
-        > 还没有推特账号？可以在 [Facebook][1] 或 [Instagram][2] 上找到我们。
+        > 还没有推特账号？可以在 [Facebook](https://www.facebook.com/Code.org/) 或 [Instagram](https://www.instagram.com/codeorg/) 上找到我们。
       OPD-K5 Closing: |-
         > **如果喜欢本课程，注册面对面的研讨会：**
         >
-        > [现在注册][0] 来继续学习计算机科学和它的教育学。免费的现场研讨会是与所在地区的其他热情教育者合作和互动的宝贵场所。
+        > [现在注册](http://code.org/professional-development-workshops) 来继续学习计算机科学和它的教育学。免费的现场研讨会是与所在地区的其他热情教育者合作和互动的宝贵场所。
       OPD-K5 EventsVid: |-
         观看定义 "事件"，并展示它如何在计算机科学基础起作用的视频。然后，尝试一些需要编写事件的难题。
 
         > 事件是一行代码，来告诉计算机 "监听" 某件事情是否发生，如果发生了就执行一些动作。例如，在网页上，用鼠标滑过导航栏时，通常会显示下拉菜单。"鼠标滑过" 就是触发活动的 "事件"。
-      OPD-K5 FirstProgram: 观看下面的视频，该视频解释了幼儿园的学生将在 [课程A][0] 中编写的第一个程序。下一页，会自己编写类似的程序！
+      OPD-K5 FirstProgram: 观看下面的视频，该视频解释了幼儿园的学生将在 [课程A](https://studio.code.org/s/coursea-2018?section_id=2042045)
+        中编写的第一个程序。下一页，会自己编写类似的程序！
       OPD-K5 LessonPlanning: "现在，已经介绍了所有的线下课程计划。每个计算机科学基础课程都有计划 - 包括线下和线上的。可以找到每个课程的完整计划：\n<br/>\n<br/>
-        \n[课程 A 计划][0]<br/> \n[课程 B 计划][1]<br/>\n[课程 C 计划][2]<br/> \n[课程 D 计划][3]<br/>
-        \n[课程 E 计划][4]<br/> \n[课程 F 计划][5]<br/> \n\n但是，可能需要改编这些课程，或者自己构建课程！下面的视频说明了计算机科学基础课程的结构，还提供了一些技巧，以便开发自己的课程。"
+        \n[课程 A 计划](https://curriculum.code.org/csf-18/coursea/)<br/> \n[课程 B 计划](https://curriculum.code.org/csf-18/courseb/)<br/>\n[课程
+        C 计划](https://curriculum.code.org/csf-18/coursec/)<br/> \n[课程 D 计划](https://curriculum.code.org/csf-18/coursed/)<br/>
+        \n[课程 E 计划](https://curriculum.code.org/csf-18/coursee/)<br/> \n[课程 F 计划](https://curriculum.code.org/csf-18/coursef/)<br/>
+        \n\n但是，可能需要改编这些课程，或者自己构建课程！下面的视频说明了计算机科学基础课程的结构，还提供了一些技巧，以便开发自己的课程。"
       OPD-K5 Problem Solving: |-
         # 最佳实践 > 解决问题的元认知
 
         在编码之前、之中、之后，明确的传授解决问题的元认知，对帮助学生的学习过程非常重要。元认知解决问题包括思考自己的思考过程，并反思 _如何_ 解决问题。观看视频来学习 Code.org 的 "解密配方"，可帮助学生能成功的解决困难问题：
 
-        此 [工作表][0] 详细列出了解密配方的不同步骤。
+        此 [工作表](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.png) 详细列出了解密配方的不同步骤。
 
         <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
 
@@ -17937,7 +17940,7 @@ zh-CN:
         >
         > 如何在计算机科学课堂中明确的讲授解决问题？
         >
-        > [发推特分享][1] 并加上 @teachcode 标签，以便我们能反馈。
+        > [发推特分享](https://twitter.com/teachcode) 并加上 @teachcode 标签，以便我们能反馈。
         >
         > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> 在推特上分享</h4></a>
       OPD-K5 RepeatBlock: 观看下面的视频，其中说明了循环的原理，并介绍了计算机科学基础中的 '重复' 模块。
