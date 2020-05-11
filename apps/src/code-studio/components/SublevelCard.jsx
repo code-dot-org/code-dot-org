@@ -10,12 +10,12 @@ import queryString from 'query-string';
 
 const THUMBNAIL_IMAGE_SIZE = 200;
 const MARGIN = 10;
-const LESSON_EXTRAS_WIDTH = 435;
-const BUBBLE_CHOICE_WIDTH = 600;
+const WIDTH = 435;
 
 const styles = {
   row: {
     display: 'flex',
+    width: WIDTH,
     marginBottom: MARGIN,
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
@@ -183,21 +183,17 @@ export default class SublevelCard extends React.Component {
   render() {
     const {sublevel} = this.props;
 
-    const cardWidth = this.props.isLessonExtra
-      ? LESSON_EXTRAS_WIDTH
-      : BUBBLE_CHOICE_WIDTH;
-
     return (
       <div
         key={sublevel.id}
-        style={{...styles.row, ...{width: cardWidth}}}
+        style={styles.row}
         className="uitest-bubble-choice"
       >
         <a href={this.getSublevelUrl()}>{this.renderThumbnail()}</a>
         <div
           style={{
             ...styles.column,
-            ...{width: cardWidth - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)}
+            ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)}
           }}
         >
           <div style={styles.bubbleAndTitle}>
