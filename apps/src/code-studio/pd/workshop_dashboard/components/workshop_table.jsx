@@ -282,7 +282,7 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatManagement = manageData => {
-    const {id, course, subject, state, date, canDelete} = manageData;
+    const {id, course, subject, state, date, canDelete, endDate} = manageData;
 
     return (
       <WorkshopManagement
@@ -299,6 +299,7 @@ export default class WorkshopTable extends React.Component {
             subject !== SubjectNames.SUBJECT_FIT) ||
           (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
         }
+        endDate={endDate}
       />
     );
   };
@@ -319,7 +320,8 @@ export default class WorkshopTable extends React.Component {
           subject: row.subject,
           state: row.state,
           date: row.sessions[0].start,
-          canDelete: row.can_delete
+          canDelete: row.can_delete,
+          endDate: row.sessions[row.sessions.length - 1].end
         }
       })
     );
