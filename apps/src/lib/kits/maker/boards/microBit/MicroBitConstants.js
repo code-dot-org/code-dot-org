@@ -2,7 +2,8 @@ export const sensor_channels = {
   accelX: 8,
   accelY: 9,
   accelZ: 10,
-  tempSensor: 12
+  tempSensor: 12,
+  magX: 13
 };
 export const EXTERNAL_PINS = [0, 1, 2];
 
