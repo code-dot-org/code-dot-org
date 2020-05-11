@@ -486,17 +486,6 @@ km:
       report_abuse_form:
         abuse_type:
           other: 'ផ្សេងៗ'
-  flex_category:
-    csf_loops: 'រង្វិល​ជុំ'
-    csf_events: 'ព្រឹត្តិការណ៍'
-    csf_conditionals: 'លក្ខខណ្ឌ'
-    csf_functions: 'អនុ​គមន៍'
-    csf_variables: 'អ​ថេរ'
-    csp_variables: 'អ​ថេរ'
-    csp_conditionals: 'លក្ខខណ្ឌ'
-    csp_functions: 'អនុ​គមន៍'
-    csp_lists: 'បញ្ជី'
-    csp_loops: 'រង្វិល​ជុំ'
   hoc_download:
     minecraft_name: 'Minecraft Hour of Code'
   pd:
