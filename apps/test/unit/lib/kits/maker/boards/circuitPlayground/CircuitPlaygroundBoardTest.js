@@ -323,19 +323,14 @@ describe('CircuitPlaygroundBoard', () => {
     ChromeSerialPort.stub.reset();
   });
 
-  describe('Maker Board Interface', () => {
-    describe('implements shared Maker Board Interface', () => {
-      itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
-    });
+  // Test coverage for Maker Board Interface
+  itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
 
-    /**
-     * After installing on the interpreter, test that the components and
-     * component constructors are available from the interpreter
-     */
-    describe('Circuit Playground components accessible from interpreter', () => {
-      itMakesCircuitPlaygroundComponentsAvailable(CircuitPlaygroundBoard);
-    });
-  });
+  /**
+   * After installing on the interpreter, test that the components and
+   * component constructors are available from the interpreter
+   */
+  itMakesCircuitPlaygroundComponentsAvailable(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
     // TODO (bbuchanan): Remove when maker-captouch is on by default.
