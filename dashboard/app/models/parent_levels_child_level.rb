@@ -6,6 +6,7 @@
 #  parent_level_id :integer          not null
 #  child_level_id  :integer          not null
 #  position        :integer
+#  kind            :string(255)      default("sublevel"), not null
 #
 # Indexes
 #
@@ -36,4 +37,11 @@ class ParentLevelsChildLevel < ActiveRecord::Base
   belongs_to :parent_level, class_name: 'Level'
   belongs_to :child_level, class_name: 'Level'
   validates_uniqueness_of :child_level, scope: :parent_level
+
+  VALID_KINDS = [
+    CONTAINED = 'contained'.freeze,
+    PROJECT_TEMPLATE = 'project_template'.freeze,
+    SUBLEVEL = 'sublevel'.freeze
+  ]
+  validates_inclusion_of :kind, in: VALID_KINDS
 end

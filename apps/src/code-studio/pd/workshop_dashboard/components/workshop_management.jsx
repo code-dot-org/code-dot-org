@@ -39,7 +39,9 @@ export class WorkshopManagement extends React.Component {
 
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
-      if (this.use_daily_survey_route()) {
+      if (this.use_foorm_route()) {
+        surveyBaseUrl = 'workshop_daily_survey_results';
+      } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = 'local_summer_workshop_survey_results';
@@ -73,6 +75,16 @@ export class WorkshopManagement extends React.Component {
 
     return (
       new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
+    );
+  };
+
+  use_foorm_route = () => {
+    let workshop_date = new Date(this.props.date);
+
+    return (
+      workshop_date >= new Date('2020-05-08') &&
+      this.props.subject === SubjectNames.SUBJECT_CSF_101 &&
+      this.props.course === 'CS Fundamentals'
     );
   };
 

@@ -6,7 +6,7 @@ export default storybook => {
   storybook = storybook.storiesOf('ManageStudentsLoginInfo', module);
 
   Object.values(SectionLoginType).forEach(loginType => {
-    storybook = storybook.add(`${loginType}`, () => (
+    storybook = storybook.add(loginType, () => (
       <ManageStudentsLoginInfo
         sectionId={7}
         sectionCode="ABCDEF"

@@ -7,9 +7,9 @@ import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
 import {
   reorderLevel,
-  moveLevelToStage,
+  moveLevelToLesson,
   addLevel,
-  setStageLockable,
+  setLessonLockable,
   setFlexCategory
 } from './editorRedux';
 import FlexCategorySelector from './FlexCategorySelector';
@@ -20,7 +20,7 @@ const styles = {
   checkbox: {
     margin: '0 0 0 7px'
   },
-  stageCard: {
+  lessonCard: {
     fontSize: 18,
     background: 'white',
     borderWidth: 1,
@@ -30,11 +30,11 @@ const styles = {
     padding: 20,
     margin: 10
   },
-  stageCardHeader: {
+  lessonCardHeader: {
     color: '#5b6770',
     marginBottom: 15
   },
-  stageLockable: {
+  lessonLockable: {
     fontSize: 13,
     marginTop: 3
   },
@@ -50,25 +50,25 @@ const styles = {
   }
 };
 
-styles.targetStageCard = {
-  ...styles.stageCard,
+styles.targetLessonCard = {
+  ...styles.lessonCard,
   borderWidth: 5,
   borderColor: color.cyan,
   padding: 16
 };
 
-export class UnconnectedStageCard extends Component {
+export class UnconnectedLessonCard extends Component {
   static propTypes = {
     reorderLevel: PropTypes.func.isRequired,
-    moveLevelToStage: PropTypes.func.isRequired,
+    moveLevelToLesson: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
-    setStageLockable: PropTypes.func.isRequired,
-    stagesCount: PropTypes.number.isRequired,
-    stage: PropTypes.object.isRequired,
-    stageMetrics: PropTypes.object.isRequired,
+    setLessonLockable: PropTypes.func.isRequired,
+    lessonsCount: PropTypes.number.isRequired,
+    lesson: PropTypes.object.isRequired,
+    lessonMetrics: PropTypes.object.isRequired,
     setFlexCategory: PropTypes.func.isRequired,
-    setTargetStage: PropTypes.func.isRequired,
-    targetStagePos: PropTypes.number
+    setTargetLesson: PropTypes.func.isRequired,
+    targetLessonPos: PropTypes.number
   };
 
   /**
@@ -92,7 +92,7 @@ export class UnconnectedStageCard extends Component {
     // page since the last time this component was updated. Therefore, force the
     // component to rerender so that this.metrics will be up to date.
     this.forceUpdate(() => {
-      const startingPositions = this.props.stage.levels.map(level => {
+      const startingPositions = this.props.lesson.levels.map(level => {
         const metrics = this.metrics[level.position];
         return metrics.top + metrics.height / 2;
       });
@@ -134,42 +134,42 @@ export class UnconnectedStageCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
-    const targetStagePos = this.getTargetStage(clientY);
-    this.props.setTargetStage(targetStagePos);
+    const targetLessonPos = this.getTargetLesson(clientY);
+    this.props.setTargetLesson(targetLessonPos);
   };
 
-  // Given a clientY value of a location on the screen, find the StageCard
+  // Given a clientY value of a location on the screen, find the LessonCard
   // corresponding to that location, and return the position of the
-  // corresponding stage within the script.
-  getTargetStage = y => {
-    const {stageMetrics} = this.props;
-    const stagePos = Object.keys(stageMetrics).find(stagePos => {
-      const stageRect = stageMetrics[stagePos];
-      return y > stageRect.top && y < stageRect.top + stageRect.height;
+  // corresponding lesson within the script.
+  getTargetLesson = y => {
+    const {lessonMetrics} = this.props;
+    const lessonPos = Object.keys(lessonMetrics).find(lessonPos => {
+      const lessonRect = lessonMetrics[lessonPos];
+      return y > lessonRect.top && y < lessonRect.top + lessonRect.height;
     });
-    return stagePos ? Number(stagePos) : null;
+    return lessonPos ? Number(lessonPos) : null;
   };
 
   handleDragStop = () => {
-    const {stage, targetStagePos} = this.props;
-    if (targetStagePos === stage.position) {
-      // When dragging within a stage, reorder the level within that stage.
+    const {lesson, targetLessonPos} = this.props;
+    if (targetLessonPos === lesson.position) {
+      // When dragging within a lesson, reorder the level within that lesson.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
-          stage.position,
+          lesson.position,
           this.state.draggedLevelPos,
           this.state.newPosition
         );
       }
-    } else if (targetStagePos) {
-      // When dragging between stages, move it to the end of the new stage.
-      this.props.moveLevelToStage(
-        stage.position,
+    } else if (targetLessonPos) {
+      // When dragging between lessons, move it to the end of the new lesson.
+      this.props.moveLevelToLesson(
+        lesson.position,
         this.state.draggedLevelPos,
-        targetStagePos
+        targetLessonPos
       );
     }
-    this.props.setTargetStage(null);
+    this.props.setTargetLesson(null);
 
     this.setState({
       draggedLevelPos: null,
@@ -182,7 +182,7 @@ export class UnconnectedStageCard extends Component {
   };
 
   handleAddLevel = () => {
-    this.props.addLevel(this.props.stage.position);
+    this.props.addLevel(this.props.lesson.position);
   };
 
   handleRemoveLevel = levelPos => {
@@ -201,8 +201,8 @@ export class UnconnectedStageCard extends Component {
 
   handleSetFlexCategory = newFlexCategory => {
     this.setState({editingFlexCategory: false});
-    if (this.props.stage.flex_category !== newFlexCategory) {
-      this.props.setFlexCategory(this.props.stage.position, newFlexCategory);
+    if (this.props.lesson.flex_category !== newFlexCategory) {
+      this.props.setFlexCategory(this.props.lesson.position, newFlexCategory);
     }
   };
 
@@ -211,9 +211,9 @@ export class UnconnectedStageCard extends Component {
   };
 
   toggleLockable = () => {
-    this.props.setStageLockable(
-      this.props.stage.position,
-      !this.props.stage.lockable
+    this.props.setLessonLockable(
+      this.props.lesson.position,
+      !this.props.lesson.lockable
     );
   };
 
@@ -222,34 +222,34 @@ export class UnconnectedStageCard extends Component {
   }
 
   render() {
-    const {stage, targetStagePos} = this.props;
+    const {lesson, targetLessonPos} = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
-    const isTargetStage = targetStagePos === stage.position;
+    const isTargetLesson = targetLessonPos === lesson.position;
     return (
-      <div style={isTargetStage ? styles.targetStageCard : styles.stageCard}>
-        <div style={styles.stageCardHeader}>
-          {!stage.lockable && (
-            <span>Stage {stage.relativePosition}:&nbsp;</span>
+      <div style={isTargetLesson ? styles.targetLessonCard : styles.lessonCard}>
+        <div style={styles.lessonCardHeader}>
+          {!lesson.lockable && (
+            <span>Lesson {lesson.relativePosition}:&nbsp;</span>
           )}
-          {stage.name}
+          {lesson.name}
           <OrderControls
-            type={ControlTypes.Stage}
-            position={stage.position}
-            total={this.props.stagesCount}
-            name={this.props.stage.name}
+            type={ControlTypes.Lesson}
+            position={lesson.position}
+            total={this.props.lessonsCount}
+            name={this.props.lesson.name}
           />
-          <label style={styles.stageLockable}>
-            Require teachers to unlock this stage before students in their
+          <label style={styles.lessonLockable}>
+            Require teachers to unlock this lesson before students in their
             section can access it
             <input
-              checked={stage.lockable}
+              checked={lesson.lockable}
               onChange={this.toggleLockable}
               type="checkbox"
               style={styles.checkbox}
             />
           </label>
         </div>
-        {stage.levels.map(level => (
+        {lesson.levels.map(level => (
           <LevelToken
             ref={levelToken => {
               if (levelToken) {
@@ -261,7 +261,7 @@ export class UnconnectedStageCard extends Component {
             }}
             key={level.position + '_' + level.ids[0]}
             level={level}
-            stagePosition={stage.position}
+            lessonPosition={lesson.position}
             dragging={!!draggedLevelPos}
             draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
@@ -304,7 +304,7 @@ export class UnconnectedStageCard extends Component {
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLevelDialog
-          stage={stage}
+          lesson={lesson}
           levelPosToRemove={levelPosToRemove}
           handleClose={this.handleClose}
         />
@@ -317,9 +317,9 @@ export default connect(
   state => ({}),
   {
     reorderLevel,
-    moveLevelToStage,
+    moveLevelToLesson,
     addLevel,
-    setStageLockable,
+    setLessonLockable,
     setFlexCategory
   }
-)(UnconnectedStageCard);
+)(UnconnectedLessonCard);

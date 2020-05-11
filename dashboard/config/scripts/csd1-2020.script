@@ -9,6 +9,7 @@ family_name 'csd1'
 version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit1/standards/"]]
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Pre-survey', lockable: true

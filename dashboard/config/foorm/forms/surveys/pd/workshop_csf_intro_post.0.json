@@ -319,6 +319,8 @@
           "name": "race",
           "title": "What is your racial or ethnic identity?",
           "isRequired": true,
+          "hasOther": true,
+          "otherText": "Other",
           "choices": [
             {
               "value": "ai_or_an",
@@ -343,10 +345,6 @@
             {
               "value": "white",
               "text": "White"
-            },
-            {
-              "value": "other",
-              "text": "Other"
             },
             {
               "value": "prefer_not_answer",

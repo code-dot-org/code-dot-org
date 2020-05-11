@@ -10,11 +10,11 @@ const styles = {
     border: '1px solid ' + color.light_gray,
     padding: 10
   },
-  stage: {
+  lesson: {
     paddingTop: 10,
     paddingBottom: 10
   },
-  stageName: {
+  lessonName: {
     fontSize: 16,
     textDecoration: 'underline'
   },
@@ -39,11 +39,11 @@ const styles = {
 };
 
 /**
- * Shows a list of stages that have descriptions, along with those descriptions.
+ * Shows a list of lessons that have descriptions, along with those descriptions.
  * If you click the import button, it grabs new descriptions from curriculum
  * builder and shows both sets.
  */
-export default class StageDescriptions extends React.Component {
+export default class LessonDescriptions extends React.Component {
   static propTypes = {
     scriptName: PropTypes.string.isRequired,
     currentDescriptions: PropTypes.arrayOf(
@@ -60,7 +60,7 @@ export default class StageDescriptions extends React.Component {
     collapsed: true,
     buttonText: null,
     importedDescriptions: [],
-    mismatchedStages: []
+    mismatchedLessons: []
   };
 
   toggleExpanded = () => {
@@ -73,17 +73,17 @@ export default class StageDescriptions extends React.Component {
     let importedDescriptions = [];
     const {currentDescriptions} = this.props;
 
-    const mismatchedStages = [];
+    const mismatchedLessons = [];
 
     result.lessons.forEach((lesson, index) => {
       if (index >= currentDescriptions.length) {
         // CB gave us more lessons that we have on LB. throw the extras away
-        mismatchedStages.push(lesson.title);
+        mismatchedLessons.push(lesson.title);
         return;
       }
 
       if (currentDescriptions[index].name !== lesson.title) {
-        mismatchedStages.push(lesson.title);
+        mismatchedLessons.push(lesson.title);
       }
 
       importedDescriptions.push({
@@ -96,7 +96,7 @@ export default class StageDescriptions extends React.Component {
     this.setState({
       buttonText: 'Imported',
       importedDescriptions,
-      mismatchedStages
+      mismatchedLessons
     });
   };
 
@@ -116,7 +116,7 @@ export default class StageDescriptions extends React.Component {
       });
   };
 
-  updatedStageDescriptions = () => {
+  updatedLessonDescriptions = () => {
     const {currentDescriptions} = this.props;
     const {importedDescriptions} = this.state;
 
@@ -139,30 +139,30 @@ export default class StageDescriptions extends React.Component {
 
     return (
       <div>
-        <h4>Stage Descriptions</h4>
+        <h4>Lesson Descriptions</h4>
         <div style={styles.main}>
           <button type="button" className="btn" onClick={this.toggleExpanded}>
             {this.state.collapsed ? 'Click to Expand' : 'Click to Collapse'}
           </button>
           {!this.state.collapsed && (
             <div>
-              {currentDescriptions.map((stage, index) => {
-                const currentStudent = stage.descriptionStudent;
-                const currentTeacher = stage.descriptionTeacher;
+              {currentDescriptions.map((lesson, index) => {
+                const currentStudent = lesson.descriptionStudent;
+                const currentTeacher = lesson.descriptionTeacher;
 
-                const importedStage = importedDescriptions[index] || {};
+                const importedLesson = importedDescriptions[index] || {};
                 const updatedStudent =
-                  hasImported && importedStage.descriptionStudent;
+                  hasImported && importedLesson.descriptionStudent;
                 const updatedTeacher =
-                  hasImported && importedStage.descriptionTeacher;
+                  hasImported && importedLesson.descriptionTeacher;
 
                 return (
-                  <div style={styles.stage} key={index}>
-                    <div style={styles.stageName}>{stage.name}</div>
-                    {hasImported && importedStage.name !== stage.name && (
+                  <div style={styles.lesson} key={index}>
+                    <div style={styles.lessonName}>{lesson.name}</div>
+                    {hasImported && importedLesson.name !== lesson.name && (
                       <div>
                         Lesson name on Curriculum Builder:{' '}
-                        <span style={styles.diff}>{importedStage.name}</span>
+                        <span style={styles.diff}>{importedLesson.name}</span>
                       </div>
                     )}
                     <label>
@@ -186,15 +186,15 @@ export default class StageDescriptions extends React.Component {
                   </div>
                 );
               })}
-              {this.state.mismatchedStages.length > 0 && (
+              {this.state.mismatchedLessons.length > 0 && (
                 <div style={styles.mismatch}>
                   <div style={{fontWeight: 'bold'}}>
-                    Curriculum Builder stages with different names than their
+                    Curriculum Builder lessons with different names than their
                     levelbuilder counterparts. If there are a lot of these, it
                     may indicate them being ordered differently in the two
                     environments.
                   </div>
-                  {this.state.mismatchedStages.map((name, index) => (
+                  {this.state.mismatchedLessons.map((name, index) => (
                     <div key={index}>- {name}</div>
                   ))}
                 </div>
@@ -203,7 +203,9 @@ export default class StageDescriptions extends React.Component {
                 <input
                   name="stage_descriptions"
                   type="hidden"
-                  defaultValue={JSON.stringify(this.updatedStageDescriptions())}
+                  defaultValue={JSON.stringify(
+                    this.updatedLessonDescriptions()
+                  )}
                 />
               )}
               <button

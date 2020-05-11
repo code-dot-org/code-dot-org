@@ -535,10 +535,7 @@ module Poste2
       facilitators@code.org
       volunteers@code.org
       partner@code.org
-      regional_partner_contact_request@code.org
     ]
-    # Note: regional_partner_contact_request@code.org should only be used
-    # to send email to internal recipients (eg, support@code.org)
 
     def initialize(settings = nil)
     end

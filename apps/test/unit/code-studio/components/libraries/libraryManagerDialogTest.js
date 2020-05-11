@@ -172,10 +172,12 @@ describe('LibraryManagerDialog', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      wrapper.instance().setState({error: IMPORT_ERROR_MSG});
+      wrapper
+        .instance()
+        .setState({errorMessages: {importFromId: IMPORT_ERROR_MSG}});
 
       wrapper.instance().setLibraryToImport({target: {value: 'id'}});
-      expect(wrapper.state().error).to.be.null;
+      expect(wrapper.state().errorMessages.importFromId).to.be.undefined;
     });
 
     it('addLibraryById adds the library to the project if given libraryJson', () => {
@@ -197,9 +199,11 @@ describe('LibraryManagerDialog', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      expect(wrapper.state().error).to.be.null;
+      expect(wrapper.state().errorMessages.importFromId).to.be.undefined;
       wrapper.instance().addLibraryById(null, 'an error occurred!');
-      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+      expect(wrapper.state().errorMessages.importFromId).to.equal(
+        IMPORT_ERROR_MSG
+      );
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {

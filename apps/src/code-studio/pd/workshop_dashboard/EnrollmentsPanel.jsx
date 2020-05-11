@@ -179,16 +179,22 @@ export default class EnrollmentsPanel extends React.Component {
     });
   };
 
-  getViewSurveyUrl = (workshopId, course, subject) => {
+  getViewSurveyUrl = (workshopId, course, subject, lastSessionDate) => {
     if (
       !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
     ) {
       return null;
     }
 
-    return course === 'CS Fundamentals' && subject === 'Intro'
-      ? `/pd/workshop_dashboard/survey_results/${workshopId}`
-      : `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
+    if (course === 'CS Fundamentals' && subject === 'Intro') {
+      if (lastSessionDate >= new Date('2020-05-08')) {
+        return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
+      } else {
+        return `/pd/workshop_dashboard/survey_results/${workshopId}`;
+      }
+    } else {
+      return `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
+    }
   };
 
   render() {
@@ -267,10 +273,15 @@ export default class EnrollmentsPanel extends React.Component {
         .utc(workshop.sessions[0].start)
         .format('MMMM Do');
 
+      const lastSessionDate = new Date(
+        workshop.sessions[workshop.sessions.length - 1].start
+      );
+
       let viewSurveyUrl = this.getViewSurveyUrl(
         workshopId,
         workshop.course,
-        workshop.subject
+        workshop.subject,
+        lastSessionDate
       );
 
       contents = (
