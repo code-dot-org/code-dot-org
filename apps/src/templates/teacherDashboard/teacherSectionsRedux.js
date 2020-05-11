@@ -1008,6 +1008,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
