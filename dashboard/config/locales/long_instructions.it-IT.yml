@@ -2359,30 +2359,32 @@ it-IT:
         >
         > What are your first impressions of CS Fundamentals?
         >
-        > [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.
+        > [Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
-        > Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2].
+        > Don't have a Twitter account? You can also find us on [Facebook](https://www.facebook.com/Code.org/) or [Instagram](https://www.instagram.com/codeorg/).
       OPD-K5 Closing: |-
         > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
         >
-        > [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
+        > [Sign up now](http://code.org/professional-development-workshops) to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
       OPD-K5 EventsVid: |-
         Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in qui occorre  programmare con gli eventi.
 
         > Un "gestore di evento" è un insieme di istruzioni che dicono al computer di "ascoltare" se succede un determinata cosa, e "quando accade" eseguire un certo insieme di azioni. Per esempio, in alcune  pagine web, passando il mouse sopra ad un menù a tendina, questo si apre. In questo caso l'evento è "il passaggio del cursore del mouse in una certa zona dello schermo" e l'"azione" scatenata dall'evento è l'apertura del menù a tendina.
       OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
-        che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
-        ti verrà chiesto di scrivere un programma simile!
+        che gli alunni scriveranno durante il [Corso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
+        Nella prossima pagina ti verrà chiesto di scrivere un programma simile!
       OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni piani di lavoro
         delle lezioni tradizionali. Tieni presente che sono disponibili i piani di
         lavoro di ogni lezione del corso \"Fondamenti di informatica\" -- sia delle
         lezioni tradizionali che di quelle tecnologiche. Ecco la lista completa (al
         momento questi documenti sono disponibili solo in inglese):\n<br/>\n<br/>
-        \n[Piano di lavoro delle lezioni del corso A][0]<br/> \n[Piano di lavoro delle
-        lezioni del corso B][1]<br/>\n[Piano di lavoro delle lezioni del corso C][2]<br/>
-        \n[Piano di lavoro delle lezioni del corso D][3]<br/> \n[Piano di lavoro delle
-        lezioni del corso E][4]<br/> \n[Piano di lavoro delle lezioni del corso F][5]<br/>
+        \n[Piano di lavoro delle lezioni del corso A](https://curriculum.code.org/csf-18/coursea/)<br/>
+        \n[Piano di lavoro delle lezioni del corso B](https://curriculum.code.org/csf-18/courseb/)<br/>\n[Piano
+        di lavoro delle lezioni del corso C](https://curriculum.code.org/csf-18/coursec/)<br/>
+        \n[Piano di lavoro delle lezioni del corso D](https://curriculum.code.org/csf-18/coursed/)<br/>
+        \n[Piano di lavoro delle lezioni del corso E](https://curriculum.code.org/csf-18/coursee/)<br/>
+        \n[Piano di lavoro delle lezioni del corso F](https://curriculum.code.org/csf-18/coursef/)<br/>
         \n\nSentiti comunque libero di adattare queste lezioni o di creare un tuo
         personale piano di lavoro delle lezioni che assecondi le tue specifiche esigenze!
         Il video qui sotto introduce il piano di lavoro delle lezioni del corso \"Fondamenti
@@ -2407,7 +2409,7 @@ it-IT:
         >
         > How might you explicitly teach problem solving in your CS classroom?
         >
-        > [Tweet your thoughts][1] and be sure to tag @teachcode in your tweet so we can respond.
+        > [Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.
         >
         > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Share on Twitter</h4></a>
       OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
