@@ -137,7 +137,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Add lives to the clicker game that decrement by 1 when the background image is clicked (Click to see full instructions)",
-    "long_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and goes down by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, reduce the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
+    "long_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and goes down by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n**Do This:** Make the number of lives go down by 1 every time the background image is clicked.\r\n\r\n**How?**\r\n1. Add a variable to keep track of lives.\r\n2. Add a event handler for the background image. Note the ID for the image is called \"background\".\r\n3. When the background is clicked, reduce the number of lives by 1.\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -184,7 +184,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-04-21 21:02:58 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-04-21 21:02:58 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 02:41:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

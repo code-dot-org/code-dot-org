@@ -179,6 +179,24 @@ export default class EnrollmentsPanel extends React.Component {
     });
   };
 
+  getViewSurveyUrl = (workshopId, course, subject, lastSessionDate) => {
+    if (
+      !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
+    ) {
+      return null;
+    }
+
+    if (course === 'CS Fundamentals' && subject === 'Intro') {
+      if (lastSessionDate >= new Date('2020-05-08')) {
+        return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
+      } else {
+        return `/pd/workshop_dashboard/survey_results/${workshopId}`;
+      }
+    } else {
+      return `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
+    }
+  };
+
   render() {
     const {
       workshopId,
@@ -254,24 +272,44 @@ export default class EnrollmentsPanel extends React.Component {
       const firstSessionDate = moment
         .utc(workshop.sessions[0].start)
         .format('MMMM Do');
+
+      const lastSessionDate = new Date(
+        workshop.sessions[workshop.sessions.length - 1].start
+      );
+
+      let viewSurveyUrl = this.getViewSurveyUrl(
+        workshopId,
+        workshop.course,
+        workshop.subject,
+        lastSessionDate
+      );
+
       contents = (
-        <WorkshopEnrollment
-          workshopId={workshopId}
-          workshopCourse={workshop.course}
-          workshopSubject={workshop.subject}
-          workshopDate={firstSessionDate}
-          numSessions={workshop.sessions.length}
-          enrollments={enrollments}
-          onDelete={this.handleDeleteEnrollment}
-          onClickSelect={this.handleClickSelect}
-          accountRequiredForAttendance={
-            workshop['account_required_for_attendance?']
-          }
-          scholarshipWorkshop={workshop['scholarship_workshop?']}
-          activeTab={this.state.enrollmentActiveTab}
-          onTabSelect={this.handleEnrollmentActiveTabSelect}
-          selectedEnrollments={this.state.selectedEnrollments}
-        />
+        <div>
+          <WorkshopEnrollment
+            workshopId={workshopId}
+            workshopCourse={workshop.course}
+            workshopSubject={workshop.subject}
+            workshopDate={firstSessionDate}
+            numSessions={workshop.sessions.length}
+            enrollments={enrollments}
+            onDelete={this.handleDeleteEnrollment}
+            onClickSelect={this.handleClickSelect}
+            accountRequiredForAttendance={
+              workshop['account_required_for_attendance?']
+            }
+            scholarshipWorkshop={workshop['scholarship_workshop?']}
+            activeTab={this.state.enrollmentActiveTab}
+            onTabSelect={this.handleEnrollmentActiveTabSelect}
+            selectedEnrollments={this.state.selectedEnrollments}
+          />
+
+          {['In Progress', 'Ended'].includes(workshop.state) && viewSurveyUrl && (
+            <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
+              View Survey Results
+            </Button>
+          )}
+        </div>
       );
     }
 

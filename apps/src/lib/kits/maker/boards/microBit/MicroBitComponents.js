@@ -2,7 +2,7 @@
  * Utilities for initializing MicroBit board components
  */
 import MicroBitButton from './MicroBitButton';
-import LedMatrix from './LedMatrix';
+import LedScreen from './LedScreen';
 import Accelerometer from './Accelerometer';
 import MicroBitThermometer from './MicroBitThermometer';
 
@@ -17,7 +17,7 @@ export function createMicroBitComponents(board) {
   return Promise.resolve({
     buttonA: new MicroBitButton({mb: board, pin: 1}),
     buttonB: new MicroBitButton({mb: board, pin: 2}),
-    ledMatrix: new LedMatrix({mb: board}),
+    ledScreen: new LedScreen({mb: board}),
     tempSensor: new MicroBitThermometer({mb: board}),
     accelerometer: new Accelerometer({mb: board})
   });
@@ -34,8 +34,8 @@ export function createMicroBitComponents(board) {
  *   components, or just reset to their initial state.
  */
 export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
-  if (components.ledMatrix) {
-    components.ledMatrix.clear();
+  if (components.ledScreen) {
+    components.ledScreen.clear();
   }
 
   if (components.tempSensor) {
@@ -49,7 +49,7 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
   }
 
   if (shouldDestroyComponents) {
-    delete components.ledMatrix;
+    delete components.ledScreen;
     delete components.buttonA;
     delete components.buttonB;
     delete components.accelerometer;
@@ -78,7 +78,7 @@ export function enableMicroBitComponents(components) {
  */
 export const componentConstructors = {
   MicroBitButton,
-  LedMatrix,
+  LedScreen,
   Accelerometer,
   MicroBitThermometer
 };

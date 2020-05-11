@@ -2,9 +2,11 @@ professional_learning_course 'CS Principles Facilitator in Training'
 login_required true
 student_detail_progress_view true
 
-stage 'Welcome', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+stage 'Welcome'
 level 'welcome-csp-novice', named: true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Tuesday'
 level 'csp-tuesday-unit', progression: 'Unit Reflection'
 level 'csp-tuesday-unit2', progression: 'Unit Reflection'

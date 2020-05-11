@@ -1,6 +1,19 @@
-// Shows rollup data from Foorm surveys. Shows average data for this workshop
-// and across all workshops for this course
-// TODO: show facilitator averages
+/**
+ * Shows rollup data from Foorm surveys. Shows average data for this workshop
+ * and across all workshops for this course
+ * The rollup table can either be per facilitator or not. This means the question(s) were asked on a
+ * per-facilitator basis. If it is per-facilitator, each question
+ * will have the following data points (keys used in table are in parentheses):
+ *  -average for this workshop for each facilitator (thisWorkshop-{facilitatorId})
+ *  -average for each facilitator across all of their workshops (facilitatorAverage-{facilitatorId})
+ *  -average for all workshops for this course (overall)
+ *
+ * If the data is not per-facilitator each question will have the following data points
+ * (keys used in table are in parentheses):
+ *  -average for this workshop (thisWorkshop)
+ *  -average for each facilitator across all of their workshops (facilitatorAverage-{facilitatorId})
+ *  -average for all workshops for this course (overall)
+ **/
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
@@ -14,48 +27,73 @@ const styles = {
   },
   headerRow: {
     borderTop: 'solid'
+  },
+  dateNotice: {
+    textAlign: 'right'
   }
 };
 
 export default class SurveyRollupTableFoorm extends React.Component {
   static propTypes = {
     workshopRollups: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
-    courseName: PropTypes.string.isRequired
+    courseName: PropTypes.string.isRequired,
+    isPerFacilitator: PropTypes.bool.isRequired,
+    facilitators: PropTypes.object
   };
 
-  // parse row data into format reactabular-table can parse. Each row may contain the following data:
-  // {question: {text: <question-text>, type: overall/title/question},
-  //             thisWorkshop: <this workshop average>, overall: <overall average>,
-  //             id: <id>, isHeader: true/false}
+  /**
+   * Parse row data into format reactabular-table can parse.
+   * The row may contain the following data:
+   * {
+   *  question: {text: <question-text>, type: overall/title/question},
+   *  // if isPerFacilitator = false
+   *  thisWorkshop: '5 / 7'
+   *  // if isPerFacilitator = true, faciliator ids are 100, 200
+   *  thisWorkshop-100: '3 / 7',
+   *  thisWorkshop-200: '4 / 7',
+   *  // for either type--average across all workshops for each facilitator
+   *  facilitatorAverage-100: '4 / 7',
+   *  facilitatorAverage-200: '3 / 7',
+   *  // average across all workshops for this course
+   *  overall: '6 / 7',
+   *  id: <row-id>,
+   *  isHeader: true/false
+   * }
+   **/
   getTableRows() {
-    const {workshopRollups} = this.props;
-    let rows = [
-      {
-        question: {
-          text: 'Total Responses',
-          type: 'overall'
-        },
-        thisWorkshop: workshopRollups.single_workshop.response_count,
-        overall: workshopRollups.overall.response_count,
-        id: 'total_responses'
-      }
-    ];
-    const overall = workshopRollups.overall;
-    const thisWorkshop = workshopRollups.single_workshop;
-    const questions = workshopRollups.questions;
+    // add response counts for each category
+    let rows = [];
+    rows.push(this.getOverallCountsRow());
+
+    // add rows for each question in rollup
+    const overall = this.props.workshopRollups.overall;
+    const thisWorkshop = this.props.workshopRollups.single_workshop;
+    const overallFacilitator = this.props.workshopRollups.overall_facilitator;
+    const questions = this.props.workshopRollups.questions;
     if (overall && overall.averages) {
       for (const questionId in overall.averages) {
         const questionData = questions[questionId];
         let overallQuestionAverages = overall.averages[questionId];
-        let thisWorkshopAverages = thisWorkshop.averages[questionId];
-        // only display matrix questions for now
+        let thisWorkshopAverages = this.props.isPerFacilitator
+          ? {}
+          : thisWorkshop.averages[questionId];
+        let overallFacilitatorAverages = this.getFacilitatorAveragesForQuestion(
+          overallFacilitator,
+          questionId
+        );
+        if (this.props.isPerFacilitator && thisWorkshop) {
+          thisWorkshopAverages = this.getFacilitatorAveragesForQuestion(
+            thisWorkshop,
+            questionId
+          );
+        }
         if (questionData.type === 'matrix') {
           this.parseMatrixData(
             rows,
             questionData,
             questionId,
             thisWorkshopAverages,
+            overallFacilitatorAverages,
             overallQuestionAverages
           );
         } else if (
@@ -68,6 +106,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
             questionData,
             questionId,
             thisWorkshopAverages,
+            overallFacilitatorAverages,
             overallQuestionAverages
           );
         }
@@ -76,9 +115,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
     return rows;
   }
 
-  // get column configuration information
+  // Get column configuration in reactabular-table format
   getTableColumns() {
-    return [
+    let columns = [
       {
         property: 'question',
         cell: {
@@ -94,44 +133,38 @@ export default class SurveyRollupTableFoorm extends React.Component {
             })
           ]
         }
-      },
-      {
-        property: 'thisWorkshop',
-        header: {
-          label: 'Average for this workshop'
-        }
-      },
-      {
-        property: 'overall',
-        header: {
-          label: `Average across all ${this.props.courseName} workshops`
-        }
       }
     ];
+    this.addThisWorkshopColumns(columns);
+    columns.push({
+      property: 'overall',
+      header: {
+        label: `Average across all ${this.props.courseName} workshops`
+      }
+    });
+    return columns;
   }
 
-  // parse row data for a set of matrix answers
+  // Add rollup data for a set of matrix questions
   parseMatrixData(
     rows,
     questionData,
     questionId,
     thisWorkshopAverages,
+    overallFacilitatorAverages,
     overallQuestionAverages
   ) {
-    let denominator = questionData.column_count;
-    // add matrix category
-    rows.push({
-      question: {
-        text: questionData.header,
-        type: 'overall'
-      },
-      thisWorkshop: thisWorkshopAverages
-        ? `${thisWorkshopAverages.average} / ${denominator}`
-        : '',
-      overall: `${overallQuestionAverages.average} / ${denominator}`,
-      id: `${questionId}-category`,
-      isHeader: true
-    });
+    // add overall averages for the matrix
+    rows.push(
+      this.getOverallMatrixData(
+        questionData,
+        overallQuestionAverages,
+        questionId,
+        thisWorkshopAverages,
+        overallFacilitatorAverages
+      )
+    );
+
     // add top level question
     rows.push({
       question: {
@@ -140,20 +173,43 @@ export default class SurveyRollupTableFoorm extends React.Component {
       },
       id: questionId
     });
+
     // add individual rows
-    let thisWorkshopRows = thisWorkshopAverages && thisWorkshopAverages.rows;
+    const denominator = questionData.column_count;
     for (const rowId in overallQuestionAverages.rows) {
-      rows.push({
+      let rowData = {
         question: {
           text: questionData.rows[rowId],
           type: 'question'
         },
-        thisWorkshop: thisWorkshopRows
-          ? `${thisWorkshopRows[rowId]} / ${denominator}`
-          : '',
-        overall: `${overallQuestionAverages.rows[rowId]} / ${denominator}`,
+        overall: this.getFormattedRowData(
+          overallQuestionAverages.rows[rowId],
+          denominator
+        ),
         id: rowId
-      });
+      };
+      if (this.props.isPerFacilitator) {
+        this.addPerQuestionAverageToRow(
+          rowData,
+          rowId,
+          thisWorkshopAverages,
+          denominator,
+          'thisWorkshop'
+        );
+      } else if (thisWorkshopAverages && thisWorkshopAverages.rows) {
+        rowData['thisWorkshop'] = this.getFormattedRowData(
+          thisWorkshopAverages.rows[rowId],
+          denominator
+        );
+      }
+      this.addPerQuestionAverageToRow(
+        rowData,
+        rowId,
+        overallFacilitatorAverages,
+        denominator,
+        'facilitatorAverage'
+      );
+      rows.push(rowData);
     }
   }
 
@@ -163,37 +219,249 @@ export default class SurveyRollupTableFoorm extends React.Component {
     questionData,
     questionId,
     thisWorkshopAverage,
+    overallFacilitatorAverage,
     overallQuestionAverage
   ) {
     let denominator = questionData.column_count;
-    rows.push({
+    let rowData = {
       question: {
         text: questionData.title,
         type: 'overall'
       },
-      thisWorkshop: thisWorkshopAverage
-        ? `${thisWorkshopAverage} / ${denominator}`
-        : '',
-      overall: `${overallQuestionAverage} / ${denominator}`,
+      overall: this.getFormattedRowData(overallQuestionAverage, denominator),
       id: questionId,
       isHeader: true
-    });
+    };
+
+    if (this.props.isPerFacilitator) {
+      this.addPerFacilitatorAverageForSelect(
+        rowData,
+        thisWorkshopAverage,
+        denominator,
+        'thisWorkshop'
+      );
+    } else {
+      rowData['thisWorkshop'] = this.getFormattedRowData(
+        thisWorkshopAverage,
+        denominator
+      );
+    }
+
+    this.addPerFacilitatorAverageForSelect(
+      rowData,
+      overallFacilitatorAverage,
+      denominator,
+      'facilitatorAverage'
+    );
+
+    rows.push(rowData);
+  }
+
+  /** HELPER FUNCTIONS */
+
+  // Get data row for average across all questions in a matrix
+  getOverallMatrixData(
+    questionData,
+    overallQuestionAverages,
+    questionId,
+    thisWorkshopAverages,
+    overallFacilitatorAverages
+  ) {
+    let denominator = questionData.column_count;
+    let overallData = {
+      question: {
+        text: questionData.header,
+        type: 'overall'
+      },
+      overall: this.getFormattedRowData(
+        overallQuestionAverages.average,
+        denominator
+      ),
+      id: `${questionId}-category`,
+      isHeader: true
+    };
+    if (this.props.isPerFacilitator) {
+      this.addFacilitatorAverageToRow(
+        thisWorkshopAverages,
+        overallData,
+        denominator,
+        'thisWorkshop'
+      );
+    } else if (thisWorkshopAverages) {
+      overallData['thisWorkshop'] = this.getFormattedRowData(
+        thisWorkshopAverages.average,
+        denominator
+      );
+    }
+    this.addFacilitatorAverageToRow(
+      overallFacilitatorAverages,
+      overallData,
+      denominator,
+      'facilitatorAverage'
+    );
+    return overallData;
+  }
+
+  // Get row data for response counts
+  getOverallCountsRow() {
+    const {workshopRollups} = this.props;
+    let responseCounts = {
+      question: {
+        text: 'Total Responses',
+        type: 'overall'
+      },
+      overall: workshopRollups.overall.response_count,
+      id: 'total_responses'
+    };
+    if (this.props.isPerFacilitator) {
+      this.addPerFacilitatorResponseCounts(
+        responseCounts,
+        'thisWorkshop',
+        workshopRollups.single_workshop
+      );
+    } else {
+      responseCounts.thisWorkshop =
+        workshopRollups.single_workshop.response_count;
+    }
+
+    this.addPerFacilitatorResponseCounts(
+      responseCounts,
+      'facilitatorAverage',
+      workshopRollups.overall_facilitator
+    );
+    return responseCounts;
+  }
+
+  // Create column configurations for thisWorkshop
+  // data points and add to columns array
+  addThisWorkshopColumns(columns) {
+    if (!this.props.isPerFacilitator) {
+      columns.push({
+        property: 'thisWorkshop',
+        header: {
+          label: 'Average for this workshop'
+        }
+      });
+    }
+    let columnLabels = [];
+    for (const facilitator in this.props.facilitators) {
+      columnLabels.push({
+        thisWorkshopLabel: `${
+          this.props.facilitators[facilitator]
+        }'s average for this workshop`,
+        averageLabel: `Average across all of ${
+          this.props.facilitators[facilitator]
+        }'s ${this.props.courseName} workshops`,
+        id: facilitator
+      });
+    }
+    for (const columnLabel of columnLabels) {
+      if (this.props.isPerFacilitator) {
+        columns.push({
+          property: `thisWorkshop-${columnLabel.id}`,
+          header: {
+            label: columnLabel.thisWorkshopLabel
+          }
+        });
+      }
+      columns.push({
+        property: `facilitatorAverage-${columnLabel.id}`,
+        header: {
+          label: columnLabel.averageLabel
+        }
+      });
+    }
+  }
+
+  // format numerator and denominator into format for displaying in the table
+  getFormattedRowData(numerator, denominator) {
+    if (numerator === null || numerator === undefined || numerator === '') {
+      return '';
+    }
+    return `${numerator} / ${denominator}`;
+  }
+
+  // Get per facilitator averages for this questionId
+  getFacilitatorAveragesForQuestion(averages, questionId) {
+    let result = {};
+    for (const facilitator in averages) {
+      if (averages[facilitator].averages[questionId]) {
+        result[facilitator] = averages[facilitator].averages[questionId];
+      }
+    }
+    return result;
+  }
+
+  // add overall average for each facilitator to the given row,
+  // using the key ${key}-${facilitatorId}
+  addFacilitatorAverageToRow(averages, row, denominator, key) {
+    for (const facilitator in averages) {
+      row[`${key}-${facilitator}`] = this.getFormattedRowData(
+        averages[facilitator].average,
+        denominator
+      );
+    }
+  }
+
+  // add average for each facilitator for the given rowId to the given row,
+  // using the key ${key}-${facilitatorId}
+  addPerQuestionAverageToRow(row, rowId, averages, denominator, key) {
+    for (const facilitator in averages) {
+      if (averages[facilitator].rows && averages[facilitator].rows[rowId]) {
+        row[`${key}-${facilitator}`] = this.getFormattedRowData(
+          averages[facilitator].rows[rowId],
+          denominator
+        );
+      }
+    }
+  }
+
+  // Add the number of responses per facilitator to the responseCounts array
+  addPerFacilitatorResponseCounts(responseCounts, key, data) {
+    for (const facilitator in this.props.facilitators) {
+      responseCounts[`${key}-${facilitator}`] = data[facilitator]
+        ? data[facilitator].response_count
+        : 0;
+    }
+  }
+
+  // Add per facilitator averages for a single-select question
+  // to the given row, where the averages are an object
+  // in the format {facilitatorId-1: 5,...}
+  addPerFacilitatorAverageForSelect(row, averages, denominator, key) {
+    for (const facilitator in averages) {
+      row[`${key}-${facilitator}`] = this.getFormattedRowData(
+        averages[facilitator],
+        denominator
+      );
+    }
   }
 
   render() {
     const rows = this.getTableRows();
     const columns = this.getTableColumns();
     return (
-      <Table.Provider className="table table-bordered" columns={columns}>
-        <Table.Header />
-        <Table.Body
-          rows={rows}
-          rowKey="id"
-          onRow={row => {
-            return {style: row.isHeader ? styles.headerRow : {}};
-          }}
-        />
-      </Table.Provider>
+      <div>
+        <Table.Provider className="table table-bordered" columns={columns}>
+          <Table.Header />
+          <Table.Body
+            rows={rows}
+            rowKey="id"
+            onRow={row => {
+              return {style: row.isHeader ? styles.headerRow : {}};
+            }}
+          />
+        </Table.Provider>
+        <div style={styles.dateNotice}>
+          The averages shown above are for workshops from May 2020 onwards.{' '}
+          <br />
+          Earlier averages can be found at{' '}
+          <a href="/pd/workshop_dashboard/legacy_survey_summaries">
+            Legacy Facilitator Survey Summaries
+          </a>
+          .
+        </div>
+      </div>
     );
   }
 }

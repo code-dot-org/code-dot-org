@@ -1,31 +1,34 @@
 login_required 'true'
 
-stage 'Intro to the Unit', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+stage 'Intro to the Unit'
 level 'Sample Free Response', named: true
 level 'U1L5 How the Internet Works - Video', named: true
 level 'Sample External Resource', named: true
 
-stage 'Chapter Overviews', flex_category: 'required'
+stage 'Chapter Overviews'
 level 'Empty Markdown Level', named: true
 
-stage 'Tool Talk: Intro to Netsim', flex_category: 'required'
+stage 'Tool Talk: Intro to Netsim'
 level 'Empty Markdown Level'
 level 'Empty Markdown Level'
 level 'Empty Markdown Level'
 level 'Empty Markdown Level'
 level 'Sample CSP Assessment'
 
-stage 'Sending Binary Messages', flex_category: 'content'
+lesson_group 'content', display_name: 'Content'
+stage 'Sending Binary Messages'
 level 'Empty Markdown Level'
 
-stage 'Encoding and Sending Numbers', flex_category: 'content'
+stage 'Encoding and Sending Numbers'
 level 'Empty Markdown Level'
 
-stage 'Supporting Peer Learning', flex_category: 'practice'
+lesson_group 'practice', display_name: 'Teaching Practices'
+stage 'Supporting Peer Learning'
 level 'U3L2 Free Response Reflection', named: true
 
-stage 'Running a Constructive Classroom', flex_category: 'practice'
+stage 'Running a Constructive Classroom'
 level 'U3L2 Free Response Reflection'
 
-stage 'Strategies for Student Writing', flex_category: 'practice'
+stage 'Strategies for Student Writing'
 level 'U3L2 Free Response Reflection'

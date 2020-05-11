@@ -946,48 +946,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, response["script"]["stages"][0]["length"]
   end
 
-  test "should get progress for student in section" do
-    get :student_progress, params: {
-      student_id: @student_1.id,
-      section_id: @section.id
-    }
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-
-    assert_not_nil response["progressHtml"]
-    expected_student = {"id" => @student_1.id, "name" => @student_1.name}
-    assert_equal expected_student, response["student"]
-    expected_script = {"id" => Script.twenty_hour_script.id, "name" => Script.twenty_hour_script.localized_title}
-    assert_equal expected_script, response["script"]
-  end
-
-  test "should get progress for student in section with section script" do
-    get :student_progress, params: {
-      student_id: @student_flappy_1.id,
-      section_id: @flappy_section.id
-    }
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    expected_script = {"id" => Script.flappy_script.id, "name" => Script.flappy_script.localized_title}
-    assert_equal expected_script, response["script"]
-  end
-
-  test "should get progress for student in section with specified script" do
-    script = Script.find_by_name('algebra')
-    get :student_progress, params: {
-      student_id: @student_flappy_1.id,
-      section_id: @flappy_section.id,
-      script_id: script.id
-    }
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    expected_script = {"id" => script.id, "name" => script.localized_title}
-    assert_equal expected_script, response["script"]
-  end
-
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
@@ -1100,11 +1058,6 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "section_progress", section_id: '2'}
     )
 
-    assert_routing(
-      {method: "get", path: "/dashboardapi/student_progress/2/15"},
-      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'}
-    )
-
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
@@ -1114,11 +1067,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
       {method: "get", path: "/api/section_progress/2"}
-    )
-
-    assert_recognizes(
-      {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
-      {method: "get", path: "/api/student_progress/2/15"}
     )
   end
 

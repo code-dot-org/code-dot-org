@@ -163,7 +163,7 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: 'Draw',
+            text: i18n.draw(),
             action: () => {
               getStore().dispatch(
                 changeInterfaceMode(
@@ -174,7 +174,7 @@ const customInputTypes = {
             }
           },
           {
-            text: 'More',
+            text: i18n.more(),
             action: () => {
               getStore().dispatch(show(Goal.NEW_ANIMATION));
             }
@@ -199,7 +199,18 @@ const customInputTypes = {
         .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue(arg.name)}'`;
+      switch (block.type) {
+        case 'gamelab_clickedSpritePointer':
+          return '{id: extraArgs.sprite}';
+        case 'gamelab_subjectSpritePointer':
+          return '{id: extraArgs.sprite}';
+        case 'gamelab_objectSpritePointer':
+          return '{id: extraArgs.target}';
+        default:
+          // unsupported block for spritePointer, returning undefined here
+          // will match the behavior of an empty socket.
+          return undefined;
+      }
     }
   },
   spritePicker: {

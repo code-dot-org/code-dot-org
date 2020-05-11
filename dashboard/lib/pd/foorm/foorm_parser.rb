@@ -89,7 +89,7 @@ module Pd::Foorm
     # parse single question into standardized format
     def self.parse_question(question_data)
       parsed_question = {
-        title: question_data[:title],
+        title: fill_question_placeholders(question_data[:title]),
         type: QUESTION_TO_ANSWER_TYPES[question_data[:type]]
       }
       case question_data[:type]
@@ -137,9 +137,14 @@ module Pd::Foorm
     def self.flatten_choices(choices)
       choices_obj = {}
       choices.each do |choice_hash|
-        choices_obj[choice_hash[:value]] = choice_hash[:text]
+        choices_obj[choice_hash[:value]] = fill_question_placeholders(choice_hash[:text])
       end
       choices_obj
+    end
+
+    def self.fill_question_placeholders(question)
+      question && question.sub!("{panel.facilitatorName}", "my facilitator")
+      question
     end
   end
 end

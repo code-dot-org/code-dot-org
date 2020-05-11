@@ -1,19 +1,13 @@
 class FoormPreviewController < ApplicationController
   # GET '/foorm/preview/:name'
   def index
-    if Rails.env.production?
-      render_404
-      return
-    end
+    return render_404 if Rails.env.production?
 
     name = params[:name]
 
     form_questions, latest_version = Foorm::Form.get_questions_and_latest_version_for_name(name)
 
-    unless form_questions
-      render_404
-      return
-    end
+    return render_404 unless form_questions
 
     survey_data = {
       facilitators: [

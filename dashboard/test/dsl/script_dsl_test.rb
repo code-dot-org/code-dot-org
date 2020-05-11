@@ -206,51 +206,9 @@ endvariants
     assert_equal expected, script_text
   end
 
-  test 'test Script DSL flex category as property hash' do
-    input_dsl = <<~DSL
-      stage 'Lesson1',
-        flex_category: 'Content'
-      level 'Level 1'
-      stage 'Lesson2',
-        flex_category: 'Practice'
-      level 'Level 2'
-      stage 'Lesson3'
-      level 'Level 3'
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
-            ]
-          },
-          {
-            stage: "Lesson2",
-            scriptlevels: [
-              {stage: "Lesson2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
-            ]
-          },
-          {
-            stage: "Lesson3",
-            scriptlevels: [
-              {stage: "Lesson3", levels: [{name: "Level 3"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
   test 'test Script DSL property lockable as property hash' do
     input_dsl = <<~DSL
       stage 'Lesson1',
-        flex_category: 'Content',
         lockable: true
       level 'Level 1'
       stage 'Lesson2'
@@ -262,7 +220,7 @@ endvariants
           {
             stage: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
+              {stage: "Lesson1", levels: [{name: "Level 1", stage_lockable: true}]},
             ]
           },
           {
@@ -512,33 +470,6 @@ level 'Level 3'
                   challenge: true,
                 },
               },
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
-  test 'Script DSL with skipped extras' do
-    input_dsl = <<~DSL
-      stage 'Lesson1'
-      level 'Level 1'
-      level 'Level 2'
-      no_extras
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            stage_extras_disabled: true,
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
             ]
           }
         ],
@@ -934,5 +865,32 @@ level 'Level 3'
       "lesson_groups" => {}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
+  end
+
+  test 'serialize lessons in lesson groups in the correct order' do
+    script = create :script, hidden: true
+
+    level1 = create :maze, name: 'maze 1', level_num: 'custom'
+    level2 = create :maze, name: 'maze 2', level_num: 'custom'
+
+    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1
+
+    # intentionally made in the opposite order of how we want them to show to test
+    lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group, absolute_position: 2
+    lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
+
+    create :script_level, levels: [level1], lesson: lesson1, script: script
+    script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
+    script_text = ScriptDSL.serialize_to_string(script_level2.script)
+    expected = <<~SCRIPT
+      lesson_group 'content1', display_name: 'Content'
+      stage 'lesson 1'
+      level 'maze 1'
+
+      stage 'lesson 2'
+      level 'maze 2'
+
+    SCRIPT
+    assert_equal expected, script_text
   end
 end

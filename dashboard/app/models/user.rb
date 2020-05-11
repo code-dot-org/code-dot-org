@@ -396,8 +396,6 @@ class User < ActiveRecord::Base
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
 
-  has_many :gallery_activities, -> {order 'id desc'}
-
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
   has_many :followers, through: :sections

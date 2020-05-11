@@ -284,18 +284,24 @@ class CoursesControllerTest < ActionController::TestCase
     assert_nil course.version_year
     assert_nil course.family_name
     refute course.has_verified_resources
+    refute course.visible?
+    refute course.is_stable?
 
     post :update, params: {
       course_name: course.name,
       version_year: '2019',
       family_name: 'csp',
-      has_verified_resources: 'on'
+      has_verified_resources: 'on',
+      visible: 'on',
+      is_stable: 'on'
     }
     course.reload
 
     assert_equal '2019', course.version_year
     assert_equal 'csp', course.family_name
     assert course.has_verified_resources
+    assert course.visible?
+    assert course.is_stable?
   end
 
   # tests for edit

@@ -3,8 +3,6 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import sinon from 'sinon';
-import experiments from '@cdo/apps/util/experiments';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -78,7 +76,6 @@ describe('SectionProgress', () => {
   });
 
   it('shows standards view', () => {
-    sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(
       <UnconnectedSectionProgress
         {...DEFAULT_PROPS}
@@ -86,7 +83,6 @@ describe('SectionProgress', () => {
       />
     );
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
-    experiments.isEnabled.restore();
   });
 
   it('shows student timestamps', () => {

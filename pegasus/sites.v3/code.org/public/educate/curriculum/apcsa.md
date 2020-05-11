@@ -42,7 +42,7 @@ The following organizations make partnerships at the school or district level to
 | [CodeHS](https://codehs.com/info/curriculum/apjava) | FREE. Pro plans for schools start at $2500 | 30-40 hour online course, $1500/teacher |
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE | In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-computer-science/pltw-computer-science-curriculum) | 3 courses, $2000/school | 5 or 10-day in-person training, $1200 or $2400, depending on course |
-| [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
+| [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, no program fee | Industry volunteers support classroom teachers in teaching CS, schools to cover costs related to onboarding volunteers into school system |
 
 ## Other Resources
 

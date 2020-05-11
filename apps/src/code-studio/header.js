@@ -38,10 +38,10 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
- * @param {object} stageData{{
+ * @param {object} lessonData{{
  *   script_id: number,
  *   script_name: number,
- *   script_stages: id,
+ *   num_script_lessons: number,
  *   title: string,
  *   finishLink: string,
  *   finishText: string,
@@ -62,7 +62,7 @@ const PUZZLE_PAGE_NONE = -1;
  */
 header.build = function(
   scriptData,
-  stageData,
+  lessonData,
   progressData,
   currentLevelId,
   puzzlePage,
@@ -70,28 +70,28 @@ header.build = function(
   stageExtrasEnabled
 ) {
   scriptData = scriptData || {};
-  stageData = stageData || {};
+  lessonData = lessonData || {};
   progressData = progressData || {};
 
   const scriptName = scriptData.name;
 
-  if (stageData.finishLink) {
+  if (lessonData.finishLink) {
     $('.header_finished_link')
       .show()
       .append(
         $('<a>')
-          .attr('href', stageData.finishLink)
-          .text(stageData.finishText)
+          .attr('href', lessonData.finishLink)
+          .text(lessonData.finishText)
       );
   }
-  if (stageData.script_stages > 1) {
+  if (lessonData.num_script_lessons > 1) {
     $('.header_popup_link').show();
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
   progress.renderStageProgress(
     scriptData,
-    stageData,
+    lessonData,
     progressData,
     currentLevelId,
     saveAnswersBeforeNavigation,
