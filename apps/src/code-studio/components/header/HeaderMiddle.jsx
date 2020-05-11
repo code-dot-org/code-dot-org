@@ -24,24 +24,39 @@ class HeaderMiddle extends React.Component {
 
     this.state = {
       width: this.getWidth(),
-      projectInfoWidth: 0
+      projectInfoWidth: 0,
+      addedPopupComponents: false
     };
   }
 
   componentDidMount() {
+    this.showPopupComponents();
+
+    this.updateLayoutListener = _.throttle(this.updateLayout, 200);
+    window.addEventListener('resize', this.updateLayoutListener);
+    window.addEventListener('scroll', this.updateLayoutListener);
+  }
+
+  componentDidUpdate() {
+    this.showPopupComponents();
+  }
+
+  showPopupComponents() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
 
-    if (this.props.stageData.script_stages > 1) {
+    if (
+      !this.state.addedPopupComponents &&
+      this.refs.header_popup_components &&
+      this.props.stageData.script_stages > 1
+    ) {
       $('.header_popup_components')
         .appendTo(ReactDOM.findDOMNode(this.refs.header_popup_components))
         .show();
 
       $('.header_popup_link').show();
-    }
 
-    this.updateLayoutListener = _.throttle(this.updateLayout, 200);
-    window.addEventListener('resize', this.updateLayoutListener);
-    window.addEventListener('scroll', this.updateLayoutListener);
+      this.setState({addedPopupComponents: true});
+    }
   }
 
   getWidth() {
@@ -93,8 +108,9 @@ class HeaderMiddle extends React.Component {
 
     if (this.props.appLoaded) {
       return (
-        <div style={{width: '100%'}}>
+        <div id="header_middle_content" style={{width: '100%'}}>
           <div
+            id="project_info_container"
             style={{
               float: 'left'
               //width: widths.projectInfo,
@@ -108,16 +124,25 @@ class HeaderMiddle extends React.Component {
             />
           </div>
 
-          <div style={{float: 'left', width: widths.scriptName}}>
+          <div
+            id="script_name_container"
+            style={{float: 'left', width: widths.scriptName}}
+          >
             <ScriptName {...extraScriptNameData} />
           </div>
 
-          <div style={{float: 'left', width: widths.progress}}>
+          <div
+            id="lesson_progress_container"
+            style={{float: 'left', width: widths.progress}}
+          >
             <LessonProgress width={widths.progress} />
           </div>
 
           {stageData.finishLink && (
-            <div style={{float: 'left', width: widths.finishLink}}>
+            <div
+              id="finish_link_container"
+              style={{float: 'left', width: widths.finishLink}}
+            >
               <div className="header_finished_link">
                 <a href={stageData.finishLink}>{stageData.finishText}</a>
               </div>
@@ -125,7 +150,10 @@ class HeaderMiddle extends React.Component {
           )}
 
           {stageData.script_stages > 1 && (
-            <div style={{float: 'left', width: widths.popup}}>
+            <div
+              id="header_popup_container"
+              style={{float: 'left', width: widths.popup}}
+            >
               <ProtectedStatefulDiv ref="header_popup_components" />
             </div>
           )}
