@@ -5,7 +5,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import {AnimationCategories} from '../gamelab/constants';
 import {CostumeCategories} from '../spritelab/constants';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 import animationLibrary from '../gamelab/animationLibrary.json';
 import spriteCostumeLibrary from '../spritelab/spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -14,7 +14,6 @@ import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
@@ -188,7 +187,7 @@ class AnimationPickerBody extends React.Component {
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
-          placeholderText={i18n.animationSearchPlaceholder()}
+          placeholderText={msg.animationSearchPlaceholder()}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(searchQuery !== '' || categoryQuery !== '') && (
