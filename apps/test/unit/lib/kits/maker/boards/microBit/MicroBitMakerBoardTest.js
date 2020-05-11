@@ -8,7 +8,7 @@ export function itMakesMBComponentsAvailableFromInterpreter(
   const MB_CONSTRUCTOR_COUNT = 4;
   const MB_COMPONENT_COUNT = 6;
   const MB_COMPONENTS = [
-    'LedMatrix',
+    'LedScreen',
     'MicroBitButton',
     'Accelerometer',
     'MicroBitThermometer'
@@ -93,9 +93,9 @@ export function itMakesMBComponentsAvailableFromInterpreter(
         });
       });
 
-      describe('ledMatrix', () => {
+      describe('ledScreen', () => {
         function expectLedToHaveFunction(fnName) {
-          expect(jsInterpreter.globalProperties.ledMatrix[fnName]).to.be.a(
+          expect(jsInterpreter.globalProperties.ledScreen[fnName]).to.be.a(
             'function'
           );
         }
