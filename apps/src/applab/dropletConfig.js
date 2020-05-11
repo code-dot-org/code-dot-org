@@ -216,7 +216,14 @@ export var blocks = [
     category: 'UI controls',
     paletteParams: ['id'],
     params: ['"id"'],
-    dropdown: {0: idDropdownWithSelector('img')},
+    dropdown: {
+      0: function() {
+        return [
+          ...idDropdownWithSelector('img')(),
+          ...idDropdownWithSelector('.img-upload')()
+        ];
+      }
+    },
     type: 'value'
   },
   {

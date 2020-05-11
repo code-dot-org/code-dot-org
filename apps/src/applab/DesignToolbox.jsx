@@ -101,7 +101,7 @@ export default class DesignToolbox extends React.Component {
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'button.png'}
+          imageUrl={IMAGE_BASE_URL + 'camera.png'}
           desc={'Photo Chooser'}
           elementType={'PHOTO_CHOOSER'}
           handleDragStart={this.props.handleDragStart}
