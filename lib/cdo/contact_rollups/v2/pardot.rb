@@ -5,13 +5,13 @@ class PardotV2
 
   API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   PROSPECT_QUERY_URL = "#{API_V4_BASE}/do/query".freeze
+  PROSPECT_READ_URL = "#{API_V4_BASE}/do/read/email".freeze
   PROSPECT_DELETION_URL = "#{API_V4_BASE}/do/delete/id".freeze
   BATCH_CREATE_URL = "#{API_V4_BASE}/do/batchCreate".freeze
   BATCH_UPDATE_URL = "#{API_V4_BASE}/do/batchUpdate".freeze
 
   URL_LENGTH_THRESHOLD = 6000
   MAX_PROSPECT_BATCH_SIZE = 50
-  MAX_PROSPECT_DELETION_BATCH_SIZE = 50
 
   CONTACT_TO_PARDOT_PROSPECT_MAP = {
     email: {field: :email},
@@ -181,29 +181,42 @@ class PardotV2
     [submissions, errors]
   end
 
-  # Deletes a list of prospects from Pardot. For Pardot API documentation, see
-  # http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects.
-  # @param [Array[Integer]] prospect_ids of the prospects to be deleted.
-  # @return [Array[Integer]] the set of prospect_ids that failed to be deleted.
-  def self.delete_prospects(prospect_ids)
-    failed_prospect_ids = []
+  # Deletes multiple prospects from Pardot using an email address.
+  def self.delete_prospects_by_email(email)
+    retrieve_pardot_ids_by_email(email).each do |id|
+      delete_prospect_by_id(id)
+    end
+  end
 
-    return prospect_ids unless CDO.rack_env? :production
-    return prospect_ids if prospect_ids.length > MAX_PROSPECT_DELETION_BATCH_SIZE
-
-    prospect_ids.each do |prospect_id|
-      url = "#{PROSPECT_DELETION_URL}/#{prospect_id}"
-      post_request_with_auth url
-    rescue RuntimeError => e
-      if e.message =~ /Pardot request failed with HTTP/
-        failed_prospect_ids << prospect_id
-        next
-      else
-        raise e
-      end
+  # Deletes a prospect from Pardot using Pardot Id.
+  # This method only runs in the production environment to avoid accidentally deleting prospect.
+  # @param [Integer, String] pardot_id of the prospects to be deleted.
+  def self.delete_prospect_by_id(pardot_id)
+    if CDO.rack_env != :production
+      log "#{__method__} only runs in production. The current environment is #{CDO.rack_env}."
+      return
     end
 
-    failed_prospect_ids
+    # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
+    post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
+  rescue StandardError => e
+    # If the input pardot_id does not exist, Pardot will response with
+    # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
+    return if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
+  end
+
+  # Finds prospects using email address and extract their Pardot ids.
+  # @param email [String]
+  # @return [Array<Integer>]
+  def self.retrieve_pardot_ids_by_email(email)
+    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{email}"
+    doc.xpath('//prospect/id').map(&:text)
+  rescue StandardError => e
+    # If the input email does not exist, Pardot will response with
+    # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
+    return [] if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
   end
 
   # Converts contact keys and values to Pardot prospect keys and values.
