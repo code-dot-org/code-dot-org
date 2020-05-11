@@ -19,10 +19,14 @@ class HeaderMiddle extends React.Component {
     children: PropTypes.node
   };
 
-  state = {
-    width: -1,
-    projectInfoWidth: 0
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      width: this.getWidth(),
+      projectInfoWidth: 0
+    };
+  }
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
@@ -40,11 +44,12 @@ class HeaderMiddle extends React.Component {
     window.addEventListener('scroll', this.updateLayoutListener);
   }
 
+  getWidth() {
+    return window.innerWidth - 280;
+  }
+
   updateLayout = () => {
-    //console.log(this.refs.header_middle_parent.clientWidth);
-    //this.setState({width: this.refs.header_middle_parent.clientWidth});
-    //console.log($('.header_middle').width());
-    this.setState({width: $('.header_middle').width()});
+    this.setState({width: this.getWidth()});
   };
 
   // The first item is the script name, the second item is the progress container.
