@@ -765,6 +765,32 @@ ja-JP:
       New Infinity Project: すきなものをつくってきょうゆうしましょう！
       New Minecraft Hero Project: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
       New Sports Project: 君の ゲームを作ろう。あなたが全部きめてください。ルールは自由に変更できるし、スポーツをミックスしたり、自由にやろう！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
+      OPD-K5-events-2: "`クリックしたとき` の下に `ふつうにパタパタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
+        むかって うごきます。"
+      OPD-K5-events-3: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにしてみよう。まと まで はばたき つづけよう。"
+      OPD-K5-events-4: "`じめんに ぶつかったとき` に`ゲームオーバー`をひっつけて。鳥を地めんにぶつけてみよう。"
+      OPD-K5-events-5: フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき` に ブロックを ひっつけよう。
+      OPD-K5-events-6: "`しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を とおりぬけたとき、ポイントが入るようにしよう。"
+      OPD-K5-forloops-1: できるだけ少ないブロックで花からミツを全部集めよう。
+      OPD-K5-forloops-2: ミツを集めよう。
+      OPD-K5-forloops-5: ハチがミツを集めるのを手伝って。
+      OPD-K5-forloops-6: 5から1まで減らしながらミツを集めよう。
+      OPD-K5-forloops-7: 2づつ増やしてミツを集めよう。
+      OPD-K5-projects-2: はいけいとゲームの主人公になるキャラを選ぼう。
+      OPD-K5-projects-3: イベントとあなたの主人公を動かす命令を使って、はたをゲットします。
+      OPD-K5-projects-4: ゲームにキャラを二人追加して、動かしてみよう。
+      OPD-K5-projects-5: ポイントをゲットする仕組みを考えよう。どうすればポイントをゲットできるようにする？
+      OPD-K5-projects-6: すごい！ゲームを ほとんど 作ってしまった。あとは、ゲームを すきなように かえてみよう！
+      OPD-K5-projects-7: 完成、ゲームをプレイしてみよう！ともだちとゲームを共有しよう！
+      OPD-K5-spritelab-2: タンブルウィードを魚に変えよう！
+      OPD-K5-spritelab-3: 魚の動作を変えて、左右に 泳ぐように しよう。
+      OPD-K5-spritelab-4: "`背景色を にセット`ブロックを使って、背景の色を変えよう。"
+      OPD-K5-spritelab-6: 魚は冒険好きで、海の中で新しい生き物に会いたがっています。水そうに新たなスプライトを入れましょう。スプライトは、今の魚とは、別のコスチュームにしましょう。
+      OPD-K5-spritelab-7: 魚の新しい友だちの行動を 追加しよう！
+      OPD-K5-variables-2: '三角形を3つかこう。   '
+      OPD-K5-variables-5: 動く長さ50を変数に入れて使います。この方法は、これからのパズルでも使います。
+      OPD-K5-variables-6: 次の三角形をかくとき、アーティストを前と下にジャンプさせるのに 変数`length`を 使おう。
+      OPD-K5-variables-7: あと3つ三角形をかくために くり返しを 使いましょう。今度は、前に進んで 上に 行きます。
       Overworld Avoid Monsters: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
       Overworld Avoid Monsters_2019: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
       Overworld Chop Tree: 木はいろいろな物の材料になります。木を切り倒すには、近づいて“ブロックを破壊”コマンドを使います。
@@ -1077,6 +1103,7 @@ ja-JP:
       courseA_maze_seq10: 'チャレンジ TNTにあたらないように ブタを つかまえて！ '
       courseA_maze_seq10_2018: 'チャレンジ TNTに ぶつからないように ブタを つかまえて！ '
       courseA_maze_seq10_2019: 'チャレンジ TNTに ぶつからないように ブタを つかまえて！ '
+      courseA_maze_seq10_copy: 'チャレンジ TNTにあたらないように ブタを つかまえて！ '
       courseA_maze_seq11: ブロックを くみあわせて、ブタを つかまえよう。
       courseA_maze_seq11_2018: ブロックを くみあわせて、ブタを つかまえよう。
       courseA_maze_seq11_2019: ブロックを くみあわせて、ブタを つかまえよう。
@@ -1094,15 +1121,19 @@ ja-JP:
       courseA_maze_seq5: じぶんで はじめから やってみよう。
       courseA_maze_seq5_2018: こんどは、これをやってみよう。
       courseA_maze_seq5_2019: こんどは、これをやってみよう。
+      courseA_maze_seq5_copy: じぶんで はじめから やってみよう。
       courseA_maze_seq5a_2018: ブタをつかまえるには、どのブロックを ひっつければ いいですか？
       courseA_maze_seq5a_2019: ブタをつかまえるには、どのブロックを ひっつければ いいですか？
       courseA_maze_seq6: ブロックを くみあわせて、ブタを つかまえて！
       courseA_maze_seq6_2018: ブロックを くみあわせて、ブタを つかまえて！
       courseA_maze_seq6_2019: ブロックを くみあわせて、ブタを つかまえて！
+      courseA_maze_seq6_copy: ブロックを くみあわせて、ブタを つかまえて！
       courseA_maze_seq7: トリさんが ブタを つかまえられるように、ブロックを いれて ください！
+      courseA_maze_seq7_copy: トリさんが ブタを つかまえられるように、ブロックを いれて ください！
       courseA_maze_seq8: ブタを つかまえて！
       courseA_maze_seq8_2018: ブタを つかまえて！
       courseA_maze_seq8_2019: ブタを つかまえて！
+      courseA_maze_seq8_copy: ブタを つかまえて！
       courseA_maze_seq9: トリさんが ブタを つかまえられるように ブロックを いれて、デバッグしよう！
       courseA_maze_seq_challenge1: なにかが ちがうよ。プログラムを なおして、トリさんを ブタさんのところに つれていって！
       courseA_maze_seq_challenge1_2018: なにかが ちがうよ。プログラムを なおして、トリさんを ブタさんのところに つれていって！
@@ -1118,12 +1149,19 @@ ja-JP:
       courseA_playLab_events2_2019: いぬのジョージは "Hi there." と いおうとしています。てつだうことが できますか？
       courseA_playLab_events3: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
       courseA_playLab_events3_2018: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
+      courseA_playLab_events3_2019: " `もし ひだり` ブロックの下に`移動（いどう）ひだり` ブロックを ひっつけましょう。やじるしキーをおして、いぬのジョージを
+        はたまで いかせればクリアです！"
       courseA_playLab_events4: 右やじるしキーがおされたとき、右にうごくようにしよう。
       courseA_playLab_events4_2018: "`→`ボタンが おされた とき、ジョージが みぎに うごくようにしよう。"
+      courseA_playLab_events4_2019: 右やじるしをクリックしたら、ジョージが右にいくように、もうひとつイベントブロックをおいてください。やじるしキーをおして、ジョージが、はたを２つとれば、クリアです。
       courseA_playLab_events5: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
       courseA_playLab_events5_2018: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events5_2019: "`上` 、 `下` のボタンをおしたら、ジョージが上下するようイベントブロックを ついかしましょう。ジョージが、はたを
+        とればクリアです。"
       courseA_playLab_events6: はいけいをかえてみよう、犬が クリックされたとき ランダムに おとが なるようにしてみよう。
       courseA_playLab_events6_2018: はいけいをかえてみよう、犬が クリックされたとき ランダムに おとが なるようにしてみよう。
+      courseA_playLab_events6_2019: ジョージがクリックされたら、はいけいをかえたり、ランダムに音がなるようにして、もっと たのしく
+        しましょう。かんせしたら、ジョージをクリックしてみましょう！
       courseA_playLab_events7: 犬が、きょうりゅうに ぶつかったら きょうりゅうが きえる ゲームを つくってみよう。
       courseA_playLab_events7_2018: _フリープレイ_ このゲームを かいぞう してみよう。
       courseA_playLab_events7_2019: _フリープレイ_ このゲームを かいぞう してみよう。
@@ -1758,23 +1796,30 @@ ja-JP:
       courseC_starWars_loops2: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
       courseC_starWars_loops2_2018: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
       courseC_starWars_loops2_2019: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
+      courseC_starWars_loops2_copy: "`くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。"
       courseC_starWars_loops4: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
       courseC_starWars_loops4_2018: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
       courseC_starWars_loops4_2019: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops4_copy: 短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
       courseC_starWars_loops5: できるだけ みじかい プログラムで すべてのスクラップを　あつめよう。
       courseC_starWars_loops5_2018: できるだけ みじかい プログラムで すべてのスクラップを　あつめよう。
       courseC_starWars_loops5_2019: できるだけ みじかい プログラムで すべてのスクラップを　あつめよう。
+      courseC_starWars_loops5_copy: できるだけ みじかい プログラムで すべてのスクラップを　あつめよう。
       courseC_starWars_loops6: １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを くりかえしの中に
         いれることが できるかな？
       courseC_starWars_loops6_2018: １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを
         くりかえしの中に いれることが できるかな？
       courseC_starWars_loops6_2019: １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを
         くりかえしの中に いれることが できるかな？
+      courseC_starWars_loops6_copy: １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを
+        くりかえしの中に いれることが できるかな？
       courseC_starWars_loops7: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの パターンを
         見つけて くりかえしの中に 入れてみよう。
       courseC_starWars_loops7_2018: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
         パターンを 見つけて くりかえしの中に 入れてみよう。
       courseC_starWars_loops7_2019: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
+        パターンを 見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops7_copy: くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの
         パターンを 見つけて くりかえしの中に 入れてみよう。
       courseC_starWars_loops9: 今までやったことを思い出して、すべてのスクラップをあつめよう！
       courseC_starWars_loops9_2018: 今までやったことを思い出して、すべてのスクラップをあつめよう！
@@ -1968,9 +2013,11 @@ ja-JP:
       courseD_bee_conditionals1_predict1: くもの下に花があるか調べて、花があればミツをとろう。
       courseD_bee_conditionals1_predict1_2018: くもの下に花があるか調べて、花があればミツをとろう。
       courseD_bee_conditionals1_predict1_2019: くもの下に花があるか調べて、花があればミツをとろう。
+      courseD_bee_conditionals1_predict1_copy: くもの下に花があるか調べて、花があればミツをとろう。
       courseD_bee_conditionals2: 'くもの下に花が かくれているか 調べて、ミツを集めよう。  '
       courseD_bee_conditionals2_2018: 'くもの下に花が かくれているか 調べて、ミツを集めよう。  '
       courseD_bee_conditionals2_2019: 'くもの下に花が かくれているか 調べて、ミツを集めよう。  '
+      courseD_bee_conditionals2_copy: 'くもの下に花が かくれているか 調べて、ミツを集めよう。  '
       courseD_bee_conditionals3: |-
         ハチがミツを集めるのを手つだおう。
 
@@ -1983,12 +2030,18 @@ ja-JP:
         ハチがミツを集めるのを手つだおう。
 
         花があるかどうか調べて、花があれば ミツを集めよう。
+      courseD_bee_conditionals3_copy: |-
+        ハチがミツを集めるのを手つだおう。
+
+        花があるかどうか調べて、花があれば ミツを集めよう。
       courseD_bee_conditionals4: できるだけ少ないブロックですべてのミツを集めよう。
       courseD_bee_conditionals4_2018: できるだけ少ないブロックですべてのミツを集めよう。
       courseD_bee_conditionals4_2019: できるだけ少ないブロックですべてのミツを集めよう。
+      courseD_bee_conditionals4_copy: できるだけ少ないブロックですべてのミツを集めよう。
       courseD_bee_conditionals5: できるだけ少ないブロックでミツを集めよう。
       courseD_bee_conditionals5_2018: できるだけ少ないブロックでミツを集めよう。
       courseD_bee_conditionals5_2019: できるだけ少ないブロックでミツを集めよう。
+      courseD_bee_conditionals5_copy: できるだけ少ないブロックでミツを集めよう。
       courseD_bee_conditionals6: ハチの巣が かくれている くもが あります。かくれているのが、ハチの巣か どうか 調べてみよう！
       courseD_bee_conditionals6_2018: ハチの巣が かくれている くもが あります。かくれているのが、ハチの巣か どうか 調べてみよう！
       courseD_bee_conditionals6_2019: ハチの巣が かくれている くもが あります。かくれているのが、ハチの巣か どうか 調べてみよう！
@@ -2319,16 +2372,23 @@ ja-JP:
       courseE_artist_functions10: こんどは、一辺が25ピクセルの六角形で線をかいてみよう。
       courseE_artist_functions10_2018: こんどは、一辺が25ピクセルの六角形で線をかいてみよう。
       courseE_artist_functions10_2019: こんどは、一辺が25ピクセルの六角形で線をかいてみよう。
+      courseE_artist_functions1_copy: |-
+        こんにちは！ゾンビアーティストです。お絵かき大好き！
+        四角いメガネを描くので手伝ってください。ヒント：レンズとレンズの間は、レンズより25ピクセル短くかきましょう。
       courseE_artist_functions2: '関数`正方形を かく`を使って、メガネをかいてみよう。 '
       courseE_artist_functions2_2018: '関数`正方形を かく`を使って、メガネをかいてみよう。 '
       courseE_artist_functions2_2019: '関数`正方形を かく`を使って、メガネをかいてみよう。 '
+      courseE_artist_functions2_copy: '関数`正方形を かく`を使って、メガネをかいてみよう。 '
       courseE_artist_functions3: くり返しを使って、この絵をかいてみよう。
       courseE_artist_functions3_2018: 星をかく関数を作りましょう。
       courseE_artist_functions3_2019: 星をかく関数を作りましょう。
+      courseE_artist_functions3_copy: くり返しを使って、この絵をかいてみよう。
       courseE_artist_functions4: 星が１つかけたので、こんどは４つかいてみよう！
+      courseE_artist_functions4_copy: 星が１つかけたので、こんどは４つかいてみよう！
       courseE_artist_functions5: ３つ星をかいてみよう。
       courseE_artist_functions5_2018: ３つ星をかいてみよう。
       courseE_artist_functions5_2019: ３つ星をかいてみよう。
+      courseE_artist_functions5_copy: ３つ星をかいてみよう。
       courseE_artist_functions6: 正方形を１つかいたら、次の正方形をかく前に90度曲がります。これをくり返して、まどをかいてみよう。
       courseE_artist_functions7: 関数`まどをかく`を作って、それを5回くり返そう。ドアに気を付けてね！
       courseE_artist_functions7_2018: 関数`まどをかく`を作って、それを5回くり返そう。ドアに気を付けてね！

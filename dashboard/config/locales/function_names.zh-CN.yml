@@ -620,6 +620,8 @@ zh-CN:
         do something: 做点什么
         draw hexagon: 画六边形
         draw line of hexagons: 画一列六边形
+      courseE_artist_functions1_copy:
+        draw ear stems: 画穗柄
       courseE_artist_functions2:
         draw a square: 画一个正方形
         draw ear stems: 画穗柄
@@ -629,17 +631,24 @@ zh-CN:
       courseE_artist_functions2_2019:
         draw a square: 画一个正方形
         draw ear stems: 画穗柄
+      courseE_artist_functions2_copy:
+        draw a square: 画一个正方形
+        draw ear stems: 画穗柄
       courseE_artist_functions3_2018:
         draw a star: 画一个星星
       courseE_artist_functions3_2019:
         draw a star: 画一个星星
       courseE_artist_functions4:
         draw a star: 画一个星星
+      courseE_artist_functions4_copy:
+        draw a star: 画一个星星
       courseE_artist_functions5:
         draw a star: 画一个星星
       courseE_artist_functions5_2018:
         draw a star: 画一个星星
       courseE_artist_functions5_2019:
+        draw a star: 画一个星星
+      courseE_artist_functions5_copy:
         draw a star: 画一个星星
       courseE_artist_functions7:
         draw a window: 画一个窗口
@@ -736,6 +745,9 @@ zh-CN:
         draw a square: 画一个正方形
         draw ear stems: 画穗柄
       courseE_artist_functions_predict1_2019:
+        draw a square: 画一个正方形
+        draw ear stems: 画穗柄
+      courseE_artist_functions_predict1_copy:
         draw a square: 画一个正方形
         draw ear stems: 画穗柄
       courseE_artist_functions_predict2:

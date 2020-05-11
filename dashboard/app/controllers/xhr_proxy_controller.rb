@@ -73,6 +73,7 @@ class XhrProxyController < ApplicationController
     quizlet.com
     rejseplanen.dk
     maker.ifttt.com
+    maps.googleapis.com
     noaa.gov
     numbersapi.com
     pastebin.com

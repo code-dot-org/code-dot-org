@@ -584,19 +584,6 @@ da:
       audience: "Alder 4+"
     unplugged_conditionals:
       title: "Betingelser"
-  gallery:
-    students_drew_these_with_code: "Elever har tegnet disse med kode!"
-    students_made_these_with_code: "Elever har lavet dette med kode!"
-    picture_count: "I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at prøve programmerne."
-    activity_count: "I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b> apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder og skærmklip for at prøve programmerne."
-    want_to_make_your_own: "Vil du lave dit eget?"
-    more: "Mere &rarr;"
-    caption_by_name_age: "af %{name}, alder %{age}"
-    caption_time_ago: "%{time_ago} siden"
-    header: "Galleri"
-    header_playlab: "Play Lab"
-    header_artist: "Kunstner"
-    report_abuse: "Rapporter misbrug"
   landing:
     report_bug: "Rapporter fejl"
     support: "Få hjælp"

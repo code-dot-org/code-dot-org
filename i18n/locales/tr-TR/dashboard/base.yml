@@ -665,20 +665,6 @@ tr:
       body: "Öğrenciler bilgisayar bilim ilkelerini bu dijital araçlarla uygulamalı olarak keşfedebilirler. Her öğrenci endi başlarına kullanabilir veya kullanacağınız sınıf için bir ortak tek bir ders oluşturabilirsiniz."
       audience: "14 yaş üzeri"
       cta: "Nasıl olduğunu öğren"
-  gallery:
-    students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
-    students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
-    picture_count: "Geçtiğimiz <b>%{days}</b> günlerde, öğrenciler <b>%{count}</b> tane resmi kendi yazdıkları programlarla çizdiler. Her programın çalışışını görmek için resimlerin üzerine tıklayın."
-    activity_count: "geçmiş <b>%{days}</b> günde, öğrenciler kendi bilgisayar programlarını yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine tıklayıp her bir programın nasıl çalıştığını görün."
-    want_to_make_your_own: "Kendininkini yapmak ister misin?"
-    how_to_save: "Eğitici bölümlerin son kısmında, çalışmanızı kaydetmek için \"Bitir\" butonunu ve \"Kaydet\" butonunu tıklayın."
-    more: "Daha fazla &rarr;"
-    caption_by_name_age: "%{name} tarafından, %{age} yaşında"
-    caption_time_ago: "%{time_ago} zaman önce"
-    header: "Galeri"
-    header_playlab: "Oyun Laboratuvarı"
-    header_artist: "Aktör"
-    report_abuse: "Hata Rapor Et"
   landing:
     report_bug: "Hata bildir"
     support: "Yardım Al"
@@ -862,6 +848,7 @@ tr:
     peer_feedback: 'Geribildirim Gönder'
     outdated: 'Bu geribildirim daha önce yollanan gönderiye eklendi'
     review_in_progress: 'Gözden geçirmeye hazır'
+    peer_review: 'Eş gözden geçirme'
   flex_category:
     required: 'Genel Bakış'
     content: 'İçerik'

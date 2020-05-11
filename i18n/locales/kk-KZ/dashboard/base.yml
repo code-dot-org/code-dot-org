@@ -440,19 +440,6 @@ kk:
       title: "Шарттар"
     widgets:
       cta: "Қалай жасауды үйрең"
-  gallery:
-    students_drew_these_with_code: "Оқушылар кодпен бірге суретін салады!"
-    students_made_these_with_code: "Оқушылар кодын жазады!"
-    picture_count: "Өткен <b>%{days}</b> күнде, оқушылар компьютерлік бағдарламаларына <b>%{count}</b> сурет салды. Әрбір бағдарламаны көру үшін суретке және скриншотқа шертіңіз."
-    activity_count: "Өткен <b>%{days}</b> күнде, оқушылар <b>%{count}</b> қосымша мен компьютерлік ойындарына сурет салды. Әрбір бағдарламаны көру үшін суретке және скриншотқа шертіңіз."
-    want_to_make_your_own: "Өзіңіз жасап көргіңіз келеді ме?"
-    more: "Көбірек &rarr;"
-    caption_by_name_age: "%{name}, жасы %{age}"
-    caption_time_ago: "%{time_ago} бұрын"
-    header: "Галерея"
-    header_playlab: "Хикаялар мен ойындар"
-    header_artist: "Өнерді кодтау"
-    report_abuse: "Құқық бұзушылық туралы хабарлау"
   landing:
     report_bug: "Қате туралы хабарлау"
     support: "Көмек Сұрау"

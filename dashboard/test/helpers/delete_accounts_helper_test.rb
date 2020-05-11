@@ -444,7 +444,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
-  # Table: dashboard.gallery_activities
   # Table: dashboard.assessment_activities
   #
 
@@ -465,20 +464,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   # Note: table overflow_activities only exists on production, which makes it
   # difficult to test.
-
-  test 'disconnects gallery activities from level sources' do
-    user = create :student
-    gallery_activity = create :gallery_activity, user: user
-
-    refute_nil gallery_activity.level_source_id
-
-    purge_user user
-    gallery_activity.reload
-
-    assert_nil gallery_activity.level_source_id
-
-    assert_logged "Cleaned 1 GalleryActivity"
-  end
 
   test 'disconnects assessment activities from level sources' do
     user = create :student

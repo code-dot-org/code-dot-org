@@ -21,6 +21,9 @@ de-DE:
       AppLab Intro 7 - thisOrThatSetScreen: Dies oder das
       CDEF_video_SpritesInAction: Wie man einen Sprite erstellt
       CDEF_video_SpritesInAction_2019: Wie man einen Sprite erstellt
+      CSD Board Buttons Map: Schaltflächen und Schalter
+      CSD Board Buttons Map_2018: Schaltflächen und Schalter
+      CSD Board Buttons Map_2019: Schaltflächen und Schalter
       CSD Board Sensors Map: Analoge Sensoren
       CSD Board Sensors Map_2018: Analoge Sensoren
       CSD Board Sensors Map_2019: Analoge Sensoren
@@ -90,6 +93,9 @@ de-DE:
       CSD U2 challenge: Herausforderung
       CSD U2 challenge_2018: Herausforderung
       CSD U2 challenge_2019: Herausforderung
+      CSD U2 formatting map: HTML-Formatierung
+      CSD U2 formatting map_2018: HTML-Formatierung
+      CSD U2 formatting map_2019: HTML-Formatierung
       CSD U2 images map: Bilder in HTML
       CSD U2 images map_2018: Bilder in HTML
       CSD U2 images map_2019: Bilder in HTML
@@ -192,8 +198,14 @@ de-DE:
       CSD U3 Variables Map: Variablen
       CSD U3 Variables Map_2018: Variablen
       CSD U3 Variables Map_2019: Variablen
+      CSD U3 finishing touches: Projekt - Feinschliff
+      CSD U3 finishing touches_2018: Projekt - Feinschliff
+      CSD U3 finishing touches_2019: Projekt - Feinschliff
       CSD U3 function video: 'Video: Funktionen'
       CSD U3 if else predict: Vorhersage
+      CSD U3 naming map: Benennung von Variablen
+      CSD U3 naming map_2018: Benennung von Variablen
+      CSD U3 naming map_2019: Benennung von Variablen
       CSD U3 platform challenge: Verbessere Dein Spiel
       CSD U3 platform challenge_2018: Verbessere Dein Spiel
       CSD U3 platform challenge_2019: Verbessere Dein Spiel
@@ -247,6 +259,12 @@ de-DE:
       CSD U4 - Design Mode Project: 'App-Projekt: Bildschirm-Design'
       CSD U4 - Design Mode Project_2018: 'App-Projekt: Bildschirm-Design'
       CSD U4 - Design Mode Project_2019: 'App-Projekt: Bildschirm-Design'
+      CSD U4 Design Mode Map: Rundgang durch den Designmodus
+      CSD U4 Design Mode Map_2018: Rundgang durch den Designmodus
+      CSD U4 Design Mode Map_2019: Rundgang durch den Designmodus
+      CSD U4 Importing Screens Map: Bildschirme Importieren
+      CSD U4 Importing Screens Map_2018: Bildschirme Importieren
+      CSD U4 Importing Screens Map_2019: Bildschirme Importieren
       CSD U4 Mult Screen Map: Mehrbildschirm-Apps
       CSD U4 Mult Screen Map_2018: Mehrbildschirm-Apps
       CSD U4 Mult Screen Map_2019: Mehrbildschirm-Apps
@@ -428,6 +446,12 @@ de-DE:
       CSDU4 Design Mode Video: Einführung in den Designmodus
       CSDU4 Design Mode Video_2018: Einführung in den Designmodus
       CSDU4 Design Mode Video_2019: Einführung in den Designmodus
+      CSDU4 Project Bug Feature: 'App-Projekt: Fehler und Funktionalitäten'
+      CSDU4 Project Bug Feature_2018: 'App-Projekt: Fehler und Funktionalitäten'
+      CSDU4 Project Bug Feature_2019: 'App-Projekt: Fehler und Funktionalitäten'
+      CSDU4 Project Events: 'App-Projekt: Bildschirme verknüpfen'
+      CSDU4 Project Events_2018: 'App-Projekt: Bildschirme verbinden'
+      CSDU4 Project Events_2019: 'App-Projekt: Bildschirme verknüpfen'
       CSDU4 Project Import: 'App-Projekt: Bildschirm-Import'
       CSDU4 Project Import_2018: 'App-Projekt: Bildschirm-Import'
       CSDU4 Project Import_2019: 'App-Projekt: Bildschirm-Import'
@@ -501,6 +525,8 @@ de-DE:
       New Dance Lab Project: Neues Tanzparty Projekt
       New Minecraft Hero Project: Freispiel
       OPD-K5 WhatIsCS: Was ist Informatik?
+      OPD-K5 WhatIsCS_copy: Was ist Informatik?
+      OPD-K5-spritelab-5-video: Wie man einen Sprite erstellt
       Oceans_Video_Machine_Learning: 'Video: Maschinelles Lernen'
       Oceans_Video_Societal_Implications: 'Video: Gesellschaftliche Auswirkungen'
       Oceans_Video_Training_Data: 'Video: Trainingsdaten'

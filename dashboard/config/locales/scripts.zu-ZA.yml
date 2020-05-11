@@ -37,10 +37,22 @@ zu:
           stages:
             Lists:
               name: Umbhalo olandelanayo
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
         csd2-pilot:
           stages:
             Lists:
               name: Umbhalo olandelanayo
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
         csd3-2020:
           stages:
             Text:

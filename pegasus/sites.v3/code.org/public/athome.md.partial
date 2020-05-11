@@ -102,7 +102,13 @@ A great option for students getting started on their own. You'll learn the funda
 
 <hr>
 
-### **Turtle Programming in App Lab**
+### **Programming Modules for older students**
+
+Adapted from our CS Principles courses, these short, self-paced modules for middle and high school students are a great way to learn concepts that span all programming languages and tools.
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+#### Turtle Programming in App Lab
 
 <div class="col-25" style="padding-right: 20px;">
 
@@ -112,13 +118,29 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-75">
 
-<p>Adapted from our CS Principles course, this short, self-paced JavaScript module for 6th-12th graders is a great way to learn concepts that span all programming languages and tools. Ages 13+.</p>
+<p>Begin working in App Lab where you’ll use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Learn to break down big programming problems into manageable pieces. Design and program your own digital scene! For middle and high school students.</p>
 <a href="https://studio.code.org/s/csp3-virtual"><button>Try it out</button></a>
 
 </div>
 
-<div style="clear: both; margin-bottom: 15px"></div>
+<div style="clear: both; margin-bottom: 30px"></div>
 
+#### Event-Driven Programming in App Lab
+
+<div class="col-25" style="text-align:center; padding-right: 20px;">
+
+<a href="https://studio.code.org/s/csp5-virtual"><img src="/images/athome/events.png" style="width: 60%"/></a>
+
+</div>
+
+<div class="col-75">
+
+<p>Program in the JavaScript language using App Lab. Learn to design apps that respond to user interaction like clicks and key presses. Create a series of simple applications (apps) that live on the web! For middle and high school students.</p>
+<a href="https://studio.code.org/s/csp5-virtual"><button>Try it out</button></a>
+
+</div>
+
+<div style="clear: both; margin-bottom: 30px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>

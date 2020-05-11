@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import StageProgress from './components/progress/StageProgress.jsx';
+import LessonProgress from './components/progress/LessonProgress.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import MiniView from './components/progress/MiniView.jsx';
@@ -126,7 +126,7 @@ progress.renderStageProgress = function(
 
   ReactDOM.render(
     <Provider store={store}>
-      <StageProgress />
+      <LessonProgress />
     </Provider>,
     document.querySelector('.progress_container')
   );
@@ -301,7 +301,7 @@ function initializeStoreWithProgress(
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
       stages: scriptData.stages,
-      peerReviewStage: scriptData.peerReviewStage,
+      peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,

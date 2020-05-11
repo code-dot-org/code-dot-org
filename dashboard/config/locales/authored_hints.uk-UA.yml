@@ -1333,6 +1333,9 @@ uk-UA:
       courseA_maze_seq10_2019:
         courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
           записати сходинки на папірці.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Якщо у вас виникли проблеми, спробуйте в першу чергу
+          записати сходинки на папірці.
       courseA_maze_seq13:
         courseA_maze_seq13_b: Не бійся помилятися! Спробуйте додати блоки та запустити
           код, щоб побачити, що станеться.
@@ -1738,6 +1741,9 @@ uk-UA:
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_b: Якщо ви хочете використовувати менше коду, ви можете
           помістити один цикл `repeat` іншим! Це називається \*\* вкладена петля \*\*.
+      courseC_starWars_loops6_copy:
+        courseC_starWars_loops6_b: Якщо ви хочете використовувати менше коду, ви можете
+          помістити один цикл `repeat` іншим! Це називається \*\* вкладена петля \*\*.
       courseC_starWars_loops7:
         courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
           що станеться, навіть якщо ви ще не вирішили головоломку.
@@ -1745,6 +1751,9 @@ uk-UA:
         courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
           що станеться, навіть якщо ви ще не вирішили головоломку.
       courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
+          що станеться, навіть якщо ви ще не вирішили головоломку.
+      courseC_starWars_loops7_copy:
         courseC_starWars_loops7_c: Не бійся помилятися! Запустіть код, щоб побачити,
           що станеться, навіть якщо ви ще не вирішили головоломку.
       courseD_artist_binary3:
@@ -1879,6 +1888,9 @@ uk-UA:
       courseD_bee_conditionals2_2018:
         courseD_bee_conditionals2_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
@@ -1895,16 +1907,28 @@ uk-UA:
         courseD_bee_conditionals3_c: Не бійся помилятися! Спробуйте додати блоки та
           запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
           головоломку.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+        courseD_bee_conditionals3_c: Не бійся помилятися! Спробуйте додати блоки та
+          запустити код, щоб побачити, що станеться, навіть якщо ви ще не вирішили
+          головоломку.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
       courseD_bee_conditionals4_2018:
         courseD_bee_conditionals4_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
       courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_hintVid1: Потрібна допомога з початку роботи? Переглянути
+          відео!
+      courseD_bee_conditionals5_copy:
         courseD_bee_conditionals5_hintVid1: Потрібна допомога з початку роботи? Переглянути
           відео!
       courseD_bee_conditionals6:
@@ -2143,7 +2167,14 @@ uk-UA:
           просувати вперед 175 пікселів перед тим, як малювати свою другу площу.
         courseE_artist_functions1_b: Добре малювати перехресні лінії, щоб зробити
           свої окуляри.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Квадрати мають 100 пікселів, тобто вам доведеться
+          просувати вперед 175 пікселів перед тим, як малювати свою другу площу.
+        courseE_artist_functions1_b: Добре малювати перехресні лінії, щоб зробити
+          свої окуляри.
       courseE_artist_functions4:
+        courseD_artist_functions4_a: Спробуйте скористатись функцією!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: Спробуйте скористатись функцією!
       courseE_artist_functions6:
         grade4_artist_functions_windows0_c: Не бійся помилятися! Спробуйте додати

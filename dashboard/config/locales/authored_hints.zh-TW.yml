@@ -3900,6 +3900,67 @@ zh-TW:
           如果循環的數字是由小排到大，每次循環就會從計數器變量中加上間隔的值。
 
           如果要依序收集花蜜，間隔數需要設成多少？
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 你需要添加的積木稱為`設定速度`。
+        courseC_flappy_events2_b: 將`設定速度`積木連接到`運行時`積木來解決此關卡。
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: 如果某些部分不能正常運作，請確保你的積木已連接到工作區中的正確事件上。
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: 將`結束遊戲`積木連接到`碰到障礙`上即可解決此關卡。
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: 你將需要使用`得分`積木來過關。
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: 把紫色的數字積木拖曳到`重複`積木裡，讓程式可以循環指定的次數。
+        courseF_bee_for1_b: 在「repeat」迴圈中，您需要使用兩個模塊來收集所有的花蜜。
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: 如果您感到困惑，請一次採一朵花的蜜，並經常進行測試。
+        courseF_bee_for2_b: 請記住要在每個迴圈之間向前移動，以到達每朵花。
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: 使用從1到7以1遞增的「 for」迴圈來解決這個關卡。
+        courseF_bee_for4_b: 在「for」迴圈中，您將需要一個「move forward」命令和一個收集花蜜的迴圈。
+        courseF_bee_for4_c: 確保在嵌套的「repeat」迴圈中使用「counter」（計數器）變數以獲得足夠的花蜜！
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: 不要忘記在「repeat」迴圈中使用「counter」變數。
+        courseF_bee_for6_b: 在「for」迴圈中，您將需要一個「move forward」命令和一個收集花蜜的迴圈。
+        courseF_bee_for6_c: 你的迴圈應該要**從 5 到 1** 計數。
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: 您的「for」迴圈會從 1 數到 7，間隔是 2。
+        courseF_bee_for7_b: 在「for」迴圈中，您將需要一個「move forward」命令和一個收集花蜜的迴圈。
+        courseF_bee_for7_c: 請記住在「repeat」迴圈中使用「counter」變數。
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: 可用`設定角色 1 為 ??? image`積木將角色添加到舞臺。
+        courseE_playLab_scaffold1_b: 將`設定角色`積木放在`運行時`下，使你的角色出現在程式的開頭。
+        courseE_playLab_scaffold1_c: 使用`設定 ??? 背景`來為你的場景選擇背景。
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: 拖出`當按__鍵時`事件的下拉式功能表，來更改積木控制的方向。
+        courseE_playLab_scaffold1_b: 你應該有四個`按箭頭鍵時`事件積木，每個積木下面都有一個方向。
+        courseE_playLab_scaffold1_c: 完成後，你就應該能夠使用方向鍵移動主角了！
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: 使用`得分`增加一份，用`減分`減去一分。
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: 要讓三角形的每個角保持為 60 度，需要將藝術家轉 120 度。
+        grade5_artist_variables_triangles1_b: 使用`重複`迴圈來把程式縮短。
+        grade5_artist_variables_triangles1_c: 在您的迴圈內，您需要向前移動50畫素，然後左轉120度。
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: 記住在畫完每一個三角形之後向前移動。
+        courseF_artist_variables2_b: 您的新迴圈將包含幫助您畫三角形的迴圈，然後是一個「move forward」指令。
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: "「length」（長度）變量將在您代碼中的兩個地方被使用到：在您三角形的邊長中，以及在您在三角形之間向前移動的數量上。"
+      OPD-K5-variables-6:
+        courseF_artist_variables4_c: |-
+          這是您的小藝術家將遵循的規律：
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: 除了您將要向_左_轉，跳躍，然後向_右_轉之外，代碼的後半部分應與前半部分幾乎相同。
+        courseF_artist_variables5_b: 您代碼的前半部分將繪製三個三角形，後半部分將繪製另外三個三角形。
+        courseF_artist_variables5_c: 首先複製程式的前半部分代碼，然後對其進行更改，將設計呈現出來。
+        courseF_artist_variables5_d: |-
+          這是您的小藝術家將遵循的規律：
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: 您可以走幾條路。哪條路是最短的？
         mc_8_b: 使用`重複`迴圈來簡化程式。
@@ -5486,6 +5547,9 @@ zh-TW:
         courseA_maze_seq10_a: 如果遇到麻煩，請嘗試將步驟記在紙上。
       courseA_maze_seq10_2019:
         courseA_maze_seq10_a: 如果遇到麻煩，請嘗試將步驟記在紙上。
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: 如果遇到麻煩，請嘗試將步驟記在紙上。
+        courseA_maze_seq10_b: 你需要向 3 個方向移動才能過關。
       courseA_maze_seq13:
         courseA_maze_seq13_a: 如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。
         courseA_maze_seq13_b: 不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。
@@ -5540,6 +5604,9 @@ zh-TW:
         '1': 嘗試在紙上寫下步驟來過關！
       courseA_maze_seq5_2019:
         '1': 嘗試在紙上寫下步驟來過關！
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: 嘗試在紙上寫下步驟來過關！
+        courseA_maze_seq5_b: 你將需要 2 個積木，指向 2 個方向。
       courseA_maze_seq5a_2018:
         '1': 大聲的唸出每個步驟，看看這樣能不能幫你找到答案。
       courseA_maze_seq5a_2019:
@@ -5553,7 +5620,13 @@ zh-TW:
       courseA_maze_seq6_2019:
         courseA_maze_seq6_a: 最後的程式應該要有 3 個移動積木。
         courseA_maze_seq6_b: 如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: 最後的程式應該要有 3 個移動積木。
+        courseA_maze_seq6_b: 如果卡住了，請嘗試分兩部分來解決關卡，一個在拐角前，一個在拐角後。
       courseA_maze_seq7:
+        courseA_maze_seq7_a: 你需要添加 1 個積木才能將鳥移到豬上。
+        courseA_maze_seq7_b: 如果你不知道該怎麼辦，請嘗試在紙上畫出關卡，然後用手指找出移動的方式。
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: 你需要添加 1 個積木才能將鳥移到豬上。
         courseA_maze_seq7_b: 如果你不知道該怎麼辦，請嘗試在紙上畫出關卡，然後用手指找出移動的方式。
       courseA_maze_seq8:
@@ -5561,6 +5634,8 @@ zh-TW:
       courseA_maze_seq8_2018:
         courseA_maze_seq8_a: 如果卡住了，請嘗試在紙上繪製圖像，以確定小鳥應該如何移動。
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: 如果卡住了，請嘗試在紙上繪製圖像，以確定小鳥應該如何移動。
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: 如果卡住了，請嘗試在紙上繪製圖像，以確定小鳥應該如何移動。
       courseA_maze_seq9:
         courseA_maze_seq9_a: 卡住了？嘗試用手指畫出鳥的路徑。
@@ -8925,6 +9000,8 @@ zh-TW:
         courseC_starWars_loops2_a: 要重複代碼，請拖出一個`重複`迴圈，然後將所需的積木放入其中。
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: 要重複代碼，請拖出一個`重複`迴圈，然後將所需的積木放入其中。
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: 要重複代碼，請拖出一個`重複`迴圈，然後將所需的積木放入其中。
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: 點擊轉彎積木上「左」旁邊的小箭頭，即可將其更改為「右」。
         courseC_starWars_loops4_a: 用 2 個`重複`積木。
@@ -8937,7 +9014,14 @@ zh-TW:
         courseC_starWars_loops4_c: 點擊轉彎積木上「左」旁邊的小箭頭，即可將其更改為「右」。
         courseC_starWars_loops4_a: 用 2 個`重複`積木。
         courseC_starWars_loops4_b: 每個`重複`迴圈內部都只有一個命令：`移動-向前`。
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: 點擊轉彎積木上「左」旁邊的小箭頭，即可將其更改為「右」。
+        courseC_starWars_loops4_a: 用 2 個`重複`積木。
+        courseC_starWars_loops4_b: 每個`重複`迴圈內部都只有一個命令：`移動-向前`。
       courseC_starWars_loops5:
+        courseC_starWars_loops5_b: 要向下移動，必須先轉彎然後再向前移動。
+        courseC_starWars_loops5_a: 最好的解決方案是先轉彎，再往前移動一次，再轉彎，然後重複。
+      courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: 要向下移動，必須先轉彎然後再向前移動。
         courseC_starWars_loops5_a: 最好的解決方案是先轉彎，再往前移動一次，再轉彎，然後重複。
       courseC_starWars_loops6:
@@ -8955,6 +9039,11 @@ zh-TW:
         courseC_starWars_loops6_b: |-
           如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
           這叫做**巢狀迴圈**。
+      courseC_starWars_loops6_copy:
+        courseC_starWars_loops6_a: 嘗試將所有移動記錄到紙上，然後尋找規律。
+        courseC_starWars_loops6_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: 這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？
         courseC_starWars_loops7_b: 如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。
@@ -8964,6 +9053,10 @@ zh-TW:
         courseC_starWars_loops7_b: 如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。
         courseC_starWars_loops7_c: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
       courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_a: 這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？
+        courseC_starWars_loops7_b: 如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。
+        courseC_starWars_loops7_c: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
+      courseC_starWars_loops7_copy:
         courseC_starWars_loops7_a: 這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？
         courseC_starWars_loops7_b: 如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。
         courseC_starWars_loops7_c: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
@@ -8982,6 +9075,13 @@ zh-TW:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: 嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！
+        course_starWars_loops8_b: 將此問題的前半部分視為階梯問題。你之前是如何解決的？
+        course_starWars_loops8_c: |-
+          看一下這條路徑。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: 嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！
         course_starWars_loops8_b: 將此問題的前半部分視為階梯問題。你之前是如何解決的？
         course_starWars_loops8_c: |-
@@ -9498,6 +9598,8 @@ zh-TW:
         courseD_bee_conditionals1_a: 在嘗試獲取花蜜之前，你將需要使用`如果`積木來檢查雲朵下面是否有一朵花。
       courseD_bee_conditionals1_predict1_2019:
         courseD_bee_conditionals1_a: 在嘗試獲取花蜜之前，你將需要使用`如果`積木來檢查雲朵下面是否有一朵花。
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: 在嘗試獲取花蜜之前，你將需要使用`如果`積木來檢查雲朵下面是否有一朵花。
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: 不知道怎麼開始？看看這個影片！
         courseD_bee_conditionals2_a: 有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。
@@ -9513,6 +9615,12 @@ zh-TW:
       courseD_bee_conditionals2_2019:
         courseD_bee_conditionals2_a: 有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。
         courseD_bee_conditionals2_c: 你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals2_a: 有時會有花，有時沒有。如果您希望您的代碼在兩種情況下都運行，請確保使用「if」語句。
+        courseD_bee_conditionals2_b: 你可以使用`重複`迴圈或`重複 判斷 有沒有路`來穿越這個迷宮。
+        courseD_bee_conditionals2_c: 你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。
+        courseD_bee_conditionals2_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: 不知道怎麼開始？看看這個影片！
         courseD_bee_conditionals3_a: 確保使用「if」語句檢查每個空間是否有花。
@@ -9528,6 +9636,12 @@ zh-TW:
       courseD_bee_conditionals3_2019:
         courseD_bee_conditionals3_a: 確保使用「if」語句檢查每個空間是否有花。
         courseD_bee_conditionals3_c: 不要害怕犯錯！嘗試添加模塊並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals3_a: 確保使用「if」語句檢查每個空間是否有花。
+        courseD_bee_conditionals3_b: 你可以使用`重複`迴圈或`重複 判斷`迴圈來讓蜜蜂一直向前移動。使用你喜歡的方式就可以！
+        courseD_bee_conditionals3_c: 不要害怕犯錯！嘗試添加模塊並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。
+        courseD_bee_conditionals3_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: 不知道怎麼開始？看看這個影片！
         courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
@@ -9545,6 +9659,13 @@ zh-TW:
       courseD_bee_conditionals4_2019:
         courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
         courseD_bee_conditionals4_b: 在迴圈中使用「if」語句檢查每個空間的花蜜。
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
+        courseD_bee_conditionals4_b: 在迴圈中使用「if」語句檢查每個空間的花蜜。
+        courseD_bee_conditionals4_c: 使用 <xml><block type="maze_untilBlocked"/></xml>
+          積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼辦？
+        courseD_bee_conditionals4_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: 不知道怎麼開始？看看這個影片！
         courseD_bee_conditionals5_a: 將矩形路徑的每一邊都看作一條路徑。設定一個巢狀迴圈，外部用一個`重複`積木，內部有一個`重複
@@ -9554,6 +9675,13 @@ zh-TW:
         courseD_bee_conditionals5_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals5_2018:
         courseD_bee_conditionals5_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals5_hintVid2: 觀看影片以幫你完成關卡。
+      courseD_bee_conditionals5_copy:
+        courseD_bee_conditionals5_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals5_a: 將矩形路徑的每一邊都看作一條路徑。設定一個巢狀迴圈，外部用一個`重複`積木，內部有一個`重複
+          判斷 有沒有路`迴圈。如果蜜蜂在每一條有花的邊上都要停下來，那麼蜜蜂需要停留多少條路徑？
+        courseD_bee_conditionals5_c: 矩形的三個邊上都有花，因此代碼需要`重複 3 次`。在每次重複中，只要`重複 判斷 有沒有路`說前面有路，蜜蜂就會沿著這條路徑繼續前進。要繼續沿著這條道路前進，蜜蜂需要`移動-向前`。在路上，蜜蜂需要檢查花朵。`如果有花朵`，蜜蜂就應該`獲取花蜜`。
+        courseD_bee_conditionals5_b: 在`重複 判斷 有沒有路`積木內，你需要向前移動並檢查花朵。怎樣檢查有沒有花？如果有一朵花要怎麼辦？
         courseD_bee_conditionals5_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: 不知道怎麼開始？看看這個影片！
@@ -10922,6 +11050,10 @@ zh-TW:
           你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: 正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。
+        courseE_artist_functions1_b: 畫出眼鏡時可以讓你的兩條線重疊沒關係。
+        courseE_artist_functions1_c: 要縮短代碼，請嘗試使用`重複`迴圈來繪製眼鏡的方形框架。
       courseE_artist_functions2:
         courseD_artist_functions2_b: 編寫的函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。
         courseD_artist_functions2_c: |-
@@ -10948,13 +11080,35 @@ zh-TW:
           -   使用函式
           -   向前移動 100 + 75 像素
           -   使用函式
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: 編寫的函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。
+        courseD_artist_functions2_c: |-
+          在`運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。否則，你的函式中的代碼將無法運行。
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          你的程式應該要：
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           要通過這個關卡，你只需要添加一個迴圈，即可重複初始代碼 8 次。
 
           如果你不記得初始代碼是什麼，請點擊工作區右上角的「重新開始」。
         courseD_artist_functions3_b: 你的迴圈中應包含所有 3 個初始代碼積木。
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          要通過這個關卡，你只需要添加一個迴圈，即可重複初始代碼 8 次。
+
+          如果你不記得初始代碼是什麼，請點擊工作區右上角的「重新開始」。
+        courseD_artist_functions3_b: 你的迴圈中應包含所有 3 個初始代碼積木。
       courseE_artist_functions4:
+        courseD_artist_functions4_a: 試著使用函式！
+        courseD_artist_functions4_b: 從工具箱中拖出`繪製星星`函式積木來開始構建函式。它應該與上一個關卡具有相同的代碼，因為你在繪製的是相同的星形圖案。
+        courseD_artist_functions4_c: 使用綠色的`繪製星星`積木在主程式中呼叫此函式。別忘了在每顆星之間要向前跳！
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: 試著使用函式！
         courseD_artist_functions4_b: 從工具箱中拖出`繪製星星`函式積木來開始構建函式。它應該與上一個關卡具有相同的代碼，因為你在繪製的是相同的星形圖案。
         courseD_artist_functions4_c: 使用綠色的`繪製星星`積木在主程式中呼叫此函式。別忘了在每顆星之間要向前跳！
@@ -10968,6 +11122,10 @@ zh-TW:
       courseE_artist_functions5_2019:
         courseD_artist_functions5_a: 別放棄！記住你一直在學的東西。
         courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
+      courseE_artist_functions5_copy:
+        courseD_artist_functions5_a: 別放棄！記住你一直在學的東西。
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
+        courseD_artist_functions5_c: 首先將星星的代碼拖動到`繪製星星`函式中，然後使用該函式繪製三個星星！
       courseE_artist_functions6:
         grade4_artist_functions_windows0_a: 現在專注畫出一個窗戶。我們將在下一個關卡中創建一個函式。
         grade4_artist_functions_windows0_b: 嘗試使用巢狀迴圈。內部迴圈畫出正方形，而外部迴圈將使正方形旋轉四次。

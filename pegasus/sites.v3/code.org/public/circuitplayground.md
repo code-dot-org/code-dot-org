@@ -42,7 +42,7 @@ One of our primary goals in integrating the Circuit Playground into CS Discoveri
 
 **App Lab** is a web-based programming environment for building apps using Javascript with either blocks or text. App Lab features prominently in both CS Principles and CS Discoveries
 
-The **Circuit Playground** is an series of circuit boards produced by Adafruit with a variety of sensors and ouputs built in. There are two variants of the Circuit Playground, both compatible with CS Discoveries:
+The **Circuit Playground** is a series of circuit boards produced by Adafruit with a variety of sensors and ouputs built in. There are two variants of the Circuit Playground, both compatible with CS Discoveries:
 
 * The Circuit Playground Classic - the first version of this board which can be programmed with either Maker Toolkit or the Arduino IDE
 * The Circuit Playground Express - the newer version of this board which can be programmed with the Maker Toolkit, Microsoft Makecode, Scratch 3.0, Circuit Python, and more .

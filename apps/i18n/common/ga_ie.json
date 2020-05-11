@@ -708,7 +708,6 @@
   "loginCard_secretWords": "Focail Rúnda:",
   "loginCard_sectionName": "Ainm an Rannáin",
   "loginInfo": "Sonraí Logála Isteach",
-  "loginInformation": "Sonraí Logála Isteach",
   "loginInfo_joinTitle": "Páirt a ghlacadh sa rannán (uair amháin)",
   "loginInfo_joinBody": "Mura bhfuil daltaí cláraithe le do rannán fós, iarr orthu na céimeanna seo a leanúint. Ní gá dóibh é seo a dhéanamh ach uair amháin. Tar éis dóibh clárú leis an rannán, beidh siad in ann an cúrsa a sannadh dóibh a fheiceáil, agus beidh tusa in ann an dul chun cinn atá déanta acu a lorg má tá siad logáilte isteach.",
   "loginInfo_joinStep1": "Cuntas Code.org a chruthú mura bhfuil ceann acu cheana féin. Is féidir é seo a dhéanamh ag {url}, le seoladh ríomhphoist agus focal faire, nó trí chuntas Google, Facebook, nó Microsoft le ceann de na cnaipí seo a leanas:",

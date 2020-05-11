@@ -78,10 +78,6 @@ class DeleteAccountsHelper
       @log.puts "Cleaned #{updated_rows} OverflowActivity" if updated_rows > 0
     end
 
-    @log.puts "Cleaning GalleryActivity"
-    updated_rows = GalleryActivity.where(user_id: user_id).update_all(level_source_id: nil)
-    @log.puts "Cleaned #{updated_rows} GalleryActivity" if updated_rows > 0
-
     @log.puts "Cleaning AssessmentActivity"
     updated_rows = AssessmentActivity.where(user_id: user_id).update_all(level_source_id: nil)
     @log.puts "Cleaned #{updated_rows} AssessmentActivity" if updated_rows > 0

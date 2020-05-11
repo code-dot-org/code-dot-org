@@ -1484,7 +1484,7 @@ id:
             '"w"': B
             '"a"': A
             '"s"': S
-            '"d"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1495,7 +1495,7 @@ id:
             '"w"': B
             '"a"': A
             '"s"': S
-            '"d"': S
+            '"d"': D
       Mikelab_whenMouseClicked:
         text: ketika mouse diklik
       Mikelab_whenYesNoClicked:

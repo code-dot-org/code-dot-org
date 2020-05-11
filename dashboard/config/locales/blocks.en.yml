@@ -1208,7 +1208,7 @@ en:
           collecting
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: show title screen {BREAK} title {TITLE} text {SUBTITLE}
+        text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} clicked"
         options:

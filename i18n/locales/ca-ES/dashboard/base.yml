@@ -501,19 +501,6 @@ ca:
       title: "Condicionals"
     widgets:
       title: "Ginys"
-  gallery:
-    students_drew_these_with_code: "Els estudiants van dibuixar això amb codi!"
-    students_made_these_with_code: "Els estudiants van fer això amb codi!"
-    picture_count: "En els darrers <b>%{days}</b> dies, els alumnes han elaborat <b>%{count}</b> imatges escrivint els seus propis programes informàtics. Fes clic a les fotos per veure el programa en acció."
-    activity_count: "En els darrers <b>%{days}</b> dies, els estudiants han fet <b>%{count}</b> aplicacions i imatges escrivint els seus propis programes informàtics. Fes clic a les fotos i captures de pantalla per veure el programa en acció."
-    want_to_make_your_own: "Vols fer el teu propi?"
-    more: "Més &rarr;"
-    caption_by_name_age: "per %{name}, %{age} anys"
-    caption_time_ago: "fa %{time_ago}"
-    header: "Galeria"
-    header_playlab: "Play Lab"
-    header_artist: "Artista"
-    report_abuse: "Denuncieu un abús"
   landing:
     report_bug: "Informeu d'errors"
     support: "Obtenir ajuda"

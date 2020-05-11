@@ -309,8 +309,8 @@ id-ID:
       CourseE_HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk sebuah peti.
       CourseE_HOC 2018 Level_9b: Gunakan karang sebagai titik acuan untuk mencapai
         harta karun.
-      Crack Random Substitution: instruksi
-      Crack a Caesar Cipher: instruksi
+      Crack Random Substitution: Instruksi
+      Crack a Caesar Cipher: Instruksi
       Dance Party 2_2019: Ganti blok perilaku dalam blok 'peri mulai' menjadi berbeda
         yang membuat alien mulai berputar!
       Dance Party 3_2019: 'Buat peri baru yang nampak seperti alien pink dan buat
@@ -552,6 +552,14 @@ id-ID:
         mengubah semua aturan, mencampur dan mencocokkan olahraga, mendapatkan kreatif!
         Ketika anda sudah selesai, klik Finish untuk membiarkan teman-teman mencoba
         permainan anda pada ponsel mereka.'
+      OPD-K5-spritelab-2: Ubah tumbleweed ke berbagai macam ikan!
+      OPD-K5-spritelab-3: Ubah perilaku ikan sehingga ikannya berenang ke kiri dan
+        kanan.
+      OPD-K5-spritelab-4: Gunakan blok 'atur warna latar'untuk membuat berbagai warna
+        latar.
+      OPD-K5-spritelab-6: Ikan adalah petualang dan ingin bertemu dengan mahluk baru
+        di laut. Tambahkan peri lain ke kolam ikan. Peri ini bisa memiliki berbagai
+        macam kostum lain selain yang anda gunakan untuk ikan!
       Overworld Avoid Monsters: Berlari memasuki Creeper bukan ide yang bagus. Bergerak
         perlahan melewati Creeper dan capai keselamatan rumah kamu.
       Overworld Avoid Monsters_2019: Berlari memasuki Creeper bukan ide yang bagus.
@@ -744,16 +752,255 @@ id-ID:
         bola sampai menyentuh bendera.
       bounce_7_sports: Melampirkan blok untuk masing-masing "ketika" blok. Bouncing
         bola sampai menyentuh bendera.
+      course1_artist_loops_challenge4: '"Saatnya mengundi dadu! Kamu bisa membantu
+        menggambarnya?"'
+      course1_collector_loops_challenge4: Ayo kita ambil harta karun! Bantu aku menyeberang
+        setiap baris lalu kembali untuk memulai baris berikutnya. Bisakah kamu menemukan
+        pola?
+      course1_maze_debugging_challenge2: Perbaiki bug level ini. Bloknya sudah benar,
+        tertapi urutannya salah!
       course4_artist_fwp_challenge1: Cobalah jalankan program ini, dan buatlah perubahan
         untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus
         dan ganti dengan komposisi yang berbeda)
       courseA_maze_seq2: Ubah kode untuk membawa saya ke babi!
+      courseB_artist_loops10: Gunakan apa yang telah kamu pelajari untuk membuat gambar
+        yang menurutmu akan dilihat oleh artis saat sampai di rumah.
+      courseB_artist_loops10_2018: Gunakan apa yang telah kamu pelajari untuk membuat
+        gambar yang menurutmu akan dilihat oleh artis saat sampai di rumah.
+      courseB_artist_loops10_2019: Gunakan apa yang telah kamu pelajari untuk membuat
+        gambar yang menurutmu akan dilihat oleh artis saat sampai di rumah.
+      courseB_artist_loops2: Artis sedang mencoba menggambar garis **6** kali, tetapi
+        tidak berhasil. Apakah anda dapat membantu?
+      courseB_artist_loops2_2018: Artis sedang mencoba menggambar garis **6** kali,
+        tetapi tidak berhasil. Apakah anda dapat membantu?
+      courseB_artist_loops2_2019: Artis sedang mencoba menggambar garis **6** kali,
+        tetapi tidak berhasil. Apakah anda dapat membantu?
+      courseB_artist_loops3: Bantu artis menggambar garis 7 kali untuk membuat dinding
+        taman.
+      courseB_artist_loops3_2018: Bantu artis menggambar garis 7 kali untuk membuat
+        dinding taman.
+      courseB_artist_loops3_2019: Bantu artis menggambar garis 7 kali untuk membuat
+        dinding taman.
+      courseB_artist_loops4: Sekarang kita perlu menyiapkan tanah untu menanam. Temukan
+        bug dalam kode ini dan bantu artis menyiapkan tanah.
+      courseB_artist_loops4_2018: Sekarang kita perlu menyiapkan tanah untu menanam.
+        Temukan bug dalam kode ini dan bantu artis menyiapkan tanah.
+      courseB_artist_loops4_2019: Sekarang kita perlu menyiapkan tanah untu menanam.
+        Temukan bug dalam kode ini dan bantu artis menyiapkan tanah.
+      courseB_artist_loops5: Waktunya memperbaiki tangga! Ulangi pola ini **5** kali
+        agar artis dapat mencapai puncak semak.
+      courseB_artist_loops5_2018: Waktunya memperbaiki tangga! Ulangi pola ini **5**
+        kali agar artis dapat mencapai puncak semak.
+      courseB_artist_loops5_2019: Waktunya memperbaiki tangga! Ulangi pola ini **5**
+        kali agar artis dapat mencapai puncak semak.
+      courseB_artist_loops6: Panjat tanaman dan lihat ke mana perginya?
+      courseB_artist_loops6_2018: Panjat tanaman dan lihat ke mana perginya?
+      courseB_artist_loops6_2019: Panjat tanaman dan lihat ke mana perginya?
+      courseB_artist_loops7: "**Tantangan:**  Itu taman tersembunyi! Mari kita berjalan
+        berkeliling."
+      courseB_artist_loops7_2018: "**Tantangan:**  Itu taman tersembunyi! Mari kita
+        berjalan berkeliling."
+      courseB_artist_loops7_2019: "**Tantangan:**  Itu taman tersembunyi! Mari kita
+        berjalan berkeliling."
+      courseB_artist_loops8: Waktunya pulang ke rumah. Bisakah kami memperbaiki tangga
+        ini hanya menggunakan satu blok untuk membantu artis turun?
+      courseB_artist_loops8_2018: Waktunya pulang ke rumah. Bisakah kami memperbaiki
+        tangga ini hanya menggunakan satu blok untuk membantu artis turun?
+      courseB_artist_loops8_2019: Waktunya pulang ke rumah. Bisakah kami memperbaiki
+        tangga ini hanya menggunakan satu blok untuk membantu artis turun?
+      courseB_artist_loops9: Ayo lewat pintasan ke rumah, melalui kolam. Bisakah kami
+        membantu artis tetap ada di batu?
+      courseB_artist_loops9_2018: Ayo lewat pintasan ke rumah, melalui kolam. Bisakah
+        kami membantu artis tetap ada di batu?
+      courseB_artist_loops9_2019: Ayo lewat pintasan ke rumah, melalui kolam. Bisakah
+        kami membantu artis tetap ada di batu?
+      courseB_artist_loops_challenge1: '"Saatnya mengundi dadu! Kamu bisa membantu
+        menggambarnya?"'
+      courseB_artist_loops_challenge1_2018: '"Saatnya mengundi dadu! Kamu bisa membantu
+        menggambarnya?"'
+      courseB_artist_loops_challenge1_2019: '"Saatnya mengundi dadu! Kamu bisa membantu
+        menggambarnya?"'
+      courseB_artist_loops_challenge2: Gambar X sebanyak mungkin. Kamu bisa menggambar
+        3 kali dalam satu baris?
+      courseB_artist_loops_challenge2_2018: Gambar X sebanyak mungkin. Kamu bisa menggambar
+        3 kali dalam satu baris?
+      courseB_artist_loops_challenge2_2019: Gambar X sebanyak mungkin. Kamu bisa menggambar
+        3 kali dalam satu baris?
+      courseB_collector_loops1: Ini Laurel si Petualang! Kamu bisa menggerakkannya
+        dan mendapat harta karun?
+      courseB_collector_loops11: Eureka! Ambil sebanyak mungkin harta karun!
+      courseB_collector_loops11_2018: Eureka! Ambil sebanyak mungkin harta karun!
+      courseB_collector_loops11_2019: Eureka! Ambil sebanyak mungkin harta karun!
+      courseB_collector_loops2: Ambil keempat tumpukan untuk lulus level ini.
+      courseB_collector_loops2_2018: Ambil keempat tumpukan untuk lulus level ini.
+      courseB_collector_loops2_2019: Ambil keempat tumpukan untuk lulus level ini.
+      courseB_collector_loops3: Bagaimana Laurel bisa mengambil kelima tumpukan hanya
+        dengan satu blok `E -->`?
+      courseB_collector_loops3_2018: Bagaimana Laurel bisa mengambil kelima tumpukan
+        hanya dengan satu blok `E -->`?
+      courseB_collector_loops3_2019: Bagaimana Laurel bisa mengambil kelima tumpukan
+        hanya dengan satu blok `E -->`?
+      courseB_collector_loops4: Perbaiki jalur Laurel untuk mengambil semua harta
+        karun ini!
+      courseB_collector_loops4_2018: Perbaiki jalur Laurel untuk mengambil semua harta
+        karun ini!
+      courseB_collector_loops4_2019: Perbaiki jalur Laurel untuk mengambil semua harta
+        karun ini!
+      courseB_collector_loops5: Tambahkan kode dari teka-teki terakhir untuk mengambil
+        semua harta karun.
+      courseB_collector_loops5_2018: Tambahkan kode dari teka-teki terakhir untuk
+        mengambil semua harta karun.
+      courseB_collector_loops5_2019: Tambahkan kode dari teka-teki terakhir untuk
+        mengambil semua harta karun.
+      courseB_collector_loops6: Pikirkan kode untuk membantu Laurel mengambil semua
+        harta karun!
+      courseB_collector_loops6_2018: Pikirkan kode untuk membantu Laurel mengambil
+        semua harta karun!
+      courseB_collector_loops6_2019: Pikirkan kode untuk membantu Laurel mengambil
+        semua harta karun!
+      courseB_collector_loops7: Tulis kode untuk mengambil semua harta karun ini.
+      courseB_collector_loops7_2018: Tulis kode untuk mengambil semua harta karun
+        ini.
+      courseB_collector_loops7_2019: Tulis kode untuk mengambil semua harta karun
+        ini.
+      courseB_collector_loops8: "**Tantangan:** Harta karun ada di sepanjang tangga
+        turun ini! Tulis kode untuk membantu Laurel mengambil semuanya."
+      courseB_collector_loops8_2018: "**Tantangan:** Harta karun ada di sepanjang
+        tangga turun ini! Tulis kode untuk membantu Laurel mengambil semuanya."
+      courseB_collector_loops8_2019: "**Tantangan:** Harta karun ada di sepanjang
+        tangga turun ini! Tulis kode untuk membantu Laurel mengambil semuanya."
+      courseB_collector_loops9: _"Bantu aku mengambil harta karun dari lembah curam
+        ini."_
+      courseB_collector_loops9_2018: _"Bantu aku mengambil harta karun dari lembah
+        curam ini."_
+      courseB_collector_loops9_2019: _"Bantu aku mengambil harta karun dari lembah
+        curam ini."_
+      courseB_collector_loops_challenge1: Saat ini blokmu terbatas. Ambil semua harta
+        karun!
+      courseB_collector_loops_challenge1_2018: Saat ini blokmu terbatas. Ambil semua
+        harta karun!
+      courseB_collector_loops_challenge1_2019: Saat ini blokmu terbatas. Ambil semua
+        harta karun!
+      courseB_collector_loops_challenge2: Ayo kita ambil harta karun! Bantu aku menyeberang
+        setiap baris lalu kembali untuk memulai baris berikutnya. Bisakah kamu menemukan
+        pola?
       courseB_collector_loops_challenge2a: Bantu Laurel setidaknya mendapat **5**
         harta karun untuk menyelesaikan teka-teki ini.
       courseB_collector_loops_challenge2a_2018: Bantu Laurel setidaknya mendapat **5**
         harta karun untuk menyelesaikan teka-teki ini.
       courseB_collector_loops_challenge2a_2019: Bantu Laurel setidaknya mendapat **5**
         harta karun untuk menyelesaikan teka-teki ini.
+      courseB_maze_seq1: |-
+        Bermain dengan blok ini untuk melihat apa yang akan dilakukan burung!
+
+        Buat burung sampai ke babi untuk menyelesaikan level ini.
+      courseB_maze_seq10: Perbaiki bug agar burung sampai ke babi.
+      courseB_maze_seq11: Semuanya terserah kamu! Buat burung sampai ke babi.
+      courseB_maze_seq12: Sekarang dapatkan babi itu bagiamana pun caranya!
+      courseB_maze_seq2: _"Ada bug! Perbaiki kode agar aku sampai ke babi."_
+      courseB_maze_seq3: '"Perbaiki kode agar aku sampai ke babi."'
+      courseB_maze_seq4: Tambahkan 2 blok agar burung sampai ke babi.
+      courseB_maze_seq5: Sekarang cobalah teka-teki ini dari awal!
+      courseB_maze_seq8: Giliranmu! Apa yang perlu kamu lakukan agar burung sampai
+        ke babi?
+      courseB_maze_seq9: 'Tantangan: Bergerak di sekeliling TNT agar burung sampai
+        ke babi.'
+      courseB_maze_seq_challenge1: Bisakah kamu menemukan jalur sebelum kehabisan
+        blok?
+      courseB_maze_seq_challenge1_2018: Bisakah kamu menemukan jalur sebelum kehabisan
+        blok?
+      courseB_maze_seq_challenge1_2019: Bisakah kamu menemukan jalur sebelum kehabisan
+        blok?
+      courseB_maze_seq_challenge2: Perbaiki bug level ini. Bloknya sudah benar, tertapi
+        urutannya salah!
+      courseB_maze_seq_challenge2_2018: Perbaiki bug level ini. Bloknya sudah benar,
+        tertapi urutannya salah!
+      courseB_maze_seq_challenge2_2019: Perbaiki bug level ini. Bloknya sudah benar,
+        tertapi urutannya salah!
+      courseB_playLab_events1: Lihat apakah kamu bisa tahu apa yang dilakukan setiap
+        blok.
+      courseB_playLab_events1_2018: Lihat apakah kamu bisa tahu apa yang dilakukan
+        setiap blok.
+      courseB_playLab_events1_2019: Lihat apakah kamu bisa tahu apa yang dilakukan
+        setiap blok.
+      courseB_playlab_events2: Buat Daisy si Naga mengatakan sesuatu bila kami mengeklik
+        "Run".
+      courseB_playlab_events2_2018: Buat Daisy si Naga mengatakan sesuatu bila kami
+        mengeklik "Run".
+      courseB_playlab_events2_2019: Buat Daisy si Naga mengatakan sesuatu bila kami
+        mengeklik "Run".
+      courseB_playlab_events3: Gunakan suatu event agar Daisy si Naga beralih ke suasana
+        hati acak jika diklik.
+      courseB_playlab_events3_2018: Gunakan suatu event agar Daisy si Naga beralih
+        ke suasana hati acak jika diklik.
+      courseB_playlab_events3_2019: Gunakan suatu event agar Daisy si Naga beralih
+        ke suasana hati acak jika diklik.
+      courseB_playlab_events4: Waktunya ksatria! Tambahkan satu event agar ksatria
+        bergerak ke arah naga ketika tanda panah kiri diklik.
+      courseB_playlab_events5: Sekarang tambahkan kejadian agar ksatria berlari dari
+        naga bila kamu menekan tombol panah kanan.
+      courseB_playlab_events6: |-
+        Bantu ksatriamu mengambil semua bendera!
+
+        Untuk melakukannya, kamu akan perlu menambahkan kejadian untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
+      courseB_playlab_events6_2018: |-
+        Bantu ksatriamu mengambil semua bendera!
+
+        Untuk melakukannya, kamu akan perlu menambahkan kejadian untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
+      courseB_playlab_events6_2019: |-
+        Bantu ksatriamu mengambil semua bendera!
+
+        Untuk melakukannya, kamu akan perlu menambahkan kejadian untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
+      courseB_playlab_events7: Buat permainan ini menyenangkan dengan mengatur ksatria
+        agar menghilang jika dia lari ke arah naga dalam perjalanan untuk mengambil
+        bendera! Putar suara jika mereka beradu untuk membuatnya terasa nyata.
+      courseB_playlab_eventsFP: Gunakan imajinasimu. Apa yang bisa kamu lakukan untuk
+        membuat permainan ini lebih menyenangkan?
+      courseB_playlab_events_challenge1: 'Buat hewan bergerak ke bawah jika kamu menekan
+        ▼. '
+      courseB_playlab_events_challenge1_2018: 'Buat hewan bergerak ke bawah jika kamu
+        menekan ▼. '
+      courseB_playlab_events_challenge1_2019: 'Buat hewan bergerak ke bawah jika kamu
+        menekan ▼. '
+      courseB_playlab_events_challenge2: Buat hewan menghilang jika diklik.
+      courseB_playlab_events_challenge2_2018: Buat hewan menghilang jika diklik.
+      courseB_playlab_events_challenge2_2019: Buat hewan menghilang jika diklik.
+      courseB_starWars_prog1: '"Ambil logam rongsokan, BB-8!"'
+      courseB_starWars_prog10: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog10_2018: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog10_2019: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog11: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog11_2018: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog11_2019: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog1_2018: '"Ambil logam rongsokan, BB-8!"'
+      courseB_starWars_prog1_2019: '"Ambil logam rongsokan, BB-8!"'
+      courseB_starWars_prog2: Ambil semua logam.
+      courseB_starWars_prog2_2018: Ambil semua logam.
+      courseB_starWars_prog2_2019: Ambil semua logam.
+      courseB_starWars_prog3: Ambil semua logam rongsokan
+      courseB_starWars_prog3_2018: Ambil semua logam rongsokan
+      courseB_starWars_prog3_2019: Ambil semua logam rongsokan
+      courseB_starWars_prog4: Ambil semua logam rongsokan
+      courseB_starWars_prog4_2018: Ambil semua logam rongsokan
+      courseB_starWars_prog4_2019: Ambil semua logam rongsokan
+      courseB_starWars_prog5: Ambil logam rongsokan
+      courseB_starWars_prog5_2018: Ambil logam rongsokan
+      courseB_starWars_prog5_2019: Ambil logam rongsokan
+      courseB_starWars_prog6: Ambil semua logam rongsokan
+      courseB_starWars_prog6_2018: Ambil semua logam rongsokan
+      courseB_starWars_prog6_2019: Ambil semua logam rongsokan
+      courseB_starWars_prog7: Ayo ambil!
+      courseB_starWars_prog7_2018: Ayo ambil!
+      courseB_starWars_prog7_2019: Ayo ambil!
+      courseB_starWars_prog8: "**Tantangan:** Bantu BB-8 mengumpulkan logam rongsokan
+        bersinar"
+      courseB_starWars_prog8_2018: "**Tantangan:** Bantu BB-8 mengumpulkan logam rongsokan
+        bersinar"
+      courseB_starWars_prog8_2019: "**Tantangan:** Bantu BB-8 mengumpulkan logam rongsokan
+        bersinar"
+      courseB_starWars_prog9: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog9_2018: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
+      courseB_starWars_prog9_2019: Bantu BB-8 mengumpulkan logam rongsokan yang bersinar
       courseC_artist_loop1_2018: Ayo, tambahkan pizazz dengan blok `atur pola`.
       courseC_artist_loop1_2019: Ayo, tambahkan pizazz dengan blok `atur pola`.
       courseC_artist_prog5: |-
@@ -817,6 +1064,10 @@ id-ID:
       courseD_maze_ramp4_2019: Bantu Scrat meraih biji pohon ek.
       courseD_maze_ramp5c_2019: Awas pecahan es! bantu Scrat mencapai biji pohon ek.
       courseE_artist_functions1: |-
+        Hello. Saya artis zombie. Saya suka menggambar!
+        Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
+        25 piksel lebih pendek dari panjang persegi.
+      courseE_artist_functions1_copy: |-
         Hello. Saya artis zombie. Saya suka menggambar!
         Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
         25 piksel lebih pendek dari panjang persegi.

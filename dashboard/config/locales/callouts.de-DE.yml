@@ -127,6 +127,7 @@ de-DE:
         CSD_U3_L18_S3_C2: Variablenbereich
       CSD U3 rect:
         CSD_U3_rect_c1: Hier ist der Code
+        CSD_U3_rect_c2: Hier ist die "Ausführen"-Knopf
       CSD U3 rect_2018:
         CSD_U3_rect_c1: Hier ist der Code
       CSD U3 rect_2019:
@@ -322,10 +323,25 @@ de-DE:
         snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
           zu erstellen!
       New Play Lab Project:
+        New Play Lab Project_callout1: Klicke auf die Kategorien, um die Bausteine
+          in deinem Werkzeugkasten zu sehen! Ziehe Bausteine in den Arbeitsbereich
+          und füge sie zu deinem Programm hinzu
         New Play Lab Project_callout2: Drücke "Ausführen" um dein Programm zu speichern
           und auszuführen
         sign_in_to_save_project: Möchtest du später auf dein Projekt zugreifen? Melde
           dich an, um dieses Projekt in deinem Konto zu speichern!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Die "Für"-Schleife findest du hier!
+      OPD-K5-spritelab-3:
+        spritelab_comment: Verwende diesen Baustein, um dir selbst oder Deinem Lehrer
+          Notizen darüber zu machen, wie Dein Code funktioniert.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Beachte dabei, dass es bei den Blöcken
+          jetzt eine neue Art der Zahleneingabe gibt. Diese `Mathe`-Blöcke können
+          herausgezogen und verschoben werden!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Verwende ihn, um den Wert der Variablen `Länge`
+          zu bestimmen.
       Overworld Chop Trees:
         craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
       Overworld Chop Trees_2019:
@@ -693,6 +709,9 @@ de-DE:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
           zur Verfügung.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
+          zur Verfügung.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
@@ -703,6 +722,10 @@ de-DE:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
+          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe?  Klicke hier für einen VIDEO-Hinweis!
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Verwende diesen Befehl, um die
           Biene rückwärts zu bewegen.

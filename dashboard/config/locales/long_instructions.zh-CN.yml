@@ -17941,6 +17941,7 @@ zh-CN:
         >
         > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> 在推特上分享</h4></a>
       OPD-K5 RepeatBlock: 观看下面的视频，其中说明了循环的原理，并介绍了计算机科学基础中的 '重复' 模块。
+      OPD-K5 RepeatBlock_copy: 观看下面的视频，其中说明了循环的原理，并介绍了计算机科学基础中的 '重复' 模块。
       OPD-K5 Unplugged Video: |-
         ## 展望 > 通过 "线下" 学习
 
@@ -17954,6 +17955,81 @@ zh-CN:
 
         **用自己的方法来完成第 4-8 阶段**，将有机会针对本课程涵盖的每个核心概念，来了解线下的活动。
       OPD-K5 WhatIsCS: 有没有好奇过 "到底什么是计算机科学？" 或者 "为什么有些计算机程序是文字写的，但有些是图片？" 如果有的话，观看此视频；这是对计算机科学领域的精彩介绍。
+      OPD-K5-events-2: |-
+        将`拍打正常数量`模块附加到`当点击时`事件, 然后按 "运行"。
+
+        * * *
+
+        单击或点击播放空间，将像素鸟移动到目标处。
+      OPD-K5-events-3: "`当运行时`事件允许你在游戏启动后立即运行代码。 \n\n尝试添加在按下 \"运行\" 按钮时设置级别速度的模块。\n\n*
+        * *\n\n播放游戏并拍打目标继续。"
+      OPD-K5-events-4: |-
+        现在我们已经增加了地面。
+
+        将`结束游戏`模块附加到`当命中地面`事件时。
+
+        * * *
+
+        玩游戏, 把鸟撞向地面继续。
+      OPD-K5-events-5: |-
+        像素鸟会飞过障碍，除非你写代码来让它能撞上。
+
+        附加一个模块到`当碰到障碍时`时间，在像素鸟碰到第一个管道时，让游戏结束。
+      OPD-K5-events-6: |-
+        我们已经增加了分数板来统计像素鸟通过的障碍数。
+
+        增加一个模块到`当通过了一个障碍`时间来得一分，然后点击"运行"让它飞过第一组管道。
+      OPD-K5-forloops-2: |-
+        写代码帮助蜜蜂收集所有的花蜜。
+
+        这一关需要大量的模块，但我们会在下一关学到一种更容易的方法。
+      OPD-K5-forloops-6: |-
+        你也能用`计数循环`递减。
+
+        试着通过从**5**到**1**，每次减**1**来递减计数收集花蜜。
+      OPD-K5-forloops-7: |-
+        循环里的最后一个数字叫做**"增量"**。每次循环运行时，counter（计数器）变量就会改变**增量**这么多值。
+
+        试试用**增量**2来收集花。
+      OPD-K5-projects-2: |-
+        你学到的大量知识太令人惊奇了！让我们一步步做个游戏。
+
+        用工具箱里的新模块，选择一个新背景，然后捡起一个演员放到游戏中。
+      OPD-K5-projects-3: |-
+        用事件处理函数和动作这样的模块来让你的玩家根据键盘方向键来移动。
+
+        让玩家到达目标来通过这关。
+      OPD-K5-projects-4: |-
+        让我们添加更多的角色到你的游戏里！
+
+        用`设置演员`模块来增加更多的角色，然后移动到目标来完成这关。
+      OPD-K5-projects-5: |-
+        让好几个角色动起来，是游戏的好的开始，但我们需要增加更多的东西，让它感觉起来是个真游戏。让我们添加分数！
+
+        用`当演员碰到`这样的事件模块来改变分数。得到10分来通关。
+      OPD-K5-projects-6: 做的好！你有了一个游戏所有基本的部分了。现在花点时间来确保游戏会像你像的那样工作。加入一个胜利或失败的方法，然后玩到触发这些条件。
+      OPD-K5-projects-7: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
+      OPD-K5-spritelab-2: |-
+        我们来做个鱼缸！
+
+        把灰蒙蒙的风滚草变成一条鱼。
+      OPD-K5-spritelab-3: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
+      OPD-K5-spritelab-4: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
+      OPD-K5-spritelab-6: 鱼有些孤单。在鱼缸内创造一个新的精灵图。
+      OPD-K5-spritelab-7: 想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！
+      OPD-K5-variables-1: |-
+        让我们画一个等边三角形。
+
+        它的每条边都正好是50像素。
+      OPD-K5-variables-2: |-
+        现在用另一个循环来画这相邻的三个三角形。
+
+        你可以嵌套上一关的代码。
+      OPD-K5-variables-5: |-
+        在事情变得难办前，你能将长度50放到一个变量里，以便下面几关我们都能用到它吗？
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      OPD-K5-variables-6: 现在，用`length`（长度）变量来让小艺术家在三角形之间向前跳`length`（长度）像素。
       Overworld Chop Tree: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld Chop Tree_2019: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld House Frame Chosen: 用你想要的任何材料来建立房子的剩余部分。`重复`命令将派上用场。
@@ -19407,6 +19483,10 @@ zh-CN:
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq10_2018: "**挑战：** 绕开TNT 把鸟带到猪那里！"
       courseA_maze_seq10_2019: "**挑战：** 绕开TNT 把鸟带到猪那里！"
+      courseA_maze_seq10_copy: |-
+        **挑战：** 绕开TNT 把鸟带到猪那里！
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         到了更短的关卡了！往一个方向移动，然后另一个方向把鸟带到猪那里。
 
@@ -19454,6 +19534,10 @@ zh-CN:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: 尝试一下。
       courseA_maze_seq5_2019: 尝试一下。
+      courseA_maze_seq5_copy: |-
+        从头自己开始尝试这个。
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"在这里，小猪！"_
 
@@ -19468,7 +19552,15 @@ zh-CN:
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq6_2019: 往一条路走，然后走另一条把鸟带到猪那里！
+      courseA_maze_seq6_copy: |-
+        往一条路走，然后另一条把鸟带到猪那里！
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        找出什么缺少了，然后添加模块使鸟到达猪那！
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         找出什么缺少了，然后添加模块使鸟到达猪那！
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -19478,6 +19570,10 @@ zh-CN:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: 通过这关，把鸟带到猪那！
       courseA_maze_seq8_2019: 通过这关，把鸟带到猪那！
+      courseA_maze_seq8_copy: |-
+        通过这关卡把鸟带到猪那！
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: "\\*\\* 挑战: \\*\\* 通过添加模块把鸟带到猪那里来调试这个关卡! \n\n![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)"
       courseA_maze_seq_challenge1: 调试本关卡。去掉多余的模块并添加缺少的块。让鸟到达猪那里！
       courseA_maze_seq_challenge1_2018: 调试本关卡。去掉多余的模块并添加缺少的块。让鸟到达猪那里！
@@ -20676,6 +20772,11 @@ zh-CN:
         _"BB-8，上!"_
 
         为了得到所有废金属，试着用`重复`模块创建一个循环，里面只放一个模块。
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8，上!"_
+
+        为了得到所有废金属，试着用`重复`模块创建一个循环，里面只放一个模块。
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8，坚持下去。"_
@@ -20691,11 +20792,18 @@ zh-CN:
         _"BB-8，坚持下去。"_
 
         在这一关，两个`重复`循环会帮你用最少的模块帮助BB-8收集到所有的废金属！
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8，坚持下去。"_
+
+        在这一关，两个`重复`循环会帮你用最少的模块帮助BB-8收集到所有的废金属！
       courseC_starWars_loops5: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _“BB-8，上！”_"
       courseC_starWars_loops5_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _“BB-8，上！”_"
       courseC_starWars_loops5_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _“BB-8，上！”_"
+      courseC_starWars_loops5_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _“BB-8，上！”_"
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -20708,6 +20816,11 @@ zh-CN:
 
         循环里面能放多个模块！你能循环这个序列吗？
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"你能得到所有的吗？"_
+
+        循环里面能放多个模块！你能循环这个序列吗？
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"你能得到所有的吗？"_
 
@@ -20727,6 +20840,11 @@ zh-CN:
         _"你能做到！"_
 
         你能只用一个循环来收集所有的废金属吗？先试着完全写出代码，然后再找到重复的代码，并放到一个循环里。
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"你能做到！"_
+
+        你能只用一个循环来收集所有的废金属吗？先试着完全写出代码，然后再找到重复的代码，并放到一个循环里。
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8，坚持。"_
@@ -20738,6 +20856,11 @@ zh-CN:
 
         **挑战**：结合前几关的主意来完成这一关。
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8，坚持。"_
+
+        **挑战**：结合前几关的主意来完成这一关。
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8，坚持。"_
 
@@ -21210,15 +21333,22 @@ zh-CN:
         _"这朵云挡住了我的视线！"_
 
         检查是否云下面有花。如果有花，采花蜜。
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"这朵云挡住了我的视线！"_
+
+        检查是否云下面有花。如果有花，采花蜜。
       courseD_bee_conditionals2: "更多的云！ \n\n在采花蜜前检查每朵云下面，看看是否藏着一朵花。如果云下面有花，蜜蜂需要采_一次_花蜜。
         \n\n记住，不是每朵云下面都藏着一样的东西！"
       courseD_bee_conditionals2_2018: "更多的云！ \n\n在采花蜜前检查每朵云下面，看看是否藏着一朵花。如果云下面有花，蜜蜂需要采_一次_花蜜。
         \n\n记住，不是每朵云下面都藏着一样的东西！"
       courseD_bee_conditionals2_2019: "更多的云！ \n\n在采花蜜前检查每朵云下面，看看是否藏着一朵花。如果云下面有花，蜜蜂需要采_一次_花蜜。
         \n\n记住，不是每朵云下面都藏着一样的东西！"
+      courseD_bee_conditionals2_copy: "更多的云！ \n\n在采花蜜前检查每朵云下面，看看是否藏着一朵花。如果云下面有花，蜜蜂需要采_一次_花蜜。
+        \n\n记住，不是每朵云下面都藏着一样的东西！"
       courseD_bee_conditionals3: 你只能从花上采集花蜜，但你能检查任何空间，看看是否那里有花。如果在任何云下面有花，蜜蜂需要采集_一次_花蜜。
       courseD_bee_conditionals3_2018: 你只能从花上采集花蜜，但你能检查任何空间，看看是否那里有花。如果在任何云下面有花，蜜蜂需要采集_一次_花蜜。
       courseD_bee_conditionals3_2019: 你只能从花上采集花蜜，但你能检查任何空间，看看是否那里有花。如果在任何云下面有花，蜜蜂需要采集_一次_花蜜。
+      courseD_bee_conditionals3_copy: 你只能从花上采集花蜜，但你能检查任何空间，看看是否那里有花。如果在任何云下面有花，蜜蜂需要采集_一次_花蜜。
       courseD_bee_conditionals4: |-
         在这一关中，我们知道每朵花都有正好一个花蜜，但是花没有均匀的分布。
 
@@ -21228,6 +21358,10 @@ zh-CN:
 
         用尽可能少的模块采集所有花蜜。
       courseD_bee_conditionals4_2019: |-
+        在这一关中，我们知道每朵花都有正好一个花蜜，但是花没有均匀的分布。
+
+        用尽可能少的模块采集所有花蜜。
+      courseD_bee_conditionals4_copy: |-
         在这一关中，我们知道每朵花都有正好一个花蜜，但是花没有均匀的分布。
 
         用尽可能少的模块采集所有花蜜。
@@ -21918,6 +22052,11 @@ zh-CN:
         -   为了画出每个六边形，重复6次，每次转60度。
         -   在每个六边形间跳25像素。
         -   为了画出一个钻石，你需要交替转向60度和120度。
+      courseE_artist_functions1_copy: |-
+        _"我僵尸艺术家。我喜欢画！"_
+
+        帮助僵尸用边长100像素的正方形画眼镜。\
+        镜片间的桥是75像素长。
       courseE_artist_functions2: |-
         函数能让你定义新的模块。
 
@@ -21938,6 +22077,14 @@ zh-CN:
         * * *
 
         正方形间隔75像素。
+      courseE_artist_functions2_copy: |-
+        函数能让你定义新的模块。
+
+        我们将画正方形的模块挪到了一个叫做`draw a square`（画一个正方形）的函数里。这次，用`draw a square`（画一个正方形）函数来画个眼镜。
+
+        <hr/>
+
+        正方形间隔75像素。
       courseE_artist_functions3: |-
         我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
 
@@ -21950,7 +22097,17 @@ zh-CN:
         我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
 
         可以通过增加一个重复循环来画这幅图。
+      courseE_artist_functions3_copy: |-
+        我们很快就会回到函数部分。让我们先休息一下，练习画这个星星。
+
+        可以通过增加一个重复循环来画这幅图。
       courseE_artist_functions4: |-
+        现在，你已经能画一个星星了，试着画4个星星！
+
+        -   每个行星的分支是25像素长
+        -   在分支之间转45度
+        -   在每个星星间跳100像素
+      courseE_artist_functions4_copy: |-
         现在，你已经能画一个星星了，试着画4个星星！
 
         -   每个行星的分支是25像素长
@@ -21965,6 +22122,10 @@ zh-CN:
 
         只画出三个星星来完成这关。
       courseE_artist_functions5_2019: |-
+        什么时候画三个星星会比画4个难？当你需要跳过月亮的时候！
+
+        只画出三个星星来完成这关。
+      courseE_artist_functions5_copy: |-
         什么时候画三个星星会比画4个难？当你需要跳过月亮的时候！
 
         只画出三个星星来完成这关。
@@ -22048,6 +22209,7 @@ zh-CN:
       courseE_artist_functions_predict1: '这是用了我们已经定义过的程序的关卡。 '
       courseE_artist_functions_predict1_2018: '这是用了我们已经定义过的程序的关卡。 '
       courseE_artist_functions_predict1_2019: '这是用了我们已经定义过的程序的关卡。 '
+      courseE_artist_functions_predict1_copy: '这是用了我们已经定义过的程序的关卡。 '
       courseE_artist_ramp8: |-
         太棒了！让我们用`重复`和小艺术家画一个正方形！小艺术家模块和其它关有点不同，但概念是一样的。
 

@@ -25,7 +25,7 @@ describe('MicroBit Components', () => {
         expect(Object.keys(components)).to.deep.equal([
           'buttonA',
           'buttonB',
-          'ledMatrix',
+          'ledScreen',
           'tempSensor',
           'accelerometer'
         ]);
@@ -77,17 +77,17 @@ describe('MicroBit Components', () => {
     });
   });
 
-  describe('ledMatrix', () => {
-    let ledMatrix;
+  describe('ledScreen', () => {
+    let ledScreen;
 
     beforeEach(() => {
       return createMicroBitComponents(board).then(
-        components => (ledMatrix = components.ledMatrix)
+        components => (ledScreen = components.ledScreen)
       );
     });
 
     it('bound to the board controller', () => {
-      expect(ledMatrix.board.mb).to.equal(board);
+      expect(ledScreen.board.mb).to.equal(board);
     });
   });
 
@@ -164,8 +164,8 @@ describe('MicroBit Components', () => {
       expect(components).to.haveOwnProperty('someOtherComponent');
     });
 
-    it('calls clear for the ledMatrix', () => {
-      const stopSpy = sinon.spy(components.ledMatrix, 'clear');
+    it('calls clear for the ledScreen', () => {
+      const stopSpy = sinon.spy(components.ledScreen, 'clear');
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(stopSpy).to.have.been.calledOnce;
     });

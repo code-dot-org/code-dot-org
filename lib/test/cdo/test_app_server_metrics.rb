@@ -48,6 +48,9 @@ class AppServerMetricsTest < Minitest::Test
   end
 
   def test_reporting_task
+    # Note: this test only passes on Linux systems, since it relies on Raindrops reading from /proc/net/unix.
+    skip "Skip on non-Linux system" unless File.file? Raindrops::Linux::PROC_NET_UNIX_ARGS.first
+
     listener = Cdo::AppServerMetrics.new(nil,
       interval: 0.1,
       report_count: 2,

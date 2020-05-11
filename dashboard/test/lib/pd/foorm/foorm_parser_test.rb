@@ -148,8 +148,8 @@ module Pd::Foorm
       csf_survey = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
       parsed_form = FoormParser.parse_forms([csf_survey]).with_indifferent_access
 
-      assert_not_empty parsed_form[:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       facilitator_questions = parsed_form[:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      assert_not_empty facilitator_questions
       assert_equal 'facilitator_effectiveness', facilitator_questions.keys[0]
       assert_equal 'k5_facilitator_did_well', facilitator_questions.keys[1]
     end

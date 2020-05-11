@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "long_instructions": "# Which comes first?\r\n\r\nAnother useful thing to do with `console.log` statements is to use them to figure out the order in which events are triggered. In the code below one button has 3 different event listeners, that will respond to the events: `\"mousedown\"`, `\"mouseup\"`, and `\"click\"`\r\n\r\n*What order will these events be triggered in?*\r\n\r\n**You try it**:\r\n1. Study the code and **make a Prediction**.\r\n2. **Run** the program.\r\n3. **Were you right?** What's unexpected?\r\n4. **Keep testing** until you see what's happening.\r\n\r\n",
+    "long_instructions": "# Which comes first?\r\n\r\nAnother useful thing to do with `console.log` statements is to use them to figure out the order in which events are triggered. In the code below one button has 3 different event listeners, that will respond to the events: `\"mousedown\"`, `\"mouseup\"`, and `\"click\"`\r\n\r\n**Do this**:\r\n1. **Study the code**\r\n2. **Make a prediction.** What will the order of these console.log statements be in the Debug Console?\r\n3. **Run** the program.\r\n4. **Were you right?** What's unexpected?\r\n5. **Keep testing** until you see what's happening.\r\n\r\n",
     "instructions_important": "false",
     "start_blocks": "onEvent(\"button1\",\"click\",function(){\r\n  console.log(\"CLICK\");\r\n});\r\nonEvent(\"button1\",\"mousedown\",function(){\r\n  console.log(\"mouse DOWN\");\r\n});\r\nonEvent(\"button1\",\"mouseup\",function(){\r\n  console.log(\"mouse UP\");\r\n});\r\n",
     "is_k1": "false",
@@ -73,14 +73,11 @@
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-13 17:49:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2020-04-03 17:33:39 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:30 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-13 17:49:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2020-04-03 17:33:39 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:30 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 16:37:32 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

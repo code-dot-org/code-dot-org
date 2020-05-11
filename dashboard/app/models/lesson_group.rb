@@ -17,7 +17,7 @@
 
 class LessonGroup < ApplicationRecord
   belongs_to :script
-  has_many :lessons
+  has_many :lessons, -> {order('absolute_position ASC')}
 
   validates_uniqueness_of :key, scope: :script_id
 

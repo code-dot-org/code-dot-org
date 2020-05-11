@@ -621,6 +621,8 @@ fr-FR:
         do something: faire quelque chose
         draw hexagon: dessiner un hexagone
         draw line of hexagons: dessiner une ligne d'hexagones
+      courseE_artist_functions1_copy:
+        draw ear stems: dessiner les branches de lunettes
       courseE_artist_functions2:
         draw a square: dessine un carré
         draw ear stems: dessiner les branches de lunettes
@@ -630,17 +632,24 @@ fr-FR:
       courseE_artist_functions2_2019:
         draw a square: dessine un carré
         draw ear stems: dessiner les branches de lunettes
+      courseE_artist_functions2_copy:
+        draw a square: dessine un carré
+        draw ear stems: dessiner les branches de lunettes
       courseE_artist_functions3_2018:
         draw a star: dessine une étoile
       courseE_artist_functions3_2019:
         draw a star: dessine une étoile
       courseE_artist_functions4:
         draw a star: dessine une étoile
+      courseE_artist_functions4_copy:
+        draw a star: dessine une étoile
       courseE_artist_functions5:
         draw a star: dessine une étoile
       courseE_artist_functions5_2018:
         draw a star: dessine une étoile
       courseE_artist_functions5_2019:
+        draw a star: dessine une étoile
+      courseE_artist_functions5_copy:
         draw a star: dessine une étoile
       courseE_artist_functions7:
         draw a window: dessiner une fenêtre
@@ -737,6 +746,9 @@ fr-FR:
         draw a square: dessine un carré
         draw ear stems: dessiner les branches de lunettes
       courseE_artist_functions_predict1_2019:
+        draw a square: dessine un carré
+        draw ear stems: dessiner les branches de lunettes
+      courseE_artist_functions_predict1_copy:
         draw a square: dessine un carré
         draw ear stems: dessiner les branches de lunettes
       courseE_artist_functions_predict2:

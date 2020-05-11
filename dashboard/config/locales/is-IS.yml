@@ -843,25 +843,6 @@ is:
         um einstök hugtök fyrir hópinn.
       audience: Aldur 14+
       cta: Læra hvernig
-  gallery:
-    students_drew_these_with_code: Nemendur teiknuðu þetta með kóða!
-    students_made_these_with_code: Nemendur gerðu þetta með forritun!
-    picture_count: Undanfarna <b>%{days}</b> daga hafa nemendur teiknað <b>%{count}</b>
-      myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar til að sjá hvernig
-      forritin virka.
-    activity_count: Undanfarna <b>%{days}</b> daga hafa nemendur búið til <b>%{count}</b>
-      forrit og myndir með því að skrifa eigin tölvuforrit. Smelltu á myndirnar og
-      skjásýnin til að sjá forritin virka.
-    want_to_make_your_own: Viltu búa til þitt eigið?
-    how_to_save: Á síðasta borði þessa kennsluefnis þarf að smella á "Ljúka" og "Vista"
-      til að vista verkefnið í safninu.
-    more: Meira &rarr;
-    caption_by_name_age: höfundur %{name}, %{age} ára
-    caption_time_ago: fyrir %{time_ago}
-    header: Safn
-    header_playlab: Leikjasmiðja
-    header_artist: Listamaður
-    report_abuse: Tilkynna misnotkun
   landing:
     prerelease_tutorial: Þetta kennsluefni er **beta** útgáfa. Það gæti breyst eftir
       því sem endurgjöf berst og endurbætur eru gerðar.
@@ -1113,6 +1094,7 @@ is:
     peer_feedback: Álit samnemenda
     outdated: Þessi umsögn átti við áður innsenda útgáfu
     review_count: Þú verður að ljúka %{review_count} upprifjunum fyrir þessa einingu
+    peer_review: Álit samnemenda
   flex_category:
     required: Yfirlit
     content: Innihald

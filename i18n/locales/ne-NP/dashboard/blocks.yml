@@ -325,7 +325,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -334,7 +336,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whileKeyPressed:
         options:
           KEY:

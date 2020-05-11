@@ -1,6 +1,7 @@
 login_required true
 has_lesson_plan true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
@@ -165,23 +166,24 @@ level 'courseF_bee_fwp7', challenge: true
 level 'courseF_bee_fwp8'
 level 'courseF_bee_fwp9_predict1', assessment: true
 
-stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+stage 'Explore Project Ideas'
 level 'courseF_video_csMatters', named: true
 level 'InspirationalArtwork', named: true
 level 'FoodFight', named: true
 level 'Guess The Number', named: true
 level 'Choose Your Own Adventure', named: true
 
-stage 'The Design Process', flex_category: 'end_of_course_project'
+stage 'The Design Process'
 level 'Begin planning your project', named: true
 
-stage 'Build Your Project', flex_category: 'end_of_course_project'
+stage 'Build Your Project'
 level 'Course F: Artist Project', named: true
 level 'Course F: Play Lab Project', named: true
 
-stage 'Revise Your Project', flex_category: 'end_of_course_project'
+stage 'Revise Your Project'
 level 'Course F: Artist Project - Revise', named: true
 level 'Course F: Play Lab Project - Revise', named: true
 
-stage 'Presentation Your Project', flex_category: 'end_of_course_project'
+stage 'Presentation Your Project'
 level 'Prepare for your presentation', named: true

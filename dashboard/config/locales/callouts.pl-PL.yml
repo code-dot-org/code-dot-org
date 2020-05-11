@@ -287,6 +287,11 @@ pl-PL:
           (Akcje).
       New Frozen Project:
         snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Tutaj znajdziesz tutaj pętlę `for`!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Przesuń aktora do tej flagi, aby przejść do następnego
+          poziomu.
       Overworld Chop Trees:
         craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
       Overworld Chop Trees_2019:
@@ -553,6 +558,11 @@ pl-PL:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest
           KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Pamiętaj, aby sprawdzić czy na KAŻDEJ chmurze jest
+          KWIAT. Plastrów miodu nie musisz sprawdzać w ogóle.
+        4_5_Bee_Conditionals_2_2: Potrzebujesz pomocy? Kliknij tutaj, aby obejrzeć
+          WIDEO z podpowiedzią!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar
           (lub miód) z jednego kwiatka (lub plastra).

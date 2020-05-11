@@ -309,11 +309,6 @@ bn:
       title: শর্তযুক্ত
     widgets:
       cta: শিখুন কিভাবে
-  gallery:
-    caption_time_ago: "%{time_ago} আগে"
-    header: সংগ্রহশালা
-    header_playlab: প্লে ল্যাব
-    header_artist: কোড শিল্প
   landing:
     report_bug: বাগ রিপোর্ট করুন
     support: সহায়তা নিন

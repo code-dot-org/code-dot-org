@@ -190,6 +190,7 @@ class ScriptsController < ApplicationController
       :has_verified_resources,
       :has_lesson_plan,
       :tts,
+      :is_stable,
       :script_announcements,
       :pilot_experiment,
       :editor_experiment,

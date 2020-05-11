@@ -777,6 +777,8 @@ el-GR:
         MC_HOC_2017_13_Cole_a: Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις
           μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα
           από τις άκρες του χάρτη.
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -840,6 +842,12 @@ el-GR:
           σχεδιάσετε το δεύτερο τετράγωνο.
         courseE_artist_functions1_b: Είναι αποδεκτό να σχεδιάσετε επικαλυπτόμενες
           γραμμές για να σχεδιάσετε τα γυαλιά σας.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Τα τετράγωνα έχουν 100 pixels πλευρές το καθένα,
+          που σημαίνει ότι θα πρέπει να μετακινηθείτε προς τα εμπρός 175 pixels πριν
+          σχεδιάσετε το δεύτερο τετράγωνο.
+        courseE_artist_functions1_b: Είναι αποδεκτό να σχεδιάσετε επικαλυπτόμενες
+          γραμμές για να σχεδιάσετε τα γυαλιά σας.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Το πρόγραμμά σου πρέπει:
@@ -855,6 +863,13 @@ el-GR:
           -   Να κινηθεί εμπρός κατά 100 + 75 pixels
           -   Να χρησιμοποιήσει την συνάρτηση
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          Το πρόγραμμά σου πρέπει:
+
+          -   Να χρησιμοποιήσει την συνάρτηση
+          -   Να κινηθεί εμπρός κατά 100 + 75 pixels
+          -   Να χρησιμοποιήσει την συνάρτηση
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Το πρόγραμμά σου πρέπει:
 

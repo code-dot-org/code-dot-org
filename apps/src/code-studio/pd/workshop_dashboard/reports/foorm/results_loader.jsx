@@ -45,6 +45,7 @@ export class ResultsLoader extends React.Component {
         this.setState({
           loading: false,
           questions: data['questions'],
+          facilitators: data['facilitators'],
           thisWorkshop: data['this_workshop'],
           workshopTabs: Object.keys(data['this_workshop']),
           courseName: data['course_name'],

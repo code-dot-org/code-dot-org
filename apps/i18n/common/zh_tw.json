@@ -907,7 +907,6 @@
   "loginCard_secretWords": "通關密語：",
   "loginCard_sectionName": "學習小組名稱",
   "loginInfo": "登入資訊",
-  "loginInformation": "登入資訊",
   "loginInfo_joinTitle": "加入學習小組（只能加入一次）",
   "loginInfo_joinBody": "如果學生尚未加入您的小組，請要求他們執行以下步驟。 請注意，他們只需要這樣做一次。 通過加入您的小組，學生將能夠看到分配給他們的課程，並且能夠跟踪他們登錄後完成的工作的進度。",
   "loginInfo_joinStep1": "如果他們還沒有註冊，請他們在 {url} 先完成註冊。注意，他們可以使用自己的信箱，或是通過第三方帳號登入，像是 Google、Facebook 或 Microsoft。",

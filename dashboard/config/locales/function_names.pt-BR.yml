@@ -620,6 +620,8 @@ pt-BR:
         do something: faça algo
         draw hexagon: desenhar um hexágono
         draw line of hexagons: desenhar fila de hexágonos
+      courseE_artist_functions1_copy:
+        draw ear stems: desenhar orelhas
       courseE_artist_functions2:
         draw a square: desenhar um quadrado
         draw ear stems: desenhar orelhas
@@ -629,17 +631,24 @@ pt-BR:
       courseE_artist_functions2_2019:
         draw a square: desenhar um quadrado
         draw ear stems: desenhar orelhas
+      courseE_artist_functions2_copy:
+        draw a square: desenhar um quadrado
+        draw ear stems: desenhar orelhas
       courseE_artist_functions3_2018:
         draw a star: desenhe uma estrela
       courseE_artist_functions3_2019:
         draw a star: desenhe uma estrela
       courseE_artist_functions4:
         draw a star: desenhe uma estrela
+      courseE_artist_functions4_copy:
+        draw a star: desenhe uma estrela
       courseE_artist_functions5:
         draw a star: desenhe uma estrela
       courseE_artist_functions5_2018:
         draw a star: desenhe uma estrela
       courseE_artist_functions5_2019:
+        draw a star: desenhe uma estrela
+      courseE_artist_functions5_copy:
         draw a star: desenhe uma estrela
       courseE_artist_functions7:
         draw a window: desenhar uma janela
@@ -736,6 +745,9 @@ pt-BR:
         draw a square: desenhar um quadrado
         draw ear stems: desenhar orelhas
       courseE_artist_functions_predict1_2019:
+        draw a square: desenhar um quadrado
+        draw ear stems: desenhar orelhas
+      courseE_artist_functions_predict1_copy:
         draw a square: desenhar um quadrado
         draw ear stems: desenhar orelhas
       courseE_artist_functions_predict2:

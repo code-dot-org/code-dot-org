@@ -18,11 +18,15 @@ zh-TW:
     none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
   csedweek_banner_teachers_text: 您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源
   n_have_learned_an_hoc: "<h1>立刻嘗試</h1><h3> # 人已體驗的</h3><h2>一小時玩程式活動</h2>"
+  try_hoc_num_served: "<h1>立即嘗試</h1> <h3>%{num} 人已體驗的</h3><h2>一小時玩程式活動</h2>"
+  try_hoc_num_served_markdown: "# 立即嘗試\\\\## %{num} 人已體驗的\\\\### 一小時玩程式活動 #Try an"
   anybody_can_learn: 任何人都可以學習。
   learn_now: 現在就開始學習
   petition_message: 每個在學校的學生都應該有機會學習計算機科學
   petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
+  petition_sign_message_num: 若你同意，請簽署你的名字，以加入我們的郵寄名單。目前已有 %{num} 人簽署。
   petition_join_others: '目前已有 # 人簽署。'
+  petition_join_others_num: 加入這個已有 %{num} 人參與的活動
   name: 名稱
   email: 電子郵件
   zipcode: 郵遞區號或國家
@@ -48,6 +52,7 @@ zh-TW:
   hoc2014_support: 支援 &#x25BE;
   hoc2014_whatishoc: 一小時玩程式（Hour of Code）是什麼？
   csedweek_map_header: "# 個計算機科學教育週 / 一小時玩程式活動在全球"
+  csedweek_map_header_num: 全球各地有 %{num} 個 CSEdWeek  / 一小時玩程式活動
   csedweek_map_signup: 註冊您的活動
   csedweek_map_search_placeholder: 搜尋一小時玩程式活動
   csedweek_map_search_search: 搜尋
@@ -159,12 +164,21 @@ zh-TW:
   get_a_certificate_message: 我們將會寄送給您一份證書，以及有關<a href='/learn/beyond'>一小時課程後的學習</a>的相關訊息。
   get_a_certificate_message_after: 點擊證書可以下載或列印。現在，繼續我們的<a href='http://studio.code.org'>其它課程</a>，或點擊<a
     href='/learn/beyond'>超越一小時玩程式</a>以觀看更多學習內容。
+  get_a_certificate_message_after_markdown: 請點擊下載或列印證書。現在，請繼續我們的[其他課程](http://studio.code.org)，或查看[超越一小時玩程式](/learn/beyond)，觀看更多學習內容。
   thanks_for_submitting: 感謝您的提交！
   if_you_enjoyed: 如果你喜歡這樣的學習方式，不妨邀請你的朋友一起體驗！我們希望全世界都能學習。
   personalize_certificate: 在證書上留下你的姓名（可以用中文喲）
+  print_batch_certificates: 列印一批證書
   print_certificates: 列印所有證書
+  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
+  print_ice_art_from_frozen: 列印冰雪奇緣教程的冰雕藝術
+  want_a_blank_certificate_template: 你是否想要空白的證書範本，用於寫下你的學生姓名？
+  landscape_recommended_certificates: 列印證書時，建議你選擇**水平**列印。
+  print_one_here_certificates: 在此處列印一份。
+  enter_certificate_names: 輸入最多 30 個姓名，**每行一個**。系統會產生可列印的頁面，並印上個人化的%{script_name}。
   share_achievement: 分享你的成就
   beyond_hour_message: 繼續<a href='http://studio.code.org'>其它的課程</a>，或前往<a href='/learn/beyond'>超越一小時玩程式</a>觀看更多可學習的項目。
+  beyond_hour_message_markdown: 請繼續[其他課程](http://studio.code.org)，或前往[超越一小時玩程式](/learn/beyond)觀看更多可學習的項目。
   leaderboards_for_hoc: 一小時玩程式的排行榜。
   support_url: http://support.code.org
   country: 國家
@@ -240,6 +254,9 @@ zh-TW:
   stats_nina: "「每一天學生都 100% 投入。」Nina Nichols Peery，老師"
   stats_student: "「這可是<b>一生只有一次</b>的難得機會。」Mariana Alzate，五年級學生"
   stats_michael: "「我<b>從來沒有</b>看過我的學生們如些熱衷學習。」Frank Martinez，老師"
+  stats_nina_markdown: "「每一天學生都 100% 投入。」Nina Nichols Peery，老師"
+  stats_student_markdown: "「這可是**一生只有一次**的難得機會。」Mariana Alzate，五年級學生"
+  stats_michael_markdown: "「我**從來沒有**看過我的學生如此熱衷學習。」Frank Martinez，老師"
   studiobar_title: 探索 <a href='Http://studio.code.org'>Code.org 上的課程</a>
   studiobar_title_nolink: 探索 Code.org
   studiobar_elementary_title: 國小課程
@@ -396,7 +413,9 @@ zh-TW:
   class_submission_level_vocational: 專業級
   class_submission_languages_other: 其他語言
   videos_more: 更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>
+  videos_more_markdown: 更多來自學習楷模及知名人士的[啟發影片](%{inspiring_videos_playlist})
   careers_page_more: 更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>
+  careers_page_more_markdown: 更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>
   playlab_choose_theme: 選擇一個 Play Lab 主題
   playlab_classic_title: 經典
   playlab_gumball_title: 阿甘妙世界
@@ -511,10 +530,15 @@ zh-TW:
   volunteer_engineer_submission_intro_recruit: '這些老師希望有<span style="font-family: ''Gotham
     7r'', sans-serif;">熱衷於計算機科學教育的人士</span>能夠在課堂上提供幫助，或是藉由談論計算機科學的可能性有多大（不一定要面對面，或許也能透過視訊）來<span
     style="font-family: ''Gotham 7r'', sans-serif;">啟發</span>學生的人。'
+  volunteer_engineer_submission_intro_recruit_markdown: 老師都希望有**熱衷於電腦科學教育**的人士能夠在課堂上提供幫助，或是有人談論電腦科學的可能性有多大（不一定要面對面，或許也能以視訊通話），從而**啟發**學生。
   volunteer_engineer_submission_intro_guide: 進一步了解我們的<a href="%{volunteer_guide}">志工專案</a>。
+  volunteer_engineer_submission_intro_guide_markdown: 進一步了解我們的<a href="%{volunteer_guide}">志工專案</a>。
   volunteer_engineer_submission_intro_signup: 如果你是學習計算機科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿
     18 歲才能申請為志工，所有填寫的訊息都會在<a href="/volunteer/local">志工地圖</a>上公開顯示。<span class="form-required-field">*</span>為必填。
+  volunteer_engineer_submission_intro_signup_markdown: 如果你是學習電腦科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿
+    18 歲才能申請為志工。在本節填寫的所有訊息都會在[志工地圖](/volunteer/local)上公開顯示。_*_為必填。
   volunteer_engineer_submission_intro_links: 需要些志工嗎？在我們的<a href="%{volunteer_local}">志工地圖</a>上尋找本地有哪些志願者。
+  volunteer_engineer_submission_intro_links_markdown: 你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找本地有哪些志願者。
   volunteer_engineer_submission_update_information: 更新你的個人資訊
   volunteer_engineer_submission_header_shared: 在志工地圖上分享給老師的資訊
   volunteer_engineer_submission_field_name: 名稱
@@ -549,6 +573,7 @@ zh-TW:
   volunteer_engineer_submission_submit: 送出
   volunteer_engineer_submission_thankyou: 感謝你！你的志工請願表已提交。請允許我們將你的資料公開在地圖上 48 小時，這樣一來教師才可以從<a
     href="%{url}">地圖</a>中搜尋或聯絡到像你一樣的志工。
+  volunteer_engineer_submission_thankyou_markdown: 感謝你！你的志工請願表已提交。請等候 48 小時，讓你的資料在地圖上正確顯示。這樣一來，教師才可以從[此地圖](%{url})中搜尋並聯絡到像你一樣的志工。
   volunteer_engineer_submission_commitment_uncertain: 不確定
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 小時 / 週
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 小時 / 週
@@ -760,6 +785,7 @@ zh-TW:
   dashboard_pre-express: 學前兒童的速學課程：
   dashboard_express: 速學課程：
   dashboard_unplugged: 如果你沒有電腦，你可以在你的教室<a href='%{unplugged_url}'>試試這些不插電教學活動 </a>。
+  dashboard_unplugged_markdown: 如果你沒有電腦，[不妨試試這些不插電教學活動](%{unplugged_url})。
   dashboard_tools: 工具：
   dashboard_curriculum: 課程
   dashboard_curriculum_overview: K-5 課程概覽
@@ -1583,6 +1609,9 @@ zh-TW:
   hoc_overview_subtitle: <a href="https://hourofcode.com">一小時玩程式（Hour of Code）</a>是個全球性的運動，觸及了來自
     180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過 45
     種語言。
+  hoc_overview_subtitle_markdown: "[一小時玩程式（Hour of Code）](https://hourofcode.com)
+    是個全球性的運動，遍及 180 多個國家中數以千萬計的學生。不管你是誰，也不管你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過
+    45 種語言。"
   hoc_overview_partner_activities_title: 合作夥伴的更多活動
   hoc_overview_partner_activities_body: 一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 500 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。
   hoc_overview_partner_activities_link: 查看活動
@@ -1687,6 +1716,8 @@ zh-TW:
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
     Engineer* 是一個由童年到職業的全面計劃，旨在鼓勵、教育和培養低收入或弱勢的兒童和青少年投身計算機科學事業。<a href='%{amazon_future_engineer_link}'
     target='_blank'>了解更多</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* 是一項由童年到職業的全面計畫，旨在鼓勵、教育和培養低收入或弱勢的兒童和青少年投身電腦科學事業。[瞭解更多](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 進一步瞭解亞馬遜未來工程師（Amazon
     Future Engineer）
   hoc2018_dance_amazon_about_future_engineer_title: 有關亞馬遜未來工程師計畫 (Amazon Future Engineer)

@@ -99,8 +99,10 @@ module Pd
 
     test 'pre-workshop foorm survey redirects to thanks when a response exists' do
       setup_summer_workshop
-      create :pd_workshop_survey_foorm_submission, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
-             day: 0
+      create :day_0_workshop_foorm_submission,
+        :answers_high,
+        pd_workshop: @summer_workshop,
+        user: @enrolled_summer_teacher
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/foorm/day/0'
