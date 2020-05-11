@@ -1,14 +1,18 @@
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 import {expect} from '../../../../../util/reconfiguredChai';
-import {itMakesComponentsAvailableFromInterpreter} from './circuitPlayground/CircuitPlaygroundMakerBoardTest';
+import {itMakesCircuitPlaygroundComponentsAvailable} from './circuitPlayground/CircuitPlaygroundBoardTest';
 
 describe('FakeBoard', () => {
-  itImplementsTheMakerBoardInterface(FakeBoard);
+  describe('Maker Board Interface', () => {
+    describe('implements shared Maker Board Interface', () => {
+      itImplementsTheMakerBoardInterface(FakeBoard);
+    });
 
-  // Board-specific tests
-  // Test that the appropriate components are available on each board
-  itMakesComponentsAvailableFromInterpreter(FakeBoard);
+    describe('Circuit Playground components accessible from interpreter', () => {
+      itMakesCircuitPlaygroundComponentsAvailable(FakeBoard);
+    });
+  });
 
   describe(`boardConnected()`, () => {
     it('always returns false', () => {
