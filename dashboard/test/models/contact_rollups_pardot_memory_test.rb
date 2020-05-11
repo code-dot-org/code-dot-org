@@ -68,7 +68,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {'id' => '1', 'email' => 'earth@rollups.com'},
       {'id' => '2', 'email' => 'mars@rollups.com'},
       # There could be multiple prospects with the same email address, but with different pardot_id.
-      {'id' => '3', 'email' => 'earths@rollups.com'}
+      {'id' => '3', 'email' => 'earth@rollups.com'}
     ]
     PardotV2.stubs(:retrieve_prospects).once.yields(deleted_prospects)
 
