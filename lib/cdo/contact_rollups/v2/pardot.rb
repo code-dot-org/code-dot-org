@@ -184,14 +184,14 @@ class PardotV2
   # Deletes all prospects with the same email address from Pardot.
   # @param email [String]
   # @return [Boolean] all prospects are deleted or not
-  def self.delete_all_prospects_by_email(email)
+  def self.delete_prospects_by_email(email)
     pardot_ids = retrieve_pardot_ids_by_email(email)
 
-    all_deleted = true
+    success = true
     pardot_ids.each do |id|
-      all_deleted = false unless delete_prospect_by_id(id)
+      success = false unless delete_prospect_by_id(id)
     end
-    all_deleted
+    success
   end
 
   # Deletes a prospect from Pardot using Pardot Id.
@@ -216,7 +216,7 @@ class PardotV2
 
   # Finds prospects using email address and extract their Pardot ids.
   # @param email [String]
-  # @return [Array<Integer>]
+  # @return [Array<String>]
   def self.retrieve_pardot_ids_by_email(email)
     doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{email}"
     doc.xpath('//prospect/id').map(&:text)
