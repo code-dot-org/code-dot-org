@@ -173,15 +173,17 @@ class ContactRollupsPardotMemory < ApplicationRecord
   # Deletes prospects from Pardot API that have been marked for deletion
   # by the account deletion process.
   def self.delete_pardot_prospects
-    pardot_ids_to_delete = ContactRollupsPardotMemory.where(delete_from_pardot: true).pluck(:pardot_id)
-    failed_deletion_pardot_ids = PardotV2.delete_prospects(pardot_ids_to_delete)
+    emails = ContactRollupsPardotMemory.
+               where.not(marked_for_deletion_at: nil).
+               pluck(:email)
 
-    # The difference between these two arrays
-    # represents the IDs that were successfully deleted from Pardot.
-    pardot_ids_deleted = pardot_ids_to_delete - failed_deletion_pardot_ids
+    deleted_emails = []
+    emails.each do |email|
+      deleted_emails << email if PardotV2.delete_all_prospects_by_email(email)
+    end
 
     # clean-up step to delete rows once they've been deleted from Pardot
-    ContactRollupsPardotMemory.where(pardot_id: pardot_ids_deleted).delete_all
+    ContactRollupsPardotMemory.where(email: deleted_emails).delete_all if deleted_emails.present?
   end
 
   # Saves sync results to database.

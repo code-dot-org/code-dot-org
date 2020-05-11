@@ -181,28 +181,36 @@ class PardotV2
     [submissions, errors]
   end
 
-  # Deletes multiple prospects from Pardot using an email address.
-  def self.delete_prospects_by_email(email)
-    retrieve_pardot_ids_by_email(email).each do |id|
-      delete_prospect_by_id(id)
+  # Deletes all prospects with the same email address from Pardot.
+  # @param email [String]
+  # @return [Boolean] all prospects are deleted or not
+  def self.delete_all_prospects_by_email(email)
+    pardot_ids = retrieve_pardot_ids_by_email(email)
+
+    all_deleted = true
+    pardot_ids.each do |id|
+      all_deleted = false unless delete_prospect_by_id(id)
     end
+    all_deleted
   end
 
   # Deletes a prospect from Pardot using Pardot Id.
   # This method only runs in the production environment to avoid accidentally deleting prospect.
   # @param [Integer, String] pardot_id of the prospects to be deleted.
+  # @return [Boolean] deletion succeeds or not
   def self.delete_prospect_by_id(pardot_id)
     if CDO.rack_env != :production
       log "#{__method__} only runs in production. The current environment is #{CDO.rack_env}."
-      return
+      return false
     end
 
     # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
     post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
+    true
   rescue StandardError => e
     # If the input pardot_id does not exist, Pardot will response with
     # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
-    return if e.message =~ /Pardot request failed with HTTP 400/
+    return false if e.message =~ /Pardot request failed with HTTP 400/
     raise e
   end
 
