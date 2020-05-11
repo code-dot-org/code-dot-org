@@ -91,8 +91,7 @@ class PardotV2
     url += "&fields=#{fields.join(',')}" if fields
     url += "&limit=#{limit}" if limit
     url += "&deleted=true" if deleted
-
-    return url
+    url
   end
 
   # Compiles a batch of prospects and batch-create them in Pardot when batch size
