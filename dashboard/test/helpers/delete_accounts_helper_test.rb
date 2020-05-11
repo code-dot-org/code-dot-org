@@ -1860,6 +1860,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # contact rollups V2
+  #
+
+  test "account deletion stages email for removal from pardot via purge_user" do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    purge_user teacher
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
+  end
+
+  test "account deletion stages email for removal from pardot via purge_all_accounts_with_email" do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    purge_all_accounts_with_email teacher_email
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
+  end
+
+  #
   # Testing our utilities
   #
 
