@@ -189,7 +189,10 @@ export default {
     element.style.backgroundPosition = '50% 50%';
     element.style.backgroundImage =
       'url(' +
-      assetPrefix.renderIconToString('icon://fa-camera', element) +
+      assetPrefix.renderIconToString(
+        element.getAttribute('data-canonical-image-url'),
+        element
+      ) +
       ')';
 
     element.style.width = '75px';
