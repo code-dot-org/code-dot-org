@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import {Provider} from 'react-redux';
-import {getStore} from '../../redux';
+import {connect} from 'react-redux';
 import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
@@ -12,8 +11,9 @@ import LessonProgress, {
   getFullWidthForLevels
 } from '../progress/LessonProgress.jsx';
 
-export default class HeaderMiddle extends React.Component {
+class HeaderMiddle extends React.Component {
   static propTypes = {
+    appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object.isRequired,
     stageData: PropTypes.object.isRequired,
     children: PropTypes.node
@@ -84,8 +84,10 @@ export default class HeaderMiddle extends React.Component {
 
     const widths = this.getWidths();
 
-    return (
-      <Provider store={getStore()}>
+    const extraScriptNameData = {...scriptNameData, width: widths.scriptName};
+
+    if (this.props.appLoaded) {
+      return (
         <div style={{width: '100%'}}>
           <div
             style={{
@@ -102,7 +104,7 @@ export default class HeaderMiddle extends React.Component {
           </div>
 
           <div style={{float: 'left', width: widths.scriptName}}>
-            <ScriptName {...scriptNameData} />
+            <ScriptName {...extraScriptNameData} />
           </div>
 
           <div style={{float: 'left', width: widths.progress}}>
@@ -123,7 +125,13 @@ export default class HeaderMiddle extends React.Component {
             </div>
           )}
         </div>
-      </Provider>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
+
+export default connect(state => ({
+  appLoaded: state.header.appLoaded
+}))(HeaderMiddle);

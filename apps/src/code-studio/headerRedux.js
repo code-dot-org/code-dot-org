@@ -12,6 +12,7 @@ const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'header/SET_NAME_FAILURE';
 const UNSET_NAME_FAILURE = 'header/UNSET_NAME_FAILURE';
+const SET_APP_LOADED = 'header/SET_APP_LOADED';
 
 export const projectUpdatedStatuses = {
   default: 'default',
@@ -36,7 +37,8 @@ const initialState = {
   projectName: '',
   projectNameFailure: undefined,
   includeExportInProjectHeader: false,
-  showTryAgainDialog: false
+  showTryAgainDialog: false,
+  appLoaded: false
 };
 
 export default (state = initialState, action) => {
@@ -118,6 +120,13 @@ export default (state = initialState, action) => {
     };
   }
 
+  if (action.type === SET_APP_LOADED) {
+    return {
+      ...state,
+      appLoaded: true
+    };
+  }
+
   return state;
 };
 
@@ -184,4 +193,8 @@ export const setNameFailure = projectNameFailure => ({
 
 export const unsetNameFailure = () => ({
   type: UNSET_NAME_FAILURE
+});
+
+export const setAppLoaded = () => ({
+  type: SET_APP_LOADED
 });
