@@ -27,7 +27,7 @@ var ElementType = utils.makeEnum(
   'SCREEN',
   'CHART',
   'SLIDER',
-  'PHOTO_CHOOSER'
+  'PHOTO_SELECT'
 );
 
 var elements = {};
@@ -43,7 +43,7 @@ elements[ElementType.CANVAS] = require('./canvas');
 elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
-elements[ElementType.PHOTO_CHOOSER] = require('./photochooser');
+elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
 
 export default {
   ElementType: ElementType,
@@ -129,7 +129,7 @@ export default {
         return ElementType.BUTTON;
       case 'label':
         if ($(element).hasClass('img-upload')) {
-          return ElementType.PHOTO_CHOOSER;
+          return ElementType.PHOTO_SELECT;
         } else {
           return ElementType.LABEL;
         }
