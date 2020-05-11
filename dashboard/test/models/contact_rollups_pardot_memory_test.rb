@@ -267,7 +267,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     contacts_to_delete = create_list :contact_rollups_pardot_memory, 2, marked_for_deletion_at: Time.now.utc
     emails_to_delete = contacts_to_delete.pluck(:email)
 
-    PardotV2.expects(:delete_all_prospects_by_email).
+    PardotV2.expects(:delete_prospects_by_email).
       times(emails_to_delete.length).
       with {|email| emails_to_delete.include? email}
 

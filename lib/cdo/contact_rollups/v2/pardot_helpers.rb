@@ -73,6 +73,8 @@ module PardotHelpers
     uri = URI(url)
     response = Net::HTTP.post_form(uri, params)
 
+    # TODO: Return a custom exception containing both the HTTP response code and
+    #   the (parsed) response body. The detailed error is in the response body.
     raise "Pardot request failed with HTTP #{response.code}" unless
       SUCCESS_HTTP_CODES.include?(response.code)
 
