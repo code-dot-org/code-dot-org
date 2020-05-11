@@ -1118,6 +1118,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move [SPRITE][0] pixels [DISTANCE][1] toward [TARGET][2]
+      gamelab_objectSpritePointer:
+        text: object [SPRITE][0]
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
@@ -1215,6 +1217,8 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_subjectSpritePointer:
+        text: subject [SPRITE][0]
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
