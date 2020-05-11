@@ -79,12 +79,18 @@ class PardotV2
   end
 
   # Creates URL and query string for use with Pardot prospect query API
-  def self.build_prospect_query_url(last_id, fields, limit_in_query, only_deleted)
+  # @param id_greater_than [String, Integer]
+  # @param fields [Array<String>]
+  # @param limit [String, Integer]
+  # @param deleted [Boolean]
+  # @return [String]
+  def self.build_prospect_query_url(id_greater_than, fields, limit, deleted)
     # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
-    url = "#{PROSPECT_QUERY_URL}?output=bulk"
-    url += "&id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
-    url += "&limit=#{limit_in_query}" if limit_in_query
-    url += "&deleted=true" if only_deleted
+    url = "#{PROSPECT_QUERY_URL}?output=bulk&sort_by=id"
+    url += "&id_greater_than=#{id_greater_than}" if id_greater_than
+    url += "&fields=#{fields.join(',')}" if fields
+    url += "&limit=#{limit}" if limit
+    url += "&deleted=true" if deleted
 
     return url
   end
