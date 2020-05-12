@@ -239,13 +239,14 @@ MARKDOWN
     # Create the sublevel.
     multi_dsl = get_multi_dsl(1)
     multi = Multi.create_from_level_builder({}, {dsl_text: multi_dsl})
-    File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?(multi.filename)}.returns(true)
-    File.stubs(:read).with {|filepath, _| filepath.to_s.end_with?(multi.filename)}.returns(multi_dsl)
+    multi_filename = multi.filename.split('/').last
+    File.stubs(:exist?).with {|filepath| filepath.basename.to_s == multi_filename}.returns(true)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == multi_filename}.returns(multi_dsl)
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
-    File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?("my_level_group.level_group")}.returns(true)
-    File.stubs(:read).with {|filepath, _| filepath.to_s.end_with?("my_level_group.level_group")}.returns(level_group_input_dsl)
+    File.stubs(:exist?).with {|filepath| filepath.basename.to_s == 'my_level_group.level_group'}.returns(true)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'my_level_group.level_group'}.returns(level_group_input_dsl)
 
     File.stubs(:write).with do |filepath, actual_dsl|
       filepath.basename.to_s == 'my_level_group_copy.level_group' &&
@@ -303,24 +304,26 @@ page
 level 'level6_copy'
 level 'level7_copy'"
 
+    # To make the test run faster, just stub File.exist? once. If the code under
+    # test tries to read a nonexistent file, we'll get an error during File.read.
+    File.stubs(:exist?).returns(true)
+
     # Create multis named level1-level7.
     (1..7).each do |id|
       multi_dsl = get_multi_dsl(id)
       multi = Multi.create_from_level_builder({}, {dsl_text: multi_dsl})
-      File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?(multi.filename)}.returns(true)
-      File.stubs(:read).with {|filepath, _| filepath.to_s.end_with?(multi.filename)}.returns(multi_dsl)
+      multi_filename = multi.filename.split('/').last
+      File.stubs(:read).with {|filepath| filepath.basename.to_s == multi_filename}.returns(multi_dsl)
     end
 
     # Create the external level.
     external_dsl = get_external_dsl(1)
     External.create_from_level_builder({}, {dsl_text: external_dsl})
-    File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?("external1.external")}.returns(true)
-    File.stubs(:read).with {|filename, _| filename.to_s.end_with?("external1.external")}.returns(external_dsl)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'external1.external'}.returns(external_dsl)
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
-    File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?("level_group_test_long_assessment.level_group")}.returns(true)
-    File.stubs(:read).with {|filepath, _| filepath.to_s.end_with?("level_group_test_long_assessment.level_group")}.returns(level_group_input_dsl)
+    File.stubs(:read).with {|filepath| filepath.basename.to_s == 'level_group_test_long_assessment.level_group'}.returns(level_group_input_dsl)
 
     File.stubs(:write).with do |filepath, actual_dsl|
       filepath.basename.to_s == 'level_group_test_long_assessment_copy.level_group' &&
