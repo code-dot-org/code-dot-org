@@ -75,8 +75,8 @@ class LevelGroup < DSLDefined
     offset = 0
     @pages ||= properties['levels_per_page'].map.with_index do |page_size, page_index|
       page_number = page_index + 1
-      page_levels = levels[offset..(offset + page_size - 1)]
-      page_object = LevelGroupPage.new(page_number, offset, page_levels)
+      levels_by_page = levels[offset..(offset + page_size - 1)]
+      page_object = LevelGroupPage.new(page_number, offset, levels_by_page)
       offset += page_size
       page_object
     end
@@ -89,22 +89,22 @@ class LevelGroup < DSLDefined
     level.update!(properties: {pages: data[:pages]})
 
     # new way: store pages in levels_per_page and child_levels.
-    pages = data[:pages].map do |page|
+    levels_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|
         Level.find_by_name!(level_name)
       end
     end
-    level.update_pages(pages)
+    level.update_levels_by_page(levels_by_page)
 
     level
   end
 
-  # @param [Array] pages A 2D array of levels, e.g.
+  # @param [Array] new_levels_by_page A 2D array of levels, e.g.
   #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
-  def update_pages(pages)
+  def update_levels_by_page(new_levels_by_page)
     self.child_levels = []
-    levels = pages.flatten
-    levels.each_with_index do |level, level_index|
+    new_levels = new_levels_by_page.flatten
+    new_levels.each_with_index do |level, level_index|
       ParentLevelsChildLevel.find_or_create_by!(
         parent_level: self,
         child_level: level,
@@ -113,8 +113,9 @@ class LevelGroup < DSLDefined
     end
 
     self.levels_per_page = []
-    pages.each do |page_levels|
-      levels_per_page.push(page_levels.count)
+    @pages = nil
+    new_levels_by_page.each do |levels_by_page|
+      levels_per_page.push(levels_by_page.count)
     end
     save!
   end
