@@ -166,12 +166,14 @@ export default {
     element.style.margin = '0';
     element.style.lineHeight = '1';
     element.style.borderStyle = 'solid';
+    element.style.fontFamily = 'FontAwesome';
+    element.style.content = '\f030';
 
-    elementLibrary.setAllPropertiesToCurrentTheme(
+    /*elementLibrary.setAllPropertiesToCurrentTheme(
       element,
       designMode.activeScreen()
-    );
-    element.style.backgroundSize = 'contain';
+    );*/
+    /*element.style.backgroundSize = 'contain';
     element.style.backgroundRepeat = 'no-repeat';
     element.style.backgroundPosition = '50% 50%';
     element.style.backgroundImage =
@@ -180,7 +182,7 @@ export default {
         element.getAttribute('data-canonical-image-url'),
         element
       ) +
-      ')';
+      ')';*/
 
     element.style.width = '75px';
     element.style.height = '50px';
