@@ -12,13 +12,25 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class ExpressCourses extends Component {
+  componentDidMount() {
+    $('#pre-express')
+      .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
+      .show();
+    $('#express')
+      .appendTo(ReactDOM.findDOMNode(this.refs.express))
+      .show();
+  }
+
   render() {
     return (
       <ContentContainer
         heading={i18n.courseBlocksCsfExpressHeading()}
         description={i18n.courseBlocksCsfExpressDescription()}
       >
-        <CourseBlocks tiles={['#pre_express', '#express']} />
+        <div className="row">
+          <ProtectedStatefulDiv ref="pre_express" />
+          <ProtectedStatefulDiv ref="express" />
+        </div>
         <AcceleratedAndUnplugged />
       </ContentContainer>
     );
@@ -26,6 +38,27 @@ class ExpressCourses extends Component {
 }
 
 class CoursesAToF extends Component {
+  componentDidMount() {
+    $('#coursea')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursea))
+      .show();
+    $('#courseb')
+      .appendTo(ReactDOM.findDOMNode(this.refs.courseb))
+      .show();
+    $('#coursec')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursec))
+      .show();
+    $('#coursed')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursed))
+      .show();
+    $('#coursee')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursee))
+      .show();
+    $('#coursef')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
+      .show();
+  }
+
   render() {
     return (
       <div>
@@ -33,16 +66,22 @@ class CoursesAToF extends Component {
           heading={i18n.courseBlocksCsfYoungHeading()}
           description={i18n.courseBlocksCsfYoungDescription()}
         >
-          <CourseBlocks tiles={['#coursea', '#courseb']} />
+          <div className="row">
+            <ProtectedStatefulDiv ref="coursea" />
+            <ProtectedStatefulDiv ref="courseb" />
+          </div>
         </ContentContainer>
 
         <ContentContainer
           heading={i18n.courseBlocksCsfOlderHeading()}
           description={i18n.courseBlocksCsfOlderDescription()}
         >
-          <CourseBlocks
-            tiles={['#coursec', '#coursed', '#coursee', '#coursef']}
-          />
+          <div className="row">
+            <ProtectedStatefulDiv ref="coursec" />
+            <ProtectedStatefulDiv ref="coursed" />
+            <ProtectedStatefulDiv ref="coursee" />
+            <ProtectedStatefulDiv ref="coursef" />
+          </div>
         </ContentContainer>
       </div>
     );
@@ -74,6 +113,21 @@ const LegacyCSFNotification = () => (
 );
 
 class Courses1To4 extends Component {
+  componentDidMount() {
+    $('#course1')
+      .appendTo(ReactDOM.findDOMNode(this.refs.course1))
+      .show();
+    $('#course2')
+      .appendTo(ReactDOM.findDOMNode(this.refs.course2))
+      .show();
+    $('#course3')
+      .appendTo(ReactDOM.findDOMNode(this.refs.course3))
+      .show();
+    $('#course4')
+      .appendTo(ReactDOM.findDOMNode(this.refs.course4))
+      .show();
+  }
+
   render() {
     return (
       <ContentContainer
@@ -82,9 +136,12 @@ class Courses1To4 extends Component {
         link={'/home/#recent-courses'}
         linkText={i18n.viewMyRecentCourses()}
       >
-        <CourseBlocks
-          tiles={['#course1', '#course2', '#course3', '#course4']}
-        />
+        <div className="row">
+          <ProtectedStatefulDiv ref="course1" />
+          <ProtectedStatefulDiv ref="course2" />
+          <ProtectedStatefulDiv ref="course3" />
+          <ProtectedStatefulDiv ref="course4" />
+        </div>
       </ContentContainer>
     );
   }

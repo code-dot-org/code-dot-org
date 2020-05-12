@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import StageDescriptions from './StageDescriptions';
+import LessonDescriptions from './LessonDescriptions';
 
 const currentDescriptions = [
   {
@@ -49,11 +49,11 @@ class ModifyState extends React.Component {
 }
 
 export default storybook => {
-  storybook.storiesOf('StageDescriptions', module).addStoryTable([
+  storybook.storiesOf('LessonDescriptions', module).addStoryTable([
     {
-      name: 'collapsed stage descriptions',
+      name: 'collapsed lesson descriptions',
       story: () => (
-        <StageDescriptions
+        <LessonDescriptions
           scriptName="csd2"
           currentDescriptions={currentDescriptions}
         />
@@ -63,7 +63,7 @@ export default storybook => {
       name: 'uncollapsed before import',
       story: () => (
         <ModifyState collapsed={false}>
-          <StageDescriptions
+          <LessonDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
           />
@@ -74,7 +74,7 @@ export default storybook => {
       name: 'While importing',
       story: () => (
         <ModifyState buttonText="Querying server..." collapsed={false}>
-          <StageDescriptions
+          <LessonDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
           />
@@ -82,17 +82,17 @@ export default storybook => {
       )
     },
     {
-      name: 'stage descriptions with changes after merging',
+      name: 'lesson descriptions with changes after merging',
       description:
-        'Simulates one of the stages being named slightly differently on CB',
+        'Simulates one of the lessons being named slightly differently on CB',
       story: () => (
         <ModifyState
           collapsed={false}
           importedDescriptions={importedDescriptions}
-          mismatchedStages={['The internet']}
+          mismatchedLessons={['The internet']}
           buttonText="Imported"
         >
-          <StageDescriptions
+          <LessonDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
           />
