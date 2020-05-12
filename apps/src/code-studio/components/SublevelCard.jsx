@@ -17,10 +17,10 @@ const styles = {
     display: 'flex',
     width: WIDTH,
     marginBottom: MARGIN,
+    marginRight: MARGIN,
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2,
-    marginRight: 10
+    borderRadius: 2
   },
   thumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
@@ -55,7 +55,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    margin: 10
+    margin: MARGIN
   },
   bubbleAndTitle: {
     display: 'flex',
@@ -68,7 +68,7 @@ const styles = {
     lineHeight: '25px',
     fontFamily: '"Gotham 5r"',
     color: color.teal,
-    marginLeft: 10,
+    marginLeft: MARGIN,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
     hyphens: 'auto',
