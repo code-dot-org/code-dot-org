@@ -34,6 +34,10 @@ class ContactRollupsV2
     end
   end
 
+  # Using truncate allows us to re-use row IDs,
+  # which is important in production so we don't overflow the table.
+  # Deletion is required in test environments, as tests generally do
+  # not allow you to execute TRUNCATE statements.
   def self.truncate_or_delete_table(model)
     CDO.rack_env == :production ? model.truncate_table : model.delete_all
   end
