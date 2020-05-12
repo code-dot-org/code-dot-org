@@ -179,7 +179,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Apply Now
+                    Join us
                   </button>
                 </div>
               </div>
@@ -189,7 +189,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Apply Now
+                    Join us
                   </button>
                 </div>
               </div>
