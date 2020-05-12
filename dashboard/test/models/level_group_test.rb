@@ -223,6 +223,46 @@ MARKDOWN
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
 
+  test 'clone simple level group with suffix' do
+    level_group_input_dsl = <<~DSL
+      name 'my level group'
+      page
+      level 'level1'
+    DSL
+    expected_copy_dsl = <<~DSL.strip
+      name 'my level group_copy'
+
+      page
+      level 'level1_copy'
+    DSL
+
+    # Create the sublevel.
+    multi_dsl = get_multi_dsl(1)
+    multi = Multi.create_from_level_builder({}, {dsl_text: multi_dsl})
+    File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?(multi.filename)}.returns(true)
+    File.stubs(:read).with {|filepath, _| filepath.to_s.end_with?(multi.filename)}.returns(multi_dsl)
+
+    # Create the level_group.
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    File.stubs(:exist?).with {|filepath, _| filepath.to_s.end_with?("my_level_group.level_group")}.returns(true)
+    File.stubs(:read).with {|filepath, _| filepath.to_s.end_with?("my_level_group.level_group")}.returns(level_group_input_dsl)
+
+    File.stubs(:write).with do |filepath, actual_dsl|
+      filepath.basename.to_s == 'my_level_group_copy.level_group' &&
+        actual_dsl == expected_copy_dsl
+    end.once
+
+    # Copy the level group and all its sub levels.
+    level_group_copy = level_group.clone_with_suffix('_copy')
+
+    # Verify the result
+    assert_equal 'my level group_copy', level_group_copy.name
+    assert_equal 1, level_group_copy.pages.count
+    page = level_group_copy.pages.first
+    assert_equal 1, page.levels.count
+    assert_equal 'level1_copy', page.levels.first.name
+  end
+
   # Test that clone_with_suffix performs a deep copy of a LevelGroup, and the
   # copy has the correct dsl text.
   test 'clone level group with suffix' do
