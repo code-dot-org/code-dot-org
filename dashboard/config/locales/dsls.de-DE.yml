@@ -323,10 +323,10 @@ de-DE:
         content1: Jedes dieser Fahrzeuge wurde in kleinere Einzelteile zerlegt. Weise
           die Fahrzeuge der Einzelteilliste zu.
         questions:
-        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 0</h3>"
-        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 1</h3>"
-        - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 6</h3>"
-        - text: "<h3>Räder/Seite: 3<br/>Fenster/Seite: 2</h3>"
+        - text: "<h3>Räder/Seite: 2<br>Fenster/Seite: 0</h3>"
+        - text: "<h3>Räder/Seite: 2<br>Fenster/Seite: 1</h3>"
+        - text: "<h3>Räder/Seite: 2<br>Fenster/Seite: 6</h3>"
+        - text: "<h3>Räder/Seite: 3<br>Fenster/Seite: 2</h3>"
         title: Passend
       4-5 Computational Thinking Multi 1:
         answers:
@@ -357,7 +357,7 @@ de-DE:
         - text: Deine Haare bürsten
         - text: Dein Gesicht waschen
         questions:
-        - text: Welche dieser Aktivitäten ist am besten für Crowdsourcing?
+        - text: Welche dieser Aktivitäten ist am besten für Crowdsourcing geeignet?
         title: Multiple-Choice
       4-5 Digital Footprint Multi 1:
         answers:
@@ -367,8 +367,7 @@ de-DE:
         - text: Deine Adresse
         - text: Die Kreditkartennummer deiner Eltern
         questions:
-        - text: Welche der unten genannten Informationen kannst du gefahrlos im Internet
-            teilen?
+        - text: Welche dieser Informationen kannst du gefahrlos im Internet teilen?
         title: Multiple-Choice
       4-5 Internet Multi 1:
         answers:
@@ -379,8 +378,8 @@ de-DE:
           correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - text: Wenn du versuchst, dich bei code.org anzumelden, zu welcher IP-Adresse
-            bringt der DNS dich am wahrscheinlichsten?
+        - text: Zu welcher IP-Adresse bringt dich der DNS am ehesten, wenn du versuchst,
+            dich bei code.org anzumelden?
         title: Multiple-Choice
       4-5 Internet Multi 2:
         answers:
@@ -391,8 +390,8 @@ de-DE:
         - text: khanacademy.org
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - text: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet
-            hat, auf welcher Seite sind sie?
+        - text: Auf welcher Seite bist du, wenn dich der DNS zu der Seite mit der
+            IP-Adresse 100.42.50.110 geleitet hat?
         title: Multiple-Choice
       4-5 Songwriting Multi 1:
         answers:
@@ -408,7 +407,8 @@ de-DE:
             <br/> Husch, fliege, Husch, <br/> spring zu my Lou, mein Liebling.
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Welches ist der längste als Refrain definierbare Teil des Songs, der
+            bei exakt jedem Aufruf wiederholt wird?
         title: Multiple-Choice
       4-5 Suncatchers Match 1:
         answers:
@@ -476,6 +476,9 @@ de-DE:
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: Eine lila Blume kann entweder 3, 2 oder 1 Portion Nektar haben,
+          aber du weißt nicht genau. Welche Bausteine überprüfen und sammeln den gesamten
+          Nektar einer lila Blume?"
         questions:
         - text: Wähle die besten Bausteine.
         title: Biene Bedingungen Multiple-Choice
@@ -2787,7 +2790,7 @@ de-DE:
             in Richtung Galaxie bewegen?
       courseC_multi_artist_prog6_predict1:
         answers:
-        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+        - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Künstler wird eine einzelne Linie zeichnen.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
@@ -2797,11 +2800,11 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+        - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Künstler wird eine einzelne Linie zeichnen.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
@@ -2811,11 +2814,11 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - text: Der Künstler will ein Dreieck mit drei gleichen Seiten zeichnen.
+        - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Künstler wird eine einzelne Linie zeichnen.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
@@ -2825,59 +2828,59 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
-          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
-            Schleifen.  4 mal 3 ist 12!
+          feedback: Falsch. Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse
+            ein. 4 x 3 = 12!
         - text: '12'
           correct: true
           feedback: Richtig!
         - text: '15'
-          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
-            Schleifen.  4 mal 3 ist 12!
+          feedback: Falsch. Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse
+            ein. 4 x 3 = 12!
         - text: Ich weiß es nicht.
-          feedback: Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3 Schleifen.  4
-            mal 3 ist 12!
+          feedback: Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse ein.
+            4 x 3 = 12!
         questions:
-        - text: Schau dir den untenstehenden Code genau an. Wie viele Kürbisse wird
-            die Erntearbeiterin sammeln, nachdem du auf "Ausführen" geklickt hast?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
-          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
-            Schleifen.  4 mal 3 ist 12!
+          feedback: Falsch. Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse
+            ein. 4 x 3 = 12!
         - text: '12'
           correct: true
           feedback: Richtig!
         - text: '15'
-          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
-            Schleifen.  4 mal 3 ist 12!
+          feedback: Falsch. Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse
+            ein. 4 x 3 = 12!
         - text: Ich weiß es nicht.
-          feedback: Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3 Schleifen.  4
-            mal 3 ist 12!
+          feedback: Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse ein.
+            4 x 3 = 12!
         questions:
-        - text: Schau dir den untenstehenden Code genau an. Wie viele Kürbisse wird
-            die Erntearbeiterin sammeln, nachdem du auf "Ausführen" geklickt hast?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
-          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
-            Schleifen.  4 mal 3 ist 12!
+          feedback: Falsch. Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse
+            ein. 4 x 3 = 12!
         - text: '12'
           correct: true
           feedback: Richtig!
         - text: '15'
-          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
-            Schleifen.  4 mal 3 ist 12!
+          feedback: Falsch. Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse
+            ein. 4 x 3 = 12!
         - text: Ich weiß es nicht.
-          feedback: Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3 Schleifen.  4
-            mal 3 ist 12!
+          feedback: Der Landwirt sammelt in jeder der 3 Schleifen 4 Kürbisse ein.
+            4 x 3 = 12!
         questions:
-        - text: Schau dir den untenstehenden Code genau an. Wie viele Kürbisse wird
-            die Erntearbeiterin sammeln, nachdem du auf "Ausführen" geklickt hast?
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
@@ -2888,11 +2891,11 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig nimmt, passiert erst
+          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
             nachdem er sich in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
-            die falsche Richtung geht. '
+          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
+            in die falsche Richtung bewegt. '
         questions:
         - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
             dieses Programm scheitern lässt? '
@@ -2906,14 +2909,14 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig nimmt, passiert erst
+          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
             nachdem er sich in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
-            die falsche Richtung geht. '
+          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
+            in die falsche Richtung bewegt. '
         questions:
-        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
-            dieses Programm scheitern lässt? '
+        - text: 'Schau dir den nachfolgenden Code genau an. Was ist der erste Fehler,
+            der dieses Programm falsch laufen lässt? '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
@@ -2924,14 +2927,14 @@ de-DE:
           feedback: Richtig!
         - text: Scrat geht einen Schritt zu wenig und wird einen Schritt vor der Eichel
             stoppen.
-          feedback: Falsch. Dass Scrat einen Schritt zu wenig nimmt, passiert erst
+          feedback: Falsch. Dass Scrat einen Schritt zu wenig macht, passiert erst,
             nachdem er sich in die falsche Richtung gedreht hat.
         - text: Ich weiß es nicht.
-          feedback: 'Der erste Fehler ist, dass Scrat nach seiner letzen Drehung in
-            die falsche Richtung geht. '
+          feedback: 'Der erste Fehler ist, dass sich Scrat nach seiner letzten Drehung
+            in die falsche Richtung bewegt. '
         questions:
-        - text: 'Schau dir den Code unten genau an. Was ist der erste Fehler, der
-            dieses Programm scheitern lässt? '
+        - text: 'Schau dir den nachfolgenden Code genau an. Was ist der erste Fehler,
+            der dieses Programm falsch laufen lässt? '
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
@@ -2939,13 +2942,13 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in das TNT laufen.
+        - text: Der Vogel wird in den Sprengstoff laufen.
           feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
+            du auf "Ausführen" klickst?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
@@ -2953,13 +2956,13 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in das TNT laufen.
+        - text: Der Vogel wird in den Sprengstoff laufen.
           feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
+            du auf "Ausführen" klickst?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
@@ -2967,115 +2970,115 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - text: Der Vogel wird in das TNT laufen.
+        - text: Der Vogel wird in den Sprengstoff laufen.
           feedback: Falsch. Dieser Code wird den Vogel genau zum Schwein bringen.
         - text: Ich weiß es nicht.
           feedback: Dieser Code bringt den Vogel genau zum Schwein.
         questions:
-        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
-            "Ausführen" klickst?
+        - text: Lies dir den nachfolgenden Code sorgfältig durch. Was passiert, wenn
+            du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
             bewegen.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
             bewegen.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
-            aufsammeln.
+            einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Durch den Wiederholen Block wird BB-8 sich 5 mal vorwärts bewegen.
+          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
         questions:
-        - text: Was glaubst du wird geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
             bewegen.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
             bewegen.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
-            aufsammeln.
+            einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Durch den Wiederholen Block wird BB-8 sich 5 mal vorwärts bewegen.
+          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
         questions:
-        - text: Was glaubst du wird geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 wird sich nicht bewegen.
-          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
             bewegen.
         - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
-          feedback: Falsch. Wegen dem Wiederholen Block wird sich BB-8 fünf mal vorwärts
+          feedback: Falsch. Der ‚wiederholen‘ Baustein wird sich BB-8 fünf mal vorwärts
             bewegen.
         - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
-            aufsammeln.
+            einsammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß nicht
-          feedback: Durch den Wiederholen Block wird BB-8 sich 5 mal vorwärts bewegen.
+          feedback: Der `wiederholen`-Baustein wird BB-8 5 mal vorwärts bewegen.
         questions:
-        - text: Was glaubst du wird geschehen, wenn du auf "Ausführen" klickst?
+        - text: Was wird deiner Meinung nach geschehen, wenn du auf "Ausführen" klickst?
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
-        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren um den ganzen
-            Metallschrott einzusammeln.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren, um den
+            gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
-        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren um den ganzen
-            Metallschrott einzusammeln.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren, um den
+            gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8 wird mit der ersten Schleife zu weit fahren.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
-        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren um den ganzen
-            Metallschrott einzusammeln.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren, um den
+            gesamten Metallschrott einzusammeln.
           correct: true
           feedback: Richtig!
-        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+        - text: BB-8 sammelt ohne Probleme den gesamten Metallschrott ein.
           feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
             obwohl er 3 Felder vorwärts fahren müsste.
         - text: Ich weiß es nicht.
           feedback: Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts, obwohl er
             3 Felder vorwärts fahren müsste.
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_external_binary1:
         markdown: "<h1>Zeichnen mit Binär</h1>\n \n<h3>Binär ist eine Möglichkeit,
           Informationen mit nur zwei Optionen darzustellen. In diesem Fall <b>aus</b>
@@ -3139,7 +3142,8 @@ de-DE:
           <br/>
 
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -3167,7 +3171,8 @@ de-DE:
           <br/>
 
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -3195,15 +3200,22 @@ de-DE:
           <br/>
 
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
           feedback: Richtig!
         - text: B
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
         - text: C
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
         - text: Ich weiß es nicht.
+          feedback: Die innere Schleife zeichnet ein Fünfeck, und die äußere Schleife
+            wiederholt es 4 Mal in einem Kreis.
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -3212,15 +3224,22 @@ de-DE:
           <br/><br/>
 
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was wird das Programm zeichnen,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
           feedback: Richtig!
         - text: B
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
         - text: C
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
         - text: Ich weiß es nicht.
+          feedback: Die innere Schleife zeichnet ein Fünfeck, und die äußere Schleife
+            wiederholt es 4 Mal in einem Kreis.
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -3229,15 +3248,22 @@ de-DE:
           <br/><br/>
 
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was wird das Programm zeichnen,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
           feedback: Richtig!
         - text: B
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
         - text: C
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
         - text: Ich weiß es nicht.
+          feedback: Die innere Schleife zeichnet ein Fünfeck, und die äußere Schleife
+            wiederholt es 4 Mal in einem Kreis.
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -3246,98 +3272,160 @@ de-DE:
           <br/><br/>
 
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was wird das Programm zeichnen,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
-            egal was passiert. '
-        - correct: true
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          feedback: Falsch. Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
           feedback: Richtig!
-        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
-            passiert. '
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur dann
+            versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte befindet.
         questions:
-        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
-            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
-            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
-            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
+        - text: Die Wolke versperrt die Sicht. Unter der Wolke könnte sich eine Blüte
+            befinden. Wenn dort eine Blüte ist, muss die Biene einmal Nektar holen.
+            Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
+            den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
-            egal was passiert. '
-        - correct: true
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          feedback: Falsch. Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
           feedback: Richtig!
-        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
-            passiert. '
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur dann
+            versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte befindet.
         questions:
-        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
-            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
-            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
-            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
+        - text: Die Wolke versperrt die Sicht. Unter der Wolke könnte sich eine Blüte
+            befinden. Wenn dort eine Blüte ist, muss die Biene einmal Nektar holen.
+            Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
+            den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
-            egal was passiert. '
-        - correct: true
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          feedback: Falsch. Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
           feedback: Richtig!
-        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
-            passiert. '
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur dann
+            versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte befindet.
         questions:
-        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
-            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
-            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
-            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
+        - text: Die Wolke versperrt die Sicht. Unter der Wolke könnte sich eine Blüte
+            befinden. Wenn dort eine Blüte ist, muss die Biene einmal Nektar holen.
+            Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
+            den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
-        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
-            egal was passiert. '
-        - correct: true
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          feedback: Falsch. Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
           feedback: Richtig!
-        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
-            passiert. '
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur dann
+            versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte befindet.
         questions:
-        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
-            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
-            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
-            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
+        - text: Die Wolke versperrt die Sicht. Unter der Wolke könnte sich eine Blüte
+            befinden. Wenn dort eine Blüte ist, muss die Biene einmal Nektar holen.
+            Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
+            den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
+        - text: Die Biene bekommt an jeder Blüte Nektar und bei jeder Wabe Honig.
+          correct: true
           feedback: Richtig!
-        - {}
-        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
-            zu gewinnen.
+        - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` lässt die Biene an jeder
+            Blüte Nektar und an jeder Wabe Honig erhalten.
+        - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+          feedback: Falsch. Falsch. Der Baustein `wenn an der Blüte` lässt die Biene
+            an jeder Blüte Nektar und an jeder Wabe Honig erhalten.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein `wenn an der Blüte` lässt die Biene an jeder Blüte
+            Nektar und an jeder Wabe Honig erhalten.
         questions:
-        - text: 'Betrachte den nachfolgenden Code genau. Was wird deiner Meinung nach
-            geschehen, nachdem du auf "Ausführen" geklickt hast? Denke daran: es gibt
-            immer nur *eine* Wabe oder *eine* Blume hinter jeder Wolke.
+        - text: 'Schau dir den nachfolgenden Code genau an: Was wird deiner Meinung
+            nach geschehen, nachdem du auf "Ausführen" geklickt hast? Denke daran:
+            es gibt immer nur *eine* Wabe oder *eine* Blüte hinter jeder Wolke.
 
 '
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - correct: true
+        - text: Die Biene bekommt an jeder Blüte Nektar und bei jeder Wabe Honig.
+          correct: true
           feedback: Richtig!
-        - {}
-        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
-            zu gewinnen.
+        - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` lässt die Biene an jeder
+            Blüte Nektar und an jeder Wabe Honig erhalten.
+        - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+          feedback: Falsch. Falsch. Der Baustein `wenn an der Blüte` lässt die Biene
+            an jeder Blüte Nektar und an jeder Wabe Honig erhalten.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein `wenn an der Blüte` lässt die Biene an jeder Blüte
+            Nektar und an jeder Wabe Honig erhalten.
         questions:
-        - text: 'Betrachte den nachfolgenden Code genau. Was wird deiner Meinung nach
-            geschehen, nachdem du auf "Ausführen" geklickt hast? Denke daran: es gibt
-            immer nur *eine* Wabe oder *eine* Blume hinter jeder Wolke.
+        - text: 'Schau dir den nachfolgenden Code genau an: Was wird deiner Meinung
+            nach geschehen, nachdem du auf "Ausführen" geklickt hast? Denke daran:
+            es gibt immer nur *eine* Wabe oder *eine* Blüte hinter jeder Wolke.
 
 '
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
           feedback: Richtig!
-        - {}
-        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
-            zu gewinnen.
+        - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+        - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
+            den Waben zu holen.
         - text: Ich weiß es nicht.
         questions:
         - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
@@ -3345,89 +3433,149 @@ de-DE:
             Wolke wird es immer nur *eine* Wabe oder *eine* Blume geben.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar bekommen.
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
+          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-        - text: Die Biene wird den ganzen Nektar bekommen.
+          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+        - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene wiederholt die Schleife der Vorwärtsbewegung und des
-            Nektarsammelns und kann so das Rätsel lösen.
+          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
+            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
         - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar bekommen.
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
+          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-        - text: Die Biene wird den ganzen Nektar bekommen.
+          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+        - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene wiederholt die Schleife der Vorwärtsbewegung und des
-            Nektarsammelns und kann so das Rätsel lösen.
+          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
+            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
         - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar bekommen.
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
+          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
-        - text: Die Biene wird den ganzen Nektar bekommen.
+          feedback: Falsch. Die Biene dreht die Schleife, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+        - text: Die Biene wird den gesamten Nektar sammeln.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Die Biene wiederholt die Schleife der Vorwärtsbewegung und des
-            Nektarsammelns und kann so das Rätsel lösen.
+          feedback: Die Biene dreht die Schleife, indem sie sich vorwärts bewegt und
+            Nektar sammelt, wodurch sie die Aufgabe lösen kann.
         questions:
         - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
             wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
+            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
+            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         - text: Ich weiß es nicht.
+          feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
+            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         questions:
-        - text: Schau Dir den untenstehenden Code genau an. Wie viel Honig wird die
-            Biene machen, wenn du auf "Ausführen" klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
+            Biene her, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
+            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
+            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         - text: Ich weiß es nicht.
+          feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
+            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         questions:
-        - text: Schau Dir den untenstehenden Code genau an. Wie viel Honig wird die
-            Biene machen, wenn du auf "Ausführen" klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
+            Biene her, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
+            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         - text: '8'
           correct: true
           feedback: Richtig!
         - text: '12'
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze
+            Aktion befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         - text: Ich weiß es nicht.
+          feedback: Die Biene sammelt 2 Einheiten Nektar in einer Schleife vorwärts,
+            dann 2 Einheiten Nektar in einer Schleife abwärts. Diese ganze Aktion
+            befindet sich innerhalb einer weiteren Schleife, die zweimal ausgeführt
+            wird. 4 x 2 = 8!
         questions:
-        - text: Schau Dir den untenstehenden Code genau an. Wie viel Honig wird die
-            Biene machen, wenn du auf "Ausführen" klickst?
+        - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
+            Biene her, wenn du auf "Ausführen" klickst?
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Laurel dreht sich in die falsche Richtung, wenn sie ein Quadrat bildet.
+          feedback: Falsch. Die Antwort ist teilweise richtig, aber die Schleife läuft
+            auch nicht lange genug, um den gesamten Schatz einzusammeln.
+        - text: Die Schleife läuft nicht lange genug, um Laurel alle Schätze erreichen
+            zu lassen.
+          feedback: Falsch. Die Antwort ist teilweise richtig, aber die Biene dreht
+            sich auch in die falsche Richtung, wenn sie versucht, ein Quadrat zu bilden.
+        - text: Laurel dreht sich in die falsche Richtung *und* die Schleife läuft
+            nicht lang genug, um Laurel alle Schätze erreichen zu lassen.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Laurel dreht sich in die falsche Richtung *und* die Schleife läuft
+            nicht lang genug, um Laurel alle Schätze erreichen zu lassen.
         questions:
-        - {}
+        - text: 'Sieh dir den nachfolgenden Code genau an. Warum sammelt Laurel nicht
+            alle Schätze ein, wenn du auf "Ausführen" klickst? Warnung: Dies ist eine
+            knifflige Frage, achte darauf, dass du alle Optionen gelesen hast, bevor
+            du antwortest!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
-          feedback: Falsch. Es gibt hier keinen Code zum Sammeln des Kürbisses.
+          feedback: Falsch. Es gibt hier keinen Code, um den Kürbis aufzusammeln.
         - text: Die Erntearbeiterin wird auf dem von ihr eingeschlagenen Weg keine
             Feldfrüchte ernten.
           feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
@@ -3445,7 +3593,8 @@ de-DE:
           Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
           <br/>
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
@@ -3465,7 +3614,8 @@ de-DE:
           Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
           <br/>
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
@@ -3485,14 +3635,29 @@ de-DE:
           Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
           <br/>
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_ramp13:
         answers:
-        - {}
-        - correct: true
+        - text: Der Bauer wird bis zum Ende des Weges gehen und den Kürbis ernten.
+          feedback: Falsch. Der "Kürbis einsammeln"-Baustein befindet sich innerhalb
+            der Schleife, so dass der Landwirt versuchen wird, Kürbisse bei jedem
+            Schritt und nicht erst am Ende einzusammeln.
+        - text: Der Bauer wird versuchen, in jedem Feld Kürbisse einzusammeln, aber
+            er wird es nie bis zum Kürbis schaffen.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Der Landwirt geht vier Felder und versucht dann, einen Kürbis einzusammeln.
+          feedback: Falsch. Der "Kürbis einsammeln"-Baustein befindet sich innerhalb
+            der Schleife, so dass der Landwirt versuchen wird, Kürbisse bei jedem
+            Schritt und nicht erst am Ende einzusammeln.
         - text: Ich weiß es nicht.
+          feedback: Der "Kürbis einsammeln"-Baustein befindet sich innerhalb der Schleife,
+            so dass der Landwirt versuchen wird, Kürbisse bei jedem Schritt und nicht
+            erst am Ende einzusammeln.
+        markdown: Hier ist ein neuer Aufgabentyp, der Bausteine verwendet, die dem
+          ähneln, was du bereits gesehen hast. Kannst du vorhersagen, was passieren
+          wird, wenn du den nachfolgenden Code ausführst?
         questions:
         - text: " "
       courseD_multi_farmer_while10_predict2:
@@ -3506,23 +3671,17 @@ de-DE:
 '
           correct: true
           feedback: Richtig!
-        - text: 'Dieser Code lässt die Löcher völlig unberührt.
-
-'
+        - text: Dieser Code lässt die Löcher völlig unberührt.
           feedback: 'Falsch. Die `während-Schleife kann jede Schleifengröße verarbeiten,
             aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
 
 '
         - text: Ich weiß es nicht.
-          feedback: 'Die `während-Schleife kann jede Schleifengröße verarbeiten, aber
+          feedback: Die `während`-Schleife kann jede Schleifengröße verarbeiten, aber
             es gibt keinen Code, um Erde vom Haufen zu entfernen.
-
-'
         questions:
-        - text: 'Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieses
-            Rätsels übrig bleiben?
-
-'
+        - text: Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieser
+            Aufgabe übrig sein?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
@@ -3534,23 +3693,17 @@ de-DE:
 '
           correct: true
           feedback: Richtig!
-        - text: 'Dieser Code lässt die Löcher völlig unberührt.
-
-'
+        - text: Dieser Code lässt die Löcher völlig unberührt.
           feedback: 'Falsch. Die `während-Schleife kann jede Schleifengröße verarbeiten,
             aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
 
 '
         - text: Ich weiß es nicht.
-          feedback: 'Die `während-Schleife kann jede Schleifengröße verarbeiten, aber
+          feedback: Die `während`-Schleife kann jede Schleifengröße verarbeiten, aber
             es gibt keinen Code, um Erde vom Haufen zu entfernen.
-
-'
         questions:
-        - text: 'Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieses
-            Rätsels übrig bleiben?
-
-'
+        - text: Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieser
+            Aufgabe übrig sein?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
@@ -3562,23 +3715,17 @@ de-DE:
 '
           correct: true
           feedback: Richtig!
-        - text: 'Dieser Code lässt die Löcher völlig unberührt.
-
-'
+        - text: Dieser Code lässt die Löcher völlig unberührt.
           feedback: 'Falsch. Die `während-Schleife kann jede Schleifengröße verarbeiten,
             aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
 
 '
         - text: Ich weiß es nicht.
-          feedback: 'Die `während-Schleife kann jede Schleifengröße verarbeiten, aber
+          feedback: Die `während`-Schleife kann jede Schleifengröße verarbeiten, aber
             es gibt keinen Code, um Erde vom Haufen zu entfernen.
-
-'
         questions:
-        - text: 'Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieses
-            Rätsels übrig bleiben?
-
-'
+        - text: Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieser
+            Aufgabe übrig sein?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: Nichts wird passieren.
@@ -3635,16 +3782,23 @@ de-DE:
             klickst?
       courseD_multi_maze_until10_predict2:
         answers:
-        - correct: true
+        - text: Der Zombie wird sich sofort nach rechts drehen und steckenbleiben.
+          correct: true
           feedback: Richtig!
         - text: Der Zombie wird es bis zur Sonnenblume schaffen.
-        - text: 'Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+          feedback: Falsch. In diesem Code sucht er nach einer Drehung nach rechts
+            *bevor* er schaut, ob er geradeaus gehen kann. Daran scheitert die Aufgabe.
+        - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
-
-'
+          feedback: Falsch. Der Zombie sucht nur nach einer Drehung nach rechts oder
+            nach einem geraden Weg. Er will niemals nach links abbiegen, also bleibt
+            er fast sofort stecken.
         - text: Ich weiß es nicht.
+          feedback: In diesem Code sucht er nach einer Drehung nach rechts *bevor*
+            er Ausschau hält, ob er geradeaus gehen kann. Daran scheitert die Aufgabe.
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
@@ -3654,17 +3808,16 @@ de-DE:
         - text: Der Zombie wird es bis zur Sonnenblume schaffen.
           feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
-        - text: 'Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+        - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
-
-'
           feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
         - text: Ich weiß es nicht.
           feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
             Ende für immer hin und her gehen.
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
@@ -3674,74 +3827,88 @@ de-DE:
         - text: Der Zombie wird es bis zur Sonnenblume schaffen.
           feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
-        - text: 'Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+        - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
-
-'
           feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
         - text: Ich weiß es nicht.
           feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
             Ende für immer hin und her gehen.
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_maze_until2_predict1:
         answers:
         - text: Der Vogel wird sich überhaupt nicht bewegen.
-          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
-            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
-            er so lange, bis er das Schwein erreicht!
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen Weg gibt, und sich dann nach links dreht. Das macht er
+            so lange, bis er das Schwein erreicht!
+
+'
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
         - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
-          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
-            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
-            er so lange, bis er das Schwein erreicht!
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen sicheren Weg gibt, und sich dann nach links dreht. Das
+            macht er so lange, bis er das Schwein erreicht!
+
+'
         - text: Ich weiß es nicht.
-          feedback: Der Code veranlasst den Vogel, sich vorwärts zu bewegen, solange
-            es einen Weg gibt, und dann nach links abzubiegen.  Das macht er so lange,
+          feedback: Der Code bewirkt, dass sich der Vogel vorwärts bewegt, solange
+            es einen Weg gibt, und sich dann nach links dreht. Das macht er so lange,
             bis er das Schwein erreicht!
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: Der Vogel wird sich überhaupt nicht bewegen.
-          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
-            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
-            er so lange, bis er das Schwein erreicht!
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen Weg gibt, und sich dann nach links dreht. Das macht er
+            so lange, bis er das Schwein erreicht!
+
+'
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
         - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
-          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
-            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
-            er so lange, bis er das Schwein erreicht!
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen sicheren Weg gibt, und sich dann nach links dreht. Das
+            macht er so lange, bis er das Schwein erreicht!
+
+'
         - text: Ich weiß es nicht.
-          feedback: Der Code veranlasst den Vogel, sich vorwärts zu bewegen, solange
-            es einen Weg gibt, und dann nach links abzubiegen.  Das macht er so lange,
+          feedback: Der Code bewirkt, dass sich der Vogel vorwärts bewegt, solange
+            es einen Weg gibt, und sich dann nach links dreht. Das macht er so lange,
             bis er das Schwein erreicht!
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: Der Vogel wird sich überhaupt nicht bewegen.
-          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
-            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
-            er so lange, bis er das Schwein erreicht!
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen Weg gibt, und sich dann nach links dreht. Das macht er
+            so lange, bis er das Schwein erreicht!
+
+'
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
         - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
-          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
-            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
-            er so lange, bis er das Schwein erreicht!
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen sicheren Weg gibt, und sich dann nach links dreht. Das
+            macht er so lange, bis er das Schwein erreicht!
+
+'
         - text: Ich weiß es nicht.
-          feedback: Der Code veranlasst den Vogel, sich vorwärts zu bewegen, solange
-            es einen Weg gibt, und dann nach links abzubiegen.  Das macht er so lange,
+          feedback: Der Code bewirkt, dass sich der Vogel vorwärts bewegt, solange
+            es einen Weg gibt, und sich dann nach links dreht. Das macht er so lange,
             bis er das Schwein erreicht!
         questions:
-        - {}
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_scrat_predict1:
         answers:
         - text: Nichts. Scrat wird sich überhaupt nicht bewegen.
@@ -3763,12 +3930,24 @@ de-DE:
             nach, wenn du auf "Ausführen" drückst?
       courseE_multi_bee_functions_predict1:
         answers:
-        - correct: true
-        - text: Die Biene wird nicht genug Honig produzieren.
-        - text: Die Biene wird versuchen, zu viel Honig zu machen.
+        - text: Das gleiche Programm kann auch diese Aufgabe lösen.
+          correct: true
+          feedback: Richtig! Es ist unwichtig, dass es unterschiedliche Mengen Honig
+            gibt. Die Funktion ist so programmiert, dass sie das berücksichtigen kann.
+        - text: Die Biene wird nicht genug Honig herstellen.
+          feedback: Falsch. Die Funktion ist so programmiert, dass sie jede Honigmenge,
+            die größer als 0 ist, verarbeiten kann.
+        - text: Die Biene wird versuchen, zu viel Honig herzustellen.
+          feedback: Falsch. Die Funktion ist so programmiert, dass sie jede Honigmenge,
+            die größer als 0 ist, verarbeiten kann.
         - text: Ich weiß es nicht.
+          feedback: Das Programm hilft auch bei der Lösung dieser Aufgabe. Es ist
+            so programmiert, dass es jede Menge Honig, die größer als 0 ist, verarbeiten
+            kann.
         questions:
-        - {}
+        - text: Hier ist genau dasselbe Programm, das in der letztezn Aufgabe verwendet
+            wurde, aber die Menge Honig, der in dieser Aufgabe gesammelt werden muss,
+            hat sich geändert. Was passiert, wen auf "Ausführen" klickst?
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: Die Erntearbeiterin wird zwei Kürbisse ernten.
@@ -3822,28 +4001,14 @@ de-DE:
             ernten?
       courseE_prediction_artistFunction1:
         answers:
-        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
-
-'
-          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
-            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
-
-'
-        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
-
-'
+        - text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+        - text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
           correct: true
           feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
             einem Sprung dazwischen.
@@ -3851,28 +4016,14 @@ de-DE:
         - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
-
-'
-          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
-            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
-
-'
-        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
-
-'
+        - text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+        - text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
           correct: true
           feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
             einem Sprung dazwischen.
@@ -3880,28 +4031,14 @@ de-DE:
         - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
-
-'
-          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
-            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
-
-'
-        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
-
-'
+        - text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+        - text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
           correct: true
           feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
             einem Sprung dazwischen.
@@ -3909,28 +4046,14 @@ de-DE:
         - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
-
-'
-          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
-
-'
-        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
-
-'
-          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
-            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
-
-'
-        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
-
-'
+        - text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+        - text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
           correct: true
           feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
             einem Sprung dazwischen.
@@ -4276,13 +4399,23 @@ de-DE:
             wen du auf "Ausführen" klickst?
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
-            egal was passiert. '
-        - correct: true
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          feedback: Falsch. Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
           feedback: Richtig!
-        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
-            passiert. '
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          feedback: Falsch. Der Baustein `wenn an der Blüte` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
         - text: Ich weiß es nicht.
+          feedback: Der Baustein "wenn an Blüte" bewirkt, dass die Biene nur dann
+            versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte befindet.
         markdown: 'Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der
           Wolke sein. Wenn dort eine Blume ist, wird die Biene den Nektar **einmal**
           holen.
@@ -4294,9 +4427,10 @@ de-DE:
         answers:
         - correct: true
           feedback: Richtig!
-        - {}
-        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
-            zu gewinnen.
+        - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+        - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
+            den Waben zu holen.
         - text: Ich weiß es nicht.
         questions:
         - {}
@@ -4446,94 +4580,56 @@ de-DE:
 
       coursee_prediction_artistfunction2:
         answers:
-        - text: 'Der Künstler wird das Rätsel richtig lösen.
-
-'
-          feedback: 'Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
-            "Linie aus Polygonen zeichnen".
-
-'
-        - text: 'Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
-
-'
+        - text: Der Künstler wird diese Aufgabe richtig lösen.
+          feedback: Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "eine Reihe von Polygonen zeichnen".
+        - text: Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
           correct: true
           feedback: Richtig!
-        - text: 'Der Künstler wird nur eine Linie von Quadraten zeichnen.
-
-'
-          feedback: 'Falsch. Das Programm ruft nicht "Linie aus Polygonen zeichnen"
-            auf.
-
-'
-        - text: 'Der Künstler wird vier Quadrate übereinander zeichnen.
-
-'
-          feedback: 'Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+        - text: Der Künstler wird nur eine Reihe von Quadraten zeichnen.
+          feedback: Falsch. Das Programm ruft die Funktion `eine Reihe von Polygonen
+            zeichnen` nicht auf.
+        - text: Der Künstler wird vier Quadrate übereinander zeichnen.
+          feedback: Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
             zeichnen" um 90 Grad.
-
-'
         questions:
-        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
+        - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - text: 'Der Künstler wird das Rätsel richtig lösen.
-
-'
-          feedback: 'Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
-            "Linie aus Polygonen zeichnen".
-
-'
-        - text: 'Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
-
-'
+        - text: Der Künstler wird diese Aufgabe richtig lösen.
+          feedback: Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "eine Reihe von Polygonen zeichnen".
+        - text: Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
           correct: true
           feedback: Richtig!
-        - text: 'Der Künstler wird nur eine Linie von Quadraten zeichnen.
-
-'
-          feedback: 'Falsch. Das Programm ruft nicht "Linie aus Polygonen zeichnen"
-            auf.
-
-'
-        - text: 'Der Künstler wird vier Quadrate übereinander zeichnen.
-
-'
-          feedback: 'Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+        - text: Der Künstler wird nur eine Reihe von Quadraten zeichnen.
+          feedback: Falsch. Das Programm ruft die Funktion `eine Reihe von Polygonen
+            zeichnen` nicht auf.
+        - text: Der Künstler wird vier Quadrate übereinander zeichnen.
+          feedback: Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
             zeichnen" um 90 Grad.
-
-'
         questions:
-        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
+        - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - text: 'Der Künstler wird das Rätsel richtig lösen.
-
-'
-          feedback: 'Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
-            "Linie aus Polygonen zeichnen".
-
-'
-        - text: 'Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
-
-'
+        - text: Der Künstler wird diese Aufgabe richtig lösen.
+          feedback: Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "eine Reihe von Polygonen zeichnen".
+        - text: Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
           correct: true
           feedback: Richtig!
-        - text: 'Der Künstler wird nur eine Linie von Quadraten zeichnen.
-
-'
-          feedback: 'Falsch. Das Programm ruft nicht "Linie aus Polygonen zeichnen"
-            auf.
-
-'
-        - text: 'Der Künstler wird vier Quadrate übereinander zeichnen.
-
-'
-          feedback: 'Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+        - text: Der Künstler wird nur eine Reihe von Quadraten zeichnen.
+          feedback: Falsch. Das Programm ruft die Funktion `eine Reihe von Polygonen
+            zeichnen` nicht auf.
+        - text: Der Künstler wird vier Quadrate übereinander zeichnen.
+          feedback: Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
             zeichnen" um 90 Grad.
-
-'
         questions:
-        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
+        - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: 'CS Discoveries: Schülerumfrage am Kursende'
+      csd-post-survey-levelgroup-2018:
+        title: 'CS Discoveries: Schülerumfrage am Kursende'
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Übersicht
@@ -4613,55 +4709,55 @@ de-DE:
       grade2_multi_collector_A_predict1:
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
-            Schatz ist, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
-            ist, und das verursacht einen Fehler.
+          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
+            sind, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
+            und das verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
-            Schatz ist, und das verursacht einen Fehler.
+          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
+            sind, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
-            ist, und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
+            und das verursacht einen Fehler.
         questions:
-        - text: Schau dir den Code unten genau an. Wenn dieser Code bis zum Ende ausgeführt
-            würde (wenn man die Fehler nicht beachtet), wie viele Schätze würde Laurel
-            sammeln?
+        - text: Schau dir den nachfolgenden Code genau an. Wenn dieser Code bis zum
+            Ende ausgeführt würde (wenn man Fehler nicht beachtet), wie viele Schätze
+            würde Laurel einsammeln?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
-            Schatz ist, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
-            ist, und das verursacht einen Fehler.
+          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
+            sind, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
+            und das verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
-            Schatz ist, und das verursacht einen Fehler.
+          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
+            sind, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
-            ist, und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
+            und das verursacht einen Fehler.
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
-          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
-            Schatz ist, und das verursacht einen Fehler.
-        - text: Laurel wird versuchen Schätze einzusammeln an Stellen, wo kein Schatz
-            ist, und das verursacht einen Fehler.
+          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
+            sind, und das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze an Stellen einzusammeln, wo keine sind,
+            und das verursacht einen Fehler.
           correct: true
           feedback: Richtig!
         - text: Laurel wird alle Schätze einsammeln.
-          feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
-            Schatz ist, und das verursacht einen Fehler.
+          feedback: Falsch. Laurel versucht, Schätze an Stellen einzusammeln, wo keine
+            sind, und das verursacht einen Fehler.
         - text: Ich weiß es nicht.
-          feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
-            ist, und das verursacht einen Fehler.
+          feedback: Laurel versucht, Schätze an Stellen einzusammeln, wo keine sind,
+            und das verursacht einen Fehler.
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?

@@ -1297,11 +1297,46 @@ id-ID:
       behaviors free play: "**permainan bebas:**ciptakanlayat ruang angkasamu!"
       course1_artist_loops_challenge4: _"Saatnya mengundi dadu! Kamu bisa membantu
         menggambarnya?"_
-      course1_maze_debugging_challenge2: Perbaiki bug level ini. Bloknya sudah benar,
-        tertapi urutannya salah!
+      course1_maze_debugging_challenge2: Debug level ini. Bloknya sudah benar, tertapi
+        urutannya salah!
       course4_artist_fwp_challenge1: Cobalah jalankan program ini, dan buatlah perubahan
         untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus
         dan ganti dengan komposisi yang berbeda)
+      courseA_maze_seq1: _"Mainkan blok-blok ini dan coba giring saya ke babi jelek!"_
+      courseA_maze_seq1_2018: _"Mainkan blok-blok ini dan coba giring saya ke babi
+        jelek!"_
+      courseA_maze_seq1_2019: _"Mainkan blok-blok ini dan coba giring saya ke babi
+        jelek!"_
+      courseA_maze_seq2: |-
+        _"Ada bug! Perbaiki kode agar saya sampai ke babi."_
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+      courseA_maze_seq3: |-
+        _"Perbaiki kode agar saya sampai ke babi!"_
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq4: "_\"Ada yang tidak beres.\"_ \n\nHAPUS blok agar burung sampai
+        ke babi!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq5: |-
+        Coba sendiri yang ini sejak awal.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_copy: |-
+        Coba sendiri yang ini sejak awal.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq6: |-
+        Gerakkan satu arah, lalu ke arah lainnya untuk menggiring burung ke babi!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+      courseA_maze_seq6_2018: Gerakkan satu arah, lalu ke arah lainnya untuk menggiring
+        burung ke babi!
+      courseA_maze_seq6_2019: Gerakkan satu arah, lalu ke arah lainnya untuk menggiring
+        burung ke babi!
+      courseA_maze_seq6_copy: |-
+        Gerakkan satu arah, lalu ke arah lainnya untuk menggiring burung ke babi!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseB_artist_loops10: |-
         Gunakan apa yang telah kamu pelajari untuk membuat gambar yang menurutmu akan dilihat oleh artis saat sampai di rumah.
 
@@ -1353,8 +1388,8 @@ id-ID:
         berjalan berkeliling."
       courseB_artist_loops7_2019: "**Tantangan:**  Itu taman tersembunyi! Mari kita
         berjalan berkeliling."
-      courseB_artist_loops8_2019: Waktunya pulang ke rumah. Bisakah kami memperbaiki
-        tangga ini hanya menggunakan satu blok untuk membantu artis turun?
+      courseB_artist_loops8_2019: Waktunya pulang ke rumah. Dengan hanya menggunakan
+        satu blok, bisakah anda memperbaiki tangga ini untuk membantu artis turun?
       courseB_artist_loops9_2019: Ayo lewat pintasan ke rumah, melalui kolam. Bisakah
         kami membantu artis tetap ada di batu?
       courseB_artist_loops_challenge1: _"Saatnya mengundi dadu! Kamu bisa membantu
@@ -1373,15 +1408,15 @@ id-ID:
       courseB_collector_loops2: |-
         Pindahkan Laurel ke harta karun, lalu gunakan blok <xml><block type="collector_collect"/></xml> untuk mengambilnya.
 
-        Ambil keempat tumpukan untuk lulus level ini.
+        Ambil keempat tumpukan untuk lulus dari level ini.
       courseB_collector_loops2_2018: |-
         Pindahkan Laurel ke harta karun, lalu gunakan blok <xml><block type="collector_collect"/></xml> untuk mengambilnya.
 
-        Ambil keempat tumpukan untuk lulus level ini.
+        Ambil keempat tumpukan untuk lulus dari level ini.
       courseB_collector_loops4_2019: Perbaiki jalur Laurel untuk mengambil semua harta
         karun ini!
-      courseB_collector_loops5_2019: Tambahkan kode dari teka-teki terakhir untuk
-        mengambil semua harta karun.
+      courseB_collector_loops5_2019: Tambahkan kode dari puzzle terakhir untuk mengambil
+        semua harta karun.
       courseB_collector_loops6_2019: Pikirkan kode untuk membantu Laurel mengambil
         semua harta karun!
       courseB_collector_loops7_2019: Tulis kode untuk mengambil semua harta karun
@@ -1389,9 +1424,9 @@ id-ID:
       courseB_collector_loops8_2019: "**Tantangan:** Harta karun ada di sepanjang
         tangga turun ini! Tulis kode untuk membantu Laurel mengambil semuanya."
       courseB_collector_loops9_2019: _"Bantu aku mengambil harta karun dari lembah
-        curam ini."_
-      courseB_collector_loops_challenge1_2019: Saat ini blokmu terbatas. Ambil semua
-        harta karun!
+        yang curam ini."_
+      courseB_collector_loops_challenge1_2019: Saat ini jumlah blokmu terbatas. Ambil
+        semua harta karun!
       courseB_collector_loops_challenge2a: |-
         _"Ayo ambil harta karunnya!"_
 
@@ -1404,7 +1439,7 @@ id-ID:
         _"Ayo ambil harta karunnya!"_
 
         Bantu Laurel setidaknya mendapat **5** harta karun untuk menyelesaikan teka-teki ini.
-      courseB_maze_seq3: _"Perbaiki kode agar aku sampai ke babi."_
+      courseB_maze_seq3: _"Perbaiki kode agar aku sampai ke babi!"_
       courseB_maze_seq9: "**Tantangan:** Bergerak di sekeliling TNT agar burung sampai
         ke babi."
       courseB_maze_seq_challenge1: Kamu hanya punya empat perpindahan blok. Bisakah
@@ -1413,8 +1448,8 @@ id-ID:
         kamu menemukan jalur sebelum kehabisan blok?
       courseB_maze_seq_challenge1_2019: Kamu hanya punya empat perpindahan blok. Bisakah
         kamu menemukan jalur sebelum kehabisan blok?
-      courseB_maze_seq_challenge2_2019: Perbaiki bug level ini. Bloknya sudah benar,
-        tertapi urutannya salah!
+      courseB_maze_seq_challenge2_2019: Debug level ini. Bloknya sudah benar, tertapi
+        urutannya salah!
       courseB_playLab_events1: "Game ini disebut \"Play Lab\".  \n\nLihat apakah kamu
         bisa tahu apa yang dilakukan setiap blok."
       courseB_playLab_events1_2018: "Game ini disebut \"Play Lab\".  \n\nLihat apakah
@@ -1423,13 +1458,13 @@ id-ID:
         kamu bisa tahu apa yang dilakukan setiap blok."
       courseB_playlab_events2_2019: Buat Daisy si Naga mengatakan sesuatu bila kami
         mengeklik "Run".
-      courseB_playlab_events3: Gunakan suatu kejadian agar Daisy si Naga beralih ke
-        suasana hati acak ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+      courseB_playlab_events3: Gunakan suatu event agar Daisy si Naga beralih ke suasana
+        hati acak ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         jika diklik.
-      courseB_playlab_events3_2018: Gunakan suatu kejadian agar Daisy si Naga beralih
+      courseB_playlab_events3_2018: Gunakan suatu event agar Daisy si Naga beralih
         ke suasana hati acak ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         jika diklik.
-      courseB_playlab_events3_2019: Gunakan suatu kejadian agar Daisy si Naga beralih
+      courseB_playlab_events3_2019: Gunakan suatu event agar Daisy si Naga beralih
         ke suasana hati acak ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         jika diklik.
       courseB_playlab_events4: "Waktunya kstaria!  \n\nTambahkan satu event agar ksatria
@@ -1437,18 +1472,18 @@ id-ID:
       courseB_playlab_events6: |-
         Bantu ksatriamu mengambil semua bendera!
 
-        Untuk melakukannya, kamu akan perlu menambahkan kejadian untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
+        Untuk melakukannya, kamu akan perlu menambahkan events untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
       courseB_playlab_events6_2018: |-
         Bantu ksatriamu mengambil semua bendera!
 
-        Untuk melakukannya, kamu akan perlu menambahkan kejadian untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
+        Untuk melakukannya, kamu akan perlu menambahkan events untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
       courseB_playlab_events6_2019: |-
         Bantu ksatriamu mengambil semua bendera!
 
-        Untuk melakukannya, kamu akan perlu menambahkan kejadian untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
+        Untuk melakukannya, kamu akan perlu menambahkan events untuk membantu ksatria bergerak ke atas, bawah, kiri, dan kanan.
       courseB_playlab_events7: "Buat permainan ini menyenangkan dengan mengatur ksatria
         agar menghilang jika dia lari ke arah naga dalam perjalanan untuk mengambil
-        bendera! \n\nPutar suara jika mereka beradu untuk membuatnya terasa nyata.\n\nKunjungi
+        bendera! \n\nPutar suara jika mereka bertabrakan untuk membuatnya terasa nyata.\n\nKunjungi
         semua tujuan, lalu lari ke arah naga untuk lulus level ini."
       courseB_playlab_events_challenge1: "Waktunya untuk Balapan Hewan Hebat! Buat
         hewan bergerak ke bawah jika kamu menekan `▼`. \n\nSiapa yang akan berlari
@@ -1479,11 +1514,11 @@ id-ID:
 
         Perhatikan dinding dan peti. Logam rongsokan terlihat seperti ini: ![gambar logam rongsokan](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Kamu bisa mengambil semuanya?"_'
+        _"Apalah anda bisa mendapatkan semuanya?"_'
       courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Kamu bisa mengambil semuanya?"_'
+        _"Apalah anda bisa mendapatkan semuanya?"_'
       courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Kamu bisa mengambil semuanya?"_'
+        _"Apalah anda bisa mendapatkan semuanya?"_'
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Lanjutkan!"_'
       courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -1517,11 +1552,11 @@ id-ID:
       courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ambil, BB-8!"_'
       courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Kamu bisa mengambil semuanya?"_'
+        _"Apalah anda bisa mendapatkan semuanya?"_'
       courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Kamu bisa mengambil semuanya?"_'
+        _"Apalah anda bisa mendapatkan semuanya?"_'
       courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Kamu bisa mengambil semuanya?"_'
+        _"Apalah anda bisa mendapatkan semuanya?"_'
       courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Kamu bisa melakukannya!"_'
       courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
