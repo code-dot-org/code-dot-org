@@ -28,7 +28,8 @@ import {
   editAll,
   TransferStatus,
   TransferType,
-  ParentLetterButtonMetricsCategory
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
@@ -38,6 +39,7 @@ import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
@@ -605,6 +607,13 @@ class ManageStudentsTable extends Component {
     clearTimeout();
   };
 
+  onPrintLoginCards = () => {
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
+    window.open(url, '_blank');
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -676,7 +685,13 @@ class ManageStudentsTable extends Component {
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.button}>
-              <PrintLoginCards sectionId={this.props.sectionId} />
+              <PrintLoginCards
+                sectionId={this.props.sectionId}
+                entryPointForMetrics={
+                  PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                }
+                onPrintLoginCards={this.onPrintLoginCards}
+              />
             </div>
           )}
           <div style={styles.button}>

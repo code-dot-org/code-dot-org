@@ -1,0 +1,53 @@
+{
+  "//": [
+    "Animation Library Manifest",
+    "GENERATED FILE: DO NOT MODIFY DIRECTLY",
+    "See tools/scripts/rebuildAnimationLibraryManifest.rb for more information."
+  ],
+  "metadata": {
+    "category_animals/bear": {
+      "name": "медведь",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 254,
+        "y": 333
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2020-01-29 19:47:52 UTC",
+      "pngLastModified": "2020-01-29 19:47:52 UTC",
+      "version": "5exqcW6rEnA.7zF34mgDjj_2F9cqpi4w",
+      "sourceUrl": "/api/v1/animation-library/gamelab/5exqcW6rEnA.7zF34mgDjj_2F9cqpi4w/category_animals/bear.png",
+      "sourceSize": {
+        "x": 254,
+        "y": 333
+      }
+    },
+    "category_animals/bear_with_fish": {
+      "name": "медведь с рыбой",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 222,
+        "y": 300
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2020-01-29 19:47:53 UTC",
+      "pngLastModified": "2020-01-29 19:47:52 UTC",
+      "version": "MatyzuecEWjBMV8EmXXC1W7PqpeBhK.t",
+      "sourceUrl": "/api/v1/animation-library/gamelab/MatyzuecEWjBMV8EmXXC1W7PqpeBhK.t/category_animals/bear_with_fish.png",
+      "sourceSize": {
+        "x": 222,
+        "y": 300
+      }
+    }
+  },
+  "aliases": {
+    "медведь": [
+      "category_animals/bear"
+    ],
+    "медведь с рыбой": [
+      "category_animals/bear_with_fish"
+    ]
+  }
+} 

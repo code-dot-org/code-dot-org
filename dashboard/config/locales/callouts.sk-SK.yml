@@ -15,10 +15,16 @@ sk-SK:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať plásty.
       AppLab Intro 7 - Change Screen Color:
-        applab_hoc_finish: Zozelenela obrazovka? Ak áno, stlačte "Ukonči". Ak nie,
-          stlačte "Resetovať", zmeňte kód a kliknite znova na "Spustiť".
+        applab_hoc_finish: Zmenila sa farba obrazovky na zelenú? Ak áno, stlač "Dokončiť".
+          Ak nie, stlač "Obnoviť", zmeň kód a klikni znova na "Spustiť".
       AppLab Intro 7 - thisOrThatAddButton:
-        AppLabHoCFinal11: Teraz ste v dizajnovacom móde.
+        AppLabHoCFinal11: Teraz si v dizajnovom móde.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Sem pridaj console log prvok
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Sem pridaj console log prvok
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Sem pridaj console log prvok
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Zmeňte číslo tu
       CSD U3 Variables Predict Where XY:
