@@ -47,14 +47,7 @@ class LevelGroup < DSLDefined
 
   # Returns a flattened array of all the Levels in this LevelGroup, in order.
   def levels
-    level_names = []
-    properties["pages"].each do |page|
-      page["levels"].each do |page_level_name|
-        level_names << page_level_name
-      end
-    end
-
-    Level.where(name: level_names).sort_by {|l| level_names.index(l.name)}
+    pages.map(&:levels).flatten
   end
 
   class LevelGroupPage
@@ -87,6 +80,16 @@ class LevelGroup < DSLDefined
       offset += page_object.levels.count
       page_object
     end
+  end
+
+  def self.setup(data)
+    level = super(data)
+    level.update_pages(data[:pages])
+    level
+  end
+
+  def update_pages(pages)
+    update!(properties: {pages: pages})
   end
 
   def assign_attributes(params)

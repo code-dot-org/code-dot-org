@@ -63,8 +63,6 @@ te:
   project:
     projects: "ప్రాజెక్టులు"
     project_gallery: "ప్రాజెక్టులు"
-  flex_category:
-    csf_events: 'ఈవెంట్లు'
   pd:
     form_entries:
       email_opt_in:
