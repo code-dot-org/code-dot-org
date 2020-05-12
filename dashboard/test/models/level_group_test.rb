@@ -223,7 +223,7 @@ MARKDOWN
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
 
-  test 'clone simple level group with suffix' do
+  test 'clone with suffix for simple level group' do
     level_group_input_dsl = <<~DSL
       name 'my level group'
       page
