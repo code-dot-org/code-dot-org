@@ -123,17 +123,7 @@ class PhotoChooserEvents extends React.Component {
 
   getPhotoselectEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function() {\n' +
-      '  console.log("' +
-      id +
-      ' photo selected!");\n' +
-      '  console.log(getImageURL("' +
-      id +
-      '"));\n' +
-      '});\n';
+    const code = 'onEvent("${id}", "change", function() {\n  console.log("${id} photo selected!");\n  console.log(getImageURL("${id}"));\n});\n';
     return code;
   }
 
@@ -143,7 +133,7 @@ class PhotoChooserEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = 'Change';
-    const clickDesc = 'Triggered when a photo is selected.';
+    const clickDescription = 'Triggered when a photo is selected.';
 
     return (
       <div id="eventRowContainer">
@@ -156,7 +146,7 @@ class PhotoChooserEvents extends React.Component {
         <EventHeaderRow />
         <EventRow
           name={clickName}
-          desc={clickDesc}
+          desc={clickDescription}
           handleInsert={this.insertPhotoselect}
         />
       </div>
@@ -173,13 +163,10 @@ export default {
     const element = document.createElement('label');
     element.setAttribute('class', 'img-upload');
     element.setAttribute('data-canonical-image-url', 'icon://fa-camera');
-    element.style.margin = '0px';
+    element.style.margin = '0';
     element.style.lineHeight = '1';
-    element.style.overflow = 'hidden';
-    element.style.wordWrap = 'break-word';
     element.style.borderStyle = 'solid';
 
-    element.style.textRendering = 'optimizeSpeed';
     elementLibrary.setAllPropertiesToCurrentTheme(
       element,
       designMode.activeScreen()
@@ -207,20 +194,16 @@ export default {
   },
   onDeserialize: function(element, updateProperty) {
     // Disable image upload events unless running
-    $(element).on('click', function(e) {
-      if (!Applab.isRunning()) {
-        element.childNodes[0].disabled = true;
-      } else {
+    $(element).on('click', () => {
+      if (Applab.isRunning()) {
         element.childNodes[0].disabled = false;
+      } else {
+        element.childNodes[0].disabled = true;
       }
     });
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);
     }
-    // Set border styles for older projects that didn't set them on create:
-    elementUtils.setDefaultBorderStyles(element);
-    // Set the font family for older projects that didn't set them on create:
-    elementUtils.setDefaultFontFamilyStyle(element);
   }
 };
