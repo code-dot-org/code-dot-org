@@ -234,7 +234,7 @@ export var blocks = [
     params: ['"id"', '"https://code.org/images/logo.png"'],
     dropdown: {
       0: idDropdownWithSelector('img'),
-      1: function() {
+      1: () => {
         return getAssetDropdown('image');
       }
     },
