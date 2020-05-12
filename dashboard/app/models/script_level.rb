@@ -223,8 +223,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    return false unless assessment
-    !!level.properties["pages"]
+    assessment && level.is_a?(LevelGroup)
   end
 
   def anonymous?
@@ -349,7 +348,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels = []
     level_id = last_level_summary[:ids].first
     level = Script.cache_find_level(level_id)
-    extra_level_count = level.properties["pages"].length - 1
+    extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
