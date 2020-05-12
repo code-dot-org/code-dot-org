@@ -1,3 +1,7 @@
+// Interface for admins to try out Foorm configurations in real-time.
+// Includes a json editor with a starting configuration, along with
+// a preview button to preview the configuration in Foorm
+
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -45,7 +49,7 @@ class FoormEditor extends React.Component {
   }
 
   previewFoorm = () => {
-    console.log(this.props.formQuestions);
+    // fill in form with any library items
     $.ajax({
       url: '/api/v1/pd/foorm/form_with_library_items',
       type: 'post',
@@ -79,6 +83,7 @@ class FoormEditor extends React.Component {
         />
         <Button onClick={this.previewFoorm}>Preview</Button>
         {this.state.formPreviewQuestions && (
+          // key allows us to force re-render when preview is clicked
           <Foorm
             formQuestions={this.state.formPreviewQuestions}
             formName={'preview'}

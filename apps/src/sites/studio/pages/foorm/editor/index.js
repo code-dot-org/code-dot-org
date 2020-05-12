@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-
-import 'survey-react/survey.css';
-import FoormEditorManager from '../../../../../code-studio/pd/foorm/FoormEditorManager';
+import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
 import foorm, {
   setFormQuestions
-} from '../../../../../code-studio/pd/foorm/foormEditorRedux';
+} from '@cdo/apps/code-studio/pd/foorm/foormEditorRedux';
+
+import 'survey-react/survey.css';
 
 $(document).ready(function() {
   registerReducers({foorm});
@@ -18,6 +19,7 @@ $(document).ready(function() {
       <FoormEditorManager
         updateFormQuestions={updateFormQuestions}
         populateCodeMirror={populateCodeMirror}
+        {...getScriptData('props')}
       />
     </Provider>,
     document.getElementById('editor-container')
