@@ -39,6 +39,10 @@ class ContactRollupsV2
   # Deletion is required in test environments, as tests generally do
   # not allow you to execute TRUNCATE statements.
   def self.truncate_or_delete_table(model)
-    CDO.rack_env == :production ? model.truncate_table : model.delete_all
+    CDO.rack_env == :production ? truncate_table(model) : model.delete_all
+  end
+
+  def self.truncate_table(model)
+    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{model.table_name}")
   end
 end
