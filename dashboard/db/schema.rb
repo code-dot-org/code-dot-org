@@ -448,20 +448,6 @@ ActiveRecord::Schema.define(version: 20200504210058) do
     t.datetime "updated_at",                 null: false
   end
 
-  create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                            null: false
-    t.bigint   "user_level_id",                                   unsigned: true
-    t.integer  "level_source_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "autosaved"
-    t.string   "app",             default: "turtle", null: false
-    t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
-    t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
-    t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
-  end
-
   create_table "games", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
     t.datetime "created_at"
