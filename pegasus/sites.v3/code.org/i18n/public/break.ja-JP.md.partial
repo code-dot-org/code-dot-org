@@ -23,7 +23,7 @@ social:
 <h2>サポート内容</h2>
 <a href="#signup">サインアップ</a>すると、下記のおしらせを受け取ることができます。 
 <ul>
-<li>創始者<a href="/about/leadership/hadi_partovi">ハディ・パルトヴィ</a>とスペシャルゲストによる<a href="http://code.org/codebreaknow">週次のインタラクティブ授業</a> Every Wednesday at 10am PT / 1pm ET - <a href="https://www.addevent.com/event/Qu4803077">add to calendar</a>.</li>
+<li>創始者<a href="/about/leadership/hadi_partovi">ハディ・パルトヴィ</a>とスペシャルゲストによる<a href="http://code.org/codebreaknow">週次のインタラクティブ授業</a> Every Wednesday at 10am PT / 1pm ET - <a href="https://www.addevent.com/event/Fw4803078">add to calendar</a>.</li>
 <li><a href="#activities">新しいアクティビティ</a>や毎週の課題</li>
 <li>初めての人、慣れてきた人、コンピュータがない人向けのコンテンツ</li>
 </ul>
@@ -36,8 +36,8 @@ social:
 </div>
 
 <div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
-<img src="/images/marketing/khan-vaughn-callout.jpg" style="max-width:100%">
-<p style="margin: 10px 18px 0 8px;">In celebration of Teacher Appreciation Week, we'll welcome the founder and CEO of Khan Academy, Sal Khan, as well as computer science educator, Flo Vaughn.</p>
+<img src="/images/marketing/code-break-callout-episode-8.jpg" style="max-width:100%">
+<p style="margin: 10px 18px 0 8px;">Join us in welcoming actress, Yara Shahidi, and the inventor of Google Sheets, Fuzzy Khosrowshahi.</p>
 <a id="signup"></a>
 <div style="padding:8px 18px 0 8px;">
 <a href="https://code.org/codebreaknow"><button style="background-color: #ffa400;border-color: #e7e8ea;color: #FFFFFF;font-size: 16px;">参加する</button></a>
@@ -49,9 +49,9 @@ social:
 <div style="clear: both;margin-bottom:30px;"></div>
 <div class="col-33" style="padding:0 25px 25px 0;"><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" max-width="100%"></a></div>
 <div class="col-66">
-<p>世界中の子どもたちと一緒に、Code.org創業者の<a href="https://code.org/about/leadership/hadi_partovi">ハディ・パルトヴィ</a>とスペシャルゲスト、Code.orgの最高の先生たちとコンピュータサイエンスのさまざまな概念を学ぶライブ授業に<a href="http://code.org/codebreaknow">参加しましょう</a> To get the classroom projects each week, <a href="#signup">sign up</a> above and <a href="https://www.addevent.com/event/Qu4803077">add Code Break to your calendar.</a></p>
+<p>世界中の子どもたちと一緒に、Code.org創業者の<a href="https://code.org/about/leadership/hadi_partovi">ハディ・パルトヴィ</a>とスペシャルゲスト、Code.orgの最高の先生たちとコンピュータサイエンスのさまざまな概念を学ぶライブ授業に<a href="http://code.org/codebreaknow">参加しましょう</a> To get the classroom projects each week, <a href="#signup">sign up</a> above and <a href="https://www.addevent.com/event/Fw4803078">add Code Break to your calendar.</a></p>
 
-<a title="カレンダーに追加する" class="addeventatc" data-id="Qu4803077" href="https://www.addevent.com/event/Qu4803077" target="_blank" rel="nofollow">カレンダーに追加する</a>
+<a title="カレンダーに追加する" class="addeventatc" data-id="Fw4803078" href="https://www.addevent.com/event/Fw4803078" target="_blank" rel="nofollow">カレンダーに追加する</a>
 
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script> 
 <p style="margin-top: 15px;">年齢に関係なく、スマートフォンやコンピュータからつながりましょう。 To participate in the episode, make sure to <a href="https://zoom.us/download">download Zoom</a> beforehand. Or, you can simply tune in on YouTube to <a href="https://www.youtube.com/user/CodeOrg/live">watch the show live</a>. You can also find more resources for at home learning <a href="https://code.org/athome">here</a>.</p>
@@ -189,6 +189,29 @@ social:
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">高学年のこどもたちへ</span> 要サインイン</p>
 <a href="https://studio.code.org/s/code-break/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">13歳以上のコンテンツをみる</button></a>
+</div>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<a id="episode7"></a>
+<div style="clear: both;"></div>
+<h2>Episode 7 - Conditionals with Sal Khan & Flo Vaughn</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 5/6 episode</h4>
+<a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Conditionals</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">低学年のこどもたちへ</span> サインイン不要</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">6-12歳向けのコンテンツをみる</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">高学年のこどもたちへ</span> 要サインイン</p>
+<a href="https://studio.code.org/s/code-break/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">13歳以上のコンテンツをみる</button></a>
 </div>
 
 </div>
