@@ -31,7 +31,7 @@ export default class LessonExtrasProgressBubble extends Component {
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        <LessonExtrasFlagIcon perfect={perfect} />
+        <LessonExtrasFlagIcon perfect={perfect} style={styles.main} />
         <TooltipWithIcon
           tooltipId={tooltipId}
           icon={'flag-checkered'}
