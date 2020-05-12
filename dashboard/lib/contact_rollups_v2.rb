@@ -55,6 +55,7 @@ class ContactRollupsV2
     @log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
       ContactRollupsRaw.extract_email_preferences
     end
+    log_collector.info("ContactRollupsRaw row count after extraction = #{ContactRollupsRaw.count}")
 
     @log_collector.time!('Extracts parent emails from dashboard.users') do
       ContactRollupsRaw.extract_parent_emails
@@ -63,6 +64,7 @@ class ContactRollupsV2
     @log_collector.time!('Processes all extracted data') do
       ContactRollupsProcessed.import_from_raw_table
     end
+    log_collector.info("ContactRollupsProcessed row count after processing = #{ContactRollupsProcessed.count}")
 
     @log_collector.time!("Overwrites contact_rollups_final table") do
       truncate_or_delete_table ContactRollupsFinal
@@ -94,6 +96,7 @@ class ContactRollupsV2
     @log_collector.time_and_continue('Updates existing Pardot prospects') do
       ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
     end
+    log_collector.info("ContactRollupsFinal row count after overwriting = #{ContactRollupsFinal.count}")
   end
 
   def report_results

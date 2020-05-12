@@ -23,18 +23,20 @@ class LogCollector
   # Save exception if caught, do not re-raise. Caller's flow will continue as normal.
   #
   # @param action_name [string] a friendly name of the block being executed
-  def time(action_name = nil)
+  def time(action_name = nil, print_to_stdout = true)
     return unless block_given?
     start_time = Time.now
 
     yield
 
     info("#{action_name || 'Unnamed'} action completed without error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}."
+      " #{self.class.get_friendly_time(Time.now - start_time)}.",
+      print_to_stdout
     )
   rescue StandardError => e
     error("#{action_name || 'Unnamed'} action exited with error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}."
+      " #{self.class.get_friendly_time(Time.now - start_time)}.",
+      print_to_stdout
     )
     record_exception(e)
   end
@@ -45,19 +47,21 @@ class LogCollector
   #
   # @param action_name [string] friendly name for the given block
   #
-  # @raise [StandardError] error encoutered when executing the given block
-  def time!(action_name = nil)
+  # @raise [StandardError] error encountered when executing the given block
+  def time!(action_name = nil, print_to_stdout = true)
     return unless block_given?
     start_time = Time.now
 
     yield
 
     info("#{action_name || 'Unnamed'} action completed without error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}."
+      " #{self.class.get_friendly_time(Time.now - start_time)}.",
+      print_to_stdout
     )
   rescue StandardError
     error("#{action_name || 'Unnamed'} action exited with error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!"
+      " #{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!",
+      print_to_stdout
     )
 
     # To be handled by caller
@@ -65,12 +69,14 @@ class LogCollector
   end
   alias_method :time_and_raise!, :time!
 
-  def info(message)
+  def info(message, print_to_stdout = true)
     logs << "[#{Time.now}] INFO: #{message}"
+    CDO.log.info logs.last if print_to_stdout
   end
 
-  def error(message)
+  def error(message, print_to_stdout = true)
     logs << "[#{Time.now}] ERROR: #{message}"
+    CDO.log.info logs.last if print_to_stdout
   end
 
   def record_exception(e)
@@ -80,6 +86,10 @@ class LogCollector
 
   def ok?
     exceptions.blank?
+  end
+
+  def last_message
+    logs.last
   end
 
   def to_s
