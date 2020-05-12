@@ -40,6 +40,7 @@ import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   headerName: {
@@ -585,9 +586,20 @@ class ManageStudentsTable extends Component {
   };
 
   copySectionCode = () => {
-    const {sectionCode, studioUrlPrefix} = this.props;
+    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'copy-section-code-join-link',
+        data_json: JSON.stringify({
+          sectionId: sectionId
+        })
+      },
+      {includeUserId: true}
+    );
     this.setState({showCopiedMsg: true});
     setTimeout(() => {
       this.setState({showCopiedMsg: false});

@@ -181,7 +181,7 @@ describe('ManageStudentsTable', () => {
       expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
     });
 
-    it('renders correct info in password column if loginType is picture', () => {
+    it('renders correctly if loginType is picture', () => {
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable />
@@ -193,9 +193,14 @@ describe('ManageStudentsTable', () => {
       const showSecret = wrapper.find('ShowSecret');
       expect(showSecret).to.have.lengthOf(1);
       expect(showSecret.find('Button').text()).to.equal(i18n.showPicture());
+      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
+      expect(loginInfo.props().loginType).to.equal(SectionLoginType.picture);
+      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
+        SectionLoginType.picture
+      );
     });
 
-    it('renders correct info in password column if loginType is word', () => {
+    it('renders correctly if loginType is word', () => {
       const wordSection = {...fakeSection, loginType: SectionLoginType.word};
       const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
       const wordStudents = {
@@ -216,9 +221,14 @@ describe('ManageStudentsTable', () => {
       const showSecret = wrapper.find('ShowSecret');
       expect(showSecret).to.have.lengthOf(1);
       expect(showSecret.find('Button').text()).to.equal(i18n.showWords());
+      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
+      expect(loginInfo.props().loginType).to.equal(SectionLoginType.word);
+      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
+        SectionLoginType.word
+      );
     });
 
-    it('renders correct info in password column if loginType is personal email', () => {
+    it('renders correctly if loginType is personal email', () => {
       const emailSection = {...fakeSection, loginType: SectionLoginType.email};
       const emailStudent = {...fakeStudent, loginType: SectionLoginType.email};
       const emailStudents = {
@@ -237,9 +247,14 @@ describe('ManageStudentsTable', () => {
       expect(passwordColumnHeader).to.have.lengthOf(1);
       expect(passwordColumnHeader.text()).to.equal(i18n.password());
       expect(wrapper.find('PasswordReset')).to.have.lengthOf(1);
+      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
+      expect(loginInfo.props().loginType).to.equal(SectionLoginType.email);
+      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
+        SectionLoginType.email
+      );
     });
 
-    it('does not render password column if loginType is clever', () => {
+    it('renders correctly if loginType is clever', () => {
       const cleverSection = {
         ...fakeSection,
         loginType: SectionLoginType.clever
@@ -254,9 +269,14 @@ describe('ManageStudentsTable', () => {
       );
       const passwordColumnHeader = wrapper.find('#password-header');
       expect(passwordColumnHeader).to.have.lengthOf(0);
+      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
+      expect(loginInfo.props().loginType).to.equal(SectionLoginType.clever);
+      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
+        SectionLoginType.clever
+      );
     });
 
-    it('does not render password column if loginType is google_classroom', () => {
+    it('renders correctly if loginType is google_classroom', () => {
       const googleSection = {
         ...fakeSection,
         loginType: SectionLoginType.google_classroom
@@ -271,6 +291,13 @@ describe('ManageStudentsTable', () => {
       );
       const passwordColumnHeader = wrapper.find('#password-header');
       expect(passwordColumnHeader).to.have.lengthOf(0);
+      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
+      expect(loginInfo.props().loginType).to.equal(
+        SectionLoginType.google_classroom
+      );
+      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
+        SectionLoginType.google_classroom
+      );
     });
   });
 });

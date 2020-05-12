@@ -30,6 +30,7 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
   'teacher-dashboard-section-buttons-alternate-text';
 experiments.MINI_TOOLBOX = 'miniToolbox';
+experiments.VIRTUAL_WORKSHOPS = 'virtual-workshops';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
