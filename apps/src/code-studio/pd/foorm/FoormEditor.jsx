@@ -1,11 +1,32 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import Foorm from './Foorm';
+
+const sampleSurveyData = {
+  facilitators: [
+    {
+      facilitatorId: 1,
+      facilitatorName: 'Alice'
+    },
+    {
+      facilitatorId: 2,
+      facilitatorName: 'Bob'
+    },
+    {
+      facilitatorId: 3,
+      facilitatorName: 'Chris'
+    }
+  ],
+  workshop_course: 'Sample Course'
+};
 
 class FoormEditor extends React.Component {
   static propTypes = {
+    populateCodeMirror: PropTypes.func.isRequired,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
     // populated by redux
     formQuestions: PropTypes.object
   };
@@ -15,8 +36,12 @@ class FoormEditor extends React.Component {
 
     this.state = {
       formKey: 0,
-      formPreviewQuestions: {}
+      formPreviewQuestions: null
     };
+  }
+
+  componentDidMount() {
+    this.props.populateCodeMirror();
   }
 
   previewFoorm = () => {
@@ -41,27 +66,28 @@ class FoormEditor extends React.Component {
   render() {
     return (
       <div>
-        <DropdownButton id="load_config" title="Load Existing Configuration">
-          <MenuItem key={1} eventKey={'ack'}>
-            Sample
-          </MenuItem>
-        </DropdownButton>
+        {this.props.formName && (
+          <h3>{`${this.props.formName}, version ${this.props.formVersion}`}</h3>
+        )}
         <textarea
           ref="content"
           // 3rd parameter specifies number of spaces to insert into the output JSON string for readability purposes.
           // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-          value={this.props.formQuestions}
+          value={JSON.stringify(this.props.formQuestions, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
         />
         <Button onClick={this.previewFoorm}>Preview</Button>
-        <Foorm
-          formQuestions={this.props.formQuestions}
-          formName={'preview'}
-          formVersion={0}
-          submitApi={'/none'}
-          key={this.state.formKey}
-        />
+        {this.state.formPreviewQuestions && (
+          <Foorm
+            formQuestions={this.state.formPreviewQuestions}
+            formName={'preview'}
+            formVersion={0}
+            submitApi={'/none'}
+            key={`form-${this.state.formKey}`}
+            surveyData={sampleSurveyData}
+          />
+        )}
       </div>
     );
   }

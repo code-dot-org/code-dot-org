@@ -5,7 +5,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 
 import 'survey-react/survey.css';
-import FoormEditor from '../../../../../code-studio/pd/foorm/FoormEditor';
+import FoormEditorManager from '../../../../../code-studio/pd/foorm/FoormEditorManager';
 import foorm, {
   setFormQuestions
 } from '../../../../../code-studio/pd/foorm/foormEditorRedux';
@@ -15,26 +15,32 @@ $(document).ready(function() {
   const store = getStore();
   ReactDOM.render(
     <Provider store={store}>
-      <FoormEditor />
+      <FoormEditorManager
+        updateFormQuestions={updateFormQuestions}
+        populateCodeMirror={populateCodeMirror}
+      />
     </Provider>,
     document.getElementById('editor-container')
   );
+});
+
+function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: onChange
   });
-});
+}
 
 function onChange(editor) {
   try {
     const formQuestions = JSON.parse(editor.getValue());
-    // console.log('in onChange');
-    // console.log(editor.getValue());
-    // console.log(formQuestions);
     getStore().dispatch(setFormQuestions(formQuestions));
   } catch (e) {
     // There is a JSON error.
-    //console.log('there is a json error');
     getStore().dispatch(setFormQuestions({}));
   }
 }
+
+const updateFormQuestions = formQuestions => {
+  getStore().dispatch(setFormQuestions(formQuestions));
+};
