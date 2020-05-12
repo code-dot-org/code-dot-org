@@ -73,4 +73,23 @@ class Foorm::Form < ActiveRecord::Base
 
     return questions, latest_version
   end
+
+  def self.fill_in_library_items(questions)
+    questions["pages"]&.each do |page|
+      page["elements"]&.map! do |element|
+        if element["type"] == "library_item"
+          JSON.parse(
+            Foorm::LibraryQuestion.where(
+              library_name: element["library_name"],
+              library_version: element["library_version"].to_i,
+              question_name: element["name"]
+            ).first.question
+          )
+        else
+          element
+        end
+      end
+    end
+    return questions
+  end
 end

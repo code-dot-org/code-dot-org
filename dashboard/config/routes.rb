@@ -482,6 +482,8 @@ Dashboard::Application.routes.draw do
           get :fit_cohort
         end
       end
+
+      post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
     end
   end
 
@@ -700,6 +702,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
+
+  get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
