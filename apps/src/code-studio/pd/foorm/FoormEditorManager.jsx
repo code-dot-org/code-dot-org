@@ -1,3 +1,7 @@
+// Main page for Foorm Editor interface. Will initially show a choice
+// between loading an existing configuration or an empty configuration.
+// After that choice is made, will render FoormEditor with the chosen configuration.
+
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -8,6 +12,7 @@ class FoormEditorManager extends React.Component {
   static propTypes = {
     updateFormQuestions: PropTypes.func,
     populateCodeMirror: PropTypes.func,
+    formNamesAndVersions: PropTypes.array,
 
     // populated by redux
     formQuestions: PropTypes.object
@@ -19,46 +24,29 @@ class FoormEditorManager extends React.Component {
     this.state = {
       formKey: 0,
       formPreviewQuestions: null,
-      formattedConfigurationOptions: null,
+      formattedConfigurationOptions: this.getFormattedConfigurationDropdownOptions(
+        this.props.formNamesAndVersions
+      ),
       showCodeMirror: false,
       formName: null,
       formVersion: null
     };
-
-    this.getConfigurationDropdownOptions();
-  }
-
-  getConfigurationDropdownOptions() {
-    if (!this.state.formattedConfigurationOptions) {
-      $.ajax({
-        url: '/api/v1/pd/foorm/form_names_and_versions',
-        type: 'get'
-      }).done(result => {
-        console.log('in done');
-        this.getFormattedConfigurationDropdownOptions(result);
-      });
-    }
   }
 
   getFormattedConfigurationDropdownOptions(formNamesAndVersions) {
-    console.log('in get formatted config options');
-    console.log(formNamesAndVersions);
-    const configurationOptions = formNamesAndVersions.map(
-      (formNameAndVersion, i) => {
-        const formName = formNameAndVersion['name'];
-        const formVersion = formNameAndVersion['version'];
-        return (
-          <MenuItem
-            key={i}
-            eventKey={i}
-            onClick={() => this.loadConfiguration(formName, formVersion)}
-          >
-            {`${formName}, version ${formVersion}`}
-          </MenuItem>
-        );
-      }
-    );
-    this.setState({formattedConfigurationOptions: configurationOptions});
+    return formNamesAndVersions.map((formNameAndVersion, i) => {
+      const formName = formNameAndVersion['name'];
+      const formVersion = formNameAndVersion['version'];
+      return (
+        <MenuItem
+          key={i}
+          eventKey={i}
+          onClick={() => this.loadConfiguration(formName, formVersion)}
+        >
+          {`${formName}, version ${formVersion}`}
+        </MenuItem>
+      );
+    });
   }
 
   loadConfiguration(formName, formVersion) {
