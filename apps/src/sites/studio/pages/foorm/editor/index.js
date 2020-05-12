@@ -26,14 +26,17 @@ $(document).ready(function() {
   );
 });
 
+// We want to wait to fill in the code mirror until we have selected
+// a configuration to populate it with.
 function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror(codeMirrorArea, 'application/json', {
-    callback: onChange
+    callback: onCodeMirrorChange
   });
 }
 
-function onChange(editor) {
+// Functions for keeping the code mirror content in the redux store.
+function onCodeMirrorChange(editor) {
   try {
     const formQuestions = JSON.parse(editor.getValue());
     getStore().dispatch(setFormQuestions(formQuestions));

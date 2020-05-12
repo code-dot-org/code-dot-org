@@ -73,9 +73,11 @@ class FoormEditor extends React.Component {
         {this.props.formName && (
           <h3>{`${this.props.formName}, version ${this.props.formVersion}`}</h3>
         )}
+        {/* textarea is filled by populateCodeMirror()*/}
         <textarea
           ref="content"
-          // 3rd parameter specifies number of spaces to insert into the output JSON string for readability purposes.
+          // 3rd parameter specifies number of spaces to insert
+          // into the output JSON string for readability purposes.
           // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
           value={JSON.stringify(this.props.formQuestions, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
