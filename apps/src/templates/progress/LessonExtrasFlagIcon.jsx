@@ -4,10 +4,6 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 
 const styles = {
-  main: {
-    width: 21,
-    height: 24
-  },
   flagNormal: {
     color: color.white
   },
@@ -31,14 +27,15 @@ const styles = {
 
 class LessonExtrasFlagIcon extends Component {
   static propTypes = {
-    perfect: PropTypes.bool
+    perfect: PropTypes.bool,
+    style: PropTypes.object
   };
 
   render() {
-    const {perfect} = this.props;
+    const {perfect, style} = this.props;
 
     return (
-      <div style={styles.main}>
+      <div style={style}>
         <span className="fa-stack fa-1x" style={styles.smallStack}>
           <i className="fa fa-flag fa-stack-1x" style={styles.flagNormal} />
           <i
