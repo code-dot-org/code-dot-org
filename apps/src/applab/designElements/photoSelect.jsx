@@ -123,7 +123,7 @@ class PhotoChooserEvents extends React.Component {
 
   getPhotoselectEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code = 'onEvent("${id}", "change", function() {\n  console.log("${id} photo selected!");\n  console.log(getImageURL("${id}"));\n});\n';
+    const code = `onEvent("${id}", "change", function() {\n  console.log("${id} photo selected!");\n  console.log(getImageURL("${id}"));\n});\n`;
     return code;
   }
 
