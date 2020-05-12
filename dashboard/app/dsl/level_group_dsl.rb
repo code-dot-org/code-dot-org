@@ -5,11 +5,16 @@ class LevelGroupDSL < LevelDSL
     @title = nil
     @description_short = nil
     @description = nil
-    @hash[:pages] = []
     @hash[:texts] = []
     @hash[:options] = {skip_dialog: true, skip_sound: true}
     @current_page_level_names = []
     @level_names = []
+    @pages = []
+  end
+
+  # @override
+  def parse_output
+    super.merge(pages: @pages)
   end
 
   # @override
@@ -30,7 +35,7 @@ class LevelGroupDSL < LevelDSL
 
   def page
     @current_page_level_names = []
-    @hash[:pages] << {levels: @current_page_level_names}
+    @pages << {levels: @current_page_level_names}
   end
 
   def text(name)
