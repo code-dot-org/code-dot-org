@@ -1,4 +1,5 @@
 name 'cspu3_assess1_robotpath_2018_2019'
+editor_experiment ''
 height '160'
 layout 'wrap'
 
@@ -33,7 +34,7 @@ Consider the following program which uses commands from the pseudocode described
 	}
 
 
-Which of the following images shows the path and ending location of the robot that will result from executing the code above. The starting location of the robot is shown as dotted triangle for cases where the robot does not start and end at the same location.
+Which of the following images shows the path and ending location of the robot that will result from executing the code above. The starting location of the robot is shown as a dotted triangle for cases where the robot does not start and end at the same location.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
