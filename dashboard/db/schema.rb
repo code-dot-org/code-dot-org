@@ -102,16 +102,14 @@ ActiveRecord::Schema.define(version: 20200504210058) do
   end
 
   create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",                                      null: false
-    t.string   "pool",                         default: "", null: false
+    t.string   "name",                                   null: false
+    t.string   "pool",                      default: "", null: false
     t.string   "category"
-    t.text     "config",         limit: 65535
-    t.text     "helper_code",    limit: 65535
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.text     "config",      limit: 65535
+    t.text     "helper_code", limit: 65535
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.datetime "deleted_at"
-    t.text     "xml_definition", limit: 65535
-    t.string   "description"
     t.index ["deleted_at"], name: "index_blocks_on_deleted_at", using: :btree
     t.index ["pool", "name"], name: "index_blocks_on_pool_and_name", unique: true, using: :btree
   end
@@ -448,20 +446,6 @@ ActiveRecord::Schema.define(version: 20200504210058) do
     t.text     "answers",      limit: 65535, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
-  end
-
-  create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                            null: false
-    t.bigint   "user_level_id",                                   unsigned: true
-    t.integer  "level_source_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "autosaved"
-    t.string   "app",             default: "turtle", null: false
-    t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
-    t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
-    t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
   end
 
   create_table "games", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
