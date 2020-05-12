@@ -16,9 +16,8 @@
 class ContactRollupsFinal < ApplicationRecord
   self.table_name = 'contact_rollups_final'
 
-  def self.overwrite_from_processed_table
-    delete_all
-    insert_from_processed_table
+  def self.truncate_table
+    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name}")
   end
 
   def self.insert_from_processed_table

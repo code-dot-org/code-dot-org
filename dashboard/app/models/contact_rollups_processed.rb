@@ -16,6 +16,10 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
+  def self.truncate_table
+    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name}")
+  end
+
   DEFAULT_BATCH_SIZE = 10000
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
