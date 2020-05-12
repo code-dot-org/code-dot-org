@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'cdo/contact_rollups/v2/pardot'
-require 'cdo/log_collector'
 
 class ContactRollupsV2Test < ActiveSupport::TestCase
   test 'sync new contact' do
@@ -29,12 +28,8 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(
-      log_collector: log_collector,
-      sync_with_pardot: true,
-      is_dry_run: false
-    )
+    cr = ContactRollupsV2.new(is_dry_run: false)
+    cr.build_and_sync
 
     # Verify results
 
@@ -83,12 +78,8 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(
-      log_collector: log_collector,
-      sync_with_pardot: true,
-      is_dry_run: false
-    )
+    cr = ContactRollupsV2.new(is_dry_run: false)
+    cr.build_and_sync
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
