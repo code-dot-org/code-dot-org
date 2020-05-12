@@ -1,8 +1,8 @@
 class ContactRollupsV2
   def self.build_contact_rollups(log_collector, sync_with_pardot=false)
     log_collector.time!('Deletes intermediate content from previous runs') do
-      ContactRollupsRaw.delete_all
-      ContactRollupsProcessed.delete_all
+      truncate_or_delete_table ContactRollupsRaw
+      truncate_or_delete_table ContactRollupsProcessed
     end
 
     log_collector.time!('Extracts data from dashboard email_preferences') do
@@ -29,7 +29,12 @@ class ContactRollupsV2
     end
 
     log_collector.time!("Overwrites contact_rollups_final table") do
-      ContactRollupsFinal.overwrite_from_processed_table
+      truncate_or_delete_table ContactRollupsFinal
+      ContactRollupsFinal.insert_from_processed_table
     end
+  end
+
+  def self.truncate_or_delete_table(model)
+    CDO.rack_env == :production ? model.truncate_table : model.delete_all
   end
 end
