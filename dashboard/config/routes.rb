@@ -484,7 +484,6 @@ Dashboard::Application.routes.draw do
       end
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
-      get 'foorm/form_names_and_versions', action: :get_form_names_and_versions, controller: 'foorm'
       get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
     end
   end

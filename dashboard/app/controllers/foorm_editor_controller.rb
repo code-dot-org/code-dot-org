@@ -1,7 +1,7 @@
 class FoormEditorController < ApplicationController
   # GET '/foorm/editor/'
   def index
-    # only show for admins on non-production for now
+    # only show for admins on non-production
     return render_404 if Rails.env.production? || !current_user.admin?
 
     form_names = Foorm::Form.pluck(:name, :version)

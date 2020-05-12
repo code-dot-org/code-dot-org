@@ -71,7 +71,13 @@ class FoormEditorManager extends React.Component {
   render() {
     return (
       <div>
-        {!this.state.showCodeMirror && (
+        {this.state.showCodeMirror ? (
+          <FoormEditor
+            populateCodeMirror={this.props.populateCodeMirror}
+            formName={this.state.formName}
+            formVersion={this.state.formVersion}
+          />
+        ) : (
           <div>
             <DropdownButton
               id="load_config"
@@ -84,13 +90,6 @@ class FoormEditorManager extends React.Component {
               Empty Configuration
             </Button>
           </div>
-        )}
-        {this.state.showCodeMirror && (
-          <FoormEditor
-            populateCodeMirror={this.props.populateCodeMirror}
-            formName={this.state.formName}
-            formVersion={this.state.formVersion}
-          />
         )}
       </div>
     );
