@@ -176,7 +176,8 @@ class DSLDefined < Level
   end
 
   def dsl_text
-    self.class.decrypt_dsl_text_if_necessary(File.read(file_path)) if file_path && File.exist?(file_path)
+    path = file_path
+    self.class.decrypt_dsl_text_if_necessary(File.read(path)) if path && File.exist?(path)
   end
 
   def assign_attributes(params)
