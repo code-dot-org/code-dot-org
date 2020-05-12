@@ -5,6 +5,8 @@ class PardotV2
 
   API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   PROSPECT_QUERY_URL = "#{API_V4_BASE}/do/query".freeze
+  PROSPECT_READ_URL = "#{API_V4_BASE}/do/read/email".freeze
+  PROSPECT_DELETION_URL = "#{API_V4_BASE}/do/delete/id".freeze
   BATCH_CREATE_URL = "#{API_V4_BASE}/do/batchCreate".freeze
   BATCH_UPDATE_URL = "#{API_V4_BASE}/do/batchUpdate".freeze
 
@@ -191,6 +193,52 @@ class PardotV2
     end
 
     [submissions, errors]
+  end
+
+  # Deletes all prospects with the same email address from Pardot.
+  # @param email [String]
+  # @return [Boolean] all prospects are deleted or not
+  def self.delete_prospects_by_email(email)
+    pardot_ids = retrieve_pardot_ids_by_email(email)
+
+    success = true
+    pardot_ids.each do |id|
+      success = false unless delete_prospect_by_id(id)
+    end
+    success
+  end
+
+  # Deletes a prospect from Pardot using Pardot Id.
+  # This method only runs in the production environment to avoid accidentally deleting prospect.
+  # @param [Integer, String] pardot_id of the prospects to be deleted.
+  # @return [Boolean] deletion succeeds or not
+  def self.delete_prospect_by_id(pardot_id)
+    if CDO.rack_env != :production
+      log "#{__method__} only runs in production. The current environment is #{CDO.rack_env}."
+      return false
+    end
+
+    # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
+    post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
+    true
+  rescue StandardError => e
+    # If the input pardot_id does not exist, Pardot will response with
+    # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
+    return false if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
+  end
+
+  # Finds prospects using email address and extract their Pardot ids.
+  # @param email [String]
+  # @return [Array<String>]
+  def self.retrieve_pardot_ids_by_email(email)
+    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{email}"
+    doc.xpath('//prospect/id').map(&:text)
+  rescue StandardError => e
+    # If the input email does not exist, Pardot will response with
+    # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
+    return [] if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
   end
 
   # Converts contact keys and values to Pardot prospect keys and values.
