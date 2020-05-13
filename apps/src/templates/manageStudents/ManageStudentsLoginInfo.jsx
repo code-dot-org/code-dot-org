@@ -8,6 +8,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import DownloadParentLetter from './DownloadParentLetter';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 
 const styles = {
   explanation: {
@@ -29,7 +30,7 @@ class ManageStudentsLoginInfo extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
-    loginType: PropTypes.string,
+    loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string
@@ -62,17 +63,11 @@ class ManageStudentsLoginInfo extends Component {
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
-            <h2 style={styles.heading}>{i18n.signingInWord()}</h2>
-            <p>{i18n.signingInWordIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
-                sectionCode: sectionCode,
-                codeOrgLink: pegasus('/')
-              })}
+            <SignInInstructions
+              loginType={SectionLoginType.word}
+              sectionCode={sectionCode}
+              studioUrlPrefix={studioUrlPrefix}
             />
-            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
-            <p style={styles.listAlign}>{i18n.signingInWord3()}</p>
           </div>
         )}
         {loginType === SectionLoginType.picture && (
@@ -96,17 +91,11 @@ class ManageStudentsLoginInfo extends Component {
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
-            <h2 style={styles.heading}>{i18n.signingInPic()}</h2>
-            <p>{i18n.signingInPicIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
-                sectionCode: sectionCode,
-                codeOrgLink: pegasus('/')
-              })}
+            <SignInInstructions
+              loginType={SectionLoginType.picture}
+              sectionCode={sectionCode}
+              studioUrlPrefix={studioUrlPrefix}
             />
-            <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
-            <p style={styles.listAlign}>{i18n.signingInPic3()}</p>
           </div>
         )}
         {loginType === SectionLoginType.email && (
@@ -131,14 +120,7 @@ class ManageStudentsLoginInfo extends Component {
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
-            <h2 style={styles.heading}>{i18n.signingInEmail()}</h2>
-            <p>{i18n.signingInEmailIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/')
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.signingInEmail2()}</p>
+            <SignInInstructions loginType={SectionLoginType.email} />
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
@@ -147,15 +129,7 @@ class ManageStudentsLoginInfo extends Component {
             <p style={styles.listAlign}>{i18n.setUpClassGoogle1()}</p>
             <p style={styles.listAlign}>{i18n.setUpClassGoogle2()}</p>
             <p>{i18n.setUpClassGoogleFinished()}</p>
-            <h2 style={styles.heading}>{i18n.signingInGoogle()}</h2>
-            <p>{i18n.signingInGoogleIntro()}</p>
-            <SafeMarkdown
-              markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/')
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.signingInGoogle2()}</p>
-            <p style={styles.listAlign}>{i18n.signingInGoogle3()}</p>
+            <SignInInstructions loginType={SectionLoginType.google_classroom} />
           </div>
         )}
         {loginType === SectionLoginType.clever && (
@@ -164,20 +138,9 @@ class ManageStudentsLoginInfo extends Component {
             <p style={styles.listAlign}>{i18n.setUpClassClever1()}</p>
             <p style={styles.listAlign}>{i18n.setUpClassClever2()}</p>
             <p>{i18n.setUpClassCleverFinished()}</p>
-            <h2 style={styles.heading}>{i18n.signingInClever()}</h2>
-            <p>{i18n.signingInCleverIntro()}</p>
-            <p style={styles.listAlign}>{i18n.signingInClever1()}</p>
-            <div style={styles.sublistAlign}>
-              <SafeMarkdown markdown={i18n.signingInClever1a()} />
-            </div>
-            <p style={styles.sublistAlign}>{i18n.signingInClever1b()}</p>
-            <img
-              style={styles.sublistAlign}
-              src="/shared/images/clever_code_org_logo.png"
-            />
+            <SignInInstructions loginType={SectionLoginType.clever} />
           </div>
         )}
-
         <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
