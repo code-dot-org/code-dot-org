@@ -194,7 +194,7 @@ class LessonGroup extends Component {
 
     return (
       <div>
-        {_.keys(groups).map(group => (
+        {_.keys(lessonGroupMap).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
               Lesson Group: {group || '(none)'}: "
@@ -207,7 +207,7 @@ class LessonGroup extends Component {
               />
             </div>
             <div style={styles.groupBody}>
-              {groups[group].map((lesson, index) => {
+              {groups[lessonGroupMap[group]].map((lesson, index) => {
                 afterLesson++;
                 return (
                   <LessonCard
