@@ -130,11 +130,9 @@ gem 'open_uri_redirections', require: false, group: [:development, :staging, :te
 
 # Ref: https://github.com/tmm1/gctools/pull/17
 gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
-# Optimizes copy-on-write memory usage with GC before web-application fork.
-gem 'nakayoshi_fork'
-# Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', branch: 'debugging'
-gem 'puma_worker_killer'
+gem 'puma', '~> 5.0.0.beta1'
+gem 'puma_log_stats'
+gem 'puma_worker_killer', github: 'wjordan/puma_worker_killer', ref: 'puma_v5'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'

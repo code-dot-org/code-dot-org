@@ -157,11 +157,13 @@ GIT
       omniauth-oauth2 (~> 1.4)
 
 GIT
-  remote: https://github.com/wjordan/puma.git
-  revision: 29a576120b30c34db7706c062ddf9a046723789f
-  branch: debugging
+  remote: https://github.com/wjordan/puma_worker_killer.git
+  revision: 51e9a89b723bf566e76fa0fb63473230484d76a4
+  ref: puma_v5
   specs:
-    puma (3.12.0)
+    puma_worker_killer (0.1.1)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 6)
 
 GIT
   remote: https://github.com/wjordan/sass-rails.git
@@ -431,7 +433,8 @@ GEM
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
     gemoji (2.1.0)
-    get_process_mem (0.2.3)
+    get_process_mem (0.2.5)
+      ffi (~> 1.0)
     gherkin (5.1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -550,7 +553,6 @@ GEM
     multipart-post (2.0.0)
     mustermann (1.0.3)
     mysql2 (0.5.2)
-    nakayoshi_fork (0.0.4)
     naturally (2.1.0)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
@@ -625,9 +627,10 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.3)
-    puma_worker_killer (0.1.0)
-      get_process_mem (~> 0.2)
-      puma (>= 2.7, < 4)
+    puma (5.0.0.beta1)
+      nio4r (~> 2.0)
+    puma_log_stats (0.1.0)
+      puma (>= 2.7, < 6)
     pusher (1.3.1)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
@@ -964,7 +967,6 @@ DEPENDENCIES
   minitest-reporters (~> 1.2.0.beta3)
   mocha
   mysql2 (>= 0.4.1)
-  nakayoshi_fork
   naturally
   net-http-persistent
   net-scp
@@ -990,8 +992,9 @@ DEPENDENCIES
   pg
   phantomjs (~> 1.9.7.1)
   pry
-  puma!
-  puma_worker_killer
+  puma (~> 5.0.0.beta1)
+  puma_log_stats
+  puma_worker_killer!
   pusher (~> 1.3.1)
   rack-cache
   rack-mini-profiler
@@ -1056,4 +1059,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.17.1
+   1.17.3

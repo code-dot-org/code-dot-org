@@ -16,19 +16,19 @@ drain_on_shutdown
 queue_requests false
 
 pidfile "#{File.expand_path(__FILE__)}.pid"
-preload_app!
+#preload_app!
 stdout_redirect dashboard_dir('log', 'puma_stdout.log'), dashboard_dir('log', 'puma_stderr.log'), true
 directory deploy_dir('dashboard')
 
 require 'cdo/app_server_hooks'
 before_fork do
-  ActiveRecord::Base.connection_pool.disconnect!
+  # ActiveRecord::Base.connection_pool.disconnect!
   Cdo::AppServerHooks.before_fork
 end
 
 on_worker_boot do |_index|
   Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
-  ActiveRecord::Base.establish_connection
+  # ActiveRecord::Base.establish_connection
 end
 
 require 'gctools/oobgc'
@@ -39,3 +39,10 @@ plugin :log_stats
 LogStats.threshold = -> {DCDO.get('logStatsDashboard', nil)}
 filter_gems = %w(puma sinatra actionview activesupport honeybadger newrelic rack)
 LogStats.backtrace_filter = ->(bt) {CDO.filter_backtrace(bt, filter_gems: filter_gems)}
+
+# Puma 5 settings
+wait_for_less_busy_worker
+nakayoshi_fork true
+fork_worker 0
+
+worker_boot_timeout 500

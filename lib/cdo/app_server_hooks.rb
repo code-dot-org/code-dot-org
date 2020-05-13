@@ -3,8 +3,8 @@ module Cdo
   # (e.g., dashboard and pegasus).
   module AppServerHooks
     def self.before_fork
-      PEGASUS_DB.disconnect
-      DASHBOARD_DB.disconnect
+      # PEGASUS_DB.disconnect
+      # DASHBOARD_DB.disconnect
       Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
       # Control automated restarts of web application server processes via Gatekeeper.

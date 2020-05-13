@@ -1,0 +1,14 @@
+[Unit]
+Description=<%= @app_name %> socket
+PartOf=<%=@app_name%>.service
+
+[Socket]
+ListenStream=<%=@socket_path%>/<%=@app_name%>.sock
+# Socket options matching Puma defaults
+NoDelay=true
+ReusePort=true
+Backlog=1024
+SocketUser=<%=@user%>
+
+[Install]
+WantedBy=sockets.target

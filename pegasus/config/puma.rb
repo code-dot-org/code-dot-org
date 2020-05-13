@@ -16,7 +16,7 @@ queue_requests false
 
 pidfile "#{File.expand_path(__FILE__)}.pid"
 
-preload_app!
+#preload_app!
 
 stdout_redirect pegasus_dir('log', 'puma_stdout.log'), pegasus_dir('log', 'puma_stderr.log'), true
 directory deploy_dir('pegasus')
@@ -38,3 +38,8 @@ plugin :log_stats
 LogStats.threshold = -> {DCDO.get('logStatsPegasus', nil)}
 filter_gems = %w(puma sinatra actionview activesupport honeybadger newrelic rack)
 LogStats.backtrace_filter = ->(bt) {CDO.filter_backtrace(bt, filter_gems: filter_gems)}
+
+# Puma 5 settings
+wait_for_less_busy_worker
+nakayoshi_fork true
+fork_worker 0

@@ -8,12 +8,6 @@ apt_package 'nginx'
 
 %w(dashboard pegasus).each do |app|
   socket_path = File.join node['cdo-nginx']['socket_path'], "#{app}.sock"
-  # Ensure stale socket-files are cleaned up
-  # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
-  file socket_path do
-    action :delete
-    not_if {::File.socket?(socket_path)}
-  end
   node.override['cdo-secrets']["#{app}_sock"] = socket_path
 end
 
