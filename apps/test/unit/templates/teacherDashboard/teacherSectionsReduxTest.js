@@ -177,7 +177,7 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    lesson_extras_available: true
+    stage_extras_available: true
   },
   {
     id: 112,
@@ -225,7 +225,7 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    lesson_extras_available: true
+    stage_extras_available: true
   }
 ];
 
