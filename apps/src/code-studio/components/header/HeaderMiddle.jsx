@@ -15,7 +15,7 @@ class HeaderMiddle extends React.Component {
   static propTypes = {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object.isRequired,
-    stageData: PropTypes.object.isRequired,
+    lessonData: PropTypes.object.isRequired,
     children: PropTypes.node
   };
 
@@ -47,7 +47,7 @@ class HeaderMiddle extends React.Component {
     if (
       !this.state.addedPopupComponents &&
       this.refs.header_popup_components &&
-      this.props.stageData.script_stages > 1
+      this.props.lessonData.num_script_lessons > 1
     ) {
       $('.header_popup_components')
         .appendTo(ReactDOM.findDOMNode(this.refs.header_popup_components))
@@ -70,9 +70,9 @@ class HeaderMiddle extends React.Component {
   // The first item is the script name, the second item is the progress container.
   // But the third item can be the "I'm finished" link, or the popup link.
   thirdItem() {
-    if (this.props.stageData.finishLink) {
+    if (this.props.lessonData.finishLink) {
       return 'finish';
-    } else if (this.props.stageData.script_stages > 1) {
+    } else if (this.props.lessonData.num_script_lessons > 1) {
       return 'popup';
     } else {
       return 'none';
@@ -116,7 +116,7 @@ class HeaderMiddle extends React.Component {
   }
 
   render() {
-    const {scriptNameData, stageData} = this.props;
+    const {scriptNameData, lessonData} = this.props;
 
     const widths = this.getWidths();
 
@@ -156,18 +156,18 @@ class HeaderMiddle extends React.Component {
             <LessonProgress width={widths.progress} />
           </div>
 
-          {stageData.finishLink && (
+          {lessonData.finishLink && (
             <div
               id="finish_link_container"
               style={{float: 'left', width: widths.finishLink}}
             >
               <div className="header_finished_link">
-                <a href={stageData.finishLink}>{stageData.finishText}</a>
+                <a href={lessonData.finishLink}>{lessonData.finishText}</a>
               </div>
             </div>
           )}
 
-          {stageData.script_stages > 1 && (
+          {lessonData.num_script_lessons > 1 && (
             <div
               id="header_popup_container"
               style={{float: 'left', width: widths.popup}}
