@@ -1432,7 +1432,7 @@ id:
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} Berhenti {BEHAVIOR}
       Mikelab_repeatUntilComplete:
-        text: Ulangi selamanya
+        text: ulangi selamanya
       Mikelab_sendBad:
         text: memindahkan objek ke kiri
       Mikelab_sendGood:
@@ -1474,10 +1474,10 @@ id:
         text: ketika {KEY} ditekan
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': anak panah atas
+            '"down"': anak panah bawah
+            '"left"': anak panah kiri
+            '"right"': anak panah kanan
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1485,10 +1485,10 @@ id:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': anak panah atas
+            '"down"': anak panah bawah
+            '"left"': anak panah kiri
+            '"right"': anak panah kanan
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1504,10 +1504,10 @@ id:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': anak panah atas
+            '"down"': anak panah bawah
+            '"left"': anak panah kiri
+            '"right"': anak panah kanan
       Mikelab_xLocationOf:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:

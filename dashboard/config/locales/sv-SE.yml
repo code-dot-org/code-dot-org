@@ -839,36 +839,6 @@ sv:
     peer_feedback: Din feedback
     outdated: Denna feedback skapades för en tidigare skickad version
     peer_review: Din recension
-  flex_category:
-    required: Översikt
-    content: Innehåll
-    practice: Undervisningsmetoder
-    peer_review: Din recension
-    csf_digcit: Digitalt medborgarskap
-    csf_jigsaw: Pussel
-    csf_loops: loopar
-    csf_events: Händelser
-    csf_binary: Binära
-    csf_conditionals: Villkor
-    csf_nested_loops: Kapslade slingor(loopar)
-    csf_functions: funktioner
-    csf_variables: variabler
-    csf_for_loops: "'För' loopar"
-    csf_internet: Internet
-    csf_warmup: Uppvärmning
-    csd1_1: 'Kapitel 1: Problemlösnings-processen'
-    csd1_2: 'Kapitel 2: Datorer och Problemlösning'
-    csd3_1: 'Kapitel 1: Bilder och Animationer'
-    csd3_2: 'Kapitel 2: Bygga Spel'
-    csp1_2: 'Kapitel 2: Uppfinna Internet'
-    csp_variables: variabler
-    csp_conditionals: Villkor
-    csp_functions: funktioner
-    csp_project: Projekt
-    csp_lists: Listor
-    csp_loops: loopar
-    csp_libraries: Bibliotek
-    k5_next_steps: Nästa steg
   external_links:
     disclaimer: Varning
   hoc_download:
