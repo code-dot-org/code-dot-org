@@ -4,22 +4,22 @@
   {
    "name": "page1",
    "elements": [
-    {
+     {
      "type": "html",
      "name": "clickTo44",
      "visible": false,
      "titleLocation": "hidden",
-     "html": "<h2 style=\"background-color: #ffff00\"> Variable Test</h2>\n<ul>\n<li><span style=\"background-color: #ffff00;\">environment: {environment}</span></li>\n<li><span style=\"background-color: #ffff00;\">userId: {userId}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshopId: {workshopId}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshopCourse: {workshopCourse}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshopSubject: {workshopSubject}</span></li>\n<li><span style=\"background-color: #ffff00;\">regionalPartnerName: {regionalPartnerName}</span></li>\n<li><span style=\"background-color: #ffff00;\">sessionId: {sessionId}</span></li>\n<li><span style=\"background-color: #ffff00;\">submitRedirect: {submitRedirect}</span></li>\n</ul>"
+     "html": "<h2 style=\"background-color: #ffff00\"> Variable Test</h2>\n<ul>\n<li><span style=\"background-color: #ffff00;\">environment: {environment}</span></li>\n<li><span style=\"background-color: #ffff00;\">userId: {user_id}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshopId: {workshop_id}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshopCourse: {workshop_course}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshopSubject: {workshop_subject}</span></li>\n<li><span style=\"background-color: #ffff00;\">regionalPartnerName: {regional_partner_name}</span></li>\n<li><span style=\"background-color: #ffff00;\">sessionId: {session_id}</span></li>\n</ul>"
     },
     {
      "type": "html",
      "name": "clickTo109",
-     "html": "<p><span style=\"font-size: 18pt;\"><strong>{workshopCourse} Summer workshop Post-Survey</strong></span></p>\n<p><strong>Congratulations! You've completed the Code.org {workshopCourse} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the week as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified,</strong>aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+     "html": "<p><span style=\"font-size: 18pt;\"><strong>{workshop_course} Summer workshop Post-Survey</strong></span></p>\n<p><strong>Congratulations! You've completed the Code.org {workshop_course} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the week as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified,</strong>aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
     },
     {
      "type": "html",
      "name": "clickTo",
-     "html": "<p><strong><span style=\"font-size: 14pt;\">Your {workshopCourse} Workshop Experience</span></strong></p>"
+     "html": "<p><strong><span style=\"font-size: 14pt;\">Your {workshop_course} Workshop Experience</span></strong></p>"
     },
     {
      "type": "matrix",
@@ -138,7 +138,7 @@
     {
      "type": "matrix",
      "name": "curriculum_impressions",
-     "title": "Having been through this workshop, what are your overall impressions of the {workshopCourse} curriculum?",
+     "title": "Having been through this workshop, what are your overall impressions of the {workshop_course} curriculum?",
      "columns": [
       {
        "value": "1",
@@ -379,14 +379,14 @@
     },
     {
      "type": "paneldynamic",
-     "name": "facilitator_feedback_panel",
+     "name": "facilitators",
      "title": "Facilitator Feedback",
      "description": "Please leave feedback about your facilitator(s).",
      "templateElements": [
       {
        "type": "matrix",
        "name": "facilitator_effectiveness",
-       "title": "During my workshop, {panel.facilitatorName} did the following:",
+       "title": "During my workshop, {panel.facilitator_name} did the following:",
        "columns": [
         {
          "value": "1",
@@ -447,15 +447,15 @@
       {
        "type": "comment",
        "name": "facilitator_did_well",
-       "title": "What were two things {panel.facilitatorName} did well?"
+       "title": "What were two things {panel.facilitator_name} did well?"
       },
       {
        "type": "comment",
        "name": "facilitator_could_improve",
-       "title": "What were two things {panel.facilitatorName} could do better?"
+       "title": "What were two things {panel.facilitator_name} could do better?"
       }
      ],
-     "templateTitle": "Facilitator {panel.facilitatorPosition} of {panel.numFacilitators} - {panel.facilitatorName}",
+     "templateTitle": "Facilitator {panel.facilitator_position} of {panel.num_facilitators} - {panel.facilitator_name}",
      "allowAddPanel": false,
      "allowRemovePanel": false
     },
