@@ -1,8 +1,10 @@
 const SET_ARROW_BUTTONS_VISIBLE = 'arrowDisplay/SET_ARROW_BUTTONS_VISIBLE';
 const SET_ARROW_BUTTONS_HIDDEN = 'arrowDisplay/SET_ARROW_BUTTONS_HIDDEN';
+const SET_ARROW_BUTTONS_DISABLED = 'arrowDisplay/SET_ARROW_BUTTONS_DISABLED';
 
 const initialState = {
-  buttonsAreVisible: false
+  buttonsAreVisible: false,
+  buttonsAreDisabled: true
 };
 
 export default function arrowDisplay(state = initialState, action) {
@@ -17,6 +19,11 @@ export default function arrowDisplay(state = initialState, action) {
         ...state,
         buttonsAreVisible: false
       };
+    case SET_ARROW_BUTTONS_DISABLED:
+      return {
+        ...state,
+        buttonsAreDisabled: action.isDisabled
+      };
     default:
       return state;
   }
@@ -28,4 +35,8 @@ export function showArrowButtons() {
 
 export function hideArrowButtons() {
   return {type: SET_ARROW_BUTTONS_HIDDEN};
+}
+
+export function setArrowButtonDisabled(isDisabled) {
+  return {type: SET_ARROW_BUTTONS_DISABLED, isDisabled};
 }

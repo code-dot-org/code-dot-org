@@ -4,6 +4,7 @@ import React from 'react';
 import GameButtons from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
+import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {
@@ -15,6 +16,7 @@ export default class CraftVisualizationColumn extends React.Component {
       <span>
         <ProtectedVisualizationDiv>
           <div id="minecraft-frame">
+            <SwipePrompt useMinecraftStyling />
             <div id="code-connection-log" />
           </div>
         </ProtectedVisualizationDiv>

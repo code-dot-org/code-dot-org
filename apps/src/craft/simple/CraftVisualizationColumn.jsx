@@ -5,12 +5,14 @@ var msg = require('@cdo/locale');
 var GameButtons = require('../../templates/GameButtons').default;
 var BelowVisualization = require('../../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
+import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
 var CraftVisualizationColumn = function(props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
         <div id="minecraft-frame">
+          <SwipePrompt useMinecraftStyling />
           <div id="phaser-game" />
         </div>
       </ProtectedVisualizationDiv>

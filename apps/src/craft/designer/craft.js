@@ -21,7 +21,6 @@ import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
-
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
