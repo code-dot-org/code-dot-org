@@ -9,7 +9,7 @@ require 'honeybadger/ruby'
 # Writes teacher application data for this year into
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
-def update_sheets(sheets)
+def update_tabs(sheet)
   # Update application sheet
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
@@ -46,19 +46,18 @@ def update_sheets(sheets)
     ]
   end
 
-  sheets.export(
-    document_key: CDO.applications_2020_2021_gsheet_key,
+  sheet.export(
     sheet_name: 'all_apps',
     rows: applications
   )
 end
 
-def notify_of_external_sharing(sheets)
+def notify_of_external_sharing(sheet)
   # List of external emails that we can share this document with.
   # This list is saved in DCDO as an array. To append a new value to this list:
   # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
   allowed_list = DCDO.get('external_emails_with_application_data_access', [])
-  external_emails = sheets.get_external_emails_with_access(document_key: CDO.applications_2020_2021_gsheet_key) - allowed_list
+  external_emails = sheet.external_emails_with_access - allowed_list
 
   if external_emails.present?
     email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
@@ -73,9 +72,9 @@ end
 
 def main
   # Uses a Google Cloud service account to access Google Drive
-  sheets = Google::Sheets.new
-  update_sheets(sheets)
-  notify_of_external_sharing(sheets)
+  sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
+  update_tabs(sheet)
+  notify_of_external_sharing(sheet)
 end
 
 main

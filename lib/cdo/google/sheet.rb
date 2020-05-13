@@ -15,14 +15,15 @@ class WebAgent
 end
 
 module Google
-  class Sheets
-    def drive
-      @drive ||= Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
+  class Sheet
+    def initialize(document_key)
+      @drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
+      @document_key = document_key
     end
 
-    def export(document_key:, sheet_name:, rows:)
+    def export(sheet_name:, rows:)
       # Write exported data to a sheet in the document
-      drive.update_sheet rows, document_key, "#{sheet_name} (auto)"
+      @drive.update_sheet rows, @document_key, "#{sheet_name} (auto)"
 
       # Write new metadata to a second sheet in the document
       last_updated = DateTime.now.in_time_zone ActiveSupport::TimeZone.new "Pacific Time (US & Canada)"
@@ -40,15 +41,15 @@ module Google
         The sheet is shared with a \"service account\" that updates it on the application's behalf.
         (Technical Details: https://github.com/code-dot-org/code-dot-org/pull/32597)
       META
-      drive.update_sheet metadata, document_key, "#{sheet_name}_meta (auto)"
+      @drive.update_sheet metadata, @document_key, "#{sheet_name}_meta (auto)"
     end
 
-    # Given a particular Google Sheets document, returns a list of email addresses of
-    # individuals who have been granted access to the document who are not:
+    # Returns a list of email addresses of individuals who have been granted access
+    # to the document who are not:
     #   - @code.org accounts
     #   - The configured gsheet writer service account
-    def get_external_emails_with_access(document_key:)
-      acl = drive.get_spreadsheet_acl document_key
+    def external_emails_with_access
+      acl = @drive.get_spreadsheet_acl @document_key
       emails = []
       acl.each do |entry|
         email = entry.email_address
