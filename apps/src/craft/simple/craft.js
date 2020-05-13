@@ -396,6 +396,15 @@ Craft.init = function(config) {
             );
             visualizationColumn.style.width = this.nativeVizWidth + 'px';
           }
+
+          // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
+          Craft.gameController.game.device.whenReady(
+            () => {
+              Craft.gameController.game.scale.compatibility.scrollTo = false;
+            },
+            this,
+            false
+          );
         },
         twitter: {
           text: 'Share on Twitter',

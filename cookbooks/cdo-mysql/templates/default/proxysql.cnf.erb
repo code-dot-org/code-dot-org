@@ -23,7 +23,7 @@ mysql_variables=
 
   # Semicolon-separated list of hostname:port entries for interfaces for incoming MySQL traffic.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-interfaces
-  interfaces="127.0.0.1:<%= @port %>"
+  interfaces="127.0.0.1:<%=@port%>;127.0.0.1:<%=@reporting_port%>"
 
   # The server version with which the proxy will respond to the clients.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-server_version
@@ -75,7 +75,7 @@ mysql_variables=
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
 mysql_servers =
 (
-<% [@writer, @reader].uniq.product([1, 2]).push([@writer, 0]).each do |server, hostgroup| -%>
+<% @mysql_servers.each do |server, hostgroup| -%>
   {
     address =        "<%= server.host %>"
     port =            <%= server.port || 3306 %>
@@ -174,4 +174,12 @@ mysql_query_rules:
     match_digest="SET @@wait_timeout"
     multiplex=2
   },
+  {
+    # Send reporting-port queries to the reporting hostgroup (HG3).
+    rule_id=6
+    proxy_port=<%=@reporting_port%>
+    active=1
+    destination_hostgroup=3
+    apply=1
+  }
 )

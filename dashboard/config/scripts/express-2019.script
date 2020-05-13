@@ -11,6 +11,7 @@ is_stable true
 supported_locales ["es-MX", "fr-FR"]
 curriculum_umbrella 'CSF'
 tts true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/express/standards/"]]
 
 lesson_group 'csf_warmup', display_name: 'Warm-Up'
 stage 'Dance Party'

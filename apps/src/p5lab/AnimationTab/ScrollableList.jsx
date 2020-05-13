@@ -21,7 +21,8 @@ class ScrollableList extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
-    children: PropTypes.node
+    children: PropTypes.node,
+    onScroll: PropTypes.func
   };
 
   render() {
@@ -29,6 +30,7 @@ class ScrollableList extends React.Component {
       <div
         className={this.props.className}
         style={[staticStyles.root, this.props.style]}
+        onScroll={this.props.onScroll}
       >
         <div style={staticStyles.margins}>{this.props.children}</div>
       </div>

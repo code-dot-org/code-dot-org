@@ -105,7 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
-    code_break_takeover = DCDO.get("promote_code_break", nil) && request.language == "en"
+    code_break_takeover = promote_code_break(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -130,14 +130,10 @@ class Homepage
     if code_break_takeover
       [
         {
-          type: "code_break_learn_more"
+          type: "code_break_check"
         },
         {
-          type: "code_break_video",
-          youtube_id: youtube_id,
-          download_path: download_path,
-          facebook: facebook,
-          twitter: twitter
+          type: "code_break_home"
         }
       ]
     elsif hoc_mode == "actual-hoc"
@@ -369,8 +365,12 @@ class Homepage
     end
   end
 
+  def self.promote_code_break(request)
+    DCDO.get("promote_code_break", nil) && request.language == "en"
+  end
+
   def self.show_single_hero(request)
-    DCDO.get("promote_code_break", nil) && request.language == "en" ? "codebreak2020" : "changeworld"
+    promote_code_break(request) ? "codebreak2020" : "changeworld"
   end
 
   def self.get_heroes_arranged(request)
@@ -450,10 +450,14 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    false
+    true
   end
 
   def self.show_courses_banner(request)
+    false
+  end
+
+  def self.show_special2020_banner(request)
     false
   end
 

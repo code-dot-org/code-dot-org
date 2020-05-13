@@ -481,33 +481,6 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'Script DSL with skipped extras' do
-    input_dsl = <<~DSL
-      stage 'Lesson1'
-      level 'Level 1'
-      level 'Level 2'
-      no_extras
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            stage_extras_disabled: true,
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
   test 'Script DSL with blank stage visible after date will set visible after to next wednesday at 8 am PST' do
     Timecop.freeze(Time.new(2020, 3, 27))
 
