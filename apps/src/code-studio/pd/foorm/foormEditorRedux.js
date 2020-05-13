@@ -24,7 +24,6 @@ export default function foormEditorRedux(state = initialState, action) {
     };
   }
   if (action.type === SET_HAS_ERROR) {
-    console.log(`setting has error to ${action.hasError}`);
     return {
       ...state,
       hasError: action.hasError

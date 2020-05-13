@@ -43,8 +43,7 @@ function populateCodeMirror() {
 function onCodeMirrorChange(editor) {
   try {
     const formQuestions = JSON.parse(editor.getValue());
-    getStore().dispatch(setFormQuestions(formQuestions));
-    getStore().dispatch(setHasError(false));
+    updateFormQuestions(formQuestions);
   } catch (e) {
     // There is a JSON error.
     getStore().dispatch(setFormQuestions({}));

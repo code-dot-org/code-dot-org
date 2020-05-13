@@ -8,6 +8,13 @@ import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEditor from './FoormEditor';
 
+const styles = {
+  loadError: {
+    fontWeight: 'bold',
+    padding: '1em'
+  }
+};
+
 class FoormEditorManager extends React.Component {
   static propTypes = {
     updateFormQuestions: PropTypes.func,
@@ -30,7 +37,8 @@ class FoormEditorManager extends React.Component {
       ),
       showCodeMirror: false,
       formName: null,
-      formVersion: null
+      formVersion: null,
+      hasLoadError: false
     };
   }
 
@@ -55,22 +63,35 @@ class FoormEditorManager extends React.Component {
       url: '/api/v1/pd/foorm/form_questions',
       type: 'get',
       data: {name: formName, version: formVersion}
-    }).done(result => {
-      this.props.updateFormQuestions(result);
-      this.setState({
-        showCodeMirror: true,
-        formName: formName,
-        formVersion: formVersion
+    })
+      .done(result => {
+        this.props.updateFormQuestions(result);
+        this.setState({
+          showCodeMirror: true,
+          formName: formName,
+          formVersion: formVersion,
+          hasLoadError: false
+        });
+        this.props.resetCodeMirror(result);
+      })
+      .fail(() => {
+        this.props.updateFormQuestions({});
+        this.setState({
+          showCodeMirror: true,
+          formName: null,
+          formVersion: null,
+          hasLoadError: true
+        });
+        this.props.resetCodeMirror({});
       });
-      this.props.resetCodeMirror(result);
-    });
   }
 
   initializeEmptyCodeMirror = () => {
     this.setState({
       showCodeMirror: true,
       formName: null,
-      formVersion: null
+      formVersion: null,
+      hasLoadError: false
     });
     this.props.resetCodeMirror({});
   };
@@ -80,11 +101,15 @@ class FoormEditorManager extends React.Component {
       <div>
         <div>
           <DropdownButton id="load_config" title="Load Survey...">
-            {this.state.formattedConfigurationOptions &&
-              this.state.formattedConfigurationOptions}
+            {this.state.formattedConfigurationOptions}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror}>New Survey</Button>
         </div>
+        {this.state.hasLoadError && (
+          <div style={styles.loadError}>
+            Could not load the selected survey.
+          </div>
+        )}
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
