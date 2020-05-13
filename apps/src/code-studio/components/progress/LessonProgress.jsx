@@ -83,10 +83,10 @@ function getShowLevels(levels, width) {
   } else {
     // If there isn't enough room, show the current level in the middle
     // of the dots we can show.
-    var numSurroundingElements = Math.floor(numAvailableElements / 2);
+    var numSurroundingElements = numAvailableElements / 2;
 
-    firstElement = currentLevelIndex - numSurroundingElements;
-    var lastElement = currentLevelIndex + numSurroundingElements;
+    firstElement = Math.ceil(currentLevelIndex - numSurroundingElements);
+    var lastElement = Math.ceil(currentLevelIndex + numSurroundingElements);
 
     // Adjust beginning and ending so they don't go off the ends of the range.
     if (firstElement < 0) {
