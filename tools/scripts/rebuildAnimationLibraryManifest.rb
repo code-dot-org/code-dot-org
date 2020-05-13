@@ -101,7 +101,7 @@ class ManifestBuilder
         #{dim 'd[ o_0 ]b'}
     EOS
 
-    if @options[:spritelab]
+    if @options[:spritelab] && @option[:upload_to_s3]
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         "spritelabCostumeLibrary.json",
@@ -420,6 +420,10 @@ cli_parser = OptionParser.new do |opts|
 
   opts.on('-v', '--verbose', 'Use verbose log output') do
     options[:verbose] = true
+  end
+
+  opts.on('-u', '--upload', 'Upload Spritelab manifest to S3') do
+    options[:upload_to_s3] = true
   end
 
   opts.on_tail("-h", "--help", "Show this message") do
