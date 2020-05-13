@@ -4,11 +4,7 @@ class FoormEditorController < ApplicationController
     # only show for admins on non-production
     return render_404 if Rails.env.production? || !current_user.admin?
 
-    form_names = Foorm::Form.pluck(:name, :version)
-    formatted_names_and_versions = []
-    form_names.each do |form_data|
-      formatted_names_and_versions << {name: form_data[0], version: form_data[1]}
-    end
+    formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version}}
 
     @script_data = {
       props: {
