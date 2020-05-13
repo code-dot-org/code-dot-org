@@ -140,14 +140,16 @@ class HeaderMiddle extends React.Component {
             />
           </div>
 
-          {widths.scriptName > 0 && (
-            <div
-              id="script_name_container"
-              style={{float: 'left', width: widths.scriptName}}
-            >
-              <ScriptName {...extraScriptNameData} />
-            </div>
-          )}
+          <div
+            id="script_name_container"
+            style={{
+              float: 'left',
+              width: widths.scriptName,
+              display: widths.scriptName === 0 ? 'none' : undefined
+            }}
+          >
+            <ScriptName {...extraScriptNameData} />
+          </div>
 
           <div
             id="lesson_progress_container"
