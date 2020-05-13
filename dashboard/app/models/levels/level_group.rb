@@ -102,6 +102,7 @@ class LevelGroup < DSLDefined
   # @param [Array] new_levels_by_page A 2D array of levels, e.g.
   #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
   def update_levels_by_page(new_levels_by_page)
+    reload
     self.child_levels = []
     new_levels = new_levels_by_page.flatten
     new_levels.each_with_index do |level, level_index|
@@ -118,6 +119,10 @@ class LevelGroup < DSLDefined
       levels_per_page.push(levels_by_page.count)
     end
     save!
+  end
+
+  def levels_by_page
+    pages.map(&:levels)
   end
 
   def assign_attributes(params)
@@ -139,14 +144,16 @@ class LevelGroup < DSLDefined
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
     level = super(new_suffix, editor_experiment: editor_experiment)
-    level.clone_sublevels_with_suffix(new_suffix)
+    level.clone_sublevels_with_suffix(levels_by_page, new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
   end
 
   # Clone the sublevels, adding the specified suffix to the level name. Also
   # updates this level to reflect the new level names.
-  def clone_sublevels_with_suffix(new_suffix)
+  # @param [Array[Array[Level]]] A 2D array of levels, e.g.
+  #   [[Level<id:1>, Level<id:2>],[Level<id:3>]]
+  def clone_sublevels_with_suffix(old_levels_by_page, new_suffix)
     new_properties = properties
 
     if new_properties['texts']
@@ -156,18 +163,12 @@ class LevelGroup < DSLDefined
         text
       end
     end
-
-    if new_properties['pages']
-      new_properties['pages'].map! do |page|
-        page['levels'].map! do |level_name|
-          new_level = Level.find_by_name(level_name).clone_with_suffix(new_suffix)
-          new_level.name
-        end
-        page
-      end
-    end
-
     update!(properties: new_properties)
+
+    new_levels_by_page = old_levels_by_page.map do |page_levels|
+      page_levels.map {|level| level.clone_with_suffix(new_suffix)}
+    end
+    update_levels_by_page(new_levels_by_page)
   end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
