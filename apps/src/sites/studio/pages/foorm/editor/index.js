@@ -6,7 +6,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
 import foorm, {
-  setFormQuestions
+  setFormQuestions,
+  setHasError
 } from '@cdo/apps/code-studio/pd/foorm/foormEditorRedux';
 
 import 'survey-react/survey.css';
@@ -43,18 +44,22 @@ function onCodeMirrorChange(editor) {
   try {
     const formQuestions = JSON.parse(editor.getValue());
     getStore().dispatch(setFormQuestions(formQuestions));
+    getStore().dispatch(setHasError(false));
   } catch (e) {
     // There is a JSON error.
     getStore().dispatch(setFormQuestions({}));
+    getStore().dispatch(setHasError(true));
   }
 }
 
 const updateFormQuestions = formQuestions => {
   getStore().dispatch(setFormQuestions(formQuestions));
+  getStore().dispatch(setHasError(false));
 };
 
 function resetCodeMirror(json) {
   if (codeMirror) {
     codeMirror.setValue(JSON.stringify(json, null, 2));
+    getStore().dispatch(setHasError(false));
   }
 }

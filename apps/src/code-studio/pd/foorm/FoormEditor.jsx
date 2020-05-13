@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button} from 'react-bootstrap';
 import Foorm from './Foorm';
+import FontAwesome from '../../../templates/FontAwesome';
 
 const sampleSurveyData = {
   facilitators: [
@@ -26,13 +27,21 @@ const sampleSurveyData = {
   workshop_course: 'Sample Course'
 };
 
+const styles = {
+  errorMessage: {
+    fontWeight: 'bold',
+    padding: '1em'
+  }
+};
+
 class FoormEditor extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func.isRequired,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
     // populated by redux
-    formQuestions: PropTypes.object
+    formQuestions: PropTypes.object,
+    formHasError: PropTypes.bool
   };
 
   constructor(props) {
@@ -83,17 +92,27 @@ class FoormEditor extends React.Component {
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
         />
-        <Button onClick={this.previewFoorm}>Preview</Button>
-        {this.state.formPreviewQuestions && (
-          // key allows us to force re-render when preview is clicked
-          <Foorm
-            formQuestions={this.state.formPreviewQuestions}
-            formName={'preview'}
-            formVersion={0}
-            submitApi={'/none'}
-            key={`form-${this.state.formKey}`}
-            surveyData={sampleSurveyData}
-          />
+        {this.props.formHasError ? (
+          <div style={styles.errorMessage}>
+            <FontAwesome icon="exclamation-triangle" /> There is a parsing error
+            in the survey configuration. Errors are noted on the left side of
+            the editor.
+          </div>
+        ) : (
+          <div>
+            <Button onClick={this.previewFoorm}>Preview</Button>
+            {this.state.formPreviewQuestions && (
+              // key allows us to force re-render when preview is clicked
+              <Foorm
+                formQuestions={this.state.formPreviewQuestions}
+                formName={'preview'}
+                formVersion={0}
+                submitApi={'/none'}
+                key={`form-${this.state.formKey}`}
+                surveyData={sampleSurveyData}
+              />
+            )}
+          </div>
         )}
       </div>
     );
@@ -101,6 +120,9 @@ class FoormEditor extends React.Component {
 }
 
 export default connect(
-  state => ({formQuestions: state.foorm.formQuestions || {}}),
+  state => ({
+    formQuestions: state.foorm.formQuestions || {},
+    formHasError: state.foorm.hasError
+  }),
   dispatch => ({})
 )(FoormEditor);
