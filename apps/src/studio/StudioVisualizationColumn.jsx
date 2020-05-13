@@ -3,8 +3,8 @@ import React from 'react';
 var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
-var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
+import ArrowButtons from '../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';

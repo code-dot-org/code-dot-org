@@ -25,6 +25,7 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -264,9 +265,8 @@ export default class Craft {
             }
 
             dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
-            $('#soft-buttons')
-              .removeClass('soft-buttons-none')
-              .addClass('soft-buttons-' + 4);
+            $('#soft-buttons').addClass('soft-buttons-' + 4);
+            getStore().dispatch(showArrowButtons());
             $('.arrow').prop('disabled', false);
 
             const resetButton = document.getElementById('resetButton');

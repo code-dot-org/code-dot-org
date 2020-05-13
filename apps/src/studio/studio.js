@@ -55,6 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -505,7 +506,6 @@ var drawMap = function() {
 
   // Attach click handler.
   // HERE this looks like where we add swipe for playlab. (see on drag below)
-  debugger;
   var hammerSvg = new Hammer(svg);
   hammerSvg.on('tap', Studio.onSvgClicked);
   hammerSvg.on('drag', Studio.onSvgDrag);
@@ -2640,9 +2640,8 @@ Studio.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay
