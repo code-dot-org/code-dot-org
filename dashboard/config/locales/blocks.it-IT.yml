@@ -978,8 +978,22 @@ it:
         text: quando si clicca su "Esegui"
       gamelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
+      gamelab_addBehaviorUntil:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_changeColor:
+        text: modifica {COLOR} {METHOD} di {AMOUNT}
+        options:
+          METHOD:
+            '"tint"': tonalità
+      gamelab_changeColorBy:
+        text: modifica {COLOR} {METHOD} di {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': tonalità
+            '"saturation"': saturazione
+            '"brightness"': luminosità
       gamelab_changePropBy:
         text: modifica la {PROPERTY} di {SPRITE} di {VAL}
         options:
@@ -1001,9 +1015,16 @@ it:
         text: "{SPRITE} cliccato"
       gamelab_comment:
         text: 'commento: {COMMENT}'
+      gamelab_console.log:
+        text: messaggio di log {MESSAGE}
       gamelab_createNewSprite:
         text: "crea un nuovo personaggio\n chiamato {NAME} \n con il costume {COSTUME}
           \n alla posizione {LOCATION}"
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': vero
+            'false': falso
       gamelab_destroy:
         text: elimina {THIS}
       gamelab_draggable:
@@ -1026,6 +1047,8 @@ it:
           CHOICE:
             '"this"': questo
             '"other"': altro
+      gamelab_hasBehavior:
+        text: "{SPRITE} sta eseguendo {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: nascondi schermata introduttiva
       gamelab_isTouchingEdges:
@@ -1070,10 +1093,38 @@ it:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': bordo
+            '"inner"': quadrato interno
+            '"circle"': cerchio
+            '"grid"': griglia
+            '"row"': fila
+            '"column"': colonna
+            '"x"': croce
+            '"plus"': più
+            '"random"': a caso
+      gamelab_locationAdd:
+        options:
+          OPERATOR:
+            "'plus'": "+"
+            "'minus'": "-"
       gamelab_locationAt:
         text: 'posizione x: {X} y: {Y}'
+      gamelab_locationConstant:
+        options:
+          DIR:
+            "'north'": nord
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'north'": nord
+            "'random'": a caso
       gamelab_locationMouse:
         text: posizione del mouse
+      gamelab_locationNorth:
+        text: nord
       gamelab_locationOf:
         text: posizione di {SPRITE}
       gamelab_location_picker:
@@ -1086,6 +1137,8 @@ it:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
+      gamelab_mixColors:
+        text: mescola {COLOR1} e {COLOR2}
       gamelab_mouseLocation:
         text: posizione del mouse
       gamelab_moveForward:
@@ -1144,6 +1197,17 @@ it:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sottomarino
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nessuno
+      gamelab_setPosition:
+        options:
+          POSITION:
+            "{x: 50, y: 50}": in alto a sinistra
+            "{x: 200, y: 50}": in alto al centro
+            "{x: 350, y: 50}": in alto a destra
+            "{x: 200, y: 200}": al centro
+            "{x: 50, y: 350}": in basso a sinistra
+            "{x: 200, y: 350}": in basso al centro
+            "{x: 350, y: 350}": in basso a destra
+            '"random"': a caso
       gamelab_setProp:
         text: imposta la {PROPERTY} di {SPRITE} a {VAL}
         options:
@@ -1162,6 +1226,8 @@ it:
             '"height"': altezza
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
+      gamelab_setup:
+        text: quando si clicca su "Esegui"
       gamelab_setupSim:
         text: |-
           imposta simolazione con
@@ -1177,6 +1243,40 @@ it:
           CONDITION:
             '"when"': quando
             '"while"': mentre
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ovest
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+            '"tint"': tonalità
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+            '"tint"': tonalità
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
+      gamelab_thisBeginsBehaviorSimple:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR}
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} gradi"
         options:
@@ -1200,10 +1300,24 @@ it:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quando viene premuta la freccia a sinistra
+      gamelab_whenMouseClicked:
+        text: quando si clicca con il mouse
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": in alto
+            "'down'": in basso
+            "'left'": a sinistra
+            "'right'": a destra
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
       gamelab_whenTouching:
         text: quando {SPRITE1} tocca {SPRITE2}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
       gamelab_whenUpArrow:
         text: quando viene premuta la freccia in su
       gamelab_whileDownArrow:
@@ -1505,12 +1619,57 @@ it:
         text: personaggio aalab {SPRITE} inizia {BEHAVIOR} per {SECONDS} secondi
       aalab_addBehaviorUntilBoolean:
         text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
+      aalab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      aalab_changePropByFlexible:
+        text: modifica la {PROPERTY} di {SPRITE} di {VAL}
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+      aalab_checkTouching:
+        text: "{CONDITION} {SPRITE1} tocca {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+      aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} cliccato"
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+      aalab_createNewSpriteAnon:
+        text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      aalab_getThisSprite:
+        text: "{CHOICE} personaggio"
+        options:
+          CHOICE:
+            '"this"': questo
+            '"other"': altro
       aalab_goToScene:
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_keyPressed:
+        text: "{CONDITION} {KEY} premuto"
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spazio
+      aalab_location_picker:
+        text: "{LOCATION}"
       aalab_moveInDirection:
         text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
         options:
@@ -1521,16 +1680,49 @@ it:
             '"West"': Ovest
       aalab_prompt:
         text: chiedi domanda {MESSAGE}
+      aalab_randomLocation:
+        text: posizione casuale
+      aalab_removeOneAndAll:
+        text: elimina {THIS}
       aalab_scene:
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': vero
+            '"false"': falso
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione del movimento
+            '"tint"': tonalità
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': per sempre
+      aalab_spriteSay:
+        text: personaggio {SPRITE} dice {TEXT} per {SECONDS} secondi
       aalab_starwars_playSound:
         options:
           OPTION:
             '"random"': a caso
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mostra
+            '"hide"': nascondi
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:

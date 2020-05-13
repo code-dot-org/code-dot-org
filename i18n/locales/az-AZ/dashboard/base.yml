@@ -473,23 +473,6 @@ az:
       name: 'Qəbul edildi'
     rejected:
       name: 'Rədd edildi'
-  flex_category:
-    required: 'Yekun'
-    content: 'Məzmun'
-    practice: 'Öyrədici proqramlar'
-    csf_jigsaw: 'Mozaika'
-    csf_loops: 'dövrlər'
-    csf_events: 'Hadisələr'
-    csf_binary: 'İkilik'
-    csf_conditionals: 'Şərti ifadələr'
-    csf_functions: 'funksiyalar'
-    csf_variables: 'dəyişənlər'
-    csf_internet: 'İnternet'
-    csp_variables: 'dəyişənlər'
-    csp_conditionals: 'Şərti ifadələr'
-    csp_functions: 'funksiyalar'
-    csp_lists: 'Siyahılar'
-    csp_loops: 'dövrlər'
   hoc_download:
     title: 'Kod saatı yükləmələr'
     capsule_title: 'Internetiniz varmı?'

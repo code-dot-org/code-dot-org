@@ -669,26 +669,6 @@ fa:
       name: پذیرفته شد
     rejected:
       name: رد شد
-  flex_category:
-    required: بررسی اجمالی
-    main_course: درس اصلی
-    csf_digcit: شهروندی دیجیتالی
-    csf_jigsaw: جورچین
-    csf_loops: حلقه‌ها
-    csf_events: رویدادها
-    csf_online_safety: امنیت سایبری
-    csf_binary: دو دویی
-    csf_conditionals: شرطی ها
-    csf_nested_loops: حلقه های تو در تو
-    csf_functions: توابع
-    csf_variables: متغیرها
-    csf_for_loops: حلقه های "برای"
-    csf_internet: اینترنت
-    csp_variables: متغیرها
-    csp_conditionals: شرطی ها
-    csp_functions: توابع
-    csp_lists: فهرست‌ها
-    csp_loops: حلقه‌ها
   hoc_download:
     minecraft_name: ساعتی با کد ماینکرفت
     download_in_Catalan: 'دانلود Catalan:'

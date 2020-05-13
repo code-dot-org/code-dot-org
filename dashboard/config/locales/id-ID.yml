@@ -57,7 +57,7 @@ id:
         reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         error:
           future: tidak mungkin di masa depan
-  beta: Percobaan
+  beta: versi uji-coba
   hello: Halo dunia
   welcome_back: Selamat datang kembali, %{name}
   your_professional_learning_plan: Rencana Pembelajaran Profesional Anda
@@ -1063,80 +1063,6 @@ id:
     instructor_feedback: Umpan balik instruktur
     peer_feedback: Peer Feedback
     outdated: Umpan balik ini telah ditambahkan sebelumnya diserahkan versi
-  flex_category:
-    required: Tinjauan
-    content: Konten
-    ramp_up: Jalan-Naik
-    main_course: Kursus Utama
-    extra_course_content: Isi Kursus Tambahan
-    csf_e_1: Jalur naik tujuan E (opsional)
-    csf_e_2: Isi kursus E
-    csf_f_1: Jalur naik tujuan F (opsional)
-    csf_f_2: Isi kursus F
-    csf_digcit: Kewarganegaraaan Digital
-    csf_jigsaw: Teka-teki
-    csf_sequencing: Urutan
-    csf_loops: Loop
-    csf_events: kegiatan
-    csf_online_safety: Keamanan daring
-    csf_binary: Biner
-    csf_conditionals: Kondisi
-    csf_nested_loops: Perulangan bercabang
-    csf_functions: fungsi
-    csf_variables: Variables
-    csf_for_loops: Untuk Pengulangan
-    csf_internet: Internet
-    csf_impacts: Dampak dari Komputasi
-    csf_warmup: Berlatih
-    csd1_1: 'Bab 1: Proses Pemecahan Masalah'
-    csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
-    csd2_1: 'Bab 1: Konten Web dan HTML'
-    csd2_2: 'Bab 2: Styling dan CSS'
-    csd3_1: 'Bab 1: Gambar dan Animasi'
-    csd3_2: 'Bab 2: Bangunan Permainan'
-    csd4_1: 'Bab 1: User Centered Design'
-    csd4_2: 'Bab 2: Aplikasi Prototyping'
-    csd5_1: 'Bab 1: Yang Mewakili Informasi'
-    csd5_2: 'Bab 2: Memecahkan Masalah Data'
-    csd6_1: 'Bab 1: Pemrograman dengan Hardware'
-    csd6_2: 'Bab 2: Membangun Prototipe Fisik'
-    csd_survey: Survei Pasca Kursus
-    csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
-    csp1_2: 'Bab 2: Menciptakan Internet'
-    csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
-    csp2_2: 'Bab 2: Memanipulasi dan Visualing Data'
-    csp3_1: 'Bab 1: Bahasa Pemrograman dan Algoritma'
-    csp4_1: 'Bab 1: Dunia Big Data dan Enkripsi'
-    csp5_1: 'Bab 1: Pemrograman Event-Driven'
-    csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
-    cspSurvey: Survei
-    cspAssessment: Bab Penilaian
-    csp_ap_1: 'Bab 1: Pengaturan Teknologi AP'
-    csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'
-    csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
-    csp_postap_1: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
-    csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
-    csp2_1_2018: 'Unit 2: informasi digital'
-    csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
-    csp4_1_2018: 'Unit 4: Big data dan privasi'
-    csp_variables: Variables
-    csp_conditionals: Kondisi
-    csp_functions: fungsi
-    csp_project: Proyek
-    csp_lists: Daftar
-    csp_loops: Loop
-    csp_traversals: Melintang
-    csp_libraries: Perpustakaan
-    csp_parameters_return_values: Parameter dan Nilai Balik
-    csp_unit1_2020: "(Lama) Unit 1: Informasi Digital"
-    dlp: Anjuran Refleksi
-    time4cs_c1: Everglades dan Ekosistemnya
-    time4cs_c2: Tantai Makanan di Everglades
-    time4cs_c3: Hidup di Everglades
-    time4cs_c4: Dampak Invasi pada Everglades
-    time4cs_c5: Masyarakat Mempengaruhi Perubahan di Everglades
-    k5_getting_started: Dapat Dimulai
-    k5_next_steps: Langkah berikutnya
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan

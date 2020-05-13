@@ -844,29 +844,6 @@ el:
         acknowledge: Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε
           σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy
           και το %{link_start_tos}Terms του Service%{link_end}
-  flex_category:
-    required: Επισκόπηση
-    csf_digcit: Ψηφιακή υπηκοότητα
-    csf_jigsaw: Παζλ
-    csf_loops: Βρόχοι
-    csf_events: Συμβάντα
-    csf_binary: Δυαδικό
-    csf_conditionals: Συνθήκες
-    csf_spritelab: Sprite Lab
-    csf_nested_loops: Φωλιασμένες Επαναλήψεις
-    csf_functions: Συναρτήσεις
-    csf_variables: Μεταβλητές
-    csf_for_loops: Βρόχοι Για
-    csf_internet: Διαδίκτυο
-    csf_warmup: Ζέσταμα
-    cspSurvey: Έρευνα
-    csp_variables: Μεταβλητές
-    csp_conditionals: Συνθήκες
-    csp_functions: Συναρτήσεις
-    csp_project: Έργο
-    csp_lists: Λίστες
-    csp_loops: Βρόχοι
-    csp_libraries: Βιβλιοθήκες
   external_links:
     disclaimer: Αποποίηση ευθυνών
   hoc_download:
