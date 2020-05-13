@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_stages true
 student_detail_progress_view true
-stage_extras_available true
+lesson_extras_available true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit6/{LESSON}'
@@ -13,6 +13,7 @@ version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit6/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit6/code/"]]
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 stage 'Innovations in Computing'

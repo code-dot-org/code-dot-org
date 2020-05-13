@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template_2020",
     "all_animations_single_frame": "false",
-    "encrypted_examples": "CLp70Nl1O85yhw/TdOPhX98ssoTAl+vJ+baCh01rfFCdECQ/gI0sHjy4gpzw\nLgCg\n",
+    "encrypted_examples": "+gyoSYKhcTIb4n7RC+TdAHCOP7YIapZ8nL0eOb9Hch7RBcxaP9xQ/V7MXSYW\nDJ3rQgYCUq9q4pYqzvLBK/m0XA==\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_in_animation_tab": "false",
@@ -67,13 +67,13 @@
     "rubric_performance_level_3": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
     "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program.",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
     "bubble_choice_description": "Give your game a custom theme by giving your sprites new animations",
-    "thumbnail_url": "https://images.code.org/6f7fd36f92584c1132e77f9c4ba4caab-image-1585849578758.png"
+    "thumbnail_url": "https://images.code.org/6f7fd36f92584c1132e77f9c4ba4caab-image-1585849578758.png",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 13:46:17 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 17:46:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 13:46:17 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 17:46:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-12 23:28:51 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

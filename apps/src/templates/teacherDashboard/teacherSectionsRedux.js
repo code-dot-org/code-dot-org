@@ -750,7 +750,7 @@ export default function teacherSections(state = initialState, action) {
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
@@ -1008,6 +1008,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
