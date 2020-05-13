@@ -2,9 +2,9 @@ import React from 'react';
 var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
-var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import ArrowButtons from '../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var BounceVisualizationColumn = function() {

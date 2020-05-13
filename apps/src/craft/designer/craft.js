@@ -26,6 +26,10 @@ import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {
+  showArrowButtons,
+  hideArrowButtons
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -343,9 +347,7 @@ Craft.init = function(config) {
         }
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
-        $('#soft-buttons')
-          .removeClass('soft-buttons-none')
-          .addClass('soft-buttons-' + 4);
+        $('#soft-buttons').addClass('soft-buttons-' + 4);
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
@@ -659,12 +661,12 @@ Craft.niceToHaveAssetsForLevel = function(levelNumber) {
 };
 
 Craft.hideSoftButtons = function() {
-  $('#soft-buttons').hide();
+  getStore().dispatch(hideArrowButtons());
   studioApp().resizePinnedBelowVisualizationArea();
 };
 
 Craft.showSoftButtons = function() {
-  $('#soft-buttons').show();
+  getStore().dispatch(showArrowButtons());
   studioApp().resizePinnedBelowVisualizationArea();
 };
 
