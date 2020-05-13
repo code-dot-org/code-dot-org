@@ -90,6 +90,35 @@ module AWS
       return false
     end
 
+    # Returns true iff the specified S3 key exists in the buckep
+    #
+    # Will query all objects in the bucket up front and cache that result. Note
+    # this cache will not expire, so this method is not recommended for use in
+    # production. The create and delete operations defined in this module do
+    # attempt to keep this cache up-to-date, but other operations could easily
+    # modify the bucket contents and render this method unreliable.
+    #
+    # Note also that we are not using the Rails cache framework for this. We
+    # rely on this method for the text-to-speech update; specifically the
+    # translation-aware tts update we do as part of the i18n sync, which
+    # happens in a development environment for which the Rails cache is
+    # disabled.
+    #
+    # @param [String] bucket
+    # @param [String] key
+    # @return [Boolean]
+    def self.cached_exists_in_bucket?(bucket, key)
+      @cached_bucket_contents ||= {}
+      @cached_bucket_contents[bucket] ||=
+        create_client.
+          list_objects_v2({bucket: bucket}).
+          contents.
+          collect(&:key).
+          to_set
+
+      @cached_bucket_contents[bucket].include? key
+    end
+
     # Sets the value of a key in the given S3 bucket.
     # The key name is derived from 'filename', prepending a random prefix
     # unless options[:no_random] is set.
@@ -103,6 +132,11 @@ module AWS
       no_random = options.delete(:no_random)
       filename = "#{random}-#{filename}" unless no_random
       create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
+
+      # add key to local cache used by cached_exists_in_bucket?
+      if @cached_bucket_contents && @cached_bucket_contents[bucket]
+        @cached_bucket_contents[bucket].add(filename)
+      end
       filename
     end
 
@@ -112,6 +146,12 @@ module AWS
     # @return [Boolean] If the file was successfully deleted.
     def self.delete_from_bucket(bucket, filename)
       response = create_client.delete_object({bucket: bucket, key: filename})
+
+      # remove key from local cache used by cached_exists_in_bucket?
+      if @cached_bucket_contents && @cached_bucket_contents[bucket]
+        @cached_bucket_contents[bucket].delete(filename)
+      end
+
       response.delete_marker
     rescue Aws::S3::Errors::NoSuchKey
       false
