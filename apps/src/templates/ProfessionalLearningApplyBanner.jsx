@@ -113,7 +113,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
   };
 
   generateLink() {
-    let link = '/educate/professional-learning';
+    let link = '/educate/professional-learning/middle-high';
     if (this.props.linkSuffix) {
       link = `${link}/${this.props.linkSuffix}`;
     }
