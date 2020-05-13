@@ -34,6 +34,18 @@ de-DE:
         Diese Kartenebene fasst die Tags zusammen, die die Schülerinnen und Schüler in dieser Lektion gelernt haben.  Ermutigen Sie die Schülerinnen und Schüler, diese Ressource zu nutzen, um ihre HTML-Tag-Liste oder ihr Poster zu aktualisieren.
       CSD U2 RGB summer: 'Farblösung für Sommergelb: (rot, grün, blau) = (255, 230,
         100)'
+      CSD U2 RGB summer_2018: |-
+        [key]
+
+        Farblösung für Sommergelb: (rot, grün, blau) = (255, 230, 100)
+
+        [/key]
+      CSD U2 RGB summer_2019: |-
+        [key]
+
+        Farblösung für Sommergelb: (rot, grün, blau) = (255, 230, 100)
+
+        [/key]
       CSD U2 RGB winter: 'Farblösung für Winterblau: (rot, grün, blau) = (195, 230,
         255)'
       CSD U2 new page: Die Logistik bei der Erstellung einer neuen HTML-Seite kann
@@ -75,6 +87,21 @@ de-DE:
         Seite eingesehen werden können.\n\nAuf dieser Stufe wird der Code eines Studenten
         validiert, indem geprüft wird, ob die folgenden Bedingungen erfüllt sind:\n\n-
         \  Jedes Sprite muss ein aktives Verhalten aufweisen."
+      OPD-K5-spritelab-7: "Diese Lektion enthält ein **Miniprojekt** namens _Schwimmender
+        Fisch_. Dieser Verlauf kann sich sowohl für Sie als auch für Ihre Schülerinnen
+        und Schüler ganz anders anfühlen als das, was früher im Kurs gekommen ist.
+        Diese Niveaustufen haben einige neue Merkmale, die Sie vielleicht vor Beginn
+        des Kurses erforschen möchten. \n\n-   Der Code, den Ihre Schülerinnen und
+        Schüler in einer Stufe schreiben, wird automatisch auf die anderen Stufen
+        übertragen. Dadurch können sie schrittweise auf ihren Ideen aufbauen und im
+        Laufe des Lernens iterieren.\n-   Diese Stufen ermöglichen mehr Kreativität
+        mit offenem Ende. Befähigen Sie Ihre Schülerinnen und Schüler, selbst zu bestimmen,
+        wann sie jede Aufgabe abgeschlossen haben. Es gibt keine einzige richtige
+        Antwort! \n-   Für diese Stufe des Lernfortschritts stehen Beispiellösungen
+        zur Verfügung, die durch Öffnen der Lehrertafel auf der rechten Seite eingesehen
+        werden können.\n\nAuf dieser Stufe wird der Code eines Studenten validiert,
+        indem geprüft wird, ob die folgenden Bedingungen erfüllt sind:\n\n-   Jedes
+        Sprite muss ein aktives Verhalten aufweisen."
       Virtual Pet 2_2019: "Diese Lektion enthält ein **Miniprojekt** namens _Virtuelles
         Haustier_. Dieser Verlauf kann sich sowohl für Sie als auch für Ihre Schülerinnen
         und Schüler ganz anders anfühlen als das, was früher im Kurs gekommen ist.

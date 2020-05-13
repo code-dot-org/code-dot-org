@@ -5,6 +5,8 @@ class PardotV2
 
   API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   PROSPECT_QUERY_URL = "#{API_V4_BASE}/do/query".freeze
+  PROSPECT_READ_URL = "#{API_V4_BASE}/do/read/email".freeze
+  PROSPECT_DELETION_URL = "#{API_V4_BASE}/do/delete/id".freeze
   BATCH_CREATE_URL = "#{API_V4_BASE}/do/batchCreate".freeze
   BATCH_UPDATE_URL = "#{API_V4_BASE}/do/batchUpdate".freeze
 
@@ -36,14 +38,15 @@ class PardotV2
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
   # @param [Integer] last_id retrieves only Pardot ID greater than this value
-  # @param [Array<String>] a list of fields. Must have 'id' the list. Field names must be url-safe.
-  # @param [Integer] limit maximum number of prospects to retrieve
+  # @param [Array<String>] fields url-safe prospect field names. Must have 'id' the list.
+  # @param [Integer] limit the maximum number of prospects to retrieve
+  # @param [Boolean] only_deleted get deleted prospects (default false). Note this is in place of non-deleted prospects, not in addition to.
   # @return [Integer] number of results retrieved
   #
   # @yieldreturn [Array<Hash>] an array of hash of prospect data
   # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
-  def self.retrieve_prospects(last_id, fields, limit = nil)
+  def self.retrieve_prospects(last_id, fields, limit = nil, only_deleted = false)
     raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
 
@@ -54,10 +57,7 @@ class PardotV2
     # Run repeated requests querying for prospects above our highest known Pardot ID.
     # Stop when receiving no prospects or reaching the download limit.
     loop do
-      # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
-      url = "#{PROSPECT_QUERY_URL}?output=bulk"
-      url += "&id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
-      url += "&limit=#{limit_in_query}" if limit_in_query
+      url = build_prospect_query_url(last_id, fields, limit_in_query, only_deleted)
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
 
@@ -78,6 +78,22 @@ class PardotV2
     end
 
     total_results_retrieved
+  end
+
+  # Creates URL and query string for use with Pardot prospect query API
+  # @param id_greater_than [String, Integer]
+  # @param fields [Array<String>]
+  # @param limit [String, Integer]
+  # @param deleted [Boolean]
+  # @return [String]
+  def self.build_prospect_query_url(id_greater_than, fields, limit, deleted)
+    # Use bulk output format as recommended at http://developer.pardot.com/kb/bulk-data-pull/.
+    url = "#{PROSPECT_QUERY_URL}?output=bulk&sort_by=id"
+    url += "&id_greater_than=#{id_greater_than}" if id_greater_than
+    url += "&fields=#{fields.join(',')}" if fields
+    url += "&limit=#{limit}" if limit
+    url += "&deleted=true" if deleted
+    url
   end
 
   # Compiles a batch of prospects and batch-create them in Pardot when batch size
@@ -177,6 +193,52 @@ class PardotV2
     end
 
     [submissions, errors]
+  end
+
+  # Deletes all prospects with the same email address from Pardot.
+  # @param email [String]
+  # @return [Boolean] all prospects are deleted or not
+  def self.delete_prospects_by_email(email)
+    pardot_ids = retrieve_pardot_ids_by_email(email)
+
+    success = true
+    pardot_ids.each do |id|
+      success = false unless delete_prospect_by_id(id)
+    end
+    success
+  end
+
+  # Deletes a prospect from Pardot using Pardot Id.
+  # This method only runs in the production environment to avoid accidentally deleting prospect.
+  # @param [Integer, String] pardot_id of the prospects to be deleted.
+  # @return [Boolean] deletion succeeds or not
+  def self.delete_prospect_by_id(pardot_id)
+    if CDO.rack_env != :production
+      log "#{__method__} only runs in production. The current environment is #{CDO.rack_env}."
+      return false
+    end
+
+    # @see http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects
+    post_with_auth_retry "#{PROSPECT_DELETION_URL}/#{pardot_id}"
+    true
+  rescue StandardError => e
+    # If the input pardot_id does not exist, Pardot will response with
+    # HTTP code 400 and error code 3 "Invalid prospect ID" in the body.
+    return false if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
+  end
+
+  # Finds prospects using email address and extract their Pardot ids.
+  # @param email [String]
+  # @return [Array<String>]
+  def self.retrieve_pardot_ids_by_email(email)
+    doc = post_with_auth_retry "#{PROSPECT_READ_URL}/#{email}"
+    doc.xpath('//prospect/id').map(&:text)
+  rescue StandardError => e
+    # If the input email does not exist, Pardot will response with
+    # HTTP code 400, and error code 4 "Invalid prospect email address" in the body.
+    return [] if e.message =~ /Pardot request failed with HTTP 400/
+    raise e
   end
 
   # Converts contact keys and values to Pardot prospect keys and values.

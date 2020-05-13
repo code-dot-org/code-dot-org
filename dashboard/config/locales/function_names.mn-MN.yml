@@ -588,6 +588,8 @@ mn-MN:
         do something: ямар нэг юм хийх
         draw hexagon: зургаан өнцөгт зурах
         draw line of hexagons: зургаан өнцөгтийн шугамыг зурах
+      courseE_artist_functions1_copy:
+        draw ear stems: чихний ишийг зур
       courseE_artist_functions2:
         draw a square: квадрат зурах
         draw ear stems: чихний ишийг зур
@@ -597,17 +599,24 @@ mn-MN:
       courseE_artist_functions2_2019:
         draw a square: квадрат зурах
         draw ear stems: чихний ишийг зур
+      courseE_artist_functions2_copy:
+        draw a square: квадрат зурах
+        draw ear stems: чихний ишийг зур
       courseE_artist_functions3_2018:
         draw a star: од зурах
       courseE_artist_functions3_2019:
         draw a star: од зурах
       courseE_artist_functions4:
         draw a star: од зурах
+      courseE_artist_functions4_copy:
+        draw a star: од зурах
       courseE_artist_functions5:
         draw a star: од зурах
       courseE_artist_functions5_2018:
         draw a star: од зурах
       courseE_artist_functions5_2019:
+        draw a star: од зурах
+      courseE_artist_functions5_copy:
         draw a star: од зурах
       courseE_artist_functions7:
         draw a window: цонх зурах
@@ -698,6 +707,9 @@ mn-MN:
         draw a square: квадрат зурах
         draw ear stems: чихний ишийг зур
       courseE_artist_functions_predict1_2019:
+        draw a square: квадрат зурах
+        draw ear stems: чихний ишийг зур
+      courseE_artist_functions_predict1_copy:
         draw a square: квадрат зурах
         draw ear stems: чихний ишийг зур
       courseE_artist_functions_predict2:

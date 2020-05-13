@@ -103,6 +103,7 @@ if node['cdo-secrets']["build_apps"] ||
   # TODO keep this logic in sync with `BUILD_PACKAGE` in `package.rake`.
   (node['cdo-apps']['daemon'] && %w[staging test adhoc].include?(node.chef_environment))
   include_recipe 'cdo-nodejs'
+  include_recipe 'cdo-apps::google_chrome'
   include_recipe 'cdo-apps::generate_pdf'
 end
 

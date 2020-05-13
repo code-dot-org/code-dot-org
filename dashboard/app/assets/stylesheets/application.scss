@@ -22,7 +22,6 @@
  *
  * Shared
  *= require user-menu
- *= require user-progress
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -3283,8 +3282,7 @@ h2.danger {
   color: $white;
   border-top: 1px solid $white;
 
-  /* Make sure we're in front of the AnswerDash icon in the lower-right corner. */
-  z-index: 2000000200;
+  z-index: 1030;
 
   .banner-content {
     max-width: 970px;

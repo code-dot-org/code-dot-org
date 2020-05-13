@@ -781,6 +781,14 @@ fa:
           stages:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         allthehiddenthings:
           stages:
             Game Lab:
@@ -791,6 +799,10 @@ fa:
               name: توابع هنرمند
         artistExemplar:
           description_audience: سنین 8 به بالا (پس از دوره 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -867,6 +879,10 @@ fa:
               name: پریدن
             'Farmer: While Loops':
               name: 'کشاورز: حلقه‌های "در حالیکه"'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         csd3-2017:
           description_short: برنامه نویسی
           stages:
@@ -914,6 +930,14 @@ fa:
               name: دستور العمل طراحی
             Welcome!:
               name: خوش آمدی!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         basketball:
           stages:
             Bounce:
@@ -931,6 +955,10 @@ fa:
           stages:
             Lists:
               name: فهرست‌ها
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -1019,6 +1047,14 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         sciencepd4:
           stages:
             Welcome!:
@@ -1041,6 +1077,10 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         csd6-draft:
           stages:
             Lists:
@@ -1147,6 +1187,54 @@ fa:
           stages:
             Building a Foundation:
               name: ساختن بنیان
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         express-2017:
           stages:
             Introduction:
@@ -1438,6 +1526,74 @@ fa:
           stages:
             While Loops:
               name: حلقه ها ی While
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1448,6 +1604,10 @@ fa:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         frozen-2018:
           stages:
             Artist:
@@ -1472,6 +1632,14 @@ fa:
           stages:
             Dance Party:
               name: جشن و رقص
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1488,6 +1656,15 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+          lesson_groups:
+            csf_variables:
+              display_name: متغیرها
+            csf_for_loops:
+              display_name: حلقه های "برای"
+            csf_internet:
+              display_name: اینترنت
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
         dance-low:
           stages:
             Dance Party:
@@ -1508,6 +1685,17 @@ fa:
               name: دودویی هنرمند
             Dance Party:
               name: جشن و رقص
+          lesson_groups:
+            csf_events:
+              display_name: رویدادها
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_binary:
+              display_name: دو دویی
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1524,6 +1712,13 @@ fa:
               name: کمک گیری جمعی
             Songwriting:
               name: ترانه سرایی
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_nested_loops:
+              display_name: حلقه های تو در تو
+            csf_functions:
+              display_name: توابع
         express-2019:
           stages:
             Relay Programming:
@@ -1546,10 +1741,24 @@ fa:
               name: کمک گیری جمعی
             Dance Party:
               name: جشن و رقص
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_functions:
+              display_name: توابع
+            csf_variables:
+              display_name: متغیرها
+            csf_for_loops:
+              display_name: حلقه های "برای"
         andrea-test:
           stages:
             'null':
               name: 'تهی'
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1558,6 +1767,15 @@ fa:
               name: رویداد بزرگ
             Binary Bracelets:
               name: دستبند دودویی
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_binary:
+              display_name: دو دویی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         gamelab:
           title: کارگاه بازی سازی
         coursea-2019:
@@ -1566,6 +1784,13 @@ fa:
               name: نقشه های شاد
             Going Places Safely:
               name: با خیال راحت سفرکردن
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1574,6 +1799,13 @@ fa:
               name: ردپای دیجیتالی شما
             'Loops: Getting Loopy':
               name: سر گیجه گرفتن
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1582,6 +1814,11 @@ fa:
               name: ردپای دیجیتالی شما
             Spelling Bee:
               name: زنبور عسل هجی کن
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1603,6 +1840,16 @@ fa:
           stages:
             Functions with Parameters:
               name: معادله با پارامترها
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+            required:
+              display_name: بررسی اجمالی
         csp1-2019:
           stages:
             The Internet:
@@ -1616,6 +1863,10 @@ fa:
           stages:
             While Loops:
               name: حلقه ها ی While
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1624,10 +1875,88 @@ fa:
               name: شرطی ها با کارتها
             Building a Foundation:
               name: ساختن بنیان
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: فهرست‌ها
+            csp_loops:
+              display_name: حلقه‌ها
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: فهرست‌ها
+            csp_loops:
+              display_name: حلقه‌ها
+            required:
+              display_name: بررسی اجمالی
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         csd2-pilot:
           stages:
             Lists:
@@ -1641,12 +1970,70 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         peru-2019:
           stages:
             Introduction:
               name: مقدمه
             Nested Loops:
               name: حلقه های تو در تو
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
         dance-2019:
           stages:
             Dance Party:
@@ -1667,6 +2054,14 @@ fa:
               name: متغیرها
             For Loops:
               name: حلقه های "برای"
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1677,14 +2072,59 @@ fa:
               name: کمک گیری جمعی
             Conditionals with Cards:
               name: شرطی ها با کارتها
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_nested_loops:
+              display_name: حلقه های تو در تو
+            csf_functions:
+              display_name: توابع
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: شرطی ها
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_events:
+              display_name: رویدادها
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: شرطی ها
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_events:
+              display_name: رویدادها
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: بررسی اجمالی
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: فهرست‌ها
+            csp_loops:
+              display_name: حلقه‌ها
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1706,6 +2146,13 @@ fa:
               name: با خیال راحت سفرکردن
             'Programming: Happy Maps':
               name: نقشه های شاد
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1714,12 +2161,28 @@ fa:
               name: حرکت کن، حرکت کن
             'Loops: Getting Loopy':
               name: سر گیجه گرفتن
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         coursec-2020:
           stages:
             Binary Bracelets:
               name: دستبند دودویی
             'Events: The Big Event':
               name: رویداد بزرگ
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_binary:
+              display_name: دو دویی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1736,10 +2199,28 @@ fa:
               name: شهروندی دیجیتالی
             Dance Party:
               name: جشن و رقص
+          lesson_groups:
+            csf_events:
+              display_name: رویدادها
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_binary:
+              display_name: دو دویی
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: ترانه سرایی
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_nested_loops:
+              display_name: حلقه های تو در تو
+            csf_functions:
+              display_name: توابع
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1750,14 +2231,37 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_variables:
+              display_name: متغیرها
+            csf_for_loops:
+              display_name: حلقه های "برای"
         express-2020:
           stages:
             Dance Party:
               name: جشن و رقص
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_functions:
+              display_name: توابع
+            csf_variables:
+              display_name: متغیرها
+            csf_for_loops:
+              display_name: حلقه های "برای"
         pre-express-2020:
           stages:
             Spelling Bee:
               name: زنبور عسل هجی کن
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
         csp3-virtual:
           description_short: برنامه نویسی
           stages:

@@ -7,6 +7,7 @@ zh-TW:
         csd_category_name: 計算機科學探索（'17-'18）
         csd_2018_category_name: 計算機科學探索（'18-'19）
         csd_2019_category_name: 計算機科學探索（'19-'20）
+        csf_category_name: CS 基本原理
         csf_2018_category_name: 計算機科學基礎（2018）
         csf_international_category_name: 計算機科學基礎國際版
         csf2_draft_category_name: '開發中：課程 A - F'
@@ -274,6 +275,8 @@ zh-TW:
           stages:
             'Calc: Defining Variables':
               name: 定義變數和替換
+            'Calc: Evaluation Blocks':
+              name: 評估積木與算術運算式
             'Eval: Boolean Operators':
               name: 布林運算子
             'Eval: Conditionals':
@@ -284,10 +287,14 @@ zh-TW:
               name: 用設計方法解決單字問題 (Word Problem)
             'Eval: Strings and Images':
               name: 字串和圖像
+            'Eval: Writing Contracts':
+              name: 編寫契約
             'Play Lab: Animation (Big Game)':
               name: The Big Game - 動畫（Animation）
             'Play Lab: Boolean (Big Game)':
               name: The Big Game - 布林值（Booleans）
+            'Play Lab: Booleans':
+              name: 蝙蝠山姆（Sam the Bat）
             'Play Lab: Collision Detection (Big Game)':
               name: The Big Game - 碰撞檢測（Collision Detection）
             'Play Lab: Defining Functions':
@@ -300,6 +307,8 @@ zh-TW:
               name: '不插電活動：碰撞檢測和畢氏定理'
             'Unplugged: Conditionals and Piecewise Functions':
               name: '不插電活動：條件判斷和分段函式'
+            'Unplugged: Contracts':
+              name: '不插電活動：契約、定義域和範圍'
             'Unplugged: The Design Recipe':
               name: '不插電活動 - 設計流程'
             'Unplugged: Video Games and Coordinate Planes':
@@ -320,6 +329,8 @@ zh-TW:
               name: 函式簡單定義
             Defining Variables:
               name: 變數的定義
+            Evaluation Blocks:
+              name: 評估積木
             Making Pictures:
               name: 製作圖片
             The Design Recipe:
@@ -368,6 +379,8 @@ zh-TW:
               name: 手動設定 DNS
             Overview and Setup Instructions:
               name: 概覽與操作說明
+            Packets and Reliability:
+              name: 封包和可靠度
             Peer to Peer - Sending Ascii:
               name: 點對點傳輸 - 發送 Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
@@ -382,6 +395,8 @@ zh-TW:
           stages:
             Black & White Pixelation Freeplay:
               name: 黑白像素自由探索
+            Black & White Pixelation Tutorial:
+              name: 黑白像素化教程
             Color Pixelation Examples:
               name: 色彩像素化範例
             Color Pixelation Freeplay:
@@ -441,6 +456,8 @@ zh-TW:
           stages:
             Applab:
               name: Applab
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
             Play Lab:
               name: Play Lab
             The Artist:
@@ -527,6 +544,8 @@ zh-TW:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
               name: 用網路模擬器發送二進位訊息
+            Sending Bits in the Real World:
+              name: 在現實生活中傳送位元
             Sending Complex Messages:
               name: 複合訊息的發送
             Sending Formatted Text:
@@ -542,8 +561,12 @@ zh-TW:
           stages:
             Course Overview:
               name: 課程概覽
+            Evaluation Blocks:
+              name: 評估積木
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teacher Dashboard:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
@@ -555,8 +578,16 @@ zh-TW:
           stages:
             Booleans:
               name: 布林值
+            Design Recipe Practice:
+              name: 設計流程練習
+            Evaluation Blocks:
+              name: 評估積木
             Luigi's Pizza:
               name: 路易吉的披薩
+            Rocket-Height:
+              name: 火箭高度
+            Sam the Bat:
+              name: 蝙蝠山姆（Sam the Bat）
             Strings and Images:
               name: 字串和圖像
             Your Game - Animation:
@@ -577,12 +608,16 @@ zh-TW:
           description: '階段 1 CSP 線上介紹'
           description_short: '階段 1 CSP 線上介紹'
           stages:
+            Exploring CSP Instructional Materials:
+              name: 探索 CSP 指導材料
             Growth Mindset:
               name: 增長思維
             Impact of Computer Science:
               name: 計算機科學的影響
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teaching Strategies:
               name: 教學策略
             What is CSP?:
@@ -604,6 +639,8 @@ zh-TW:
               name: 計算機科學的影響
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teaching Strategies:
               name: 教學策略
             What is ECS?:
@@ -617,10 +654,18 @@ zh-TW:
               name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
+            Dispositions and Classroom Culture:
+              name: 規定與課堂文化
+            Introduction to Complex Adaptive Systems:
+              name: 複雜適應系統簡介
+            Introduction to Computational Science:
+              name: 電腦科學簡介
             Introduction to PD:
               name: PD 簡介
             Introduction to StarLogo Nova:
               name: StarLogo Nova簡介
+            Post-Survey:
+              name: 課後調查
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
@@ -642,22 +687,54 @@ zh-TW:
           stages:
             APIs and Function Parameters:
               name: API 和函式參數
+            Beyond Buttons Toward Apps:
+              name: 超越按鈕，製作應用程式
+            Canvas and Arrays in Apps:
+              name: 應用程式中的畫布（Canvas）
+            Compound Conditional Logic:
+              name: 複合條件式邏輯
+            Controlling Memory with Variables:
+              name: 以變數（Variable）控制記憶體
             Creating Functions:
               name: 建立函式
+            Creating functions with Parameters:
+              name: 建立帶參數（Parameter）的函式
+            Digital Assistant Project:
+              name: 數位助理專案
+            Event-Driven Programming and Debugging:
+              name: 事件驅動的程式設計與除錯（Debugging）
             Events Unplugged:
               name: 事件的不插電活動
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
             Functions with Return Values:
               name: 帶返回值的函式
             Image Scroller with Key Events:
               name: 圖片播放器的按鍵事件
+            Introducing Design Mode:
+              name: 設計模式簡介
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
+            Introduction to Conditional Logic:
+              name: 條件式邏輯簡介
+            Introduction to Digital Assistants:
+              name: 數位助理簡介
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Loops and Simulations:
+              name: 迴圈與模擬
             Multi-screen Apps:
               name: 多螢幕應用程式
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
             'Practice PT: Create':
               name: 'PT 練習 - 創建'
             Processing Arrays:
               name: 處理陣列
+            The Need For Programming Languages:
+              name: 程式語言的需要
+            Understanding Program Flow and Logic:
+              name: 瞭解程式流程與邏輯
             User Input and Strings:
               name: 使用者輸入與字串
             Using Simple Commands:
@@ -673,6 +750,8 @@ zh-TW:
               name: 計算機科學教育學
             Course Overview:
               name: 課程概覽
+            Evaluation Blocks:
+              name: 評估積木
             Next Steps:
               name: 下一步
             Strings and Images:
@@ -695,6 +774,8 @@ zh-TW:
               name: 計算機科學的影響
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teaching Strategies:
               name: 教學策略
             What is ECS?:
@@ -710,6 +791,8 @@ zh-TW:
               name: 計算機科學的影響
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teaching Strategies:
               name: 教學策略
             What is ECS?:
@@ -722,8 +805,12 @@ zh-TW:
           stages:
             Course Overview:
               name: 課程概覽
+            Evaluation Blocks:
+              name: 評估積木
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teacher Dashboard:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
@@ -735,8 +822,12 @@ zh-TW:
           stages:
             Course Overview:
               name: 課程概覽
+            Evaluation Blocks:
+              name: 評估積木
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teacher Dashboard:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
@@ -751,10 +842,18 @@ zh-TW:
               name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
+            Dispositions and Classroom Culture:
+              name: 規定與課堂文化
+            Introduction to Complex Adaptive Systems:
+              name: 複雜適應系統簡介
+            Introduction to Computational Science:
+              name: 電腦科學簡介
             Introduction to PD:
               name: PD 簡介
             Introduction to StarLogo Nova:
               name: StarLogo Nova簡介
+            Post-Survey:
+              name: 課後調查
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
@@ -772,10 +871,18 @@ zh-TW:
               name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
+            Dispositions and Classroom Culture:
+              name: 規定與課堂文化
+            Introduction to Complex Adaptive Systems:
+              name: 複雜適應系統簡介
+            Introduction to Computational Science:
+              name: 電腦科學簡介
             Introduction to PD:
               name: PD 簡介
             Introduction to StarLogo Nova:
               name: StarLogo Nova簡介
+            Post-Survey:
+              name: 課後調查
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
@@ -788,6 +895,16 @@ zh-TW:
           description: 階段 2 暑假的線上混合式學習
           description_short: 階段 2 暑假的線上混合式學習
           stages:
+            Creating Breeds in Starlogo Nova:
+              name: 在 Starlogo Nova 中建立品種
+            Epidemic Model Extensions:
+              name: 流行病模型延伸工具
+            Review StarLogo Nova:
+              name: 檢閱 StarLogo Nova
+            Revisiting Agent Movement:
+              name: 重溫 Agent 移動
+            Thinking Ahead to Implementation:
+              name: 預先進行實作構思
             Welcome!:
               name: 歡迎！
             Wrap-Up:
@@ -798,6 +915,8 @@ zh-TW:
           stages:
             Decode and Share:
               name: 解碼和分享
+            Mystery Model:
+              name: 神秘模型
             Welcome Back!:
               name: 歡迎回來！
         Testing:
@@ -823,16 +942,28 @@ zh-TW:
               name: 現實生活中的 DNS
             Encryption Algorithms:
               name: 金鑰和密碼
+            HTTP and Abstraction:
+              name: HTTP 與網際網路上的抽象化
             Invent an Addressing Protocol:
               name: 發明一個定址協定
             One Way Functions - Ice Cream Vans:
               name: 單向函式 - WiFi 熱點問題
+            Packets and Making a Reliable Internet:
+              name: 封包與建立可靠的網際網路
+            Practice PT - Cybersecurity Innovations:
+              name: PT 練習 - 網路安全上的創新
+            Practice PT - The Internet and Society:
+              name: PT 練習 - 網際網路與社會
             Public Key Crypto:
               name: 公開金鑰加密
+            Routers and Redundancy:
+              name: 路由器與備援
             Tell Me a Secret - Encrypting Text:
               name: 加密的需求
             The Internet:
               name: 串聯你我的網際網路
+            The Need for Addressing:
+              name: 加密的需求
             The Need for DNS:
               name: DNS 的需求
         algebraPD2a:
@@ -854,10 +985,16 @@ zh-TW:
               name: 布林值
             Defining Variables:
               name: 變數的定義
+            Evaluation Blocks:
+              name: 評估積木
             Free Play:
               name: 自由發揮
             Luigi's Pizza:
               name: 路易吉的披薩
+            Rocket-Height:
+              name: 火箭高度
+            Sam the Bat:
+              name: 蝙蝠山姆（Sam the Bat）
             Strings and Images:
               name: 字串和圖像
             The Design Recipe:
@@ -883,10 +1020,14 @@ zh-TW:
               name: 農夫
             Flappy:
               name: 像素鳥
+            Free Response:
+              name: 自由回應
             Gamelab:
               name: Gamelab
             Jigsaw:
               name: 拼圖
+            Long assessment:
+              name: 仔細評估
             Markdown Details:
               name: Markdown 細節
             Match:
@@ -901,20 +1042,34 @@ zh-TW:
               name: 雙人
             Netsim:
               name: 籃網
+            Odometer:
+              name: 呈程表
             Online PD:
               name: 線上 PD
             PlayLab:
               name: PlayLab
             Public Key Cryptography:
               name: 公開金鑰加密
+            Rich long assessment:
+              name: 詳盡評估
+            Sample PLC Assessment:
+              name: PLC 評估範例
             Star wars:
               name: 星際大戰
             Studio:
               name: 工作室
+            Swapped Levels:
+              name: 跳越的關卡
             Text Compression:
               name: 文字壓縮
+            TextMatch:
+              name: 配上文字
             Web Lab:
               name: Web Lab
+            Multi page assessment:
+              name: 多頁評估
+            Single page assessment:
+              name: 單頁評估
             Standalone video:
               name: 獨立影片
             Curriculum Reference:
@@ -936,12 +1091,20 @@ zh-TW:
               name: 定義函式
             Defining Variables:
               name: 變數的定義
+            'Eval: Conditionals':
+              name: 'Eval：條件式'
+            Evaluation Blocks:
+              name: 評估積木
             Next Steps:
               name: 下一步
+            Rocket-Height:
+              name: 火箭高度
             Strings and Images:
               name: 字串和圖像
             Teacher Dashboard:
               name: 教師控制台
+            Writing Contracts:
+              name: 編寫契約
         cspfacilitator:
           title: '計算機科學原理輔導員工作坊 '
           stages:
@@ -951,6 +1114,8 @@ zh-TW:
               name: 廣播課程
             Internet Simulator:
               name: 網路模擬器
+            Pixelation Widget:
+              name: 像素化小工具
             Text Compression Lesson:
               name: 文字壓縮教程
             Text Compression Widget:
@@ -966,6 +1131,8 @@ zh-TW:
               name: 計算機科學基礎
             Getting Started:
               name: 新手上路
+            Looking Ahead:
+              name: 展望未來
             'Mastering the Basics: Conditionals':
               name: '掌握基本知識：條件判斷（Conditionals）'
             'Mastering the Basics: Events':
@@ -1031,8 +1198,12 @@ zh-TW:
           stages:
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
+            Review StarLogo Nova:
+              name: 檢閱 StarLogo Nova
             Reviewing the Modules:
               name: 查看模組
+            Thinking Ahead to Implementation:
+              name: 預先進行實作構思
             Welcome!:
               name: 歡迎！
             Wrap-Up:
@@ -1048,8 +1219,12 @@ zh-TW:
           stages:
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
+            Review StarLogo Nova:
+              name: 檢閱 StarLogo Nova
             Reviewing the Modules:
               name: 查看模組
+            Thinking Ahead to Implementation:
+              name: 預先進行實作構思
             Welcome!:
               name: 歡迎！
             Wrap-Up:
@@ -1067,8 +1242,12 @@ zh-TW:
           stages:
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
+            Review StarLogo Nova:
+              name: 檢閱 StarLogo Nova
             Reviewing the Modules:
               name: 查看模組
+            Thinking Ahead to Implementation:
+              name: 預先進行實作構思
             Welcome!:
               name: 歡迎！
             Wrap-Up:
@@ -1367,12 +1546,16 @@ zh-TW:
         cspunit3temp:
           title: "（舊）計算機科學原理 單元 3 - 程式設計"
           stages:
+            Canvas and Arrays in Apps:
+              name: 應用程式中的畫布（Canvas）
             Functions with Return Values:
               name: 帶返回值的函式
             Image Scroller with Key Events:
               name: 圖片播放器的按鍵事件
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
+            Loops and Simulations:
+              name: 迴圈與模擬
             'Practice PT: Create':
               name: 'PT 練習 - 創建'
             Processing Arrays:
@@ -1542,6 +1725,8 @@ zh-TW:
           stages:
             'Eval: Boolean Operators':
               name: '賦值 - 布林值運算子'
+            'Eval: Conditionals':
+              name: 'Eval：條件式'
             'Play Lab: Animation (Big Game)':
               name: 'Play Lab - Big Game 動畫'
             'Play Lab: Boolean (Big Game)':
@@ -1568,8 +1753,12 @@ zh-TW:
           stages:
             Course Overview:
               name: 課程概覽
+            Evaluation Blocks:
+              name: 評估積木
             Introduction to PD:
               name: PD 簡介
+            Preparing for in-person PD:
+              name: 準備進行現場 PD
             Teacher Dashboard:
               name: 教師控制台
             Why Computer Science belongs in Algebra:
@@ -1591,8 +1780,14 @@ zh-TW:
               name: 計算機科學原理課前問卷調查
             Number Systems:
               name: 數字系統
+            Packets and Making a Reliable Internet:
+              name: 封包與建立可靠的網際網路
             Personal Innovations:
               name: 個人創新
+            Practice PT - The Internet and Society:
+              name: PT 練習 - 網際網路與社會
+            Routers and Redundancy:
+              name: 路由器與備援
             Sending Binary Messages:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
@@ -1601,6 +1796,8 @@ zh-TW:
               name: 數字的發送
             The Internet:
               name: 網際網路
+            The Need for Addressing:
+              name: 加密的需求
             The Need for DNS:
               name: DNS 的需求
             Unit 1 Chapter 1 Assessment:
@@ -1609,6 +1806,13 @@ zh-TW:
               name: 單元 1 第 2 節 評量
             Post-Course Survey:
               name: 課後調查
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csp1_1:
+              display_name: '第 1 章：表示及傳輸資訊'
+            csp1_2:
+              display_name: '第 2 章：研發互聯網'
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1633,6 +1837,13 @@ zh-TW:
               name: 單元 2 第 2 節 評量
             Post-Course Survey:
               name: 課後調查
+          lesson_groups:
+            csp2_1:
+              display_name: '第 3 章：編碼及壓縮複雜資訊'
+            csp2_2:
+              display_name: '第 2 章：數據操作和可視化'
+            cspSurvey:
+              display_name: 問卷
         csp3-2017:
           title: CSP 單元 3 - 程式設計簡介 ('17-'18)
           stages:
@@ -1640,17 +1851,36 @@ zh-TW:
               name: API 和函式參數
             Creating Functions:
               name: 建立函式
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
+            The Need For Programming Languages:
+              name: 程式語言的需要
             Using Simple Commands:
               name: 簡單指令的使用
             Unit 3 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
+            Creating Functions with Parameters:
+              name: 建立帶參數（Parameter）的函式
             Post-Course Survey:
               name: 課後調查
+          lesson_groups:
+            csp3_1:
+              display_name: '第 1 章：程式語言及演算法'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp4-2017:
           title: CSP 單元 4 - 大數據與隱私 ('17-'18)
           stages:
             Cracking the Code:
               name: 解析程式碼
+            Practice PT - Cybersecurity Innovations:
+              name: PT 練習 - 網路安全上的創新
             Simple Encryption:
               name: 簡單加密
             What is Big Data?:
@@ -1661,23 +1891,52 @@ zh-TW:
               name: 課後調查
             Student Post-Course Survey:
               name: 課後問卷調查
+          lesson_groups:
+            csp4_1:
+              display_name: '第 1 章：大數據及加密的世界'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp5-2017:
           description_short: 透過使用 JavaScript 製作豐富、互動的應用程式，繼續學習更多計算機編程的基礎概念 。
           stages:
+            Beyond Buttons Toward Apps:
+              name: 超越按鈕，製作應用程式
+            Canvas and Arrays in Apps:
+              name: 應用程式中的畫布（Canvas）
+            Compound Conditional Logic:
+              name: 複合條件式邏輯
+            Controlling Memory with Variables:
+              name: 以變數（Variable）控制記憶體
+            Digital Assistant Project:
+              name: 數位助理專案
+            Event-Driven Programming and Debugging:
+              name: 事件驅動的程式設計與除錯（Debugging）
             Events Unplugged:
               name: 事件的不插電活動
             Functions with Return Values:
               name: 帶返回值的函式
             Image Scroller with Key Events:
               name: 圖片播放器的按鍵事件
+            Introducing Design Mode:
+              name: 設計模式簡介
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
+            Introduction to Conditional Logic:
+              name: 條件式邏輯簡介
+            Introduction to Digital Assistants:
+              name: 數位助理簡介
+            Loops and Simulations:
+              name: 迴圈與模擬
             Multi-screen Apps:
               name: 多螢幕應用程式
             'Practice PT: Create':
               name: 'PT 練習 - 創建'
             Processing Arrays:
               name: 處理陣列
+            Understanding Program Flow and Logic:
+              name: 瞭解程式流程與邏輯
             User Input and Strings:
               name: 使用者輸入與字串
             Using Variables in Apps:
@@ -1710,6 +1969,13 @@ zh-TW:
               name: '「如果」陳述式不插電教程'
             Post-Course Survey:
               name: 課後調查
+          lesson_groups:
+            csp5_1:
+              display_name: '第 1 章：事件驅動的程式設計'
+            csp5_2:
+              display_name: '第 2 章：資料結構程式設計'
+            cspSurvey:
+              display_name: 問卷
         CSDU3-Draft:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
           description_short: 程式設計
@@ -1754,10 +2020,18 @@ zh-TW:
               name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
+            Dispositions and Classroom Culture:
+              name: 規定與課堂文化
+            Introduction to Complex Adaptive Systems:
+              name: 複雜適應系統簡介
+            Introduction to Computational Science:
+              name: 電腦科學簡介
             Introduction to PD:
               name: PD 簡介
             Introduction to StarLogo Nova:
               name: StarLogo Nova簡介
+            Post-Survey:
+              name: 課後調查
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
@@ -1785,6 +2059,8 @@ zh-TW:
           description: 通過函數式程式設計教代數
           description_short: 通過函數式程式設計教代數
           stages:
+            Evaluation Blocks:
+              name: 評估積木
             Introduction to PD:
               name: PD 簡介
             Teacher Dashboard:
@@ -1799,10 +2075,18 @@ zh-TW:
               name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
+            Dispositions and Classroom Culture:
+              name: 規定與課堂文化
+            Introduction to Complex Adaptive Systems:
+              name: 複雜適應系統簡介
+            Introduction to Computational Science:
+              name: 電腦科學簡介
             Introduction to PD:
               name: PD 簡介
             Introduction to StarLogo Nova:
               name: StarLogo Nova簡介
+            Post-Survey:
+              name: 課後調查
             The Tutorial:
               name: 教程
             Using Computer Models in Science:
@@ -1833,6 +2117,21 @@ zh-TW:
               name: 單位簡介
             Sending Binary Messages:
               name: 二進位訊息的發送
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         allthehiddenthings:
           title: 所有隱藏的東西！
           stages:
@@ -1979,6 +2278,13 @@ zh-TW:
               name: '教程 2.2: 文字壓縮'
             Measuring Student Learning:
               name: 衡量學生的學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -2202,6 +2508,13 @@ zh-TW:
               name: 第2, 2 課
             Lesson 2,3:
               name: 第2, 3 課
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         csd3-2017:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: Game Lab 編程環境介紹
@@ -2260,6 +2573,15 @@ zh-TW:
               name: 專案 - 互動式卡片
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
+            csd_survey:
+              display_name: 課後調查
         grade2:
           title: 年級 2
           description_audience: 年齡 5-18
@@ -2360,6 +2682,13 @@ zh-TW:
               name: 輸入與輸出
             Apps and Problem Solving:
               name: App 與問題解決
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: '第 1 章：解決問題的流程'
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
         csp-online-test:
           stages:
             Unit 1 Overview:
@@ -2386,6 +2715,13 @@ zh-TW:
               name: 變數與字串
             Unit 5 Overview:
               name: 單元 5 概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         csp1-support:
           stages:
             Unit 1 Overview:
@@ -2398,6 +2734,13 @@ zh-TW:
               name: 發現學習
             Measuring Student Learning:
               name: 衡量學生的學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         basketball:
           title: 選擇你的球隊，來場籃球比賽
           description_short: 選擇你的球隊，來場籃球比賽
@@ -2405,6 +2748,10 @@ zh-TW:
           stages:
             Bounce:
               name: 彈跳
+        sample-csp5:
+          stages:
+            Controlling Memory with Variables:
+              name: 以變數（Variable）控制記憶體
         hoc-encryption:
           title: '一小時玩程式：簡單加密'
           stages:
@@ -2469,6 +2816,13 @@ zh-TW:
               name: 專案 - 多頁式網站
             Headings:
               name: 標題
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章：網站內容和 HTML'
+            csd2_2:
+              display_name: '第 2 章：樣式和 CSS'
+            csd_survey:
+              display_name: 課後調查
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -2481,6 +2835,13 @@ zh-TW:
               name: 發現學習
             Measuring Student Learning:
               name: 衡量學生的學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         csd4-2017:
           stages:
             Analysis of Design:
@@ -2519,6 +2880,13 @@ zh-TW:
               name: 專案 - 紙上原型
             User Interfaces:
               name: 使用者介面
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
+            csd_survey:
+              display_name: 課後調查
         minecraft:
           title: 一小時玩 Minecraft 設計師
           description_short: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
@@ -2650,6 +3018,11 @@ zh-TW:
               name: 介紹
             Conditionals:
               name: 條件判斷（Conditionals）
+          lesson_groups:
+            content:
+              display_name: 內容
+            extra_course_content:
+              display_name: 額外的課程內容
         coursef-draft:
           description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
           stages:
@@ -2679,6 +3052,9 @@ zh-TW:
               name: 冰原歷險記 Play Lab
             'Algorithms: Tangrams':
               name: '演算法: 七巧板'
+          lesson_groups:
+            content:
+              display_name: 內容
         classic-hoc-impact-study:
           title: 一小時玩程式 問卷調查
           description_short: 和許多有趣的角色一塊兒學學計算機科學基礎！
@@ -2711,20 +3087,28 @@ zh-TW:
           stages:
             Welcome!:
               name: 歡迎！
+            Review StarLogo Nova:
+              name: 檢閱 StarLogo Nova
             Reviewing the Modules:
               name: 查看模組
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
+            Thinking Ahead to Implementation:
+              name: 預先進行實作構思
             Wrap-Up:
               name: 總結
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
               name: 歡迎！
+            Review StarLogo Nova:
+              name: 檢閱 StarLogo Nova
             Reviewing the Modules:
               name: 查看模組
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
+            Thinking Ahead to Implementation:
+              name: 預先進行實作構思
             Wrap-Up:
               name: 總結
         sciencepd3-2016:
@@ -2745,6 +3129,13 @@ zh-TW:
               name: 發現學習
             Measuring Student Learning:
               name: 衡量學生的學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         csdgraveyard:
           stages:
             new stage:
@@ -2765,6 +3156,13 @@ zh-TW:
               name: 衡量學生的學習
             Unit 4 Overview:
               name: 單元 4 概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         sciencepd4:
           description_short: '階段 3 學期反思研討會'
           description: '階段 3 學期反思研討會'
@@ -2792,6 +3190,9 @@ zh-TW:
               name: 二進制（Binary）
             Snowflakes:
               name: 雪花
+          lesson_groups:
+            content:
+              display_name: 內容
         sciencepd5:
           title: '科學中的 CS：第 5 部份'
           stages:
@@ -2822,6 +3223,13 @@ zh-TW:
               name: 發現學習
             Measuring Student Learning:
               name: 衡量學生的學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+            practice:
+              display_name: 老師的做法
         csp6-support:
           title: 單元 6 線上專業學習課程
           description: '即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。'
@@ -2845,6 +3253,11 @@ zh-TW:
               name: 應用程式範例
             Post-Course Survey:
               name: 課後調查
+          lesson_groups:
+            content:
+              display_name: 內容
+            cspSurvey:
+              display_name: 問卷
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -2904,6 +3317,11 @@ zh-TW:
               name: 陣列
             Functions with Parameters:
               name: 函式帶參數
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
         workshop-gamelab:
           title: Game Lab 工作坊
           stages:
@@ -2955,6 +3373,11 @@ zh-TW:
               name: 加密
             Structuring Data:
               name: 資料的建構
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
         applab-1hour:
           title: App Lab 一小時工作坊
           description_audience: 國中和高中學生
@@ -3064,6 +3487,13 @@ zh-TW:
               name: '專案：原型創新'
             'Project: Make a Game__':
               name: '專案：創建一個遊戲'
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
+            csd_survey:
+              display_name: 課後調查
         csd3-draft:
           title: 'CSD 單元 3 - 程式設計：動畫與遊戲'
           description_short: 動畫和遊戲
@@ -3147,6 +3577,13 @@ zh-TW:
               name: 加密
             Structuring Data:
               name: 資料的建構
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            csd_survey:
+              display_name: 課後調查
         csd3-old:
           stages:
             Drawing in Game Lab:
@@ -3290,6 +3727,10 @@ zh-TW:
             Drawing in Game Lab:
               name: 用 Game Lab 繪圖
           title: CSD - 用 Game Lab 繪圖
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
         csd2-old:
           stages:
             Quality Websites:
@@ -3475,6 +3916,13 @@ zh-TW:
           assignment_family_title: 課程 E
           description_audience: '年齡 8-12'
           description_short: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升至課程 E（可選）
+            csf_e_2:
+              display_name: 課程 E 內容
+            extra_course_content:
+              display_name: 額外的課程內容
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -3507,6 +3955,11 @@ zh-TW:
           assignment_family_title: 課程 F
           description_audience: '年齡 9-13'
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升至課程 F（可選）
+            csf_f_2:
+              display_name: 課程 F 內容
         csdnovice:
           stages:
             Tuesday:
@@ -3521,6 +3974,14 @@ zh-TW:
               name: 恭喜
             Wrap Up:
               name: 總結
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: '第 1 章：AP 技術設置'
+            csp_ap_3:
+              display_name: '第 3 章：AP 建立效能任務'
+            csp_ap_2:
+              display_name: '第 2 章：AP 探索效能任務'
         cspnovice:
           stages:
             Welcome:
@@ -3533,6 +3994,11 @@ zh-TW:
               name: 星期四
             Wrap Up:
               name: 總結
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         novice-view:
           stages:
             CSP Tuesday:
@@ -3548,6 +4014,11 @@ zh-TW:
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成單元 1 深入學習反思
           title: CSP 單元 1 深入學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -3555,6 +4026,11 @@ zh-TW:
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
           title: CSP 單元 2 深入學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -3562,6 +4038,11 @@ zh-TW:
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
           title: CSP 單元 3 深入學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -3569,6 +4050,11 @@ zh-TW:
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
           title: CSP 單元 4 深入學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -3576,42 +4062,77 @@ zh-TW:
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
           title: CSP 單元 5 深入學習
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd1-dlp:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成單元 1 深入學習反思
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd6-dlp:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
             Complete Unit 6 Deeper Learning Reflections:
               name: 完成單元 6 深入學習反思
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd5-dlp:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd4-dlp:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd3-dlp:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd2-dlp:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         allthettsthings:
           stages:
             TTS:
@@ -3664,6 +4185,9 @@ zh-TW:
           assignment_family_title: 速學課程
           description_audience: '年齡 9-18'
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          lesson_groups:
+            content:
+              display_name: 內容
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3703,16 +4227,31 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            The Need For Programming Languages:
+              name: 程式語言的需要
             Using Simple Commands:
               name: 簡單指令的使用
             Creating Functions:
               name: 建立函式
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
             APIs and Function Parameters:
               name: API 和函式參數
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
             foo:
               name: foo
+          lesson_groups:
+            csp3_1:
+              display_name: '第 1 章：程式語言及演算法'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csd4-draft:
           stages:
             Analysis of Design:
@@ -3739,6 +4278,11 @@ zh-TW:
               name: 基本的 App 函式
             Testing the App:
               name: 測試應用程式
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -3784,6 +4328,13 @@ zh-TW:
               name: 群眾外包（Crowdsourcing）
             Nested Loops in Bee:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升至課程 E（可選）
+            csf_e_2:
+              display_name: 課程 E 內容
+            extra_course_content:
+              display_name: 額外的課程內容
         new-d:
           stages:
             Introduction:
@@ -3816,6 +4367,9 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+          lesson_groups:
+            csp3_1:
+              display_name: '第 1 章：程式語言及演算法'
         new-express:
           stages:
             Introduction:
@@ -3846,6 +4400,9 @@ zh-TW:
               name: 巢狀迴圈
             Loops in Artist (UPDATED!):
               name: 藝術家中的迴圈（已更新！）
+          lesson_groups:
+            content:
+              display_name: 內容
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -3870,6 +4427,13 @@ zh-TW:
               name: 網際網路 Internet
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升至課程 E（可選）
+            csf_e_2:
+              display_name: 課程 E 內容
+            extra_course_content:
+              display_name: 額外的課程內容
         new-f:
           stages:
             Building a Foundation:
@@ -3900,6 +4464,11 @@ zh-TW:
               name: 建立你的專案
             Present Your Project:
               name: 介紹你的專案
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升至課程 F（可選）
+            csf_f_2:
+              display_name: 課程 F 內容
         csd5-old:
           stages:
             Representation Matters:
@@ -3931,6 +4500,11 @@ zh-TW:
             Project - Solve a Data Problem:
               name: 專案 - 解決數據問題
           title: CSD 單元 5 - 數據和社會
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
         subgoals-assessment-staging:
           stages:
             dummy:
@@ -3965,16 +4539,34 @@ zh-TW:
               name: 基本的 App 函式
             Testing the App:
               name: 測試應用程式
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
         csp3-staging:
           stages:
+            The Need For Programming Languages:
+              name: 程式語言的需要
             Using Simple Commands:
               name: 簡單指令的使用
             Creating Functions:
               name: 建立函式
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
             APIs and Function Parameters:
               name: API 和函式參數
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
+          lesson_groups:
+            csp3_1:
+              display_name: '第 1 章：程式語言及演算法'
+            cspAssessment:
+              display_name: 章節測驗
         pwc:
           stages:
             new stage:
@@ -4036,11 +4628,21 @@ zh-TW:
               name: 新的階段
             Post-Course Survey:
               name: 課後調查
+          lesson_groups:
+            csp_ap_2:
+              display_name: '第 2 章：AP 探索效能任務'
+            cspSurvey:
+              display_name: 問卷
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: 課後調查
           title: 創建 - AP 效能任務準備 ('18-'19)
+          lesson_groups:
+            csp_ap_3:
+              display_name: '第 3 章：AP 建立效能任務'
+            cspSurvey:
+              display_name: 問卷
         aws-demo:
           stages:
             new stage:
@@ -4075,6 +4677,13 @@ zh-TW:
               name: 群眾外包（Crowdsourcing）
             Build a Star Wars Game:
               name: 創建一個星際大戰遊戲！
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升至課程 E（可選）
+            csf_e_2:
+              display_name: 課程 E 內容
+            extra_course_content:
+              display_name: 額外的課程內容
         course-f-2018:
           stages:
             Building a Foundation:
@@ -4107,6 +4716,11 @@ zh-TW:
               name: 建立你的專案
             Present Your Project:
               name: 介紹你的專案
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升至課程 F（可選）
+            csf_f_2:
+              display_name: 課程 F 內容
         csd6-old:
           stages:
             Computing Innovations:
@@ -4133,6 +4747,11 @@ zh-TW:
               name: 傳感器應用
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
         csd3-1819draft:
           stages:
             Programming for Entertainment:
@@ -4169,6 +4788,13 @@ zh-TW:
               name: 專案 - 設計一個遊戲
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: "Game Lab 編程環境介紹"
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
         textbook:
           stages:
             new stage:
@@ -4213,6 +4839,13 @@ zh-TW:
               name: 使用遊戲設計流程
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
         csd2-2018:
           title: CSD 單元 2 - Web 開發  ('18-'19)
           stages:
@@ -4232,6 +4865,13 @@ zh-TW:
               name: 透過 CSS 修改元素樣式
             Sources and Search Engines:
               name: 來源和搜尋引擎
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章：網站內容和 HTML'
+            csd2_2:
+              display_name: '第 2 章：樣式和 CSS'
+            cspSurvey:
+              display_name: 問卷
         coursea-2018:
           title: 課程 A（2018）
           assignment_family_title: 課程 A
@@ -4504,6 +5144,13 @@ zh-TW:
               name: 函式帶參數
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
+            cspSurvey:
+              display_name: 問卷
         coursee-2018:
           title: 課程 E（2018）
           assignment_family_title: 課程 E
@@ -4547,6 +5194,13 @@ zh-TW:
               name: 寵物長頸鹿
             Copyright and Creativity:
               name: 數位分享
+          lesson_groups:
+            csf_e_1:
+              display_name: 提升至課程 E（可選）
+            csf_e_2:
+              display_name: 課程 E 內容
+            extra_course_content:
+              display_name: 額外的課程內容
         coursef-2018:
           title: 課程 F（2018）
           assignment_family_title: 課程 F
@@ -4597,6 +5251,11 @@ zh-TW:
               name: 寵物長頸鹿
             Functions in Minecraft:
               name: 在 Minecraft 裡寫函式
+          lesson_groups:
+            csf_f_1:
+              display_name: 提升至課程 F（可選）
+            csf_f_2:
+              display_name: 課程 F 內容
         csp1-2018:
           stages:
             CS Principles Pre-survey:
@@ -4617,10 +5276,25 @@ zh-TW:
               name: 單元 1 第 1 節 評量
             The Internet:
               name: 網際網路
+            The Need for Addressing:
+              name: 加密的需求
+            Routers and Redundancy:
+              name: 路由器與備援
+            Packets and Making a Reliable Internet:
+              name: 封包與建立可靠的網際網路
             The Need for DNS:
               name: DNS 的需求
+            Practice PT - The Internet and Society:
+              name: PT 練習 - 網際網路與社會
             Unit 1 Chapter 2 Assessment:
               name: 單元 1 第 2 節 評量
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csp1_1:
+              display_name: '第 1 章：表示及傳輸資訊'
+            csp1_2:
+              display_name: '第 2 章：研發互聯網'
         csd1-2018:
           title: CSD 單元 1 - 問題解決 ('18-'19)
           stages:
@@ -4636,6 +5310,13 @@ zh-TW:
               name: 輸入與輸出
             Apps and Problem Solving:
               name: App 與問題解決
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: '第 1 章：解決問題的流程'
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
         csd4-2018:
           stages:
             Analysis of Design:
@@ -4660,6 +5341,13 @@ zh-TW:
               name: 數位設計
             Testing the App:
               name: 測試應用程式
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
+            cspSurvey:
+              display_name: 問卷
         csd5-2018:
           title: CSD 單元 5 - 數據和社會
           stages:
@@ -4691,6 +5379,13 @@ zh-TW:
               name: 自動化數據決策
             Project - Solve a Data Problem:
               name: 專案 - 解決數據問題
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
         csp2-2018:
           stages:
             Bytes and File Sizes:
@@ -4713,25 +5408,57 @@ zh-TW:
               name: 數據的清理
             Unit 2 Chapter 2 Assessment:
               name: 單元 2 第 2 節 評量
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '單元 2：數位資訊'
+            cspAssessment:
+              display_name: 章節測驗
         csp3-2018:
           title: CSP 單元 3 - 程式設計簡介 ('18-'19)
           stages:
+            The Need For Programming Languages:
+              name: 程式語言的需要
             Using Simple Commands:
               name: 簡單指令的使用
             Creating Functions:
               name: 建立函式
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
             APIs and Function Parameters:
               name: API 和函式參數
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
+            Creating Functions with Parameters:
+              name: 建立帶參數（Parameter）的函式
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '單元 3：程式設計簡介'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp-explore-2018:
           stages:
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp_ap_2:
+              display_name: '第 2 章：AP 探索效能任務'
+            cspSurvey:
+              display_name: 問卷
         csp-create-2018:
           title: 創建 - AP 效能任務準備 ('18-'19)
+          lesson_groups:
+            csp_ap_3:
+              display_name: '第 3 章：AP 建立效能任務'
+            cspSurvey:
+              display_name: 問卷
         csp4-2018:
           title: CSP 單元 4 - 大數據與隱私 ('18-'19)
           stages:
@@ -4743,11 +5470,20 @@ zh-TW:
               name: 單元 1 第 1 節 評量
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp4_1_2018:
+              display_name: '單元 4：大數據與私隱'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp5-2018:
           description_short: 透過使用 JavaScript 製作豐富、互動的應用程式，繼續學習更多計算機編程的基礎概念 。
           stages:
             Multi-screen Apps:
               name: 多螢幕應用程式
+            Controlling Memory with Variables:
+              name: 以變數（Variable）控制記憶體
             Unit 5 Assessment 1:
               name: 單元 5 評量 1
             User Input and Strings:
@@ -4760,6 +5496,8 @@ zh-TW:
               name: 單元 5 評量 2
             While Loops:
               name: 當…迴圈
+            Loops and Simulations:
+              name: 迴圈與模擬
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
             'Building an App: Image Scroller':
@@ -4778,6 +5516,13 @@ zh-TW:
               name: 'PT 練習 - 創建'
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp5_1:
+              display_name: '第 1 章：事件驅動的程式設計'
+            csp5_2:
+              display_name: '第 2 章：資料結構程式設計'
+            cspSurvey:
+              display_name: 問卷
         csppostap-2018:
           stages:
             Creating Javascript Objects:
@@ -4804,6 +5549,13 @@ zh-TW:
               name: 數據的清理
             Unit 2 Chapter 2 Assessment:
               name: 單元 2 第 2 節 評量
+          lesson_groups:
+            csp_postap_1:
+              display_name: '第 1 章：數據操作和可視化'
+            csp_postap_2:
+              display_name: '第 2 章：App 和數據庫'
+            cspSurvey:
+              display_name: 問卷
         spritelab:
           stages:
             Alien Dance Party - Input:
@@ -4821,6 +5573,11 @@ zh-TW:
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4828,6 +5585,11 @@ zh-TW:
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4835,6 +5597,11 @@ zh-TW:
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4844,6 +5611,11 @@ zh-TW:
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4851,6 +5623,11 @@ zh-TW:
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4860,6 +5637,11 @@ zh-TW:
             Complete Unit 6 Deeper Learning Reflections:
               name: 完成單元 6 深入學習反思
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4867,6 +5649,11 @@ zh-TW:
             Complete Unit 1 Deeper Learning Reflections:
               name: 完成單元 1 深入學習反思
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4874,6 +5661,11 @@ zh-TW:
             Complete Unit 2 Deeper Learning Reflections:
               name: 完成單元 2 深入學習反思
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4881,6 +5673,11 @@ zh-TW:
             Complete Unit 3 Deeper Learning Reflections:
               name: 完成單元 3 深入學習反思
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4890,6 +5687,11 @@ zh-TW:
             Complete Unit 4 Deeper Learning Reflections:
               name: 完成單元 4 深入學習反思
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4897,6 +5699,11 @@ zh-TW:
             Complete Unit 5 Deeper Learning Reflections:
               name: 完成單元 5 深入學習反思
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4904,11 +5711,25 @@ zh-TW:
             Complete Unit 6 Deeper Learning Reflections:
               name: 完成單元 6 深入學習反思
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: 課後調查
         csd-novice-18:
           stages:
             Novice Reflections Overview:
@@ -4938,6 +5759,11 @@ zh-TW:
             Day 4:
               name: 第 4 天
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -4961,6 +5787,11 @@ zh-TW:
             Day 4:
               name: 第 4 天
           description_audience: CS Discoveries 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -4984,6 +5815,11 @@ zh-TW:
             Day 4:
               name: 第 4 天
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -5007,6 +5843,11 @@ zh-TW:
             Day 4:
               name: 第 4 天
           description_audience: CS Principles 輔導員培訓 2018-2019
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         pre-express-2018:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
@@ -5048,6 +5889,11 @@ zh-TW:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         spritelab-simple:
           stages:
             Alien Dance Party - Input:
@@ -5120,6 +5966,15 @@ zh-TW:
             Practice PT Part 3:
               name: PT 練習 第 3 部分
           title: CSP 遊樂場
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -5173,6 +6028,21 @@ zh-TW:
             Digital Sharing:
               name: 數位分享
               description_teacher: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解尊重所有權與著作權的挑戰和優點，尤其是在數位環境中。教師應鼓勵學生，我們是遵守道德的數位公民，重點之一是尊重藝術家的權利。
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_variables:
+              display_name: 變數
+            csf_data:
+              display_name: 數據
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            csf_internet:
+              display_name: 網際網路 Internet
+            csf_sprites:
+              display_name: 角色
+            csf_digcit:
+              display_name: 數位公民
         dance-low:
           stages:
             Dance Party:
@@ -5210,6 +6080,19 @@ zh-TW:
               name: 創建一個星際大戰遊戲！
             Dance Party:
               name: 舞蹈派對
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_binary:
+              display_name: 二進制（Binary）
+            csf_digcit:
+              display_name: 數位公民
         coursee-2019:
           title: 課程 E（2019）
           description_short: 預覽課程 C & D 的概念，進一步的學習函式。
@@ -5261,6 +6144,17 @@ zh-TW:
               name: 老師說
             Songwriting:
               name: 歌曲創作
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_sprites:
+              display_name: 角色
+            csf_digcit:
+              display_name: 數位公民
+            csf_nested_loops:
+              display_name: 巢狀迴圈
+            csf_functions:
+              display_name: 函式
         express-2019:
           title: 速學課程（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -5316,6 +6210,23 @@ zh-TW:
               name: 舞蹈派對
             Concept Practice with Minecraft:
               name: 與 Minecraft 一起展望未來
+          lesson_groups:
+            csf_warmup:
+              display_name: 熱身
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_functions:
+              display_name: 函式
+            csf_variables:
+              display_name: 變數
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            csf_sprites:
+              display_name: 角色
         csd1-2019:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
@@ -5329,6 +6240,13 @@ zh-TW:
               name: 電腦是什麼？
             Input and Output:
               name: 輸入與輸出
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: '第 1 章：解決問題的流程'
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
         andrea-test:
           stages:
             new stage:
@@ -5343,6 +6261,11 @@ zh-TW:
               name: 第二部分
             part 3:
               name: 第三部分
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -5378,6 +6301,23 @@ zh-TW:
               name: 強大的密碼
             Picturing Data:
               name: 描繪資料
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_binary:
+              display_name: 二進制（Binary）
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            csf_data:
+              display_name: 數據
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -5414,6 +6354,15 @@ zh-TW:
               name: 和 BB-8 與 Rey 一起寫程式
             Sequencing with Scrat:
               name: 和鼠奎特一起學序列
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         courseb-2019:
           title: 課程 B（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -5448,6 +6397,15 @@ zh-TW:
               name: 和農夫一起學程式
             Sequencing in Maze:
               name: 迷宮中的循序（Sequence）
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         pre-express-2019:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
@@ -5477,6 +6435,13 @@ zh-TW:
               name: 與憤怒鳥一起編程
             Programming in Harvester:
               name: 和農夫一起學程式
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5508,6 +6473,13 @@ zh-TW:
               name: 透過 CSS 修改元素樣式
             Sources and Search Engines:
               name: 來源和搜尋引擎
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章：網站內容和 HTML'
+            csd2_2:
+              display_name: '第 2 章：樣式和 CSS'
+            cspSurvey:
+              display_name: 問卷
         csd3-2019:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: "Game Lab 編程環境介紹"
@@ -5544,6 +6516,13 @@ zh-TW:
               name: 使用遊戲設計流程
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
         csd4-2019:
           stages:
             Analysis of Design:
@@ -5568,6 +6547,15 @@ zh-TW:
               name: 數位設計
             Testing the App:
               name: 測試應用程式
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
         csd5-2019:
           title: CSD 單元 5 - 數據和社會
           stages:
@@ -5599,6 +6587,13 @@ zh-TW:
               name: 自動化數據決策
             Project - Solve a Data Problem:
               name: 專案 - 解決數據問題
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
         csd6-2019:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -5616,6 +6611,13 @@ zh-TW:
               name: 函式帶參數
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
+            cspSurvey:
+              display_name: 問卷
         csp4-pilot:
           stages:
             Variables Practice:
@@ -5642,6 +6644,19 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
+            required:
+              display_name: 概覽
+            optional_stages:
+              display_name: 可選階段
         csp1-2019:
           stages:
             CS Principles Pre-survey:
@@ -5662,10 +6677,25 @@ zh-TW:
               name: 單元 1 第 1 節 評量
             The Internet:
               name: 網際網路
+            The Need for Addressing:
+              name: 加密的需求
+            Routers and Redundancy:
+              name: 路由器與備援
+            Packets and Making a Reliable Internet:
+              name: 封包與建立可靠的網際網路
             The Need for DNS:
               name: DNS 的需求
+            Practice PT - The Internet and Society:
+              name: PT 練習 - 網際網路與社會
             Unit 1 Chapter 2 Assessment:
               name: 單元 1 第 2 節 評量
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csp1_1:
+              display_name: '第 1 章：表示及傳輸資訊'
+            csp1_2:
+              display_name: '第 2 章：研發互聯網'
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -5676,19 +6706,41 @@ zh-TW:
               name: 黑白圖片的編碼
             Encoding Color Images:
               name: 彩色圖片的編碼
+          lesson_groups:
+            csp2_1_2018:
+              display_name: '單元 2：數位資訊'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp3-2019:
           title: CSP 單元 3 - 程式設計簡介 ('18-'19)
           stages:
+            The Need For Programming Languages:
+              name: 程式語言的需要
             Using Simple Commands:
               name: 簡單指令的使用
             Creating Functions:
               name: 建立函式
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
             APIs and Function Parameters:
               name: API 和函式參數
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '單元 3：程式設計簡介'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp4-2019:
           title: CSP 單元 4 - 大數據與隱私 ('18-'19)
           stages:
@@ -5698,11 +6750,20 @@ zh-TW:
               name: 簡單加密
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp4_1_2018:
+              display_name: '單元 4：大數據與私隱'
+            cspAssessment:
+              display_name: 章節測驗
+            cspSurvey:
+              display_name: 問卷
         csp5-2019:
           description_short: 透過使用 JavaScript 製作豐富、互動的應用程式，繼續學習更多計算機編程的基礎概念 。
           stages:
             Multi-screen Apps:
               name: 多螢幕應用程式
+            Controlling Memory with Variables:
+              name: 以變數（Variable）控制記憶體
             Unit 5 Assessment 1:
               name: 單元 5 評量 1
             User Input and Strings:
@@ -5715,6 +6776,8 @@ zh-TW:
               name: 單元 5 評量 2
             While Loops:
               name: 當…迴圈
+            Loops and Simulations:
+              name: 迴圈與模擬
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
             'Building an App: Image Scroller':
@@ -5731,12 +6794,29 @@ zh-TW:
               name: 單元 5 評量 4
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp5_1:
+              display_name: '第 1 章：事件驅動的程式設計'
+            csp5_2:
+              display_name: '第 2 章：資料結構程式設計'
+            cspSurvey:
+              display_name: 問卷
         csp-explore-2019:
           stages:
             Mid-Year Survey:
               name: 中年級問卷
+          lesson_groups:
+            csp_ap_2:
+              display_name: '第 2 章：AP 探索效能任務'
+            cspSurvey:
+              display_name: 問卷
         csp-create-2019:
           title: 創建 - AP 效能任務準備 ('18-'19)
+          lesson_groups:
+            csp_ap_3:
+              display_name: '第 3 章：AP 建立效能任務'
+            cspSurvey:
+              display_name: 問卷
         csppostap-2019:
           stages:
             Intro to Data:
@@ -5761,6 +6841,13 @@ zh-TW:
               name: 資料視覺化
             Sample Apps:
               name: 應用程式範例
+          lesson_groups:
+            csp_postap_1:
+              display_name: '第 1 章：數據操作和可視化'
+            csp_postap_2:
+              display_name: '第 2 章：App 和數據庫'
+            cspSurvey:
+              display_name: 問卷
         csp1-pilot:
           stages:
             new stage:
@@ -5777,6 +6864,11 @@ zh-TW:
               name: 計算機科學原理課前問卷調查
             Binary Numbers:
               name: 二進位數
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            required:
+              display_name: 概覽
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -5812,6 +6904,21 @@ zh-TW:
             I am in Big Trouble:
               name: 我遇上大麻煩了！
           description_audience: 四年級
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_sprites:
+              display_name: 角色
+            time4cs_c1:
+              display_name: '系列 1：佛羅里達大沼澤地和生態系統'
+            time4cs_c2:
+              display_name: '系列 2：食物鏈（佛羅里達大沼澤地）'
+            time4cs_c3:
+              display_name: '系列 3：原生物種（佛羅里達大沼澤地）'
+            time4cs_c4:
+              display_name: '系列 4：入侵物種的影響（佛羅里達大沼澤地）'
+            time4cs_c5:
+              display_name: '系列 5：市民來採取行動'
         csp1-pilot-staging:
           stages:
             Variables Practice:
@@ -5830,6 +6937,15 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp2-pilot-staging:
           stages:
             Variables Practice:
@@ -5849,6 +6965,15 @@ zh-TW:
             Practice PT Part 3:
               name: PT 練習 第 3 部分
           title: '（舊）單元 2：網際網路'
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp3-pilot-staging:
           stages:
             Variables Practice:
@@ -5889,6 +7014,15 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp5-pilot-staging:
           stages:
             Variables Practice:
@@ -5911,6 +7045,17 @@ zh-TW:
               name: 清單的練習
             Traversals Practice:
               name: 遍歷的練習
+          lesson_groups:
+            csp_lists:
+              display_name: 清單
+            csp_loops:
+              display_name: 迴圈
+            csp_traversals:
+              display_name: 尋訪
+            csp_project:
+              display_name: 專案
+            csp_libraries:
+              display_name: 程式庫
         csp6-pilot-staging:
           stages:
             Variables Practice:
@@ -5930,6 +7075,15 @@ zh-TW:
             Practice PT Part 3:
               name: PT 練習 第 3 部分
           title: '單元 6：演算法'
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp7-pilot-staging:
           stages:
             new stage:
@@ -5952,6 +7106,11 @@ zh-TW:
               name: PT 練習 第 3 部分
             Libraries:
               name: 程式庫
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 參數及函數回傳值
+            csp_libraries:
+              display_name: 程式庫
         csp8-pilot-staging:
           stages:
             Variables Practice:
@@ -5970,6 +7129,15 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp9-pilot-staging:
           stages:
             Variables Practice:
@@ -5988,6 +7156,15 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp10-pilot-staging:
           stages:
             Variables Practice:
@@ -6006,12 +7183,29 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: 方格紙編程
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
         csp5-pilot:
           stages:
             new stage:
@@ -6024,6 +7218,19 @@ zh-TW:
               name: 迴圈的練習
             Unit 5 Assessment:
               name: 單元 5 評量
+          lesson_groups:
+            csp_lists:
+              display_name: 清單
+            csp_loops:
+              display_name: 迴圈
+            csp_traversals:
+              display_name: 尋訪
+            csp_project:
+              display_name: 專案
+            required:
+              display_name: 概覽
+            optional_stages:
+              display_name: 可選階段
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -6038,6 +7245,11 @@ zh-TW:
               name: 第 4 天
             Wrap Up:
               name: 總結
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -6056,6 +7268,11 @@ zh-TW:
               name: 第 4 天
             Wrap Up:
               name: 總結
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd1-pilot:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
@@ -6069,6 +7286,13 @@ zh-TW:
               name: 電腦是什麼？
             Input and Output:
               name: 輸入與輸出
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: '第 1 章：解決問題的流程'
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
         csd2-pilot:
           title: CSD 單元 2 - Web 開發 ('19-'20)
           stages:
@@ -6108,6 +7332,13 @@ zh-TW:
               name: 規劃多頁網站
             Linking and Navigation:
               name: 鏈接與導航
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章：網站內容和 HTML'
+            csd2_2:
+              display_name: '第 2 章：樣式和 CSS'
+            cspSurvey:
+              display_name: 問卷
         csd3-pilot:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: "Game Lab 編程環境介紹"
@@ -6146,6 +7377,13 @@ zh-TW:
               name: 專案 - 設計一個遊戲
             Random Numbers:
               name: 隨機取數
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
         maddie-test:
           stages:
             new stage:
@@ -6160,6 +7398,11 @@ zh-TW:
               name: '課程 11：單元測驗'
             'Lesson 11: Assessment Day':
               name: '課程 11：評量日'
+          lesson_groups:
+            content:
+              display_name: 內容
+            required:
+              display_name: 概覽
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -6171,14 +7414,31 @@ zh-TW:
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
           title: 越南的計算機科學素養
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csd-mod-w1:
           stages:
             Module 1:
@@ -6189,48 +7449,100 @@ zh-TW:
               name: 步骤2
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: 新的階段
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csd-mod-w3:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csd-mod-w4:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csp-mod-w2:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csp-mod-w3:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+          lesson_groups:
+            required:
+              display_name: 概覽
+            content:
+              display_name: 內容
         csd4-pilot:
           stages:
             What is a Computer?:
               name: 電腦是什麼？
             Input and Output:
               name: 輸入與輸出
+          lesson_groups:
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
         csp2-pilot:
           stages:
             new stage:
               name: 新的階段
             IP Addresses:
               name: IP 位址
+            Routers and Redundancy:
+              name: 路由器與備援
+            The Need for Addressing:
+              name: 加密的需求
+          lesson_groups:
+            content:
+              display_name: 內容
+            required:
+              display_name: 概覽
         peru-2019:
           stages:
             new stage:
@@ -6249,6 +7561,11 @@ zh-TW:
           stages:
             Algorithm Efficiency:
               name: 演算法效率
+          lesson_groups:
+            content:
+              display_name: 內容
+            required:
+              display_name: 概覽
         dance-2019:
           stages:
             Dance Party:
@@ -6263,6 +7580,8 @@ zh-TW:
               name: 新手上路
             Computer Science Fundamentals:
               name: 計算機科學基礎
+            Looking Ahead:
+              name: 展望未來
             'Mastering the Basics: Sequencing':
               name: '掌握基本知識：序列（Sequencing）'
             'Mastering the Basics: Loops':
@@ -6311,6 +7630,15 @@ zh-TW:
               name: 變數
             For Loops:
               name: 計次迴圈（For Loops）
+          lesson_groups:
+            k5_getting_started:
+              display_name: 新手上路
+            k5_basic_concepts:
+              display_name: 基本編程概念和教學練習
+            k5_diving_deeper:
+              display_name: '深造：課程 E 和 F'
+            k5_next_steps:
+              display_name: 下一步
         dance-extras-2019:
           title: 繼續跳舞 2019
           description: 在一小時之後嘗試更多奇思妙想。
@@ -6341,6 +7669,15 @@ zh-TW:
               name: PT 練習 第 2 部分
             Practice PT Part 3:
               name: PT 練習 第 3 部分
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -6365,6 +7702,15 @@ zh-TW:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
             Functions in Minecraft:
               name: Minecraft 中的函式
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_nested_loops:
+              display_name: 巢狀迴圈
+            csf_functions:
+              display_name: 函式
         time4cs-experiment-unit-2:
           stages:
             Food Chains:
@@ -6377,6 +7723,17 @@ zh-TW:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
             Functions in Minecraft:
               name: Minecraft 中的函式
+          lesson_groups:
+            time4cs_c1:
+              display_name: '系列 1：佛羅里達大沼澤地和生態系統'
+            time4cs_c2:
+              display_name: '系列 2：食物鏈（佛羅里達大沼澤地）'
+            time4cs_c3:
+              display_name: '系列 3：原生物種（佛羅里達大沼澤地）'
+            time4cs_c4:
+              display_name: '系列 4：入侵物種的影響（佛羅里達大沼澤地）'
+            time4cs_c5:
+              display_name: '系列 5：市民來採取行動'
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -6389,6 +7746,21 @@ zh-TW:
               name: 關於我
             Access Ability:
               name: 輔助功能
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_events:
+              display_name: 事件
+            csf_sprites:
+              display_name: 角色
+            csf_digcit:
+              display_name: 數位公民
+            ramp_up:
+              display_name: 提升
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -6401,6 +7773,21 @@ zh-TW:
               name: 關於我
             Access Ability:
               name: 輔助功能
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_events:
+              display_name: 事件
+            csf_sprites:
+              display_name: 角色
+            csf_digcit:
+              display_name: 數位公民
+            ramp_up:
+              display_name: 提升
         csp7-pilot:
           stages:
             Assessment Day:
@@ -6411,6 +7798,15 @@ zh-TW:
               name: 單元 7 教師調查
             'Lesson 11: Assessment Day':
               name: '課程 11：評量日'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 參數及函數回傳值
+            csp_libraries:
+              display_name: 程式庫
+            required:
+              display_name: 概覽
+            optional_stages:
+              display_name: 可選階段
         csp8-pilot:
           stages:
             new stage:
@@ -6427,6 +7823,15 @@ zh-TW:
               name: 函式的練習
             Functions Make:
               name: 函式的建立
+          lesson_groups:
+            csp_variables:
+              display_name: 變數
+            csp_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csp_functions:
+              display_name: 函式
+            csp_project:
+              display_name: 專案
         csp5-2020:
           stages:
             Lists Practice:
@@ -6435,6 +7840,15 @@ zh-TW:
               name: 迴圈的練習
             Traversals Practice:
               name: 遍歷的練習
+          lesson_groups:
+            csp_lists:
+              display_name: 清單
+            csp_loops:
+              display_name: 迴圈
+            csp_traversals:
+              display_name: 尋訪
+            csp_project:
+              display_name: 專案
         csp7-2020:
           stages:
             Assessment Day:
@@ -6445,6 +7859,11 @@ zh-TW:
               name: 單元 7 教師調查
             'Lesson 11: Assessment Day':
               name: '課程 11：評量日'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 參數及函數回傳值
+            csp_libraries:
+              display_name: 程式庫
         csp9-pilot:
           stages:
             new stage:
@@ -6475,6 +7894,13 @@ zh-TW:
               name: 規劃多頁網站
             Linking and Navigation:
               name: 鏈接與導航
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章：網站內容和 HTML'
+            csd2_2:
+              display_name: '第 2 章：樣式和 CSS'
+            cspSurvey:
+              display_name: 問卷
         csd1-2020:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
@@ -6489,6 +7915,13 @@ zh-TW:
             Input and Output:
               name: 輸入與輸出
             0:
+          lesson_groups:
+            cspSurvey:
+              display_name: 問卷
+            csd1_1:
+              display_name: '第 1 章：解決問題的流程'
+            csd1_2:
+              display_name: '第 2 章：計算機與問題解決能力'
         csd4-2020:
           stages:
             Analysis of Design:
@@ -6513,6 +7946,15 @@ zh-TW:
               name: 數位設計
             Testing the App:
               name: 測試應用程式
+          lesson_groups:
+            csd4_1:
+              display_name: '第 1 章：用戶為中心的設計'
+            csd4_2:
+              display_name: '第 2 章︰ 應用程式原型'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
         csd5-2020:
           title: CSD 單元 5 - 數據和社會
           stages:
@@ -6544,6 +7986,13 @@ zh-TW:
               name: 自動化數據決策
             Project - Solve a Data Problem:
               name: 專案 - 解決數據問題
+          lesson_groups:
+            csd5_1:
+              display_name: '第 1 章：表達信息'
+            csd5_2:
+              display_name: '第 2 章：解決數據問題'
+            cspSurvey:
+              display_name: 問卷
         csd6-2020:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -6561,6 +8010,13 @@ zh-TW:
               name: 函式帶參數
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
+          lesson_groups:
+            csd6_1:
+              display_name: '第 1 章：硬體輸出'
+            csd6_2:
+              display_name: '第 2 章：建立物理原型'
+            cspSurvey:
+              display_name: 問卷
         csd3-2020:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: "Game Lab 編程環境介紹"
@@ -6599,6 +8055,13 @@ zh-TW:
               name: 專案 - 設計一個遊戲
             Text:
               name: 文字
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
+            cspSurvey:
+              display_name: 問卷
         coursea-2020:
           title: 課程 A（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -6626,6 +8089,15 @@ zh-TW:
               name: 與 Laurel 一起學習迴圈
               description_student: 幫探險家 Laurel 收集地底的寶藏。
               description_teacher: 從「快樂迴圈」中建立重複指令的概念，這個階段會讓學生用迴圈更有效率的收集寶藏。
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         courseb-2020:
           title: 課程 B（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -6648,6 +8120,15 @@ zh-TW:
               name: 與農夫一起學迴圈（Loops）
             Loops in Collector:
               name: 與 Laurel 一起學習迴圈
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         coursec-2020:
           title: 課程 C（2019）
           description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
@@ -6669,6 +8150,19 @@ zh-TW:
               name: 大事件
             Picturing Data:
               name: 描繪資料
+          lesson_groups:
+            csf_digcit:
+              display_name: 數位公民
+            csf_sequencing:
+              display_name: 序列
+            csf_binary:
+              display_name: 二進制（Binary）
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
+            csf_data:
+              display_name: 數據
         coursed-2020:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
@@ -6699,6 +8193,19 @@ zh-TW:
               description_teacher: "與 [r common-sense-media] 媒體合作，這課有助學生批判性的思考某些網站的請求或要求的使用者訊息相關問題。\\r\n\\r\n學生會學到隱私訊息和個人訊息的不同，分辨在網路上分享什麼資料是安全的，什麼是不安全的。"
             Dance Party:
               name: 舞蹈派對
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_events:
+              display_name: 事件
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_binary:
+              display_name: 二進制（Binary）
+            csf_digcit:
+              display_name: 數位公民
         coursee-2020:
           title: 課程 E（2019）
           description_short: 預覽課程 C & D 的概念，進一步的學習函式。
@@ -6722,6 +8229,17 @@ zh-TW:
               description_student: 你能指出要如何利用函式提高編程效率嗎？
             Digital Sharing:
               name: 數位分享
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_sprites:
+              display_name: 角色
+            csf_digcit:
+              display_name: 數位公民
+            csf_nested_loops:
+              display_name: 巢狀迴圈
+            csf_functions:
+              display_name: 函式
         coursef-2020:
           title: 課程 F（2019）
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
@@ -6749,6 +8267,19 @@ zh-TW:
             Digital Sharing:
               name: 數位分享
               description_teacher: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解尊重所有權與著作權的挑戰和優點，尤其是在數位環境中。教師應鼓勵學生，我們是遵守道德的數位公民，重點之一是尊重藝術家的權利。
+          lesson_groups:
+            ramp_up:
+              display_name: 提升
+            csf_digcit:
+              display_name: 數位公民
+            csf_variables:
+              display_name: 變數
+            csf_data:
+              display_name: 數據
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            csf_sprites:
+              display_name: 角色
         express-2020:
           title: 速學課程（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -6770,6 +8301,23 @@ zh-TW:
               name: 藝術家中的計數迴圈（For Loops）
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
+          lesson_groups:
+            csf_warmup:
+              display_name: 熱身
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_conditionals:
+              display_name: 條件判斷（Conditionals）
+            csf_functions:
+              display_name: 函式
+            csf_variables:
+              display_name: 變數
+            csf_for_loops:
+              display_name: 計次迴圈（For Loops）
+            csf_sprites:
+              display_name: 角色
         pre-express-2020:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
@@ -6791,6 +8339,13 @@ zh-TW:
               name: 收藏家中的迴圈（Loops）
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+          lesson_groups:
+            csf_sequencing:
+              display_name: 序列
+            csf_loops:
+              display_name: 迴圈
+            csf_events:
+              display_name: 事件
         csp1-2020:
           stages:
             new stage:
@@ -6799,10 +8354,20 @@ zh-TW:
               name: 二進位數
             Intellectual Property:
               name: 知識產權
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '（舊）單元 1：數位資訊'
         csp2-2020:
           stages:
             new stage:
               name: 新的階段
+            The Need for Addressing:
+              name: 加密的需求
+            Routers and Redundancy:
+              name: 路由器與備援
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '（舊）單元 2：網際網路'
         csp3-2020:
           stages:
             new stage:
@@ -6811,12 +8376,18 @@ zh-TW:
               name: 單元 3：應用程式開發簡介
             'Lesson 11: Assessment Day':
               name: '課程 11：評量日'
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: '單元 3：應用程式設計簡介'
         csp6-2020:
           stages:
             new stage:
               name: 新的階段
             Algorithm Efficiency:
               name: 演算法效率
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '單元 6：演算法'
         csp8-2020:
           stages:
             new stage:
@@ -6829,6 +8400,9 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '單元 10：網路安全與全球影響'
         csp-march-virtual:
           stages:
             new stage:
@@ -6839,14 +8413,25 @@ zh-TW:
               name: 第二部分
         csp3-virtual:
           stages:
+            The Need For Programming Languages:
+              name: 程式語言的需要
             Using Simple Commands:
               name: 簡單指令的使用
             Creating Functions:
               name: 建立函式
+            Functions and Top-Down Design:
+              name: 函式與自上而下的設計
             APIs and Function Parameters:
               name: API 和函式參數
+            Looping and Random Numbers:
+              name: 迴圈與隨機數字
+            Practice PT - Design a Digital Scene:
+              name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
+          lesson_groups:
+            csp3_1_2018:
+              display_name: '單元 3：程式設計簡介'
         csd3-virtual:
           description_short: "Game Lab 編程環境介紹"
           stages:
@@ -6884,6 +8469,9 @@ zh-TW:
               name: 專案 - 設計一個遊戲
             Random Numbers:
               name: 隨機取數
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章：圖像和動畫'
         jess-test-script:
           stages:
             new stage:
@@ -6914,10 +8502,17 @@ zh-TW:
               name: 規劃多頁網站
             Linking and Navigation:
               name: 鏈接與導航
+          lesson_groups:
+            csd2_1:
+              display_name: '第 1 章：網站內容和 HTML'
+            csd2_2:
+              display_name: '第 2 章：樣式和 CSS'
         csp5-virtual:
           stages:
             Multi-screen Apps:
               name: 多螢幕應用程式
+            Controlling Memory with Variables:
+              name: 以變數（Variable）控制記憶體
             Unit 5 Assessment 1:
               name: 單元 5 評量 1
             User Input and Strings:
@@ -6930,6 +8525,8 @@ zh-TW:
               name: 單元 5 評量 2
             While Loops:
               name: 當…迴圈
+            Loops and Simulations:
+              name: 迴圈與模擬
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
             'Building an App: Image Scroller':
@@ -6964,6 +8561,11 @@ zh-TW:
               name: 使用遊戲設計流程
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+          lesson_groups:
+            content:
+              display_name: 內容
+            csd3_2:
+              display_name: '第 2 章：創建遊戲'
         code-break:
           stages:
             new stage:
@@ -6982,6 +8584,8 @@ zh-TW:
               name: 單元 5 評量 2
             While Loops:
               name: 當…迴圈
+            Loops and Simulations:
+              name: 迴圈與模擬
             Introduction to Arrays:
               name: 陣列（Arrays）的介紹
             'Building an App: Image Scroller':
@@ -6996,3 +8600,8 @@ zh-TW:
               name: '創建一個 App - 帆布畫家'
             Unit 5 Assessment 4:
               name: 單元 5 評量 4
+          lesson_groups:
+            csp5_1:
+              display_name: '第 1 章：事件驅動的程式設計'
+            csp5_2:
+              display_name: '第 2 章：資料結構程式設計'

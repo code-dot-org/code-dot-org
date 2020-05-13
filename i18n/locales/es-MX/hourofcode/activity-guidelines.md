@@ -32,10 +32,11 @@ Algunos consejos:
 - [Guía general para crear una actividad de la Hora del Código™](#guidelines)
 - [Cómo enviar](#submit)
 - [Cómo se evaluarán las actividades](#inclusion)
-- [Sugerencias para diseñar tu actividad](#design)
-- [Directrices de marca registrada](#tm)
-- [Pixel de seguimiento](#pixel)
-- [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#promote)
+- [Sugerencias para diseñar tu actividad](#earlyreview)
+- [Directrices de marca registrada](#design)
+- [Pixel de seguimiento](#tm)
+- [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#pixel)
+- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -104,9 +105,7 @@ Qué necesitas:
 * Nombre de la actividad (no puede incluir "Hora del Código" en el nombre)
 * URL para la actividad
 * Descripciones de la actividad 
-    * Descripción más larga para la vista de escritorio con un máximo de 400 caracteres
-    * Descripción más corta para la vista móvil con un máximo de 75 caracteres
-    * Incluye en la descripción si es guiado por el estudiante o por el docente. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad se centra en estándares específicos, incluye esta información.
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Niveles de grado recomendados para los usuarios previstos. Puedes consultar \[los estándares K-12 de la Computer Science Teachers’ Association\] (https://k12cs.org/framework-statements-by-grade-band/) para ver los conceptos de las ciencias de la computación adecuados para cada grado. Algunos ejemplos de niveles de grado: 
     * Jardín de infantes - Grado 1 (4 a 6 años)
     * Grados 2-5 (7 a 10 años)
@@ -123,12 +122,8 @@ Qué necesitas:
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 
-* Tu nombre
-* Enlace a tu plan de lecciones. Puede ser una página web, un enlace a dropbox, google drive u otro servicio similar. 
-* Escuela donde enseñas, ciudad y estado (opcional)
-* Grados y asignaturas que enseñas (opcional)
-* Tu foto (opcional)
-* ¿Qué software necesitará el profesor para llevar adelante tu plan de lecciones (¿Scratch? ¿Robots? ¿Ninguno?)
+* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
+* Enlace a tu plan de lecciones. Puede ser una página web, un enlace a dropbox, google drive u otro servicio similar. Nothing?)
 
 #### Otras cosas que necesitarás cuando envíes actividades en línea
 
@@ -143,14 +138,14 @@ Qué necesitas:
         * Android Chrome (optimizado para dispositivos móviles)
     * Sin conexión: especificar la plataforma para el código nativo (Mac, Win, iOS, Android, xBox, otra)
     * Sin conexión
-* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png.
-* Para poder realizar un seguimiento más preciso de la participación, los tutoriales de la Hora del Código de los socios deben incluir imágenes de seguimiento de 1 pixel en la primera página. Coloca una imagen de pixel inicial en la página de inicio. No coloques pixeles en las páginas intermedias). Consulta la sección del pixel de seguimiento debajo para ver más detalles.
+* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* Para poder realizar un seguimiento más preciso de la participación, los tutoriales de la Hora del Código de los socios deben incluir imágenes de seguimiento de 1 pixel en la primera página. Coloca una imagen de pixel inicial en la página de inicio.
 * Una vez que finalizan tu actividad, los usuarios serán dirigidos a [code.org/api/hour/finish](https://code.org/api/hour/finish), donde podrán: 
     * Decir en las redes sociales que han completado la Hora del Código
     * Recibir un certificado que dice que completaron la Hora del Código
     * Ver tablas con los países y ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
     * Para los usuarios que pasan una hora en tu actividad y no la completan, incluye un botón que diga "Terminé mi Hora del Código" y que también lleve a <http://code.org/api/hour/finish>.
-* (Opcional) Podemos hacer un seguimiento con un enlace de encuesta o formulario en línea que solicita un informe de las siguientes métricas de la actividad para la semana del 9 de diciembre, desde las 12:01 a. m., al 15 de diciembre, hasta las 11:59 p. m.) 
+* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
     * Para actividades en línea (especialmente aplicaciones para smartphones y tablets): 
         * Número de usuarios
         * Cuántos completaron la tarea
@@ -254,7 +249,7 @@ Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Ho
 
 <a id="tm"></a>
 
-## Directrices de marca registrada
+## Pixel de seguimiento
 
 Muchos de nuestros socios que crean tutoriales han usado la marca registrada "Hora del Código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que esté dentro de ciertos límites:
 

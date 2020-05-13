@@ -1667,6 +1667,31 @@ es-ES:
         Trata de recoger estas flores con un incremento de 2.
       New Minecraft Hero Project: "**Juego libre:** ¡Te toca! Utiliza el código del
         Agent para ayudarte a explorar este mundo."
+      OPD-K5-events-2: |-
+        Junta el bloque `aletear normalmente` a `Cuando haga click`, después haz click en "Ejecutar".
+
+        * * *
+
+        Haz click o toca en el espacio de juego para llevar a Flappy al objetivo.
+      OPD-K5-events-3: |-
+        El evento `al ejecutar` te permite ejecutar código tan pronto como empiece el juego.
+
+        Prueba a añadir un bloque que fije la velocidad cuando hagas click en el botón "Ejecutar".
+
+        * * *
+
+        Juega al juego y aletea hasta el objetivo para continuar.
+      OPD-K5-events-4: "Ahora hemos añadido el suelo. \n\nJunta el bloque `terminar
+        el juego` al evento \"cuando toca el suelo\". \n\n* * *\n\nJuega al juego
+        y estrella el pájaro contra el suelo para continuar."
+      OPD-K5-events-5: |-
+        Flappy volará a través de los obstáculos a menos que escribas código que haga que se estrelle.
+
+        Junta un bloque al evento `cuando choca con un obstáculo` para que el juego termine cuando Flappy se choque contra el primer grupo de tuberías.
+      OPD-K5-events-6: "Hemos añadido un marcador para contar puntos cuando Flappy
+        atraviese obstáculos. \n\nAñade un bloque al evento `cuando pase un obstáculo`,
+        después pulsa `Ejecutar` para anotar un punto haciendo que Flappy atraviese
+        las primeras tuberías."
       Overworld House Frame Chosen: Construye el resto de tu casa con cualquier material
         que te guste. El comando "repetir" va a resultar util.
       Overworld House Frame Chosen_2019: Construye el resto de tu casa con cualquier
@@ -2579,6 +2604,9 @@ es-ES:
       courseC_starWars_loops2_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Ve BB-8!\"_ \n\nPara conseguir toda la chatarra, prueba a hacer un bucle
         que use sólo un bloque dentro de un bloque `repetir`."
+      courseC_starWars_loops2_copy: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Ve BB-8!\"_ \n\nPara conseguir toda la chatarra, prueba a hacer un bucle
+        que use sólo un bloque dentro de un bloque `repetir`."
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
@@ -2591,11 +2619,17 @@ es-ES:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
         En este puzle, dos bloques `repetir` te ayudarán a llevar a BB-8 a toda la chatarra con el menor número de bloques
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        En este puzle, dos bloques `repetir` te ayudarán a llevar a BB-8 a toda la chatarra con el menor número de bloques
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ve BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ve BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Ve BB-8!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ve BB-8!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes conseguirlo todo?"_
@@ -2606,6 +2640,10 @@ es-ES:
 
         ¡Los bucles funcionan también con más de un bloque dentro! ¿Puedes meter en un bucle esta secuencia?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes conseguirlo todo?"_
+
+        ¡Los bucles funcionan también con más de un bloque dentro! ¿Puedes meter en un bucle esta secuencia?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes conseguirlo todo?"_
 
         ¡Los bucles funcionan también con más de un bloque dentro! ¿Puedes meter en un bucle esta secuencia?
@@ -2621,6 +2659,10 @@ es-ES:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
 
         ¿Puedes intentar conseguir toda la chatarra sólo con un bucle? Prueba a programarlo todo y luego encuentra el código repetido para meterlo en un bucle.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+
+        ¿Puedes intentar conseguir toda la chatarra sólo con un bucle? Prueba a programarlo todo y luego encuentra el código repetido para meterlo en un bucle.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
@@ -2630,6 +2672,10 @@ es-ES:
 
         **Desafío:** Combina ideas de los últimos puzles para completar este nivel.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+
+        **Desafío:** Combina ideas de los últimos puzles para completar este nivel.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
 
         **Desafío:** Combina ideas de los últimos puzles para completar este nivel.

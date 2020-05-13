@@ -484,7 +484,6 @@
   "showBlocksHeader": "Shfaq Blloqet",
   "showCodeHeader": "Shfaq kodin",
   "showGeneratedCode": "Shfaq kodin",
-  "showSecret": "Trego sekretin",
   "showTextHeader": "Shfaq tekstin",
   "showToolbox": "Shfaq mjetet",
   "showVersionsHeader": "Historia e Versioneve",
@@ -568,6 +567,6 @@
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur ekzekutohet",
-  "workspaceHeaderShort": "hapësirë pune",
+  "workspaceHeaderShort": "Vendi i punës: ",
   "yes": "Po"
 }

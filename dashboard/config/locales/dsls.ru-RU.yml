@@ -1474,7 +1474,65 @@ ru-RU:
           время, играя с ним, вы должны собраться вместе с кем-то :партнером, небольшой
           группой, целым классом, чтобы обсудить то, что вы нашли, и проверить, что
           вы знаете, что происходит, и различные способы использования инструмента.\n\n\n"
+      OPD-K5 Reviewing Reflections:
+        content1: Описание здесь
       OPD-K5 Stage3aGo:
+        content1: Описание здесь
+      OPD-K5 Stage3aGo_copy:
+        content1: Описание здесь
+      OPD-K5 conditionals introduced:
+        content1: Описание здесь
+      OPD-K5 debugging:
+        content1: Описание здесь
+      OPD-K5 diving deeper intro:
+        content1: Описание здесь
+      OPD-K5 events introduced:
+        content1: Описание здесь
+      OPD-K5 for loops:
+        content1: Описание здесь
+      OPD-K5 for loops intro:
+        content1: Описание здесь
+      OPD-K5 for loops introduction:
+        content1: Описание здесь
+      OPD-K5 functions introduced:
+        content1: Описание здесь
+      OPD-K5 journaling:
+        content1: Описание здесь
+      OPD-K5 lesson implementation planning:
+        content1: Описание здесь
+      OPD-K5 lesson plans:
+        content1: Описание здесь
+      OPD-K5 loops introduced:
+        content1: Описание здесь
+      OPD-K5 project:
+        content1: Описание здесь
+      OPD-K5 projects introduction:
+        content1: Описание здесь
+      OPD-K5 role_of_teacher:
+        content1: Описание здесь
+      OPD-K5 sequencing introduced:
+        content1: Описание здесь
+      OPD-K5 sprite lab:
+        content1: Описание здесь
+      OPD-K5 sprite lab introduction:
+        content1: Описание здесь
+      OPD-K5 sprite lab unplugged:
+        content1: Описание здесь
+      OPD-K5 sprite lab video:
+        content1: Описание здесь
+      OPD-K5 types of lessons:
+        content1: Описание здесь
+      OPD-K5 using lesson plans:
+        content1: Описание здесь
+      OPD-K5 variables:
+        content1: Описание здесь
+      OPD-K5 variables introduction:
+        content1: Описание здесь
+      OPD-K5 variables unplugged:
+        content1: Описание здесь
+      OPD-K5 where to next:
+        content1: Описание здесь
+      OPD-K5-projects-1:
         content1: Описание здесь
       'Overview: Design Mode':
         markdown: |
@@ -2236,6 +2294,42 @@ ru-RU:
 
 '
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - text: "Пчела переместится к облачку и попытается собрать нектар, что бы
+            ни скрывалось под облачком. \n"
+          feedback: 'Неверно. Блок "если у цветка" обеспечивает, чтобы пчела пыталась
+            собрать нектар, только если под облачком скрывается цветок.
+
+'
+        - text: 'Пчела переместится к облачку и попытается добыть нектар, только если
+            под ним скрывается цветок.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
+        - text: "Пчела переместится к облачку, а затем не сделает ничего, что бы ни
+            скрывалось под облачком. \n"
+          feedback: 'Неверно. Блок "если у цветка" обеспечивает, чтобы пчела попыталась
+            собрать нектар, если под облачком скрывается цветок.
+
+'
+        - text: 'Не знаю.
+
+'
+          feedback: 'Блок "если у цветка" обеспечивает, чтобы пчела пыталась собрать
+            нектар, только если под облачком скрывается цветок.
+
+'
+        questions:
+        - text: 'Облачко загораживает обзор. Под этим облачком может быть цветок.
+            Если цветок есть, пчеле потребуется собрать нектар один раз. Если цветка
+            нет, пчела не должна ничего собирать. Посмотри внимательно на приведенный
+            ниже код. Что, по-твоему, произойдет, когда ты нажмешь на «Выполнить»?
+
+'
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: "Пчела переместится к облачку и попытается собрать нектар, что бы
             ни скрывалось под облачком. \n"
@@ -3185,6 +3279,41 @@ ru-RU:
 
 '
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - text: 'Ничего. Эта функция в программе не вызывается.
+
+'
+          feedback: 'Неверно. На самом деле эта функция вызывается в программе два
+            раза.
+
+'
+        - text: 'Художник нарисует один квадрат.
+
+'
+          feedback: 'Неверно. На самом деле эта функция вызывается в программе два
+            раза.
+
+'
+        - text: 'Художник нарисует два частично совпадающих квадрата.
+
+'
+          feedback: 'Неверно. Длина каждой стороны квадрата всего 100 точек, но художник
+            прыгает между функциями на 175 точек.
+
+'
+        - text: 'Художник нарисует два квадрата с небольшим расстоянием между ними.
+
+'
+          correct: true
+          feedback: 'Верно! Эта функция вызывается в программе два раза, а между вызовами
+            выполняется прыжок.
+
+'
+        questions:
+        - text: 'Что произойдет, когда ты нажмешь на «Выполнить»?
+
+'
+      courseE_prediction_artistFunction1_copy:
         answers:
         - text: 'Ничего. Эта функция в программе не вызывается.
 

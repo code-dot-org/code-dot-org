@@ -223,8 +223,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def long_assessment?
-    return false unless assessment
-    !!level.properties["pages"]
+    assessment && level.is_a?(LevelGroup)
   end
 
   def anonymous?
@@ -349,7 +348,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels = []
     level_id = last_level_summary[:ids].first
     level = Script.cache_find_level(level_id)
-    extra_level_count = level.properties["pages"].length - 1
+    extra_level_count = level.pages.length - 1
     (1..extra_level_count).each do |page_index|
       new_level = last_level_summary.deep_dup
       new_level[:uid] = "#{level_id}_#{page_index}"
@@ -361,7 +360,8 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus(user_id)
+  def summarize_as_bonus(user_id = nil)
+    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
     {
       id: id,
       type: level.type,
@@ -369,7 +369,7 @@ class ScriptLevel < ActiveRecord::Base
       display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: UserLevel.find_by(level: level, user_id: user_id)&.perfect?,
+      perfect: perfect,
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),

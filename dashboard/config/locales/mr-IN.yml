@@ -51,8 +51,6 @@ mr:
       title: डांस पार्टी
     dance-2019:
       title: डांस पार्टी
-  gallery:
-    report_abuse: गैरवर्तनाची रिपोर्ट करा
   landing:
     help_support: सहाय्य आणि मदत
   dialog:
@@ -69,8 +67,6 @@ mr:
     projects: प्रकल्प
     project_gallery: प्रकल्प
     name: नाव
-  flex_category:
-    csf_events: ईव्हेंट्स
   pd:
     form_entries:
       email_opt_in:

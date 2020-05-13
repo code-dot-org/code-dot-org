@@ -47,10 +47,10 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
- * @param {object} stageData{{
+ * @param {object} lessonData{{
  *   script_id: number,
  *   script_name: number,
- *   script_stages: id,
+ *   num_script_lessons: number,
  *   title: string,
  *   finishLink: string,
  *   finishText: string,
@@ -71,7 +71,7 @@ const PUZZLE_PAGE_NONE = -1;
  */
 header.build = function(
   scriptData,
-  stageData,
+  lessonData,
   progressData,
   currentLevelId,
   puzzlePage,
@@ -80,7 +80,7 @@ header.build = function(
   scriptNameData
 ) {
   scriptData = scriptData || {};
-  stageData = stageData || {};
+  lessonData = lessonData || {};
   progressData = progressData || {};
 
   const scriptName = scriptData.name;
@@ -89,7 +89,7 @@ header.build = function(
 
   const renderedProgress = progress.renderStageProgress(
     scriptData,
-    stageData,
+    lessonData,
     progressData,
     currentLevelId,
     saveAnswersBeforeNavigation,
@@ -99,7 +99,7 @@ header.build = function(
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <HeaderMiddle scriptNameData={scriptNameData} stageData={stageData}>
+      <HeaderMiddle scriptNameData={scriptNameData} stageData={lessonData}>
         {renderedProgress}
       </HeaderMiddle>
     </Provider>,

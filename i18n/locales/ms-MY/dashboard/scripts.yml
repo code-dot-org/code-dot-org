@@ -431,12 +431,25 @@ ms:
           stages:
             Dance Party:
               name: Majlis Tari-Menari
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
         coursef-2019:
           stages:
             The Artist:
               name: Pelukis
             Internet:
               name: Internet
+          lesson_groups:
+            csf_variables:
+              display_name: Pembolehubah
+            csf_internet:
+              display_name: Internet
         dance-low:
           stages:
             Dance Party:
@@ -449,10 +462,20 @@ ms:
               name: Pengaturcaraan penyampai
             Dance Party:
               name: Majlis Tari-Menari
+          lesson_groups:
+            csf_events:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
         coursee-2019:
           stages:
             Internet:
               name: Internet
+          lesson_groups:
+            csf_functions:
+              display_name: Fungsi
         express-2019:
           stages:
             Relay Programming:
@@ -461,18 +484,49 @@ ms:
               name: Internet
             Dance Party:
               name: Majlis Tari-Menari
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_functions:
+              display_name: Fungsi
+            csf_variables:
+              display_name: Pembolehubah
         andrea-test:
           stages:
             'null':
               name: 'null'
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Peta-peta Gembira
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
         pre-express-2019:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
         csd2-2019:
           stages:
             Lists:
@@ -489,16 +543,92 @@ ms:
           stages:
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
         csp1-2019:
           stages:
             Sending Numbers:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Senarai
+            csp_loops:
+              display_name: Gelung
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Senarai
+            csp_loops:
+              display_name: Gelung
         csd2-pilot:
           stages:
             Lists:
@@ -511,6 +641,12 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
         dance-2019:
           stages:
             Dance Party:
@@ -527,18 +663,60 @@ ms:
               name: Fungsi
             Variables:
               name: Pembolehubah
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
         time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Bersyarat
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_functions:
+              display_name: Fungsi
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Bersyarat
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_events:
+              display_name: Acara-acara
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Bersyarat
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_events:
+              display_name: Acara-acara
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Senarai
+            csp_loops:
+              display_name: Gelung
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -557,6 +735,23 @@ ms:
           stages:
             'Programming: Happy Maps':
               name: Peta-peta Gembira
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -565,18 +760,46 @@ ms:
               name: Pengaturcaraan penyampai
             Dance Party:
               name: Majlis Tari-Menari
+          lesson_groups:
+            csf_events:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: Fungsi
         coursef-2020:
           stages:
             Internet:
               name: Internet
+          lesson_groups:
+            csf_variables:
+              display_name: Pembolehubah
         express-2020:
           stages:
             Dance Party:
               name: Majlis Tari-Menari
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_functions:
+              display_name: Fungsi
+            csf_variables:
+              display_name: Pembolehubah
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+          lesson_groups:
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
         csd3-virtual:
           stages:
             Variables:
