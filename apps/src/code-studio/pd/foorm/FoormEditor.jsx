@@ -68,7 +68,6 @@ class FoormEditor extends React.Component {
         form_questions: this.props.formQuestions
       })
     }).done(result => {
-      console.log(result);
       this.setState({
         formKey: this.state.formKey + 1,
         formPreviewQuestions: result
