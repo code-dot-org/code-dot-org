@@ -3,28 +3,18 @@ require 'cdo/contact_rollups/v2/pardot'
 require 'cdo/log_collector'
 
 class ContactRollupsV2Test < ActiveSupport::TestCase
-  setup do
-    EmailPreference.delete_all
-    User.delete_all
-    ContactRollupsPardotMemory.delete_all
-    ContactRollupsFinal.delete_all
-  end
-
-  teardown do
-    EmailPreference.delete_all
-    User.delete_all
-    ContactRollupsRaw.delete_all
-    ContactRollupsProcessed.delete_all
-    ContactRollupsPardotMemory.delete_all
-    ContactRollupsFinal.delete_all
-  end
-
   test 'sync new contact' do
     # Create seed data in a source table
     email_preference = create :email_preference, email: 'test@domain.com', opt_in: true
     student_with_parent_email = create :student, parent_email: 'caring@parent.com'
 
     # Stub out Pardot responses
+
+    # We use retrieve_prospects twice in the pipeline
+    # to get the most current email-Pardot ID mappings.
+    # A blank yielded array results first suggests there are no existing mappings
+    # in Pardot, and the second result is what we'd expect once we've added
+    # the two new test prospects to Pardot.
     PardotV2.stubs(:retrieve_prospects).
       yields([]).
       then.yields([
@@ -32,6 +22,10 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
                     {'id' => 2, 'email' => student_with_parent_email.parent_email}
                   ]
       )
+    # In a full pipeline run with updates and new contacts,
+    # we'd run submit_batch_request twice.
+    # However, since this case only involves a new contact (no updates),
+    # we should only execute this once.
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
@@ -72,7 +66,16 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
       data_synced_at: base_time - 1.day
 
     # Stub out Pardot responses
+
+    # We use retrieve_prospects twice in the pipeline
+    # to get the most current email-Pardot ID mappings.
+    # A blank yielded array results when there are no new
+    # mappings to report, which is what we'd expect in this test case.
     PardotV2.stubs(:retrieve_prospects).twice.yields([])
+    # In a full pipeline run with updates and new contacts,
+    # we'd run submit_batch_request twice.
+    # However, since this case only involves an update (no new contacts),
+    # we should only execute this once.
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
