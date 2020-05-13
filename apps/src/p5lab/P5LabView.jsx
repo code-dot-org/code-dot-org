@@ -53,6 +53,14 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
+  getLibraryManifest() {
+    return this.props.spriteLab ? spriteCostumeLibrary : animationLibrary;
+  }
+
+  getCategories() {
+    return this.props.spriteLab ? CostumeCategories : AnimationCategories;
+  }
+
   componentDidMount() {
     this.props.onMount();
   }
@@ -63,8 +71,7 @@ class P5LabView extends React.Component {
       isResponsive,
       hideSource,
       pinWorkspaceToBottom,
-      showFinishButton,
-      spriteLab
+      showFinishButton
     } = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
@@ -81,8 +88,6 @@ class P5LabView extends React.Component {
       responsive: isResponsive,
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
-    const libraryManifest = spriteLab ? spriteCostumeLibrary : animationLibrary;
-    let categories = spriteLab ? CostumeCategories : AnimationCategories;
 
     return (
       <div style={codeModeStyle}>
@@ -97,8 +102,8 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              libraryManifest={libraryManifest}
-              categories={categories}
+              libraryManifest={this.getLibraryManifest()}
+              categories={this.getCategories()}
               hideUploadOption={true}
             />
           )}
@@ -120,15 +125,13 @@ class P5LabView extends React.Component {
   }
 
   renderAnimationMode() {
-    const {allowAnimationMode, interfaceMode, spriteLab} = this.props;
-    const libraryManifest = spriteLab ? spriteCostumeLibrary : animationLibrary;
-    let categories = spriteLab ? CostumeCategories : AnimationCategories;
+    const {allowAnimationMode, interfaceMode} = this.props;
     return allowAnimationMode &&
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        libraryManifest={libraryManifest}
-        categories={categories}
+        libraryManifest={this.getLibraryManifest()}
+        categories={this.getCategories()}
         hideUploadOption={true}
       />
     ) : (
