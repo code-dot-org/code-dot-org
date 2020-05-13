@@ -570,24 +570,6 @@ hr:
         acknowledge: Slanjem ove informacije, vi prihvaćate da će se postupati u skladu
           s uvjetima %{link_start_privacy}Pravila privatnosti%{link_end} i %{link_start_tos}Uvjetima
           korištenja%{link_end}
-  flex_category:
-    required: Pregled
-    csf_digcit: Digitalno građanstvo
-    csf_jigsaw: Slagalica
-    csf_loops: Petlje
-    csf_events: Događaji
-    csf_binary: Binarno
-    csf_conditionals: Uvjeti
-    csf_nested_loops: Ugniježđene petlje
-    csf_functions: Funkcije
-    csf_variables: Varijable
-    csf_for_loops: Petlja brojača
-    csf_internet: Internet
-    csp_variables: Varijable
-    csp_conditionals: Uvjeti
-    csp_functions: Funkcije
-    csp_lists: Liste
-    csp_loops: Petlje
   hoc_download:
     minecraft_name: Minecraft Sat Kodiranja
   pd:

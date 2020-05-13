@@ -7,6 +7,7 @@ curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
 pilot_experiment 'csd-piloters'
 project_sharing true
 tts true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit1/standards/"]]
 
 lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Pre-survey', lockable: true

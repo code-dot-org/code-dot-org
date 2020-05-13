@@ -28,7 +28,8 @@ import {
   editAll,
   TransferStatus,
   TransferType,
-  ParentLetterButtonMetricsCategory
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
@@ -38,6 +39,8 @@ import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   headerName: {
@@ -583,14 +586,32 @@ class ManageStudentsTable extends Component {
   };
 
   copySectionCode = () => {
-    const {sectionCode, studioUrlPrefix} = this.props;
+    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'copy-section-code-join-link',
+        data_json: JSON.stringify({
+          sectionId: sectionId
+        })
+      },
+      {includeUserId: true}
+    );
     this.setState({showCopiedMsg: true});
     setTimeout(() => {
       this.setState({showCopiedMsg: false});
     }, 5000);
     clearTimeout();
+  };
+
+  onPrintLoginCards = () => {
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
+    window.open(url, '_blank');
   };
 
   render() {
@@ -664,7 +685,13 @@ class ManageStudentsTable extends Component {
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.button}>
-              <PrintLoginCards sectionId={this.props.sectionId} />
+              <PrintLoginCards
+                sectionId={this.props.sectionId}
+                entryPointForMetrics={
+                  PrintLoginCardsButtonMetricsCategory.MANAGE_STUDENTS
+                }
+                onPrintLoginCards={this.onPrintLoginCards}
+              />
             </div>
           )}
           <div style={styles.button}>

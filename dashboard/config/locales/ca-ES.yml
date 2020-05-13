@@ -697,25 +697,6 @@ ca:
           offensive: Contingut ofensiu
           infringement: Infracció de copyright
           other: Altres
-  flex_category:
-    required: Vista general
-    csf_digcit: Ciutadania digital
-    csf_jigsaw: Puzzle
-    csf_loops: Bucles
-    csf_events: Esdeveniments
-    csf_binary: Binari
-    csf_conditionals: Condicionals
-    csf_spritelab: Laboratori de personatges
-    csf_nested_loops: Bucles imbricats
-    csf_functions: Funcions
-    csf_variables: Variables
-    csf_for_loops: Per bucles
-    csf_internet: Internet
-    csp_variables: Variables
-    csp_conditionals: Condicionals
-    csp_functions: Funcions
-    csp_lists: Llistes
-    csp_loops: Bucles
   hoc_download:
     minecraft_name: Hora del Codi de Minecraft
   view_teacher_guide: Veure la guia docent

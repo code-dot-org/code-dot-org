@@ -1,8 +1,8 @@
 class ContactRollupsV2
   def self.build_contact_rollups(log_collector, sync_with_pardot=false)
     log_collector.time!('Deletes intermediate content from previous runs') do
-      ContactRollupsRaw.delete_all
-      ContactRollupsProcessed.delete_all
+      truncate_or_delete_table ContactRollupsRaw
+      truncate_or_delete_table ContactRollupsProcessed
     end
 
     log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
@@ -33,7 +33,20 @@ class ContactRollupsV2
     end
 
     log_collector.time!("Overwrites contact_rollups_final table") do
-      ContactRollupsFinal.overwrite_from_processed_table
+      truncate_or_delete_table ContactRollupsFinal
+      ContactRollupsFinal.insert_from_processed_table
     end
+  end
+
+  # Using truncate allows us to re-use row IDs,
+  # which is important in production so we don't overflow the table.
+  # Deletion is required in test environments, as tests generally do
+  # not allow you to execute TRUNCATE statements.
+  def self.truncate_or_delete_table(model)
+    CDO.rack_env == :production ? truncate_table(model) : model.delete_all
+  end
+
+  def self.truncate_table(model)
+    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{model.table_name}")
   end
 end

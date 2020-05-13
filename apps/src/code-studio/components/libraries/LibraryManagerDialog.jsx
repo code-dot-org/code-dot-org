@@ -115,7 +115,7 @@ export class LibraryManagerDialog extends React.Component {
     displayLibrary: null,
     displayLibraryMode: DisplayLibraryMode.NONE,
     isLoading: false,
-    error: null,
+    errorMessages: {},
     updatedLibraryChannels: []
   };
 
@@ -139,7 +139,12 @@ export class LibraryManagerDialog extends React.Component {
         this.setState({classLibraries, projectLibraries});
       },
       error => {
-        console.log('error: ' + error);
+        this.setState({
+          errorMessages: {
+            ...this.state.errorMessages,
+            loadClassLibraries: i18n.errorFindingClassLibraries()
+          }
+        });
       }
     );
 
@@ -163,7 +168,10 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   setLibraryToImport = event => {
-    this.setState({importLibraryId: event.target.value, error: null});
+    this.setState({
+      importLibraryId: event.target.value,
+      errorMessages: {...this.state.errorMessages, importFromId: undefined}
+    });
   };
 
   addLibraryToProject = libraryJson => {
@@ -194,7 +202,10 @@ export class LibraryManagerDialog extends React.Component {
   addLibraryById = (libraryJson, error) => {
     if (error) {
       this.setState({
-        error: i18n.libraryImportError(),
+        errorMessages: {
+          ...this.state.errorMessages,
+          importFromId: i18n.libraryImportError()
+        },
         isLoading: false
       });
     } else if (libraryJson) {
@@ -278,7 +289,10 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   displayClassLibraries = () => {
-    const {classLibraries} = this.state;
+    const {classLibraries, errorMessages} = this.state;
+    if (errorMessages.loadClassLibraries) {
+      return <div style={styles.error}>{errorMessages.loadClassLibraries}</div>;
+    }
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
       return <div style={styles.message}>{i18n.noLibrariesInClass()}</div>;
     }
@@ -367,7 +381,12 @@ export class LibraryManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
-    const {importLibraryId, displayLibrary, isLoading, error} = this.state;
+    const {
+      importLibraryId,
+      displayLibrary,
+      isLoading,
+      errorMessages
+    } = this.state;
 
     if (!isOpen) {
       return null;
@@ -406,7 +425,7 @@ export class LibraryManagerDialog extends React.Component {
               {!isLoading && i18n.add()}
             </button>
           </div>
-          <div style={styles.error}>{error}</div>
+          <div style={styles.error}>{errorMessages.importFromId}</div>
         </BaseDialog>
         {displayLibrary && this.renderDisplayLibrary()}
       </div>

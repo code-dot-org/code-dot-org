@@ -644,7 +644,7 @@ sk:
         text: "Ak chceš pridať obrázky do prvkov, stačí použiť blok setProperty. V druhom rozbaľovacom zozname vyber možnosť \"image\""
       6:
         image: 'notes/applab_intro_sounds_6.png'
-        text: "Potom vyberte \"Vybrať\" z tretieho rozbaľovacieho menu."
+        text: "Potom z tretieho rozbaľovacieho zoznamu vyber možnosť “Vyber si“."
       7:
         image: 'notes/applab_intro_sounds_7.png'
         text: "Odtiaľto môžeš nahrať obrázok z počítača alebo si môžeš vybrať z veľkého\nmnožstva ikon v knižnici ikon."
@@ -660,7 +660,7 @@ sk:
         text: "Pre vytvorenie aplikácií, musíš začať navrhovať obrazovky a prvky od základu. S App Lab je toto jednoduché vďaka Dizajn Módu."
       2:
         image: 'notes/applab_intro_designmode_2.png'
-        text: "Použite tlačidlo v hornej časti Vašej aplikácie pre vstup do Dizajnoavcieho módu."
+        text: "Pomocou tlačidla umiestneného nad appkou prepni AppLab do dizajnového módu."
       3:
         image: 'notes/applab_intro_designmode_3.png'
         text: "Nové prvky môžeš pridať ich pretiahnutím na obrazovku. Môžeš ich presunúť na rôzne miesta a zmeniť ich veľkosť pretiahnutím pravého dolného rohu."

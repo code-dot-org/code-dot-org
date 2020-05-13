@@ -6,7 +6,7 @@ title: Så-gör-du guide
 
 # Hur man undervisar Hour of Code på fritids och i föreningar
 
-### Häng på och introducera en grupp elever till deras första programmeringstimme med dessa steg. Hour of Code är enkelt att delta i - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Häng på och introducera en grupp elever till deras första programmeringstimme med dessa steg. Hour of Code är enkelt att delta i - även för nybörjare! Om du vill ha ett extra par händer kan du nå ut till en [volontär]({{ urls/volunteer_local }}) som kan hjälpa till att leda en Hour of Code utanför skoltid. 
 
 * * *
 
@@ -14,17 +14,17 @@ title: Så-gör-du guide
 
 ## 2. Välj en övning
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Vi erbjuder ett stort utbud av roliga [entimmes-lektioner]({{ urls/learn }}) för deltagare av alla åldrar, skapade av flera olika samarbetspartners. [Testa här!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Alla Hour of Code-lektioner** kräver minimalt med förberedelser för arrangörer, och är självledda - vilket tillåter barnen att jobba i sin egen takt och på egen nivå. 
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Behöver du ett förslag på upplägg för Hour of Code på fritids eller i din förening?** Kolla in den här [mallen](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Marknadsför din Hour of Code
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Marknadsför din Hour of Code [med dessa verktyg]({{ urls/promote_resources }}) och uppmuntra andra att hålla egna evenemang.
 
 ## 4. Planera vad du behöver för teknik - datorer är inte nödvändiga
 
@@ -44,20 +44,20 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 - Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa).
 - [Hour of Code worldwide videon](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [President Obama uppmanar alla elever att lära sig datavetenskap.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Hitta fler inspirerande videor [här](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Det är inga problem om du är helt helt ny till datavetenskap. Här är några idéer att introducera din Hour of Code-aktivitet:**
 
 - Förklara hur teknik påverkar våra liv genom exempel som alla elever i klassrummet förstår. Berätta om appar och teknik som används för att rädda liv, hjälpa människor, få människor att samverka, o. s. v.
 - Lista saker som använder kod i vardagslivet.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Se tips för att få tjejer intresserade av datavetenskap [här](http://code.org/girls)
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Behöver du mer handledning?** Ladda ner vår [mall för lektionsplanering](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Koda!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Led deltagarna till aktiviteten** - skriv länken till övningen på en whiteboard-tavla. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 

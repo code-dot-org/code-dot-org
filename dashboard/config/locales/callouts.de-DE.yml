@@ -9,9 +9,13 @@ de-DE:
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
           weißt du nicht, bis du den Code ausführst!
+      4-5 Artist Patterns Free Play:
+        4-5_Artist_Patterns_Free_Play_1: Alle deine Lieblingsbausteine sind jetzt
+          in Kategorien organisiert. Klicke auf diese Wörter, um zu sehen, wo sie
+          geblieben sind!
       4-5 Bee Conditionals 2:
-        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
-          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_1: Vergiss nicht, zu überprüfen ob JEDE Wolke eine
+          Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen.
       AppLab Intro 7 - Change Screen Color:
         applab_hoc_finish: Wurde der Bildschirm grün? Wenn ja, drücke 'beenden'. Wenn
           nicht, drücke 'reset', ändere deinen Code, und drücke erneut 'start'.
@@ -193,6 +197,9 @@ de-DE:
           Funktion hinzuzufügen
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Benutze die Pfeile, um die Figur zu bewegen
+      Course 4 Play Lab Vars 9:
+        Course_4_Play_Lab_Vars_9_1: Nun sind alle deine Bausteine in Kategorien geordnet.
+          Klicke auf eine Kategorie, um die Bausteine darin zu sehen.
       CourseD_Dance_Party_01:
         dance_callout_01: Füge diesen Baustein deinem Programm hinzu!
       CourseD_Dance_Party_02:
@@ -246,6 +253,14 @@ de-DE:
         Function_intro_Ryan_1: Diese kleine Anweisung sagt dem Computer, dass er ein
           GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
           soll.
+      Geometric Sun:
+        4-5_Artist_Patterns_Free_Play_1: Alle deine Lieblingsbausteine sind jetzt
+          in Kategorien organisiert. Klicke auf diese Wörter, um zu sehen, wo sie
+          geblieben sind!
+      Geometric Sun_2018:
+        4-5_Artist_Patterns_Free_Play_1: Alle deine Lieblingsbausteine sind jetzt
+          in Kategorien organisiert. Klicke auf diese Wörter, um zu sehen, wo sie
+          geblieben sind!
       Infinity_move_collide:
         Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
       Infinity_move_directions:
@@ -332,6 +347,11 @@ de-DE:
           dich an, um dieses Projekt in deinem Konto zu speichern!
       OPD-K5-forloops-5:
         courseF_bee_for4_1: Die "Für"-Schleife findest du hier!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: 'Bringe die Figur zu dieser Fahne, um zum nächsten
+          Level zu gelangen.
+
+'
       OPD-K5-spritelab-3:
         spritelab_comment: Verwende diesen Baustein, um dir selbst oder Deinem Lehrer
           Notizen darüber zu machen, wie Dein Code funktioniert.
@@ -398,6 +418,19 @@ de-DE:
         behaviors_edit: Fügen Sie diesem Verhalten Code hinzu.
       behaviors free play:
         behaviors_edit: Fügen Sie diesem Verhalten Code hinzu.
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: Verwende diese Schleife, um den gesamten
+          Nektar (oder Honig) von einer Blüte (oder Wabe) einzusammeln.
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge1_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge2_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Verwende diesen Befehl, um die
           Biene rückwärts zu bewegen.
@@ -408,8 +441,13 @@ de-DE:
           kann hier verwendet werden, wenn sie so bearbeitet wird, dass sie viele
           Male Honig herstellt.
       course3_playLab_challenge1:
-        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
-          in verschiedene Bereiche des Spielraums verschieben.
+        courseC_PlayLab_events_challenge1_1: Mit diesem Baustein kannst du Figuren
+          an verschiedene Orte im Spielbereich bewegen.
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge2_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
       course4_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Diese Funktion wird bei Mais gut funktionieren,
           aber was ist mit dem anderen Gemüse?
@@ -570,28 +608,42 @@ de-DE:
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: Verwende den grünen Dropdown-Pfeil, um die Richtung
           zu ändern.
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: 'Bringe die Figur zu dieser Fahne, um zum nächsten
+          Level zu gelangen.
+
+'
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: Verwende diesen Baustein, wenn sich Waddles
+          und Chomp berühren!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: Verwende diesen Baustein, wenn sich Waddles
+          und Chomp berühren!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: Verwende diesen Baustein, wenn sich Waddles
+          und Chomp berühren!
       courseC_PlayLab_events_challenge1:
-        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
-          in verschiedene Bereiche des Spielraums verschieben.
+        courseC_PlayLab_events_challenge1_1: Mit diesem Baustein kannst du Figuren
+          an verschiedene Orte im Spielbereich bewegen.
       courseC_PlayLab_events_challenge1_2018:
-        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
-          in verschiedene Bereiche des Spielraums verschieben.
+        courseC_PlayLab_events_challenge1_1: Mit diesem Baustein kannst du Figuren
+          an verschiedene Orte im Spielbereich bewegen.
       courseC_PlayLab_events_challenge1_2019:
-        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
-          in verschiedene Bereiche des Spielraums verschieben.
+        courseC_PlayLab_events_challenge1_1: Mit diesem Baustein kannst du Figuren
+          an verschiedene Orte im Spielbereich bewegen.
       courseC_artist_loops1a_2019:
         jumpto_callout: Dieser Baustein ist für dieses Projekt sehr wichtig. Achte
           darauf diesen zu verwenden!
       courseC_artist_loops1b_2019:
         sticker2: Füge dies in der Mitte deines Programms hinzu.
       courseC_artist_loopsPrePre1a:
-        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Block, um den Künstler
+        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Baustein, um den Künstler
           in die Mitte des Bildschirms zu bringen.
       courseC_artist_loopsPrePre1a_2018:
-        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Block, um den Künstler
+        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Baustein, um den Künstler
           in die Mitte des Bildschirms zu bringen.
       courseC_artist_loopsPrePre1a_2019:
-        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Block, um den Künstler
+        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Baustein, um den Künstler
           in die Mitte des Bildschirms zu bringen.
       courseC_collector_prog1:
         courseC_collector_prog1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
@@ -604,14 +656,14 @@ de-DE:
         courseC_collector_prog1_1: Siehst du ein paar neue Blöcke in der Toolbox?  Keine
           Sorge, wir zeigen dir, wie du sie in einer anderen Lektion verwenden kannst.
       courseC_collector_prog7:
-        courseC_collector_prog7_1: Du kannst dir mehr Blöcke aus der Werkzeugkiste
-          nehmen wenn du sie brauchst!
+        courseC_collector_prog7_1: Du kannst dir mehr Bausteine aus der Werkzeugkiste
+          holen, wenn du sie brauchst!
       courseC_collector_prog7_2018:
-        courseC_collector_prog7_1: Du kannst dir mehr Blöcke aus der Werkzeugkiste
-          nehmen wenn du sie brauchst!
+        courseC_collector_prog7_1: Du kannst dir mehr Bausteine aus der Werkzeugkiste
+          holen, wenn du sie brauchst!
       courseC_collector_prog7_2019:
-        courseC_collector_prog7_1: Du kannst dir mehr Blöcke aus der Werkzeugkiste
-          nehmen wenn du sie brauchst!
+        courseC_collector_prog7_1: Du kannst dir mehr Bausteine aus der Werkzeugkiste
+          holen, wenn du sie brauchst!
       courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: Die Zahl vier auf dem Kürbis sagt dir,
           dass es vier Kürbisse zu pflücken gibt.
@@ -652,17 +704,17 @@ de-DE:
       courseC_maze_programming3:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming3_2018:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming3_2019:
         courseC_maze_programming3_2: Du kannst zusätzliche Blöcke in die Werkzeugkiste
           ziehen, um sie wegzuwerfen.
-        courseC_maze_programming3_3: Diese Blöcke sind aus Stein und können nicht
+        courseC_maze_programming3_3: Diese Bausteine sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming4:
         courseC_maze_programming4_1: Dies ist deine maximal Anzahl an Blöcken. Die
@@ -683,49 +735,74 @@ de-DE:
         '': Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du
           willst!
       courseC_maze_programming7:
-        courseC_maze_programming7_1: Das hier ist deine erste Herausforderung! Diese
-          Aufgaben sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche,
+        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
+          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
           bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
+        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_1: Das hier ist deine erste Herausforderung! Diese
-          Aufgaben sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche,
+        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
+          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
           bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
+        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
           weggeworfen werden.
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_1: Das hier ist deine erste Herausforderung! Diese
-          Aufgaben sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche,
+        courseC_maze_programming7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben
+          sind nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen,
           bis du sie gelöst hast.
-        courseC_maze_programming7_2: Diese Blöcke sind aus Stein und können nicht
+        courseC_maze_programming7_2: Diese Bausteine sind aus Stein und können nicht
           weggeworfen werden.
       courseC_starWars_loops2:
-        courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
+        courseC_starWars_loops2: In dieser Aufgabe steht dir nur einer dieser Bausteine
           zur Verfügung.
       courseC_starWars_loops2_2018:
-        courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
+        courseC_starWars_loops2: In dieser Aufgabe steht dir nur einer dieser Bausteine
           zur Verfügung.
       courseC_starWars_loops2_2019:
-        courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
+        courseC_starWars_loops2: In dieser Aufgabe steht dir nur einer dieser Bausteine
           zur Verfügung.
       courseC_starWars_loops2_copy:
-        courseC_starWars_loops2: In dieser Aufgabe hast du nur einen dieser Blöcke
+        courseC_starWars_loops2: In dieser Aufgabe steht dir nur einer dieser Bausteine
           zur Verfügung.
+      courseD_artist_nestedLoops1a:
+        courseD_artist_nestedLoops1a_1: Du brauchst keine Farben zu verwenden, um
+          diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige
+          Farben`-Baustein` leicht machen!
+      courseD_artist_nestedLoops1a_2018:
+        courseD_artist_nestedLoops1a_1: Du brauchst keine Farben zu verwenden, um
+          diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige
+          Farben`-Baustein` leicht machen!
+      courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: Du brauchst keine Farben zu verwenden, um
+          diese Aufgabe zu lösen. Wenn du willst, kannst du es dir mit diesem `zufällige
+          Farben`-Baustein` leicht machen!
+      courseD_artist_ramp11:
+        courseD_artist_ramp11_1: Du kannst diese Zahl ändern.
+        courseD_artist_ramp11_2: Klicke hier, um die Anzahl der Wiederholungen deines
+          Codes einzugeben.
       courseD_bee_conditionals2:
-        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
-          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
-        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe?  Klicke hier für einen VIDEO-Hinweis!
+        4_5_Bee_Conditionals_2_1: Vergiss nicht, zu überprüfen ob JEDE Wolke eine
+          Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen.
+        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe? Klicke hier für einen VIDEO-Tipp!
       courseD_bee_conditionals2_2018:
-        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
-          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_1: Vergiss nicht, zu überprüfen ob JEDE Wolke eine
+          Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen.
       courseD_bee_conditionals2_2019:
-        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
-          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+        4_5_Bee_Conditionals_2_1: Vergiss nicht, zu überprüfen ob JEDE Wolke eine
+          Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen.
       courseD_bee_conditionals2_copy:
-        4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
-          hat. Du musst überhaupt nicht auf Honigwaben prüfen.
-        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe?  Klicke hier für einen VIDEO-Hinweis!
+        4_5_Bee_Conditionals_2_1: Vergiss nicht, zu überprüfen ob JEDE Wolke eine
+          Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen.
+        4_5_Bee_Conditionals_2_2: Brauchst du Hilfe? Klicke hier für einen VIDEO-Tipp!
+      courseD_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: Verwende diese Schleife, um den gesamten
+          Nektar (oder Honig) von einer Blüte (oder Wabe) einzusammeln.
+      courseD_bee_conditionals_challenge2_2018:
+        courseD_bee_conditionals_challenge2_1: Verwende diese Schleife, um den gesamten
+          Nektar (oder Honig) von einer Blüte (oder Wabe) einzusammeln.
+      courseD_bee_conditionals_challenge2_2019:
+        courseD_bee_conditionals_challenge2_1: Verwende diese Schleife, um den gesamten
+          Nektar (oder Honig) von einer Blüte (oder Wabe) einzusammeln.
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Verwende diesen Befehl, um die
           Biene rückwärts zu bewegen.
@@ -733,8 +810,8 @@ de-DE:
         courseD_bee_debugging_challenge1_callout1: Verwende diesen Befehl, um die
           Biene rückwärts zu bewegen.
       courseD_collector_ramp8:
-        courseD_collector_ramp8_1: 'Verwende diesen Block, um ein einzelnes Stück
-          des Schatzes zu sammeln.  '
+        courseD_collector_ramp8_1: 'Verwende diesen Baustein, um einen einzelnen Edelstein
+          einzusammeln. '
       courseD_farmer_while7_2018:
         courseD_farmer_while7_2018_PathAhead: Um dieses Rätsel zu lösen, musst du
           den Baustein `Solange ein Weg vor Dir liegt` verwenden.
@@ -808,6 +885,18 @@ de-DE:
         courseD_maze_ramp6_1: Egal, welchen Code du hier eingibst, er wird so oft
           wiederholt, wie du es vorschreibst, und führt dann das verbleibende Programm
           aus.
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: 'Wir haben die Bausteine in Kategorien eingeteilt,
+          um dir mehr Code zur Verfügung zu stellen! Klicke hier, um zu sehen, wo
+          die Bausteine sind.
+
+'
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: 'Wir haben die Bausteine in Kategorien eingeteilt,
+          um dir mehr Code zur Verfügung zu stellen! Klicke hier, um zu sehen, wo
+          die Bausteine sind.
+
+'
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Wenn du alle Blöcke verbunden hast, drücke auf
           "Ausführen", um dein Programm zu starten.
@@ -832,17 +921,84 @@ de-DE:
           wiederholt, wie du es vorschreibst, und führt dann das verbleibende Programm
           aus.
       courseD_scrat_ramp8:
-        courseD_maze_ramp7_1: Das hier ist deine erste Herausforderung! Diese Aufgaben
-          sind nicht einfach und du brauchst wahrscheinlich mehrere Versuche, bis
+        courseD_maze_ramp7_1: Das hier ist deine erste Aufgabe! Diese Aufgaben sind
+          nicht einfach und du wirst wahrscheinlich mehrere Versuche benötigen, bis
           du sie gelöst hast.
       courseE_aboutme_2:
         '': Klicke hier!
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: Lass uns zuerst diesen Baustein für das Zeichnen
+          des ersten Quadrats zu verwenden.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Lass uns zuerst diesen Baustein für das Zeichnen
+          des ersten Quadrats zu verwenden.
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: Wenn dieser grüne Baustein ausgeführt wird, wird
+          der gesamte Code in der Funktion ausgeführt. Was sollte der Künstler tun,
+          wenn er das erste Quadrat gezeichnet hat?
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: Wenn dieser grüne Baustein ausgeführt wird, wird
+          der gesamte Code in der Funktion ausgeführt. Was sollte der Künstler tun,
+          wenn er das erste Quadrat gezeichnet hat?
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Wenn dieser grüne Baustein ausgeführt wird, wird
+          der gesamte Code in der Funktion ausgeführt. Was sollte der Künstler tun,
+          wenn er das erste Quadrat gezeichnet hat?
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_1: Wenn dieser grüne Baustein ausgeführt wird, wird
+          der gesamte Code in der Funktion ausgeführt. Was sollte der Künstler tun,
+          wenn er das erste Quadrat gezeichnet hat?
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: Deine Bausteine zum Erstellen von Funktionen
+          wurden in der Werkzeugkiste unter dieses Etikett verschoben.
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: Deine Bausteine zum Erstellen von Funktionen
+          wurden in der Werkzeugkiste unter dieses Etikett verschoben.
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: Deine Bausteine zum Erstellen von Funktionen
+          wurden in der Werkzeugkiste unter dieses Etikett verschoben.
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge1_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge1_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge1_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge2_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge2_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: Lass dieses Programm weiterlaufen,
+          indem du unten mehr Code hinzufügst.
+        courseE_artist_functions_challenge2_callout2: Wenn dir dieses Design nicht
+          gefällt, ändere es so, wie es dir gefällt.
       courseE_artist_ramp8:
         courseE_artist_ramp8_1: Du kannst diese Zahl ändern
+        courseE_artist_ramp8_2: Klicke hier, um die Anzahl der Wiederholungen deines
+          Codes einzugeben.
+      courseE_artist_ramp8_2:
+        courseE_artist_ramp8_1: Du kannst diese Zahl ändern.
+        courseE_artist_ramp8_2: Klicke hier, um die Anzahl der Wiederholungen deines
+          Codes einzugeben.
       courseE_farmer_functions1:
-        courseE_farmer_functions1_2: Der Werkzeugkasten ist diesmal ein wenig anders
+        courseE_farmer_functions1_2: Die Werkzeugkiste ist diesmal ein wenig anders
           organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche
-          Bausteine Sie enthalten.
+          Bausteine dir zur Verfügung stehen.
       courseE_farmer_functions13_2018:
         courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
           bei jeder Ausführung des Programms.
@@ -850,13 +1006,13 @@ de-DE:
         courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
           bei jeder Ausführung des Programms.
       courseE_farmer_functions1_2018:
-        courseE_farmer_functions1_2: Der Werkzeugkasten ist diesmal ein wenig anders
+        courseE_farmer_functions1_2: Die Werkzeugkiste ist diesmal ein wenig anders
           organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche
-          Bausteine Sie enthalten.
+          Bausteine dir zur Verfügung stehen.
       courseE_farmer_functions1_2019:
-        courseE_farmer_functions1_2: Der Werkzeugkasten ist diesmal ein wenig anders
+        courseE_farmer_functions1_2: Die Werkzeugkiste ist diesmal ein wenig anders
           organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche
-          Bausteine Sie enthalten.
+          Bausteine dir zur Verfügung stehen.
       courseE_farmer_functions1a:
         courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
           bei jeder Ausführung des Programms.
@@ -876,8 +1032,13 @@ de-DE:
         courseE_farmer_functions1a_1: Dieses Gemüse ist unbekannt.  Es ändert sich
           bei jeder Ausführung des Programms.
       courseE_playLab_challenge1:
-        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
-          in verschiedene Bereiche des Spielraums verschieben.
+        courseC_PlayLab_events_challenge1_1: Mit diesem Baustein kannst du Figuren
+          an verschiedene Orte im Spielbereich bewegen.
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: 'Bringe die Figur zu dieser Fahne, um zum nächsten
+          Level zu gelangen.
+
+'
       courseF_artist_for1:
         courseF_artist_for1_1: Die Werkzeugkiste befindet sich im "Kategorie"-Modus,
           um mehr Platz für deinen Code zu schaffen. Die "Für"-Schleifen ist hier
