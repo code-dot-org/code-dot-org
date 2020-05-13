@@ -62,8 +62,9 @@ class LessonGroupSelector extends Component {
 
   /* do we need to check here that its not already in the list? */
   handleConfirm = () => {
-    const {newLessonGroup} = this.state;
-    this.setState({newLessonGroup: ''});
+    const {newLessonGroupKey, newLessonGroupDisplayName} = this.state;
+    this.setState({newLessonGroupKey: '', newLessonGroupDisplayName: ''});
+    let newLessonGroup = {[newLessonGroupKey]: newLessonGroupDisplayName};
     this.props.onConfirm(newLessonGroup);
   };
 
