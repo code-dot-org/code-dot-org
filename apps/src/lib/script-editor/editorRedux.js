@@ -184,7 +184,7 @@ function lessons(state = [], action) {
     }
     case ADD_GROUP: {
       newState.push({
-        lesson_group: action.groupName,
+        lesson_group_display_name: Object.values(action.groupName)[0],
         name: action.lessonName,
         levels: []
       });
@@ -356,11 +356,17 @@ function levelNameToIdMap(state = {}, action) {
 }
 
 function lessonGroupMap(state = {}, action) {
+  let newState = _.cloneDeep(state);
+
   switch (action.type) {
     case INIT:
       return action.lessonGroupMap;
+    case ADD_GROUP: {
+      _.merge(newState, action.groupName);
+      break;
+    }
   }
-  return state;
+  return newState;
 }
 
 export default {

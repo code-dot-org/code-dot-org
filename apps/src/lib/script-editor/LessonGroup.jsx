@@ -69,14 +69,14 @@ class LessonGroup extends Component {
   };
 
   createLessonGroup = newLessonGroup => {
-    this.hideLessonGroupSelector();
+    this.hideLessonGroupCreate();
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
       this.props.addGroup(newLessonName, newLessonGroup);
     }
   };
 
-  hideLessonGroupSelector = () => {
+  hideLessonGroupCreate = () => {
     this.setState({addingLessonGroup: false});
   };
 
@@ -93,9 +93,6 @@ class LessonGroup extends Component {
 
   serializeLessonGroups = lessons => {
     let s = [];
-    console.log(
-      _.groupBy(lessons, lesson => lesson.lesson_group_display_name || '')
-    );
     /*
     lessonGroups.forEach(lessonGroup => {
       if (lessonGroup.user_facing && !lessonGroup.lessons) {
@@ -106,7 +103,6 @@ class LessonGroup extends Component {
     lessons.forEach(lesson => {
       s = s.concat(this.serializeLesson(lesson));
     });
-    /* }); */
     s.push('');
     return s.join('\n');
   };
@@ -255,7 +251,7 @@ class LessonGroup extends Component {
           <NewLessonGroupInput
             confirmButtonText="Create"
             onConfirm={this.createLessonGroup}
-            onCancel={this.hideLessonGroupSelector}
+            onCancel={this.hideLessonGroupCreate}
           />
         )}
         <input
