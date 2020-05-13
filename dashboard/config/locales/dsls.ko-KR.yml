@@ -1226,7 +1226,65 @@ ko-KR:
         content1: 설명 입력
       New Challenge Introduction:
         content1: 설명 입력
+      OPD-K5 Reviewing Reflections:
+        content1: 설명 입력
       OPD-K5 Stage3aGo:
+        content1: 설명 입력
+      OPD-K5 Stage3aGo_copy:
+        content1: 설명 입력
+      OPD-K5 conditionals introduced:
+        content1: 설명 입력
+      OPD-K5 debugging:
+        content1: 설명 입력
+      OPD-K5 diving deeper intro:
+        content1: 설명 입력
+      OPD-K5 events introduced:
+        content1: 설명 입력
+      OPD-K5 for loops:
+        content1: 설명 입력
+      OPD-K5 for loops intro:
+        content1: 설명 입력
+      OPD-K5 for loops introduction:
+        content1: 설명 입력
+      OPD-K5 functions introduced:
+        content1: 설명 입력
+      OPD-K5 journaling:
+        content1: 설명 입력
+      OPD-K5 lesson implementation planning:
+        content1: 설명 입력
+      OPD-K5 lesson plans:
+        content1: 설명 입력
+      OPD-K5 loops introduced:
+        content1: 설명 입력
+      OPD-K5 project:
+        content1: 설명 입력
+      OPD-K5 projects introduction:
+        content1: 설명 입력
+      OPD-K5 role_of_teacher:
+        content1: 설명 입력
+      OPD-K5 sequencing introduced:
+        content1: 설명 입력
+      OPD-K5 sprite lab:
+        content1: 설명 입력
+      OPD-K5 sprite lab introduction:
+        content1: 설명 입력
+      OPD-K5 sprite lab unplugged:
+        content1: 설명 입력
+      OPD-K5 sprite lab video:
+        content1: 설명 입력
+      OPD-K5 types of lessons:
+        content1: 설명 입력
+      OPD-K5 using lesson plans:
+        content1: 설명 입력
+      OPD-K5 variables:
+        content1: 설명 입력
+      OPD-K5 variables introduction:
+        content1: 설명 입력
+      OPD-K5 variables unplugged:
+        content1: 설명 입력
+      OPD-K5 where to next:
+        content1: 설명 입력
+      OPD-K5-projects-1:
         content1: 설명 입력
       Prepare for your presentation:
         content1: 설명 입력
@@ -1502,6 +1560,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
@@ -1770,6 +1836,14 @@ ko-KR:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

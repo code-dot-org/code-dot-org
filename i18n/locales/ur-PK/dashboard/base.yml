@@ -199,8 +199,6 @@ ur:
       title: "فروزن"
     unplugged_conditionals:
       title: "شرائط"
-  gallery:
-    report_abuse: "غلط استعمال کی اطلاع دیں"
   landing:
     help_support: "مدد اور معاونت"
   dialog:
@@ -226,15 +224,6 @@ ur:
       report_abuse_form:
         abuse_type:
           other: 'دیگر'
-  flex_category:
-    csf_loops: 'لوپس'
-    csf_events: 'ایونٹس/واقعات'
-    csf_conditionals: 'شرائط'
-    csf_variables: 'متغیرات'
-    csp_variables: 'متغیرات'
-    csp_conditionals: 'شرائط'
-    csp_lists: 'فہرستیں'
-    csp_loops: 'لوپس'
   hoc_download:
     minecraft_name: 'Minecraft کوڈ کی گھڑی'
   pd:

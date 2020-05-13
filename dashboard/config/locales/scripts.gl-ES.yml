@@ -739,12 +739,24 @@ gl:
           stages:
             Evaluation Blocks:
               name: Bloques de avaliación
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         MikeTest:
           stages:
             Artist Functions:
               name: Funcións de artista
         artistExemplar:
           description_audience: Idades de 8 a 18 anos
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -817,6 +829,10 @@ gl:
               name: Rebote
             'Farmer: While Loops':
               name: 'Granxeira: Bucles "Mentres" (While)'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csd3-2017:
           stages:
             Functions:
@@ -863,6 +879,14 @@ gl:
               name: A receita de deseño
             Welcome!:
               name: Benvido!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         basketball:
           stages:
             Bounce:
@@ -880,6 +904,10 @@ gl:
           stages:
             Lists:
               name: Listas
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -970,6 +998,14 @@ gl:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         sciencepd4:
           stages:
             Welcome!:
@@ -992,6 +1028,10 @@ gl:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csd6-draft:
           stages:
             Lists:
@@ -1098,6 +1138,54 @@ gl:
           stages:
             Building a Foundation:
               name: Construíndo unha base
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         express-2017:
           stages:
             Introduction:
@@ -1384,6 +1472,74 @@ gl:
           stages:
             While Loops:
               name: Bucles mentres
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1394,6 +1550,10 @@ gl:
               name: Creando camiños
             Your Digital Footprint:
               name: A túa pegada dixital
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         frozen-2018:
           stages:
             Artist:
@@ -1406,6 +1566,14 @@ gl:
           stages:
             Artist:
               name: Artista
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1422,6 +1590,15 @@ gl:
               name: A Internet
             Crowdsourcing:
               name: Colaboración Aberta
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Cidadanía dixital
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1436,6 +1613,17 @@ gl:
               name: Imaxes binárias
             Artist Binary:
               name: Artista binario
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1452,6 +1640,13 @@ gl:
               name: Colaboración Aberta
             Songwriting:
               name: Composición
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
         express-2019:
           stages:
             Relay Programming:
@@ -1472,10 +1667,24 @@ gl:
               name: Internet
             Crowdsourcing:
               name: Colaboración Aberta
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
         andrea-test:
           stages:
             'null':
               name: nulo
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1484,12 +1693,28 @@ gl:
               name: O Gran Evento
             Binary Bracelets:
               name: Pulseiras Binarias
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Mapas Felices
             Going Places Safely:
               name: Ir a Sitios en modo Seguro
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1498,6 +1723,13 @@ gl:
               name: A túa pegada dixital
             'Loops: Getting Loopy':
               name: Bucleándose
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1506,6 +1738,11 @@ gl:
               name: A túa pegada dixital
             Spelling Bee:
               name: Abella que Soletrea
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1526,6 +1763,16 @@ gl:
           stages:
             Functions with Parameters:
               name: Funcións con parámetros
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            required:
+              display_name: Visión xeral
         csp1-2019:
           stages:
             The Internet:
@@ -1538,6 +1785,10 @@ gl:
           stages:
             While Loops:
               name: Bucles mentres
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1546,10 +1797,88 @@ gl:
               name: Condicionais con cartas
             Building a Foundation:
               name: Construíndo unha base
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+            required:
+              display_name: Visión xeral
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csd2-pilot:
           stages:
             Lists:
@@ -1562,12 +1891,70 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         peru-2019:
           stages:
             Introduction:
               name: Introdución
             Nested Loops:
               name: Bucles aniñados
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -1584,6 +1971,14 @@ gl:
               name: Variables
             For Loops:
               name: Bucles "Para" (For)
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1594,14 +1989,59 @@ gl:
               name: Colaboración Aberta
             Conditionals with Cards:
               name: Condicionais con cartas
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_conditionals:
+              display_name: Condicionais
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Condicionais
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_events:
+              display_name: Eventos
+            csf_digcit:
+              display_name: Cidadanía dixital
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Condicionais
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_events:
+              display_name: Eventos
+            csf_digcit:
+              display_name: Cidadanía dixital
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1622,6 +2062,13 @@ gl:
               name: Ir a Sitios en modo Seguro
             'Programming: Happy Maps':
               name: Mapas Felices
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -1630,12 +2077,28 @@ gl:
               name: Creando camiños
             'Loops: Getting Loopy':
               name: Bucleándose
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Pulseiras Binarias
             'Events: The Big Event':
               name: O Gran Evento
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1650,10 +2113,28 @@ gl:
               name: Artista binario
             Digital Citizenship:
               name: Cidadanía dixital
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Composición
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1664,10 +2145,34 @@ gl:
               name: A Internet
             Crowdsourcing:
               name: Colaboración Aberta
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Abella que Soletrea
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
         csp3-virtual:
           stages:
             Creating Functions:

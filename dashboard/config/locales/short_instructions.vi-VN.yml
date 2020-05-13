@@ -453,10 +453,14 @@ vi-VN:
         đến được chỗ chú lợn!
       courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
+      courseA_maze_seq6_copy: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
       courseA_maze_seq8: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú lợn!
       courseA_maze_seq8_2018: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
+      courseA_maze_seq8_copy: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
       courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
         các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
@@ -563,6 +567,9 @@ vi-VN:
       courseE_artist_functions1: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp
         tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn
         so với độ dài cạnh vuông.'
+      courseE_artist_functions1_copy: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ!
+        Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn
+        hơn so với độ dài cạnh vuông.'
       courseE_bee_functions1: Thu thập tất cả phấn hoa từ từng bông.
       courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
         sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."

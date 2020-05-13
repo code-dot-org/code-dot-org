@@ -1440,6 +1440,12 @@ FactoryGirl.define do
     questions '{}'
   end
 
+  factory :basic_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/sample"
+    foorm_submission_metadata
+    answers '{}'
+  end
+
   factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher

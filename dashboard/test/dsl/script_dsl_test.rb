@@ -18,7 +18,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
-    stage_extras_available: false,
+    lesson_extras_available: false,
     has_verified_resources: false,
     has_lesson_plan: false,
     curriculum_path: nil,
@@ -470,33 +470,6 @@ level 'Level 3'
                   challenge: true,
                 },
               },
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
-  test 'Script DSL with skipped extras' do
-    input_dsl = <<~DSL
-      stage 'Lesson1'
-      level 'Level 1'
-      level 'Level 2'
-      no_extras
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            stage_extras_disabled: true,
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
             ]
           }
         ],

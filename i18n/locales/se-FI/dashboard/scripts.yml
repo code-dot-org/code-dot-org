@@ -28,10 +28,62 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+        coursed-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
         k5-onlinepd-2019:
           stages:
             Events:
               name: Dáhpáhusaid
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursed-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
         code-break:
           stages:
             Events:

@@ -1348,6 +1348,43 @@ fr-FR:
         toutes les règles, mélanger les sports entre eux, soyez créatifs! Lorsque
         tu as terminé, clique sur Terminer pour laisser tes amis essayer ton jeu sur
         leurs téléphones.'
+      OPD-K5-events-2: Attache le bloc `faire une quantité normale de battements d'ailes`
+        sous l'évènement `lors d'un clic`, et appuie sur "Démarrer". Clique ou tape
+        sur l'espace de jeu pour déplacer Flappy vers la cible.
+      OPD-K5-events-3: Essaie d'ajouter un bloc qui définit la vitesse du niveau quand
+        on appuie sur le bouton "Démarrer". Joue avec le jeu et bat des ailes jusqu'à
+        la cible pour continuer.
+      OPD-K5-events-4: Attache le bloc `terminer le jeu` à l'évènement `au contact
+        du sol`. Joue et fait tomber l'oiseau sur le sol pour continuer.
+      OPD-K5-events-5: Attache un bloc à l'évènement `au contact d'un obstacle` pour
+        que le jeu se termine lorsque Flappy s'écrase dans les premiers tuyaux.
+      OPD-K5-events-6: Ajoute un bloc à l'évènement `au passage d'un obstacle`, appuie
+        sur "Démarrer" pour marquer un point en faisant passer Flappy à travers les
+        premiers tuyaux.
+      OPD-K5-forloops-1: Recueille le nectar de chaque fleur en utilisant le moins
+        de blocs possible.
+      OPD-K5-forloops-2: Écris le code pour aider l'abeille à recueillir tout le nectar.
+      OPD-K5-forloops-5: Aide l'abeille à recueillir tout le nectar.
+      OPD-K5-forloops-6: Essaie de recueillir ce nectar en comptant à rebours de 5
+        à1, avec un pas de 1.
+      OPD-K5-forloops-7: Essaie de cueillir ces fleurs en utilisant un incrément de
+        2.
+      OPD-K5-projects-2: Choisis un arrière plan et un acteur qui sera ton héros dans
+        le jeu.
+      OPD-K5-projects-4: Ajoute au moins 2 acteurs à ton jeu et fais les bouger.
+      OPD-K5-projects-5: Trouve des moyens intéressants pour modifier le score. Le
+        score doit se modifier pour montrer autre chose que 0 et pouvoir continuer.
+      OPD-K5-projects-7: Tu as terminé! Maintenant tu peux jouer à ton jeu où le partager
+        avec tes amis et camarades de classe!
+      OPD-K5-variables-2: 'Maintenant, dessine trois de ces triangles, l''un à côté
+        de l''autre.  '
+      OPD-K5-variables-5: Déplace la longueur de 50 dans une variable afin de pouvoir
+        l'utiliser dans les prochaines énigmes.
+      OPD-K5-variables-6: Maintenant, utilise la variable 'longueur' pour que l'artiste
+        saute en avant et vers le bas de la `longueur` des pixels entre les triangles.
+      OPD-K5-variables-7: Ajoute un autre ensemble de boucles à la fin de ton code
+        pour ajouter trois triangles. Cette fois-ci, déplace-toi en avant et en haut
+        !
       Overworld Avoid Monsters: Courir dans une plante grimpante est une mauvaise
         idée. Faufile-toi entre les plantes grimpantes avec précaution et mets-toi
         à l’abri dans ta maison.
@@ -1789,6 +1826,8 @@ fr-FR:
       courseA_maze_ramp5a_2019: Amène l’oiseau jusqu'au cochon !
       courseA_maze_seq1: Amène l'oiseau jusqu'au sale cochon!
       courseA_maze_seq10: 'Défi: Contourne la TNT pour que l''oiseau atteigne le cochon! '
+      courseA_maze_seq10_copy: 'Défi: Contourne la TNT pour que l''oiseau atteigne
+        le cochon! '
       courseA_maze_seq11: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon.
       courseA_maze_seq11_2018: Bouge dans une direction, puis dans une autre pour
@@ -1807,17 +1846,23 @@ fr-FR:
       courseA_maze_seq3: Modifie le code pour que l'oiseau atteigne le cochon!
       courseA_maze_seq4: ENLEVE un bloc pour que l'oiseau atteigne le cochon!
       courseA_maze_seq5: Essaie celui la depuis le début.
+      courseA_maze_seq5_copy: Essaie celui la depuis le début.
       courseA_maze_seq6: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
       courseA_maze_seq6_2018: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
       courseA_maze_seq6_2019: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
+      courseA_maze_seq6_copy: Bouge dans une direction, puis dans une autre pour amener
+        l'oiseau jusqu'au cochon !
       courseA_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau
         jusqu'au cochon!
+      courseA_maze_seq7_copy: Trouve ce qui manque, puis ajoute des blocs pour amener
+        l'oiseau jusqu'au cochon!
       courseA_maze_seq8: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
       courseA_maze_seq8_2018: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
       courseA_maze_seq8_2019: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
+      courseA_maze_seq8_copy: Résoud ce niveau et amène l'oiseau jusqu'au cochon!
       courseA_maze_seq9: Corrige ce niveau en ajoutant des blocs pour amener l'oiseau
         jusqu'au cochon!
       courseA_maze_seq_challenge1: Il y a un problème. Corrige ce code pour amener
@@ -2670,11 +2715,15 @@ fr-FR:
         une boucle qui utilise seulement un bloc à l'intérieur d'un bloc `Répéter`.
       courseC_starWars_loops2_2019: Pour obtenir toute la ferraille, essaie de créer
         une boucle qui utilise seulement un bloc à l'intérieur d'un bloc `Répéter`.
+      courseC_starWars_loops2_copy: Pour obtenir toute la ferraille, essaie de créer
+        une boucle qui utilise seulement un bloc à l'intérieur d'un bloc `Répéter`.
       courseC_starWars_loops4: Dans ce puzzle, 2 boucles `Répéter` aiderons BB-8 à
         ramasser toute la ferraille avec le moins de blocs possible!
       courseC_starWars_loops4_2018: Dans ce puzzle, 2 boucles `Répéter` aiderons BB-8
         à ramasser toute la ferraille avec le moins de blocs possible!
       courseC_starWars_loops4_2019: Dans ce puzzle, 2 boucles `Répéter` aiderons BB-8
+        à ramasser toute la ferraille avec le moins de blocs possible!
+      courseC_starWars_loops4_copy: Dans ce puzzle, 2 boucles `Répéter` aiderons BB-8
         à ramasser toute la ferraille avec le moins de blocs possible!
       courseC_starWars_loops5: Faire ramasser à BB-8 toutes les ferrailles aussi vite
         que possible!
@@ -2682,11 +2731,15 @@ fr-FR:
         vite que possible!
       courseC_starWars_loops5_2019: Faire ramasser à BB-8 toutes les ferrailles aussi
         vite que possible!
+      courseC_starWars_loops5_copy: Faire ramasser à BB-8 toutes les ferrailles aussi
+        vite que possible!
       courseC_starWars_loops6: Les boucles fonctionnent même avec plus d'un bloc à
         l'intérieur. Est ce que tu peux boucler sur cette séquence?
       courseC_starWars_loops6_2018: Les boucles fonctionnent même avec plus d'un bloc
         à l'intérieur. Est ce que tu peux boucler sur cette séquence?
       courseC_starWars_loops6_2019: Les boucles fonctionnent même avec plus d'un bloc
+        à l'intérieur. Est ce que tu peux boucler sur cette séquence?
+      courseC_starWars_loops6_copy: Les boucles fonctionnent même avec plus d'un bloc
         à l'intérieur. Est ce que tu peux boucler sur cette séquence?
       courseC_starWars_loops7: Peux-tu essayer de ramasser toute la ferraille avec
         une seule boucle? Essaie de le programmer sans puis de trouver le code qui
@@ -2695,6 +2748,9 @@ fr-FR:
         avec une seule boucle? Essaie de le programmer sans puis de trouver le code
         qui se répète pour le mettre dans une boucle.
       courseC_starWars_loops7_2019: Peux-tu essayer de ramasser toute la ferraille
+        avec une seule boucle? Essaie de le programmer sans puis de trouver le code
+        qui se répète pour le mettre dans une boucle.
+      courseC_starWars_loops7_copy: Peux-tu essayer de ramasser toute la ferraille
         avec une seule boucle? Essaie de le programmer sans puis de trouver le code
         qui se répète pour le mettre dans une boucle.
       courseC_starWars_loops9: Utilse ce que tu as appris pour ramasser toute la ferraille
@@ -2935,11 +2991,15 @@ fr-FR:
         nuage. S'il y a une fleur, prends du nectar.
       courseD_bee_conditionals1_predict1_2019: Vérifie s'il y a une fleur sous le
         nuage. S'il y a une fleur, prends du nectar.
+      courseD_bee_conditionals1_predict1_copy: Vérifie s'il y a une fleur sous le
+        nuage. S'il y a une fleur, prends du nectar.
       courseD_bee_conditionals2: 'Vérifie sous chaque nuage s''il cache une fleur
         avant de ramasser le nectar.  '
       courseD_bee_conditionals2_2018: 'Vérifie sous chaque nuage s''il cache une fleur
         avant de ramasser le nectar.  '
       courseD_bee_conditionals2_2019: 'Vérifie sous chaque nuage s''il cache une fleur
+        avant de ramasser le nectar.  '
+      courseD_bee_conditionals2_copy: 'Vérifie sous chaque nuage s''il cache une fleur
         avant de ramasser le nectar.  '
       courseD_bee_conditionals3: |-
         Aide l'abeille à ramasser tout le nectar.
@@ -2953,17 +3013,25 @@ fr-FR:
         Aide l'abeille à ramasser tout le nectar.
 
         Tu peux seulement ramasser le nectar des fleurs, mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
+      courseD_bee_conditionals3_copy: |-
+        Aide l'abeille à ramasser tout le nectar.
+
+        Tu peux seulement ramasser le nectar des fleurs, mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
       courseD_bee_conditionals4: Recueille tout le nectar en utilisant le moins de
         blocs possible.
       courseD_bee_conditionals4_2018: Recueille tout le nectar en utilisant le moins
         de blocs possible.
       courseD_bee_conditionals4_2019: Recueille tout le nectar en utilisant le moins
         de blocs possible.
+      courseD_bee_conditionals4_copy: Recueille tout le nectar en utilisant le moins
+        de blocs possible.
       courseD_bee_conditionals5: Ramasse tous les nectars avec le moins possible de
         blocs.
       courseD_bee_conditionals5_2018: Ramasse tous les nectars avec le moins possible
         de blocs.
       courseD_bee_conditionals5_2019: Ramasse tous les nectars avec le moins possible
+        de blocs.
+      courseD_bee_conditionals5_copy: Ramasse tous les nectars avec le moins possible
         de blocs.
       courseD_bee_conditionals6: Certains de ces nuages peuvent avoir des nids d'abeille
         sous eux. Vérifie bien si un nid d'abeille se cache derrière chaque nuage!
@@ -3423,16 +3491,27 @@ fr-FR:
         avec des côtés de 25 pixels.
       courseE_artist_functions10_2019: Cette fois, utilise des lignes de 8 hexagones
         avec des côtés de 25 pixels.
+      courseE_artist_functions1_copy: |-
+        Aide le zombie à dessiner des lunettes en utilisant des carrés avec des carrés de 100 pixels.\
+        La passerelle entre les carrés fait 75 pixels de long.
       courseE_artist_functions2: 'Ce coup-ci, utilise la fonction `Dessine un carré`
         pour créer des lunettes. '
+      courseE_artist_functions2_copy: 'Ce coup-ci, utilise la fonction `Dessine un
+        carré` pour créer des lunettes. '
       courseE_artist_functions3: Tu peux faire ce dessin en ajoutant un bloc `répéter`.
+      courseE_artist_functions3_copy: Tu peux faire ce dessin en ajoutant un bloc
+        `répéter`.
       courseE_artist_functions4: Maintenant que tu peux dessiner une étoile, essaie
         de dessiner 4 étoiles!
+      courseE_artist_functions4_copy: Maintenant que tu peux dessiner une étoile,
+        essaie de dessiner 4 étoiles!
       courseE_artist_functions5: Dessine seulement ces 3 étoiles pour terminer le
         puzzle.
       courseE_artist_functions5_2018: Dessine seulement ces 3 étoiles pour terminer
         le puzzle.
       courseE_artist_functions5_2019: Dessine seulement ces 3 étoiles pour terminer
+        le puzzle.
+      courseE_artist_functions5_copy: Dessine seulement ces 3 étoiles pour terminer
         le puzzle.
       courseE_artist_functions6: Fais cette fenêtre en dessinant un carré, puis tourne
         de 90 degrés avant d’en dessiner une autre et ainsi de suite.

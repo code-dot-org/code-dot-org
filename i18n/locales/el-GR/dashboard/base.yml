@@ -572,19 +572,6 @@ el:
     widgets:
       audience: "Ηλικίες 14+"
       cta: "Μάθε πώς"
-  gallery:
-    students_drew_these_with_code: "Οι μαθητές τα σχεδίασαν αυτά με κώδικα!"
-    students_made_these_with_code: "Οι μαθητές τα δημιούργησαν αυτά με κώδικα!"
-    picture_count: "Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές σχεδίασαν <b>%{count}</b> εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε κλικ επάνω στις εικόνες για να δείτε το κάθε πρόγραμμα σε δράση."
-    activity_count: "Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές δημιούργησαν <b>%{count}</b> εφαρμογές και εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε κλικ επάνω στις εικόνες και τα στιγμιότυπα για να δείτε το κάθε πρόγραμμα σε δράση."
-    want_to_make_your_own: "Θέλετε να φτιάξετε το δικό σας;"
-    more: "Επιπλέον &rarr;"
-    caption_by_name_age: "από %{name}, ηλικία %{age}"
-    caption_time_ago: "%{time_ago} πριν"
-    header: "Συλλογή φωτογραφιών"
-    header_playlab: "Εργαστήριο Παιχνιδιού"
-    header_artist: "Καλλιτέχνης"
-    report_abuse: "Αναφορά κατάχρησης"
   landing:
     report_bug: "Αναφορά σφάλματος"
     support: "Λάβετε βοήθεια"
@@ -720,29 +707,6 @@ el:
           other: 'Άλλα'
         detail: 'Καλείσθε να παράσχετε τόσο λεπτομερώς όσο το δυνατόν σχετικά με το περιεχόμενο που πρόκειται να αναφέρετε.'
         acknowledge: 'Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy και το %{link_start_tos}Terms του Service%{link_end}'
-  flex_category:
-    required: 'Επισκόπηση'
-    csf_digcit: 'Ψηφιακή υπηκοότητα'
-    csf_jigsaw: 'Παζλ'
-    csf_loops: 'Βρόχοι'
-    csf_events: 'Συμβάντα'
-    csf_binary: 'Δυαδικό'
-    csf_conditionals: 'Συνθήκες'
-    csf_spritelab: 'Sprite Lab'
-    csf_nested_loops: 'Φωλιασμένες Επαναλήψεις'
-    csf_functions: 'Συναρτήσεις'
-    csf_variables: 'Μεταβλητές'
-    csf_for_loops: 'Βρόχοι Για'
-    csf_internet: 'Διαδίκτυο'
-    csf_warmup: 'Ζέσταμα'
-    cspSurvey: 'Έρευνα'
-    csp_variables: 'Μεταβλητές'
-    csp_conditionals: 'Συνθήκες'
-    csp_functions: 'Συναρτήσεις'
-    csp_project: 'Έργο'
-    csp_lists: 'Λίστες'
-    csp_loops: 'Βρόχοι'
-    csp_libraries: 'Βιβλιοθήκες'
   external_links:
     disclaimer: Αποποίηση ευθυνών
   hoc_download:

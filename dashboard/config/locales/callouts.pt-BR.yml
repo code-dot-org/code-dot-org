@@ -514,6 +514,20 @@ pt-BR:
           seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Faça Login para
           salvar esse projeto em sua conta!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Você irá encontrar o laço `para` aqui!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Leve o ator para esta bandeira para ir para o
+          próximo nível.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Use este bloco para deixar anotações, para você mesmo ou
+          para seu professor, de como seu código funciona.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Observe que os blocos agora têm uma
+          nova maneira de inserir números. Estes blocos `matemática` podem ser retirados
+          e movidos!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Use isso para definir o valor da variável `tamanho`
       Overworld Chop Trees:
         craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
       Overworld Chop Trees_2019:
@@ -888,6 +902,8 @@ pt-BR:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Você não precisa usar cores para acertar este
           desafio. Se quiser, use este bloco `cor aleatória` para facilitar!
@@ -911,6 +927,10 @@ pt-BR:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
           não precisa se preocupar com os favos de mel.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+        4_5_Bee_Conditionals_2_2: Precisa de ajuda? Clique aqui para uma dica em VIDEO!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Use este laço para coletar todo o néctar
           (ou mel) de uma flor (ou favo de mel).
@@ -1028,6 +1048,9 @@ pt-BR:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Vamos começar usando esse bloco para ajudar a
           criar o primeiro quadrado.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Vamos começar usando esse bloco para ajudar a
+          criar o primeiro quadrado.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Quando este bloco verde é executado, todo o código
           na função será executado. O que o artista deve fazer depois de desenhar
@@ -1037,6 +1060,10 @@ pt-BR:
           na função será executado. O que o artista deve fazer depois de desenhar
           o primeiro quadrado?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Quando este bloco verde é executado, todo o código
+          na função será executado. O que o artista deve fazer depois de desenhar
+          o primeiro quadrado?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Quando este bloco verde é executado, todo o código
           na função será executado. O que o artista deve fazer depois de desenhar
           o primeiro quadrado?

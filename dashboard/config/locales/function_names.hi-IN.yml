@@ -477,6 +477,8 @@ hi-IN:
         do something: कुछ कीजिए
         draw hexagon: षट्कोण खींचें
         draw line of hexagons: षट्भुजों की लाइन खींचें
+      courseE_artist_functions1_copy:
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions2:
         draw a square: एक वर्ग खींचें
         draw ear stems: ईयर स्टेम चित्रित करें
@@ -486,17 +488,24 @@ hi-IN:
       courseE_artist_functions2_2019:
         draw a square: एक वर्ग खींचें
         draw ear stems: ईयर स्टेम चित्रित करें
+      courseE_artist_functions2_copy:
+        draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions3_2018:
         draw a star: एक सितारा खींचे
       courseE_artist_functions3_2019:
         draw a star: एक सितारा खींचे
       courseE_artist_functions4:
         draw a star: एक सितारा खींचे
+      courseE_artist_functions4_copy:
+        draw a star: एक सितारा खींचे
       courseE_artist_functions5:
         draw a star: एक सितारा खींचे
       courseE_artist_functions5_2018:
         draw a star: एक सितारा खींचे
       courseE_artist_functions5_2019:
+        draw a star: एक सितारा खींचे
+      courseE_artist_functions5_copy:
         draw a star: एक सितारा खींचे
       courseE_artist_functions7:
         draw a window: खिड़की चित्रित करें
@@ -587,6 +596,9 @@ hi-IN:
         draw a square: एक वर्ग खींचें
         draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict1_2019:
+        draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
+      courseE_artist_functions_predict1_copy:
         draw a square: एक वर्ग खींचें
         draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict2:

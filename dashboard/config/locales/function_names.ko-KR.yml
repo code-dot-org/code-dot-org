@@ -231,17 +231,23 @@ ko-KR:
         draw a square: 사각형 그리기
       courseE_artist_functions2_2019:
         draw a square: 사각형 그리기
+      courseE_artist_functions2_copy:
+        draw a square: 사각형 그리기
       courseE_artist_functions3_2018:
         draw a star: 별 그리기
       courseE_artist_functions3_2019:
         draw a star: 별 그리기
       courseE_artist_functions4:
         draw a star: 별 그리기
+      courseE_artist_functions4_copy:
+        draw a star: 별 그리기
       courseE_artist_functions5:
         draw a star: 별 그리기
       courseE_artist_functions5_2018:
         draw a star: 별 그리기
       courseE_artist_functions5_2019:
+        draw a star: 별 그리기
+      courseE_artist_functions5_copy:
         draw a star: 별 그리기
       courseE_artist_functions7:
         draw a house: 집 그리기
@@ -304,6 +310,8 @@ ko-KR:
       courseE_artist_functions_predict1_2018:
         draw a square: 사각형 그리기
       courseE_artist_functions_predict1_2019:
+        draw a square: 사각형 그리기
+      courseE_artist_functions_predict1_copy:
         draw a square: 사각형 그리기
       courseE_artist_functions_predict2:
         do something: 함수 이름

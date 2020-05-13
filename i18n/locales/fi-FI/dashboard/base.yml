@@ -641,19 +641,6 @@ fi:
       title: "Pienoisohjelmat"
       audience: "Yli 14-vuotiaille"
       cta: "Lisätietoja"
-  gallery:
-    students_drew_these_with_code: "Oppilaat piirsivät nämä koodilla!"
-    students_made_these_with_code: "Oppilaat tekivät nämä koodilla!"
-    picture_count: "Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat piirtäneet <b>%{count}</b> kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia nähdäksesi kunkin ohjelman toiminnassa."
-    activity_count: "Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat tehneet <b>%{count}</b> sovellusta ja kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa."
-    want_to_make_your_own: "Haluatko tehdä omasi?"
-    more: "Lisää →"
-    caption_by_name_age: "%{name} tekemä, ikä %{age}"
-    caption_time_ago: "%{time_ago} sitten"
-    header: "Galleria"
-    header_playlab: "Pelilabra"
-    header_artist: "Taiteilija"
-    report_abuse: "Ilmoita väärinkäytöksestä"
   landing:
     report_bug: "Raportoi ongelma"
     support: "Katso ohjeet"
@@ -816,39 +803,6 @@ fi:
     instructor_feedback: 'Ohjaajan palaute'
     peer_feedback: 'Kanssaoppijan palaute'
     outdated: 'Palaute on lisätty aiemmin lähetettyyn versioon'
-  flex_category:
-    required: 'Yleiskatsaus'
-    main_course: 'Pää kurssi'
-    extra_course_content: 'Lisäkurssin sisältö'
-    csf_digcit: 'Digitaalinen kansalaisuus'
-    csf_jigsaw: 'Palapeli'
-    csf_loops: 'Silmukat'
-    csf_events: 'Tapahtumat'
-    csf_binary: 'Binääri'
-    csf_conditionals: 'Ehtolausekkeet'
-    csf_nested_loops: 'Sisäkkäiset silmukat'
-    csf_functions: 'Funktiot'
-    csf_variables: 'Muuttujat'
-    csf_for_loops: 'Silmukat'
-    csf_internet: 'Internet'
-    csd1_1: 'Luku 1: Ongelmanratkaisu prosessi'
-    csd1_2: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
-    csd2_1: 'Luku 1: Web-sisältö ja HTML'
-    csd2_2: 'Luku 2: Muotoilu ja CSS'
-    csd3_1: 'Luku 1: Kuvia ja animaatioita'
-    csd3_2: 'Luku 2: Pelien rakentaminen'
-    csd4_1: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
-    csd4_2: 'Luku 2: Apsin prototypointi'
-    csd5_1: 'Luku 1: Tiedon esittäminen'
-    csd5_2: 'Luku 2: Tieto-ongelmien ratkaisu'
-    csd6_1: 'Luku 1: Laitteiston palaute'
-    csd6_2: 'Luku 2: Laitteiston syöte'
-    cspSurvey: 'Kysely'
-    csp_variables: 'Muuttujat'
-    csp_conditionals: 'Ehtolausekkeet'
-    csp_functions: 'Funktiot'
-    csp_lists: 'Listat'
-    csp_loops: 'Silmukat'
   external_links:
     disclaimer: Vastuuvapauslauseke
   hoc_download:

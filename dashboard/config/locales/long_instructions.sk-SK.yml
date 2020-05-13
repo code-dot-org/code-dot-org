@@ -104,6 +104,8 @@ sk-SK:
         Tieto kvetinky vyzerajú lákavo!
 
         Pozbieraj nektár z každého kvetu použitím čo možno najmenej blokov.
+      2-3 Bee Loops 13: "\\*\\*Hodnotenie: Pozbierajte všetok nektár použitím čo najmenšieho
+        možného počtu blokov."
       2-3 Bee Loops 3A: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       2-3 Bee Loops 3B: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru
         a vyrobenie všetkého medu.
@@ -239,62 +241,246 @@ sk-SK:
         zasypávať jamu až kým nebude zem vyrovnaná?  "
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
         AM.png\" style=\"height:150px\"> \n</div>\n\n**Cieľ:** Nastaviť obrazovku
-        na zeleno. \n\n**Ako:** Potiahni si na plochu blok `nastavVlastnosť(). Použi
-        rozbaľovacie šípky nadol na nastavenie`\"farby-pozadia\"`obrazovky na`\"zelená\"\\`.
-        Potom stlač \"Spustiť\".\n\n**Nejde to? Klikni tu:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+        na zeleno. \n\n**Ako:** Pretiahni si na plochu blok `setProperty()`. Použi
+        rozbaľovacie šípky nadol na nastavenie farby pozadia`\"background-color\"`
+        obrazovky na zelená `\"green\"`. Potom stlač \"Spustiť\".\n\n**Nedarí sa ti?
+        Klikni sem:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: "<div style=\"float:right\">\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29
         PM.png\" style=\"height:200px;\">\n</div>\n\n**Cieľ:** Nastaviť väčší text
         a zmeniť ho na modrý. \n\n**Ako:** Budeš potrebovať dva riadky kódu. Zmeň
-        pre `\"label1\"` `\"veľkosť-písma\"` na `80` a`\"farba-textu\"` na `\"modrú\"`\n\n**Nejde
-        to? Klikni tu:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
+        pre `\"label1\"` veľkosť písma `\"font-size\"` na `80` a farbu textu `\"text-color\"`
+        na modrú `\"blue\"`\n\n**Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
       AppLab Intro 7 - Full Text: |-
         <div style="float:right">
         <img src="https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png" style="height:200px">
         </div>
 
-        **Cieľ:** Zmeniť tlačidlá na `"červené"` a \`"modré". Potom zmeň text vo veľkom orandžovom rámčeku.
+        **Cieľ:** Zmeniť tlačidlá na červené `"red"` a modré `"blue"`. Potom zmeň text vo veľkom oranžovom rámčeku.
 
         **Ako:**
 
-        -   Neabudni, že keď kurzorom prejdeš ponad objekty, tak uvidíš ich `"id"`.
-        -   Nastav `"farbu-pozadia"` pre tlačidlá na `"červenú"` a \`"modrú".
-        -   Zmeň vlastnosť rámčeka `"text"` na ˇˇcokoľvek chceš, ako napríklad \`"Vitajte v mojej appke!"
+        -   Neabudni, že keď kurzorom prejdeš ponad prvky, tak uvidíš ich `"id"`.
+        -   Nastav farbu pozadia `"background-color"` pre tlačidlá na červenú `"red"` a modrú `"blue"`.
+        -   Zmeň vlastnosť rámčeka `"text"` na čokoľvek chceš, ako napríklad `"Vitajte v mojej appke!"`
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
       AppLab Intro 7 - onEvent intro: |-
         <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
 
-        **Cieľ:** Obrazovka bude na začiatku modrá. Pridaj kód tak, aby sa zmenila na zelenú po kliknutí na tlačidlo "Zozeleniť".
+        **Cieľ:** Obrazovka bude na začiatku modrá. Pridaj kód tak, aby sa zmenila na zelenú po kliknutí na tlačidlo Zozeleniť "Green-ify".
 
-        **Ako:**  Pridaj kód do vnútra `priUdalosti()` , ktoré nastaví `"farbu-pozadia"` obrazovky na `"zelenú"`.
+        **Ako:**  Pridaj kód do vnútra `setProperty()` , ktorý nastaví farbu pozadia `"background-color"` obrazovky na zelenú `"green"`.
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons: |-
         <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
 
-        **Cieľ:** Pomôž s dokončním tejto aplikácie baterky. Tlačidlo "Zapnúť" už mení obrazovku na bielu. Spusti si aplikáciu a vyskúšaj to. Potom napíš kód tak aby tlačidlo "Vypnúť" menilo obrazovku naspäť na čiernu.
+        **Cieľ:** Pomôž nám dokončiť túto appku imitujúcu baterku. Tlačidlo Zapnúť "On" už mení obrazovku na bielu. Spusti si aplikáciu a vyskúšaj to. Potom napíš kód tak aby tlačidlo Vypnúť "Off" menilo obrazovku naspäť na čiernu.
 
-        **Ako:**  Pridaj kód do prázdneho `priUdalosti()`, ktoré nastaví `"farbu-pozadia"` obrazovky na `"čiernu"` a `"farbu-textu"` rámčeka na `"bielu"`.
+        **Ako:**  Pridaj kód do prázdneho `setProperty()`, ktorý nastaví farbu pozadia `"background-color"` obrazovky na  čiernu `"black"` a farbu textu `"text-color"` nápisu na bielu `"white"`.
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
-        AM.png\" style=\"float:right;height:200px\">\n\n**Cieľ:** Táto doska so zvukmi
-        už je skoro hotová! Spusti ju a zisti ako funguje. Potom pridaj obrázok, text
-        a zvuk pre posledné tlačidlo.\n\n**Ako:** \n\n-   Pridaj do porogramu `priUdalosti()`
-        a nastav \"id\" na `\"tlačidlo4\"`. Potiahnu `prehrajZvuk()` do bloku  `priUdalosti()`
-        a vyber si nejaký zvuk z knižnice. \n-   Pridaj `nastavVlastnosť()` (von z
-        bloku `priUdalosti()`), aby si zmenil/a vlastnosť tlačidla `\"obrázok\"`.
-        Vyber so obrázok pomocou tretieho rozbaľovacieho menu.\n-   Pridaj ešte jednu
-        \ `nastavVlastnosť()`, aby si zmenil `\"text\"` tlačidla.\n\n**Nejde to? Klikni
-        tu:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+        AM.png\" style=\"float:right;height:200px\">\n\n**Cieľ:** Táto zvuková aplikácia
+        so zvieratami je už skoro hotová! Spusti ju a zisti ako funguje. Potom pridaj
+        obrázok, text a zvuk pre posledné tlačidlo.\n\n**Ako:** \n\n-   Pridaj `onEvent()`
+        do programu a nastav \"id\" na `\"button4\"`. Pretiahni `playSound()` do bloku
+        `onEvent()` a vyber si nejaký zvuk z knižnice. \n-   Pridaj `setProperty()`
+        (mimo bloku `onEvent()`), a zmeň obrázok `\"image\"` tlačidla. Vyber obrázok
+        pomocou tretieho rozbaľovacieho menu.\n-   Pridaj ešte jeden blok `setProperty()`,
+        a zmeň text `\"text\"` tlačidla.\n\n**Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
       AppLab Intro 7 - thisOrThatAddButton: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
 
-        **Cieľ:** Pridaj na obrazovku druhé tlačidlo, ktoré bude mať na sebe napísané "Doprava!" s `"id"` `"pravéTlačidlo"`
+        **Cieľ:** Pridaj na obrazovku druhé tlačidlo `"Button"`, ktoré bude mať na sebe napísané Doprava! "Right!" s id `"id"` pravéTlačidlo `"rightButton"`.
 
-        **Ako:**  V móde dizajnovania pritiahni nové tlačidlo. Umiestni ho a uprav jeho veľkosť. Potom nastav jeho `"id"`, `"text"`, `"farbu pozadia"`, and `"veľkosť písma"`.
+        **Ako:**  V dizajnovom móde vyber nové tlačidlo `"Button"`, umiestni ho priamo do appky a uprav jeho veľkosť. Potom nastav jeho id `"id"`, text `"text"`, farbu pozadia `"background color"`, a veľkosť písma `"font size"`.
 
-        **Nejde to? Klikni tu:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Cieľ:** Vytvor novú obrazovku `"Screen"` s id `"id"` praváObrazovka `"rightScreen"`. Pridaj štítok `"Label"` s textom Už si vpravo! "You went right!".
+
+        **Ako:**  V dizajnovom móde vyber novú obrazovku `"Screen"` a umiestni ju priamo do appky. Zmeň jej  id `"id"` na praváObrazovka `"rightScreen"`. Potom pretiahni štítok `"Label"` na túto obrazovku a zmeň jeho text na Už si vpravo! "You went right!".
+
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: |-
+        <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank"><img src="https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank"><img src="https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05 PM.png" style="float:right;height:200px"></a>
+        <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40 PM.png" style="float:right;height:200px"></a>
+
+        **Cieľ:** Vytvor vlastnú aplikáciu rozšírením tohto projektu. Potom ju s niekým zdieľaj kliknutím na "Zdieľať"!
+
+        **Ako:** Rozhodni sa, aký typ aplikácie chceš vytvoriť. Potom ju vytvor pridaním obrazoviek, tlačidiel, textov, zvukov a interakcií. V paneli nástrojov je ešte niekoľko blokov, ktoré môžeš vyskúšať. Po dokončení aplikácie klikni na "Zdieľať" a pošli ju sebe alebo kamarátom!
+
+        <details>
+
+        <summary><b>Nápady na vlastné dobrodružstvá</b></summary>
+
+        Pozri si túto appku <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg" target="_blank">Príklad: Vyber si vlastné dobrodružstvo</a> , ktorá ti ukáže ako to môže fungovať. Nižšie je niekoľko nápadov, ktoré ti môžu pomôcť vymyslieť tvoj vlastný príbeh.
+
+        <li>Vytvor dobrodružstvo s tvojou obľúbenou postavou, skutočnou alebo vymyslenou.</li>
+        <li>Vytvor dobrodružstvo, ktorým vyrozprávaš príbeh zo svojej obľúbenej knihy, filmu alebo si nejaký príbeh vymysli.</li>
+        <li>Vytvor dobrodružstvo, ktoré má veľa nečakaných zvratov alebo rieši morálnu dilemu.</li>
+        <br>
+        </details>
+
+        <details><summary><b>Nápady na blahoželania</b></summary>
+
+        Pozri si túto appku <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q" target="_blank">Príklad: Blahoželania</a> , ktorá ti ukáže ako to môže fungovať. Nižšie je niekoľko nápadov, ktoré ti môžu pomôcť vymyslieť tvoje vlastné blahoželnie.
+
+        <li>Zamysli sa nad narodeninami, sviatkom alebo iným špeciálnym dňom, ktorý sa blíží a vytvor to správne blahoželanie!</li>
+        <li>Vytvor blahoželanie ako poďakovanie niekomu, koho si vážiš.</li>
+        <li>Vytvor pozvánku na blížiacu sa udalosť.</li>
+        <br>
+        </details>
+
+        <details><summary><b>Nápady na kvíz</b></summary>
+
+        Pozri si túto appku <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ" target="_blank">Príklad: Kvíz</a> , ktorá ti ukáže ako to môže fungovať. Nižšie je niekoľko nápadov, ktoré ti môžu pomôcť vymyslieť tvoj vlastný kvíz.
+
+        <li>Vytvor kvíz, ktorý kamarátom navrhne niečo čo môžu mať radi, napríklad jedlo, obľúbený tím, knihu alebo miesto.</li>
+        <li>Vytvor kvíz, ktorý "predpovedá budúcnosť" na základe odpovedí kamarátov.</li>
+        <li>Vytvor kvíz, ktorý pomôže kamarátom urobiť ťažké rozhodnutia.</li>
+
+        </details>
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Cieľ:** Obrazovka sa prepne na pravú obrazovku `"rightScreen"` keď klikneš na tlačidlo Doprava! `"Right!"` s id `"rightButton"`.
+
+        **Ako:** V móde kódu pridaj nový blok `onEvent()` do svojho programu pre tvoje tlačidlo Doprava! "Right!". Ďalej pridaj blok `setScreen()` do jeho vnútra, ktorý prepne obrazovku na pravú obrazovku `"rightScreen"`.
+
+        **Nedarí sa ti? Klikni sem:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      CSD U3 - Conditionals Video_2019: |-
+        ## Otázka na diskusiu
+
+        -   Kedy by sa ti v programe zišiel príkaz “if/else”? Nájdeš viacero príkladov?
+      CSD U3 - complex - key up and down: |-
+        # Odpoveď na jediné kliknutie myšou
+
+        Nedávno sme sa naučili, že `keyWentDown` a `keyWentUp` sa môžu použiť pre reakciu na jedno stlačenie klávesy. Bloky `mouseWentUp` a `mouseWentDown` robia to isté pri myši!
+
+        # Urob toto
+
+        Vytvorme jednoduchú hru, ktorá ráta, koľkokrát si stlačil/a tlačidlo myši. Premennú `clicks`, ktorá počíta stlačenia, sme za teba už nakódovali, takže môžeš sledovať, koľkokrát sa tlačidlo myši stlačilo.
+
+        -   Pridaj podmienku, ktorá skontroluje, či sa tlačidlo myši stlačilo.
+        -   Dovnútra podmienky pridaj premennú `clicks`.
+
+        _Výzva: Vieš pridať „sprite“ objekt, ktorý zareaguje na akciu `mouseWentDown`? Pridaj obrázok podľa tvojho výberu a zväčši ho pri každom jednom kliknutí_
+      CSD U3 - complex - key up and down_2018: |-
+        # Odpoveď na jediné kliknutie myšou
+
+        Nedávno sme sa naučili, že `keyWentDown` a `keyWentUp` sa môžu použiť pre reakciu na jedno stlačenie klávesy. Bloky `mouseWentUp` a `mouseWentDown` robia to isté pri myši!
+
+        # Urob toto
+
+        Vytvorme jednoduchú hru, ktorá ráta, koľkokrát si stlačil/a tlačidlo myši. Premennú `clicks`, ktorá počíta stlačenia, sme za teba už nakódovali, takže môžeš sledovať, koľkokrát sa tlačidlo myši stlačilo.
+
+        -   Pridaj podmienku, ktorá skontroluje, či sa tlačidlo myši stlačilo.
+        -   Dovnútra podmienky pridaj premennú `clicks`.
+
+        _Výzva: Vieš pridať „sprite“ objekt, ktorý zareaguje na akciu `mouseWentDown`? Pridaj obrázok podľa tvojho výberu a zväčši ho pri každom jednom kliknutí_
+      CSD U3 - complex - key up and down_2019: |-
+        # Odpoveď na jediné kliknutie myšou
+
+        Nedávno sme sa naučili, že `keyWentDown` a `keyWentUp` sa môžu použiť pre reakciu na jedno stlačenie klávesy. Bloky `mouseWentUp` a `mouseWentDown` robia to isté pri myši!
+
+        # Urob toto
+
+        Vytvorme jednoduchú hru, ktorá ráta, koľkokrát si stlačil/a tlačidlo myši. Premennú `clicks`, ktorá počíta stlačenia, sme za teba už nakódovali, takže môžeš sledovať, koľkokrát sa tlačidlo myši stlačilo.
+
+        -   Pridaj podmienku, ktorá skontroluje, či sa tlačidlo myši stlačilo.
+        -   Dovnútra podmienky pridaj premennú `clicks`.
+
+        _Výzva: Vieš pridať „sprite“ objekt, ktorý zareaguje na akciu `mouseWentDown`? Pridaj obrázok podľa tvojho výberu a zväčši ho pri každom jednom kliknutí_
+      CSD U3 - complex - mouse down: "# Kliknutie myšou\n\nStlačenia kláves sú fajn,
+        ale niekedy chceme, aby užívatelia radšej používali myš. Preto tu máme nový
+        blok nazvaný `mouseDown`, ktorý, podobne ako `keyDown`, kontroluje, či užívateľ
+        klikol na ľavé alebo pravé tlačidlo na myši. Ak používate počítač s trackpadom
+        alebo s myšou s jediným tlačidlom, používajte vždy možnosť `mouseDown(\"left\")`.
+        \n\n# Urob toto\n\nTu je program, v ktorom balón padá nadol. Tvojou úlohou
+        bude zabezpečiť, aby kliknutie na myšku balón opäť zodvihlo.\n\n-   Pridaj
+        „if“ výraz, ktorý skontroluje  `mouseDown`.\n-   Vo vnútri podmienky posuň
+        balón o jeden pixel hore, ak je tlačidlo stlačené. Inak posuň balón smerom
+        nadol.\n\n_Nápoveda: Kód, ktorý spúšťa balón nadol, potrebuješ presunúť –
+        chceš ho spustiť len vtedy, ak je `mouseDown` v stave `false`_.\n\n_Výzva:
+        Vieš zariadiť, aby balón, počas jeho výstupu/pádu, lietal aj náhodne doľava/doprava?_"
+      CSD U3 - complex - mouse down_2018: "# Kliknutie myšou\n\nStlačenia kláves sú
+        fajn, ale niekedy chceme, aby užívatelia radšej používali myš. Preto tu máme
+        nový blok nazvaný `mouseDown`, ktorý, podobne ako `keyDown`, kontroluje, či
+        užívateľ klikol na ľavé alebo pravé tlačidlo na myši. Ak používate počítač
+        s trackpadom alebo s myšou s jediným tlačidlom, používajte vždy možnosť `mouseDown(\"left\")`.
+        \n\n# Urob toto\n\nTu je program, v ktorom balón padá nadol. Tvojou úlohou
+        bude zabezpečiť, aby kliknutie na myšku balón opäť zodvihlo.\n\n-   Pridaj
+        „if“ výraz, ktorý skontroluje  `mouseDown`.\n-   Vo vnútri podmienky posuň
+        balón o jeden pixel hore, ak je tlačidlo stlačené. Inak posuň balón smerom
+        nadol.\n\n_Nápoveda: Kód, ktorý spúšťa balón nadol, potrebuješ presunúť –
+        chceš ho spustiť len vtedy, ak je `mouseDown` v stave `false`_.\n\n_Výzva:
+        Vieš zariadiť, aby balón, počas jeho výstupu/pádu, lietal aj náhodne doľava/doprava?_"
+      CSD U3 - complex - mouse down_2019: "# Kliknutie myšou\n\nStlačenia kláves sú
+        fajn, ale niekedy chceme, aby užívatelia radšej používali myš. Preto tu máme
+        nový blok nazvaný `mouseDown`, ktorý, podobne ako `keyDown`, kontroluje, či
+        užívateľ klikol na ľavé alebo pravé tlačidlo na myši. Ak používate počítač
+        s trackpadom alebo s myšou s jediným tlačidlom, používajte vždy možnosť `mouseDown(\"left\")`.
+        \n\n# Urob toto\n\nTu je program, v ktorom balón padá nadol. Tvojou úlohou
+        bude zabezpečiť, aby kliknutie na myšku balón opäť zodvihlo.\n\n-   Pridaj
+        „if“ výraz, ktorý skontroluje  `mouseDown`.\n-   Vo vnútri podmienky posuň
+        balón o jeden pixel hore, ak je tlačidlo stlačené. Inak posuň balón smerom
+        nadol.\n\n_Nápoveda: Kód, ktorý spúšťa balón nadol, potrebuješ presunúť –
+        chceš ho spustiť len vtedy, ak je `mouseDown` v stave `false`_.\n\n_Výzva:
+        Vieš zariadiť, aby balón, počas jeho výstupu/pádu, lietal aj náhodne doľava/doprava?_"
+      CSD U3 - complex - mouse move: |-
+        # mouseDidMove
+
+        Logické výrazy môžeme použiť aj na kontrolu toho, či sa kurzor (ne)pohol. Blok `mouseDidMove` vráti `false`, ak sa myš nepohla a `true`, ak sa myš pohla.
+
+        # Urob toto
+
+        V tomto momente nám program zobrazí „sprite“ s obrázkom soľničky. Aby sa pri pohybe myšou soľnička zatriasla, použijeme príkaz `mouseDidMove`.
+
+        -   Pridaj podmieňovací výraz, ktorý skontroluje akciu `mouseDidMove`.
+        -   Ak sa podmienka splní, otoč soľničku o náhodný počet stupňov doľava alebo doprava.
+
+        _Výzva: Vieš sledovať aj počet zatrasení soľničky funkciou `mouseDidMove` a po 100 zatraseniach ju otočiť pravou stranou dohora?_
+      CSD U3 - complex - mouse move_2018: |-
+        # mouseDidMove
+
+        Logické výrazy môžeme použiť aj na kontrolu toho, či sa kurzor (ne)pohol. Blok `mouseDidMove` vráti `false`, ak sa myš nepohla a `true`, ak sa myš pohla.
+
+        # Urob toto
+
+        V tomto momente nám program zobrazí „sprite“ s obrázkom soľničky. Aby sa pri pohybe myšou soľnička zatriasla, použijeme príkaz `mouseDidMove`.
+
+        -   Pridaj podmieňovací výraz, ktorý skontroluje akciu `mouseDidMove`.
+        -   Ak sa podmienka splní, otoč soľničku o náhodný počet stupňov doľava alebo doprava.
+
+        _Výzva: Vieš sledovať aj počet zatrasení soľničky funkciou `mouseDidMove` a po 100 zatraseniach ju otočiť pravou stranou dohora?_
+      CSD U3 - complex - mouse move_2019: |-
+        # mouseDidMove
+
+        Logické výrazy môžeme použiť aj na kontrolu toho, či sa kurzor (ne)pohol. Blok `mouseDidMove` vráti `false`, ak sa myš nepohla a `true`, ak sa myš pohla.
+
+        # Urob toto
+
+        V tomto momente nám program zobrazí „sprite“ s obrázkom soľničky. Aby sa pri pohybe myšou soľnička zatriasla, použijeme príkaz `mouseDidMove`.
+
+        -   Pridaj podmieňovací výraz, ktorý skontroluje akciu `mouseDidMove`.
+        -   Ak sa podmienka splní, otoč soľničku o náhodný počet stupňov doľava alebo doprava.
+
+        _Výzva: Vieš sledovať aj počet zatrasení soľničky funkciou `mouseDidMove` a po 100 zatraseniach ju otočiť pravou stranou dohora?_
+      CSD U3 - conditionals - first conditional: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
+        PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
+        výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
+        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
+        autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
+        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
+        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        (alebo „Víťaz“)."
       CSD U3 - conditionals - first conditional 2_2018: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
         style=\"width:200px;float:right\">\n\n# Viditeľnosť\n\nNiekedy sa hodí obrázok
         na chvíľu skryť a potom ho zas zobraziť. Toto sa dá urobiť pomocou nastavenia
@@ -325,6 +511,56 @@ sk-SK:
         dva výroky.\n    -   Jeden, ktorý nastaví `visible` pre neprasknutý balón
         - ten by sa mal skryť, keď dosiahne okraj plochy.\n    -   Druhý, ktorý zobrazí
         prasknutie balóna."
+      CSD U3 - conditionals - first conditional_2018: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
+        PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
+        výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
+        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
+        autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
+        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
+        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        (alebo „Víťaz“)."
+      CSD U3 - conditionals - first conditional_2019: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
+        PM.png\" style=\"float:right;width:100px\">\n\n# Podmienkový výrok\n\nLogické
+        výrazy, použité v predchádzajúcich úrovniach, nám dovoľujú pýtať sa otázky.
+        Aby sme na ne určili odpoveď, potrebujeme použiť podmienkový `if` výrok. \n\nPodmienkové
+        `if` výroky budeš pravdpodobne využívať najmä v rámci cyklu kreslenia, pretože
+        ich počas jeho behu chceme overovať. \n\n# Urob toto\n\nProgram s pretekárskym
+        autom, vytvorený pred chvíľou, je tu už pripravený.\n\n-   Keď zmeníš pozíciu
+        auta, pridaj `if` výrok.\n-   Presuň logický výraz z console.log do podmienky
+        „if“ výroku.\n-   Do `if` výroku pridaj príkaz na zobrazenie textu „Winner“
+        (alebo „Víťaz“)."
+      CSD U3 - conditionals - transition: "# Logické výrazy\n\nV predchádzajúcich
+        lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
+        daný výrok pravdivý alebo nepravdivý. Poďme sa teraz na to pozrieť z pohľadu
+        animácie. \n\n# Urob toto\n\nProgram nakreslí pretekárske auto a cieľovú čiaru.
+        Skús uhádnuť, kedy ju pretkárske auto prejde. Všekty „sprite“ objekty už pre
+        teba boli nastavené..\n\n-   Pridaj `console.log` prvok do cyklu kreslenia.
+        ( [Ukáž mi kde](#triggercallout=callout) )\n-   Do `console.log` pridaj logický
+        výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
+        x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
+        sa výstup zmení? A prečo?"
+      CSD U3 - conditionals - transition_2018: "# Logické výrazy\n\nV predchádzajúcich
+        lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
+        daný výrok pravdivý alebo nepravdivý. Poďme sa teraz na to pozrieť z pohľadu
+        animácie. \n\n# Urob toto\n\nProgram nakreslí pretekárske auto a cieľovú čiaru.
+        Skús uhádnuť, kedy ju pretkárske auto prejde. Všekty „sprite“ objekty už pre
+        teba boli nastavené..\n\n-   Pridaj `console.log` prvok do cyklu kreslenia.
+        ( [Ukáž mi kde](#triggercallout=callout) )\n-   Do `console.log` pridaj logický
+        výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
+        x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
+        sa výstup zmení? A prečo?"
+      CSD U3 - conditionals - transition_2019: "# Logické výrazy\n\nV predchádzajúcich
+        lekciách sme porovnávali hodnoty „sprite“ objektov, aby sme zistili, či je
+        daný výrok pravdivý alebo nepravdivý. Poďme sa teraz na to pozrieť z pohľadu
+        animácie. \n\n# Urob toto\n\nProgram nakreslí pretekárske auto a cieľovú čiaru.
+        Skús uhádnuť, kedy ju pretkárske auto prejde. Všekty „sprite“ objekty už pre
+        teba boli nastavené..\n\n-   Pridaj `console.log` prvok do cyklu kreslenia.
+        ( [Ukáž mi kde](#triggercallout=callout) )\n-   Do `console.log` pridaj logický
+        výraz, ktorý sa pýta: „Je pozícia x pretekárskeho auta menšia ako pozícia
+        x cieľovej čiary“?\n-   Pozri sa na výstup programu, keď sa auto pohne. Kedy
+        sa výstup zmení? A prečo?"
       CSD U3 AnimationsMulti defender move up down_2018: |-
         # Pohyb hore a dole
 
@@ -356,26 +592,26 @@ sk-SK:
       CSD U3 Boolean Modify_2018: |-
         # Logické výrazy
 
-        Najjednoduchšie logické výrazy sú tie, na ktoré sa dá odpovedať pravda alebo nepravda. Tieto výrazy sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.
+        Najjednoduchšie logické výrazy sú tie, na ktoré sa dá odpovedať pravda `true` alebo nepravda `false`. Tieto výrazy sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.
 
-        |                                               Porovnávacie zmamienko                                              | Logický výraz         | Význam              |
-        | :---------------------------------------------------------------------------------------------------------------: | --------------------- | ------------------- |
-        |                                                 :----------------:                                                | :-------------------: |                     |
-        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> | `1 < 9`               | Je 1 menšie ako 9?  |
-        |                                                                                                                   | `1 > 9`               | Je 1 väčšie ako 9 ? |
-        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> | `1 == 9`              | Je 1 rovné 9?       |
+        |                                               Porovnávacie zmamienko                                              | Logický výraz         | Význam            |
+        | :---------------------------------------------------------------------------------------------------------------: | --------------------- | ----------------- |
+        |                                                 :----------------:                                                | :-------------------: |                   |
+        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> | `1 < 9`               | Je 1 menej ako 9? |
+        |                                                                                                                   | `1 > 9`               | Je 1 viac ako 9?  |
+        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> | `1 == 9`              | Je 1 rovné 9?     |
 
-        **Poznámka:** Ak by si uvidel/a výrok 3 \< 2 na matematike, mohol/mohla by si si myslieť, že niekde nastala chyba. Ale toto nie je hodina matematiky. V informatike sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať `true` (pravda) alebo `false` (nepravda). V našom prípade tento výraz čítaj ako otázku: **„Je 3 menšie ako 2?"** Odpoveď znie nie, čiže `false`.
+        **Poznámka:** Ak uvidíš výrok 3 \< 2 na matematike, môžeš si myslieť, že je niečo nesprávne. Ale toto nie je hodina matematiky. V informatike sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať `true` (pravda) alebo `false` (nepravda). V našom prípade tento výraz čítaj ako otázku: **„Je 3 menšie ako 2?"** Odpoveď znie „nie", teda `false` (nepravda).
 
-        Iná možnosť, ako prečítať tento logickývýraz je, že `3 < 2` **sa rovná** `false`.
+        Iná možnosť, ako prečítať tento logický výraz je, že `3 < 2` **sa rovná** `false` (nepravda).
 
         # Urob toto
 
-        Vedel/a by si upraviť hodnoty "sprite" atribútov tak, aby bol každý logický výraz `true`?
+        Vieš si upraviť hodnoty „sprite" atribútov tak, aby sa každý logický výraz rovnal `true` (pravda)?
 
         -   Prejdi si celý program a zisti, ako sú `sprite1` a `sprite2` vytvorené a ktoré ich vlastnosti sú porovnávané.
         -   Pre každý z logických výrazov urči vlastnosti, ktoré sú poronávané.
-        -   Zmeň kód _iba v prvých **11-tich** riadkoch_ tak, aby každý výraz v `console.log()` vrátil odpoveď `true`.
+        -   Zmeň kód len v prvých **11-tich** riadkoch tak, aby každý výraz v `console.log()` vrátil `true`.
       CSD U3 Compound Nested Challenge_2018: |-
         # Výzva: Kontrola viacerých podmienok
 
@@ -417,41 +653,41 @@ sk-SK:
       CSD U3 Conditionals Apple 2_2018: |-
         # Meniace sa ovocie
 
-        Teraz keď poznáme _podmienkové_ výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+        Teraz keď poznáme podmienkové výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
 
         # Urob toto
 
         Použi podmienku v cykle kreslenia, ktorá overí, že `fruit.scale` je väčšie ako 2. Ak je to tak, zmeň animáciu ovocia na "hruška".
 
-        _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
+        **Výzva**: Vieš program nastaviť tak, aby ovocie prestalo rásť, keď sa z neho stane hruška?
       CSD U3 Conditionals Apple 2_2018_2019: |-
         # Meniace sa ovocie
 
-        Teraz keď poznáme _podmienkové_ výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+        Teraz keď poznáme podmienkové výroky, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
 
         # Urob toto
 
         Použi podmienku v cykle kreslenia, ktorá overí, že `fruit.scale` je väčšie ako 2. Ak je to tak, zmeň animáciu ovocia na "hruška".
 
-        _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
+        **Výzva**: Vieš program nastaviť tak, aby ovocie prestalo rásť, keď sa z neho stane hruška?
       CSD U3 Conditionals Apple_2018: |-
         # Ďalšie precvičenie logických výrazov
 
-        Poďme použiť ešte jeden logický výraz na kontrolu podmienok "sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
+        Poďme použiť ešte jeden logický výraz na kontrolu podmienok „sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
 
         # Urob toto
 
         -   Pridaj `console.log` výrok
-        -   Do `console.log` pridaj logický výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+        -   Do `console.log` pridaj logický výraz, ktorý overí, či `fruit.scale` je väčšie ako 2.
       CSD U3 Conditionals Apple_2018_2019: |-
         # Ďalšie precvičenie logických výrazov
 
-        Poďme použiť ešte jeden logický výraz na kontrolu podmienok "sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
+        Poďme použiť ešte jeden logický výraz na kontrolu podmienok „sprite" objektu. Môžeš použiť `console.log` príkaz na overenie, či jeho veľkosť už dosiahla hodnotu 2.
 
         # Urob toto
 
         -   Pridaj `console.log` výrok
-        -   Do `console.log` pridaj logický výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+        -   Do `console.log` pridaj logický výraz, ktorý overí, či `fruit.scale` je väčšie ako 2.
       CSD U3 Diagonal Movement_2018: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
 
@@ -461,7 +697,7 @@ sk-SK:
 
         Náš program momentálne pohybuje myškou rovno nadol. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
 
-        _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
+        _Výzva: Vieš nastaviť myšku tak, aby sa otočila rovnakým smerom ako na obrázku?_
       CSD U3 Diagonal Movement_2019: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
 
@@ -471,7 +707,43 @@ sk-SK:
 
         Náš program momentálne pohybuje myškou rovno nadol. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
 
-        _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
+        _Výzva: Vieš nastaviť myšku tak, aby sa otočila rovnakým smerom ako na obrázku?_
+      CSD U3 Direction Animations: "# Zmena obrázkov počas pohybu\n\nZatiaľ si používal/a
+        podmieňovacie výrazy len jednu činnosť: na zmenu súradnice x alebo y tvojho
+        „sprite“ objektu. V skutočnosti môžeš do podmieňovacieho výrazu vložiť toľko
+        kódu, koľko len chceš. Bežnou vecou v hrách je zmena obrázku postavičky podľa
+        smeru, ktorým sa hýbe.\n\n# Urob toto\n\nPoužitím poskytnutého kódu a obrázkov:\n•\tZdvoj
+        vybraný obrázok chrobáčika štyrikrát.\n•\tUprav každý z obrázkov tak, aby
+        smeroval jedným zo štyroch smerov.\n•\tNapíš kód, ktorý bude používať sprite.setAnimation()
+        na zmenu obrázku chrobáčika po stlačení rozličných šípok na klávesnici.\n\n-
+        \  Vyber si obrázok chrobáčika a zduplikuj ho štyrikrát.\n-   Uprav obrázky
+        tak, aby každý smeroval iným zo 4 možných smerov.\n-   Napíš kód, ktorý použije
+        `sprite.setAnimation()` na zmenu obrázku chrobáčika po stlačení jednotlivých
+        šípok na klávesnici."
+      CSD U3 Direction Animations_2018: "# Zmena obrázkov počas pohybu\n\nZatiaľ si
+        používal/a podmieňovacie výrazy len jednu činnosť: na zmenu súradnice x alebo
+        y tvojho „sprite“ objektu. V skutočnosti môžeš do podmieňovacieho výrazu vložiť
+        toľko kódu, koľko len chceš. Bežnou vecou v hrách je zmena obrázku postavičky
+        podľa smeru, ktorým sa hýbe.\n\n# Urob toto\n\nPoužitím poskytnutého kódu
+        a obrázkov:\n•\tZdvoj vybraný obrázok chrobáčika štyrikrát.\n•\tUprav každý
+        z obrázkov tak, aby smeroval jedným zo štyroch smerov.\n•\tNapíš kód, ktorý
+        bude používať sprite.setAnimation() na zmenu obrázku chrobáčika po stlačení
+        rozličných šípok na klávesnici.\n\n-   Vyber si obrázok chrobáčika a zduplikuj
+        ho štyrikrát.\n-   Uprav obrázky tak, aby každý smeroval iným zo 4 možných
+        smerov.\n-   Napíš kód, ktorý použije `sprite.setAnimation()` na zmenu obrázku
+        chrobáčika po stlačení jednotlivých šípok na klávesnici."
+      CSD U3 Direction Animations_2018_2019: "# Zmena obrázkov počas pohybu\n\nZatiaľ
+        si používal/a podmieňovacie výrazy len jednu činnosť: na zmenu súradnice x
+        alebo y tvojho „sprite“ objektu. V skutočnosti môžeš do podmieňovacieho výrazu
+        vložiť toľko kódu, koľko len chceš. Bežnou vecou v hrách je zmena obrázku
+        postavičky podľa smeru, ktorým sa hýbe.\n\n# Urob toto\n\nPoužitím poskytnutého
+        kódu a obrázkov:\n•\tZdvoj vybraný obrázok chrobáčika štyrikrát.\n•\tUprav
+        každý z obrázkov tak, aby smeroval jedným zo štyroch smerov.\n•\tNapíš kód,
+        ktorý bude používať sprite.setAnimation() na zmenu obrázku chrobáčika po stlačení
+        rozličných šípok na klávesnici.\n\n-   Vyber si obrázok chrobáčika a zduplikuj
+        ho štyrikrát.\n-   Uprav obrázky tak, aby každý smeroval iným zo 4 možných
+        smerov.\n-   Napíš kód, ktorý použije `sprite.setAnimation()` na zmenu obrázku
+        chrobáčika po stlačení jednotlivých šípok na klávesnici."
       CSD U3 Direction Arrows_2018: "# Posun do všetkých smerov\n\nKeďže už vieš posunúť
         \"sprite\" pomocou príkazu `keyDown` jedným smerom, posun do všetkých smerov
         by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré sa naučíš
@@ -519,6 +791,14 @@ sk-SK:
 
         -   Klikni na tlačidlo „plus“  v spodnej časti bloku „if“ - pre pridanie časti „else“.
         -   Pridaj príkaz pre otáčanie kolies opačným smerom v prípade, ak je stlačený medzerník.
+      CSD U3 Else_2019: |-
+        # Otoč chod kolies
+
+        Ozubené kolesá sú späť! Naposledy sme ich naprogramovali tak, aby sa začali točiť po stlačení medzerníka. Tentoraz však chceme, aby sa po stlačení medzerníka točili jedným smerom a keď medzerník stlačený nebude, nech sa točia opačne.
+
+        # Urob toto
+
+        -   Naprogramuj kolesá tak, aby sa točili opačným smerom, než sa točia pri stlačení medzerníka.
       CSD U3 Functions Add Change Background_2018: |-
         # Zmena pozadia na základe skóre
 
@@ -537,6 +817,97 @@ sk-SK:
 
         -   Použi **výraz „if“** a dve rozdielne funkcie na nakreslenie svojich pozadí
         -   Potom napíš svoje funkcie mimo cyklu kreslenia. Môžeš sa rozhodnúť ktoré bude štandardné, a ktoré bláznivé pozadie. Zabav sa!
+      CSD U3 If Else: "# Keď potrebujeme záložný plán\n\n„Else“ je vhodné aj ako záloha
+        pre podmienku „if“, ktorú kontrolujeme. Teda ak sa stane, že podmienka `if`
+        nie je splnená, príkazom `else` zabezpečíme správny beh programu.\n\n<img
+        src=\"https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif\"
+        style=\"float:right;\">\n\n# Urob toto\n\nKlikni na tlačidlo „Spustiť“, aby
+        si uvidel/a roj včiel a kvetinku na ľavej strane obrazovky. Nastav program
+        tak, aby sa roj včiel **objavil, keď je kurzor myši pri kvetine** (v ľavej
+        časti obrazovky) a **zmizol, keď sa kurzor vzdiali** (teda je v pravej časti
+        obrazovky). Pozri si príklad vpravo. \n\n-   Potom, ako aktualizuješ pozíciu
+        roja včiel, pridaj výraz `if-else`.\n-   Ako vstup do podmieňovacieho „if“
+        výrazu použi logický výraz na kontrolu, či je súradnica x kurzora myši na
+        tej istej strane obrazovky ako kvetinka.\n-   Nastav vlastnosť `visible` pre
+        každú včelu v oboch  výrazoch „if“ aj „else“ tak, aby sa včely zobrazili vždy
+        v blízkosti kvetinky."
+      CSD U3 If Else predict question: |-
+        # Porozmýšľaj: If/Else
+
+        Preštuduj si tento program a zameraj sa pritom na blok `if/else` na riadku 10.  Prediskutuj vo dvojici nasledujúce otázky, zapíš svoj tip, spusti kód a zisti, ako sa program správa naozaj.
+
+        -   Čo sa stane po stlačení medzerníka na klávesnici?
+        -   Čo sa stane, keď medzerník **nebude** stlačený?
+      CSD U3 If Else_2018: "# Keď potrebujeme záložný plán\n\n„Else“ je vhodné aj
+        ako záloha pre podmienku „if“, ktorú kontrolujeme. Teda ak sa stane, že podmienka
+        `if` nie je splnená, príkazom `else` zabezpečíme správny beh programu.\n\n<img
+        src=\"https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif\"
+        style=\"float:right;\">\n\n# Urob toto\n\nKlikni na tlačidlo „Spustiť“, aby
+        si uvidel/a roj včiel a kvetinku na ľavej strane obrazovky. Nastav program
+        tak, aby sa roj včiel **objavil, keď je kurzor myši pri kvetine** (v ľavej
+        časti obrazovky) a **zmizol, keď sa kurzor vzdiali** (teda je v pravej časti
+        obrazovky). Pozri si príklad vpravo. \n\n-   Potom, ako aktualizuješ pozíciu
+        roja včiel, pridaj výraz `if-else`.\n-   Ako vstup do podmieňovacieho „if“
+        výrazu použi logický výraz na kontrolu, či je súradnica x kurzora myši na
+        tej istej strane obrazovky ako kvetinka.\n-   Nastav vlastnosť `visible` pre
+        každú včelu v oboch  výrazoch „if“ aj „else“ tak, aby sa včely zobrazili vždy
+        v blízkosti kvetinky."
+      CSD U3 If Else_2019: |-
+        # Kedy použiť "Else"
+
+        "Else" je užitočné v momente, keď chceme, aby program urobil jednu vec v prípade, ak je podmienka platí (`true`)a _inú_ vec, keď podmienka neplatí (`false`).
+
+        <img src="https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif" style="float:right;">
+
+        # Urob toto
+
+        Klikni na tlačidlo „Spustiť“, aby si uvidel/a roj včiel a kvetinku na ľavej strane obrazovky. Nastav program tak, aby sa roj včiel **zobrazil, keď je kurzor myši pri kvetinke** (na ľavej strane obrazovky) a aby **zmizol, keď sa kurzor vzdiali (teda, keď je na pravej strane obrazovky).** Pozri si príklad vpravo.
+
+        -   Pridaj výraz `if-else` za kód, ktorý aktulizuje pozíciu roja včiel.
+        -   Ako vstup do podmieňovacieho „if“ výrazu použi logický výraz na kontrolu, či je súradnica x kurzora myši na rovnakej strane obrazovky, ako kvetinka.
+        -   Nastav vlastnosť `visible` pre každú včelu v oboch  výrazoch „if“ aj „else“ tak, aby sa včely vždy zobrazili blízko kvetinky.
+      CSD U3 Input Fish: "# Ryby so šípkami\n\nRyby sú späť! Vieš zariadiť, aby sa
+        hýbali vľavo len vtedy, keď je stlačená klávesa so šípkou doľava?\n\n# Urob
+        toto\n\n-   Pridaj podmieňovací výraz na kontrolu stlačenia klávesy so šípkou
+        doľava.\n-   Presuň príkaz na posun ryby dovnútra výrazu „if“. "
+      CSD U3 Input Fish_2018: "# Ryby so šípkami\n\nRyby sú späť! Vieš zariadiť, aby
+        sa hýbali vľavo len vtedy, keď je stlačená klávesa so šípkou doľava?\n\n#
+        Urob toto\n\n-   Pridaj podmieňovací výraz na kontrolu stlačenia klávesy so
+        šípkou doľava.\n-   Presuň príkaz na posun ryby dovnútra výrazu „if“. "
+      CSD U3 Input Fish_2019: "# Ryby so šípkami\n\nRyby sú späť! Vieš zariadiť, aby
+        sa hýbali vľavo len vtedy, keď je stlačená klávesa so šípkou doľava?\n\n#
+        Urob toto\n\n-   Pridaj podmieňovací výraz na kontrolu stlačenia klávesy so
+        šípkou doľava.\n-   Presuň príkaz na posun ryby dovnútra výrazu „if“. "
+      CSD U3 Input Gears: |-
+        # Ozubené kolesá s podmienkami
+
+        Nech sa kolesá otáčajú, ale len keď je stlačená a podržaná klávesa „medzerník“.
+
+        # Urob toto
+
+        -   Pridaj výraz `if`.
+        -   Použi `keyDown` ako vstup pre if výraz na kontrolu stlačenia klávesy „medzerník“.
+        -   Presuň kód, ktorý otáča ozubenými kolesami, dovnútra výrazu `if`.
+      CSD U3 Input Gears_2018: |-
+        # Ozubené kolesá s podmienkami
+
+        Nech sa kolesá otáčajú, ale len keď je stlačená a podržaná klávesa „medzerník“.
+
+        # Urob toto
+
+        -   Pridaj výraz `if`.
+        -   Použi `keyDown` ako vstup pre if výraz na kontrolu stlačenia klávesy „medzerník“.
+        -   Presuň kód, ktorý otáča ozubenými kolesami, dovnútra výrazu `if`.
+      CSD U3 Input Gears_2019: |-
+        # Ozubené kolesá s podmienkami
+
+        Nech sa kolesá otáčajú, ale len keď je stlačená a podržaná klávesa „medzerník“.
+
+        # Urob toto
+
+        -   Pridaj výraz `if`.
+        -   Použi `keyDown` ako vstup pre if výraz na kontrolu stlačenia klávesy „medzerník“.
+        -   Presuň kód, ktorý otáča ozubenými kolesami, dovnútra výrazu `if`.
       CSD U3 Interactive Card Final_2018: |-
         # Finálne úpravy
 
@@ -589,6 +960,42 @@ sk-SK:
         \*Spusti program.
         \*Počas behu programu stlač medzerník na klávesnici.
         \*Uhádol/la si? Bol/a si prekvapený/á? Porozprávaj sa o tom so spolusediacim/spolusediacou.
+      CSD U3 Keypress Watchers Predict: |-
+        # Porozmýšľaj: Vstup užívateľa
+
+        Doteraz sme používali `keyDown` ako spôsob kontroly programu užívateľom. To je však len jeden zo spôsobov na získanie vstupu od užívateľa. V skutočnosti existuje veľa možností _na zachytenie stlačenia kláves_! Podľa toho, ako chceš reagovať na stlačenie klávesy, je viacero blokov, ktoré môžeš použiť.
+
+        Prečítaj si program a skús uhádnuť, čo sa stane po stlačení každej zo šípok hore, dole, vľavo a vpravo.
+
+        Po tipnutí si spusti kód a zapíš si, čo si si všimol/la alebo to predisukutuj s partnerom.
+
+        -   Aký je rozdiel medzi `keyDown()`, `keyWentDown()`, and `keyWentUp()`?
+        -   Čo myslíš, čo robí výkričník (`!`) na riadku 10?
+        -   Ako môžeš využiť stlačenia rôznych kláves v hre??
+      CSD U3 Keypress Watchers Predict_2018: |-
+        # Porozmýšľaj: Vstup užívateľa
+
+        Doteraz sme používali `keyDown` ako spôsob kontroly programu užívateľom. To je však len jeden zo spôsobov na získanie vstupu od užívateľa. V skutočnosti existuje veľa možností _na zachytenie stlačenia kláves_! Podľa toho, ako chceš reagovať na stlačenie klávesy, je viacero blokov, ktoré môžeš použiť.
+
+        Prečítaj si program a skús uhádnuť, čo sa stane po stlačení každej zo šípok hore, dole, vľavo a vpravo.
+
+        Po tipnutí si spusti kód a zapíš si, čo si si všimol/la alebo to predisukutuj s partnerom.
+
+        -   Aký je rozdiel medzi `keyDown()`, `keyWentDown()`, and `keyWentUp()`?
+        -   Čo myslíš, čo robí výkričník (`!`) na riadku 10?
+        -   Ako môžeš využiť stlačenia rôznych kláves v hre??
+      CSD U3 Keypress Watchers Predict_2019: |-
+        # Porozmýšľaj: Vstup užívateľa
+
+        Doteraz sme používali `keyDown` ako spôsob kontroly programu užívateľom. To je však len jeden zo spôsobov na získanie vstupu od užívateľa. V skutočnosti existuje veľa možností _na zachytenie stlačenia kláves_! Podľa toho, ako chceš reagovať na stlačenie klávesy, je viacero blokov, ktoré môžeš použiť.
+
+        Prečítaj si program a skús uhádnuť, čo sa stane po stlačení každej zo šípok hore, dole, vľavo a vpravo.
+
+        Po tipnutí si spusti kód a zapíš si, čo si si všimol/la alebo to predisukutuj s partnerom.
+
+        -   Aký je rozdiel medzi `keyDown()`, `keyWentDown()`, and `keyWentUp()`?
+        -   Čo myslíš, čo robí výkričník (`!`) na riadku 10?
+        -   Ako môžeš využiť stlačenia rôznych kláves v hre??
       CSD U3 Keypress Watchers_2018: |-
         # Predpokladaj: Vstup od užívateľa
 
@@ -613,6 +1020,102 @@ sk-SK:
         -   Aký je rozdiel medzi `keyDown()`, `keyWentDown()` a `keyWentUp()`?
         -   Čo myslíš, čo robí výkričník (`!`) na riadku 10?
         -   Ako môžeš použiť stlačenia rôznych kláves v hre?
+      CSD U3 Mouse Input Bee 1: |-
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right">
+
+        # X a Y počítačovej myši
+
+        Jedným z najjednoduchších spôsobov zadávania vstupu je, keď „sprite“ objekt sleduje pozíciu kurzora užívateľovej myši. **Súradnice x a y kurzora myši môžeš získať pomocou `World.mouseX` and `World.mouseY`.**   Toto je podobné, ako pri vlastnosti „sprite“ objektu. `World` je meno objektu. `mouseX` a `mouseY` sú názvy vlastností.
+
+        # Urob toto
+
+        -   Obrázok včeličky sme už za teba nahrali do záložky s animáciami.
+        -   Vytvor „sprite“ so včeličkou a umiestni ho v strede obrazovky.
+        -   Vo vnútri cyklu kreslenia uprav pozíciu „sprite“ objektu podľa kurzoru myši nasledovne:
+            -   Nastav jeho súradnicu x tak, aby sa rovnala `World.mouseX`.
+            -   Nastav jeho súradnicu y tak, aby sa rovnala `World.mouseY`.
+        -   Spusti program a otestuj jeho funkčnosť.
+      CSD U3 Mouse Input Bee 1_2018: |-
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right">
+
+        # X a Y počítačovej myši
+
+        Jedným z najjednoduchších spôsobov zadávania vstupu je, keď „sprite“ objekt sleduje pozíciu kurzora užívateľovej myši. **Súradnice x a y kurzora myši môžeš získať pomocou `World.mouseX` and `World.mouseY`.**   Toto je podobné, ako pri vlastnosti „sprite“ objektu. `World` je meno objektu. `mouseX` a `mouseY` sú názvy vlastností.
+
+        # Urob toto
+
+        -   Obrázok včeličky sme už za teba nahrali do záložky s animáciami.
+        -   Vytvor „sprite“ so včeličkou a umiestni ho v strede obrazovky.
+        -   Vo vnútri cyklu kreslenia uprav pozíciu „sprite“ objektu podľa kurzoru myši nasledovne:
+            -   Nastav jeho súradnicu x tak, aby sa rovnala `World.mouseX`.
+            -   Nastav jeho súradnicu y tak, aby sa rovnala `World.mouseY`.
+        -   Spusti program a otestuj jeho funkčnosť.
+      CSD U3 Mouse Input Bee 1_2019: |-
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right">
+
+        # X a Y počítačovej myši
+
+        Jedným z najjednoduchších spôsobov zadávania vstupu je, keď „sprite“ objekt sleduje pozíciu kurzora užívateľovej myši. **Súradnice x a y kurzora myši môžeš získať pomocou `World.mouseX` and `World.mouseY`.**   Toto je podobné, ako pri vlastnosti „sprite“ objektu. `World` je meno objektu. `mouseX` a `mouseY` sú názvy vlastností.
+
+        # Urob toto
+
+        -   Obrázok včeličky sme už za teba nahrali do záložky s animáciami.
+        -   Vytvor „sprite“ so včeličkou a umiestni ho v strede obrazovky.
+        -   Vo vnútri cyklu kreslenia uprav pozíciu „sprite“ objektu podľa kurzoru myši nasledovne:
+            -   Nastav jeho súradnicu x tak, aby sa rovnala `World.mouseX`.
+            -   Nastav jeho súradnicu y tak, aby sa rovnala `World.mouseY`.
+        -   Spusti program a otestuj jeho funkčnosť.
+      CSD U3 Mouse Input Bee 2: |-
+        # Náhodný pohyb v okolí bodu
+
+        <img src="https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif" style="float:right">
+
+        Keď už vieme, ako dosiahnuť, aby včelička nasledovala pozíciu kurzora myši, nechajme ju okolo nieho lietať. Na to potrebujeme **k hodnotám `mouseX` alebo `mouseY` pridať náhodnú hodnotu v rozmedzí od -50 do 50.**
+
+        # Urob toto
+
+        Už máš vytvorený „sprite“ so včeličkou, ktorý sleduje kurzor myši.
+        World.mouseX a World.mouseY.
+
+        -   Aktualizuj súradnice x a y tak, aby boli vždy niekde blízko kurzoru myši.
+            -   Pridaj náhodnú hodnotu od -50 do 50 k `World.mouseX` a `World.mouseY`.
+        -   Ak je to potrebné, použi blok `World.frameRate` pre spomalenie animácie a nájdenie čo najlepšej obnovovacej frekvencie
+
+        _Výzva: **Pridaj ďalšie 3 včeličky**, ktoré sa budú správať rovnako a spolu vytvoria roj._
+      CSD U3 Mouse Input Bee 2_2018: |-
+        # Náhodný pohyb v okolí bodu
+
+        <img src="https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif" style="float:right">
+
+        Keď už vieme, ako dosiahnuť, aby včelička nasledovala pozíciu kurzora myši, nechajme ju okolo nieho lietať. Na to potrebujeme **k hodnotám `mouseX` alebo `mouseY` pridať náhodnú hodnotu v rozmedzí od -50 do 50.**
+
+        # Urob toto
+
+        Už máš vytvorený „sprite“ so včeličkou, ktorý sleduje kurzor myši.
+        World.mouseX a World.mouseY.
+
+        -   Aktualizuj súradnice x a y tak, aby boli vždy niekde blízko kurzoru myši.
+            -   Pridaj náhodnú hodnotu od -50 do 50 k `World.mouseX` a `World.mouseY`.
+        -   Ak je to potrebné, použi blok `World.frameRate` pre spomalenie animácie a nájdenie čo najlepšej obnovovacej frekvencie
+
+        _Výzva: **Pridaj ďalšie 3 včeličky**, ktoré sa budú správať rovnako a spolu vytvoria roj._
+      CSD U3 Mouse Input Bee 2_2019: |-
+        # Náhodný pohyb v okolí bodu
+
+        <img src="https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif" style="float:right">
+
+        Keď už vieme, ako dosiahnuť, aby včelička nasledovala pozíciu kurzora myši, nechajme ju okolo nieho lietať. Na to potrebujeme **k hodnotám `mouseX` alebo `mouseY` pridať náhodnú hodnotu v rozmedzí od -50 do 50.**
+
+        # Urob toto
+
+        Už máš vytvorený „sprite“ so včeličkou, ktorý sleduje kurzor myši.
+        World.mouseX a World.mouseY.
+
+        -   Aktualizuj súradnice x a y tak, aby boli vždy niekde blízko kurzoru myši.
+            -   Pridaj náhodnú hodnotu od -50 do 50 k `World.mouseX` a `World.mouseY`.
+        -   Ak je to potrebné, použi blok `World.frameRate` pre spomalenie animácie a nájdenie čo najlepšej obnovovacej frekvencie
+
+        _Výzva: **Pridaj ďalšie 3 včeličky**, ktoré sa budú správať rovnako a spolu vytvoria roj._
       CSD U3 Movement Fish challenge_2018: |-
         # Viac rýb!
 
@@ -1512,6 +2015,77 @@ sk-SK:
         si pozbieral 3, 6, 9, 12, 15 nektárov?"
       New Minecraft Hero Project: "**Voľná hra:** Teraz je to na tebe! Nakóduj agenta
         a preskúmaj s ním tento svet."
+      OPD-K5-events-2: "Pripoj blok `mávni normálne` k bloku `keď klikneš`, potom
+        stlač tlačidlo \"Spustiť\". \n\n* * *\n\nKlikni na hernú plochu aby si dostal
+        Flappyho k cieľu."
+      OPD-K5-events-3: "Blok `pri spustení` ti umožní spustiť tvoj kód hneď ako tvoja
+        hra začne. \n\nVyskúšaj pridať blok, ktorým zmeníš rýchlosť hry po stlačení
+        tlačidla \"Spustiť\". \n\n* * *\n\nZahraj si túto hru a doleť až k cieľu,
+        aby si mohol pokračovať."
+      OPD-K5-events-4: "Teraz sme pridali aj zem. \n\nUmiestni blok `ukonči hru` pod
+        blok `keď dopadne na zem`. \n\n* * *\n\nZahraj si hru a na jej konci nechaj
+        Flappyho spadnúť na zem."
+      OPD-K5-events-5: "Flappy skrz prekážky preletí, pokiaľ ho nenaprogramuješ tak,
+        aby do nich narazil ak sa im nevyhne. \n\nPripoj blok `ukonči hru` ku bloku
+        `keď narazí na prekážku`, aby sa hra skončila akonáhle Flappy narazí do prvej
+        prekážky."
+      OPD-K5-events-6: "Pridali sme počítadlo bodov, Flappy získa jeden zakaždým,
+        keď sa vyhne prekážke. \n\nPridaj blok `pridaj bod` pod udalosť `keď obíde
+        prekážku`, potom stlač \"Spustiť\" a dostaň Flappyho cez prvé prekážky."
+      OPD-K5-forloops-2: |-
+        Napíš kód, ktorý pomôže včele pozbierať všetok nektár.
+
+        Potrebuješ veľa blokov pre túto výzvu, ale v ďalšej úlohe sa naučíme jednoduchší spôsob.
+      OPD-K5-forloops-6: |-
+        Cyklus `for` môžeš použiť aj na odpočítavanie.
+
+        Skús pozbierať nektár odpočítavaním od **5** do **1** počítané po **1**.
+      OPD-K5-forloops-7: |-
+        Posledné číslo v tvojom cykle `for` sa nazýva **"prírastok"**. Zakaždým, keď cyklus prebehne, tak sa premenná počítadlo zmení o hodnotu  **prírastku**.
+
+        Skús pozbierať tieto kvety s použitím **prírastku** 2.
+      OPD-K5-projects-3: "Použi bloky ako udalosti a akcie, aby si hráčom mohol hýbať
+        pomocou šípok. \n\n Úlohu dokončíš posunutím hráča ku všetkým terčom."
+      OPD-K5-projects-5: |-
+        Viacero postáv, ktoré sa hýbu je dobrý začiatok na vytvorenie hry. Potrebujeme ešte niečo pridať, aby sa to viac podobalo na ozajstnú hru. Pridajme skóre!
+
+        Použi bloky s udalosťami ako napríklad 'keď sa postava dotkne', aby si ovplyvnil skóre alebo vyhral. Nazbieraj 5 bodov alebo vyhraj, aby si vyriešil túto úlohu.
+      OPD-K5-projects-6: Skvelá práca! Máš všetky základné časti fungujúcej hry. Teraz
+        si skontroluj, či hra funguje presne tak, ako chceš. A nakoniec klikni na
+        "Dokončiť"!
+      OPD-K5-spritelab-2: "Vytvor akvárium!  \n\nZmeň Pracháča (kôpku slamy) na akúkoľvek
+        rybu kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the
+        sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nNezabudni
+        tiež zmeniť kostým v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the
+        add behavior block\"></block></xml>."
+      OPD-K5-spritelab-3: "Rybe sa začala točiť hlava! \n\nZmeň správanie ryby tak,
+        aby plávala vľavo a vpravo."
+      OPD-K5-spritelab-4: "Naše akvárium bude potrebovať vodu! \n\nPouži <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background
+        color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
+        \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
+        \ </block></xml> na nastavenie farby pozadia. Odporúčame modrú!"
+      OPD-K5-spritelab-6: Ryba má dobrodružnú povahu a chcela by stretnúť ďalšie morské
+        živočíchy. Pridaj do akvária ďašiu postavu. Postava môže mať hociaký kostým,
+        okrem toho, ktorý už má ryba.
+      OPD-K5-spritelab-7: |-
+        Čo chceš, aby robil nový kamarát tvojej ryby?
+
+        Pridaj mu správanie a sleduj ich!
+      OPD-K5-variables-1: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
+      OPD-K5-variables-2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      OPD-K5-variables-5: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      OPD-K5-variables-6: Teraz použi premennú `dĺžka`, aby umelec skočil dopredu
+        a dole o `dĺžka` pixelov medzi trojuhoníkmi.
       Overworld Chop Tree: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí.
         Kráčaj ku stromu a použi príkaz`znič blok` na to, aby si ho vyrúbal.
       Overworld Chop Tree_2019: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa
@@ -2029,6 +2603,10 @@ sk-SK:
         ku prasiatku!
       courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
         ku prasiatku!
+      courseA_maze_seq6_copy: |-
+        Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal ku prasiatku!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
@@ -2070,6 +2648,9 @@ sk-SK:
         po stlačení šípiek na klávensnici.
       courseA_playLab_events5_2018: Pridaj udalosti tak, aby sa Jorge hýbal hore a
         dole po stlačení šípiek na klávensnici.
+      courseA_playLab_events5_2019: Pridaj udalosti tak, aby sa Jorge hýbal hore a
+        dole po stlačení tlačidla \`hore\` a \`dole\`. Pre dokončenie úlohy pomôž
+        Jorgemu získať všetky vlajky!
       courseA_playLab_events6_2019: Sprav to ešte zaujímavejšie, zmeň aj pozadie a
         prehraj náhodný zvuk po kliknutí na Jorgeho. Keď bude tvoj kód hotový, klikni
         na Jorgeho aby si to vyskúšal/a!
@@ -3234,6 +3815,10 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ideš BB-8!"_
 
         Ak chceš pozbierať všetky kusy šrotu, vytvor cyklus použitím len jedného bloku vo vnútri opakovania.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ideš BB-8!"_
+
+        Ak chceš pozbierať všetky kusy šrotu, vytvor cyklus použitím len jedného bloku vo vnútri opakovania.
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
 
@@ -3246,11 +3831,17 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
 
         V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
+
+        V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8, ideš!"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
@@ -3261,6 +3852,10 @@ sk-SK:
 
         Cykly fungujú dokonca aj s viac ako jedným blokom vo vnútri! Dokážeš dať túto postupnosť do cyklu?
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
+
+        Cykly fungujú dokonca aj s viac ako jedným blokom vo vnútri! Dokážeš dať túto postupnosť do cyklu?
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
 
         Cykly fungujú dokonca aj s viac ako jedným blokom vo vnútri! Dokážeš dať túto postupnosť do cyklu?
@@ -3276,6 +3871,10 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ty to dokážeš!!"_
 
         Pokúsiš sa pozbierať všetky kusy kovu s použitím iba jedného cyklu? Pokús sa to najskôr naprogramovať celé bez cyklu, potom nájdi opakujúci sa kód a daj ho do cyklu.
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ty to dokážeš!!"_
+
+        Pokúsiš sa pozbierať všetky kusy kovu s použitím iba jedného cyklu? Pokús sa to najskôr naprogramovať celé bez cyklu, potom nájdi opakujúci sa kód a daj ho do cyklu.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
 
@@ -3285,6 +3884,10 @@ sk-SK:
 
         **Výzva:** Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
+
+        **Výzva:** Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Keep it up, BB-8."_
 
         **Výzva:** Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.
@@ -3828,6 +4431,10 @@ sk-SK:
         _"Tento oblak mi zacláňa vo výhľade!"_
 
          Skontroluj, či je pod oblakom kvet. Ak sa tam kvet nachádza, pozberaj  nektár.
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"Tento oblak mi zacláňa vo výhľade!"_
+
+         Skontroluj, či je pod oblakom kvet. Ak sa tam kvet nachádza, pozberaj  nektár.
       courseD_bee_conditionals2: |-
         Viac oblakov!
 
@@ -3846,6 +4453,12 @@ sk-SK:
         Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
 
         Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
+      courseD_bee_conditionals2_copy: |-
+        Viac oblakov!
+
+        Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
+
+        Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
       courseD_bee_conditionals3: Nektár môžeš zbierať len z kvetov, ale musíš skontrolovať
         každé miestečko, aby si si overil, či sa tam nenachádza kvet. Ak sa pod oblakom
         nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
@@ -3853,6 +4466,9 @@ sk-SK:
         skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
         Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
       courseD_bee_conditionals3_2019: Nektár môžeš zbierať len z kvetov, ale musíš
+        skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
+        Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
+      courseD_bee_conditionals3_copy: Nektár môžeš zbierať len z kvetov, ale musíš
         skontrolovať každé miestečko, aby si si overil, či sa tam nenachádza kvet.
         Ak sa pod oblakom nachádza kvet, včela bude musieť _ihneď_ pozberať nektár.
       courseD_bee_conditionals4: |-
@@ -3864,6 +4480,10 @@ sk-SK:
 
         Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
       courseD_bee_conditionals4_2019: |-
+        Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
+
+        Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
+      courseD_bee_conditionals4_copy: |-
         Vieme, že z každého kvetu je možné dostať nektár, ale v tejto úlohe kvety nie sú rovnomerne rozložené.
 
         Zober všetok nektár, s použitím čo najmänšieho počtu blokov.
@@ -4037,18 +4657,12 @@ sk-SK:
         aby sa lopta odrazila od steny a trafila do koša."
       courseD_bounce_events6s_2019: "Teraz máme kôš hore.  \n\nPridaj kód (bloky),
         aby sa lopta odrazila od steny a trafila do koša."
-      courseD_bounce_events7s_2018: |-
-        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku. Odrážaj loptu, kým nezasiahne svoj cieľ.
-
-        * * *
-
-        Odrážaj loptu, kým nezasiahne svoj cieľ.
-      courseD_bounce_events7s_2019: |-
-        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku. Odrážaj loptu, kým nezasiahne svoj cieľ.
-
-        * * *
-
-        Odrážaj loptu, kým nezasiahne svoj cieľ.
+      courseD_bounce_events7s_2018: "Pridaj bloky so zvukom, aby zašuchotala sieťka,
+        keď lopta trafí kôš, a aby zapískala píšťalka, keď lopta netrafí ruku. \n\n*
+        * *\n\nOdrážaj loptu, kým nezasiahne svoj cieľ."
+      courseD_bounce_events7s_2019: "Pridaj bloky so zvukom, aby zašuchotala sieťka,
+        keď lopta trafí kôš, a aby zapískala píšťalka, keď lopta netrafí ruku. \n\n*
+        * *\n\nOdrážaj loptu, kým nezasiahne svoj cieľ."
       courseD_collector_debugging1: |-
         _"Oh nie! Vidím tu problém"_
 
@@ -4607,6 +5221,38 @@ sk-SK:
         vylepšiť:\n\n-   Pridaj pozadie! Vyber si pozadie, ktoré sa hodí k tvojmu
         plagátu.\n-   Pridaj správanie! Pridel každej postave iné správanie po kliknutí
         na ňu.\n-   Pridaj viac udalostí! Využi ďalšie bloky v kategórii blokov `Udalosti`."
+      courseE_artist_concept1: "Vytvor tento obrázok.\n\n-   Šesťuholníky so stranami
+        dlhými 50 pixelov. \n-   Šesťuholníky sú od seba vzdialené 100 pixelov.\n-
+        \  Stopa pera pri šesťuholníkoch je 1 pixel, 4 pixely a 8 pixelov."
+      courseE_artist_concept1_2018: "Vytvor tento obrázok.\n\n-   Šesťuholníky so
+        stranami dlhými 50 pixelov. \n-   Šesťuholníky sú od seba vzdialené 100 pixelov.\n-
+        \  Stopa pera pri šesťuholníkoch je 1 pixel, 4 pixely a 8 pixelov."
+      courseE_artist_concept4: |-
+        Vytvor túto kresbu.
+
+        Každý štvorec má stranu dlhú **20 pixelov** a **15 štvorcov v rade**.
+      courseE_artist_concept4_2018: |-
+        Vytvor túto kresbu.
+
+        Každý štvorec má stranu dlhú **20 pixelov** a **15 štvorcov v rade**.
+      courseE_artist_functions10: |-
+        Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+
+        -   Na vytvorenie šesť uholníka opakuj stranu 6-krát s pootočením o 60 stupňov.
+        -   Skoč 25 pixelov medzi šesťuholníkmi.
+        -   Na kresbu diamantu budeš potrebovať meniť veľkosť supňa 60 a 120.
+      courseE_artist_functions10_2018: |-
+        Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+
+        -   Na vytvorenie šesť uholníka opakuj stranu 6-krát s pootočením o 60 stupňov.
+        -   Skoč 25 pixelov medzi šesťuholníkmi.
+        -   Na kresbu diamantu budeš potrebovať meniť veľkosť supňa 60 a 120.
+      courseE_artist_functions10_2019: |-
+        Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+
+        -   Na vytvorenie šesť uholníka opakuj stranu 6-krát s pootočením o 60 stupňov.
+        -   Skoč 25 pixelov medzi šesťuholníkmi.
+        -   Na kresbu diamantu budeš potrebovať meniť veľkosť supňa 60 a 120.
       courseE_artist_functions2_2018: "Tu je funkcia `nakresli štvorec`. Použi ju
         na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       courseE_artist_functions2_2019: "Tu je funkcia `nakresli štvorec`. Použi ju
@@ -4691,6 +5337,22 @@ sk-SK:
         a vytvor čo len chceš! \n\nDokážeš vytvoriť niečo ako táto ružica?"
       courseE_artist_functionsProj_2019: "**Inšpirácia:** Použi čo si sa naučil/a
         a vytvor čo len chceš! \n\nDokážeš vytvoriť niečo ako táto ružica?"
+      courseE_bee_concept1: |-
+        _"Môžeš oVČIELKOvať  všetky tieto kvety?"_
+
+        Pozberaj nekátr zo všetkých kvetov.
+      courseE_bee_concept1_2018: |-
+        _"Môžeš oVČIELKOvať  všetky tieto kvety?"_
+
+        Pozberaj nekátr zo všetkých kvetov.
+      courseE_bee_concept2: |-
+        Pomôž včele vyrobiť med.
+
+        Med môžeš vyorbiť len pri úli, ale môžeš skontrolovať miesta, či sa tam úľ nachádza.
+      courseE_bee_concept2_2018: |-
+        Pomôž včele vyrobiť med.
+
+        Med môžeš vyorbiť len pri úli, ale môžeš skontrolovať miesta, či sa tam úľ nachádza.
       courseE_bee_concept5: "Pomôž včele pozbierať všetok nektár. \n\nNektár môžeš
         zbierať len z kvetov, ale musíš skontrolovať každé miestečko, aby si overil,
         či sa tam nenachádza kvet."
@@ -4811,11 +5473,11 @@ sk-SK:
       courseE_farmer_functions8a1_2019: Skús znovu napísať svoju funkciu. Je stále
         užitočná?  Ako ju môžeš použiť pri riešení tejto úlohy?
       courseE_farmer_functions9a1_2018: |-
-        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+        \*Táto úloha je a-MAZE-ing! (amazing - úžasná, maze - bludisko)\*\*
 
         Je tvoja funkcia užitočná aj pri tejto úlohe?
       courseE_farmer_functions9a1_2019: |-
-        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+        \*Táto úloha je a-MAZE-ing! (amazing - úžasná, maze - bludisko)\*\*
 
         Je tvoja funkcia užitočná aj pri tejto úlohe?
       courseE_farmer_ramp11a: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť

@@ -53,7 +53,6 @@ def storage_decrypt_channel_id(encrypted)
   # pad to a multiple of 4 characters to make a valid base64 string.
   encrypted += '=' * ((4 - encrypted.length % 4) % 4)
   storage_id, storage_app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
-  puts storage_decrypt(Base64.urlsafe_decode64(encrypted))
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   raise ArgumentError, "`storage_app_id` must be an integer > 0" unless storage_app_id > 0
   [storage_id, storage_app_id]

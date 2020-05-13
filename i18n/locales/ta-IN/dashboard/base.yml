@@ -147,9 +147,6 @@ ta:
       title: 'நடன விருந்து'
     dance-2019:
       title: 'நடன விருந்து'
-  gallery:
-    header_artist: "கலைஞர்"
-    report_abuse: "தவறான பயன்பாட்டை தெரிவிக்கவும்"
   landing:
     help_support: "உதவி மற்றும் ஆதரவு"
   dialog:
@@ -176,15 +173,6 @@ ta:
       report_abuse_form:
         abuse_type:
           other: 'வேறு'
-  flex_category:
-    csf_loops: 'சுழற்சிகள்'
-    csf_events: 'நிகழ்வுகள்'
-    csf_functions: 'செயல்பாடுகள்'
-    csf_variables: 'மாறிலிகள்'
-    csp_variables: 'மாறிலிகள்'
-    csp_functions: 'செயல்பாடுகள்'
-    csp_lists: 'பட்டியல்கள்'
-    csp_loops: 'சுழற்சிகள்'
   pd:
     form_labels:
       email: 'மின்னஞ்சல்'

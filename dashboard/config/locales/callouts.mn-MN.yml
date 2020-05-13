@@ -174,6 +174,19 @@ mn-MN:
       New Frozen Project:
         snowflake_dropdown: Энэ доош урсах цэсийг ашиглан өөр өөр цасан ширхгийг бий
           болго!
+      OPD-K5-forloops-5:
+        courseF_bee_for4_1: Та энд `-д зориулав` гогцоог олох болно!
+      OPD-K5-projects-4:
+        courseE_playLab_scaffold3_1: Дараагийн шатанд шилжихийн тулд жүжигчдийг энэ
+          туг дээр аваачаарай.
+      OPD-K5-spritelab-3:
+        spritelab_comment: Таны код хэрхэн ажиллаж байгааг өөртөө болон багшдаа анзааруулахын
+          тулд энэхүү блокийг ашиглаарай.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_1: Одоо блокууд тоог оруулах шинэ аргатай
+          байгааг анзаараарай. Эдгээр `мат` блокуудыг сугалж авчраад хөдөлгөж болно!
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: Үүнийг ашиглан `урт` хувьсагчийн утгыг тохируулаарай
       Overworld Chop Trees:
         craft_callout_preplaced: Эхлэхийн тулд бид энд хэдэн блок тавьсан
       Overworld Chop Trees_2019:
@@ -545,6 +558,9 @@ mn-MN:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг
           нь л байна.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2: Танд энэ тааварт байгаа эдгээр блокуудын зөвхөн нэг
+          нь л байна.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Энэ тааврыг зөв бодохын тулд өнгө ашиглах
           шаардлагагүй. Та хүсвэл энэ "санамсаргүй өнгө" блок нь үүнийг хялбаршуулдаг!
@@ -568,6 +584,10 @@ mn-MN:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай.
           Та зөгийн сархинаг заавал шалгах шаардлагагүй.
+      courseD_bee_conditionals2_copy:
+        4_5_Bee_Conditionals_2_1: САНАГТУН, үүл БҮРТ ЦЭЦЭГ байгаа эсэхийг шалгаарай.
+          Та зөгийн сархинаг заавал шалгах шаардлагагүй.
+        4_5_Bee_Conditionals_2_2: Тусламж хэрэгтэй юу? ВИДЕО түлхүүрийг энд дарж үзээрэй!
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Нэг цэцгээс (эсвэл сархинагаас) бүх
           шүүс (эсвэл зөгийн бал) цуглуулахын тулд энэ гогцоог ашиглаарай.
@@ -690,6 +710,9 @@ mn-MN:
       courseE_artist_functions1:
         courseD_artist_functions1_1: Энэ блокийг ашиглан эхний квадратыг үүсгэхэд
           тусалж эхлүүлье.
+      courseE_artist_functions1_copy:
+        courseD_artist_functions1_1: Энэ блокийг ашиглан эхний квадратыг үүсгэхэд
+          тусалж эхлүүлье.
       courseE_artist_functions2:
         courseD_artist_functions2_1: Энэ ногоон блок ажиллаж байх үед функц доторх
           бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?
@@ -697,6 +720,9 @@ mn-MN:
         courseD_artist_functions2_1: Энэ ногоон блок ажиллаж байх үед функц доторх
           бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: Энэ ногоон блок ажиллаж байх үед функц доторх
+          бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_1: Энэ ногоон блок ажиллаж байх үед функц доторх
           бүх код ажиллана. Эхний квадратыг зурсны дараа зураач юу хийх ёстой вэ?
       courseE_artist_functions8:

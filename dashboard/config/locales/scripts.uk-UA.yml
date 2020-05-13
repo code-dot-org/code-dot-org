@@ -3,6 +3,7 @@ uk:
   data:
     script:
       category:
+        csf_category_name: Основи інформатики
         csf2_draft_category_name: 'В розробці: курси А—Д'
         csp_category_name: "'15-'16 принципи інформатики"
         cspexams_category_name: Практичний тест з принципів інформатики
@@ -879,10 +880,24 @@ uk:
               name: Інтернет
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp1_1:
+              display_name: 'Глава 1: Представлення та передача інформації'
+            csp1_2:
+              display_name: 'Глава 2: Винайти інтернет'
         csp2-2017:
           stages:
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            csp2_1:
+              display_name: 'Глава 1: Кодування та стиснення складної інформації'
+            csp2_2:
+              display_name: Глава 2. Маніпулювання та візуалізація даних
+            cspSurvey:
+              display_name: Опитування
         csp3-2017:
           description_short: Програмування
           stages:
@@ -890,18 +905,39 @@ uk:
               name: Створення функцій
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Мови програмування та алгоритми'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
         csp4-2017:
           stages:
             Simple Encryption:
               name: Просте шифрування
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            csp4_1:
+              display_name: 'Глава 1: Світ великих даних та шифрування'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
         csp5-2017:
           stages:
             While Loops:
               name: Цикли "поки"
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Програмування, кероване подіями'
+            csp5_2:
+              display_name: 'Глава 2: Програмування з структурами даних'
+            cspSurvey:
+              display_name: Опитування
         CSDU3-Draft:
           description_short: Програмування
           stages:
@@ -929,6 +965,22 @@ uk:
           stages:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
         allthehiddenthings:
           stages:
             Game Lab:
@@ -943,6 +995,14 @@ uk:
               name: Художник - функції
         artistExemplar:
           description_audience: Вік 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1021,6 +1081,14 @@ uk:
               name: Арканоід
             'Farmer: While Loops':
               name: Фермерка - цикли "поки"
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
         csd3-2017:
           description_short: Програмування
           stages:
@@ -1032,6 +1100,15 @@ uk:
               name: змінні
             Conditionals:
               name: Умови
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
+            csd_survey:
+              display_name: Опитування після закінчення курсу
         grade2:
           stages:
             Flappy:
@@ -1072,6 +1149,30 @@ uk:
               name: Створення рецепту
             Welcome!:
               name: Ласкаво просимо!
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
         basketball:
           title: Обери команду та створи гру в баскетбол
           description_short: Зроби гру в баскетбол
@@ -1098,6 +1199,31 @@ uk:
               name: Рецензування
             Lists:
               name: Списки
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент та HTML'
+            csd2_2:
+              display_name: 'Глава: Стилізація та CSS'
+            csd_survey:
+              display_name: Опитування після закінчення курсу
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
+        csd4-2017:
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            csd_survey:
+              display_name: Опитування після закінчення курсу
         minecraft:
           title: Година коду від Майнкрафт - Розробник
           description_short: Запрограмуй тварин та інших істот Майнкрафт у власній
@@ -1159,6 +1285,11 @@ uk:
               name: Вступ
             Conditionals:
               name: Умови
+          lesson_groups:
+            content:
+              display_name: Зміст
+            extra_course_content:
+              display_name: Додатковий вміст курсу
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1173,6 +1304,9 @@ uk:
               name: Вступ
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
+          lesson_groups:
+            content:
+              display_name: Зміст
         classic-hoc-impact-study:
           description_short: Спробуйте основи інформатики з цікавими персонажами!
           stages:
@@ -1202,6 +1336,22 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
         sciencepd4:
           stages:
             Welcome!:
@@ -1218,16 +1368,32 @@ uk:
           stages:
             Binary:
               name: Двійкова система
+          lesson_groups:
+            content:
+              display_name: Зміст
         sciencepd5:
           stages:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+            practice:
+              display_name: Методики викладання
         csppostap-2017:
           stages:
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            content:
+              display_name: Зміст
+            cspSurvey:
+              display_name: Опитування
         csd6-draft:
           stages:
             Lists:
@@ -1236,10 +1402,21 @@ uk:
               name: Цикли For
             Functions with Parameters:
               name: Функції з параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
         workshop-gamelab:
           stages:
             Introduction:
               name: Вступ
+        csd5-draft:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
         coursed-ramp:
           stages:
             Introduction:
@@ -1262,6 +1439,13 @@ uk:
               name: Функції з параметрами
             Functions with Parameters_:
               name: Функції з параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            csd_survey:
+              display_name: Опитування після закінчення курсу
         csd3-draft:
           stages:
             Variables:
@@ -1272,6 +1456,14 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+        csd5-2017:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            csd_survey:
+              display_name: Опитування після закінчення курсу
         csd3-old:
           stages:
             Velocity:
@@ -1300,6 +1492,10 @@ uk:
               name: Вступ
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
         csd2-old:
           stages:
             Peer Review:
@@ -1355,6 +1551,13 @@ uk:
           title: Курс Ґ
           assignment_family_title: Курс Ґ
           description_audience: 'Вік: 8-12'
+          lesson_groups:
+            csf_e_1:
+              display_name: Просунутися до Курсу Е (опціонально)
+            csf_e_2:
+              display_name: Зміст курсу E
+            extra_course_content:
+              display_name: Додатковий вміст курсу
         coursef-2017:
           stages:
             Building a Foundation:
@@ -1362,6 +1565,91 @@ uk:
           title: Курс Д
           assignment_family_title: Курс Д
           description_audience: 'Вік: 9-13'
+          lesson_groups:
+            csf_f_1:
+              display_name: Просунутися до Курсу F (опціонально)
+            csf_f_2:
+              display_name: Зміст курсу F
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Глава 1: Налаштування технології AP'
+            csp_ap_3:
+              display_name: 'Глава 3: Створення завдання ефективності AP'
+            csp_ap_2:
+              display_name: 'Глава 2: Дослідження продуктивності AP'
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
         express-2017:
           stages:
             Introduction:
@@ -1383,6 +1671,9 @@ uk:
             Nested Loops:
               name: Вкладені цикли
           description_audience: 'Вік: 9-18'
+          lesson_groups:
+            content:
+              display_name: Зміст
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1399,6 +1690,21 @@ uk:
             Creating Functions:
               name: Створення функцій
           description_short: Програмування
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Мови програмування та алгоритми'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1411,6 +1717,13 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            csf_e_1:
+              display_name: Просунутися до Курсу Е (опціонально)
+            csf_e_2:
+              display_name: Зміст курсу E
+            extra_course_content:
+              display_name: Додатковий вміст курсу
         new-d:
           stages:
             Introduction:
@@ -1429,6 +1742,10 @@ uk:
               name: Закладання основ
             Loops in Ice Age:
               name: Петлі в Ice Age
+        csp3-a:
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Мови програмування та алгоритми'
         new-express:
           stages:
             Introduction:
@@ -1437,6 +1754,9 @@ uk:
               name: Закладання основ
             Nested Loops:
               name: Вкладені цикли
+          lesson_groups:
+            content:
+              display_name: Зміст
         new-e:
           stages:
             Building a Foundation:
@@ -1447,6 +1767,13 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            csf_e_1:
+              display_name: Просунутися до Курсу Е (опціонально)
+            csf_e_2:
+              display_name: Зміст курсу E
+            extra_course_content:
+              display_name: Додатковий вміст курсу
         new-f:
           stages:
             Building a Foundation:
@@ -1459,10 +1786,34 @@ uk:
               name: Ігри з циклами
             Songwriting with Parameters:
               name: Пісні з параметрами
+          lesson_groups:
+            csf_f_1:
+              display_name: Просунутися до Курсу F (опціонально)
+            csf_f_2:
+              display_name: Зміст курсу F
+        csd5-old:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+        csd4-old:
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
         csp3-staging:
           stages:
             Creating Functions:
               name: Створення функцій
+          lesson_groups:
+            csp3_1:
+              display_name: 'Глава 1: Мови програмування та алгоритми'
+            cspAssessment:
+              display_name: Оцінка глави
         pwc:
           stages:
             Personal Innovations:
@@ -1477,10 +1828,20 @@ uk:
           stages:
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Глава 2: Дослідження продуктивності AP'
+            cspSurvey:
+              display_name: Опитування
         csp-create-2017:
           stages:
             Post-Course Survey:
               name: Опитування після закінчення курсу
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Глава 3: Створення завдання ефективності AP'
+            cspSurvey:
+              display_name: Опитування
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1495,6 +1856,13 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            csf_e_1:
+              display_name: Просунутися до Курсу Е (опціонально)
+            csf_e_2:
+              display_name: Зміст курсу E
+            extra_course_content:
+              display_name: Додатковий вміст курсу
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1509,12 +1877,22 @@ uk:
               name: Ігри з циклами
             Songwriting with Parameters:
               name: Пісні з параметрами
+          lesson_groups:
+            csf_f_1:
+              display_name: Просунутися до Курсу F (опціонально)
+            csf_f_2:
+              display_name: Зміст курсу F
         csd6-old:
           stages:
             Lists:
               name: Списки
             For Loops:
               name: Цикли For
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
         csd3-1819draft:
           stages:
             Variables:
@@ -1526,6 +1904,13 @@ uk:
             Functions:
               name: функції
           description_short: Програмування
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
         csd3-2018:
           description_short: Програмування
           stages:
@@ -1537,10 +1922,24 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
         csd2-2018:
           stages:
             Lists:
               name: Списки
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент та HTML'
+            csd2_2:
+              display_name: 'Глава: Стилізація та CSS'
+            cspSurvey:
+              display_name: Опитування
         coursea-2018:
           assignment_family_title: Курс А
           description_audience: 'Вік: 4-7'
@@ -1642,6 +2041,13 @@ uk:
           stages:
             Functions with Parameters:
               name: Функції з параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            cspSurvey:
+              display_name: Опитування
         coursee-2018:
           assignment_family_title: Курс Ґ
           description_audience: 'Вік: 8-12'
@@ -1662,6 +2068,13 @@ uk:
               name: Листівки та умови
             Minecraft Hour of Code:
               name: Година коду від Майнкрафт
+          lesson_groups:
+            csf_e_1:
+              display_name: Просунутися до Курсу Е (опціонально)
+            csf_e_2:
+              display_name: Зміст курсу E
+            extra_course_content:
+              display_name: Додатковий вміст курсу
         coursef-2018:
           assignment_family_title: Курс Д
           description_audience: 'Вік: 9-13'
@@ -1682,6 +2095,11 @@ uk:
               name: Пісні з параметрами
             Conditionals with Cards:
               name: Листівки та умови
+          lesson_groups:
+            csf_f_1:
+              display_name: Просунутися до Курсу F (опціонально)
+            csf_f_2:
+              display_name: Зміст курсу F
         csp1-2018:
           stages:
             Personal Innovations:
@@ -1690,19 +2108,205 @@ uk:
               name: Двійкові Числа
             The Internet:
               name: Інтернет
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp1_1:
+              display_name: 'Глава 1: Представлення та передача інформації'
+            csp1_2:
+              display_name: 'Глава 2: Винайти інтернет'
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        csd4-2018:
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            cspSurvey:
+              display_name: Опитування
+        csd5-2018:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Розділ 2: Цифрова інформація'
+            cspAssessment:
+              display_name: Оцінка глави
         csp3-2018:
           description_short: Програмування
           stages:
             Creating Functions:
               name: Створення функцій
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Блок 3: Введення в програмування'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
+        csp-explore-2018:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Глава 2: Дослідження продуктивності AP'
+            cspSurvey:
+              display_name: Опитування
+        csp-create-2018:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Глава 3: Створення завдання ефективності AP'
+            cspSurvey:
+              display_name: Опитування
         csp4-2018:
           stages:
             Simple Encryption:
               name: Просте шифрування
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Блок 4: великі дані та конфіденційність'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
         csp5-2018:
           stages:
             While Loops:
               name: Цикли "поки"
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Програмування, кероване подіями'
+            csp5_2:
+              display_name: 'Глава 2: Програмування з структурами даних'
+            cspSurvey:
+              display_name: Опитування
+        csppostap-2018:
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Глава 1: Маніпулювання і візуалізація даних'
+            csp_postap_2:
+              display_name: 'Глава 2: Додатки та бази даних'
+            cspSurvey:
+              display_name: Опитування
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd-post-survey:
+          lesson_groups:
+            csd_survey:
+              display_name: Опитування після закінчення курсу
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
         pre-express-2018:
           description_audience: 'Вік: 4-8'
           stages:
@@ -1720,6 +2324,12 @@ uk:
               name: Твій цифровий слід
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
         frozen-2018:
           stages:
             Artist:
@@ -1749,6 +2359,16 @@ uk:
           stages:
             Dance Party:
               name: Танцювальна вечірка
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
         dance-extras:
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
@@ -1768,6 +2388,17 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            csf_variables:
+              display_name: змінні
+            csf_for_loops:
+              display_name: Цикли For
+            csf_internet:
+              display_name: Інтернет
+            csf_digcit:
+              display_name: Цифрове громадянство
         dance-low:
           stages:
             Dance Party:
@@ -1791,6 +2422,19 @@ uk:
               name: 'Художник: двійкова система'
             Dance Party:
               name: Танцювальна вечірка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_binary:
+              display_name: Двійкова система
+            csf_digcit:
+              display_name: Цифрове громадянство
         coursee-2019:
           description_audience: 'Вік: 8-12'
           stages:
@@ -1808,6 +2452,15 @@ uk:
               name: Краудсорсинг
             Songwriting:
               name: Написання пісень
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_nested_loops:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: функції
         express-2019:
           description_audience: 'Вік: 9-18'
           stages:
@@ -1831,6 +2484,29 @@ uk:
               name: Краудсорсинг
             Dance Party:
               name: Танцювальна вечірка
+          lesson_groups:
+            csf_warmup:
+              display_name: Розминка
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: функції
+            csf_variables:
+              display_name: змінні
+            csf_for_loops:
+              display_name: Цикли For
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
         andrea-test:
           stages:
             andrea-g1:
@@ -1845,6 +2521,11 @@ uk:
               name: andrea-s3
             'null':
               name: нічого
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
         dance-extras-gallery:
           title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
@@ -1857,6 +2538,21 @@ uk:
               name: Велика подія
             Binary Bracelets:
               name: Двійкові браслети
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_binary:
+              display_name: Двійкова система
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
         gamelab:
           title: Ігрова лабораторія
         coursea-2019:
@@ -1866,6 +2562,15 @@ uk:
               name: Щасливі карти
             Going Places Safely:
               name: Безпечне добирання
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         courseb-2019:
           description_audience: 'Вік: 5-8'
           stages:
@@ -1877,6 +2582,15 @@ uk:
               name: Петлі в Ice Age
             'Loops: Getting Loopy':
               name: Економія на повторах
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         pre-express-2019:
           description_audience: 'Вік: 4-8'
           stages:
@@ -1886,6 +2600,13 @@ uk:
               name: Твій цифровий слід
             Spelling Bee:
               name: Грамотна Бджілка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1894,6 +2615,13 @@ uk:
           stages:
             Lists:
               name: Списки
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент та HTML'
+            csd2_2:
+              display_name: 'Глава: Стилізація та CSS'
+            cspSurvey:
+              display_name: Опитування
         csd3-2019:
           description_short: Програмування
           stages:
@@ -1905,14 +2633,59 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
+        csd4-2019:
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csd5-2019:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
         csd6-2019:
           stages:
             Functions with Parameters:
               name: Функції з параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            cspSurvey:
+              display_name: Опитування
         csp4-pilot:
           stages:
             Surveys:
               name: Опитування
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+            required:
+              display_name: Огляд
         csp1-2019:
           stages:
             Personal Innovations:
@@ -1921,23 +2694,84 @@ uk:
               name: Двійкові Числа
             The Internet:
               name: Інтернет
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp1_1:
+              display_name: 'Глава 1: Представлення та передача інформації'
+            csp1_2:
+              display_name: 'Глава 2: Винайти інтернет'
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Розділ 2: Цифрова інформація'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
         csp3-2019:
           description_short: Програмування
           stages:
             Creating Functions:
               name: Створення функцій
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Блок 3: Введення в програмування'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
         csp4-2019:
           stages:
             Simple Encryption:
               name: Просте шифрування
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Блок 4: великі дані та конфіденційність'
+            cspAssessment:
+              display_name: Оцінка глави
+            cspSurvey:
+              display_name: Опитування
         csp5-2019:
           stages:
             While Loops:
               name: Цикли "поки"
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Програмування, кероване подіями'
+            csp5_2:
+              display_name: 'Глава 2: Програмування з структурами даних'
+            cspSurvey:
+              display_name: Опитування
+        csp-explore-2019:
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Глава 2: Дослідження продуктивності AP'
+            cspSurvey:
+              display_name: Опитування
+        csp-create-2019:
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Глава 3: Створення завдання ефективності AP'
+            cspSurvey:
+              display_name: Опитування
+        csppostap-2019:
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Глава 1: Маніпулювання і візуалізація даних'
+            csp_postap_2:
+              display_name: 'Глава 2: Додатки та бази даних'
+            cspSurvey:
+              display_name: Опитування
         csp1-pilot:
           stages:
             Binary Numbers:
               name: Двійкові Числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            required:
+              display_name: Огляд
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1946,20 +2780,167 @@ uk:
               name: Листівки та умови
             Building a Foundation:
               name: Закладання основ
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            time4cs_c1:
+              display_name: Еверглейдс і його екосистеми
+            time4cs_c2:
+              display_name: Харчові ланцюги в Еверглейдс
+            time4cs_c3:
+              display_name: Життя в Еверглейдс
+            time4cs_c4:
+              display_name: Інвазивні впливи на Еверглейдс
+            time4cs_c5:
+              display_name: Громадяни впливають на зміни в Еверглейдс
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+            csp_libraries:
+              display_name: Бібліотеки
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
         csp7-pilot-staging:
           stages:
             Libraries:
               name: Бібліотеки
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Програмування по клітинках
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+            required:
+              display_name: Огляд
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
         csd2-pilot:
           stages:
             Lists:
               name: Списки
             CSS Classes:
               name: Класи CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент та HTML'
+            csd2_2:
+              display_name: 'Глава: Стилізація та CSS'
+            cspSurvey:
+              display_name: Опитування
         csd3-pilot:
           description_short: Програмування
           stages:
@@ -1971,16 +2952,112 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Зміст
+            required:
+              display_name: Огляд
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Петлі в Ice Age
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Огляд
+            content:
+              display_name: Зміст
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Зміст
+            required:
+              display_name: Огляд
         peru-2019:
           stages:
             Introduction:
               name: Вступ
             Nested Loops:
               name: Вкладені цикли
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Зміст
+            required:
+              display_name: Огляд
         dance-2019:
           stages:
             Dance Party:
@@ -2009,8 +3086,21 @@ uk:
               name: змінні
             For Loops:
               name: Цикли For
+          lesson_groups:
+            k5_next_steps:
+              display_name: Наступні Кроки
         dance-extras-2019:
           description: Рухайся далі однієї години з розширеними проектними ідеями.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -2021,22 +3111,145 @@ uk:
               name: Краудсорсинг
             Conditionals with Cards:
               name: Листівки та умови
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_conditionals:
+              display_name: Умови
+            csf_nested_loops:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: функції
+        time4cs-experiment-unit-2:
+          lesson_groups:
+            time4cs_c1:
+              display_name: Еверглейдс і його екосистеми
+            time4cs_c2:
+              display_name: Харчові ланцюги в Еверглейдс
+            time4cs_c3:
+              display_name: Життя в Еверглейдс
+            time4cs_c4:
+              display_name: Інвазивні впливи на Еверглейдс
+            time4cs_c5:
+              display_name: Громадяни впливають на зміни в Еверглейдс
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Умови
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_events:
+              display_name: Події
+            csf_digcit:
+              display_name: Цифрове громадянство
+            ramp_up:
+              display_name: Просунутися
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Умови
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_events:
+              display_name: Події
+            csf_digcit:
+              display_name: Цифрове громадянство
+            ramp_up:
+              display_name: Просунутися
+        csp7-pilot:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+            required:
+              display_name: Огляд
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: функції
+            csp_project:
+              display_name: Проект
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
         csd2-2020:
           stages:
             CSS Classes:
               name: Класи CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент та HTML'
+            csd2_2:
+              display_name: 'Глава: Стилізація та CSS'
+            cspSurvey:
+              display_name: Опитування
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csd1_1:
+              display_name: 'Глава 1: Процес вирішення проблем'
+            csd1_2:
+              display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+        csd4-2020:
+          lesson_groups:
+            csd4_1:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            csd4_2:
+              display_name: 'Глава 2: Прототипування додатків'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
+        csd5-2020:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Глава 1: Представлення інформації'
+            csd5_2:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+            cspSurvey:
+              display_name: Опитування
         csd6-2020:
           stages:
             Functions with Parameters:
               name: Функції з параметрами
+          lesson_groups:
+            csd6_1:
+              display_name: 'Глава 1: Програмування з обладнанням'
+            csd6_2:
+              display_name: 'Глава 2: Побудова фізичних прототипів'
+            cspSurvey:
+              display_name: Опитування
         csd3-2020:
           description_short: Програмування
           stages:
@@ -2050,6 +3263,13 @@ uk:
               name: функції
             Text:
               name: Текст
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
+            cspSurvey:
+              display_name: Опитування
         coursea-2020:
           description_audience: 'Вік: 4-7'
           stages:
@@ -2057,6 +3277,15 @@ uk:
               name: Безпечне добирання
             'Programming: Happy Maps':
               name: Щасливі карти
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         courseb-2020:
           description_audience: 'Вік: 5-8'
           stages:
@@ -2066,6 +3295,15 @@ uk:
               name: Рухайся, рухайся
             'Loops: Getting Loopy':
               name: Економія на повторах
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         coursec-2020:
           description_audience: 'Вік: 6-10'
           stages:
@@ -2073,6 +3311,17 @@ uk:
               name: Двійкові браслети
             'Events: The Big Event':
               name: Велика подія
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_binary:
+              display_name: Двійкова система
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         coursed-2020:
           description_audience: 'Вік: 7-11'
           stages:
@@ -2092,11 +3341,33 @@ uk:
               name: Цифрове громадянство
             Dance Party:
               name: Танцювальна вечірка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_binary:
+              display_name: Двійкова система
+            csf_digcit:
+              display_name: Цифрове громадянство
         coursee-2020:
           description_audience: 'Вік: 8-12'
           stages:
             'Functions: Songwriting':
               name: Написання пісень
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_nested_loops:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: функції
         coursef-2020:
           description_audience: 'Вік: 9-13'
           stages:
@@ -2108,11 +3379,35 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+          lesson_groups:
+            ramp_up:
+              display_name: Просунутися
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_variables:
+              display_name: змінні
+            csf_for_loops:
+              display_name: Цикли For
         express-2020:
           description_audience: 'Вік: 9-18'
           stages:
             Dance Party:
               name: Танцювальна вечірка
+          lesson_groups:
+            csf_warmup:
+              display_name: Розминка
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: функції
+            csf_variables:
+              display_name: змінні
+            csf_for_loops:
+              display_name: Цикли For
         pre-express-2020:
           description_audience: 'Вік: 4-8'
           stages:
@@ -2120,15 +3415,28 @@ uk:
               name: Грамотна Бджілка
             Loops in Ice Age:
               name: Петлі в Ice Age
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
         csp1-2020:
           stages:
             Binary Numbers:
               name: Двійкові Числа
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
         csp3-virtual:
           description_short: Програмування
           stages:
             Creating Functions:
               name: Створення функцій
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Блок 3: Введення в програмування'
         csd3-virtual:
           description_short: Програмування
           stages:
@@ -2140,10 +3448,18 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+          lesson_groups:
+            csd3_1:
+              display_name: 'Глава 1: Зображення та анімації'
         csd2-virtual:
           stages:
             CSS Classes:
               name: Класи CSS
+          lesson_groups:
+            csd2_1:
+              display_name: 'Глава 1: Веб-контент та HTML'
+            csd2_2:
+              display_name: 'Глава: Стилізація та CSS'
         csp5-virtual:
           stages:
             While Loops:
@@ -2156,6 +3472,11 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+          lesson_groups:
+            content:
+              display_name: Зміст
+            csd3_2:
+              display_name: 'Глава 2: Побудова ігор'
         code-break:
           stages:
             Algorithms:
@@ -2166,3 +3487,8 @@ uk:
           stages:
             While Loops:
               name: Цикли "поки"
+          lesson_groups:
+            csp5_1:
+              display_name: 'Глава 1: Програмування, кероване подіями'
+            csp5_2:
+              display_name: 'Глава 2: Програмування з структурами даних'

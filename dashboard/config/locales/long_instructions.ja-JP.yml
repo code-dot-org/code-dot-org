@@ -950,6 +950,100 @@ ja-JP:
         「セット length は」に、数のブロックをくっつけて、数は100にします。全部の「前に動く？ピクセル」には「length」ブロックを入れて下さい。
         「length」に入れた数が、その後のプログラムで、どこでも使えることが分ったかな？
       New Minecraft Hero Project: "**自由にプレイ:** ここからはあなたの自由です! Agent のコードを、この世界の探検に役立ててみましょう。"
+      OPD-K5-events-2: |-
+        `クリックしたとき` の下に `ふつうにパタパタする` をひっつけて”実行（じっこう）”してみよう。
+
+        * * *
+
+        クリックするかタップすれば、フラッピーは、まとに むかって うごきます。
+      OPD-K5-events-3: |-
+        `実行（じっこう）した時` にひっつけたブロックは、プログラムが はじまったら すぐに 実行（じっこう）されます。
+
+        "実行（じっこう）"ボタンをおしたとき、スピードをふつうにしましょう。
+
+        * * *
+
+        まと まで はばたき つづけよう。
+      OPD-K5-events-4: |-
+        地めんを ついかしました。
+
+        `じめんに ぶつかったとき` に`ゲームオーバー`をひっつけてください。
+
+        * * *
+
+        鳥を地めんにぶつけてみよう。
+      OPD-K5-events-5: |-
+        フラッピーが しょうがいぶつに あたったときの プログラムを かかないと フラッピーは とびつづけます。
+
+        フラッピーが パイプに あたったとき、ゲームオーバーに なるよう`しょうがいぶつに あたったとき` に ブロックを ひっつけよう。
+      OPD-K5-events-6: |-
+        フラッピーが しょうがいぶつを とおりぬけたとき、ポイントが入るようにしよう。
+
+        `しょうがいぶつを とおりぬけたとき`に ブロックを ひっつけて、フラッピーが パイプの間を とおりぬけたとき、ポイントが入るようにしよう。
+      OPD-K5-forloops-2: |-
+        ミツを集めよう。
+
+        さっきのパズルで勉強したことを使えば、かんたんにクリアできるよ。
+      OPD-K5-forloops-6: |-
+        `まつ` を使って、1づつ減らします。
+
+        **5** から**1**まで**1**づつ減らしながら、ミツを集めましょう。
+      OPD-K5-forloops-7: |-
+        `まつ`の最後の数字を**"インクリメント"**と呼びます。1回くり返すごとにカウンターは、**インクリメント**の値だけ変わります。
+
+        **インクリメント**を2にして、ミツを集めよう。
+      OPD-K5-projects-2: |-
+        今までやってきたことを使って、ゲームを少しずつ作っていこう。
+
+        ツールボックスにあるブロックを使って、はいけいとゲームの主人公になるキャラを選ぼう。
+      OPD-K5-projects-3: |-
+        イベント と 矢じるしキーをおしたとき あなたの主人公を動かす命令を使います。
+
+        はたをゲットして、パズルをクリアしましょう。
+      OPD-K5-projects-4: |-
+        ほかのキャラも追加しよう！
+
+        `セット キャラ`でほかのキャラを追加して、ゴールに向けて動かそう。
+      OPD-K5-projects-5: |-
+        ゲームがはじまったら、ふくすうのキャラが 主人公を おいかけてきます。リアルなゲームにするために ポイントが入るようにしよう！
+
+        `キャラが さわったら`をつかって、ポイントが はいるようにするか、かちでゲームをおわるようにします。5ポイントとるか ゲームをかちでおわれば、このパズルはクリアです。
+      OPD-K5-projects-6: すごい！ゲームを ほとんど 作ってしまった。あとは、ゲームを すきなように かえてみよう！かんせい したら、"おわり"を
+        クリックしよう！
+      OPD-K5-projects-7: 完成、ゲームをプレイしてみよう！ともだちとゲームを共有しよう！
+      OPD-K5-spritelab-2: "水そうを作ろう！  \n\n <xml><block type=\"gamelab_allSpritesWithAnimation\"
+        block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>
+        をクリックして、タンブルウィードを魚に変えよう。\n\n <xml><block type=\"gamelab_addBehaviorSimple\"
+        block-text=\"the add behavior block\"></block></xml> のスプライトのコスチュームも変更しよう。"
+      OPD-K5-spritelab-3: |-
+        魚が、変な動きをしている！
+
+        魚の動作を変えて、左右に 泳ぐように しよう。
+      OPD-K5-spritelab-4: |-
+        水そうに水を入れよう！
+
+         <xml><block type="gamelab_setBackground" inline="true" block-text="the set background color block">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#0000ff</title>
+              </block>
+            </value>
+          </block></xml> を使って、背景の色を変えよう。
+      OPD-K5-spritelab-6: 魚は冒険好きで、海の中で新しい生き物に会いたがっています。水そうに新たなスプライトを入れましょう。スプライトは、今の魚とは、別のコスチュームにしましょう。
+      OPD-K5-spritelab-7: |-
+        新しい友だちに 何をさせればいいかな？
+
+        魚の新しい友だちの行動を 追加しよう！
+      OPD-K5-variables-1: |-
+        正三角形をかこう。
+
+        一辺は50ピクセルです。
+      OPD-K5-variables-2: "もうひとつ くり返しを使って、三角形を3つかこう。   \n\nくり返しの入れ子を使いましょう。"
+      OPD-K5-variables-5: |-
+        動く長さ50を変数に入れて使います。この方法は、これからのパズルでも使います。
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      OPD-K5-variables-6: 次の三角形をかくとき、アーティストを前と下にジャンプさせるのに 変数`length`を 使おう。
       Overworld Chop Tree: 木はとても大切な素材です。いろんなものを作ることができます。木のところまで行って、`ブロック破壊（はかい）`
         で木をきりましょう。
       Overworld Chop Tree_2019: 木はとても大切な素材です。いろんなものを作ることができます。木のところまで行って、`ブロック破壊（はかい）`
@@ -1533,6 +1627,7 @@ ja-JP:
       courseA_maze_seq10: "**チャレンジ** TNTにあたらないように ブタを つかまえて！ \n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
       courseA_maze_seq10_2018: "**チャレンジ** TNTに ぶつからないように ブタを つかまえて！"
       courseA_maze_seq10_2019: "**チャレンジ** TNTに ぶつからないように ブタを つかまえて！"
+      courseA_maze_seq10_copy: "**チャレンジ** TNTにあたらないように ブタを つかまえて！ \n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
       courseA_maze_seq11: |-
         パズルだよ！ブロックを くみあわせて、ブタを つかまえよう。
 
@@ -1563,6 +1658,10 @@ ja-JP:
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018: こんどは、これをやってみよう。
       courseA_maze_seq5_2019: こんどは、これをやってみよう。
+      courseA_maze_seq5_copy: |-
+        じぶんで はじめから やってみよう。
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5a_2018: |-
         _"ブタがいた、ブタが！"_
 
@@ -1577,7 +1676,15 @@ ja-JP:
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018: ブロックを くみあわせて、ブタを つかまえて！
       courseA_maze_seq6_2019: ブロックを くみあわせて、ブタを つかまえて！
+      courseA_maze_seq6_copy: |-
+        ブロックを くみあわせて、ブタを つかまえて！
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
+        トリさんが ブタをつかまえられるように、ブロックを いれて ください！
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_copy: |-
         トリさんが ブタをつかまえられるように、ブロックを いれて ください！
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
@@ -1587,6 +1694,10 @@ ja-JP:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018: ブタを つかまえて！
       courseA_maze_seq8_2019: ブタを つかまえて！
+      courseA_maze_seq8_copy: |-
+        ブタを つかまえて！
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq9: |-
         **チャレンジ** トリさんが ブタを つかまえられるように ブロックを いれて、デバッグしよう！
 
@@ -1613,10 +1724,24 @@ ja-JP:
             <title name="DIR">8</title>
           </block></xml> をつけて 犬をうごかせるようにしよう。
         犬を はたまで うごかせばクリアです。
+      courseA_playLab_events3_2019: |2-
+         <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml>  ブロックの下に <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml>  ブロックを ひっつけて、いぬのジョージを うごかしましょう。
+
+        やじるしキーをおして、ジョージを はたまで いかせればクリアです！
       courseA_playLab_events4: 右やじるしキーがおされたとき、犬が右にうごくようにしてみよう。
       courseA_playLab_events4_2018: みぎ やじるし ボタンが おされたとき、ジョージが みぎに うごくようにしよう。
+      courseA_playLab_events4_2019: 右やじるしをクリックしたら、ジョージが右にいくように、もうひとつイベントブロックをおいてください。やじるしキーをおして、ジョージが、はたを２つとれば、クリアです。
       courseA_playLab_events5: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
       courseA_playLab_events5_2018: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
+      courseA_playLab_events5_2019: "`上` 、 `下` のボタンをおしたら、ジョージが上下するようイベントブロックを ついかしましょう。ジョージが、はたを
+        とればクリアです。"
+      courseA_playLab_events6_2019: ジョージがクリックされたら、はいけいをかえたり、ランダムに音がなるようにして、もっと たのしく
+        しましょう。かんせしたら、ジョージをクリックしてみましょう！
       courseA_playLab_events7_2018: _フリープレイ_ このゲームを かいぞう してみよう。ジョージが きょうりゅうに ぶつかったとき、きょうりゅうを
         けすことが できますか？
       courseA_playLab_events7_2019: _フリープレイ_ このゲームを かいぞう してみよう。ジョージが きょうりゅうに ぶつかったとき、きょうりゅうを
@@ -2805,6 +2930,9 @@ ja-JP:
       courseC_starWars_loops2_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"行け BB-8！"_
         `くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"行け BB-8！"_
+        `くりかえし` ブロックの中に １つだけ ブロックを 入れて すべてのスクラップを あつめよう。
       courseC_starWars_loops4: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"がんばれ、BB-8！"_
         短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
@@ -2814,11 +2942,16 @@ ja-JP:
       courseC_starWars_loops4_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"がんばれ、BB-8！"_
         短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
+      courseC_starWars_loops4_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"がんばれ、BB-8！"_
+        短いプログラムで すべてのスクラップを あつめるには、`くりかえし`ブロックを ２つ つかいます。
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"行け BB-8！"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"行け BB-8！"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"行け BB-8！"_'
+      courseC_starWars_loops5_copy: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"行け BB-8！"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"スクラップを ぜんぶ あつめることが できるかな？"_
@@ -2827,6 +2960,9 @@ ja-JP:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"スクラップを ぜんぶ あつめることが できるかな？"_
         １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを くりかえしの中に いれることが できるかな？
       courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"スクラップを ぜんぶ あつめることが できるかな？"_
+        １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを くりかえしの中に いれることが できるかな？
+      courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"スクラップを ぜんぶ あつめることが できるかな？"_
         １つ いじょうの ブロックを くりかえしの中に 入れて くりかえしてみよう！下のプログラムを くりかえしの中に いれることが できるかな？
       courseC_starWars_loops7: |-
@@ -2838,6 +2974,9 @@ ja-JP:
       courseC_starWars_loops7_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ぜったい できるよ！"_
         くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの パターンを 見つけて くりかえしの中に 入れてみよう。
+      courseC_starWars_loops7_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ぜったい できるよ！"_
+        くりかえしを １つだけ つかって すべてのスクラップを あつめることが できるかな？くりかえしの パターンを 見つけて くりかえしの中に 入れてみよう。
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"がんばって、BB-8."_
 
@@ -2847,6 +2986,10 @@ ja-JP:
 
         **チャレンジ** さっきやったことを思い出して、このパズルをクリアしよう。
       courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"がんばって、BB-8."_
+
+        **チャレンジ** さっきやったことを思い出して、このパズルをクリアしよう。
+      courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"がんばって、BB-8."_
 
         **チャレンジ** さっきやったことを思い出して、このパズルをクリアしよう。
@@ -3370,15 +3513,22 @@ ja-JP:
         _"くもがあって下が見えないよ～！"_
 
         くもの下に花があるか調べて、花があればミツをとろう。
+      courseD_bee_conditionals1_predict1_copy: |-
+        _"くもがあって下が見えないよ～！"_
+
+        くもの下に花があるか調べて、花があればミツをとろう。
       courseD_bee_conditionals2: "くもが ふえた！ \n\nくもの下に花が かくれているか 調べて、ミツを集めよう。もし花があったら、
         _１回だけ_花のミツをとります。\n\nすべてのくもの下に 花があるとは かぎらないよ！"
       courseD_bee_conditionals2_2018: "くもが ふえた！ \n\nくもの下に花が かくれているか 調べて、ミツを集めよう。もし花があったら、
         _１回だけ_花のミツをとります。\n\nすべてのくもの下に 花があるとは かぎらないよ！"
       courseD_bee_conditionals2_2019: "くもが ふえた！ \n\nくもの下に花が かくれているか 調べて、ミツを集めよう。もし花があったら、
         _１回だけ_花のミツをとります。\n\nすべてのくもの下に 花があるとは かぎらないよ！"
+      courseD_bee_conditionals2_copy: "くもが ふえた！ \n\nくもの下に花が かくれているか 調べて、ミツを集めよう。もし花があったら、
+        _１回だけ_花のミツをとります。\n\nすべてのくもの下に 花があるとは かぎらないよ！"
       courseD_bee_conditionals3: 花があるかどうか調べて、花があれば ミツを集めよう。くもの下に花があれば、_１回だけ_花のミツをとろう。
       courseD_bee_conditionals3_2018: 花があるかどうか調べて、花があれば ミツを集めよう。くもの下に花があれば、_１回だけ_花のミツをとろう。
       courseD_bee_conditionals3_2019: 花があるかどうか調べて、花があれば ミツを集めよう。くもの下に花があれば、_１回だけ_花のミツをとろう。
+      courseD_bee_conditionals3_copy: 花があるかどうか調べて、花があれば ミツを集めよう。くもの下に花があれば、_１回だけ_花のミツをとろう。
       courseD_bee_conditionals4: |-
         今回は、花には1つだけミツがありますが、すべての場所に花があるわけではありません。
 
@@ -3388,6 +3538,10 @@ ja-JP:
 
         できるだけ少ないブロックですべてのミツを集めよう。
       courseD_bee_conditionals4_2019: |-
+        今回は、花には1つだけミツがありますが、すべての場所に花があるわけではありません。
+
+        できるだけ少ないブロックですべてのミツを集めよう。
+      courseD_bee_conditionals4_copy: |-
         今回は、花には1つだけミツがありますが、すべての場所に花があるわけではありません。
 
         できるだけ少ないブロックですべてのミツを集めよう。
@@ -4143,6 +4297,10 @@ ja-JP:
         -   六角形は、60度曲がるを6回くり返してかきます。
         -   次の六角形をかくときには、25 ピクセル ジャンプ します。
         -   ダイヤモンド型をかくには、60度曲がる と 120度曲がる を交互にくり返します。
+      courseE_artist_functions1_copy: |-
+        _"ゾンビアーティストです。お絵かき大好き！"_
+        100ピクセルの四角いメガネをかくので手伝ってください。
+        レンズとレンズの間は、75ピクセルです。
       courseE_artist_functions2: |-
         関数を使えば新しいブロックを作ることができます！
 
@@ -4163,6 +4321,14 @@ ja-JP:
         * * *
 
         正方形の間は、75ピクセルです。
+      courseE_artist_functions2_copy: |-
+        関数を使えば新しいブロックを作ることができます！
+
+        ここでは、正方形をかくためのブロックを "正方形を かく" という名前の関数の中に移動しました。関数"正方形を かく" を使って、メガネをかいてみましょう。
+
+        * * *
+
+        正方形と正方形の間は 75 ピクセルあいています。
       courseE_artist_functions3: |-
         関数の勉強を続けますが、ちょっとその前に 練習として この星を かいてみよう。
 
@@ -4183,7 +4349,17 @@ ja-JP:
         -   1つの線の長さは、25ピクセル
         -   45度曲がるのを8回くり返す
         -   線のかき方は、前に進んで後にもどるです
+      courseE_artist_functions3_copy: |-
+        関数の勉強を続けますが、ちょっとその前に 練習として この星を かいてみよう。
+
+        くり返しを使って、この絵をかいてみよう。
       courseE_artist_functions4: |-
+        星が１つかけたので、こんどは４つ かいてみよう！
+
+        -   星のひとつの線の長さは25ピクセル
+        -   曲がるのは45度
+        -   次の星をかくのに100ピクセルジャンプする
+      courseE_artist_functions4_copy: |-
         星が１つかけたので、こんどは４つ かいてみよう！
 
         -   星のひとつの線の長さは25ピクセル
@@ -4211,6 +4387,10 @@ ja-JP:
 
         -   最初の星と2つ目の星の間は、**200** ピクセルです
         -   2つ目の星と3つ目の星の間は、**100** ピクセルです
+      courseE_artist_functions5_copy: |-
+        ４つ星をかいたときよりも、３つかくときのほうがむつかしい？月はジャンプして飛びこえてね！
+
+        ３つ星をかいてみよう。
       courseE_artist_functions6: |-
         すごい、がんばってるね！
 
@@ -4301,6 +4481,7 @@ ja-JP:
       courseE_artist_functions_predict1: '関数を使ったパズル '
       courseE_artist_functions_predict1_2018: '関数を使ったパズル '
       courseE_artist_functions_predict1_2019: '関数を使ったパズル '
+      courseE_artist_functions_predict1_copy: '関数を使ったパズル '
       courseE_artist_ramp8: |-
         すごい！ 正方形をかいてみよう！ 使うブロックは前のパズルと ちょっとちがうけど、やり方は同じだよ。
 

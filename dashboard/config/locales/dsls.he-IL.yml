@@ -1266,7 +1266,65 @@ he-IL:
         content1: הוסיפו תיאור כאן
       New Challenge Introduction:
         content1: הוסיפו תיאור כאן
+      OPD-K5 Reviewing Reflections:
+        content1: הוסיפו תיאור כאן
       OPD-K5 Stage3aGo:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 Stage3aGo_copy:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 conditionals introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 debugging:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 diving deeper intro:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 events introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops intro:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 functions introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 journaling:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 lesson implementation planning:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 lesson plans:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 loops introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 project:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 projects introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 role_of_teacher:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sequencing introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab unplugged:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab video:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 types of lessons:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 using lesson plans:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables unplugged:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 where to next:
+        content1: הוסיפו תיאור כאן
+      OPD-K5-projects-1:
         content1: הוסיפו תיאור כאן
       Prepare for your presentation:
         content1: הוסיפו תיאור כאן
@@ -1508,6 +1566,14 @@ he-IL:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1783,6 +1849,14 @@ he-IL:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

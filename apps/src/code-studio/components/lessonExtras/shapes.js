@@ -2,14 +2,13 @@ import PropTypes from 'prop-types';
 
 export const bonusLevel = {
   id: PropTypes.number.isRequired,
-  levelId: PropTypes.number.isRequired,
-  map: PropTypes.array,
-  name: PropTypes.string.isRequired,
-  skin: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  solutionImageUrl: PropTypes.string,
-  startDirection: PropTypes.number,
-  type: PropTypes.string.isRequired
+  display_name: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  thumbnail_url: PropTypes.string,
+  url: PropTypes.string.isRequired,
+  perfect: PropTypes.bool,
+  type: PropTypes.string,
+  maze_summary: PropTypes.object
 };
 
 export const lessonOfBonusLevels = {

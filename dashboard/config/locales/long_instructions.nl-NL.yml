@@ -610,6 +610,49 @@ nl-NL:
         hart van de zee** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Gebruik het blauwe en rode koraal om de schat **kist** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         te vinden.
+      Crack Random Substitution: |-
+        # Kraak een versleuteling met willekeurige vervanging!
+
+        Deze versie van het tool geeft je meer informatie over de versleutelde tekst en meer opties voor het proberen van verschillende vervangingen.
+
+        ### Verschillende manieren om tekst te analyzeren
+
+        -   Speel met sommige sorteer opties die beschikbaar zijn in het Willekeurige vervanging tabblad om verschillende perspektieven op de letter frequenties in de gegeven versleutelde tekst alsmede op standaard tekst te krijgen.
+
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Verschillende manieren om te vervangen
+
+        -   Om een letter te vervangen sleep een blauwe letter van het alfabet direct onder de orange letter die je wil vervangen in de versleutelde invoer tekst.
+
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Spelen. Altijd spelen.
+
+        -   Er zijn andere manieren om letters te analyzeren en te vervangen die je kan vinden door te klikken op de knoppen en te proberen wat je maar wilt.
+        -   Onthoud: je kan het niet kapot maken it :)
+
+        Zie je hoe lang het duurt om de versleuteling te kraken! Is dit een goede method om geheime gegevens te versleutelen?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Breek de Caesar versleuteling!
+
+        Dit programma laat je spelen met tekst en met Caesar versleuteling. Je kunt deze gebruiken om een boodschap te versleutelen of te ontsleutelen.
+
+        # Doe dit
+
+        -   Laad een **Voorbeeld bericht** uit het berichten drop-down menu. Dit zal een bericht laden dat is versleuteld met een Caesar versleuteling.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Door gebruik te maken van de knoppen in het Caesar substitutie tabblad, kun je het alfabet vooruit of achteruit schuiven om het bericht te ontcijferen.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Zie je hoe lang het duurt om het bericht te ontcijferen? Is dit een goede methode om geheime data te versleutelen?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_2019_01: |-
         _Laten we een dansfeest plannen!_
 
@@ -1035,18 +1078,18 @@ nl-NL:
       Standalone_Artist_5: Hoeveel keer moet de diamant in een lus gestopt worden
         om de bloem te tekenen?
       Standalone_Artist_5.5: 'Kijk hoe we de diamant code vereenvoudigd hebben door
-        de code te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om
+        de code te veranderen in een lus. Je kan de hele reeks 12 keer herhalen om
         een bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
         je niet over dezelfde diamant blijft tekenen.'
       Standalone_Artist_6: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp
-        te tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+        te tekenen. Hoeveel graden moet je iedere keer draaien? Tip: deel het aantal
         graden in een cirkel door het aantal maal dat je een lus gebruikt.'
       Standalone_Artist_7: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
-        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
-        waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
-        spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van mekaar'
+        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze telkens
+        gebruiken wanneer je een bloem wil tekenen. Gebruik deze en het nieuwe spring
+        blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van elkaar.'
       Standalone_Artist_8: Hier is de functie "teken een vorm" die we geprogrammeerd
-        hebben om zeshoeken te tekenen. voer de code uit om te zien wat deze doet
+        hebben om zeshoeken te tekenen. Voer de code uit om te zien wat deze doet
         en experimenteer vervolgens met de functie om te zien wat er gebeurt. Kan
         je er patronen met vierkanten, driehoeken of achthoeken mee tekenen?
       Standalone_Artist_9: Nu mag je maken wat je wil! Je hebt zelfs een lege functie
@@ -1065,6 +1108,11 @@ nl-NL:
       Underground If Statements_2019: Nu wordt het een beetje lastig. Delf 3 redstone,
         maar val niet in de lava. Gebruik een "als"-instructie om keien te plaatsen
         op de lava die je ontdekt.
+      'Widget: Text Compression': Zoek naar patronen (herhaalde woorden of stukken
+        van een zin) in de tekst. Voeg de patronen die je ziet toe aan het woordenboek
+        aan de rechterkant. Wanneer je woorden toevoegt aan het woordenboek, zal het
+        symbool voor die vermelding opgenomen worden in de tekst in plaats van het
+        oorspronkelijke patroon.
       course1_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk
         X'en als je maar kan! Kan er 3 in een rij tekenen?
       course1_artist_loops_challenge4: '"Tijd om met de dobbelstenen te gooien! Kan
@@ -1285,6 +1333,10 @@ nl-NL:
         hebben de blokken om een vierkant te tekenen in een functie met de naam "teken
         een vierkant". Kan je de "teken een vierkant" functie gebruiken om de brillenglazen
         te tekenen? De vierkanten staan 75 pixels uit elkaar.
+      courseE_artist_functions2_copy: Met functies kan je nieuwe blokken definiëren!
+        We hebben de blokken om een vierkant te tekenen in een functie met de naam
+        "teken een vierkant". Kan je de "teken een vierkant" functie gebruiken om
+        de brillenglazen te tekenen? De vierkanten staan 75 pixels uit elkaar.
       courseE_bee_functions2: Functies zijn blokken code die een taak uitvoeren. Gebruik
         de "neem 2 nektar" functies om nektar van elke bloem te verzamelen.
       courseE_bee_functions3: Functies zijn blokken code die een taak uitvoeren. Gebruik

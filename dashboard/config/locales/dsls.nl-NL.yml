@@ -1196,14 +1196,140 @@ nl-NL:
         content1: beschrijving hier
       New Challenge Introduction:
         content1: beschrijving hier
+        markdown: "### Nieuwe uitdaging: Kraak een \"willekeurig substitutiecijfer\"...
+          met een nieuwe widget\n\nWat als we, in plaats van het hele alfabet te verschuiven,
+          elke letter in het alfabet vervangen door een willekeurige andere letter
+          van het alfabet? Dit heet een \"willekeurig substitutiecijfer\".\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNu
+          krijg je berichten die niet versleuteld zijn met een simpele alfabetische
+          verschuiving, maar met een **willekeurig substitutiecijfer**.\n\n\n\nDit
+          is veel moeilijker om te kraken en vereist een geavanceerder gereedschap,
+          dus...\n\nAls je op volgende klikt zie je een **nieuwe, geavanceerdere versie
+          van het encryptie tool** die je veel verschillende dingen laat zien.\n\nMaar
+          wat het doet is een beetje een mysterie!  \n\n### Je taak:\n\n * Zoek uit
+          wat er gebeurt in dit tool\n * Wat voor informatie wordt getoond?\n * Zoek
+          uit wat het tool je laat doen\n * Zoals gewoonlijk: je kan het niet stuk
+          maken. Dus, klik op dingen, en probeer maar wat.\n * Als je het door hebt
+          ben je misschien in staat om een boodschap te ontsleutelen die gebruik maakt
+          van willekeurige vervanging.\n \n### Tip\n\n* Wist je dat de letter **E**
+          de meest voorkomende letter is?\n\n### Kom opnieuw bijeen en bespreek\nNa
+          een tijdje er mee gespeeld te hebben, overleg met iemand - partner, keine
+          groep, hele klas - om te bespreken wat je uitgevonden hebt en controleer
+          dat je weet hoe het werkt en wat de verschillende manieren om het tool te
+          gebruiken zijn.\n\n\n"
+      OPD-K5 Reviewing Reflections:
+        content1: beschrijving hier
       OPD-K5 Stage3aGo:
+        content1: beschrijving hier
+      OPD-K5 Stage3aGo_copy:
+        content1: beschrijving hier
+      OPD-K5 conditionals introduced:
+        content1: beschrijving hier
+      OPD-K5 debugging:
+        content1: beschrijving hier
+      OPD-K5 diving deeper intro:
+        content1: beschrijving hier
+      OPD-K5 events introduced:
+        content1: beschrijving hier
+      OPD-K5 for loops:
+        content1: beschrijving hier
+      OPD-K5 for loops intro:
+        content1: beschrijving hier
+      OPD-K5 for loops introduction:
+        content1: beschrijving hier
+      OPD-K5 functions introduced:
+        content1: beschrijving hier
+      OPD-K5 journaling:
+        content1: beschrijving hier
+      OPD-K5 lesson implementation planning:
+        content1: beschrijving hier
+      OPD-K5 lesson plans:
+        content1: beschrijving hier
+      OPD-K5 loops introduced:
+        content1: beschrijving hier
+      OPD-K5 project:
+        content1: beschrijving hier
+      OPD-K5 projects introduction:
+        content1: beschrijving hier
+      OPD-K5 role_of_teacher:
+        content1: beschrijving hier
+      OPD-K5 sequencing introduced:
+        content1: beschrijving hier
+      OPD-K5 sprite lab:
+        content1: beschrijving hier
+      OPD-K5 sprite lab introduction:
+        content1: beschrijving hier
+      OPD-K5 sprite lab unplugged:
+        content1: beschrijving hier
+      OPD-K5 sprite lab video:
+        content1: beschrijving hier
+      OPD-K5 types of lessons:
+        content1: beschrijving hier
+      OPD-K5 using lesson plans:
+        content1: beschrijving hier
+      OPD-K5 variables:
+        content1: beschrijving hier
+      OPD-K5 variables introduction:
+        content1: beschrijving hier
+      OPD-K5 variables unplugged:
+        content1: beschrijving hier
+      OPD-K5 where to next:
+        content1: beschrijving hier
+      OPD-K5-projects-1:
         content1: beschrijving hier
       Prepare for your presentation:
         content1: beschrijving hier
       'Technique: Frequency Analysis':
         content1: beschrijving hier
+        markdown: "# Het kraken van een versleuteling op basis van willekeurige vervanging\n\nDe
+          beste techniek voor het kraken van een sleutel op basis van willekeurige
+          vervanging heet **frequentie analyse**.\n\nGeparafraseerd van: [wikipedia](https://nl.wikipedia.org/wiki/Frequentieanalyse_(cryptoanalyse))\n\n*
+          **Frequentieanalyse** is het onderzoek naar de frequentie van letters of
+          groepen van letters van een versleutelde tekst. \n* Met \"frequentie\" wordt
+          bedoelt hoe vaak een bepaalde letter voorkomt in een tekst.\n* De methode
+          is gebaseerd op het feit dat binnen elke geschreven taal er frequentie waar
+          te nemen is van bepaalde letters of lettercombinaties. * Frequentieanalyse
+          vereist een basiskennis van de karakteristieken van een bepaalde taal, zo
+          komen in het Nederlands de e, n en a het meeste voor.\n\n\nDe widget op
+          de vorige pagina is bedoeld om je te helpen bij **het kraken van een versleuteling
+          op basis van willekeurige vervanging door middel van frequentieanalyse**.\n\nDoor
+          het analyzeren van de frequentie van de letters in de versleutelde boodschap
+          en dat te vergelijken met de frequentie van letters in een standaard stukje
+          (onversleutelde) tekst, kun je bepalen wat sommige van de letter vervangingen
+          zouden kunnen zijn. \n\nHet tool toont je wat de frequentie is van letters
+          in de versleutelde booschap (oranje) en hoe dat vergelijkt met de frequenties
+          van letters in de standaard tekst (blauw).\n\n### Tip: Hoe te starten?\n\n1.
+          Vind korte woorden en \"kraak\" die eerst.  Hoe veel een-letter woorden
+          ken je? (\"o\", \"u\").  Een veel voorkomend tweeletter woord is \"de\".\n2.
+          Dan heb je vervangingen voor sommige van de meest voorkomende letters. Gebruik
+          je intuïtie om naar andere woorden met die letters te kjiken en probeer
+          te raden wat de rest van de letters moeten zijn.\n3. Nadat je - na hard
+          werken - deze eerste groep van letters gevonden hebt, komt de rest een stuk
+          gemakkelijker..\n4. Het vergelijken van frequenties van letters geeft veel
+          hulp bij het verstandig raden van letters.\n\n### Probeer dit:\nDe animatie
+          hieronder toont iemand die net begon. Hier is wat die heeft geprobeerd\n\n*
+          Eerst sorteer je de letters op frequentie. \n* Identificeer een groep letters
+          die af te beelden is op het woord 'de' ('the' in het engels). Dat is een
+          goed begin!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Is willekeurige vervanging goed?\n* Na een tijdje oefenen, hoe lang heb
+          je nodig om een versleuteling op basis van willekeurige vervanging te kraken?\n*
+          Is dit goed of niet?\n\n"
       Terminology Recap:
         content1: beschrijving hier
+        markdown: "# Pauze en samenvatting\n\nBerichten versleuteld met de **Caesar
+          versleuteling** zijn eenvoudig te kraken, in het bijzonder met een computer.
+          Nu je een beetje ervaring hebt met een versleuteling op basis van alfabetisch
+          verschuiven zullen we eens iets moeilijkers proberen.\n\n**Samenvatting
+          van termen:**\n\n* **Encryptie** - een process waarbij berichten versleuteld
+          worden om ze geheim te houden, zodat allen \"geauthorizeerde\" partijen
+          het kunnen lezen.\n* **Decryptie** - een process dat encryptie ongedaan
+          maakt; pak een geheim - versleuteld - bericht en haal daar de oorspronkelijke
+          tekst uit.\n* **Sleutel/cijfertekst** - de generieke term voor een techniek
+          (of algorithme) die een versleuteling verzorgt.\n* **Caesar's sleutel**
+          - een techniek voor encryptie waarbij het alfabet een aantal karakters verschoven
+          wordt.\n* **Kaken van encryptie** - Wanneer je een geheim bericht probeert
+          te decoderen \"zonder\" te weten wat de sleutel is, probeer je de encryptie
+          te **kraken**. \n\n\nDruk op volgende om de **Volgende uitdaging** te zien...\n\n
+          \n"
       behaviors 1 predict:
         answers:
         - {}
@@ -1438,6 +1564,14 @@ nl-NL:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
@@ -1713,6 +1847,14 @@ nl-NL:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

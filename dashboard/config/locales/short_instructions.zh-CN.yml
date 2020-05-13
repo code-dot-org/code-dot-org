@@ -971,6 +971,31 @@ zh-CN:
       New Infinity Project: 创建并分享你想的任何东西！
       New Minecraft Hero Project: "**自由游戏时间：** 是时候自行探索了！"
       New Sports Project: 创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，创造！当你完成后，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。
+      OPD-K5-events-2: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
+      OPD-K5-events-3: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
+      OPD-K5-events-4: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
+      OPD-K5-events-5: 附加一个块到 ' 当击中障碍 ' 事件中，以便在像素鸟撞到第一条管道时，游戏结束。
+      OPD-K5-events-6: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行" 得一分。
+      OPD-K5-forloops-1: 用尽可能少的模块来从每朵花里收集花蜜。
+      OPD-K5-forloops-2: 写出代码来帮助蜜蜂收集所有的花蜜。
+      OPD-K5-forloops-5: 帮助蜜蜂收集所有的花蜜。
+      OPD-K5-forloops-6: 通过从5到1每次减1，来收集花蜜。
+      OPD-K5-forloops-7: 通过每次增加2来收集所有的花。
+      OPD-K5-projects-2: 选择一个背景和地图，然后选择一个演员来作为你的游戏里的英雄。
+      OPD-K5-projects-3: 用事件处理函数和行动来帮助你的英雄移动。
+      OPD-K5-projects-4: 添加两个或更多的演员到你的游戏中，并让它们移动。
+      OPD-K5-projects-5: 找一些有趣的方法来改变游戏的分数。让分数不为零，然后再继续。
+      OPD-K5-projects-6: 现在，花一些时间来让游戏按照你想的方式运行。包括游戏失败或胜利的方法，然后玩游戏，直到某个条件达成。
+      OPD-K5-projects-7: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
+      OPD-K5-spritelab-2: 改变达斯汀（风滚草）为鱼。
+      OPD-K5-spritelab-3: 改动一下鱼的行为，让它沿着水缸边缘游。
+      OPD-K5-spritelab-4: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
+      OPD-K5-spritelab-6: 鱼有些孤单。在鱼缸内创造一个新的精灵图。
+      OPD-K5-spritelab-7: 给鱼的新朋友添加一种新行为。
+      OPD-K5-variables-2: '现在画出三个三角形, 让它们彼此挨着。   '
+      OPD-K5-variables-5: 将长度50移动到一个变量中，这样我们能在下面几关用到它。
+      OPD-K5-variables-6: 现在，用`length`（长度）变量来让小艺术家在三角形之间向前跳`length`（长度）像素。
+      OPD-K5-variables-7: 在代码的末尾添加另一组循环来再增加三个三角形。这次，向前移动，并向上！
       Overworld Avoid Monsters: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Avoid Monsters_2019: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Chop Tree: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
@@ -1296,6 +1321,7 @@ zh-CN:
       courseA_maze_seq10: '挑战: 绕开TNT炸药, 把鸟撞到猪身上。 '
       courseA_maze_seq10_2018: '挑战: 绕开TNT炸药, 让鸟到达猪那里！ '
       courseA_maze_seq10_2019: '挑战: 绕开TNT炸药, 让鸟到达猪那里！ '
+      courseA_maze_seq10_copy: '挑战: 绕开TNT炸药, 把鸟撞到猪身上。 '
       courseA_maze_seq11: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
       courseA_maze_seq11_2018: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
       courseA_maze_seq11_2019: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
@@ -1313,15 +1339,19 @@ zh-CN:
       courseA_maze_seq5: 从头开始尝试这一个。
       courseA_maze_seq5_2018: 尝试一下。
       courseA_maze_seq5_2019: 尝试一下。
+      courseA_maze_seq5_copy: 从头开始尝试这一个。
       courseA_maze_seq5a_2018: 你能在代码最后加上什么来让小鸟到达猪那里？
       courseA_maze_seq5a_2019: 你能在代码最后加上什么来让小鸟到达猪那里？
       courseA_maze_seq6: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq6_2018: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq6_2019: 往一条路走，然后走另一条把鸟带到猪那里！
+      courseA_maze_seq6_copy: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq7: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
+      courseA_maze_seq7_copy: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseA_maze_seq8: 通过这关，把鸟带到猪那！
       courseA_maze_seq8_2018: 通过这关，把鸟带到猪那！
       courseA_maze_seq8_2019: 通过这关，把鸟带到猪那！
+      courseA_maze_seq8_copy: 通过这关，把鸟带到猪那！
       courseA_maze_seq9: 通过添加块来调试这关，让鸟到达猪那里!
       courseA_maze_seq_challenge1: 这里出了点问题。帮助修复代码, 让鸟到达猪那里!
       courseA_maze_seq_challenge1_2018: 这里出了点问题。帮助修复代码, 让鸟到达猪那里!
@@ -1927,18 +1957,23 @@ zh-CN:
       courseC_starWars_loops2: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops2_2018: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops2_2019: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
+      courseC_starWars_loops2_copy: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops4: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
       courseC_starWars_loops4_2018: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
       courseC_starWars_loops4_2019: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
+      courseC_starWars_loops4_copy: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
       courseC_starWars_loops5: 让 BB-8 尽快拿起所有的废金属!
       courseC_starWars_loops5_2018: 让 BB-8 尽快拿起所有的废金属!
       courseC_starWars_loops5_2019: 让 BB-8 尽快拿起所有的废金属!
+      courseC_starWars_loops5_copy: 让 BB-8 尽快拿起所有的废金属!
       courseC_starWars_loops6: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops6_2018: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops6_2019: 循环里能放多于一个模块！你能循环这个序列吗？
+      courseC_starWars_loops6_copy: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops7: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
       courseC_starWars_loops7_2018: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
       courseC_starWars_loops7_2019: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
+      courseC_starWars_loops7_copy: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
       courseC_starWars_loops9: 用你所学的东西来捡起所有的废铁!
       courseC_starWars_loops9_2018: 用你所学的东西来捡起所有的废铁!
       courseC_starWars_loops9_2019: 用你所学的东西来捡起所有的废铁!
@@ -2113,9 +2148,11 @@ zh-CN:
       courseD_bee_conditionals1_predict1: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals1_predict1_2018: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals1_predict1_2019: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
+      courseD_bee_conditionals1_predict1_copy: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals2: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals2_2018: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals2_2019: '在采集花蜜前，检查每朵云下面是不是有花。  '
+      courseD_bee_conditionals2_copy: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals3: |-
         帮助蜜蜂采集所有的花蜜。
 
@@ -2128,12 +2165,18 @@ zh-CN:
         帮助蜜蜂采集所有的花蜜。
 
         只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。
+      courseD_bee_conditionals3_copy: |-
+        帮助蜜蜂采集所有的花蜜。
+
+        只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。
       courseD_bee_conditionals4: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals4_2018: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals4_2019: 使用尽可能少的模块来收集所有的花蜜。
+      courseD_bee_conditionals4_copy: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals5: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals5_2018: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals5_2019: 使用尽可能少的模块来收集所有的花蜜。
+      courseD_bee_conditionals5_copy: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals6: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
       courseD_bee_conditionals6_2018: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
       courseD_bee_conditionals6_2019: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
@@ -2450,16 +2493,23 @@ zh-CN:
       courseE_artist_functions10: 这次，用8个（25像素边长的）六边形的线。
       courseE_artist_functions10_2018: 这次，用8个（25像素边长的）六边形的线。
       courseE_artist_functions10_2019: 这次，用8个（25像素边长的）六边形的线。
+      courseE_artist_functions1_copy: |-
+        帮助僵尸艺术家画一个边长为100像素的眼镜。
+        眼镜之间的桥梁长75像素。
       courseE_artist_functions2: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
       courseE_artist_functions2_2018: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
       courseE_artist_functions2_2019: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
+      courseE_artist_functions2_copy: '这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 '
       courseE_artist_functions3: 可以通过添加重复模块来绘制此画。
       courseE_artist_functions3_2018: 构建一个能创造这个星星的函数。
       courseE_artist_functions3_2019: 构建一个能创造这个星星的函数。
+      courseE_artist_functions3_copy: 可以通过添加重复模块来绘制此画。
       courseE_artist_functions4: 现在你能画一个星星了，试试画4个星星！
+      courseE_artist_functions4_copy: 现在你能画一个星星了，试试画4个星星！
       courseE_artist_functions5: 只画3个星星来完成这关。
       courseE_artist_functions5_2018: 只画3个星星来完成这关。
       courseE_artist_functions5_2019: 只画3个星星来完成这关。
+      courseE_artist_functions5_copy: 只画3个星星来完成这关。
       courseE_artist_functions6: 通过画一个正方形来制作这个窗口，然后在画另一个前转90度，等等。
       courseE_artist_functions7: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
       courseE_artist_functions7_2018: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
