@@ -85,17 +85,33 @@ class HeaderMiddle extends React.Component {
     const thirdItem = this.thirdItem();
 
     if (thirdItem === 'finish') {
-      return {
-        scriptName: width / 3,
-        progress: Math.min(getFullWidthForLevels(), width / 3),
-        finishLink: width / 3
-      };
+      if (width < 300) {
+        return {
+          scriptName: 0,
+          progress: Math.min(getFullWidthForLevels(), width / 2),
+          finishLink: width / 2
+        };
+      } else {
+        return {
+          scriptName: width / 3,
+          progress: Math.min(getFullWidthForLevels(), width / 3),
+          finishLink: width / 3
+        };
+      }
     } else if (thirdItem === 'popup') {
-      return {
-        scriptName: (width - 40) / 2 - 1,
-        progress: Math.min(getFullWidthForLevels(), (width - 40) / 2 - 1),
-        popup: 40
-      };
+      if (width < 300) {
+        return {
+          scriptName: 0,
+          progress: Math.min(getFullWidthForLevels(), width - 40 - 1),
+          popup: 40
+        };
+      } else {
+        return {
+          scriptName: (width - 40) / 2 - 1,
+          progress: Math.min(getFullWidthForLevels(), (width - 40) / 2 - 1),
+          popup: 40
+        };
+      }
     }
   }
 
@@ -124,12 +140,14 @@ class HeaderMiddle extends React.Component {
             />
           </div>
 
-          <div
-            id="script_name_container"
-            style={{float: 'left', width: widths.scriptName}}
-          >
-            <ScriptName {...extraScriptNameData} />
-          </div>
+          {widths.scriptName > 0 && (
+            <div
+              id="script_name_container"
+              style={{float: 'left', width: widths.scriptName}}
+            >
+              <ScriptName {...extraScriptNameData} />
+            </div>
+          )}
 
           <div
             id="lesson_progress_container"
