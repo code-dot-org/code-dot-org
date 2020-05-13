@@ -60,7 +60,9 @@ class HeaderMiddle extends React.Component {
   }
 
   getWidth() {
-    return window.innerWidth - 280;
+    const width = $('.header_middle').width();
+    console.log('header_middle width', width);
+    return width;
   }
 
   updateLayout = () => {
