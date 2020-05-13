@@ -99,7 +99,7 @@ header.build = function(
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <HeaderMiddle scriptNameData={scriptNameData} stageData={lessonData}>
+      <HeaderMiddle scriptNameData={scriptNameData} lessonData={lessonData}>
         {renderedProgress}
       </HeaderMiddle>
     </Provider>,
