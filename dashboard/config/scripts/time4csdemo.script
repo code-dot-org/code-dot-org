@@ -1,4 +1,4 @@
-lesson_extras_available true
+stage_extras_available true
 has_lesson_plan true
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
