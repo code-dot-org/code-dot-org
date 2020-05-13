@@ -130,7 +130,7 @@ class Script < ActiveRecord::Base
     project_widget_visible
     project_widget_types
     teacher_resources
-    stage_extras_available
+    lesson_extras_available
     has_verified_resources
     has_lesson_plan
     curriculum_path
@@ -201,8 +201,8 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.stage_extras_script_ids
-    @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
+  def self.lesson_extras_script_ids
+    @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_unit_scripts
@@ -1416,7 +1416,8 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      stage_extras_available: stage_extras_available,
+      stage_extras_available: lesson_extras_available, # TODO: remove after corresponding js code is changed and not cached anymore
+      lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
@@ -1574,7 +1575,8 @@ class Script < ActiveRecord::Base
       :student_detail_progress_view,
       :project_widget_visible,
       :project_widget_types,
-      :stage_extras_available,
+      :stage_extras_available, # TODO: remove after corresponding dependencies are updated to use lesson_extras_available
+      :lesson_extras_available,
       :curriculum_path,
       :script_announcements,
       :version_year,
@@ -1658,7 +1660,8 @@ class Script < ActiveRecord::Base
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
-    info[:stage_extras_available] = stage_extras_available
+    # TODO: remove stage_extras_available after correesponding js change is deployed and not cached
+    info[:stage_extras_available] = info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
     end

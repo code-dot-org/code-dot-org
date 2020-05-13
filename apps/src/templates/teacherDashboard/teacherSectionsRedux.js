@@ -750,7 +750,7 @@ export default function teacherSections(state = initialState, action) {
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
