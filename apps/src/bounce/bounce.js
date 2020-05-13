@@ -19,6 +19,7 @@ var Hammer = require('../third-party/hammer');
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 
 var SquareType = tiles.SquareType;
 
@@ -918,6 +919,7 @@ Bounce.reset = function(first) {
   }
   if (softButtonCount) {
     var softButtonsCell = document.getElementById('soft-buttons');
+    getStore().dispatch(showArrowButtons());
     softButtonsCell.className = 'soft-buttons-' + softButtonCount;
   }
 

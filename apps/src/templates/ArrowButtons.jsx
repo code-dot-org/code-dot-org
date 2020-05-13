@@ -13,23 +13,45 @@ const styles = {
 export class ArrowButtons extends React.Component {
   static propTypes = {
     // from redux
-    visible: PropTypes.bool.required
+    visible: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired
   };
 
   render() {
-    const style = this.props.visible ? styles.visible : styles.hidden;
+    const {visible, disabled} = this.props;
+    const style = visible ? styles.visible : styles.hidden;
     return (
       <div style={style} id="soft-buttons">
-        <button type="button" id="leftButton" disabled className="arrow">
+        <button
+          type="button"
+          id="leftButton"
+          disabled={disabled}
+          className="arrow"
+        >
           <img src="/blockly/media/1x1.gif" className="left-btn icon21" />
         </button>
-        <button type="button" id="rightButton" disabled className="arrow">
+        <button
+          type="button"
+          id="rightButton"
+          disabled={disabled}
+          className="arrow"
+        >
           <img src="/blockly/media/1x1.gif" className="right-btn icon21" />
         </button>
-        <button type="button" id="upButton" disabled className="arrow">
+        <button
+          type="button"
+          id="upButton"
+          disabled={disabled}
+          className="arrow"
+        >
           <img src="/blockly/media/1x1.gif" className="up-btn icon21" />
         </button>
-        <button type="button" id="downButton" disabled className="arrow">
+        <button
+          type="button"
+          id="downButton"
+          disabled={disabled}
+          className="arrow"
+        >
           <img src="/blockly/media/1x1.gif" className="down-btn icon21" />
         </button>
       </div>
@@ -38,5 +60,6 @@ export class ArrowButtons extends React.Component {
 }
 
 export default connect(state => ({
-  visible: state.arrowDisplay.buttonsAreVisible
+  visible: state.arrowDisplay.buttonsAreVisible,
+  disabled: state.arrowDisplay.buttonsAreDisabled
 }))(ArrowButtons);

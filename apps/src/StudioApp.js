@@ -71,6 +71,7 @@ import {
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 
 var copyrightStrings;
 
@@ -944,7 +945,8 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
-  $('.arrow').prop('disabled', showRun);
+  getStore().dispatch(setArrowButtonDisabled(showRun));
+  // $('.arrow').prop('disabled', showRun);
 };
 
 StudioApp.prototype.isRunning = function() {

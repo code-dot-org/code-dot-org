@@ -267,7 +267,6 @@ export default class Craft {
             dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
             $('#soft-buttons').addClass('soft-buttons-' + 4);
             getStore().dispatch(showArrowButtons());
-            $('.arrow').prop('disabled', false);
 
             const resetButton = document.getElementById('resetButton');
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
@@ -609,13 +608,6 @@ export default class Craft {
 
   static levelInitialized() {
     return Craft.gameController && Craft.gameController.levelModel;
-  }
-
-  /**
-   * Base's `studioApp().resetButtonClick` will be called first.
-   */
-  static resetButtonClick() {
-    $('.arrow').prop('disabled', false);
   }
 
   static isPreAnimationFailure(testResult) {
