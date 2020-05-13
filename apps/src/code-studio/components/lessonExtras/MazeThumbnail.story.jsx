@@ -304,11 +304,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          map={sampleMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: sampleMap,
+            level: {startDirection: 1},
+            skin: 'birds'
           }}
-          skin="birds"
         />
       )
     },
@@ -317,11 +317,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          map={sampleMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: sampleMap,
+            level: {startDirection: 1},
+            skin: 'pvz'
           }}
-          skin="pvz"
         />
       )
     },
@@ -330,11 +330,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          map={sampleMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: sampleMap,
+            level: {startDirection: 1},
+            skin: 'scrat'
           }}
-          skin="scrat"
         />
       )
     },
@@ -343,11 +343,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          map={sampleMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: sampleMap,
+            level: {startDirection: 1},
+            skin: 'farmer'
           }}
-          skin="farmer"
         />
       )
     },
@@ -356,11 +356,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          map={sampleMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: sampleMap,
+            level: {startDirection: 1},
+            skin: 'farmer_night'
           }}
-          skin="farmer_night"
         />
       )
     },
@@ -369,12 +369,14 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          serializedMaze={beeMap}
-          level={{
-            startDirection: 1,
-            flowerType: 'redWithNectar'
+          mazeSummary={{
+            map: beeMap,
+            level: {
+              startDirection: 1,
+              flowerType: 'redWithNectar'
+            },
+            skin: 'bee'
           }}
-          skin="bee"
         />
       )
     },
@@ -383,11 +385,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          serializedMaze={harvesterMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: harvesterMap,
+            level: {startDirection: 1},
+            skin: 'harvester'
           }}
-          skin="harvester"
         />
       )
     },
@@ -396,11 +398,11 @@ export default storybook => {
       description: 'This is the MazeThumbnail component.',
       story: () => (
         <MazeThumbnail
-          serializedMaze={collectorMap}
-          level={{
-            startDirection: 1
+          mazeSummary={{
+            map: collectorMap,
+            level: {startDirection: 1},
+            skin: 'collector'
           }}
-          skin="collector"
         />
       )
     }
