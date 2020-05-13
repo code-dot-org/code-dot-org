@@ -11,6 +11,8 @@ import foorm, {
 
 import 'survey-react/survey.css';
 
+let codeMirror = null;
+
 $(document).ready(function() {
   registerReducers({foorm});
   const store = getStore();
@@ -19,6 +21,7 @@ $(document).ready(function() {
       <FoormEditorManager
         updateFormQuestions={updateFormQuestions}
         populateCodeMirror={populateCodeMirror}
+        resetCodeMirror={resetCodeMirror}
         {...getScriptData('props')}
       />
     </Provider>,
@@ -30,7 +33,7 @@ $(document).ready(function() {
 // a configuration to populate it with.
 function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
-  initializeCodeMirror(codeMirrorArea, 'application/json', {
+  codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: onCodeMirrorChange
   });
 }
@@ -49,3 +52,9 @@ function onCodeMirrorChange(editor) {
 const updateFormQuestions = formQuestions => {
   getStore().dispatch(setFormQuestions(formQuestions));
 };
+
+function resetCodeMirror(json) {
+  if (codeMirror) {
+    codeMirror.setValue(JSON.stringify(json, null, 2));
+  }
+}

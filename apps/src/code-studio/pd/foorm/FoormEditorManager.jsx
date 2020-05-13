@@ -12,6 +12,7 @@ class FoormEditorManager extends React.Component {
   static propTypes = {
     updateFormQuestions: PropTypes.func,
     populateCodeMirror: PropTypes.func,
+    resetCodeMirror: PropTypes.func,
     formNamesAndVersions: PropTypes.array,
 
     // populated by redux
@@ -61,35 +62,35 @@ class FoormEditorManager extends React.Component {
         formName: formName,
         formVersion: formVersion
       });
+      this.props.resetCodeMirror(result);
     });
   }
 
   initializeEmptyCodeMirror = () => {
-    this.setState({showCodeMirror: true});
+    this.setState({
+      showCodeMirror: true,
+      formName: null,
+      formVersion: null
+    });
+    this.props.resetCodeMirror({});
   };
 
   render() {
     return (
       <div>
-        {this.state.showCodeMirror ? (
+        <div>
+          <DropdownButton id="load_config" title="Load Survey...">
+            {this.state.formattedConfigurationOptions &&
+              this.state.formattedConfigurationOptions}
+          </DropdownButton>
+          <Button onClick={this.initializeEmptyCodeMirror}>New Survey</Button>
+        </div>
+        {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
             formName={this.state.formName}
             formVersion={this.state.formVersion}
           />
-        ) : (
-          <div>
-            <DropdownButton
-              id="load_config"
-              title="Load Existing Configuration"
-            >
-              {this.state.formattedConfigurationOptions &&
-                this.state.formattedConfigurationOptions}
-            </DropdownButton>
-            <Button onClick={this.initializeEmptyCodeMirror}>
-              Empty Configuration
-            </Button>
-          </div>
         )}
       </div>
     );
