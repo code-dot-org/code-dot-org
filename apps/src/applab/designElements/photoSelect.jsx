@@ -9,9 +9,7 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import BorderProperties from './BorderProperties';
 import themeValues from '../themeValues';
-import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
-import * as assetPrefix from '../../assetManagement/assetPrefix';
 import designMode from '../designMode';
 import elementLibrary from './library';
 
@@ -22,30 +20,8 @@ class PhotoChooserProperties extends React.Component {
     onDepthChange: PropTypes.func.isRequired
   };
 
-  handleChangeWrapper = value => {
-    this.props.handleChange('icon-color', value);
-    this.props.handleChange(
-      'image',
-      this.props.element.getAttribute('data-canonical-image-url')
-    );
-  };
-
   render() {
     const element = this.props.element;
-
-    let iconColorPicker;
-    const canonicalImage = element.getAttribute('data-canonical-image-url');
-    if (ICON_PREFIX_REGEX.test(canonicalImage)) {
-      iconColorPicker = (
-        <ColorPickerPropertyRow
-          desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(
-            element.getAttribute('data-icon-color') || '#000000'
-          )}
-          handleChange={this.handleChangeWrapper}
-        />
-      );
-    }
 
     return (
       <div id="propertyRowContainer">
@@ -84,7 +60,17 @@ class PhotoChooserProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
-        {iconColorPicker}
+        <ColorPickerPropertyRow
+          desc={'icon color'}
+          initialValue={elementUtils.rgb2hex(element.style.color || '#000000')}
+          handleChange={this.props.handleChange.bind(this, 'textColor')}
+        />
+        <PropertyRow
+          desc={'icon size (px)'}
+          isNumber
+          initialValue={parseInt(element.style.fontSize, 10)}
+          handleChange={this.props.handleChange.bind(this, 'fontSize')}
+        />
         <BorderProperties
           element={element}
           handleBorderWidthChange={this.props.handleChange.bind(
@@ -121,14 +107,14 @@ class PhotoChooserEvents extends React.Component {
     onInsertEvent: PropTypes.func.isRequired
   };
 
-  getPhotoselectEventCode() {
+  getPhotoSelectedEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code = `onEvent("${id}", "change", function() {\n  console.log("${id} photo selected!");\n  console.log(getImageURL("${id}"));\n});\n`;
     return code;
   }
 
-  insertPhotoselect = () =>
-    this.props.onInsertEvent(this.getPhotoselectEventCode());
+  insertPhotoSelected = () =>
+    this.props.onInsertEvent(this.getPhotoSelectedEventCode());
 
   render() {
     const element = this.props.element;
@@ -147,7 +133,7 @@ class PhotoChooserEvents extends React.Component {
         <EventRow
           name={clickName}
           desc={clickDescription}
-          handleInsert={this.insertPhotoselect}
+          handleInsert={this.insertPhotoSelected}
         />
       </div>
     );
@@ -161,31 +147,24 @@ export default {
 
   create: function() {
     const element = document.createElement('label');
-    element.setAttribute('class', 'img-upload');
-    element.setAttribute('data-canonical-image-url', 'icon://fa-camera');
+    element.setAttribute('class', 'img-upload fa fa-camera');
     element.style.margin = '0';
-    element.style.lineHeight = '1';
     element.style.borderStyle = 'solid';
-    element.style.fontFamily = 'FontAwesome';
-    element.style.content = '\f030';
+    element.style.overflow = 'hidden';
 
-    /*elementLibrary.setAllPropertiesToCurrentTheme(
+    elementLibrary.setAllPropertiesToCurrentTheme(
       element,
       designMode.activeScreen()
-    );*/
-    /*element.style.backgroundSize = 'contain';
-    element.style.backgroundRepeat = 'no-repeat';
-    element.style.backgroundPosition = '50% 50%';
-    element.style.backgroundImage =
-      'url(' +
-      assetPrefix.renderIconToString(
-        element.getAttribute('data-canonical-image-url'),
-        element
-      ) +
-      ')';*/
+    );
+    element.style.padding = '0';
+    element.style.textAlign = 'center';
+    element.style.fontSize = '32px';
 
     element.style.width = '75px';
     element.style.height = '50px';
+    element.style.display = 'flex';
+    element.style.alignItems = 'center';
+    element.style.justifyContent = 'center';
     const newInput = document.createElement('input');
     newInput.type = 'file';
     newInput.accept = 'image/*';

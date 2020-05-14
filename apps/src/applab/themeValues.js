@@ -407,7 +407,7 @@ const themeValues = {
       robot: '#B2D9EB',
       classic: '#1ABC9C'
     },
-    'icon-color': {
+    textColor: {
       type: 'color',
       default: '#FFFFFF',
       orange: '#FFFFFF',
