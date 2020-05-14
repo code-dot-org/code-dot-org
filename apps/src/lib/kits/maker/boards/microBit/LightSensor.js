@@ -31,7 +31,7 @@ export default class LightSensor extends EventEmitter {
         }
       },
       threshold: {
-        get: function() {
+        set: function() {
           return this.threshold;
         }
       }
