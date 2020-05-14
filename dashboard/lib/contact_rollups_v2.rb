@@ -1,4 +1,8 @@
 class ContactRollupsV2
+  # Query max execution time in millisecond.
+  # Can be used to override the production database global query timeout.
+  MAX_EXECUTION_TIME = 1_800_000
+
   def self.build_contact_rollups(log_collector, sync_with_pardot=false)
     log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw

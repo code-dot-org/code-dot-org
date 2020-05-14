@@ -16,10 +16,6 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  # Max execution time for query in millisecond.
-  # Can be used to override the production database global query timeout.
-  MAX_EXECUTION_TIME = 1_800_000
-
   DEFAULT_BATCH_SIZE = 1000
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
@@ -63,7 +59,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # production is 5.7.12, while JSON_OBJECT_AGG is only available from 5.7.22.
     # Because GROUP_CONCAT returns a string, we add a parser function to convert the result to a hash.
     <<-SQL.squish
-      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
+      SELECT /*+ MAX_EXECUTION_TIME(#{ContactRollupsV2::MAX_EXECUTION_TIME}) */
         email,
         CONCAT('[', GROUP_CONCAT(data_and_metadata), ']') AS all_data_and_metadata
       FROM (#{data_transformation_query}) AS subquery
