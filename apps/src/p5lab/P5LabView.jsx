@@ -19,7 +19,6 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
 import animationLibrary from './gamelab/animationLibrary.json';
-import spriteCostumeLibrary from './spritelab/spriteCostumeLibrary.json';
 import {AnimationCategories} from './gamelab/constants';
 import {CostumeCategories} from './spritelab/constants';
 
