@@ -32,13 +32,23 @@ export class UnconnectedOrderControls extends Component {
 
   handleMoveUp = () => {
     if (this.props.position !== 1) {
-      this.props.move(this.props.type, this.props.position, 'up');
+      this.props.move(
+        this.props.type,
+        this.props.position,
+        this.props.parentPosition,
+        'up'
+      );
     }
   };
 
   handleMoveDown = () => {
     if (this.props.position !== this.props.total) {
-      this.props.move(this.props.type, this.props.position, 'down');
+      this.props.move(
+        this.props.type,
+        this.props.position,
+        this.props.parentPosition,
+        'down'
+      );
     }
   };
 
@@ -100,10 +110,10 @@ export class UnconnectedOrderControls extends Component {
 const OrderControls = connect(
   state => ({}),
   dispatch => ({
-    move(type, position, direction) {
+    move(type, position, parentPosition, direction) {
       type === ControlTypes.Group
         ? dispatch(moveGroup(position, direction))
-        : dispatch(moveLesson(position, direction));
+        : dispatch(moveLesson(position, parentPosition, direction));
     },
     remove(type, position, parentPosition) {
       type === ControlTypes.Group

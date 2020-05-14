@@ -152,11 +152,12 @@ export class UnconnectedLessonCard extends Component {
   };
 
   handleDragStop = () => {
-    const {lesson, targetLessonPos} = this.props;
+    const {lesson, lessonGroup, targetLessonPos} = this.props;
     if (targetLessonPos === lesson.position) {
       // When dragging within a lesson, reorder the level within that lesson.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
+          lessonGroup.position,
           lesson.position,
           this.state.draggedLevelPos,
           this.state.newPosition
@@ -165,6 +166,7 @@ export class UnconnectedLessonCard extends Component {
     } else if (targetLessonPos) {
       // When dragging between lessons, move it to the end of the new lesson.
       this.props.moveLevelToLesson(
+        lessonGroup.position,
         lesson.position,
         this.state.draggedLevelPos,
         targetLessonPos

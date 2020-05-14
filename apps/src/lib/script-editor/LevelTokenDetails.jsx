@@ -333,22 +333,8 @@ export default connect(
     levelNameToIdMap: state.levelNameToIdMap
   }),
   dispatch => ({
-    chooseLevel(
-      groupPosition,
-      lessonPosition,
-      levelPosition,
-      variant,
-      levelId
-    ) {
-      dispatch(
-        chooseLevel(
-          groupPosition,
-          lessonPosition,
-          levelPosition,
-          variant,
-          levelId
-        )
-      );
+    chooseLevel(groupPos, lessonPos, levelPos, variant, levelId) {
+      dispatch(chooseLevel(groupPos, lessonPos, levelPos, variant, levelId));
     },
     addVariant(lesson, level) {
       dispatch(addVariant(lesson, level));
