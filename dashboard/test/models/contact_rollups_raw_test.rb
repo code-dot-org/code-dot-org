@@ -67,8 +67,9 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'get_extraction_query looks as expected when called with a single column' do
-    expected_sql = <<~SQL
-      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+    expected_sql = <<~SQL.squish
+      INSERT /*+ MAX_EXECUTION_TIME(#{ContactRollupsV2::MAX_EXECUTION_TIME}) */
+      INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         email,
         'dashboard.email_preferences' AS sources,
@@ -84,8 +85,9 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'get_extraction_query looks as expected when called with multiple columns' do
-    expected_sql = <<~SQL
-      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+    expected_sql = <<~SQL.squish
+      INSERT /*+ MAX_EXECUTION_TIME(#{ContactRollupsV2::MAX_EXECUTION_TIME}) */
+      INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         parent_email,
         'dashboard.users' AS sources,

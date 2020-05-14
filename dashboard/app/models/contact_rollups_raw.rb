@@ -50,9 +50,8 @@ class ContactRollupsRaw < ApplicationRecord
 
     <<~SQL.squish
       INSERT /*+ MAX_EXECUTION_TIME(#{ContactRollupsV2::MAX_EXECUTION_TIME}) */
-      INTO #{ContactRollupsRaw.table_name} (
-        email, sources, data, data_updated_at, created_at, updated_at
-      )
+      INTO #{ContactRollupsRaw.table_name}
+        (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         #{email_column},
         '#{source_name}' AS sources,
