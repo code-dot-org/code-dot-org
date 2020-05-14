@@ -107,9 +107,7 @@ module Pd
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
-          surveyData: {
-            workshop_course: workshop.course
-          },
+          surveyData: get_foorm_survey_data(workshop),
           submitApi: "/api/v1/pd/foorm/workshop_survey_submission",
           submitParams: {
             user_id: current_user.id,
@@ -449,9 +447,6 @@ module Pd
 
     def render_csf_survey_foorm(survey_name, workshop)
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
-      facilitator_data = workshop.facilitators.map do |facilitator|
-        {facilitatorId: facilitator.id, facilitatorName: facilitator.name}
-      end
 
       @script_data = {
         props: {
@@ -463,10 +458,7 @@ module Pd
             user_id: current_user.id,
             pd_workshop_id: workshop.id
           },
-          surveyData: {
-            facilitators: facilitator_data,
-            workshop_course: workshop.course
-          }
+          surveyData: get_foorm_survey_data(workshop)
         }.to_json
       }
 
@@ -530,6 +522,30 @@ module Pd
         end
       end
       return true
+    end
+
+    def get_foorm_survey_data(workshop)
+      facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
+        {
+          facilitator_id: facilitator.id,
+          facilitator_name: facilitator.name,
+          facilitator_position: i + 1
+        }
+      end
+
+      regional_partner_name = ''
+      if workshop.regional_partner_id
+        regional_partner_name = RegionalPartner.find(workshop.regional_partner_id).name
+      end
+
+      return {
+        facilitators: facilitator_data,
+        workshop_course: workshop.course,
+        workshop_subject: workshop.subject,
+        regional_partner_name: regional_partner_name,
+        is_virtual: workshop.virtual?,
+        num_facilitators: workshop.facilitators.count
+      }
     end
   end
 end

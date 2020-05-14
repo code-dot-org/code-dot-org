@@ -455,7 +455,7 @@
        "title": "What were two things {panel.facilitator_name} could do better?"
       }
      ],
-     "templateTitle": "Facilitator {panel.facilitator_position} of {panel.num_facilitators} - {panel.facilitator_name}",
+     "templateTitle": "Facilitator {panel.facilitator_position} of {num_facilitators} - {panel.facilitator_name}",
      "allowAddPanel": false,
      "allowRemovePanel": false
     },
