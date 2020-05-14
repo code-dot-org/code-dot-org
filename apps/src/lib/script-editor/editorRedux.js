@@ -39,10 +39,11 @@ export const addLesson = (lessonName, lessonGroupPosition) => ({
   lessonGroupPosition
 });
 
-export const toggleExpand = (lesson, level) => ({
+export const toggleExpand = (groupPosition, lessonPosition, levelPosition) => ({
   type: TOGGLE_EXPAND,
-  lesson,
-  level
+  groupPosition,
+  lessonPosition,
+  levelPosition
 });
 
 export const removeLevel = (lessonPosition, groupPosition, levelPosition) => ({
@@ -52,12 +53,19 @@ export const removeLevel = (lessonPosition, groupPosition, levelPosition) => ({
   levelPosition
 });
 
-export const chooseLevel = (lesson, level, variant, value) => ({
-  type: CHOOSE_LEVEL,
-  lesson,
-  level,
+export const chooseLevel = (
+  groupPosition,
+  lessonPosition,
+  levelPosition,
   variant,
-  value
+  levelId
+) => ({
+  type: CHOOSE_LEVEL,
+  groupPosition,
+  lessonPosition,
+  levelPosition,
+  variant,
+  levelId
 });
 
 export const addVariant = (lesson, level) => ({
@@ -272,20 +280,27 @@ function lessonGroups(state = [], action) {
       updateLevelPositions(levels);
       break;
     }
-    /*
     case CHOOSE_LEVEL: {
-      const level = newState[action.lesson - 1].levels[action.level - 1];
+      const lessons = newState[action.groupPosition - 1].lessons;
+      const level =
+        lessons[action.lessonPosition - lessons[0].position].levels[
+          action.levelPosition - 1
+        ];
       if (level.ids[action.variant] === level.activeId) {
-        level.activeId = action.value;
+        level.activeId = action.levelId;
       }
-      level.ids[action.variant] = action.value;
+      level.ids[action.variant] = action.levelId;
       break;
     }
     case TOGGLE_EXPAND: {
-      const level = newState[action.lesson - 1].levels[action.level - 1];
+      const lessons = newState[action.groupPosition - 1].lessons;
+      const level =
+        lessons[action.lessonPosition - lessons[0].position].levels[
+          action.levelPosition - 1
+        ];
       level.expand = !level.expand;
       break;
-    }
+    } /*
     case MOVE_GROUP: {
       if (action.direction !== 'up' && action.position === newState.length) {
         break;

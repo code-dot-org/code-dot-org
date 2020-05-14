@@ -272,6 +272,7 @@ export class UnconnectedLessonCard extends Component {
             key={level.position + '_' + level.ids[0]}
             level={level}
             lessonPosition={lesson.position}
+            lessonGroupPosition={lessonGroup.position}
             dragging={!!draggedLevelPos}
             draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
