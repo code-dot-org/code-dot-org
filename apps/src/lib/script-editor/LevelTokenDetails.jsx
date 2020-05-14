@@ -99,7 +99,8 @@ export class UnconnectedLevelTokenDetails extends Component {
     setActiveVariant: PropTypes.func.isRequired,
     setField: PropTypes.func.isRequired,
     level: levelShape.isRequired,
-    lessonPosition: PropTypes.number.isRequired
+    lessonPosition: PropTypes.number.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired
   };
 
   constructor(props) {
@@ -124,6 +125,7 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleLevelSelected = (variant, levelId) => {
     this.props.chooseLevel(
+      this.props.lessonGroupPosition,
       this.props.lessonPosition,
       this.props.level.position,
       variant,
@@ -331,8 +333,22 @@ export default connect(
     levelNameToIdMap: state.levelNameToIdMap
   }),
   dispatch => ({
-    chooseLevel(lesson, level, variant, value) {
-      dispatch(chooseLevel(lesson, level, variant, value));
+    chooseLevel(
+      groupPosition,
+      lessonPosition,
+      levelPosition,
+      variant,
+      levelId
+    ) {
+      dispatch(
+        chooseLevel(
+          groupPosition,
+          lessonPosition,
+          levelPosition,
+          variant,
+          levelId
+        )
+      );
     },
     addVariant(lesson, level) {
       dispatch(addVariant(lesson, level));
