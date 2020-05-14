@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
 import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
 
 import LessonProgress, {
@@ -188,5 +189,9 @@ class HeaderMiddle extends React.Component {
 }
 
 export default connect(state => ({
-  appLoaded: state.header.appLoaded
+  appLoaded: state.header.appLoaded,
+  lessonExtrasUrl: lessonExtrasUrl(
+    state.progress,
+    state.progress.currentStageId
+  )
 }))(HeaderMiddle);

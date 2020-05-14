@@ -838,9 +838,6 @@ $default-modal-width: 640px;
   z-index: 2;
   flex-shrink: 0;
   flex-grow: 0;
-  .header_button, .header_input, .header_text {
-    margin-left: 10px;
-  }
 }
 
 .header_left, .header_right {
@@ -952,9 +949,13 @@ $default-modal-width: 640px;
   flex-grow: 1;
   min-width: 0;
   float: left;
-  /*width: calc(100% - 280px);*/
+
   .header_button {
     margin-top: 3px;
+  }
+
+  .header_button, .header_input, .header_text {
+    margin-left: 10px;
   }
 }
 
@@ -965,9 +966,6 @@ $default-modal-width: 640px;
 }
 
 .header_level {
-  padding-top: 2px;
-  padding-bottom: 0;
-  text-align: center;
   font-size: 150%;
   cursor: default;
   white-space: nowrap;
