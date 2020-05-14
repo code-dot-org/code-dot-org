@@ -65,6 +65,7 @@ export class UnconnectedLessonCard extends Component {
     setLessonLockable: PropTypes.func.isRequired,
     lessonsCount: PropTypes.number.isRequired,
     lesson: PropTypes.object.isRequired,
+    lessonGroup: PropTypes.object.isRequired,
     lessonMetrics: PropTypes.object.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     setTargetLesson: PropTypes.func.isRequired,
@@ -182,7 +183,10 @@ export class UnconnectedLessonCard extends Component {
   };
 
   handleAddLevel = () => {
-    this.props.addLevel(this.props.lesson.position);
+    this.props.addLevel(
+      this.props.lesson.position,
+      this.props.lessonGroup.position
+    );
   };
 
   handleRemoveLevel = levelPos => {
@@ -199,10 +203,14 @@ export class UnconnectedLessonCard extends Component {
     });
   };
 
-  handleSetLessonGroup = newLessonGroup => {
+  handleSetLessonGroup = newLessonGroupPosition => {
     this.setState({editingLessonGroup: false});
-    if (this.props.lesson.lesson_group !== newLessonGroup) {
-      this.props.setLessonGroup(this.props.lesson.position, newLessonGroup);
+    if (this.props.lessonGroup.position !== newLessonGroupPosition + 1) {
+      this.props.setLessonGroup(
+        this.props.lesson.position,
+        this.props.lessonGroup.position,
+        newLessonGroupPosition + 1
+      );
     }
   };
 
@@ -212,6 +220,7 @@ export class UnconnectedLessonCard extends Component {
 
   toggleLockable = () => {
     this.props.setLessonLockable(
+      this.props.lessonGroup.position,
       this.props.lesson.position,
       !this.props.lesson.lockable
     );
@@ -222,7 +231,7 @@ export class UnconnectedLessonCard extends Component {
   }
 
   render() {
-    const {lesson, targetLessonPos} = this.props;
+    const {lesson, targetLessonPos, lessonGroup} = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetLesson = targetLessonPos === lesson.position;
     return (
@@ -235,6 +244,7 @@ export class UnconnectedLessonCard extends Component {
           <OrderControls
             type={ControlTypes.Lesson}
             position={lesson.position}
+            parentPosition={lessonGroup.position}
             total={this.props.lessonsCount}
             name={this.props.lesson.name}
           />
@@ -305,6 +315,7 @@ export class UnconnectedLessonCard extends Component {
            interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLevelDialog
           lesson={lesson}
+          lessonGroup={lessonGroup}
           levelPosToRemove={levelPosToRemove}
           handleClose={this.handleClose}
         />
