@@ -1087,6 +1087,22 @@ input.header_input {
   }
 }
 
+body.iframe_embed_app_and_code {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .full_container {
+    padding: 0;
+  }
+
+  #codeApp {
+    height: 100%;
+  }
+}
+
 #codeApp.pin_bottom {
   position: absolute;
   top: 60px;
