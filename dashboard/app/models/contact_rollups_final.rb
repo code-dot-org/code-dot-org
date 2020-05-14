@@ -18,7 +18,8 @@ class ContactRollupsFinal < ApplicationRecord
 
   def self.insert_from_processed_table
     insert_sql = <<~SQL
-      INSERT INTO #{table_name}
+      INSERT /*+ MAX_EXECUTION_TIME(#{ContactRollupsV2::MAX_EXECUTION_TIME}) */
+      INTO #{table_name}
       SELECT *
       FROM contact_rollups_processed;
     SQL
