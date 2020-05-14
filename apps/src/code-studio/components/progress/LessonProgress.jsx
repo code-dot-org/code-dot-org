@@ -22,8 +22,9 @@ const styles = {
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     height: 40,
-    width: '100%',
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   spacer: {
     marginRight: 'auto'
@@ -45,15 +46,17 @@ const styles = {
 
 // return the ideal desired width of this control.  it will be up to the parent
 // container to decide how much of that space it's able to give us.
-export function getFullWidthForLevels() {
+export function getFullWidthForLevels(lessonExtrasProgressBubble) {
   const progress = getStore().getState().progress;
   const levels = levelsForLessonId(progress, progress.currentStageId);
-  return (levels.length - 1) * 18 + 40;
+  const numLevels = levels.length;
+  const numBubbles = numLevels + (lessonExtrasProgressBubble ? 1 : 0);
+  return (numBubbles - 1) * 18 + 40;
 }
 
 // given a set of levels, and a width, return which levels we will actually
 // render.
-function getShowLevels(levels, width) {
+function getShowLevels(levels, width, lessonExtrasProgressBubble) {
   // which dot is current level?
   var currentLevelIndex = 0;
   for (const [i, l] of levels.entries()) {
@@ -63,7 +66,11 @@ function getShowLevels(levels, width) {
     }
   }
 
-  const numLevels = levels.length;
+  var numLevels = levels.length;
+
+  if (lessonExtrasProgressBubble) {
+    numLevels++;
+  }
 
   let numAvailableElements = Math.min(
     Math.floor((width - 40) / 18) + 1,
@@ -102,9 +109,16 @@ function getShowLevels(levels, width) {
     numElements = lastElement - firstElement + 1;
   }
 
+  let showLessonExtrasProgressBubble = false;
+
+  if (lessonExtrasProgressBubble && numElements === numLevels) {
+    numElements -= 1;
+    showLessonExtrasProgressBubble = true;
+  }
+
   const showLevels = levels.slice(firstElement, firstElement + numElements);
 
-  return showLevels;
+  return {showLevels, showLessonExtrasProgressBubble};
 }
 
 /**
@@ -137,7 +151,11 @@ class LessonProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
-    const showLevels = getShowLevels(levels, width);
+    const {showLevels, showLessonExtrasProgressBubble} = getShowLevels(
+      levels,
+      width,
+      lessonExtrasUrl && !lessonTrophyEnabled
+    );
 
     return (
       <div
@@ -165,7 +183,7 @@ class LessonProgress extends Component {
             />
           </div>
         ))}
-        {lessonExtrasUrl && !lessonTrophyEnabled && (
+        {showLessonExtrasProgressBubble && (
           <LessonExtrasProgressBubble
             lessonExtrasUrl={lessonExtrasUrl}
             perfect={onLessonExtras}
