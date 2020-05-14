@@ -51,7 +51,7 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
   }
 
   if (components.compass) {
-    components.compass.state = {x: 0};
+    components.compass.state = {x: 0, y: 0};
     components.compass.stop();
   }
 
