@@ -27,13 +27,6 @@ export default class Compass extends EventEmitter {
         get: function() {
           let rawX = this.board.mb.analogChannel[sensor_channels.magX];
           let rawY = this.board.mb.analogChannel[sensor_channels.magY];
-          if (rawY === 0) {
-            if (rawX >= 0) {
-              return 180;
-            } else {
-              return 0;
-            }
-          }
           let heading = roundToHundredth(
             Math.atan2(rawY, rawX) * (180 / Math.PI)
           );
