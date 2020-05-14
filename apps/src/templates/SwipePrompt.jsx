@@ -6,10 +6,9 @@ import cookies from 'js-cookie';
 
 const styles = {
   overlay: {
-    background: 'white',
     position: 'absolute',
     zIndex: 1,
-    opacity: '50%'
+    opacity: '90%'
   },
   minecraft: {
     top: '62px',
@@ -64,6 +63,7 @@ export class SwipePrompt extends React.Component {
     const promptStyle = this.props.useMinecraftStyling
       ? {...styles.overlay, ...styles.minecraft}
       : styles.overlay;
+
     return (
       <svg
         onTouchStart={this.onDismiss}
@@ -72,9 +72,18 @@ export class SwipePrompt extends React.Component {
         height={400}
         width={400}
       >
-        <text x={75} y={200} fontSize="35px">
-          HELLO WORLD!!!
-        </text>
+        <image
+          height={400}
+          width={400}
+          xlinkHref={'/blockly/media/common_images/swipe-directions.png'}
+        />
+        <image
+          height={100}
+          width={100}
+          x={160}
+          y={190}
+          xlinkHref={'/blockly/media/common_images/touch-icon.png'}
+        />
       </svg>
     );
   }
