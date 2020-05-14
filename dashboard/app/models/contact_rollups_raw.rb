@@ -18,13 +18,17 @@
 class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
+  # Max execution time for query in millisecond.
+  # Can be used to override the production database global query timeout.
+  MAX_EXECUTION_TIME = 1_800_000
+
   def self.extract_email_preferences
     query = get_extraction_query('email_preferences', 'email', ['opt_in'])
     ActiveRecord::Base.connection.execute(query)
   end
 
   def self.extract_parent_emails
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT parent_email, MAX(updated_at) AS updated_at
       FROM users
       GROUP BY parent_email
@@ -48,8 +52,11 @@ class ContactRollupsRaw < ApplicationRecord
     source_name ||= "dashboard.#{source}"
     wrapped_source = source_is_subquery ? "(#{source}) AS subquery" : source
 
-    <<~SQL
-      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+    <<~SQL.squish
+      INSERT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
+      INTO #{ContactRollupsRaw.table_name} (
+        email, sources, data, data_updated_at, created_at, updated_at
+      )
       SELECT
         #{email_column},
         '#{source_name}' AS sources,
