@@ -162,7 +162,7 @@ progress.renderCourseProgress = function(scriptData) {
     store.dispatch(setSections(scriptData.sections));
   }
 
-  store.dispatch(setPageType, pageTypes.scriptOverview);
+  store.dispatch(setPageType(pageTypes.scriptOverview));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
