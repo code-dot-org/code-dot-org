@@ -18,7 +18,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
-    stage_extras_available: false,
+    lesson_extras_available: false,
     has_verified_resources: false,
     has_lesson_plan: false,
     curriculum_path: nil,

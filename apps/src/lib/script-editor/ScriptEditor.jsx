@@ -308,7 +308,7 @@ export default class ScriptEditor extends React.Component {
         <label>
           Lesson Extras Available
           <input
-            name="stage_extras_available"
+            name="lesson_extras_available"
             type="checkbox"
             defaultChecked={this.props.lessonExtrasAvailable}
             style={styles.checkbox}
