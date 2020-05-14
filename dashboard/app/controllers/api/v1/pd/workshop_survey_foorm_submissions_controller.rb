@@ -52,13 +52,13 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
     survey_submission_ids = []
     if facilitator_answers
       facilitator_answers.each do |_, data|
-        next unless data["facilitatorId"]
+        next unless data["facilitator_id"]
         survey_submission = ::Pd::WorkshopSurveyFoormSubmission.new(
           user_id: params[:user_id],
           pd_session_id: params[:pd_session_id],
           pd_workshop_id: params[:pd_workshop_id],
           day: params[:day],
-          facilitator_id: data["facilitatorId"]
+          facilitator_id: data["facilitator_id"]
         )
         begin
           survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])
