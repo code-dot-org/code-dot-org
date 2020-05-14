@@ -12,7 +12,7 @@ require 'json'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../../tools/scripts/rebuildAnimationLibraryManifest'
+require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   HocSyncUtils.sync_in
@@ -249,9 +249,6 @@ def localize_animation_library
   spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/course_content/spritelab_animation_library.json"
   File.open(spritelab_animation_source_file, "w") do |file|
     animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
-    puts animation_strings.size
-    puts spritelab_animation_source_file
-    puts JSON.pretty_generate(animation_strings)
     file.write(JSON.pretty_generate(animation_strings))
   end
 end
