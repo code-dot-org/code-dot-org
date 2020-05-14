@@ -54,7 +54,31 @@ class P5LabView extends React.Component {
   }
 
   getLibraryManifest() {
-    return this.props.spriteLab ? spriteCostumeLibrary : animationLibrary;
+    /*if (this.props.spriteLab) {
+      //return new Promise(resolve => {
+      //  resolve(spriteCostumeLibrary);
+      //});
+      if (this.state && this.state.libraryManifest) {
+        return new Promise(resolve => {
+          resolve(this.state.libraryManifest);
+        });
+      } else {
+        return fetch('/api/v1/animation-library/manifest/spritelab').then(
+          response => {
+            console.log('got the manifest');
+            const response_json = response.json();
+            this.setState({libraryManifest: response_json});
+            return response_json;
+          }
+        );
+      }
+    } else {
+      return new Promise(resolve => {
+        resolve(animationLibrary);
+      });
+    }*/
+    console.log(this.state.libraryManifest);
+    return this.state.libraryManifest;
   }
 
   getCategories() {
@@ -63,6 +87,15 @@ class P5LabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
+    if (this.props.spriteLab) {
+      fetch('/api/v1/animation-library/manifest/spritelab')
+        .then(response => response.json())
+        .then(libraryManifest => {
+          this.setState({libraryManifest});
+        });
+    } else {
+      this.setState({libraryManifest: animationLibrary});
+    }
   }
 
   renderCodeMode() {
@@ -102,7 +135,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              libraryManifest={this.getLibraryManifest()}
+              getLibraryManifest={() => this.getLibraryManifest()}
               categories={this.getCategories()}
               hideUploadOption={true}
             />
@@ -130,7 +163,7 @@ class P5LabView extends React.Component {
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        libraryManifest={this.getLibraryManifest()}
+        getLibraryManifest={() => this.getLibraryManifest()}
         categories={this.getCategories()}
         hideUploadOption={true}
       />
