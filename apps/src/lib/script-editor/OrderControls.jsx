@@ -21,6 +21,7 @@ export class UnconnectedOrderControls extends Component {
     remove: PropTypes.func.isRequired,
     type: PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
     position: PropTypes.number.isRequired,
+    parentPosition: PropTypes.number,
     total: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
   };
@@ -47,7 +48,11 @@ export class UnconnectedOrderControls extends Component {
 
   handleConfirm = () => {
     this.setState({showConfirm: false});
-    this.props.remove(this.props.type, this.props.position);
+    this.props.remove(
+      this.props.type,
+      this.props.position,
+      this.props.parentPosition
+    );
   };
 
   handleClose = () => {
@@ -100,10 +105,10 @@ const OrderControls = connect(
         ? dispatch(moveGroup(position, direction))
         : dispatch(moveLesson(position, direction));
     },
-    remove(type, position) {
+    remove(type, position, parentPosition) {
       type === ControlTypes.Group
         ? dispatch(removeGroup(position))
-        : dispatch(removeLesson(position));
+        : dispatch(removeLesson(position, parentPosition));
     }
   })
 )(UnconnectedOrderControls);

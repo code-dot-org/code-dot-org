@@ -1452,7 +1452,7 @@ class Script < ActiveRecord::Base
   def summarize_for_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:stages] = lessons.map(&:summarize_for_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_edit)
     summary
   end
 

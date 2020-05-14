@@ -13,38 +13,44 @@ import {valueOr} from '@cdo/apps/utils';
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.lessonLevelData;
-  const lessons = (scriptData.stages || [])
-    .filter(lesson => lesson.id)
-    .map(lesson => ({
-      position: lesson.position,
-      relativePosition: lesson.relative_position,
-      lesson_group_display_name: lesson.lesson_group_display_name,
-      lockable: lesson.lockable,
-      name: lesson.name,
-      // Only include the first level of an assessment (uid ending with "_0").
-      levels: lesson.levels
-        .filter(level => !level.uid || /_0$/.test(level.uid))
-        .map(level => ({
-          position: level.position,
-          activeId: level.activeId,
-          ids: level.ids.slice(),
-          kind: level.kind,
-          skin: level.skin,
-          videoKey: level.videoKey,
-          concepts: level.concepts,
-          conceptDifficulty: level.conceptDifficulty,
-          progression: level.progression,
-          named: !!level.name,
-          assessment: level.assessment,
-          challenge: level.challenge
+  const lesson_groups = (scriptData.lesson_groups || [])
+    .filter(lesson_group => lesson_group.id)
+    .map(lesson_group => ({
+      key: lesson_group.key,
+      display_name: lesson_group.display_name,
+      user_facing: lesson_group.user_facing,
+      position: lesson_group.position,
+      lessons: lesson_group.lessons
+        .filter(lesson => lesson.id)
+        .map(lesson => ({
+          position: lesson.position,
+          relativePosition: lesson.relative_position,
+          lockable: lesson.lockable,
+          name: lesson.name,
+          // Only include the first level of an assessment (uid ending with "_0").
+          levels: lesson.levels
+            .filter(level => !level.uid || /_0$/.test(level.uid))
+            .map(level => ({
+              position: level.position,
+              activeId: level.activeId,
+              ids: level.ids.slice(),
+              kind: level.kind,
+              skin: level.skin,
+              videoKey: level.videoKey,
+              concepts: level.concepts,
+              conceptDifficulty: level.conceptDifficulty,
+              progression: level.progression,
+              named: !!level.name,
+              assessment: level.assessment,
+              challenge: level.challenge
+            }))
         }))
     }));
   const locales = scriptEditorData.locales;
-  const lessonGroupMap = scriptEditorData.lesson_group_map;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(lessons, scriptEditorData.levelKeyList, lessonGroupMap));
+  store.dispatch(init(lesson_groups, scriptEditorData.levelKeyList));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})

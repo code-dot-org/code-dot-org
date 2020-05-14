@@ -39,7 +39,7 @@ class LessonGroupSelector extends Component {
     onCancel: PropTypes.func.isRequired,
 
     // from redux
-    lessonGroupMap: PropTypes.object.isRequired
+    lessonGroups: PropTypes.array.isRequired
   };
 
   state = {
@@ -60,12 +60,12 @@ class LessonGroupSelector extends Component {
     this.setState({newLessonGroupDisplayName});
   };
 
-  /* do we need to check here that its not already in the list? */
   handleConfirm = () => {
     const {newLessonGroupKey, newLessonGroupDisplayName} = this.state;
-    this.setState({newLessonGroupKey: '', newLessonGroupDisplayName: ''});
-    let newLessonGroup = {[newLessonGroupKey]: newLessonGroupDisplayName};
-    this.props.onConfirm(newLessonGroup);
+    if (!this.props.lessonGroups.some(lg => lg.key === newLessonGroupKey)) {
+      this.setState({newLessonGroupKey: '', newLessonGroupDisplayName: ''});
+      this.props.onConfirm(newLessonGroupKey, newLessonGroupDisplayName);
+    }
   };
 
   render() {
@@ -114,5 +114,5 @@ class LessonGroupSelector extends Component {
 }
 
 export default connect(state => ({
-  lessonGroupMap: state.lessonGroupMap
+  lessonGroups: state.lessonGroups
 }))(LessonGroupSelector);

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import color from '../../util/color';
 import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
@@ -51,9 +50,8 @@ class LessonGroup extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
-    lessons: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.object.isRequired,
-    lessonGroupMap: PropTypes.object.isRequired
+    lessonGroups: PropTypes.array.isRequired,
+    levelKeyList: PropTypes.object.isRequired
   };
 
   state = {
@@ -68,22 +66,23 @@ class LessonGroup extends Component {
     });
   };
 
-  createLessonGroup = newLessonGroup => {
+  createLessonGroup = (newLessonGroupKey, newLessonGroupName) => {
     this.hideLessonGroupCreate();
-    const newLessonName = prompt('Enter new lesson name');
-    if (newLessonName) {
-      this.props.addGroup(newLessonName, newLessonGroup);
-    }
+    this.props.addGroup(
+      this.props.lessonGroups.length,
+      newLessonGroupKey,
+      newLessonGroupName
+    );
   };
 
   hideLessonGroupCreate = () => {
     this.setState({addingLessonGroup: false});
   };
 
-  handleAddLesson = position => {
+  handleAddLesson = lessonGroupPosition => {
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
-      this.props.addLesson(position, newLessonName);
+      this.props.addLesson(newLessonName, lessonGroupPosition);
     }
   };
 
@@ -91,18 +90,19 @@ class LessonGroup extends Component {
     this.setState({targetLessonPos});
   };
 
-  serializeLessonGroups = lessons => {
+  serializeLessonGroups = lessonGroups => {
     let s = [];
-    /*
     lessonGroups.forEach(lessonGroup => {
-      if (lessonGroup.user_facing && !lessonGroup.lessons) {
-        let t = `lesson_group '#{escape(lessonGroup.key)}'`;
-        t += ', display_name: \'#{escape(lesson_group.localized_display_name)}\'';
+      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+        let t = `lesson_group '${lessonGroup.key}'`;
+        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
         s.push(t);
-      } */
-    lessons.forEach(lesson => {
-      s = s.concat(this.serializeLesson(lesson));
+      }
+      lessonGroup.lessons.forEach(lesson => {
+        s = s.concat(this.serializeLesson(lesson));
+      });
     });
+
     s.push('');
     return s.join('\n');
   };
@@ -181,35 +181,30 @@ class LessonGroup extends Component {
   lessonMetrics = {};
 
   render() {
-    const groups = _.groupBy(
-      this.props.lessons,
-      lesson => lesson.lesson_group_display_name || ''
-    );
-    let afterLesson = 1;
-    const {lessonGroupMap} = this.props;
+    const {lessonGroups} = this.props;
 
     return (
       <div>
-        {_.keys(lessonGroupMap).map(group => (
-          <div key={group}>
+        {lessonGroups.map((lessonGroup, index) => (
+          <div key={lessonGroup.key}>
             <div style={styles.groupHeader}>
-              Lesson Group: {group || '(none)'}: "
-              {lessonGroupMap[group] || 'Content'}"
+              Lesson Group: {lessonGroup.key || '(none)'}: "
+              {lessonGroup.display_name || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
-                position={afterLesson}
-                total={Object.keys(groups).length}
-                name={group || '(none)'}
+                position={index + 1}
+                total={lessonGroups.length}
+                name={lessonGroup.key || '(none)'}
               />
             </div>
             <div style={styles.groupBody}>
-              {groups[lessonGroupMap[group]].map((lesson, index) => {
-                afterLesson++;
+              {lessonGroup.lessons.map((lesson, index) => {
                 return (
                   <LessonCard
                     key={`lesson-${index}`}
-                    lessonsCount={this.props.lessons.length}
+                    lessonsCount={lessonGroup.lessons.length}
                     lesson={lesson}
+                    lessonGroup={lessonGroup}
                     ref={lessonCard => {
                       if (lessonCard) {
                         const metrics = ReactDOM.findDOMNode(
@@ -225,7 +220,7 @@ class LessonGroup extends Component {
                 );
               })}
               <button
-                onMouseDown={this.handleAddLesson.bind(null, afterLesson - 1)}
+                onMouseDown={this.handleAddLesson.bind(null, index)}
                 className="btn"
                 style={styles.addLesson}
                 type="button"
@@ -257,7 +252,7 @@ class LessonGroup extends Component {
         <input
           type="hidden"
           name="script_text"
-          value={this.serializeLessonGroups(this.props.lessons)}
+          value={this.serializeLessonGroups(lessonGroups)}
         />
       </div>
     );
@@ -267,12 +262,11 @@ class LessonGroup extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    lessons: state.lessons,
-    lessonGroupMap: state.lessonGroupMap
+    lessonGroups: state.lessonGroups
   }),
   dispatch => ({
-    addGroup(lessonName, groupName) {
-      dispatch(addGroup(lessonName, groupName));
+    addGroup(position, groupKey, groupName) {
+      dispatch(addGroup(position, groupKey, groupName));
     },
     addLesson(position, lessonName) {
       dispatch(addLesson(position, lessonName));

@@ -27,11 +27,11 @@ class LessonGroupSelector extends Component {
     onCancel: PropTypes.func.isRequired,
 
     // from redux
-    lessonGroupMap: PropTypes.object.isRequired
+    lessonGroups: PropTypes.array.isRequired
   };
 
   state = {
-    newLessonGroup: ''
+    newLessonGroupPosition: null
   };
 
   handleCancel = () => {
@@ -39,30 +39,30 @@ class LessonGroupSelector extends Component {
     this.props.onCancel();
   };
 
-  lessonGroupSelected = newLessonGroup => {
-    this.setState({newLessonGroup});
+  lessonGroupSelected = newLessonGroupPosition => {
+    this.setState({newLessonGroupPosition});
   };
 
   handleConfirm = () => {
-    const {newLessonGroup} = this.state;
-    this.setState({newLessonGroup: ''});
-    this.props.onConfirm(newLessonGroup);
+    const {newLessonGroupPosition} = this.state;
+    this.setState({newLessonGroupPosition: null});
+    this.props.onConfirm(newLessonGroupPosition);
   };
 
   render() {
-    const {lessonGroupMap} = this.props;
+    const {lessonGroups} = this.props;
     return (
       <div>
         <span style={styles.lessonGroupLabel}>{this.props.labelText}:</span>
         &nbsp;
         <select
           style={styles.lessonGroupSelect}
-          onChange={e => this.lessonGroupSelected(e.target.value)}
+          onChange={e => this.lessonGroupSelected(e.target.selectedIndex)}
           value={this.state.newLessonGroup}
         >
-          {Object.keys(lessonGroupMap).map(lessonGroup => (
-            <option key={lessonGroup} value={lessonGroup}>
-              {lessonGroup}: "{lessonGroupMap[lessonGroup]}"
+          {lessonGroups.map(lessonGroup => (
+            <option key={lessonGroup.key} value={lessonGroup.display_name}>
+              {lessonGroup.key}: "{lessonGroup.display_name}"
             </option>
           ))}
         </select>
@@ -88,5 +88,5 @@ class LessonGroupSelector extends Component {
 }
 
 export default connect(state => ({
-  lessonGroupMap: state.lessonGroupMap
+  lessonGroups: state.lessonGroups
 }))(LessonGroupSelector);
