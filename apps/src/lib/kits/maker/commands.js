@@ -4,7 +4,7 @@ import {
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
 import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
-import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
+import MicroBitBoard from './boards/microBit/MicroBitBoard';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;
@@ -108,7 +108,7 @@ export function boardConnected() {
 export function onBoardEvent(opts) {
   let {component, event, callback} = opts;
   // Look up aliases for CircuitPlaygroundBoard
-  if (BOARD_EVENT_ALIASES[event] && board instanceof CircuitPlaygroundBoard) {
+  if (BOARD_EVENT_ALIASES[event] && !(board instanceof MicroBitBoard)) {
     event = BOARD_EVENT_ALIASES[event];
   }
   component.on(event, callback);
