@@ -67,8 +67,6 @@ mr:
     projects: प्रकल्प
     project_gallery: प्रकल्प
     name: नाव
-  flex_category:
-    csf_events: ईव्हेंट्स
   pd:
     form_entries:
       email_opt_in:

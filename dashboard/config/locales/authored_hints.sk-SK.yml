@@ -11545,6 +11545,38 @@ sk-SK:
         courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
+      courseE_artist_concept1:
+        courseE_artist_concept1_a: Šesťuholníky majú strany dlhé 50 pixelov a 60 stupňov
+          uhol otočený smerom doprava.
+        courseE_artist_concept1_b: Tu skús použiť funkciu, aby nebolo potrebné písať
+          kód pre šesťuholník stále odznova.
+        courseE_artist_concept1_c: Skôr ako sa zavoláš funkciu na zmenu šírky pera,
+          použi blok `nastav šírku`.
+      courseE_artist_concept1_2018:
+        courseE_artist_concept1_a: Šesťuholníky majú strany dlhé 50 pixelov a 60 stupňov
+          uhol otočený smerom doprava.
+        courseE_artist_concept1_b: Tu skús použiť funkciu, aby nebolo potrebné písať
+          kód pre šesťuholník stále odznova.
+        courseE_artist_concept1_c: Skôr ako sa zavoláš funkciu na zmenu šírky pera,
+          použi blok `nastav šírku`.
+      courseE_artist_concept4:
+        courseE_artist_concept4_a: Existuje niekoľko spôsobov ako vyriešiť túto úlohu.
+          Vytvoríš plán?
+        courseE_artist_concept4_b: Skús vytvoriť štvorec. Potom vytvor rad štvorcov.
+          Čo bude nasledovať?
+        courseE_artist_concept4_c: Keď vytvoríš rad štvorcov, môžeš sa otočiť a nakresliť
+          ďalší rad štvorcov tak, že pôjdeš doľava, alebo môžeš skočiť späť na ľavú
+          stranu tvaru a nakresliť ďalší rad štvorcov tak, že pôjdeš doprava. Ktorý
+          spôsob uprednostníš?
+      courseE_artist_concept4_2018:
+        courseE_artist_concept4_a: Existuje niekoľko spôsobov ako vyriešiť túto úlohu.
+          Vytvoríš plán?
+        courseE_artist_concept4_b: Skús vytvoriť štvorec. Potom vytvor rad štvorcov.
+          Čo bude nasledovať?
+        courseE_artist_concept4_c: Keď vytvoríš rad štvorcov, môžeš sa otočiť a nakresliť
+          ďalší rad štvorcov tak, že pôjdeš doľava, alebo môžeš skočiť späť na ľavú
+          stranu tvaru a nakresliť ďalší rad štvorcov tak, že pôjdeš doprava. Ktorý
+          spôsob uprednostníš?
       courseE_artist_functions10:
         courseD_artist_functions10_b: Táto kresba je veľmi podobná ako predchádzajúca,
           ale funkcia `nakresli čiaru` teraz kreslí iný tvar.
@@ -11832,6 +11864,34 @@ sk-SK:
           aby si vyriešil túto úlohu.
         courseE_bee_concept3a_b: Ak nemôžeš prísť na to, kam vložiť cykly, pokús sa
           napísať kód krok za krokom a hľadaj vzory.
+      courseE_bee_concept4:
+        courseE_bee_concept4_a: Podmienka `ak/inak` by ti  tomto mohla pomôcť.
+        courseE_bee_concept4_b: Vzor ako keď kráčaš po schodoch ti môže pomôcť dostať
+          a cez všetky kvety and plásty.
+        courseE_bee_concept4_c: Ak si pri kvete, koľkokrát musíš zobrať nektár? Je
+          to to isté číslo pri všetkých kvetoch?
+      courseE_bee_concept4_2018:
+        courseE_bee_concept4_a: Podmienka `ak/inak` by ti  tomto mohla pomôcť.
+        courseE_bee_concept4_b: Vzor ako keď kráčaš po schodoch ti môže pomôcť dostať
+          a cez všetky kvety and plásty.
+        courseE_bee_concept4_c: Ak si pri kvete, koľkokrát musíš zobrať nektár? Je
+          to to isté číslo pri všetkých kvetoch?
+      courseE_bee_concept5:
+        courseE_bee_concept5_a: Kvety tvoria cestu v tvare obdĺžnika. Použi `pokiaľ
+          tam je cesta vpred` a môžeš sledovať tento obdĺžnik, i keď má na strane
+          rôzny počet štvorcov.
+        courseE_bee_concept5_c: Tu je obrázok obdĺžnikovej cesty, ktorou by včela
+          mohla ísť.
+        courseE_bee_concept5_b: Pomocou bloku `ak` môžeš skontrolovať každý štvorec,
+          či sa tam kvet nachádza, aj keď vieš, že sa tam žiadny nie je.
+      courseE_bee_concept5_2018:
+        courseE_bee_concept5_a: Kvety tvoria cestu v tvare obdĺžnika. Použi `pokiaľ
+          tam je cesta vpred` a môžeš sledovať tento obdĺžnik, i keď má na strane
+          rôzny počet štvorcov.
+        courseE_bee_concept5_c: Tu je obrázok obdĺžnikovej cesty, ktorou by včela
+          mohla ísť.
+        courseE_bee_concept5_b: Pomocou bloku `ak` môžeš skontrolovať každý štvorec,
+          či sa tam kvet nachádza, aj keď vieš, že sa tam žiadny nie je.
       courseE_farmer_concept1:
         courseE_farmer_concept1_a: Blok `pokiaľ tam je jama` ti pomôže naplniť jamu
           až po okraj.
@@ -11842,12 +11902,36 @@ sk-SK:
           až po okraj.
         courseE_farmer_concept1_b: Môžeš použiť vzor ako keď kráčas po schodoch, aby
           si sa dostal k jamám.
+      courseE_farmer_concept2:
+        courseE_farmer_concept2_a: Cesty majú rovnakú dĺžku, ale sú na niekoľkých
+          od seba oddelených štvorcoch. Cyklus nie je v tomto prípade ideálny. Skús
+          použiť funkciu.
+        courseE_farmer_concept2_b: Tu môže byť nápomocná funkcia, v ktorej sa otočíš,
+          ideš rovno, pozbieraš tekvice a vrátiš sa na hlavnú horizontálnu cestu.
+        courseE_farmer_concept2_c: Tvoj hlavný program môže zavolať túto funkciu pomocou
+          zeleného bloku `urob niečo`.
+      courseE_farmer_concept2_2018:
+        courseE_farmer_concept2_a: Cesty majú rovnakú dĺžku, ale sú na niekoľkých
+          od seba oddelených štvorcoch. Cyklus nie je v tomto prípade ideálny. Skús
+          použiť funkciu.
+        courseE_farmer_concept2_b: Tu môže byť nápomocná funkcia, v ktorej sa otočíš,
+          ideš rovno, pozbieraš tekvice a vrátiš sa na hlavnú horizontálnu cestu.
+        courseE_farmer_concept2_c: Tvoj hlavný program môže zavolať túto funkciu pomocou
+          zeleného bloku `urob niečo`.
       courseE_farmer_concept3:
         grade3_robotFarmer_ConditionalsIntro_8_a: Blok `pokiaľ tam je cesta vpred`
           ti umožnuje pokračovať, i keď nevieš koľko štvorcov má cesta.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Čo by si mal spraviť, keď sa dostaneš
+          na koniec cesty?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Na viacnásobné spustenie kódu pre
+          každú rovnú cestu použi cyklus `opakuj`.
       courseE_farmer_concept3_2018:
         grade3_robotFarmer_ConditionalsIntro_8_a: Blok `pokiaľ tam je cesta vpred`
           ti umožnuje pokračovať, i keď nevieš koľko štvorcov má cesta.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Čo by si mal spraviť, keď sa dostaneš
+          na koniec cesty?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Na viacnásobné spustenie kódu pre
+          každú rovnú cestu použi cyklus `opakuj`.
       courseE_farmer_functions1:
         courseE_farmer_functions1_a: Tentokrát je panel nástrojov usporiadaný inak!
           Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii.

@@ -659,28 +659,6 @@ hy:
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
-  flex_category:
-    required: Overview
-    content: պարունակություն
-    practice: Ուսուցիչի փորձեր
-    csf_digcit: Digital Citizenship
-    csf_jigsaw: ոլորահատ սղոց
-    csf_loops: loops
-    csf_events: Իրադարձություններ
-    csf_binary: երկուական
-    csf_conditionals: conditionals
-    csf_nested_loops: nested Loops
-    csf_functions: գործառույթները
-    csf_variables: փոփոխականների
-    csf_for_loops: For Loops
-    csf_internet: Internet
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp_variables: փոփոխականների
-    csp_conditionals: conditionals
-    csp_functions: գործառույթները
-    csp_lists: ցուցակները
-    csp_loops: loops
-    csp_unit1_2020: CS Principles Unit 1
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
