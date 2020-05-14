@@ -16,7 +16,7 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  DEFAULT_BATCH_SIZE = 1000
+  DEFAULT_BATCH_SIZE = 10000
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   #
