@@ -42,6 +42,7 @@ describe('MicroBitBoard', () => {
         expect(board.prewiredComponents_.ledScreen).to.be.a('object');
         expect(board.prewiredComponents_.tempSensor).to.be.a('object');
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
+        expect(board.prewiredComponents_.compass).to.be.a('object');
         expect(board.prewiredComponents_.buttonA).to.be.a('object');
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
       });
