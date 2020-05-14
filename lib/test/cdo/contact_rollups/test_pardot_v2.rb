@@ -43,6 +43,20 @@ class PardotV2Test < Minitest::Test
     assert_equal [{'id' => pardot_id, 'email' => email}], yielded_result
   end
 
+  def test_build_prospect_query_url
+    # Create query to retrieve active prospects
+    assert_equal(
+      "#{PardotV2::PROSPECT_QUERY_URL}?output=bulk&sort_by=id&id_greater_than=0&fields=id,email",
+      PardotV2.build_prospect_query_url(0, %w(id email), nil, false)
+    )
+
+    # Create query to retrieve only deleted prospects
+    assert_equal(
+      "#{PardotV2::PROSPECT_QUERY_URL}?output=bulk&sort_by=id&id_greater_than=0&fields=id,email&deleted=true",
+      PardotV2.build_prospect_query_url(0, %w(id email), nil, true)
+    )
+  end
+
   def test_batch_create_prospects_single_contact
     contact = {email: 'crv2_test@domain.com', data: {opt_in: 1}}
 
@@ -281,16 +295,16 @@ class PardotV2Test < Minitest::Test
     tests = [
       {old_data: nil, new_data: {}, expected_delta: {}},
       {old_data: nil, new_data: {k1: 'v1'}, expected_delta: {k1: 'v1'}},
-      {old_data: {k1: 'v1'}, new_data: {}, expected_delta: {k1: nil}},
+      {old_data: {k1: 'v1'}, new_data: {}, expected_delta: {}},
       {old_data: {k1: 'v1'}, new_data: {k1: 'v1'}, expected_delta: {}},
       {old_data: {k1: 'v1'}, new_data: {k1: 'v1.1'}, expected_delta: {k1: 'v1.1'}},
-      {old_data: {k1: 'v1'}, new_data: {k2: 'v2'}, expected_delta: {k1: nil, k2: 'v2'}},
+      {old_data: {k1: 'v1'}, new_data: {k2: 'v2'}, expected_delta: {k2: 'v2'}},
       {old_data: {k1: nil}, new_data: {k2: 'v2'}, expected_delta: {k2: 'v2'}},
       {
-        old_data: {k1: 'v1', k2: 'v2', k3: nil},
-        new_data: {k1: 'v1.1', k4: 'v4'},
-        expected_delta: {k1: 'v1.1', k2: nil, k4: 'v4'}
-      },
+        old_data: {key1: 'v1', key2: 'v2', key3: nil},
+        new_data: {key1: 'v1.1', key2: 'v2', key4: 'v4'},
+        expected_delta: {key1: 'v1.1', key4: 'v4'}
+      }
     ]
 
     tests.each_with_index do |test, index|
@@ -298,6 +312,62 @@ class PardotV2Test < Minitest::Test
       assert_equal test[:expected_delta], delta, "Test index #{index} failed"
     end
   end
+
+  def test_delete_prospects_by_email_does_not_work_in_non_production
+    PardotV2.stubs(:retrieve_pardot_ids_by_email).returns([1])
+    PardotV2.expects(:post_with_auth_retry).never
+    PardotV2.delete_prospects_by_email('test@domain.com')
+  end
+
+  def test_delete_prospects_by_email_finds_matching_pardot_ids
+    email = 'test@domain.com'
+    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{email}"
+    pardot_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok" version="1.0">
+        <prospect>
+          <id>1</id>
+        </prospect>
+      </rsp>
+    XML
+
+    PardotV2.expects(:post_with_auth_retry).
+      once.with(read_prospect_url).returns(pardot_response)
+
+    # Requesting to delete Pardot prospects in a non-production environment will fail
+    refute PardotV2.delete_prospects_by_email(email)
+  end
+
+  def test_delete_prospects_by_email_sends_deletion_requests
+    email = 'test@domain.com'
+    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{email}"
+    pardot_response = create_xml_from_heredoc <<~XML
+      <rsp stat="ok" version="1.0">
+        <prospect>
+          <id>1</id>
+        </prospect>
+        <prospect>
+          <id>2</id>
+        </prospect>
+      </rsp>
+    XML
+
+    delete_prospect_1_url = "#{PardotV2::PROSPECT_DELETION_URL}/1"
+    delete_prospect_2_url = "#{PardotV2::PROSPECT_DELETION_URL}/2"
+    # Deletion requests are only sent in production environment
+    CDO.stubs(:rack_env).returns(:production)
+
+    PardotV2.expects(:post_with_auth_retry).
+      once.with(read_prospect_url).returns(pardot_response)
+    PardotV2.expects(:post_with_auth_retry).
+      once.with(delete_prospect_1_url)
+    PardotV2.expects(:post_with_auth_retry).
+      once.with(delete_prospect_2_url)
+
+    # Deletion should succeed since deletion requests are expected to sent without errors
+    assert PardotV2.delete_prospects_by_email(email)
+  end
+
+  private
 
   # @param str a heredoc string
   # @return Nokogiri::XML::Document
