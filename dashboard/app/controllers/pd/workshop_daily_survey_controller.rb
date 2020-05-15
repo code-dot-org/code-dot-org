@@ -76,6 +76,10 @@ module Pd
     # If survey has been already completed for the given day will redirect to thanks page.
     def new_daily_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      unless validate_enrolled(workshop)
+        return
+      end
+
       day = params[:day].to_i
 
       if day == 0 || workshop.sessions.size < day
@@ -83,7 +87,7 @@ module Pd
       end
 
       session = get_session_for_workshop_and_day(workshop, day)
-      unless validate_session_for_survey(session)
+      unless validate_session_for_survey(session, workshop, day)
         return
       end
 
@@ -98,6 +102,9 @@ module Pd
     # If the pre-survey has been already completed, will redirect to thanks page.
     def new_pre_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      unless validate_enrolled(workshop)
+        return
+      end
 
       survey_name = PRE_SURVEY_NAMES[workshop.subject]
       render_general_foorm(workshop, survey_name, 0, nil)
@@ -110,6 +117,9 @@ module Pd
     # If the post-survey has been already completed, will redirect to thanks page.
     def new_post_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      unless validate_enrolled(workshop)
+        return
+      end
 
       survey_name = POST_SURVEY_NAMES[workshop.subject]
       render_general_foorm(workshop, survey_name, nil, nil)
@@ -118,14 +128,6 @@ module Pd
     def render_general_foorm(workshop, survey_name, day, session)
       return render_404 unless survey_name
 
-      key_params = {
-        environment: Rails.env,
-        userId: current_user.id,
-        workshopId: workshop.id,
-        day: day,
-        sessionId: session&.id,
-      }
-
       if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
         current_user.id,
         workshop.id,
@@ -133,7 +135,8 @@ module Pd
         day,
         survey_name
       )
-        return redirect_general(key_params)
+        render :thanks
+        return
       end
 
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
@@ -532,8 +535,7 @@ module Pd
         return false
       end
 
-      unless workshop
-        render :not_enrolled
+      unless validate_enrolled(workshop)
         return false
       end
 
@@ -545,33 +547,38 @@ module Pd
       end
 
       if day > 0
-        if day == workshop.sessions.size
-          render :too_late
-          return false
-        end
         session = get_session_for_workshop_and_day(workshop, day)
-        unless session
-          render_404
-          return false
-        end
-        unless session.open_for_attendance? || day == workshop.sessions.size
-          render :too_late
-          return false
-        end
-        unless session.attendances.exists?(teacher: current_user)
-          render :no_attendance
-          return false
-        end
+        #unless session
+        #  render_404
+        #  return false
+        #end
+        #unless session.open_for_attendance? || day == workshop.sessions.size
+        #  render :too_late
+        #  return false
+        #end
+        #unless session.attendances.exists?(teacher: current_user)
+        #  render :no_attendance
+        #  return false
+        #end
+        return validate_session_for_survey(session, workshop, day)
       end
       return true
     end
 
-    def validate_session_for_survey(session)
+    def validate_enrolled(workshop)
+      unless workshop
+        render :not_enrolled
+        return false
+      end
+      return true
+    end
+
+    def validate_session_for_survey(session, workshop, day)
       unless session
         render_404
         return false
       end
-      unless session.open_for_attendance?
+      unless session.open_for_attendance? || day == workshop.sessions.size
         render :too_late
         return false
       end
