@@ -12,12 +12,13 @@ CHANGES_JSON = "/tmp/changes.json"
 def fetch_changes
   api_key = YAML.load_file(File.join(File.dirname(__FILE__), "..", "codeorg_credentials.yml"))["api_key"]
   project = Crowdin.new("codeorg", api_key)
-  codes = project.languages.map {|l| l["code"]}
+  languages = project.languages
   etags = JSON.parse(File.read(ETAG_JSON))
   changes = {}
 
-  codes.each_with_index do |code, i|
-    puts "#{code} (#{i}/#{codes.length})"
+  languages.each_with_index do |language, i|
+    code = language["code"]
+    puts "#{language['name']} (#{code}): #{i}/#{languages.length}"
     etags[code] ||= {}
     files = project.list_files
 
