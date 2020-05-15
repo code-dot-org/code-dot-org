@@ -106,7 +106,7 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_pre_survey'
-      assert_redirected_to action: 'thanks'
+      assert_thanks
     end
 
     test 'pre-workshop survey displays embedded JotForm when enrolled' do
@@ -1166,6 +1166,10 @@ module Pd
       assert_select 'h1', text: 'No Attendance'
       assert_select 'p', text:
         'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
+    end
+
+    def assert_thanks
+      assert_select '#thanks>h1', text: 'Thank you for submitting today’s survey.'
     end
 
     def assert_redirected_to_sign_in
