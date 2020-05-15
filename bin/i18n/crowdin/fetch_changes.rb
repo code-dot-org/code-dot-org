@@ -9,7 +9,7 @@ require_relative '../crowdin'
 ETAG_JSON = File.join(File.dirname(__FILE__), "etags.json")
 CHANGES_JSON = "/tmp/changes.json"
 
-def parallel_sync
+def fetch_changes
   api_key = YAML.load_file(File.join(File.dirname(__FILE__), "..", "codeorg_credentials.yml"))["api_key"]
   project = Crowdin.new("codeorg", api_key)
   codes = project.languages.map {|l| l["code"]}
@@ -43,4 +43,4 @@ def parallel_sync
   end
 end
 
-parallel_sync if __FILE__ == $0
+fetch_changes if __FILE__ == $0
