@@ -2,6 +2,7 @@ var BlocklyWrapper = function(blocklyInstance) {
   this.blockly_ = blocklyInstance;
   this.Msg = blocklyInstance.Msg;
   this.inject = this.blockly_.inject;
+  this.bindEvent_ = this.blockly_.bindEvent_;
 
   // Blockspace
   this.getMainBlockSpace = () => this.blockly_.mainBlockSpace;
@@ -13,6 +14,8 @@ var BlocklyWrapper = function(blocklyInstance) {
   this.Xml = this.blockly_.Xml;
   this.BlockSpace = this.blockly_.BlockSpace;
   this.findEmptyContainerBlock = this.blockly_.findEmptyContainerBlock;
+  this.getReadOnly = () => this.blockly_.readOnly;
+  this.setReadOnly = readOnly => (this.blockly_.readOnly = readOnly);
 
   // Code Generation
   this.Procedures = this.blockly_.Procedures;
@@ -22,6 +25,7 @@ var BlocklyWrapper = function(blocklyInstance) {
   this.JavaScript = this.blockly_.JavaScript;
 
   // Fields
+  this.BlockFieldHelper = this.blockly_.BlockFieldHelper;
   this.BlockValueType = this.blockly_.BlockValueType;
   this.FieldAngleDropdown = this.blockly_.FieldAngleDropdown;
   this.FieldAngleInput = this.blockly_.FieldAngleInput;

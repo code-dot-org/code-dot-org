@@ -337,10 +337,10 @@ describe('getUserBlocks_', function() {
       '</xml>'
     ];
 
-    var readOnly = Blockly.readOnly;
-    Blockly.readOnly = true;
+    var readOnly = Blockly.getReadOnly();
+    Blockly.setReadOnly(true);
     validateNumUserBlocks(testBlockXml.join(''), 3);
-    Blockly.readOnly = readOnly;
+    Blockly.setReadOnly(readOnly);
   });
 });
 
