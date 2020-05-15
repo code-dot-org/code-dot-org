@@ -1,4 +1,4 @@
-hideable_stages true
+hideable_lessons true
 
 stage 'Algorithms with Hill Harper'
 level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'
