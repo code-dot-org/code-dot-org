@@ -50,7 +50,6 @@ level 'CSD U3 Random Debug Grass_2020', progression: 'Skill Building'
 level 'CSD Games parameters practice_2020', progression: 'Practice'
 level 'CSD U3 Random Debug Cloud_2018_2020', progression: 'Assessment', assessment: true
 level 'CSD Games Parameters challenge_2020', progression: 'Challenges'
-level 'CSD U3 parameters shape scene_2020', progression: 'make a Shape Scene'
 
 stage 'Variables'
 level 'CSD U3L05 TFMD_2020', progression: 'Lesson Overview'
