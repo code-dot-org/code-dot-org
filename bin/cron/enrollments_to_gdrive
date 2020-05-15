@@ -3,57 +3,65 @@ require_relative '../../lib/cdo/only_one'
 exit unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/google_sheets_export'
+require 'cdo/google/sheet'
 
 #
-# Uses a Google Cloud service account to write summer workshop data for this year into
-# a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
-# by our programs team.
+# Uses a Google Cloud service account to write enrollment data for this year into
+# a spreadsheet in Google Drive (with permissions locked down to our organization)
+# in order to send packages to teachers attending 5-day workshops.
 #
-
-subjects = [
-  Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP,
-  Pd::SharedWorkshopConstants::SUBJECT_CSF_101,
-  Pd::SharedWorkshopConstants::SUBJECT_CSF_201
-]
 
 EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
 LATEST_WORKSHOP_START_DATE = Date.new(2020, 8, 31)
 
-workshops = []
+def update_tabs(sheet)
+  # Seed results array with a header row
+  results = [%w(teacher_email teacher_name workshop_id
+                workshop_start_date workshop_course regional_partner)]
 
-# The first row is an array of strings, one for each attribute name.
-workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
+  workshop_ids_this_year = Pd::Workshop.
+    where(subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
+    scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).
+    pluck(:id)
 
-# Subsequent rows are for each workshop.
-Pd::Workshop.where(subject: subjects).find_each do |w|
-  if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2020, 5, 15) && w.workshop_starting_date <= Date.new(2020, 8, 31)
-    workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
+  enrollments_this_year = Pd::Enrollment.
+    includes(:workshop).
+    where(pd_workshop_id: workshop_ids_this_year)
+
+  enrollments_this_year.find_each do |enrollment|
+    results << [
+      enrollment.email,
+      enrollment.first_name + ' ' + enrollment.last_name,
+      enrollment.workshop.id,
+      enrollment.workshop.workshop_starting_date.to_date,
+      enrollment.workshop.course,
+      enrollment.workshop.regional_partner&.name
+    ]
+  end
+
+  sheet.export(
+    sheet_name: 'enrollments',
+    rows: results
+  )
+end
+
+def notify_of_external_sharing(sheet)
+  if sheet.external_emails_with_access.present?
+    email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
+    error_msg = "Document containing PII information is shared to "\
+      "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
+      "Please check with PLC team that this is intentional!"
+
+    Honeybadger.notify error_msg
+    puts error_msg
   end
 end
 
-# Seed results array with a header row
-results = [%w(teacher_email teacher_name teacher_school workshop_id
-                  workshop_start_date workshop_course regional_partner)]
-workshop_ids_this_year = Pd::Workshop
-  .scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE)
-  .scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE)
-  .pluck(:id)
-enrollments_this_year = Pd::Enrollment.includes(:workshop).where(pd_workshop_id: workshop_ids_this_year)
-enrollments_this_year.find_each do |enrollment|
-  results << [
-    enrollment.email,
-    enrollment.first_name + ' ' + enrollment.last_name,
-    enrollment.school,
-    enrollment.workshop.id,
-    enrollment.workshop_starting_date,
-    enrollment.workshop.course,
-    enrollment.workshop.regional_partner&.name
-  ]
+def main
+  sheet = Google::Sheet.new '1Ne5hAh7Xu32EVsvJ_B_JKcymTU67HmSVckAWDogb24c'
+  update_tabs(sheet)
+  notify_of_external_sharing(sheet)
 end
 
-Google::Sheet.export(
-  document_key: '1Ne5hAh7Xu32EVsvJ_B_JKcymTU67HmSVckAWDogb24c',
-  sheet_name: 'enrollments',
-  rows: results
-)
+main
