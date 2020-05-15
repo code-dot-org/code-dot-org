@@ -1,10 +1,12 @@
 const SET_ARROW_BUTTONS_VISIBLE = 'arrowDisplay/SET_ARROW_BUTTONS_VISIBLE';
 const SET_ARROW_BUTTONS_HIDDEN = 'arrowDisplay/SET_ARROW_BUTTONS_HIDDEN';
 const SET_ARROW_BUTTONS_DISABLED = 'arrowDisplay/SET_ARROW_BUTTONS_DISABLED';
+const DISMISS_SWIPE_OVERLAY = 'arrowDisplay/DISMISS_SWIPE_OVERLAY';
 
 const initialState = {
   buttonsAreVisible: false,
-  buttonsAreDisabled: true
+  buttonsAreDisabled: true,
+  swipeOverlayHasBeenDismissed: false
 };
 
 export default function arrowDisplay(state = initialState, action) {
@@ -24,6 +26,11 @@ export default function arrowDisplay(state = initialState, action) {
         ...state,
         buttonsAreDisabled: action.isDisabled
       };
+    case DISMISS_SWIPE_OVERLAY:
+      return {
+        ...state,
+        swipeOverlayHasBeenDismissed: true
+      };
     default:
       return state;
   }
@@ -39,4 +46,8 @@ export function hideArrowButtons() {
 
 export function setArrowButtonDisabled(isDisabled) {
   return {type: SET_ARROW_BUTTONS_DISABLED, isDisabled};
+}
+
+export function dismissSwipeOverlay() {
+  return {type: DISMISS_SWIPE_OVERLAY};
 }

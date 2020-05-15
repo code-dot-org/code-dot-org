@@ -19,7 +19,11 @@ var Hammer = require('../third-party/hammer');
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
-import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 var SquareType = tiles.SquareType;
 
@@ -502,6 +506,11 @@ Bounce.onTick = function() {
       Bounce.keyState[KeyCodes[key]] &&
       Bounce.keyState[KeyCodes[key]] === 'keydown'
     ) {
+      let store = getStore();
+      if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+        trackEvent('Research', 'HideSwipeOverlay', 'hide-keyPress');
+        store.dispatch(dismissSwipeOverlay());
+      }
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
@@ -670,6 +679,11 @@ Bounce.onKey = function(e) {
 };
 
 Bounce.onArrowButtonDown = function(e, idBtn) {
+  let store = getStore();
+  if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+    trackEvent('Research', 'HideSwipeOverlay', 'hide-buttonPress');
+    store.dispatch(dismissSwipeOverlay());
+  }
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.DOWN;
   e.preventDefault(); // Stop normal events so we see mouseup later.

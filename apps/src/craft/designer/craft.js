@@ -27,7 +27,8 @@ import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {
   showArrowButtons,
-  hideArrowButtons
+  hideArrowButtons,
+  dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
@@ -463,6 +464,11 @@ const directionToFacing = {
 };
 
 Craft.onArrowButtonDown = function(e, btn) {
+  let store = getStore();
+  if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+    trackEvent('Research', 'HideSwipeOverlay', 'hide-buttonPress');
+    store.dispatch(dismissSwipeOverlay());
+  }
   Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
   e.preventDefault(); // Stop normal events so we see mouseup later.
 };
@@ -703,6 +709,18 @@ Craft.levelInitialized = function() {
 Craft.runButtonClick = function() {
   if (!Craft.phaserLoaded()) {
     return;
+  }
+
+  let store = getStore();
+  if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+    window.addEventListener('keydown', function hideOverlay(e) {
+      // TODO: Handle IE11
+      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) {
+        trackEvent('Research', 'HideSwipeOverlay', 'hide-keyPress');
+        store.dispatch(dismissSwipeOverlay());
+        window.removeEventListener('keydown', hideOverlay);
+      }
+    });
   }
 
   if (Craft.level.usePlayer) {
