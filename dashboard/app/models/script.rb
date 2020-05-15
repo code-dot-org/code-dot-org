@@ -122,7 +122,7 @@ class Script < ActiveRecord::Base
   end
 
   serialized_attrs %w(
-    hideable_stages
+    hideable_lessons
     peer_reviews_to_complete
     professional_learning_course
     redirect_to
@@ -1405,7 +1405,8 @@ class Script < ActiveRecord::Base
       is_stable: is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
-      hideable_stages: hideable_stages?,
+      hideable_stages: hideable_lessons?, # TODO: remove after corresponding js code is changed and not cached anymore
+      hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
@@ -1568,8 +1569,12 @@ class Script < ActiveRecord::Base
   # Returns a property hash that always has the same keys, even if those keys were missing
   # from the input. This ensures that values can be un-set via seeding or the script edit UI.
   def self.build_property_hash(script_data)
+    # When adding a key, add it to the appropriate list based on whether you want it defaulted to nil or false.
+    # The existing keys in this list may not all be in the right place theoretically, but when adding a new key,
+    # try to put it in the appropriate place.
     nonboolean_keys = [
-      :hideable_stages,
+      :hideable_lessons,
+      :hideable_stages, # TODO: remove after corresponding dependencies are updated to use hideable_lessons
       :professional_learning_course,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
