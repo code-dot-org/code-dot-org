@@ -134,11 +134,16 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   handleAddVariant = () => {
-    this.props.addVariant(this.props.lessonPosition, this.props.level.position);
+    this.props.addVariant(
+      this.props.lessonGroupPosition,
+      this.props.lessonPosition,
+      this.props.level.position
+    );
   };
 
   handleRemoveVariant = levelId => {
     this.props.removeVariant(
+      this.props.lessonGroupPosition,
       this.props.lessonPosition,
       this.props.level.position,
       levelId
@@ -147,6 +152,7 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   handleActiveVariantChanged = id => {
     this.props.setActiveVariant(
+      this.props.lessonGroupPosition,
       this.props.lessonPosition,
       this.props.level.position,
       id
@@ -154,21 +160,25 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   handleFieldChange = (field, event) => {
-    this.props.setField(this.props.lessonPosition, this.props.level.position, {
-      [field]: event.target.value
-    });
-  };
-
-  handleProgressionChange = e => {
-    this.props.setField(this.props.lessonPosition, this.props.level.position, {
-      progression: e.target.value
-    });
+    this.props.setField(
+      this.props.lessonGroupPosition,
+      this.props.lessonPosition,
+      this.props.level.position,
+      {
+        [field]: event.target.value
+      }
+    );
   };
 
   handleCheckboxChange = field => {
-    this.props.setField(this.props.lessonPosition, this.props.level.position, {
-      [field]: !this.props.level[field]
-    });
+    this.props.setField(
+      this.props.lessonGroupPosition,
+      this.props.lessonPosition,
+      this.props.level.position,
+      {
+        [field]: !this.props.level[field]
+      }
+    );
   };
 
   render() {
@@ -336,17 +346,17 @@ export default connect(
     chooseLevel(groupPos, lessonPos, levelPos, variant, levelId) {
       dispatch(chooseLevel(groupPos, lessonPos, levelPos, variant, levelId));
     },
-    addVariant(lesson, level) {
-      dispatch(addVariant(lesson, level));
+    addVariant(groupPos, lessonPos, levelPos) {
+      dispatch(addVariant(groupPos, lessonPos, levelPos));
     },
-    removeVariant(lesson, level, levelId) {
-      dispatch(removeVariant(lesson, level, levelId));
+    removeVariant(groupPos, lessonPos, levelPos, levelId) {
+      dispatch(removeVariant(groupPos, lessonPos, levelPos, levelId));
     },
-    setActiveVariant(lesson, level, id) {
-      dispatch(setActiveVariant(lesson, level, id));
+    setActiveVariant(groupPos, lessonPos, levelPos, id) {
+      dispatch(setActiveVariant(groupPos, lessonPos, levelPos, id));
     },
-    setField(lesson, level, modifier) {
-      dispatch(setField(lesson, level, modifier));
+    setField(groupPos, lessonPos, levelPos, modifier) {
+      dispatch(setField(groupPos, lessonPos, levelPos, modifier));
     }
   })
 )(UnconnectedLevelTokenDetails);
