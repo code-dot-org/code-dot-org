@@ -504,7 +504,7 @@ Dashboard::Application.routes.draw do
     post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
-    get 'workshop_survey/foorm/day/:day', to: 'workshop_daily_survey#new_general_foorm'
+    get 'workshop_daily_survey/day/:day', to: 'workshop_daily_survey#new_daily_foorm'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'

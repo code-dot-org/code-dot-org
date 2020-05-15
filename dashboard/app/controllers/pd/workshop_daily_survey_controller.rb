@@ -3,6 +3,7 @@ module Pd
     include WorkshopConstants
     include JotForm::EmbedHelper
     include WorkshopSurveyConstants
+    include WorkshopSurveyFoormConstants
 
     # The POST submit route will be redirected to from JotForm, after form submission
     skip_before_action :verify_authenticity_token, only: %w(submit_general submit_facilitator)
@@ -67,27 +68,28 @@ module Pd
     end
 
     # General workshop daily survey using foorm system.
-    # GET '/pd/workshop_survey/foorm/day/:day'
-    # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
+    # GET '/pd/workshop_daily_survey/day/:day?enrollmentCode=code'
+    # Enrollment code is an optional parameter, otherwise will show most recent workshop.
+    # Accepts any day greater than 0 and less than or equal to the number of sessions in the workshop
+    # (pre and post surveys should use the pre-survey and post-survey routes, respectively).
     #
-    # Currently only generates a day 0 survey, any other day will redirect to a 404.
-    # If survey has been completed already will redirect to thanks page.
-    def new_general_foorm
+    # If survey has been already completed for the given day will redirect to thanks page.
+    def new_daily_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       day = params[:day].to_i
-      # TODO: extract day 5 out into post-survey once have facilitator surveys (so can auto-redirect)
-      unless [0, 5].include?(day)
+
+      if day == 0 || workshop.sessions.size < day
         return render_404
       end
 
-      unless day == 5 || validate_new_general_parameters(workshop)
+      session = get_session_for_workshop_and_day(workshop, day)
+      unless validate_session_for_survey(session)
         return
       end
 
-      session = get_session_for_workshop_and_day(workshop, day)
+      survey_name = DAILY_SURVEY_NAMES[workshop.subject]
+      return render_404 unless survey_name
 
-      # once we have surveys per day parameterize this on day number
-      survey_name = "surveys/pd/workshop_daily_survey_day_#{day}"
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
@@ -96,7 +98,13 @@ module Pd
         sessionId: session&.id,
       }
 
-      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
+      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
+        current_user.id,
+        workshop.id,
+        session&.id,
+        day,
+        survey_name
+      )
         return redirect_general(key_params)
       end
 
@@ -108,7 +116,7 @@ module Pd
           formName: survey_name,
           formVersion: latest_version,
           surveyData: get_foorm_survey_data(workshop),
-          submitApi: "/api/v1/pd/foorm/workshop_survey_submission",
+          submitApi: FOORM_SUBMIT_API,
           submitParams: {
             user_id: current_user.id,
             pd_session_id: session&.id,
@@ -117,6 +125,8 @@ module Pd
           }
         }.to_json
       }
+
+      render :new_general_foorm
     end
 
     # POST /pd/workshop_survey/submit
@@ -298,7 +308,7 @@ module Pd
         return render :not_enrolled if enrolled_workshops.blank?
       end
 
-      survey_name = "surveys/pd/workshop_csf_intro_post"
+      survey_name = POST_SURVEY_NAMES[SUBJECT_CSF_101]
 
       # Find the workshop attended.
       attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
@@ -453,7 +463,7 @@ module Pd
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
-          submitApi: "/api/v1/pd/foorm/workshop_survey_submission",
+          submitApi: FOORM_SUBMIT_API,
           submitParams: {
             user_id: current_user.id,
             pd_workshop_id: workshop.id
@@ -507,19 +517,28 @@ module Pd
       end
 
       if day > 0
-        session = get_session_for_workshop_and_day(workshop, day)
-        unless session
-          render_404
-          return false
-        end
-        unless session.open_for_attendance? || day == workshop.sessions.size
+        if day == workshop.sessions.size
           render :too_late
           return false
         end
-        unless session.attendances.exists?(teacher: current_user)
-          render :no_attendance
-          return false
-        end
+        session = get_session_for_workshop_and_day(workshop, day)
+        return validate_session_for_survey(session)
+      end
+      return true
+    end
+
+    def validate_session_for_survey(session)
+      unless session
+        render_404
+        return false
+      end
+      unless session.open_for_attendance?
+        render :too_late
+        return false
+      end
+      unless session.attendances.exists?(teacher: current_user)
+        render :no_attendance
+        return false
       end
       return true
     end
