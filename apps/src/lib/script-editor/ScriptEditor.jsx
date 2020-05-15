@@ -281,7 +281,7 @@ export default class ScriptEditor extends React.Component {
         <label>
           Hideable Lessons
           <input
-            name="hideable_stages"
+            name="hideable_lessons"
             type="checkbox"
             defaultChecked={this.props.hideableLessons}
             style={styles.checkbox}
