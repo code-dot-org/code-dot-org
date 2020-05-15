@@ -112,25 +112,38 @@ class ContactRollupsPardotMemory < ApplicationRecord
     end
   end
 
-  def self.create_new_pardot_prospects
+  def self.create_new_pardot_prospects(dry_run)
+    record_count = 0
+
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
-    pardot_writer = PardotV2.new
+    pardot_writer = PardotV2.new dry_run
     ActiveRecord::Base.connection.exec_query(query_new_contacts).each do |record|
+      record_count += 1
       data = JSON.parse(record['data']).deep_symbolize_keys
       submissions, errors = pardot_writer.batch_create_prospects record['email'], data
-      save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+      if submissions.present? && !dry_run
+        save_sync_results(submissions, errors, Time.now.utc)
+      end
     end
 
     # There could be prospects left in the batch because batch size is not yet big enough
     # to trigger a Pardot request. Sends the remaining of the batch to Pardot now.
     submissions, errors = pardot_writer.batch_create_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+
+    if submissions.present? && !dry_run
+      save_sync_results(submissions, errors, Time.now.utc)
+    end
+
+    puts "[Total] #{record_count} new prospects to be added" if dry_run
   end
 
-  def self.update_pardot_prospects
-    pardot_writer = PardotV2.new
+  def self.update_pardot_prospects(dry_run)
+    record_count = 0
+    pardot_writer = PardotV2.new dry_run
     ActiveRecord::Base.connection.exec_query(query_updated_contacts).each do |record|
+      record_count += 1
+
       # If pardot_id has changed since the last data sync, we should assume that
       # Pardot prospect data is currently empty and re-sync all contact data.
       old_prospect_data =
@@ -145,11 +158,19 @@ class ContactRollupsPardotMemory < ApplicationRecord
         old_prospect_data,
         new_contact_data
       )
-      save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+
+      if submissions.present? && !dry_run
+        save_sync_results(submissions, errors, Time.now.utc)
+      end
     end
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
+
+    if submissions.present? && !dry_run
+      save_sync_results(submissions, errors, Time.now.utc)
+    end
+
+    puts "[Total] #{record_count} prospects to be updated" if dry_run
   end
 
   def self.query_new_contacts
