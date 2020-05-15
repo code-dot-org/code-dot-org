@@ -1,4 +1,5 @@
 name 'CSD Games Parameters challenge_2020'
+editor_experiment ''
 display_name 'Shapes and Parameters Challenges'
 description 'Check out one or more of these extra blocks that you can use to make your pictures more interesting.'
 
@@ -7,3 +8,4 @@ level 'CSD U3 shapes polygon_pilot'
 level 'CSD U3 shapes_pilot'
 level 'CSD U3 shapes line_pilot'
 level 'CSD U3 shapes arc_pilot'
+level 'CSD U3 parameters shape scene_2020'
