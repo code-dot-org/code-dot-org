@@ -1,7 +1,7 @@
 hideable_stages true
 project_widget_visible true
 student_detail_progress_view true
-stage_extras_available true
+lesson_extras_available true
 has_verified_resources true
 has_lesson_plan true
 is_stable true
