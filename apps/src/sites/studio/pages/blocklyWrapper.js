@@ -3,6 +3,8 @@ var BlocklyWrapper = function(blocklyInstance) {
   this.Msg = blocklyInstance.Msg;
   this.inject = this.blockly_.inject;
   this.bindEvent_ = this.blockly_.bindEvent_;
+  this.assetUrl = this.blockly_.assetUrl;
+  this.setAssetUrl = assetUrlFn => (this.blockly_.assetUrl = assetUrlFn);
 
   // Blockspace
   this.getMainBlockSpace = () => this.blockly_.mainBlockSpace;
@@ -34,6 +36,8 @@ var BlocklyWrapper = function(blocklyInstance) {
   this.FieldColour = this.blockly_.FieldColour;
   this.FieldDropdown = this.blockly_.FieldDropdown;
   this.FieldIcon = this.blockly_.FieldIcon;
+  this.FieldImage = this.blockly_.FieldImage;
+  this.FieldImageDropdown = this.blockly_.FieldImageDropdown;
   this.FieldLabel = this.blockly_.FieldLabel;
   this.FieldParameter = this.blockly_.FieldParameter;
   this.FieldRectangularDropdown = this.blockly_.FieldRectangularDropdown;

@@ -45,7 +45,7 @@ function renderBlock(element) {
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
-  Blockly.assetUrl = assetUrl;
+  Blockly.setAssetUrl(assetUrl);
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
   Blockly.typeHints = true;
   Blockly.Css.inject(document);

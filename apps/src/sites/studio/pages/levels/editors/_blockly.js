@@ -7,7 +7,7 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
 if (window.Blockly && !data.uses_droplet) {
-  window.Blockly.assetUrl = path => `/assets/${path}`;
+  window.Blockly.setAssetUrl(path => `/assets/${path}`);
   Blockly.Css.inject(document);
   const appBlocks = require('@cdo/apps/' + data.app + '/blocks');
   const skinsModule = require('@cdo/apps/' + data.app + '/skins');

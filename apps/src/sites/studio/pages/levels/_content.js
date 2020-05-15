@@ -9,7 +9,7 @@ import commonBlocks from '@cdo/apps/blocksCommon';
 $(document).ready(() => {
   // Load app specific Blockly blocks. This will enable level creators to write
   // Blockly XML and render the blocks directly in the level text.
-  Blockly.assetUrl = assetUrl;
+  Blockly.setAssetUrl(assetUrl);
   Blockly.Css.inject(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
