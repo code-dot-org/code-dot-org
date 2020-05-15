@@ -55,7 +55,11 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -1100,6 +1104,13 @@ var setSvgText = (Studio.setSvgText = function(opts) {
  *  machine for consumption by the student's event-handling code.
  */
 function callHandler(name, allowQueueExtension, extraArgs = []) {
+  if (['when-up', 'when-down', 'when-left', 'when-right'].includes(name)) {
+    let store = getStore();
+    if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+      trackEvent('Research', 'HideSwipeOverlay', 'hide-buttonKeyPress');
+      store.dispatch(dismissSwipeOverlay());
+    }
+  }
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
