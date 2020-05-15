@@ -12,6 +12,7 @@ import themeValues from '../themeValues';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
+import i18n from '@cdo/applab/locale';
 
 class PhotoChooserProperties extends React.Component {
   static propTypes = {
@@ -118,8 +119,8 @@ class PhotoChooserEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const clickName = 'Change';
-    const clickDescription = 'Triggered when a photo is selected.';
+    const clickName = i18n.designElementPhotoSelectClickName();
+    const clickDescription = i18n.designElementPhotoSelectClickDescription();
 
     return (
       <div id="eventRowContainer">
