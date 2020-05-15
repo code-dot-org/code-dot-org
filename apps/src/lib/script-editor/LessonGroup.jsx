@@ -82,7 +82,7 @@ class LessonGroup extends Component {
   handleAddLesson = lessonGroupPosition => {
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
-      this.props.addLesson(newLessonName, lessonGroupPosition);
+      this.props.addLesson(lessonGroupPosition, newLessonName);
     }
   };
 
