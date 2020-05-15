@@ -1,2 +1,4 @@
 import Blockly from '@code-dot-org/blockly';
-window.Blockly = Blockly;
+import BlocklyWrapper from './blocklyWrapper';
+
+window.Blockly = new BlocklyWrapper(Blockly);
