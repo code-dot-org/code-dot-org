@@ -356,6 +356,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'can set lesson_extras to TRUE or FALSE during creation' do
+    sign_in @teacher
+    [true, false].each do |desired_value|
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        lesson_extras: desired_value,
+      }
+
+      assert_equal desired_value, returned_json['lesson_extras']
+      assert_equal desired_value, returned_section.stage_extras
+    end
+  end
+
   test 'default stage_extras value is FALSE' do
     sign_in @teacher
     post :create, params: {
@@ -584,6 +597,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(false, section_with_script.stage_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
+
+    post :update, params: {
+      id: section_with_script.id,
+      lesson_extras: true,
+    }
+    section_with_script = Section.find(section_with_script.id)
+    assert_equal(true, section_with_script.stage_extras)
   end
 
   test "update: name is ignored if empty or all whitespace" do
