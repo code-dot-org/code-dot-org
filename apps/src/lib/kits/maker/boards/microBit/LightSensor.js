@@ -5,6 +5,8 @@ export default class LightSensor extends EventEmitter {
   constructor(board) {
     super();
     this.threshold = 0;
+    this.rangeMin = 0;
+    this.rangeMax = 0;
     this.currentReading = 0;
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
@@ -27,7 +29,9 @@ export default class LightSensor extends EventEmitter {
     Object.defineProperties(this, {
       value: {
         get: function() {
-          return this.board.mb.analogChannel[sensor_channels.lightSensor];
+          let ratio =
+            this.board.mb.analogChannel[sensor_channels.lightSensor] / 255;
+          return this.rangeMin + ratio * (this.rangeMax - this.rangeMin);
         }
       },
       threshold: {
@@ -50,6 +54,8 @@ export default class LightSensor extends EventEmitter {
   //TODO
   getAveragedValue() {}
 
-  //ToDo
-  setThreshold() {}
+  setThreshold(min, max) {
+    this.rangeMin = min;
+    this.rangeMax = max;
+  }
 }
