@@ -250,7 +250,8 @@ class Section < ActiveRecord::Base
       numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
-      stage_extras: stage_extras,
+      stage_extras: stage_extras, # TODO: remove after corresponding js change has been deployed
+      lesson_extras: stage_extras,
       pairing_allowed: pairing_allowed,
       autoplay_enabled: autoplay_enabled,
       sharing_disabled: sharing_disabled?,
