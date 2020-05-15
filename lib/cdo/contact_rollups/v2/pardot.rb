@@ -29,10 +29,14 @@ class PardotV2
     state: {field: :db_State},
   }.freeze
 
-  def initialize
+  def initialize(dry_run)
     @new_prospects = []
     @updated_prospects = []
     @updated_prospect_deltas = []
+
+    # Instance variables relevant for dry runs
+    @dry_run = dry_run
+    @dry_run_batches_built = []
   end
 
   # Retrieves new (email, Pardot ID) mappings from Pardot
@@ -114,13 +118,13 @@ class PardotV2
     prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
 
-    process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
+    process_batch BATCH_CREATE_URL, @new_prospects, eager_submit, 'create'
   end
 
   # Immediately batch-create the remaining prospects in Pardot.
   # @return [Array<Array>] @see process_batch method
   def batch_create_remaining_prospects
-    process_batch BATCH_CREATE_URL, @new_prospects, true
+    process_batch BATCH_CREATE_URL, @new_prospects, true, 'create'
   end
 
   # Compiles a batch of prospects and batch-update them in Pardot when batch size
@@ -141,12 +145,12 @@ class PardotV2
     return [], [] unless delta.present?
 
     email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    prospect = new_prospect_data.merge email_pardot_id
+    prospect = email_pardot_id.merge new_prospect_data
     @updated_prospects << prospect
-    prospect_delta = delta.merge email_pardot_id
+    prospect_delta = email_pardot_id.merge delta
     @updated_prospect_deltas << prospect_delta
 
-    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit, 'update'
     return [], [] unless delta_submissions.present?
 
     # As an optimization, we only send the deltas to Pardot. However, as far as
@@ -159,7 +163,7 @@ class PardotV2
   # Immediately batch-update the remaining prospects in Pardot.
   # @return [Array<Array>] @see process_batch method
   def batch_update_remaining_prospects
-    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true, 'update'
     return [], [] unless delta_submissions.present?
 
     full_submissions = @updated_prospects
@@ -176,8 +180,9 @@ class PardotV2
   # @param [String] api_endpoint
   # @param [Array<Hash>] prospects
   # @param [Boolean] eager_submit if is true, triggers submitting request immediately
+  # @param [String] batch is to create new prospects ('create') or update existing ones ('update')
   # @return [Array<Array>] two arrays, one for all submitted prospects and one for Pardot errors
-  def process_batch(api_endpoint, prospects, eager_submit)
+  def process_batch(api_endpoint, prospects, eager_submit, batch_type)
     return [], [] unless prospects.present?
 
     submissions = []
@@ -185,9 +190,22 @@ class PardotV2
     url = self.class.build_batch_url api_endpoint, prospects
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      #   Use an instance variable to remember the number of failures.
-      errors = self.class.submit_batch_request api_endpoint, prospects
+      if @dry_run
+        unless @dry_run_batches_built.include? batch_type
+          puts "[Sample Batch] Prospects to sync to Pardot: #{prospects.length}"
+          puts "[Sample Batch] Query string:\n#{url}"
+          puts '[Sample Batch] Contacts to be added:'
+          prospects.each do |prospect|
+            puts prospect
+          end
+
+          @dry_run_batches_built << batch_type
+        end
+      else
+        # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
+        #   Use an instance variable to remember the number of failures.
+        errors = self.class.submit_batch_request api_endpoint, prospects
+      end
       submissions = prospects.clone
       prospects.clear
     end
