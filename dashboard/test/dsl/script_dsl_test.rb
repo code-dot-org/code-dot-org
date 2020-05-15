@@ -14,7 +14,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     wrapup_video: nil,
     login_required: false,
     professional_learning_course: nil,
-    hideable_stages: false,
+    hideable_lessons: false,
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
@@ -238,9 +238,9 @@ endvariants
     assert_equal expected, output
   end
 
-  test 'can set hideable_stages' do
+  test 'can set hideable_lessons' do
     input_dsl = <<~DSL
-      hideable_stages 'true'
+      hideable_lessons 'true'
 
       stage 'Lesson1'
       level 'Level 1'
@@ -248,7 +248,7 @@ endvariants
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal true, output[:hideable_stages]
+    assert_equal true, output[:hideable_lessons]
   end
 
   test 'can set student_detail_progress_view' do

@@ -18,7 +18,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @custom_script = create(:script, name: 'laurel', hideable_stages: true)
+    @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_stage_1 = create(:lesson, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
     @custom_stage_2 = create(:lesson, script: @custom_script, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
     @custom_stage_3 = create(:lesson, script: @custom_script, name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
@@ -1371,7 +1371,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     section = put_student_in_section(student, teacher, @custom_script)
     stage1 = @custom_script.lessons[0]
-    assert @custom_script.hideable_stages
+    assert @custom_script.hideable_lessons
 
     # start with no hidden stages
     assert_equal 0, SectionHiddenStage.where(section_id: section.id).length
@@ -1400,7 +1400,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in teacher
 
     section = put_student_in_section(student, teacher, @custom_script)
-    assert @custom_script.hideable_stages
+    assert @custom_script.hideable_lessons
 
     # start with no hidden scripts
     assert_equal 0, SectionHiddenScript.where(section_id: section.id).length
@@ -1419,8 +1419,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal 0, SectionHiddenScript.where(section_id: section.id).length
   end
 
-  test "teacher can't hide stages if script has hideable_stages false" do
-    script = create(:script, hideable_stages: false)
+  test "teacher can't hide stages if script has hideable_lessons false" do
+    script = create(:script, hideable_lessons: false)
     stage = create(:lesson, script: script)
 
     teacher = create :teacher
@@ -1428,7 +1428,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in teacher
 
     section = put_student_in_section(student, teacher, script)
-    refute script.hideable_stages
+    refute script.hideable_lessons
 
     post :toggle_hidden, params: {
       script_id: script.id,
@@ -1448,7 +1448,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     section = put_student_in_section(student, other_teacher, @custom_script)
     stage1 = @custom_script.lessons[0]
-    assert @custom_script.hideable_stages
+    assert @custom_script.hideable_lessons
 
     post :toggle_hidden, params: {
       script_id: @custom_script.id,
