@@ -165,7 +165,7 @@ export default class SmallFooter extends React.Component {
       },
       copyrightScrollArea: {
         maxHeight: this.props.phoneFooter ? 210 : undefined,
-        marginBottom: this.state.baseHeight
+        marginBottom: this.state.baseHeight - 1
       },
       moreMenu: {
         display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
