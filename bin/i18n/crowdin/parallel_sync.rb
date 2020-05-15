@@ -6,7 +6,7 @@ require 'yaml'
 
 require_relative '../crowdin'
 
-ETAG_JSON = "/tmp/etags.json"
+ETAG_JSON = File.join(File.dirname(__FILE__), "etags.json")
 CHANGES_JSON = "/tmp/changes.json"
 
 def parallel_sync
