@@ -65,6 +65,10 @@ class Section < ActiveRecord::Base
   has_many :section_hidden_stages
   has_many :section_hidden_scripts
 
+  # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
+  # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
+  alias_attribute :lesson_extras, :stage_extras
+
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
     LOGIN_TYPE_EMAIL = 'email'.freeze,

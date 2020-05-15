@@ -352,7 +352,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       }
 
       assert_equal desired_value, returned_json['stage_extras']
-      assert_equal desired_value, returned_section.stage_extras
+      assert_equal desired_value, returned_section.lesson_extras
     end
   end
 
@@ -363,7 +363,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     }
 
     assert_equal false, returned_json['stage_extras']
-    assert_equal false, returned_section.stage_extras
+    assert_equal false, returned_section.lesson_extras
   end
 
   test 'cannot set stage_extras to an invalid value' do
@@ -376,7 +376,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # TODO: Better to fail here?
 
     assert_equal true, returned_json['stage_extras']
-    assert_equal true, returned_section.stage_extras
+    assert_equal true, returned_section.lesson_extras
   end
 
   test 'can set pairing_allowed to TRUE or FALSE during creation' do
@@ -581,7 +581,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
     assert_equal("K", section_with_script.grade)
-    assert_equal(false, section_with_script.stage_extras)
+    assert_equal(false, section_with_script.lesson_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
   end
