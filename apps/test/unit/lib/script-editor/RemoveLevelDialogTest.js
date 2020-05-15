@@ -15,6 +15,21 @@ describe('RemoveLevelDialog', () => {
     handleClose = sinon.spy();
     removeLevel = sinon.spy();
     props = {
+      lessonGroup: {
+        position: 1,
+        lessons: [
+          {
+            position: 3,
+            levels: [
+              {
+                position: 1,
+                activeId: 22,
+                ids: [22]
+              }
+            ]
+          }
+        ]
+      },
       lesson: {
         position: 3,
         levels: [
@@ -49,7 +64,7 @@ describe('RemoveLevelDialog', () => {
     const deleteButton = body.find('button').at(1);
     expect(deleteButton.text()).to.include('Delete');
     deleteButton.simulate('click');
-    expect(removeLevel).to.have.been.calledWith(3, 1);
+    expect(removeLevel).to.have.been.calledWith(1, 3, 1);
     expect(handleClose).to.have.been.calledOnce;
   });
   it('does not remove level on cancel', () => {
