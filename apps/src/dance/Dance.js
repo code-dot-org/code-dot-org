@@ -469,7 +469,7 @@ Dance.prototype.onPuzzleComplete = function(result, message) {
   const levelComplete = result;
 
   // We're using blockly, report the program as xml.
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   let program = encodeURIComponent(Blockly.Xml.domToText(xml));
 
   if (this.testResults >= TestResults.FREE_PLAY) {
@@ -535,7 +535,7 @@ Dance.prototype.runButtonClick = async function() {
   //Log song count in Dance Lab
   trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
 
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   this.studioApp_.attempts++;
 
   try {

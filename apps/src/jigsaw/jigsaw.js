@@ -114,7 +114,7 @@ var drawMap = function() {
   visualizationColumn.style.display = 'none';
 
   if (level.ghost) {
-    var blockCanvas = Blockly.mainBlockSpace.getCanvas();
+    var blockCanvas = Blockly.getMainBlockSpace().getCanvas();
     Blockly.createSvgElement(
       'rect',
       {
@@ -176,7 +176,7 @@ Jigsaw.init = function(config) {
     studioApp().init(config);
 
     document.getElementById('runButton').style.display = 'none';
-    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
+    Jigsaw.successListener = Blockly.getMainBlockSpaceEditor().addChangeListener(
       function(evt) {
         checkForSuccess();
       }
@@ -264,7 +264,7 @@ Jigsaw.onPuzzleComplete = function() {
     studioApp().playAudio('failure');
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Jigsaw.waitingForReport = true;

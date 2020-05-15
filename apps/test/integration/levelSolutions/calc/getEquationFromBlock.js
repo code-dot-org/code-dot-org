@@ -34,25 +34,27 @@ function validateGeneratedEquation(
 ) {
   blockIndex = blockIndex || 0;
   // Clear existing blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
-    // use b.blockSpace as an indicator for whether block has already
-    // been disposed
-    if (b.blockSpace) {
-      b.dispose();
-    }
-  });
+  Blockly.getMainBlockSpace()
+    .getTopBlocks()
+    .forEach(function(b) {
+      // use b.blockSpace as an indicator for whether block has already
+      // been disposed
+      if (b.blockSpace) {
+        b.dispose();
+      }
+    });
 
   studioApp().loadBlocks(blockXml);
 
   if (blockIndex === 0) {
-    assert.equal(Blockly.mainBlockSpace.getTopBlocks().length, 1);
+    assert.equal(Blockly.getMainBlockSpace().getTopBlocks().length, 1);
   } else {
     assert(
-      Blockly.mainBlockSpace.getTopBlocks().length > blockIndex,
-      'actual: ' + Blockly.mainBlockSpace.getTopBlocks().length
+      Blockly.getMainBlockSpace().getTopBlocks().length > blockIndex,
+      'actual: ' + Blockly.getMainBlockSpace().getTopBlocks().length
     );
   }
-  var block = Blockly.mainBlockSpace.getTopBlocks()[blockIndex];
+  var block = Blockly.getMainBlockSpace().getTopBlocks()[blockIndex];
   var equation = getEquationFromBlock(block);
 
   if (expectedEquation === null) {

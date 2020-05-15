@@ -51,10 +51,10 @@ const blockXml = `<xml>
 </xml>`;
 
 Blockly.Xml.domToBlockSpace(
-  Blockly.mainBlockSpace,
+  Blockly.getMainBlockSpace(),
   Blockly.Xml.textToDom(blockXml)
 );
-const block = Blockly.mainBlockSpace.getTopBlocks()[0];
+const block = Blockly.getMainBlockSpace().getTopBlocks()[0];
 const name = getInput('name').value;
 
 if (name) {
@@ -69,7 +69,7 @@ const childBlock = Blockly.Xml.textToDom(
   '<xml>' + getInput('stack').value + '</xml>'
 ).firstChild;
 if (childBlock) {
-  const stack = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, childBlock);
+  const stack = Blockly.Xml.domToBlock(Blockly.getMainBlockSpace(), childBlock);
   block.attachBlockToInputName(stack, 'STACK');
 }
 

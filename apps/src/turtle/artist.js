@@ -386,7 +386,7 @@ Artist.prototype.init = function(config) {
  * orientation.
  */
 Artist.prototype.prepareForRemix = function() {
-  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   const blocksDocument = blocksDom.ownerDocument;
   const remix_props = REMIX_PROPS_BY_SKIN[this.skin.id] || REMIX_PROPS;
   let next = false;
@@ -449,8 +449,8 @@ Artist.prototype.prepareForRemix = function() {
 
   cleanBlocks(blocksDom);
 
-  Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.getMainBlockSpace().clear();
+  Blockly.Xml.domToBlockSpace(Blockly.getMainBlockSpace(), blocksDom);
   return Promise.resolve();
 };
 
@@ -736,7 +736,7 @@ Artist.prototype.runButtonClick = function() {
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainBlockSpace().traceOn(true);
   }
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
@@ -844,7 +844,7 @@ Artist.prototype.execute = function(executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    let codeBlocks = Blockly.getMainBlockSpace().getTopBlocks(true);
     if (this.studioApp_.initializationBlocks) {
       codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
     }
@@ -972,7 +972,7 @@ Artist.prototype.finishExecution_ = function() {
 
   document.getElementById('spinner').style.visibility = 'hidden';
   if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.highlightBlock(null);
+    Blockly.getMainBlockSpace().highlightBlock(null);
   }
 
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
@@ -1485,7 +1485,7 @@ Artist.prototype.checkAnswer = function() {
 
 Artist.prototype.getUserCode = function() {
   if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
     return Blockly.Xml.domToText(xml);
   } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly

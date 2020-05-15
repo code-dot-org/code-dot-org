@@ -392,7 +392,10 @@ EquationSet.getEquationFromBlock = function(block) {
 
     case 'functional_call':
       name = block.getCallName();
-      var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
+      var def = Blockly.Procedures.getDefinition(
+        name,
+        Blockly.getMainBlockSpace()
+      );
       if (def.isVariable()) {
         return new Equation(null, [], new ExpressionNode(name));
       } else {

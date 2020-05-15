@@ -222,7 +222,7 @@ Calc.init = function(config) {
  */
 function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
   try {
-    var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+    var entireSet = new EquationSet(Blockly.getMainBlockSpace().getTopBlocks());
 
     var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
     var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
@@ -333,7 +333,7 @@ function displayGoal(targetSet) {
  */
 Calc.runButtonClick = function() {
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   studioApp().attempts++;
   Calc.execute();
 };
@@ -362,7 +362,7 @@ Calc.resetButtonClick = function() {
  */
 function generateEquationSetFromBlockXml(blockXml) {
   if (blockXml) {
-    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+    if (Blockly.getMainBlockSpace().getTopBlocks().length !== 0) {
       throw new Error(
         "generateTargetExpression shouldn't be called with blocks" +
           'if we already have blocks in the workspace'
@@ -372,11 +372,13 @@ function generateEquationSetFromBlockXml(blockXml) {
     studioApp().loadBlocks(blockXml);
   }
 
-  var equationSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+  var equationSet = new EquationSet(Blockly.getMainBlockSpace().getTopBlocks());
 
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(block) {
-    block.dispose();
-  });
+  Blockly.getMainBlockSpace()
+    .getTopBlocks()
+    .forEach(function(block) {
+      block.dispose();
+    });
 
   return equationSet;
 }
@@ -708,7 +710,7 @@ Calc.evaluateResults_ = function(targetSet, userSet) {
 Calc.execute = function() {
   Calc.generateResults_();
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
@@ -797,7 +799,9 @@ Calc.generateResults_ = function() {
     return;
   }
 
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopUsedBlocks());
+  appState.userSet = new EquationSet(
+    Blockly.getMainBlockSpace().getTopUsedBlocks()
+  );
   appState.failedInput = null;
 
   // Note: These checks will take precedence over free play, so you can "fail"

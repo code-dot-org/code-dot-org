@@ -2400,7 +2400,7 @@ Studio.prepareForRemix = function() {
     return Promise.resolve();
   }
 
-  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   const blocksDocument = blocksDom.ownerDocument;
 
   let whenRun = blocksDom.querySelector('block[type="when_run"]');
@@ -2496,8 +2496,8 @@ Studio.prepareForRemix = function() {
   whenRun.appendChild(next);
   cleanBlocks(blocksDom);
 
-  Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.getMainBlockSpace().clear();
+  Blockly.Xml.domToBlockSpace(Blockly.getMainBlockSpace(), blocksDom);
   return Promise.resolve();
 };
 
@@ -2962,7 +2962,7 @@ Studio.runButtonClick = function() {
   }
   studioApp().toggleRunReset('reset');
   if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainBlockSpace().traceOn(true);
   }
 
   // Stop the music the first time the run button is pressed (hoc2015)
@@ -3112,7 +3112,7 @@ var registerHandlers = function(
   matchParam2Val,
   argNames
 ) {
-  var blocks = Blockly.mainBlockSpace.getTopBlocks();
+  var blocks = Blockly.getMainBlockSpace().getTopBlocks();
   for (var x = 0; blocks[x]; x++) {
     var block = blocks[x];
     // default title values to '0' for case when there is only one sprite
@@ -3762,7 +3762,7 @@ Studio.onPuzzleComplete = function() {
 
     program = studioApp().getCode();
   } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
     program = Blockly.Xml.domToText(xml);
   }
 

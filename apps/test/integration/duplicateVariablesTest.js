@@ -14,9 +14,11 @@ describe('hasDuplicateVariablesInForLoops', function() {
   });
 
   afterEach(function() {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
-      b.dispose();
-    });
+    Blockly.getMainBlockSpace()
+      .getTopBlocks()
+      .forEach(function(b) {
+        b.dispose();
+      });
   });
 
   it('returns true for nested for loops with the same variable name', function() {

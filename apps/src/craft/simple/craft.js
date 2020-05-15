@@ -166,7 +166,7 @@ Craft.init = function(config) {
           if (!levelConfig.edit_blocks) {
             Object.assign(config.level, houseLevels[selectedHouse]);
 
-            Blockly.mainBlockSpace.clear();
+            Blockly.getMainBlockSpace().clear();
             studioApp().setStartBlocks_(config, true);
           }
           Craft.initializeAppLevel(config.level);
@@ -731,7 +731,7 @@ Craft.runButtonClick = function() {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -769,7 +769,7 @@ Craft.executeUserCode = function() {
   studioApp().playAudio('start');
 
   // Start tracing calls.
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
@@ -791,7 +791,7 @@ Craft.executeUserCode = function() {
 
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  let codeBlocks = Blockly.getMainBlockSpace().getTopBlocks(true);
   if (studioApp().initializationBlocks) {
     codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
   }
@@ -954,7 +954,9 @@ Craft.reportResult = function(success) {
     testResult: testResultType,
     image: encodedImage,
     program: encodeURIComponent(
-      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+      Blockly.Xml.domToText(
+        Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
+      )
     ),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks

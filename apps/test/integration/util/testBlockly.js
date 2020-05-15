@@ -22,11 +22,11 @@ exports.setupTestBlockly = function() {
   assert(Blockly.Blocks.text, 'text block exists');
   assert(Blockly.Blocks.math_number, 'math_number block exists');
   assert(studioApp(), 'studioApp exists');
-  assert(Blockly.mainBlockSpace, 'Blockly workspace exists');
+  assert(Blockly.getMainBlockSpace(), 'Blockly workspace exists');
 
-  Blockly.mainBlockSpace.clear();
+  Blockly.getMainBlockSpace().clear();
   assert(
-    Blockly.mainBlockSpace.getBlockCount() === 0,
+    Blockly.getMainBlockSpace().getBlockCount() === 0,
     'Blockly workspace is empty'
   );
 };

@@ -240,7 +240,7 @@ function displayCallAndExample() {
  */
 Eval.runButtonClick = function() {
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   studioApp().attempts++;
   Eval.execute();
 };
@@ -337,7 +337,7 @@ function getDrawableFromBlock(block) {
  * @return {EvalImage|CustomEvalError}
  */
 function getDrawableFromBlockXml(blockXml) {
-  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+  if (Blockly.getMainBlockSpace().getTopBlocks().length !== 0) {
     throw new Error(
       "getDrawableFromBlocks shouldn't be called with blocks if " +
         'we already have blocks in the workspace'
@@ -349,9 +349,11 @@ function getDrawableFromBlockXml(blockXml) {
   var result = getDrawableFromBlockspace();
 
   // Remove the blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
-    b.dispose();
-  });
+  Blockly.getMainBlockSpace()
+    .getTopBlocks()
+    .forEach(function(b) {
+      b.dispose();
+    });
 
   return result;
 }
@@ -491,7 +493,7 @@ Eval.execute = function() {
     }
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {

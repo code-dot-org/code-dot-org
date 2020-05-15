@@ -515,7 +515,7 @@ Craft.runButtonClick = function() {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -554,7 +554,7 @@ Craft.executeUserCode = function() {
   let interpreter;
 
   // Start tracing calls.
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
@@ -601,7 +601,7 @@ Craft.executeUserCode = function() {
   };
 
   // Run user code.
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  let codeBlocks = Blockly.getMainBlockSpace().getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   interpreter = CustomMarshalingInterpreter.evalWith(
     code,
@@ -680,7 +680,9 @@ Craft.reportResult = function(success) {
     testResult: testResultType,
     image: encodedImage,
     program: encodeURIComponent(
-      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+      Blockly.Xml.domToText(
+        Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
+      )
     ),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks

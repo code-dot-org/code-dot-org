@@ -25,7 +25,7 @@ window.levelbuilder.installBlocks = function(app, blockly, options) {
 
 window.levelbuilder.copyWorkspaceToClipboard = function() {
   const str = Blockly.Xml.domToPrettyText(
-    Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+    Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
   );
   copyToClipboard(str);
 };

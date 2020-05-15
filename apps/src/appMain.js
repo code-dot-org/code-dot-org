@@ -17,7 +17,9 @@ import defaultSkinModule from './skins.js';
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
   getBlockXML: () =>
-    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)),
+    Blockly.Xml.domToText(
+      Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
+    ),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
   getDropletContents: () => studioApp().editor.getValue(),
   getDroplet: () => studioApp().editor,

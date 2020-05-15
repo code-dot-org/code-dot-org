@@ -1155,7 +1155,7 @@ Applab.runButtonClick = function() {
   Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
   if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainBlockSpace().traceOn(true);
   }
   Applab.execute();
 

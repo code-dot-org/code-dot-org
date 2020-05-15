@@ -3,7 +3,7 @@
  * Tests collections are specified in .js files in the solutions directory.
  * To extract the xml for a test from a workspace, run the following code in
  * your console:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+ * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace()));
  */
 
 // todo - should we also have tests around which blocks to show as part of the
@@ -175,8 +175,8 @@ describe('Level tests', function() {
 
   afterEach(function() {
     // Main blockspace doesn't always exist (i.e. edit-code)
-    if (Blockly.mainBlockSpace) {
-      Blockly.mainBlockSpace.clear();
+    if (Blockly.getMainBlockSpace()) {
+      Blockly.getMainBlockSpace().clear();
     }
 
     restoreRedux();

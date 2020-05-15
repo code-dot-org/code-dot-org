@@ -279,7 +279,7 @@ module.exports = class Maze {
     }
     studioApp().toggleRunReset('reset');
     if (studioApp().isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
+      Blockly.getMainBlockSpace().traceOn(true);
     }
     studioApp().reset(false);
     studioApp().attempts++;
@@ -305,7 +305,7 @@ module.exports = class Maze {
 
     var code = '';
     if (studioApp().isUsingBlockly()) {
-      let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+      let codeBlocks = Blockly.getMainBlockSpace().getTopBlocks(true);
       if (studioApp().initializationBlocks) {
         codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
       }
@@ -469,7 +469,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
       program = Blockly.Xml.domToText(xml);
     }
 

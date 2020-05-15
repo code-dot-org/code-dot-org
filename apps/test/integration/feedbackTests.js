@@ -32,7 +32,7 @@ describe('checkForEmptyContainerBlockFailure_', function() {
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
     var loaded = Blockly.Xml.domToText(
-      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+      Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
     );
     assert(
       !args.blockXml || loaded,
@@ -180,7 +180,7 @@ describe('throwOnInvalidExampleBlocks', function() {
     );
     assert.throws(
       function() {
-        var exampleBlock = Blockly.mainBlockSpace
+        var exampleBlock = Blockly.getMainBlockSpace()
           .getTopBlocks()
           .filter(function(block) {
             return block.type === 'functional_example';
@@ -227,7 +227,7 @@ describe('throwOnInvalidExampleBlocks', function() {
     );
     assert.throws(
       function() {
-        var exampleBlock = Blockly.mainBlockSpace
+        var exampleBlock = Blockly.getMainBlockSpace()
           .getTopBlocks()
           .filter(function(block) {
             return block.type === 'functional_example';
@@ -278,7 +278,7 @@ describe('throwOnInvalidExampleBlocks', function() {
         '</xml>'
     );
     assert.doesNotThrow(function() {
-      var exampleBlock = Blockly.mainBlockSpace
+      var exampleBlock = Blockly.getMainBlockSpace()
         .getTopBlocks()
         .filter(function(block) {
           return block.type === 'functional_example';
@@ -308,7 +308,7 @@ describe('getUserBlocks_', function() {
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
     var loaded = Blockly.Xml.domToText(
-      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+      Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
     );
     assert(loaded, "we didn't correctly load our test blocks");
 
@@ -420,7 +420,7 @@ describe('getMissingBlocks_ tests', function() {
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
     var loaded = Blockly.Xml.domToText(
-      Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+      Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
     );
     assert(
       !options.userBlockXml || loaded,

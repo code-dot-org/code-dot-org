@@ -640,7 +640,7 @@ export default class Craft {
     }
 
     studioApp().toggleRunReset('reset');
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainBlockSpace().traceOn(true);
     studioApp().attempts++;
 
     Craft.executeUserCode();
@@ -678,7 +678,7 @@ export default class Craft {
     studioApp().playAudio('start');
 
     // Start tracing calls.
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainBlockSpace().traceOn(true);
 
     const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();
@@ -700,7 +700,7 @@ export default class Craft {
 
     // Run user generated code, calling appCodeOrgAPI
     let code = '';
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    let codeBlocks = Blockly.getMainBlockSpace().getTopBlocks(true);
     if (studioApp().initializationBlocks) {
       codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
     }
@@ -835,7 +835,7 @@ export default class Craft {
       image: encodedImage,
       program: encodeURIComponent(
         Blockly.Xml.domToText(
-          Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+          Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace())
         )
       ),
       // typically delay feedback until response back

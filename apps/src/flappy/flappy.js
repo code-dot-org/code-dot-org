@@ -747,7 +747,7 @@ Flappy.runButtonClick = function() {
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   // studioApp().reset(false);
   studioApp().attempts++;
   Flappy.execute();
@@ -888,7 +888,7 @@ Flappy.onPuzzleComplete = function() {
 };
 
 function sendReport() {
-  const xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   const textBlocks = Blockly.Xml.domToText(xml);
 
   Flappy.waitingForReport = true;

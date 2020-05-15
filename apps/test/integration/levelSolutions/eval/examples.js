@@ -243,7 +243,7 @@ module.exports = {
         var answerElement = document.getElementById('answer');
         var callElement = document.getElementById('test-call');
         var resultElement = document.getElementById('test-result');
-        var triangleBlock = Blockly.mainBlockSpace.findFunctionExamples(
+        var triangleBlock = Blockly.getMainBlockSpace().findFunctionExamples(
           'green-triangle'
         )[0];
         var contractEditor = Blockly.contractEditor;

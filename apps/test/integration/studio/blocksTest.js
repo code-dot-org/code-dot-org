@@ -22,9 +22,9 @@ describe('Custom studio blocks', function() {
       studioApp.loadBlocks(
         '<xml><block type="studio_whenSpriteAndGroupCollide"></block></xml>'
       );
-      assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
+      assert(Blockly.getMainBlockSpace().getAllBlocks().length === 1);
 
-      var block = Blockly.mainBlockSpace.getAllBlocks()[0];
+      var block = Blockly.getMainBlockSpace().getAllBlocks()[0];
       var lastTitle = block.getTitles()[block.getTitles().length - 1];
 
       assert(block.getTitleValue('SPRITENAME') === '"witch"');
@@ -39,9 +39,9 @@ describe('Custom studio blocks', function() {
           '</block>' +
           '</xml>'
       );
-      assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
+      assert(Blockly.getMainBlockSpace().getAllBlocks().length === 1);
 
-      var block = Blockly.mainBlockSpace.getAllBlocks()[0];
+      var block = Blockly.getMainBlockSpace().getAllBlocks()[0];
       var lastTitle = block.getTitles()[block.getTitles().length - 1];
 
       assert(block.getTitleValue('SPRITENAME') === '"dinosaur"');

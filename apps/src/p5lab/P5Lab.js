@@ -828,7 +828,7 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     this.message = null;
   } else {
     // We're using blockly, report the program as xml
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
 
     // When SharedFunctions (aka shared behavior_definitions) are enabled, they
     // are always appended to startBlocks on page load.
@@ -902,7 +902,7 @@ P5Lab.prototype.runButtonClick = function() {
   this.studioApp_.toggleRunReset('reset');
   // document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainBlockSpace().traceOn(true);
   }
   this.studioApp_.attempts++;
   this.execute();

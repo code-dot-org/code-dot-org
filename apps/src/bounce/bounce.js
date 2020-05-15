@@ -1049,7 +1049,7 @@ Bounce.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainBlockSpace().traceOn(true);
   studioApp().reset(false);
   studioApp().attempts++;
   Bounce.execute();
@@ -1172,7 +1172,7 @@ Bounce.onPuzzleComplete = function() {
       : TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.getMainBlockSpace());
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Bounce.waitingForReport = true;

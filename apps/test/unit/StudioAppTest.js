@@ -301,7 +301,7 @@ describe('StudioApp', () => {
       studioApp().setupChangeHandlers();
 
       studioApp().addChangeHandler(() => (changed = true));
-      Blockly.mainBlockSpace
+      Blockly.getMainBlockSpace()
         .getCanvas()
         .dispatchEvent(new Event('blocklyBlockSpaceChange'));
 
@@ -345,7 +345,7 @@ describe('StudioApp', () => {
 
       studioApp().addChangeHandler(() => (changed1 = true));
       studioApp().addChangeHandler(() => (changed2 = true));
-      Blockly.mainBlockSpace
+      Blockly.getMainBlockSpace()
         .getCanvas()
         .dispatchEvent(new Event('blocklyBlockSpaceChange'));
 
