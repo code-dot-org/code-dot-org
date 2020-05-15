@@ -353,14 +353,14 @@ class PardotV2
     end
   end
 
-  # Calculates what needs to change to transform an old data to a new data.
+  # Identifies additional information that is in new data but not in old data.
   # Example:
-  #   old_data = {key1: 1, key2: 2, key3: nil}
-  #   new_data = {key1: 1.1, k4: 4}
-  #   delta output = {key1: 1.1, key2: nil, key4: 4}
-  #   The output means to transform old_data into new_data, we have to reset value for key1,
-  #   unset key2 value (i.e. set it to nil), ignore key3 (because its old value was nil)
-  #   and set key4.
+  #   old_data = {key1: 'v1', key2: 'v2', key3: nil}
+  #   new_data = {key1: 'v1.1', key2: 'v2', key4: 'v4'}
+  #   delta output = {key1: 'v1.1', key4: 'v4'}
+  #   The output means there is a new value for key1,
+  #   key2 and key3 are ignored (no new information about these keys in new_data),
+  #   and set key4 for the first time.
   #
   # @param [Hash] old_data
   # @param [Hash] new_data
@@ -369,17 +369,10 @@ class PardotV2
     return new_data unless old_data.present?
 
     # Set key-value pairs that exist only in the new data
-    delta = {}
-    new_data.each_pair do |key, val|
-      delta[key] = val unless old_data.key?(key) && old_data[key] == val
+    {}.tap do |delta|
+      new_data.each_pair do |key, val|
+        delta[key] = val unless old_data.key?(key) && old_data[key] == val
+      end
     end
-
-    # Unset entries that exist only in the old data and not in the new data.
-    # Ignore entries with values are nil.
-    old_data.each_pair do |key, val|
-      delta[key] = nil unless new_data.key?(key) || val.nil?
-    end
-
-    delta
   end
 end

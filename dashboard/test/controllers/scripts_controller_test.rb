@@ -554,7 +554,7 @@ class ScriptsControllerTest < ActionController::TestCase
       hideable_stages: 'on',
       project_widget_visible: 'on',
       student_detail_progress_view: 'on',
-      stage_extras_available: 'on',
+      lesson_extras_available: 'on',
       has_verified_resources: 'on',
       has_lesson_plan: 'on',
       is_stable: 'on',
