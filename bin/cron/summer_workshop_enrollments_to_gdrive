@@ -47,7 +47,8 @@ def update_tabs(sheet)
 end
 
 def notify_of_external_sharing(sheet)
-  if sheet.external_emails_with_access.present?
+  external_emails = sheet.external_emails_with_access
+  if external_emails.present?
     email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
     error_msg = "Document containing PII information is shared to "\
       "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
@@ -59,7 +60,7 @@ def notify_of_external_sharing(sheet)
 end
 
 def main
-  sheet = Google::Sheet.new CDO.enrollments_summer_2021_gsheet_key
+  sheet = Google::Sheet.new CDO.enrollments_summer_2020_gsheet_key
   update_tabs(sheet)
   notify_of_external_sharing(sheet)
 end
