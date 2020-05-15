@@ -1011,65 +1011,6 @@ pl:
     peer_feedback: Wzajemne opinie
     outdated: Ta opinia została dodana do wcześniej zgłoszonej wersji
     peer_review: Wzajemne recenzje
-  flex_category:
-    required: Streszczenie
-    content: Treści
-    practice: Doświadczenia nauczycieli
-    peer_review: Wzajemne recenzje
-    main_course: Kurs Główny
-    extra_course_content: Dodatki do Kursu
-    csf_e_1: Przygotuj się do Kursu E (opcjonalnie)
-    csf_e_2: Zawartość Kursu E
-    csf_f_1: Przejdź do Kursu F (opcjonalnie)
-    csf_f_2: Zawartość Kursu F
-    csf_digcit: Cyfrowe obywatelstwo
-    csf_jigsaw: Układanka
-    csf_loops: Pętle
-    csf_events: Zdarzenia
-    csf_binary: Binarny
-    csf_conditionals: Zdania z warunkami
-    csf_spritelab: Sprite Lab
-    csf_nested_loops: Zagnieżdżające się  pętle
-    csf_functions: Funkcje
-    csf_variables: Zmienne
-    csf_for_loops: Pętle dla (for)
-    csf_internet: Internet
-    csd1_1: 'Rozdział 1: Proces Rozwiązywania Problemów'
-    csd1_2: 'Rozdział 2: Komputery i Rozwiązywanie Problemów'
-    csd2_1: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
-    csd2_2: 'Rozdział 2: Style i CSS'
-    csd3_1: 'Rozdział 1: Obrazy i Animacje'
-    csd3_2: 'Rozdział 2: Budowanie Gier'
-    csd4_1: 'Rozdział 1: Projektowanie Zorientowane na Użytkownika'
-    csd4_2: 'Rozdział 2: Prototypowanie aplikacji'
-    csd5_1: 'Rozdział 1: Reprezentowanie Informacji'
-    csd5_2: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
-    csd6_1: 'Rozdział 1: Wyjście Sprzętowe'
-    csd6_2: 'Rozdział 2: Wejście Sprzętowe'
-    csp1_1: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
-    csp1_2: 'Rozdział 2: Wynalezienie Internetu'
-    csp2_1: 'Rozdział 1: Kodowanie i Kompresja Złożonych Danych'
-    csp2_2: 'Rozdział 2: Manipulowanie i Wizualizacja Danych'
-    csp3_1: 'Rozdział 1: Języki Programowania i Algorytmy'
-    csp4_1: 'Rozdział 1: Świat Big Data i Szyfrowania'
-    csp5_1: 'Rozdział 1: Programowanie Sterowane Zdarzeniami'
-    csp5_2: 'Rozdział 2: Programowanie ze Strukturami Danych'
-    cspSurvey: Ankieta
-    cspAssessment: Ocena Rozdziału
-    csp_ap_1: 'Rozdział 1: AP Konfiguracja Techniczna'
-    csp_ap_2: 'Rozdział 2: AP Zbadaj Wydajność'
-    csp_ap_3: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
-    csp_postap_1: 'Rozdział 2: Manipulowanie i Wizualizacja Danych'
-    csp2_1_2018: 'Unit 2: Cyfrowe informacje'
-    csp_variables: Zmienne
-    csp_conditionals: Zdania z warunkami
-    csp_functions: Funkcje
-    csp_lists: Listy
-    csp_loops: Pętle
-    csp_unit1_2020: "(stary) Unit 1: Informacje cyfrowe"
-    dlp: Wskazówki
-    k5_getting_started: Pierwsze kroki
-    k5_next_steps: Następne Kroki
   external_links:
     disclaimer: Uwaga
     leaving_domain: Opuszczasz tę domenę do witryny, która nie jest obsługiwana przez

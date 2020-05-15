@@ -624,26 +624,6 @@ mi:
     peer_feedback: 'Urupare Hoa'
     outdated: 'I tāpiritia tēnei urupare mō tētahi putanga tāpaetanga o mua'
     peer_review: 'Arotake ā-Hoa'
-  flex_category:
-    content: 'Ihirangi'
-    practice: 'Huarahi Whakaako'
-    peer_review: 'Arotake ā-Hoa'
-    csf_digcit: 'Te Kirirarautanga Matihiko'
-    csf_jigsaw: 'Pangahono'
-    csf_loops: 'Ngā Koromeke'
-    csf_events: 'Ngā Takunetanga'
-    csf_binary: 'Tāhūrua'
-    csf_conditionals: 'Ngā Here'
-    csf_nested_loops: 'Ngā Koromeke Tauroto'
-    csf_functions: 'Ngā Taumahi'
-    csf_variables: 'Ngā Taurangi'
-    csf_for_loops: 'Mō Ngā Koromeke'
-    csf_internet: 'Te Ipurangi'
-    csp_variables: 'Ngā Taurangi'
-    csp_conditionals: 'Ngā Here'
-    csp_functions: 'Ngā Taumahi'
-    csp_lists: 'Ngā Rārangi'
-    csp_loops: 'Ngā Koromeke'
   external_links:
     disclaimer: Karo
     leaving_domain: E puta ana koe i tēnei rohe ināianei ki tētahi pae kāore i te whakahaerehia e Code.org.
