@@ -351,7 +351,6 @@ Craft.init = function(config) {
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
-        // HERE this is where we set up swipe for designer (see onDrag below)
         const hammerToButton = {
           [Hammer.DIRECTION_LEFT]: 'leftButton',
           [Hammer.DIRECTION_RIGHT]: 'rightButton',
@@ -466,8 +465,7 @@ const directionToFacing = {
 Craft.onArrowButtonDown = function(e, btn) {
   let store = getStore();
   if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
-    trackEvent('Research', 'HideSwipeOverlay', 'hide-buttonPress');
-    store.dispatch(dismissSwipeOverlay());
+    store.dispatch(dismissSwipeOverlay('buttonPress'));
   }
   Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
   e.preventDefault(); // Stop normal events so we see mouseup later.
@@ -714,10 +712,19 @@ Craft.runButtonClick = function() {
   let store = getStore();
   if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
     window.addEventListener('keydown', function hideOverlay(e) {
-      // TODO: Handle IE11
-      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) {
-        trackEvent('Research', 'HideSwipeOverlay', 'hide-keyPress');
-        store.dispatch(dismissSwipeOverlay());
+      if (
+        [
+          'ArrowLeft',
+          'ArrowRight',
+          'ArrowUp',
+          'ArrowDown',
+          'Left',
+          'Right',
+          'Up',
+          'Down'
+        ].includes(e.key)
+      ) {
+        store.dispatch(dismissSwipeOverlay('keyPress'));
         window.removeEventListener('keydown', hideOverlay);
       }
     });

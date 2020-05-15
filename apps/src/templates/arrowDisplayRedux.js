@@ -6,7 +6,8 @@ const DISMISS_SWIPE_OVERLAY = 'arrowDisplay/DISMISS_SWIPE_OVERLAY';
 const initialState = {
   buttonsAreVisible: false,
   buttonsAreDisabled: true,
-  swipeOverlayHasBeenDismissed: false
+  swipeOverlayHasBeenDismissed: false,
+  swipeOverlayDismissAction: ''
 };
 
 export default function arrowDisplay(state = initialState, action) {
@@ -29,7 +30,8 @@ export default function arrowDisplay(state = initialState, action) {
     case DISMISS_SWIPE_OVERLAY:
       return {
         ...state,
-        swipeOverlayHasBeenDismissed: true
+        swipeOverlayHasBeenDismissed: true,
+        swipeOverlayDismissAction: action.dismissAction
       };
     default:
       return state;
@@ -48,6 +50,6 @@ export function setArrowButtonDisabled(isDisabled) {
   return {type: SET_ARROW_BUTTONS_DISABLED, isDisabled};
 }
 
-export function dismissSwipeOverlay() {
-  return {type: DISMISS_SWIPE_OVERLAY};
+export function dismissSwipeOverlay(dismissAction) {
+  return {type: DISMISS_SWIPE_OVERLAY, dismissAction};
 }
