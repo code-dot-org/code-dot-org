@@ -78,7 +78,8 @@ describe('LevelTokenDetails', () => {
       setActiveVariant,
       setField,
       level: defaultLevel,
-      lessonPosition: 5
+      lessonPosition: 5,
+      lessonGroupPosition: 1
     };
   });
 
