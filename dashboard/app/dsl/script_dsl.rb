@@ -15,7 +15,7 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
-    @hideable_stages = false
+    @hideable_lessons = false
     @student_detail_progress_view = false
     @teacher_resources = []
     @lesson_extras_available = false
@@ -44,7 +44,7 @@ class ScriptDSL < BaseDSL
 
   boolean :hidden
   boolean :login_required
-  boolean :hideable_stages
+  boolean :hideable_lessons
   boolean :student_detail_progress_view
   boolean :lesson_extras_available
   boolean :project_widget_visible
@@ -129,7 +129,7 @@ class ScriptDSL < BaseDSL
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      hideable_stages: @hideable_stages,
+      hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
@@ -309,7 +309,7 @@ class ScriptDSL < BaseDSL
 
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
-    s << 'hideable_stages true' if script.hideable_stages
+    s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
