@@ -950,10 +950,6 @@ $default-modal-width: 640px;
   min-width: 0;
   float: left;
 
-  .header_button {
-    margin-top: 3px;
-  }
-
   .header_button, .header_input, .header_text {
     margin-left: 10px;
   }
@@ -968,7 +964,6 @@ $default-modal-width: 640px;
 .header_level {
   font-size: 150%;
   cursor: default;
-  white-space: nowrap;
   width: 100%;
 
   display: flex;
