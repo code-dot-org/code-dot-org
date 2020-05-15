@@ -343,20 +343,20 @@ export default connect(
     levelNameToIdMap: state.levelNameToIdMap
   }),
   dispatch => ({
-    chooseLevel(groupPos, lessonPos, levelPos, variant, levelId) {
-      dispatch(chooseLevel(groupPos, lessonPos, levelPos, variant, levelId));
+    chooseLevel(group, lesson, level, variant, value) {
+      dispatch(chooseLevel(group, lesson, level, variant, value));
     },
-    addVariant(groupPos, lessonPos, levelPos) {
-      dispatch(addVariant(groupPos, lessonPos, levelPos));
+    addVariant(group, lesson, level) {
+      dispatch(addVariant(group, lesson, level));
     },
-    removeVariant(groupPos, lessonPos, levelPos, levelId) {
-      dispatch(removeVariant(groupPos, lessonPos, levelPos, levelId));
+    removeVariant(group, lesson, level, levelId) {
+      dispatch(removeVariant(group, lesson, level, levelId));
     },
-    setActiveVariant(groupPos, lessonPos, levelPos, id) {
-      dispatch(setActiveVariant(groupPos, lessonPos, levelPos, id));
+    setActiveVariant(group, lesson, level, id) {
+      dispatch(setActiveVariant(group, lesson, level, id));
     },
-    setField(groupPos, lessonPos, levelPos, modifier) {
-      dispatch(setField(groupPos, lessonPos, levelPos, modifier));
+    setField(group, lesson, level, modifier) {
+      dispatch(setField(group, lesson, level, modifier));
     }
   })
 )(UnconnectedLevelTokenDetails);
