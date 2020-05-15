@@ -183,9 +183,5 @@ export default {
         element.childNodes[0].disabled = true;
       }
     });
-    const url = element.getAttribute('data-canonical-image-url');
-    if (url) {
-      updateProperty(element, 'image', url);
-    }
   }
 };
