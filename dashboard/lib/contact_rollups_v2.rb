@@ -1,5 +1,5 @@
 class ContactRollupsV2
-  def self.build_contact_rollups(log_collector, sync_with_pardot=false, dry_run=true)
+  def self.build_contact_rollups(log_collector:, sync_with_pardot: false, dry_run: true)
     log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
       truncate_or_delete_table ContactRollupsProcessed
@@ -25,10 +25,10 @@ class ContactRollupsV2
       end
 
       log_collector.time!('Creates new Pardot prospects') do
-        ContactRollupsPardotMemory.create_new_pardot_prospects(dry_run)
+        ContactRollupsPardotMemory.create_new_pardot_prospects(dry_run: dry_run)
       end
       log_collector.time!('Updates existing Pardot prospects') do
-        ContactRollupsPardotMemory.update_pardot_prospects(dry_run)
+        ContactRollupsPardotMemory.update_pardot_prospects(dry_run: dry_run)
       end
 
       unless dry_run
