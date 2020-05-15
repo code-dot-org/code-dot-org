@@ -17,6 +17,9 @@ const styles = {
     width: '100%',
     display: 'flex',
     alignItems: 'center'
+  },
+  finishedLink: {
+    width: '100%'
   }
 };
 
@@ -100,21 +103,33 @@ class HeaderMiddle extends React.Component {
     );
 
     if (thirdItem === 'finish') {
-      if (width < 300) {
+      if (width < 160) {
         return {
           scriptName: 0,
-          progress: Math.min(progressDesiredWidth, width / 2),
-          finishLink: width / 2
+          progress: 0,
+          finishLink: width
+        };
+      } else if (width < 300) {
+        return {
+          scriptName: 0,
+          progress: Math.min(progressDesiredWidth, (3 * width) / 4),
+          finishLink: width / 4
         };
       } else {
         return {
-          scriptName: width / 3,
-          progress: Math.min(progressDesiredWidth, width / 3),
-          finishLink: width / 3
+          scriptName: width / 4,
+          progress: Math.min(progressDesiredWidth, (2 * width) / 4),
+          finishLink: width / 4
         };
       }
     } else if (thirdItem === 'popup') {
-      if (width < 300) {
+      if (width < 160) {
+        return {
+          scriptName: 0,
+          progress: 0,
+          popup: 40
+        };
+      } else if (width < 300) {
         return {
           scriptName: 0,
           progress: Math.min(progressDesiredWidth, width - 40 - 1),
@@ -168,7 +183,11 @@ class HeaderMiddle extends React.Component {
 
           <div
             id="lesson_progress_container"
-            style={{float: 'left', width: widths.progress}}
+            style={{
+              float: 'left',
+              width: widths.progress,
+              display: widths.progress === 0 ? 'none' : undefined
+            }}
           >
             <LessonProgress width={widths.progress} />
           </div>
@@ -178,7 +197,7 @@ class HeaderMiddle extends React.Component {
               id="finish_link_container"
               style={{float: 'left', width: widths.finishLink}}
             >
-              <div className="header_finished_link">
+              <div className="header_finished_link" style={styles.finishedLink}>
                 <a href={lessonData.finishLink}>{lessonData.finishText}</a>
               </div>
             </div>
