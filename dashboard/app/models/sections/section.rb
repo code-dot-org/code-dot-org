@@ -62,7 +62,7 @@ class Section < ActiveRecord::Base
   belongs_to :script
   belongs_to :course
 
-  has_many :section_hidden_stages
+  has_many :section_hidden_lessons
   has_many :section_hidden_scripts
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
@@ -283,11 +283,11 @@ class Section < ActiveRecord::Base
 
   # Hide or unhide a stage for this section
   def toggle_hidden_stage(stage, should_hide)
-    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
     if hidden_stage && !should_hide
       hidden_stage.delete
     elsif hidden_stage.nil? && should_hide
-      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
     end
   end
 
