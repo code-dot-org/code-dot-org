@@ -157,23 +157,23 @@ describe('MicroBit Components', () => {
     });
 
     it('destroys everything that createMicroBitComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(5);
+      expect(Object.keys(components)).to.have.length(6);
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components if shouldDestroyComponents is false', () => {
-      expect(Object.keys(components)).to.have.length(5);
+      expect(Object.keys(components)).to.have.length(6);
       cleanupMicroBitComponents(
         components,
         false /* shouldDestroyComponents */
       );
-      expect(Object.keys(components)).to.have.length(5);
+      expect(Object.keys(components)).to.have.length(6);
     });
 
     it('does not destroy components not created by createMicroBitComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(6);
+      expect(Object.keys(components)).to.have.length(7);
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');
