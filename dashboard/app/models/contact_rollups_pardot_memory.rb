@@ -112,7 +112,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     end
   end
 
-  def self.create_new_pardot_prospects(dry_run)
+  def self.create_new_pardot_prospects(dry_run: false)
     record_count = 0
 
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
@@ -138,7 +138,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     puts "[Total] #{record_count} new prospects to be added" if dry_run
   end
 
-  def self.update_pardot_prospects(dry_run)
+  def self.update_pardot_prospects(dry_run: false)
     record_count = 0
     pardot_writer = PardotV2.new dry_run
     ActiveRecord::Base.connection.exec_query(query_updated_contacts).each do |record|
