@@ -33,164 +33,133 @@ export const addGroup = (position, groupKey, groupName) => ({
   groupName
 });
 
-export const addLesson = (lessonName, lessonGroupPosition) => ({
+export const addLesson = (lessonName, group) => ({
   type: ADD_LESSON,
   lessonName,
-  lessonGroupPosition
+  group
 });
 
-export const toggleExpand = (groupPosition, lessonPosition, levelPosition) => ({
+export const toggleExpand = (group, lesson, level) => ({
   type: TOGGLE_EXPAND,
-  groupPosition,
-  lessonPosition,
-  levelPosition
+  group,
+  lesson,
+  level
 });
 
-export const removeLevel = (lessonPosition, groupPosition, levelPosition) => ({
+export const removeLevel = (lesson, group, level) => ({
   type: REMOVE_LEVEL,
-  lessonPosition,
-  groupPosition,
-  levelPosition
+  lesson,
+  group,
+  level
 });
 
-export const chooseLevel = (
-  groupPosition,
-  lessonPosition,
-  levelPosition,
-  variant,
-  levelId
-) => ({
+export const chooseLevel = (group, lesson, level, variant, levelId) => ({
   type: CHOOSE_LEVEL,
-  groupPosition,
-  lessonPosition,
-  levelPosition,
+  group,
+  lesson,
+  level,
   variant,
   levelId
 });
 
-export const addVariant = (groupPosition, lessonPosition, levelPosition) => ({
+export const addVariant = (group, lesson, level) => ({
   type: ADD_VARIANT,
-  groupPosition,
-  lessonPosition,
-  levelPosition
+  group,
+  lesson,
+  level
 });
 
-export const removeVariant = (
-  groupPosition,
-  lessonPosition,
-  levelPosition,
-  levelId
-) => ({
+export const removeVariant = (group, lesson, level, levelId) => ({
   type: REMOVE_VARIANT,
-  groupPosition,
-  lessonPosition,
-  levelPosition,
+  group,
+  lesson,
+  level,
   levelId
 });
 
-export const setActiveVariant = (
-  groupPosition,
-  lessonPosition,
-  levelPosition,
-  id
-) => ({
+export const setActiveVariant = (group, lesson, level, id) => ({
   type: SET_ACTIVE_VARIANT,
-  groupPosition,
-  lessonPosition,
-  levelPosition,
+  group,
+  lesson,
+  level,
   id
 });
 
-export const setField = (
-  groupPosition,
-  lessonPosition,
-  levelPosition,
-  modifier
-) => ({
+export const setField = (group, lesson, level, modifier) => ({
   type: SET_FIELD,
-  groupPosition,
-  lessonPosition,
-  levelPosition,
+  group,
+  lesson,
+  level,
   modifier
 });
 
-export const reorderLevel = (
-  groupPosition,
-  lessonPosition,
-  originalPosition,
-  newPosition
-) => ({
+export const reorderLevel = (group, lesson, originalPosition, newPosition) => ({
   type: REORDER_LEVEL,
-  groupPosition,
-  lessonPosition,
+  group,
+  lesson,
   originalPosition,
   newPosition
 });
 
-export const moveLevelToLesson = (
-  groupPosition,
-  lessonPosition,
-  levelPosition,
-  newLessonPosition
-) => ({
+export const moveLevelToLesson = (group, lesson, level, newLessonPosition) => ({
   type: MOVE_LEVEL_TO_LESSON,
-  groupPosition,
-  lessonPosition,
-  levelPosition,
+  group,
+  lesson,
+  level,
   newLessonPosition
 });
 
-export const addLevel = (lessonPosition, lessonGroupPosition) => ({
+export const addLevel = (lesson, group) => ({
   type: ADD_LEVEL,
-  lessonPosition,
-  lessonGroupPosition
+  lesson,
+  group
 });
 
-export const moveGroup = (groupPosition, direction) => ({
+export const moveGroup = (group, direction) => ({
   type: MOVE_GROUP,
-  groupPosition,
+  group,
   direction
 });
 
-export const moveLesson = (lessonPosition, groupPosition, direction) => ({
+export const moveLesson = (lesson, group, direction) => ({
   type: MOVE_LESSON,
-  lessonPosition,
-  groupPosition,
+  lesson,
+  group,
   direction
 });
 
-export const removeGroup = groupPosition => ({
+export const removeGroup = group => ({
   type: REMOVE_GROUP,
-  groupPosition
+  group
 });
 
-export const removeLesson = (lessonPosition, groupPosition) => ({
+export const removeLesson = (lesson, group) => ({
   type: REMOVE_LESSON,
-  lessonPosition,
-  groupPosition
+  lesson,
+  group
 });
 
-export const setLessonLockable = (groupPosition, lessonPosition, lockable) => ({
+export const setLessonLockable = (group, lesson, lockable) => ({
   type: SET_LESSON_LOCKABLE,
-  groupPosition,
-  lessonPosition,
+  group,
+  lesson,
   lockable
 });
 
 export const setLessonGroup = (
-  lessonPosition,
+  lesson,
   oldLessonGroupPosition,
   newLessonGroupPosition
 ) => ({
   type: SET_LESSON_GROUP,
-  lessonPosition,
+  lesson,
   oldLessonGroupPosition,
   newLessonGroupPosition
 });
 
-function updateGroupPositions(lessonGorups) {
-  for (let i = 0; i < lessonGorups.length; i++) {
-    lessonGorups[i].position = i + 1;
+function updateGroupPositions(lessonGroups) {
+  for (let i = 0; i < lessonGroups.length; i++) {
+    lessonGroups[i].position = i + 1;
   }
 }
 
@@ -226,9 +195,8 @@ function lessonGroups(state = [], action) {
     case INIT:
       return action.lessonGroups;
     case REORDER_LEVEL: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      const levels =
-        lessons[action.lessonPosition - lessons[0].position].levels;
+      const lessons = newState[action.group - 1].lessons;
+      const levels = lessons[action.lesson - lessons[0].position].levels;
       const temp = levels.splice(action.originalPosition - 1, 1);
       levels.splice(action.newPosition - 1, 0, temp[0]);
       updateLevelPositions(levels);
@@ -236,10 +204,9 @@ function lessonGroups(state = [], action) {
     }
     case MOVE_LEVEL_TO_LESSON: {
       //remove level from old lesson
-      const lessons = newState[action.groupPosition - 1].lessons;
-      const levels =
-        lessons[action.lessonPosition - lessons[0].position].levels;
-      const level = levels.splice(action.levelPosition - 1, 1)[0];
+      const lessons = newState[action.group - 1].lessons;
+      const levels = lessons[action.lesson - lessons[0].position].levels;
+      const level = levels.splice(action.level - 1, 1)[0];
       updateLevelPositions(levels);
 
       // add level to new lesson
@@ -269,7 +236,7 @@ function lessonGroups(state = [], action) {
       break;
     }
     case ADD_LESSON: {
-      const lessons = newState[action.lessonGroupPosition].lessons;
+      const lessons = newState[action.group].lessons;
       lessons.push({
         id: state.newLessonId,
         name: action.lessonName,
@@ -280,9 +247,8 @@ function lessonGroups(state = [], action) {
     }
 
     case ADD_LEVEL: {
-      const lessons = newState[action.lessonGroupPosition - 1].lessons;
-      const levels =
-        lessons[action.lessonPosition - lessons[0].position].levels;
+      const lessons = newState[action.group - 1].lessons;
+      const levels = lessons[action.lesson - lessons[0].position].levels;
       levels.push({
         ids: [NEW_LEVEL_ID],
         activeId: NEW_LEVEL_ID,
@@ -292,62 +258,58 @@ function lessonGroups(state = [], action) {
       break;
     }
     case ADD_VARIANT: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      lessons[action.lessonPosition - lessons[0].position].levels[
-        action.levelPosition - 1
+      const lessons = newState[action.group - 1].lessons;
+      lessons[action.lesson - lessons[0].position].levels[
+        action.level - 1
       ].ids.push(NEW_LEVEL_ID);
       break;
     }
     case REMOVE_VARIANT: {
-      const lessons = newState[action.groupPosition - 1].lessons;
+      const lessons = newState[action.group - 1].lessons;
       const levelIds =
-        lessons[action.lessonPosition - lessons[0].position].levels[
-          action.levelPosition - 1
-        ].ids;
+        lessons[action.lesson - lessons[0].position].levels[action.level - 1]
+          .ids;
       const i = levelIds.indexOf(action.levelId);
       levelIds.splice(i, 1);
       break;
     }
     case SET_ACTIVE_VARIANT: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      lessons[action.lessonPosition - lessons[0].position].levels[
-        action.levelPosition - 1
+      const lessons = newState[action.group - 1].lessons;
+      lessons[action.lesson - lessons[0].position].levels[
+        action.level - 1
       ].activeId = action.id;
       break;
     }
     case SET_FIELD: {
       const type = Object.keys(action.modifier)[0];
-      const lessons = newState[action.groupPosition - 1].lessons;
-      lessons[action.lessonPosition - lessons[0].position].levels[
-        action.levelPosition - 1
-      ][type] = action.modifier[type];
+      const lessons = newState[action.group - 1].lessons;
+      lessons[action.lesson - lessons[0].position].levels[action.level - 1][
+        type
+      ] = action.modifier[type];
       break;
     }
     case REMOVE_GROUP: {
-      newState.splice(action.groupPosition - 1, 1);
+      newState.splice(action.group - 1, 1);
       updateLessonPositions(newState);
       break;
     }
     case REMOVE_LESSON: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      lessons.splice(action.lessonPosition - lessons[0].position, 1);
+      const lessons = newState[action.group - 1].lessons;
+      lessons.splice(action.lesson - lessons[0].position, 1);
       updateLessonPositions(newState);
       break;
     }
     case REMOVE_LEVEL: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      const levels =
-        lessons[action.lessonPosition - lessons[0].position].levels;
-      levels.splice(action.levelPosition - 1, 1);
+      const lessons = newState[action.group - 1].lessons;
+      const levels = lessons[action.lesson - lessons[0].position].levels;
+      levels.splice(action.level - 1, 1);
       updateLevelPositions(levels);
       break;
     }
     case CHOOSE_LEVEL: {
-      const lessons = newState[action.groupPosition - 1].lessons;
+      const lessons = newState[action.group - 1].lessons;
       const level =
-        lessons[action.lessonPosition - lessons[0].position].levels[
-          action.levelPosition - 1
-        ];
+        lessons[action.lesson - lessons[0].position].levels[action.level - 1];
       if (level.ids[action.variant] === level.activeId) {
         level.activeId = action.levelId;
       }
@@ -355,22 +317,17 @@ function lessonGroups(state = [], action) {
       break;
     }
     case TOGGLE_EXPAND: {
-      const lessons = newState[action.groupPosition - 1].lessons;
+      const lessons = newState[action.group - 1].lessons;
       const level =
-        lessons[action.lessonPosition - lessons[0].position].levels[
-          action.levelPosition - 1
-        ];
+        lessons[action.lesson - lessons[0].position].levels[action.level - 1];
       level.expand = !level.expand;
       break;
     }
     case MOVE_GROUP: {
-      if (
-        action.direction !== 'up' &&
-        action.groupPosition === newState.length
-      ) {
+      if (action.direction !== 'up' && action.group === newState.length) {
         break;
       }
-      const index = action.groupPosition - 1;
+      const index = action.group - 1;
       const swap = action.direction === 'up' ? index - 1 : index + 1;
       const tempGroup = newState[index];
       newState[index] = newState[swap];
@@ -380,11 +337,11 @@ function lessonGroups(state = [], action) {
       break;
     }
     case MOVE_LESSON: {
-      const groupIndex = action.groupPosition - 1;
+      const groupIndex = action.group - 1;
 
       const lessons = newState[groupIndex].lessons;
 
-      const lessonIndex = action.lessonPosition - lessons[0].position;
+      const lessonIndex = action.lesson - lessons[0].position;
       const lessonSwapIndex =
         action.direction === 'up' ? lessonIndex - 1 : lessonIndex + 1;
 
@@ -412,9 +369,8 @@ function lessonGroups(state = [], action) {
       break;
     }
     case SET_LESSON_LOCKABLE: {
-      const lessons = newState[action.groupPosition - 1].lessons;
-      lessons[action.lessonPosition - lessons[0].position].lockable =
-        action.lockable;
+      const lessons = newState[action.group - 1].lessons;
+      lessons[action.lesson - lessons[0].position].lockable = action.lockable;
 
       updateLessonPositions(newState);
       break;
@@ -423,7 +379,7 @@ function lessonGroups(state = [], action) {
       // Remove the lesson
       const oldLessons = newState[action.oldLessonGroupPosition - 1].lessons;
       const curLesson = oldLessons.splice(
-        action.lessonPosition - oldLessons[0].position,
+        action.lesson - oldLessons[0].position,
         1
       )[0];
 
