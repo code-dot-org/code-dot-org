@@ -59,7 +59,7 @@ def notify_of_external_sharing(sheet)
 end
 
 def main
-  sheet = Google::Sheet.new '1Ne5hAh7Xu32EVsvJ_B_JKcymTU67HmSVckAWDogb24c'
+  sheet = Google::Sheet.new CDO.enrollments_summer_2021_gsheet_key
   update_tabs(sheet)
   notify_of_external_sharing(sheet)
 end
