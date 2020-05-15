@@ -8,13 +8,13 @@ import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitCo
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
 
-const MB_CONSTRUCTOR_COUNT = 4;
-const MB_COMPONENT_COUNT = 6;
+const MB_COMPONENT_COUNT = 7;
 const MB_COMPONENTS = [
   'LedScreen',
   'MicroBitButton',
   'Accelerometer',
-  'MicroBitThermometer'
+  'MicroBitThermometer',
+  'Compass'
 ];
 
 describe('MicroBitBoard', () => {
@@ -75,7 +75,7 @@ describe('MicroBitBoard', () => {
 
         it(`correct number of them`, () => {
           expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
-            MB_CONSTRUCTOR_COUNT
+            MB_COMPONENTS.length
           );
         });
 
@@ -103,7 +103,7 @@ describe('MicroBitBoard', () => {
         });
 
         it(`correct number of them`, () => {
-          let globalPropsCount = MB_CONSTRUCTOR_COUNT + MB_COMPONENT_COUNT;
+          let globalPropsCount = MB_COMPONENTS.length + MB_COMPONENT_COUNT;
           expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
             globalPropsCount
           );
@@ -197,7 +197,9 @@ describe('MicroBitBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(6);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(
+          MB_COMPONENT_COUNT
+        );
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.ledScreen).to.be.a('object');
         expect(board.prewiredComponents_.tempSensor).to.be.a('object');
