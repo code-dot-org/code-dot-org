@@ -68,30 +68,49 @@ export const chooseLevel = (
   levelId
 });
 
-export const addVariant = (lesson, level) => ({
+export const addVariant = (groupPosition, lessonPosition, levelPosition) => ({
   type: ADD_VARIANT,
-  lesson,
-  level
+  groupPosition,
+  lessonPosition,
+  levelPosition
 });
 
-export const removeVariant = (lesson, level, levelId) => ({
+export const removeVariant = (
+  groupPosition,
+  lessonPosition,
+  levelPosition,
+  levelId
+) => ({
   type: REMOVE_VARIANT,
-  lesson,
-  level,
+  groupPosition,
+  lessonPosition,
+  levelPosition,
   levelId
 });
 
-export const setActiveVariant = (lesson, level, id) => ({
+export const setActiveVariant = (
+  groupPosition,
+  lessonPosition,
+  levelPosition,
+  id
+) => ({
   type: SET_ACTIVE_VARIANT,
-  lesson,
-  level,
+  groupPosition,
+  lessonPosition,
+  levelPosition,
   id
 });
 
-export const setField = (lesson, level, modifier) => ({
+export const setField = (
+  groupPosition,
+  lessonPosition,
+  levelPosition,
+  modifier
+) => ({
   type: SET_FIELD,
-  lesson,
-  level,
+  groupPosition,
+  lessonPosition,
+  levelPosition,
   modifier
 });
 
@@ -272,30 +291,38 @@ function lessonGroups(state = [], action) {
       updateLevelPositions(levels);
       break;
     }
-    /*
     case ADD_VARIANT: {
-      newState[action.lesson - 1].levels[action.level - 1].ids.push(
-        NEW_LEVEL_ID
-      );
+      const lessons = newState[action.groupPosition - 1].lessons;
+      lessons[action.lessonPosition - lessons[0].position].levels[
+        action.levelPosition - 1
+      ].ids.push(NEW_LEVEL_ID);
       break;
     }
     case REMOVE_VARIANT: {
-      const levelIds = newState[action.lesson - 1].levels[action.level - 1].ids;
+      const lessons = newState[action.groupPosition - 1].lessons;
+      const levelIds =
+        lessons[action.lessonPosition - lessons[0].position].levels[
+          action.levelPosition - 1
+        ].ids;
       const i = levelIds.indexOf(action.levelId);
       levelIds.splice(i, 1);
       break;
     }
     case SET_ACTIVE_VARIANT: {
-      newState[action.lesson - 1].levels[action.level - 1].activeId = action.id;
+      const lessons = newState[action.groupPosition - 1].lessons;
+      lessons[action.lessonPosition - lessons[0].position].levels[
+        action.levelPosition - 1
+      ].activeId = action.id;
       break;
     }
     case SET_FIELD: {
       const type = Object.keys(action.modifier)[0];
-      newState[action.lesson - 1].levels[action.level - 1][type] =
-        action.modifier[type];
+      const lessons = newState[action.groupPosition - 1].lessons;
+      lessons[action.lessonPosition - lessons[0].position].levels[
+        action.levelPosition - 1
+      ][type] = action.modifier[type];
       break;
     }
-    */
     case REMOVE_GROUP: {
       newState.splice(action.groupPosition - 1, 1);
       updateLessonPositions(newState);
