@@ -186,8 +186,8 @@ export class UnconnectedLessonCard extends Component {
 
   handleAddLevel = () => {
     this.props.addLevel(
-      this.props.lesson.position,
-      this.props.lessonGroup.position
+      this.props.lessonGroup.position,
+      this.props.lesson.position
     );
   };
 
