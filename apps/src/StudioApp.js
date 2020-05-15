@@ -806,7 +806,7 @@ export function makeFooterMenuItems() {
     },
     {
       text: msg.copyright(),
-      link: '#',
+      link: 'javascript:void(0)',
       copyright: true
     },
     {
@@ -859,7 +859,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
-    phoneFooter: true
+    phoneFooter: true,
+    channel: project.getCurrentId()
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);

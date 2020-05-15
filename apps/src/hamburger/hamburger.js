@@ -1,5 +1,8 @@
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
+import cookies from 'js-cookie';
+import _ from 'lodash';
+import {getChannelIdFromUrl} from '@cdo/apps/code-studio/components/ReportAbuseForm';
 
 export const initHamburger = function() {
   $(function() {
@@ -68,5 +71,16 @@ export const initHamburger = function() {
         trackEvent('help_ui', 'support', 'studio_footer');
       });
     });
+
+    let channelId = getChannelIdFromUrl(location.href);
+    const userAlreadyReportedAbuse =
+      cookies.get('reported_abuse') &&
+      _.includes(JSON.parse(cookies.get('reported_abuse')), channelId);
+    if (userAlreadyReportedAbuse) {
+      let reportAbuseButton = $('#report-abuse');
+      if (reportAbuseButton) {
+        reportAbuseButton.hide();
+      }
+    }
   });
 };
