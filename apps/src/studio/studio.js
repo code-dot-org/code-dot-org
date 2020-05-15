@@ -59,7 +59,6 @@ import {
   showArrowButtons,
   dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
-import trackEvent from '@cdo/apps/util/trackEvent';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -509,7 +508,6 @@ var drawMap = function() {
   svg.setAttribute('height', Studio.MAZE_HEIGHT);
 
   // Attach click handler.
-  // HERE this looks like where we add swipe for playlab. (see on drag below)
   var hammerSvg = new Hammer(svg);
   hammerSvg.on('tap', Studio.onSvgClicked);
   hammerSvg.on('drag', Studio.onSvgDrag);
@@ -1107,8 +1105,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
   if (['when-up', 'when-down', 'when-left', 'when-right'].includes(name)) {
     let store = getStore();
     if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
-      trackEvent('Research', 'HideSwipeOverlay', 'hide-buttonKeyPress');
-      store.dispatch(dismissSwipeOverlay());
+      store.dispatch(dismissSwipeOverlay('buttonKeyPress'));
     }
   }
   if (level.autoArrowSteer) {

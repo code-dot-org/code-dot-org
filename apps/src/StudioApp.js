@@ -946,7 +946,6 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   getStore().dispatch(setArrowButtonDisabled(showRun));
-  // $('.arrow').prop('disabled', showRun);
 };
 
 StudioApp.prototype.isRunning = function() {

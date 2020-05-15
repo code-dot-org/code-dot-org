@@ -23,7 +23,6 @@ import {
   showArrowButtons,
   dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
-import trackEvent from '@cdo/apps/util/trackEvent';
 
 var SquareType = tiles.SquareType;
 
@@ -508,8 +507,7 @@ Bounce.onTick = function() {
     ) {
       let store = getStore();
       if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
-        trackEvent('Research', 'HideSwipeOverlay', 'hide-keyPress');
-        store.dispatch(dismissSwipeOverlay());
+        store.dispatch(dismissSwipeOverlay('keyPress'));
       }
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
@@ -681,8 +679,7 @@ Bounce.onKey = function(e) {
 Bounce.onArrowButtonDown = function(e, idBtn) {
   let store = getStore();
   if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
-    trackEvent('Research', 'HideSwipeOverlay', 'hide-buttonPress');
-    store.dispatch(dismissSwipeOverlay());
+    store.dispatch(dismissSwipeOverlay('buttonPress'));
   }
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.DOWN;

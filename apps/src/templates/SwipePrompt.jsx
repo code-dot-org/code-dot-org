@@ -28,8 +28,9 @@ const HideSwipeOverlayCookieName = 'hide_swipe_overlay';
 const SwipeOverlayOverrideSet =
   window.location.search.indexOf('force_show_swipe_overlay') !== -1;
 
-const HideOverlayCookieSet =
-  cookies.get(HideSwipeOverlayCookieName) && !SwipeOverlayOverrideSet;
+function hideOverlayCookieSet() {
+  return cookies.get(HideSwipeOverlayCookieName) && !SwipeOverlayOverrideSet;
+}
 
 export class SwipePrompt extends React.Component {
   static propTypes = {
@@ -39,7 +40,8 @@ export class SwipePrompt extends React.Component {
     buttonsAreVisible: PropTypes.bool.isRequired,
     buttonsAreDisabled: PropTypes.bool.isRequired,
     hasBeenDismissed: PropTypes.bool.isRequired,
-    onDismiss: PropTypes.func.isRequired
+    onDismiss: PropTypes.func.isRequired,
+    dismissAction: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -50,31 +52,28 @@ export class SwipePrompt extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.hasBeenDismissed && !prevProps.hasBeenDismissed) {
+    const {hasBeenDismissed, dismissAction} = this.props;
+    if (
+      hasBeenDismissed &&
+      !prevProps.hasBeenDismissed &&
+      !hideOverlayCookieSet()
+    ) {
       // The overlay was just dismissed. Don't show it again for a while.
       cookies.set(HideSwipeOverlayCookieName, 'true', {expires: 30, path: '/'});
+      trackEvent('Research', 'HideSwipeOverlay', 'hide-' + dismissAction);
     }
   }
 
-  onTouchDismiss = () => {
-    trackEvent('Research', 'HideSwipeOverlay', 'hide-onTouch');
-    this.props.onDismiss();
-  };
-
-  onClickDismiss = () => {
-    trackEvent('Research', 'HideSwipeOverlay', 'hide-onClick');
-    this.props.onDismiss();
-  };
-
   render() {
     const {
+      onDismiss,
       buttonsAreVisible,
       buttonsAreDisabled,
       hasBeenDismissed,
       useMinecraftStyling
     } = this.props;
     if (
-      HideOverlayCookieSet ||
+      hideOverlayCookieSet() ||
       hasBeenDismissed ||
       !(TouchSupported || SwipeOverlayOverrideSet) ||
       !buttonsAreVisible ||
@@ -91,8 +90,8 @@ export class SwipePrompt extends React.Component {
 
     return (
       <svg
-        onTouchStart={this.onTouchDismiss}
-        onClick={this.onClickDismiss}
+        onTouchStart={() => onDismiss('onOverlayTouch')}
+        onClick={() => onDismiss('onOverlayClick')}
         style={promptStyle}
         height={400}
         width={400}
@@ -118,11 +117,12 @@ export default connect(
   state => ({
     buttonsAreVisible: state.arrowDisplay.buttonsAreVisible,
     buttonsAreDisabled: state.arrowDisplay.buttonsAreDisabled,
-    hasBeenDismissed: state.arrowDisplay.swipeOverlayHasBeenDismissed
+    hasBeenDismissed: state.arrowDisplay.swipeOverlayHasBeenDismissed,
+    dismissAction: state.arrowDisplay.swipeOverlayDismissAction
   }),
   dispatch => ({
-    onDismiss() {
-      dispatch(dismissSwipeOverlay());
+    onDismiss(action) {
+      dispatch(dismissSwipeOverlay(action));
     }
   })
 )(SwipePrompt);
