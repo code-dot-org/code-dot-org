@@ -16,5 +16,10 @@ module Pd
     }
 
     FOORM_SUBMIT_API = '/api/v1/pd/foorm/workshop_survey_submission'
+
+    FACILITATORS = 'facilitators'
+    FACILITATOR_ID = 'facilitator_id'
+    FACILITATOR_NAME = 'facilitator_name'
+    FACILITATOR_POSITION = 'facilitator_position'
   end
 end

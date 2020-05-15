@@ -88,6 +88,34 @@ module Pd
       end
 
       survey_name = DAILY_SURVEY_NAMES[workshop.subject]
+      render_general_foorm(workshop, survey_name, day, session)
+    end
+
+    # General pre-workshop survey using foorm system.
+    # GET '/pd/workshop_pre_survey?enrollmentCode=code'
+    # Enrollment code is an optional parameter, otherwise will show most recent workshop.
+    #
+    # If the pre-survey has been already completed, will redirect to thanks page.
+    def new_pre_foorm
+      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+
+      survey_name = PRE_SURVEY_NAMES[workshop.subject]
+      render_general_foorm(workshop, survey_name, 0, nil)
+    end
+
+    # General post-workshop survey using foorm system.
+    # GET '/pd/workshop_post_survey?enrollmentCode=code'
+    # Enrollment code is an optional parameter, otherwise will show most recent workshop.
+    #
+    # If the post-survey has been already completed, will redirect to thanks page.
+    def new_post_foorm
+      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+
+      survey_name = POST_SURVEY_NAMES[workshop.subject]
+      render_general_foorm(workshop, survey_name, nil, nil)
+    end
+
+    def render_general_foorm(workshop, survey_name, day, session)
       return render_404 unless survey_name
 
       key_params = {
@@ -522,7 +550,18 @@ module Pd
           return false
         end
         session = get_session_for_workshop_and_day(workshop, day)
-        return validate_session_for_survey(session)
+        unless session
+          render_404
+          return false
+        end
+        unless session.open_for_attendance? || day == workshop.sessions.size
+          render :too_late
+          return false
+        end
+        unless session.attendances.exists?(teacher: current_user)
+          render :no_attendance
+          return false
+        end
       end
       return true
     end
@@ -546,9 +585,9 @@ module Pd
     def get_foorm_survey_data(workshop)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
-          facilitator_id: facilitator.id,
-          facilitator_name: facilitator.name,
-          facilitator_position: i + 1
+          FACILITATOR_ID => facilitator.id,
+          FACILITATOR_NAME => facilitator.name,
+          FACILITATOR_POSITION => i + 1
         }
       end
 
@@ -558,7 +597,7 @@ module Pd
       end
 
       return {
-        facilitators: facilitator_data,
+        FACILITATORS => facilitator_data,
         workshop_course: workshop.course,
         workshop_subject: workshop.subject,
         regional_partner_name: regional_partner_name,
