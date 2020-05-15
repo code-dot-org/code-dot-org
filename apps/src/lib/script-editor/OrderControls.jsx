@@ -113,12 +113,12 @@ const OrderControls = connect(
     move(type, position, parentPosition, direction) {
       type === ControlTypes.Group
         ? dispatch(moveGroup(position, direction))
-        : dispatch(moveLesson(position, parentPosition, direction));
+        : dispatch(moveLesson(parentPosition, position, direction));
     },
     remove(type, position, parentPosition) {
       type === ControlTypes.Group
         ? dispatch(removeGroup(position))
-        : dispatch(removeLesson(position, parentPosition));
+        : dispatch(removeLesson(parentPosition, position));
     }
   })
 )(UnconnectedOrderControls);

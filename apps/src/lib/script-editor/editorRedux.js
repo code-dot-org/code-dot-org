@@ -109,10 +109,10 @@ export const moveLevelToLesson = (group, lesson, level, newLesson) => ({
   newLesson
 });
 
-export const addLevel = (lesson, group) => ({
+export const addLevel = (group, lesson) => ({
   type: ADD_LEVEL,
-  lesson,
-  group
+  group,
+  lesson
 });
 
 export const moveGroup = (group, direction) => ({
@@ -121,10 +121,10 @@ export const moveGroup = (group, direction) => ({
   direction
 });
 
-export const moveLesson = (lesson, group, direction) => ({
+export const moveLesson = (group, lesson, direction) => ({
   type: MOVE_LESSON,
-  lesson,
   group,
+  lesson,
   direction
 });
 
@@ -133,10 +133,10 @@ export const removeGroup = group => ({
   group
 });
 
-export const removeLesson = (lesson, group) => ({
+export const removeLesson = (group, lesson) => ({
   type: REMOVE_LESSON,
-  lesson,
-  group
+  group,
+  lesson
 });
 
 export const setLessonLockable = (group, lesson, lockable) => ({
@@ -232,7 +232,7 @@ function lessonGroups(state = [], action) {
       break;
     }
     case ADD_LESSON: {
-      const lessons = newState[action.group].lessons;
+      const lessons = newState[action.group - 1].lessons;
       lessons.push({
         id: state.newLessonId,
         name: action.lessonName,

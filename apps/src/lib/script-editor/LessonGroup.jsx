@@ -220,7 +220,7 @@ class LessonGroup extends Component {
                 );
               })}
               <button
-                onMouseDown={this.handleAddLesson.bind(null, index)}
+                onMouseDown={this.handleAddLesson.bind(null, index + 1)}
                 className="btn"
                 style={styles.addLesson}
                 type="button"
