@@ -29,7 +29,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
       removeLevel,
       handleClose
     } = this.props;
-    removeLevel(lesson.position, lessonGroup.position, levelPosToRemove);
+    removeLevel(lessonGroup.position, lesson.position, levelPosToRemove);
     handleClose();
   };
 

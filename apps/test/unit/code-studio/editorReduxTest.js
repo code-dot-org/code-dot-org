@@ -13,36 +13,44 @@ import reducers, {
 
 const getInitialState = () => ({
   levelKeyList: {},
-  lessons: [
+  lessonGroups: [
     {
-      id: 100,
-      name: 'A',
-      levels: [
+      key: 'lg-key',
+      display_name: 'Display Name',
+      position: 1,
+      user_facing: false,
+      lessons: [
         {
-          ids: [1],
-          activeId: 1
+          id: 100,
+          name: 'A',
+          levels: [
+            {
+              ids: [1],
+              activeId: 1
+            },
+            {
+              ids: [4],
+              activeId: 4
+            },
+            {
+              ids: [5],
+              activeId: 5
+            },
+            {
+              ids: [6],
+              activeId: 6
+            }
+          ]
         },
         {
-          ids: [4],
-          activeId: 4
-        },
-        {
-          ids: [5],
-          activeId: 5
-        },
-        {
-          ids: [6],
-          activeId: 6
-        }
-      ]
-    },
-    {
-      name: 'B',
-      id: 101,
-      levels: [
-        {
-          ids: [2, 3],
-          activeId: 3
+          name: 'B',
+          id: 101,
+          levels: [
+            {
+              ids: [2, 3],
+              activeId: 3
+            }
+          ]
         }
       ]
     }
