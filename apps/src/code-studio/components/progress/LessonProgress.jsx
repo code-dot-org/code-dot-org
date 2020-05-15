@@ -24,7 +24,9 @@ const styles = {
     height: 40,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginLeft: 4,
+    marginRight: 4
   },
   spacer: {
     marginRight: 'auto'
@@ -90,7 +92,7 @@ function getShowLevels(levels, width, lessonExtrasProgressBubble) {
   } else {
     // If there isn't enough room, show the current level in the middle
     // of the dots we can show.
-    var numSurroundingElements = numAvailableElements / 2;
+    var numSurroundingElements = (numAvailableElements - 1) / 2;
 
     firstElement = Math.ceil(currentLevelIndex - numSurroundingElements);
     var lastElement = Math.ceil(currentLevelIndex + numSurroundingElements);
@@ -111,7 +113,7 @@ function getShowLevels(levels, width, lessonExtrasProgressBubble) {
 
   let showLessonExtrasProgressBubble = false;
 
-  if (lessonExtrasProgressBubble && numElements === numLevels) {
+  if (lessonExtrasProgressBubble && firstElement + numElements >= numLevels) {
     numElements -= 1;
     showLessonExtrasProgressBubble = true;
   }

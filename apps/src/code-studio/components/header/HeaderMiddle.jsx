@@ -12,11 +12,20 @@ import LessonProgress, {
   getFullWidthForLevels
 } from '../progress/LessonProgress.jsx';
 
+const styles = {
+  headerMiddleContent: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center'
+  }
+};
+
 class HeaderMiddle extends React.Component {
   static propTypes = {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object.isRequired,
     lessonData: PropTypes.object.isRequired,
+    lessonExtrasUrl: PropTypes.string,
     children: PropTypes.node
   };
 
@@ -86,18 +95,21 @@ class HeaderMiddle extends React.Component {
   getWidths() {
     const width = this.state.width - this.state.projectInfoWidth;
     const thirdItem = this.thirdItem();
+    const progressDesiredWidth = getFullWidthForLevels(
+      this.props.lessonExtrasUrl /*&& !this.props.lessonTrophyEnabled*/
+    );
 
     if (thirdItem === 'finish') {
       if (width < 300) {
         return {
           scriptName: 0,
-          progress: Math.min(getFullWidthForLevels(), width / 2),
+          progress: Math.min(progressDesiredWidth, width / 2),
           finishLink: width / 2
         };
       } else {
         return {
           scriptName: width / 3,
-          progress: Math.min(getFullWidthForLevels(), width / 3),
+          progress: Math.min(progressDesiredWidth, width / 3),
           finishLink: width / 3
         };
       }
@@ -105,13 +117,13 @@ class HeaderMiddle extends React.Component {
       if (width < 300) {
         return {
           scriptName: 0,
-          progress: Math.min(getFullWidthForLevels(), width - 40 - 1),
+          progress: Math.min(progressDesiredWidth, width - 40 - 1),
           popup: 40
         };
       } else {
         return {
           scriptName: (width - 40) / 2 - 1,
-          progress: Math.min(getFullWidthForLevels(), (width - 40) / 2 - 1),
+          progress: Math.min(progressDesiredWidth, (width - 40) / 2 - 1),
           popup: 40
         };
       }
@@ -127,7 +139,7 @@ class HeaderMiddle extends React.Component {
 
     if (this.props.appLoaded) {
       return (
-        <div id="header_middle_content" style={{width: '100%'}}>
+        <div id="header_middle_content;" style={styles.headerMiddleContent}>
           <div
             id="project_info_container"
             style={{
