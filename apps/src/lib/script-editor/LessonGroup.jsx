@@ -204,7 +204,7 @@ class LessonGroup extends Component {
                     key={`lesson-${index}`}
                     lessonsCount={lessonGroup.lessons.length}
                     lesson={lesson}
-                    lessonGroup={lessonGroup}
+                    lessonGroupPosition={lessonGroup.position}
                     ref={lessonCard => {
                       if (lessonCard) {
                         const metrics = ReactDOM.findDOMNode(

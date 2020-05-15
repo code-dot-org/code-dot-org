@@ -65,7 +65,7 @@ export class UnconnectedLessonCard extends Component {
     setLessonLockable: PropTypes.func.isRequired,
     lessonsCount: PropTypes.number.isRequired,
     lesson: PropTypes.object.isRequired,
-    lessonGroup: PropTypes.object.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired,
     lessonMetrics: PropTypes.object.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     setTargetLesson: PropTypes.func.isRequired,
@@ -152,12 +152,12 @@ export class UnconnectedLessonCard extends Component {
   };
 
   handleDragStop = () => {
-    const {lesson, lessonGroup, targetLessonPos} = this.props;
+    const {lesson, lessonGroupPosition, targetLessonPos} = this.props;
     if (targetLessonPos === lesson.position) {
       // When dragging within a lesson, reorder the level within that lesson.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
-          lessonGroup.position,
+          lessonGroupPosition,
           lesson.position,
           this.state.draggedLevelPos,
           this.state.newPosition
@@ -166,7 +166,7 @@ export class UnconnectedLessonCard extends Component {
     } else if (targetLessonPos) {
       // When dragging between lessons, move it to the end of the new lesson.
       this.props.moveLevelToLesson(
-        lessonGroup.position,
+        lessonGroupPosition,
         lesson.position,
         this.state.draggedLevelPos,
         targetLessonPos
@@ -186,7 +186,7 @@ export class UnconnectedLessonCard extends Component {
 
   handleAddLevel = () => {
     this.props.addLevel(
-      this.props.lessonGroup.position,
+      this.props.lessonGroupPosition,
       this.props.lesson.position
     );
   };
@@ -207,10 +207,10 @@ export class UnconnectedLessonCard extends Component {
 
   handleSetLessonGroup = newLessonGroupPosition => {
     this.setState({editingLessonGroup: false});
-    if (this.props.lessonGroup.position !== newLessonGroupPosition + 1) {
+    if (this.props.lessonGroupPosition !== newLessonGroupPosition + 1) {
       this.props.setLessonGroup(
         this.props.lesson.position,
-        this.props.lessonGroup.position,
+        this.props.lessonGroupPosition,
         newLessonGroupPosition + 1
       );
     }
@@ -222,7 +222,7 @@ export class UnconnectedLessonCard extends Component {
 
   toggleLockable = () => {
     this.props.setLessonLockable(
-      this.props.lessonGroup.position,
+      this.props.lessonGroupPosition,
       this.props.lesson.position,
       !this.props.lesson.lockable
     );
@@ -233,7 +233,7 @@ export class UnconnectedLessonCard extends Component {
   }
 
   render() {
-    const {lesson, targetLessonPos, lessonGroup} = this.props;
+    const {lesson, targetLessonPos, lessonGroupPosition} = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetLesson = targetLessonPos === lesson.position;
     return (
@@ -246,7 +246,7 @@ export class UnconnectedLessonCard extends Component {
           <OrderControls
             type={ControlTypes.Lesson}
             position={lesson.position}
-            parentPosition={lessonGroup.position}
+            parentPosition={lessonGroupPosition}
             total={this.props.lessonsCount}
             name={this.props.lesson.name}
           />
@@ -274,7 +274,7 @@ export class UnconnectedLessonCard extends Component {
             key={level.position + '_' + level.ids[0]}
             level={level}
             lessonPosition={lesson.position}
-            lessonGroupPosition={lessonGroup.position}
+            lessonGroupPosition={lessonGroupPosition}
             dragging={!!draggedLevelPos}
             draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
@@ -318,7 +318,7 @@ export class UnconnectedLessonCard extends Component {
            interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLevelDialog
           lesson={lesson}
-          lessonGroup={lessonGroup}
+          lessonGroupPosition={lessonGroupPosition}
           levelPosToRemove={levelPosToRemove}
           handleClose={this.handleClose}
         />

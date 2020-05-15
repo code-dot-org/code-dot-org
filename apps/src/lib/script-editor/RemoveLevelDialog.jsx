@@ -11,7 +11,7 @@ import Dialog from '../../templates/Dialog';
 export class UnconnectedRemoveLevelDialog extends Component {
   static propTypes = {
     lesson: PropTypes.object.isRequired,
-    lessonGroup: PropTypes.object.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired,
     // Position of level to remove. Dialog opens when this is set.
     levelPosToRemove: PropTypes.number,
     handleClose: PropTypes.func.isRequired,
@@ -24,12 +24,12 @@ export class UnconnectedRemoveLevelDialog extends Component {
   handleConfirm = () => {
     const {
       lesson,
-      lessonGroup,
+      lessonGroupPosition,
       levelPosToRemove,
       removeLevel,
       handleClose
     } = this.props;
-    removeLevel(lessonGroup.position, lesson.position, levelPosToRemove);
+    removeLevel(lessonGroupPosition, lesson.position, levelPosToRemove);
     handleClose();
   };
 
