@@ -2256,7 +2256,7 @@ class User < ActiveRecord::Base
   private
 
   def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   def hidden_script_ids(sections)
