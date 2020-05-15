@@ -99,4 +99,20 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil contact_record
     assert_equal 0, contact_record.data['opt_in']
   end
+
+  test 'dry run makes no Pardot API calls' do
+    # Called when creating and updating Pardot prospects
+    PardotV2.expects(:submit_batch_request).never
+    ContactRollupsPardotMemory.expects(:save_sync_results).never
+    # Called when downloading Pardot ID-email mappings
+    PardotV2.expects(:post_with_auth_retry).never
+
+    # Execute the pipeline
+    log_collector = LogCollector.new "Tests end-to-end pipeline"
+    ContactRollupsV2.build_contact_rollups(
+      log_collector: log_collector,
+      sync_with_pardot: true,
+      dry_run: true
+    )
+  end
 end
