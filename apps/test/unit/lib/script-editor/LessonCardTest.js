@@ -32,16 +32,7 @@ describe('LessonCard', () => {
         position: 1,
         lockable: false
       },
-      lessonGroup: {
-        position: 1,
-        lessons: [
-          {
-            levels: [],
-            position: 1,
-            lockable: false
-          }
-        ]
-      },
+      lessonGroupPosition: 1,
       lessonMetrics: {},
       setLessonGroup,
       setTargetLesson,
