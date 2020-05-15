@@ -1,5 +1,6 @@
 import {EventEmitter} from 'events';
 import {sensor_channels, roundToHundredth} from './MicroBitConstants';
+import {ACCEL_EVENT_ID} from './MBFirmataWrapper';
 
 // Transfer the acceleration units from milli-g to meters/second^2
 // Round to the nearest hundredth
@@ -12,6 +13,8 @@ function unitsFromMGToMS2(val) {
 export default class Accelerometer extends EventEmitter {
   constructor(board) {
     super();
+    // There are twelve sensor events, ['', 'up', 'down', 'left', 'right',
+    // 'face-up', 'face-down', 'freefall', '3G', '6G', '8G', 'shake']
     this.state = {x: 0, y: 0, z: 0};
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
@@ -29,8 +32,15 @@ export default class Accelerometer extends EventEmitter {
         this.state.z = this.board.mb.analogChannel[sensor_channels.accelZ];
         this.emit('change');
       }
+    });
 
-      //TODO : implement 'shake' action
+    this.board.mb.addFirmataEventListener((sourceID, eventID) => {
+      if (ACCEL_EVENT_ID === sourceID) {
+        // The shake event is at the 11th index for sensor events
+        if (eventID === 11) {
+          this.emit('shake');
+        }
+      }
     });
     this.start();
 
