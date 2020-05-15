@@ -16,6 +16,7 @@ describe('OrderControls', () => {
       remove,
       type: ControlTypes.Lesson,
       position: 1,
+      parentPosition: 1,
       total: 2,
       name: 'My Lesson'
     };
