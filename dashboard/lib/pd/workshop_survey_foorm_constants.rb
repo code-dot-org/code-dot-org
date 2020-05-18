@@ -3,7 +3,7 @@ module Pd
     include SharedWorkshopConstants
 
     DAILY_SURVEY_NAMES = {
-      SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/survey_placeholder'
+      SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_daily_survey'
     }
 
     POST_SURVEY_NAMES = {
@@ -12,7 +12,7 @@ module Pd
     }
 
     PRE_SURVEY_NAMES = {
-      SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/survey_placeholder'
+      SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_pre_survey'
     }
 
     FOORM_SUBMIT_API = '/api/v1/pd/foorm/workshop_survey_submission'
