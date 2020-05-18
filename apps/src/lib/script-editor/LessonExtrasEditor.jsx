@@ -52,7 +52,6 @@ export default class LessonExtrasEditor extends React.Component {
         </label>
         {this.state.lessonExtras && (
           <div>
-            <h4>Project widget options</h4>
             <label>
               Project widget visible
               <input
