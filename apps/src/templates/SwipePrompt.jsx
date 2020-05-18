@@ -18,19 +18,7 @@ const styles = {
   }
 };
 
-// Note: this method is not foolproof for detecting touch support. It is
-// impossible to detect with 100% certainty.
-// http://www.stucox.com/blog/you-cant-detect-a-touchscreen/
-const TouchSupported = 'ontouchstart' in window || navigator.maxTouchPoints;
-
 const HideSwipeOverlayCookieName = 'hide_swipe_overlay';
-
-const SwipeOverlayOverrideSet =
-  window.location.search.indexOf('force_show_swipe_overlay') !== -1;
-
-function hideOverlayCookieSet() {
-  return cookies.get(HideSwipeOverlayCookieName) && !SwipeOverlayOverrideSet;
-}
 
 export class SwipePrompt extends React.Component {
   static propTypes = {
@@ -46,7 +34,7 @@ export class SwipePrompt extends React.Component {
 
   constructor(props) {
     super(props);
-    if (SwipeOverlayOverrideSet) {
+    if (this.swipeOverlayOverrideSet()) {
       cookies.remove(HideSwipeOverlayCookieName, {path: '/'});
     }
   }
@@ -56,12 +44,30 @@ export class SwipePrompt extends React.Component {
     if (
       hasBeenDismissed &&
       !prevProps.hasBeenDismissed &&
-      !hideOverlayCookieSet()
+      !this.hideOverlayCookieSet()
     ) {
       // The overlay was just dismissed. Don't show it again for a while.
       cookies.set(HideSwipeOverlayCookieName, 'true', {expires: 30, path: '/'});
       trackEvent('Research', 'HideSwipeOverlay', 'hide-' + dismissAction);
     }
+  }
+
+  swipeOverlayOverrideSet() {
+    window.location.search.indexOf('force_show_swipe_overlay') !== -1;
+  }
+
+  touchSupported() {
+    // Note: if you are planning to use this logic in other places, you should
+    // know that this is not foolproof for detecting touch support. It is
+    // impossible to detect touch support with 100% certainty.
+    // http://www.stucox.com/blog/you-cant-detect-a-touchscreen/
+    'ontouchstart' in window || navigator.maxTouchPoints;
+  }
+
+  hideOverlayCookieSet() {
+    return (
+      cookies.get(HideSwipeOverlayCookieName) && !this.swipeOverlayOverrideSet
+    );
   }
 
   render() {
@@ -72,10 +78,11 @@ export class SwipePrompt extends React.Component {
       hasBeenDismissed,
       useMinecraftStyling
     } = this.props;
+
     if (
-      hideOverlayCookieSet() ||
+      this.hideOverlayCookieSet() ||
       hasBeenDismissed ||
-      !(TouchSupported || SwipeOverlayOverrideSet) ||
+      !(this.touchSupported() || this.swipeOverlayOverrideSet()) ||
       !buttonsAreVisible ||
       buttonsAreDisabled
     ) {
@@ -84,6 +91,7 @@ export class SwipePrompt extends React.Component {
       // the user hasn't seen the overlay recently
       return null;
     }
+
     const promptStyle = useMinecraftStyling
       ? {...styles.overlay, ...styles.minecraft}
       : styles.overlay;
@@ -112,6 +120,8 @@ export class SwipePrompt extends React.Component {
     );
   }
 }
+
+export const UnconnectedSwipePrompt = SwipePrompt;
 
 export default connect(
   state => ({
