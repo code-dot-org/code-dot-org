@@ -16,7 +16,7 @@ LATEST_WORKSHOP_START_DATE = Date.new(2020, 8, 31)
 
 def update_tabs(sheet)
   # Seed results array with a header row
-  results = [%w(teacher_email teacher_name workshop_id
+  results = [%w(teacher_email first_name last_name workshop_id
                 workshop_start_date workshop_course regional_partner)]
 
   workshop_ids_this_year = Pd::Workshop.
@@ -32,7 +32,8 @@ def update_tabs(sheet)
   enrollments_this_year.find_each do |enrollment|
     results << [
       enrollment.email,
-      enrollment.first_name + ' ' + enrollment.last_name,
+      enrollment.first_name,
+      enrollment.last_name,
       enrollment.workshop.id,
       enrollment.workshop.workshop_starting_date.to_date,
       enrollment.workshop.course,
