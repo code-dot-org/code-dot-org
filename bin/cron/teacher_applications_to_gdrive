@@ -72,7 +72,7 @@ end
 
 def main
   # Uses a Google Cloud service account to access Google Drive
-  sheet = Google::Sheet.new '1Ne5hAh7Xu32EVsvJ_B_JKcymTU67HmSVckAWDogb24c'
+  sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
   update_tabs(sheet)
   notify_of_external_sharing(sheet)
 end
