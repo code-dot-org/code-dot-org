@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+exit unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/google/sheet'
+
+#
+# Uses a Google Cloud service account to write enrollment data for this year into
+# a spreadsheet in Google Drive (with permissions locked down to our organization)
+# in order to send packages to teachers attending 5-day workshops.
+#
+
+EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
+LATEST_WORKSHOP_START_DATE = Date.new(2020, 8, 31)
+
+def update_tabs(sheet)
+  # Seed results array with a header row
+  results = [%w(teacher_email first_name last_name workshop_id
+                workshop_start_date workshop_course regional_partner)]
+
+  workshop_ids_this_year = Pd::Workshop.
+    where(subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
+    scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).
+    pluck(:id)
+
+  enrollments_this_year = Pd::Enrollment.
+    includes(:workshop).
+    where(pd_workshop_id: workshop_ids_this_year)
+
+  enrollments_this_year.find_each do |enrollment|
+    results << [
+      enrollment.email,
+      enrollment.first_name,
+      enrollment.last_name,
+      enrollment.workshop.id,
+      enrollment.workshop.workshop_starting_date.to_date,
+      enrollment.workshop.course,
+      enrollment.workshop.regional_partner&.name
+    ]
+  end
+
+  sheet.export(
+    sheet_name: 'enrollments',
+    rows: results
+  )
+end
+
+def notify_of_external_sharing(sheet)
+  external_emails = sheet.external_emails_with_access
+  if external_emails.present?
+    email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
+    error_msg = "Document containing PII information is shared to "\
+      "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
+      "Please check with PLC team that this is intentional!"
+
+    Honeybadger.notify error_msg
+    puts error_msg
+  end
+end
+
+def main
+  sheet = Google::Sheet.new CDO.enrollments_summer_2020_gsheet_key
+  update_tabs(sheet)
+  notify_of_external_sharing(sheet)
+end
+
+main

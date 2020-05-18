@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require_relative('../../dashboard/config/deployment')
 require 'cdo/languages'
-require 'cdo/google_drive'
+require 'cdo/google/drive'
 require 'csv'
 
 def try_parse_json(data)
