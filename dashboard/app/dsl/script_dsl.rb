@@ -282,6 +282,7 @@ class ScriptDSL < BaseDSL
 
     # temporarily include "stage" strings under both "stages" and "lessons"
     # while we transition from the former term to the latter.
+    # TODO FND-1122
     {@name => {
       'stages' => i18n_stage_strings,
       'lessons' => i18n_stage_strings,
