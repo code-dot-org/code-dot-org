@@ -4,13 +4,21 @@ import {sensor_channels} from './MicroBitConstants';
 export default class LightSensor extends EventEmitter {
   constructor(board) {
     super();
-    this.threshold = 0;
+    this.threshold = 128;
     this.rangeMin = 0;
-    this.rangeMax = 0;
+    this.rangeMax = 255;
     this.currentReading = 0;
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
-      this.emit('data');
+      // Only emit the data event when the value is above the threshold or the
+      // previous reading was above the threshold
+      if (
+        this.this.board.mb.analogChannel[sensor_channels.lightSensor] >=
+          this.threshold ||
+        this.currentReading >= this.threshold
+      ) {
+        this.emit('data');
+      }
 
       // If the light value has changed, update the local value and
       // trigger a change event
@@ -18,10 +26,16 @@ export default class LightSensor extends EventEmitter {
         this.currentReading !==
         this.board.mb.analogChannel[sensor_channels.lightSensor]
       ) {
+        if (
+          this.this.board.mb.analogChannel[sensor_channels.lightSensor] >=
+            this.threshold ||
+          this.currentReading >= this.threshold
+        ) {
+          this.emit('change');
+        }
         this.currentReading = this.board.mb.analogChannel[
           sensor_channels.lightSensor
         ];
-        this.emit('change');
       }
     });
     this.start();
@@ -35,8 +49,8 @@ export default class LightSensor extends EventEmitter {
         }
       },
       threshold: {
-        set: function() {
-          return this.threshold;
+        set: function(value) {
+          this.threshold = value;
         }
       }
     });
@@ -54,7 +68,7 @@ export default class LightSensor extends EventEmitter {
   //TODO
   getAveragedValue() {}
 
-  setThreshold(min, max) {
+  setRange(min, max) {
     this.rangeMin = min;
     this.rangeMax = max;
   }
