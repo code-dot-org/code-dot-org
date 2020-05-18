@@ -1090,6 +1090,8 @@ es-MX:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
+      gamelab_patrollingUpDown:
+        text: Patrullar hacia arriba y abajo
       gamelab_playSound:
         text: reproducirSonido {SOUND}
       gamelab_pointInDirection:
@@ -1571,9 +1573,16 @@ es-MX:
       aalab_setupStory:
         text: configurar historia
       aalab_starwars_playSound:
+        text: reproducir{OPTION}sonido
         options:
           OPTION:
             '"random"': al azar
+            '"R2-D2 random"': R2-D2 aleatorio
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:
