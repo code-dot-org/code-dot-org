@@ -177,11 +177,7 @@ export default {
   onDeserialize: function(element, updateProperty) {
     // Disable image upload events unless running
     $(element).on('click', () => {
-      if (Applab.isRunning()) {
-        element.childNodes[0].disabled = false;
-      } else {
-        element.childNodes[0].disabled = true;
-      }
+      element.childNodes[0] = !Applab.isRunning();
     });
   }
 };

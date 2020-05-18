@@ -205,11 +205,6 @@ export default function sanitizeHtml(
       'hidden',
       'capture'
     ]),
-    label: standardAttributes.concat([
-      'data-canonical-image-url',
-      'src',
-      'data-icon-color'
-    ]),
     select: standardAttributes.concat(['multiple', 'size'])
   };
   var tagsWithCustomAttributes = Object.keys(customAttributesMap);
