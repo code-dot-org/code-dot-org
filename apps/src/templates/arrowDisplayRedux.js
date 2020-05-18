@@ -10,31 +10,32 @@ const initialState = {
   swipeOverlayDismissAction: ''
 };
 
-export default function arrowDisplay(state = initialState, action) {
+export default function arrowDisplay(state, action) {
+  const currentState = {...initialState, ...state};
   switch (action.type) {
     case SET_ARROW_BUTTONS_VISIBLE:
       return {
-        ...state,
+        ...currentState,
         buttonsAreVisible: true
       };
     case SET_ARROW_BUTTONS_HIDDEN:
       return {
-        ...state,
+        ...currentState,
         buttonsAreVisible: false
       };
     case SET_ARROW_BUTTONS_DISABLED:
       return {
-        ...state,
+        ...currentState,
         buttonsAreDisabled: action.isDisabled
       };
     case DISMISS_SWIPE_OVERLAY:
       return {
-        ...state,
+        ...currentState,
         swipeOverlayHasBeenDismissed: true,
         swipeOverlayDismissAction: action.dismissAction
       };
     default:
-      return state;
+      return currentState;
   }
 }
 

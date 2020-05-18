@@ -10,7 +10,7 @@ const styles = {
 /**
  * A set of arrow buttons
  */
-export class ArrowButtons extends React.Component {
+class ArrowButtons extends React.Component {
   static propTypes = {
     // from redux
     visible: PropTypes.bool.isRequired,
