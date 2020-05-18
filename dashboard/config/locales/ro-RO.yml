@@ -195,7 +195,12 @@ ro:
     email_preference_yes: Da
     email_preference_no: Nu
     email_preference_required: Trebuie să specificaţi un email preferat.
-    parent_account_email_label: E-mail părinte/tutore
+    parent_account_checkbox: Sunt un părinte/tutore care se înscrie în numele copilului
+      meu
+    parent_account_email_progress_permission: Putem să vă trimitem un email cu actualizări
+      ocazionale privind progresul și proiectele copilului dv., precum și actualizări
+      despre cursul lui și despre informatică? [(Vedeți politica noastră de confidențialitate)](%{privacy_policy_url})
+    parent_account_email_label: Email-ul Părintelui/Tutorelui
   school_info:
     title: Informații școală (opțional)
     school_country: Țara școlii
@@ -512,8 +517,14 @@ ro:
     update: Actualizaţi contul
     account_successfully_updated: Contul a fost actualizat cu succes.
     update_email: Actualizează
+    for_parents_and_guardians: Pentru Părinți și Tutori
+    link_a_parent_email: Corelați adresa de email a unui părinte/tutore cu acest cont
+      pentru a primi actualizări despre progresul și proiectele copilului dv. De asemenea,
+      veți putea utiliza această adresă de email pentru recuperarea parolei.
     parent_guardian_email_label: E-mail părinte/tutore
     none: Nici unul
+    only_one_parent_email_supported_warning: 'Notă: pentru moment, putem accepta doar
+      o adresă de email a părintelui/tutorelui pentru un cont de elev'
     encrypted: criptat
   user_level:
     completed: Finalizat
@@ -1224,3 +1235,8 @@ ro:
     logout: Deconectare
     true: Da
   copy: Copiază
+  parent_email_banner:
+    text: "**Sunteți un părinte sau un tutore?** Corelați emailul dv. cu acest cont
+      pentru a primi actualizări despre progresul și proiectele copilului dv.!"
+    link_your_email: Corelați emailul dv.
+    not_now: Nu acum
