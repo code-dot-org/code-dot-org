@@ -244,7 +244,6 @@ class LessonGroup extends Component {
         )}
         {this.state.addingLessonGroup && (
           <NewLessonGroupInput
-            confirmButtonText="Create"
             onConfirm={this.createLessonGroup}
             onCancel={this.hideLessonGroupCreate}
           />

@@ -32,9 +32,8 @@ const styles = {
   }
 };
 
-class LessonGroupSelector extends Component {
+class NewLessonGroupInput extends Component {
   static propTypes = {
-    confirmButtonText: PropTypes.string.isRequired,
     onConfirm: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
 
@@ -97,7 +96,7 @@ class LessonGroupSelector extends Component {
             style={styles.lessonGroupButton}
             type="button"
           >
-            {this.props.confirmButtonText}
+            Create
           </button>
           <button
             onMouseDown={this.handleCancel}
@@ -113,6 +112,8 @@ class LessonGroupSelector extends Component {
   }
 }
 
+export const UnconnectedNewLessonGroupInput = NewLessonGroupInput;
+
 export default connect(state => ({
   lessonGroups: state.lessonGroups
-}))(LessonGroupSelector);
+}))(NewLessonGroupInput);
