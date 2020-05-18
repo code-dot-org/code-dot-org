@@ -14,6 +14,7 @@ import ResourceType, {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import VisibleAndPilotExperiment from './VisibleAndPilotExperiment';
+import LessonExtrasEditor from './LessonExtrasEditor';
 
 const styles = {
   input: {
@@ -83,12 +84,6 @@ export default class ScriptEditor extends React.Component {
       curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
-
-  handleClearProjectWidgetSelectClick = () => {
-    $(this.projectWidgetSelect)
-      .children('option')
-      .removeAttr('selected', true);
-  };
 
   handleClearSupportedLocalesSelectClick = () => {
     $(this.supportedLocaleSelect)
@@ -305,19 +300,11 @@ export default class ScriptEditor extends React.Component {
             this script.
           </p>
         </label>
-        <label>
-          Lesson Extras Available
-          <input
-            name="lesson_extras_available"
-            type="checkbox"
-            defaultChecked={this.props.lessonExtrasAvailable}
-            style={styles.checkbox}
-          />
-          <p>
-            If also enabled by the teacher, show the lesson extras page at the
-            end of each lesson.
-          </p>
-        </label>
+        <LessonExtrasEditor
+          lessonExtrasAvailable={this.props.lessonExtrasAvailable}
+          projectWidgetTypes={this.props.projectWidgetTypes}
+          projectWidgetVisible={this.props.projectWidgetVisible}
+        />
         <label>
           Verified Resources
           <input
@@ -403,60 +390,6 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-
-        <h3>Project widget options</h3>
-        <label>
-          Project widget visible
-          <input
-            name="project_widget_visible"
-            type="checkbox"
-            defaultChecked={this.props.projectWidgetVisible}
-            style={styles.checkbox}
-          />
-          <p>
-            If checked this script will have the projects widget (recent
-            projects and new project buttons) visible in lesson extras.
-          </p>
-        </label>
-        <label>
-          Project widget new project types
-          <p>
-            Select up to 4 project type options to appear in the 'Start a new
-            project' section. Select
-            <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
-            or shift-click or cmd-click to select multiple.
-          </p>
-          <select
-            name="project_widget_types[]"
-            multiple
-            defaultValue={this.props.projectWidgetTypes}
-            ref={select => (this.projectWidgetSelect = select)}
-          >
-            <option value="playlab">Play Lab</option>
-            <option value="playlab_k1">Play Lab K1</option>
-            <option value="artist">Artist</option>
-            <option value="artist_k1">Artist K1</option>
-            <option value="applab">App Lab</option>
-            <option value="gamelab">Game Lab</option>
-            <option value="weblab">Web Lab</option>
-            <option value="calc">Calc</option>
-            <option value="eval">Eval</option>
-            <option value="frozen">Frozen</option>
-            <option value="minecraft_adventurer">Minecraft Adventurer</option>
-            <option value="minecraft_designer">Minecraft Designer</option>
-            <option value="minecraft_hero">Minecraft Hero</option>
-            <option value="starwars">Star Wars</option>
-            <option value="starwarsblocks">Star Wars Blocks</option>
-            <option value="flappy">Flappy</option>
-            <option value="sports">Sports</option>
-            <option value="basketball">Basketball</option>
-            <option value="bounce">Bounce</option>
-            <option value="infinity">Infinity</option>
-            <option value="iceage">Ice Age</option>
-            <option value="gumball">Gumball</option>
-          </select>
-        </label>
-
         <label>
           Supported locales
           <p>
