@@ -29,13 +29,13 @@ zh-TW:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: 找到與組合按鈕相符的舞蹈動作，將它們配對起來。
         questions:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: 配對
       2-3 Binary Match 1:
         answers:
@@ -61,6 +61,14 @@ zh-TW:
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: 根據遊戲規則，哪一組牌卡的得分是正確的？
+        teacher_markdown: |
+          ## 老師們︰
+
+          學生很可能會有所誤解，而這就是一個可以好好爬梳的地方。如果學生認為這裡 *沒有* 正確答案，那麼他們可能對條件判斷有所誤會。
+
+          這裡有一段影片可以幫助解釋在這個問題中發生了什麼︰
+
+          https://youtu.be/TbUaEnAYPjI
         title: 選擇題
       2-3 Getting Loopy Multi 1:
         answers:
@@ -118,17 +126,20 @@ zh-TW:
         title: 迷宮：選擇題
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: 哪個程式 **無法** 畫出這個圖像？
         title: 選擇題
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
         - text: 哪一組的程式與圖像沒有問題？
         title: 選擇題
@@ -142,7 +153,8 @@ zh-TW:
         content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
         questions:
-        - {}
+        - text: 你要修正什麼地方才能完成這個圓圈？
+        title: 小藝術家 - 除錯：選擇題 1
       2-3 artist functions multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
@@ -166,6 +178,7 @@ zh-TW:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: 小藝術家 - 迴圈：配對題 1
       2-3 artist loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
@@ -212,6 +225,7 @@ zh-TW:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: 下列的比較中，哪個得到的結果會是 true？
+        title: 蜜蜂 - 條件判斷：選擇題 1
       2-3 bee conditionals multi 3:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
@@ -223,6 +237,7 @@ zh-TW:
           500"
         questions:
         - text: 選出最適合的程式積木。
+        title: 蜜蜂 - 條件判斷：選擇題 2
       2-3 bee loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
@@ -281,10 +296,10 @@ zh-TW:
         title: 選擇題
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: 每台車已經被分解成小部分，利用它的分解列表幫每台車子完成配對。
         questions:
         - text: "<h3>車輪/側面: 2<br/>窗戶/側面: 0</h3>"
@@ -305,8 +320,9 @@ zh-TW:
         title: 選擇題
       4-5 Crowdsourcing Multi 1:
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: 這些圖片中，哪一個最能用來代表群眾外包（Crowdsourcing）？
         title: 選擇題
@@ -337,24 +353,34 @@ zh-TW:
         - text: 64.14.68.10
         - text: 54.243.71.82
           correct: true
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 當你試著造訪 code.org 時，DNS 最有可能帶你到哪個 IP 位址？
         title: 選擇題
       4-5 Internet Multi 2:
         answers:
         - text: code.org
-        - correct: true
-        - {}
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
         - text: khanacademy.org
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 如果 DNS 已把你導向 IP 為 100.42.50.110 的網頁，那麼你會在哪個網站？
         title: 選擇題
       4-5 Songwriting Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
+          correct: true
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
         - text: 在這首歌裡，哪一大段因為每次都會完全重複，所以能被稱為副歌？
         title: 選擇題
@@ -365,101 +391,121 @@ zh-TW:
         - text: "<h4>STAR</h4>"
         - text: "<h4>RAMP</h4>"
         content1: 這些程式分別製造出了什麼單字？請配對。
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: 配對
       4-5 Suncatchers Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: 下列的哪個程式<strong>沒有</strong>產生和程式 1 相同的序列？
         title: 選擇題
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: 哪個程式可以作出這樣的圖案？
         title: 小藝術家 - 迴圈：選擇題
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: 哪個程式可以畫出周長為 100 像素的長方形？
         title: 小藝術家：選擇題
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: 哪一個圖形是對稱的？
         title: 小藝術家：選擇題
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         content2: "？一朵紫色的花可能會有 1 至 3 個花蜜，但你不知道有多少。用哪些積木可以正確的檢查並收集紫色花蜜呢？"
         questions:
         - text: 選出最適合的程式積木。
         title: 蜜蜂 - 條件判斷：選擇題
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
         - text: 哪個版本的函式有用？
         title: 蜜蜂 - 除錯：選擇題
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: 哪個程式可以完成這個關卡？
         title: 蜜蜂 - 迴圈：選擇題
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         questions:
         - text: 哪個程式可以解決這個關卡？
         title: 迷宮 - 條件判斷（Conditionals）：選擇題
       4-5 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         content1: 哪個程式積木可以解決關卡，把它們配對起來。
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         title: 迷宮：配對題
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: 哪個程式可以解決這個關卡？
         title: 迷宮：選擇題
@@ -1118,9 +1164,11 @@ zh-TW:
         title: 配對
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: 哪隻動物留下的數位足跡讓牠最有可能<strong>曝露在危險中</strong>？
         title: 選擇題
