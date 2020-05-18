@@ -446,6 +446,9 @@ nl-NL:
         ingesteld is. Kun je de rekenblokken gebruiken om de code compleet te maken?
       Course 4 Artist Vars 7: Kun je de variable "zijden" aanpassen om mij te helpen
         deze zeshoek te tekenen?
+      Course 4 Bee Params 1: Schrijf een reeks om alle nector op te halen door gebruik
+        te maken van `get 3 nectar` (haal drie nectar) welke draait, dan beweegt om
+        de nector op te halen en dan weer terug gaat naar de oorspronkelijke locatie.
       Course 4 Bee Params 2: Pas de functie "krijg 3 nectar" aan zodat het mij naar
         rechts naar de bloemen laat draaien in plaats van links.
       Course 4 Bee Params 5: Laten we helemaal opnieuw beginnen - kun je een nieuwe
@@ -462,10 +465,17 @@ nl-NL:
       Course 4 EC 2a: "**Mega uitdaging:** Geen regels, geen hints. Los het op!"
       Course 4 EC 2b: "**Mega uitdaging:** Geen regels, geen hints. Los het op!"
       Course 4 EC 2c: "**Mega uitdaging:** Geen regels, geen hints. Los het op!"
+      Course 4 Play Lab Params 1: Hier is een functie genaamd `spring` die je karakter
+        100 pixels omhoog laat springen. Start het programma en gebruik de spring
+        functie om alle vlaggen te verzamelen door de hond met de pijltjestoetsen
+        te bewegen.
       Course 4 Play Lab Params 3: 'Laten we een andere parameter toevoegen aan de
         jump-functie, zodat we het kunnen gebruiken met andere figuren. Elk figuur
         stelt een nummer voor, beginnend bij 1. verander de "jump"-functie, zodat
         het ook om de "actor"-parameter vraagt. '
+      Course 4 Play Lab Params 4: Hier is een functie genaamd `patrol` ("patrouilleer").
+        Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten
+        bewegen.
       Course 4 Play Lab Params 5: Voeg een 'speler'-parameter toe aan de 'patrol'-functie,
         zodat we hem kunnen aanroepen voor alle spelers op het scherm. De spelers
         hebben nummer 1, 2 en 3.
@@ -476,6 +486,18 @@ nl-NL:
       Course 4 Play Lab Params 8: Gebruik een "wanneer de speler aanraakt"-blok om
         de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij een
         van de andere spelers aanraakt.
+      Course 4 Play Lab Params 9: |-
+        Hier is ons spel van eerder, maar de meeste code is nu verborgen. Er is een nieuwe functie `score_points` ("punten\_scoren").
+
+        * * *
+
+        #### Pas de functie zo aan dat de "punten"-parameter toegevoegd wordt aan de "speler\_score" variabele.
+
+        #### De variabele "speler\_score" moet iedere keer stijgen als Hond Kat raakt met hartjes en dalen als Kat Hond raakt met een broodje.
+
+        * * *
+
+        Let op: als je klaar bent, klik dan op "Start" om af te spelen. Als Hond 6 punten scoort ga je verder naar de volgende puzzel.
       Course 4 Play Lab Vars 1: Hier hoef je niet te programmeren. druk gewoon op
         de knop "uitvoeren" om het spel te spelen! In dit spel ben je een hond die
         meer vlaggen moet verzamelen dan de kat. gebruik de pijltjes om de hond te
@@ -509,6 +531,8 @@ nl-NL:
         lussen wijzigen zodat de wedstrijd eindigt op een gelijke stand?
       Course 4 Playlab For Loops 5b: Pas het interval in deze `herhaal` lussen aan
         zodat deze twee spelers op exact dezelfde plaats eindigen.
+      Course 4 SCF 1b: "**Functies super uitdaging:** Kan je bedenken hoe je al deze
+        honing kan verzamelen met zo min mogelijk blokken?"
       CourseD_Dance_Party_01: |-
         _Laten we een dansfeestje houden!_
 

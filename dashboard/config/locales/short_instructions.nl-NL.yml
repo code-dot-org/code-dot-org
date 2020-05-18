@@ -218,6 +218,8 @@ nl-NL:
       2-3 Maze 7: Breng me naar de groene slechterik! (Pas op voor TNT)
       2-3 Maze 8: Breng me naar het varken!
       2-3 Maze 9: Breng me naar de groene slechterik! (Pas op voor TNT)
+      2-3 Maze Loops 1: Kun je mij het varken krijgen door gebruik te maken van 5
+        keer hetzelfde blok?
       2-3 Maze Loops 17: Help me tot bij de zonnebloem!
       2-3 Maze Loops 20: Kun jij deze puzzel met het minste aantal blokken oplossen?
       2-3 Maze Loops Assessment 1: 'Opdracht: Breng me naar de zonnebloem met slechts
@@ -599,6 +601,9 @@ nl-NL:
       Course 4 Bee Loops 5a NEW: Gebruik nu lussen om de bij te helpen alle nectar
         te verzamelen op zijn weg naar de honingraat met zo weinig mogelijk blokken.
         Vergeet niet honing te maken als je er bent!
+      Course 4 Bee Params 1: Schrijf een reeks om alle nector op te halen door gebruik
+        te maken van `get 3 nectar` (haal drie nectar) welke draait, dan beweegt om
+        de nector op te halen en dan weer terug gaat naar de oorspronkelijke locatie.
       Course 4 Bee Params 2: Pas de functie "krijg 3 nectar" aan zodat het mij naar
         rechts naar de bloemen laat draaien in plaats van links.
       Course 4 Bee Params 3: 'Nu zijn er bloemen aan beide kanten! Ik heb een parameter
@@ -626,10 +631,17 @@ nl-NL:
       Course 4 Maze 2: vermijd de TNT!
       Course 4 Maze 3: 'programmeer zodat de angry bird naar het biggetje gaat. '
       Course 4 Maze 5: Kun jij deze puzzel met het minste aantal blokken oplossen?
+      Course 4 Play Lab Params 1: Hier is een functie genaamd `spring` die je karakter
+        100 pixels omhoog laat springen. Start het programma en gebruik de spring
+        functie om alle vlaggen te verzamelen door de hond met de pijltjestoetsen
+        te bewegen.
       Course 4 Play Lab Params 3: 'Laten we een andere parameter toevoegen aan de
         jump-functie, zodat we het kunnen gebruiken met andere figuren. Elk figuur
         stelt een nummer voor, beginnend bij 1. verander de "jump"-functie, zodat
         het ook om de "actor"-parameter vraagt. '
+      Course 4 Play Lab Params 4: Hier is een functie genaamd `patrol` ("patrouilleer").
+        Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten
+        bewegen.
       Course 4 Play Lab Params 5: Voeg een 'speler'-parameter toe aan de 'patrol'-functie,
         zodat we hem kunnen aanroepen voor alle spelers op het scherm. De spelers
         hebben nummer 1, 2 en 3.
@@ -640,6 +652,13 @@ nl-NL:
       Course 4 Play Lab Params 8: Gebruik een "wanneer de speler aanraakt"-blok om
         de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij een
         van de andere spelers aanraakt.
+      Course 4 Play Lab Params 9: "Hier is ons spel van eerder, maar de meeste code
+        is nu verborgen. Er is een nieuwe functie `score_points` (\"punten\\_scoren\").\n\nPas
+        de functie zo aan dat de \"punten\"-parameter toegevoegd wordt aan de \"speler_score\"
+        variabele. De variabele \"speler_score\" moet iedere keer stijgen als Hond
+        Kat raakt met hartjes en dalen als Kat Hond raakt met een broodje.\n\nLet
+        op: als je klaar bent, klik dan op \"Start\" om af te spelen. Als Hond 6 punten
+        scoort ga je verder naar de volgende puzzel. "
       Course 4 Play Lab Vars 1: Hier hoef je niet te programmeren. druk gewoon op
         de knop "uitvoeren" om het spel te spelen! In dit spel ben je een hond die
         meer vlaggen moet verzamelen dan de kat. gebruik de pijltjes om de hond te
@@ -687,6 +706,8 @@ nl-NL:
         je hoe de even rijen naar rechts zijn opgeschoven?
       Course 4 SCF 1a: Kan je bedenken hoe je alle nectar kan verzamelen met zo min
         mogelijk blokken?
+      Course 4 SCF 1b: Kan je bedenken hoe je al deze honing kan verzamelen met zo
+        min mogelijk blokken?
       Course 4 SCF 2: 'Gebruik wat je hebt geleerd bij het vorige niveau om deze tekening
         te maken. Hint: de code wordt eenvoudiger als je parameters gebruikt. '
       Course 4 SCF 3: 'Gebruik wat je hebt geleerd bij het vorige niveau om deze tekening

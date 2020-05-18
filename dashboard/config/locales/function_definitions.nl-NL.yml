@@ -1,7 +1,7 @@
 ---
 nl-NL:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -51,8 +51,22 @@ nl-NL:
         jump:
           name: spring
       Course 4 Play Lab Params 4:
+        patrol:
+          name: patrouilleer
         do something:
           name: do iets
+      Course 4 Play Lab Params 5:
+        patrol:
+          name: patrouilleer
+      Course 4 Play Lab Params 6:
+        patrol:
+          name: patrouilleer
+      Course 4 Play Lab Params 7:
+        patrol:
+          name: patrouilleer
+      Course 4 Play Lab Params 8:
+        patrol:
+          name: patrouilleer
       Course 4 Play Lab Vars 1:
         set score:
           name: score instellen
@@ -74,6 +88,12 @@ nl-NL:
       Find the Wizard:
         do something:
           name: do iets
+      Function intro Ryan:
+        build bridge:
+          name: bouw brug
+      Function intro Ryan_2019:
+        build bridge:
+          name: bouw brug
       Geometric Sun:
         diamond:
           name: diamant
@@ -84,6 +104,42 @@ nl-NL:
           name: diamant
         draw a house:
           name: teken een huis
+      MC_HOC_2017_07_Cole:
+        clear path:
+          name: pad leegmaken
+      MC_HOC_2017_07_Cole_2019:
+        clear path:
+          name: pad leegmaken
+      MC_HOC_2017_10_RETRY:
+        fix long path:
+          name: repareer lang pad
+        fix short path:
+          name: repareer kort pad
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: repareer lang pad
+        fix short path:
+          name: repareer kort pad
+      MC_HOC_2017_Ali:
+        build short bridge:
+          name: bouw korte brug
+        build long bridge:
+          name: bouw lange brug
+      MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: bouw korte brug
+        build long bridge:
+          name: bouw lange brug
+      MC_HOC_2017_FP20x20:
+        function 1:
+          name: functie 1
+        function 2:
+          name: functie 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1:
+          name: functie 1
+        function 2:
+          name: functie 2
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: teken een vierkant
@@ -115,10 +171,16 @@ nl-NL:
       NEW Course 4 Artist Params 15:
         draw a star:
           name: teken een ster
+          description: teken een ster met gegeven punten en zijden van gegeven lengte
         draw a circle:
           name: teken een cirkel
+          description: teken een cirkel met gegeven straal
+        draw a pinwheel:
+          name: teken een windmolen
         draw a triangle:
           name: teken een driehoek
+        draw a shape:
+          name: teken een vorm
         draw a house:
           name: teken een huis
         draw a square:
@@ -150,23 +212,43 @@ nl-NL:
       NEW Course 4 Play Lab Params 11:
         jump:
           name: spring
+          description: spring functie block met parameters voor hoogte en spelers
+        patrol:
+          name: patrouilleer
       New Artist Project:
         draw a star:
           name: teken een ster
+          description: teken een ster met gegeven punten en zijden van gegeven lengte
         draw a circle:
           name: teken een cirkel
+          description: teken een cirkel met gegeven straal
+        draw a pinwheel:
+          name: teken een windmolen
         draw a triangle:
           name: teken een driehoek
+        draw a shape:
+          name: teken een vorm
         draw a house:
           name: teken een huis
         draw a square:
           name: teken een vierkant
+      New Minecraft Hero Project:
+        function 1:
+          name: functie 1
+        function 2:
+          name: functie 2
       New Play Lab Project:
         jump:
           name: spring
+          description: spring functie block met parameters voor hoogte en spelers
+        patrol:
+          name: patrouilleer
       Standalone_Artist_7:
         draw a flower:
           name: teken een bloem
+      Standalone_Artist_8:
+        draw a shape:
+          name: teken een vorm
       Standalone_Artist_9:
         my function:
           name: mijn functie
@@ -390,10 +472,16 @@ nl-NL:
       courseF_artist_fwp9:
         draw a star:
           name: teken een ster
+          description: teken een ster met gegeven punten en zijden van gegeven lengte
         draw a circle:
           name: teken een cirkel
+          description: teken een cirkel met gegeven straal
+        draw a pinwheel:
+          name: teken een windmolen
         draw a triangle:
           name: teken een driehoek
+        draw a shape:
+          name: teken een vorm
         draw a house:
           name: teken een huis
         draw a square:
