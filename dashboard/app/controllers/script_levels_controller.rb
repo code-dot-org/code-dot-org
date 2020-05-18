@@ -452,6 +452,9 @@ class ScriptLevelsController < ApplicationController
       level_id: @level.id
     )
 
+    # for level groups, @level and @callback point to the parent level, so we
+    # generate a url which can be used to report sublevel progress (after
+    # appending the sublevel id).
     if @level.game.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,

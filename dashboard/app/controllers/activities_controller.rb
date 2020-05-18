@@ -184,9 +184,28 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
       )
+
+      is_sublevel = !@script_level.levels.include?(@level)
+
+      if is_sublevel
+        parent_level = @script_level.levels.find do |level|
+          level.sublevels.include?(@level)
+        end
+        if parent_level && parent_level.is_a?(BubbleChoice)
+          User.track_level_progress(
+            user_id: current_user.id,
+            level_id: parent_level.id,
+            script_id: @script_level.script_id,
+            new_result: test_result,
+            submitted: false,
+            level_source_id: nil,
+            pairing_user_ids: pairing_user_ids,
+            )
+        end
+      end
+
       # Make sure we don't log when @script_level is a multi-page assessment
       # and @level is a multi level.
-      is_sublevel = !@script_level.levels.include?(@level)
       if @script_level.assessment && @level.is_a?(Multi) && !is_sublevel
         AssessmentActivity.create(
           user_id: current_user.id,
