@@ -280,7 +280,13 @@ class ScriptDSL < BaseDSL
       i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
     end
 
-    {@name => {'stages' => i18n_stage_strings, 'lesson_groups' => i18n_lesson_group_strings}}
+    # temporarily include "stage" strings under both "stages" and "lessons"
+    # while we transition from the former term to the latter.
+    {@name => {
+      'stages' => i18n_stage_strings,
+      'lessons' => i18n_stage_strings,
+      'lesson_groups' => i18n_lesson_group_strings
+    }}
   end
 
   def self.parse_file(filename, name = nil)
