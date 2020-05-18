@@ -1,6 +1,7 @@
 login_required true
 has_lesson_plan true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Algorithms: Dice Race'
 level 'DiceRace'
 
@@ -132,25 +133,27 @@ level 'courseE_playLab_scaffold4'
 level 'courseE_playLab_scaffold5'
 level 'courseE_playLab_scaffold6'
 
-stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+stage 'Explore Project Ideas'
 level 'courseF_video_csMatters', named: true
 level 'Geometric Sun', named: true
 level 'Robot Doodle', named: true
 level 'Alien Defender', named: true
 level 'Find the Wizard', named: true
 
-stage 'The Design Process', flex_category: 'end_of_course_project'
+stage 'The Design Process'
 level 'Begin planning your project', named: true
 
-stage 'Build Your Project', flex_category: 'end_of_course_project'
+stage 'Build Your Project'
 level 'Course E: Play Lab Project', named: true
 level 'Course E: Artist Project', named: true
 
-stage 'Present Your Project', flex_category: 'end_of_course_project'
+stage 'Present Your Project'
 level 'Prepare for your presentation', named: true
 
-stage 'Internet', flex_category: 'extra_course_content'
+lesson_group 'extra_course_content', display_name: 'Extra Course Content'
+stage 'Internet'
 level 'Internet'
 
-stage 'Crowdsourcing', flex_category: 'extra_course_content'
+stage 'Crowdsourcing'
 level 'Crowdsourcing'

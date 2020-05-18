@@ -20,14 +20,14 @@ es-ES:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de
     CSEdWeek</a>'
+  csedweek_banner_teachers_text: "¿Eres profesor de informática? Mira otros recursos
+    de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Code</h2><h3># intentaron</h3>"
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     Ciencias de la Computación
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # otros.'
-  petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
-    otros.'
   petition_join_others: 'Únete a # otros'
   name: Nombre
   email: Correo electrónico
@@ -399,6 +399,7 @@ es-ES:
   homepage_action_text_signpetition: Firma la petición
   homepage_action_text_wincelebritychat: Gane un chat de celebridades
   homepage_signpetition_dropdown: Firma nuestra petición &#x25BE;
+  homepage_signpetition_dropdown_text: De acuerdo
   homepage_diversity_pledge: Abraza la promesa de la diversidad
   homepage_banner_text_prizes: 'Vuelve la Hora de Code, del 7 al 13 de Diciembre. '
   homepage_banner_link_prizes: 'Únete al mayor evento educativo de la historia. '
@@ -667,9 +668,7 @@ es-ES:
     por enseñar Ciencias de la Computación</span>, que pueda ayudar en el aula, o
     alguien que pueda <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar
     </span> a sus alumnos hablando de la amplitud de posibilidades con las Ciencias
-    de la Computación (que podría hacerse a través de una vídeo conferencia). Si no
-    deseas ofrecerte como voluntario, <a href="%{url}"> obtén más información</a>
-    acerca de cómo organizar tu propio evento de Hora de Code.'
+    de la Computación (que podría hacerse a través de una vídeo conferencia). '
   volunteer_engineer_submission_intro_guide: Conozca más acerca de nuestro <a href="%{volunteer_guide}">programa
     de voluntariado aquí</a>.
   volunteer_engineer_submission_intro_signup: Por favor, introduce la siguiente información
@@ -1263,6 +1262,7 @@ es-ES:
   pre-express-2018_name: Curso rápido prescolar (2018)
   express-2019_name: Curso Rápido (2017)
   pre-express-2019_name: Curso rápido prescolar (2017)
+  express-2020_name: Curso Rápido (2017)
   csd2_name: 'Unidad 2: Desarrollo Web'
   csd3_name: 'Unidad 3: Animación y Juegos'
   accelerated_name: Curso acelerado

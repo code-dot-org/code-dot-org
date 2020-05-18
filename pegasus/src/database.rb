@@ -1,7 +1,7 @@
 require 'cdo/db'
 require 'cdo/geocoder'
 require 'cdo/properties'
-require 'json'
+require 'cdo/form'
 require 'securerandom'
 require 'active_support/core_ext/enumerable'
 require 'active_support/core_ext/object/deep_dup'
@@ -130,18 +130,4 @@ def geocode_address(address)
   return nil unless location
   return nil unless location.latitude && location.longitude
   "#{location.latitude},#{location.longitude}"
-end
-
-class Form2 < OpenStruct
-  def initialize(params={})
-    params = params.dup
-    params[:data] = JSON.load(params[:data])
-    params[:processed_data] = JSON.load(params[:processed_data])
-    super params
-  end
-
-  def self.from_row(row)
-    return nil unless row
-    new row
-  end
 end

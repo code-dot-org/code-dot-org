@@ -49,6 +49,10 @@ ms-MY:
         do something: Buat sesuatu
       NEW Course 4 Play Lab Params 11:
         jump: lompat
+      New Artist Project:
+        draw a square: lukis segi empat
+      New Play Lab Project:
+        jump: lompat
       course3_artist_functions_challenge1:
         do something: Buat sesuatu
       course3_artist_functions_challenge2:
@@ -84,6 +88,8 @@ ms-MY:
       courseE_artist_functions2_2018:
         draw a square: lukis segi empat
       courseE_artist_functions2_2019:
+        draw a square: lukis segi empat
+      courseE_artist_functions2_copy:
         draw a square: lukis segi empat
       courseE_artist_functions8:
         do something: Buat sesuatu
@@ -128,6 +134,8 @@ ms-MY:
       courseE_artist_functions_predict1_2018:
         draw a square: lukis segi empat
       courseE_artist_functions_predict1_2019:
+        draw a square: lukis segi empat
+      courseE_artist_functions_predict1_copy:
         draw a square: lukis segi empat
       courseE_artist_functions_predict2:
         do something: Buat sesuatu

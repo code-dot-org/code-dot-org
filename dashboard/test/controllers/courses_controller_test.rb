@@ -9,6 +9,11 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_course = create :course, pilot_experiment: 'my-experiment'
+    @pilot_section = create :section, user: @pilot_teacher, course: @pilot_course
+    @pilot_student = create(:follower, section: @pilot_section).student_user
+
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
@@ -133,6 +138,44 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  no_access_msg = "You don&#39;t have access to this course."
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'signed out user cannot view pilot script'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{course_name: @pilot_course.name}}, name: 'student cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'teacher without pilot access cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{course_name: @pilot_course.name, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
+                              params: -> {{course_name: @pilot_course.name}}, name: 'pilot student can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {{course_name: @pilot_course.name}}, name: 'levelbuilder can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
   # Tests for create
 
   test "create: fails without levelbuilder permission" do
@@ -241,18 +284,24 @@ class CoursesControllerTest < ActionController::TestCase
     assert_nil course.version_year
     assert_nil course.family_name
     refute course.has_verified_resources
+    refute course.visible?
+    refute course.is_stable?
 
     post :update, params: {
       course_name: course.name,
       version_year: '2019',
       family_name: 'csp',
-      has_verified_resources: 'on'
+      has_verified_resources: 'on',
+      visible: 'on',
+      is_stable: 'on'
     }
     course.reload
 
     assert_equal '2019', course.version_year
     assert_equal 'csp', course.family_name
     assert course.has_verified_resources
+    assert course.visible?
+    assert course.is_stable?
   end
 
   # tests for edit

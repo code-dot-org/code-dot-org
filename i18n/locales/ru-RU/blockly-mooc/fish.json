@@ -63,7 +63,7 @@
     "run": "Выполнить",
     "mostImportantParts": "Это были самые важные части рыбы:",
     "clickIndividualFish": "Нажмите на отдельную рыбу, чтобы увидеть информацию о ней.",
-    "mostImportantPartsDescription": "",
+    "mostImportantPartsDescription": "Самое важное свойство рыбы при ее определении, это была ли эта рыба “*{word}*” или “**{notWord}**”.",
     "newWord": "Новое Слово",
     "finish": "Готово",
     "trainMore": "Тренировать Далее",

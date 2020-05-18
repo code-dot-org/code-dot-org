@@ -4015,6 +4015,8 @@ it:
         image: notes/writing_first_program_4.png
       5:
         image: notes/writing_first_program_5.png
+      6:
+        image: notes/writing_first_program_3.png
     hoc_dance_warmup_2019:
       1:
         text: 'Ora del Codice | Ballando col codice: Riscaldamento'

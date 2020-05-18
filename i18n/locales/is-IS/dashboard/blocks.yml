@@ -1076,6 +1076,8 @@ is:
             '"left"': vinstri
       gamelab_mouseLocation:
         text: staður músar
+      gamelab_moveBackward:
+        text: færa {SPRITE} {DISTANCE} díla aftur á bak
       gamelab_moveForward:
         text: færa {SPRITE} {DISTANCE} díla áfram
       gamelab_moveInDirection:
@@ -1088,6 +1090,8 @@ is:
             '"West"': vestur
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
+      gamelab_patrollingUpDown:
+        text: rásar upp og niður
       gamelab_playSound:
         text: spilaHljóð {SOUND}
       gamelab_pointInDirection:
@@ -1165,12 +1169,16 @@ is:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
+      gamelab_tumbling:
+        text: veltist
       gamelab_turn:
         text: "{SPRITE} snýr {DIRECTION} {N} gráður"
         options:
           DIRECTION:
             '"right"': hægri
             '"left"': vinstri
+      gamelab_updateTitleWithColor:
+        text: sýna titilskjá {BREAK} titill {TITLE} litur {COLOR}
       gamelab_whenDownArrow:
         text: þegar ýtt er á ör niður
       gamelab_whenKey:
@@ -1549,6 +1557,14 @@ is:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: færa {SPRITE} {DISTANCE} díla í {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': norður
+            '"East"': austur
+            '"South"': suður
+            '"West"': vestur
       aalab_prompt:
         text: spyrja spurningar {MESSAGE}
       aalab_scene:
@@ -1560,12 +1576,17 @@ is:
             '3': '3'
       aalab_setupStory:
         text: stilla upp sögu
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
+        text: spila{OPTION}hljóð
         options:
           OPTION:
-            '"show"': sýna
-            '"hide"': fela
+            '"random"': eitthvað
+            '"R2-D2 random"': R2-D2 ?
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: teikna tvíund {BIN}
       binary_drawBinScreen:

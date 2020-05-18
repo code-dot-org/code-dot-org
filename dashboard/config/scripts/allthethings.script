@@ -1,5 +1,5 @@
 hideable_stages true
-stage_extras_available true
+lesson_extras_available true
 
 stage 'Jigsaw'
 skin 'jigsaw'

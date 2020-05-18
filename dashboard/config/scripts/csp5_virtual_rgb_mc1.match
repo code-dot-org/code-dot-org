@@ -1,0 +1,25 @@
+name 'csp5 virtual rgb mc1'
+editor_experiment ''
+title 'RGB Colors Quiz'
+banner ''
+description 'For each number below, match the color shown in the app to one of the RGB values. These numbers should be close to what you found in the previous level. If not, hit the Back button on your browser and keep experimenting. WARNING - They are not in the same order!'
+height '60'
+
+question '![](https://images.code.org/b89d325496521da988fc2763f0dc324e-image-1587483096275.30.15 AM.png)'
+answer '**red: 255, green: 239, blue: 213 - rgb(255,239,213)**'
+
+question '![](https://images.code.org/e9a5b6178fc63c643201ca8856e05882-image-1587483101474.30.24 AM.png)'
+answer '**red: 250, green: 128, blue: 114 - rgb(250,128,114)**'
+
+question '![](https://images.code.org/bc62828222ce40acff33aefe7786773f-image-1587483106029.30.31 AM.png)'
+answer '**red: 70, green: 130, blue: 180 - rgb(70, 130, 180)**'
+
+question '![](https://images.code.org/421a6f55354b956045da6696301b7e30-image-1587483110115.30.40 AM.png)'
+answer '**red: 216, green: 191, blue: 216 rgb(216,191,216)**'
+
+question '![](https://images.code.org/72c1c8cf97094add0b087eaa5370a476-image-1587483113950.30.49 AM.png)'
+answer '**red: 107, green: 142, blue: 35 - rgb(107,142,35)**'
+
+markdown <<MARKDOWN
+
+MARKDOWN

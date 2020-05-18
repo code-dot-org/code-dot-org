@@ -29,13 +29,19 @@ bg:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -58,6 +64,19 @@ bg:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -65,6 +84,13 @@ bg:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -146,6 +172,16 @@ bg:
   hoc2018_tutorial_mchoc_description: Използвай блокове с код, за да отведеш Стив
     или Алекс на приключение в този свят на Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: Като продължите да разглеждате нашия сайт или щракнеш "Съгласен",
     ти се съгласявате на съхраняването на бисквитки на твоя компютър или устройство.
   cookie_banner_more_information: Вижте декларацията за поверителност на Code.org.
@@ -394,6 +430,9 @@ bg:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
@@ -494,6 +533,7 @@ bg:
   map_warning: Картата на Часът на кода показва само първите 200 000 регистрирани
     събития. Всички регистрирани събития с валиден адрес могат да се видят на <a href='%{events_url}'>
     събития страницата.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Часът на кодирането наближава
   meta_tag_og_description: Hour of Code е глобално движение, достигащо до десетки
     милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.
@@ -510,6 +550,13 @@ bg:
   hoc_faq_what_is_hoc_a: Hour of Code е един час въведение в компютърните науки, предназначен
     да демитологизира програмирането и да се покаже, че всеки може да научи основите.<a
     href='%{codeorg_url}'>Вижте уроците ни</a>.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Опитайте уроците
   hoc_faq_when_is_hoc_q: Кога се провеждаHour of Code?
   hoc_faq_when_is_hoc_a: Всеки може да бъде организатор на Hour of Code събитие по
@@ -518,17 +565,31 @@ bg:
     на компютърните науки и образованието </a>. В точно определен <i>час ли е</i>?
     Не. Можете да направите своя Hour of Code по всяко време през тази седмица. (И
     по всяко друго време).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Защо компютърни науки?
   hoc_faq_why_cs_a: "<i>Всеки</i> ученик трябва да има възможност да изучава компютърни
     науки. Те помагат за възпитаване на умения в решаване на проблеми, логика и креативност.
     Когато започнат да ги изучават по- рано, учениците ще имат основа за успешна кариера
     в 21-ви век. Вижте повече статистика на <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Как да участвам в Hour of Code?
   hoc_faq_how_participate_a: <a href='target-resources-how-to'> Започнете да планирате
     тук</a> чрез преглед на нашия наръчник 'Указания". Можете да организирате Hour
     of Code събитие във Вашето училище или във Вашата общност &mdash; като и в извънкласни
     клубове, с нестопанска цел или на работното място. Или, просто го пробвйте сами
     когато %{campaign_date} дойде времето.
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Кой стои зад Hour of Code?
   hoc_faq_behind_hoc_a: Hour of Code е организиран от <a href='http://code.org'>Code.org</a>
     с нестопанска цел, посветен на разширяване използването и изучаването на компютърни
@@ -536,6 +597,11 @@ bg:
     <a href='%{codeorg_url}/about/partners'>Безпрецедентен брой партньори</a> са се
     обединили в подкрепа на Часът на кодирането &mdash; включително Microsoft, Apple,
     Amazon, момчета и момичета от Клуб Америка и College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Аз не умея да програмирам. Може ли все пак да регистрирам събитие?
   hoc_faq_host_a: Разбира се. Дейностите в Hour of Code са самонасочващи. Всичко,
     което трябва да направите е, <a href='%{codeorg_url}/learn'> да пробвате нашите
@@ -543,12 +609,22 @@ bg:
     Час &mdash; Ние ще се погрижим за останалото. Подготвили сме варианти за всяка
     възраст и ниво на опит, от детската градина и нагоре. Започнете да планирате Вашето
     събитие като прочетете нашите <a href='/resources/how-to'> съвети</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Какви устройства трябва да използвам с моите ученици?
   hoc_faq_devices_a: Code.org уроците работят на всички устройства и браузъри. Можете
     да видите повече информация за технологичните нужди на Code.org уроците в <a href='%{codeorg_url}/educate/it'>.
     Техническите нужди на Code.org партньорските уроци можете да намерите на <a href=''%{codeorg_url}/learn'>
     in the tutorial specific description. Не забравяйте, ние също предлагаме дейности
     без компютър, ако вашето училище не може да стартира другите уроци!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Трябва ли компютър за всеки участник?
   hoc_faq_need_computers_a: Не. Имаме уроци в Hour of Code, които работят на компютри,
     смартфони, таблетки и някои, които не изискват компютър! Можете да се присъедините,
@@ -561,26 +637,53 @@ bg:
     Часът на кодирането с цялата си група. Гледайте видео клиповете заедно и нека
     учениците се редуват в решаването на пъзели или в отговарянето на въпроси. <li><b>Опитайте
     ънплъгд уроците.</b> Ние предлагаме уроци, които не изискват компютър.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Аз съм от <country>. Как да участвам в международен план?
   hoc_faq_international_a: Всеки може да организира Hour of Code събитие, навсякъде
     по света. Миналата година ученици по целия свят се присъединиха за Hour of Code
     събитието. Научете повече <a href='/promote'> тук</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Как да направя  урок за Часът на кодирането?
   hoc_faq_tutorial_a: Ако сте заинтересувани да станете наш партньор в създаването
     на уроци, <a href='/tutorial-guidelines'>вижте нашите указания и инструкции</a>.
     Бихме искали да има разнообразие от възможности за ангажиране, но основната цел
     е да се оптимизира опитът на учениците и учителите, за които компютърните науки
     са новост.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Учениците трябва да влезнат  с акаунт?
   hoc_faq_account_a: Не. Абсолютно не е необходима регистрация и не се изисква такава
     за учениците, които пробват Hour of Code. Повечето от <a href='%{codeorg_url}/learn/beyond'>follow-on
     courses</a> изискват създаване на акаунт за да се следи напредъка на ученика.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Коя от дейностите трябва да направя с учениците от училище?
   hoc_faq_high_school_a: За всички възрасти препоръчваме да опитате един от начинаещите
     уроци на <a href='http://code.org/learn'> Code.org/learn</a> за да започнете,подходящ
     урок е този, с ядосаните птици или с Анна и Елза. Гимназиалните ученици трябва
     да могат  да приключат един от тях за поне 30 минути и след това да опитат уроците
     за по-напреднали в JavaScript, като Khan Academy или CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Аз ще използвам Scratch за Hour of Code, но какво става, ако
     учениците ми работят на iPad, а не на лаптопи?
   hoc_faq_scratch_a: Scratch не е предвиден за таблетки. Ако учениците са малки, те
@@ -588,6 +691,10 @@ bg:
     в ръководството на <a href='http://code.org/learn'> Code.org/learn</a>, можете
     да намерите и други уроци, които работят на iPad - от Code.org, Tynker, Lightbot
     или CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Как да се броят участниците в Hour of Code?
   hoc_faq_map_q: Защо не виждам моята точка на картата?
   hoc_faq_map_a: Ние сме съжаляваме, че не вие виждате събитието си на Hour of Code
@@ -597,9 +704,21 @@ bg:
     вашето събитие, изброено там. Освен това предвид че хиляди хора се записват за
     Hour of Code, списъка на картата и събитията се актуализира обикновено за 48 часа.
     Проверете отново след няколко дни!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Брояча на Hour of Code не се използва за точно изброяване на
     участниците. Ние не броим всеки участвал ученик, защото няма изискване за регистрация.
     Като резултат се получава една приблизитена сума. Прочетете повече <a href='%{codeorg_url}/loc'>тук</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Колко може да се научи за един час?
   hoc_faq_one_hour_a: Целта на Hour of Code е не да научи всички да станат експерти
     в компютърните науки за един час. Един час е достатъчен само да научат, че компютърни
@@ -618,9 +737,16 @@ bg:
     осъзнават, че компютърните науки са нещо, в което искат техните ученици и техните
     учители да успеят. <br/> <br/> Преди всичко, това, което ние можем да предложим
     е всички участници могат да учат в Hour of Code.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Все още имате въпроси?
   hoc_faq_more_questions_a: Опитайте да намерите отговор в нашият <a href='http://support.code.org'>
     форум за поддръжка</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Как да продължим след Hour of Code?
   hoc_faq_keep_learning_a: Всеки може да бъде домакин на Hour of Code по всяко време.
     Уроците ще са използваеми през цялата година. Можете да очаквате всички наши уроци
@@ -628,15 +754,27 @@ bg:
     и вижте <a href='/promote'> нашите ресурси</a> ръководство за организиране на
     събитие и други ресурси, за да ни помогнете да направим вашият Hour of Code успешно
     събитие.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Къде мога да отпечатам сертификатите за моите ученици?
   hoc_faq_certificates_a: Посетете нашата <a href='%{codeorg_url}/certificates'> страницата
     "сертификати"</a> където можете да отпечатате бързо и лесно сертификати за целия
     клас.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Има ли ограничения в използването на "часът на кода" лого или име?
   hoc_faq_logo_a: Час на код е търговска марка. Ние не искаме да забраним нейното
     използване, но ние искаме да се уверим, че използването се вписва в рамките на
     няколко ограничения. Моля, вижте <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
     тези указания за употреба</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Статистика от 2013 за Hour of Code
   stats_growth: Това беше най-бързия начин за достигане на 15 милиона потребители.
   stats_i18n: Учениците се учат на 40 езика
@@ -653,6 +791,8 @@ bg:
     of high school courses, university courses, and the workforce.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Всеки ден отчитам същите резултати &mdash; 100 % ангажираност."-Нина
     Никълс Пири, учител'
   stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана
@@ -779,8 +919,11 @@ bg:
     с Hour of Code.
   learn_banner_beyond: Искате да продължите да учите?  <a id='learn_banner_beyond'>
     Вземете повече от един час</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Учители: <a id=''teacher_banner_host''>проведете час</a>
     или <a id=''teacher_banner_howto''>прочетете практическото ръководство</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: РОБОТИКА
   learn_robotics_banner_blurb: Имате роботи? Използвайте ги с дейностите по-долу и
     направете реален Hour of Code за ученици от всички възрасти!

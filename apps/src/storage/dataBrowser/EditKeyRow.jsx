@@ -3,6 +3,7 @@ import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
+import experiments from '@cdo/apps/util/experiments';
 import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
@@ -17,10 +18,14 @@ const INITIAL_STATE = {
 class EditKeyRow extends React.Component {
   static propTypes = {
     keyName: PropTypes.string.isRequired,
-    value: PropTypes.any
+    value: PropTypes.any,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
+
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
 
   componentDidMount() {
     this.isMounted_ = true;
@@ -39,13 +44,27 @@ class EditKeyRow extends React.Component {
     });
 
   handleSave = () => {
-    this.setState({isSaving: true});
-    FirebaseStorage.setKeyValue(
-      this.props.keyName,
-      castValue(this.state.newValue),
-      this.resetState,
-      msg => console.warn(msg)
-    );
+    if (this.inExperiment) {
+      this.props.hideError();
+    }
+    try {
+      this.setState({isSaving: true});
+      const newValue = castValue(
+        this.state.newValue,
+        /* allowUnquotedStrings */ false
+      );
+      FirebaseStorage.setKeyValue(
+        this.props.keyName,
+        newValue,
+        this.resetState,
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      if (this.inExperiment) {
+        this.setState({isSaving: false});
+        this.props.showError();
+      }
+    }
   };
 
   resetState = () => {

@@ -1,0 +1,74 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:23.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "setProperty"
+        ],
+        "matchType": "exact",
+        "minTimes": 5,
+        "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
+      }
+    ],
+    "long_instructions": "# Create a function\r\n\r\nYour program now creates a new randomly generated \"game board\" each time you run.\r\n\r\nWhen playing the game we need to create a new game board repeatedly, not just when the program starts.  Since we have a chunk of code that we want to use repeatedly, **we should take that code and put it in a function**.\r\n\r\n## Do this:\r\n\r\n* Define a new function called `setBoard`.\r\n* Move all of the code that sets the colors of the buttons inside the function - this is actually **all** the code you have so far.\r\n* Add a call to `setBoard()` as the first line of code in the program to verify that it works\r\n\r\n\r\n![](https://images.code.org/b0b65a0c5357f3131e5add97bbcae5ab-image-1587396741774.2020-04-20 11_32_08.gif)\r\n\r\n**NOTE:** The program should not behave any differently after this step - we're just organizing the code to make it more useful. In the next step will make more use of `setBoard()`.  For now, just make the function and call it once.\r\n",
+    "teacher_markdown": "This step is deceptively simple.  You're just wrapping up all the code you wrote inside a function called `setBoard`\r\n\r\n**Common Mistake**: forgetting to *call* `setBoard()` at the top of the program after putting all the code inside a function.  If a student says it's not working or their screen is blank, that's probably why.\r\n\r\nHere is the suggested solution.\r\n\r\n \t\r\n\r\n    setBoard();  // call setBoard\r\n    \r\n    function setBoard() {   \t\t// define setBoard\r\n      var R = randomNumber(0,235);\r\n      var G = randomNumber(0,235); \r\n      var B = randomNumber(0,235); \r\n      var color = rgb(R, G, B);\r\n      setProperty(\"button1\", \"background-color\", color);\r\n      setProperty(\"button2\", \"background-color\", color);\r\n      setProperty(\"button3\", \"background-color\", color);\r\n      setProperty(\"button4\", \"background-color\", color);\r\n\r\n      R = R+20; \r\n      G = G+20;\r\n      B = B+20;\r\n      var diffColor = rgb(R, G, B);\r\n      var randButtonID = \"button\"+randomNumber(1,4);\r\n      setProperty(randButtonID, \"background-color\", diffColor);\r\n    }",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 17253,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "Add log conditions for setBoard",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:51:47 +0000\",\"changed\":[\"log_conditions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 04:16:52 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-20 15:34:09 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 12:51:07 +0000\",\"changed\":[\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

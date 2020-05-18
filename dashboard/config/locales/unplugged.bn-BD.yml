@@ -40,6 +40,8 @@ bn:
         title: গান লিখা
       Internet:
         title: ইন্টারনেট
+      SongwritingWithParameters:
+        title: গান লিখা
       BinaryImages:
         title: দ্বিমিক ছবি
       courseA_unplugged_happyMaps:
@@ -54,9 +56,13 @@ bn:
         title: কার্ড সঙ্গে শর্ত
       courseD_unplugged_binaryImages:
         title: দ্বিমিক ছবি
+      courseE_unplugged_songwritingParameters:
+        title: গান লিখা
       courseE_unplugged_internet:
         title: ইন্টারনেট
       courseE_unplugged_songwriting:
+        title: গান লিখা
+      courseF_unplugged_songwritingParameters:
         title: গান লিখা
       courseB_unplugged_MRF_2018:
         title: আমার রোবোটিক্স বন্ধুরা

@@ -92,6 +92,14 @@ ky-KG:
         do something: бирдеме кылуу
       NEW Course 4 Play Lab Params 11:
         jump: секир
+      New Artist Project:
+        draw a star: жылдыз тарткыла
+        draw a circle: тегерек тарткыла
+        draw a triangle: үч бурчтук тарткыла
+        draw a house: саат тарткыла
+        draw a square: чарчы тарткыла
+      New Play Lab Project:
+        jump: секир
       Standalone_Artist_7:
         draw a flower: гүл тарткыла
       course3_artist_functions_challenge1:
@@ -133,11 +141,15 @@ ky-KG:
         draw a square: чарчы тарткыла
       courseE_artist_functions2_2019:
         draw a square: чарчы тарткыла
+      courseE_artist_functions2_copy:
+        draw a square: чарчы тарткыла
       courseE_artist_functions3_2018:
         draw a star: жылдыз тарткыла
       courseE_artist_functions3_2019:
         draw a star: жылдыз тарткыла
       courseE_artist_functions4:
+        draw a star: жылдыз тарткыла
+      courseE_artist_functions4_copy:
         draw a star: жылдыз тарткыла
       courseE_artist_functions5:
         draw a star: жылдыз тарткыла
@@ -145,11 +157,11 @@ ky-KG:
         draw a star: жылдыз тарткыла
       courseE_artist_functions5_2019:
         draw a star: жылдыз тарткыла
+      courseE_artist_functions5_copy:
+        draw a star: жылдыз тарткыла
       courseE_artist_functions7:
         draw a house: саат тарткыла
       courseE_artist_functions7_2018:
-        draw a house: саат тарткыла
-      courseE_artist_functions7_2019:
         draw a house: саат тарткыла
       courseE_artist_functions8:
         do something: бирдеме кылуу
@@ -194,6 +206,8 @@ ky-KG:
       courseE_artist_functions_predict1_2018:
         draw a square: чарчы тарткыла
       courseE_artist_functions_predict1_2019:
+        draw a square: чарчы тарткыла
+      courseE_artist_functions_predict1_copy:
         draw a square: чарчы тарткыла
       courseE_artist_functions_predict2:
         do something: бирдеме кылуу

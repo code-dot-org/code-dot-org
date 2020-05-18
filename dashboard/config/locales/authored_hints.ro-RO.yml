@@ -1237,6 +1237,8 @@ ro-RO:
           Dacă bucla ta numără în sus, incrementul este adăugat variabilei contor la fiecare repetare.
 
           Ce trebuie să adaugi fiecărui număr pentru a obţine numărul de după el?
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_a: |-
           Poţi folosi bucle ca aceasta pentru a crea pereţii şi acoperişul. Încearcă să repeţi blocuri diferite.
@@ -2151,7 +2153,20 @@ ro-RO:
           înainte de a desena cel de-al doilea pătrat.
         courseE_artist_functions1_b: Este în regulă dacă desenați linii care se suprapun
           pentru a vă face ochelarii.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Pătratele au, fiecare, laturi de câte 100 de
+          pixeli, ceea ce înseamnă că va trebui să mutați înainte cu 175 de pixeli,
+          înainte de a desena cel de-al doilea pătrat.
+        courseE_artist_functions1_b: Este în regulă dacă desenați linii care se suprapun
+          pentru a vă face ochelarii.
       courseE_artist_functions2:
+        courseD_artist_functions2_a: |-
+          Programul dvs. ar trebui să:
+
+          -   Utilizeze funcția
+          -   Mute înainte cu 100 + 75 pixeli
+          -   Utilizeze funcția
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Programul dvs. ar trebui să:
 

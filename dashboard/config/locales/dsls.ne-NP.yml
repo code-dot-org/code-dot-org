@@ -1091,49 +1091,49 @@ ne-NP:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
         - {}
         questions:
         - {}
@@ -1154,6 +1154,14 @@ ne-NP:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - {}
@@ -1426,6 +1434,14 @@ ne-NP:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

@@ -1,0 +1,32 @@
+---
+mn:
+  data:
+    block_categories:
+      Actions: Үйлдлүүд
+      Advanced: Ахисан шат
+      Behaviors: Зан чанар
+      Brushes: Багс
+      Color: Өнгө
+      Comment: Тайлбар
+      Comments: Тайлбарууд
+      Conditionals: Нөхцлүүд
+      Dancers: Бүжигчид
+      Default: Үндсэн
+      Events: Үйл явдлууд
+      Functions: Функцүүд
+      'Functions ': 'Функцүүд '
+      Game/Score: Тоглоом/Оноо
+      Games/Score: Тоглоом/Оноо
+      Groups: Бүлгүүд
+      Input: Оролт
+      Locations: Байрлалууд
+      Logic: Логик
+      Loops: Гогцоонууд
+      Math: Математик
+      Numbers: Дугаар
+      Properties: Шинж чанарууд
+      Sprites: Шидтэнгүүд
+      Text: Текст
+      Variables: Хувьсагчууд
+      'Variables ': 'Хувьсагчууд '
+      World: Ертөнц

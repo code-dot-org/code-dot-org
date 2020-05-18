@@ -415,6 +415,8 @@ vi-VN:
         Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_FP20x20_2019: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
         tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
+      New Minecraft Hero Project: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
+        tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       Overworld Move to Sheep: Hãy thêm một lệnh "move forward" thứ hai để đi đến
         con cừu.
       Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi
@@ -629,6 +631,10 @@ vi-VN:
         đến được chỗ chú lợn!
       courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
+      courseA_maze_seq6_copy: |-
+        Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến được chỗ chú lợn!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq8: |-
         Giải quyết câu đố này và đưa chú chim đến chỗ chú lợn!
 
@@ -637,6 +643,10 @@ vi-VN:
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
+      courseA_maze_seq8_copy: |-
+        Giải quyết câu đố này và đưa chú chim đến chỗ chú lợn!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
         các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
       courseA_playLab_events3_2019: |-
@@ -650,16 +660,10 @@ vi-VN:
         Đưa chú chó Jorge đến cây cờ để hoàn thành câu đố này!
       courseA_playLab_events4_2018: Thêm một khối để giúp Jorge di chuyển sang phải
         khi ấn phím mũi tên phải.
-      courseA_playLab_events4_2019: Thêm một khối để giúp Jorge di chuyển sang phải
-        khi ấn phím mũi tên phải.
       courseA_playLab_events5: Thêm các khối sự kiện để giúp Jorge di chuyển lên hoặc
         xuống khi ấn phím mũi tên lên hoặc xuống.
       courseA_playLab_events5_2018: Thêm các khối sự kiện để giúp Jorge di chuyển
         lên hoặc xuống khi ấn phím mũi tên lên hoặc xuống.
-      courseA_playLab_events5_2019: Thêm các khối sự kiện để giúp Jorge di chuyển
-        lên hoặc xuống khi ấn phím mũi tên lên hoặc xuống.
-      courseA_playLab_events6_2019: Hãy làm cho trò chơi thú vị hơn bằng cách thay
-        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
       courseA_playLab_events7_2018: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
         trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
         nó không?

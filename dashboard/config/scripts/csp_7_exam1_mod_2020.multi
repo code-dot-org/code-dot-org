@@ -1,13 +1,22 @@
 name 'csp-7-exam1-mod-2020'
-encrypted 'ms5ZA/2XGivNlkhsF2oVGb2w9+WmipJMI9FZGA6xzU9da1ySP+R7dbrjdPOW
-AJoFrvhctb1LxosI0VO7ODqaKQlwZhE44pm9SjyRAsDawySDgYu/upR7lfIf
-bRAloq52+uj5IaoU6HjiNd5rJXVSG/0NpdOkBT4a7QTYIlpvZqx4seETsCu8
-0FDQQTSfrhKQ9/eexb0690SRf7eNx7naStZe2ffKEoB7uC5EogPeLIYqJudU
-DKJv+HedhMm94xoBKWmMszTttRsxevH7k8o5exJ7jVGnndXV3FDo9EtwHFGB
-VimW5M8QOz2Exrv//GRwlRuKMJ0fLso1BidAkiSF1k149mWXiRLuN6TQVir+
-I34hskujcxMxOppyV7mGnghHJdKmG4BKIZOMhMZHiuWf1tBqVANgRrWKcao/
-KdAh47oEKDv9tjqnA8rxcx0buaYPutpXFNItxW1W58xk9hr73hezyU2QG4P/
-vkABBo7qBMMew8YGFCmbUUhqFMeCURwcqgo5p6oc0GH++qJjwxukwAaJOVAA
-GS4gNanRxTRTiHLH7TkMyVVm4PZX0r1aA7IxDONPSql7blW5EhHXSLr4SiZ+
-w8gqQl6Lc6lGIJAWPL8=
-'
+editor_experiment ''
+right ' `num % 2 == 0;`'
+wrong ' `num % 0 == 2;`'
+wrong ' `num % 1 == 0;`'
+wrong ' `num % 1 == 2;`'
+
+markdown <<MARKDOWN
+Which code segment results in "true" being returned if a number is even?
+Replace "MISSING CONDITION" with the correct code segment. 
+
+```
+function isEven(num){
+	if(MISSING CONDITION){
+    	return true;
+    } else {
+    	return false;
+    }
+}
+
+```
+MARKDOWN

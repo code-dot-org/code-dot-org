@@ -242,6 +242,9 @@ hy-AM:
       NEW Course 4 Bee For Loops 8: |-
         You've got this! What should your
         increment be to collect 3, 6, 9, 12, 15 nectar?
+      New Gumball Project: Create anything you like and share it!
+      New Ice Age Project: Create anything you like and share it!
+      New Infinity Project: Create anything you like and share it!
       Overworld Avoid Monsters: |-
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
@@ -473,6 +476,9 @@ hy-AM:
       courseD_maze_nestedLoops6_2019: "Let's take this to another level! \\\r\nUse\nloops
         to get me to the sunflower with the fewest loops possible."
       courseE_artist_functions1: "\"Me zombie artist. Me love drawing!\"  \\\r\n\\\r\nHelp\nthe
+        zombie draw square glasses.  \\\r\n\\\r\nThe bridge between the glasses is\n25
+        pixels shorter than the width of the squares."
+      courseE_artist_functions1_copy: "\"Me zombie artist. Me love drawing!\"  \\\r\n\\\r\nHelp\nthe
         zombie draw square glasses.  \\\r\n\\\r\nThe bridge between the glasses is\n25
         pixels shorter than the width of the squares."
       courseE_bee_concept1: |-

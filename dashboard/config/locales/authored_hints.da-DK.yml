@@ -642,6 +642,11 @@ da-DK:
       courseA_maze_seq10_2019:
         courseA_maze_seq10_a: Hvis du har problemer, så prøv at tegne ruten på et
           stykke papir.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Hvis du har problemer, så prøv at tegne ruten på et
+          stykke papir.
+        courseA_maze_seq10_b: Du skal få den til at bevæge sig i 3 retninger, for
+          at løse denne opgave.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Hvis du er usikker på vejen, så brug din finger til
           at finde vejen, fra fuglen og hen til grisen.
@@ -702,6 +707,10 @@ da-DK:
         '1': Prøv at skrive de enkelte trin ned på et stykke papir, for at finde løsningen!
       courseA_maze_seq5_2019:
         '1': Prøv at skrive de enkelte trin ned på et stykke papir, for at finde løsningen!
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Prøv at skrive de enkelte trin ned på et stykke papir,
+          for at finde løsningen!
+        courseA_maze_seq5_b: Du skal bruge 2 blokke der peger i 2 retninger.
       courseA_maze_seq6:
         courseA_maze_seq6_a: Din endelige kode skal have 3 blokke.
         courseA_maze_seq6_b: Hvis det er svært, så prøv at del opgave i 2. Første
@@ -714,7 +723,15 @@ da-DK:
         courseA_maze_seq6_a: Din endelige kode skal have 3 blokke.
         courseA_maze_seq6_b: Hvis det er svært, så prøv at del opgave i 2. Første
           del før hjørnet, den anden del efter hjørnet.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Din endelige kode skal have 3 blokke.
+        courseA_maze_seq6_b: Hvis det er svært, så prøv at del opgave i 2. Første
+          del før hjørnet, den anden del efter hjørnet.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Du mangler en blok for at få fuglen hen til grisen.
+        courseA_maze_seq7_b: Hvis du ikke kan finde ud af hvad du skal, så tegn opgaven
+          på et stykke papir, og brug fingeren til at finde vejen frem.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Du mangler en blok for at få fuglen hen til grisen.
         courseA_maze_seq7_b: Hvis du ikke kan finde ud af hvad du skal, så tegn opgaven
           på et stykke papir, og brug fingeren til at finde vejen frem.
@@ -725,6 +742,9 @@ da-DK:
         courseA_maze_seq8_a: Hvis du ikke kan finde ud af hvad du skal, så tegn på
           et stykke papir hvordan fuglen skal bevæge sig.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Hvis du ikke kan finde ud af hvad du skal, så tegn på
+          et stykke papir hvordan fuglen skal bevæge sig.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Hvis du ikke kan finde ud af hvad du skal, så tegn på
           et stykke papir hvordan fuglen skal bevæge sig.
       courseA_maze_seq9:

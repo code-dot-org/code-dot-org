@@ -28,13 +28,19 @@ is:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -57,6 +63,19 @@ is:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -64,6 +83,13 @@ is:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -142,6 +168,16 @@ is:
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Nánar
   cookie_banner_message: Með því að halda áfram að vafra á vef okkar eða smella á
     "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.
   cookie_banner_more_information: Sjá persónuverndarstefnu Code.org.
@@ -389,6 +425,9 @@ is:
     fyrir Klukkustund kóðunar eru tiltæk árið um kring. <a href='%{hoc_activities_url}'>Prófaðu
     verkefni</a> eða lestu <a href='%{howto_guide_url}'>Leiðarvísi okkar</a> um að
     skipuleggja viðburð fyrir hópinn þinn.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Og á hverju ári í desember getur hópur þinn slegist
     í för með miljónum nemenda um allan heim er þeir fagna Viku tölvunarfræðináms
     með því að gera verkefni í Klukkustund kóðunar. Við munum opna fyrir skráningu
@@ -488,6 +527,7 @@ is:
   map_legend_cs_tech_jam: Sérstakur viðburður
   map_warning: Kort Klukkustunda kóðunar sýnir aðeins fyrstu 200.000 skráðu viðburðina.
     Alla skráða viðburði með gilt heimilisfang má sjá á <a href='%{events_url}'>viðburðasíðunni.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Klukkustund kóðunar er komin
   meta_tag_og_description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga
     miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.
@@ -505,6 +545,13 @@ is:
   hoc_faq_what_is_hoc_a: Klukkustund kóðunar er einnar klukkustundar kynning á tölvunarfræði
     sem er ætlað að svipta hulunni af forritun og sýna að allir geti lært grunnatriðin.
     <a href='http://code.org/learn'>Skoða kennsluefnið</a>.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Prófa kennsluefnið
   hoc_faq_when_is_hoc_q: Hvenær er Klukkustund kóðunar?
   hoc_faq_when_is_hoc_a: Það geta allir miðlað Klukkutíma kóðunar hvenær sem er, en
@@ -513,16 +560,30 @@ is:
     Science Education Week</a> í USA. Er þetta ein tiltekin <i>klukkustund</i>? Nei.
     Það er hægt að gera þetta hvenær sem er þessa viku. (Og ef það næst ekki, þá vikuna
     á undan eða eftir).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Hvers vegna tölvunarfræði?
   hoc_faq_why_cs_a: "<i>Öllum</i> nemendum ætti að vera gefið tækifæri til að læra
     tölvunarfræði. Það hjálpar til að þroska færni í að leysa vandamál, rökvísi og
     sköpun. Með því að byrja snemma fá nemendur grunn til að ná árangri í störfum
     21. aldarinnar. Meiri tölfræði má finna á <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hvernig tek ég þátt í Klukkustund kóðunar?
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Byrjaðu að skipuleggja
     hér</a> með því að lesa leiðarvísi okkar. Þú getur haldið Klukkustund kóðunar
     í skólanum þínum eða út í samfélaginu &mdash; svo sem í tómstundaklúbbi, félagi
     eða í vinnunni. Eða bara prófað þetta sjálf/ur %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hver stendur að baki Klukkustund kóðunar?
   hoc_faq_behind_hoc_a: Klukkustund kóðunar er skipulögð af <a href='http://code.org'>Code.org</a>,
     sem eru almenn óháð samtök sem hafa það að markmiði að auka þátttöku í tölvunarfræði
@@ -530,6 +591,11 @@ is:
     minnihlutahópa. Fordæmalaust <a href='http://code.org/about/partners'>samstarf
     hefur tekist</a> milli aðila hefur tekist til að styðja við Klukkustund kóðunar.
     Þar má nefna Microsoft, Apple, Amazon, ungmennafélög og skólayfirvöld.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Ég veit ekkert um forritun. Get ég samt skipulagt viðburð?
   hoc_faq_host_a: Að sjálfsögðu. Verkefni í Klukkustund kóðunar eru sjálfstýrð. Allt
     sem þú þarft að gera er að <a href='%{codeorg_url}/learn'>prófa núverandi kennsluefni
@@ -537,12 +603,22 @@ is:
     um afganginn. Við erum líka með valkosti fyrir alla aldurs- og reynsluhópa, frá
     leikskólastigi og upp úr. Byrjaðu skipulagninguna á að lesa <a href='/how-to'>leiðarvísinn
     okkar</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Hvaða tæki ætti ég að nota með nemendum mínum?
   hoc_faq_devices_a: Kennsluefni Code.org virkar á öllum tækjum og vöfrum. Þú getur
     séð meiri upplýsingar um tæknikröfur <a href='%{codeorg_url}/educate/it'>hér</a>.
     Tæknikröfur kennsluefnis sem ekki er frá Code.org má finna á <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     í lýsingu kennsluefnisins. Ekki gleyma að við erum líka með <a href='%{unplugged_url}'>ótengd
     verkefni</a> fyrir æfingar án nettengingar!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Þarf ég tölvu fyrir hvern þátttakanda?
   hoc_faq_need_computers_a: Nei. Við erum með kennsluefni fyrir Klukkustund kóðunar
     sem virkar á tölvum, snjallsímum og spjaldtölvum og jafnvel án tölvu! Þú getur
@@ -553,28 +629,55 @@ is:
     tölvu getur heill hópur hjálpast að með Klukkustund kóðunar. Horft á myndskeiðin
     saman og skipst á að leysa þrautir eða svara spurningum.<li><b>Vinna án tölvu.</b>Við
     erum með verkefni sem gera ekki ráð fyrir tölvu.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku
     háttað?
   hoc_faq_international_a: Það geta allir skipulagt Klukkustund kóðunar, hvar sem
     er í heiminum. Á síðasta ári komu nemendur um allan heim saman til að prófa Klukkustund
     kóðunar. Nánari upplýsingar <a href='/promote'>hér</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Hvernig get ég búið til kennsluefni fyrir Klukkustund kóðunar?
   hoc_faq_tutorial_a: Ef þú hefur áhuga á að gerast samstarfsaðili í gerð kennsluefnis,
     þá mælum við með að þú kynnir þér <a href='target-tutorial-guidelines'>leiðarvísa
     okkar og leiðbeiningar</a>. Við mundum vilja hýsa fjölmörg áhugaverð viðfangsefni,
     en meginmarkmiðið er að hámarka upplifunina fyrir nemendur og kennara sem hafa
     ekki fyrri reynslu af tölvunarfræði.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Þurfa nemendur að skrá sig inn með notendaupplýsingum?
   hoc_faq_account_a: Nei. Það er alls engin krafa að nemendur skrái sig eða skrái
     sig inn til að prófa Klukkustund kóðunar. En flest <a href='http://code.org/learn/beyond'>námskeiðin
     sem fara á eftir</a> gera kröfu um innskráningu til að geta varðveitt framvindu
     nemenda.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Hvaða verkefni ætti ég að nota með framhaldsskólanemendum?
   hoc_faq_high_school_a: Fyrir alla aldurshópa mælum við með að prófa byrjendaefnið
     á <a href='http://code.org/learn'>Code.org/learn</a> til að byrja með, svo sem
     kennsluefnið með Angry Birds eða með Önnu og Elsu. Nemandi í framhaldsskóla ætti
     að geta klárað svona efni á 30 mínútum og getur þá spreytt sig á ítarlegra efni
     með JavaScript, svo sem hjá Khan Academy eða CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Ég er að gera Klukkustund kóðunar í Scratch en hvað ef nemendur
     mínir hafa iPad spjöld fremur en fartölvur?
   hoc_faq_scratch_a: Scratch keyrir ekki á spjaldtölvum. Ef nemendur þínir eru ungir,
@@ -582,6 +685,10 @@ is:
     kennsluefnið í boði á <a href='http://code.org/learn'>Code.org/learn</a>, munt
     þú finna annað kennsluefni sem virkar á iPad - frá Code.org, Tynker, Lightbot
     eða CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hvernig eru Klukkustundir kóðunar taldar?
   hoc_faq_map_q: Af hverju sé ég ekki punktinn minn á kortinu?
   hoc_faq_map_a: Okkur finnst mjög leitt ef þú sérð ekki viðburðinn þinn á Klukkustund
@@ -590,11 +697,23 @@ is:
     á töluna ofan við kortið færðu lista yfir alla viðburði eftir stað og ættir að
     finna viðburðinn þinn þar. Auk þess, vegna fjöldans sem skráir sig, tekur kortið
     yfirleitt 48 tíma að uppfærast. Athugaðu aftur eftir nokkra daga!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Notendatalningin fyrir Klukkustund kóðunar er ekki hárnákvæm.
     Við teljum ekki auðkenni nemenda þegar þátttakan í Klukkustund kóðunar er metin,
     enda gerum við það ekki að skilyrði að nemendur skrái sig inn eða skrái sig yfirleitt.
     Afleiðing af því er að við bæði ofteljum og vanteljum á sama tíma. Þú getur lesið
     nánar um þetta <a href='http://code.org/loc'>hér</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Hve mikið er hægt að læra á klukkutíma?
   hoc_faq_one_hour_a: Markmið Klukkustundar kóðunar er ekki að gera neinn að tölvusérfræðingi
     á einni klukkustund. Ein klukkustund er þó nóg til að komast að því að tölvunarfræði
@@ -612,26 +731,45 @@ is:
     átta sig á því að nemendur þeirra vilja tölvunarfræði og að kennararnir geta kennt
     hana.<br/><br/>Umfram allt geta allir þátttakendur lært það á klukkustund að þetta
     er viðráðanlegt.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Er einhverjum spurningum ósvarað?
   hoc_faq_more_questions_a: Gáðu hvort þú finnir svör á <a href='http://support.code.org'>stuðningsspjallvef
     okkar</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hvernig get ég haldið áfram að læra eftir Klukkustund kóðunar?
   hoc_faq_keep_learning_a: Allir geta séð um halda Klukkustund kóðunar hvenær sem
     er. Kennsluefnið er aðgengilegt allt árið. Þú getur gengið að því vísu að allt
     kennsluefnið verði tiltækt það sem eftir er. Farðu á síðuna <a href='/promote'>efniviður</a>
     til að finna leiðbeiningar fyrir viðburði og annað efni sem getur hjálpað til
     að þín Klukkustund kóðunar heppnist vel.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Hvar get ég prentað skírteini fyrir nemendur mína?
   hoc_faq_certificates_a: Farðu á <a href='%{codeorg_url}/certificates'>skírteinasíðuna</a>
     þar sem þú getur prentað skírteini fyrir allan bekkinn fyrirfram. Þú getur líka
     prentað <a href='%{codeorg_url}/certificates?course=mc'>sérstök skírteini</a>
     fyrir nemendur sem fara í Minecraft kennsluefnið.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Eru takmörk á því hvernig ég má nota merki eða heiti Klukkustundar
     kóðunar (Hour of Code)?
   hoc_faq_logo_a: Hour of Code er skrásett vörumerki. Við viljum ekki koma í veg fyrir
     notkun þess, en við viljum að notkun þess sé háð nokkrum takmörkunum. Kynntu þér
     <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>þennan
     leiðarvísi um notkun</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Tölur frá Klukkustund kóðunar 2013
   stats_growth: Fljótust að ná til 15 miljón notenda.
   stats_i18n: Nemendur eru að læra á 40 tungumálum
@@ -647,6 +785,8 @@ is:
     háskólum og á vinnustöðum.
   stats_females_more: Þegar Klukkustund kóðunar er haldin, eru stúlkur <b>50% af öllum
     þátttakendum</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Á hverjum einasta degi var niðurstaðan sú sama &mdash; 100% virkni."
     - Nina Nichols Peery, kennari'
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana
@@ -771,8 +911,11 @@ is:
     sem hafa byrjað með Klukkustund kóðunar.
   learn_banner_beyond: Viltu halda áfram að læra?  <a id='learn_banner_beyond'>Hér
     er framhaldsefni</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Kennarar: <a id=''teacher_banner_host''>Skipuleggið Klukkustund</a>
     eða <a id=''teacher_banner_howto''>lesið Leiðarvísinn</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: Þjarkar og rafrásir
   learn_robotics_banner_blurb: Eru til vélmenni eða sett fyrir forritun vélbúnaðar?
     Notaðu þennan búnað með verkefnunum hér fyrir neðan og búðu til áþreifanlega Klukkustund

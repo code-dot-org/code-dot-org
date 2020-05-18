@@ -24,6 +24,7 @@ export const assetButtonStyles = {
 const RecordButton = ({onSelectRecord, disabled}) => (
   <span>
     <Button
+      __useDeprecatedTag
       onClick={onSelectRecord}
       id="record-asset"
       className="share"

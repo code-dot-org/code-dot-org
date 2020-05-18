@@ -32,6 +32,7 @@ class DataVisualizer extends React.Component {
     } else {
       return (
         <GoogleChartWrapper
+          style={{height: '100%'}}
           records={this.props.records}
           numericColumns={this.props.numericColumns}
           chartType={this.props.chartType}

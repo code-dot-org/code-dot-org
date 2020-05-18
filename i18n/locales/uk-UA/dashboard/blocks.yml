@@ -900,6 +900,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -945,6 +946,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1057,6 +1059,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
       gamelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
@@ -1546,6 +1549,14 @@ uk:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Переміщення {SPRITE} {DISTANCE} Пікселів {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
       aalab_prompt:
         text: задати питання {MESSAGE}
       aalab_scene:
@@ -1557,12 +1568,10 @@ uk:
             '3': '3'
       aalab_setupStory:
         text: історія налаштування
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': показати
-            '"hide"': приховати
+            '"random"': випадковий
       binary_drawBin:
         text: залучити двійковий {BIN}
       binary_drawBinScreen:

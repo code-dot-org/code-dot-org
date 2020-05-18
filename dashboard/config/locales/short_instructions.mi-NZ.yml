@@ -65,13 +65,33 @@ mi-NZ:
       4-5 Maze 3: Me... haere... ki te putiputirā.
       4-5 Maze 6: Aratakina ahau ki te putiputirā mā te whakamahi i ngā nama paraka
         rua rua noa iho!
+      CourseD_Dance_Party_01: Kumea te paraka 'he mea hou' ki te papamahi, me tapiri
+        atu ki roto i te paraka 'tatunga'.
       CourseD_Dance_Party_02: Me timatahia te Moose ki te neke a muri i nga wahanga
         e 4!
       CourseD_Dance_Party_03: A muri i nga wahanga e 6 me timatahia to kaikanikani
         i tetahi nekehanga hou!
       CourseD_Dance_Party_04: Tapiri atu he papamuri ki to taupānga.
+      CourseD_Dance_Party_05: Tapiri atu he paraka hou ki te tīni te nekehanga o to
+        kaikanikani ia wahanga e rua.
+      CourseD_Dance_Party_06: Hangaia he kaikanikani ā muri me whakaingoatia `Kaikanikani-ā-muri1`
+        ki te kanikani kotahi ki Ngeru.
+      CourseD_Dance_Party_08: Ka taea e koe te hanga nga kaikanikani takirua kia rite
+        ki te rahi?
+      CourseD_Dance_Party_09: Ki te tini te tae o te kaikanikani, whakamahia i te
+        paraka `kowhiri te tae`.
+      CourseD_Dance_Party_10: Whakamahia te paraka `whai atu` kia timata te kai kanikani
+        i te tangi o te waiata.
+      CourseD_Dance_Party_11: Ko te paraka `te patuhi ki runga` ka whakahaere i te
+        waehere i te wa ka pehi te patuhi kōpere o runga. Me waehere te kaikanikani
+        kia nekehia i te wa ka pehi te patuhi kōpere o runga.
       CourseD_Dance_Party_11_5: Whakamahia te paraka/wahanga "nga raki katoa" kia
         kanikani kotahi nga rakiraki.
+      CourseD_Dance_Party_11b: ' Ka "drop" te Karetao ia wa ka pehi te patuhi kōpere
+        mātau, ka "pakipaki" ia wa ka pehi te pātuhi kōpere o runga. Whakamahia kia
+        drop, pakipaki, drop, pakipaki kia tere rawa atu!\*\*'
+      CourseD_Dance_Party_12: Ka mau te wehi! Hangaia he kanikani ki te tohatoha atu
+        ki o hoa.
       CourseE_HOC 2018 Level_1: Tikina he waka mai i te pouaka taonga.
       CourseE_HOC 2018 Level_10: Haere tōtika ki te whaharoa o te Whakamaharatanga
         Moana nei.
@@ -92,12 +112,33 @@ mi-NZ:
       Crack a Caesar Cipher: Ngā Tohutohu
       Dance_2019_05: A muri i nga wahanga e 6 me timatahia to kaikanikani i tetahi
         nekehanga hou!
+      Dance_2019_10: Ka mau te wehi! Hangaia he kanikani ki te tohatoha atu ki o hoa.
+      Dance_Party_01: Kumea te paraka 'he mea hou' ki te papamahi, me tapiri atu ki
+        roto i te paraka 'tatunga'.
       Dance_Party_02: Me timatahia te Moose ki te neke a muri i nga wahanga e 4!
       Dance_Party_03: A muri i nga wahanga e 6 me timatahia to kaikanikani i tetahi
         nekehanga hou!
       Dance_Party_04: Tapiri atu he papamuri ki to taupānga.
+      Dance_Party_05: Tapiri atu he paraka hou ki te tīni te nekehanga o to kaikanikani
+        ia wahanga e rua.
+      Dance_Party_06: Hangaia he kaikanikani ā muri me whakaingoatia `Kaikanikani-ā-muri1`
+        ki te kanikani kotahi ki Ngeru.
+      Dance_Party_08: Ka taea e koe te hanga nga kaikanikani takirua kia rite ki te
+        rahi?
+      Dance_Party_09: Ki te tini te tae o te kaikanikani, whakamahia i te paraka `kowhiri
+        te tae`.
+      Dance_Party_10: Whakamahia te paraka `whai atu` kia timata te kai kanikani i
+        te tangi o te waiata.
+      Dance_Party_11: Ko te paraka `te patuhi ki runga` ka whakahaere i te waehere
+        i te wa ka pehi te patuhi kōpere o runga. Me waehere te kaikanikani kia nekehia
+        i te wa ka pehi te patuhi kōpere o runga.
       Dance_Party_11_5: Whakamahia te paraka/wahanga "nga raki katoa" kia kanikani
         kotahi nga rakiraki.
+      Dance_Party_11b: ' Ka "drop" te Karetao ia wa ka pehi te patuhi kōpere mātau,
+        ka "pakipaki" ia wa ka pehi te pātuhi kōpere o runga. Whakamahia kia drop,
+        pakipaki, drop, pakipaki kia tere rawa atu!\*\*'
+      Dance_Party_12: Ka mau te wehi! Hangaia he kanikani ki te tohatoha atu ki o
+        hoa.
       HOC 2018 Level_1: Tikina he waka mai i te pouaka taonga.
       HOC 2018 Level_10: Haere tōtika ki te whaharoa o te Whakamaharatanga Moana nei.
       HOC 2018 Level_11: Ki te Paraka kikorangi hangaia he roma ki roto i te Whakamaharatanga
@@ -148,6 +189,10 @@ mi-NZ:
         te kaute piro ki te 5 e toa ai koe!
       MC HOC 2016 Village Test: Aiiiiiiiii! Kua mau koe e ngā Kairoro. Waeheretia
         te Taipō Rino ki te aru me te whakaeke i ngā kairoro!
+      New Sports Project: 'Waihangahia tō ake kēmu! Ko koe te rangatira: e whakaae
+        ana kia panonihia ngā ture, kia whakawhenumi hoki i ngā momo tākaro, kia auaha!
+        Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria e ō hoa ki ā rātou
+        waea.'
       bounce_1: Whakapiri i tētahi paraka ki te paraka "ina pere mauī", ā, pāwhiritia
         te "Whakahaerehia". Nekehia te patu mā te whakamahi i te pere mauī kia tae
         atu ki te ūnga whakamutunga.
@@ -246,6 +291,8 @@ mi-NZ:
       courseD_maze_nestedLoops6_2019: "Me tae atu ki tētahi taumata kē atu! \\\r\nWhakamahi
         koromeke kia tae atu ai au ki te putiputirā mā ngā koromeke ruarua noa iho."
       courseE_bee_functions1: Kohia te waihonga i ia putiputi.
+      express_maze_debugging9_2019: Whakamahia ngā paraka o te pouaka taputapu ki
+        te waihanga i tō papatono. Tukua a Scrat ki te haere ki te kākano.
       flappy_1: Whakapiri i tētahi paraka ki te paraka "ina pāwhiri", kātahi ka pāwhiritia
         te "Whakahaerehia". Pāwhiritia, patupatu rānei i te mata ke te whakaneke i
         a Flappy ki te ūnga.

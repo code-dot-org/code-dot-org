@@ -2,6 +2,7 @@
 el-GR:
   data:
     display_name:
+      CSD Problem Solving Process Video: 'Βίντεο: Διαδικασία Επίλυσης Προβλημάτων'
       CSD U2 CSS explore CSS: 'Εξερεύνηση: Προσθήκη Στυλ'
       CSD U2 CSS explore CSS_2018: 'Εξερεύνηση: Προσθήκη Στυλ'
       CSD U2 CSS explore CSS_2019: 'Εξερεύνηση: Προσθήκη Στυλ'
@@ -131,6 +132,7 @@ el-GR:
       Dance_Party_extras_visible: Πού θα πήγαιναν;
       Dance_Party_extras_visible_2019: Πού θα πήγαιναν;
       OPD-K5 WhatIsCS: Τι είναι η επιστήμη υπολογιστών;
+      OPD-K5 WhatIsCS_copy: Τι είναι η επιστήμη υπολογιστών;
       courseA_video_Stevie: Ο Στίβι και το Μεγάλο Πρότζεκτ
       courseA_video_Stevie_2018: Ο Στίβι και το Μεγάλο Πρότζεκτ
       courseB_video_Unspotted: Μη εντοπισμένα bugs

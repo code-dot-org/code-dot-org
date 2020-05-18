@@ -6,6 +6,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   dialog: {
@@ -20,6 +21,7 @@ const styles = {
 
 class AddMultipleStudents extends Component {
   static propTypes = {
+    sectionId: PropTypes.number,
     // Provided by redux
     addMultipleStudents: PropTypes.func.isRequired
   };
@@ -30,6 +32,17 @@ class AddMultipleStudents extends Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'add-students-button-click',
+        data_json: JSON.stringify({
+          sectionId: this.props.sectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeDialog = () => {
@@ -39,6 +52,17 @@ class AddMultipleStudents extends Component {
   add = () => {
     const value = this.refs.studentsTextBox.value;
     this.props.addMultipleStudents(value.split('\n'));
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'add-students-confirm',
+        data_json: JSON.stringify({
+          sectionId: this.props.sectionId
+        })
+      },
+      {includeUserId: true}
+    );
     this.closeDialog();
   };
 
@@ -46,9 +70,11 @@ class AddMultipleStudents extends Component {
     return (
       <div>
         <Button
+          __useDeprecatedTag
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.addStudentsMultiple()}
+          icon="plus"
         />
         <BaseDialog
           useUpdatedStyles
@@ -66,11 +92,13 @@ class AddMultipleStudents extends Component {
           />
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.done()}
               onClick={this.add}
               color={Button.ButtonColor.orange}

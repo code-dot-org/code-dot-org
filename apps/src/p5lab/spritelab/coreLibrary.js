@@ -23,6 +23,9 @@ export function reset() {
  * the specified id/name, or a list containing all sprites with the specified animation.
  */
 export function getSpriteArray(spriteArg) {
+  if (!spriteArg) {
+    return [];
+  }
   if (spriteArg.hasOwnProperty('id')) {
     let sprite = nativeSpriteMap[spriteArg.id];
     if (sprite) {

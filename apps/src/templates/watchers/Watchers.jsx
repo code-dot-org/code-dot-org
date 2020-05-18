@@ -23,9 +23,9 @@ const OPTIONS_GAMELAB = [
   'sprite.height'
 ];
 
-const buttonSize = '34px';
+const buttonSize = '28px';
 const valueAndInputWidth = 'calc(100% - 41px)';
-const inputElementHeight = 29;
+const inputElementHeight = 23;
 
 const styles = {
   autocompleteDropdown: {
@@ -74,7 +74,7 @@ const styles = {
   watchValue: {
     display: 'inline-flex',
     alignItems: 'center',
-    minHeight: '34px'
+    minHeight: '28px'
   },
   watchInputSection: {
     clear: 'both'

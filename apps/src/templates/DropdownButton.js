@@ -49,6 +49,7 @@ class DropdownButton extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
+    size: PropTypes.string,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'a') {
@@ -105,13 +106,15 @@ class DropdownButton extends Component {
   };
 
   render() {
-    const {text, color} = this.props;
+    const {text, color, size} = this.props;
     const {dropdownOpen} = this.state;
 
     return (
       <div style={styles.main}>
         <Button
+          __useDeprecatedTag
           text={text}
+          size={size}
           onClick={this.toggleDropdown}
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconStyle={styles.icon}

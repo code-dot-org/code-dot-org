@@ -28,13 +28,19 @@ ro:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -57,6 +63,19 @@ ro:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -64,6 +83,13 @@ ro:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -140,6 +166,16 @@ ro:
   hoc2018_tutorial_mchoc_description: Folosește blocuri de coduri pentru a-l conduce
     pe Steve sau pe Alex într-o aventură prin lumea Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Încearcă noua <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Aflați mai multe
   cookie_banner_message: Dacă continuați să navigați site-ul nostru sau faceți clic
     pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul
     sau pe dispozitivul dumneavoastră.
@@ -392,6 +428,9 @@ ro:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Și în fiecare an în luna decembrie, clasa dvs. se poate
     alătura milioanelor de studenți din întreaga lume pentru a sărbători Săptămâna
     Educației în Informatică cu Ora de Cod. Vom deschide înregistrarea pentru celebrarea
@@ -493,6 +532,7 @@ ro:
   map_warning: Harta Orei de Cod arată doar primele 200.000 de evenimente înregistrate.
     Toate evenimentele înregistrate cu o adresă validă pot fi vizualizate pe <a href='%{events_url}'>
     pagina de evenimente.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Hour of Code se apropie
   meta_tag_og_description: Hour of Code este o mişcare globală care ajunge la zeci
     de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite.
@@ -516,6 +556,13 @@ ro:
     ale comunitatii. Iata <a href='%{tutorials}'> tutorialele si activitatile </a>.
     Aceasta campanie este sustinuta de peste <a href='%{partners}'> 400 de parteneri</a>
     si 200.000 de educatori din toata lumea.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Incearca tutorialele
   hoc_faq_when_is_hoc_q: Când se desfășoară Hour of Code?
   hoc_faq_when_is_hoc_a: Hour of Code are loc in fiecare an in timpul <a href='%{csedweek_url}'>Saptamanii
@@ -525,18 +572,32 @@ ro:
     in fiecare in amintirea zilei de nastere a unui importnant pionier din domeniul
     tehnologiei <a href='%{grace_hopper}'>Admirarul Grace Murray Hopper</a>(Decembrie
     9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: De ce tehnologia computerelor si programare?
   hoc_faq_why_cs_a: "<i>Fiecare</i> elev ar trebui să aibă posibilitatea de a învata
     tehnologia computerelor. Ajută la dezvoltarea abilităților de rezolvare a problemelor,
     la dezvoltarea logicii şi creativității. Începând devreme, elevii vor avea o fundaţie
     pentru succesul în orice carieră din secolul Xxi. Descoperă mai multe statistici
     <a href='%{stats_url}'>aici</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Cum particip la Hour of Code?
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Incepe planificarea
     aici</a> prin revederea ghidulul nostru pas cu pas. Poti organiza un eveniment
     Hour of Code in scoala sau comunitatea ta &mdash; sau intr-un club extracurricular,
     non-profit, chiar si la serviciu. De asemenea, poti incerca si singur cand incepe%{campaign_date}
     campania."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Cine este în spatele Hour of Code?
   hoc_faq_behind_hoc_a: Evenimentul Hour of Code este organizat de <a href='http://code.org'>
     Code.org</a>, o organizație non-profit dedicată extinderii educației cu privire
@@ -545,6 +606,11 @@ ro:
     coaliţie de parteneri fără precedent</a> susțin împreună Hour of Code &mdash;
     inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America şi College
     Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
   hoc_faq_host_a: Desigur. Activităţile Hour of Code sunt autodidacte si pot fi realizate
     individual. Tot ce trebuie să faceţi este <a href='%{codeorg_url}/learn'> să accesaţi
@@ -552,6 +618,11 @@ ro:
     noi vom avea grijă de restul. Avem opţiuni pentru fiecare vârsta si nivel de experienta,
     de la grădiniţă in sus. Începeți planificarea evenimentului dumneavoastră citind
     <a href='/resources/how-to'>ghidul de organizare</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Ce dispozitive ar trebui să utilizez pentru elevii mei?
   hoc_faq_devices_a: Tutorialele Code.org funcționează pe toate dispozitivele și în
     toate browserele. Puteți vedea mai multe informații referitoare la cerințele de
@@ -561,6 +632,11 @@ ro:
     a tutorialului respectiv. Nu uitați că oferim, de asemenea,<a href='%{unplugged_url}'>
     activități de tip unplugged </a>(fără calculator) în condițiile în care școala
     dvs. nu poate parcurge tutoriale pe calculator!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Am nevoie de calculator pentru fiecare participant?
   hoc_faq_need_computers_a: Nu. Avem Tutoriale Hour of Code care funcționează pe PC-uri,
     smartphone-uri, tablete şi chiar unele care nu necesită nici un calculator! Puteţi
@@ -573,21 +649,41 @@ ro:
     Code împreună. Urmăriți porțiuni din clipurile video împreună şi rezolvați pe
     rând puzzle-uri sau răspundeți la întrebări. <li><b>Fără computer.</b> Noi oferim
     <a href='%{unplugged_url}'>și Tutoriale care nu necesită nici un computer. </ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Eu sunt în <country>. Cum pot participa la nivel internaţional?
   hoc_faq_international_a: Oricine poate organiza un eveniment Hour of Code, oriunde
     în lume. Anul trecut, elevi din întreaga lume s-au alăturat pentru a realiza o
     Ora de Programare. Află mai multe <a href='target-resources'>aici</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Cum pot face un tutorial Hour of Code?
   hoc_faq_tutorial_a: Dacă sunteţi interesat să deveniți partener pentru tutoriale,
     <a href='/tutorial-guidelines'> consultaţi referințele și instrucţiunile noastre</a>.
     Ne dorim să oferim o varietate de opţiuni interactive, dar obiectivul principal
     este de a optimiza experienţa pentru elevi şi profesori care sunt incepatori.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Elevii trebuie sa se inregistreze folosind un cont?
   hoc_faq_account_a: Nu. Nu este necesara niciun fel de inregistrare pentru ca elevii
     sa incerce Ora de Programare. Majoritatea <a href='%{codeorg_url}/learn/beyond'>cursurilor</a>
     au nevoie de cont doar pentru a salva progresul elevului. De asemenea, inregistrarea
     entru Hour of ode NU creeaza automat un cont Code Studio. Daca vreti sa creati
     conturi pentru elevii dumneavoastra, va rugam sa urmai aceste <a href='https://youtu.be/_smelV_KISE'>instructiuni</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Ce activitate o pot realiza cu elevii de liceu?
   hoc_faq_high_school_a: Tutorialele noastre Star Wars si Minecraft sunt ideale pentru
     elevii de liceu, in special cel Star Wars JavaScript si nivelurile gratuite de
@@ -596,6 +692,13 @@ ro:
     inceput, cum ar fi tutorialul Angry Birds sau Anna si Elsa. Un elev de liceu ar
     trebui sa poata termina unul dintre acestea in 30 de minute si apoi poate incerca
     un tutorial mai avansat in JavaScript, cum ar fi Khan Academy sau CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Folosesc programul Scratch pentru Ora de Programare, dar ce se
     intampla daca elevii mei au iPad-uri si nu laptop-uri?
   hoc_faq_scratch_a: Scratch nu ruleaza pe tablete. Daca elevii tai sunt tineri, pot
@@ -603,6 +706,10 @@ ro:
     Daca urmariti tutorialele de pe <a href='http://code.org/learn'>Code.org/learn</a>,
     puteti gasi si alte tutoriale care functioneaza pe iPad-uri - Code.org, Tynker,
     Lightbot, sau CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Cum numeri Orele de Programare?
   hoc_faq_map_q: De ce nu pot vedea punctul meu pe hartă?
   hoc_faq_map_a: Ne pare nespus de rău că nu vă puteți vedea evenimentul dvs. pe harta
@@ -613,10 +720,22 @@ ro:
     În plus, având în vedere miile de oameni care se înscriu la Ora de Programare,
     durează cam 48 de ore până când harta și lista evenimentelor se actualizează.
     Verificați din nou peste câteva zile!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Nu este o unitate de masurare clara. Nu se numara cont-urile
     elevilor unici cand urmarim participarea la Hour of Code, in special pentru ca
     nu le cerem acestora sa se inregistreze. Ca rezultat, am supra estima sau subestima
     numarul de participanti in acelasi timp. Citeste toate detaliile <a href='%{codeorg_url}/loc'>aici</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Cât de mult poate cineva învăța într-o oră?
   hoc_faq_one_hour_a: Scopul Hour of Code nu e acela de a învăța pe oricine să devină
     expert în informatică într-o singură oră. O oră este suficientă doar pentru a
@@ -637,9 +756,16 @@ ro:
     că tehnologia computerului este ceva ce elevii vor iar profesorii lor sunt capabili
     sa le ofere. <br/><br/> Mai presus de toate, ceea ce participanții pot învăța
     într-o oră este că putem să facem și acest lucru.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Încă mai ai multe întrebări?
   hoc_faq_more_questions_a: Încercaţi găsirea unui răspuns în  <a href='http://support.code.org'>
     forumul nostru de sprijin</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Cum continui să învăț după Hour of Code?
   hoc_faq_keep_learning_a: Oricine poate găzdui o Oră de Programare oricând. Tutorialele
     rămân disponibile pe tot parcursul anului. Așteptați-vă să gasiți toate tutorialele
@@ -647,16 +773,28 @@ ro:
     mergeți la <a href='/promote'>resursele noastre</a> pentru ghidurile de organizare
     ale evenimentului și alte resurse care vă ajută să faceți din Ora dvs. de Programare
     un succes.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Unde pot printa certificate pentru elevii mei?
   hoc_faq_certificates_a: Mergeți la a noastră <a href='%{codeorg_url}/certificates'>pagină
     de certificate</a> de unde puteți printa certificate pentru întreaga clasă încă
     din timp. Puteți, de asemenea, tipări <a href='%{codeorg_url}/certificates?course=mc'>certificate
     speciale</a> pentru elevii care participă la tutorialul Minecraft.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Există limitări la cum pot folosi sigla Hour of Code sau numele?
   hoc_faq_logo_a: Hour of Code este marcă înregistrată. Nu vrem să prevenim utilizarea
     acesteia, dar vrem să vă asiguraţi că utilizarea acesteia se încadrează în câteva
     limite. Vă rugăm să consultaţi <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
     aceste orientări pentru utilizare</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
   stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de
     utilizatori.
@@ -674,6 +812,8 @@ ro:
     de liceu, cursurile universitare, și forța de muncă.
   stats_females_more: Pe durata Hour of Code, femelele reprezintă <b>50% din toți
     participanții</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% pasiune."- Nina
     Nichols Peery, Profesor'
   stats_student: '"Ştiam că acest lucru a fost o sansa <b>o data in viata</b>."- Mariana
@@ -802,8 +942,11 @@ ro:
     180 de țări, începând cu o sesiune de o oră de Hour of Code.
   learn_banner_beyond: Vrei să continui să înveți? <a id='learn_banner_beyond'>Parcurge
     mai mult de o oră</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Profesori: <a id=''teacher_banner_host''>Găzduiește o oră</a>
     sau <a id=''teacher_banner_howto''>citește Ghidul</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTICĂ
   learn_robotics_banner_blurb: Ai roboți? Folosește-i în cadrul activităților de mai
     jos și concepe o sesiune practică de Hour of Code pentru elevi de orice vârstă!

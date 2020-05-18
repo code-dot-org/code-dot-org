@@ -340,6 +340,7 @@ te:
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
             '"SHARK"': షార్క్
           LOCATION:
             "{x: 200, y: 100}": టాప్
@@ -357,6 +358,7 @@ te:
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
             '"SHARK"': షార్క్
           LOCATION:
             "{x: 200, y: 100}": టాప్

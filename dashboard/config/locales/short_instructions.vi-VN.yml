@@ -296,6 +296,11 @@ vi-VN:
       MC_HOC_2017_FP20x20_2019: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
         tạo!'
       NEW Course 4 Artist Functions 14: 'Thời gian chơi tự do! '
+      New Gumball Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
+      New Ice Age Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
+      New Infinity Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
+      New Minecraft Hero Project: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
+        tạo!'
       Overworld Avoid Monsters: Đi thẳng về phía một Creeper là một ý kiến không hay.
         Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Avoid Monsters_2019: Đi thẳng về phía một Creeper là một ý kiến không
@@ -448,10 +453,14 @@ vi-VN:
         đến được chỗ chú lợn!
       courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
         đến được chỗ chú lợn!
+      courseA_maze_seq6_copy: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
       courseA_maze_seq8: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú lợn!
       courseA_maze_seq8_2018: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
+      courseA_maze_seq8_copy: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
       courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
         các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
@@ -463,13 +472,9 @@ vi-VN:
         trái`.
       courseA_playLab_events3_2018: Ghép khối `di chuyển trái` vào dưới khối `khi
         nào bên trái`.
-      courseA_playLab_events3_2019: Ghép khối `di chuyển trái` vào dưới khối `khi
-        nào bên trái`.
       courseA_playLab_events6: Hãy làm cho trò chơi thú vị hơn bằng cách thay đổi
         hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
       courseA_playLab_events6_2018: Hãy làm cho trò chơi thú vị hơn bằng cách thay
-        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
-      courseA_playLab_events6_2019: Hãy làm cho trò chơi thú vị hơn bằng cách thay
         đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
       courseB_Scrat_ramp4a_2018: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
         cùng của các khối khác để hoàn thành chương trình này không?
@@ -562,6 +567,9 @@ vi-VN:
       courseE_artist_functions1: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp
         tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn
         so với độ dài cạnh vuông.'
+      courseE_artist_functions1_copy: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ!
+        Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn
+        hơn so với độ dài cạnh vuông.'
       courseE_bee_functions1: Thu thập tất cả phấn hoa từ từng bông.
       courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
         sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."

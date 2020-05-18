@@ -190,6 +190,16 @@ az-AZ:
       NEW Course 4 Play Lab Params 11:
         jump: atıl
         patrol: patrul
+      New Artist Project:
+        draw a star: bir ulduz çək
+        draw a circle: çevrə çək
+        draw a triangle: üçbucaq çək
+        draw a shape: bir forma çək
+        draw a house: ev çək
+        draw a square: kvadrat çək
+      New Play Lab Project:
+        jump: atıl
+        patrol: patrul
       Robot Doodle:
         draw head: baş çək
         draw eye: göz çək
@@ -331,11 +341,15 @@ az-AZ:
         draw a square: kvadrat çək
       courseE_artist_functions2_2019:
         draw a square: kvadrat çək
+      courseE_artist_functions2_copy:
+        draw a square: kvadrat çək
       courseE_artist_functions3_2018:
         draw a star: bir ulduz çək
       courseE_artist_functions3_2019:
         draw a star: bir ulduz çək
       courseE_artist_functions4:
+        draw a star: bir ulduz çək
+      courseE_artist_functions4_copy:
         draw a star: bir ulduz çək
       courseE_artist_functions5:
         draw a star: bir ulduz çək
@@ -343,11 +357,11 @@ az-AZ:
         draw a star: bir ulduz çək
       courseE_artist_functions5_2019:
         draw a star: bir ulduz çək
+      courseE_artist_functions5_copy:
+        draw a star: bir ulduz çək
       courseE_artist_functions7:
         draw a house: ev çək
       courseE_artist_functions7_2018:
-        draw a house: ev çək
-      courseE_artist_functions7_2019:
         draw a house: ev çək
       courseE_artist_functions8:
         do something: bir şey etmək
@@ -406,6 +420,8 @@ az-AZ:
       courseE_artist_functions_predict1_2018:
         draw a square: kvadrat çək
       courseE_artist_functions_predict1_2019:
+        draw a square: kvadrat çək
+      courseE_artist_functions_predict1_copy:
         draw a square: kvadrat çək
       courseE_artist_functions_predict2:
         do something: bir şey etmək

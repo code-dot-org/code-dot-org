@@ -281,6 +281,11 @@ a:hover {
   color: rgb(89, 202, 211);
 }
 
+.highlight-strong strong  {
+  font-family: 'Gotham 5r', sans-serif;
+  color: rgb(89, 202, 211);
+}
+
 .new-announcement-tablet {
   position: absolute;
   bottom: 10%;

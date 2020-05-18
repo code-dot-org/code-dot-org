@@ -10,4 +10,4 @@ layout: wide_index
   = view :header
 %h2.center-text= view :hoc_events_counter
 = view :hoc_events_map
-.footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+.footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals:{events_url: resolve_url('/events')})

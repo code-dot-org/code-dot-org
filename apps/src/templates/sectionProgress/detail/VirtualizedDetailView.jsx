@@ -35,8 +35,7 @@ const styles = {
   numberHeader: {
     ...progressStyles.lessonNumberHeading,
     margin: 0,
-    paddingLeft: 16,
-    width: 39
+    paddingLeft: 16
   },
   lessonHeaderContainer: {
     display: 'flex',

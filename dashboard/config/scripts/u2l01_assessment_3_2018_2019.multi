@@ -1,4 +1,5 @@
 name 'U2L01 Assessment 3_2018_2019'
+editor_experiment ''
 title 'The Internet is for Everyone: Assessment 3'
 type 'multi2'
 question 'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:'
@@ -9,7 +10,8 @@ right 'make informed choices about my privacy on the internet.'
 wrong 'get the best price for my cell phone plan.'
 wrong 'speed up my downloads of movies I purchase.'
 teacher_markdown <<MARKDOWN
-**Correct Answers:** 
+**Correct Answers:**
+
 - make informed choices to support or oppose decisions my government makes about access to the internet.
 - right 'make informed choices about my privacy on the internet.
 MARKDOWN

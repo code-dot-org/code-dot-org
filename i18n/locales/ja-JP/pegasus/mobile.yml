@@ -12,12 +12,12 @@
   csedweek_dates: "2018年12月3～9日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>が始まります。先生方と主催者のみなさん、<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください</a>'
+  csedweek_banner_teachers_text: "コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください"
   n_have_learned_an_hoc: "<h1>さあ、</h1><h2>コードの時間</h2><h3># をはじめよう</h3>"
   anybody_can_learn: "誰でも学べます"
   learn_now: "今すぐ学ぶ"
   petition_message: "すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです"
   petition_sign_message: 'ご賛同いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加ください。'
-  petition_sign_message_support: 'ご支援いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加下さい。'
   petition_join_others: '参加する # ほか'
   name: "名前"
   email: "Eメール"
@@ -305,6 +305,7 @@
   homepage_action_text_signpetition: "請願書に署名します。"
   homepage_action_text_wincelebritychat: "著名人とのチャットを勝ち取りましょう"
   homepage_signpetition_dropdown: "請願書に署名します &#x25BE;"
+  homepage_signpetition_dropdown_text: "賛成する"
   homepage_diversity_pledge: "ダイバーシティーを認める誓約をしてください。"
   homepage_banner_text_prizes: 'Hour of Code が12月７~13日にまたやって来ます。 '
   homepage_banner_link_prizes: '史上最大の学習イベントに参加します。 '

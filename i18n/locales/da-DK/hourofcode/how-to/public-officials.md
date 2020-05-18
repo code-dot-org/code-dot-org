@@ -2,7 +2,7 @@
 title: Guide for offentligt ansatte
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How to involve your entire community
 
@@ -61,4 +61,4 @@ Consider publishing an opinion piece in your local paper. See this [sample op-ed
 
 [Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
 
-{{ signup_button }}
+{{ tilmeld_knap }}

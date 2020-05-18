@@ -9,7 +9,7 @@ right 'tails has a value of 20 and heads has a value of 20'
 wrong 'tails has a value of 50 and heads has a value of 50'
 
 markdown <<MARKDOWN
-A 6-sided dice has an equal likelihood of landing on any of its sides, numbered 1 through 6.
+A 2-sided coin has an equal likelihood of landing on each side. One side is called "heads" and the other is called "tails". The program below simulates randomly flipping that coin many times.
 
 ```
 var heads = 0;

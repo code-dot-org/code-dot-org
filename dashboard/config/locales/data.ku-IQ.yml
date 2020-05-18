@@ -68,6 +68,7 @@ ku:
     video:
       name:
         function: فرمانەکان
+        parameters: فەرمانی بە پێوەر
         Unplug2: بیرکردنەوەی ژمارەیی
         Unplug3: بەرنامەڕێژی پەڕەی هێڵکاری
         Unplug4: خوارزمیەکان
@@ -82,6 +83,9 @@ ku:
         C3_bounce: هەڵبەزینەوە
         C3_computational_thinking: بیرکردنەوەی ژمارەیی
         C4_loops_zombie: گرێکان
+        C4_function_parameters: فەرمانی بە پێوەر
         C4_conditionals: مەرجیەکان
+        csp_applab_functions_parameters: فەرمانی بە پێوەر
         csp_applab_loops: گرێکان
         CSF_loops_AB: گرێکان
+        csd_applab_parameters: فەرمانی بە پێوەر

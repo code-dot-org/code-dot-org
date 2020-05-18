@@ -355,6 +355,20 @@ is-IS:
       NEW Course 4 Play Lab Params 11:
         jump: hoppa
         patrol: rása
+      New Artist Project:
+        draw a star: teikna stjörnu
+        draw a circle: teikna hring
+        draw a pinwheel: teikna rellu
+        draw a triangle: teikna þríhyrning
+        draw a shape: teikna form
+        draw a house: teikna hús
+        draw a square: teikna ferning
+      New Minecraft Hero Project:
+        function 1: fall 1
+        function 2: fall 2
+      New Play Lab Project:
+        jump: hoppa
+        patrol: rása
       Robot Doodle:
         25 pixel square: 25 díla ferningur
         draw head: teikna höfuð
@@ -606,6 +620,8 @@ is-IS:
         do something: gera eitthvað
         draw hexagon: teikna sexhyrning
         draw line of hexagons: teikna röð sexhyrninga
+      courseE_artist_functions1_copy:
+        draw ear stems: teikna spangir
       courseE_artist_functions2:
         draw a square: teikna ferning
         draw ear stems: teikna spangir
@@ -615,17 +631,24 @@ is-IS:
       courseE_artist_functions2_2019:
         draw a square: teikna ferning
         draw ear stems: teikna spangir
+      courseE_artist_functions2_copy:
+        draw a square: teikna ferning
+        draw ear stems: teikna spangir
       courseE_artist_functions3_2018:
         draw a star: teikna stjörnu
       courseE_artist_functions3_2019:
         draw a star: teikna stjörnu
       courseE_artist_functions4:
         draw a star: teikna stjörnu
+      courseE_artist_functions4_copy:
+        draw a star: teikna stjörnu
       courseE_artist_functions5:
         draw a star: teikna stjörnu
       courseE_artist_functions5_2018:
         draw a star: teikna stjörnu
       courseE_artist_functions5_2019:
+        draw a star: teikna stjörnu
+      courseE_artist_functions5_copy:
         draw a star: teikna stjörnu
       courseE_artist_functions7:
         draw a window: teikna glugga
@@ -635,7 +658,6 @@ is-IS:
         draw a house: teikna hús
       courseE_artist_functions7_2019:
         draw a window: teikna glugga
-        draw a house: teikna hús
       courseE_artist_functions8:
         do something: gera eitthvað
         draw a line of squares: teikna röð ferninga
@@ -723,6 +745,9 @@ is-IS:
         draw a square: teikna ferning
         draw ear stems: teikna spangir
       courseE_artist_functions_predict1_2019:
+        draw a square: teikna ferning
+        draw ear stems: teikna spangir
+      courseE_artist_functions_predict1_copy:
         draw a square: teikna ferning
         draw ear stems: teikna spangir
       courseE_artist_functions_predict2:

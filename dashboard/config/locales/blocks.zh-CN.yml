@@ -1083,6 +1083,8 @@ zh-CN:
             '"left"': 向左
       gamelab_mouseLocation:
         text: 鼠标位置
+      gamelab_moveBackward:
+        text: 向后移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveForward:
         text: 向前移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveInDirection:
@@ -1133,6 +1135,8 @@ zh-CN:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 银河系
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 网格
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 公园风景
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 松树
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 科幻
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星球
@@ -1178,6 +1182,8 @@ zh-CN:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
+      gamelab_updateTitleWithColor:
+        text: 显示标题屏幕 {BREAK} 标题 {TITLE} 颜色 {COLOR}
       gamelab_whenDownArrow:
         text: 当下方向键按下时
       gamelab_whenKey:
@@ -1444,6 +1450,8 @@ zh-CN:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 公园风景
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 松树
       Mikelab_setProp:
         text: 设置 {PROPERTY} {SPRITE} 为 {VAL}
         options:
@@ -1575,6 +1583,14 @@ zh-CN:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
       aalab_prompt:
         text: 提问 {MESSAGE}
       aalab_scene:
@@ -1586,12 +1602,10 @@ zh-CN:
             '3': '3'
       aalab_setupStory:
         text: 设置故事
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 显示
-            '"hide"': 隐藏
+            '"random"': 随机
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:

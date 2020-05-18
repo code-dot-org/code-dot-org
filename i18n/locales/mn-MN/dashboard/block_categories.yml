@@ -1,0 +1,15 @@
+mn:
+  data:
+    block_categories:
+      Actions: Үйлдлүүд
+      Color: Өнгө
+      Conditionals: Нөхцлүүд
+      Events: Үйл явдлууд
+      Functions: Функцүүд
+      Input: Оролт
+      Logic: Логик
+      Loops: Гогцоонууд
+      Math: Математик
+      Sprites: Шидтэнгүүд
+      Text: Текст
+      Variables: Хувьсагчууд

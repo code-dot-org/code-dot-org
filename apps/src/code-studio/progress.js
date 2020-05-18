@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
-import StageProgress from './components/progress/StageProgress.jsx';
+import LessonProgress from './components/progress/LessonProgress.jsx';
 import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import MiniView from './components/progress/MiniView.jsx';
@@ -126,7 +126,7 @@ progress.renderStageProgress = function(
 
   ReactDOM.render(
     <Provider store={store}>
-      <StageProgress />
+      <LessonProgress />
     </Provider>,
     document.querySelector('.progress_container')
   );
@@ -162,7 +162,7 @@ progress.renderCourseProgress = function(scriptData) {
     store.dispatch(setSections(scriptData.sections));
   }
 
-  store.dispatch(setPageType, pageTypes.scriptOverview);
+  store.dispatch(setPageType(pageTypes.scriptOverview));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -182,7 +182,6 @@ progress.renderCourseProgress = function(scriptData) {
         redirectScriptUrl={scriptData.redirect_script_url}
         versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
-        locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
         assignedSectionId={scriptData.assigned_section_id}
@@ -302,7 +301,7 @@ function initializeStoreWithProgress(
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
       stages: scriptData.stages,
-      peerReviewStage: scriptData.peerReviewStage,
+      peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
       scriptTitle: scriptData.title,

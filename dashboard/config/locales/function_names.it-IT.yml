@@ -297,6 +297,20 @@ it-IT:
       NEW Course 4 Play Lab Params 11:
         jump: salta
         patrol: pattuglia
+      New Artist Project:
+        draw a star: disegna una stella
+        draw a circle: disegna un cerchio
+        draw a pinwheel: disegna una girandola
+        draw a triangle: disegna un triangolo
+        draw a shape: disegna una forma
+        draw a house: disegna una casa
+        draw a square: disegna un quadrato
+      New Minecraft Hero Project:
+        function 1: funzione 1
+        function 2: funzione 2
+      New Play Lab Project:
+        jump: salta
+        patrol: pattuglia
       Robot Doodle:
         25 pixel square: quadrato da 25 pixel
         draw head: disegna testa
@@ -383,6 +397,7 @@ it-IT:
         do something: fai qualcosa
       courseE_Dogger_2:
         stop_everything: ferma_tutto
+        lose: sconfitta
       courseE_artist_concept1:
         do something: fai qualcosa
         draw a hexagon: disegna un esagono
@@ -422,17 +437,23 @@ it-IT:
         draw a square: disegna un quadrato
       courseE_artist_functions2_2019:
         draw a square: disegna un quadrato
+      courseE_artist_functions2_copy:
+        draw a square: disegna un quadrato
       courseE_artist_functions3_2018:
         draw a star: disegna una stella
       courseE_artist_functions3_2019:
         draw a star: disegna una stella
       courseE_artist_functions4:
         draw a star: disegna una stella
+      courseE_artist_functions4_copy:
+        draw a star: disegna una stella
       courseE_artist_functions5:
         draw a star: disegna una stella
       courseE_artist_functions5_2018:
         draw a star: disegna una stella
       courseE_artist_functions5_2019:
+        draw a star: disegna una stella
+      courseE_artist_functions5_copy:
         draw a star: disegna una stella
       courseE_artist_functions7:
         draw a window: disegna una finestra
@@ -442,7 +463,6 @@ it-IT:
         draw a house: disegna una casa
       courseE_artist_functions7_2019:
         draw a window: disegna una finestra
-        draw a house: disegna una casa
       courseE_artist_functions8:
         do something: fai qualcosa
         draw a line of squares: disegna una fila di quadrati
@@ -528,6 +548,8 @@ it-IT:
       courseE_artist_functions_predict1_2018:
         draw a square: disegna un quadrato
       courseE_artist_functions_predict1_2019:
+        draw a square: disegna un quadrato
+      courseE_artist_functions_predict1_copy:
         draw a square: disegna un quadrato
       courseE_artist_functions_predict2:
         draw line of polygons: disegna una fila di poligoni

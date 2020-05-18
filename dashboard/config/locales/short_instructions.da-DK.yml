@@ -309,6 +309,13 @@ da-DK:
       MC_HOC_2017_Ali_2019: Brug funktionerne til at finde vej hen over lavaen.
       MC_HOC_2017_FP20x20: "**Fri leg:**  Tid til at udforske på egen hånd!"
       MC_HOC_2017_FP20x20_2019: "**Fri leg:**  Tid til at udforske på egen hånd!"
+      New Gumball Project: Lav noget du kan lide og del det!
+      New Ice Age Project: Lav noget du kan lide og del det!
+      New Infinity Project: Lav noget du kan lide og del det!
+      New Minecraft Hero Project: "**Fri leg:**  Tid til at udforske på egen hånd!"
+      New Sports Project: Opret dit eget spil. Du kan ændre alle regler, mixe og tilpasse
+        sportsgrene, og være kreativ. Når du er færdig, klik på Del, for at lade venner
+        prøve dit spil på deres mobiler.
       Overworld Avoid Monsters: Det er en dårlig idé at løbe direkte ind i en sniger.
         Prøv i stedet at liste dig forbi dem, så du kan komme i sikkerhed i dit hus.
       Overworld Avoid Monsters_2019: Det er en dårlig idé at løbe direkte ind i en
@@ -554,6 +561,8 @@ da-DK:
       courseA_collector_preLoops7: Saml alle 3 skatte for at komme gennem dette trin.
       courseA_maze_seq1: Få fuglen hen til den onde gris!
       courseA_maze_seq10: 'Udfording: Gå uden om TNT for at få fuglen hen til grisen! '
+      courseA_maze_seq10_copy: 'Udfording: Gå uden om TNT for at få fuglen hen til
+        grisen! '
       courseA_maze_seq11: Flyt i en retning, så en anden, for at få fuglen hen til
         grisen.
       courseA_maze_seq11_2018: Flyt i en retning, så en anden, for at få fuglen hen
@@ -572,16 +581,22 @@ da-DK:
       courseA_maze_seq3: Ret koden, for at få fuglen hen til grisen!
       courseA_maze_seq4: Fjern en blok for at få fuglen hen til grisen!
       courseA_maze_seq5: Prøv denne opgave selv helt fra begyndelsen.
+      courseA_maze_seq5_copy: Prøv denne opgave selv helt fra begyndelsen.
       courseA_maze_seq6: Flyt i en retning, så en anden, for at komme hen til grisen!
       courseA_maze_seq6_2018: Flyt i en retning, så en anden, for at komme hen til
         grisen!
       courseA_maze_seq6_2019: Flyt i en retning, så en anden, for at komme hen til
         grisen!
+      courseA_maze_seq6_copy: Flyt i en retning, så en anden, for at komme hen til
+        grisen!
       courseA_maze_seq7: Prøv at finde ud af hvad der mangler, og tilføj så blokke,
+        for at få fuglen hen til grisen!
+      courseA_maze_seq7_copy: Prøv at finde ud af hvad der mangler, og tilføj så blokke,
         for at få fuglen hen til grisen!
       courseA_maze_seq8: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_2018: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq8_2019: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq8_copy: Løs dette level for at få fuglen hen til grisen!
       courseA_maze_seq9: Ret fejlen og tilføj blokke, så fuglen kommer hen til grisen!
       courseA_maze_seq_challenge1: Der er noget galt. Ret koden så fuglen kommer hen
         til grisen!
@@ -607,21 +622,15 @@ da-DK:
         venstre' blokke, som allerede er på arbejdsområdet.
       courseA_playLab_events3_2018: Forbind 'bevæg til venstre' - blokken med 'når
         til venstre' blokke, som allerede er på arbejdsområdet.
-      courseA_playLab_events3_2019: Forbind 'bevæg til venstre' - blokken med 'når
-        til venstre' blokke, som allerede er på arbejdsområdet.
       courseA_playLab_events4: Tilføj blokke for bevægelse til højre, når der trykkes
         på 'højre' knap.
       courseA_playLab_events5: Tilføj nogle handlinger, for at få Jorge til at bevæge
         sig op og ned, når du trykker på 'op' og 'ned' pilene.
       courseA_playLab_events5_2018: Tilføj nogle handlinger, for at få Jorge til at
         bevæge sig op og ned, når du trykker på 'op' og 'ned' pilene.
-      courseA_playLab_events5_2019: Tilføj nogle handlinger, for at få Jorge til at
-        bevæge sig op og ned, når du trykker på 'op' og 'ned' pilene.
       courseA_playLab_events6: Du kan gøre det sjovere ved, at ændre baggrunden og
         spille en tilfældig lyd, når du klikker på Jorge.
       courseA_playLab_events6_2018: Du kan gøre det sjovere ved, at ændre baggrunden
-        og spille en tilfældig lyd, når du klikker på Jorge.
-      courseA_playLab_events6_2019: Du kan gøre det sjovere ved, at ændre baggrunden
         og spille en tilfældig lyd, når du klikker på Jorge.
       courseA_playLab_events7: Tilføj lige hvad du har lyst til. Kan du få en dinosaurus
         til at forsvinde, når Jorge løber ind i den?
@@ -670,6 +679,9 @@ da-DK:
       courseE_artist_functions1: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp
         mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels
         kortere end firkantens længde.'
+      courseE_artist_functions1_copy: 'Hej. Mig zombie kunstner. Mig elske tegning.
+        Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25
+        pixels kortere end firkantens længde.'
       courseE_bee_concept1: "Saml al nektaren fra hver blomst.\nBrug et indlejret
         loop. "
       courseE_bee_concept1_2018: "Saml al nektaren fra hver blomst.\nBrug et indlejret

@@ -608,6 +608,14 @@ da:
           egen algoritme ved at klippe billederne fra hinanden. Vælg de billeder,
           der viser trinene i at så frø, og arranger disse billeder i den korrekte
           rækkefølge.
+      5:
+        text: Når vi ønsker at lave chokolade, er der mange store trin i denne proces.
+          Og hvert af disse store trin har sit eget sæt af mindre trin. Og der er
+          forskellige opskrifter eller algoritmer, afhængigt af hvordan vi ønsker
+          chokoladen skal smage. Hvert trin er vigtigt, selv de små. Så hvis man undlader
+          et trin, kan resten af dem ikke fuldføres. At lave algoritmer, som andre
+          kan forstå, er virkelig vigtigt. Det er derfor hvert trin må skrives ned,
+          så uanset hvem der følger dem, er resultatet er det samme.
     C1_playlab_storytelling:
       2:
         text: Katten har altid været bange for hunden, og hvad nu hvis katten finder
@@ -623,6 +631,12 @@ da:
         text: Prøv om du kan stave ordet de giver dig i boksen under banen. Men vær
           forsigtig! hvis du flytter i den forkerte retning, tilføjer du uønskede
           bogstaver.
+    C2_bee_loops:
+      1:
+        text: En løkke er en gentagelse af en aktivitet. Så når jeg går ind i et bistad
+          og inspicerer, ser jeg på et billede og derefter sætter jeg det tilbage,
+          så jeg gentager den samme aktivitet flere gange. Det kører i en løkke, og
+          laver den samme aktivitet flere gange.
     C2_maze_intro:
       4:
         text: Jeg har tænkt mig at vælge "Drej til højre" blokken, og jeg vil trække
@@ -672,6 +686,12 @@ da:
         text: Her er "når pilen"- og "flyt figur"-blokkene. Du kan sætte disse blokke
           sammen for at kunne flytte figurerne rundt med piletasterne.
     C4_intro:
+      4:
+        text: Jeg har tænkt mig at vælge "Drej til højre" blokken, og jeg vil trække
+          det under min "Flyt" blok, indtil den gule pil kommer frem. Derefter jeg
+          vil slippe den, og de to blokke vil klikke sammen. Når jeg trykker på "Kør"
+          igen, vil fuglen udføre de kommandoer, der er stablet fra top til bund på
+          vores arbejdsplads.
       5:
         text: Hvis du nogensinde ønsker at slette en blok, kan du bare fjerne den
           fra stakken og trække den til papirkurven. efter du har kørt programmet,
@@ -759,10 +779,36 @@ da:
           du kan skifte tilbage til bloktilstand når som helst ved at klikke i øverste
           højre hjørne. Ok, lad os prøve at skrive! Og hvis du laver fejl, blive ikke
           frustreret. Alle bruger et par forsøg for at få det rigtige.
+    starwars_events:
+      4:
+        text: Eksempler på hændelser er at lytte efter et museklik, en piletast eller
+          at der tappes på skærmen.
     starwars_blocks_intro:
+      1:
+        text: Hej, jeg er Kathleen Kennedy og jeg er producer på Star Wars, The Force
+          Awakens. I dag skal du arbejde med en af vores stjerner, BB-8. BB-8 er en
+          sfærisk droid. Alt, hvad han gør og hver bevægelse, som han gør styres af
+          computerprogrammer. Computere påvirker alle brancher, fra markedsføring
+          til sundhedspleje til film. Faktisk arbejdede hundredvis af computer ingeniører,
+          sammen om at lave en film som The Force Awakens.
+      2:
+        text: Hej jeg er Rachel Rose, jeg er en senior R&D ingeniør på ILM og jeg
+          leder animation og væsen udviklingsteamet. I The Force Awakens, er jeg ansvarlig
+          for at hjælpe kunstnere udvikle rigge, som er de dele af karakteren, som
+          bevæger sig for at se meget troværdig ud i en galakse langt langt væk.
       5:
         text: Denne miderste område er værktøjskassen og hver af disse blokke er en
           kommando, som BB-8 kan forstå.
+      6:
+        text: Det tomme område til højre kaldes arbejdsområdet og det er hvor vi skal
+          bygge vores program.
+      10:
+        text: Efter du har trykket Kør, kan du altid trykke på nulstillingsknappen
+          for at få BB-8 tilbage til start. Lad os nu rulle!
+    starwars_blocks_events:
+      4:
+        text: Eksempler på hændelser er at lytte efter et museklik, en piletast eller
+          at der tappes på skærmen.
     mc_intro:
       1:
         text: Jeg hedder Jens Bergensten, men jeg er bedre kendt som Jeb. Jeg er Lead
@@ -896,13 +942,27 @@ da:
       4:
         text: Nu kan du bygge lige, hvad du vil. God fornøjelse!
     gumball_intro:
+      4:
+        text: Skærmen er opdelt i tre hoveddele. Til venstre er den plads hvor dit
+          program vil køre. Instruktioner til hvert trin er skrevet under.
       6:
         text: Det hvide område til højre kaldes arbejdsområdet, og det er her, vi
           bygger vores program.
+      7:
+        text: Til at begynde med, skal du knytte dine blokke til den orange "når kør"
+          blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden,
+          indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv.
     iceage_intro:
+      4:
+        text: Skærmen er opdelt i tre hoveddele. Til venstre er den plads hvor dit
+          program vil køre. Instruktioner til hvert trin er skrevet under.
       6:
         text: Det hvide område til højre kaldes arbejdsområdet, og det er her, vi
           bygger vores program.
+      7:
+        text: Til at begynde med, skal du knytte dine blokke til den orange "når kør"
+          blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden,
+          indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv.
     hoc_dance_warmup:
       1:
         text: 'Hour of Code | Dansefest: Opvarmning'

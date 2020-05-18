@@ -65,8 +65,8 @@ class LevelDslTest < ActiveSupport::TestCase
 
   test 'test Evaluation Question' do
     script = create :script
-    stage1 = create(:stage, name: 'Stage1', script: script)
-    stage2 = create(:stage, name: 'Stage2', script: script)
+    stage1 = create(:lesson, name: 'Stage1', script: script)
+    stage2 = create(:lesson, name: 'Stage2', script: script)
     input_dsl = <<~DSL
       name 'Test question'
       display_name 'Test override question'

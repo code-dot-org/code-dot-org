@@ -23,17 +23,14 @@
     = f.text_area :notes, rows: 6, class: "input-block-level"
 
 .field
-  = f.label 'bubble_choice_description'
-  %p
-    Description of this level and why a student would want to choose it as part of a BubbleChoice progression.
-  = f.text_area :bubble_choice_description, rows: 3, class: "input-block-level"
-
-.field
   %legend.control-legend.collapsed{data: {toggle: "collapse", target: "#audit_log_info"}}
     Audit Log
   %p A log of the people who most recently edited this level (up to the last 10 people)
   #audit_log_info.collapse
     = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
+
+- if !@level.is_a?(BubbleChoice)
+  = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
 .field
   = f.label :video_key, 'Level Video'
@@ -46,7 +43,7 @@
   .video-preview{style: 'display: block'}
 
 -# Deprecated for Sprite Lab and Dance
-- if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab))
+- if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab) || @level.is_a?(BubbleChoice))
   .field
     = f.label :map_reference, 'Map Reference'
     %p If there is a key resource you want to reference in the instructions, add the link here. It will show up under the 'Help & Tips' tab.

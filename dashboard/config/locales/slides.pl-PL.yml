@@ -843,6 +843,20 @@ pl:
           to wezmę moje okulary przeciwsłoneczne. Myślę jednak, że lepszym wyborem
           będzie parasolka. To co widzę i słyszę definiuje to co wezmę ze sobą do
           parku.
+    C2_bee_loops:
+      1:
+        text: Pętla to powtarzanie działań. Czas na przegląd ula. Wyciągam ramkę i
+          odkładam ją z powrotem. Powtarzam tą samą czynność wiele razy. To właśnie
+          zapętlenie, wykonywanie tych samych czynności wielokrotnie.
+    C2_paper_airplanes:
+      4:
+        text: Kiedy chcemy zrobić czekoladę, jest wiele etapów tego procesu, a każdy
+          etap składa się ze zbioru mniejszych kroków, ponadto jest wiele różnych
+          przepisów lub algorytmów, w zależności od tego, jak chcemy, żeby czekolada
+          smakowała. Każdy krok jest ważny, nawet te malutkie, a więc bez jednego
+          kroku reszta nie może być wykonana. Tworzenie algorytmów, które inni mogą
+          zrozumieć, jest naprawdę ważne. Dlatego każdy krok musi być zapisany w ten
+          sposób, żeby wynik był taki sam niezależnie od tego, kto dany krok wykona.
     C2_playlab_createstory:
       1:
         text: Do tej pory tworzyliście animację lub historyjkę, która za każdym razem
@@ -851,6 +865,12 @@ pl:
       2:
         text: Tam są bloki "kiedy strzałka" i "przenieś postać". Możesz umieścić te
           bloki razem, aby poruszać postaciami za pomocą klawiszy strzałek.
+    C2_zuck_repeat_loop:
+      1:
+        text: Jeden z tych komputerów jest dobry w powtarzaniu komend. Jako osoba
+          możesz się naprawdę zmęczyć, jeśli trzeba samemu robić te same rzeczy kilka
+          razy. Ale komputer może robić to samo miliony, a nawet miliardy razy i się
+          nie zmęczyć trzeba więc posiadać tę zdolność.
     C3_artist_intro:
       2:
         text: W tym zadaniu zostaniesz artystą, który używa ołówka, by narysować rożne
@@ -982,9 +1002,28 @@ pl:
           które przenoszą go po ekranie. Krok po kroku Wasza gra staje się coraz bardziej
           interaktywna.
     starwars_blocks_intro:
+      1:
+        text: 'Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars:
+          Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną
+          z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy
+          jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na
+          przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości,
+          setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens.'
+      2:
+        text: Witam, jestem Rachel Rose. Jestem starszym inżynierem R&D w ILM i prowadzę
+          zespół zajmujący się animacją i tworzeniem postaci. W The Force Awakens
+          odpowiadam za pomoc artystom w doborze wyposażenia, będącego częścią postaci,
+          dzięki czemu wyglądają bardzo wiarygodnie w galaktyce znajdującej się bardzo
+          daleko.
       5:
         text: W środkowej części znajduje się przybornik z blokami (Toolbox), które
           rozumie BB-8.
+      6:
+        text: Biała część po prawej stronie to pole robocze (Work space), gdzie będziemy
+          budować nasz program.
+      10:
+        text: Po naciśnięciu Uruchom możesz zawsze nacisnąć przycisk Reset, by powrócić
+          z BB-8 na początek. Milego toczenia się!
     starwars_blocks_events:
       1:
         text: Hello, nazywam się Charita Carter. Jestem starszym kreatywnym producentem
@@ -1148,13 +1187,27 @@ pl:
       4:
         text: Teraz możesz zbudować, co tylko zechcesz. Baw się dobrze!
     gumball_intro:
+      4:
+        text: Ekran jest podzielony na 3 części. Po lewej stronie jest miejsce, gdzie
+          wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej.
       6:
         text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie
           będzie powstawał nasz program. '
+      7:
+        text: Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do
+          pomarańczowego bloku "po uruchomieniu". Można połączyć ze sobą wiele bloków
+          przeciągając je aż pojawi się żółta linia - wtedy bloki połączą się ze sobą.
     iceage_intro:
+      4:
+        text: Ekran jest podzielony na 3 części. Po lewej stronie jest miejsce, gdzie
+          wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej.
       6:
         text: 'Biały obszar z prawej strony nazywamy obszarem roboczym i tu właśnie
           będzie powstawał nasz program. '
+      7:
+        text: Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do
+          pomarańczowego bloku "po uruchomieniu". Można połączyć ze sobą wiele bloków
+          przeciągając je aż pojawi się żółta linia - wtedy bloki połączą się ze sobą.
     hoc_dance_warmup:
       1:
         text: 'Godzina Kodowania | Potańcówka: Rozgrzewka'

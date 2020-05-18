@@ -313,7 +313,7 @@
     "PROCEDURES_MUTATORARG_TITLE": "nombre de entrada:",
     "PROCEDURES_MUTATORCONTAINER_TITLE": "entradas",
     "REMOVE_COMMENT": "Eliminar comentario",
-    "RENAME_ALL": "Renombrar todos los %1",
+    "RENAME_ALL": "Renombrar todo al %1",
     "RENAME_PARAMETER": "Cambiar nombre de parámetro...",
     "RENAME_PARAMETER_TITLE": "Cambiar nombre de todos los parámetros '%1' a:",
     "RENAME_THIS": "Renombra este %1",

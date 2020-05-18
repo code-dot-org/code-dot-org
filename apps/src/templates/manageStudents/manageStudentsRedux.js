@@ -6,6 +6,16 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import $ from 'jquery';
 
+export const ParentLetterButtonMetricsCategory = {
+  ABOVE_TABLE: 'above-table',
+  BELOW_TABLE: 'below-table'
+};
+
+export const PrintLoginCardsButtonMetricsCategory = {
+  MANAGE_STUDENTS: 'manage-students',
+  LOGIN_INFO: 'section-login-info'
+};
+
 // Response from server after adding a new student to the section.
 export const AddStatus = {
   SUCCESS: 'success',

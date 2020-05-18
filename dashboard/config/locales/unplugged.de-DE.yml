@@ -486,6 +486,8 @@ de:
           Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht
           die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen
           Arbeit fair umzugehen.
+      courseE_unplugged_CnC_2018:
+        title: Digitale Teilhabe
       RelayProgramming_2018:
         title: Relais-Programmierung
         desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und
@@ -522,6 +524,8 @@ de:
           binären Techniken repräsentiert werden können.  Diese Lektion entwickelt
           das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
           Bilder und Farben als Binärcode speichern können.
+      courseE_unplugged_CnC_2019:
+        title: Digitale Teilhabe
       GettingLoopy_2019:
         title: Schöne Schleifen
         desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte

@@ -1107,11 +1107,10 @@ et:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': näita
-            '"hide"': peida
+            '"random"': juhuslik
       binary_move:
         options:
           DIR:

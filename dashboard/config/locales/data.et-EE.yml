@@ -711,6 +711,8 @@ et:
         hoc_dance_properties: Tantsuõhtu - omadused
         csd_pair_programming: Paarisprogrammeerimine
         csd_applab_parameters: Parameetritega funktsioonid
+        hoc_dance_events_2019: Tantsuõhtu - sündmused
+        hoc_dance_properties_2019: Tantsuõhtu - omadused
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

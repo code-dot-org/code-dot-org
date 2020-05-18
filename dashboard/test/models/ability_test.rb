@@ -48,9 +48,6 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute ability.can?(:read, Section)
 
-    assert ability.can?(:create, GalleryActivity)
-    assert ability.can?(:destroy, GalleryActivity)
-
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
@@ -73,9 +70,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
 
     assert ability.can?(:read, Section)
-
-    assert ability.can?(:create, GalleryActivity)
-    assert ability.can?(:destroy, GalleryActivity)
 
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))

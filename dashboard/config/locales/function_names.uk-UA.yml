@@ -28,6 +28,8 @@ uk-UA:
         draw a square: намалювати квадрат
       2-3 Artist Functions 9:
         draw a snowflake: намалювати сніжинку
+      2-3 Bee Functions 10:
+        collect purple nectar: Збери пурпуровий нектар
       4-5 Artist 3:
         draw a flower: намалювати квітку
       4-5 Artist 6:
@@ -183,6 +185,17 @@ uk-UA:
         draw a polygon: намалюйте багатокутник
       NEW Course 4 Play Lab Params 11:
         jump: стрибок
+      New Artist Project:
+        draw a star: намалювати зірку
+        draw a circle: намалювати коло
+        draw a triangle: намалювати трикутник
+        draw a house: намалювати будинок
+        draw a square: намалювати квадрат
+      New Minecraft Hero Project:
+        function 1: функція 1
+        function 2: функція 2
+      New Play Lab Project:
+        jump: стрибок
       Standalone_Artist_7:
         draw a flower: намалювати квітку
       course3_artist_functions_challenge1:
@@ -228,11 +241,15 @@ uk-UA:
         draw a square: намалювати квадрат
       courseE_artist_functions2_2019:
         draw a square: намалювати квадрат
+      courseE_artist_functions2_copy:
+        draw a square: намалювати квадрат
       courseE_artist_functions3_2018:
         draw a star: намалювати зірку
       courseE_artist_functions3_2019:
         draw a star: намалювати зірку
       courseE_artist_functions4:
+        draw a star: намалювати зірку
+      courseE_artist_functions4_copy:
         draw a star: намалювати зірку
       courseE_artist_functions5:
         draw a star: намалювати зірку
@@ -240,11 +257,11 @@ uk-UA:
         draw a star: намалювати зірку
       courseE_artist_functions5_2019:
         draw a star: намалювати зірку
+      courseE_artist_functions5_copy:
+        draw a star: намалювати зірку
       courseE_artist_functions7:
         draw a house: намалювати будинок
       courseE_artist_functions7_2018:
-        draw a house: намалювати будинок
-      courseE_artist_functions7_2019:
         draw a house: намалювати будинок
       courseE_artist_functions8:
         do something: щось зробити
@@ -309,6 +326,8 @@ uk-UA:
       courseE_artist_functions_predict1_2018:
         draw a square: намалювати квадрат
       courseE_artist_functions_predict1_2019:
+        draw a square: намалювати квадрат
+      courseE_artist_functions_predict1_copy:
         draw a square: намалювати квадрат
       courseE_artist_functions_predict2:
         do something: щось зробити

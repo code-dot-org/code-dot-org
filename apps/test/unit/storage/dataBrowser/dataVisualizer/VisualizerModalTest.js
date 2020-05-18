@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import {UnconnectedVisualizerModal as VisualizerModal} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
 const DEFAULT_PROPS = {
@@ -29,7 +30,7 @@ describe('VisualizerModal', () => {
     it('clears selected columns when chart type changes', () => {
       let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
       wrapper.instance().setState({
-        chartType: 'Scatter Plot',
+        chartType: ChartType.SCATTER_PLOT,
         selectedColumn1: 'column1',
         selectedColumn2: 'column2'
       });
@@ -320,6 +321,47 @@ describe('VisualizerModal', () => {
             .filterRecords(records, 'filterCol', `"it's a contraction"`)
         ).to.deep.equal([records[2], records[5]]);
       });
+    });
+  });
+
+  describe('chartOptionsToString', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+      wrapper.instance().setState({
+        selectedColumn1: 'column1',
+        selectedColumn2: 'column2',
+        bucketSize: '2'
+      });
+    });
+    it('works for bar charts', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
+      ).to.equal('Values: column1');
+    });
+    it('works for histograms', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.HISTOGRAM)
+      ).to.equal('Values: column1, Bucket Size: 2');
+    });
+    it('works for scatter plots', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.SCATTER_PLOT)
+      ).to.equal('X Values: column1, Y Values: column2');
+    });
+    it('works for cross tab charts', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.CROSS_TAB)
+      ).to.equal('X Values: column1, Y Values: column2');
+    });
+    it('works for filtering', () => {
+      wrapper.instance().setState({
+        filterColumn: 'column3',
+        filterValue: 'value'
+      });
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
+      ).to.equal('Values: column1, Filtered column3 to value');
     });
   });
 });

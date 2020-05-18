@@ -1,0 +1,118 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:08.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveTo": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "uh0JuvFxhkLQrHkc5MNkb3DfqsNeL3JiEbf/2bI+KRURWVpMvR265LW9NmVz\n2fz0\n",
+    "embed": "false",
+    "short_instructions": "Call drawSquare() to complete the drawing of two squares. (Click to see full instructions)",
+    "long_instructions": "# Calling Functions with Multiple Parameters\r\n\r\nYou're about to see a new definition for `drawSquare` that has two parameters: `drawSquare(size, borderWidth)` Notice how **multiple parameters are separated by commas**.\r\n\r\n![](https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15 PM.png)\r\n\r\n# Do This:\r\nAdd to the code to **make two calls** to the new two-parameter version of `drawSquare` to make an image similar to this one.\r\n\r\n![](https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38 PM.png)\r\n\r\n",
+    "start_blocks": "penUp();\r\nmoveTo(150,150);\r\n\r\nmoveTo(250,300);\r\n\r\n\r\nfunction drawSquare(size, borderWidth){\r\n  penDown();\r\n  penWidth(borderWidth);\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  penUp();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawSquare: 2"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete the task you need to call the 2-parameter version of drawSquare, twice."
+      },
+      {
+        "entries": [
+          "moveTo:2",
+          "drawSquare:2",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "moveTo:2",
+          "drawSquare:2",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1",
+          "turnLeft:0",
+          "moveForward:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to insert two lines of code - two calls to drawSquare(size, width) at the top of the program. The turtle should behave as follows: move to a location, draw a larger square with a thin line, move to a different location, and then draw a smaller square with a thicker border."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 16936,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

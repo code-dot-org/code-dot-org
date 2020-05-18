@@ -355,6 +355,20 @@ zh-TW:
       NEW Course 4 Play Lab Params 11:
         jump: 定位到
         patrol: patrol
+      New Artist Project:
+        draw a star: 畫顆星星
+        draw a circle: 畫個圓形
+        draw a pinwheel: 畫個風車
+        draw a triangle: 畫個三角形
+        draw a shape: 畫個形狀
+        draw a house: 畫個房子
+        draw a square: 畫個正方形
+      New Minecraft Hero Project:
+        function 1: function 1
+        function 2: function 2
+      New Play Lab Project:
+        jump: 定位到
+        patrol: patrol
       Robot Doodle:
         25 pixel square: 25 pixel square
         draw head: draw head
@@ -606,6 +620,8 @@ zh-TW:
         do something: 函式名稱
         draw hexagon: draw hexagon
         draw line of hexagons: draw line of hexagons
+      courseE_artist_functions1_copy:
+        draw ear stems: draw ear stems
       courseE_artist_functions2:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
@@ -615,17 +631,24 @@ zh-TW:
       courseE_artist_functions2_2019:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
+      courseE_artist_functions2_copy:
+        draw a square: 畫個正方形
+        draw ear stems: draw ear stems
       courseE_artist_functions3_2018:
         draw a star: 畫顆星星
       courseE_artist_functions3_2019:
         draw a star: 畫顆星星
       courseE_artist_functions4:
         draw a star: 畫顆星星
+      courseE_artist_functions4_copy:
+        draw a star: 畫顆星星
       courseE_artist_functions5:
         draw a star: 畫顆星星
       courseE_artist_functions5_2018:
         draw a star: 畫顆星星
       courseE_artist_functions5_2019:
+        draw a star: 畫顆星星
+      courseE_artist_functions5_copy:
         draw a star: 畫顆星星
       courseE_artist_functions7:
         draw a window: draw a window
@@ -635,7 +658,6 @@ zh-TW:
         draw a house: 畫個房子
       courseE_artist_functions7_2019:
         draw a window: draw a window
-        draw a house: 畫個房子
       courseE_artist_functions8:
         do something: 函式名稱
         draw a line of squares: draw a line of squares
@@ -723,6 +745,9 @@ zh-TW:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
       courseE_artist_functions_predict1_2019:
+        draw a square: 畫個正方形
+        draw ear stems: draw ear stems
+      courseE_artist_functions_predict1_copy:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
       courseE_artist_functions_predict2:

@@ -133,6 +133,14 @@ vi-VN:
         do something: thực hiện
       NEW Course 4 Play Lab Params 11:
         jump: nhảy
+      New Artist Project:
+        draw a star: vẽ một ngôi sao
+        draw a circle: vẽ một hình tròn
+        draw a triangle: vẽ một hình tam giác
+        draw a house: vẽ một căn nhà
+        draw a square: vẽ một hình vuông
+      New Play Lab Project:
+        jump: nhảy
       Robot Doodle:
         draw head: vẽ đầu
       Robot Doodle_2018:
@@ -176,6 +184,8 @@ vi-VN:
         do something: thực hiện
       courseE_artist_functions10_2019:
         do something: thực hiện
+      courseE_artist_functions1_copy:
+        draw ear stems: vẽ thân tai
       courseE_artist_functions2:
         draw a square: vẽ một hình vuông
         draw ear stems: vẽ thân tai
@@ -185,11 +195,16 @@ vi-VN:
       courseE_artist_functions2_2019:
         draw a square: vẽ một hình vuông
         draw ear stems: vẽ thân tai
+      courseE_artist_functions2_copy:
+        draw a square: vẽ một hình vuông
+        draw ear stems: vẽ thân tai
       courseE_artist_functions3_2018:
         draw a star: vẽ một ngôi sao
       courseE_artist_functions3_2019:
         draw a star: vẽ một ngôi sao
       courseE_artist_functions4:
+        draw a star: vẽ một ngôi sao
+      courseE_artist_functions4_copy:
         draw a star: vẽ một ngôi sao
       courseE_artist_functions5:
         draw a star: vẽ một ngôi sao
@@ -197,11 +212,11 @@ vi-VN:
         draw a star: vẽ một ngôi sao
       courseE_artist_functions5_2019:
         draw a star: vẽ một ngôi sao
+      courseE_artist_functions5_copy:
+        draw a star: vẽ một ngôi sao
       courseE_artist_functions7:
         draw a house: vẽ một căn nhà
       courseE_artist_functions7_2018:
-        draw a house: vẽ một căn nhà
-      courseE_artist_functions7_2019:
         draw a house: vẽ một căn nhà
       courseE_artist_functions8:
         do something: thực hiện
@@ -259,6 +274,9 @@ vi-VN:
         draw a square: vẽ một hình vuông
         draw ear stems: vẽ thân tai
       courseE_artist_functions_predict1_2019:
+        draw a square: vẽ một hình vuông
+        draw ear stems: vẽ thân tai
+      courseE_artist_functions_predict1_copy:
         draw a square: vẽ một hình vuông
         draw ear stems: vẽ thân tai
       courseE_artist_functions_predict2:

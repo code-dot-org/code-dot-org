@@ -272,6 +272,8 @@ de:
       courseB_unplugged_CnC_2018:
         title: Es ist großartig etwas zu erschaffen und fair zu spielen
         desc: Diese Lektion, die vom Team von Copyright and Creativity an die Grundlagen der Informatik verliehen wurde, soll den Schülern helfen, den kreativen Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen Arbeit fair umzugehen.
+      courseE_unplugged_CnC_2018:
+        title: Digitale Teilhabe
       RelayProgramming_2018:
         title: Relais-Programmierung
         desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.
@@ -293,6 +295,8 @@ de:
       BinaryImages_2019:
         title: Binärbilder
         desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.
+      courseE_unplugged_CnC_2019:
+        title: Digitale Teilhabe
       GettingLoopy_2019:
         title: Schöne Schleifen
         desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine einfache Choreografie und werden angewiesen, diese zu wiederholen.

@@ -13,7 +13,7 @@
   #courseblock-content{style: 'padding-left: 20px; padding-right: 20px;'}
     - unless ages.nil?
       %h4= ages
-    .smalltext{style: 'min-height: 120px; margin-bottom: 10px;'}= description
+    .smalltext{style: 'min-height: 120px; margin-bottom: 10px;'}!= description
     - unless cta_text.nil?
       %a{:href=>cta_link}
         %button{style: "margin-left: 10px; margin-top: 20px;"}!= cta_text

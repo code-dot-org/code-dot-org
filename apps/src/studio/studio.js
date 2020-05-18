@@ -3052,12 +3052,7 @@ Studio.displayFeedback = function() {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToLegacyGalleryUrl:
-        level.freePlay &&
-        Studio.response &&
-        Studio.response.save_to_gallery_url,
-      // save to the project gallery instead of the legacy gallery
+      // save to the project gallery
       saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,

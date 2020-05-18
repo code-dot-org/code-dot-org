@@ -1,2 +1,3 @@
 // locale for turtle
-module.exports = window.blockly.turtle_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('turtle_locale');

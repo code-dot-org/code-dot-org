@@ -12,13 +12,16 @@
   csedweek_dates: "3-9 dicembre 2018"
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Sei un insegnante interessato all''Informatica? Guarda le altre risorse disponibili</a>'
+  csedweek_banner_teachers_text: "Sei un insegnante interessato all'Informatica? Guarda le altre risorse disponibili"
   n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
+  try_hoc_num_served: "<h1>Prova un'</h1><h2>Ora del Codice</h2><h3>, ne hanno già fatte %{num}</h3>"
   anybody_can_learn: "Chiunque può imparare."
   learn_now: "Impara Adesso"
   petition_message: "Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare informatica"
   petition_sign_message: 'Se sei d''accordo, firma con il tuo nome.  Unisciti agli altri #.'
-  petition_sign_message_support: 'Per sostenerci, aggiungi il tuo nome. Unisciti agli altri #.'
+  petition_sign_message_num: "Se sei d'accordo, firma con il tuo nome. Unisciti agli altri %{num}."
   petition_join_others: 'Unisciti agli # altri'
+  petition_join_others_num: "Unisciti agli altri %{num}"
   name: "Nome"
   email: "Indirizzo di posta elettronica"
   zipcode: "CAP o Città"
@@ -43,6 +46,7 @@
   hoc2014_support: "Sostienilo &#x25BE;"
   hoc2014_whatishoc: "Cosa è l'Ora del Codice?"
   csedweek_map_header: "Eventi dell'Ora del Codice nel mondo"
+  csedweek_map_header_num: "%{num} Eventi dell'Ora del Codice nel mondo (Settimana di Educazione all'Informatica)"
   csedweek_map_signup: "Iscrivi il tuo evento"
   csedweek_map_search_placeholder: "Cerca eventi per l'Ora del codice"
   csedweek_map_search_search: "Cerca"
@@ -322,6 +326,7 @@
   homepage_action_text_signpetition: "Firma la petizione"
   homepage_action_text_wincelebritychat: "Vinci una conversazione con una celebrità"
   homepage_signpetition_dropdown: "Firma la nostra petizione &#x25BE;"
+  homepage_signpetition_dropdown_text: "Accetto"
   homepage_diversity_pledge: "Abbraccia la causa in favore delle diversità"
   homepage_banner_text_prizes: 'L''Ora di Codice sta per ripartire, 7-13 Dicembre. '
   homepage_banner_link_prizes: 'Partecipa all''evento didattico più popolare del mondo.'
@@ -935,6 +940,7 @@
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
   express-2019_name: Corso Rapido (2017)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
+  express-2020_name: Corso Rapido (2017)
   accelerated_name: "Corso rapido"
   express_name: "Corso Rapido (2018)"
   pre-express_name: Corso Rapido pre-scolare

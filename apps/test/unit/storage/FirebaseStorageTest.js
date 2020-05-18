@@ -15,10 +15,12 @@ describe('FirebaseStorage', () => {
     FirebaseStorage = initFirebaseStorage({
       channelId: 'test-firebase-channel-id',
       firebaseName: 'test-firebase-name',
+      firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
       firebaseAuthToken: 'test-firebase-auth-token',
       showRateLimitAlert: () => {}
     });
     getProjectDatabase().autoFlush();
+    getSharedDatabase().autoFlush();
     return getConfigRef()
       .set({
         limits: {
@@ -32,6 +34,7 @@ describe('FirebaseStorage', () => {
       })
       .then(() => {
         getProjectDatabase().set(null);
+        getSharedDatabase().set(null);
       });
   });
 

@@ -282,7 +282,7 @@ mr:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} वर जा {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": वर
@@ -340,6 +340,7 @@ mr:
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
+            '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
           LOCATION:
             "{x: 200, y: 100}": वर
@@ -357,6 +358,7 @@ mr:
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
+            '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
           LOCATION:
             "{x: 200, y: 100}": वर
@@ -860,7 +862,7 @@ mr:
             '"direction"': हालचालीची दिशा
             '"tint"': रंग
       gamelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} वर जा {LOCATION}"
       gamelab_keyPressed:
         options:
           KEY:

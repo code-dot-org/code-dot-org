@@ -12,12 +12,12 @@
   csedweek_dates: "दिसंबर 8-14, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> ऑवर ऑफ़ कोड</a> आ रहा है। सभी शिक्षकों और आयोजकों को बोला रहा है, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> आपके ऑवर ऑफ़ कोड  का प्लान करे</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें</a>'
+  csedweek_banner_teachers_text: " तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें"
   n_have_learned_an_hoc: "का प्रयास एक कोड के घंटे सेवा की\n code ke ek ghante dha koshish karo"
   anybody_can_learn: "हर कोई सीख सकता है"
   learn_now: "अब जानें"
   petition_message: "हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना चाहिए"
   petition_sign_message: 'यदि आप सहमत हैं, तो अपना नाम साइन करें और ऑवर ऑफ़ कोड अन्य लोगों के साथ हमारी मेलिंग सूची में शामिल हों।'
-  petition_sign_message_support: "यदि आप हमें समर्थन, अपना नाम साइन इन करें।  # दूसरों में शामिल हों।\nAgar aap hamare samarthan kartha hein, up ne nam ko sankhet karo. Log nal shamil ho"
   petition_join_others: "# दूसरों में शामिल हों\nLog nal shaamil ho"
   name: "नाम"
   email: "ईमेल"
@@ -314,6 +314,7 @@
   homepage_action_text_signpetition: "याचना पर हस्ताक्षर करें"
   homepage_action_text_wincelebritychat: "सेलिब्रिटी चैट जीतें"
   homepage_signpetition_dropdown: "मैं सहमत हूं &#x25BE;"
+  homepage_signpetition_dropdown_text: "मैं सहमत हूँ"
   homepage_diversity_pledge: "विविधता संकल्प लें"
   homepage_banner_text_prizes: 'आवर ऑफ़ कोड दुबारा 7-13 दिसम्बर को आ रहा है। '
   homepage_banner_link_prizes: 'इतिहास में सबसे बड़े सीखने के कार्यक्रम में शामिल हों। '
@@ -932,9 +933,16 @@
   coursed-2019_name: कोर्स D (2019)
   coursee-2019_name: कोर्स E (2019)
   coursef-2019_name: कोर्स F (2019)
+  coursea-2020_name: कोर्स A (2019)
+  courseb-2020_name: कोर्स B (2019)
+  coursec-2020_name: कोर्स C (2019)
+  coursed-2020_name: कोर्स D (2019)
+  coursee-2020_name: कोर्स E (2019)
+  coursef-2020_name: कोर्स F (2019)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
   express-2019_name: एक्सप्रेस कोर्स (2019)
   pre-express-2019_name: पूर्व-पाठक एक्सप्रेस कोर्स (2019)
+  express-2020_name: एक्सप्रेस कोर्स (2019)
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "त्वरित पाठ्यक्रम"
   express_name: "एक्सप्रेस कोर्स"

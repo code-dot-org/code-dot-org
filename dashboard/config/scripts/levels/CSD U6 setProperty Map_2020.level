@@ -1,0 +1,18 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:34:40.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Designing Screens with Code",
+    "reference": "/docs/concepts/app-lab/designing-screens-with-code/index.html",
+    "parent_level_id": 16421,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-26 16:07:32 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 16:10:48 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-19 19:52:10 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

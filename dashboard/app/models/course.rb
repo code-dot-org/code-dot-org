@@ -17,9 +17,9 @@ require 'cdo/script_constants'
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course'
-  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript'
+  has_many :default_course_scripts, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'CourseScript', dependent: :destroy
   has_many :default_scripts, through: :default_course_scripts, source: :script
-  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript'
+  has_many :alternate_course_scripts, -> {where.not(experiment_name: nil)}, class_name: 'CourseScript', dependent: :destroy
 
   after_save :write_serialization
 
@@ -43,6 +43,8 @@ class Course < ApplicationRecord
     family_name
     version_year
     is_stable
+    visible
+    pilot_experiment
   )
 
   def to_param
@@ -203,11 +205,20 @@ class Course < ApplicationRecord
     info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
     info[:is_stable] = stable?
+    info[:pilot_experiment] = pilot_experiment
     info[:category] = I18n.t('courses_category')
+    # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
+    info[:category_priority] = -1
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
       default_course_scripts.map(&:script_id)
     info
+  end
+
+  def self.all_courses
+    Rails.cache.fetch('valid_courses/all') do
+      Course.all
+    end
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
@@ -219,11 +230,23 @@ class Course < ApplicationRecord
     # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
     if user && has_any_course_experiments?(user)
-      return Course.valid_courses_without_cache(user: user)
+      return Course.valid_courses_without_cache
     end
-    Rails.cache.fetch("valid_courses/#{I18n.locale}") do
+
+    courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.valid_courses_without_cache
     end
+
+    if user && has_any_pilot_access?(user)
+      pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
+      courses += pilot_courses
+    end
+
+    courses
+  end
+
+  def self.valid_course_infos(user: nil)
+    return Course.valid_courses(user: user).map {|c| c.assignable_info(user)}
   end
 
   # @param user [User]
@@ -233,26 +256,16 @@ class Course < ApplicationRecord
     Experiment.any_enabled?(user: user, experiment_names: CourseScript.experiments)
   end
 
-  # Get the set of valid courses for the dropdown in our sections table, using
-  # any alternate scripts based on any experiments the user belongs to.
-  def self.valid_courses_without_cache(user: nil)
-    course_infos = Course.
-      where(name: ScriptConstants::CATEGORIES[:full_course]).
-      map {|course| course.assignable_info(user)}
-
-    # Only return stable course versions.
-    # * Currently, all course versions are stable.
-    # * In the future, stability will be set as a property by the levelbuilder.
-    #
-    # Group courses by family when showing multiple versions of each course.
-    course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]}
+  # Get the set of valid courses for the dropdown in our sections table.
+  def self.valid_courses_without_cache
+    Course.all.select(&:visible?)
   end
 
   # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
-    valid_courses.any? {|course| course[:id] == course_id.to_i}
+    valid_courses.any? {|course| course.id == course_id.to_i}
   end
 
   # @param user [User]
@@ -272,6 +285,9 @@ class Course < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
+      visible: visible?,
+      is_stable: is_stable?,
+      pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
@@ -303,8 +319,13 @@ class Course < ApplicationRecord
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
-    versions = Course.
-      where("properties -> '$.family_name' = ?", family_name).
+
+    # Include visible courses, plus self if not already included
+    courses = Course.valid_courses(user: user).clone
+    courses.append(self) unless courses.any? {|c| c.id == id}
+
+    versions = courses.
+      select {|c| c.family_name == family_name}.
       map do |c|
         {
           name: c.name,
@@ -548,5 +569,42 @@ class Course < ApplicationRecord
   # from the current year.
   def self.get_version_year_options
     (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
+  end
+
+  def pilot?
+    !!pilot_experiment
+  end
+
+  def has_pilot_experiment?(user)
+    return false unless pilot_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+  end
+
+  def has_pilot_access?(user = nil)
+    return false unless pilot? && user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    return true if has_pilot_experiment?(user)
+
+    # A user without the experiment has pilot script access if one of their
+    # teachers has the pilot experiment enabled, AND they are either currently
+    # assigned to or have progress in the course.
+    #
+    # This logic is subtly different from the logic we use for pilot script
+    # access: because we do not record when a user is assigned to a course, we
+    # will fail to detect if a user was previously assigned to a pilot course in
+    # which they made no progress.
+
+    is_assigned = user.sections_as_student.any? {|s| s.course == self}
+    has_progress = !!UserScript.find_by(user: user, script: default_scripts)
+    has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
+    (is_assigned || has_progress) && has_pilot_teacher
+  end
+
+  # returns true if the user is a levelbuilder, or a teacher with any pilot
+  # script experiments enabled.
+  def self.has_any_pilot_access?(user = nil)
+    return false unless user&.teacher?
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    all_courses.any? {|course| course.has_pilot_experiment?(user)}
   end
 end

@@ -1069,6 +1069,12 @@ vi:
           vậy tôi thử làm lại với vị trí tay đã sửa và tôi đã thành công! Tôi thực
           sự rất vui vì đã gỡ được lỗi động tác lộn sau chống tay. Chúng ta đã tìm
           ra cách! Gỡ lỗi là tìm ra và sửa chữa các vấn đề. Làm tốt lắm!
+    C2_zuck_repeat_loop:
+      1:
+        text: Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh.
+          Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không
+          ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả
+          tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt.
     C3_artist_intro:
       1:
         text: Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những
@@ -1132,11 +1138,30 @@ vi:
           dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1
           mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi
           là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình.
+      3:
+        text: Nếu tôi kéo khối lệnh Di chuyển tới không gian làm việc và nhấn "Chạy",
+          điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trong khung. Và nếu tôi
+          muốn chú chim làm gì khác sau khi tiến lên 1 ô? Tôi có thể thêm khối lệnh
+          khác vào chương trình.
+      4:
+        text: Tôi sẽ chọn khối lệnh "rẽ phải" và tôi sẽ kéo nó đặt xuống dưới khối
+          lệnh di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả lệnh và
+          2 khối lệnh sẽ chập lại với nhau. Khi tôi nhấn "Chạy", chú chim sẽ thực
+          hiện lần lượt các lệnh được xếp từ trên xuống dưới trong không gian làm
+          việc.
       5:
         text: Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến
           thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút "Thiết lập lại"
           để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu
           xa!
+    starwars_events:
+      4:
+        text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,
+          phím mũi tên hoặc phím tab được nhấn.'
+    starwars_blocks_events:
+      4:
+        text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,
+          phím mũi tên hoặc phím tab được nhấn.'
     mc_intro:
       1:
         text: Tôi tên là Jens Bergensten, nhưng tốt hơn nên gọi tôi là Jeb. Tôi là
@@ -1278,13 +1303,27 @@ vi:
       4:
         text: Bây giờ bạn có thể xây dựng bất cứ thứ gì mà bạn muốn. Chúc vui vẻ!
     gumball_intro:
+      4:
+        text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
+          gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới.
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
+      7:
+        text: Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam "khi chạy".
+          Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi
+          bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau.
     iceage_intro:
+      4:
+        text: Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không
+          gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới.
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
+      7:
+        text: Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam "khi chạy".
+          Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi
+          bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau.
     hoc_dance_events_2019:
       4:
         text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,

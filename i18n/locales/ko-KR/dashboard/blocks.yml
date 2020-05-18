@@ -1545,6 +1545,14 @@ ko:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 이동 {SPRITE} {DISTANCE} 픽셀 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 북쪽
+            '"East"': 동쪽
+            '"South"': 남쪽
+            '"West"': 서쪽
       aalab_prompt:
         text: 질문하기 {MESSAGE}
       aalab_scene:
@@ -1556,12 +1564,10 @@ ko:
             '3': '3'
       aalab_setupStory:
         text: 설정 스토리
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 보이게 하기
-            '"hide"': 보이지 않게 하기
+            '"random"': random(랜덤)
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:

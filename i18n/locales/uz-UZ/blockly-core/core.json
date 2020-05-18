@@ -49,7 +49,7 @@
     "CONTROLS_IF_ELSE_TOOLTIP": "Barcha shartlar yolg‘on bo‘lganda yakunlovchi blok qo‘shish.",
     "CONTROLS_IF_HELPURL": "",
     "CONTROLS_IF_IF_TOOLTIP": "\"Agar\" blogini qayta tahrirlash uchun qismlarni qo‘shing, o‘chiring yoki boshqattan taxlang.",
-    "CONTROLS_IF_MSG_ELSE": "",
+    "CONTROLS_IF_MSG_ELSE": "yoki",
     "CONTROLS_IF_MSG_ELSEIF": "aks holda agar",
     "CONTROLS_IF_MSG_IF": "agar",
     "CONTROLS_IF_TOOLTIP_1": "Agar qiymat rost bo‘lsa, biror buyruqlarni bajaradi.",

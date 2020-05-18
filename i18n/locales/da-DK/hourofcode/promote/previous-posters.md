@@ -2,7 +2,7 @@
 title: Past Hour of Code Posters
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Past Hour of Code Posters
 
@@ -14,4 +14,4 @@ title: Past Hour of Code Posters
 
 {{ promote_posters }}
 
-{{ signup_button }}
+{{ tilmeld_knap }}

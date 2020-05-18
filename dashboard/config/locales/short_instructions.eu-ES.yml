@@ -203,6 +203,12 @@ eu-ES:
         biltzeko.
       NEW Course 4 Bee For Loops 8: Ondo zabiltza! Zein izan behar da darabilzun inkrementua
         3, 6, 9, 12, 15 nektar jasotzeko?
+      New Gumball Project: Sortu nahi duzuna eta partekatu!
+      New Ice Age Project: Sortu nahi duzuna eta partekatu!
+      New Infinity Project: Sortu nahi duzuna eta partekatu!
+      New Sports Project: Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu
+        eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin Amaitu
+        zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
       Overworld Avoid Monsters: Landare igokari baten kontra jotzea ez da batere ideia
         ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure
         etxeko segurtasunera.
@@ -419,6 +425,9 @@ eu-ES:
       courseD_maze_nestedLoops6_2018: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops6_2019: Eraman nazazu ekiloreraino!
       courseE_artist_functions1: |-
+        Kaixo. Ni zombie artista. Marraztea maite dugu!
+        Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
+      courseE_artist_functions1_copy: |-
         Kaixo. Ni zombie artista. Marraztea maite dugu!
         Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
       courseE_bee_concept1: 'Bildu lore bakoitzeko nektar guztia. Erabili begizta

@@ -511,6 +511,10 @@ id:
       3:
       4:
         text: "Saya menggunakan algoritma dalam pekerjaan saya. Jika saya menuliskan semua langkah, saya dapat menciptakan kembali bagian yang sama lagi, atau saya dapat mengajari orang lain untuk melakukannya. Letakkan gelas tersebut di tempat pembakaran, sikat bersama-sama, ikuti sisa instruksi untuk membuat mangkuk. Algoritma-algoritma memberikan anda peta jalan untuk mendapatkan sesuatu."
+    C2_bee_loops:
+      1:
+        text: "Sebuah loop adalah pengulangan aktivitas. Jadi akan menjadi sarang untuk memeriksa, saya melihat sebuah frame dan kemudian saya meletakkannya kembali, jadi saya ulangi bahwa aktivitas yang sama beberapa kali. Ini perulangan sekitar, melakukan kegiatan yang sama beberapa kali."
+      2:
     C2_paper_airplanes:
       1:
       2:
@@ -530,6 +534,7 @@ id:
         text: "Di sini, saya mencoba memegang kembali, tapi saya terus terjatuh. Saya melalui setiap bagian, selangkah demi selangkah, dan menyadari di mana letak kesalahan saya. Pelatih saya menunjukkan bahwa saya tidak meletakkan tangan saya di balok dengan benar. Jadi saya mencoba lagi pegangan belakang di balok dengan posisi tangan baru saya, dan saya terjebak! Saya benar-benar senang, saya dapat bersalto. Kami tahu itu! Penelusuran adalah menemukan dan memperbaiki masalah. Bagus, kerjaan yang bagus!"
     C2_zuck_repeat_loop:
       1:
+        text: "Salah satu hal yang paling bagus pada komputer adalah mengulang banyak perintah. Sebagai seorang manusia, anda akan benar-benar bosan jika anda harus melakukan hal yang sama banyak dan sering kali berturut-turut. Tapi komputer bisa melakukan hal yang sama jutaan bahkan milyaran kali dan tidak bosan dan dapat melaksanakannya dengan sangat baik."
       2:
         text: "Jadi misalnya jika saya ingin mengucapkan semua orang di Facebook ucapan selamat ulang tahun dengan mengirimkan email kepada mereka, mungkin perlu waktu lebih dari satu abad untuk benar-benar menuliskan semua email itu kepada semua orang. Tapi dengan hanya beberapa baris kode, saya dapat meminta sebuah sistem mengirim email ke semua orang di Facebook untuk mengucapkan selamat ulang tahun kepada mereka. Jadi itulah caranya, dan mengapa itu berharga, dan sesuatu yang dapat dilakukan dengan baik oleh komputer."
       3:
@@ -610,6 +615,7 @@ id:
       1:
         text: "Salah satu hal yang hebat dalam pemrograman komputer adalah saat anda sudah mengajarkan komputer bagaimana melakukan suatu tindakan, anda dapat memanggil fungsi itu lagi. Anda memberinya nama dan kemudian anda dapat memanggilnya. Itu benar-benar seperti memperluas bahasa."
       2:
+        text: "Dalam program yang kami buat, kami mempelajari cara menggambar persegi dengan bergerak dan berputar empat kali. Kami dapat mengambil fungsi itu dan memberinya sebuah nama, menggambar persegi, sehingga setiap saat kami ingin melakukannya, kami cukup mengatakan menggambar persegi dan itu akan kembali dan memanggil fungsi itu, kode itu. Itu akan berhasil untuk kami. Kami telah menambahkan konsep itu ke bahasa pemrograman kami."
       3:
       4:
     starwars_intro:
@@ -669,6 +675,7 @@ id:
         image: 'catatan/starwars_kejadian_3.JPG'
       4:
         image: 'catatan/starwars_kejadian_4.JPG'
+        text: "Beberapa contoh peristiwa seperti listening/mendengarkan sebuah mouse click/klik mouse, arrow button/tombol panah atau tap on the screen/Tekan pada layar."
       5:
         image: 'catatan/starwars_kejadian_5.JPG'
       6:
@@ -697,6 +704,7 @@ id:
         text: "Hai, saya Kathleen Kennedy dan saya adalah produser Star Wars: The Force Awakens. Hari ini anda akan bekerja sama dengan salah satu bintang kami, BB-8. BB-8 yang merupakan robot yang berbentuk bola. Semua yang dia lakukan dan setiap gerakan yang dia lakukan dikontrol oleh perangkat lunak komputer. Pengetahuan komputer berdampak pada setiap industri, mulai dari pemasaran hingga perawatan kesehatan hingga perfileman. Bahkan, ratusan insinyur komputer bekerja sama dalam membuat film seperti The Force Awakens."
       2:
         image: 'catatan/starwars_pengenalan_blok_2.JPG'
+        text: "Hi Saya Rachel Rose, Saya adalah engineer R&D senior di ILM dan Saya memimpin tim pengembangan animasi dan ciptaan. Dalam Film The Force Awakens, saya bertanggung jawab untuk membantu para seniman mengembangkan rig yang merupakan bagian dari karakter yang bergerak yang memungkinkan karakter terlihat sangat mudah dipercaya di sebuah galaksi yang jauh."
       3:
         image: 'catatan/starwars_pengenalan_blok_3.JPG'
         text: "Pada waktu berikutnya, kami akan membuat permainan Star Wars kami sendiri yang akan mengajarkan anda konsep-konsep dasar pemrograman. Biasanya, pemrograman adalah semua teks tapi kita akan menggunakan blok disini sehingga kami dapat menarik dan mengeluarkan untuk menulis program-program. Untuk memulainya, kami akan bekerja sama dengan Rey untuk memprogram BB-8 agara berjalan untuk mengumpulkan semua bagian-bagian potongan."
@@ -707,6 +715,7 @@ id:
         text: "Daerah ini tengah adalah toolbox dan masing-masing blok ini adalah perintah yang dapat mengerti BB-8."
       6:
         image: 'catatan/starwars_pengenalan_blok_6.JPG'
+        text: "Ruang putih di sebelah kanan disebut ruang kerja dan ini adalah di mana kita akan membangun program kita."
       7:
         image: 'catatan/starwars_pengenalan_blok_7.JPG'
       8:
@@ -715,6 +724,7 @@ id:
         image: 'catatan/starwars_pengenalan_blok_9.JPG'
       10:
         image: 'catatan/starwars_pengenalan_blok_10.JPG'
+        text: "Setelah Anda bisa menekan run, Anda juga dapat menekan tombol reset untuk mengembalikan BB-8 kembali ke awal. Sekarang mari kita lakukan kebalikannya!"
     starwars_blocks_events:
       1:
         image: 'catatan/starwars_kejadian_blok_1.JPG'
@@ -724,6 +734,7 @@ id:
         image: 'catatan/starwars_kejadian_blok_3.JPG'
       4:
         image: 'catatan/starwars_kejadian_blok_4.JPG'
+        text: "Beberapa contoh peristiwa seperti listening/mendengarkan sebuah mouse click/klik mouse, arrow button/tombol panah atau tap on the screen/Tekan pada layar."
       5:
         image: 'catatan/starwars_kejadian_blok_5.JPG'
       6:
@@ -811,10 +822,12 @@ id:
       2:
       3:
       4:
+        text: "Layar Anda dibagi menjadi 3 bagian utama. Di sebelah kiri adalah ruang permainan dimana program Anda akan berjalan. Petunjuk untuk setiap tingkat ditulis di bawah ini."
       5:
       6:
         text: "Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita akan membuat program."
       7:
+        text: "Untuk memulai, Anda harus hubungkan blok anda ke blok \"when run\" / \"ketika menjalankan\" yang bewarna oranye. Anda dapat menghubungkan beberapa blok bersama-sama dengan menyeret mereka sampai Anda melihat garis kuning, dan kemudian mereka akan merampas bersama-sama."
       8:
       9:
     iceage_intro:
@@ -822,10 +835,12 @@ id:
       2:
       3:
       4:
+        text: "Layar Anda dibagi menjadi 3 bagian utama. Di sebelah kiri adalah ruang permainan dimana program Anda akan berjalan. Petunjuk untuk setiap tingkat ditulis di bawah ini."
       5:
       6:
         text: "Ruang putih di sebelah kanan disebut area kerja dan di sinilah kita akan membuat program."
       7:
+        text: "Untuk memulai, Anda harus hubungkan blok anda ke blok \"when run\" / \"ketika menjalankan\" yang bewarna oranye. Anda dapat menghubungkan beberapa blok bersama-sama dengan menyeret mereka sampai Anda melihat garis kuning, dan kemudian mereka akan merampas bersama-sama."
       8:
       9:
     mc_2016_intro:

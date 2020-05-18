@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
+import BackToFrontConfetti from './BackToFrontConfetti';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 import PropTypes from 'prop-types';
@@ -37,6 +38,9 @@ const styles = {
   submit: {
     background: color.orange,
     color: color.white
+  },
+  confetti: {
+    top: 100
   }
 };
 
@@ -145,6 +149,10 @@ class Certificate extends Component {
           />
         )}
         <div id="uitest-certificate" style={certificateStyle}>
+          <BackToFrontConfetti
+            active={this.state.personalized}
+            style={styles.confetti}
+          />
           <a href={certificateLink}>
             <img src={imgSrc} />
           </a>

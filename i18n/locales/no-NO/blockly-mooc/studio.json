@@ -34,7 +34,7 @@
   "bird": "fugl",
   "calloutPutCommandsHereRunStart": "Legg til kommandoer her for å kjøre dem når programmet starter",
   "calloutBlocklyPlaceGoUpHere": "Plasser en \"flytt opp\"-blokk her for å gå opp",
-  "calloutBlocklyPlaceMoveUpHere": "",
+  "calloutBlocklyPlaceMoveUpHere": "Legg til en \"flytt opp\"-blokk her for å gå opp",
   "calloutClickEvents": "Klikk på kategoriene for å se funksjonsblokkene.",
   "calloutUseArrowButtons": "Trykk på disse knappene eller piltastene på tastaturet for å bevege deg",
   "calloutUseArrowButtonsAutoSteer": "Vi har skjult koden du skrev, men du kan fremdeles bruke piltastene for å styre",

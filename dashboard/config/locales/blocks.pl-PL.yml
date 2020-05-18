@@ -985,6 +985,8 @@ pl:
         text: sprite {SPRITE} rozpoczyna się {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -1006,6 +1008,9 @@ pl:
         text: kliknął {SPRITE}
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at
+          {LOCATION}"
       gamelab_destroy:
         text: usunąć {THIS}
       gamelab_draggable:
@@ -1023,6 +1028,7 @@ pl:
             '"direction"': kierunku ruchu
             '"tint"': odcień
       gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
         options:
           CHOICE:
             '"this"': tego
@@ -1031,6 +1037,8 @@ pl:
         text: ukryj ekran tytułowy
       gamelab_isTouchingEdges:
         text: "{SPRITE} dotyka krawędzi"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} dotyka {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} skocz do {LOCATION}"
       gamelab_keyPressed:
@@ -1071,6 +1079,8 @@ pl:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_locationAt:
+        text: 'location x: {X} y: {Y}'
       gamelab_locationMouse:
         text: lokalizacja myszy
       gamelab_locationOf:
@@ -1091,9 +1101,11 @@ pl:
         options:
           DIRECTION:
             '"North"': Północ
-            '"East"': Na wschód
+            '"East"': Wschód
             '"South"': Południe
-            '"West"': Na zachód
+            '"West"': Zachód
+      gamelab_patrollingUpDown:
+        text: patrolowanie w górę i w dół
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1101,9 +1113,9 @@ pl:
         options:
           DIRECTION:
             '"North"': Północ
-            '"East"': Na wschód
+            '"East"': Wschód
             '"South"': Południe
-            '"West"': Na zachód
+            '"West"': Zachód
       gamelab_printText:
         text: druk {TEXT}
       gamelab_randColor:
@@ -1134,10 +1146,10 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': siatka
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazd
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-            undefined: Żadnego
+            undefined: żaden
       gamelab_setProp:
         text: zestaw {SPRITE} {PROPERTY} do {VAL}
         options:
@@ -1160,6 +1172,8 @@ pl:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
+      gamelab_tumbling:
+        text: gimnastykowanie się
       gamelab_turn:
         text: skręt {SPRITE} {DIRECTION} {N} stopni
         options:
@@ -1401,6 +1415,8 @@ pl:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie moja etykieta
+      Mikelab_locationAt:
+        text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
@@ -1522,6 +1538,13 @@ pl:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Północ
+            '"East"': Wschód
+            '"South"': Południe
+            '"West"': Zachód
       aalab_prompt:
         text: zadaj pytanie {MESSAGE}
       aalab_scene:
@@ -1533,12 +1556,10 @@ pl:
             '3': '3'
       aalab_setupStory:
         text: historia konfiguracji
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': pokaż
-            '"hide"': ukryj
+            '"random"': losowy
       binary_drawBin:
         text: remis binarny {BIN}
       binary_drawDec:

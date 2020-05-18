@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+require_relative '../../dashboard/lib/contact_rollups_v2'
+require 'cdo/only_one'
+require 'cdo/log_collector'
+
+def main
+  log_collector = LogCollector.new "Build contact rollups V2"
+
+  # Build new daily table of contact rollups
+  ContactRollupsV2.build_contact_rollups(log_collector)
+  puts log_collector.to_s
+end
+
+main if only_one_running?(__FILE__)

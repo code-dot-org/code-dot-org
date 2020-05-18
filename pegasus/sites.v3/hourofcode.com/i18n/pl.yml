@@ -26,16 +26,24 @@ pl:
   social_hoc2019_dance: Wystąpią Katy Perry, Jonas Brothers, Lil Nas X, Panic at the
     Disco i wielu innych!
   oceans_landing_title: AI dla oceanów
-  oceans_landing_description: 'Poznaj uczenie maszynowe, ucząc AI, aby rozpoznawać
-    ryby. #CSforGood'
+  oceans_landing_description: 'Poznaj uczenie maszynowe, ucząc A.I., rozpoznawać ryby.
+    #CSforGood'
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Tylko w języku angielskim | Od 11 lat
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_specs: Dostępne w ponad 25 językach | Klasy 3+
+  oceans_landing_explanation: Informatyka to coś więcej niż tylko kodowanie! Dowiedz
+    się o sztucznej inteligencji (AI), uczeniu maszynowym, danych treningowych i uprzedzeniach,
+    jednocześnie poznając kwestie etyczne i jak sztuczną inteligencję można wykorzystać
+    do rozwiązywania problemów na świecie. Ciesz się pierwszym krokiem Code.org w
+    nowej podróży, aby dowiedzieć się więcej o sztucznej inteligencji. Podczas korzystania
+    z aktywności AI dla Oceanów, trenujesz prawdziwe modele uczenia maszynowego. <a
+    href='#behind-the-scenes'> Ucz się więcej.</a>
+  oceans_landing_explanation_markdown: Informatyka to coś więcej niż tylko kodowanie!
+    Dowiedz się o sztucznej inteligencji (AI), uczeniu maszynowym, danych treningowych
+    i uprzedzeniach, jednocześnie poznając kwestie etyczne i jak sztuczną inteligencję
+    można wykorzystać do rozwiązywania problemów na świecie. Ciesz się pierwszym krokiem
+    Code.org w nowej podróży, aby dowiedzieć się więcej o sztucznej inteligencji.
+    Podczas korzystania z aktywności AI dla Oceanów, trenujesz prawdziwe modele uczenia
+    maszynowego. [Ucz się więcej](#behind-the-scenes).
   oceans_landing_teacher_resources: Materiały dla nauczycieli
   oceans_landing_teacher_resources_desc: Plany lekcji i aktywności pomagające w nauczaniu
     sztucznej inteligencji, uczenia maszynowego, danych szkoleniowych i uprzedzeń,
@@ -44,28 +52,51 @@ pl:
   oceans_landing_cs_for_good: Informatyka na dobre
   oceans_landing_cs_for_good_desc: Materiały, które pomogą uczniom zrozumieć rolę
     informatyki w tworzeniu bardziej sprawiedliwego świata.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_landing_videos: Filmy o sztucznej inteligencji i uczeniu maszynowym
+  oceans_behind_the_scenes: 'AI dla Oceanów: Za kulisami'
+  oceans_behind_the_scenes_1: Poziomy 2-4 używają wstępnie przeszkolonego modelu dostarczonego
+    przez <a href="https://www.tensorflow.org/" ></a>TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a>. Model MobileNet to <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">splotowa
+    sieć neuronowa</a>, która została przeszkolona na < a href="http://www.image-net.org/">
+    ImageNet</a>, zbiór danych obejmujący ponad 14 milionów obrazów ręcznie opatrzonych
+    adnotacjami, takimi słowami jak „balon” lub „truskawka”. Aby dostosować ten model
+    do poetykietowanych danych treningowych, które uczniowie generują w tym ćwiczeniu,
+    stosujemy technikę o nazwie <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Każdy obraz z zestawu danych treningowych jest dostarczany do MobileNet
+    w postaci pikseli, aby uzyskać listę adnotacji, które najprawdopodobniej odnoszą
+    się do niego. Następnie, dla nowego obrazu, dostarczamy go do MobileNet i porównujemy
+    jego listę adnotacji z adnotacjami ze zbioru danych treningowych. Klasyfikujemy
+    nowy obraz z tą samą etykietą (taką jak „fish” lub „not fish”) co obrazy z zestawu
+    treningowego z najbardziej podobnymi wynikami.
+  oceans_behind_the_scenes_1_markdown: Poziomy 2-4 używają wstępnie przeszkolonego
+    modelu dostarczonego przez <a href="https://www.tensorflow.org/" ></a>TensorFlow</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a>. Model MobileNet to <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">splotowa
+    sieć neuronowa</a>, która została przeszkolona na < a href="http://www.image-net.org/">
+    ImageNet</a>, zbiór danych obejmujący ponad 14 milionów obrazów ręcznie opatrzonych
+    adnotacjami, takimi słowami jak „balon” lub „truskawka”. Aby dostosować ten model
+    do poetykietowanych danych treningowych, które uczniowie generują w tym ćwiczeniu,
+    stosujemy technikę o nazwie <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Każdy obraz z zestawu danych treningowych jest dostarczany do MobileNet
+    w postaci pikseli, aby uzyskać listę adnotacji, które najprawdopodobniej odnoszą
+    się do niego. Następnie, dla nowego obrazu, dostarczamy go do MobileNet i porównujemy
+    jego listę adnotacji z adnotacjami ze zbioru danych treningowych. Klasyfikujemy
+    nowy obraz z tą samą etykietą (taką jak „fish” lub „not fish”) co obrazy z zestawu
+    treningowego z najbardziej podobnymi wynikami.
+  oceans_behind_the_scenes_2: Poziomy 6-8 korzystają z <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). Patrzymy na każdy element ryby (taki, jak oczy, usta, ciało)
+    i łączymy wszystkie metadane dla składników (takich, jak liczba zębów, kształt
+    ciała) w wektor liczb dla każdej ryby. Używamy tych wektorów do szkolenia SVM.
+    Na podstawie danych treningowych, SVM dzieli „przestrzeń” wszystkich możliwych
+    ryb na dwie części, które odpowiadają klasom, których próbujemy się nauczyć (np.
+    „niebieska” lub „nie niebieska”).
+  oceans_behind_the_scenes_2_markdown: Poziomy 6-8 korzystają z [Support-Vector Machine]
+    (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Patrzymy na każdy
+    element ryby (taki, jak oczy, usta, ciało) i łączymy wszystkie metadane dla składników
+    (takich, jak liczba zębów, kształt ciała) w wektor liczb dla każdej ryby. Używamy
+    tych wektorów do szkolenia SVM. Na podstawie danych treningowych, SVM dzieli „przestrzeń”
+    wszystkich możliwych ryb na dwie części, które odpowiadają klasom, których próbujemy
+    się nauczyć (np. „niebieska” lub „nie niebieska”).
   social_hoc2019_oceans_title: 'AI dla oceanów #CSForGood'
   social_hoc2019_oceans_desc: Dowiedz się o sztucznej inteligencji, uczeniu maszynowym,
     danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie etyczne
@@ -78,56 +109,56 @@ pl:
     maszynowym, danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie
     etyczne i jak sztuczna inteligencja może być wykorzystana do rozwiązywania problemów
     na świecie.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  ai_video_title_what_is_ai: Co to jest AI (sztuczna inteligencja)?
+  ai_video_title_algorithm_bias: Zwalczanie stronniczości w algorytmach
+  ai_video_title_phone_knows_dog: Skąd Twój telefon wie, że to pies?
+  ai_video_title_what_is_ml: Czym jest uczenie maszynowe?
+  ai_video_title_ml_big_small_prickly: 'Uczenie maszynowe: rozwiązywanie problemów
+    dużych, małych i złośliwych'
+  ai_video_title_ethics_of_ai: Etyka AI (sztucznej inteligencji)
+  ai_video_title_ml_human_bias: Uczenie maszynowe i ludzkie uprzedzenia
+  ai_video_title_seeing_ai: 'Widząc AI: Zwiększenie dostępności świata wizualnego'
+  activity: Aktywność
   name: Name
-  description: Description
+  description: Opis
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_header: Nauczaj i ucz się o sztucznej inteligencji (AI)
+  ai_resource_minecraft: AI z Minecraftem na dobre
+  ai_resource_minecraft_desc: 'Uzyskaj dostęp do bezpłatnych zasobów, w tym planu
+    lekcji, filmów, programu nauczania informatyki i szkoleń dla nauczycieli. (Wymaga
+    Minecraft: Education Edition)'
+  ai_resource_ml_for_kids: Uczenie maszynowe dla dzieci
+  ai_resource_ml_for_kids_desc: Przećwicz model uczenia maszynowego z tekstem, liczbami
+    lub obrazami i wykorzystaj go do tworzenia gier w Scratchu.
+  ai_resource_ibm_ml_for_kids: 'IBM: Uczenie maszynowe dla dzieci'
+  ai_resouce_ibm_ml_for_kids_desc: Praktyczne ćwiczenia mające na celu wprowadzenie
+    uczniów w proste modele uczenia maszynowego poprzez gry i interaktywne projekty.
+  ai_resource_ecs: 'ECS: Sztuczna inteligencja (AI)'
+  ai_resource_ecs_desc: Nowa alternatywna jednostka programowa dla programu nauczania
+    Odkrywanie Informatyki (Exploring Computer Science - ECS).
+  ai_resource_elements_ai: Elementy sztucznej inteligencji (AI)
+  ai_resource_elements_ai_desc: Seria bezpłatnych kursów online utworzonych przez
+    Reaktor i Uniwersytet Helsiński.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
+  ai_resource_cognimates_desc: Platforma edukacyjna AI do tworzenia gier, programowania
+    robotów i szkolenia.
+  ai_audience_k12: K-12 (Wymaga czytania)
+  ai_audience_hs: Liceum
+  ai_activity_header: Działania wspomagane przez AI i ML
+  ai_activity_seeing_ai: Widząc AI
+  ai_activity_seeing_ai_desc: Darmowa aplikacja, która opowiada świat wokół ciebie
+    w różnych językach.
+  ai_activity_quick_draw: Szybko, Wyciągnij!
+  ai_activity_quick_draw_desc: Czy sieć neuronowa może nauczyć się rozpoznawać gryzmoły?
+  ai_activity_teachable: Pojętna maszyna
+  ai_activity_teachable_desc: Naucz komputer rozpoznawać Twoje własne obrazy, dźwięki
+    oraz pozy.
+  ai_activity_experiments: Eksperymenty AI z Google
+  ai_activity_experiments_desc: Rozpocznij poznawanie uczenia maszynowego poprzez
+    obrazy, rysunki, język, muzykę i wiele innych.
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_zooniverse_desc: Pomóż chronić zagrożoną zebrę górską, rozpoznając różne
+    zwierzęta na zdjęciach.
   codeorg_homepage_hoc2018_curriculum: Przejdź dalej dzięki <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link"> Kursom Code.org </a>
   codeorg_homepage_hoc2018_dance_heading: Utwórz własną <span class="highlight-word">Potańcówkę</span>
@@ -146,6 +177,16 @@ pl:
   hoc2018_tutorial_mchoc_description: Użyj bloków kodu, aby zabrać Aleksa i Steve'a
     na wycieczkę po tym świecie Minecraftu.
   codeorg_homepage_hoc2019_dance_heading: Wypróbuj nową <span class="highlight-word">Potańcówkę&nbsp;!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Dowiedz się więcej
   cookie_banner_message: Kontynuując przeglądanie naszej strony lub klikając "Zgadzam
     się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.
   cookie_banner_more_information: Zapoznaj się z polityką prywatności Code.org.
@@ -392,6 +433,9 @@ pl:
     Działania Godziny Kodowania są dostępne przez cały rok.<a href='%{hoc_activities_url}'>Spróbuj
     aktywności</a> lub przeczytaj nasz<a href='%{howto_guide_url}'>Poradnik jak </a>
     zaplanować wydarzenie dla twojej klasy.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Co roku w grudniu twoja klasa może dołączyć do milionów
     studentów z całego świata świętujących Tydzień Edukacji Informatycznej z godziną
     kodowania. Otworzymy rejestrację na doroczną uroczystość w październiku.
@@ -491,6 +535,7 @@ pl:
   map_warning: Mapa Godziny Kodowania pokazuje tylko pierwsze 200 000 zarejestrowanych
     wydarzeń. Wszystkie zarejestrowane wydarzenia z prawidłowym adresem mogą być wyświetlane
     na <a href='%{events_url}'> stronie wydarzeń.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Zbliża się Godzina Kodowania
   meta_tag_og_description: The Hour of Code to globalny ruch docierający do dziesiątek
     milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek
@@ -514,6 +559,13 @@ pl:
     środowiska. Sprawdź <a href='%{tutorials}'> samouczki i działania </a>. Ta kampania
     jest wspierana przez ponad <a href='%{partners}'> 400 partnerów </a> i 200 000
     nauczycieli na całym świecie.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Wypróbuj samouczki
   hoc_faq_when_is_hoc_q: Kiedy jest Godzina Kodowania?
   hoc_faq_when_is_hoc_a: Godzina kodowania odbywa się każdego roku podczas <a href='%{csedweek_url}'>
@@ -522,29 +574,53 @@ pl:
     cały rok. Tydzień Edukacji Informatycznej odbywa się co roku dla uhonorowania
     pioniera informatyki, <a href='%{grace_hopper}'> Admirał Grace Murray Hopper</a>,
     urodzonej 9 grudnia 1906.
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Dlaczego informatyka?
   hoc_faq_why_cs_a: "<i>Każdy</i> uczeń powinien mieć możliwość nauki informatyki.
     Pomaga ona rozwijać umiejętności rozwiązywania problemów, logicznego myślenia
     i kreatywności. Dzięki rozpoczęciu nauki wcześnie, uczniowie zdobędą podstawy
     dla przyszłych sukcesów na jakiejkolwiek ścieżce zawodowej w XXI wieku. Zobacz
     więcej statystyk na <a href='%{stats_url}'>here</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Jak mogę wziąć udział w Godzinie Kodowania?
   hoc_faq_how_participate_a: "<a href='/how-to'>Rozpocznij planowanie tutaj</a> przeglądając
     nasz przewodnik. Możesz zorganizować Godzinę Kodowania w swojej szkole lub w okolicy
     &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy. Albo po
     prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kto jest odpowiedzialny za Godzinę Kodowania?
   hoc_faq_behind_hoc_a: Godzina Kodowania jest organizowana przez Komitety Doradczy
     i Kontrolujący the Hour of Code i Computer Science Education Week <a href='%{partner_url}'>
     </a>, jak również przez bezprecedensową koalicję partnerów, którzy wspólnie wspierają
     Godzinę Kodowania Hour of Code &mdash; wśród nich Microsoft, Apple, Amazon, Boys
     i Girls Clubs of America oraz College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Nic nie wiem o kodowaniu. Czy nadal mogę zorganizować wydarzenie?
   hoc_faq_host_a: Oczywiście. Ćwiczenia Godziny Kodowania możesz wykonywać samodzielnie.
     Jedyne co musisz zrobić to <a href='%{codeorg_url}/learn'>spróbować naszych samouczków</a>,
     wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą.
     Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola
     wzwyż. Zacznij planowanie swojego wydarzenia poprzez przeczytanie naszych <a href=''how-to'>przewodników</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Jakich urządzeń powinienem użyć z moimi uczniami?
   hoc_faq_devices_a: Samouczki Code.org działają na wszystkich urządzeniach i we wszystkich
     przeglądarkach. Więcej informacji o wymaganiach technicznych samouczków Code.org
@@ -553,6 +629,11 @@ pl:
     w opisie danego samouczka. Nie zapomnij, że oferujemy również <a href='%{unplugged_url}'>aktywności
     bez użycia komputera</a>, jeśli Twoja szkoła nie dysponuje zapleczem technicznym
     potrzebnym dla samouczków!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Czy potrzebuję komputerów dla każdego uczestnika?
   hoc_faq_need_computers_a: Nie. Mamy samouczki dla Godziny Kodowania na komputery
     PC, smartfony, tablety i takie, które nie wymagają w ogóle żadnych urządzeń! Możesz
@@ -566,15 +647,30 @@ pl:
     i na zmianę rozwiązujcie łamigłówki i znajdujcie odpowiedzi na pytania. <li><b>Uczcie
     się bez komputerów.</b> Oferujemy <a href='%{unplugged_url}'> samouczki, które
     nie wymagają komputera </a> at all. </ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Jestem w <country>. Jak mogę uczestniczyć na arenie międzynarodowej?
   hoc_faq_international_a: Każdy może zorganizować Godzinę Kodowania, gdziekolwiek
     na całym świecie. W ubiegłym roku uczniowie na całym świecie uczestniczyli w Godzinie
     Kodowania. Dowiedz się więcej <a href='/promote'>tutaj</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Jak mogę utworzyć samouczek dla Godziny Kodowania?
   hoc_faq_tutorial_a: Jeśli jesteś zainteresowany by być partnerem samouczków, <a
     href='target-tutorial-guidelines'> zobacz nasze wskazówki i instrukcje</a>. Chcielibyśmy
     zrealizować wiele angażujących działań, ale głównym celem jest, aby uczniowie
     i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
   hoc_faq_account_a: Nie. Rejestracja i logowanie nie są wymagane, aby wypróbować
     Godzinę Kodowania. Większość <a href='%{codeorg_url}/learn/beyond'>kursów</a>
@@ -582,6 +678,11 @@ pl:
     do Godziny Kodowania nie powoduje automatycznego utworzenia konta na Code Studio.
     Jeśli chcesz utworzyć konta dla swoich uczniów, to postępuj zgodnie z następującymi
     <a href='https://youtu.be/_smelV_KISE'>instrukcjami</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Jakie zadania powinienem wykonywać z uczniami ze szkół średnich?
   hoc_faq_high_school_a: Nasze samouczki dla Star Wars i Minecraft są świetne dla
     uczniów ze szkół średnich, zwłaszcza w wersji Star Wars JavaScript, a oba samouczki
@@ -590,6 +691,13 @@ pl:
     by zacząć, takich jak samouczki z Angry Birds lub Anną i Elsą. Uczeń szkoły średniej
     powinien być w stanie je ukończyć w 30 minut, a potem może spróbować bardziej
     zaawansowanych na Khan Academy lub CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Podczas Godziny Kodowania używam Scratcha, ale co jeśli moi uczniowie
     używają iPadów zamiast laptopów?
   hoc_faq_scratch_a: Scratch nie działa na tabletach. Jeśli uczniowie są młodzi, mogą
@@ -597,6 +705,10 @@ pl:
     na samouczki na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, możesz
     znaleźć inne samouczki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot
     lub CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Jak liczyć Godziny Kodowania?
   hoc_faq_map_q: Dlaczego nie widzę na mapie mojego znacznika?
   hoc_faq_map_a: Przykro nam, że nie widzisz organizowanego przez Ciebie wydarzenia
@@ -606,12 +718,24 @@ pl:
     z podziałem na państwa; tam znajdziesz organizowane przez siebie wydarzenie. Ponadto,
     ponieważ tysiące osób zapisują się na Godzinę Kodowania, uaktualnienie mapy i
     listy wydarzeń zazwyczaj zajmuje 48 godzin. Sprawdź ponownie za kilka dni!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Śledzenie udziału w Godzinie Kodowania nie jest dokładnym pomiarem
     uczestnictwa. Nie liczymy dokładnie unikatowych identyfikatorów uczniów, kiedy
     śledzimy udział w Godzinie Kodowania zwłaszcza, że nie wymagamy, aby uczniowie
     się logowali czy rejestrowali. W rezultacie w tym samym czasie zarówno przeszacowujemy
     jak i niedoszacowujemy liczbę uczestników. Przeczytaj o wszystkich szczegółach
     <a href='%{codeorg_url}/loc'>tutaj</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Ile mogę się nauczyć w ciągu godziny?
   hoc_faq_one_hour_a: Celem Godziny Kodowania nie jest wyszkolenie kogokolwiek na
     eksperta informatyki w ciągu godziny. Godzina wystarczy jednak by dowiedzieć się,
@@ -631,25 +755,44 @@ pl:
     szkołą, które uświadamiają sobie, że informatyka jest czymś, czego uczniowie chcą,
     a nauczyciele są w stanie uczyć.<br/><br/>Ponadto, wszyscy uczestnicy mogą w ciągu
     godziny przekonać się, że jesteśmy w stanie tego dokonać.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Masz więcej pytań?
   hoc_faq_more_questions_a: Spróbuj znaleźć odpowiedź na naszym <a href='http://support.code.org'>forum
     wsparcia</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Jak kontynuować naukę po Godzinie Kodowania?
   hoc_faq_keep_learning_a: Każdy może organizować Godzinę Kodowania w dowolnym czasie.
     Samouczki działają przez cały rok. Możesz oczekiwać, że nasze samouczki i program
     nauczania będą dostępne na naszej stronie przez cały czas. Przejdź proszę do <a
     href='/promote'>naszych zasobów</a>, aby znaleźć przewodniki do wydarzeń oraz
     inne materiały, które pomogą sprawić, że Twoja Godzina Kodowania będzie sukcesem.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Gdzie mogę wydrukować certyfikaty dla moich uczniów?
   hoc_faq_certificates_a: Przejdź do naszej <a href='%{codeorg_url}/certificates'>strony
     certyfikatów</a>, gdzie możesz wydrukować dyplomy dla całej swojej klasy w dowolnej
     chwili, nawet z wyprzedzeniem. Możesz także wydrukować <a href='%{codeorg_url}/certificates?course=mc'>specjalne
     certyfikaty</a> dla uczniów korzystających z samouczka Minecraft.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Czy są ograniczenia związane z używaniem logo i nazwy Godziny Kodowania?
   hoc_faq_logo_a: Godzina Kodowania jest znakiem towarowym. Nie chcemy uniemożliwiać
     jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Zobacz
     <a href='https://support.code.org/hc/en-us/articles/215831637-Czy-są-jakieś- ograniczenia,
     -jak-mógłbym-używać-logo-Godziny-Kodowania-'> wskazówki, jak go używać</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
   stats_i18n: Uczniowie uczą się w 40 językach
@@ -666,6 +809,8 @@ pl:
     średnich i na uczelniach, na stanowiskach pracy.
   stats_females_more: Podczas Godziny Kodowania kobiety stanowią <b>50% wszystkich
     uczestników</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania."-Nina
     Nichols Peery, nauczyciel'
   stats_student: '"Wiedziałam, że to <b>jedyna</b> taka szansa na całe życie."- Mariana
@@ -793,8 +938,11 @@ pl:
     w ponad 180 krajach, rozpoczynając Godzinę Kodowania.
   learn_banner_beyond: Czy chcesz kontynuować naukę?  <a id='learn_banner_beyond'>
     Przejdź poza Godzinę Kodowania</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Nauczycielu: <a id=''teacher_banner_host''> Zorganizuj godzinę</a>
     lub <a id=''teacher_banner_howto''> przeczytaj, jak to zrobić</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTYKA
   learn_robotics_banner_blurb: Czy masz roboty lub inne urządzenia do obliczeń? Użyj
     je w aktywnościach poniżej i uczyń autentyczną Godzinę Kodowania dla uczniów w
@@ -2133,8 +2281,8 @@ pl:
     a pet that you can feed and play with.
   tutorial_carest_shortdescription: Use the MicroPython programming language to make
     a pet that you can feed and play with.
-  tutorial_accai_shortdescription: Teach an Artificial Intelligence robot to explore
-    a new planet!
+  tutorial_accai_shortdescription: Naucz robota sztucznej inteligencji odkrywania
+    nowej planety!
   tutorial_vceclipse_shortdescription: Code a solar eclipse simulation with JavaScript!
   tutorial_pmzero_shortdescription: Create and program a 3D Pac-Man Maze World
   tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
@@ -4407,12 +4555,11 @@ pl:
   tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
     your computational thinking skills to help Ross solve problems and serve dinner
     to 8 excited kids.
-  tutorial_accai_longdescription: A robot is sent to an unknown planet to discover
-    if humanity could establish a new settlement. It explores the planet to find shelter
-    and discovers and interacts with the local population. As the player, you will
-    experience various Artificial Intelligence techniques to teach the robot how to
-    recognize animals and plants, understand a new language, dialogue with the inhabitants
-    etc.
+  tutorial_accai_longdescription: Robot zostaje wysłany na nieznaną planetę, aby dowiedzieć
+    się, czy ludzkość mogłaby założyć nową osadę. Bada planetę, aby znaleźć schronienie,
+    odkrywa i współdziała z miejscową ludnością. Jako gracz, poznasz różne techniki
+    sztucznej inteligencji, aby nauczyć robota rozpoznawania zwierząt i roślin, rozumienia
+    nowego języka, rozmawiania z mieszkańcami itp.
   tutorial_vceclipse_longdescription: 2017 gave us one of the most spectacular natural
     phenomena of our lives, and now we're going to simulate the solar eclipse with
     JavaScript! Looking at the eclipse as a system of moving parts, we can decompose
@@ -5576,7 +5723,7 @@ pl:
   tutorial_cacrazy_language: English only
   tutorial_cajump_language: English only
   tutorial_carest_language: English only
-  tutorial_accai_language: English, French, Italian, and Dutch
+  tutorial_accai_language: Angielski, francuski, włoski i niderlandzki
   tutorial_vceclipse_language: English only
   tutorial_pmzero_language: English only
   tutorial_hsela_language: English only

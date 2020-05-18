@@ -1,2 +1,3 @@
 // locale for fish
-module.exports = window.blockly.fish_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('fish_locale');

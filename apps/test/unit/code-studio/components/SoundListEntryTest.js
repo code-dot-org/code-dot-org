@@ -61,7 +61,7 @@ describe('SoundListEntry', () => {
     sinon.stub(sounds, 'stopPlayingURL');
     wrapper.setProps({isSelected: false});
 
-    assert.equal(sounds.isPlayingURL(sourceURL), false);
+    assert.equal(sounds.isPlaying(sourceURL), false);
     expect(sounds.stopPlayingURL).to.have.been.calledOnce;
 
     sounds.stopPlayingURL.restore();

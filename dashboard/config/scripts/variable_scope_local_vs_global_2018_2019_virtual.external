@@ -1,0 +1,52 @@
+name 'Variable Scope: Local vs. Global_2018_2019_virtual'
+editor_experiment ''
+title 'U3L19 - variable scope explanation pt2'
+description 'description here'
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+# Creating Variables in the Right Place
+
+<table>
+<tr>
+  <td>
+    <strong>Mistake: </strong> typing <code>var</code> in multiple places
+    <p>
+    Remember that the `var` command creates a new variable without a value. This code contains a mistake:</p>
+    <p><code>var count = count + 1</code></p>
+    <p>It is telling the computer to create a <em>new variable</em> called <strong>count</strong> but it cannot compute <code>count + 1</code> because <code>count</code> doesn't have a value anymore.
+    </p>
+  </td>
+  <td>
+ 	 <img src="https://images.code.org/c328b4ef428688c44ed1ef26eb88b4d7-image-1446399684536.png">
+  </td>
+</tr>
+<tr>
+	<td colspan=2>
+		<hr>
+	</td>
+</tr>
+<tr>
+  <td>
+    <strong>Solution:</strong> remove  <code>var</code> from Line 4
+    <p>
+    Instead of trying to create a new variable inside the event handler, this code will now reference the one created in Line 1. Because we only created the variable once, all references to <code>count</code> refer to the same variable.
+    </p>
+  </td>
+  <td>
+  	<img src="https://images.code.org/56102bea14ff88864eebd9ffd0a73a1b-image-1446400269463.png">
+  </td>
+</tr>
+</table>
+
+<hr>
+
+For more advanced programs, it can actually be useful to declare variables <em>inside</em> an event function, but we won't need to do that for a while. <strong>For now, make sure to only use `var` once for each variable - preferably at the very top of your program so it's easy to keep track.</strong>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

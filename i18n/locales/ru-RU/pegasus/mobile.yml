@@ -12,12 +12,12 @@
   csedweek_dates: "3-9 декабря 2018 года"
   csedweek_banner_hoc: 'Скоро наступит <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Час кода</a> Приглашаем всех учителей и организаторов <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">запланировать свой час кода</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вы учитель информатики? Смотреть другие ресурсы недели образования в информатике</a>'
+  csedweek_banner_teachers_text: "Вы учитель информатики? Смотреть другие ресурсы недели образования в информатике"
   n_have_learned_an_hoc: "<h1>Попробовать</h1><h2>Час кода</h2><h3>Уже попробовали</h3>"
   anybody_can_learn: "Каждый может учиться."
   learn_now: "Начать изучение"
   petition_message: "Каждый ученик в каждой школе должен иметь возможность изучения информатики"
   petition_sign_message: 'Если вы согласны, укажите свое имя. Присоединяйтесь к # остальным.'
-  petition_sign_message_support: 'Если вы поддерживаете нас, подпишите свое имя.  Присоединяйтесь к #остальным.'
   petition_join_others: 'Присоединяйтесь к #остальным'
   name: "Имя"
   email: "Электронная почта"
@@ -288,6 +288,7 @@
   homepage_action_text_learn: "Начать обучение"
   homepage_action_text_signpetition: "Подписать петицию"
   homepage_signpetition_dropdown: "Я согласен(на) ▾"
+  homepage_signpetition_dropdown_text: "Я согласен(на)"
   homepage_diversity_pledge: "Присоединиться к петиции о разнообразии"
   homepage_banner_text_prizes: 'Час кода состоится снова 7-13 декабря. '
   homepage_banner_link_prizes: 'Присоединяйтесь к крупнейшему обучающему событию в истории. '
@@ -892,6 +893,7 @@
   coursef-2017_name: Курс F (2017)
   express-2018_name: Экспресс-курс (2017)
   express-2019_name: Экспресс-курс (2017)
+  express-2020_name: Экспресс-курс (2017)
   accelerated_name: "Ускоренный курс"
   express_name: "Экспресс-курс"
   20-hour_name: Ускоренный курс

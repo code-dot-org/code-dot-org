@@ -162,6 +162,7 @@ describe('MockFirebase', () => {
       init({
         channelId: 'test-firebase-channel-id',
         firebaseName: 'test-firebase-name',
+        firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
         firebaseAuthToken: 'test-firebase-auth-token',
         showRateLimitAlert: () => {}
       });

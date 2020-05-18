@@ -1,0 +1,32 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-04-10T19:02:07.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Use 0's and 1's to create your own emoji!",
+    "long_instructions": "Do This: Use 0's and 1's to create your own emoji! Share the image you create using the hashtag #CodeBreak or emailing it to <codebreatech@code.org>. \r\n\r\nExample:\r\n\r\n![](https://images.code.org/41d648eab91d0cb71a53f9035741f5ef-image-1586545724533.gif)",
+    "version": "1",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "true",
+    "parent_level_id": 23183,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "v1_initial_width": "10",
+    "v1_initial_height": "10",
+    "display_name": "Beginner Challenge: Create Your Own Emoji",
+    "bubble_choice_description": "Use 0's and 1's to create your own emoji!",
+    "thumbnail_url": "https://images.code.org/41d648eab91d0cb71a53f9035741f5ef-image-1586545724533.gif"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-09 22:03:49 +0000\",\"changed\":[\"markdown_instructions\",\"video_key\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-07-22 15:00:03 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:00:39 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:01:28 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:32 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:02:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 17:56:21 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\",\"v1_hide_sliders\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 17:56:53 +0000\",\"changed\":[\"hide_encoding_controls\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:05:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 19:04:17 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"v1_initial_width\",\"v1_initial_height\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 19:09:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

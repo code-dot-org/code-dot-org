@@ -4,6 +4,7 @@
 import AddTableRow from './AddTableRow';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
+import DataEntryError from './DataEntryError';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
@@ -52,7 +53,8 @@ const INITIAL_STATE = {
   pendingAdd: false,
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
-  currentPage: 0
+  currentPage: 0,
+  showError: false
 };
 
 class DataTable extends React.Component {
@@ -62,12 +64,7 @@ class DataTable extends React.Component {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    // "if all of the keys are integers, and more than half of the keys between 0 and
-    // the maximum key in the object have non-empty values, then Firebase will render
-    // it as an array."
-    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired,
+    tableRecords: PropTypes.array.isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired
@@ -81,6 +78,9 @@ class DataTable extends React.Component {
       this.setState(INITIAL_STATE);
     }
   }
+
+  showError = () => this.setState({showError: true});
+  hideError = () => this.setState({showError: false});
 
   addColumn = () => {
     const columnName = this.getNextColumnName();
@@ -196,13 +196,10 @@ class DataTable extends React.Component {
   };
 
   getRowsForCurrentPage(rowsPerPage) {
-    if (this.props.tableRecords['slice']) {
-      return this.props.tableRecords.slice(
-        this.state.currentPage * rowsPerPage,
-        (this.state.currentPage + 1) * rowsPerPage
-      );
-    }
-    return this.props.tableRecords;
+    return this.props.tableRecords.slice(
+      this.state.currentPage * rowsPerPage,
+      (this.state.currentPage + 1) * rowsPerPage
+    );
   }
 
   render() {
@@ -212,7 +209,7 @@ class DataTable extends React.Component {
     let rowsPerPage = this.props.rowsPerPage || MAX_ROWS_PER_PAGE;
     let numPages = Math.max(
       1,
-      Math.ceil(Object.keys(this.props.tableRecords).length / rowsPerPage)
+      Math.ceil(this.props.tableRecords.length / rowsPerPage)
     );
     let rows = this.getRowsForCurrentPage(rowsPerPage);
 
@@ -224,14 +221,17 @@ class DataTable extends React.Component {
 
     return (
       <div>
-        <div style={styles.pagination}>
-          <PaginationWrapper
-            totalPages={numPages}
-            currentPage={this.state.currentPage + 1}
-            onChangePage={this.onChangePageNumber}
-            label={msg.paginationLabel()}
-          />
-        </div>
+        <DataEntryError isVisible={this.state.showError} />
+        {numPages > 1 && (
+          <div style={styles.pagination}>
+            <PaginationWrapper
+              totalPages={numPages}
+              currentPage={this.state.currentPage + 1}
+              onChangePage={this.onChangePageNumber}
+              label={msg.paginationLabel()}
+            />
+          </div>
+        )}
         <table style={styles.table}>
           <tbody>
             <tr>
@@ -281,6 +281,8 @@ class DataTable extends React.Component {
               <AddTableRow
                 tableName={this.props.tableName}
                 columnNames={columnNames}
+                showError={this.showError}
+                hideError={this.hideError}
               />
             )}
 
@@ -291,10 +293,22 @@ class DataTable extends React.Component {
                 record={JSON.parse(rows[id])}
                 key={id}
                 readOnly={this.props.readOnly}
+                showError={this.showError}
+                hideError={this.hideError}
               />
             ))}
           </tbody>
         </table>
+        {numPages > 1 && (
+          <div style={styles.pagination}>
+            <PaginationWrapper
+              totalPages={numPages}
+              currentPage={this.state.currentPage + 1}
+              onChangePage={this.onChangePageNumber}
+              label={msg.paginationLabel()}
+            />
+          </div>
+        )}
       </div>
     );
   }
@@ -303,7 +317,7 @@ class DataTable extends React.Component {
 export default connect(
   state => ({
     tableColumns: state.data.tableColumns || [],
-    tableRecords: state.data.tableRecords || {},
+    tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || ''
   }),
   dispatch => ({

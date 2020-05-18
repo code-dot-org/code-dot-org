@@ -239,6 +239,9 @@ bs-BA:
       NEW Course 4 Bee For Loops 8: "Ako tvoja petlja broji prema gore, prirast je
         dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš
         povećati da bi sakupio/la 3, 6, 9 nektara?\\\r"
+      New Gumball Project: Napravi šta god želiš i podijeli!
+      New Ice Age Project: Napravi šta god želiš i podijeli!
+      New Infinity Project: Napravi šta god želiš i podijeli!
       Standalone_Artist_1: Dobrodošao u Umjetnik! Kao prvo, hajde da pokušamo napraviti
         jednostavan kvadrat koristeći blok za skretanje u desno i blok za kretanje
         naprijed. Svaka stranica bi trebala biti 100 piksela duga.
@@ -320,6 +323,9 @@ bs-BA:
       courseE_artist_functions1: 'Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi
         mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala je 25 piksela
         kraća od dužine kvadrata.'
+      courseE_artist_functions1_copy: 'Zdravo. Ja zombi umjetnik. Ja voljeti crtati!
+        Pomozi mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala
+        je 25 piksela kraća od dužine kvadrata.'
       courseE_bee_concept1: 'Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu
         petlju. '
       courseE_bee_concept1_2018: 'Sakupi sav nektar iz svakog cvijeta. Upotrijebi

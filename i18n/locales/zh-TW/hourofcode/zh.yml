@@ -27,13 +27,19 @@ zh:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -56,6 +62,19 @@ zh:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -63,6 +82,13 @@ zh:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -137,6 +163,16 @@ zh:
   hourofcode_homepage_hoc2018_header_line2: 年齡 4 - 104。
   hoc2018_tutorial_mchoc_description: 用程式積木帶著 Alex 或 Steve 在 Minecraft 遊戲世界中四處冒險。
   codeorg_homepage_hoc2019_dance_heading: 嘗試新版 <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: 進一步學習
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -367,6 +403,9 @@ zh:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: 而每年的 12 月，您的班級都可以與全世界數百萬名學生一起在慶祝「電腦科學教育周」之餘參加「程式設計一小時」活動。我們將在
     10 月開放年度慶祝活動的註冊。
   signup_header: 在 %{campaign_date} 舉辦一場一小時的程式設計課程活動，並在這裡註冊。
@@ -454,6 +493,7 @@ zh:
   map_legend_cs_tech_jam: 特殊活動
   map_warning: Hour of Code的地圖只顯示首 200,000 起已註冊事件。要查看所有已註冊事件，請使用 <a href='%{events_url}'>
     事件頁面</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 一小時玩程式活動來囉
   meta_tag_og_description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
   meta_tag_twitter_title: 一小時玩程式活動來囉
@@ -469,66 +509,164 @@ zh:
   hoc_faq_what_is_hoc_a: Hour of Code 是個一小時介紹計算機科學的活動，希望在揭開程式設計的神秘面紗的同時，說明它是任何人都可以學習的基礎知識，期望能擴展人們在計算機科學領域的參與。查看<a
     href='%{tutorials}'>教程和活動</a>。這個草根活動得到了<a href='%{partners}'>400 個合作夥伴</a>和來自世界
     20 萬名教師的支持。
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: 試試教程
   hoc_faq_when_is_hoc_q: 何時舉辦一小時玩程式活動？
   hoc_faq_when_is_hoc_a: 一小時學程式活動主要是在<a href='%{csedweek_url}'>計算機科學教育週</a>期間展開，%{campaign_date_year}
     計算機科學教育週是 %{campaign_date_full}，但你還是可以隨時隨地舉辦一小時玩程式活動。每年舉辦的計算機科學教育週是為了紀念世界最早的女性程式設計師
     <a href='%{grace_hopper}'>Grace Murray Hopper</a> (December 9, 1906)。
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: 為何是資訊科學？
   hoc_faq_why_cs_a: "<i>每個</i> 學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、 邏輯和創造力。提早開始，學生將有在任何一個
     21 世紀的職業生涯成功的基礎。在 <a href='HTTP://code.org'> Code.org</a> 上觀看更多的統計資料。"
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: 要如何參加一小時玩程式活動？
   hoc_faq_how_participate_a: 觀看完我們的活動指引就可以<a href='/how-to'>開始在這裡計劃</a>。你能在你的學校或你的社區，組織個一小時玩程式活動&mdash;
     就像在進行一個課外活動，非營利的活動或是一個工作。或者，在%{campaign_date} 到來之前自己先體驗。
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: 一小時玩程式活動是由誰支持的？
   hoc_faq_behind_hoc_a: 一小時玩程式是由 Code. org 策劃，屬於 501c3 非營利組織，活動在<a href='%{partner_url}'>計算機科學教育週</a>展開，致力於在學校推廣計算機科學教育，並增加了女性和弱勢學生學習計算機的機會。同時，這是一個<a
     href='Http://code. org/about/partners'>前所未有的夥伴聯盟</a>&mdash; 支持者包括微軟、蘋果、亞馬遜、Boys
     and Girls Clubs of America 以及各大學理事會。
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: 我對寫程式一無所知，這樣能舉辦活動嗎？
   hoc_faq_host_a: 當然，「一小時玩程式活動」是可以自學得。你要做的就是<a href='%{codeorg_url}/learn'>體驗我們目前的教程</a>，挑選你想要的教程&mdash;
     後續就放心的交給我們。我們為不同年齡不同程度的人，提供了許多選擇。先閱讀我們的 <a href='target-resources-how-to'>活動指引</a>，並開始規劃您的活動。
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: 我應該使用什麼設備給我的學生？
   hoc_faq_devices_a: 'Code.org 教學課程可以在所有的裝置跟瀏覽器上使用。您可以在 <a href=''%{codeorg_url}/educate/it''>
     找到關於 Code.org 教學課程的軟硬體需求詳情。關於非 Code.org 的教學課程的軟硬體需求，可以在教學的描述中找到 <a href="%{codeorg_url}/learn">。別忘了，如果您的學校沒有電腦或沒有相關的資源，我們也有不用電腦也可以進行的活動課程喔！
 
 '
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: 我要給每個參與者提供電腦嗎？
   hoc_faq_need_computers_a: 不需要，一小時玩程式活動可以在電腦、手機、平板上執行，有些活動甚至根本不需要計算機。無論你在哪裡，不管設備是什麼，你都可以參加。<p><i>這裡有幾個方式：</i>
     <br><ul><li><b>兩兩合作。</b><a href='%{pair_programming_research}'>研究顯示</a>，學生在<a
     href='%{pair_programming_video}'>合作編程</a>時的學習效果最好，透過在一台電腦上協同，也可以讓你的學生學習合作。<li><b>使用投影螢幕，</b>如果你有一部投影機和有可以電腦連線的大螢幕，你的整個團體就可以一起進行活動，一起觀看影片，輪流解決關卡或回答問題。<li><b>不插電活動，</b>我們提供了<a
     href='%{unplugged_url}'>不需要電腦的教學內容</a>。</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: 我在 <country>。我如何參與國際活動？
   hoc_faq_international_a: 任何人都可以在任何一個地方舉辦一小時玩程式活動。去年，全世界有許多的學生共同參與了這個活動。<a href='target-resources'>進一步了解</a>。
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: 我該如何製作一小時玩程式的教程？
   hoc_faq_tutorial_a: 如果您有興趣成為教程合作夥伴，請<a href='/tutorial-guidelines'>參閱我們的指南和說明</a>。
     我們想要舉辦各種各樣有吸引力的選擇，但主要目標是優化對於計算機科學新手的學生和教師的體驗。
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: 學生是否需要使用帳戶登錄？
   hoc_faq_account_a: 不，學生體驗一小時玩程式的過程中，完全不需要註冊或登入。只有大多數<a href='%{codeorg_url}/learn/beyond'>後續課程</a>才需要建立帳戶以保存學生的學習進度。同時，一小時玩程式上註冊的帳戶並沒有自動與
     Code Studio 的帳戶關聯。如果你想為你的學生建立帳戶，請參考<a href='https://youtu.be/_smelV_KISE'>這些指引</a>。
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: 我應該和高中生一起做哪些活動？
   hoc_faq_high_school_a: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的 JavaScript 版本和這兩個教程的自由發揮關卡。或者,
     我們建議一開始可以在 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 裡選個入門教程，比方說憤怒鳥，或安娜和艾莎公主。高中生應該能夠在
     30 分鐘內完成其中一個，然後進行更進階的教程，比如汗學院或 CodeHS 的 JavaScript 相關課程。
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: 我正用 Scratch 辦一小時玩程式活動，但是如果我的學生有 iPad 而不是筆記型電腦，怎麼辦呢？
   hoc_faq_scratch_a: Scratch無法在平板電腦上執行。如果你的學生年紀小，他們可以使用 ScratchJR--它是iPad應用程式。如果你有看一下<a
     href='http://code.org/learn'> Code.org/learn</a>的教學課程，你會在Code.org找到其他在iPad可行的教學，例如Tynker、Lightbot或CodeSpark。
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: 你如何計算代碼小時數？
   hoc_faq_map_q: 為什麼我在地圖上看不到我的點？
   hoc_faq_map_a: 我們很抱歉，您在“小時代碼”地圖上看不到您的活動。 由於成千上萬的組織者註冊，地圖匯總數據並顯示一個點的幾個事件。 如果您點擊地圖上方的號碼，您將被定向到按州列出的所有事件列表，並可以在此列出您的事件。
     此外，鑑於成千上萬的人註冊了“小時代碼”，地圖和事件列表通常需要48小時才能更新。 幾天后再回來看看！
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: 小時的代碼的跟蹤器不是使用精確測量。我們不會計算特定學生的詳細Id當我們正在跟蹤代碼小時的參與，特別是因為我們不要求學生登錄或註冊。作為一個結果，我們過度計數和不足計數的參與者，在同一時間。閱讀所有的細節
     <a href='HTTP://code.org/loc'> 在這裡</a>。
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: 一個小時能學多少？
   hoc_faq_one_hour_a: "「一小時的程式設計課程」目的並不是在一小時內把大家教成資訊科學的專家。一小時的時間是剛好讓大家瞭解到資訊科學是門有趣且有創意的學問，而且適合所有年紀、所有學生學習，不管是什麼背景。這個活動的成功不是以學生學了多少資訊科學的知識來衡量的，而是體現在參與族群、性別、經濟背景等的多元化，讓我們可以看到資訊科學在所有年齡層中遍地開花。上百萬的老師與學生在一小時的體驗之後決定繼續下去
     -- 學習一整天、一整個星期甚至更長時間，而且有許多學生決定最後主修資訊科學。<br/><br/>除了學生之外，另一個「得到好處」的是老師們。因為有些老師並沒有資訊科學的學位，但經過這一小時的體驗之後，他們變得有自信，可以教好資訊科學相關的課程。也有成千上萬的老師決定再深入一點研究資訊科學，有些去參與線上課程，甚至有人去進修。有些學校的管理團隊也瞭解到，資訊科學是他們的學生與老師可以一起學習的課程。<br/><br/>總結來說，我們希望一小時的體驗能帶給大家更多未來的可能性。"
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: 還有疑問？
   hoc_faq_more_questions_a: 請嘗試在 <a href='HTTP://support.code.org'> 支援論壇 </a> 中找到答案。
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: 在一小時玩程式活動之後，我可以繼續學習什麼？
   hoc_faq_keep_learning_a: 任何人、任何時間都可以舉辦一小時玩程式活動。所有的教程都會永久保留在網站上。請到<a href='/promote'>我們的資源</a>看看如何辦理活動的活動指引，還有相關的資源，幫助你辦理一場成功的活動。
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: 我在哪裡可以為學生列印證書？
   hoc_faq_certificates_a: 到我們的<a href='%{codeorg_url}/certificates'>認證網頁</a>，您可以在那裡提前先把整個班的認證印好。
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: 當我使用一小時玩程式的標誌或名稱時，有什麼限制嗎？
   hoc_faq_logo_a: Hour of Code 是個商標，我們不想限制使用，但我們必須確保它被使用時符合一些條件，請參考<a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>這些使用指南</a>。
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: 2013 一小時玩程式的統計資料
   stats_growth: 活動在最快的時間內觸及了 1500 萬的使用者。
   stats_i18n: 支援超過 45 種語言
@@ -542,6 +680,8 @@ zh:
   stats_girls_more: 體驗過資訊科學的女孩已經比過去 70 年的總和還多。
   stats_females: 女性參與計算機科學只佔高中課程，大學課程和勞動力的20％。
   stats_females_more: 在代碼的一個小時內, 女性組成了<b>50% 的所有參與者</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: "“每一天都取得相同的結果 - 100％的參與。” - 尼娜尼科爾斯Peery，老師"
   stats_student: "“我知道這是一個一生一次的機會。” - 馬里亞納阿爾扎特，五年級學生"
   stats_michael: "“我從來沒有見過我的學生對學習這麼興奮。” - 老師Michael Clark"
@@ -647,7 +787,10 @@ zh:
   learn_banner_heading: 一小時玩程式
   learn_banner_blurb: 體驗為所有年齡層設計的一小時玩程式教程（支援超過 45 種語言）。參加超過 180 個國家、數以百萬計的學生、教師都加入的一小時玩程式活動。
   learn_banner_beyond: 想要不斷地學習嗎？ <a id='learn_banner_beyond'> 超越一小時</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 教師： <a id='teacher_banner_host'>辦理一小時的活動</a>或<a id='teacher_banner_howto'>觀看活動指引</a>
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: 機器人與電路
   learn_robotics_banner_blurb: 用過機器人技術嗎？透過以下活動使用機器人技術，提供任何年紀的學生一堂實際的「一小時程式設計課程」！
   tutorial_dance2019_name: 舞蹈派對 2019

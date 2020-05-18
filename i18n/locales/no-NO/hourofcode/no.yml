@@ -28,13 +28,19 @@
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -57,6 +63,19 @@
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -64,6 +83,13 @@
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -140,6 +166,16 @@
   hoc2018_tutorial_mchoc_description: Bruk kodeblokker for å ta med Alex eller Steve
     på et eventyr gjennom denne Minecraft-verdenen.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -382,6 +418,9 @@
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
@@ -478,6 +517,7 @@
   map_legend_cs_tech_jam: Spesialarrangement
   map_warning: Kodetimen-kartet viser bare de 200.000 første registrerte arrangementene.
     Alle registrerte arrangementer kan du se på <a href='%{events_url}'>arrangement-siden.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Kodetimen kommer
   meta_tag_og_description: 'Kodetimen er en verdensomspennende bevegelse som når ut
     til et titalls millioner elever i mer enn 180 land og finnes på over 45 språk.
@@ -496,6 +536,13 @@
   hoc_faq_what_is_hoc_a: Kodetimen er en timelang introduksjon til informatikk, utformet
     for å avmystifisere programmering og vise at alle kan lære det grunnleggende.
     <a href='http://code.org/learn'> Se lekskjonene</a>.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Prøv oppgavesettene
   hoc_faq_when_is_hoc_q: Når er Kodetimen?
   hoc_faq_when_is_hoc_a: Kodetimen arrangeres hvert år i %{campaign_date_year}<a href='%{csedweek_url}'>Computer
@@ -503,15 +550,29 @@
     men du kan arrangere Kodetimen når som helst på året. Computer Science Education
     Week avholdes årlig til minne om datapioneren <a href='%{grace_hopper}'>Admiral
     Grace Murray Hopper</a> (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Hvorfor informatikk?
   hoc_faq_why_cs_a: "<i>Hver</i> student burde få muligheten til å lære datavitenskap.
     Det hjelper til med å trene problemløsningsferdigheter, logikk og kreativitet.
     Med å starte tidlig, får studentene et fundament for suksess i et hvilket som
     helst 21-århundre karriereløp. Se flere statistikker på <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hvordan kan jeg delta på Kodetimen?
   hoc_faq_how_participate_a: "<a href='/how-to'> Start planlegging her</a> ved å se
     vår guide. Du kan organisere en Kodetime på skolen eller i nærmiljøet &mdash;
     i en fritidsklubb, Sfo eller på jobb. Eller bare prøv det selv den %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hvem står bak Kodetimen?
   hoc_faq_behind_hoc_a: Kodetimen er organisert av <a href='http://code.org'>Code.org</a>,
     en offentlig frivillig organisasjon dedikert til å ekspandere deltagelse i datavitenskap
@@ -520,6 +581,11 @@
     koalisjon av partnere</a> har kommet sammen for å støtte Kodetimen, som inkluderer
     bl.a. Microsoft, Apple, Amazon, Boys and Girls Clubs of America og det amerikanske
     «College Board».
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Jeg vet ikke noe om koding. Kan jeg fortsatt arrangere en Kodetime?
   hoc_faq_host_a: Selvfølgelig, Aktiviteter i Kodetimen er brukerveiledet. Alt du
     trenger å gjøre er <a href='%{codeorg_url}/learn'>å prøve våre veiledninger</a>,
@@ -527,6 +593,11 @@
     også valg for alle aldre og erfaring, fra barnehage og oppover. Start planlegging
     av ditt arrangement ved å lese vår <a href='target-resources-how-to'>«Hvordan»
     veiledning</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Hvilke enheter burde jeg bruke for elevene mine?
   hoc_faq_devices_a: Code.org tutorials fungerer på alle enheter og nettlesere. Du
     finner mer informasjon om Code.orgs veileder teknologibehov <a href='%{codeorg_url}/educate/it'>
@@ -534,6 +605,11 @@
     href='%{codeorg_url}/learn'>%{partner_url}/lære</a> i den spesifikke veilederbeskrivelsen.
     Ikke glem at vi også tilbyr <a href='%{unplugged_url}'> aktiviteter som kan gjøres
     uten tilkobling til nett </a> hvis skolen ikke kan tilby veiledere!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Trenger jeg en datamaskin for hver elev?
   hoc_faq_need_computers_a: Nei. Vi har Kodetimen opplegg som viker på PCer, smarttelefoner,
     nettbrett og noen som ikke krever datamaskiner i det store og det hele! Du kan
@@ -544,21 +620,41 @@
     datamaskin, så kan hele gruppen din gjøre Kodetimen sammen. Se video biter sammen
     og løse oppgaver eller svare på spørsmål etter tur. <li><b>Gå analogt.</b> Vi
     tilbyr veiledninger som ikke krever datamaskiner i det store og det hele.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Jeg er i <country>. Hvordan kan jeg delta internasjonalt?
   hoc_faq_international_a: Alle kan organisere en Kodetime, hvor som helst i verden.
     I fjor gikk elever over hele verden sammen om å arrangere Kodetimen. Finn ut mer
     <a href='target-resources'> her</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Hvordan kan jeg lage en Kodetimeveiledning?
   hoc_faq_tutorial_a: Hvis du er interessert i å bli en veiledningspartner, <a href='target-tutorial-guidelines'>sjekk
     ut våre rettningslinjer og instruksjoner</a>. Vi ønsker å arrangere mange muligheter,
     men hovedmålet er at studenter og lærere som er helt nye til datavitenskap skal
     få den best mulige opplevelsen.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Må elevene logge på med en konto?
   hoc_faq_account_a: Nei. Registrering eller innlogging er ikke nødvendig for at elevene
     skal får å prøve Kodetimen. De fleste <a href='%{codeorg_url}/learn/beyond'>av
     de videre kursene</a> krever bare konto hvis man vil lagre elevens framgang i
     oppgavene. Å melde seg på Kodetimen lager IKKE automatisk en CodeStudio-konto.
     Hvis du vil lage en konto for elevene dine, følg disse <a href='https://youtu.be/_smelV_KISE'>instruksjonene</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Hvilke aktiviteter bør jeg gjøre med elever i videregående
     skole?
   hoc_faq_high_school_a: For alle aldersgrupper, anbefaler vi at du prøver en av nybegynner-leksjonene  på
@@ -566,12 +662,23 @@
     eller  Anna og Elsa. En elev i videregående vil klare å fullføre en av disse på
     en halv time og kan deretter prøve en mer avansert leksjon i JavaScript, slik
     som Khan Academy eller CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Jeg bruker Scratch i Kodetimen, men hva gjør jeg hvis elevene
     mine har nettbrett i stedet for bærbare datamaskiner?
   hoc_faq_scratch_a: Scratch kjører på nettbrett. Hvis elevene er små, kan de bruke
     appen ScratchJR (for de som kan lese). Hvis du ser på oversikten på <a href='http://code.org/learn'>
     Code.org/learn</a>, kan du finne andre leksoner som fungerer på nettbrett - fra
     Code.org, Tynker, Lightbot eller CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hvordan teller dere Kodetimer?
   hoc_faq_map_q: Hvorfor ser jeg ikke min prikk på kartet?
   hoc_faq_map_a: Vi er veldig lei oss for at du ikke ser Kodetime-arrangementet på
@@ -581,11 +688,23 @@
     oppført der. Siden det er tusenvis av mennesker som registrerer seg for Kodetimen,
     vil det vanligvis ta 48 timer å oppdatere kart og arrangementoversikt. Sjekk igjen
     om noen dager!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Kodetimen tracker er ikke en nøyaktig bruksmåling. Vi teller
     ikke unike student IDer helt korrekt når vi registrerer deltakelse i Kodetimen,
     fordi vi ikke krever at studenter logger seg inn eller registerer seg. Derfor
     teller vi både for mange og for få deltakere samtidig. Les alle detaljene <a href='%{codeorg_url}/loc'>
     her</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Hvor mye kan man lære på en time?
   hoc_faq_one_hour_a: Målet med Kodetimen er ikke å lære noen å bli en dataekspert
     på en time. En time er bare nok å skjønne at informatikk er morsomt og kreativt,
@@ -602,25 +721,44 @@
     administratorer som innser at informatikk er noe deres studenter ønsker og deres
     lærere er i stand til. <br/> <br/> Fremfor alt, det alle deltakerne kan lære på
     en time er at vi kan gjøre dette.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Har du flere spørsmål?
   hoc_faq_more_questions_a: Prøv å finn et svar i vårt <a href='http://support.code.org'>støtte
     forum</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hvordan jeg fortsette å lære etter en Kodetime?
   hoc_faq_keep_learning_a: Hvem som helst kan arrangere en Kodetime - når som helst.
     Veiledere er tilgjengelige året rundt. Du kan forvente at alle våre veiledere
     og læreplaner alltid er tilgjengelig på vårt nettsted. Gå til <a href='/promote'>
     våre ressurser</a> for hvordan-veiledninger og andre ressurser for å gjøre en
     Kodetime til en suksess.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Hvor kan jeg skrive ut diplomer til elevene mine?
   hoc_faq_certificates_a: Gå til vår <a href='%{codeorg_url}/certificates'> diplom-side</a>
     der du kan skrive ut diplomer for hele klassen forhånd. Du kan også skrive ut
     <a href='%{codeorg_url}/certificates?course=mc'> spesielle diplomer</a> for studenter
     på Minecraft opplæringen.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Er det begrensninger på hvordan jeg kan bruke Kodetime-logoen eller
     navnet?
   hoc_faq_logo_a: Kodetimen er varemerkebeskyttet. Vi ønsker ikke å hindre bruken,
     men vi ønsker å sikre at bruken passer innenfor noen rammer. Se <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
     retningslinjene for bruk</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statestikk fra kodetimen i 2013
   stats_growth: Det var den raskeste til å nå 15 millioner brukere.
   stats_i18n: Elevene lærer i over 45 språk
@@ -636,6 +774,8 @@
     of high school courses, university courses, and the workforce.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
     - Nina Nichols Peery, Lærer'
   stats_student: '"Jeg visste at dette var en <b>sjanse jeg bare ville få en gang
@@ -756,8 +896,11 @@
     Bli med millioner av elever og lærere i over 180 land på en Kodetime.
   learn_banner_beyond: Vil du lære mer? <a id='learn_banner_beyond'>Lær mer enn en
     Kodetime</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: Lærere:<a id='teacher_banner_host'>Vær vert for en time</a>eller<a
     id='teacher_banner_howto'>les slik-gjør-du-guiden</a>
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTIKK
   learn_robotics_banner_blurb: Har du roboter? Bruk dem i aktivitetene nedenfor og
     lag en håndfast Kodetime for alle aldre!

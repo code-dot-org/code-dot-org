@@ -70,7 +70,7 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    locale: PropTypes.string,
+    localeEnglishName: PropTypes.string,
     isNewSection: PropTypes.bool
   };
 
@@ -101,7 +101,7 @@ export default class AssignmentSelector extends Component {
 
     return setRecommendedAndSelectedVersions(
       versions,
-      this.props.locale,
+      this.props.localeEnglishName,
       selectedVersionYear
     );
   };

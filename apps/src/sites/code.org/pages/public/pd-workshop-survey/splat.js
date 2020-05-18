@@ -107,7 +107,7 @@ function processError(data) {
     )
     .show();
 
-  $('body').scrollTop(0);
+  window.scrollTo(0, 0);
   $('#btn-submit').removeAttr('disabled');
   $('#btn-submit')
     .removeClass('button_disabled')

@@ -1,4 +1,5 @@
 name 'AP_practice_Qs_rqb_87_CSP_5_1_1'
+editor_experiment ''
 right '<pre>
 IF (num1<num2 AND num1<num3)
      RETURN num1
@@ -34,28 +35,28 @@ ELSE
 markdown <<MARKDOWN
 Consider the following procedure:
 
-<pre>
-PROCEDURE max (num1, num2, num3)
-{
-     <missing code>
-}
-</pre>
+	PROCEDURE max (num1, num2, num3)
+	{
+	     <missing code>
+	}
+
 The procedure max is intended to return the smallest of three numbers.
 
 Which of the following is a replacement for `<missing code>` so it works as intended?
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **5.1.1** and Essential Knowledge statements: **5.1.1A**
-<hr>
- (A) If the first number is smaller then the second number and the third number then it must be the smallest. If not, then we can check to see if the second number is smaller than the other two which would make that the smallest. If neither the first or second number are the smallest, then it must be the third.
 
-<hr>
- (B) This will return the smallest number of the three.
+---
+(A) If the first number is smaller then the second number and the third number then it must be the smallest. If not, then we can check to see if the second number is smaller than the other two which would make that the smallest. If neither the first or second number are the smallest, then it must be the third.
 
-<hr>
- (C) This will return the smallest number of the three.
+---
+(B) This will return the smallest number of the three.
 
-<hr>
- (D) Line 1 returns `num1` when it is less than `num2,` meaning it can\'t be the correct answer choice.
+---
+(C) This will return the smallest number of the three.
 
+---
+(D) Line 1 returns `num1` when it is less than `num2`, meaning it can't be the correct answer choice.
 MARKDOWN

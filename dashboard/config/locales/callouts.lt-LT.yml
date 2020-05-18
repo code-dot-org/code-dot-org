@@ -30,6 +30,9 @@ lt-LT:
       NEW Course 4 Artist Params 10:
         create_function: Spausk čia, kad atvertum išskleistum komandas, o tada nuspausk
           mygtuką „Sukurti komandą“.
+      New Frozen Project:
+        snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių
+          snaigių!
       Overworld Chop Trees:
         craft_callout_preplaced: Mes padėjome kelis blokelius, kad tau būtų nuo ko
           pradėti

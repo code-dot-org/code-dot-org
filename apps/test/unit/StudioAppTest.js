@@ -7,6 +7,7 @@ import {
   restoreStudioApp,
   makeFooterMenuItems
 } from '@cdo/apps/StudioApp';
+import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -182,6 +183,36 @@ describe('StudioApp', () => {
     });
   });
 
+  describe('playAudio', () => {
+    let playStub, isPlayingStub;
+    beforeEach(() => {
+      playStub = sinon.stub(Sounds.getSingleton(), 'play');
+      isPlayingStub = sinon.stub(Sounds.getSingleton(), 'isPlaying');
+    });
+
+    afterEach(() => {
+      playStub.restore();
+      isPlayingStub.restore();
+    });
+
+    it('does not play audio over itself when noOverlap is true', () => {
+      isPlayingStub.onCall(0).returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).not.to.have.been.called;
+
+      isPlayingStub.onCall(1).returns(false);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).to.have.been.calledOnce;
+    });
+
+    it('does play audio over itself when noOverlap is false or unspecified', () => {
+      isPlayingStub.returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: false});
+      studioApp().playAudio('testAudio');
+      expect(playStub).to.have.been.calledTwice;
+    });
+  });
+
   describe('loadLibraryBlocks', () => {
     const initialConfig = {
       level: {
@@ -227,15 +258,22 @@ describe('StudioApp', () => {
       expect(config.dropletConfig.blocks).to.deep.equal(targetBlocks);
     });
 
-    it('given a library, adds all library closures to libraryCode', () => {
+    it('given a library, adds all library closures to projectLibraries', () => {
       let config = initialConfig;
-      let librarycode =
-        createLibraryClosure(sampleLibrary.libraries[0]) +
-        createLibraryClosure(sampleLibrary.libraries[1]);
+      let librarycode = [
+        {
+          name: sampleLibrary.libraries[0].name,
+          code: createLibraryClosure(sampleLibrary.libraries[0])
+        },
+        {
+          name: sampleLibrary.libraries[1].name,
+          code: createLibraryClosure(sampleLibrary.libraries[1])
+        }
+      ];
 
       config.level.libraries = sampleLibrary.libraries;
       studioApp().loadLibraryBlocks(config);
-      expect(config.level.libraryCode).to.deep.equal(librarycode);
+      expect(config.level.projectLibraries).to.deep.equal(librarycode);
     });
 
     it('given a library, adds all functions to codeFunctions', () => {

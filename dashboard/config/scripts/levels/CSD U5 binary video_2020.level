@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:32:48.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "video_key": "csd_concept_binary_data",
+    "instructions_important": "false",
+    "display_name": "Binary and Data",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16383,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* Why are all the types of data on the computer stored as numbers?\r\n* If everything is stored as a number, how do you think the computer tell the difference between numbers, letters, images, and sound?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nTh goal of this discussion is to have the students think more deeply about the purpose of binary.  For the first question, they may want to return to their ASCII character sheets and see how the computer would interpret the same binary sequence as a number.  For their image representation, they may wonder whether it is even useful to interpret the binary sequences as numbers.  In the end, the purpose of defining all data as numbers is less about the \"reality\" of what the ones and zeros represent, and more about how binary is traditionally interpreted.\r\n\r\nFor the second question, allow students to think of different ways that the computer would distinguish between different types of data.  While it's not necessary for students to come up with any specific answer, challenge them on any ways that involve human interpretation of context, such as knowing that a name is most likely text and an age is most likely a number.  Assure them that they will look at the problem again in a couple of lessons."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-27 16:15:28 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 05:28:14 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -80,6 +80,7 @@ class FeedbackDownload extends Component {
           headers={HEADERS}
         >
           <Button
+            __useDeprecatedTag
             text={i18n.downloadFeedbackCSV()}
             onClick={() => {}}
             color={Button.ButtonColor.gray}

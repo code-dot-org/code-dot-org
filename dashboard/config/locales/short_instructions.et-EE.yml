@@ -336,6 +336,13 @@ et-EE:
       NEW Course 4 Bee For Loops 8: "Sul on see selge! Millist juurdekasvu on vaja,
         et koguda 3, 6, 9, 12, 15 nektarit?\\\r Vihje: mille peab igale arvule lisama,
         et saada sellele järgnev arv?"
+      New Gumball Project: Loo midagi vabal valikul ning jaga seda!
+      New Ice Age Project: Loo midagi vabal valikul ning jaga seda!
+      New Infinity Project: Loo midagi vabal valikul ning jaga seda!
+      New Minecraft Hero Project: "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!"
+      New Sports Project: 'Loo oma mäng! Sina otsustad: sa võid kõiki reegleid muuta,
+        spordialasid omavahel siduda, ole loov! Kui lõpetad, klõpsa "Lõpeta" ja lase
+        sõpradel oma mängu nende telefonis proovida.'
       Overworld Avoid Monsters: Kreeperiga ei tasu kokku põrgata. Liigu kollidest
         ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Avoid Monsters_2019: Kreeperiga ei tasu kokku põrgata. Liigu kollidest
@@ -559,6 +566,8 @@ et-EE:
         vähe tsükleid, et mind päevalilleni viia."
       courseE_artist_functions1: "Aita zombile joonistada prilid, kasutades 100 piksli
         pikkuste külgedega ruute.\\\r\nKaar klaaside vahel on 75 piksli pikkune."
+      courseE_artist_functions1_copy: "Aita zombile joonistada prilid, kasutades 100
+        piksli pikkuste külgedega ruute.\\\r\nKaar klaaside vahel on 75 piksli pikkune."
       courseE_bee_concept1: 'Kogu nektarit igalt lillelt. Kasuta korduse pesa. '
       courseE_bee_concept1_2018: 'Kogu nektarit igalt lillelt. Kasuta korduse pesa. '
       courseE_bee_functions1: Kogu kogu nektar igalt lillelt.

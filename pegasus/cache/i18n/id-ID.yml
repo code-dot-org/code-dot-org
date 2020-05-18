@@ -20,6 +20,8 @@ id-ID:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
     yang lain</a>'
+  csedweek_banner_teachers_text: Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
+    yang lain
   n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
@@ -27,8 +29,6 @@ id-ID:
     untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda dan bergabunglah dengan
     milis kami dengan # orang lainnya.'
-  petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabunglah
-    dengan # orang lainnya.'
   petition_join_others: 'Bergabunglah dengan # orang-orang lainnya'
   name: Nama
   email: Email
@@ -411,6 +411,7 @@ id-ID:
   homepage_action_text_signpetition: Tandatangani petisi
   homepage_action_text_wincelebritychat: Menangkan sebuah obrolan selebriti
   homepage_signpetition_dropdown: Tandatangani petisi kami &#x25BE;
+  homepage_signpetition_dropdown_text: Saya setuju
   homepage_diversity_pledge: Ambil jaminan diversitas
   homepage_banner_text_prizes: 'The Hour of Code akan datang lagi, Desember 7-13. '
   homepage_banner_link_prizes: 'Bergabung dengan acara belajar terbesar dalam sejarah. '
@@ -2074,7 +2075,7 @@ id-ID:
   header_course_catalog: Katalog Kursus
   header_project_gallery: Proyek
   header_sections: Sesi
-  header_professional_learning: Belajar profesional
+  header_professional_learning: Pembelajaran profesional
   header_educate_overview: Ikhtisar Pendidik
   header_educate_elementary: Sekolah Dasar
   header_educate_middle: Sekolah Menengah Pertama
@@ -2284,9 +2285,9 @@ id-ID:
   hoc2018_mc_homepage_join_us: Bergabunglah dengan kami
   hoc2018_mc_homepage_try_it: Cobalah
   hoc2018_mc_teacher_guide: Lihat petunjuk guru
-  hoc2018_mc_minecraft_education: Pendidikan Minecraft
+  hoc2018_mc_minecraft_education: Minecraft Education
   hoc2018_mc_continue_learning: Lanjutkan pembelajaran dengan Minecraft.
-  hoc2018_mc_go_to_mc_education: Pergi ke pendidikan Minecraft
+  hoc2018_mc_go_to_mc_education: Pergi ke Minecraft Education
   hoc2018_mc_short_description: Gunakan kreatifitasmu dan keterampilan memecahkan
     masalah untuk menemukan harta terpendam dan eksplor dunia bawah air dengan kekuatan
     kode.
