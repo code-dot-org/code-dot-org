@@ -464,7 +464,7 @@ module Pd
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
-          surveyData: get_foorm_survey_data(workshop),
+          surveyData: get_foorm_survey_data(workshop, day),
           submitApi: FOORM_SUBMIT_API,
           submitParams: {
             user_id: current_user.id,
@@ -549,7 +549,7 @@ module Pd
       return true
     end
 
-    def get_foorm_survey_data(workshop)
+    def get_foorm_survey_data(workshop, day=nil)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
           FACILITATOR_ID => facilitator.id,
@@ -569,7 +569,8 @@ module Pd
         workshop_subject: workshop.subject,
         regional_partner_name: regional_partner_name,
         is_virtual: workshop.virtual?,
-        num_facilitators: workshop.facilitators.count
+        num_facilitators: workshop.facilitators.count,
+        day: day
       }
     end
   end
