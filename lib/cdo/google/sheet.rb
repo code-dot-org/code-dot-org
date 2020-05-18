@@ -21,9 +21,9 @@ module Google
       @document_key = document_key
     end
 
-    def export(sheet_name:, rows:)
+    def export(sheet_name:, data:)
       # Write exported data to a sheet in the document
-      @drive.update_sheet rows, @document_key, "#{sheet_name} (auto)"
+      @drive.update_sheet data, @document_key, "#{sheet_name} (auto)"
 
       # Write new metadata to a second sheet in the document
       last_updated = DateTime.now.in_time_zone ActiveSupport::TimeZone.new "Pacific Time (US & Canada)"
@@ -35,7 +35,7 @@ module Google
 
         Last updated: #{last_updated.strftime '%Y-%m-%d %l:%M%P GMT%:::z'}
         Written by: #{CDO.gdrive_export_secret.client_email}
-        Rows: #{rows.length - 1}
+        Rows: #{data.length - 1}
 
         Parts of this Google Sheet are auto-populated from our live application by an automated process.
         The sheet is shared with a \"service account\" that updates it on the application's behalf.
@@ -43,6 +43,27 @@ module Google
       META
       @drive.update_sheet metadata, @document_key, "#{sheet_name}_meta (auto)"
     end
+
+    def notify_of_external_sharing(dcdo_key=nil)
+      # List of external emails that we can share this document with.
+      # This list is saved in DCDO as an array. To append a new value to this list:
+      # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
+      allowed_list = dcdo_key.nil? ? [] : DCDO.get(dcdo_key, [])
+      external_emails = external_emails_with_access - allowed_list
+
+      if external_emails.present?
+        email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
+        error_msg = "Document containing PII information is shared to "\
+          "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
+          "Document key: #{@document_key}"\
+          "Please check with PLC team that this is intentional!"
+
+        Honeybadger.notify error_msg
+        puts error_msg
+      end
+    end
+
+    private
 
     # Returns a list of email addresses of individuals who have been granted access
     # to the document who are not:
