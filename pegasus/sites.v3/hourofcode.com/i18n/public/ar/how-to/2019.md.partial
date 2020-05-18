@@ -109,7 +109,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 [/col-33]
 
-- [اطبع الشهادات](%= codeorg_url('/certificates')%) لطلابك.
+- <"{{a href="{{ urls/certificates>اطبع الشهادات</a> لطلابك.
 - [اطبع "أجريت ساعة البرمجة"]({{ urls/promote_stickers }}) ملصقات لطلابك.
 - [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لمدرستك.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!

@@ -1,4 +1,5 @@
 name 'csp-pre-survey-2017 preamble 1_2018_pilot'
+editor_experiment ''
 markdown <<MARKDOWN
 ### **This survey is anonymous** 
 
@@ -22,10 +23,10 @@ Best practice is to let students complete this survey **before** engaging in any
 You will be able to see the anonymized results of the survey for your students.
 
 Why is this survey here?
+
 * A major goal of CS Discoveries is to broaden participation in computer science.
 * It is crucial therefore to have insight into students' attitudes and beliefs about computer science before the course so that we can measure the amount of change that occurred after the course is over.
 * Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.
 
-
-* Please help by having your students contribute to this vital dataset. Their voices make the difference!
+Please help by having your students contribute to this vital dataset. Their voices make the difference!
 MARKDOWN

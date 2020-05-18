@@ -1,5 +1,5 @@
 import Walls from './walls';
-import {imageDataFromURI, URIFromImageData} from '../imageUtils';
+import {toImageData, URIFromImageData} from '../imageUtils';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
@@ -24,18 +24,16 @@ export default class CollisionMaskWalls extends Walls {
     this.wallMaps = {};
     Promise.all(
       Object.keys(skin.wallMaps).map(mapName => {
-        return imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(
-          imageData => {
-            const wallMap = this.wallMapFromImageData(imageData.data);
-            this.wallMaps[mapName] = {
-              srcData: imageData,
-              wallColor: WALL_COLOR,
-              wallMap: wallMap,
-              overlayURI: this.wallOverlayURI(imageData, wallMap),
-              srcUrl: skin.wallMaps[mapName].srcUrl
-            };
-          }
-        );
+        return toImageData(skin.wallMaps[mapName].srcUrl).then(imageData => {
+          const wallMap = this.wallMapFromImageData(imageData.data);
+          this.wallMaps[mapName] = {
+            srcData: imageData,
+            wallColor: WALL_COLOR,
+            wallMap: wallMap,
+            overlayURI: this.wallOverlayURI(imageData, wallMap),
+            srcUrl: skin.wallMaps[mapName].srcUrl
+          };
+        });
       })
     )
       .then(() => {

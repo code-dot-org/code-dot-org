@@ -67,14 +67,27 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "// Add a call to minVal to the console.log command below\r\nvar rand1 = randomNumber(1,100);\r\nvar rand2 = randomNumber(1,100);    \r\nconsole.log(\"The maximum of \" + rand1 + \" and \" + rand2 + \" is \");\r\n\r\nfunction maxVal(num1, num2){\r\n  \r\n}\r\n\r\nfunction minVal(num1, num2){\r\n  var min;\r\n  if(num1 < num2){\r\n    min = num1;\r\n  }\r\n  else{\r\n    min = num2;\r\n  }\r\n  return min;\r\n}",
+    "start_blocks": "// Add a call to maxVal to the console.log command below\r\nvar rand1 = randomNumber(1,100);\r\nvar rand2 = randomNumber(1,100);    \r\nconsole.log(\"The maximum of \" + rand1 + \" and \" + rand2 + \" is \");\r\n\r\nfunction maxVal(num1, num2){\r\n  \r\n}\r\n\r\nfunction minVal(num1, num2){\r\n  var min;\r\n  if(num1 < num2){\r\n    min = num1;\r\n  }\r\n  else{\r\n    min = num2;\r\n  }\r\n  return min;\r\n}",
     "encrypted_examples": "g9ofYdgZnod5ET4eSrUOkzf78VUSMj93v/HfgEXMD6gfEiPVpVppV64cKi7h\nRWAE\n",
     "parent_level_id": 13858,
     "name_suffix": "_2019",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-03 22:33:11 +0000\",\"changed\":[\"notes\",\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

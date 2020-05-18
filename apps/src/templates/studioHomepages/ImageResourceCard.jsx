@@ -93,6 +93,7 @@ class ImageResourceCard extends Component {
           <div style={styles.description}>{description}</div>
           <br />
           <Button
+            __useDeprecatedTag
             href={link}
             color={Button.ButtonColor.gray}
             text={buttonText}

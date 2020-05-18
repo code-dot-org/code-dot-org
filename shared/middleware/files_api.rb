@@ -142,6 +142,9 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    if endpoint == 'libraries'
+      dont_cache
+    end
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -333,6 +336,9 @@ class FilesApi < Sinatra::Base
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
+
+    # Block libraries with PII/profanity from being published.
+    return bad_request if endpoint == 'libraries' && ShareFiltering.find_failure(body, request.locale)
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.

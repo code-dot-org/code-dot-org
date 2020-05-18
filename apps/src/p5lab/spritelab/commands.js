@@ -21,6 +21,8 @@ function drawBackground() {
 
 function updateTitle() {
   this.fill('black');
+  this.stroke('white');
+  this.strokeWeight(3);
   this.textAlign(this.CENTER, this.CENTER);
   this.textSize(50);
   this.text(coreLibrary.title, 0, 0, 400, 200);
@@ -38,6 +40,9 @@ export const commands = {
   },
 
   // Action commands
+  bounceOff(spriteArg, targetArg) {
+    actionCommands.bounceOff(spriteArg, targetArg);
+  },
   changePropBy(spriteArg, prop, val) {
     actionCommands.changePropBy(spriteArg, prop, val);
   },
@@ -48,6 +53,10 @@ export const commands = {
 
   isTouchingEdges(spriteArg) {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
+  },
+
+  isTouchingSprite(spriteArg, targetArg) {
+    return actionCommands.isTouchingSprite(spriteArg, targetArg);
   },
 
   jumpTo(spriteArg, location) {

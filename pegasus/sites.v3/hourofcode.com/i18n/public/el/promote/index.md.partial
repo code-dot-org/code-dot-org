@@ -6,21 +6,21 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Πώς μπορεί η κοινότητά σας να συμμετάσχει στην Ώρα του Κώδικα
+# Εμπλέξτε την κοινότητά σας στην Ώρα του Κώδικα
 
 ## 1. Διαδώστε το
 
-Tell your friends about the **#HourOfCode**!
+Πείτε στους φίλους σας από την **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
-## Ζητήστε από όλο το σχολείο να προσφέρει μία Ώρα του Κώδικα
+## 2. Ζητήστε από όλο το σχολείο να προσφέρει μία Ώρα του Κώδικα
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Στείλτε αυτό το email]({{ promote/sample_emails }}) στον διευθυντή σας και καλέστε κάθε τάξη στο σχολείο σας να συμμετέχει.
 
-## Ζήτησε από τον εργοδότη σου να συμμετάσχει
+## 3. Ζητήστε από τον εργοδότη σας να συμμετάσχει
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Στείλτε αυτό το email]({{ promote/sample_emails }}) στον διευθυντή σας ή στον διευθύνοντα σύμβουλο της εταιρείας σας.
 
 ## 4. Προωθήστε την Ώρα του Κώδικα στην κοινότητά σας
 

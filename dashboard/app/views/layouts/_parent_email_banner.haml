@@ -1,0 +1,32 @@
+-# Only show when we're not showing the cookie banner,
+-# the current user is signed in, a student, doesn't have a parent email, and hasn't previously dismissed the banner
+-# and the page isn't a level.
+
+:ruby
+  show_banner =
+    !(request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)) &&
+    current_user && current_user.user_type == 'student' &&
+    current_user.parent_email.blank? &&
+    !current_user.parent_email_banner_dismissed &&
+    !@level
+
+- if show_banner
+  %script{src: webpack_asset_path("js/layouts/_parent_email_banner.js")}
+
+  #parent-email-banner
+    %div.banner-content
+      .text
+        != I18n.t('parent_email_banner.text', markdown: true)
+
+      .buttons
+        %button#link_your_email= I18n.t('parent_email_banner.link_your_email')
+        %button#not_now= I18n.t('parent_email_banner.not_now')
+  = form_for(current_user,
+      url: '/users/parent_email',
+      remote: true,
+      html: { id: 'parent-email-banner-modal-form' },
+      namespace: 'parent-email-banner-modal',
+    ) do |f|
+    = f.hidden_field :parent_email
+    = f.hidden_field :parent_email_preference_opt_in
+    = f.hidden_field :parent_email_preference_source, value: EmailPreference::PARENT_EMAIL_BANNER

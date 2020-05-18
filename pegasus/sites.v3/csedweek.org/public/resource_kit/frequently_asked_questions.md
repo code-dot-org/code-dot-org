@@ -10,7 +10,7 @@ Computer Science Education Week (CSEdWeek) is an annual program dedicated to sho
 ---
 
 ## What is the Hour of Code?
-The Hour of Code is a one-hour introduction to computer programming, designed to demystify code and show that anyone can learn. Your Hour of Code can take place any time during CS Ed Week!
+The Hour of Code is a one-hour introduction to computer programming, designed to demystify code and show that anyone can learn. Your Hour of Code can take place any time during CSEdWeek!
 
 Existing [computer science teachers](/csteacher) can create their own Hour of Code lesson, if they want. For everyone else, we'll provide self-guided tutorials that anybody can do. Participants don't need any prior experience or even a computer.
 
@@ -24,13 +24,13 @@ No. Hour of Code modules and tools are self-directed. All you have to do is pick
 ## Do we need computers for every participant?
 
 NO COMPUTERS NEEDED!
-We will curate a selection of computer science tutorials that work on PC’s, smartphones, and tablets – so really you can join wherever you are with whatever you have.
+We curate a selection of computer science tutorials that work on PCs, smartphones, and tablets – so you can join wherever you are with whatever you have.
 
-If you have more than one device, research shows that [students learn best when they are pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning), sharing a computer. So encourage your students to double up.  If using smartphones, they can take turns.
+If you have more than one device, research shows that [students learn best when they are pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning), sharing a computer. So encourage your students to double up. If using smartphones, they can take turns.
 
 If you have only one internet-connected device, then you can have an audience interactively shout out answers while you go through the tutorial on a shared screen using a projector.
 
-And if you don't have any internet-connected devices, you can still participate. Computer Science is all about problem solving, logic, and design, so you can start with pencil and paper (like some of the best professional programmers) using "unplugged" tutorials (see example "unplugged" tutorials:  by [NCWIT](http://www.ncwit.org/unplugged) or by [ThinkerSmith](/files/CSEDrobotics.pdf)).
+And if you don't have any internet-connected devices, you can still participate. Computer science is all about problem solving, logic, and design, so you can start with pencil and paper (like some of the best professional programmers) using "unplugged" tutorials (see example "unplugged" tutorials:  by [NCWIT](http://www.ncwit.org/unplugged) or by [ThinkerSmith](/files/CSEDrobotics.pdf)).
 
 ---
 
@@ -85,7 +85,7 @@ Organize a family hour of code and let your kids teach you. You can use PCs, tab
 ---
 
 ## What day do I need to do my Hour of Code?
-You can do your Hour of Code on any day during CSEdWeek (December 4-10, 2017).
+You can do your Hour of Code on any day during CSEdWeek (December 7-13, 2020).
 
 ---
 
@@ -96,7 +96,7 @@ You are welcome to participate in the Hour of Code. Several of our tutorials wil
 ---
 
 ## What if I already teach computer science or coding?
-You can use one of the existing tutorials, or you can develop your own for your students.  Even better, with your credibility, you can organize large-scale computer science activities at your school.  Some other ideas are below, but see our [guide for CS teachers](/csteacher) for more details:
+You can use one of the existing tutorials, or you can develop your own for your students.  Even better, with your credibility, you can organize large-scale computer science activities at your school. Some other ideas are below, but see our [guide for CS teachers](/csteacher) for more details:
 
 - Get your principal on board
 - Organize a code-in or an Hour of Code activity

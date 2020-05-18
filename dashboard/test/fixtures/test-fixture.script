@@ -1,10 +1,10 @@
 script_announcements [{"notice"=>"foo", "details"=>"bar", "link"=>"", "type"=>"information"}]
 
-stage 'Stage1'
+stage 'stage1'
 level 'Level 1'
 level 'Level 2'
 level 'Level 3'
 
-stage 'Stage2'
+stage 'stage2'
 level 'Level 4', progression: 'MyProgression'
 level 'Level 5', progression: 'MyProgression'

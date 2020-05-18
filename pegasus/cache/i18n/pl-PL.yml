@@ -21,14 +21,14 @@ pl-PL:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje
     CSEdWeek</a>'
+  csedweek_banner_teachers_text: Jesteś nauczycielem informatyki? Zobacz inne propozycje
+    CSEdWeek
   n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien móc uczyć się informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do
     # innych.'
-  petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz
-    do # innych.'
   petition_join_others: 'Dołącz do # innych'
   name: Imię/Nazwisko
   email: Adres e-mail
@@ -96,6 +96,7 @@ pl-PL:
   congratulations_volunteer: |-
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
+  congratulations_on_completing_course: Gratulacje za ukończenie %{course}
   congrats_next_tutorials_title: Przejdź na następny poziom
   congrats_next_tutorials_desc: Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj
     <a href="%{current_path}/next">samouczki partnerów</a>.
@@ -222,6 +223,7 @@ pl-PL:
     aby cały świat się uczył.
   personalize_certificate: Spersonalizuj swój certyfikat
   print_certificates: Drukuj certyfikaty
+  print_one_here_certificates: Wypisz jeden tutaj.
   share_achievement: Podziel się swoim osiągnięciem
   beyond_hour_message: Kontynuuj z naszymi <a href='http://studio.code.org'> innymi
     kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć
@@ -390,6 +392,7 @@ pl-PL:
   homepage_action_text_signpetition: Podpisz petycję
   homepage_action_text_wincelebritychat: Wygraj czat z celebrytą
   homepage_signpetition_dropdown: Zgadzam się &#x25BE;
+  homepage_signpetition_dropdown_text: Zgadzam się
   homepage_diversity_pledge: Weź zastaw różnorodności
   homepage_banner_text_prizes: 'Godzina Kodowania nadchodzi ponownie, 7-13 grudnia. '
   homepage_banner_link_prizes: 'Dołącz do największego wydarzenia edukacyjnego w historii. '
@@ -514,6 +517,7 @@ pl-PL:
   minecraft_adventurer: Poszukiwacz przygód z Minecraftem
   minecraft_tutorials: Samouczki Minecrafta w Godzinie Kodowania
   minecraft_specs: Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2 +
+  minecraft_start_tutorial: Rozpocznij samouczek
   minecraft_agent_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
   minecraft_agent_button: Rozpocznij
@@ -1223,6 +1227,8 @@ pl-PL:
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
   express-2018_name: Szybki Kurs (2018)
+  pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
+  csd2_name: 'Rodział 2: Web Development'
   accelerated_name: Przyspieszony kurs
   20-hour_name: Przyspieszony kurs
   algebra_name: Pełny kurs Informatyka w algebrze
@@ -2082,6 +2088,7 @@ pl-PL:
   header_documentation: Dokumentacja
   user_header_label: Witaj %{username}
   user_header_team: Zespół
+  user_header_my_projects: Moje projekty
   user_header_settings: Moje konto
   user_header_logout: Wyloguj się
   user_header_signin: Zaloguj się

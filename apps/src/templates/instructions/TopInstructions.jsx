@@ -326,19 +326,23 @@ class TopInstructions extends Component {
   };
 
   /**
-   * Given a prospective delta, determines how much we can actually change the
-   * height (accounting for min/max) and changes height by that much.
-   * @param {number} delta
-   * @returns {number} How much we actually changed
+   * Returns the top Y coordinate of the instructions that are being resized
+   * via a call to handleHeightResize from HeightResizer.
    */
-  handleHeightResize = delta => {
-    const currentHeight = this.props.height;
+  getItemTop = () => {
+    return this.refs.topInstructions.getBoundingClientRect().top;
+  };
 
-    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
+  /**
+   * Given a desired height, determines how much we can actually change the
+   * height (account for min/max) and changes the height to that.
+   * @param {number} desired height
+   */
+  handleHeightResize = desiredHeight => {
+    let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
-    return newHeight - currentHeight;
   };
 
   /**
@@ -585,7 +589,7 @@ class TopInstructions extends Component {
       $('#containedLevelAnswer0').length > 0;
 
     return (
-      <div style={mainStyle} className="editor-column">
+      <div style={mainStyle} className="editor-column" ref="topInstructions">
         <PaneHeader
           hasFocus={false}
           teacherOnly={teacherOnly}
@@ -777,6 +781,7 @@ class TopInstructions extends Component {
           </div>
           {!this.props.isEmbedView && (
             <HeightResizer
+              resizeItemTop={this.getItemTop}
               position={this.props.height}
               onResize={this.handleHeightResize}
             />

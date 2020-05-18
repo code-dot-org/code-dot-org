@@ -1,0 +1,10 @@
+name 'Crowdsourcing-Unplugged_2020'
+video_key 'C3_crowdsourcing'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Crowdsourcing
+
+See how crowdsourcing, a problem-solving technique common in computer science, can help you complete a task together as a classroom more efficiently than if you had to do it alone.
+MARKDOWN

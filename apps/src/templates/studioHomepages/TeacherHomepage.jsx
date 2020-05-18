@@ -36,7 +36,6 @@ export default class TeacherHomepage extends Component {
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
-    locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
     donorBannerName: PropTypes.string,
     donorTeacherBannerOptions: donorTeacherBannerOptionsShape,
@@ -168,7 +167,6 @@ export default class TeacherHomepage extends Component {
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      locale,
       specialAnnouncement
     } = this.props;
 
@@ -236,7 +234,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
+        <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

@@ -67,7 +67,7 @@ nav: how_to_nav
 
 ## ٧- احتفل
 
-- [اطبع الشهادات](%= codeorg_url('/certificates')%) لطلابك.
+- <"{{a href="{{ urls/certificates>اطبع الشهادات</a> لطلابك.
 - [اطبع "أجريت ساعة البرمجة"]({{ promote/resources_stickers }}) ملصقات لطلابك.
 - [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لمدرستك.
 - شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!

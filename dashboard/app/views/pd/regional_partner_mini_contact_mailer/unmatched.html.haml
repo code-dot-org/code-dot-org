@@ -1,0 +1,10 @@
+%p
+  The following person has requested to connect with their local Code.org Regional Partner
+  = link_to('through this form,', CDO.code_org_url('educate/professional-learning/contact-regional-partner', CDO.default_scheme))
+  - if @matched_but_no_pms
+    but the Regional Partner does not have any program managers.
+  - else
+    but we were unable to match them with a Regional Partner.
+  Please follow up with them directly at your convenience.
+
+= render partial: 'form_body'

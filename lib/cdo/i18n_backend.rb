@@ -24,7 +24,8 @@ module Cdo
         # any of the individual scope or key values, to prevent a situation in
         # which periods in a key name can be mistakenly interpreted as separators
         if options.key?(:scope) && !options.key?(:separator)
-          options[:separator] = get_valid_separator(key + options[:scope].join(''))
+          combined_key = [key] + options.fetch(:scope, [])
+          options[:separator] = get_valid_separator(combined_key.join(""))
         end
 
         options
@@ -62,7 +63,8 @@ module Cdo
       # source strings that include HTML
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         translation = super(locale, key, options.except(:markdown))
-        if options.fetch(:markdown, false)
+        markdown = options.fetch(:markdown, false)
+        if markdown == true
           # The safe_links_only just makes sure that the URL is a "safe" web
           # one which starts with: "#", "/", "http://", "https://", "ftp://",
           # "mailto:" However, it isn't good enough because it ignores URLS
@@ -76,6 +78,9 @@ module Cdo
           # redacting all URLs in strings given to outside translators.
           @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe.new(safe_links_only: false))
           @renderer.render(translation)
+        elsif markdown == :inline
+          @inline_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+          @inline_renderer.render(translation)
         else
           translation
         end

@@ -1532,6 +1532,20 @@ applabCommands.onEvent = function(opts) {
           opts.eventName,
           applabCommands.onEventFired.bind(this, opts)
         );
+
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        if (opts.eventName === 'mousedown') {
+          domElement.addEventListener(
+            'touchstart',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
+        if (opts.eventName === 'mouseup') {
+          domElement.addEventListener(
+            'touchend',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
         // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
         // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
         // browsers typically only sent 'change' events.
@@ -1549,6 +1563,11 @@ applabCommands.onEvent = function(opts) {
       case 'mousemove':
         domElement.addEventListener(
           opts.eventName,
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        domElement.addEventListener(
+          'touchmove',
           applabCommands.onEventFired.bind(this, opts)
         );
         // Additional handler needed to ensure correct calculation of

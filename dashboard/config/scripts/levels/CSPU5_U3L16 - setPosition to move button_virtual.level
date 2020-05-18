@@ -1,0 +1,87 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "randomNumber_min_max": null,
+      "setPosition": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
+    "long_instructions": "<img src=\"https://images.code.org/dc1f942b805f07b3581c678ed1669a27-image-1476892595302.gif\" style=\"float: right\">\r\n\r\n# Using setPosition and randomNumber\r\n\r\n**Do this:** \r\n* Make the button jump *anywhere* on the visible screen each time it's clicked.\r\n* Once you've got the button jumping around the screen, click **Finish** to move onto the next level.\r\n\r\n**How?** Instead of using a fixed value, you can use [randomNumber](#triggercallout=showRand) to set the x and y coordinates for setPosition.\r\n\r\n**Need a hint? Click here:** ![expandable](https://images.code.org/a2641825710e3a2942c0634bc79b2568-image-1586187050510.2020-04-06 11_29_59.gif)\r\n\r\n**Optional extension:** If you want to get really nuts, you could add back in the *width* and *height* parameters of setPosition and make the size of the button *also* change randomly with each click!\r\n\r\n\r\n",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"randNumReminder\",\r\n  \"callout_text\": \"Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"randomNumber_min_max\\\"]\",\r\n  \"on\": \"showRand\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"Math\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "parent_level_id": 17092,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-02 16:05:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 15:31:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 20:56:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

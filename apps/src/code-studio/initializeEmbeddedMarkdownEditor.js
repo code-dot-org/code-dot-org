@@ -1,6 +1,6 @@
 /**
  * @file Defines a function for initializing an embedded markdown editor using
- *       CodeMirror and marked.
+ *       CodeMirror
  */
 var initializeCodeMirror = require('./initializeCodeMirror');
 

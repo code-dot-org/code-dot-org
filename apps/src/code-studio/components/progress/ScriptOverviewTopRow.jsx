@@ -85,11 +85,13 @@ class ScriptOverviewTopRow extends React.Component {
         {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div>
             <Button
+              __useDeprecatedTag
               href={`/s/${scriptName}/next`}
               text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
             />
             <Button
+              __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}

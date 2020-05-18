@@ -54,7 +54,6 @@ module Pd::Application
       *(1..12).map {|n| "Grade #{n}".freeze}
     ].freeze
 
-    validate :scholarship_status_valid
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
 
@@ -64,12 +63,6 @@ module Pd::Application
     serialized_attrs %w(
       pd_workshop_id
     )
-
-    def scholarship_status_valid
-      unless scholarship_status.nil? || Pd::ScholarshipInfoConstants::SCHOLARSHIP_STATUSES.include?(scholarship_status)
-        errors.add(:scholarship_status, 'is not included in the list.')
-      end
-    end
 
     # Updates the associated user's school info with the info from this teacher application
     # based on these rules in order:

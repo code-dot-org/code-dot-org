@@ -274,7 +274,7 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         scriptName="coursea-2018"
         versions={versions}
-        locale="Italian"
+        localeEnglishName="Italian"
       />,
       {disableLifecycleMethods: true}
     );

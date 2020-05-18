@@ -441,7 +441,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     course_unit = create :plc_course_unit
     level = create :free_response, peer_reviewable: true
     script_level = create :script_level, script: course_unit.script, levels: [level]
-    learning_module = create :plc_learning_module, plc_course_unit: course_unit, stage: script_level.stage
+    learning_module = create :plc_learning_module, plc_course_unit: course_unit, lesson: script_level.lesson
 
     # Assign the learner to the peer review module
     # (Whoa let's simplify this in the future...)

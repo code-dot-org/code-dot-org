@@ -14,12 +14,14 @@ describe('HiddenForSectionToggle', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <Button
+          __useDeprecatedTag
           text={i18n.visible()}
           color={Button.ButtonColor.gray}
           disabled={true}
           icon="eye"
         />
         <Button
+          __useDeprecatedTag
           text={i18n.hidden()}
           color={Button.ButtonColor.gray}
           disabled={false}
@@ -32,8 +34,8 @@ describe('HiddenForSectionToggle', () => {
     wrapper.setProps({hidden: true});
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Button text={i18n.visible()} disabled={false} />
-        <Button text={i18n.hidden()} disabled={true} />
+        <Button __useDeprecatedTag text={i18n.visible()} disabled={false} />
+        <Button __useDeprecatedTag text={i18n.hidden()} disabled={true} />
       </div>
     );
   });

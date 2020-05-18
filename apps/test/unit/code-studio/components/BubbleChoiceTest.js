@@ -10,13 +10,21 @@ const fakeSublevels = [
     id: 1,
     display_name: 'Choice 1',
     thumbnail_url: 'some-fake.url/kittens.png',
-    url: '/s/script/stage/1/puzzle/2/sublevel/1'
+    url: '/s/script/stage/1/puzzle/2/sublevel/1',
+    description: 'Sublevel 1 is lots of fun',
+    position: 1,
+    letter: 'a',
+    status: 'perfect'
   },
   {
     id: 2,
     display_name: 'Choice 2',
     thumbnail_url: null,
-    url: '/s/script/stage/1/puzzle/2/sublevel/2'
+    url: '/s/script/stage/1/puzzle/2/sublevel/2',
+    description: 'Sublevel 2 has cool stuff to do',
+    position: 2,
+    letter: 'b',
+    status: 'not_tried'
   }
 ];
 
@@ -27,36 +35,17 @@ const DEFAULT_PROPS = {
     sublevels: fakeSublevels,
     previous_level_url: '/s/script/stage/1/puzzle/1',
     next_level_url: '/s/script/stage/1/puzzle/3',
-    script_url: '/s/script'
+    script_url: '/s/script',
+    name: 'Bubble Choice',
+    type: 'BubbleChoice',
+    teacher_markdown: 'Students should work on which ever bubble they like'
   }
 };
 
 describe('BubbleChoice', () => {
-  it('renders level information', () => {
+  it('renders correct number of sublevels', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    assert.equal(DEFAULT_PROPS.level.display_name, wrapper.find('h1').text());
-    assert.equal(
-      DEFAULT_PROPS.level.description,
-      wrapper.find('SafeMarkdown').text()
-    );
-  });
-
-  it('renders sublevel thumbnail if present', () => {
-    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    const thumbnails = wrapper.find('img');
-    assert.equal(1, thumbnails.length);
-    assert(
-      thumbnails
-        .at(0)
-        .getDOMNode()
-        .src.includes(fakeSublevels[0].thumbnail_url)
-    );
-  });
-
-  it('renders a placeholder div if sublevel thumbnail is not present', () => {
-    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    const placeholderThumbnails = wrapper.find('.placeholder');
-    assert.equal(1, placeholderThumbnails.length);
+    assert.equal(2, wrapper.find('SublevelCard').length);
   });
 
   describe('back and continue buttons', () => {

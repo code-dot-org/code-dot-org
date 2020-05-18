@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:10:22.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "Anything else you'd like to say about your experience in the course?",
+    "instructions_important": "false",
+    "placeholder": "Write whatever you like here.  Your responses will be anonymous.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "optional": "true",
+    "parent_level_id": 20148,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 14:19:36 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-09-24 22:00:10 +0000\",\"changed\":[],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,22 @@
+peer_reviews_to_complete 2
+hideable_stages true
+
+stage 'Welcome to CSD Virtual Professional Learning'
+level 'CSD-U3-fill_2019-Jess'
+level 'VirtualPLOverview'
+
+stage 'Introduction to CSD'
+level 'Jess - CSD U2 HTML Adding Paragraphs_2019'
+
+stage 'Course Resources'
+level 'OPD-CSD lesson plans'
+
+stage 'Debugging'
+level 'OPL - CSD-PL AYWS1 Debugging Intro'
+level 'OPL - CSD Web Debugging'
+level 'OPL - CSD-PL Debugging Instructions'
+level 'OPL - CSD U3 drawing practice 1'
+level 'OPL - CSD U3 drawing practice 3'
+level 'OPL - CSD U3 Variable names debug'
+level 'OPL - CSD U3 Sprites debug'
+level 'OPL - CSD - Debugging'

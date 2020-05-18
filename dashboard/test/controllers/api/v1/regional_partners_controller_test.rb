@@ -30,6 +30,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   setup do
     Pd::Workshop.any_instance.stubs(:process_location) # don't actually call Geocoder service
+    Pd::RegionalPartnerMapping.any_instance.stubs(:unique_region_to_partner) # skip uniqueness validations for easier testing
   end
 
   [:index, :capacity].each do |action|

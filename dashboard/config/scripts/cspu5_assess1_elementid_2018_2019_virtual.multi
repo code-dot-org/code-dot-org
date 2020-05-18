@@ -1,0 +1,19 @@
+name 'cspu5_assess1_elementid_2018_2019_virtual'
+right 'An element with a unique ID must always have an event handler associated with it.'
+wrong 'Any element that needs to be triggered by onEvent must have a unique ID.'
+wrong 'Two or more onEvent calls may reference the same ID.'
+wrong 'While not a requirement, IDs should be meaningful and descriptive.'
+wrong 'IDs allow a programmer to reference interface elements within their code.'
+
+markdown <<MARKDOWN
+Which of the following is FALSE about element IDs?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 1**
+
+An element must be given a unique ID so a program can reference it; however, it does not need an event handler (lines of code that is executed due to an event such as mouse clicks, keyboard presses, and so forth). 
+
+For example, a screen has a button and an image on it. Both the button and the image have unique element IDs (such as "button1" and "image1"). The button has an event handler because the user would need to click it for code to run; however, the image does not have an event handler because it displays an image without needing an action from the user and thus, does not necessarily have an event handler associated with it.
+
+MARKDOWN

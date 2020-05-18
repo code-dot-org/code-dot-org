@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup} from 'react-bootstrap';
 import Select from 'react-select';
-import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 
 export class ScholarshipDropdown extends React.Component {
   static propTypes = {
     scholarshipStatus: PropTypes.string,
+    dropdownOptions: PropTypes.array,
     onChange: PropTypes.func,
     disabled: PropTypes.bool
   };
@@ -18,7 +18,7 @@ export class ScholarshipDropdown extends React.Component {
           clearable={false}
           value={this.props.scholarshipStatus}
           onChange={this.props.onChange}
-          options={ScholarshipDropdownOptions}
+          options={this.props.dropdownOptions}
           disabled={this.props.disabled}
         />
       </FormGroup>

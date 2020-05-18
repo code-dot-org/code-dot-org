@@ -11,11 +11,11 @@ driver:
   instance_type: m5.4xlarge
 <% if ENV['SUBNET_ID'] %>
   subnet_id: <%= ENV['SUBNET_ID'] %>
+  associate_public_ip: true
 <% end %>
 <% if ENV['IMAGE_ID'] %>
   image_id: <%= ENV['IMAGE_ID']%>
 <% end %>
-  associate_public_ip: true
   block_device_mappings:
     - device_name: /dev/sda1
       ebs:
@@ -29,3 +29,6 @@ driver:
   iam_profile_name: <%=ENV['IAM_PROFILE_NAME']%>
 provisioner:
   name: chef_zero
+  environments_path: ../cdo-apps/test/environments
+  client_rb:
+    environment: adhoc

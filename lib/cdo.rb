@@ -185,16 +185,17 @@ module Cdo
       filter_backtrace exception.backtrace
     end
 
-    def filter_backtrace(backtrace)
-      FILTER_GEMS.map do |gem|
+    def filter_backtrace(backtrace, filter_gems: FILTER_GEMS)
+      filter_gems.each do |gem|
         backtrace.reject! {|b| b =~ /gems\/#{gem}/}
       end
       backtrace.each do |b|
         b.gsub!(dir, '[CDO]')
         Gem.path.each do |gem|
-          b.gsub!(gem, '[GEM]')
+          b.gsub!(/#{gem}(\/gems|\/bundler\/gems)?/, '[GEM]')
         end
         b.gsub! Bundler.system_bindir, '[BIN]'
+        b.gsub! RbConfig::CONFIG['rubylibdir'], '[RUBY]'
       end
       backtrace.join("\n")
     end

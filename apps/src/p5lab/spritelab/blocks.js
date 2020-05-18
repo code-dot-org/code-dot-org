@@ -163,7 +163,7 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: 'Draw',
+            text: i18n.draw(),
             action: () => {
               getStore().dispatch(
                 changeInterfaceMode(
@@ -174,7 +174,7 @@ const customInputTypes = {
             }
           },
           {
-            text: 'More',
+            text: i18n.more(),
             action: () => {
               getStore().dispatch(show(Goal.NEW_ANIMATION));
             }
@@ -199,7 +199,18 @@ const customInputTypes = {
         .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue(arg.name)}'`;
+      switch (block.type) {
+        case 'gamelab_clickedSpritePointer':
+          return '{id: extraArgs.sprite}';
+        case 'gamelab_subjectSpritePointer':
+          return '{id: extraArgs.sprite}';
+        case 'gamelab_objectSpritePointer':
+          return '{id: extraArgs.target}';
+        default:
+          // unsupported block for spritePointer, returning undefined here
+          // will match the behavior of an empty socket.
+          return undefined;
+      }
     }
   },
   spritePicker: {
@@ -278,9 +289,9 @@ export default {
 
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
-        FUNCTION_HEADER: 'Behavior',
-        FUNCTION_NAME_LABEL: 'Name your behavior:',
-        FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?'
+        FUNCTION_HEADER: i18n.behaviorEditorHeader(),
+        FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
+        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription()
       },
       'behavior_definition',
       {
@@ -521,7 +532,13 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    if (blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE) {
+
+    // NOTE: On the page where behaviors are created (the functions/#/edit page)
+    // blockInstallOptions is undefined.
+    if (
+      !blockInstallOptions ||
+      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
+    ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {

@@ -79,7 +79,7 @@ class ApplicationController < ActionController::Base
   def render_404
     respond_to do |format|
       format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
-      format.all {head :not_found}
+      format.all {head :not_found, content_type: 'text/html'}
     end
   end
 
@@ -131,7 +131,10 @@ class ApplicationController < ActionController::Base
     :email_preference_opt_in,
     :data_transfer_agreement_accepted,
     :data_transfer_agreement_required,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
   ].freeze
 
   def configure_permitted_parameters
@@ -192,23 +195,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    # logged in users can:
-    if current_user
-      # save solved levels to a gallery (subject to
-      # additional logic in the blockly code because blockly owns
-      # which levels are worth saving)
-      if options[:level_source].try(:id) &&
-          options[:solved?] &&
-          options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(
-          gallery_activity: {
-            level_source_id: options[:level_source].try(:id),
-            user_level_id: options[:user_level] && options[:user_level].id
-          }
-        )
-      end
-    end
-
     response[:activity_id] = options[:activity] && options[:activity].id
 
     response
@@ -224,6 +210,20 @@ class ApplicationController < ActionController::Base
 
   def require_levelbuilder_mode
     unless Rails.application.config.levelbuilder_mode
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
+
+  # Allow us to get some UI test coverage on levelbuilder-only features. This
+  # protection must be applied carefully to make sure that script and level
+  # files in the test environment are never modified.
+  #
+  # UI test authors must be careful to clean up after themselves so that they do
+  # not modify curriculum content in a way could introduce intermittent failures
+  # in other tests. Developers wishing to run these tests locally should run
+  # their local server in levelbuilder_mode.
+  def require_levelbuilder_mode_or_test_env
+    unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
   end
