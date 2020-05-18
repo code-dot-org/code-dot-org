@@ -190,6 +190,11 @@ hu:
     email_preference_yes: Igen
     email_preference_no: Nem
     email_preference_required: Meg kell adnia egy e-mail címet.
+    parent_account_checkbox: Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem
+    parent_account_email_progress_permission: Küldhetünk Önnek esetenként e-mailt
+      a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról
+      és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})
+    parent_account_email_label: Szülő/gondviselő e-mail címe
   school_info:
     title: Az iskolai információ (opcionális)
     school_country: Iskola országa
@@ -446,8 +451,14 @@ hu:
     update: Adatok frissítése
     account_successfully_updated: Az adatok frissítése sikeres volt.
     update_email: Frissítés
+    for_parents_and_guardians: Szülőknek és gondviselőknek
+    link_a_parent_email: 'Kapcsolja a szülő/gondviselő e-mail címét ehhez a fiókhoz,
+      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről. Ezzel
+      az e-mail címmel tudja a jelszavát is visszaállítani.  '
     parent_guardian_email_label: Szülő/gondviselő e-mail
     none: Egyik sem
+    only_one_parent_email_supported_warning: 'Megjegyzés: ez alkalommal diákonként
+      csak egy szülői/gondviselői e-mail címet tudunk támogatni.'
     encrypted: titkosítva
   user_level:
     completed: Befejezve
@@ -885,3 +896,8 @@ hu:
       az Egyesült Államokban történik.
     true: Igen
   copy: Másol
+  parent_email_banner:
+    text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
+      így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
+    link_your_email: Kapcsolja az e-mail címét
+    not_now: Most nem
