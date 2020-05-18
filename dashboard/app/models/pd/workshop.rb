@@ -176,7 +176,7 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
-  scope :in_year, ->(year = Date.now.year) do
+  scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
     scheduled_start_on_or_before(Date.new(year + 1))
   end
