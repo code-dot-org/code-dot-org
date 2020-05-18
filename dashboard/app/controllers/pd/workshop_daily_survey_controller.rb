@@ -82,7 +82,7 @@ module Pd
 
       day = params[:day].to_i
 
-      if day == 0 || workshop.sessions.size < day
+      if day == 0 || workshop.sessions.size <= day
         return render_404
       end
 
@@ -92,7 +92,7 @@ module Pd
       end
 
       survey_name = DAILY_SURVEY_NAMES[workshop.subject]
-      render_general_foorm(workshop, survey_name, day, session)
+      render_survey_foorm(survey_name, workshop, session, day)
     end
 
     # General pre-workshop survey using foorm system.
@@ -101,13 +101,7 @@ module Pd
     #
     # If the pre-survey has been already completed, will redirect to thanks page.
     def new_pre_foorm
-      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
-      unless validate_enrolled(workshop)
-        return
-      end
-
-      survey_name = PRE_SURVEY_NAMES[workshop.subject]
-      render_general_foorm(workshop, survey_name, 0, nil)
+      new_general_foorm(PRE_SURVEY_NAMES, 0)
     end
 
     # General post-workshop survey using foorm system.
@@ -116,48 +110,17 @@ module Pd
     #
     # If the post-survey has been already completed, will redirect to thanks page.
     def new_post_foorm
+      new_general_foorm(POST_SURVEY_NAMES, nil)
+    end
+
+    def new_general_foorm(survey_names, day)
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       unless validate_enrolled(workshop)
         return
       end
 
-      survey_name = POST_SURVEY_NAMES[workshop.subject]
-      render_general_foorm(workshop, survey_name, nil, nil)
-    end
-
-    def render_general_foorm(workshop, survey_name, day, session)
-      return render_404 unless survey_name
-
-      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
-        current_user.id,
-        workshop.id,
-        session&.id,
-        day,
-        survey_name
-      )
-        render :thanks
-        return
-      end
-
-      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
-
-      @script_data = {
-        props: {
-          formQuestions: form_questions,
-          formName: survey_name,
-          formVersion: latest_version,
-          surveyData: get_foorm_survey_data(workshop),
-          submitApi: FOORM_SUBMIT_API,
-          submitParams: {
-            user_id: current_user.id,
-            pd_session_id: session&.id,
-            day: day,
-            pd_workshop_id: workshop.id
-          }
-        }.to_json
-      }
-
-      render :new_general_foorm
+      survey_name = survey_names[workshop.subject]
+      render_survey_foorm(survey_name, workshop, nil, day)
     end
 
     # POST /pd/workshop_survey/submit
@@ -347,13 +310,7 @@ module Pd
       # Render a message if no attendance for this workshop.
       return render :no_attendance unless attended_workshop
 
-      # Render a thanks message if already submitted.
-      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
-        render :thanks
-        return
-      end
-
-      render_csf_survey_foorm(survey_name, attended_workshop)
+      render_survey_foorm(survey_name, attended_workshop, nil, nil)
     end
 
     # Display CSF201 (Deep Dive) post-workshop survey.
@@ -486,7 +443,20 @@ module Pd
       render :new_general
     end
 
-    def render_csf_survey_foorm(survey_name, workshop)
+    def render_survey_foorm(survey_name, workshop, session, day)
+      return render_404 unless survey_name
+
+      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
+        current_user.id,
+        workshop.id,
+        session&.id,
+        day,
+        survey_name
+      )
+        render :thanks
+        return
+      end
+
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
@@ -494,12 +464,14 @@ module Pd
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
+          surveyData: get_foorm_survey_data(workshop),
           submitApi: FOORM_SUBMIT_API,
           submitParams: {
             user_id: current_user.id,
+            pd_session_id: session&.id,
+            day: day,
             pd_workshop_id: workshop.id
-          },
-          surveyData: get_foorm_survey_data(workshop)
+          }
         }.to_json
       }
 
@@ -548,18 +520,6 @@ module Pd
 
       if day > 0
         session = get_session_for_workshop_and_day(workshop, day)
-        #unless session
-        #  render_404
-        #  return false
-        #end
-        #unless session.open_for_attendance? || day == workshop.sessions.size
-        #  render :too_late
-        #  return false
-        #end
-        #unless session.attendances.exists?(teacher: current_user)
-        #  render :no_attendance
-        #  return false
-        #end
         return validate_session_for_survey(session, workshop, day)
       end
       return true
