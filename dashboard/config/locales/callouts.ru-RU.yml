@@ -488,6 +488,21 @@ ru-RU:
       courseC_collector_prog1_2019:
         courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
+      courseC_collector_prog7:
+        courseC_collector_prog7_1: 'Если нужно, возьми из набора инструментов и другие
+          блоки!
+
+'
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_1: 'Если нужно, возьми из набора инструментов и другие
+          блоки!
+
+'
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_1: 'Если нужно, возьми из набора инструментов и другие
+          блоки!
+
+'
       courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: Число 4 на тыкве говорит, что доступно
           4 тыквы для сбора.
