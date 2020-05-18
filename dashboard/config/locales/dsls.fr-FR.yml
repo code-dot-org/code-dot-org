@@ -470,15 +470,112 @@ fr-FR:
         title: Choix multiple du labyrinthe
       Begin planning your project:
         content1: description ici
+        markdown: '# Le Processus de Conception   Concevoir un logiciel signifie résoudre
+          beaucoup de petits problèmes, tout le temps. Le principal problème, dans
+          la conception de logiciels, est ce qu''il faut créer, en premier lieu.   Ce
+          processus est utile pour toutes sortes de choses, mais nous allons nous
+          concentrer sur son utilisation pour la conception d''applications.   <!--
+          Traduire les termes « Définir », « Préparer », « Essayer », « Réfléchir
+          » et changer la taille de la police et le positionnement au besoin-->   <div
+          style=" position: relative; text-align: center; font-size: 1em " > < img
+          src = "https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png"
+          alt="processus de conception" style="width: 50%;"> <div style="position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;">Define</div> <div style="position: absolute; top: 52%; left: 61%;
+          transform: translateX(-61%); font-weight: bold;">Prepare</div> <div style="position:
+          absolute; top: 79%; left: 49.8%; transform: translatex(-49,8%); font-weight:
+          bold;">TRY</div> <div style="position: absolute; top: 52%; left: 39%; transform:
+          translatex(-39%); font-weight: bold;">reflect</div></div>* **définir** *
+          Quel type d''application souhaites-tu créer ?  * Quelles sont tes contraintes
+          ?  * À quoi ressemble la réussite ?   * **Préparer**   *Réfléchir en groupe
+          / rechercher les éléments possibles   * Comparer les avantages et les inconvénients   *
+          Faire un plan * **Essayer**   * Mettre ton plan à exécution   * **Réfléchir**   *
+          Comment tes résultats se comparent-ils aux objectifs que tu t''étais fixés,
+          lors de la définition de l''application ?  * Qu''est-ce que cela t''enseigne-t-il
+          ou que peux-tu améliorer, la prochaine fois ?  * Quels nouveaux problèmes
+          as-tu découverts ?   # Ce à Quoi Ça Ressemble   Au cours des prochaines
+          semaines, tu auras l''occasion d''expérimenter des jeux existants et de
+          concevoir ton propre jeu, basé sur ce que tu as appris. Après avoir créé
+          ton jeu, tu auras la chance de le présenter aux autres et de recevoir des
+          commentaires. Ces étapes sont toutes d''une grande importance dans l''industrie
+          du logiciel, et obtenir de la pratique avec les éléments du processus de
+          conception t''aidera à créer de meilleurs produits, plus efficacement.   Voici
+          ce en quoi les semaines à venir consisteront, pendant que nous en apprenons
+          plus sur le processus de conception: 1. **Définir et Préparer**   * Jouer
+          à des jeux existants pour trouver des idées et comprendre les limites   *
+          Réfléchir en groupe et planifie ton application, nouvelle ou modifiée   1.
+          **Essayer**   * Suivre ton plan pour construire une app1. **Réfléchir et
+          Modifier**   * Échanger des applications avec un autre groupe pour améliorer
+          tes projets   1. **Présenter**   * Présenter à tout le monde ton produit
+          final !
+
+'
       Begin planning your project_2018:
         content1: description ici
+        markdown: '# Le Processus de Conception   Concevoir un logiciel signifie résoudre
+          beaucoup de petits problèmes, tout le temps. Le principal problème, dans
+          la conception de logiciels, est ce qu''il faut créer, en premier lieu.   Ce
+          processus est utile pour toutes sortes de choses, mais nous allons nous
+          concentrer sur son utilisation pour la conception d''applications.   <!--
+          Traduire les termes « Définir », « Préparer », « Essayer », « Réfléchir
+          » et changer la taille de la police et le positionnement au besoin-->   <div
+          style=" position: relative; text-align: center; font-size: 1em " > < img
+          src = "https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png"
+          alt="processus de conception" style="width: 50%;"> <div style="position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;">Define</div> <div style="position: absolute; top: 52%; left: 61%;
+          transform: translateX(-61%); font-weight: bold;">Prepare</div> <div style="position:
+          absolute; top: 79%; left: 49.8%; transform: translatex(-49,8%); font-weight:
+          bold;">TRY</div> <div style="position: absolute; top: 52%; left: 39%; transform:
+          translatex(-39%); font-weight: bold;">reflect</div></div>* **définir** *
+          Quel type d''application souhaites-tu créer ?  * Quelles sont tes contraintes
+          ?  * À quoi ressemble la réussite ?   * **Préparer**   *Réfléchir en groupe
+          / rechercher les éléments possibles   * Comparer les avantages et les inconvénients   *
+          Faire un plan * **Essayer**   * Mettre ton plan à exécution   * **Réfléchir**   *
+          Comment tes résultats se comparent-ils aux objectifs que tu t''étais fixés,
+          lors de la définition de l''application ?  * Qu''est-ce que cela t''enseigne-t-il
+          ou que peux-tu améliorer, la prochaine fois ?  * Quels nouveaux problèmes
+          as-tu découverts ?   # Ce à Quoi Ça Ressemble   Au cours des prochaines
+          semaines, tu auras l''occasion d''expérimenter des jeux existants et de
+          concevoir ton propre jeu, basé sur ce que tu as appris. Après avoir créé
+          ton jeu, tu auras la chance de le présenter aux autres et de recevoir des
+          commentaires. Ces étapes sont toutes d''une grande importance dans l''industrie
+          du logiciel, et obtenir de la pratique avec les éléments du processus de
+          conception t''aidera à créer de meilleurs produits, plus efficacement.   Voici
+          ce en quoi les semaines à venir consisteront, pendant que nous en apprenons
+          plus sur le processus de conception: 1. **Définir et Préparer**   * Jouer
+          à des jeux existants pour trouver des idées et comprendre les limites   *
+          Réfléchir en groupe et planifie ton application, nouvelle ou modifiée   1.
+          **Essayer**   * Suivre ton plan pour construire une app1. **Réfléchir et
+          Modifier**   * Échanger des applications avec un autre groupe pour améliorer
+          tes projets   1. **Présenter**   * Présenter à tout le monde ton produit
+          final !
+
+'
       Begin planning your project_2018_2019:
         content1: description ici
+        markdown: '# Exemples de Projets    Tu es sur le point de commencer ton projet
+          final. Avant de commencer, passe un moment à regarder les exemples de projets.    |
+          Écureuil Affamé | Histoire d''Extraterrestre |    |---|---|    | [![Écureuil
+          Affamé (Labo du Jeu)] (https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG
+          "Écureuil Affamé(Labo du Jeu")] (https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view)
+          /[![Histoire d''Extraterrestre (Labo du Jeu)] (https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG
+          "Histoire d''Extraterrestre (Labo du Jeu")] (https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view)
+          / / Essaie d''ajouter des sons à ce jeu ! | Essaie d''ajouter une autre
+          scène de cette histoire ! |
+
+'
       BigEvent-Unplugged:
         markdown: |
           # Le grand événement
 
           En informatique, les événements sont des actions que l'ordinateur surveille. Dans cette leçon vous serez différemment selon le bouton qui est préssé.
+      BinaryBracelets-Unplugged:
+        markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
+          dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+      BinaryImages-Unplugged:
+        markdown: "# Images Binaires    Exprime comment recréer une image seulement
+          à l'aide de deux valeurs simples.\n"
       CSD Header Size MC:
         answers:
         - {}
@@ -879,6 +976,15 @@ fr-FR:
           correct: true
         questions:
         - {}
+      ConditionalsWithCards-Unplugged:
+        markdown: "# Conditionnelles avec des Cartes    Joue à un jeu de cartes et
+          crée des règles comme « Si je dessine un carton rouge, j'obtiens un point
+          » et « Si je dessine une carte noire, tu obtiens un point. »\n"
+      Crowdsourcing-Unplugged:
+        markdown: "# Production participative   Vois comment la production participative,
+          une technique de résolution de problèmes commune en informatique, peut t'aider
+          à accomplir une tâche, avec toute la classe, plus efficacement que si tu
+          devais le faire seul.\n"
       Dance_Party_extras_intro:
         markdown: |
           # Continuer de dancer !
@@ -1043,11 +1149,36 @@ fr-FR:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: "# Concevoir pour l'Accessibilité   * Dans le monde de l'informatique,
+          **l'accessibilité** consiste à créer de la technologie pour les personnes
+          handicapées.   * Les handicaps sont physiques, auditifs, visuels et bien
+          d'autres.   * Les handicaps sont divers et affectent les gens de différentes
+          manières, notamment la façon dont ils utilisent la technologie comme **applications
+          pour smartphones**.   * La conception d'applications, accessibles pour les
+          personnes handicapées, améliorent ces mêmes applications pour tout le monde
+          aussi !   ![] (https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)\n"
+      DigitalCitizenship-Unplugged:
+        markdown: "# Citoyenneté Numérique    Il n'est pas sûr de partager certaines
+          informations, en ligne. Cette leçon t'aidera à apprendre la différence entre
+          l'information sûre et privée.\n\n"
       DigitalFootprint-Unplugged:
         markdown: |
           # Votre Empreinte Digital
 
           Ajouter des informations à propos de vous en ligne crée une empreinte digital.
+      DigitalSharing-Unplugged:
+        markdown: "# Partage Numérique   Dans cette leçon, tu examineras les défis
+          et les avantages du respect de la propriété et du droit d'auteur, en particulier
+          dans les environnements numériques.\n"
+      EnvelopeVariables-Unplugged:
+        markdown: "# Envelope Variables   Les variables offrent beaucoup de liberté
+          en informatique. Cette leçon aide à expliquer ce que sont les variables
+          et les différentes façons dont nous pouvons les utiliser.\n"
+      ForLoopFun-Unplugged:
+        markdown: "# Les Boucles Pour Amusantes   Nous savons que les boucles nous
+          permettent de faire des choses encore et encore mais, maintenant, nous allons
+          apprendre à utiliser des boucles avec une structure supplémentaire intégrée.\n"
       GettingLoopy-Unplugged:
         markdown: |
           # Faire le plain de boucles
@@ -1058,6 +1189,9 @@ fr-FR:
           Soyez prudent lorsque vous naviguez sur internet !
 
 '
+      GraphPaperProgramming-Unplugged:
+        markdown: "# Programmation sur Papier Millimétré    Écris des algorithmes
+          que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
       HappyLoops-Unplugged:
         markdown: |
           # Joyeuses boucles
@@ -1076,6 +1210,9 @@ fr-FR:
         content1: description ici
       Internet Simulator Setup 3:
         content1: description ici
+      Internet-Unplugged:
+        markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
+          classe, simplement à l'aide de morceaux de papier.\n"
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1281,6 +1418,9 @@ fr-FR:
           Utiliser une carte et donner les commandes pour atteindre le but.
       Multi-Screen Apps:
         content1: description ici
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
+          utilisant des boucles !\n"
       MyRoboticFriends-Unplugged:
         markdown: |
           # Mon ami robot
@@ -1452,6 +1592,12 @@ fr-FR:
           aux utilisateurs. App Lab attend pour répondre à certains **événements**
           qui se produisent dans un programme. Le bloc onEvent spécifie l’élément
           de l’interface utilisateur sur lequel attendre un événement.
+      PicturingData-Unplugged:
+        markdown: "# Représenter des Données    Utilise un projet du Labo du Jeu pour
+          recueillir des données et faire des prévisions.    ![] (https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)\n"
+      PowerOfWords-Unplugged:
+        markdown: "# La Pouvoir des Mots   Aujourd'hui tu apprendras ce qu'il faut
+          faire si quelqu'un est méchant en ligne.\n"
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant
@@ -1460,11 +1606,32 @@ fr-FR:
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         content1: description ici
+        markdown: "# Présentation du Projet   C'est le moment de présenter tes projets
+          ! Ton professeur fournira plus de détails sur la façon dont tu présenteras
+          ton travail à tes camarades de classe.\n"
+      Prepare for your presentation_2018:
+        markdown: "# Présentation du Projet   C'est le moment de présenter tes projets
+          ! Ton professeur fournira plus de détails sur la façon dont tu présenteras
+          ton travail à tes camarades de classe.\n"
+      PrivatePersonalInformation-Unplugged:
+        markdown: "# Information Privée et Personnelle    Développé par Common Sense
+          Education, cette leçon traite de la différence entre l'information qui peut
+          être partagée en ligne en toute sécurité et l'information qui ne le peut
+          pas.   ![] (https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)\n"
+      RelayProgramming-Unplugged:
+        markdown: "# Programmation en Relais    Composez des équipes et travaillez
+          ensemble pour écrire des programmes qui dessinent des images.\n"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Rejette les mechancetés
 
           Aujourd'hui vous allez apprendre ce qu'il faut faire si quelqu'un devient méchant en ligne.
+      SimonSays-Unplugged:
+        markdown: "# Jacques A Dit   Joue à un jeu et réfléchis aux commandes nécessaires
+          pour obtenir le bon résultat.\n"
+      Songwriting-Unplugged:
+        markdown: "# Écriture de Chansons   Utilise le concept du refrain, dans une
+          chanson, pour mieux comprendre la définition et l'appel des fonctions.\n"
       'Technique: Frequency Analysis':
         content1: description ici
         markdown: "# Cassé un chiffrement par substitution\n\nLa meilleure technique
@@ -1522,22 +1689,54 @@ fr-FR:
           dans cet esprit!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       behaviors 1 predict:
         answers:
-        - feedback: Incorrect.
-        - correct: true
+        - text: 'Le lutin tournera
+
+'
+          feedback: Incorrect.
+        - text: 'Le lutin rétrécira.
+
+'
+          correct: true
           feedback: Correct!
-        - feedback: Incorrect.
-        - feedback: Incorrect
+        - text: 'Le lutin bougera.
+
+'
+          feedback: Incorrect.
+        - text: 'Le lutin changera de couleurs.
+
+'
+          feedback: Incorrect
         questions:
-        - {}
+        - text: 'Clique sur le bouton « modifier » pour voir comment le `comportement
+            mystère` fonctionne. Étudie le code à l''intérieur, puis fais une prévision.
+
+'
       behaviors 4 predict:
         answers:
-        - feedback: Incorrect.
-        - correct: true
+        - text: 'À gauche puis vers le bas
+
+'
+          feedback: Incorrect.
+        - text: 'En diagonale
+
+'
+          correct: true
           feedback: Correct!
-        - {}
-        - feedback: Incorrect
+        - text: 'Zigzag
+
+'
+          feedback: 'Incorrect.
+
+'
+        - text: 'Vers le bas, puis à gauche
+
+'
+          feedback: Incorrect
         questions:
-        - {}
+        - text: 'Faites une prévision. Quel chemin le satellite suivra-t-il, vers
+            la galaxie ?
+
+'
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: L'artiste dessinera un triamgle avec 3 côté égaux.
@@ -1558,7 +1757,8 @@ fr-FR:
           feedback: Incorrect. L'artiste a dessiné un carré.
         - text: L'artiste dessinera une seule ligne.
           feedback: Incorrect. L'artiste a dessiné un carré.
-        - correct: true
+        - text: L'artiste dessinera un carré.
+          correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: L'artiste dessine un carré.
@@ -1571,7 +1771,8 @@ fr-FR:
           feedback: Incorrect. L'artiste a dessiné un carré.
         - text: L'artiste dessinera une seule ligne.
           feedback: Incorrect. L'artiste a dessiné un carré.
-        - correct: true
+        - text: L'artiste dessinera un carré.
+          correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: L'artiste dessine un carré.
@@ -1865,6 +2066,12 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: The inner loop makes a pentagon, and the outer loop repeats it
             4 times in a circle.
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
         - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
             lorsque tu cliqueras sur "Démarrer"?
@@ -1882,6 +2089,12 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: The inner loop makes a pentagon, and the outer loop repeats it
             4 times in a circle.
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
         - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
             lorsque tu cliqueras sur "Démarrer"?
@@ -1899,6 +2112,12 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: The inner loop makes a pentagon, and the outer loop repeats it
             4 times in a circle.
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
         questions:
         - text: Regarde bien le code ci-dessous. Quel dessin va faire ce programme
             lorsque tu cliqueras sur "Démarrer"?
@@ -2196,36 +2415,50 @@ fr-FR:
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
             et ramasser autant de salades et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
+        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
+          br / >
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: Le ceuilleur  ramassera toutes les plantes.
-        - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
+        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+            prend.
+          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
-        - correct: true
+        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+          correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
+        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
+          br / >
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer" ?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: Le ceuilleur  ramassera toutes les plantes.
-        - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+          feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
+        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+            prend.
+          feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
-        - correct: true
+        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+          correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
+        markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
+          br / >
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer" ?
@@ -2374,23 +2607,39 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
+            toujours.
+          correct: true
           feedback: Correct!
         - text: Le zombie va arriver jusqu'au tournesol.
+          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
+            et venir, pour toujours.
         - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
             sans jamais s'arrêter de tourner.
+          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
+            et venir, pour toujours.
         - text: Je ne sais pas.
+          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
+            aller et venir, pour toujours.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Le zombie empruntera le bon chemin et finira par aller et venir, pour
+            toujours.
+          correct: true
           feedback: Correct!
         - text: Le zombie va arriver jusqu'au tournesol.
+          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
+            et venir, pour toujours.
         - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
             sans jamais s'arrêter de tourner.
+          feedback: Incorrect. Le zombie empruntera le bon chemin et finira par aller
+            et venir, pour toujours.
         - text: Je ne sais pas.
+          feedback: Dans ce code, le zombie empruntera le bon chemin et finira par
+            aller et venir, pour toujours.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -2508,22 +2757,46 @@ fr-FR:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: La fermière ramassera 2 citrouilles.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
         - text: La fermière ramassera toutes les citrouilles.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
         - text: La fermière ramassera la salade.
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
         questions:
         - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
             va ramasser ?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: La fermière ramassera 2 citrouilles.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
         - text: La fermière ramassera toutes les citrouilles.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
         - text: La fermière ramassera la salade.
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
+          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+            se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
+
+'
         questions:
         - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
             va ramasser ?
@@ -2587,24 +2860,95 @@ fr-FR:
             un saut entre les 2.
         questions:
         - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
+      courseE_project_exemplars_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: '# Exemples de Projet   Tu es sur le point de commencer ton projet
+          final. Avant de commencer, passe un moment à regarder les exemples de projets.   ##
+          Labo des Lutins | Danse des Monstres (Labo des Lutins) | Jeu de Petit Gâteau
+          (Labo des Lutins) ||---|---|| [![Danse des Monstres (Labo des Lutins)] (https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          "Danse des Monstres (Labo des Lutins")] (https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          /[![Jeu de Petit Gâteau (Labo des Lutins)] (https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          "Jeu de Petit Gâteau (Labo des Lutins")] (https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          / / Essaie d''ajouter du texte ou un score à ce jeu ! | Essaie d''ajouter
+          du texte ou un score à ce jeu ! |## Artiste| Modèle (Artiste) | Fonction
+          Fleurs (Artiste) ||---|---|| [![Modèle (Artiste)] (https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          "Modèle (Artiste)")] (https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          /[![Fonction Fleurs (Artiste)] (https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png
+          "Fonction Fleurs (Artiste)")] (https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          / / Soyons créatifs avec des boucles imbriquées ! / Soyons créatifs avec
+          des fonctions ! |
+
+'
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
-        - correct: true
+        - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
+            pas « rassembler ».
+
+'
+          feedback: 'Incorrect. Le nom de ta variable n''affecte pas sa valeur.
+
+'
+        - text: 'L''abeille ne recueillera que 2 nectar.
+
+'
+          correct: true
           feedback: Correct!
-        - {}
+        - text: 'L''abeille recueillera tout le nectar.
+
+'
+          feedback: 'Incorrect. La variable est remise à 0 avant les deux derniers
+            appels de fonction.
+
+'
         - text: Je ne sais pas.
+          feedback: 'La variable est remise à 0 avant les deux derniers appels de
+            fonction, où 1 est ajouté à chaque fois. L''abeille recueille ensuite
+            2 unités de nectar.
+
+'
         questions:
-        - {}
+        - text: 'Regarde le code ci-dessous. Combien d''unités de nectar l''abeille
+            recueillera-t-elle, à la fin ?
+
+'
+        title: 'Bee Variables Multi
+
+'
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
+            pas « rassembler ».
+
+'
+          feedback: 'Incorrect. Le nom de ta variable n''affecte pas sa valeur.
+
+'
+        - text: 'L''abeille ne recueillera que 2 nectar.
+
+'
+          correct: true
           feedback: Correct!
-        - {}
+        - text: 'L''abeille recueillera tout le nectar.
+
+'
+          feedback: 'Incorrect. La variable est remise à 0 avant les deux derniers
+            appels de fonction.
+
+'
         - text: Je ne sais pas.
+          feedback: 'La variable est remise à 0 avant les deux derniers appels de
+            fonction, où 1 est ajouté à chaque fois. L''abeille recueille ensuite
+            2 unités de nectar.
+
+'
         questions:
-        - {}
+        - text: 'Regarde le code ci-dessous. Combien d''unités de nectar l''abeille
+            recueillera-t-elle, à la fin ?
+
+'
+        title: 'Bee Variables Multi
+
+'
       courseF_external_variableConstant:
         markdown: "<h2>More on Variables</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just
@@ -2613,6 +2957,179 @@ fr-FR:
           *same* value multiple times in your program without changing it after you
           click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you
           will write code with variables that *do* change inside the program.</h3>\n\n"
+      courseF_external_variableConstant_2018:
+        markdown: '<h2>Plus sur les Variables</h2 > <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"style="
+          padding-left: 30px; width: 300px; float: right; " / ><h3 > Tu viens d''apprendre
+          une excellente façon d''utiliser un variable...comme qu''une constante !   Lorsque
+          tu utilises une variable comme constante, tu définis une valeur une fois,
+          puis utilises cette *même* valeur plusieurs fois, dans ton programme, sans
+          la modifier, après avoir cliqué sur « Exécuter ».  < / h3><br/><hr/> < h3>Dans
+          la partie suivante de la série, tu écriras du code avec des variables qui
+          *véritablement* changent à l''intérieur du programme.< / h3>
+
+'
+      courseF_external_variableConstant_2018_2019:
+        markdown: '<h2>Plus sur les Variables</h2 > <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"style="
+          padding-left: 30px; width: 300px; float: right; " / ><h3 > Tu viens d''apprendre
+          une excellente façon d''utiliser un variable...comme qu''une constante !   Lorsque
+          tu utilises une variable comme constante, tu définis une valeur une fois,
+          puis utilises cette *même* valeur plusieurs fois, dans ton programme, sans
+          la modifier, après avoir cliqué sur « Exécuter ».  < / h3><br/><hr/> < h3>Dans
+          la partie suivante de la série, tu écriras du code avec des variables qui
+          *véritablement* changent à l''intérieur du programme.< / h3>
+
+'
+      courseF_markdown_algorithms_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# * * Tu viens d'apprendre les « algorithmes » !**   ### **Un algorithme
+          est une simple liste d'étapes à suivre pour accomplir une tâche**. Ce qui
+          est amusant, avec les algorithmes, c'est que tu décides ce qui se passe,
+          étape par étape.  ### Lorsque tu écris un algorithme pour une machine, on
+          appelle cela un **programme**.  --- ##**Vocabulaire à Connaître**   * ###
+          **Algorithme** - Une liste d'étapes pour accomplir une tâche   * ### **Programme**
+          - Un algorithme qui a été codé en quelque chose qui peut être exécuté par
+          une machine\n"
+      courseF_markdown_algorithms_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   # # # As-tu déjà voulu dire à quelqu'un
+          exactement quoi faire ? Est-ce qu'on t'écoute toujours ?   ### Aujourd'hui,
+          tu vas dire à une machine quoi faire, étape par étape- et elle écoutera
+          !---    ##**Blocs à Savoir**![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
+      courseF_markdown_conditionals_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « conditionnelles » !**   ### Les
+          conditionnelles sont super utiles en informatique. Imagine que tu te connectes
+          à ton site Web favori et que tu tapes ton mot de passe. Le site Web doit
+          utiliser des conditionnelles pour vérifier *si* le mot de passe que vous
+          avez entré correspond au mot de passe qu'il a enregistré pour ton nom d'utilisateur.
+          \  ### `Si` il correspond, connecte-toi !   ### `Sinon`, donne à l'utilisateur
+          une erreur.  --- ##**Vocabulaire à Connaître**    * # # # **Condition**
+          - Quelque chose qu'un programme vérifie avant d'autoriser une action  *
+          # # # **Conditionnelles** - Déclarations qui ne fonctionnent que sous certaines
+          conditions\n"
+      courseF_markdown_conditionals_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Les **conditions* * * sont des
+          choses qui peuvent être vraies ou fausses.   ### Tu apprendras à utiliser
+          les conditions dans un programme, pour que les choses se passent `tant que`,
+          `jusqu'à ce que`, ou `si` quelque chose est vrai !   ---   ##**Blocs à Connaître**![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n"
+      courseF_markdown_debugging_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre le « débogage » !**   ### **Un bug est
+          quelque chose qui ne fonctionne pas.** C'est une erreur dans un programme.
+          Lorsque tu trouves et corriges ces erreurs, tu **débogues** un problème.
+          \  ### Tu dois faire appel à ta **persévérance**, un autre mot pour ne pas
+          abandonner, afin de trouver et de corriger tous les bugs.   ---  ## **Vocabulaire
+          à Connaître**  * ### **Bug** - Partie d'un programme qui ne fonctionne pas
+          correctement   * ### **Déboguer** - Rechercher et résoudre les problèmes
+          dans un algorithme ou un programme   * ### **Persévérance** - Ne pas abandonner\n"
+      courseF_markdown_debugging_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# Dans cette leçon...   ### À quoi pense-tu quand on parle de bugs?
+          ### Quand la plupart des gens pensent à des bugs, ils pensent à des choses
+          effrayantes, rampantes. En informatique, les bugs ne sont pas vivants, mais
+          ils peuvent tout de même poser des problèmes.   ### Les énigmes de cette
+          leçon ont déjà été résolues pour toi ! Mais, pas si vite - il semble qu'elles
+          ne marchent pas encore. Les bugs se trouvent-ils derrière tout cela ? ---##
+          Blocs de Know![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
+      courseF_markdown_forloops_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « boucles pour » !** \n\n### **Les
+          boucles pour sont des boucles avc lesquelles tu définis les valeurs de démarrage,
+          d'arrêt et d'étape.** \n\n### Ce nouveau type de boucle `répéter` te donne
+          plus de contrôle sur le moment où ta boucle démarre, s'arrête, et ce dont
+          ta boucle devrait augmenter, à chaque fois qu'elle est exécutée.  \n\n###
+          Plus de contrôle signifie que tu peux résoudre des énigmes beaucoup plus
+          vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
+          - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
+          prédéterminés (intervalle de pas)\n"
+      courseF_markdown_forloops_end_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « boucles pour » !** \n\n### **Les
+          boucles pour sont des boucles avc lesquelles tu définis les valeurs de démarrage,
+          d'arrêt et d'étape.** \n\n### Ce nouveau type de boucle `répéter` te donne
+          plus de contrôle sur le moment où ta boucle démarre, s'arrête, et ce dont
+          ta boucle devrait augmenter, à chaque fois qu'elle est exécutée.  \n\n###
+          Plus de contrôle signifie que tu peux résoudre des énigmes beaucoup plus
+          vite!   \n\n---   \n\n##**Vocabulaire à Connaître **\n\n### **Boucle pour**
+          - Les boucles pour sont des boucles qui ont un début, une fin et un incrément
+          prédéterminés (intervalle de pas)\n"
+      courseF_markdown_forloops_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
+          type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
+          \  ![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+      courseF_markdown_forloops_intro_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Aujourd'hui, tu apprendras un nouveau
+          type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras :
+          \  ![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   ! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+      courseF_markdown_loops_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « boucles » !**  ### **Une boucle
+          est l'action de faire quelque chose encore et encore.** Un autre mot pour
+          faire quelque chose à nouveau est répéter.   ### Les boucles sont vraiment
+          utiles pour répéter des modèles. Il pourrait être utile d'écrire ton programme
+          sans les boucles, d'abord, puis d'essayer de trouver un modèle.   ### Quand
+          tu en vois un, colle ce modèle dans un bloc `répéter` !   ---  ## **Vocabulaire
+          à Connaître**   * ### **Boucle** - L'action de faire quelque chose encore
+          et encore  * ### **Répéter** - Faire quelque chose à nouveau\n"
+      courseF_markdown_loops_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# Dans cette leçon...### Imagine que tu veux que ton personnage
+          avance **5** fois. Ce serait assez facile - il suffit de glisser **5** blocs
+          avancer. Maintenant, imagine que tu veux que ton personnage avance **5,000**
+          fois !   ### Combien de temps cela te prendrait-il pour traîner **5,000**
+          blocs ? ### Aimerais-tu qu'il y ait un moyen facile de le faire ? Il y en
+          a un !--- ##Blocs à Connaître ![] (https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
+      courseF_markdown_nestedloops_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « boucles imbriquées » !**   ### **Une
+          boucle imbriquée est une boucle dans une boucle.** Imagine une boucle extérieure,
+          avec une autre boucle qui est tout confortablement et douillettement imbriquée
+          à l'intérieur de la boucle extérieure.   ### Les boucles imbriquées sont
+          idéales pour répéter des modèles de modèles. Elles peuvent être très puissantes
+          si elles sont utilisées correctement !---## **Vocabulaire à Connaître**
+          \  ### __Boucles Imbriquées__ - Une boucle dans une boucle\n"
+      courseF_markdown_nestedloops_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...** ### T'es-tu jamais demandé ce qui se
+          passerait si tu mettais une boucle *dans une autre boucle* ?   ### Ça risque
+          de te rendre fou !   ### Si une boucle normale sert à répéter des motifs,
+          à quoi penses-tu qu'une boucle à l'intérieur d'une autre boucle pourrait
+          servir ? Réfléchissons !---## **Blocs à Connaître**![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
+      courseF_markdown_variables_end:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! ---##
+          **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
+          élément d'information qui peut changer\n"
+      courseF_markdown_variables_end_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! ---##
+          **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
+          élément d'information qui peut changer\n"
+      courseF_markdown_variables_intro:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
+          réservés pour les informations qui peuvent changer.  Avoir un espace réservé
+          permet d'écrire un programme, même si on ne connaît toutes les valeurs que
+          plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
+      courseF_markdown_variables_intro_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
+          réservés pour les informations qui peuvent changer.  Avoir un espace réservé
+          permet d'écrire un programme, même si on ne connaît toutes les valeurs que
+          plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
       courseF_multi_artist_for10_predict1:
         answers:
         - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
@@ -2807,8 +3324,6 @@ fr-FR:
             y a sur les fleurs. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        markdown: "Ага! С помощью циклов for эта головоломка решается намного проще!
-          \n"
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -2824,9 +3339,14 @@ fr-FR:
         - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - {}
-        markdown: "Ага! С помощью циклов for эта головоломка решается намного проще!
-          \n"
+        - text: 'Je ne sais pas.
+
+'
+          feedback: 'La boucle `pour` permettra à l''abeille de recueillir la bonne
+            quantité de nectar, mais elle est définie pour ne s''arrêter que sur 4
+            fleurs.
+
+'
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -2842,9 +3362,14 @@ fr-FR:
         - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - {}
-        markdown: "Ага! С помощью циклов for эта головоломка решается намного проще!
-          \n"
+        - text: 'Je ne sais pas.
+
+'
+          feedback: 'La boucle `pour` permettra à l''abeille de recueillir la bonne
+            quantité de nectar, mais elle est définie pour ne s''arrêter que sur 4
+            fleurs.
+
+'
         questions:
         - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
             su "Démarrer"?
@@ -2892,6 +3417,19 @@ fr-FR:
           `ask` block.  In this case, it's the variable `name`.\n"
         questions:
         - text: Que se passerai-t-il si l'utilisateur entrer le nom "Ali" à l'invite?
+      courseF_project_exemplars_2019:
+        content1: Page du Manuel du Test Markdown
+        markdown: "# Exemples de Projets   Tu es sur le point de commencer ton projet
+          final. Avant de commencer, passe un moment à regarder les exemples de projets.
+          \  ## Labo des Lutins |  Jeu de Petit Gâteau (Labo des Lutins) / Jeu d'Hélicoptère
+          (Labo des Lutins) ||---|---|| [![#Jeu de Petit Gâteau (Labo des Lutins)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          /[![#Je d'Hélicoptère (Labo des Lutins)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          \ |    |  Essaie d'ajouter du texte ou un score à ce jeu ! | Essaie d'ajouter
+          du texte ou un score à ce jeu !   |## Artiste|   Fleurs (Artiste) | Spirale
+          (Artiste) ||---|---|| [![Fleurs (Artiste)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          /[![Spirale (Artiste)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |   | Soyons créatifs avec les variables ! | Soyons créatifs avec les
+          boucles Pour ! |\n"
       coursee_prediction_artistfunction2:
         answers:
         - text: L’artiste résoudra ce problème correctement.
