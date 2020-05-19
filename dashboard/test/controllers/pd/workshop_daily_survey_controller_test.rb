@@ -52,13 +52,13 @@ module Pd
       assert_response :not_found
     end
 
-    test 'daily summer workshop foorm survey returns 404 for days outside of range 0-5' do
+    test 'daily summer workshop foorm survey returns 404 for days outside of range 1-4 for a 5 day workshop' do
       setup_summer_workshop
       sign_in @enrolled_summer_teacher
-      get '/pd/workshop_survey/foorm/day/-1'
+      get '/pd/workshop_daily_survey/day/0'
       assert_response :not_found
 
-      get '/pd/workshop_survey/foorm/day/6'
+      get '/pd/workshop_daily_survey/day/5'
       assert_response :not_found
     end
 
@@ -82,7 +82,7 @@ module Pd
 
     test 'pre-workshop foorm survey displays not enrolled message when not enrolled' do
       sign_in unenrolled_teacher
-      get '/pd/workshop_survey/foorm/day/0'
+      get '/pd/workshop_pre_survey'
       assert_response :success
       assert_not_enrolled
     end
@@ -105,8 +105,8 @@ module Pd
         user: @enrolled_summer_teacher
 
       sign_in @enrolled_summer_teacher
-      get '/pd/workshop_survey/foorm/day/0'
-      assert_redirected_to action: 'thanks'
+      get '/pd/workshop_pre_survey'
+      assert_thanks
     end
 
     test 'pre-workshop survey displays embedded JotForm when enrolled' do
@@ -141,7 +141,8 @@ module Pd
       setup_summer_workshop
 
       sign_in @enrolled_summer_teacher
-      get '/pd/workshop_survey/foorm/day/0'
+      get '/pd/workshop_pre_survey'
+      assert_template :new_general_foorm
       assert_response :success
     end
 
@@ -149,7 +150,8 @@ module Pd
       setup_summer_workshop
 
       sign_in @enrolled_summer_teacher
-      get '/pd/workshop_survey/foorm/day/5'
+      get '/pd/workshop_post_survey'
+      assert_template :new_general_foorm
       assert_response :success
     end
 
@@ -214,6 +216,33 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
+      assert_response :success
+      assert_no_attendance
+    end
+
+    test 'daily workshop foorm survey displays not enrolled message when not enrolled' do
+      sign_in unenrolled_teacher
+      get '/pd/workshop_daily_survey/day/1'
+      assert_response :success
+      assert_not_enrolled
+    end
+
+    test 'daily workshop foorm survey displays closed message when session attendance is closed' do
+      setup_summer_workshop
+      Session.any_instance.expects(:open_for_attendance?).returns(false)
+
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_daily_survey/day/1'
+      assert_response :success
+      assert_closed
+    end
+
+    test 'daily workshop foorm survey displays no attendance message when session is open but not attended' do
+      setup_summer_workshop
+      Session.any_instance.expects(:open_for_attendance?).returns(true)
+
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_daily_survey/day/1'
       assert_response :success
       assert_no_attendance
     end
@@ -1166,6 +1195,10 @@ module Pd
       assert_select 'h1', text: 'No Attendance'
       assert_select 'p', text:
         'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
+    end
+
+    def assert_thanks
+      assert_select '#thanks>h1', text: 'Thank you for submitting today’s survey.'
     end
 
     def assert_redirected_to_sign_in
