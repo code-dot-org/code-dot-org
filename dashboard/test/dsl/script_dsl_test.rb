@@ -72,10 +72,20 @@ class ScriptDslTest < ActiveSupport::TestCase
       }
     )
 
-    i18n_expected = {'test' => {'stages' => {
-      'Lesson1' => {'name' => 'Lesson1'},
-      'Lesson2' => {'name' => 'Lesson2'}
-    }, "lesson_groups" => {}}}
+    # TODO: FND-1122
+    i18n_expected = {
+      'test' => {
+        'stages' => {
+          'Lesson1' => {'name' => 'Lesson1'},
+          'Lesson2' => {'name' => 'Lesson2'}
+        },
+        'lessons' => {
+          'Lesson1' => {'name' => 'Lesson1'},
+          'Lesson2' => {'name' => 'Lesson2'}
+        },
+        "lesson_groups" => {}
+      }
+    }
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
@@ -859,10 +869,18 @@ level 'Level 3'
       }
     )
 
-    i18n_expected = {'test' => {'stages' => {
-      "Bob's stage" => {'name' => "Bob's stage"}
-    },
-      "lesson_groups" => {}}}
+    # TODO: FND-1122
+    i18n_expected = {
+      'test' => {
+        'stages' => {
+          "Bob's stage" => {'name' => "Bob's stage"}
+        },
+        'lessons' => {
+          "Bob's stage" => {'name' => "Bob's stage"}
+        },
+        "lesson_groups" => {}
+      }
+    }
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
