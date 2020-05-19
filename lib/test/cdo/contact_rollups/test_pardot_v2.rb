@@ -68,7 +68,9 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
     # Eagerly send a batch-create request
-    submitted, errors = PardotV2.new.batch_create_prospects contact[:email], contact[:data], true
+    dry_run = false
+    pardot_writer = PardotV2.new dry_run
+    submitted, errors = pardot_writer.batch_create_prospects contact[:email], contact[:data], true
 
     expected_submissions = [{email: contact[:email], db_Opt_In: 'Yes'}]
     assert_equal expected_submissions, submitted
@@ -91,7 +93,8 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
 
     # Calling batch_create for each contact. No request shall be sent
-    pardot_writer = PardotV2.new
+    dry_run = false
+    pardot_writer = PardotV2.new dry_run
     contacts.each do |contact|
       submissions, errors = pardot_writer.batch_create_prospects contact[:email], contact[:data]
       assert_equal [], submissions
@@ -128,8 +131,10 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
+    dry_run = false
+    pardot_writer = PardotV2.new dry_run
     # Eagerly submit an update request
-    submissions, errors = PardotV2.new.batch_update_prospects(
+    submissions, errors = pardot_writer.batch_update_prospects(
       *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data),
       true
     )
@@ -167,7 +172,8 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
 
     # Calling batch_update for each contact. No update request shall be sent
-    pardot_writer = PardotV2.new
+    dry_run = false
+    pardot_writer = PardotV2.new dry_run
     contacts.each do |contact|
       submissions, errors = pardot_writer.batch_update_prospects(
         *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data)
