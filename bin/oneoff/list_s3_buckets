@@ -11,7 +11,7 @@ require 'csv'
 s3_client = Aws::S3::Client.new
 cloudwatch_client = Aws::CloudWatch::Client.new
 PRIMARY_REGION = 'us-east-1'.freeze
-ACTIVITY_PERIOD_DAYS = 7.days     # Window of time within which bucket Metrics are collected.
+ACTIVITY_PERIOD_DAYS = 30.days     # Window of time within which bucket Metrics are collected.
 
 Bucket = Struct.new(
   :name,
@@ -22,6 +22,7 @@ Bucket = Struct.new(
   :size,
   :object_count,
   :bytes_uploaded,
+  :put_requests
 )
 
 buckets = []
@@ -105,6 +106,27 @@ s3_buckets.each do |s3_bucket|
         period: ACTIVITY_PERIOD_DAYS,
         statistics: ['Sum'],
         unit: 'Bytes'
+      }
+    )&.datapoints&.last&.sum
+
+  bucket[:put_requests] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'PutRequests', client: cloudwatch_client).
+    get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'BucketName',
+            value: bucket[:name],
+          },
+          {
+            name: 'FilterId',
+            value: 'EntireBucket'
+          }
+        ],
+        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        end_time: Time.now,
+        period: ACTIVITY_PERIOD_DAYS,
+        statistics: ['Sum'],
+        unit: 'Count'
       }
     )&.datapoints&.last&.sum
 
