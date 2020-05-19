@@ -502,7 +502,7 @@
       "courseA_artist_loops_challenge1_c": "[][0]",
       "courseA_artist_loops_challenge1_d": "[][0]"
     },
-    "function_defintions": {
+    "function_definitions": {
       "\"simple\" solution": {
         "name": "\"simple\" solution"
       }
@@ -514,7 +514,7 @@
     "authored_hints": {
       "harvey_tictactoe": "You can use `jump` blocks to move to other spaces."
     },
-    "function_defintions": {
+    "function_definitions": {
       "potential solution": {
         "name": "potential solution"
       }
@@ -534,7 +534,7 @@
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/3": {
     "short_instructions": "Draw a square above the other square",
-    "function_defintions": {
+    "function_definitions": {
       "draw roof": {
         "name": "draw roof"
       }
@@ -542,7 +542,7 @@
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/4": {
     "short_instructions": "Draw a rectangle to complete the bridge.",
-    "function_defintions": {
+    "function_definitions": {
       "draw rectangle": {
         "name": "draw rectangle"
       }
@@ -550,7 +550,7 @@
   },
   "https://studio.code.org/s/course1/stage/10/puzzle/5": {
     "short_instructions": "Draw a rectangle to complete the bridge supports",
-    "function_defintions": {
+    "function_definitions": {
       "draw rectangle": {
         "name": "draw rectangle"
       }
