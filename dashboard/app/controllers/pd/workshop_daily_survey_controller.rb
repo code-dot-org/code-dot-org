@@ -552,9 +552,9 @@ module Pd
     def get_foorm_survey_data(workshop)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
-          FACILITATOR_ID => facilitator.id,
-          FACILITATOR_NAME => facilitator.name,
-          FACILITATOR_POSITION => i + 1
+          Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID => facilitator.id,
+          Pd::WorkshopSurveyFoormConstants::FACILITATOR_NAME => facilitator.name,
+          Pd::WorkshopSurveyFoormConstants::FACILITATOR_POSITION => i + 1
         }
       end
 
@@ -564,7 +564,7 @@ module Pd
       end
 
       return {
-        FACILITATORS => facilitator_data,
+        Pd::WorkshopSurveyFoormConstants::FACILITATORS => facilitator_data,
         workshop_course: workshop.course,
         workshop_subject: workshop.subject,
         regional_partner_name: regional_partner_name,
