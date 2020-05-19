@@ -335,27 +335,7 @@ export default class ScriptEditor extends React.Component {
 
         <h2>Lesson Settings</h2>
         <label>
-          Hideable Lessons
-          <input
-            name="hideable_stages"
-            type="checkbox"
-            defaultChecked={this.props.hideableLessons}
-            style={styles.checkbox}
-          />
-          <HelpTip>
-            <p>
-              Allow teachers to toggle whether or not specific lessons in this
-              script are visible to students in their section.
-            </p>
-          </HelpTip>
-        </label>
-        <LessonExtrasEditor
-          lessonExtrasAvailable={this.props.lessonExtrasAvailable}
-          projectWidgetTypes={this.props.projectWidgetTypes}
-          projectWidgetVisible={this.props.projectWidgetVisible}
-        />
-        <label>
-          Lesson Plan
+          Lesson Plans
           <input
             name="has_lesson_plan"
             type="checkbox"
@@ -377,6 +357,26 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
+        <label>
+          Hideable Lessons
+          <input
+            name="hideable_stages"
+            type="checkbox"
+            defaultChecked={this.props.hideableLessons}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              Allow teachers to toggle whether or not specific lessons in this
+              script are visible to students in their section.
+            </p>
+          </HelpTip>
+        </label>
+        <LessonExtrasEditor
+          lessonExtrasAvailable={this.props.lessonExtrasAvailable}
+          projectWidgetTypes={this.props.projectWidgetTypes}
+          projectWidgetVisible={this.props.projectWidgetVisible}
+        />
         <LessonDescriptions
           scriptName={this.props.name}
           currentDescriptions={this.props.i18nData.stageDescriptions}
