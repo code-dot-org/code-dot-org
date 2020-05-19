@@ -187,21 +187,21 @@ class ActivitiesController < ApplicationController
 
       is_sublevel = !@script_level.levels.include?(@level)
 
-      if is_sublevel
-        bubble_choice_parent_level = @script_level.levels.find do |level|
-          level.is_a?(BubbleChoice) && level.sublevels.include?(@level)
-        end
-        if bubble_choice_parent_level
-          User.track_level_progress(
-            user_id: current_user.id,
-            level_id: bubble_choice_parent_level.id,
-            script_id: @script_level.script_id,
-            new_result: test_result,
-            submitted: false,
-            level_source_id: nil,
-            pairing_user_ids: pairing_user_ids,
-            )
-        end
+      # The level might belong to more than one bubble choice parent level.
+      # Find the one that's in this script.
+      bubble_choice_parent_level = is_sublevel && @script_level.levels.find do |level|
+        level.is_a?(BubbleChoice) && level.sublevels.include?(@level)
+      end
+      if bubble_choice_parent_level
+        User.track_level_progress(
+          user_id: current_user.id,
+          level_id: bubble_choice_parent_level.id,
+          script_id: @script_level.script_id,
+          new_result: test_result,
+          submitted: false,
+          level_source_id: nil,
+          pairing_user_ids: pairing_user_ids,
+          )
       end
 
       # Make sure we don't log when @script_level is a multi-page assessment
