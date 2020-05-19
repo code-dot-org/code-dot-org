@@ -173,6 +173,9 @@ zh-TW:
     email_preference_yes: "是"
     email_preference_no: "否"
     email_preference_required: "你必須指定一個信箱地址。"
+    parent_account_checkbox: "我是一名家長/監護人，代表我的孩子注册"
+    parent_account_email_progress_permission: "我們可以給你寄送電郵，不時地告訴你孩子的進度和項目，以及他們的課程和計算機科學的最新情况嗎？[(查閱我們的隱私權政策)]（%{privacy_policy_url}）"
+    parent_account_email_label: "家長/監護人電子信箱"
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -465,8 +468,11 @@ zh-TW:
     auth_option_saved: "你已成功連結至%{provider}的帳戶，電子郵件地址是 %{email}。"
     auth_option_saved_no_email: "你已成功連結至%{provider}的帳戶。"
     update_email: "更新"
+    for_parents_and_guardians: "針對家長和監護人"
+    link_a_parent_email: "將一位家長/監護人的電郵地址連結到此帳戶，以便隨時瞭解你孩子的進度和項目。你還可以使用此電郵地址恢復密碼。"
     parent_guardian_email_label: "家長/監護人電子信箱"
     none: "無"
+    only_one_parent_email_supported_warning: "注：目前，針對每個學生帳戶我們僅支援新增一個家長/監護人電郵地址。"
     encrypted: "已加密"
   user_level:
     completed: '已完成'
@@ -746,6 +752,8 @@ zh-TW:
     open_response_body: "感謝您的回應！"
     correct_title: "正確"
     correct_body: "答對囉，太棒啦。"
+  lesson_extras:
+    bonus_level: "獎勵關卡"
   dialog:
     ok: "確定"
     startover_title: "你確定要重新開始嗎？"
@@ -1062,3 +1070,7 @@ zh-TW:
       error_wrong_provider: '提供者錯誤。請確保你以 Google 登入。'
       error_invalid_user: '使用者 ID 無效。請嘗試再次登入。'
       error_no_code: '請輸入你的登入代碼。'
+  parent_email_banner:
+    text: "**你是一名父母還是監護人？**將你的電郵連結到此帳戶，以便隨時瞭解你孩子的進度和項目！"
+    link_your_email: "連結您的電子信箱"
+    not_now: "現在不要"

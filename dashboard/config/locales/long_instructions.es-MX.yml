@@ -17213,6 +17213,10 @@ es-MX:
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
         > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Video_copy: |-
+        ## Conocer los Fundamentos de la Ciencia de la Computación
+
+        Comencemos por aprender un poco sobre los Fundamentos de la Ciencia de la Computación y cómo ha funcionado para los docentes y estudiantes de todo el mundo.
       OPD-K5 Closing: |-
         > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
         >
@@ -17224,6 +17228,10 @@ es-MX:
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
         que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         ¡En la página siguiente podrás escribir un programa similar!
+      OPD-K5 FirstProgram_copy: Mira el video a continuación, que explica un programa
+        en el que los jóvenes estudiantes escribirán en el <a href="https://studio.code.org/s/coursea-2019"
+        target="blank">Curso A</a>. En la siguiente página, ¡podrás escribir un programa
+        propio similar!
       OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
         planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
         cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
@@ -17270,10 +17278,24 @@ es-MX:
         Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
 
         **A medida que avanzas en las etapas 4-8**, tendrás la oportunidad de revisar algunas de nuestras actividades desconectadas para cada uno de los conceptos básicos cubiertos en este curso.
+      OPD-K5 Unplugged Video_copy: |-
+        ¡Puede parecer contraproducente enseñar ciencias de la computación lejos de la computadora! Sin embargo, hemos descubierto que algunas de las lecciones más impactantes son en realidad "fuera de línea" o realizadas con poca o ninguna tecnología.
+
+        Todos nuestros cursos de Fundamentos de la Ciencia de la Computación utilizan actividades fuera de línea para introducir conceptos de ciencia de la computación con objetos didácticos físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. También utilizamos actividades fuera de línea para enseñar conceptos importantes que no son programación, como la ciudadanía digital. Mira el video a continuación para comprender los beneficios de usar actividades fuera de línea para enseñar ciencias de la computación.
       OPD-K5 WhatIsCS: ¿Alguna vez te has preguntado "Exactamente qué es la informática"?
         O "¿Por qué algunos programas de computadora se escriben con palabras y otros
         se escriben con imágenes?" Si es así, mira este video; es una gran introducción
         al campo de la ciencia de la computación.
+      OPD-K5 WhatIsCS_copy: |-
+        <span style="font-size: 1.1em">
+        ¿Alguna vez te has preguntado qué es la ciencia de la computación o qué tipos de lenguajes de programa existen? Este video proporciona una introducción al campo de la ciencia de la computación.
+        </span>
+      OPD-K5 whats your plan: |-
+        # ¿Cuál es tu plan?
+
+        A lo largo del curso, se te pedirá que escribas reflexiones sobre lo que has aprendido. Una vez que envíes tu respuesta, se guardará y siempre podrás volver a ella. La revisaremos al final de este curso en línea.
+
+        Tómate un momento para reflexionar. ¿Cómo y cuándo completarás este curso en línea para asegurarte de obtener el mayor beneficio de la experiencia?
       OPD-K5-events-2: "Agrega el bloque `cantidad normal de aleteo` al evento `cuando
         hagas clic`, y luego presiona \"Ejecutar\".  \n\n* * *\n\nHaz clic o toca
         en el espacio de juego para mover a Flappy hacia el objetivo."

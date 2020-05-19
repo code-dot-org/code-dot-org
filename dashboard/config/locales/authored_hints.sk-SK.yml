@@ -3906,13 +3906,13 @@ sk-SK:
         mc_4_b: 'Príkaz  `znič blok`, zotne strom, ktorý je pred tebou. '
       Overworld House Frame Chosen:
         mc_6_a: Stlač šípku na bloku `umiestni`, aby si si zvolil/a čo chceš umiesniť.
-        mc_6_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_6_b: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu
+          ešte nemáš úplne vyriešenú. '
         mc_6_c: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
       Overworld House Frame Chosen_2019:
         mc_6_a: Stlač šípku na bloku `umiestni`, aby si si zvolil/a čo chceš umiesniť.
-        mc_6_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_6_b: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu
+          ešte nemáš úplne vyriešenú. '
         mc_6_c: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
       Overworld Move to Sheep:
         mc_1_a: Blok `posuň sa dopredu` je na vrchu v tvojom paneli nástrojov.
@@ -3926,14 +3926,14 @@ sk-SK:
         mc_5_a: Najprv použi blok `umiestni` a potom blok `posuň sa`.
         mc_5_b: Uisti sa, že obidva bloky sú vo vnútri cyklu  `opakuj` , aby kód zbehol
           viac ako raz.
-        mc_5_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_5_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu
+          ešte nemáš úplne vyriešenú. '
       Overworld Place Wall_2019:
         mc_5_a: Najprv použi blok `umiestni` a potom blok `posuň sa`.
         mc_5_b: Uisti sa, že obidva bloky sú vo vnútri cyklu  `opakuj` , aby kód zbehol
           viac ako raz.
-        mc_5_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_5_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu
+          ešte nemáš úplne vyriešenú. '
       Overworld Plant Crops:
         mc_7_a: 'Použi blok `zasaď plodinu` aby si niečo zasadil/a na mieste, kde
           stojíš. '
@@ -3955,13 +3955,13 @@ sk-SK:
       Overworld Shear Sheep:
         mc_3_a: Blok `strihaj` posunie ovcu pred teba. Si natočený smerom k ovci?
         mc_3_b: Ak potrebuješ zmeniť smer, kotrým si otočený/á, použi blok `otoč sa`
-        mc_3_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_3_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu
+          ešte nemáš úplne vyriešenú. '
       Overworld Shear Sheep_2019:
         mc_3_a: Blok `strihaj` posunie ovcu pred teba. Si natočený smerom k ovci?
         mc_3_b: Ak potrebuješ zmeniť smer, kotrým si otočený/á, použi blok `otoč sa`
-        mc_3_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_3_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu
+          ešte nemáš úplne vyriešenú. '
       Underground Avoiding Lava:
         mc_11_a: Celý kód je usporiadaný tak, aby sondoval lávu a potom  sa s ňou
           vysporiadal. Jediné čo potrebuješ spraviť , je pridať blok na posunutie
@@ -3988,14 +3988,14 @@ sk-SK:
         mc_10_a: Oceľové bloky sú tie škvrnité miesta za fakľou! Ako sa tam dostaneš?
         mc_10_b: Keď stojíš na hranici s lávou, použi blok `umiestni kameň vpredu`,
           aby si si vytvoril/a bezpečnú cestu. Potom po nich môžeš prejsť!
-        mc_10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_10_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď
+          úlohu ešte nemáš úplne vyriešenú. '
       Underground Iron_2019:
         mc_10_a: Oceľové bloky sú tie škvrnité miesta za fakľou! Ako sa tam dostaneš?
         mc_10_b: Keď stojíš na hranici s lávou, použi blok `umiestni kameň vpredu`,
           aby si si vytvoril/a bezpečnú cestu. Potom po nich môžeš prejsť!
-        mc_10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
-          keď si ešte nevyriešil celú úlohu.
+        mc_10_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď
+          úlohu ešte nemáš úplne vyriešenú. '
       Underground Mining Coal:
         mc_9_a: Si otočený/á správnym smerom? Príkaz `znič blok`, vydoluje blok, ktorý
           je pred tebou.
@@ -4012,10 +4012,10 @@ sk-SK:
         behavior hint: Na vyriešenie tejto úlohy je treba upraviť správanie. Postava
           kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne.
       comment_intro_maze_2018:
-        courseC_maze_programming4_a: Komentáre sú tiež užitočné, ak sa iní ľudia snažia
-          prečítať tvoj kód.
+        courseC_maze_programming4_a: Komentáre sú tiež užitočné vtedy, keď sa iní
+          ľudia snažia prečítať tvoj kód.
         courseC_maze_programming4_b: Pridaj komentár pri zmene smeru - čo by sa stalo,
-          keby si sa obrátil opačným smerom?
+          keby sa vták otočil opačným smerom?
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: 'Blok ako tento: <xml> <block type="simple_move_up_left"/></xml>
           umožní tvojmu umelcovi hýbať sa šikmo!'
@@ -4689,20 +4689,20 @@ sk-SK:
           name="TIMES" config="3-10">???</title></block></xml>, ktorý posunie Laurel
           na západ (vľavo) a pozbiera drahokamy.
       courseA_collector_loops6:
-        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+        courseA_collector_loops6_a: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
         courseA_collector_loops6_b: Najkratšie riešenie má 2 za sebou idúce cykly
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>.
       courseA_collector_loops6_2018:
-        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+        courseA_collector_loops6_a: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
         courseA_collector_loops6_b: Najkratšie riešenie má 2 za sebou idúce cykly
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>.
       courseA_collector_loops6_2019:
-        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+        courseA_collector_loops6_a: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
         courseA_collector_loops6_b: Najkratšie riešenie má 2 za sebou idúce cykly
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>.
@@ -5038,7 +5038,18 @@ sk-SK:
         '1': |-
           Tvoj kód by mal vyzerať takto:
 
-          <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseA_maze_ramp2_2019:
         '1': |-
           Tvoj kód by mal vyzerať takto:
@@ -5852,16 +5863,16 @@ sk-SK:
           </block></xml>!
       courseB_collector_loops5:
         courseB_collector_loops5_a: Použi viac ako jeden cyklus, aby si dokončil úlohu.
-        courseB_collector_loops5_b: Vyskúšaj spustiť kód niekoľko krát, aby si videl,
-          čo sa stane.
+        courseB_collector_loops5_b: Skús spustiť kód niekoľko krát a sleduj, čo sa
+          deje.
       courseB_collector_loops5_2018:
         courseB_collector_loops5_a: Použi viac ako jeden cyklus, aby si dokončil úlohu.
-        courseB_collector_loops5_b: Vyskúšaj spustiť kód niekoľko krát, aby si videl,
-          čo sa stane.
+        courseB_collector_loops5_b: Skús spustiť kód niekoľko krát a sleduj, čo sa
+          deje.
       courseB_collector_loops5_2019:
         courseB_collector_loops5_a: Použi viac ako jeden cyklus, aby si dokončil úlohu.
-        courseB_collector_loops5_b: Vyskúšaj spustiť kód niekoľko krát, aby si videl,
-          čo sa stane.
+        courseB_collector_loops5_b: Skús spustiť kód niekoľko krát a sleduj, čo sa
+          deje.
       courseB_collector_loops6:
         courseB_collector_loops6_a: Nevieš prísť na to, kde sa to pokazí? Použi tlačidlo
           "Krok", aby si prešiel vždy iba jeden blok tvojho progamu.
@@ -7046,19 +7057,19 @@ sk-SK:
           </block>
           </xml>
       courseB_starWars_prog9:
-        courseB_starWars_prog9_a: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseB_starWars_prog9_a: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: Pomohol by tu cyklus `opakuj`?
       courseB_starWars_prog9_2018:
-        courseB_starWars_prog9_a: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseB_starWars_prog9_a: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: Pomohol by tu cyklus <xml><block type="controls_repeat_simplified">
           <title name="TIMES">3</title> </block></xml>?
       courseB_starWars_prog9_2019:
-        courseB_starWars_prog9_a: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseB_starWars_prog9_a: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: Pomohol by tu cyklus <xml><block type="controls_repeat_simplified">
           <title name="TIMES">3</title> </block></xml>?
@@ -7911,27 +7922,24 @@ sk-SK:
       courseC_artist_prog5:
         courseC_artist_prog5_a: Spomaľ rýchlosť až na korytnačku, aby si videl bežať
           kód riadok po riadku. Takto zistíš, kde sa stala chyba.
-        courseC_artist_prog5_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_artist_prog5_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_artist_prog5_c: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
         courseC_artist_prog5_d: Každé otočenie by malo byť o 90 stupňov vpravo.
       courseC_artist_prog5_2018:
         courseC_artist_prog5_a: Spomaľ rýchlosť až na korytnačku, aby si videl bežať
           kód riadok po riadku. Takto zistíš, kde sa stala chyba.
-        courseC_artist_prog5_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_artist_prog5_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_artist_prog5_c: Šípka dole na jednotlivých blokoch ti rozbalí možnosti,
           s ktorými môžeš meniť funkciu bloku.
         courseC_artist_prog5_d: Každé otočenie by malo byť o 90 stupňov vpravo.
       courseC_artist_prog5_2019:
         courseC_artist_prog5_a: Spomaľ rýchlosť až na korytnačku, aby si videl bežať
           kód riadok po riadku. Takto zistíš, kde sa stala chyba.
-        courseC_artist_prog5_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_artist_prog5_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_artist_prog5_c: Šípka dole na jednotlivých blokoch ti rozbalí možnosti,
           s ktorými môžeš meniť funkciu bloku.
         courseC_artist_prog5_d: Každé otočenie by malo byť o 90 stupňov vpravo.
@@ -7975,9 +7983,8 @@ sk-SK:
           -   otoč sa vpravo o 45 stupňov
 
           Zopakuj tento cyklus 2 krát!
-        courseC_artist_prog7_e: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_artist_prog7_e: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_artist_prog7_2018:
         courseC_artist_prog7_a: Každý z uhlov je buď 45 alebo 90 stupňov.
         courseC_artist_prog7_b: |-
@@ -7997,9 +8004,8 @@ sk-SK:
           -   otoč sa vpravo o 45 stupňov
 
           Zopakuj tento cyklus 2 krát!
-        courseC_artist_prog7_e: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_artist_prog7_e: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_artist_prog7_2019:
         courseC_artist_prog7_a: Každý z uhlov je buď 45 alebo 90 stupňov.
         courseC_artist_prog7_b: |-
@@ -8019,9 +8025,8 @@ sk-SK:
           -   otoč sa vpravo o 45 stupňov
 
           Zopakuj tento cyklus 2 krát!
-        courseC_artist_prog7_e: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_artist_prog7_e: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: Môžeš to nakresliť ako obdĺžnik s čiarou
           v strede alebo ako dva samostatné štvorce!
@@ -8075,25 +8080,22 @@ sk-SK:
           name="DIR">moveForward</title></block></xml> alebo použiť blok <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
           ktorým program skrátiš.
-        courseC_collector_prog2_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_collector_prog2_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_collector_prog2_2018:
         courseC_collector_prog2_a: Môžeš použiť 4 bloky <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> alebo použiť blok <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
           ktorým program skrátiš.
-        courseC_collector_prog2_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_collector_prog2_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_collector_prog2_2019:
         courseC_collector_prog2_a: Môžeš použiť 4 bloky <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> alebo použiť blok <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
           ktorým program skrátiš.
-        courseC_collector_prog2_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_collector_prog2_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_collector_prog3:
         courseC_collector_prog3_a: Program spustí len bloky, ktoré sú spojené s blokom
           <xml><block type="when_run"/></xml>.
@@ -8118,23 +8120,20 @@ sk-SK:
       courseC_collector_prog4:
         courseC_collector_prog4_a: Ak sa nebudeš vedieť pohnúť, skús si svoje kroky
           rozpísať na papier.
-        courseC_collector_prog4_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_collector_prog4_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_collector_prog4_c: Skús ísť touto cestou.
       courseC_collector_prog4_2018:
         courseC_collector_prog4_a: Ak sa nebudeš vedieť pohnúť, skús si svoje kroky
           rozpísať na papier.
-        courseC_collector_prog4_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_collector_prog4_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_collector_prog4_c: Skús ísť touto cestou.
       courseC_collector_prog4_2019:
         courseC_collector_prog4_a: Ak sa nebudeš vedieť pohnúť, skús si svoje kroky
           rozpísať na papier.
-        courseC_collector_prog4_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseC_collector_prog4_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód
+          a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_collector_prog4_c: Skús ísť touto cestou.
       courseC_collector_prog5:
         courseC_collector_prog5_a: |-
@@ -8326,27 +8325,24 @@ sk-SK:
         courseC_harvester_loops2_c: Jeden z cyklov opakuje príkaz `posuň sa dopredu`
           a ten druhý opakuje príkaz `zbieraj tekvica`.
       courseC_harvester_loops3:
-        courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseC_harvester_loops3_a: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
           je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
           otočiť?
         courseC_harvester_loops3_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
           cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
       courseC_harvester_loops3_2018:
-        courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseC_harvester_loops3_a: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
           je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
           otočiť?
         courseC_harvester_loops3_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
           cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
       courseC_harvester_loops3_2019:
-        courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
-          spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseC_harvester_loops3_a: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
           je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
           otočiť?
@@ -8589,8 +8585,8 @@ sk-SK:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
-        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+        courseC_maze_debugging2_c: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -8598,8 +8594,8 @@ sk-SK:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
-        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+        courseC_maze_debugging2_c: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
       courseC_maze_debugging2_2019:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -8607,74 +8603,68 @@ sk-SK:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
-        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+        courseC_maze_debugging2_c: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
       courseC_maze_debugging3:
         courseC_maze_debugging3_a: |-
-          Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
+          Keď potrebuješ vymazať blok zo stredu kódu najprv odpoj bloky, ktoré sa nachádzajú pod ním a odlož ich nabok.
+          Potom zahoď blok, ktorý chceš vymazať späť do panela s nástrojmi.
+          Nakoniec presuň odpojené bloky späť tam, kam patria.
 
-          Potom presuň blok, ktorý chceš vymazať späť do panela s nástrojmi.
-
-          Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
-
-          ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
-        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_a: |-
-          Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
+          Keď potrebuješ vymazať blok zo stredu kódu najprv odpoj bloky, ktoré sa nachádzajú pod ním a odlož ich nabok.
+          Potom zahoď blok, ktorý chceš vymazať späť do panela s nástrojmi.
+          Nakoniec presuň odpojené bloky späť tam, kam patria.
 
-          Potom presuň blok, ktorý chceš vymazať späť do panela s nástrojmi.
-
-          Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
-
-          ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
-        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_a: |-
-          Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
+          Keď potrebuješ vymazať blok zo stredu kódu najprv odpoj bloky, ktoré sa nachádzajú pod ním a odlož ich nabok.
+          Potom zahoď blok, ktorý chceš vymazať späť do panela s nástrojmi.
+          Nakoniec presuň odpojené bloky späť tam, kam patria.
 
-          Potom presuň blok, ktorý chceš vymazať späť do panela s nástrojmi.
-
-          Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
-
-          ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
-        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
-          spustiť niekoľko krát a sleduj čo sa stane.
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: Nevieš prísť nato, kde nastala chyba? Skús spusiť
+          kód niekoľko krát a sleduj, čo sa stane.
       courseC_maze_debugging4:
         courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
-          o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
+          o jeden blok. Pomohlo ti to nájsť riadok, v ktorom sa stala chyba?
         courseC_maze_debugging4_b: Jedno z otočení posiela Scrata nesprávnym smerom.
           Dokážeš zistiť, ktoré z nich to je?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
-          o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
+          o jeden blok. Pomohlo ti to nájsť riadok, v ktorom sa stala chyba?
         courseC_maze_debugging4_b: Jedno z otočení posiela Scrata nesprávnym smerom.
           Dokážeš zistiť, ktoré z nich to je?
       courseC_maze_debugging4_2019:
         courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
-          o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
+          o jeden blok. Pomohlo ti to nájsť riadok, v ktorom sa stala chyba?
         courseC_maze_debugging4_b: Jedno z otočení posiela Scrata nesprávnym smerom.
           Dokážeš zistiť, ktoré z nich to je?
       courseC_maze_debugging5:
         courseC_maze_debugging5_a: "V pracovnom priestore už máš veľa užitočných blokov.
-          \ Neodstraňuj ich všetky! \n\nPoužitím tlačidla \"Krok\" ich prejdeš a zistíš,
-          kde v kóde nastala chyba."
+          \ Neodstraňuj ich všetky! \n\nPomocou tlačidla \"Krok\" prejdi kódom blok
+          po bloku a zisti, kde nastala chyba."
         courseC_maze_debugging5_b: Skús si nahlas povedať, čo by mal Scrat urobiť.
           Je to rovnaké ako tvoj kód? Nastane niekde chyba?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_a: "V pracovnom priestore už máš veľa užitočných blokov.
-          \ Neodstraňuj ich všetky! \n\nPoužitím tlačidla \"Krok\" ich prejdeš a zistíš,
-          kde v kóde nastala chyba."
+          \ Neodstraňuj ich všetky! \n\nPomocou tlačidla \"Krok\" prejdi kódom blok
+          po bloku a zisti, kde nastala chyba."
         courseC_maze_debugging5_c: Smer bloku "otoč sa" dokážeš zmeniť tak, že klikneš
           na šípku nadol, ktorá ti rozbalí možnosti.
         courseC_maze_debugging5_b: Skús si nahlas povedať, čo by mal Scrat urobiť.
           Je to rovnaké ako tvoj kód? Nastane niekde chyba?
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_a: "V pracovnom priestore už máš veľa užitočných blokov.
-          \ Neodstraňuj ich všetky! \n\nPoužitím tlačidla \"Krok\" ich prejdeš a zistíš,
-          kde v kóde nastala chyba."
+          \ Neodstraňuj ich všetky! \n\nPomocou tlačidla \"Krok\" prejdi kódom blok
+          po bloku a zisti, kde nastala chyba."
         courseC_maze_debugging5_c: Smer bloku "otoč sa" dokážeš zmeniť tak, že klikneš
           na šípku nadol, ktorá ti rozbalí možnosti.
         courseC_maze_debugging5_b: Skús si nahlas povedať, čo by mal Scrat urobiť.
@@ -8685,7 +8675,7 @@ sk-SK:
           -   Čo Scrat robí?
           -   Čo ti to prezrádza?
         courseC_maze_debugging6_b: |-
-          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+          Keď v programe nájdeš a opravíš prvú chybu, začni s týmto procesom odznovu a vyhľadaj ďalšiu chybu.
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging6_2018:
@@ -8694,7 +8684,7 @@ sk-SK:
           -   Čo Scrat robí?
           -   Čo ti to prezrádza?
         courseC_maze_debugging6_b: |-
-          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+          Keď v programe nájdeš a opravíš prvú chybu, začni s týmto procesom odznovu a vyhľadaj ďalšiu chybu.
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging6_2019:
@@ -8703,7 +8693,7 @@ sk-SK:
           -   Čo Scrat robí?
           -   Čo ti to prezrádza?
         courseC_maze_debugging6_b: |-
-          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+          Keď v programe nájdeš a opravíš prvú chybu, začni s týmto procesom odznovu a vyhľadaj ďalšiu chybu.
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging7:
@@ -8714,7 +8704,7 @@ sk-SK:
         courseC_maze_debugging7_b: Nezabudni na používanie tlačidla "Krok", keď chceš
           program spustiť riadok po riadku!
         courseC_maze_debugging7_c: |-
-          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+          Keď v programe nájdeš a opravíš prvú chybu, začni s týmto procesom odznovu a nájdi aj ďalšiu chybu.
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging7_2018:
@@ -8725,7 +8715,7 @@ sk-SK:
         courseC_maze_debugging7_b: Nezabudni na používanie tlačidla "Krok", keď chceš
           program spustiť riadok po riadku!
         courseC_maze_debugging7_c: |-
-          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+          Keď v programe nájdeš a opravíš prvú chybu, začni s týmto procesom odznovu a nájdi aj ďalšiu chybu.
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging7_2019:
@@ -8736,7 +8726,7 @@ sk-SK:
         courseC_maze_debugging7_b: Nezabudni na používanie tlačidla "Krok", keď chceš
           program spustiť riadok po riadku!
         courseC_maze_debugging7_c: |-
-          Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
+          Keď v programe nájdeš a opravíš prvú chybu, začni s týmto procesom odznovu a nájdi aj ďalšiu chybu.
 
           Opakuj to, až kým program nebude fungovať!
       courseC_maze_debugging_challenge1:
@@ -8803,18 +8793,21 @@ sk-SK:
         courseC_maze_programming1_0: Uisti sa, že sú bloky dobre pospájané a ešte
           raz stlač "Spustiť".
       courseC_maze_programming2:
-        courseC_maze_programming2_a: Aby si použil ďalší blok <xml><block type="maze_moveForward"/></xml>,
-          musíš ho vytiahnuť z panela nástrojov a pripojiť ku bloku <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_a: Blok <xml><block type="maze_moveForward"/></xml>
+          použiješ tak, že ho vytiahneš z panela nástrojov a pripojíš ku bloku <xml><block
+          type="when_run"/></xml>.
         courseC_maze_programming2_b: Uisti sa, že sú bloky dobre pospájané a ešte
           raz stlač "Spustiť".
       courseC_maze_programming2_2018:
-        courseC_maze_programming2_a: Aby si použil ďalší blok <xml><block type="maze_moveForward"/></xml>,
-          musíš ho vytiahnuť z panela nástrojov a pripojiť ku bloku <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_a: Blok <xml><block type="maze_moveForward"/></xml>
+          použiješ tak, že ho vytiahneš z panela nástrojov a pripojíš ku bloku <xml><block
+          type="when_run"/></xml>.
         courseC_maze_programming2_b: Uisti sa, že sú bloky dobre pospájané a ešte
           raz stlač "Spustiť".
       courseC_maze_programming2_2019:
-        courseC_maze_programming2_a: Aby si použil ďalší blok <xml><block type="maze_moveForward"/></xml>,
-          musíš ho vytiahnuť z panela nástrojov a pripojiť ku bloku <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_a: Blok <xml><block type="maze_moveForward"/></xml>
+          použiješ tak, že ho vytiahneš z panela nástrojov a pripojíš ku bloku <xml><block
+          type="when_run"/></xml>.
         courseC_maze_programming2_b: Uisti sa, že sú bloky dobre pospájané a ešte
           raz stlač "Spustiť".
       courseC_maze_programming3:
@@ -8884,22 +8877,22 @@ sk-SK:
           -   otoč sa druhým smerom
           -   posuň sa dopredu
       courseC_maze_programming5:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Na splnenie úlohy sa vták musí jeden krát otočiť.
           Podarí sa ti zistiť, ktorým smerom?
         courseC_maze_programming5_c: V riešení použiješ dva bloky `posuň sa dopredu`,
           otočku a znovu dva bloky `posuň sa dopredu`.
       courseC_maze_programming5_2018:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Na splnenie úlohy sa vták musí jeden krát otočiť.
           Podarí sa ti zistiť, ktorým smerom?
         courseC_maze_programming5_c: V riešení použiješ dva bloky `posuň sa dopredu`,
           otočku a znovu dva bloky `posuň sa dopredu`.
       courseC_maze_programming5_2019:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Na splnenie úlohy sa vták musí jeden krát otočiť.
           Podarí sa ti zistiť, ktorým smerom?
         courseC_maze_programming5_c: V riešení použiješ dva bloky `posuň sa dopredu`,
@@ -8943,21 +8936,18 @@ sk-SK:
       courseC_maze_programming8:
         courseC_maze_programming8_a: Ak nevieš, ako ďalej, použi tlačidlo "Krok" a
           prezri si svoj kód riadok po riadku.
-        courseC_maze_programming8_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming8_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_maze_programming8_2018:
         courseC_maze_programming8_a: Ak nevieš, ako ďalej, použi tlačidlo "Krok" a
           prezri si svoj kód riadok po riadku.
-        courseC_maze_programming8_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming8_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_maze_programming8_2019:
         courseC_maze_programming8_a: Ak nevieš, ako ďalej, použi tlačidlo "Krok" a
           prezri si svoj kód riadok po riadku.
-        courseC_maze_programming8_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming8_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_maze_programming_challenge1:
         courseC_maze_programming_challenge1_a: Je veľa spôsobov ako sa dostať k prasiatku.
           Skús najprv prstom nájsť cestu a potom ju naprogramuj!
@@ -8990,8 +8980,8 @@ sk-SK:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_starWars_loops1:
         courseC_starWars_loops1_a: Keď BB-8 prejde cez šrot, automaticky ho zoberie.
-        courseC_starWars_loops1_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops1_b: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_starWars_loops1_c: Na vyriešenie tejto úlohy použi blok `posuň sa
           dopredu` 5 krát.
       courseC_starWars_loops10:
@@ -8999,32 +8989,32 @@ sk-SK:
           využiť skúsenosti z predchádzajúcich cvičení a daj si pozor na správne otočky.
         courseC_starWars_loops10_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
           cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
-        courseC_starWars_loops10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops10_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: Nevyzerá tento vzor ako obrovské schody? Skús
           využiť skúsenosti z predchádzajúcich cvičení a daj si pozor na správne otočky.
         courseC_starWars_loops10_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
           cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
-        courseC_starWars_loops10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops10_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: Nevyzerá tento vzor ako obrovské schody? Skús
           využiť skúsenosti z predchádzajúcich cvičení a daj si pozor na správne otočky.
         courseC_starWars_loops10_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
           cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
-        courseC_starWars_loops10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops10_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops1_2018:
         courseC_starWars_loops1_a: Keď BB-8 prejde cez šrot, automaticky ho zoberie.
-        courseC_starWars_loops1_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops1_b: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_starWars_loops1_c: Na vyriešenie tejto úlohy použi blok `posuň sa
           dopredu` 5 krát.
       courseC_starWars_loops1_2019:
         courseC_starWars_loops1_a: Keď BB-8 prejde cez šrot, automaticky ho zoberie.
-        courseC_starWars_loops1_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops1_b: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
         courseC_starWars_loops1_c: Na vyriešenie tejto úlohy použi blok `posuň sa
           dopredu` 5 krát.
       courseC_starWars_loops2:
@@ -9104,29 +9094,29 @@ sk-SK:
           schodom. Pokryje to všetok šrot?
         courseC_starWars_loops7_b: Ak máš s touto úlohou problémy, zapíš si všetky
           kroky na papier a skús nájsť skupinu krokov, ktorá sa opakuje.
-        courseC_starWars_loops7_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops7_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops7_2018:
         courseC_starWars_loops7_a: Tento vzor je jednoduchší. ako sa zdá! Začni jedným
           schodom. Pokryje to všetok šrot?
         courseC_starWars_loops7_b: Ak máš s touto úlohou problémy, zapíš si všetky
           kroky na papier a skús nájsť skupinu krokov, ktorá sa opakuje.
-        courseC_starWars_loops7_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops7_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops7_2019:
         courseC_starWars_loops7_a: Tento vzor je jednoduchší. ako sa zdá! Začni jedným
           schodom. Pokryje to všetok šrot?
         courseC_starWars_loops7_b: Ak máš s touto úlohou problémy, zapíš si všetky
           kroky na papier a skús nájsť skupinu krokov, ktorá sa opakuje.
-        courseC_starWars_loops7_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops7_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops7_copy:
         courseC_starWars_loops7_a: Tento vzor je jednoduchší. ako sa zdá! Začni jedným
           schodom. Pokryje to všetok šrot?
         courseC_starWars_loops7_b: Ak máš s touto úlohou problémy, zapíš si všetky
           kroky na papier a skús nájsť skupinu krokov, ktorá sa opakuje.
-        courseC_starWars_loops7_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
-          čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops7_c: 'Neboj sa urobiť chybu! Spusti kód a sleduj, čo
+          sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseC_starWars_loops8:
         course_starWars_loops8_a: Skús o probléme premýšľať po častiach. Máš čas,
           nemusíš nájsť riešenie hneď na prvý pokus!
@@ -9911,31 +9901,27 @@ sk-SK:
           miestečko a zisti, či sa tam nachádza kvet, alebo nič.
         courseD_bee_conditionals3_b: Môžeš použiť cyklus `opakuj` alebo \`pokiaľ,
           aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!
-        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseD_bee_conditionals3_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_bee_conditionals3_2018:
         courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
           miestečko a zisti, či sa tam nachádza kvet, alebo nič.
         courseD_bee_conditionals3_b: Môžeš použiť cyklus `opakuj` alebo \`pokiaľ,
           aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!
-        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseD_bee_conditionals3_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_bee_conditionals3_2019:
         courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
           miestečko a zisti, či sa tam nachádza kvet, alebo nič.
-        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseD_bee_conditionals3_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_bee_conditionals3_copy:
         courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
           miestečko a zisti, či sa tam nachádza kvet, alebo nič.
         courseD_bee_conditionals3_b: Môžeš použiť cyklus `opakuj` alebo \`pokiaľ,
           aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!
-        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseD_bee_conditionals3_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_a: Ku každému políčku pristupuj tak, akoby bol nad
           ním oblak, napriek tomu, že vidíš celú cestu.
@@ -11061,11 +11047,10 @@ sk-SK:
           sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
           ešte jeden krát, aby si sa dostal až k žaluďu.
       courseD_maze_intro5a_2019:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_nestedLoops3:
         courseD_maze_nestedLoops3_a: Na vyriešenie úlohy musíš vložiť jeden blok s
           cyklom `opakuj` do ďalšieho.
@@ -11151,56 +11136,53 @@ sk-SK:
         courseD_maze_nestedLoops6_c: Na vyriešenie tejto úlohy sú potrebné dve sady
           vnorených cyklov.
       courseD_maze_ramp1:
-        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
-          či si dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming1_a: Ak sa vták neposúva k prasiatku, presvedč sa,
+          či sú bloky k sebe dobre pripojené a stlač "Spustiť".
+        courseC_maze_programming1_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp1_2018:
-        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
-          či si dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming1_a: Ak sa vták neposúva k prasiatku, presvedč sa,
+          či sú bloky k sebe dobre pripojené a stlač "Spustiť".
+        courseC_maze_programming1_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp1_2019:
-        courseC_maze_programming1_a: Ak sa vták neposúva ku prasaťu, presvedč sa,
-          či si dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming1_a: Ak sa vták neposúva k prasiatku, presvedč sa,
+          či sú bloky k sebe dobre pripojené a stlač "Spustiť".
+        courseC_maze_programming1_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp2:
-        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
-          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
-          spustení`.
+        courseC_maze_programming2_a: Vytiahni blok `posuň sa dopredu` z panela nástrojov
+          na pracovnú plochu a pripoj ho k bloku `pri spustení`.
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp2_2018:
-        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
-          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
-          spustení`.
+        courseC_maze_programming2_a: Vytiahni blok `posuň sa dopredu` z panela nástrojov
+          na pracovnú plochu a pripoj ho k bloku `pri spustení`.
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp2_2019:
-        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
-          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
-          spustení`.
+        courseC_maze_programming2_a: Vytiahni blok `posuň sa dopredu` z panela nástrojov
+          na pracovnú plochu a pripoj ho k bloku `pri spustení`.
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp3:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+          chceš vymazať blok zo stredu tvojho kódu, oddeľ bloky, ktoré sú pod ním
+          od zvyšku kódu a odtiahni ich nabok . \n\nPrejdi na blok, ktorý chceš odstrániť
+          a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky,
+          tam kam patria."
       courseD_maze_ramp3_2018:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+          chceš vymazať blok zo stredu tvojho kódu, oddeľ bloky, ktoré sú pod ním
+          od zvyšku kódu a odtiahni ich nabok . \n\nPrejdi na blok, ktorý chceš odstrániť
+          a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky,
+          tam kam patria."
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+          chceš vymazať blok zo stredu tvojho kódu, oddeľ bloky, ktoré sú pod ním
+          od zvyšku kódu a odtiahni ich nabok . \n\nPrejdi na blok, ktorý chceš odstrániť
+          a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky,
+          tam kam patria."
       courseD_maze_ramp4:
         courseC_maze_programming4_a: Môžeš sa otočiť vpravo alebo vľavo z pohľadu
           vtáka. Ak sa pozeráš doprava, tak otočením vpravo sa budeš pozerať nadol.
@@ -11221,77 +11203,68 @@ sk-SK:
           sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
           ešte jeden krát, aby si sa dostal až k žaluďu.
       courseD_maze_ramp5:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5_2018:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5_2019:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5a:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5a_2018:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5a_2019:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           Scrata.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5b:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5b_2018:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp5b_2019:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
           vtáka.
-        courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Vták začína tvárou k stene, tak sa nezabudni
@@ -11499,20 +11472,19 @@ sk-SK:
           pirátovu polohu pridaj blok `čakaj 1 sekundu` (ešte pred podmienku `AK`),
           aby sa mu body neodčítavali príliš rýchlo.
       courseD_scrat_ramp1:
-        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming1_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_scrat_ramp2:
-        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
-          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
-          spustení`.
+        courseC_maze_programming2_a: Vytiahni blok `posuň sa dopredu` z panela nástrojov
+          na pracovnú plochu a pripoj ho k bloku `pri spustení`.
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
           sú spojené s blokom `pri spustení`.
       courseD_scrat_ramp3:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+          chceš vymazať blok zo stredu tvojho kódu, oddeľ bloky, ktoré sú pod ním
+          od zvyšku kódu a odtiahni ich nabok . \n\nPrejdi na blok, ktorý chceš odstrániť
+          a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky,
+          tam kam patria."
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           z vtáčikovej perspektívy.
       courseD_scrat_ramp4:
@@ -11522,29 +11494,26 @@ sk-SK:
         courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
           sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
           ešte jeden krát, aby si sa dostal až k žaluďu.
-        courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseC_maze_programming4_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_scrat_ramp5:
-        courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
-          kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_a: Použi tlačidlo "Krok" a prezri si svoj kód riadok
+          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
           rohu?
         courseC_maze_programming5_c: Na rohu sa musíš otočiť vľavo, aby si sa dostal
           k prasiatku.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
-        courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
-          vyriešenú celú úlohu.
+        courseD_scrat_programming6_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseD_scrat_ramp8:
         courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť
           bludiskom krok po kroku a nájsť chyby.
         courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
           alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
-        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
+        courseD_maze_ramp7_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseE_artist_concept1:
         courseE_artist_concept1_a: Šesťuholníky majú strany dlhé 50 pixelov a 60 stupňov
           uhol otočený smerom doprava.
@@ -11645,9 +11614,8 @@ sk-SK:
         courseD_artist_functions5_b: 'Funkcie umožnujú zavolať uložený kód kedykoľvek,
           nie len z vnútra cyklu. '
       courseE_artist_functions6:
-        grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
-          bloky a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil
-          celú úlohu.
+        grade4_artist_functions_windows0_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseE_artist_functions7:
         courseD_artist_functions7_a: Najskôr skús vytvoriť funkciu a potom naraz pridaj
           okná.
@@ -11857,13 +11825,13 @@ sk-SK:
       courseE_bee_concept3:
         courseE_bee_concept3a_a: Vyskúšaj použiť vnorené cykly `opakuj`, aby si túto
           úlohu vyriešil.
-        courseE_bee_concept3a_b: Ak nemôžeš prísť na to, kam vložiť cykly, pokús sa
-          napísať kód krok za krokom a hľadaj vzory.
+        courseE_bee_concept3a_b: Ak nevieš prísť na to, kam vložiť cykly, pokús sa
+          napísať kód krok za krokom a pohľadaj v ňom opakujúce sa vzory.
       courseE_bee_concept3_2018:
         courseE_bee_concept3a_a: Vyskúšaj použiť vnorené cykly `opakuj` alebo `pokiaľ`,
           aby si vyriešil túto úlohu.
-        courseE_bee_concept3a_b: Ak nemôžeš prísť na to, kam vložiť cykly, pokús sa
-          napísať kód krok za krokom a hľadaj vzory.
+        courseE_bee_concept3a_b: Ak nevieš prísť na to, kam vložiť cykly, pokús sa
+          napísať kód krok za krokom a pohľadaj v ňom opakujúce sa vzory.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Podmienka `ak/inak` by ti  tomto mohla pomôcť.
         courseE_bee_concept4_b: Vzor ako keď kráčaš po schodoch ti môže pomôcť dostať
@@ -11994,13 +11962,11 @@ sk-SK:
           3-krát funkciu `pozbieraj po ceste`.
         coursee_farmer_functions3c1_2018_b: Aký kód musíš pridať aby si mohol/la zahýbať?
       courseE_farmer_functions4b:
-        courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseE_farmer_functions4b_a: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseE_farmer_functions5c:
-        courseE_farmer_functions5c_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
-          a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
-          úlohu.
+        courseE_farmer_functions5c_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti
+          kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseE_farmer_functions7a1_2018:
         courseE_farmer_functions7a1_2018_a: Vytvor svoju funkciu v časti `funkcie`,
           ktorá sa nachádza v paneli nástrojov.
@@ -12462,8 +12428,8 @@ sk-SK:
                 </value>
               </block>
           </xml>
-        courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_artist_for3_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_artist_for3_2018:
         courseF_artist_for3_a: |-
           Aby cyklus `for` riadil tvoj pohyb, tak sa uisti, že používaš `počítadlo` ako tvoju vzdialenosť v bloku `posuň sa dopredu`.
@@ -12478,8 +12444,8 @@ sk-SK:
                 </value>
               </block>
           </xml>
-        courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_artist_for3_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_artist_for3_2019:
         courseF_artist_for3_a: |-
           Aby cyklus `for` riadil tvoj pohyb, tak sa uisti, že používaš `počítadlo` ako tvoju vzdialenosť v bloku `posuň sa dopredu`.
@@ -12494,8 +12460,8 @@ sk-SK:
                 </value>
               </block>
           </xml>
-        courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_artist_for3_b: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_artist_for4:
         courseF_artist_for4_a: |-
           **Aké je najmenšíe čislo, ktoré potrebuješ?\
@@ -12505,8 +12471,8 @@ sk-SK:
           Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
         courseF_artist_for4_b: Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej
           úlohe, ale tentokrát nezabudni nakresliť štvorec!
-        courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_artist_for4_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_artist_for4_2018:
         courseF_artist_for4_a: |-
           **Aké je najmenšíe čislo, ktoré potrebuješ?\
@@ -12516,8 +12482,8 @@ sk-SK:
           Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
         courseF_artist_for4_b: Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej
           úlohe, ale tentokrát nezabudni nakresliť štvorec!
-        courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_artist_for4_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_artist_for4_2019:
         courseF_artist_for4_a: |-
           **Aké je najmenšíe čislo, ktoré potrebuješ?\
@@ -12527,8 +12493,8 @@ sk-SK:
           Toto sú otázky, ktoré potrebuješ zodpovedať, aby si vyplnil prázdne miesta v cykle `for`.
         courseF_artist_for4_b: Tvoj kód bude veľmi podobný tomu, čo si napísal v predošlej
           úlohe, ale tentokrát nezabudni nakresliť štvorec!
-        courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_artist_for4_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a
+          sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_artist_for5:
         courseF_artist_for5_a: Nepotrebuješ cyklus `opakuj` vo vnútri, keď kreslíš
           túto špirálu!
@@ -13900,24 +13866,24 @@ sk-SK:
           cykle `for`.
         courseF_bee_for5_b: Použi premennú `počítadlo` v každom cykle tak, aby včela
           prešla rôzne vzdialenosti medzi každými kvetmi.
-        courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_bee_for5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj,
+          čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_bee_for5_2018:
         courseF_bee_for5_a: Tentokrát tvoj blok `posuň sa dopredu` a tvoj blok `získaj
           nektár` potrebujú byť v samostatných cykloch `opakuj` a obidva v rovnakom
           cykle `for`.
         courseF_bee_for5_b: Použi premennú `počítadlo` v každom cykle tak, aby včela
           prešla rôzne vzdialenosti medzi každými kvetmi.
-        courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_bee_for5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj,
+          čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_bee_for5_2019:
         courseF_bee_for5_a: Tentokrát tvoj blok `posuň sa dopredu` a tvoj blok `získaj
           nektár` potrebujú byť v samostatných cykloch `opakuj` a obidva v rovnakom
           cykle `for`.
         courseF_bee_for5_b: Použi premennú `počítadlo` v každom cykle tak, aby včela
           prešla rôzne vzdialenosti medzi každými kvetmi.
-        courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseF_bee_for5_c: 'Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj,
+          čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. '
       courseF_bee_for6:
         courseF_bee_for6_a: Nezabudni použiť premennú `počítadlo` vo vnútri tvojho
           cyklu `opakuj`.
@@ -14703,13 +14669,13 @@ sk-SK:
             </block>
           </xml>
       coursea_maze_ramp1_2018:
-        courseC_maze_programming1_a: Ak sa vták neposúva ku prasiatku, presvedč sa,
-          či si dobre spojil oba bloky a stlač "Spustiť".
+        courseC_maze_programming1_a: Ak sa vták neposúva k prasiatku, presvedč sa,
+          či sú bloky k sebe dobre pripojené a stlač "Spustiť".
         courseC_maze_programming1_b: Neboj sa urobiť chybu! Vyskúšaj niečo, a keď
           to nefunguje, tak vyskúšaj niečo iné!
       coursea_maze_ramp1_2019:
-        courseC_maze_programming1_a: Ak sa vták neposúva ku prasiatku, presvedč sa,
-          či si dobre spojil oba bloky a stlač "Spustiť".
+        courseC_maze_programming1_a: Ak sa vták neposúva k prasiatku, presvedč sa,
+          či sú bloky k sebe dobre pripojené a stlač "Spustiť".
         courseC_maze_programming1_b: Neboj sa urobiť chybu! Vyskúšaj niečo, a keď
           to nefunguje, tak vyskúšaj niečo iné!
       grade5_artist_variables_triangles1:

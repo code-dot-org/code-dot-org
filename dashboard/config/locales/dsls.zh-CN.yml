@@ -6285,30 +6285,18 @@ zh-CN:
           **要知道的词汇**\n\n### **计数循环（for loop）** - 计数循环是能够预定开始、结束和增量（步长）的循环\n\n"
       courseF_markdown_forloops_intro:
         content1: 测试Markdown文本页面
-        markdown: |+
-          # **在这节课中...**
-
-          ### 今天要学习一种新的 `重复` 循环。这是要用的模块：
-
-          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
-
-          ### 好消息是，新循环会非常容易解决这样的问题！
-
-          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
-
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   \n\n! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_forloops_intro_2019:
         content1: 测试Markdown文本页面
-        markdown: |+
-          # **在这节课中...**
-
-          ### 今天要学习一种新的 `重复` 循环。这是要用的模块：
-
-          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
-
-          ### 好消息是，新循环会非常容易解决这样的问题！
-
-          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
-
+        markdown: "# **Dans cette leçon...**   \n\n### Aujourd'hui, tu apprendras
+          un nouveau type de boucle de `répéter`. Voici un aperçu du bloc que tu utiliseras
+          :   \n\n![] (https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n###
+          Grâce à cette boucle, tu as une solution *pour*  facilement résoudre des
+          énigmes comme celle-ci !   \n\n! [] (https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
       courseF_markdown_loops_end:
         content1: 测试Markdown文本页面
         markdown: "# **刚刚学会了 \"循环\"！**  \n\n### **循环是不断重复做某件事情。** 另一种说法是重复。\n\n###
@@ -6340,12 +6328,20 @@ zh-CN:
           如果一个普通循环就能对重复的规律很有用了，那么循环套上循环会怎样呢？让我们试试吧！\n\n---\n\n## **要知道的模块**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
       courseF_markdown_variables_end:
         content1: 测试Markdown文本页面
-        markdown: "# **刚刚学会了 \"变量\"！**\n\n### 要使用变量，需要一个名字和一个值。名字不能改变，但值可以。这样，可以在程序的任何位置，将名字作为值的占位符！
-          \n\n---\n\n## **要知道的词汇**\n\n### **变量（variable）** - 一些可以变化的信息的占位符\n\n"
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_end_2019:
         content1: 测试Markdown文本页面
-        markdown: "# **刚刚学会了 \"变量\"！**\n\n### 要使用变量，需要一个名字和一个值。名字不能改变，但值可以。这样，可以在程序的任何位置，将名字作为值的占位符！
-          \n\n---\n\n## **要知道的词汇**\n\n### **变量（variable）** - 一些可以变化的信息的占位符\n\n"
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
+          une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
+          pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_intro:
         content1: 测试Markdown文本页面
         markdown: |+
