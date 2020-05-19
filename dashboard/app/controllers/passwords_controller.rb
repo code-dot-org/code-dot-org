@@ -49,7 +49,7 @@ class PasswordsController < Devise::PasswordsController
       notice = "Reset password link sent to user. You may also send the link directly:<br>"
       resource.child_users.each do |user|
         url = edit_password_url(user, reset_password_token: user.raw_token)
-        notice += "#{user.username}: <a href='#{url}'>#{url}</a><br>"
+        notice += "#{ActionController::Base.helpers.sanitize(user.username)}: <a href='#{url}'>#{url}</a><br>"
       end
       flash[:notice] = notice.html_safe
     end
