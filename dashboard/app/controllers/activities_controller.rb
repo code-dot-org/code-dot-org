@@ -188,13 +188,13 @@ class ActivitiesController < ApplicationController
       is_sublevel = !@script_level.levels.include?(@level)
 
       if is_sublevel
-        parent_level = @script_level.levels.find do |level|
-          level.sublevels.include?(@level)
+        bubble_choice_parent_level = @script_level.levels.find do |level|
+          level.is_a?(BubbleChoice) && level.sublevels.include?(@level)
         end
-        if parent_level && parent_level.is_a?(BubbleChoice)
+        if bubble_choice_parent_level
           User.track_level_progress(
             user_id: current_user.id,
-            level_id: parent_level.id,
+            level_id: bubble_choice_parent_level.id,
             script_id: @script_level.script_id,
             new_result: test_result,
             submitted: false,
