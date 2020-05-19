@@ -349,15 +349,14 @@ function lessonGroups(state = [], action) {
         lessons[lessonIndex] = lessons[lessonSwapIndex];
         lessons[lessonSwapIndex] = tempLesson;
       } else {
-        // add to new lesson group
         const groupSwapIndex =
           action.direction === 'up' ? groupIndex - 1 : groupIndex + 1;
 
-        // Remove the lesson
+        // Remove the lesson from the old lesson group
         const oldLessons = newState[groupIndex].lessons;
         const curLesson = oldLessons.splice(lessonIndex, 1)[0];
 
-        // add lesson
+        // add lesson to the new lesson group
         const newLessons = newState[groupSwapIndex].lessons;
         action.direction === 'up'
           ? newLessons.push(curLesson)
@@ -374,14 +373,14 @@ function lessonGroups(state = [], action) {
       break;
     }
     case SET_LESSON_GROUP: {
-      // Remove the lesson
+      // Remove the lesson from the old lesson group
       const oldLessons = newState[action.oldGroup - 1].lessons;
       const curLesson = oldLessons.splice(
         action.lesson - oldLessons[0].position,
         1
       )[0];
 
-      // add lesson
+      // add lesson to the new lesson group
       const newLessons = newState[action.newGroup - 1].lessons;
       newLessons.push(curLesson);
       updateLessonPositions(newState);
