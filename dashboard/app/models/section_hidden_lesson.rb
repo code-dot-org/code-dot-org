@@ -12,7 +12,9 @@
 #  index_section_hidden_stages_on_stage_id    (stage_id)
 #
 
-class SectionHiddenStage < ApplicationRecord
+class SectionHiddenLesson < ApplicationRecord
   belongs_to :section
   belongs_to :lesson, foreign_key: 'stage_id'
+
+  self.table_name = 'section_hidden_stages'
 end
