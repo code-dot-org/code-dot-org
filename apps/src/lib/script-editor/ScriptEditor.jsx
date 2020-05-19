@@ -122,7 +122,6 @@ export default class ScriptEditor extends React.Component {
       : 10;
     return (
       <div>
-        <h2>I18n Strings</h2>
         <label>
           Title
           <input
@@ -141,6 +140,12 @@ export default class ScriptEditor extends React.Component {
         </label>
         <label>
           Short Description
+          <HelpTip>
+            <p>
+              This description is used when space is limited such as on the
+              Teacher and Student homepage for the course cards.
+            </p>
+          </HelpTip>
           <input
             name="description_short"
             defaultValue={this.props.i18nData.descriptionShort}
@@ -158,7 +163,7 @@ export default class ScriptEditor extends React.Component {
         </label>
         <h2>Basic Settings</h2>
         <label>
-          Login Required
+          Require Login To Use
           <input
             name="login_required"
             type="checkbox"
@@ -186,7 +191,7 @@ export default class ScriptEditor extends React.Component {
           </HelpTip>
         </label>
         <label>
-          Text-to-Speech
+          Enable Text-to-Speech
           <input
             name="tts"
             type="checkbox"
@@ -221,7 +226,7 @@ export default class ScriptEditor extends React.Component {
         </label>
         {this.props.isLevelbuilder && (
           <label>
-            Editor Experiment.
+            Editor Experiment
             <HelpTip>
               <p>
                 If specified, users with this experiment on the levelbuilder
@@ -247,11 +252,11 @@ export default class ScriptEditor extends React.Component {
           defaultAnnouncements={this.props.announcements}
           inputStyle={styles.input}
         />
-        <h2>Version Settings</h2>
+        <h2>Publishing Settings</h2>
         {this.props.isLevelbuilder && (
           <div>
             <label>
-              Is this script part of one of the core courses?
+              Core Course
               <select
                 name="curriculum_umbrella"
                 style={styles.dropdown}
@@ -335,7 +340,7 @@ export default class ScriptEditor extends React.Component {
 
         <h2>Lesson Settings</h2>
         <label>
-          Lesson Plans
+          Show Lesson Plan Links
           <input
             name="has_lesson_plan"
             type="checkbox"
@@ -358,7 +363,7 @@ export default class ScriptEditor extends React.Component {
           />
         </label>
         <label>
-          Hideable Lessons
+          Allow Teachers to Hide Lessons
           <input
             name="hideable_stages"
             type="checkbox"
@@ -383,7 +388,7 @@ export default class ScriptEditor extends React.Component {
         />
         <h2>Teacher Resources Settings</h2>
         <label>
-          Verified Resources
+          Has Resources for Verified Teachers
           <input
             name="has_verified_resources"
             type="checkbox"
@@ -424,7 +429,7 @@ export default class ScriptEditor extends React.Component {
         <h2>Professional Learning Settings</h2>
         {this.props.isLevelbuilder && (
           <label>
-            Professional Learning Course.
+            Professional Learning Course
             <HelpTip>
               <p>
                 When filled out, the course unit associated with this script
@@ -441,8 +446,10 @@ export default class ScriptEditor extends React.Component {
           </label>
         )}
         <label>
-          Peer Reviews to Complete. Currently only supported for professional
-          learning courses
+          Number of Peer Reviews to Complete
+          <HelpTip>
+            <p>Currently only supported for professional learning courses</p>
+          </HelpTip>
           <input
             name="peer_reviews_to_complete"
             defaultValue={this.props.peerReviewsRequired}

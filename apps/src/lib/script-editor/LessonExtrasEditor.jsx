@@ -37,7 +37,7 @@ export default class LessonExtrasEditor extends React.Component {
     return (
       <div>
         <label>
-          Lesson Extras Available
+          Allow Teachers to Enable Lesson Extras
           <input
             name="lesson_extras_available"
             type="checkbox"
