@@ -497,7 +497,7 @@
     "callouts": {
       "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw ear stems": {
         "name": "draw ear stems"
       }
@@ -505,7 +505,7 @@
   },
   "https://studio.code.org/s/k5-onlinepd-2019/stage/8/puzzle/6": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
-    "function_defintions": {
+    "function_definitions": {
       "draw a square": {
         "name": "draw a square"
       },
@@ -558,7 +558,7 @@
     "callouts": {
       "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a square": {
         "name": "draw a square"
       },
@@ -583,7 +583,7 @@
       "courseD_artist_functions4_b": "Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.",
       "courseD_artist_functions4_c": "Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a star": {
         "name": "draw a star"
       }
@@ -597,7 +597,7 @@
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a star": {
         "name": "draw a star"
       }

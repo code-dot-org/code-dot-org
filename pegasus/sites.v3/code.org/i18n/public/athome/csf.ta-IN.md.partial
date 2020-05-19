@@ -1,31 +1,31 @@
 ---
-title: Guide for CS Fundamentals teachers during school closures
+title: பள்ளி மூடல்களின் போது சிஎஸ் ஆசிரியர்களுக்கான அடிப்படை வழிகாட்டி
 video_player: true
 theme: responsive
 ---
 
-# Guide for CS Fundamentals teachers during school closures
+# பள்ளி மூடல்களின் போது சிஎஸ் ஆசிரியர்களுக்கான அடிப்படை வழிகாட்டி
 
-As more schools close in response to the COVID-19 pandemic, many Code.org classrooms are moving to using our CS Fundamentals courses in a virtual setting or giving their students activities to keep learning at home.
+கோவிட்-19 தொற்றுநோய்க்கு விடையிறுக்கும் வகையில் அதிகமான பள்ளிகள் மூடப்படுவதால், எங்கள் பல Code.org வகுப்பறைகள்  சிஎஸ் அடிப்படை படிப்புகளை ஒரு மெய்நிகர் அமைப்பில் பயன்படுத்த அல்லது தங்கள் மாணவர்களுக்கு வீட்டிலேயே கற்றலைத் தொடர நடவடிக்கைகளை வழங்குகின்றன.
 
-## Resources to keep learning
+## தொடர்ந்து கற்பதற்கான வளங்கள்
 
-Computer science is a great way to add some fun to extended time at home. However, the learning will take a different form when some kids are engaged regularly, some have only a little time, some have computers, and some don’t.
+வீட்டில் நீட்டிக்கப்பட்ட நேரத்திற்கு கணினி விஞ்ஞானம் மூலம்  சில வேடிக்கைகளைச் சேர்பது ஒரு சிறந்த வழியாகும். இருப்பினும், சில குழந்தைகள் தவறாமல் ஈடுபடும்போது அவர்களின் கற்றல் வேறு வடிவத்தை எடுக்கும், சிலருக்கு சிறிது நேரம் மட்டுமே இருக்கும், சிலருக்கு கணினிகள் உள்ளன, சிலருக்கு இல்லை.
 
-Rather than trying to teach a synchronous class remotely, many teachers will be giving elementary school students activities they can do to maintain their interest as well as providing structure during their time at home.
+ஒத்திசைவான வகுப்பை தொலைதூரத்தில் கற்பிக்க முயற்சிப்பதை விட, பல ஆசிரியர்கள் தொடக்கப்பள்ளி மாணவர்களுக்கு தங்கள் ஆர்வத்தைத் தக்க வைத்துக் கொள்ளவும், வீட்டிலேயே அவர்கள் கட்டமைப்பை வழங்கவும் செய்யக்கூடிய செயல்களைக் கொடுப்பார்கள்.
 
-<strong>We are compiling a list of activities on [code.org/athome](https://code.org/athome)</strong> that are ideal to share with students or families interested in doing some computer science on their own. This list includes activities for students with no computers or internet access.
+<strong mark ="crwd-குறி"> [code.org/athome](https://code.org/athome) </strong>இல் செயல்பாடுகளின் பட்டியலை நாங்கள் தொகுத்து வருகிறோம், அவை மாணவர்கள் சில கணினி அறிவியலை தாங்களாகவே செய்ய அல்லது ஆர்வமுள்ள குடும்பங்களுடன் பகிர்ந்து கொள்ள ஏற்றவை . இந்த பட்டியலில் கணினிகள் அல்லது இணைய அணுகல் இல்லாத மாணவர்களுக்கான நடவடிக்கைகள் உள்ளன.
 
-## Teaching CS Fundamentals Remotely
+## தொலைதூரத்தில் சிஎஸ் அடிப்படைகளை கற்பித்தல்
 
-If your school is asking you to continue to teach virtually and you’re part way through CS Fundamentals, we recommend you have students continue their existing courses at home, but skip the unplugged lessons.
+உங்கள் பள்ளி தொடர்ந்து கற்பிக்கும்படி கேட்டுக்கொண்டால், நீங்கள் சிஎஸ் அடிப்படைகளின் ஒரு பகுதியாக இருந்தால், மாணவர்கள் தங்களின் தற்போதைய படிப்புகளை வீட்டிலேயே தொடருமாறு பரிந்துரைக்கிறோம், ஆனால் பிரிக்கப்படாத பாடங்களைத் தவிர்க்கவும்.
 
-We designed the lessons in CS Fundamentals for use in a classroom with an actively engaged teacher, but many lessons can adapt well to at-home learning. Learning with CS Fundamentals does require an internet-connected device with a modern browser, something we realize not all students can access right now.
+தீவிரமாக ஈடுபடும் ஆசிரியருடன் ஒரு வகுப்பறையில் பயன்படுத்த சிஎஸ் அடிப்படைகளில் உள்ள பாடங்களை நாங்கள் வடிவமைத்தோம், ஆனால் பல பாடங்கள் வீட்டிலேயே கற்றலுடன் நன்கு பொருந்தக்கூடியவை. சிஎஸ் அடிப்படைகளுடன் கற்றுக்கொள்வதற்கு நவீன உலாவியுடன் இணையத்துடன் இணைக்கப்பட்ட சாதனம் தேவைப்படுகிறது, எல்லா மாணவர்களும் இப்போது அணுக முடியாது என்பதையும் நாங்கள் உணர்கிறோம்.
 
-You can track your [students’ progress](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) to see where they are. You may be able to use resources like video conferencing or email to assist students and provide feedback.
+உங்கள் [ மாணவர்களின் முன்னேற்றம் ](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) அவர்கள் எங்கிருக்கிறார்கள் என்பதைக் காணலாம். வீடியோ கான்பரன்சிங் அல்லது மின்னஞ்சல் போன்ற ஆதாரங்களை மாணவர்களுக்கு உதவவும் கருத்துக்களை வழங்கவும் நீங்கள் பயன்படுத்தலாம்.
 
-## Where can I get help?
+## நான் எங்கிருந்து உதவி பெற முடியும்?
 
-You are highly encouraged to share any questions or insights on our [CS Fundamentals Forum](https://forum.code.org/t/supporting-cs-fundamentals-students-during-school-closures/32456) where you can connect with other teachers. You can also email us at [support@code.org](mailto:support@code.org). We are here to help!
+எங்கள் [ சிஎஸ் அடிப்படை மன்றம் ](https://forum.code.org/t/supporting-cs-fundamentals-students-during-school-closures/32456) நீங்கள் மற்ற ஆசிரியர்களுடன் இணைக்க முடியும். [ support@code.org ](mailto:support@code.org) என்ற முகவரியிலும் எங்களுக்கு மின்னஞ்சல் அனுப்பலாம். நாங்கள் உதவுவதர்க்கே இங்கே இருக்கிறோம்!
 
-We also recommend you consider [CSTA's Resources to Support Teaching During COVID-19](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) for an extensive set of options for continuing to teach computer science during school closures.
+[ COVID-19 போது கற்பிப்பதை ஆதரிப்பதற்கான CSTA இன் வளங்கள் ](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) பள்ளி மூடல்களின் போது கணினி அறிவியலை தொடர்ந்து கற்பிப்பதற்கான விரிவான விருப்பங்களுக்கு.
