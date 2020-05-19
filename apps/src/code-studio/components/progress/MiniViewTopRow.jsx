@@ -29,7 +29,11 @@ const styles = {
   },
   linesOfCodeText: {
     position: 'absolute',
-    right: 105
+    right: 115
+  },
+  linesOfCodeTextRtl: {
+    position: 'absolute',
+    left: 115
   },
   toggle: {
     position: 'absolute',
@@ -76,7 +80,11 @@ export default class MiniViewTopRow extends React.Component {
           href={`/s/${scriptName}${params}`}
           color={Button.ButtonColor.gray}
         />
-        <span style={styles.linesOfCodeText}>{linesOfCodeText}</span>
+        <span
+          style={isRtl ? styles.linesOfCodeTextRtl : styles.linesOfCodeText}
+        >
+          {linesOfCodeText}
+        </span>
         <div style={isRtl ? styles.toggleRtl : styles.toggle}>
           <ProgressDetailToggle activeColor={color.teal} whiteBorder={true} />
         </div>
