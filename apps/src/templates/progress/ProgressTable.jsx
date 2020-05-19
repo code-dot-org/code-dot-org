@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
-import LessonGroup from './LessonGroup';
+import LessonGroups from './LessonGroups';
 import {levelType, lessonType} from './progressTypes';
 
 export const styles = {
@@ -67,7 +67,7 @@ class ProgressTable extends React.Component {
       return (
         <div>
           {groupedLessons.map(group => (
-            <LessonGroup
+            <LessonGroups
               key={group.group}
               isPlc={isPlc}
               groupName={group.group}
