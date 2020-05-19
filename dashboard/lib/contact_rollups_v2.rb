@@ -25,6 +25,7 @@ class ContactRollupsV2
       successful_extraction_count += 1
     end
 
+    # If all extractions fail, there is no reason to continue.
     return unless successful_extraction_count
     @log_collector.time_and_raise!('Processes all extracted data') do
       ContactRollupsProcessed.import_from_raw_table

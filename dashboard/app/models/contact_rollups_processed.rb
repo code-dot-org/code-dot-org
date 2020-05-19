@@ -34,13 +34,15 @@ class ContactRollupsProcessed < ApplicationRecord
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
 
-      # Note: Skipping validation here because the only validation we need is that an email
-      # is unique, which will be done at the DB level anyway thanks to an unique index on email.
-      import! batch, validate: false
-      batch = []
+      transaction do
+        # Note: Skipping validation here because the only validation we need is that an email
+        # is unique, which will be done at the DB level anyway thanks to an unique index on email.
+        import! batch, validate: false
+        batch = []
+      end
     end
 
-    import! batch, validate: false unless batch.empty?
+    transaction {import! batch, validate: false} unless batch.empty?
   end
 
   def self.get_data_aggregation_query
