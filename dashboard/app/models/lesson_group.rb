@@ -31,6 +31,9 @@ class LessonGroup < ApplicationRecord
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.display_name", default: 'Content')
   end
 
+  # This method is not currently used outside of summarize_for_edit but will be used
+  # soon as we move the position of lessons to be based on their lesson group instead
+  # of the script (dmcavoy - May 2020)
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
     summary = {
       id: id,
