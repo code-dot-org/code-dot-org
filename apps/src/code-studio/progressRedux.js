@@ -635,7 +635,7 @@ export function statusForLevel(level, levelProgress) {
 }
 
 /**
- * Groups lessons according to LessonGroups.
+ * Groups lessons according to LessonGroup.
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames

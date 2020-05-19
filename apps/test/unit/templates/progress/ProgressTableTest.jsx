@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/templates/progress/ProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import LessonGroups from '@cdo/apps/templates/progress/LessonGroups';
+import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
 
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];
@@ -84,7 +84,7 @@ describe('ProgressTable', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <LessonGroups
+        <LessonGroup
           key={FAKE_LESSON_1.group}
           isPlc={DEFAULT_PROPS.isPlc}
           groupName={FAKE_LESSON_1.group}
@@ -92,7 +92,7 @@ describe('ProgressTable', () => {
           lessons={FAKE_LESSON_1.lessons}
           levelsByLesson={FAKE_LESSON_1.levels}
         />
-        <LessonGroups
+        <LessonGroup
           key={FAKE_LESSON_2.group}
           isPlc={DEFAULT_PROPS.isPlc}
           groupName={FAKE_LESSON_2.group}
