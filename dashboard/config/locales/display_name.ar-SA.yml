@@ -2,6 +2,7 @@
 ar-SA:
   data:
     display_name:
+      Alien Defender: كائن فضائي مدافع
       CDEF_video_SpritesInAction: كيف تصنع "سبرايت"
       CDEF_video_SpritesInAction_2019: كيف تصنع "سبرايت"
       CSD U2 Pair Programming Video: البرمجة الزوجية
@@ -20,6 +21,9 @@ ar-SA:
       CSD U6 functions paramters video_2018: الدوال والمعاملات
       CSD U6 functions paramters video_2019: الدوال والمعاملات
       'CSD: For Loop_2018': للحلقات
+      'Course E: Artist Project': مشروع فنان الدورة هـ
+      'Course E: Artist Project_2018': مشروع فنان الدورة هـ
+      'Course E: Artist Project_2019': مشروع فنان الدورة هـ
       CourseEF_video_IntroSpriteLab: هذا مختبر العفريت
       CourseEF_video_IntroSpriteLab_2019: هذا مختبر العفريت
       CourseEF_video_MakeSprite: كيف تصنع "سبرايت"

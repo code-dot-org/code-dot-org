@@ -209,14 +209,14 @@ id-ID:
       Dance_Party_11_5:
         dance_party_11_5_groups: Lihat di sini untuk blok "semua bebek"
       Fish Tank 3-validated_2019:
-        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk anda atau
-          guru anda tentang bagaimana kode bekerja.
+        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk Anda atau
+          guru Anda tentang cara kerja kode.
       Function intro Ryan:
         Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
-          potongan BESAR kode dengan nama yang sama di ruang kerja.
+          sebagian BESAR kode dengan nama yang sama di ruang kerja.
       Function intro Ryan_2019:
         Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
-          potongan BESAR kode dengan nama yang sama di ruang kerja.
+          sebagian BESAR kode dengan nama yang sama di ruang kerja.
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: Semua blok favorit Anda diatur dalam kategori.
           Klik pada kata-kata ini untuk melihat di mana semuanya ditempatkan!
@@ -237,35 +237,37 @@ id-ID:
         InspirationalArtwork_1: Coba gunakan blok 'komentar` yang baru di bawah label
           ini untuk meninggalkan catatan anda sendiri di dalam program anda!
       InspirationalArtwork_2018:
-        InspirationalArtwork_1: Coba gunakan blok 'komentar` yang baru di bawah label
-          ini untuk meninggalkan catatan anda sendiri di dalam program anda!
+        InspirationalArtwork_1: Coba gunakan blok `komentar` di bawah label ini untuk
+          meninggalkan catatan Anda sendiri di dalam program Anda!
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Ketika anda sudah siap, tekan "Run" untuk mencoba
           program anda.
       MC HOC 2016 New Walk:
         MC_HOC_2016_New_Walk_callout2: Tekan "Run" untuk mulai bergerak.
       MC_HOC_2017_03_Cole:
-        MC_HOC_2017_03_Cole_1: Ini adalah loop `ulangi`!  Klik untuk memasukkannya
-          ke ruang kerja dan tambahkan kode yang ingin kamu jalankan berulang kali.
+        MC_HOC_2017_03_Cole_1: Ini adalah lingkaran `ulangi`!  Klik untuk memasukkannya
+          ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali.
       MC_HOC_2017_03_Cole_2019:
-        MC_HOC_2017_03_Cole_1: Ini adalah loop `ulangi`!  Klik untuk memasukkannya
-          ke ruang kerja dan tambahkan kode yang ingin kamu jalankan berulang kali.
+        MC_HOC_2017_03_Cole_1: Ini adalah lingkaran `ulangi`!  Klik untuk memasukkannya
+          ke ruang kerja dan tambahkan kode yang ingin Anda jalankan berulang kali.
       MC_HOC_2017_04_Cole:
-        MC_HOC_2017_04_Cole_a: Agent bisa mengapung di atas air, tapi pemain tidak
-          bisa!
+        MC_HOC_2017_04_Cole_a: Agent dapat mengapung di atas air, tapi pemain tidak
+          dapat!
       MC_HOC_2017_04_Cole_2019:
-        MC_HOC_2017_04_Cole_a: Agent bisa mengapung di atas air, tapi pemain tidak
-          bisa!
+        MC_HOC_2017_04_Cole_a: Agent dapat mengapung di atas air, tapi pemain tidak
+          dapat!
       MC_HOC_2017_06_Cole:
-        MC_HOC_2017_06_Cole_1: Kamu tidak bisa membuang blok ini, tapi kamu bisa mengeditnya!
+        MC_HOC_2017_06_Cole_1: Anda tidak dapat membuang blok ini, tapi Anda dapat
+          menyuntingnya!
       MC_HOC_2017_06_Cole_2019:
-        MC_HOC_2017_06_Cole_1: Kamu tidak bisa membuang blok ini, tapi kamu bisa mengeditnya!
+        MC_HOC_2017_06_Cole_1: Anda tidak dapat membuang blok ini, tapi Anda dapat
+          menyuntingnya!
       MC_HOC_2017_Ali:
-        MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
-          bisa!
+        MC_HOC_2017_08_RY_1: Agent dapat mengapung di atas lahar, tetapi Steve dan
+          Alex tidak dapat!
       MC_HOC_2017_Ali_2019:
-        MC_HOC_2017_08_RY_1: Agent bisa mengapung di atas lahar, tapi pemain tidak
-          bisa!
+        MC_HOC_2017_08_RY_1: Agent dapat mengapung di atas lahar, tetapi Steve dan
+          Alex tidak dapat!
       NEW Course 4 Artist Functions 3:
         NEW_Course_4_Artist_Functions_3_1: Klik di sini untuk menyunting fungsi baru
           sehingga itu membuat persegi.
@@ -298,8 +300,8 @@ id-ID:
         courseE_playLab_scaffold3_1: Bawalah aktor ke bendera ini untuk maju ke tahap
           selanjutnya.
       OPD-K5-spritelab-3:
-        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk anda atau
-          guru anda tentang bagaimana kode bekerja.
+        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk Anda atau
+          guru Anda tentang cara kerja kode.
       OPD-K5-variables-1:
         grade5_artist_variables_triangles1_1: Perhatikan bahwa blok-blok sekarang
           memiliki cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut
@@ -350,12 +352,13 @@ id-ID:
       Virtual Pet 2_2019:
         '': Klik disini!
       behaviors 1:
-        behaviors_edit: Klik di sini untuk melihat bagaimana perilaku bekerja.
+        behaviors_edit: Klik di sini untuk melihat cara kerja perilaku ini.
       behaviors 3a:
         behavior_callout: Mengapa perilaku ini tidak bekerja pada bintang menengah?
-        star2_callout: Hapus blok kostum ini dan gunakan blok pengganti "this sprite".
+        star2_callout: Hapus blok kostum ini dan gunakan blok pengganti "peri ini".
+        this_sprite_callout: Ganti blok kostum di bawah dengan ini.
       behaviors 4:
-        behaviors_edit: Klik di sini untuk melihat bagaimana perilaku bekerja.
+        behaviors_edit: Klik di sini untuk melihat cara kerja perilaku ini.
       behaviors 5:
         behaviors_edit: Tambahkan kode untuk perilaku.
       behaviors free play:
@@ -424,9 +427,7 @@ id-ID:
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
           tahapan.
       courseA_collector_loops1_2019:
-        courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
-          alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
-          tahapan.
+        courseA_collector_loops1_1: Gunakan blok ini untuk mengumpulkan harta karun.
       courseA_collector_loops3:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
           yang dapat anda gunakan dalam teka-teki ini.
@@ -470,7 +471,7 @@ id-ID:
         courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: Gunakan tombol langkah agar dituntun langkah demi
-          langkah dalam menjalankan program nya. Hal ini akan membantu Anda menemukan
+          langkah dalam menjalankan programnya. Hal ini akan membantu Anda menemukan
           bug!
       courseA_maze_seq4:
         made_of_stone: Blok-blok tersebut terbuat dari batu. Anda bisa memindahkannya,
@@ -482,14 +483,11 @@ id-ID:
       courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: Ini merupakan satu seruan
       courseA_playLab_events5:
-        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah dari
-          satu kejadian.
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah event.
       courseA_playLab_events5_2018:
-        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah dari
-          satu kejadian.
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah event.
       courseA_playLab_events5_2019:
-        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah dari
-          satu kejadian.
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah event.
       courseA_playLab_events6:
         courseA_playLab_events6_1: Hal ini akan memungkinkan Anda untuk memilih sebuah
           suara secara "acak", Anda tidak akan tahu suara apa yang akan Anda dapatkan
@@ -528,13 +526,9 @@ id-ID:
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
           tahapan.
       courseB_collector_loops1_2018:
-        courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
-          alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
-          tahapan.
+        courseB_collector_loops1_1: Gunakan blok ini untuk mengumpulkan harta karun.
       courseB_collector_loops1_2019:
-        courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
-          alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
-          tahapan.
+        courseB_collector_loops1_1: Gunakan blok ini untuk mengumpulkan harta karun.
       courseB_maze_seq1:
         courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseB_maze_seq1_2018:
@@ -543,7 +537,7 @@ id-ID:
         courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Gunakan tombol langkah agar dituntun langkah demi
-          langkah dalam menjalankan program nya. Hal ini akan membantu Anda menemukan
+          langkah dalam menjalankan programnya. Hal ini akan membantu Anda menemukan
           bug!
       courseB_maze_seq3:
         courseB_maze_seq3_1: Blok-blok yang warna abu-abu terbuat dari batu dan tidak
@@ -557,6 +551,15 @@ id-ID:
       courseC19_playLab_EOC3:
         courseE_playLab_scaffold3_1: Bawalah aktor ke bendera ini untuk maju ke tahap
           selanjutnya.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_callout1: Gunakan blok ini ketika Waddles dan Chomp
+          bersentuhan!
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_callout1: Gunakan blok ini ketika Waddles dan Chomp
+          bersentuhan!
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_callout1: Gunakan blok ini ketika Waddles dan Chomp
+          bersentuhan!
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: Blok ini memungkinkan Anda memindahkan
           aktor kebagian yang berbeda di dalam ruang permainan.
@@ -566,6 +569,10 @@ id-ID:
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: Blok ini memungkinkan Anda memindahkan
           aktor kebagian yang berbeda di dalam ruang permainan.
+      courseC_artist_loops1a_2019:
+        jumpto_callout: Blok ini sangat penting untuk proyek ini. Pastikan untuk menggunakannya!
+      courseC_artist_loops1b_2019:
+        sticker2: Tambahkan ini di tengah program Anda.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: Mulailah dengan menggunakan blok ini untuk
           menempatkan artis ke tengah layar.
@@ -611,6 +618,9 @@ id-ID:
         courseC_maze_debugging5_1: Blok abu-abu itu terkunci dan tidak dapat dihapus!
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Blok-blok tersebut terkunci dan tidak dapat dihapus!
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: Pindahkan blok dari kotak peralatan ke ruang
+          kerja Anda.
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
@@ -728,6 +738,12 @@ id-ID:
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'Gunakan blok ini untuk mengumpulkan satu buah
           harta karun.  '
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: Anda harus menggunakan blok `ketika
+          jalan di depan` untuk menyelesaikan teka-teki ini.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: Anda harus menggunakan blok `ketika
+          jalan di depan` untuk menyelesaikan teka-teki ini.
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
@@ -1004,6 +1020,12 @@ id-ID:
       courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Fungsi ini akan melakukan pekerjaan yang
           baik dengan jagung, tapi bagaimana dengan sayuran lainnya?
+      courseF_bee_variables_1_2018:
+        courseF_bee_functions_1_2018_1: Anda dapat menemukan variabel Anda di bawah
+          sini!
+      courseF_bee_variables_1_2019:
+        courseF_bee_functions_1_2018_1: Anda dapat menemukan variabel Anda di bawah
+          sini!
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: Toolbox telah disusun kedalam kategori-kategori
           untuk mempermudah menemukan blok-blok yang kamu butuhkan.
@@ -1014,11 +1036,14 @@ id-ID:
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: Temukan blok `tanya` disini!
       coursea_maze_ramp1_2018:
-        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
-          untuk memulai program mu.
+        grade2_CaringForNewPet_0_1: Setelah menggabungkan semua blok, tekan "Jalankan"
+          untuk memulai program Anda.
       coursea_maze_ramp1_2019:
-        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
-          untuk memulai program mu.
+        grade2_CaringForNewPet_0_1: Setelah menggabungkan semua blok, tekan "Jalankan"
+          untuk memulai program Anda.
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: Pindahkan blok dari kotak peralatan ke ruang
+          kerja Anda.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Gunakan blok "create a circle"
           dan ubahlah ukuran.
