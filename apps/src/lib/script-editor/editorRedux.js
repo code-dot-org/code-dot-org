@@ -20,6 +20,8 @@ const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_LOCKABLE = 'scriptEditor/SET_LESSON_LOCKABLE';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 
+// NOTE: Position for Lesson Groups, Lessons and Levels is 1 based.
+
 export const init = (lessonGroups, levelKeyList) => ({
   type: INIT,
   lessonGroups,
