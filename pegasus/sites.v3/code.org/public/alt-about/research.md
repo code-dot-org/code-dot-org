@@ -23,10 +23,20 @@ style_min: true
 <a id="research"></a>
 ## Research
 
+<h3><strong><a href="http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/longitudinal_study_-_combined_report_final_3_10_20__jgq_.pdf">The Effect of Advanced Placement Computer Science Course Taking on College Enrollment</a></strong></h3>
+<p>This study provides estimates of the impact of AP Computer Science course taking on students’ college enrollment, relative to students not participating in the program from the same schools, controlling for student academic achievement and background characteristics. We find that taking AP computer science courses has a positive and significant effect on increasing the likelihood of enrolling in college, despite the fact that very few students in either district took an AP Computer Science course in high school.</p>
+
+<p style="font-size:12px">Brown, Emily Anne and Richard S. Brown, PhD. (2020). The Effect of Advanced Placement Computer Science Course Taking on College Enrollment. (West Coast Analytics Research Report). Grapevine, TX: West Coast Coast Analytics. Retrieved from <a href="http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/longitudinal_study_-_combined_report_final_3_10_20__jgq_.pdf">West Coast Analytics website</a></p>
+
+<div class="col-45">
+<hr>
+</div>
+<div style="clear: both"></div>
+
 <h3><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0360131520300099?dgcid=author">The effects of coding on children’s planning and inhibition skills</a></strong></h3>
 <p>In a cluster-randomized controlled trial, Arfé, Vardanega, and Ronconi examined how 1st-grade children's gains in coding skills that follow instructional intervention transfer to two important executive functions (EFs): planning and response inhibition. The results show that practice with coding through Code.org not only improved measurably children's ability to solve coding problems, but also their EFs, increasing the time children spent planning, their ability to solve standardized planning tasks, and to inhibit prepotent responses.</p>
 
-<p style="font-size:12px">Barbara Arfé, Tullio Vardanega, and Lucia Ronconi. (2020). The effects of coding on children's planning and inhibition skills. Computers & Education 148 (2020), 103807. DOI:<a href="http://dx.doi.org/10.1016/j.compedu.2020.103807">http://dx.doi.org/10.1016/j.compedu.2020.103807</a></p>
+<p style="font-size:12px">Arfé, Barbara, Tullio Vardanega, and Lucia Ronconi. (2020). The effects of coding on children's planning and inhibition skills. Computers & Education 148 (2020), 103807. DOI:<a href="http://dx.doi.org/10.1016/j.compedu.2020.103807">http://dx.doi.org/10.1016/j.compedu.2020.103807</a></p>
 
 <div class="col-45">
 <hr>

@@ -53,7 +53,7 @@ module Api::V1::Pd
       day_0_general_response = response['this_workshop']['Day 0']['general']
 
       assert_equal 2, day_0_general_response['response_count']
-      matrix_response = day_0_general_response['surveys/pd/workshop_daily_survey_day_0.0']['teaching_cs_matrix']
+      matrix_response = day_0_general_response['surveys/pd/summer_workshop_pre_survey.0']['teaching_cs_matrix']
 
       assert_not_nil matrix_response['committed_to_teaching_cs']
       assert_not_nil matrix_response['like_teaching_cs']
@@ -244,7 +244,7 @@ module Api::V1::Pd
 
     def create_survey_submission(survey_response)
       submission = Foorm::Submission.create(
-        form_name: 'surveys/pd/workshop_daily_survey_day_0',
+        form_name: 'surveys/pd/summer_workshop_pre_survey',
         form_version: 0,
         answers: survey_response
       )

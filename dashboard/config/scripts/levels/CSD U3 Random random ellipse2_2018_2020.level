@@ -59,10 +59,10 @@
     "map_reference": "/docs/csd-1718/random_numbers_csd/index.html",
     "parent_level_id": 18459,
     "name_suffix": "_2020",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

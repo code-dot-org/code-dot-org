@@ -4288,7 +4288,13 @@ fr-FR:
         courseF_artist_variables3_a: 'La variable ''longueur'' sera utilisée à deux
           endroits dans ton code : dans la longueur latérale de ton triangle, et dans
           la quantité que tu avances entre les triangles.'
+        courseF_artist_variables3_b: 'Un bloc numérique avec la valeur 50 ne doit
+          être qu''à un seul endroit : après le bloc `définir longueur`.'
       OPD-K5-variables-6:
+        courseF_artist_variables4_a: Votre code ne sera pas très différent de ce qu'il
+          était dans la dernière énigme, sauf que tu devras tourner l'artiste pour
+          qu'il saute vers le bas, puis le retourner pour te préparer à dessiner le
+          triangle suivant.
         courseF_artist_variables4_c: "Voici le modèle que ton artiste suivra : \n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         courseF_artist_variables4_b: |-
           <xml>
@@ -4538,6 +4544,15 @@ fr-FR:
       behaviors 6:
         behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
           contrôle la vitesse de chaque sprite ?"
+      behaviors 7:
+        behaviors_hint1: Tu peux créer un nouveau comportement qui utilise deux actions
+          différentes ou combiner deux comportements existants.
+        sprites_idea1: Pour t'amuser, tu peux utiliser un comportement similaire pour
+          faire voler une navette dans l'espace ou faire courir un personnage au premier
+          plan. Essaie de changer l'arrière-plan et les costumes des lutins dans ta
+          scène !   ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05
+          16_05_19.gif>)   ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05
+          16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Les commentaires sont aussi utiles lorsque d’autres
           personnes essaient de lire ton code.
@@ -6169,10 +6184,14 @@ fr-FR:
         courseA_harvester_loops2_a: "Ton code aura **quatre** blocs `déplacer vers
           l’Ouest`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\net **quatre**
           blocs <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
+        courseA_harvester_loops2_b: 'Si tu rencontres encore des problèmes, essaie
+          de dire les étapes à haute voix. '
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "Ton code aura **quatre** blocs `déplacer vers
           l’Ouest`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\net **quatre**
           blocs <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
+        courseA_harvester_loops2_b: 'Si tu rencontres encore des problèmes, essaie
+          de dire les étapes à haute voix. '
       courseA_harvester_loops3:
         courseA_harvester_loops3_a: |-
           Utilise un bloc ˋrépéter\` comme celui-ci pour t’aider !
@@ -7222,9 +7241,13 @@ fr-FR:
       courseB_Scrat_ramp1_2018:
         '1': Si Scrat ne fait pas ce que tu veux, assure-toi que les deux blocs sont
           connectés, puis appuie de nouveau sur « Exécuter ».
+        '2': N'aie pas peur de faire une erreurs ! Essaie quelque chose et, si cela
+          ne fonctionne pas, essaie autre chose !
       courseB_Scrat_ramp1_2019:
         '1': Si Scrat ne fait pas ce que tu veux, assure-toi que les deux blocs sont
           connectés, puis appuie de nouveau sur « Exécuter ».
+        '2': N'aie pas peur de faire une erreurs ! Essaie quelque chose et, si cela
+          ne fonctionne pas, essaie autre chose !
       courseB_Scrat_ramp2_2018:
         '1': |-
           Ton code devrait ressembler à ceci :
@@ -9275,6 +9298,9 @@ fr-FR:
           bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.
         courseC_PlayLab_eventsA_b: Tu devras faire glisser un bloc ˋquand l’exécution
           commence\` sur l’espace de travail pour résoudre ce casse-tête.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: Utilise les touches fléchées pour déplacer le pingouin.
+          Tu n'as pas besoin d'écrire de code pour finir ce niveau.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _Besoin d’une idée ?_
@@ -9310,6 +9336,14 @@ fr-FR:
 
           **Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran.
       courseC_PlayLab_eventsFP_2019:
+        idea1: '_Besoin d''une idée ?_    **Qui est là ?** Fais apparaître des personnages
+          avec des images aléatoires, de sorte que personne ne sait qui apparaîtra
+          ensuite.    \< img src =" <https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif"style=>"
+          largeur: 200px">'
+        idea2: '_Besoin d''une idée ?_   **partir pour une Aventure** - Change l''arrière-plan,
+          puis fais dire aux caractères où ils se trouvent, maintenant.    \< img
+          src =" <https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif"style=>"
+          largeur: 200px">'
         idea3: |-
           _Besoin d’une idée ?_
 
@@ -9470,6 +9504,10 @@ fr-FR:
               <title name="VALUE">Bird</title>
             </block>
           </xml>
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: 'C''est le premier bloc dont tu auras besoin :     [Blockly
+          block]0    Tu peux choisir gauche ou droite et n''importe quel nombre de
+          degrés.'
       courseC_artist_loops2a:
         courseC_artist_loops2a_a: Dans ta boucle, tu devras sauter à 200 sur 200 pixels
           vers le bas, puis dessiner l’autocollant oiseau, puis tourner de 30 degrés.
@@ -10462,6 +10500,28 @@ fr-FR:
         courseC_harvester_loops_challenge1_b: Tu peux répéter ˋavancer`et ˋrécolter
           maïs` autant de fois que nécessaire, puis ˋtourner à droite\` dans chaque
           coin.
+        courseC_harvester_loops_challenge1_c: |-
+          Après avoir récolté le maïs, les deux premières fois, tu peux utiliser une boucle imbriquée pour ramasser les huit épis suivants.    <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: C'est trop compliqué sans boucle!
         courseC_harvester_loops_challenge1_b: Tu peux répéter ˋavancer`et ˋrécolter
@@ -10641,6 +10701,8 @@ fr-FR:
         courseC_maze_debugging5_a: "Il y a déjà beaucoup de blocs qui peuvent aider
           dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton
           \"Etape\" pour les passer et trouver où le code ne fonctionne pas."
+        courseC_maze_debugging5_c: Tu peux changer la direction du bloc tourner en
+          cliquant sur le menu déroulant.
         courseC_maze_debugging5_b: Essaie de dire ce que devrait faire Scrat à hautes
           voix. Est-ce que c'est la même chose que le code dans l'espace de travail?
           Qu'est ce qui ne va pas?
@@ -10648,6 +10710,8 @@ fr-FR:
         courseC_maze_debugging5_a: "Il y a déjà beaucoup de blocs qui peuvent aider
           dans l'espace de travail. Ne les efface pas tous! \n\nUtilise le bouton
           \"Etape\" pour les passer et trouver où le code ne fonctionne pas."
+        courseC_maze_debugging5_c: Tu peux changer la direction du bloc tourner en
+          cliquant sur le menu déroulant.
         courseC_maze_debugging5_b: Essaie de dire ce que devrait faire Scrat à hautes
           voix. Est-ce que c'est la même chose que le code dans l'espace de travail?
           Qu'est ce qui ne va pas?
@@ -11185,11 +11249,21 @@ fr-FR:
         courseD_artist_project1_b: Souviens-toi que `avancer` dessine une ligne, alors
           que `sauter en avant` ne le fait pas.
       courseD_artist_2_2018:
+        courseD_artist_project1_b: Souviens toi que `avancer` permet de dessiner une
+          ligne, mais pas `sauter`.
         courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
           choisir l'angle dont tu as besoin!
       courseD_artist_2_2018_2019:
+        courseD_artist_project1_b: Souviens toi que `avancer` permet de dessiner une
+          ligne, mais pas `sauter`.
         courseD_artist_project1_a: Utilise le menu déroulant du bloc `tourner` pour
           choisir l'angle dont tu as besoin!
+      courseD_artist_5_2018:
+        '1': Si tu changes tes formes, n'oublie pas que tu auras aussi besoin de changer
+          leurs angles !
+      courseD_artist_5_2018_2019:
+        '1': Si tu changes tes formes, n'oublie pas que tu auras aussi besoin de changer
+          leurs angles !
       courseD_artist_binary1:
         courseD_artist_binary1_a: Remplace les "???" dans le bloc de texte avec l'image
           binaire que tu veux, à base de 0 et de 1.
@@ -11340,6 +11414,12 @@ fr-FR:
         courseD_artist_binary8_c: N’aie pas peur de faire des erreurs ! Essaie d'écrire
           des binaires et d'exécuter le code pour voir ce qui se passe, même si tu
           n’as pas encore résolu le puzzle.
+      courseD_artist_binary_challenge2_2018:
+        courseD_artist_binary_challenge2_a: Il n'y a que quelques lignes incorrectes
+          dans le programme original.
+      courseD_artist_binary_challenge2_2019:
+        courseD_artist_binary_challenge2_a: Il n'y a que quelques lignes incorrectes
+          dans le programme original.
       courseD_artist_nestedLoops1:
         courseD_artist_nestedLoops1_a: Le moyen le plus simple pour le dessiner c'est
           d'avancer et de tourner à droite.
@@ -11376,6 +11456,10 @@ fr-FR:
           la couleur` dans ton code. Tu n'as pas besoin de faire correspondre les
           couleurs avec le modèle de l'image.
       courseD_artist_nestedLoops1a_2018:
+        courseD_artist_nestedLoops1a_a: 'Tu devras dessiner un total de 6 triangles
+          (conseil : utilisee ton code de la dernière énigme pour commencer). Après
+          avoir terminé un triangle, pivote de 60 degrés et déplace-toi pour commencer
+          le triangle suivant.    ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)'
         courseD_artist_nestedLoops1a_b: Si tu crées ton triangle avec une boucle,
           l'artiste doit être dans la même position à chaque départ. Cela rendra la
           rotation à 60 degrés plus facile à gérer.
@@ -12118,8 +12202,18 @@ fr-FR:
           le bas, l'abeille devra `avancer`. Tant que sur le chemin, l 'abeille doit
           vérifier s'il y a une fleur. `si à la fleur`, l'abeille doit `obtenir du
           nectar`.
+        courseD_bee_conditionals5_b: À l'intérieur du bloc `tant que le chemin devant`,
+          tu devras avancer et vérifier la présence d'une fleur. Comment vérifies-tu
+          s'il y a une fleur ? Que fais-tu s'il y a une fleur ?
         courseD_bee_conditionals5_hintVid2: Regarde cette vidéo pour t'aider à résoudre
           ce puzzle.
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: Si tu utilises un bloc `si à la fleur`, tu peux
+          résoudre ceci, en utilisant une boucle imbriquée. Écris un programme pour
+          les chemins de gauche et du bas, puis répète le tout deux fois !
+        courseD_bee_conditionals5_c: Pour continuer sur le chemin, l'abeille devra
+          `avancer`. Tout en se déplaçant, l'abeille doit vérifier la présence d'une
+          fleur. `si il y a une fleur, l'abeille doit`recueillir nectar\`.
       courseD_bee_conditionals5_copy:
         courseD_bee_conditionals5_hintVid1: Besoin d'aide pour démarrer? Regarde la
           vidéo!
@@ -12445,6 +12539,82 @@ fr-FR:
                     \- recueillir le nectar
                   \- avancer
                 \- tourner à droite
+      courseD_bounce_events10s_2018:
+        courseD_bounce_events10s_a: 'Tu dois avoir ces deux événements dans ton code
+          :    <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block
+          type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block
+          type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title
+          name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>'
+      courseD_bounce_events10s_2019:
+        courseD_bounce_events10s_a: 'Tu dois avoir ces deux événements dans ton code
+          :    <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block
+          type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block
+          type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title
+          name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>'
+      courseD_bounce_events11s_2018:
+        courseD_bounce_events11s_a: Tu auras besoin de lancer une balle quand le jeu
+          démarre, quand on frappe le panier, et quand la main manque la balle.
+      courseD_bounce_events11s_2019:
+        courseD_bounce_events11s_a: Tu auras besoin de lancer une balle quand le jeu
+          démarre, quand on frappe le panier, et quand la main manque la balle.
+      courseD_bounce_events12s_2018:
+        courseD_bounce_events12s_a: Tu peux accélérer le ballon ou la main en attachant
+          ces blocs à l'événement `quand court`.
+        courseD_bounce_events12s_b: Essaie de donner la valeur de 2 points à chaque
+          tir, et d'échanger le logo de l'équipe avec celui de ta ville natale !
+      courseD_bounce_events12s_2019:
+        courseD_bounce_events12s_a: Tu peux accélérer le ballon ou la main en attachant
+          ces blocs à l'événement `quand court`.
+        courseD_bounce_events12s_b: Essaie de donner la valeur de 2 points à chaque
+          tir, et d'échanger le logo de l'équipe avec celui de ta ville natale !
+      courseD_bounce_events1s_2018:
+        courseD_bounce_events1s_a: 'Tu dois ajouter le bloc `déplacer à gauche` à
+          l''événement `quand la flèche gauche` pour que ce jeu fonctione:    <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">    <next>      <block
+          type="bounce_moveLeft"/>    </next>  </block>   </xml>'
+        courseD_bounce_events1s_b: N'oublie pas d'appuyer sur « Exécuter » et de mettre
+          la main sur le panier afin de résoudre cette énigme.
+      courseD_bounce_events1s_2019:
+        courseD_bounce_events1s_a: 'Tu dois ajouter le bloc `déplacer à gauche` à
+          l''événement `quand la flèche gauche` pour que ce jeu fonctione:    <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">    <next>      <block
+          type="bounce_moveLeft"/>    </next>  </block>   </xml>'
+        courseD_bounce_events1s_b: N'oublie pas d'appuyer sur « Exécuter » et de mettre
+          la main sur le panier afin de résoudre cette énigme.
+      courseD_bounce_events2s_2018:
+        courseD_bounce_events2s_a: 'Tu auras besoin de deux ensembles d''événements
+          `déplacer` codés pour que cela fonctionne:    [Blockly block] [0]'
+      courseD_bounce_events2s_2019:
+        courseD_bounce_events2s_a: 'Tu auras besoin de deux ensembles d''événements
+          `déplacer` codés pour que cela fonctionne:    [Blockly block] [0]'
+      courseD_bounce_events5s_2018:
+        courseD_bounce_events5s_a: Tu n'as pas besoin de déplacer la main pour résoudre
+          cette énigme.
+        courseD_bounce_events5s_b: 'Assure-toi d''avoir ajouté ce code à ton espace
+          de travail :    <xml>  <block type="bounce_whenPaddleCollided" deletable="false">
+          <next> <block type="bounce_bounceBall"/></next></block></xml>'
+      courseD_bounce_events5s_2019:
+        courseD_bounce_events5s_a: Tu n'as pas besoin de déplacer la main pour résoudre
+          cette énigme.
+        courseD_bounce_events5s_b: 'Assure-toi d''avoir ajouté ce code à ton espace
+          de travail :    <xml>  <block type="bounce_whenPaddleCollided" deletable="false">
+          <next> <block type="bounce_bounceBall"/></next></block></xml>'
+      courseD_bounce_events6s_2018:
+        courseD_bounce_events6s_a: As-tu un événement qui ressemble à ceci ?    <xml><block
+          type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Si tu as écrit le code correctement, tu n'as pas
+          besoin de déplacer la main pour gagner.
+      courseD_bounce_events6s_2019:
+        courseD_bounce_events6s_a: As-tu un événement qui ressemble à ceci ?    <xml><block
+          type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Si tu as écrit le code correctement, tu n'as pas
+          besoin de déplacer la main pour gagner.
+      courseD_bounce_events7s_2018:
+        courseD_bounce_events7s_a: Tu peux ajouter des sons dans plus d'endroits,
+          si tu en as envie !
+      courseD_bounce_events7s_2019:
+        courseD_bounce_events7s_a: Tu peux ajouter des sons dans plus d'endroits,
+          si tu en as envie !
       courseD_collector_debugging1:
         courseD_collector_debugging1_a: |-
           Utilise le bouton "Etape" pour voir si tout est bon dans un premier temps
@@ -12499,6 +12669,8 @@ fr-FR:
           Et les secondes ?
 
           Où cela va mal ?
+        courseD_collector_debugging2a_c: Que se passe-t-il ?   Que doit-il se passer
+          ?   Qu'est-ce que cela signifie ?
       courseD_collector_debugging2a_2019:
         courseD_collector_debugging2a_a: |-
           Utilise le bouton "Etape" pour voir si tout est bon dans un premier temps
@@ -12506,6 +12678,8 @@ fr-FR:
           Et les secondes ?
 
           Où cela va mal ?
+        courseD_collector_debugging2a_c: Que se passe-t-il ?   Que doit-il se passer
+          ?   Qu'est-ce que cela signifie ?
       courseD_collector_debugging3:
         courseD_collector_debugging3_a: Est-ce qu'il y a un endroit où Laurel fais
           quelque chose qui n'a pas de sens ? Que se passe-t-il lorsque tu changes
@@ -12566,6 +12740,16 @@ fr-FR:
           A quoi cela te faitpenser ?
         courseD_collector_debugging5_b: Une fois que tu as la première boucle comme
           tu le souhaites, que reste dans ton code ?
+      courseD_collector_debugging5a_2018:
+        courseD_collector_debugging5a_a: Que fait-il ? Qu'est-il censé faire ? Qu'est-ce
+          que cela signifie ?
+        courseD_collector_debugging5a_b: Une fois que tu as collecté la première ligne
+          de trésors, que reste-t-il, dans ton code ?
+      courseD_collector_debugging5a_2019:
+        courseD_collector_debugging5a_a: Que fait-il ? Qu'est-il censé faire ? Qu'est-ce
+          que cela signifie ?
+        courseD_collector_debugging5a_b: Une fois que tu as collecté la première ligne
+          de trésors, que reste-t-il, dans ton code ?
       courseD_collector_debugging6:
         courseD_collector_debugging6_a: |-
           Essaie de faire fonctionner ce code avec le bouton "Etape". Est-ce que tout est bon à la première étape?
@@ -12583,6 +12767,9 @@ fr-FR:
           Et à la seconde?
 
           Quand les choses tournent mal?
+        courseD_collector_debugging6_b: On dirait que tous les blocs dont tu as besoin
+          se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer
+          », si les choses deviennent trop confuses.
       courseD_collector_debugging6a_2019:
         courseD_collector_debugging6_a: |-
           Essaie de faire fonctionner ce code avec le bouton "Etape". Est-ce que tout est bon à la première étape?
@@ -12590,6 +12777,9 @@ fr-FR:
           Et à la seconde?
 
           Quand les choses tournent mal?
+        courseD_collector_debugging6_b: On dirait que tous les blocs dont tu as besoin
+          se trouvent dans l'espace de travail. Essaie de cliquer sur « recommencer
+          », si les choses deviennent trop confuses.
       courseD_collector_debugging8:
         courseD_collector_debugging8_a: Est-ce que tu vois un modèle que tu peux simplifier
           avec une boucle?
@@ -13043,6 +13233,20 @@ fr-FR:
           rien s'il n'y a pas de maïs à récolter.
         courseD_farmer_condLoops6_b: Vérifie bien `si` le chemin continue avant de
           passer à l'étape suivante !
+      courseD_farmer_condLoops6_2018:
+        courseD_farmer_condLoops6_a: Utilise une boucle `tant que le chemin continue`
+          ou un bloc `si chemin continue / sinon` pour déplacer la fermière sur chaque
+          morceau de la spirale.
+        courseD_farmer_condLoops6_b: Tu as seulement besoin de vérifier s'il y a du
+          maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille
+          à la fin de ton programme.
+      courseD_farmer_condLoops6_2019:
+        courseD_farmer_condLoops6_a: Utilise une boucle `tant que chemin devant` ou
+          un bloc `si chemin devant / sinon` pour déplacer la fermière sur chaque
+          morceau de la spirale.
+        courseD_farmer_condLoops6_b: Tu as seulement besoin de vérifier s'il y a du
+          maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille
+          à la fin de ton programme.
       courseD_farmer_condLoops7:
         courseD_farmer_condLoops7_a: |-
           Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.
@@ -13353,12 +13557,16 @@ fr-FR:
 
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
+        courseB_iceage_loops3_b: Pour répéter du code, va prendre une boucle ˋrépéter\`
+          en la glissant, puis mets le bloc que tu veux répéter à l’intérieur.
       courseD_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Utilise ce nouveau bloc !
            <xml><block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">5</title>
             </block></xml>
+        courseB_iceage_loops3_b: Pour répéter du code, va prendre une boucle ˋrépéter\`
+          en la glissant, puis mets le bloc que tu veux répéter à l’intérieur.
       courseD_iceage_loops4:
         courseD_iceage_loops4_a: N’aie pas peur d’exécuter ton code pour voir ce qui
           se passe !
@@ -13372,9 +13580,11 @@ fr-FR:
           pour arriver au gland. Vois-tu un motif ?
         courseD_iceage_loops4_c: Voici le chemin que Scrat devrait emprunter.
       courseD_iceage_loops6:
+        courseD_iceage_loops6_a: Ton code final devra avoir **trois** blocs 'avancer\`.
         courseD_iceage_loops6_b: Tu n’as besoin d’ajouter qu’**une** boucle !
         courseD_iceage_loops6_c: Ton chemin final devrait ressembler à ceci.
       courseD_iceage_loops6_2019:
+        courseD_iceage_loops6_a: Ton code final devra avoir **trois** blocs 'avancer\`.
         courseD_iceage_loops6_b: Tu n’as besoin d’ajouter qu’**une** boucle !
         courseD_iceage_loops6_c: Ton chemin final devrait ressembler à ceci.
       courseD_iceage_loops7:
@@ -13388,12 +13598,16 @@ fr-FR:
         courseB_iceage_loops7_b: Voici le chemin que Scrat devrait suivre pour arriver
           jusqu’au gland.
       courseD_iceage_loops8:
+        courseD_iceage_loops8_a: Est-ce que les blocs `tourner` sont corrects ? Que
+          peux-tu changer d'autre ?
         courseD_iceage_loops8_b: La première boucle devrait se répéter **3** fois,
           la deuxième devrait se répéter **5** fois, la troisième boucle devrait se
           répéter **4** fois et la dernière boucle devrait se répéter **4** fois.
         courseD_iceage_loops8_c: Utilise des boucles pour aider Scrat à suivre ce
           chemin.
       courseD_iceage_loops8_2019:
+        courseD_iceage_loops8_a: Est-ce que les blocs `tourner` sont corrects ? Que
+          peux-tu changer d'autre ?
         courseD_iceage_loops8_b: La première boucle devrait se répéter **3** fois,
           la deuxième devrait se répéter **5** fois, la troisième boucle devrait se
           répéter **4** fois et la dernière boucle devrait se répéter **4** fois.
@@ -13422,6 +13636,8 @@ fr-FR:
         courseC_maze_programming5_a: Essaie d'utiliser le bouton "Étape" pour exécuter
           ton code ligne par ligne. Peux-tu deviner ce que tu dois faire, ensuite
           ?
+        courseC_maze_programming5_b: Souviens-toi que les virages sont du point de
+          vue de Red.
         courseC_maze_programming5_c: N'aie pas peur de faire une erreur ! Essaie d'ajouter
           des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si
           tu ne penses pas avoir encore résolu l’énigme.
@@ -13587,6 +13803,9 @@ fr-FR:
           sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
           de plus pour atteindre le cochon.
       courseD_maze_ramp4_2019:
+        courseC_maze_programming4_a: Tu peux tourner à droite ou à gauche du point
+          de vue de Scrat. Si tu es orienté à droite, tourner à droite te fera aller
+          vers le bas.
         courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
           sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
           de plus pour atteindre le cochon.
@@ -13639,6 +13858,8 @@ fr-FR:
         courseC_maze_programming5_a: Essaie d'utiliser le bouton "Étape" pour exécuter
           ton code ligne par ligne. Peux-tu deviner ce que tu dois faire, ensuite
           ?
+        courseC_maze_programming5_b: Rappelle-toi que les virages sont du point de
+          vue de Scrat.
         courseC_maze_programming5_c: N'aie pas peur de faire une erreur ! Essaie d'ajouter
           des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si
           tu ne penses pas avoir encore résolu l’énigme.
@@ -13940,6 +14161,9 @@ fr-FR:
         courseC_maze_programming3_b: Souviens toi que tourner à droite et à gauche,
           c'est du point de vue de Scrat.
       courseD_scrat_ramp4:
+        courseC_maze_programming4_a: Tu peux tourner à droite ou à gauche du point
+          de vue de Scrat. Si tu es orienté à droite, tourner à droite te fera aller
+          vers le bas.
         courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
           sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
           de plus pour atteindre le cochon.
@@ -14099,6 +14323,12 @@ fr-FR:
           -   Avancer de 100 + 75 pixels
           -   Utiliser une fonction
       courseE_artist_functions2_2018:
+        courseD_artist_functions2_b: La fonction ne doit pas contenir tout ton programme,
+          mais juste la partie qui dessine un carré avec des côtés de 100 pixels.
+        courseD_artist_functions2_c: Assure-toi d'utiliser le bloc vert `dessiner
+          un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction
+          ne fonctionnera pas.   <xml><block type="procedures_callnoreturn" limit="2"><mutation
+          name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Votre programme devrait:
 
@@ -14106,6 +14336,12 @@ fr-FR:
           -   Avancer de 100 + 75 pixels
           -   Utiliser une fonction
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_b: La fonction ne doit pas contenir tout ton programme,
+          mais juste la partie qui dessine un carré avec des côtés de 100 pixels.
+        courseD_artist_functions2_c: Assure-toi d'utiliser le bloc vert `dessiner
+          un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction
+          ne fonctionnera pas.   <xml><block type="procedures_callnoreturn" limit="2"><mutation
+          name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Votre programme devrait:
 
@@ -14167,11 +14403,15 @@ fr-FR:
         courseD_artist_functions5_b: Les fonctions rendent plus facile à n'importe
           quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur
           d'une boucle!
+        courseD_artist_functions5_c: Commence par créer ta fonction `dessiner une
+          étoile`, puis utilise cette fonction pour dessiner les trois étoiles !
       courseE_artist_functions5_2019:
         courseD_artist_functions5_a: N'abandonne pas! Souviens toi ce que tu as appris.
         courseD_artist_functions5_b: Les fonctions rendent plus facile à n'importe
           quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur
           d'une boucle!
+        courseD_artist_functions5_c: Commence par créer ta fonction `dessiner une
+          étoile`, puis utilise cette fonction pour dessiner les trois étoiles !
       courseE_artist_functions5_copy:
         courseD_artist_functions5_a: N'abandonne pas! Souviens toi ce que tu as appris.
         courseD_artist_functions5_b: Les fonctions rendent plus facile à n'importe
@@ -14200,9 +14440,17 @@ fr-FR:
       courseE_artist_functions7_2018:
         courseD_artist_functions7_a: Essaie de créer d'abord ta fonction puis ajoute
           les fenêtre une à une.
+        courseD_artist_functions7_b: Pour aller des fenêtres supérieures aux fenêtres
+          inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis
+          tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la
+          bonne direction pour achever la maison !
       courseE_artist_functions7_2019:
         courseD_artist_functions7_a: Essaie de créer d'abord ta fonction puis ajoute
           les fenêtre une à une.
+        courseD_artist_functions7_b: Pour aller des fenêtres supérieures aux fenêtres
+          inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis
+          tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la
+          bonne direction pour achever la maison !
       courseE_artist_functions8:
         courseD_artist_functions8_f: Tu as besoin d'un seul bloc `Avancer`, mais tu
           auras besoin de quelques blocs `saute en avant` et/ou `saute en arrière`!
@@ -14241,6 +14489,9 @@ fr-FR:
           Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles
 
           ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
+        courseD_artist_functions8_c: À la fin de chaque série de carrés décalés, l'artiste
+          devra sauter vers le bas et en arrière, avant de dessiner la série suivante
+          de carrés décalés.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_f: Tu as besoin d'un seul bloc `Avancer`, mais tu
@@ -14259,7 +14510,42 @@ fr-FR:
           Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles
 
           ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
+        courseD_artist_functions8_c: À la fin de chaque série de carrés décalés, l'artiste
+          devra sauter vers le bas et en arrière, avant de dessiner la série suivante
+          de carrés décalés.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+      courseE_artist_functions8b_2018:
+        courseD_artist_functions8_f: Tu n'as besoin que d'un bloc `avancer` si tu
+          fais cela correctement !
+        courseD_artist_functions8_a: Commence par créer une fonction pour un carré,
+          puis essaie de créer une fonction pour une rangée de carrés.
+        courseD_artist_functions8_d: Pour faire une rangée de carrés,   - répète 3
+          fois    -   dessine un carré   -   saute en avant de **100 pixels**
+      courseE_artist_functions8b_2019:
+        courseD_artist_functions8_f: Tu n'as besoin que d'un bloc `avancer` si tu
+          fais cela correctement !
+        courseD_artist_functions8_a: Commence par créer une fonction pour un carré,
+          puis essaie de créer une fonction pour une rangée de carrés.
+        courseD_artist_functions8_d: Pour faire une rangée de carrés,   - répète 3
+          fois    -   dessine un carré   -   saute en avant de **100 pixels**
+      courseE_artist_functions8c_2018:
+        courseD_artist_functions8_f: C'est plus facile qu'il n'y paraît ! Tu ne devrais
+          pas avoir besoin de blocs `déplacer` ou `sauter` ici !
+        courseD_artist_functions8_a: La deuxième rangée de carrés est simplement un
+          virage à 180 degrés différente de la première !
+        courseD_artist_functions8_c: À la fin de chaque rangée de carrés, l'artiste
+          a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée
+          de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer
+          au prochain exercice !
+      courseE_artist_functions8c_2019:
+        courseD_artist_functions8_f: C'est plus facile qu'il n'y paraît ! Tu ne devrais
+          pas avoir besoin de blocs `déplacer` ou `sauter` ici !
+        courseD_artist_functions8_a: La deuxième rangée de carrés est simplement un
+          virage à 180 degrés différente de la première !
+        courseD_artist_functions8_c: À la fin de chaque rangée de carrés, l'artiste
+          a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée
+          de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer
+          au prochain exercice !
       courseE_artist_functions9:
         courseD_artist_functions9_e: |-
           Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?
@@ -14457,6 +14743,8 @@ fr-FR:
         courseE_bee_concept3a_c: Il y a 3 groupes de fleurs, donc ta boucle `répéter`
           extérieur devrait se répéter 3 fois.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Essaie d'utiliser des boucles imbriquées `répéter`
+          ou `tant que` pour résoudre cette énigme.
         courseE_bee_concept3a_b: Si tu ne sais pas où mettre des boucles, essaies
           d'écrire ton code pas à pas et de chercher des motifs.
       courseE_bee_concept4:
@@ -14664,9 +14952,13 @@ fr-FR:
         courseE_farmer_functions1a_b: Utilise un block `répéter jusqu`à\` pour aller
           jusqu'à la citrouille!
       courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_a: Assure-toi de lire la définition de la fonction.
+          Peux-tu dire ce qu'elle fait ?
         courseE_farmer_functions1a_b: Utilise un block `répéter jusqu`à\` pour aller
           jusqu'à la citrouille!
       courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_a: Assure-toi de lire la définition de la fonction.
+          Peux-tu dire ce qu'elle fait ?
         courseE_farmer_functions1a_b: Utilise un block `répéter jusqu`à\` pour aller
           jusqu'à la citrouille!
       courseE_farmer_functions2b:
@@ -14677,11 +14969,15 @@ fr-FR:
         courseE_farmer_functions2b_c: Tu auras besoin de 2 blocs séparés `Répéte jusqu'à`
           pour attendre toutes les cultures.
       courseE_farmer_functions2b_2018:
+        courseE_farmer_functions2b_a: Tu peux `répéter jusqu'à la citrouille` pour
+          arriver au bout des deux chemins.
         courseE_farmer_functions2b_b: Il n'y a pas de maïs dans le chemin connecté,
           donc tu peux continuer ton chemin et tourner.
         courseE_farmer_functions2b_c: Tu auras besoin de 2 blocs séparés `Répéte jusqu'à`
           pour attendre toutes les cultures.
       courseE_farmer_functions2b_2019:
+        courseE_farmer_functions2b_a: Tu peux `répéter jusqu'à la citrouille` pour
+          arriver au bout des deux chemins.
         courseE_farmer_functions2b_b: Il n'y a pas de maïs dans le chemin connecté,
           donc tu peux continuer ton chemin et tourner.
         courseE_farmer_functions2b_c: Tu auras besoin de 2 blocs séparés `Répéte jusqu'à`
@@ -14692,11 +14988,27 @@ fr-FR:
         courseE_farmer_functions2ba_b: Bouge ensemble tous les blocs dans l'espace
           de travail sous le bloc `quand l'exécution commence` pour voir comment cette
           fonction évolue.
+      courseE_farmer_functions2ba_2018:
+        courseE_farmer_functions2ba_a: Utilise le bloc vert `ramasse toutes les citrouilles`
+          pour être sûr de ramasser toutes les citrouilles !
+      courseE_farmer_functions2ba_2019:
+        courseE_farmer_functions2ba_a: Utilise le bloc vert `ramasse toutes les citrouilles`
+          pour être sûr de ramasser toutes les citrouilles !
       courseE_farmer_functions3c:
         courseE_farmer_functions3c_a: Quelle séquence est souvent répétée dans ce
           programme ? Est-ce que tu peux mettre ces blocs dans la fonction ?
         courseE_farmer_functions3c_b: N'oublie pas d'appeler ta fonction dans le programme
           principal n'importe où tu enlèves des blocs.
+      courseE_farmer_functions3c1_2018:
+        coursee_farmer_functions3c1_2018_a: Tu devras utiliser la fonction `ramasser
+          en chemin` trois fois pour résoudre cette énigme.
+        coursee_farmer_functions3c1_2018_b: Quel code dois-tu ajouter pour contourner
+          les coins ?
+      courseE_farmer_functions3c1_2019:
+        coursee_farmer_functions3c1_2018_a: Tu devras utiliser la fonction `ramasser
+          en chemin` trois fois pour résoudre cette énigme.
+        coursee_farmer_functions3c1_2018_b: Quel code dois-tu ajouter pour contourner
+          les coins ?
       courseE_farmer_functions4b:
         courseE_farmer_functions4b_a: N'aie pas peur de faire une erreur ! Essaie
           d'ajouter des blocs et d'exécuter le code pour voir ce qui se passe, même
@@ -14716,6 +15028,16 @@ fr-FR:
         courseE_farmer_functions6c_b: Est-ce qu'un bloc `si/autre` n'aiderai pas à
           vérifier qu'il y a une salade ?
         courseE_farmer_functions6c_c: N'oublie pas de vérifier pour le maïs!
+      courseE_farmer_functions7a1_2018:
+        courseE_farmer_functions7a1_2018_a: Crée ta fonction dans la section `fonctions`
+          de la boîte à outils.
+        courseE_farmer_functions7a1_2018_b: N'oublie pas d'utiliser ta fonction lorsque
+          tu as terminé de la créer !
+      courseE_farmer_functions7a1_2019:
+        courseE_farmer_functions7a1_2018_a: Crée ta fonction dans la section `fonctions`
+          de la boîte à outils.
+        courseE_farmer_functions7a1_2018_b: N'oublie pas d'utiliser ta fonction lorsque
+          tu as terminé de la créer !
       courseE_farmer_functions7b:
         courseE_farmer_functions7b_a: Tu n'as pas besoin de fonction ici, mais tu
           peux en faire une si cela t'aide!
@@ -14723,12 +15045,40 @@ fr-FR:
           les cultures, puis tourne en fonction des cultures que tu trouves.
         courseE_farmer_functions7b_c: Une boucle `Répéter jusqu'à ce qu’ il y ait
           des citrouilles` peux t'aider à retrouver ton chemin dans ce labyrinthe.
+      courseE_farmer_functions8a1_2018:
+        courseE_farmer_functions8a1_2018a: Commence cette énigme en codant la même
+          fonction que tu as créée, dans le dernière énigme.
+        courseE_farmer_functions8a1_2018b: Après la première exécution de la fonction,
+          tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à
+          nouveau.
+      courseE_farmer_functions8a1_2019:
+        courseE_farmer_functions8a1_2018a: Commence cette énigme en codant la même
+          fonction que tu as créée, dans le dernière énigme.
+        courseE_farmer_functions8a1_2018b: Après la première exécution de la fonction,
+          tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à
+          nouveau.
       courseE_farmer_functions8b:
         courseE_farmer_functions8b_a: Essaies d'exécuter le code tel quel pour voir
           ce qu‘il fait. De quoi as-tu besoin ensuite ?
         courseE_farmer_functions8b_b: Met tous les blocs du départ dans une fonction
           pour que tu puisses les utiliser plus d'une fois.
         courseE_farmer_functions8b_c: Combien de fois as-tu besoin d'appeler la fonction?
+      courseE_farmer_functions9a1_2018:
+        courseE_farmer_functions9a1_2018a: Tu utiliseras la même fonction que tu as
+          créée pour les deux dernières énigmes.
+        courseE_farmer_functions9a1_2018b: Utilise les mêmes étapes que pour l'énigme
+          précédente afin de résoudre la première moitié de cette énigme.
+        courseE_farmer_functions9a1_2018c: Tu devras `tourner` quelques fois et `avancer`
+          pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta
+          fonction à nouveau.
+      courseE_farmer_functions9a1_2019:
+        courseE_farmer_functions9a1_2018a: Tu utiliseras la même fonction que tu as
+          créée pour les deux dernières énigmes.
+        courseE_farmer_functions9a1_2018b: Utilise les mêmes étapes que pour l'énigme
+          précédente afin de résoudre la première moitié de cette énigme.
+        courseE_farmer_functions9a1_2018c: Tu devras `tourner` quelques fois et `avancer`
+          pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta
+          fonction à nouveau.
       courseE_farmer_functions9b:
         courseE_farmer_functions9b_a: Est ce que tu peux utiliser des déclarations
           imbriquées `si` et `si/autre` pour suivre le trajet?
@@ -14755,6 +15105,60 @@ fr-FR:
           un bloc `tant qu’il y a une pile`.  '
         courseE_farmer_ramp12_b: Tu dois seulement avancer une fois pour aller à la
           saleté.
+      courseE_farmer_ramp11b:
+        courseE_farmer_ramp11b_a: Tu peux imbriquer ta boucle `tant que` dans une
+          boucle `répéter` pour raccourcir ton code.
+      courseE_farmer_ramp11b_2018:
+        courseE_farmer_ramp11b_a: Tu peux imbriquer ta boucle `tant que` dans une
+          boucle `répéter` pour raccourcir ton code.
+      courseE_farmer_ramp11b_2019:
+        courseE_farmer_ramp11b_a: Tu peux imbriquer ta boucle `tant que` dans une
+          boucle `répéter` pour raccourcir ton code.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Tu devras encore utiliser une boucle `répéter`, à
+          l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit
+          avancer et ramasser la laitue.
+      courseE_farmer_ramp12_forswap_2018:
+        courseE_farmer_ramp12_b: Tu devras encore utiliser une boucle `répéter`, à
+          l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit
+          avancer et ramasser la laitue.
+      courseE_farmer_ramp12_forswap_2019:
+        courseE_farmer_ramp12_b: Tu devras encore utiliser une boucle `répéter`, à
+          l'extérieur de tout cela, pour dire à la fermière combien de fois elle doit
+          avancer et ramasser la laitue.
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: Tu devras encore utiliser une boucle `jusqu'à`,
+          en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint
+          la laitue.
+      courseE_farmer_ramp12c_2018:
+        courseE_farmer_ramp12b_b: Tu devras encore utiliser une boucle `jusqu'à`,
+          en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint
+          la laitue.
+      courseE_farmer_ramp12c_2019:
+        courseE_farmer_ramp12b_b: Tu devras encore utiliser une boucle `jusqu'à`,
+          en premier, puis utiliser une boucle `tant que`, une fois que tu auras atteint
+          la laitue.
+      courseE_farmer_ramp12d:
+        courseE_farmer_ramp12d_b: Tu devras encore mettre tes boucles `jusqu'à` et
+          `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme
+          !
+      courseE_farmer_ramp12d_2018:
+        courseE_farmer_ramp12d_b: Tu devras encore mettre tes boucles `jusqu'à` et
+          `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme
+          !
+      courseE_farmer_ramp12d_2019:
+        courseE_farmer_ramp12d_b: Tu devras encore mettre tes boucles `jusqu'à` et
+          `tant que` à l'intérieur d'une boucle `répéter` pour résoudre cette énigme
+          !
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: La solution à cette énigme ressemblera beaucoup
+          à la solution au dernier puzzle, mais en tournant dans l'autre sens.
+      courseE_farmer_ramp12e_2018:
+        courseE_farmer_ramp12e_b: La solution à cette énigme ressemblera beaucoup
+          à la solution au dernier puzzle, mais en tournant dans l'autre sens.
+      courseE_farmer_ramp12e_2019:
+        courseE_farmer_ramp12e_b: La solution à cette énigme ressemblera beaucoup
+          à la solution au dernier puzzle, mais en tournant dans l'autre sens.
       courseE_farmer_ramp12f:
         courseE_farmer_ramp12f_b: Utilise un bloc `si`\\autre\`pour aider le fermier
           à décider s'il doit tourner à droite ou à gauche.
@@ -16161,10 +16565,14 @@ fr-FR:
         courseF_artist_variables3_a: 'La variable ''longueur'' sera utilisée à deux
           endroits dans ton code : dans la longueur latérale de ton triangle, et dans
           la quantité que tu avances entre les triangles.'
+        courseF_artist_variables3_b: 'Un bloc numérique avec la valeur 50 ne doit
+          être qu''à un seul endroit : après le bloc `définir longueur`.'
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: 'La variable ''longueur'' sera utilisée à deux
           endroits dans ton code : dans la longueur latérale de ton triangle, et dans
           la quantité que tu avances entre les triangles.'
+        courseF_artist_variables3_b: 'Un bloc numérique avec la valeur 50 ne doit
+          être qu''à un seul endroit : après le bloc `définir longueur`.'
       courseF_artist_variables4:
         courseF_artist_variables4_a: Ton code ne sera pas très différent de ce qu'il
           était dans la dernière énigme, sauf que tu auras besoin de tourner l'artiste
@@ -16173,6 +16581,7 @@ fr-FR:
         courseF_artist_variables4_c: "Voici le modèle que ton artiste suivra : \n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2018:
+        courseF_artist_variables4_a: Prépare- e à dessiner le prochain triangle.
         courseF_artist_variables4_c: "Voici le modèle que ton artiste suivra : \n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         courseF_artist_variables4_b: |-
           <xml>
@@ -16268,6 +16677,10 @@ fr-FR:
             </block>
           </xml>
       courseF_artist_variables4_2019:
+        courseF_artist_variables4_a: Votre code ne sera pas très différent de ce qu'il
+          était dans la dernière énigme, sauf que tu devras tourner l'artiste pour
+          qu'il saute vers le bas, puis le retourner pour te préparer à dessiner le
+          triangle suivant.
         courseF_artist_variables4_c: "Voici le modèle que ton artiste suivra : \n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         courseF_artist_variables4_b: |-
           <xml>
@@ -18302,6 +18715,49 @@ fr-FR:
           </xml>
         courseF_bee_fwp_challenge2_d: "\\*\\* Voici à quoi devrait ressembler ton
           programme principal :\\*\\* \n\n[Blockly block] [0]"
+      courseF_bee_variables_3_2018:
+        courseF_beevariables_3a: |-
+          Pour soustraire un de la variable, tu peux utiliser ce code dans ton programme :   <xml><block type="variables_set" inline="false">
+                              <title name="VAR">gather</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">gather</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block></xml>
+      courseF_bee_variables_3_2019:
+        courseF_bee_variables_3_2019_1: |-
+          Pour soustraire un de la variable, tu peux utiliser ce code dans ton programme :   <xml><block type="variables_set" inline="false">
+                              <title name="VAR">gather</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">gather</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block></xml>
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: Au lieu de soustraire 1 de `rassemble`, ajoute
+          1 à chaque fois. Quelle devrait être la valeur de la variable au début ?
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Ton but est de remplacer les mots “Que dois-je
           crier ?” dans le bloc vert par “But !”
@@ -18487,6 +18943,18 @@ fr-FR:
           </next>
           </block>
           </xml>
+      coursea_maze_ramp1_2018:
+        courseC_maze_programming1_a: Si l'oiseau n'atteint pas le cochon, assure-toi
+          que les 2 blocs sont bien assemblés ensemble, puis clique à nouveau sur
+          « Exécuter ».
+        courseC_maze_programming1_b: N'aie pas peur de faire une erreurs ! Essaie
+          quelque chose et, si cela ne fonctionne pas, essaie autre chose !
+      coursea_maze_ramp1_2019:
+        courseC_maze_programming1_a: Si l'oiseau n'atteint pas le cochon, assure-toi
+          que les 2 blocs sont bien assemblés ensemble, puis clique à nouveau sur
+          « Exécuter ».
+        courseC_maze_programming1_b: N'aie pas peur de faire une erreurs ! Essaie
+          quelque chose et, si cela ne fonctionne pas, essaie autre chose !
       grade5_artist_variables_triangles1:
         grade5_artist_variables_triangles1_a: Pour faire un angle intérieur de 60
           degrés, dans ce triangle, souviens-toi de tourner l'artiste de 120 degrés.
