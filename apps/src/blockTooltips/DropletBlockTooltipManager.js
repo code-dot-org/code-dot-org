@@ -123,41 +123,36 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
                 event.stopPropagation();
               }.bind(this)
             );
-          }
-
-          if (tooltip.showCodeLink) {
+          } else if (tooltip.showCodeLink) {
             var showCodeLink = contents.find('.tooltip-code-link > a')[0];
             // Important this binds to mouseDown/touchDown rather than click, needs to
             // happen before `blur` which triggers the ace editor completer popup
             // hide which in turn would hide the link and not show the docs.
-            dom.addClickTouchEvent(
-              showCodeLink,
-              function(event) {
-                var projectLibraries = dashboard.project.getProjectLibraries();
-                var libraryName = funcName.split('.')[0];
-                var library = projectLibraries.find(
-                  lib => lib.name === libraryName
+            dom.addClickTouchEvent(showCodeLink, event => {
+              var projectLibraries = dashboard.project.getProjectLibraries();
+              var libraryName = funcName.split('.')[0];
+              var library = projectLibraries.find(
+                library => library.name === libraryName
+              );
+              if (library) {
+                $('.tooltipstered').tooltipster('hide');
+                $('body').append("<div id='libraryFunctionTooltipModal' />");
+                ReactDOM.render(
+                  <LibraryViewCode
+                    title={library.name}
+                    description={library.description}
+                    onClose={() => {
+                      var element = document.getElementById(
+                        'libraryFunctionTooltipModal'
+                      );
+                      element.parentNode.removeChild(element);
+                    }}
+                    sourceCode={library.source}
+                  />,
+                  document.querySelector('#libraryFunctionTooltipModal')
                 );
-                if (library) {
-                  $('.tooltipstered').tooltipster('hide');
-                  $('body').append("<div id='libraryFunctionTooltipModal' />");
-                  ReactDOM.render(
-                    <LibraryViewCode
-                      title={library.name}
-                      description={library.description}
-                      onClose={() => {
-                        var element = document.getElementById(
-                          'libraryFunctionTooltipModal'
-                        );
-                        element.parentNode.removeChild(element);
-                      }}
-                      sourceCode={library.source}
-                    />,
-                    document.querySelector('#libraryFunctionTooltipModal')
-                  );
-                }
-              }.bind(this)
-            );
+              }
+            });
           }
         }.bind(this)
       });
