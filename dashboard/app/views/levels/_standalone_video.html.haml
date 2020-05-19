@@ -13,7 +13,10 @@
 
   - unless @level.video_full_width
     %h1= "#{t('video.label')}: #{video.localized_name}"
-  %div= render(inline: @level.long_instructions, type: :md) if @level.long_instructions
+  - long_instructions = @level.long_instructions
+  - if long_instructions
+    / Markdown will be rendered clientside by _standalone_video.js
+    .markdown-container{data: {markdown: long_instructions}}
 
   .video-content
   - if @slides
