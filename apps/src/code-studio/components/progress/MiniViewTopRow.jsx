@@ -6,6 +6,7 @@ import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailTog
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '@cdo/apps/utils';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   main: {
@@ -34,6 +35,11 @@ const styles = {
     position: 'absolute',
     top: 10,
     right: 10
+  },
+  toggleRtl: {
+    position: 'absolute',
+    top: 10,
+    left: 10
   }
 };
 
@@ -47,6 +53,7 @@ export default class MiniViewTopRow extends React.Component {
 
   render() {
     const {scriptName, linesOfCodeText, selectedSectionId} = this.props;
+    const isRtl = getStore().getState().isRtl;
 
     const sectionId = queryParams('section_id');
     switch (true) {
@@ -70,7 +77,7 @@ export default class MiniViewTopRow extends React.Component {
           color={Button.ButtonColor.gray}
         />
         <span style={styles.linesOfCodeText}>{linesOfCodeText}</span>
-        <div style={styles.toggle}>
+        <div style={isRtl ? styles.toggleRtl : styles.toggle}>
           <ProgressDetailToggle activeColor={color.teal} whiteBorder={true} />
         </div>
       </div>
