@@ -429,7 +429,7 @@ function lessonGroups(state = [], action) {
       )[0];
 
       // add lesson to the new lesson group
-      const newLessons = newState[action.newGroup - 1].lessons;
+      const newLessons = newState[action.newGroupPosition - 1].lessons;
       newLessons.push(curLesson);
       updateLessonPositions(newState);
 
