@@ -128,6 +128,7 @@ class YourSchool extends Component {
           nominated={false}
           useSignUpText={true}
           style={styles.banner}
+          linkSuffix={'middle-high'}
         />
         <YourSchoolResources />
         {!this.props.hideMap && (
