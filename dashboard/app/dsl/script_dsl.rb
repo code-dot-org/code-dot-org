@@ -130,6 +130,7 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_lessons: @hideable_lessons,
+      hideable_stages: @hideable_lessons, # TODO: remove after change to add hideable_lessons is deployed
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
