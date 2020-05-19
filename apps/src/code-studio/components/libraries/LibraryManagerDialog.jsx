@@ -274,7 +274,7 @@ export class LibraryManagerDialog extends React.Component {
     return projectLibraries.map(library => {
       return (
         <LibraryListItem
-          key={library.name}
+          key={library.channelId}
           library={library}
           onUpdate={
             updatedLibraryChannels.includes(library.channelId)
