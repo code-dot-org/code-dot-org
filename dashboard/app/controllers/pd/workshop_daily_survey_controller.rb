@@ -91,8 +91,8 @@ module Pd
         return
       end
 
-      survey_name = DAILY_SURVEY_NAMES[workshop.subject]
-      render_survey_foorm(survey_name, workshop, session, day)
+      survey_name = DAILY_SURVEY_CONFIG_PATHS[workshop.subject]
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: session, day: day)
     end
 
     # General pre-workshop survey using foorm system.
@@ -101,7 +101,7 @@ module Pd
     #
     # If the pre-survey has been already completed, will redirect to thanks page.
     def new_pre_foorm
-      new_general_foorm(PRE_SURVEY_NAMES, 0)
+      new_general_foorm(PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
     # General post-workshop survey using foorm system.
@@ -110,17 +110,17 @@ module Pd
     #
     # If the post-survey has been already completed, will redirect to thanks page.
     def new_post_foorm
-      new_general_foorm(POST_SURVEY_NAMES, nil)
+      new_general_foorm(POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
-    def new_general_foorm(survey_names, day)
+    def new_general_foorm(survey_names, day:)
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       unless validate_enrolled(workshop)
         return
       end
 
       survey_name = survey_names[workshop.subject]
-      render_survey_foorm(survey_name, workshop, nil, day)
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day)
     end
 
     # POST /pd/workshop_survey/submit
@@ -302,7 +302,7 @@ module Pd
         return render :not_enrolled if enrolled_workshops.blank?
       end
 
-      survey_name = POST_SURVEY_NAMES[SUBJECT_CSF_101]
+      survey_name = POST_SURVEY_CONFIG_PATHS[SUBJECT_CSF_101]
 
       # Find the workshop attended.
       attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
@@ -310,7 +310,7 @@ module Pd
       # Render a message if no attendance for this workshop.
       return render :no_attendance unless attended_workshop
 
-      render_survey_foorm(survey_name, attended_workshop, nil, nil)
+      render_survey_foorm(survey_name: survey_name, workshop: attended_workshop, session: nil, day: nil)
     end
 
     # Display CSF201 (Deep Dive) post-workshop survey.
@@ -443,7 +443,7 @@ module Pd
       render :new_general
     end
 
-    def render_survey_foorm(survey_name, workshop, session, day)
+    def render_survey_foorm(survey_name:, workshop:, session:, day:)
       return render_404 unless survey_name
 
       if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
@@ -552,9 +552,9 @@ module Pd
     def get_foorm_survey_data(workshop, day=nil)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
-          FACILITATOR_ID => facilitator.id,
-          FACILITATOR_NAME => facilitator.name,
-          FACILITATOR_POSITION => i + 1
+          Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID => facilitator.id,
+          Pd::WorkshopSurveyFoormConstants::FACILITATOR_NAME => facilitator.name,
+          Pd::WorkshopSurveyFoormConstants::FACILITATOR_POSITION => i + 1
         }
       end
 
@@ -564,7 +564,7 @@ module Pd
       end
 
       return {
-        FACILITATORS => facilitator_data,
+        Pd::WorkshopSurveyFoormConstants::FACILITATORS => facilitator_data,
         workshop_course: workshop.course,
         workshop_subject: workshop.subject,
         regional_partner_name: regional_partner_name,

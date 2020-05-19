@@ -2,16 +2,16 @@ module Pd
   module WorkshopSurveyFoormConstants
     include SharedWorkshopConstants
 
-    DAILY_SURVEY_NAMES = {
+    DAILY_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_daily_survey'
     }
 
-    POST_SURVEY_NAMES = {
+    POST_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_post_survey',
       SUBJECT_CSF_101 => 'surveys/pd/workshop_csf_intro_post',
     }
 
-    PRE_SURVEY_NAMES = {
+    PRE_SURVEY_CONFIG_PATHS = {
       SUBJECT_SUMMER_WORKSHOP => 'surveys/pd/summer_workshop_pre_survey'
     }
 

@@ -1223,6 +1223,10 @@ sk:
               display_name: Anketa
         CSDU3-Draft:
           stages:
+            Conditionals and Keyboard Input:
+              name: Podmienky a použitie kláves
+            'Project: Interactive Card':
+              name: 'Projekt: Interaktívna pohľadnica'
             Sprites and Properties:
               name: „Sprites" a vlastnosti
             Functions:
@@ -1484,8 +1488,12 @@ sk:
               display_name: Učiteľské cvičenia
         csd3-2017:
           stages:
+            Conditionals and Keyboard Input:
+              name: Podmienky a použitie kláves
             Drawing in Game Lab:
               name: Kreslenie v Game Labe
+            'Project: Interactive Card':
+              name: 'Projekt: Interaktívna pohľadnica'
             Sprites and Properties:
               name: „Sprites" a vlastnosti
             Velocity:
@@ -1537,6 +1545,14 @@ sk:
                 (ako napr. farba vlasov alebo očí, oblečenie, vek a pod.). Ďalej budete
                 pracovať s čoraz náročnejšími výrokmi a nakoniec sa pozriete na to,
                 ako sa dajú spolu s podmienkami použiť pri programovaní.
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
+              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -2073,6 +2089,8 @@ sk:
               name: Úvod
             Sprites:
               name: Objekt Sprite
+            'Project: Interactive Card':
+              name: 'Projekt: Interaktívna pohľadnica'
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2083,6 +2101,8 @@ sk:
           stages:
             Digital Design:
               name: Digitálny dizajn
+            Room Escape:
+              name: Útek z miestnosti
         applab-2hour:
           stages:
             Digital Design:
@@ -2124,6 +2144,8 @@ sk:
               name: Objekt Sprite
             Conditionals:
               name: Podmienky
+            'Project: Interactive Card':
+              name: 'Projekt: Interaktívna pohľadnica'
             Keyboard Input:
               name: Stlačenie kláves ako vstup
             Other Forms of Input:
@@ -2144,6 +2166,10 @@ sk:
           stages:
             Sprites and Properties:
               name: „Sprites" a vlastnosti
+            Conditionals and Keyboard Input:
+              name: Podmienky a použitie kláves
+            'Project: Interactive Card':
+              name: 'Projekt: Interaktívna pohľadnica'
             Velocity:
               name: Rýchlosť
             Functions:
@@ -2170,6 +2196,8 @@ sk:
               name: Stlačenie kláves ako vstup
             Other Forms of Input:
               name: Ďalšie formy vstupov
+            'Project: Interactive Card':
+              name: 'Projekt: Interaktívna pohľadnica'
             Velocity:
               name: Rýchlosť
             Functions:
@@ -2231,6 +2259,8 @@ sk:
                 tak koncept algoritmov s aktivitami skutočného života. Cieľom tejto
                 aktivity je budovať zručnosti na preklápanie situácií zo skutočného
                 sveta do online scenárov a naopak.\r\n"
+            Learn to Drag and Drop:
+              name: Postupnosť krokov s blokmi
             'Programming: Happy Maps':
               name: 'Programovanie: Veselé mapy'
               description_teacher: Premostenie od algoritmov ku programovaniu môže
@@ -2296,6 +2326,8 @@ sk:
               name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            Learn to Drag and Drop:
+              name: Postupnosť krokov s blokmi
             Your Digital Footprint:
               name: 'Digitálne občianstvo: Moja digitálna stopa'
             'Programming: My Robotic Friends':
@@ -2361,13 +2393,14 @@ sk:
           stages:
             Introduction:
               name: Predstavenie online úloh
-              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
-                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
-                Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane
-                tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať
-                bloky a ako ich vymazať či spájať. Následne si študenti precvičia
-                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
-                uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.
+              description_teacher: V týchto úloháchch študenti začnú úvodom (alebo
+                opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného
+                prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie,
+                vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu
+                ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti
+                precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_.
+                Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec
+                a Záhradníčka.
             'Algorithms: Graph Paper Programming':
               name: 'Programovanie: Programovanie na štvorčekový papier'
               description_student: V tejto lekcii naprogramuješ kamaráta na kreslenie
@@ -2460,7 +2493,7 @@ sk:
               name: 'Algoritmy: Tangramy'
             Introduction:
               name: Predstavenie online úloh
-              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
+              description_teacher: V týchto úlohách študenti začnú úvodom (alebo opakovaním
                 - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
                 Code.org. Študenti sa naučia základné funkcionality vrátane využitia
                 tlačidiel `Spustiť `, `Obnoviť ` a `Krok `. Úvodné video im tiež ukáže,
@@ -2986,6 +3019,8 @@ sk:
               name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
+            Learn to Drag and Drop:
+              name: Postupnosť krokov s blokmi
             'Online Safety: Your Digital Footprint':
               name: 'Digitálne občianstvo: Moja digitálna stopa'
             'Programming: My Robotic Friends':
@@ -2998,7 +3033,11 @@ sk:
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
+          title: Zrýchlený kurz pre predškolákov
+          assignment_family_title: Zrýchlený kurz pre predškolákov
           description_audience: 'Vek: 4-8'
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje
+            to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -3538,6 +3577,8 @@ sk:
               name: Stlačenie kláves ako vstup
             Other Forms of Input:
               name: Ďalšie formy vstupov
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
             Velocity:
               name: Rýchlosť
             Functions:
@@ -3596,6 +3637,14 @@ sk:
                 užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
                 naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
                 aj príkazy zadávané myšou.
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
+              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
             Velocity:
               name: Rýchlosť
             Functions:
@@ -4048,7 +4097,7 @@ sk:
               name: Vnorené cykly s Frozen
             Introduction:
               name: Úvod
-              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
+              description_teacher: V týchto úlohách študenti začnú úvodom (alebo opakovaním
                 - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
                 Code.org. Študenti sa naučia základné funkcionality vrátane využitia
                 tlačidiel `Spustiť `, `Obnoviť ` a `Krok `. Úvodné video im tiež ukáže,
@@ -4623,9 +4672,13 @@ sk:
             content:
               display_name: Obsah
         pre-express-2018:
+          title: Zrýchlený kurz pre predškolákov (2018)
+          assignment_family_title: Zrýchlený kurz pre predškolákov
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje
+            to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
           description_audience: 'Vek: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -4801,7 +4854,7 @@ sk:
                 "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením
                 na vytvorenie vlastnej kresby.
             Learning Sprites with Sprite Lab:
-              name: Plávajúca ryba so Sprite Lab
+              name: Plávajúca ryba so Sprite Labom
               description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
@@ -4864,6 +4917,8 @@ sk:
               name: Umelec
             Nested Loops in the Maze:
               name: Vnorené cykly v bludisku
+            Sequencing in the Maze:
+              name: Postupnosť krokov v bludisku
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Loops with the Artist:
@@ -4926,13 +4981,14 @@ sk:
               name: Programovanie na štvorčekový papier
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
-              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
-                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
-                Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane
-                tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať
-                bloky a ako ich vymazať či spájať. Následne si študenti precvičia
-                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
-                uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.
+              description_teacher: V týchto úloháchch študenti začnú úvodom (alebo
+                opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného
+                prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie,
+                vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu
+                ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti
+                precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_.
+                Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec
+                a Záhradníčka.
             Relay Programming:
               name: Štafetové programovanie
               description_teacher: Táto aktivita začne krátkym cvičením v hľadaní
@@ -5097,7 +5153,7 @@ sk:
                 si precvičia základné algoritmy, hľadanie a odstraňovanie chýb, opakovacie
                 cykly, podmienky, cykly "pokiaľ" a funkcie.
             Learning Sprites with Sprite Lab:
-              name: Plávajúca ryba so Sprite Lab
+              name: Plávajúca ryba so Sprite Labom
               description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
@@ -5169,9 +5225,12 @@ sk:
                 vlastnej kresby v poslednej úlohe.
             Nested Loops in Frozen:
               name: Vnorené cykly s Frozen
+            Sequencing in the Maze:
+              name: Postupnosť krokov v bludisku
             End of Course Project:
               name: Záverečný projekt
             About Me:
+              name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v
                 SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
                 a osobných údajov na internete
@@ -5183,7 +5242,7 @@ sk:
             Simon Says:
               name: Simon vraví
             Swimming Fish with Sprite Lab:
-              name: Plávajúca ryba so Sprite Lab
+              name: Plávajúca ryba so Sprite Labom
             Songwriting:
               name: Písanie pesničiek
           lesson_groups:
@@ -5462,6 +5521,8 @@ sk:
           description_short: Predstavenie informatiky pre predškolákov.
           description_audience: 'Vek: 4-7'
           stages:
+            Sequencing in Maze:
+              name: Postupnosť krokov v bludisku
             'Programming: Happy Maps':
               name: Veselé mapy
               description_teacher: Premostenie od algoritmov ku programovaniu môže
@@ -5600,9 +5661,12 @@ sk:
             csf_events:
               display_name: Udalosti
         pre-express-2019:
+          title: Zrýchlený kurz pre predškolákov (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje
+            to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
           description_audience: 'Vek: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -5730,6 +5794,14 @@ sk:
                 užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
                 naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
                 aj príkazy zadávané myšou.
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
+              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
             Velocity:
               name: Rýchlosť
             Functions:
@@ -6173,6 +6245,14 @@ sk:
                 užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
                 naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
                 aj príkazy zadávané myšou.
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
+              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
             Velocity:
               name: Rýchlosť
             Functions:
@@ -6365,6 +6445,8 @@ sk:
               display_name: Projekt
         time4cs-original-unit-1:
           stages:
+            Sequencing in Maze:
+              name: Postupnosť krokov v bludisku
             Conditionals:
               name: Podmienky
             'Events: The Big Event':
@@ -6437,6 +6519,8 @@ sk:
               display_name: Občania ovplyvňujú zmeny v Everglades
         time4cs-control-unit-1:
           stages:
+            Sequencing in Maze:
+              name: Postupnosť krokov v bludisku
             Conditionals:
               name: Podmienky
             'Events: The Big Event':
@@ -6468,6 +6552,8 @@ sk:
               display_name: Príprava
         time4cs-experiment-unit-1:
           stages:
+            Sequencing in Maze:
+              name: Postupnosť krokov v bludisku
             Conditionals:
               name: Podmienky
             'Events: The Big Event':
@@ -6637,6 +6723,16 @@ sk:
                 užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
                 naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
                 aj príkazy zadávané myšou.
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: "**Otázka dňa:  Aké zručnosti a techniky sú dôležité
+                pri vytváraní interaktívneho programu?**\r\n\r\nV tomto súhrnnom projekte
+                Kapitoly 1 nášho kurzu študenti navrhnú a vytvoria interaktívnu pohľadnicu
+                s využitím všetkých programovacích techník, ktoré sa doposiaľ naučili. "
+              description_teacher: "**Otázka dňa:  Aké zručnosti a techniky sú dôležité
+                pri vytváraní interaktívneho programu?**\r\n\r\nV tomto súhrnnom projekte
+                Kapitoly 1 nášho kurzu študenti navrhnú a vytvoria interaktívnu pohľadnicu
+                s využitím všetkých programovacích techník, ktoré sa doposiaľ naučili. "
             Velocity:
               name: Rýchlosť
             Functions:
@@ -6848,13 +6944,14 @@ sk:
               name: Programovanie na štvorčekový papier
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
-              description_teacher: V týchto úlohých študenti začnú úvodom (alebo opakovaním
-                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
-                Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane
-                tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať
-                bloky a ako ich vymazať či spájať. Následne si študenti precvičia
-                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
-                uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.
+              description_teacher: V týchto úloháchch študenti začnú úvodom (alebo
+                opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného
+                prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie,
+                vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu
+                ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti
+                precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_.
+                Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec
+                a Záhradníčka.
             Relay Programming:
               name: Štafetové programovanie
               description_teacher: Táto aktivita začne krátkym cvičením v hľadaní
@@ -6931,6 +7028,8 @@ sk:
             funkcie.
           description_audience: Vek 8-12
           stages:
+            Sequencing in the Maze:
+              name: Postupnosť krokov v bludisku
             Conditionals:
               name: Podmienky s Farmárkou
               description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
@@ -6944,7 +7043,7 @@ sk:
             Simon Says:
               name: Simon vraví
             Learning Sprites with Sprite Lab:
-              name: Plávajúca ryba so Sprite Lab
+              name: Plávajúca ryba so Sprite Labom
               description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
@@ -6964,6 +7063,7 @@ sk:
                 medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je
                 a ktoré nie je bezpečné zdieľať na internete."
             About Me:
+              name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v
                 SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
                 a osobných údajov na internete
@@ -7033,7 +7133,7 @@ sk:
             Functions in Minecraft:
               name: Funkcie v Minecrafte
             Learning Sprites with Sprite Lab:
-              name: Plávajúca ryba so Sprite Lab
+              name: Plávajúca ryba so Sprite Labom
               description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
@@ -7165,9 +7265,12 @@ sk:
             csf_sprites:
               display_name: Objekt Sprite
         pre-express-2020:
+          title: Zrýchlený kurz pre predškolákov (2020)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
+          description_short: 'Predstavenie informatiky pre predškolákov: kombinuje
+            to najlepšie z našich kurzov pre predškolákov a prvú triedu.'
           description_audience: 'Vek: 4-8'
           stages:
             Sequencing with Scrat:
@@ -7254,6 +7357,14 @@ sk:
                 užívateľov. Okrem jednoduchého príkazu keyDown(), ktorý sme sa naučili
                 naposledy, sa naučíme ďalšie príkazy zadávané cez klávesnicu, ako
                 aj príkazy zadávané myšou.
+            Project - Interactive Card:
+              name: Projekt - Interaktívna pohľadnica
+              description_student: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
+              description_teacher: V tomto súhrnnom projekte Kapitoly 1 nášho kurzu
+                študenti navrhnú a vytvoria interaktívnu pohľadnicu s využitím všetkých
+                programovacích techník, ktoré sa doposiaľ naučili.
             Velocity:
               name: Rýchlosť
             Functions:

@@ -1474,6 +1474,7 @@ class User < ActiveRecord::Base
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
       self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
+      return self
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
       return nil
