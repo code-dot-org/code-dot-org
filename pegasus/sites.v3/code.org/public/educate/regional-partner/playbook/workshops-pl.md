@@ -99,12 +99,11 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 
 <a id="local"></a>
 
-### Local Summer Workshop Specific
+### Summer Workshop Specific
 
 Updated guidance for hosting 2020 Summer Workshops is now available!
 
 - <a href="https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit?usp=sharing" target=_blank>2020 Summer Workshop Process Doc</a> 
-- [2019 Summer Workshop Process Document](https://docs.google.com/document/d/1-1c0JqqnIDjMyj0MpCGVpT8WI75g05Cx3CJ4Tdf5tsw/edit?usp=sharing)
 - [Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)
 - [2019-20 6-12 Supplies Plan for Summer Workshops](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit#heading=h.gum5nuvbu7rr)
 - [2019 Summer Workshop Mimeo Marketplace Order Guidance](https://docs.google.com/document/d/1AEsSE76mqM6wehXGUWxwTQZzvfbXoEgRB767hF7JEtI/edit)

@@ -4,8 +4,8 @@ module Pd::Foorm
   class WorkshopSummarizerTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
-      daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
+      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
+      daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
       @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
     end
 
@@ -26,7 +26,7 @@ module Pd::Foorm
         'Day 0': {
           general: {
             response_count: 2,
-            'surveys/pd/workshop_daily_survey_day_0.0': {
+            'surveys/pd/summer_workshop_pre_survey.0': {
               course_length_weeks: {
                 '5_fewer': 1,
                 '30_more': 1
