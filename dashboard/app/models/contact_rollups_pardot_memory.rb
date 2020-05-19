@@ -168,7 +168,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # In addition, they must not be previously rejected by Pardot as invalid emails
     # or have been deleted by someone in Pardot.
     <<-SQL.squish
-      SELECT processed.email, processed.data
+      SELECT
+        processed.email,
+        processed.data
       FROM contact_rollups_processed AS processed
       LEFT OUTER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
@@ -187,8 +189,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # will resuscitate it as an active prospect.
     <<-SQL.squish
       SELECT
-        processed.email, processed.data,
-        pardot.pardot_id, pardot.data_synced,
+        processed.email,
+        processed.data,
+        pardot.pardot_id,
+        pardot.data_synced,
         COALESCE(pardot.pardot_id_updated_at > pardot.data_synced_at, FALSE) AS pardot_id_changed
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
