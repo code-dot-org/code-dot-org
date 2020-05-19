@@ -4,7 +4,7 @@
   {
    "name": "page1",
    "elements": [
-     {
+    {
      "type": "html",
      "name": "clickTo44",
      "visible": false,
@@ -191,7 +191,7 @@
     {
      "type": "html",
      "name": "ifCs",
-     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;LOGISTICS AND TOOLS / VIRTUAL-SPECIFIC&lt;&lt;</span></p>\nCurrently a simple FR item (see below).  Could add virtual-specific items here"
+     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;LOGISTICS AND TOOLS &lt;&lt;</span></p>\nCurrently a simple FR item (see below).  Could add virtual-specific items here"
     },
     {
      "type": "comment",
@@ -202,8 +202,47 @@
     },
     {
      "type": "html",
-     "name": "clickTo209",
-     "html": "<p><strong><span style=\"font-size: 14pt;\">Teaching Computer Science</span></strong></p>"
+     "name": "question8"
+    },
+    {
+     "type": "panel",
+     "name": "Virtual Panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question11",
+       "html": "<p><span style=\"background-color: #ffff00;\"> &gt;&gt; VIRTUAL-SPECIFIC&lt;&lt;</span></p>\n<h2>Participating in a virtual meeting<h2>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "question9",
+       "title": "[IN DEVELOPMENT] The amount of time spent in a synchronous video call was...",
+       "choices": [
+        {
+         "value": "item1",
+         "text": "Way too much"
+        },
+        {
+         "value": "item2",
+         "text": "The most I can manage"
+        },
+        {
+         "value": "item3",
+         "text": "About the right amount"
+        },
+        {
+         "value": "item4",
+         "text": "Less than I could be spending"
+        },
+        {
+         "value": "item5",
+         "text": "Way less than I would like to spend"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{is_virtual} = 'true'",
+     "title": "Participating in a Virtual Meeting"
     },
     {
      "type": "matrix",
@@ -261,28 +300,253 @@
     {
      "type": "html",
      "name": "question3",
+     "visible": false,
      "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;BLIND SPOTS&lt;&lt;</span></p>\nReplacing Gender/Race blindness/awareness items"
+    },
+    {
+     "type": "matrix",
+     "name": "question5",
+     "title": "[IN DEVELOPMENT] How much do you agree or disagree with the following statements?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "biases affect students",
+       "text": "I have biases that affect my interactions with students."
+      }
+     ]
     },
     {
      "type": "html",
      "name": "clickTo212",
+     "visible": false,
      "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gtTEACHER NEEDS (logistics)&lt;&lt;</span></p>\nmore direct ask about teachers concerns/needs about program to help inform implementation (delegate to outreach)"
+    },
+    {
+     "type": "matrix",
+     "name": "question5",
+     "title": "[IN DEVELOPMENT] How much do you agree or disagree with the following statements?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "easy to join",
+       "text": "This workshop was easy to find and join"
+      }
+     ]
     },
     {
      "type": "html",
      "name": "question2",
      "titleLocation": "hidden",
-     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gtTEACHER NEEDS (pedagogy, instructional practice)&lt;&lt;</span></p>\nAsking teachers what they want more of, \"what's important to them in terms of followup.\"  a la facilitator followup sessions requests"
+     "html": "<p><span style=\"background-color: #ffff00;\">[REMOVE YELLOW BEFORE LAUNCH] &gt;&gtTEACHER NEEDS (pedagogy, instructional practice)&lt;&lt;</span></p>\n<h2>Future Support</h2>\nOur support doesn’t end in the summer! We have several follow-up sessions and resources planned for you and we'd like to know know what feels most important and relevant for you given your personal teaching situation and your own development needs."
     },
     {
-     "type": "html",
-     "name": "question1",
-     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>\nCSP-specifc things we *really* need to know about to inform program\n"
+     "type": "matrix",
+     "name": "question5",
+     "title": "[IN DEVELOPMENT] Based on what you know about your own development needs and your region’s plans for the summer, rate how important the following session topics would be to you",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "assessment",
+       "text": "How to formally assess my students' work"
+      },
+      "Row1",
+      "Row2",
+      "Row3"
+     ]
     },
     {
-     "type": "html",
-     "name": "question4",
-     "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>\nCSD-specifc things we *really* need to know about to inform program\n"
+     "type": "panel",
+     "name": "csp_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question1",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>\nCSP-specifc things we *really* need to know about to inform program\n"
+      },
+      {
+       "type": "matrix",
+       "name": "question5",
+       "title": "[IN DEVELOPMENT] How much do you agree or disagree with the following statements?",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "increased confidence",
+         "text": "This workshop increased my confidence that I can teach CS Principles as an AP course"
+        },
+        "Row1",
+        "Row2"
+       ]
+      },
+      {
+       "type": "comment",
+       "name": "question7",
+       "title": "[PLACEHOLDER - CSP Free Response - IF needed]"
+      }
+     ],
+     "visibleIf": "{workshop_course} = 'CS Principles'",
+     "title": "Teaching CS Principles"
+    },
+    {
+     "type": "panel",
+     "name": "csd_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question4",
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>\nCSD-specifc things we *really* need to know about to inform program\n"
+      },
+      {
+       "type": "checkbox",
+       "name": "question6",
+       "title": "Which units of CS Discoveries do you plan to teach in the 2020-2021 school year?",
+       "description": "Check all that apply",
+       "choices": [
+        {
+         "value": "unit 1",
+         "text": "Unit 1: Problem Solving and Computing  "
+        },
+        {
+         "value": "unit 2",
+         "text": "Unit 2: Web Development"
+        },
+        {
+         "value": "unit 3",
+         "text": "Unit 3: Interactive Animations and Games "
+        },
+        {
+         "value": "unit 4",
+         "text": "Unit 4: The Design Process "
+        },
+        {
+         "value": "unit 5",
+         "text": "Unit 5: Data and Society Unit "
+        },
+        {
+         "value": "unit 6",
+         "text": "Unit 6: Physical Computing "
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{workshop_course} = 'CS Discoveries'",
+     "title": "CS Discoveries"
     },
     {
      "type": "html",
