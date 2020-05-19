@@ -121,7 +121,9 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # TODO: remove hideable_stages once change to add hideable_lessons is deployed
   serialized_attrs %w(
+    hideable_stages
     hideable_lessons
     peer_reviews_to_complete
     professional_learning_course
