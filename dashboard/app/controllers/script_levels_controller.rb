@@ -195,7 +195,7 @@ class ScriptLevelsController < ApplicationController
       end
       # This errs on the side of showing the warning by only if the script we are in
       # is the assigned script for the section
-      @show_stage_extras_warning = !@section&.stage_extras && @section&.script&.name == params[:script_id]
+      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
