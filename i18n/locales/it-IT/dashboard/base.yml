@@ -173,6 +173,9 @@ it:
     email_preference_yes: "Sì"
     email_preference_no: "No"
     email_preference_required: "Devi specificare una preferenza relativa all'indirizzo email."
+    parent_account_checkbox: "Sono un genitore/tutore e mi iscrivo per conto di mio figlio"
+    parent_account_email_progress_permission: "Possiamo inviarti aggiornamenti occasionali sui progressi e sui progetti di tuo figlio e aggiornamenti sui corsi e sull'informatica?[(Vedi la nostra politica sulla privacy)](%{privacy_policy_url})"
+    parent_account_email_label: "E-mail del genitore/tutore"
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -459,8 +462,11 @@ it:
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
     update_email: "Aggiorna"
+    for_parents_and_guardians: "Per genitori e tutori"
+    link_a_parent_email: "Collega un indirizzo email del genitore/tutore a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio. Potrai usare questo indirizzo email per il recupero della password."
     parent_guardian_email_label: "E-mail del genitore/tutore"
     none: "Nessuno"
+    only_one_parent_email_supported_warning: "Nota: al momento possiamo supportare un solo indirizzo email genitore/tutore per ogni account studente."
     encrypted: "crittografato"
   user_level:
     completed: 'Completato'
@@ -1045,3 +1051,7 @@ it:
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
   copy: 'Copia'
+  parent_email_banner:
+    text: "**Sei un genitore o tutore?** Collega la tua email a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio!"
+    link_your_email: "Collega la tua email"
+    not_now: "Non ora"

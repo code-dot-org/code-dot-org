@@ -1,7 +1,7 @@
 ---
 ru-RU:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -332,32 +332,20 @@ ru-RU:
           name: нарисовать прямоугольник
       MC_HOC_2017_07_Cole:
         clear path:
-          name: 'очистить путь
-
-'
+          name: очистить путь
       MC_HOC_2017_07_Cole_2019:
         clear path:
-          name: 'очистить путь
-
-'
+          name: очистить путь
       MC_HOC_2017_10_RETRY:
         fix long path:
-          name: 'исправить длинный путь
-
-'
+          name: исправить длинный путь
         fix short path:
-          name: 'исправить короткий путь
-
-'
+          name: исправить короткий путь
       MC_HOC_2017_10_RETRY_2019:
         fix long path:
-          name: 'исправить длинный путь
-
-'
+          name: исправить длинный путь
         fix short path:
-          name: 'исправить короткий путь
-
-'
+          name: исправить короткий путь
       MC_HOC_2017_Ali:
         build short bridge:
           name: построить короткий мост
