@@ -1018,6 +1018,101 @@ cs-CZ:
         abys dostal umělce do středu herní plochy.\\\nPak nakresli čáru dlouhou 50
         pixelů s blokem <xml><block type=\"draw_move_by_constant\" block-text=\"move
         forward\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_artist_prog1: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog1_2018: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog1_2019: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog2: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog2_2018: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog2_2019: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog3: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog3_2018: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog3_2019: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog4: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog4_2018: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog4_2019: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog5: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog5_2018: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog5_2019: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog6_2018: |-
+        _"Nyní označení pro Belle!"_
+
+        Nakresli tento čtverec se stranami 200 pixelů.
+      courseC_artist_prog6_2019: |-
+        _"Nyní označení pro Belle!"_
+
+        Nakresli tento čtverec se stranami 200 pixelů.
+      courseC_artist_prog7: "\\*\\* Výzva: \\*\\* Toto označení je speciální!  \n\nPřijdeš
+        na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů a každá z kratších
+        stran má 75 pixelů.)"
+      courseC_artist_prog7_2018: "\\*\\* Výzva: \\*\\* Toto označení je speciální!
+        \ \n\nPřijdeš na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů
+        a každá z kratších stran má 75 pixelů.)"
+      courseC_artist_prog7_2019: "\\*\\* Výzva: \\*\\* Toto označení je speciální!
+        \ \n\nPřijdeš na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů
+        a každá z kratších stran má 75 pixelů.)"
+      courseC_artist_prog8: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2018: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2019: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
       courseC_collector_prog1: |-
         **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
 
@@ -1093,6 +1188,8 @@ cs-CZ:
       courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
+      courseC_data wizard: Klikni na "Spustit". Kouzelník vyčaruje zvířata. Spočítej
+        je. Je v tom nějaká logika?
       courseC_flappy_events1: |-
         Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
 

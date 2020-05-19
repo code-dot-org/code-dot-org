@@ -1,0 +1,15 @@
+name 'Episode 10 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### AI for Oceans
+
+**Do This:** 
+
+MARKDOWN
