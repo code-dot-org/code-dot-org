@@ -1,7 +1,7 @@
 ---
 es-MX:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -527,8 +527,11 @@ es-MX:
       NEW Course 4 Artist Params 15:
         draw a star:
           name: dibujar una estrella
+          description: 'Dibuja una estrella especificando sus puntos y la longitud
+            de sus lados '
         draw a circle:
           name: dibujar un círculo
+          description: Dibuja un circulo especificando su radio
         draw a pinwheel:
           name: dibujar un molinete
         draw a triangle:
@@ -580,13 +583,17 @@ es-MX:
       NEW Course 4 Play Lab Params 11:
         jump:
           name: salta
+          description: 'funcion de salto parametros de altura y actor '
         patrol:
           name: patrullar
       New Artist Project:
         draw a star:
           name: dibujar una estrella
+          description: 'Dibuja una estrella especificando sus puntos y la longitud
+            de sus lados '
         draw a circle:
           name: dibujar un círculo
+          description: Dibuja un circulo especificando su radio
         draw a pinwheel:
           name: dibujar un molinete
         draw a triangle:
@@ -605,6 +612,7 @@ es-MX:
       New Play Lab Project:
         jump:
           name: salta
+          description: 'funcion de salto parametros de altura y actor '
         patrol:
           name: patrullar
       Robot Doodle:
@@ -1547,8 +1555,11 @@ es-MX:
       courseF_artist_fwp9:
         draw a star:
           name: dibujar una estrella
+          description: 'Dibuja una estrella especificando sus puntos y la longitud
+            de sus lados '
         draw a circle:
           name: dibujar un círculo
+          description: Dibuja un circulo especificando su radio
         draw a pinwheel:
           name: dibujar un molinete
         draw a triangle:

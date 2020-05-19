@@ -32,7 +32,7 @@ cs:
             'Bee: Sequence':
               name: 'Včela: posloupnost'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Getting Loopy:
               name: Bláznění s cykly
             Going Places Safely:
@@ -658,7 +658,7 @@ cs:
             Binary Bracelets:
               name: Binární náramky
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Getting Loopy:
               name: Bláznění s cykly
             Graph Paper Programming:
@@ -854,6 +854,10 @@ cs:
               display_name: Obsah
             practice:
               display_name: Výukové postupy
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: Game Lab
         csp-facilitators:
           stages:
             Introduction to Text Compression:
@@ -1133,7 +1137,7 @@ cs:
             Your Digital Footprint:
               name: Tvá digitální stopa
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Debugging in Maze:
               name: Odstraňujeme chyby v bludišti
         coursed-draft:
@@ -1498,7 +1502,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -1514,7 +1518,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
           title: Kurz F
@@ -1622,7 +1626,7 @@ cs:
             Events with Flappy:
               name: Události s Flappy Bird
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Nested Loops:
               name: Vnořené cykly
             Until Loops in Maze:
@@ -1663,7 +1667,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -1697,7 +1701,7 @@ cs:
             Artist Binary:
               name: Binární umělec
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Loops in Ice Age:
               name: Cykly v Době ledové
         csp3-a:
@@ -1719,7 +1723,7 @@ cs:
             While Loops in Farmer:
               name: Cykly pokud (while) s farmářkou
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Nested Loops:
               name: Vnořené cykly
           lesson_groups:
@@ -1730,7 +1734,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Conditionals:
@@ -1746,7 +1750,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Ice Age Play Lab:
@@ -1789,7 +1793,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -1809,7 +1813,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Introduction:
@@ -1894,7 +1898,7 @@ cs:
             Introduction:
               name: Úvod
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Loops in Artist:
@@ -1979,7 +1983,7 @@ cs:
             Introduction:
               name: Úvod
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Debugging in Collector:
               name: Ladění s Laurel
             Events in Bounce:
@@ -2018,7 +2022,7 @@ cs:
           assignment_family_title: Kurz C
           stages:
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Programming in Maze:
               name: Programujeme s Angry Birds
             Debugging in Maze:
@@ -2060,7 +2064,7 @@ cs:
             'Programming: My Robotic Friends':
               name: Moji robotičtí přátelé
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Programming in Artist:
               name: Malujeme s pomocí kódu
             'Loops: My Loopy Robotic Friends':
@@ -2093,7 +2097,7 @@ cs:
             'Programming: My Robotic Friends':
               name: Moji robotičtí přátelé
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             Programming in Artist:
               name: Malujeme s pomocí kódu
             'Loops: My Loopy Robotic Friends':
@@ -2348,7 +2352,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Conditionals with Cards:
@@ -2533,7 +2537,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -2717,6 +2721,8 @@ cs:
               display_name: Cykly
             csf_events:
               display_name: Události
+        gamelab:
+          title: Game Lab
         coursea-2019:
           title: Kurz A (2019)
           stages:
@@ -2901,7 +2907,7 @@ cs:
             'Programming: My Robotic Friends':
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
-              name: Budování nadace
+              name: Budování základů
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Build a Flappy Game:

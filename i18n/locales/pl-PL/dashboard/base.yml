@@ -146,6 +146,9 @@ pl:
     email_preference_privacy: "(Zobacz naszą politykę prywatności)"
     email_preference_yes: "Tak"
     email_preference_no: "Nie"
+    parent_account_checkbox: "Jestem rodzicem/opiekunem rejestrującym się w imieniu mojego dziecka"
+    parent_account_email_progress_permission: "Czy możemy od czasu do czasu przesyłać Ci e-mailem informacje o postępach i projektach Twojego dziecka, a także o jego kursie i informatyce? [(Zobacz naszą politykę prywatności)] (%{privacy_policy_url})"
+    parent_account_email_label: "Adres e-mail rodzica/opiekuna"
   school_info:
     title: 'Informacja o Szkole (opcjonalne)'
     school_country: 'Kraj'
@@ -417,8 +420,11 @@ pl:
     confirm_secret_words: 'Potwierdź, że to ty, wprowadzając swoje aktualne sekretne słowa'
     enter_parent_email: "Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)"
     update_email: "Uaktualnij"
+    for_parents_and_guardians: "Dla rodziców i opiekunów"
+    link_a_parent_email: "Połącz adres e-mail rodzica/opiekuna z tym kontem, aby być na bieżąco z postępami i projektami dziecka. Będziesz także mógł używać tego adresu e-mail do odzyskiwania hasła."
     parent_guardian_email_label: "Adres e-mail rodzica/opiekuna"
     none: "Żaden"
+    only_one_parent_email_supported_warning: "Uwaga: w tej chwili możemy obsłużyć tylko jeden adres e-mail rodzica/opiekuna na konto studenta."
     encrypted: "zaszyfrowane"
   user_level:
     completed: 'Ukończono'
@@ -920,3 +926,7 @@ pl:
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: "Powrót do strony domowej"
   copy: 'Kopia/Kopiuj'
+  parent_email_banner:
+    text: "** Czy jesteś rodzicem lub opiekunem? ** Połącz swój adres e-mail z tym kontem, aby być na bieżąco z postępami i projektami dziecka!"
+    link_your_email: "Połącz swój e-mail"
+    not_now: "Nie teraz"
