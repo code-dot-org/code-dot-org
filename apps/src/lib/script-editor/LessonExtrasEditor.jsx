@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const styles = {
   checkbox: {
@@ -35,9 +36,8 @@ export default class LessonExtrasEditor extends React.Component {
   render() {
     return (
       <div>
-        <h3> Lesson Extras Settings </h3>
         <label>
-          Lesson Extras Available
+          Allow Teachers to Enable Lesson Extras
           <input
             name="lesson_extras_available"
             type="checkbox"
@@ -45,10 +45,12 @@ export default class LessonExtrasEditor extends React.Component {
             style={styles.checkbox}
             onChange={e => this.setState({lessonExtras: e.target.checked})}
           />
-          <p>
-            If also enabled by the teacher, show the lesson extras page at the
-            end of each lesson.
-          </p>
+          <HelpTip>
+            <p>
+              If also enabled by the teacher, show the lesson extras page at the
+              end of each lesson.
+            </p>
+          </HelpTip>
         </label>
         {this.state.lessonExtras && (
           <div>
@@ -60,10 +62,12 @@ export default class LessonExtrasEditor extends React.Component {
                 defaultChecked={this.props.projectWidgetVisible}
                 style={styles.checkbox}
               />
-              <p>
-                If checked this script will have the projects widget (recent
-                projects and new project buttons) visible in lesson extras.
-              </p>
+              <HelpTip>
+                <p>
+                  If checked this script will have the projects widget (recent
+                  projects and new project buttons) visible in lesson extras.
+                </p>
+              </HelpTip>
             </label>
             <label>
               Project widget new project types
