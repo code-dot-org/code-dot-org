@@ -116,8 +116,8 @@ module Pd::Foorm
     def self.get_friendly_rating_choices(question_data)
       choices = {}
       # survey js default min/max is 1/5
-      min_rate = 1 || question_data[:rateMin]
-      max_rate = 5 || question_data[:rateMax]
+      min_rate = question_data[:rateMin] || 1
+      max_rate = question_data[:rateMax] || 5
       min_rate_description = question_data[:minRateDescription] ?
                                "#{min_rate} - #{question_data[:minRateDescription]}" :
                                min_rate.to_s
