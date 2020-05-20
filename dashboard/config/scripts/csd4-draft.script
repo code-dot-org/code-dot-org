@@ -1,4 +1,4 @@
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 
 lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'

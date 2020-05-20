@@ -1,4 +1,4 @@
-hideable_stages true
+hideable_lessons true
 
 stage 'Anonymous student pre-survey'
 level 'CSP pre-assessment survey', assessment: true

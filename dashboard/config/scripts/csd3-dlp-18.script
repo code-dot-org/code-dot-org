@@ -1,7 +1,7 @@
 professional_learning_course 'CS Discoveries Facilitator in Training 2018-2019'
 peer_reviews_to_complete 6
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 has_lesson_plan true
 
