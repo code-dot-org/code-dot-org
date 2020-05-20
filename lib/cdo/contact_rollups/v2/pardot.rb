@@ -119,7 +119,7 @@ class PardotV2
   def batch_create_prospects(email, data, eager_submit = false)
     prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
-
+    # Creating new prospects is not a retriable action, unlike updating existing prospects.
     process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
   end
 
