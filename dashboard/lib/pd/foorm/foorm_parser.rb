@@ -116,8 +116,8 @@ module Pd::Foorm
     def self.get_friendly_rating_choices(question_data)
       choices = {}
       # survey js default min/max is 1/5
-      min_rate = 1 || question_data[:rateMin]
-      max_rate = 5 || question_data[:rateMax]
+      min_rate = question_data[:rateMin] || 1
+      max_rate = question_data[:rateMax] || 5
       min_rate_description = question_data[:minRateDescription] ?
                                "#{min_rate} - #{question_data[:minRateDescription]}" :
                                min_rate.to_s
@@ -137,7 +137,14 @@ module Pd::Foorm
     def self.flatten_choices(choices)
       choices_obj = {}
       choices.each do |choice_hash|
-        choices_obj[choice_hash[:value]] = fill_question_placeholders(choice_hash[:text])
+        if choice_hash.class == Hash && choice_hash.key?(:value) && choice_hash.key?(:text)
+          choices_obj[choice_hash[:value]] = fill_question_placeholders(choice_hash[:text])
+        elsif choice_hash.class == String
+          choices_obj[choice_hash] = fill_question_placeholders(choice_hash)
+          Honeybadger.notify(
+            "Foorm configuration contains question without key-value choice. Choice is '#{choice_hash}'. Please update the survey configuration."
+          )
+        end
       end
       choices_obj
     end
