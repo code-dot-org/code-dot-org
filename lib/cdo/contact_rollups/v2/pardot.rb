@@ -119,7 +119,10 @@ class PardotV2
   def batch_create_prospects(email, data, eager_submit = false)
     prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
-    # Creating new prospects is not a retriable action, unlike updating existing prospects.
+
+    # Creating new prospects is not a retriable action because it could succeed
+    # on the Pardot side and we just didn't receive a response. If we try again,
+    # it would create duplicate prospects.
     process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
   end
 
@@ -211,10 +214,9 @@ class PardotV2
           @dry_run_api_endpoints_hit << api_endpoint
         end
       else
-        # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-        #   Use an instance variable to remember the number of failures.
         errors = self.class.submit_batch_request api_endpoint, prospects
       end
+
       submissions = prospects.clone
       prospects.clear
     end

@@ -6,7 +6,8 @@ require 'cdo/only_one'
 
 def main
   contact_rollups = ContactRollupsV2.new
-  contact_rollups.build_and_sync
+  # TODO: invoke build_and_sync method to run the full pipeline
+  contact_rollups.collect_and_process_contacts
   contact_rollups.report_results
 end
 
