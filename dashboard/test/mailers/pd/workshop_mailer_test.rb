@@ -67,12 +67,42 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'emails are not sent for virtual workshops' do
+  test 'emails are not sent for workshops with virtual workshop subject' do
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_VIRTUAL_1, num_sessions: 1
     enrollment = create :pd_enrollment, workshop: workshop
 
     assert_no_emails do
       Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+    end
+  end
+
+  test 'specific emails are not sent for workshops with suppress_email attribute' do
+    workshop = create :csp_summer_workshop, suppress_email: true
+    facilitator = workshop.facilitators.first
+    enrollment = create :pd_enrollment, workshop: workshop
+
+    assert_no_emails do
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
+      Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
+      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+    end
+  end
+
+  test 'specific emails that should be sent for workshops with suppress_email attribute' do
+    workshop = create :csp_summer_workshop, suppress_email: true
+    enrollment = create :pd_enrollment, workshop: workshop
+
+    assert_emails 4 do
+      # Still send cancellation receipt and exit survey to teachers
+      Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
+
+      # Organizers want to stay informed of who has enrolled, even if
+      # email is suppressed
+      Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
     end
   end
 
