@@ -228,7 +228,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   def notify
     @workshop.enrollments.each do |enrollment|
-      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now unless @workshop.suppress_email?
+      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
     end
     @workshop.facilitators.each do |facilitator|
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
