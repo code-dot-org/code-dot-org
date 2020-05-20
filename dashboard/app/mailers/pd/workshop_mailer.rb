@@ -244,6 +244,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 
+  # Note that this is one of (at least) three mechanisms we use to suppress
+  # email in various cases -- see Workshop.suppress_reminders? for
+  # other subject-specific suppression of reminder emails, and
+  # the Workshop serialized attribute 'suppress_email' for a third mechanism.
   # Virtual workshops should not have any mail sent.
   def check_should_send
     if @workshop.subject&.include? "Virtual"
