@@ -518,8 +518,8 @@ class Blockly < Level
       mutation = function.at_xpath('./mutation')
       next unless mutation
       localized_name = I18n.t(
-        mutation.attr('name'),
-        scope: [:data, :function_names, name],
+        "name",
+        scope: [:data, :function_definitions, name, mutation.attr('name')],
         default: nil,
         smart: true
       )
