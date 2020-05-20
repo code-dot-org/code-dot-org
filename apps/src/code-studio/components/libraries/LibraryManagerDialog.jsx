@@ -424,7 +424,7 @@ export class LibraryManagerDialog extends React.Component {
               }
             >
               <option value="">{i18n.all()}</option>
-              {[...sections].map(section => (
+              {sections.map(section => (
                 <option key={section} value={section}>
                   {section}
                 </option>
