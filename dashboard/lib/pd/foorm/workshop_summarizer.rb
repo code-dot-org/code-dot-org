@@ -161,9 +161,12 @@ module Pd::Foorm
 
     # Sort summaries so that survey data is ordered in the order surveys
     # should be taken in. i.e. Pre-Workshop, Day 1, Day 2,.. Post-Workshop
+    # @param workshop_summary: object in the format returned by summarize_answers_by_survey
     def self.sort_summary(workshop_summary)
       temp_summary = workshop_summary.sort_by {|survey_key, _| get_index_for_survey_key(survey_key)}
       workshop_summary_sorted = {}
+      # temp_summary is an array in the format [[survey_key, summary],[survey_key2, summary2],...]
+      # want to convert back to {survey_key: summary, survey_key2: summary2}
       temp_summary.each do |summaries|
         workshop_summary_sorted[summaries[0]] = summaries[1]
       end
