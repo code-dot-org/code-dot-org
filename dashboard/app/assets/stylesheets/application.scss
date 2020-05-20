@@ -447,6 +447,37 @@ html, body {
     display: inline-block;
     opacity: 0.5;
   }
+
+  .container {
+    html[dir=rtl] & {
+      float: right;
+    }
+
+    .row {
+      [class*="span"] {
+        html[dir=rtl] & {
+          float: right;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+
+        a {
+          html[dir=rtl] & {
+            float: right;
+          }
+        }
+
+        div.dim {
+          html[dir=rtl] & {
+            float: right;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
+  }
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
