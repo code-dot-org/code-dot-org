@@ -363,7 +363,7 @@ class ScriptDSL < BaseDSL
   def self.serialize_stage(stage)
     s = []
 
-    t = "stage '#{escape(stage.name)}'"
+    t = "lesson '#{escape(stage.name)}'"
     t += ', lockable: true' if stage.lockable
     t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
     s << t
