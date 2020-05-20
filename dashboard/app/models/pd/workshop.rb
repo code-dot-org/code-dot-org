@@ -464,8 +464,10 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.send_automated_emails
-    send_reminder_for_upcoming_in_days(3)
-    send_reminder_for_upcoming_in_days(10)
+    unless suppress_email?
+      send_reminder_for_upcoming_in_days(3)
+      send_reminder_for_upcoming_in_days(10)
+    end
     send_reminder_to_close
     send_follow_up_after_days(30)
   end
