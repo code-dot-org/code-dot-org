@@ -94,12 +94,14 @@ class WorkshopMailerTest < ActionMailer::TestCase
     workshop = create :csp_summer_workshop, suppress_email: true
     enrollment = create :pd_enrollment, workshop: workshop
 
-    assert_emails 3 do
+    assert_emails 4 do
+      # Still send cancellation receipt and exit survey to teachers
       Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
 
       # Organizers want to stay informed of who has enrolled, even if
       # email is suppressed
+      Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
     end
   end
