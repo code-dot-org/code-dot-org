@@ -551,7 +551,7 @@ class ScriptsControllerTest < ActionController::TestCase
     # omitted: professional_learning_course, script_announcements because
     # using fake values doesn't seem to work for them.
     general_params = {
-      hideable_stages: 'on',
+      hideable_lessons: 'on',
       project_widget_visible: 'on',
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',

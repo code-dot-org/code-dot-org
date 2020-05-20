@@ -2,7 +2,7 @@
 chart: true
 theme: responsive
 ---
-# Make Your Own Advocacy Materials
+# More Data and Talking Points for Advocacy
 
 Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials!
 
@@ -50,7 +50,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 * Any teacher can [succeed](https://twitter.com/codeorg/status/1058432567223967745) at teaching CS; what matters is how many [years of teaching experience](https://twitter.com/codeorg/status/1073278358870507520) they have. 
 * Universities prepare [way fewer](https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa) computer science teachers than we need.
-* University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
+* University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak, and three years later, [women computer science graduates surpass](https://medium.com/@codeorg/women-computer-science-graduates-finally-surpass-record-set-17-years-ago-20a79a76275) 2003 record (but percentages still lag).
 * [Exploding demand for computer science in universities](https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/)
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade.
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).

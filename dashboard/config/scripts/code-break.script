@@ -1,6 +1,6 @@
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 
 stage 'Episode 1 - Algorithms with Hill Harper'
@@ -87,4 +87,23 @@ level 'courseF_bee_variables_8_2019', progression: 'Variables with Bee'
 level 'Episode 8 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E08 Challenges', progression: 'Challenges'
 level 'Episode 8 Share', progression: 'Share Your Work!'
+
+stage 'Events with Macklemore & Scott Forstall'
+level 'CodeBreak Episode 9 Placeholder', progression: 'Code Break: Episode 9'
+level 'Episode 9 Instructions', progression: 'Practice'
+level 'CourseD_Dance_Party_01', progression: 'Practice'
+level 'CourseD_Dance_Party_02', progression: 'Practice'
+level 'CourseD_Dance_Party_03', progression: 'Practice'
+level 'CourseD_Dance_Party_04', progression: 'Practice'
+level 'CourseD_Dance_Party_05', progression: 'Practice'
+level 'CourseD_Dance_Party_06', progression: 'Practice'
+level 'CourseD_Dance_Party_08', progression: 'Practice'
+level 'CourseD_Dance_Party_09', progression: 'Practice'
+level 'CourseD_Dance_Party_10', progression: 'Practice'
+level 'CourseD_Dance_Party_11', progression: 'Practice'
+level 'CourseD_Dance_Party_11b', progression: 'Practice'
+level 'CourseD_Dance_Party_11_5', progression: 'Practice'
+level 'Episode 9 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E09 Challenges', progression: 'Challenges'
+level 'Episode 9 Share', progression: 'Share Your Work!'
 
