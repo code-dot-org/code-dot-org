@@ -51,6 +51,7 @@ class XhrProxyController < ApplicationController
     code.org
     compete.hsctf.com
     covidtracking.com
+    cryptonator.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
