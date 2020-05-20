@@ -63,7 +63,7 @@ module Pd::Foorm
           )
         end
       end
-      workshop_summary
+      sort_summary(workshop_summary)
     end
 
     def self.get_response_count_per_survey(workshop_id, form_name, form_version)
@@ -157,6 +157,17 @@ module Pd::Foorm
         end
       end
       summary_at_question
+    end
+
+    # Sort summaries so that survey data is ordered in the order surveys
+    # should be taken in. i.e. Pre-Workshop, Day 1, Day 2,.. Post-Workshop
+    def self.sort_summary(workshop_summary)
+      temp_summary = workshop_summary.sort_by {|survey_key, _| get_index_for_survey_key(survey_key)}
+      workshop_summary_sorted = {}
+      temp_summary.each do |summaries|
+        workshop_summary_sorted[summaries[0]] = summaries[1]
+      end
+      workshop_summary_sorted
     end
   end
 end

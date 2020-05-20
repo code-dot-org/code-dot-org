@@ -137,7 +137,11 @@ module Pd::Foorm
     def self.flatten_choices(choices)
       choices_obj = {}
       choices.each do |choice_hash|
-        choices_obj[choice_hash[:value]] = fill_question_placeholders(choice_hash[:text])
+        if choice_hash.class == Hash && choice_hash.key?(:value) && choice_hash.key?(:text)
+          choices_obj[choice_hash[:value]] = fill_question_placeholders(choice_hash[:text])
+        elsif choice_hash.class == String
+          choices_obj[choice_hash] = fill_question_placeholders(choice_hash)
+        end
       end
       choices_obj
     end
