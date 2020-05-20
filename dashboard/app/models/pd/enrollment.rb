@@ -167,24 +167,22 @@ class Pd::Enrollment < ActiveRecord::Base
       enrollment.workshop.teachercon?
     end
 
-    local_summer_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
-      enrollment.workshop.local_summer?
-    end
-    new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
+    new_academic_year_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
       [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
-    csf_intro_foorm_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
-      enrollment.workshop.course == Pd::Workshop::COURSE_CSF &&
-        enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSF_101 &&
-        enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8)
+
+    # We started using Foorm after this date for CSF Intro and CSD/CSP local summer.
+    foorm_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
+      enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
+        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
     end
 
     (
-      filter_for_regular_survey_completion(other_enrollments, select_completed) +
+      filter_for_pegasus_survey_completion(other_enrollments, select_completed) +
       filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed) +
       filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed) +
       filter_for_academic_year_survey_completion(new_academic_year_enrollments, select_completed) +
-      filter_for_csf_intro_foorm_survey_completion(csf_intro_foorm_enrollments, select_completed)
+      filter_for_foorm_survey_completion(foorm_enrollments, select_completed)
     )
   end
 
@@ -206,7 +204,7 @@ class Pd::Enrollment < ActiveRecord::Base
   def pre_workshop_survey_url
     # 5-day summer workshop
     if workshop.local_summer?
-      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0, enrollmentCode: code)
+      url_for(action: 'new_pre_foorm', controller: 'pd/workshop_pre_survey', enrollmentCode: code)
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       'https://studio.code.org/pd/workshop_survey/csf/pre201'
     # academic year workshops for CSP and CSD
@@ -224,9 +222,12 @@ class Pd::Enrollment < ActiveRecord::Base
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
       # TODO: This is a temporary, fake URL. Wire up a real one!
       CDO.studio_url '/pd/workshop_survey/post'
-    elsif workshop.summer?
+    elsif workshop.local_summer?
+      url_for(action: 'new_post_foorm', controller: 'pd/workshop_post_survey', enrollmentCode: code)
+    elsif workshop.teachercon?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
-    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
+    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course)
+      # Academic year CSD/CSP workshop
       CDO.studio_url "/pd/workshop_survey/day/#{workshop.last_valid_day}?enrollmentCode=#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
@@ -381,7 +382,7 @@ class Pd::Enrollment < ActiveRecord::Base
     user.permission = UserPermission::AUTHORIZED_TEACHER if user && [COURSE_CSD, COURSE_CSP].include?(workshop.course)
   end
 
-  private_class_method def self.filter_for_regular_survey_completion(enrollments, select_completed)
+  private_class_method def self.filter_for_pegasus_survey_completion(enrollments, select_completed)
     ids_with_processed_surveys, ids_without_processed_surveys =
       enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
 
@@ -426,7 +427,7 @@ class Pd::Enrollment < ActiveRecord::Base
     select_completed ? completed_surveys : uncompleted_surveys
   end
 
-  private_class_method def self.filter_for_csf_intro_foorm_survey_completion(enrollments, select_completed)
+  private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
     completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
       workshop = enrollment.workshop
       # there is only 1 CSF Intro survey
