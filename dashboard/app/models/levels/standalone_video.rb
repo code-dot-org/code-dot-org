@@ -67,6 +67,7 @@ class StandaloneVideo < Level
     return I18n.t(name,
       scope: [:data, "long_instructions"],
       default: long_instructions,
+      smart: true
     )
   end
 
@@ -76,6 +77,7 @@ class StandaloneVideo < Level
     return I18n.t(name,
       scope: [:data, "teacher_markdown"],
       default: teacher_markdown,
+      smart: true
     )
   end
 end
