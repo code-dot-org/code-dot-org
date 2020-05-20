@@ -191,6 +191,22 @@ export default class ScriptEditor extends React.Component {
           </HelpTip>
         </label>
         <label>
+          Display project sharing column in Teacher Dashboard
+          <input
+            name="project_sharing"
+            type="checkbox"
+            defaultChecked={this.props.projectSharing}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              If checked, the "Sharing" column in the "Manage Students" tab of
+              Teacher Dashboard will be displayed by default for sections
+              assigned to this script.
+            </p>
+          </HelpTip>
+        </label>
+        <label>
           Enable Text-to-Speech
           <input
             name="tts"
