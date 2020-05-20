@@ -299,7 +299,7 @@ export class LibraryManagerDialog extends React.Component {
     }
 
     const filteredLibraries = sectionFilter
-      ? classLibraries.filter(library => library.section === sectionFilter)
+      ? classLibraries.filter(library => library.sectionName === sectionFilter)
       : classLibraries;
 
     return filteredLibraries.map(library => {
@@ -400,7 +400,7 @@ export class LibraryManagerDialog extends React.Component {
     }
 
     const sections = [
-      ...new Set(classLibraries.map(library => library.section))
+      ...new Set(classLibraries.map(library => library.sectionName))
     ];
 
     return (

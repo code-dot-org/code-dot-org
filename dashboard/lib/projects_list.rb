@@ -272,7 +272,7 @@ module ProjectsList
     def get_library_row_data(project, channel_id, section_name, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       {
-        section: section_name,
+        sectionName: section_name,
         channel: channel_id,
         name: project_value['libraryName'],
         description: project_value['libraryDescription'],

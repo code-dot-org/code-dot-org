@@ -121,8 +121,8 @@ describe('LibraryManagerDialog', () => {
 
     it('displays LibraryListItem when the project contains libraries', () => {
       getProjectLibrariesStub.returns([
-        {name: 'first', channelId: 'abc123', section: 'section'},
-        {name: 'second', channelId: 'def456', section: 'section'}
+        {name: 'first', channelId: 'abc123', sectionName: 'section'},
+        {name: 'second', channelId: 'def456', sectionName: 'section'}
       ]);
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
@@ -137,8 +137,8 @@ describe('LibraryManagerDialog', () => {
       getProjectLibrariesStub.returns(undefined);
       getClassLibrariesStub.callsFake(callback =>
         callback([
-          {channel: '1', section: 'section'},
-          {channel: '2', section: 'section'}
+          {channel: '1', sectionName: 'section'},
+          {channel: '2', sectionName: 'section'}
         ])
       );
       const wrapper = shallow(
@@ -152,13 +152,13 @@ describe('LibraryManagerDialog', () => {
 
     it('displays all libraries from the project and the class', () => {
       getProjectLibrariesStub.returns([
-        {name: 'first', channelId: 'abc123', section: 'section'},
-        {name: 'second', channelId: 'def456', section: 'section'}
+        {name: 'first', channelId: 'abc123', sectionName: 'section'},
+        {name: 'second', channelId: 'def456', sectionName: 'section'}
       ]);
       getClassLibrariesStub.callsFake(callback =>
         callback([
-          {channel: '1', section: 'section'},
-          {channel: '2', section: 'section'}
+          {channel: '1', sectionName: 'section'},
+          {channel: '2', sectionName: 'section'}
         ])
       );
       const wrapper = shallow(
@@ -174,10 +174,10 @@ describe('LibraryManagerDialog', () => {
       getProjectLibrariesStub.returns(undefined);
       getClassLibrariesStub.callsFake(callback =>
         callback([
-          {channel: 'abc123', section: 'section1'},
-          {channel: 'def456', section: 'section2'},
-          {channel: 'ghi789', section: 'section1'},
-          {channel: 'jkl1011', section: 'section3'}
+          {channel: 'abc123', sectionName: 'section1'},
+          {channel: 'def456', sectionName: 'section2'},
+          {channel: 'ghi789', sectionName: 'section1'},
+          {channel: 'jkl1011', sectionName: 'section3'}
         ])
       );
       const wrapper = shallow(
@@ -239,8 +239,8 @@ describe('LibraryManagerDialog', () => {
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
       const projectLibraries = [
-        {name: 'first', channelId: 'abc123', section: 'section'},
-        {name: 'second', channelId: 'def456', section: 'section'}
+        {name: 'first', channelId: 'abc123', sectionName: 'section'},
+        {name: 'second', channelId: 'def456', sectionName: 'section'}
       ];
       getProjectLibrariesStub.returns(projectLibraries);
       let setProjectLibraries = sinon.spy(
