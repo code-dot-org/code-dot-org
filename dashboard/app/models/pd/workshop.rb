@@ -59,12 +59,20 @@ class Pd::Workshop < ActiveRecord::Base
     #   - Uses a different, virtual-specific post-workshop survey.
     'virtual',
 
-    # If true, our system will not send any emails related to this workshop
-    # *except* for the post-workshop survey, which is exempt from this policy
+    # If true, our system will not send enrollee-facing
+    # emails related to this workshop *except* for a receipt for the teacher
+    # if they cancel their enrollment and the post-workshop survey,
+    # which is exempt from this policy
     # because it is important for our measurement of workshop outcomes.
     # This option is useful to regional partners who may wish to have more
     # direct control over workshop communication, at the cost of managing it
     # themselves.
+    # Note that this is one of (at least) three mechanisms we use to suppress
+    # email in various cases -- see Workshop.suppress_reminders? for
+    # subject-specific suppression of reminder emails, and
+    # WorkshopMailer.check_should_send, which suppresses ALL email
+    # for workshops with a virtual subject (note, this is different than the
+    # virtual serialized attribute)
     'suppress_email'
   ]
 
@@ -385,6 +393,11 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
+  # Note that this is one of (at least) three mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email' and
+  # WorkshopMailer.check_should_send, which suppresses ALL email
+  # for workshops with a virtual subject (note, this is different than the
+  # virtual serialized attribute)
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
