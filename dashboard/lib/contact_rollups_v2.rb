@@ -6,6 +6,19 @@ class ContactRollupsV2
     @log_collector = LogCollector.new('Contact Rollups')
   end
 
+  # Build contact rollups and sync the results to Pardot.
+  def build_and_sync
+    collect_and_process_contacts
+
+    # These sync steps are independent, one could fail without affecting another.
+    # However, if the build step above fails, none of them should run.
+    sync_new_contacts_with_pardot
+    sync_updated_contacts_with_pardot
+  end
+
+  # Collects raw contact data from multiple tables into ContactRollupsRaw.
+  # Then, process them and save the results into ContactRollupsProcessed.
+  # The results are copied over to ContactRollupsFinal to be used for further analysis.
   def collect_and_process_contacts
     @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
@@ -28,11 +41,6 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsFinal
       ContactRollupsFinal.insert_from_processed_table
     end
-  end
-
-  def sync_contacts_with_pardot
-    sync_new_contacts_with_pardot
-    sync_updated_contacts_with_pardot
   end
 
   def sync_new_contacts_with_pardot

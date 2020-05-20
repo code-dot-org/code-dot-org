@@ -28,12 +28,9 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    cr = ContactRollupsV2.new(is_dry_run: false)
-    cr.build_and_sync
+    cr = ContactRollupsV2.new(is_dry_run: false).build_and_sync
 
-    # Verify results
-
-    # Email preference
+    # Verify email preference
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email_preference.email, pardot_id: 1)
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record.data_synced)
@@ -42,7 +39,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil contact_record
     assert_equal 1, contact_record.data['opt_in']
 
-    # Parent email
+    # Verify parent email
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: student_with_parent_email.parent_email, pardot_id: 2)
     refute_nil pardot_memory_record
     assert_equal({}, pardot_memory_record.data_synced)
@@ -78,8 +75,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    cr = ContactRollupsV2.new(is_dry_run: false)
-    cr.build_and_sync
+    cr = ContactRollupsV2.new(is_dry_run: false).build_and_sync
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
