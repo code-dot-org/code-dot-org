@@ -1136,4 +1136,41 @@ class ActivitiesControllerTest < ActionController::TestCase
     )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
   end
+
+  test "milestone_for_bubble_choice_sublevel_also_stores_progress_for_parent_level" do
+    sublevel1 = create :applab, name: 'choice_1'
+    sublevel2 = create :gamelab, name: 'choice_2'
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    assert_nil UserLevel.find_by(user: @user, level: sublevel1, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: bubble_choice, script: script)
+
+    milestone_params = {
+      user_id: @user.id,
+      script_level_id: script_level.id,
+      level_id: sublevel1.id,
+      program: '<hey>',
+      app: 'applab',
+      result: 'true',
+      pass: 'true',
+      testResult: '100',
+      submitted: false
+    }
+
+    post :milestone, params: milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
+    refute_nil user_level
+    assert_equal 100, user_level.best_result
+
+    assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
+
+    parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
+    refute_nil parent_user_level
+    assert_equal 100, parent_user_level.best_result
+  end
 end
