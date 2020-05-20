@@ -2075,8 +2075,6 @@ StudioApp.prototype.configureDom = function(config) {
 
     if (config.level.iframeEmbed) {
       document.body.className += ' embedded_iframe';
-    } else if (config.level.iframeEmbedAppAndCode) {
-      document.body.className += 'iframe_embed_app_and_code';
     }
 
     if (config.pinWorkspaceToBottom && !config.level.iframeEmbedAppAndCode) {
@@ -2190,8 +2188,9 @@ StudioApp.prototype.handleHideSource_ = function(options) {
   }
 };
 
-StudioApp.prototype.handleIframeEmbedAppAndCode_ = function(options) {
+StudioApp.prototype.handleIframeEmbedAppAndCode_ = function() {
   document.body.style.backgroundColor = 'transparent';
+  document.body.className += 'iframe_embed_app_and_code';
   var vizColumn = document.getElementById('visualizationColumn');
   $(vizColumn).addClass('chromelessShare');
 };
