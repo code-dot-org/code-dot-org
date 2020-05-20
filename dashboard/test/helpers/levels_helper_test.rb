@@ -651,17 +651,61 @@ class LevelsHelperTest < ActionView::TestCase
     toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
 
-    start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    start = "<xml><block type=\"procedures_defnoreturn\"><mutation><description>function description</description></mutation><title name=\"NAME\">details</title></block></xml>"
     start_translated_name = "dettagli"
+    start_translated_description = "descrizione"
     @level.start_blocks = start
 
     I18n.locale = :'it-IT'
     custom_i18n = {
       "data" => {
-        "function_names" => {
+        "function_definitions" => {
           @level.name => {
-            "Actions" => toolbox_translated_name,
-            "details" => start_translated_name
+            "Actions" => {
+              "name" => toolbox_translated_name
+            },
+            "details" => {
+              "name" => start_translated_name,
+              "description" => start_translated_description
+            }
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
+    new_start = start.sub("details", start_translated_name)
+    new_start = new_start.sub("function description", start_translated_description)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, start
+
+    options = blockly_options
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
+  end
+
+  test 'block options fall back to English if no translation is given' do
+    toolbox = "<xml><category name=\"Actions\"/></xml>"
+    toolbox_translated_name = "Azioni"
+    @level.toolbox_blocks = toolbox
+
+    start = "<xml><block type=\"procedures_defnoreturn\"><mutation><description>function description</description></mutation><title name=\"NAME\">details</title></block></xml>"
+    start_translated_name = "dettagli"
+    @level.start_blocks = start
+
+    I18n.locale = :'it-IT'
+    # Provide a translation for the function name for "details" but not the description
+    custom_i18n = {
+      "data" => {
+        "function_definitions" => {
+          @level.name => {
+            "Actions" => {
+              "name" => toolbox_translated_name
+            },
+            "details" => {
+              "name" => start_translated_name
+            }
           }
         }
       }
@@ -690,10 +734,14 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = :'it-IT'
     custom_i18n = {
       "data" => {
-        "function_names" => {
+        "function_definitions" => {
           @level.name => {
-            "Actions" => toolbox_translated_name,
-            "details" => start_translated_name
+            "Actions" => {
+              "name" => toolbox_translated_name
+            },
+            "details" => {
+              "name" => start_translated_name
+            }
           }
         }
       }
