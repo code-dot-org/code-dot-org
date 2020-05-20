@@ -31,6 +31,11 @@ class ContactRollupsV2
   end
 
   def sync_contacts_with_pardot
+    sync_new_contacts_with_pardot
+    sync_updated_contacts_with_pardot
+  end
+
+  def sync_new_contacts_with_pardot
     unless @is_dry_run
       @log_collector.time!('Downloads new email-Pardot ID mappings') do
         ContactRollupsPardotMemory.download_pardot_ids
@@ -41,14 +46,18 @@ class ContactRollupsV2
       ContactRollupsPardotMemory.create_new_pardot_prospects(is_dry_run: @is_dry_run)
     end
 
-    @log_collector.time!('Updates existing Pardot prospects') do
-      ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
-    end
-
     unless @is_dry_run
       @log_collector.time!('Downloads new email-Pardot ID mappings (again)') do
         ContactRollupsPardotMemory.download_pardot_ids
       end
+    end
+  rescue StandardError => e
+    @log_collector.record_exception e
+  end
+
+  def sync_updated_contacts_with_pardot
+    @log_collector.time_and_continue('Updates existing Pardot prospects') do
+      ContactRollupsPardotMemory.update_pardot_prospects(is_dry_run: @is_dry_run)
     end
   end
 
