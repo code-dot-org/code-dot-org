@@ -13,7 +13,7 @@ import {valueOr} from '@cdo/apps/utils';
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.stageLevelData;
-  const lessons = (scriptData.stages || [])
+  const lessons = (scriptData.lessons || [])
     .filter(lesson => lesson.id)
     .map(lesson => ({
       position: lesson.position,
