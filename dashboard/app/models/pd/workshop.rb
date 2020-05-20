@@ -400,6 +400,8 @@ class Pd::Workshop < ActiveRecord::Base
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      next if workshop.suppress_email?
+
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
@@ -464,10 +466,8 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.send_automated_emails
-    unless suppress_email?
-      send_reminder_for_upcoming_in_days(3)
-      send_reminder_for_upcoming_in_days(10)
-    end
+    send_reminder_for_upcoming_in_days(3)
+    send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
   end
