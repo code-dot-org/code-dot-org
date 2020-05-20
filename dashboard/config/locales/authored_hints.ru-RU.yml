@@ -1593,7 +1593,7 @@ ru-RU:
             </block>
           </xml>
       Course 4 SCF 3:
-        Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         Course_4_SCF_3_b: Это ряд восьмиугольников со сторонами, равными (в точках)
           значению счетчика.
         Course_4_SCF_3_c: 'Каждый восьмиугольник вызывается изнутри цикла, значение
@@ -4123,7 +4123,7 @@ ru-RU:
 
           Что нужно сделать со счетчиком у каждого цветка, чтобы уравнять количество нектара, которое необходимо собрать?
       OPD-K5-events-2:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       OPD-K5-forloops-1:
         courseF_bee_for1_a: Перетащи лиловый блок с числом на пусто место в цикле
           «повторить», чтобы сказать ему, сколько должно быть повторов.
@@ -4413,12 +4413,24 @@ ru-RU:
         mc_9_b: Черные вкрапления в стене – это уголь! Примени к ним команду «уничтожить
           блок», чтобы добыть уголь.
         mc_9_c: Используй блок «поместить факел», чтобы поместить факел там, где стоишь.
+      behaviors 2:
+        behavior hint: "Попробуй изменить поведение! \n\n-   В каком направлении должна
+          двигаться ракета?"
+      behaviors 3:
+        behavior hint: "Попробуй изменить поведение! \n\n-   От какого значения зависит
+          скорость движения каждого спрайта?"
+      behaviors 3a:
+        behavior hint: "Попробуй изменить поведение! \n\n-   От какого значения зависит
+          скорость движения каждого спрайта?"
       behaviors 5:
         target hint: Можешь выбрать любой из четырех кораблей. Какой из них понравится
           космонавту?
         behavior hint: Измени поведение, чтобы решить эту головоломку. Спрайту-космонавту
           потребуется двигаться в двух разных направлениях, чтобы в итоге двигаться
           по диагонали.
+      behaviors 6:
+        behavior hint: "Попробуй изменить поведение! \n\n-   От какого значения зависит
+          скорость движения каждого спрайта?"
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_a: |-
           Ты можешь использовать циклы, чтобы создать стены и крышу. Попробуй повторить с разными блоками.
@@ -4426,9 +4438,9 @@ ru-RU:
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
           Создай свой собственный дом или нажми ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png), чтобы подсмотреть некоторые идеи!
-        courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
       course1_artist_loops_challenge2:
         harvey_tictactoe: Ты можешь использовать блоки `прыжок` для перемещения в
           другие места.
@@ -6985,13 +6997,10 @@ ru-RU:
             </block>
           </xml>
       courseC_artist_loops1b_2019:
-        courseC_artist_loops1b_a: |-
-          Первым тебе потребуется следующий блок: <xml>
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">???</title>
-              <title name="VALUE" config="45,60,90,120,180">???</title>
-            </block>
-          </xml> Можешь выбрать поворот налево или направо и любое количество градусов.
+        courseC_artist_loops1b_a: "Первым тебе потребуется следующий блок: \n\n<xml>\n
+          \ <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n
+          \   <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>
+          \n\nМожешь выбрать поворот налево или направо и любое количество градусов."
       courseC_artist_loops2a:
         courseC_artist_loops2a_a: Внутри цикла тебе потребуется прыгнуть на 200 точек
           вперед и 200 точек вниз, а затем нарисовать птичку и поворачивать ее на
@@ -7020,8 +7029,12 @@ ru-RU:
         courseC_artist_loops3a_b: Для поиска стикера с летучей мышью используй выпадающее
           меню блока «нарисовать стикер».
       courseC_artist_loops3a_2019:
+        courseC_artist_loops3a_a: Тебе потребуется вставить в свой цикл после первого
+          стикера всего один блок.
         courseC_artist_loops3a_b: |-
-          Твоя программа должна выглядеть так! <xml>
+          Твоя программа должна выглядеть так!
+
+           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
                 <block type="controls_repeat">
@@ -7087,43 +7100,22 @@ ru-RU:
           </xml>
 
           Не забудь изменить расстояние прыжка!
-        courseC_artist_loops4a_b: |-
-          Твоя программа должна выглядеть так! <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">???</title>
-                  <statement name="DO">
-                    <block type="jump_to">
-                      <title name="VALUE">13</title>
-                      <next>
-                        <block type="draw_turn_by_constant_dropdown">
-                          <title name="DIR">???</title>
-                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
-                          <next>
-                            <block type="sticker">
-                              <title name="VALUE">Cat</title>
-                              <next>
-                                <block type="jump_by_constant">
-                                  <title name="DIR">jumpForward</title>
-                                  <title name="VALUE">???</title>
-                                  <next>
-                                    <block type="sticker">
-                                      <title name="VALUE">Dog</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </xml>
+        courseC_artist_loops4a_b: "Твоя программа должна выглядеть так! \n\n<xml>\n
+          \ <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n
+          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n
+          \       <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title
+          name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">???</title>\n                <title
+          name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n
+          \               <next>\n                  <block type=\"sticker\">\n                    <title
+          name=\"VALUE\">Cat</title>\n                    <next>\n                      <block
+          type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n
+          \                       <title name=\"VALUE\">???</title>\n                        <next>\n
+          \                         <block type=\"sticker\">\n                            <title
+          name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n
+          \                     </block>\n                    </next>\n                  </block>\n
+          \               </next>\n              </block>\n            </next>\n          </block>\n
+          \       </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
       courseC_artist_loops5b:
         courseC_artist_loops5b_a: |-
           Используй этот блок, чтобы задать схему рисования своих линий:
@@ -7157,60 +7149,33 @@ ru-RU:
           </xml>
         courseC_artist_loops5b_b: Для создания рисунка, подобного приведенному выше,
           тебе потребуется перемещаться назад на такое же расстояние, как и вперед.
-        courseC_artist_loops5b_c: |-
-          Твоя программа должна выглядеть так! <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="draw_line_style_pattern">
-                  <title name="VALUE">rainbowLine</title>
-                  <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="jump_to">
-                          <title name="VALUE">13</title>
-                          <next>
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">???</title>
-                              <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveBackward</title>
-                                  <title name="VALUE">???</title>
-                                  <next>
-                                    <block type="draw_turn_by_constant_dropdown">
-                                      <title name="DIR">???</title>
-                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
-                                      <next>
-                                        <block type="sticker">
-                                          <title name="VALUE">Cat</title>
-                                          <next>
-                                            <block type="jump_by_constant">
-                                              <title name="DIR">jumpForward</title>
-                                              <title name="VALUE">???</title>
-                                              <next>
-                                                <block type="sticker">
-                                                  <title name="VALUE">Dog</title>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
+        courseC_artist_loops5b_c: "Твоя программа должна выглядеть так! \n\n<xml>\n
+          \ <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n
+          \     <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n
+          \       <next>\n          <block type=\"controls_repeat\">\n            <title
+          name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block
+          type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n
+          \                 <block type=\"draw_move_by_constant\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n
+          \                   <next>\n                      <block type=\"draw_move_by_constant\">\n
+          \                       <title name=\"DIR\">moveBackward</title>\n                        <title
+          name=\"VALUE\">???</title>\n                        <next>\n                          <block
+          type=\"draw_turn_by_constant_dropdown\">\n                            <title
+          name=\"DIR\">???</title>\n                            <title name=\"VALUE\"
+          config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n
+          \                             <block type=\"sticker\">\n                                <title
+          name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block
+          type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n
+          \                                   <title name=\"VALUE\">???</title>\n
+          \                                   <next>\n                                      <block
+          type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n
+          \                                     </block>\n                                    </next>\n
+          \                                 </block>\n                                </next>\n
+          \                             </block>\n                            </next>\n
+          \                         </block>\n                        </next>\n                      </block>\n
+          \                   </next>\n                  </block>\n                </next>\n
+          \             </block>\n            </statement>\n          </block>\n        </next>\n
+          \     </block>\n    </next>\n  </block>\n</xml>"
       courseC_artist_loopsPrePre1a_2018:
         courseC_artist_loopsPrePre1a_a: |-
           Первым тебе потребуется следующий блок: <xml>  <block type="jump_to_xy" id="callMe">
@@ -7427,39 +7392,144 @@ ru-RU:
           Повтори эту схему 2 раза!
         courseC_artist_prog7_e: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
+      courseC_collector_prog1:
+        courseC_collector_prog1_a: Оказавшись на месте с сокровищами, используй для
+          их сбора блок <xml><block type="collector_collect"/></xml>.
+        courseC_collector_prog1_b: Простейшим решением было бы переместиться один
+          раз вперед,а затем собрать сокровища.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_a: Оказавшись на месте с сокровищами, используй для
+          их сбора блок <xml><block type="collector_collect"/></xml>.
+        courseC_collector_prog1_b: Простейшим решением было бы переместиться один
+          раз вперед,а затем собрать сокровища.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_a: Оказавшись на месте с сокровищами, используй для
+          их сбора блок <xml><block type="collector_collect"/></xml>.
+        courseC_collector_prog1_b: Простейшим решением было бы переместиться один
+          раз вперед,а затем собрать сокровища.
       courseC_collector_prog2:
+        courseC_collector_prog2_a: Можешь использовать четыре блока <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> или использовать блок <xml><block
+          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
+          чтобы сделать программу короче.
         courseC_collector_prog2_b: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
       courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: Можешь использовать четыре блока <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> или использовать блок <xml><block
+          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
+          чтобы сделать программу короче.
         courseC_collector_prog2_b: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
       courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: Можешь использовать четыре блока <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> или использовать блок <xml><block
+          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
+          чтобы сделать программу короче.
         courseC_collector_prog2_b: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
       courseC_collector_prog3:
+        courseC_collector_prog3_a: Программа выполнит только блоки, соединенные с
+          блоком <xml><block type="when_run"/></xml>.
+        courseC_collector_prog3_b: Попробуй использовать кнопку "Шаг" для построчного
+          выполнения кода. Догадался, где допущена ошибка?
         courseC_collector_prog3_c: Если у тебя возникнут сложности с этой головоломкой,
           попробуй записать свои шаги на листе бумаги.
       courseC_collector_prog3_2018:
+        courseC_collector_prog3_a: Программа выполнит только блоки, соединенные с
+          блоком <xml><block type="when_run"/></xml>.
+        courseC_collector_prog3_b: Попробуй использовать кнопку "Шаг" для построчного
+          выполнения кода. Догадался, где допущена ошибка?
         courseC_collector_prog3_c: Если у тебя возникнут сложности с этой головоломкой,
           попробуй записать свои шаги на листе бумаги.
       courseC_collector_prog3_2019:
+        courseC_collector_prog3_a: Программа выполнит только блоки, соединенные с
+          блоком <xml><block type="when_run"/></xml>.
+        courseC_collector_prog3_b: Попробуй использовать кнопку "Шаг" для построчного
+          выполнения кода. Догадался, где допущена ошибка?
         courseC_collector_prog3_c: Если у тебя возникнут сложности с этой головоломкой,
           попробуй записать свои шаги на листе бумаги.
       courseC_collector_prog4:
+        courseC_collector_prog4_a: Если застрянешь, попробуй записать свои шаги на
+          листе бумаги.
         courseC_collector_prog4_b: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
+        courseC_collector_prog4_c: Попробуй этот вариант пути.
       courseC_collector_prog4_2018:
+        courseC_collector_prog4_a: Если застрянешь, попробуй записать свои шаги на
+          листе бумаги.
         courseC_collector_prog4_b: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
+        courseC_collector_prog4_c: Попробуй этот вариант пути.
       courseC_collector_prog4_2019:
+        courseC_collector_prog4_a: Если застрянешь, попробуй записать свои шаги на
+          листе бумаги.
         courseC_collector_prog4_b: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если не уверен, что уже решил головоломку.
+        courseC_collector_prog4_c: Попробуй этот вариант пути.
+      courseC_collector_prog5:
+        courseC_collector_prog5_a: "\"Работает ли она на первом шаге?\nРаботает ли
+          она на втором шаге? \nГде именно допущена ошибка?\""
+        courseC_collector_prog5_b: Если ты исправил одну ошибку, а программа все равно
+          не работает, используй вышеприведенные вопросы для поиска других ошибок.
+        courseC_collector_prog5_c: Если застрянешь, попробуй записать свои шаги на
+          листе бумаги.
+        courseC_collector_prog5_d: Пройди по этому пути, чтобы собрать сокровища.
+      courseC_collector_prog5_2018:
+        courseC_collector_prog5_a: "\"Работает ли она на первом шаге?\nРаботает ли
+          она на втором шаге? \nГде именно допущена ошибка?\""
+        courseC_collector_prog5_b: Если ты исправил одну ошибку, а программа все равно
+          не работает, используй вышеприведенные вопросы для поиска других ошибок.
+        courseC_collector_prog5_c: Если застрянешь, попробуй записать свои шаги на
+          листе бумаги.
+        courseC_collector_prog5_d: Пройди по этому пути, чтобы собрать сокровища.
+      courseC_collector_prog5_2019:
+        courseC_collector_prog5_a: "\"Работает ли она на первом шаге?\nРаботает ли
+          она на втором шаге? \nГде именно допущена ошибка?\""
+        courseC_collector_prog5_b: Если ты исправил одну ошибку, а программа все равно
+          не работает, используй вышеприведенные вопросы для поиска других ошибок.
+        courseC_collector_prog5_c: Если застрянешь, попробуй записать свои шаги на
+          листе бумаги.
+        courseC_collector_prog5_d: Пройди по этому пути, чтобы собрать сокровища.
+      courseC_collector_prog6:
+        courseC_collector_prog6_a: "Сможешь догадаться, что идет не так? \n\nПопробуй
+          использовать кнопку \"Шаг\"для поиска ошибок путем построчного прогона кода."
+        courseC_collector_prog6_b: Застрял? Попробуй этот путь, чтобы собрать сокровища.
+      courseC_collector_prog6_2018:
+        courseC_collector_prog6_a: "Сможешь догадаться, что идет не так? \n\nПопробуй
+          использовать кнопку \"Шаг\"для поиска ошибок путем построчного прогона кода."
+        courseC_collector_prog6_b: Застрял? Попробуй этот путь, чтобы собрать сокровища.
+      courseC_collector_prog6_2019:
+        courseC_collector_prog6_a: "Сможешь догадаться, что идет не так? \n\nПопробуй
+          использовать кнопку \"Шаг\"для поиска ошибок путем построчного прогона кода."
+        courseC_collector_prog6_b: Застрял? Попробуй этот путь, чтобы собрать сокровища.
+      courseC_collector_prog7:
+        courseC_collector_prog7_a: В рабочей области уже немало отличного кода. Тебе
+          не нужно удалять его части, чтобы решить эту головоломку.
+        courseC_collector_prog7_b: Не видишь блока, нужного, чтобы заставить Лорел
+          двигаться в нужном направлении? Вытащи его из набора инструментов.
+        courseC_collector_prog7_c: Не видишь маршрут, позволяющий собрать все сокровища?
+          Попробуй этот путь!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_a: В рабочей области уже немало отличного кода. Тебе
+          не нужно удалять его части, чтобы решить эту головоломку.
+        courseC_collector_prog7_b: Не видишь блока, нужного, чтобы заставить Лорел
+          двигаться в нужном направлении? Вытащи его из набора инструментов.
+        courseC_collector_prog7_c: Не видишь маршрут, позволяющий собрать все сокровища?
+          Попробуй этот путь!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_a: В рабочей области уже немало отличного кода. Тебе
+          не нужно удалять его части, чтобы решить эту головоломку.
+        courseC_collector_prog7_b: Не видишь блока, нужного, чтобы заставить Лорел
+          двигаться в нужном направлении? Вытащи его из набора инструментов.
+        courseC_collector_prog7_c: Не видишь маршрут, позволяющий собрать все сокровища?
+          Попробуй этот путь!
       courseC_flappy_events1:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2019:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_harvester_loops3:
         courseC_harvester_loops3_a: Не бойся допустить ошибку! Добавляй блоки, запускай
           код и смотри, что получится, даже если и не решил еще головоломку.
@@ -7481,24 +7551,183 @@ ru-RU:
         courseC_harvester_loops_challenge1_b: Ты можешь повторить `двигаться вперёд`
           и `собрать кукурузу` сколько потребуется, затем `повернуть вправо` в каждом
           углу.
+      courseC_maze_debugging1:
+        courseC_maze_debugging1_a: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
+        courseC_maze_debugging1_b: Чтобы решить эту головоломку, тебе потребуется
+          добавить 1 блок.
+      courseC_maze_debugging1_2018:
+        courseC_maze_debugging1_a: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
+        courseC_maze_debugging1_b: Чтобы решить эту головоломку, тебе потребуется
+          добавить 1 блок.
+      courseC_maze_debugging1_2019:
+        courseC_maze_debugging1_a: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
+        courseC_maze_debugging1_b: Чтобы решить эту головоломку, тебе потребуется
+          добавить 1 блок.
       courseC_maze_debugging2:
+        courseC_maze_debugging2_a: В рабочей области уже достаточно полезного кода.
+          Не стоит удалять его весь и начинать все сначала!
+        courseC_maze_debugging2_b: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
         courseC_maze_debugging2_c: Не можешь догадаться, что не так? Попробуй прогнать
           код пару раз и посмотреть, что получится.
       courseC_maze_debugging2_2018:
+        courseC_maze_debugging2_a: В рабочей области уже достаточно полезного кода.
+          Не стоит удалять его весь и начинать все сначала!
+        courseC_maze_debugging2_b: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
         courseC_maze_debugging2_c: Не можешь догадаться, что не так? Попробуй прогнать
           код пару раз и посмотреть, что получится.
       courseC_maze_debugging2_2019:
+        courseC_maze_debugging2_a: В рабочей области уже достаточно полезного кода.
+          Не стоит удалять его весь и начинать все сначала!
+        courseC_maze_debugging2_b: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
         courseC_maze_debugging2_c: Не можешь догадаться, что не так? Попробуй прогнать
           код пару раз и посмотреть, что получится.
       courseC_maze_debugging3:
+        courseC_maze_debugging3_a: |-
+          Для удаления блока из середины кода перетащи все блоки на другую сторону рабочей области.
+
+          Перетащи блок, который хочешь удалить, обратно в набор инструментов.
+
+          Наконец, помести другие блоки обратно туда, где они были.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Не можешь догадаться, что не так? Попробуй прогнать
           код пару раз и посмотреть, что получится.
       courseC_maze_debugging3_2018:
+        courseC_maze_debugging3_a: |-
+          Для удаления блока из середины кода перетащи все блоки на другую сторону рабочей области.
+
+          Перетащи блок, который хочешь удалить, обратно в набор инструментов.
+
+          Наконец, помести другие блоки обратно туда, где они были.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Не можешь догадаться, что не так? Попробуй прогнать
           код пару раз и посмотреть, что получится.
       courseC_maze_debugging3_2019:
+        courseC_maze_debugging3_a: |-
+          Для удаления блока из середины кода перетащи все блоки на другую сторону рабочей области.
+
+          Перетащи блок, который хочешь удалить, обратно в набор инструментов.
+
+          Наконец, помести другие блоки обратно туда, где они были.
+
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: Не можешь догадаться, что не так? Попробуй прогнать
           код пару раз и посмотреть, что получится.
+      courseC_maze_debugging4:
+        courseC_maze_debugging4_a: Используй кнопку "Шаг" для поочередного выполнения
+          всех команд. Помогло ли это тебе найти строчку, в которой происходит сбой?
+        courseC_maze_debugging4_b: Один из поворотов заставляет Скрата идти не в том
+          направлении. Сможешь ли ты догадаться, какой?
+      courseC_maze_debugging4_2018:
+        courseC_maze_debugging4_a: Используй кнопку "Шаг" для поочередного выполнения
+          всех команд. Помогло ли это тебе найти строчку, в которой происходит сбой?
+        courseC_maze_debugging4_b: Один из поворотов заставляет Скрата идти не в том
+          направлении. Сможешь ли ты догадаться, какой?
+      courseC_maze_debugging4_2019:
+        courseC_maze_debugging4_a: Используй кнопку "Шаг" для поочередного выполнения
+          всех команд. Помогло ли это тебе найти строчку, в которой происходит сбой?
+        courseC_maze_debugging4_b: Один из поворотов заставляет Скрата идти не в том
+          направлении. Сможешь ли ты догадаться, какой?
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_a: "В рабочей области уже достаточно полезных блоков.
+          Не удаляй их всех! \n\nИспользуй кнопку \"Шаг\" для прогона всего кода и
+          определения того, где в коде происходит сбой."
+        courseC_maze_debugging5_b: Попробуй перечислить вслух действия, которые должен
+          выполнить Скрат. Совпадают ли они с командами кода в рабочей области? Что
+          не так?
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_a: "В рабочей области уже достаточно полезных блоков.
+          Не удаляй их всех! \n\nИспользуй кнопку \"Шаг\" для прогона всего кода и
+          определения того, где в коде происходит сбой."
+        courseC_maze_debugging5_b: Попробуй перечислить вслух действия, которые должен
+          выполнить Скрат. Совпадают ли они с командами кода в рабочей области? Что
+          не так?
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_a: "В рабочей области уже достаточно полезных блоков.
+          Не удаляй их всех! \n\nИспользуй кнопку \"Шаг\" для прогона всего кода и
+          определения того, где в коде происходит сбой."
+        courseC_maze_debugging5_b: Попробуй перечислить вслух действия, которые должен
+          выполнить Скрат. Совпадают ли они с командами кода в рабочей области? Что
+          не так?
+      courseC_maze_debugging6:
+        courseC_maze_debugging6_a: |-
+          -   Какие действия должен выполнить Скрат?
+          -   Какие действия он выполняет?
+          -   О чем это тебе говорит?
+        courseC_maze_debugging6_b: |-
+          Когда найдешь и исправишь первую ошибку, выполни процедуру отладки еще раз и найди вторую.
+
+          Повторяй эту процедуру, пока программа не заработает!
+      courseC_maze_debugging6_2018:
+        courseC_maze_debugging6_a: |-
+          -   Какие действия должен выполнить Скрат?
+          -   Какие действия он выполняет?
+          -   О чем это тебе говорит?
+        courseC_maze_debugging6_b: |-
+          Когда найдешь и исправишь первую ошибку, выполни процедуру отладки еще раз и найди вторую.
+
+          Повторяй эту процедуру, пока программа не заработает!
+      courseC_maze_debugging6_2019:
+        courseC_maze_debugging6_a: |-
+          -   Какие действия должен выполнить Скрат?
+          -   Какие действия он выполняет?
+          -   О чем это тебе говорит?
+        courseC_maze_debugging6_b: |-
+          Когда найдешь и исправишь первую ошибку, выполни процедуру отладки еще раз и найди вторую.
+
+          Повторяй эту процедуру, пока программа не заработает!
+      courseC_maze_debugging7:
+        courseC_maze_debugging7_a: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
+        courseC_maze_debugging7_b: Не забудь использовать кнопку "Шаг", чтобы проверить
+          программу построчно!
+        courseC_maze_debugging7_c: |-
+          Когда найдешь и исправишь первую ошибку, обязательно выполни процедуру отладки еще раз и найди следующую.
+
+          Повторяй процедуру отладки, пока программа не заработает!
+      courseC_maze_debugging7_2018:
+        courseC_maze_debugging7_a: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
+        courseC_maze_debugging7_b: Не забудь использовать кнопку "Шаг", чтобы проверить
+          программу построчно!
+        courseC_maze_debugging7_c: |-
+          Когда найдешь и исправишь первую ошибку, обязательно выполни процедуру отладки еще раз и найди следующую.
+
+          Повторяй процедуру отладки, пока программа не заработает!
+      courseC_maze_debugging7_2019:
+        courseC_maze_debugging7_a: |-
+          -   Все ли работает после первого шага?
+          -   Работает ли код по-прежнему после второго шага?
+          -   Где именно происходит сбой?
+        courseC_maze_debugging7_b: Не забудь использовать кнопку "Шаг", чтобы проверить
+          программу построчно!
+        courseC_maze_debugging7_c: |-
+          Когда найдешь и исправишь первую ошибку, обязательно выполни процедуру отладки еще раз и найди следующую.
+
+          Повторяй процедуру отладки, пока программа не заработает!
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Налево или направо? Решать тебе!
         courseC_maze_debugging_challenge1_b: Скрат движется по прямоугольной траектории!
@@ -9678,17 +9907,17 @@ ru-RU:
           направо еще раз! Теперь художник будет смотреть в направлении, требуемом
           для того, чтобы закончить остаток дома!
       courseE_artist_functions8:
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018:
         courseD_artist_functions8_c: В конце каждой полосы квадратов, расположенных
           в шахматном порядке, художнику потребуется прыгнуть вниз и назад прежде,
           чем нарисовать следующую полосу таких квадратов.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_c: В конце каждой полосы квадратов, расположенных
           в шахматном порядке, художнику потребуется прыгнуть вниз и назад прежде,
           чем нарисовать следующую полосу таких квадратов.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8b_2018:
         courseD_artist_functions8_f: Если ты все делаешь правильно, тебе потребуется
           всего один блок "двигаться вперед"!
@@ -11107,7 +11336,7 @@ ru-RU:
           цикла for, значение в котором меняется от 3 до 6 с шагом 1.  Какие фигуры
           можно нарисовать?
       courseF_artist_fwp_challenge2:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: Это ряд восьмиугольников со сторонами, равными
           (в точках) значению счетчика.
         courseF_artist_fwp_challenge1_c: 'Каждый восьмиугольник вызывается изнутри
@@ -11177,7 +11406,7 @@ ru-RU:
           Художник будет двигаться по следующей схеме:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2018:
         courseF_artist_variables4_a: Подготовь его к тому, чтобы нарисовать следующий
           треугольник.

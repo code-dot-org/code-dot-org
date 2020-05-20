@@ -1,6 +1,6 @@
 tts true
 hidden false
-hideable_stages true
+hideable_lessons true
 lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}'
