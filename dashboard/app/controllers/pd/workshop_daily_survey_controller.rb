@@ -538,7 +538,7 @@ module Pd
         render_404
         return false
       end
-      unless session.open_for_attendance? || day == workshop.sessions.size
+      unless params[:bypass_date] || session.open_for_attendance? || day == workshop.sessions.size
         render :too_late
         return false
       end
