@@ -63,7 +63,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         if user
           user.update_school_info(enrollment.school_info)
         end
-        Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
+        Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now unless @workshop.suppress_email?
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
         render json: {
