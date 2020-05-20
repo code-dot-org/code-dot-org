@@ -15,6 +15,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     login_required: false,
     professional_learning_course: nil,
     hideable_lessons: false,
+    hideable_stages: false,
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
