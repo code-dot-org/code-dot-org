@@ -33,7 +33,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     ContactRollupsV2.build_contact_rollups(
       log_collector: log_collector,
       sync_with_pardot: true,
-      dry_run: false
+      is_dry_run: false
     )
 
     # Verify results
@@ -87,7 +87,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     ContactRollupsV2.build_contact_rollups(
       log_collector: log_collector,
       sync_with_pardot: true,
-      dry_run: false
+      is_dry_run: false
     )
 
     # Verify results
@@ -103,7 +103,8 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
   test 'dry run makes no Pardot API calls' do
     # Called when creating and updating Pardot prospects
     PardotV2.expects(:submit_batch_request).never
-    ContactRollupsPardotMemory.expects(:save_sync_results).never
+    ContactRollupsPardotMemory.expects(:save_accepted_submissions).never
+    ContactRollupsPardotMemory.expects(:save_rejected_submissions).never
     # Called when downloading Pardot ID-email mappings
     PardotV2.expects(:post_with_auth_retry).never
 
@@ -112,7 +113,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     ContactRollupsV2.build_contact_rollups(
       log_collector: log_collector,
       sync_with_pardot: true,
-      dry_run: true
+      is_dry_run: true
     )
   end
 end
