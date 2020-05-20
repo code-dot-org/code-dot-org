@@ -25,7 +25,7 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsProcessed
     end
 
-    @log_collector.time!('Extracts data from dashboard email_preferences') do
+    @log_collector.time!('Extracts email preferences from dashboard.email_preferences') do
       ContactRollupsRaw.extract_email_preferences
     end
 

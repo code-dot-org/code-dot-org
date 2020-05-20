@@ -19,7 +19,6 @@ class ContactRollupsProcessed < ApplicationRecord
   DEFAULT_BATCH_SIZE = 10000
 
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
-  # Do not rollback so we can investigate issues in case of failure
   # @param [Integer] batch_size number of records to save per INSERT statement.
   def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
     # Process the aggregated data row by row and save the results to DB in batches.
