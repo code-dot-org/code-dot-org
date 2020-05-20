@@ -45,9 +45,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      end
     end
   end
 
@@ -89,9 +91,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
+      end
     end
   end
 
@@ -106,9 +110,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
+      end
     end
   end
 
@@ -254,9 +260,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    import! emails_and_data,
-      validate: false,
-      on_duplicate_key_update: [:data_synced, :data_synced_at]
+    transaction do
+      import! emails_and_data,
+        validate: false,
+        on_duplicate_key_update: [:data_synced, :data_synced_at]
+    end
   end
 
   def self.save_rejected_submissions(submissions, submitted_time)
@@ -268,8 +276,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    import! emails_and_errors,
-      validate: false,
-      on_duplicate_key_update: [:data_rejected_reason, :data_rejected_at]
+    transaction do
+      import! emails_and_errors,
+        validate: false,
+        on_duplicate_key_update: [:data_rejected_reason, :data_rejected_at]
+    end
   end
 end
