@@ -119,7 +119,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       @enrollment.school_info_attributes = school_info_params
 
       if @enrollment.update enrollment_params
-        Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now unless @workshop.suppress_email?
+        Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
         redirect_to action: :thanks, code: @enrollment.code, controller: 'pd/workshop_enrollment'
       else
