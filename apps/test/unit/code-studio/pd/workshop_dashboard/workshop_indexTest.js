@@ -27,10 +27,22 @@ describe('WorkshopIndex', () => {
     // map each user permission that utilizes the Workshop Dashboard
     // to the list of buttons to which it has access
     let permissionButtonMap = new Map([
-      [Facilitator, ['Facilitator Survey Results', 'Filter View']],
+      [
+        Facilitator,
+        [
+          'Facilitator Survey Results',
+          'Legacy Facilitator Survey Summaries',
+          'Filter View'
+        ]
+      ],
       [
         CsfFacilitator,
-        ['New Workshop', 'Facilitator Survey Results', 'Filter View']
+        [
+          'New Workshop',
+          'Facilitator Survey Results',
+          'Legacy Facilitator Survey Summaries',
+          'Filter View'
+        ]
       ],
       [Organizer, ['New Workshop', 'Attendance Reports', 'Filter View']],
       [ProgramManager, ['New Workshop', 'Attendance Reports', 'Filter View']],
