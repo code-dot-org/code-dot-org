@@ -1198,6 +1198,7 @@ cs-CZ:
   hoc-encryption_name: Jednoduché šifrování
   text-compression_name: Komprese textu
   applab_name: App Lab
+  gamelab_name: Game Lab
   basketball_name: Vytvoř basketbalovou hru
   sports_name: Naprogramuj svoji vlastní sportovní hru
   applab_gradelevel: Věk 13 +
@@ -1939,6 +1940,7 @@ cs-CZ:
   user_header_signin: Přihlásit se
   user_header_create: 'Vytvoř '
   user_header_artist: 'Umělec '
+  user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
   user_header_dance: Taneční večírek
   user_header_minecraft: Minecraft

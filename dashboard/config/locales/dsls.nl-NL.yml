@@ -1216,6 +1216,43 @@ nl-NL:
           groep, hele klas - om te bespreken wat je uitgevonden hebt en controleer
           dat je weet hoe het werkt en wat de verschillende manieren om het tool te
           gebruiken zijn.\n\n\n"
+      OPD-K5 Puzzles:
+        markdown: "# Vooruitblik > Over puzzels\n\nIn de volgende stappen gebruik
+          je Code.org om de basis van programmeren te leren. Je krijgt een aantal
+          puzzels om op te lossen. Om dat te doen moet je programma's schrijven met
+          verschillende karakters om veschillende doelen te bereiken. We oefenen met
+          de eerste puzzel in stap 3. Maar eerst hebben we een overzicht van de soorten
+          puzzels die jij en je studenten tegen zullen komen:\n\n## Voorbeeld doolhof
+          puzzels\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\nJe
+          moet de Angry Bird bij het varken krijgen en je moet de zombie bij de zonnebloem
+          krijgen.\n\n## Voorbeeld kunstenaar puzzel\n\n![](//code.org/images/artist.png)\n\nJe
+          moet de kunstenaar over de grijze lijnen laten teken door hem over het canvas
+          te laten bewegen. Hij tekent een lijn waar hij loopt.\n\n## Voorbeeld bij
+          puzzel\n\n![](//code.org/images/bee.png)\n\nJe moet de bij zo bewegen dat
+          hij al het nectar ophaalt en alle honing maakt. Hoeveel honing en nectar
+          nodig is voor een puzzel staat rechtsonder de bloem of honingraat.\n\n##
+          Play Lab\n\n![](//code.org/images/playlab.png)\n\nIn Play Lab maak je spellen
+          en verhalen, gebaseerd op verschillende doelen.\n\n## Flappy\n\n![](//code.org/images/flappy.png)\n\nIn
+          Flappy maak je je eigen Flappy bird spel.\nDe puzzels die toewerken naar
+          het maken van het spel helpen je de verschillende stukken code te begrijpen,
+          die je nodig hebt voor het spel.\n\n## Bounce\n\n![](//code.org/images/bounce.png)\n\nIn
+          Bounce maak je je eigen spel. \nNet als bij Flappy  helpen de puzzels je
+          de stukken code te begrijpen die nodig zijn voor het spel.\n\n* * *\n\nIn
+          deze serie introduceren we je de puzzels van [CS Fundamentals] (http://code.org/educate/k5).
+          Deze puzzels zijn online tutorials en helpen studenten concepten zoals lussen,
+          gebeurtenissen, condities en functies te leren.\n\nTijdens deze les zullen
+          we verschillende soorten puzzels afwisselen, waardoor je vertrouwd kunt
+          raken met de programmeerconcepten in CS Fundamentals en de personages waar
+          je studenten verliefd op zullen worden. Tijdens deze cursus merk je dat
+          je snel tussen verschillende omgevingen beweegt; of het nu de boze vogel
+          naar het varken brengt, een tekening maakt of een bij nectar laat verzamelen.
+          Deze overgangen gaan vrij snel in deze cursus om u zo te laten zien welke
+          puzzels worden aangeboden in CS Fundamentals. Uw studenten zullen meer tijd
+          krijgen.\n\nAls je meer wilt weten over de studentenervaring, kun je altijd
+          op elk gewenst moment de cursussen [CS Fundamentals] (http://studio.code.org/)
+          volgen. Maar deze cursus geeft je een goed beeld van wat je kunt verwachten
+          door in korte tijd een aantal van de meest fundamentele puzzels en lessen
+          te tonen.\n"
       OPD-K5 Reviewing Reflections:
         content1: beschrijving hier
       OPD-K5 Stage3aGo:

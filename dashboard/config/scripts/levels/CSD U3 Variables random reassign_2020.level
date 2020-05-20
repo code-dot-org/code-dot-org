@@ -72,9 +72,9 @@
     "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
     "rubric_performance_level_4": "There are no changes to the code, or the changes appear unrelated to the eyeSize variable, or the variable is used in a way that prevents the program from running.",
     "long_instructions": "# Changing variable values\r\n\r\n<img src=\"https://images.code.org/d6ba52ebdc60eabdd2a76e5d9f9971ac-image-1566250367449.gif\" style=\"float:right; width:150px;\">\r\n\r\nThese two flowers use a single variable to store their petal size, but the value stored in the variable changes in the middle of the program.\r\n\r\n\r\n# Do this\r\n* Run the program several times to see how it works.\r\n* Discuss the code with your partner.\r\n* Change the program so that the flowers have random petal sizes as in the image.\r\n",
-    "preload_asset_list": null,
     "encrypted_examples": "p0S4WjCMW8UHJ682YifI3RMSZ9E9gfH2KSZVUvEwkU2ep0EBDFCbR8gbpvzP\n4XEMtuWfCw/Qc6G/RRysAdWenw==\n",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
