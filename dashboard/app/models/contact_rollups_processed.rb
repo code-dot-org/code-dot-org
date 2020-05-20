@@ -38,7 +38,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # Because GROUP_CONCAT returns a string, we add a parser function to convert the result to a hash.
     group_by_query = <<-SQL.squish
       SELECT email, CONCAT('[', GROUP_CONCAT(data_and_metadata), ']') AS all_data_and_metadata
-      FROM (#{select_query}) AS sub_query
+      FROM (#{select_query}) AS subquery
       GROUP BY email
     SQL
 

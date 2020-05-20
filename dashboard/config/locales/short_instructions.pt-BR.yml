@@ -1665,6 +1665,57 @@ pt-BR:
         pode mudar todas as regras, misturar e combinar esportes, e criar o que quiser!
         Quando terminar, clique em Concluir para deixar seus amigos experimentarem
         seu jogo em seus smartphones.'
+      OPD-K5-events-2: Anexe o bloco `quantidade normal de bater de asas` ao evento
+        `quando clicar`, depois pressione "Executar".    Clique ou toque no espaço
+        de jogo para mover o Flappy para o alvo.
+      OPD-K5-events-3: Tente adicionar um bloco que defina o nível da velocidade quando
+        o botão "Executar" for pressionado. Jogue o jogo e bata as asas até o alvo
+        para continuar.
+      OPD-K5-events-4: |-
+        Conecte outro bloco de "fim de jogo" no evento de "quando acerta o chão".
+        Rode o jogo para fazer o pássaro bater no chão e continue.
+      OPD-K5-events-5: Conecte outro bloco no bloco de "quando acerta um obstáculo",
+        então o jogo termina quando Flappy bater no primeiro cano.
+      OPD-K5-events-6: Adicione um bloco ao evento `quando passar um obstáculo`, então
+        pressione "Executar" para marcar um ponto ao fazer Flappy voar através do
+        primeiro conjunto de tubos.
+      OPD-K5-forloops-1: Colete o nectar de cada flor usando o menor número de blocos
+        possíveis.
+      OPD-K5-forloops-2: Escrever o código para ajudar a abelha a coletar todo o néctar.
+      OPD-K5-forloops-5: Ajude a abelha a coletar todo o nectar.
+      OPD-K5-forloops-6: Tente reunir esse néctar por contagem regressiva de 5 para
+        1 em 1.
+      OPD-K5-forloops-7: Tente coletar essas flores usando um incremento de 2.
+      OPD-K5-projects-2: Escolha um plano de fundo, um mapa e escolha um ator para
+        ser o herói do seu jogo.
+      OPD-K5-projects-3: Use eventos e ações para fazer seu herói se mover. Chegue
+        aos alvos.
+      OPD-K5-projects-4: Coloque dois ou mais atores adicionais no seu jogo e faça-os
+        se moverem.
+      OPD-K5-projects-5: Encontre algumas maneiras interessantes de alterar a pontuação
+        do seu jogo. Faça a pontuação mostrar algo diferente de 0 para continuar.
+      OPD-K5-projects-6: Ótimo trabalho! Você tem todos os componentes básicos de
+        um jogo em funcionamento. Agora passe algum tempo certificando-se de que o
+        jogo funciona do jeito que você deseja.
+      OPD-K5-projects-7: Você acabou! Agora você pode jogar o seu jogo ou compartilha-lo
+        com seus amigos e colegas de classe!
+      OPD-K5-spritelab-2: Mude Dusty (o amaranto) para um peixe.
+      OPD-K5-spritelab-3: Mude o comportamento do peixe de modo que ele consiga nadar
+        ao redor do tanque.
+      OPD-K5-spritelab-4: Use o bloco `definir cor de fundo` para definir o plano
+        de fundo azul.
+      OPD-K5-spritelab-6: O peixe é aventureiro e quer conhecer novas criaturas do
+        mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
+        desde que seja diferente da que você usou para o peixe!
+      OPD-K5-spritelab-7: Adicione um comportamento ao novo amigo do peixe.
+      OPD-K5-variables-2: 'Agora desenhe três desses triângulos ao lado um do outro.   '
+      OPD-K5-variables-5: Coloque o comprimento de 50 em uma variável para que possamos
+        usá-lo em alguns dos próximos quebra-cabeças.
+      OPD-K5-variables-6: Agora, utilize a variável `tamanho` para fazer com que o
+        artista pule em frente e para baixo `tamanho` pixels entre os triângulos.
+      OPD-K5-variables-7: Acrescente mais alguns laços de repetição no final do seu
+        código para adicionar mais três triângulos. Dessa vez, vá para frente e pra
+        cima!
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com
         cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2019: Não é uma boa ideia topar com um Creeper. Passe
@@ -2267,6 +2318,8 @@ pt-BR:
       courseA_maze_seq10: 'Desafio: Dê a volta na TNT para levar o pássaro até o porco! '
       courseA_maze_seq10_2018: 'Desafio: Evite a TNT para levar o pássaro até o porco! '
       courseA_maze_seq10_2019: 'Desafio: Evite a TNT para levar o pássaro até o porco! '
+      courseA_maze_seq10_copy: 'Desafio: Dê a volta na TNT para levar o pássaro até
+        o porco! '
       courseA_maze_seq11: Mova-me por um caminho, e então por outro para levar o pássaro
         até o porco.
       courseA_maze_seq11_2018: Mova-me por um caminho, e então por outro para levar
@@ -2287,6 +2340,7 @@ pt-BR:
       courseA_maze_seq5: Experimente este você mesmo desde o início.
       courseA_maze_seq5_2018: Dê uma chance a este.
       courseA_maze_seq5_2019: Dê uma chance a este.
+      courseA_maze_seq5_copy: Experimente este você mesmo desde o início.
       courseA_maze_seq5a_2018: O que você pode adicionar ao final deste código para
         levar o pássaro até o porco?
       courseA_maze_seq5a_2019: O que você pode adicionar ao final deste código para
@@ -2297,11 +2351,16 @@ pt-BR:
         o pássaro até o porco!
       courseA_maze_seq6_2019: Mova-me por um caminho, e então por outro para levar
         o pássaro até o porco!
+      courseA_maze_seq6_copy: Mova-me por um caminho, e então por outro para levar
+        o pássaro até o porco!
       courseA_maze_seq7: Descubra o que está faltando e então adicione blocos para
         levar o pássaro até o porco!
+      courseA_maze_seq7_copy: Descubra o que está faltando e então adicione blocos
+        para levar o pássaro até o porco!
       courseA_maze_seq8: Resolva este nível e leve o pássaro até o porco!
       courseA_maze_seq8_2018: Resolva este nível e leve o pássaro até o porco!
       courseA_maze_seq8_2019: Resolva este nível e leve o pássaro até o porco!
+      courseA_maze_seq8_copy: Resolva este nível e leve o pássaro até o porco!
       courseA_maze_seq9: Analise este nível adicionando blocos para levar o pássaro
         até o porco!
       courseA_maze_seq_challenge1: Alguma coisa está errada aqui. Ajude a corrigir
@@ -3278,6 +3337,8 @@ pt-BR:
         um laço que usa apenas um bloco dentro de um bloco `repita`.
       courseC_starWars_loops2_2019: Para pegar todo os pedaços de metal, tente criar
         um laço que usa apenas um bloco dentro de um bloco `repita`.
+      courseC_starWars_loops2_copy: Para pegar todo os pedaços de metal, tente criar
+        um laço que usa apenas um bloco dentro de um bloco `repita`.
       courseC_starWars_loops4: Neste quebra-cabeça, dois laços `repetir` irão ajudá-lo
         a levar o BB-8 a todas as sucatas de metal com o menor número de blocos!
       courseC_starWars_loops4_2018: Neste quebra-cabeça, dois laços `repetir` irão
@@ -3286,17 +3347,24 @@ pt-BR:
       courseC_starWars_loops4_2019: Neste quebra-cabeça, dois laços `repetir` irão
         ajudá-lo a levar o BB-8 a todas as sucatas de metal com o menor número de
         blocos!
+      courseC_starWars_loops4_copy: Neste quebra-cabeça, dois laços `repetir` irão
+        ajudá-lo a levar o BB-8 a todas as sucatas de metal com o menor número de
+        blocos!
       courseC_starWars_loops5: Faça o BB-8 pegar todos os pedaços de metal o mais
         rápido possível!
       courseC_starWars_loops5_2018: Faça o BB-8 pegar todos os pedaços de metal o
         mais rápido possível!
       courseC_starWars_loops5_2019: Faça o BB-8 pegar todos os pedaços de metal o
         mais rápido possível!
+      courseC_starWars_loops5_copy: Faça o BB-8 pegar todos os pedaços de metal o
+        mais rápido possível!
       courseC_starWars_loops6: Laços até funcionam com mais de um bloco dentro! Você
         pode repetir essa sequência?
       courseC_starWars_loops6_2018: Laços até funcionam com mais de um bloco dentro!
         Você pode repetir essa sequência?
       courseC_starWars_loops6_2019: Laços até funcionam com mais de um bloco dentro!
+        Você pode repetir essa sequência?
+      courseC_starWars_loops6_copy: Laços até funcionam com mais de um bloco dentro!
         Você pode repetir essa sequência?
       courseC_starWars_loops7: Você pode tentar obter toda a sucata usando apenas
         um laço? Tente programar tudo e então encontre o código de repetição para
@@ -3305,6 +3373,9 @@ pt-BR:
         um laço? Tente programar tudo e então encontre o código de repetição para
         colocar em um laço.
       courseC_starWars_loops7_2019: Você pode tentar obter toda a sucata usando apenas
+        um laço? Tente programar tudo e então encontre o código de repetição para
+        colocar em um laço.
+      courseC_starWars_loops7_copy: Você pode tentar obter toda a sucata usando apenas
         um laço? Tente programar tudo e então encontre o código de repetição para
         colocar em um laço.
       courseC_starWars_loops9: Use o que você aprendeu para pegar toda a sucata!
@@ -3579,11 +3650,15 @@ pt-BR:
         nuvem. Se houver uma flor, pegue o néctar.
       courseD_bee_conditionals1_predict1_2019: Verifique se há uma flor embaixo da
         nuvem. Se houver uma flor, pegue o néctar.
+      courseD_bee_conditionals1_predict1_copy: Verifique se há uma flor embaixo da
+        nuvem. Se houver uma flor, pegue o néctar.
       courseD_bee_conditionals2: 'Verifique embaixo de cada nuvem para ver se ela
         está escondendo uma flor antes de pegar o néctar.  '
       courseD_bee_conditionals2_2018: 'Verifique embaixo de cada nuvem para ver se
         ela está escondendo uma flor antes de pegar o néctar.  '
       courseD_bee_conditionals2_2019: 'Verifique embaixo de cada nuvem para ver se
+        ela está escondendo uma flor antes de pegar o néctar.  '
+      courseD_bee_conditionals2_copy: 'Verifique embaixo de cada nuvem para ver se
         ela está escondendo uma flor antes de pegar o néctar.  '
       courseD_bee_conditionals3: "Ajude a abelha a recolher todo o néctar. \n\nVocê
         só pode coletar néctar de flores, mas você pode verificar qualquer espaço
@@ -3594,17 +3669,24 @@ pt-BR:
       courseD_bee_conditionals3_2019: "Ajude a abelha a recolher todo o néctar. \n\nVocê
         só pode coletar néctar de flores, mas você pode verificar qualquer espaço
         para ver se há uma flor."
+      courseD_bee_conditionals3_copy: "Ajude a abelha a recolher todo o néctar. \n\nVocê
+        só pode coletar néctar de flores, mas você pode verificar qualquer espaço
+        para ver se há uma flor."
       courseD_bee_conditionals4: Pegue todo o néctar usando o menor número de blocos
         possível.
       courseD_bee_conditionals4_2018: Pegue todo o néctar usando o menor número de
         blocos possível.
       courseD_bee_conditionals4_2019: Pegue todo o néctar usando o menor número de
         blocos possível.
+      courseD_bee_conditionals4_copy: Pegue todo o néctar usando o menor número de
+        blocos possível.
       courseD_bee_conditionals5: Colete todo o néctar usando o menor número de blocos
         possível
       courseD_bee_conditionals5_2018: Colete todo o néctar usando o menor número de
         blocos possível
       courseD_bee_conditionals5_2019: Colete todo o néctar usando o menor número de
+        blocos possível
+      courseD_bee_conditionals5_copy: Colete todo o néctar usando o menor número de
         blocos possível
       courseD_bee_conditionals6: Algumas dessas nuvens podem ter favos de mel embaixo
         delas. Certifique-se de verificar se um favo de mel está se escondendo atrás
@@ -4143,23 +4225,34 @@ pt-BR:
         25 pixels de lado.
       courseE_artist_functions10_2019: Dessa vez, utilize linhas de 8 hexágonos com
         25 pixels de lado.
+      courseE_artist_functions1_copy: "Ajude o zumbi a desenhar óculos usando quadrados
+        com lados de 100 pixels de comprimento.  \\\r\n\\\r\nA haste entre as lentes
+        tem 75 pixels de comprimento."
       courseE_artist_functions2: 'Dessa vez, utilize a função `desenhar um quadrado`
         para criar os óculos. '
       courseE_artist_functions2_2018: 'Use a função `desenhar um quadrado` para criar
         os óculos. '
       courseE_artist_functions2_2019: 'Use a função `desenhar um quadrado` para criar
         os óculos. '
+      courseE_artist_functions2_copy: 'Dessa vez, utilize a função `desenhar um quadrado`
+        para criar os óculos. '
       courseE_artist_functions3: Você pode fazer esse desenho adicionando um bloco
         de repetição.
       courseE_artist_functions3_2018: Construa uma função que irá criar esta estrela.
       courseE_artist_functions3_2019: Construa uma função que irá criar esta estrela.
+      courseE_artist_functions3_copy: Você pode fazer esse desenho adicionando um
+        bloco de repetição.
       courseE_artist_functions4: Agora que você consegue desenhar uma estrela, tente
         desenhar quatro estrelas!
+      courseE_artist_functions4_copy: Agora que você consegue desenhar uma estrela,
+        tente desenhar quatro estrelas!
       courseE_artist_functions5: Desenhe apenas estas três estrelas para terminar
         este quebra-cabeça.
       courseE_artist_functions5_2018: Desenhe apenas estas três estrelas para terminar
         este quebra-cabeça.
       courseE_artist_functions5_2019: Desenhe apenas estas três estrelas para terminar
+        este quebra-cabeça.
+      courseE_artist_functions5_copy: Desenhe apenas estas três estrelas para terminar
         este quebra-cabeça.
       courseE_artist_functions6: Faça essa janela desenhando um quadrado, então virar
         90 graus antes de desenhar outro, e assim sucessivamente.

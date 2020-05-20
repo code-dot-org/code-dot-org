@@ -881,11 +881,6 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
         onComplete
       });
     }
-
-    if (this.studioApp_.isUsingBlockly()) {
-      // reenable toolbox
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    }
   };
 
   sendReport();
@@ -960,11 +955,6 @@ P5Lab.prototype.execute = function() {
     this.executionError
   ) {
     return;
-  }
-
-  if (this.studioApp_.isUsingBlockly()) {
-    // Disable toolbox while running
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
   this.startTickTimer();

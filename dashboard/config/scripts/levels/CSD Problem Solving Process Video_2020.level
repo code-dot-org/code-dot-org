@@ -9,7 +9,7 @@
     "video_key": "csd_problem_solving_process",
     "instructions_important": "false",
     "display_name": "Video: Problem Solving Process",
-    "long_instructions": "## Questions to consider\r\n* How did you follow the problem solving process in the last lesson?\r\n* How could you use this process on a problem in your everyday life?",
+    "long_instructions": "## Questions to consider:\r\n* How did you follow the problem solving process in the last lesson?\r\n* How could you use this process on a problem in your everyday life?",
     "skip_dialog": true,
     "skip_sound": true,
     "teacher_markdown": "## Discussion Goals\r\n\r\nThe first discussion question is part of the core activity in the rest of the lesson.  Students should take time working in their groups to think of specific things that they did that follow each step of the process.   The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity.\r\n\r\nThe second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains.  The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems, since the process will be used throughout the course in various domains.",
@@ -18,6 +18,8 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-05-06 17:49:58 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-15 19:17:00 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"},{\"changed_at\":\"2019-07-16 23:39:13 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-05-06 17:49:58 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-15 19:17:00 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"},{\"changed_at\":\"2019-07-16 23:39:13 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2020-04-29 15:45:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

@@ -42,11 +42,20 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @online_url = ONLINE_URL
     @is_enrollment_receipt = true
 
+    # Facilitator training workshops use different email addresses
+    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
+      from = from_facilitators
+      reply_to = from_facilitators
+    else
+      from = from_teacher
+      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
+    end
+
     mail content_type: 'text/html',
-      from: from_teacher,
+      from: from,
       subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+      reply_to: reply_to
   end
 
   def organizer_enrollment_receipt(enrollment)
@@ -98,13 +107,22 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
+    # Facilitator training workshops use a different email address
+    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
+      from = from_facilitators
+      reply_to = from_facilitators
+    else
+      from = from_teacher
+      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
+    end
+
     return if @workshop.suppress_reminders?
 
     mail content_type: 'text/html',
-      from: from_teacher,
+      from: from,
       subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+      reply_to: reply_to
   end
 
   def facilitator_enrollment_reminder(user, workshop)
@@ -249,6 +267,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   def from_teacher
     email_address('Code.org', 'teacher@code.org')
+  end
+
+  def from_facilitators
+    email_address('Code.org', 'facilitators@code.org')
   end
 
   def from_no_reply

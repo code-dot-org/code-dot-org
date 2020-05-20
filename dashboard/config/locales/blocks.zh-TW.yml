@@ -976,6 +976,8 @@ zh-TW:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
         text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
         options:
@@ -1027,6 +1029,8 @@ zh-TW:
         text: 標題畫面隱藏
       gamelab_isTouchingEdges:
         text: 角色 {SPRITE} 碰到邊緣？
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} 正在碰觸 {TARGET}"
       gamelab_jumpTo:
         text: 角色 {SPRITE} 定位到 {LOCATION}
       gamelab_keyPressed:
@@ -1085,6 +1089,8 @@ zh-TW:
             '"left"': " 向左"
       gamelab_mouseLocation:
         text: 鼠標位置
+      gamelab_moveBackward:
+        text: 角色 {SPRITE} 向後移動 {DISTANCE} 像素
       gamelab_moveForward:
         text: 角色 {SPRITE} 向前移動 {DISTANCE} 像素
       gamelab_moveInDirection:
@@ -1097,6 +1103,8 @@ zh-TW:
             '"West"': 西
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
+      gamelab_objectSpritePointer:
+        text: 物件 {SPRITE}
       gamelab_playSound:
         text: 播放音效 {SOUND}
       gamelab_pointInDirection:
@@ -1192,12 +1200,16 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 重複 判斷
+      gamelab_tumbling:
+        text: 翻滾
       gamelab_turn:
         text: 角色 {SPRITE} 轉向 {DIRECTION} {N} 度
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': " 向左"
+      gamelab_updateTitleWithColor:
+        text: 標題畫面顯示 {BREAK} 標題 {TITLE} 顏色 {COLOR}
       gamelab_whenDownArrow:
         text: 當向下鍵被按下
       gamelab_whenKey:
@@ -1645,9 +1657,16 @@ zh-TW:
       aalab_setupStory:
         text: 設定故事
       aalab_starwars_playSound:
+        text: 播放{OPTION}聲音
         options:
           OPTION:
             '"random"': 隨機
+            '"R2-D2 random"': R2-D2 隨機
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:

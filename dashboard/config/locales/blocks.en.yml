@@ -1118,6 +1118,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
@@ -1208,13 +1210,15 @@ en:
           collecting
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: show title screen {BREAK} title {TITLE} text {SUBTITLE}
+        text: show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} clicked"
         options:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:

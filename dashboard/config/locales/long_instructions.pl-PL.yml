@@ -1265,6 +1265,34 @@ pl-PL:
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2019: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
+      courseC_starWars_loops1: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\_„Idź po złom, BB-8!” \_
+
+        Użyj pięciu takich samych bloków, aby zdobyć złom. Złom wygląda tak: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\_„Idź po złom, BB-8!” \_
+
+        Użyj pięciu takich samych bloków, aby zdobyć złom. Złom wygląda tak: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops1_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\_„Idź po złom, BB-8!” \_
+
+        Użyj pięciu takich samych bloków, aby zdobyć złom. Złom wygląda tak: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+      courseC_starWars_loops2: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
+      courseC_starWars_loops2_copy: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_„Idź BB-8!”_
+
+        Aby uzyskać cały złom, spróbuj utworzyć pętlę, która wykorzystuje tylko jeden blok w bloku „powtarzaj”.
       courseD_artist_binary_challenge1_2018: Możesz użyć tylko binarnych wartości
         (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_artist_binary_challenge1_2019: Możesz użyć tylko binarnych wartości

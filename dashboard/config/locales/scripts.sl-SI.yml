@@ -475,12 +475,30 @@ sl:
               name: Funkcije
         CSF_Secret_Sample:
           description_audience: Starost 8-18
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         MikeTest:
           stages:
             Artist Functions:
               name: Umetnik Funkcije
         artistExemplar:
           description_audience: Starost 8-18
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -551,6 +569,12 @@ sl:
               name: Skokica
             'Farmer: While Loops':
               name: 'Kmet: Zanka dokler velja'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         csd3-2017:
           stages:
             Functions:
@@ -587,6 +611,18 @@ sl:
               name: Spremenljivke
             While Loops:
               name: 'Zanka: dokler velja'
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         basketball:
           stages:
             Bounce:
@@ -602,6 +638,12 @@ sl:
           stages:
             Lists:
               name: Seznami
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         minecraft:
           title: Minecraft Ura za kodo Oblikovalec
           description_short: Sprogramiraj živali in druga Minecraft bitja v svoji
@@ -657,6 +699,9 @@ sl:
               name: Uvod
             Conditionals:
               name: Pogoji
+          lesson_groups:
+            content:
+              display_name: Vsebina
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -669,6 +714,9 @@ sl:
               name: Pisanje pesmi s parametri
             Introduction:
               name: Uvod
+          lesson_groups:
+            content:
+              display_name: Vsebina
         classic-hoc-impact-study:
           stages:
             Hour of Code 2013:
@@ -685,6 +733,18 @@ sl:
           stages:
             Wrap-Up:
               name: Zaključek
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         sciencepd4:
           stages:
             Wrap-Up:
@@ -697,10 +757,23 @@ sl:
           stages:
             Binary:
               name: Binarno
+          lesson_groups:
+            content:
+              display_name: Vsebina
         sciencepd5:
           stages:
             Wrap-Up:
               name: Zaključek
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Vsebina
         csd6-draft:
           stages:
             Lists:
@@ -797,6 +870,78 @@ sl:
           stages:
             Building a Foundation:
               name: Graditi temelje
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         express-2017:
           stages:
             Introduction:
@@ -817,6 +962,9 @@ sl:
               name: Graditi temelje
             Nested Loops:
               name: Gnezdenje zank
+          lesson_groups:
+            content:
+              display_name: Vsebina
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -867,6 +1015,9 @@ sl:
               name: Graditi temelje
             Nested Loops:
               name: Gnezdenje zank
+          lesson_groups:
+            content:
+              display_name: Vsebina
         new-e:
           stages:
             Building a Foundation:
@@ -1065,6 +1216,108 @@ sl:
           stages:
             While Loops:
               name: 'Zanka: dokler velja'
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         pre-express-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1073,6 +1326,12 @@ sl:
               name: Čebelica črkuje besede
             Move It, Move It:
               name: Premakni se, premakni
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         frozen-2018:
           stages:
             Artist:
@@ -1085,6 +1344,14 @@ sl:
           stages:
             Artist:
               name: Umetnik
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1101,6 +1368,13 @@ sl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_variables:
+              display_name: Spremenljivke
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Digitalno državljanstvo
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1115,6 +1389,17 @@ sl:
               name: Binarne slike
             Artist Binary:
               name: Umetnik Binarno
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno državljanstvo
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1131,6 +1416,13 @@ sl:
               name: Crowdsourcing
             Songwriting:
               name: Napiši pesem
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
         express-2019:
           stages:
             Relay Programming:
@@ -1149,32 +1441,74 @@ sl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Spremenljivke
         andrea-test:
           stages:
             'null':
               name: prazno
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Življenjski algoritmi: Papirnata letala'
             'Events: The Big Event':
               name: Veliki dogodek
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: Veseli zemljevidi
             Going Places Safely:
               name: Kako varno potovati
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         courseb-2019:
           stages:
             Move It, Move It:
               name: Premakni se, premakni
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         pre-express-2019:
           stages:
             Move It, Move It:
               name: Premakni se, premakni
             Spelling Bee:
               name: Čebelica črkuje besede
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1195,6 +1529,16 @@ sl:
           stages:
             Functions with Parameters:
               name: Funkcije s parametri
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            required:
+              display_name: Pregled
         csp1-2019:
           stages:
             The Internet:
@@ -1207,6 +1551,10 @@ sl:
           stages:
             While Loops:
               name: 'Zanka: dokler velja'
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1215,10 +1563,92 @@ sl:
               name: Pogojniki s kartami
             Building a Foundation:
               name: Graditi temelje
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Obarvajmo kvadratke
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+            required:
+              display_name: Pregled
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
         csd2-pilot:
           stages:
             Lists:
@@ -1231,12 +1661,96 @@ sl:
               name: Pogoji
             Functions:
               name: Funkcije
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Pregled
+            content:
+              display_name: Vsebina
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
         peru-2019:
           stages:
             Introduction:
               name: Uvod
             Nested Loops:
               name: Gnezdenje zank
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -1251,6 +1765,14 @@ sl:
               name: Funkcije
             Variables:
               name: Spremenljivke
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1261,14 +1783,59 @@ sl:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Pogojniki s kartami
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_conditionals:
+              display_name: Pogoji
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Pogoji
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_events:
+              display_name: Dogodki
+            csf_digcit:
+              display_name: Digitalno državljanstvo
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Pogoji
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_events:
+              display_name: Dogodki
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1289,14 +1856,37 @@ sl:
               name: Kako varno potovati
             'Programming: Happy Maps':
               name: Veseli zemljevidi
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         courseb-2020:
           stages:
             Move It, Move It:
               name: Premakni se, premakni
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         coursec-2020:
           stages:
             'Events: The Big Event':
               name: Veliki dogodek
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_binary:
+              display_name: Binarno
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1311,10 +1901,28 @@ sl:
               name: Umetnik Binarno
             Digital Citizenship:
               name: Digitalno državljanstvo
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno državljanstvo
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: Napiši pesem
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_functions:
+              display_name: Funkcije
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1325,10 +1933,30 @@ sl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_variables:
+              display_name: Spremenljivke
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Spremenljivke
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Čebelica črkuje besede
+          lesson_groups:
+            csf_loops:
+              display_name: Zanke
+            csf_events:
+              display_name: Dogodki
         csp3-virtual:
           stages:
             Creating Functions:
@@ -1351,6 +1979,9 @@ sl:
           stages:
             Functions:
               name: Funkcije
+          lesson_groups:
+            content:
+              display_name: Vsebina
         code-break:
           stages:
             Algorithms:

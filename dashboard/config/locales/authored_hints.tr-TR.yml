@@ -2437,6 +2437,76 @@ tr-TR:
         NEW_Course_4_Bee_For_Loops_8_a: "Eğer döngü yukarı sayıyor ise her seferinde
           artış miktarı sayaç değişkenine eklenir. \nSonraki sayıyı elde etmek için
           her sayıya ne kadar eklemen gerekiyor?"
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'Eklemen gereken blok, ''hızı ayarla'' bloğudur. '
+        courseC_flappy_events2_b: Bulmacayı çözmek için 'hızı ayarla' bloğunu 'çalıştığı
+          zaman' bloğuna bağla.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Eğer bir şeyler doğru çalışmazsa, bloklarının çalışma
+          alanındaki doğru olaylarla bağlandığına emin ol.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Bulmacayı çözmek için 'oyunu sonlandır' bloğunu
+          'bir engele çarptığı zaman' bloğuna bağla.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Bu seviyeyi geçmek için 'puan al' bloğunu kullanman
+          gerekecek.
+      OPD-K5-forloops-1:
+        courseF_bee_for1_b: Bütün nektarı toplamak için 'tekrar' döngünüzün içinde
+          iki kareye iktiyacınız olacak.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_b: Her döngünün arasında ileri gitmeyi unutmayın, bu sayede
+          her çiçeğe ulaşırsınız.
+      OPD-K5-forloops-6:
+        courseF_bee_for6_c: Döngünüz **5'ten 1'e** saymalı.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_c: "'tekrar' döngünüzde 'zıt' değişken kullanmayı unutmayın."
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
+          aktör eklemek için kullanılabilir."
+        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi
+          için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka
+          planı ayarla' bloğunu kullanın.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde
+          4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
+        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket
+          ettirebilmelisin!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan
+          çıkarmak için 'puanı sil' kullanın.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Bu üçgende iç açıyı 60 derece yapmak
+          için sanatçıyı 120 derece döndürmeyi unutmayın.
+        grade5_artist_variables_triangles1_b: Kodunuzu kısaltmak için 'tekrarla' döngüsünü
+          kullanın.
+        grade5_artist_variables_triangles1_c: Döngünüzün içinde, 50 piksel ilerlemek
+          sonra 120 derece sola dönmek isteyeceksiniz.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Her üçgeni çizdikten sonra ilerlemeyi unutma.
+        courseF_artist_variables2_b: Yeni döngünüz, üçgeninizin döngüsünü içerecek
+          sonra da bir tane 'ilerle' komutu.
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: "'Uzunluk' değişkeni kodunuzda iki yerde kullanılacak:
+          üçgeninizin kenar uzunluğu ve üçgenler arasındaki ilerleme miktarı."
+        courseF_artist_variables3_b: 'Değeri 50 olan sayı bloğu sadece bir yerde olmalı:
+          ''uzunluk değişkeni ata'' bloğundan sonra.'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_c: |-
+          Sanatçınızın takip edeceği desen bu:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      OPD-K5-variables-7:
+        courseF_artist_variables5_b: Kodunuzun ilk yarısı üç tane üçgen çizecek, kodunuzun
+          ikinci yarısı diğer üç taneyi çizecek.
+        courseF_artist_variables5_c: Programınızın ilk yarısındaki kodu çoğaltarak
+          başlayın, sonra gösterilen tasarımı yapmak için kodunuzu değiştirin.
+        courseF_artist_variables5_d: |-
+          Sanatçınızın takip edeceği desen bu:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Burada seçebileceğin birkaç yol var. Hangisi en kısa?
         mc_8_b: Kodunu sadeleştirmek için 'tekrarla' döngüsünü kullan.
@@ -4108,6 +4178,9 @@ tr-TR:
       courseA_maze_seq5:
         courseA_maze_seq5_b: İki farklı yönde işaret eden iki farklı bloğa ihtiyacınız
           olacak.
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_b: İki farklı yönde işaret eden iki farklı bloğa ihtiyacınız
+          olacak.
       courseA_maze_seq6:
         courseA_maze_seq6_b: Takıldığınızda, bulmacayı köşeden önce ve köşeden sonra
           olarak iki ayrı parça olarak çözmeyi deneyin.
@@ -4115,6 +4188,9 @@ tr-TR:
         courseA_maze_seq6_b: Takıldığınızda, bulmacayı köşeden önce ve köşeden sonra
           olarak iki ayrı parça olarak çözmeyi deneyin.
       courseA_maze_seq6_2019:
+        courseA_maze_seq6_b: Takıldığınızda, bulmacayı köşeden önce ve köşeden sonra
+          olarak iki ayrı parça olarak çözmeyi deneyin.
+      courseA_maze_seq6_copy:
         courseA_maze_seq6_b: Takıldığınızda, bulmacayı köşeden önce ve köşeden sonra
           olarak iki ayrı parça olarak çözmeyi deneyin.
       courseA_maze_seq9:
@@ -6635,6 +6711,9 @@ tr-TR:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Tekrar etmek için, bir 'tekrar' döngüsü sürükle,
           sonra içine istediğin bloğu koy.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Tekrar etmek için, bir 'tekrar' döngüsü sürükle,
+          sonra içine istediğin bloğu koy.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: '"Sola" dön bloğunun yanındaki küçük ok işaretine
           tıklamak, onu "sağ" olarak değiştirmene izin verecektir.'
@@ -6653,7 +6732,17 @@ tr-TR:
         courseC_starWars_loops4_a: İki 'tekrarla' bloğu kullanın.
         courseC_starWars_loops4_b: 'Her ''tekrarla'' döngüsünün içinde bir komut bulunacak:
           ''ilerle''.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: '"Sola" dön bloğunun yanındaki küçük ok işaretine
+          tıklamak, onu "sağ" olarak değiştirmene izin verecektir.'
+        courseC_starWars_loops4_a: İki 'tekrarla' bloğu kullanın.
+        courseC_starWars_loops4_b: 'Her ''tekrarla'' döngüsünün içinde bir komut bulunacak:
+          ''ilerle''.'
       courseC_starWars_loops5:
+        courseC_starWars_loops5_b: Aşağı ilerlemek için, dönüp ilerlemelisin.
+        courseC_starWars_loops5_a: 'En iyi çözüm bir dönüş sonra bir ilerle ve tekrar
+          dönüş, en son da tekrarla döngüsü içermektedir. '
+      courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: Aşağı ilerlemek için, dönüp ilerlemelisin.
         courseC_starWars_loops5_a: 'En iyi çözüm bir dönüş sonra bir ilerle ve tekrar
           dönüş, en son da tekrarla döngüsü içermektedir. '
@@ -6670,6 +6759,12 @@ tr-TR:
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Bütün hareketleri bir kağıt parçasına yazmayı ve
+          bir desen bulmayı deneyin.
+        courseC_starWars_loops6_b: Eğer kodlarını daha fazla basitleştirmek istersen,
+          bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
+          içe döngü** denir.
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Bütün hareketleri bir kağıt parçasına yazmayı ve
           bir desen bulmayı deneyin.
         courseC_starWars_loops6_b: Eğer kodlarını daha fazla basitleştirmek istersen,
@@ -6699,6 +6794,14 @@ tr-TR:
           hareketleri bir kağıt parçasına yazmayı ve bir desen bulmayı deneyin.
         courseC_starWars_loops7_c: Hata yapmaktan korkma! Bulmacayı çözmemiş olsan
           bile neler olduğunu görmek için kodu çalıştır.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Bu yıldız deseni biraz karışık görünüyor! İlk olarak
+          basit bir merdiven basamağı çizerek başla. Bu bütün hurda metali kaplıyor
+          mu?
+        courseC_starWars_loops7_b: Bu bulmacayla ilgili problem yaşıyorsanız, bütün
+          hareketleri bir kağıt parçasına yazmayı ve bir desen bulmayı deneyin.
+        courseC_starWars_loops7_c: Hata yapmaktan korkma! Bulmacayı çözmemiş olsan
+          bile neler olduğunu görmek için kodu çalıştır.
       courseC_starWars_loops8:
         course_starWars_loops8_b: Bu problemin ilk yarısını bir merdiven basamağı
           olarak düşünün. Bunu daha önce nasıl çözdün?
@@ -6714,6 +6817,13 @@ tr-TR:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_b: Bu problemin ilk yarısını bir merdiven basamağı
+          olarak düşünün. Bunu daha önce nasıl çözdün?
+        course_starWars_loops8_c: |-
+          Bu çözüme bir bak:
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_b: Bu problemin ilk yarısını bir merdiven basamağı
           olarak düşünün. Bunu daha önce nasıl çözdün?
         course_starWars_loops8_c: |-
@@ -7319,6 +7429,15 @@ tr-TR:
       courseD_bee_conditionals2_2019:
         courseD_bee_conditionals2_c: Petekleri kontrol etmenize gerek yok, bulutların
           altında sadece çiçekler veya boş alanlar var.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
+          Videoyu izleyin!
+        courseD_bee_conditionals2_b: Bu labirent boyunca ilerlemek için 'tekrarla'
+          veya 'yol olduğu süresince' bloklarını kullanabilirsiniz.
+        courseD_bee_conditionals2_c: Petekleri kontrol etmenize gerek yok, bulutların
+          altında sadece çiçekler veya boş alanlar var.
+        courseD_bee_conditionals2_hintVid2: Bu bulmacayı çözerken yardım almak için
+          bu videoyu izleyin.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
@@ -7342,6 +7461,16 @@ tr-TR:
       courseD_bee_conditionals3_2019:
         courseD_bee_conditionals3_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
+          Videoyu izleyin!
+        courseD_bee_conditionals3_b: Arının ileriye gitmesini devam ettirmek için
+          'tekrarla' veya 'süresince' bloklarını kullanabilirsiniz. Hangisini isterseniz
+          onu kullanın!
+        courseD_bee_conditionals3_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
+          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseD_bee_conditionals3_hintVid2: Bu bulmacayı çözerken yardım almak için
+          bu videoyu izleyin.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
@@ -7351,6 +7480,14 @@ tr-TR:
         courseD_bee_conditionals4_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals4_2018:
+        courseD_bee_conditionals4_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
+          Videoyu izleyin!
+        courseD_bee_conditionals4_c: '''Yol olduğu sürece'' <xml><block type="maze_untilBlocked"/></xml>
+          bloğu kullandığında ''İlerle'' ve bir çiçek var mı kontrol et. ''Eğer çiçek
+          var ise'' arı ne yapmalı?'
+        courseD_bee_conditionals4_hintVid2: Bu bulmacayı çözerken yardım almak için
+          bu videoyu izleyin.
+      courseD_bee_conditionals4_copy:
         courseD_bee_conditionals4_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
         courseD_bee_conditionals4_c: '''Yol olduğu sürece'' <xml><block type="maze_untilBlocked"/></xml>
@@ -7375,6 +7512,22 @@ tr-TR:
         courseD_bee_conditionals5_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
+          Videoyu izleyin!
+        courseD_bee_conditionals5_a: Dikdörtgen yolun her tarafını ayrı bir yol olarak
+          düşün. "Tekrarla" bloğu içine "yol olduğu sürece" bloğu koy. Arının bütün
+          çiçekleri yoklaması gerekiyor, bunun için kaç tane yol gitmeksi gerekir?
+        courseD_bee_conditionals5_c: Bir üçgenin 3 kenarı vardır bu yüzden 'Tekrarla
+          3 kez ' döngüsü kullanman gerekir. Her tekrarda 'yol olduğu sürece' döngüsü
+          ile yol boyunca devam etmesi gerekir. Yola devam etmek için 'ilerle ' gerekir.
+          Yolda iken, arının çiçekleri denetlemesi gerekir. 'eğer çiçek ise', arı
+          'nektar almalı'.
+        courseD_bee_conditionals5_b: "'Yol olduğu süresince' bloğu içinde ilerle ve
+          bir çiçek varmı kontrol et blokları kullanmalısın. Bir çiçek olup olmadığını
+          nasıl kontrol edebilirim? Bir çiçek varsa ne yapıyorsun?"
+        courseD_bee_conditionals5_hintVid2: Bu bulmacayı çözerken yardım almak için
+          bu videoyu izleyin.
+      courseD_bee_conditionals5_copy:
         courseD_bee_conditionals5_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
         courseD_bee_conditionals5_a: Dikdörtgen yolun her tarafını ayrı bir yol olarak
@@ -8659,6 +8812,12 @@ tr-TR:
           `line of hexagons` isimli fonksiyonun nerede kullanıldığı görebiliyor musun?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Karelerin kenarları 100 piksel genişliğinde,
+          buda demek oluyor ki ikinci kareyi çizmeden önce 175 piksel ilerlemelisin.
+        courseE_artist_functions1_b: Gözlük yapmak için çakışan çizgiler olabilir.
+        courseE_artist_functions1_c: Daha kısa kodlama için, gözlüğün kare çerçevesini
+          çizmek için bir tane 'tekrarla' döngüsü kullanmayı deneyin.
       courseE_artist_functions2:
         courseD_artist_functions2_b: Fonksiyon bütün programı içermeyecek, sadece
           100 piksel uzunluğundaki kenarlarını çizer.
@@ -8683,10 +8842,27 @@ tr-TR:
           kod çalışmayacak."
         courseD_artist_functions2_a: "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-
           \  ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: Fonksiyon bütün programı içermeyecek, sadece
+          100 piksel uzunluğundaki kenarlarını çizer.
+        courseD_artist_functions2_c: "'Çalıştığı zaman' bloğunun altına fonksiyonunuzu
+          'çalıştırmak' için yeşil 'bir kare çiz' bloğu kullanın. Aksi takdirde, fonksiyonunuzdaki
+          kod çalışmayacak."
+        courseD_artist_functions2_a: "Programınız: \n\\-Fonksiyon kullanmalıdır.\n\n-
+          \  ileri 100 + 75 piksel ilerlemelidir\n-   Fonksiyon kullanmalıdır"
       courseE_artist_functions3:
         courseD_artist_functions3_b: Döngünüzün içinde başlatıcı kod bloklarından
           her 3' ü de bulunmalı.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_b: Döngünüzün içinde başlatıcı kod bloklarından
+          her 3' ü de bulunmalı.
       courseE_artist_functions4:
+        courseD_artist_functions4_b: Kendi fonksiyonunu oluşturmaya başlamak için
+          'yıldız çiz' fonksiyonunu araç kutusunun dışına sürükle. Önceki bulmacadaki
+          ile aynı koda sahip olmalı, çünkü aynı yıldız desenini çiziyorsun.
+        courseD_artist_functions4_c: Ana programınızda bu fonksiyonu çağırmak için
+          yeşil 'yıldız çiz' bloğunu kullan. Her bir yıldızda ileri atlamayı unutmayın!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_b: Kendi fonksiyonunu oluşturmaya başlamak için
           'yıldız çiz' fonksiyonunu araç kutusunun dışına sürükle. Önceki bulmacadaki
           ile aynı koda sahip olmalı, çünkü aynı yıldız desenini çiziyorsun.
@@ -8701,6 +8877,10 @@ tr-TR:
           kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
           kullanın!"
       courseE_artist_functions5_2019:
+        courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
+          kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
+          kullanın!"
+      courseE_artist_functions5_copy:
         courseD_artist_functions5_c: "'yıldız çiz' fonksiyonun içine yıldız şekli
           kodunu sürükleyerek başlayın, sonra 3 yıldızı çizmek için bu fonksiyonu
           kullanın!"

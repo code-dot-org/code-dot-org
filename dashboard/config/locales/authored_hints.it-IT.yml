@@ -4459,6 +4459,204 @@ it-IT:
           viene aggiunto alla variabile`counter` (_contatore_) ad ogni ciclo. Quanto
           bisogna aggiungere in questo caso ad ogni valore per ottenere il valore
           successivo nella sequenza?
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta
+          una velocità ...`. '
+        courseC_flappy_events2_b: Collega il blocco `imposta una velocità ...` al
+          blocco `quando si clicca su "Esegui"` per risolvere questo esercizio.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Se qualcosa non funziona correttamente, controlla
+          che i blocchi siano collegati agli eventi corretti nell'area di lavoro.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Per risolvere questo esercizio, collega il blocco
+          `fine del gioco` al blocco dell'evento `quando colpisce un ostacolo`.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Dovrai usare il blocco `aggiungi un punto` per completare
+          l'esercizio.
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto del
+          ciclo `ripeti ... volte` per indicare quante volte deve essere ripetuto.
+        courseF_bee_for1_b: Hai bisogno di due blocchi nel ciclo `ripeti ... volte`
+          per raccogliere tutto il nettare.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: Se sei confuso, lavora su un fiore alla volta e prova
+          ad eseguire il programma frequentemente.
+        courseF_bee_for2_b: Ricordati di andare avanti tra un ciclo e il successivo,
+          cosi potrai raggiungere ogni fiore.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: Usa un _ciclo con contatore_ (`per counter`) che va da
+          1 a 7 con un passo di 1 per risolvere questo esercizio.
+        courseF_bee_for4_b: All'interno del _ciclo con contatore_, dovrai avere un
+          blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for4_c: Per raccogliere tutto il nettare, assicurati di usare
+          la variabile `counter` (_contatore_) all'interno del ciclo annidato!
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: Non dimenticarti di usare la variabile `counter` (_contatore_)
+          all'interno del ciclo `ripeti ... volte`.
+        courseF_bee_for6_b: All'interno del _ciclo con contatore_, dovrai avere un
+          blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for6_c: Il ciclo dovrà contare **da 5 a 1**.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: Il _ciclo con contatore_ dovrà contare da 1 a 7 a passi
+          di 2.
+        courseF_bee_for7_b: All'interno del _ciclo con contatore_, dovrai avere un
+          blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for7_c: Ricordati di usare la variabile `counter` (_contatore_)
+          all'interno del ciclo `ripeti ... volte`.
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: Puoi usare il blocco `imposta il personaggio
+          1 come ...` per aggiungere un personaggio nella scena.
+        courseE_playLab_scaffold1_b: Per fare in modo che il personaggio che hai scelto
+          compaia all'avvio del tuo programma, metti il blocco `imposta il personaggio
+          1 come ...` sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_playLab_scaffold1_c: Usa il blocco `imposta uno sfondo ...` per scegliere
+          lo sfondo della tua scena.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa
+          (▼) del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento
+          `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco
+          di movimento agganciato sotto.
+        courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di
+          spostare il tuo eroe con i tasti freccia!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Per modificare il punteggio, usa i blocchi `aggiungi
+          un punto` e `togli un punto`.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Ricordati che per creare l'angolo interno
+          di 60 gradi del triangolo, devi far girare l'artista di 120 gradi (il corrispondente
+          angolo esterno).
+        grade5_artist_variables_triangles1_b: Usa il blocco `ripeti ... volte` per
+          accorciare il tuo programma.
+        grade5_artist_variables_triangles1_c: All'interno del tuo ciclo, dovrai andare
+          avanti di 50 pixel e poi girare a sinistra di 120 gradi.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Ricordati di andare avanti dopo aver disegnato
+          ogni triangolo.
+        courseF_artist_variables2_b: Il tuo nuovo ciclo conterrà il ciclo che disegna
+          un triangolo seguito da un'istruzione `vai avanti`.
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 'La variabile `length` (_lunghezza_) verrà usata
+          in due punti del programma: per il lato del triangolo e per lo spazio tra
+          un triangolo e l''altro.'
+        courseF_artist_variables3_b: 'Il blocco numerico con valore 50 dovrebbe essere
+          in un solo posto: dopo il blocco `imposta length a`.'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: Il codice non sarà molto diverso da quello dell'esercizio
+          precedente, tranne per il fatto che dovrai girare l'artista per farlo saltare
+          in basso, quindi girarlo di nuovo per farlo saltare in avanti ancora una
+          volta.
+        courseF_artist_variables4_c: |-
+          Questo è lo schema che il tuo artista dovrà seguire:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: La seconda metà del programma dovrebbe apparire
+          quasi uguale alla prima metà, tranne per il fatto che dovrai girare a _sinistra_,
+          saltare e poi girare a _destra_.
+        courseF_artist_variables5_b: La prima parte del programma dovrà disegnare
+          tre triangoli e la seconda parte dovrà disegnare gli altri tre.
+        courseF_artist_variables5_c: Inizia duplicando il codice della prima metà
+          del programma, quindi modificalo per rendere visibile il disegno.
+        courseF_artist_variables5_d: |-
+          Questo è lo schema che il tuo artista dovrà seguire:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Puoi scegliere tra diversi percorsi. Qual'è il più corto?
         mc_8_b: Usa il blocco `ripeti ... volte` per semplificare il tuo programma.
@@ -6825,6 +7023,11 @@ it-IT:
           un foglio di carta.
         courseA_maze_seq10_b: Avrai bisogno di muoverti in 3 direzioni diverse per
           risolvere l'esercizio.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Se hai problemi, prova prima a scrivere i passaggi su
+          un foglio di carta.
+        courseA_maze_seq10_b: Avrai bisogno di muoverti in 3 direzioni diverse per
+          risolvere l'esercizio.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito
           per tracciare il tuo percorso dall'uccellino fino al maialino.
@@ -6900,6 +7103,11 @@ it-IT:
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Per trovare la soluzione, prova a scrivere i passi sulla
+          carta!
+        courseA_maze_seq5_b: Avrai bisogno di 2 blocchi, che puntano in 2 direzioni
+          diverse.
       courseA_maze_seq5a_2018:
         '1': Prova a pronunciare i passi ad alta voce e osserva se questa tecnica
           ti aiuta a trovare la risposta giusta.
@@ -6918,7 +7126,17 @@ it-IT:
         courseA_maze_seq6_a: Il tuo programma finale dovrebbe avere 3 blocchi di movimento.
         courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti,
           una parte prima della curva e l'altra dopo la curva.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Il tuo programma finale dovrebbe avere 3 blocchi di movimento.
+        courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti,
+          una parte prima della curva e l'altra dopo la curva.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Hai bisogno di aggiungere 1 blocco per far arrivare l'uccellino
+          fino al maialino.
+        courseA_maze_seq7_b: Se non riesci a capire cosa devi fare, prova a disegnare
+          il labirinto sulla carta e usa le dita per capire il percorso da seguire
+          e quindi scoprire le mosse da fare.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Hai bisogno di aggiungere 1 blocco per far arrivare l'uccellino
           fino al maialino.
         courseA_maze_seq7_b: Se non riesci a capire cosa devi fare, prova a disegnare
@@ -6931,6 +7149,9 @@ it-IT:
         courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla
           carta per capire come dovrebbe muoversi l'uccellino.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla
+          carta per capire come dovrebbe muoversi l'uccellino.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla
           carta per capire come dovrebbe muoversi l'uccellino.
       courseA_maze_seq9:
@@ -11211,6 +11432,10 @@ it-IT:
         courseC_starWars_loops2_a: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Per ripetere una sequenza di istruzioni, trascina
+          nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
+          i blocchi che vuoi ripetere.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Usa il menù a discesa (▼) del blocco `gira a ...`
           per sostituire "sinistra" con "destra".
@@ -11229,6 +11454,12 @@ it-IT:
         courseC_starWars_loops4_a: Usa due blocchi `ripeti ... volte`.
         courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione
           al suo interno: `vai avanti`.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Usa il menù a discesa (▼) del blocco `gira a ...`
+          per sostituire "sinistra" con "destra".
+        courseC_starWars_loops4_a: Usa due blocchi `ripeti ... volte`.
+        courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione
+          al suo interno: `vai avanti`.'
       courseC_starWars_loops5:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
@@ -11238,6 +11469,11 @@ it-IT:
         courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
           una curva e infine un ciclo.
       courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
+      courseC_starWars_loops5_copy:
+        courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
+          girare e poi farlo andare avanti.
         courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
           una curva e infine un ciclo.
       courseC_starWars_loops6:
@@ -11253,6 +11489,12 @@ it-IT:
           Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
           Si chiama **ciclo annidato**.
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
+          carta e cerca una sequenza che si ripete.
+        courseC_starWars_loops6_b: |-
+          Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro!\
+          Si chiama **ciclo annidato**.
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
           carta e cerca una sequenza che si ripete.
         courseC_starWars_loops6_b: |-
@@ -11285,6 +11527,15 @@ it-IT:
           uno schema che si ripete.
         courseC_starWars_loops7_c: Non aver paura di sbagliare! Esegui il codice per
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Questo schema sembra più difficile di quello che
+          è! Inizia con un semplice gradino. Permette di recuperare tutti i rottami
+          metallici?
+        courseC_starWars_loops7_b: Se hai difficoltà nella risoluzione di questo esercizio,
+          prova a scrivere tutte le mosse su un foglio di carta e cerca di trovare
+          uno schema che si ripete.
+        courseC_starWars_loops7_c: Non aver paura di sbagliare! Esegui il codice per
+          vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops8:
         course_starWars_loops8_a: Prova a suddividere questo problema in piccole parti.
           Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio
@@ -11306,6 +11557,16 @@ it-IT:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Prova a suddividere questo problema in piccole parti.
+          Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio
+          al primo tentativo!
+        course_starWars_loops8_b: Pensa alla prima parte di questo esercizio come
+          ad una scalinata. Come puoi risolverla?
+        course_starWars_loops8_c: |-
+          Dai un'occhiata a questo percorso:
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Prova a suddividere questo problema in piccole parti.
           Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio
           al primo tentativo!
@@ -12133,6 +12394,9 @@ it-IT:
       courseD_bee_conditionals1_predict1_2019:
         courseD_bee_conditionals1_a: Devi usare un blocco `se` per controllare se
           c'è un fiore sotto la nuvola prima di cercare di raccogliere il nettare.
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: Devi usare un blocco `se` per controllare se
+          c'è un fiore sotto la nuvola prima di cercare di raccogliere il nettare.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -12161,6 +12425,17 @@ it-IT:
           un blocco `se`.
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
           per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
+          vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
+          un blocco `se`.
+        courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
+          `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
+          per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
+        courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -12189,6 +12464,17 @@ it-IT:
         courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
+          `se` per verificare in ogni casella se c'è un fiore.
+        courseD_bee_conditionals3_b: Per far andare avanti l'ape, puoi usare sia un
+          ciclo `ripeti ... volte` sia un ciclo `mentre`. Usa quello che preferisci!
+        courseD_bee_conditionals3_c: Non aver paura di sbagliare! Prova ad aggiungere
+          blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
+          ancora risolto l'esercizio.
+        courseD_bee_conditionals3_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -12216,6 +12502,17 @@ it-IT:
           sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
         courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
           controllare la presenza di un fiore in ogni casella.
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
+          sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
+        courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
+          controllare la presenza di un fiore in ogni casella.
+        courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
+          riesci ad andare avanti e controllare se c'è un fiore. Cosa deve fare l'ape
+          se c'è un fiore?
+        courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -12244,6 +12541,22 @@ it-IT:
           deve procedere lungo il percorso `mentre c'è strada in avanti`. Per proseguire,
           l'ape deve `"andare" avanti`. Lungo il percorso, l'ape deve controllare
           se c'è un fiore. `se c'è un fiore`, l'ape deve `"prendere" il nettare`.
+        courseD_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
+          avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
+          se c'è un fiore? Cosa fai se c'è un fiore?
+        courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals5_copy:
+        courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
+          il video-suggerimento!
+        courseD_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
+          come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
+          `ripeti ... volte` all'esterno ed uno `mentre c'è strada in avanti` all'interno.
+          Lungo quanti lati deve volare l'ape per ronzare su ogni fiore?
+        courseD_bee_conditionals5_c: Ci sono 3 lati del rettangolo con dei fiori,
+          quindi occorre usare il blocco `ripeti 3 volte`. Ad ogni ripetizione, l'ape
+          deve procedere lungo il percorso `mentre c'è strada in avanti`. Per proseguire,
+          l'ape deve andare avanti. Lungo il percorso, l'ape deve controllare se c'è
+          un fiore. `se c'è un fiore`, l'ape deve prendere il nettare.
         courseD_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
           avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
           se c'è un fiore? Cosa fai se c'è un fiore?
@@ -14417,6 +14730,14 @@ it-IT:
           Riesci a vedere dove puoi usare una funzione denominata `disegna una fila di esagoni`?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Le lenti quadrate hanno i lati da 100 pixel,
+          questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare
+          la seconda lente.
+        courseE_artist_functions1_b: Tieni conto che puoi sempre riscrivere su delle
+          linee già tracciate.
+        courseE_artist_functions1_c: Per ottenere un programma più breve, prova ad
+          usare un ciclo `ripeti ... volte` per disegnare le lenti quadrate.
       courseE_artist_functions2:
         courseD_artist_functions2_b: La funzione che hai scritto non deve contenere
           l'intero programma, ma solo la parte che disegna un quadrato con lati di
@@ -14463,6 +14784,22 @@ it-IT:
           -   usare la funzione
           -   andare avanti di 100 + 75 pixel
           -   usare la funzione
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: La funzione che hai scritto non deve contenere
+          l'intero programma, ma solo la parte che disegna un quadrato con lati di
+          100 pixel.
+        courseD_artist_functions2_c: |-
+          Per richiamare la funzione `disegna un quadrato` usa questo blocco verde:
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+
+          In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
+        courseD_artist_functions2_a: |-
+          Il programma deve:
+
+          -   usare la funzione
+          -   andare avanti di 100 + 75 pixel
+          -   usare la funzione
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           Per risolvere questo esercizio, basta aggiungere un ciclo che ripeta 8 volte il codice che trovi già pronto.
@@ -14470,7 +14807,23 @@ it-IT:
           Se, dopo alcune prove non ricordi il codice di partenza, fai clic su "Ripristina" in alto a destra nell'area di lavoro.
         courseD_artist_functions3_b: Il ciclo dovrà contenere tutti e 3 i blocchi
           di partenza.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          Per risolvere questo esercizio, basta aggiungere un ciclo che ripeta 8 volte il codice che trovi già pronto.
+
+          Se, dopo alcune prove non ricordi il codice di partenza, fai clic su "Ripristina" in alto a destra nell'area di lavoro.
+        courseD_artist_functions3_b: Il ciclo dovrà contenere tutti e 3 i blocchi
+          di partenza.
       courseE_artist_functions4:
+        courseD_artist_functions4_a: Prova ad usare una funzione!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco
+          aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso
+          codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo
+          di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `disegna una stella` per
+          richiamare la funzione nel tuo programma principale. Non dimenticare di
+          saltare avanti tra una stella e l'altra!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: Prova ad usare una funzione!
         courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco
           aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso
@@ -14501,6 +14854,14 @@ it-IT:
           non solo all'interno di un ciclo!
         courseD_artist_functions5_c: Inizia creando la funzione `disegna una stella`,
           quindi usa questa funzione per disegnare le tre stelle!
+      courseE_artist_functions5_copy:
+        courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
+        courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una
+          certa sequenza di istruzioni in un qualsiasi punto del programma principale,
+          non solo all'interno di un ciclo!
+        courseD_artist_functions5_c: Trascina il codice che disegna la stella nel
+          blocco che definisce la funzione `disegna una stella`, quindi usa questa
+          funzione per disegnare le tre stelle!
       courseE_artist_functions6:
         grade4_artist_functions_windows0_a: Per ora concentrati solamente su come
           realizzare una finestra. Creeremo poi una funzione nel prossimo esercizio.

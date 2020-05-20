@@ -169,7 +169,7 @@ class ScriptLevelsController < ApplicationController
     if stage_id
       # TODO(asher): change this to use a cache
       stage = Lesson.find(stage_id)
-      return head :forbidden unless stage.try(:script).try(:hideable_stages)
+      return head :forbidden unless stage.try(:script).try(:hideable_lessons)
       section.toggle_hidden_stage(stage, should_hide)
     else
       # We don't have a stage id, implying we instead want to toggle the hidden state of this script
@@ -195,7 +195,7 @@ class ScriptLevelsController < ApplicationController
       end
       # This errs on the side of showing the warning by only if the script we are in
       # is the assigned script for the section
-      @show_stage_extras_warning = !@section&.stage_extras && @section&.script&.name == params[:script_id]
+      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -222,10 +222,10 @@ class ScriptLevelsController < ApplicationController
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
-      next_stage_number: @stage.next_level_number_for_stage_extras(current_user),
+      next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
       stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_stage_extras(current_user),
-      bonus_levels: @script.get_bonus_script_levels(@stage),
+      next_level_path: @stage.next_level_path_for_lesson_extras(current_user),
+      bonus_levels: @script.get_bonus_script_levels(@stage, current_user),
     }.camelize_keys
     @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
 

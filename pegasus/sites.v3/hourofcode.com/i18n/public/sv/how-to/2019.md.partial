@@ -61,39 +61,39 @@ Inför Hour of Code kan du ladda upp genom att dela [inspirerande videos](/promo
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Lär dig mer om affischer, videos, klistermärken och andra sätt att [marknadsföra ditt event](/promote/resources#posters) till dina intressegrupper. 
 
 
 
-## 5. Start your Hour of Code Strong
+## 5. Starta din Hour of Code på topp
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Inled din Hour of Code starkt med några av dessa tips. 
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Bjud in en [volontär]({{ urls/volunteer_local }}) för att inspirera dina elever genom att prata om bredden av möjligheter inom datavetenskap. Det finns tusentals volontärer jorden runt som är redo att hjälpa till med din Hour of Code, antingen genom att besöka klassrummet eller videochatta med dina elever.
 
 Visa en inspirerande video:
 
 - Preimärfilmen från code.org, med Bill Gates, Mark Zuckerberg och NBA-stjärnan Chris Bosh. (Det finns versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuters](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Det är inga problem om varken du eller dina elever har någon erfarenhet med datavetenskap. Här är några idéer för hur du kan introducera din Hour of Code-aktivitet.
 
 - Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, och föra personer närmare, o.s.v.).
 - Gör en lista med vardagsprylar som använder kod tillsammans med dina elever.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Se tips för att få tjejer intresserade av datavetenskap [här](http://code.org/girls)
 
 
 
 
-## 6. Get Coding!
+## 6. Börja koda!
 
 Visa eleverna hur de kommer in till övningen
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Skriv länken till introduktionen på whiteboarden. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 När dina elever stöter på problem så är det okej att svara:
 
-- “I don’t know. Let’s figure this out together.”
+- "Jag vet inte. Vi försöker lösa det tillsammans."
 - "Teknik fungerar inte alltid som vi vill."
 - "Att lära sig programmera är som att lära sig ett nytt språk: du skriver inte flytande på en gång."
 
@@ -104,7 +104,7 @@ Vad gör jag om en elev blir färdig tidigt?
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate your Students' Success
+## 7.  Fira dina elevers framgångar
 
 [col-33]
 
@@ -115,7 +115,7 @@ Vad gör jag om en elev blir färdig tidigt?
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Skiv ut "Jag gjorde en Hour of Code!"]({{ urls/promote_stickers }})-stickers för dina elever.
 - [Beställ specialgjorda t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) till din skola.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Dela foton och videos från din Hour of Code på sociala medier. Använd "HourOfCode och @codeorg så kan vi också lyfta upp dina framgångar!
 
 
 
@@ -132,6 +132,6 @@ Vad gör jag om en elev blir färdig tidigt?
 
 ## Vad kan jag göra efter Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Datavetenskap behöver inte ta slut med Hour of Code!  Vår läroplan är webb-baserad och alltid gratis att använda.  [Lär dig hur](/beyond) du tar datavetenskap till din skola och dina elever.
 
 {{ signup_button }}

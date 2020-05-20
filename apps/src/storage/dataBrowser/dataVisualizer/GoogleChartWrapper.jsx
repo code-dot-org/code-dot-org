@@ -4,6 +4,7 @@ import _ from 'lodash';
 import {ChartType, ignoreMissingValues} from '../dataUtils';
 import {GOOGLE_CHART_AREA} from './constants';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
+import msg from '@cdo/locale';
 
 class GoogleChartWrapper extends React.Component {
   static propTypes = {
@@ -54,6 +55,7 @@ class GoogleChartWrapper extends React.Component {
     let columns;
     let options = {
       title: this.props.chartTitle || '',
+      legend: {position: 'none'},
       hAxis: {
         format: '#.#' // Round values to 1 decimal place
       },
@@ -73,6 +75,8 @@ class GoogleChartWrapper extends React.Component {
             records,
             this.props.selectedColumn1
           );
+          options.hAxis.title = this.props.selectedColumn1;
+          options.vAxis.title = msg.count();
           columns = [this.props.selectedColumn1, 'count'];
         }
         break;
@@ -83,6 +87,10 @@ class GoogleChartWrapper extends React.Component {
           chartData = ignoreMissingValues(this.props.records, [
             this.props.selectedColumn1
           ]);
+          options.hAxis.title = this.props.selectedColumn1;
+          options.hAxis.titleTextStyle = {italic: false};
+          options.vAxis.title = msg.count();
+          options.vAxis.titleTextStyle = {italic: false};
           columns = [this.props.selectedColumn1];
         }
         break;
@@ -93,6 +101,8 @@ class GoogleChartWrapper extends React.Component {
             this.props.selectedColumn1,
             this.props.selectedColumn2
           ]);
+          options.hAxis.title = this.props.selectedColumn1;
+          options.vAxis.title = this.props.selectedColumn2;
           columns = [this.props.selectedColumn1, this.props.selectedColumn2];
         }
         break;

@@ -1144,6 +1144,13 @@ cs-CZ:
         questions:
         - text: Které slovo je napsáno?
         title: Vícenásobná volba
+      PicturingData-Unplugged:
+        markdown: |
+          # Picturing Data
+
+          Použij projekt Play Lab pro sběr dat a vytvoření předpovědí.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
       RelayProgramming-Unplugged:
         markdown: |
           # Štafetové programování
@@ -1171,31 +1178,42 @@ cs-CZ:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
+        - text: Umělec nakreslí trojúhelník se třemi stejnými stranami.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí jednu čáru.
+          feedback: Špatně. Umělec nakreslí čtverec.
         - correct: true
           feedback: Správně!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Umělec nakreslí trojúhelník se třemi stejnými stranami.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí jednu čáru.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí čtverec.
+          correct: true
           feedback: Správně!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Umělec nakreslí trojúhelník se třemi stejnými stranami.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí jednu čáru.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí čtverec.
+          correct: true
           feedback: Správně!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1534,6 +1552,20 @@ cs-CZ:
             není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
             že se stane, když klikneš na tlačítko "Spustit"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - text: Včela se posune k mraku, ať se děje, co se děje.
+        - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
+            květina.
+          correct: true
+          feedback: Správně!
+        - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+        - text: Nevím.
+        questions:
+        - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
+            je tam květina, pak včela musí sebrat nektar **jednou**. Pokud tam květina
+            není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
+            že se stane, když klikneš na tlačítko "Spustit"?
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
         - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
@@ -1962,6 +1994,14 @@ cs-CZ:
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - {}
         - {}

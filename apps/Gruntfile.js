@@ -352,7 +352,8 @@ describe('entry tests', () => {
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
-          ]
+          ],
+          ['build/package/css/foorm.css', 'style/code-studio/foorm.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -514,7 +515,6 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
-    blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
@@ -706,7 +706,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/peer_reviews/dashboard.js',
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
-    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js'
+    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
+    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included
@@ -716,6 +717,10 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
+    // The blockly dependency is huge, so we currently control when it is
+    // loaded explicitly via script tags rather than via normal imports.
+    blockly: './src/sites/studio/pages/blockly.js',
+
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.

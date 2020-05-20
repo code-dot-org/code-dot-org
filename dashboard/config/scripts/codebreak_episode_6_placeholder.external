@@ -1,5 +1,6 @@
 name 'CodeBreak Episode 6 Placeholder'
 editor_experiment ''
+video_key 'codebreak_e06'
 display_as_unplugged 'false'
 use_large_video_player 'true'
 hide_reference_area 'true'

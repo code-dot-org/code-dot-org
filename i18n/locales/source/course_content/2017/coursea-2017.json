@@ -341,8 +341,10 @@
   "https://studio.code.org/s/coursea-2017/stage/10/extras?level_name=courseA_artist_loops_challenge1": {
     "short_instructions": "Can you draw a house? Make it look just the way you like it!",
     "long_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\n\nHere are some ideas:\n\n[][0]",
-    "function_names": {
-      "\"simple\" solution": "\"simple\" solution"
+    "function_definitions": {
+      "\"simple\" solution": {
+        "name": "\"simple\" solution"
+      }
     }
   },
   "https://studio.code.org/s/coursea-2017/stage/11/puzzle/1": {

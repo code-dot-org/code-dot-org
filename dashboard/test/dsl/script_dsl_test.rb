@@ -14,11 +14,12 @@ class ScriptDslTest < ActiveSupport::TestCase
     wrapup_video: nil,
     login_required: false,
     professional_learning_course: nil,
+    hideable_lessons: false,
     hideable_stages: false,
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
-    stage_extras_available: false,
+    lesson_extras_available: false,
     has_verified_resources: false,
     has_lesson_plan: false,
     curriculum_path: nil,
@@ -206,51 +207,9 @@ endvariants
     assert_equal expected, script_text
   end
 
-  test 'test Script DSL flex category as property hash' do
-    input_dsl = <<~DSL
-      stage 'Lesson1',
-        flex_category: 'Content'
-      level 'Level 1'
-      stage 'Lesson2',
-        flex_category: 'Practice'
-      level 'Level 2'
-      stage 'Lesson3'
-      level 'Level 3'
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
-            ]
-          },
-          {
-            stage: "Lesson2",
-            scriptlevels: [
-              {stage: "Lesson2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
-            ]
-          },
-          {
-            stage: "Lesson3",
-            scriptlevels: [
-              {stage: "Lesson3", levels: [{name: "Level 3"}]},
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
   test 'test Script DSL property lockable as property hash' do
     input_dsl = <<~DSL
       stage 'Lesson1',
-        flex_category: 'Content',
         lockable: true
       level 'Level 1'
       stage 'Lesson2'
@@ -262,7 +221,7 @@ endvariants
           {
             stage: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
+              {stage: "Lesson1", levels: [{name: "Level 1", stage_lockable: true}]},
             ]
           },
           {
@@ -280,9 +239,9 @@ endvariants
     assert_equal expected, output
   end
 
-  test 'can set hideable_stages' do
+  test 'can set hideable_lessons' do
     input_dsl = <<~DSL
-      hideable_stages 'true'
+      hideable_lessons 'true'
 
       stage 'Lesson1'
       level 'Level 1'
@@ -290,7 +249,7 @@ endvariants
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal true, output[:hideable_stages]
+    assert_equal true, output[:hideable_lessons]
   end
 
   test 'can set student_detail_progress_view' do
@@ -512,33 +471,6 @@ level 'Level 3'
                   challenge: true,
                 },
               },
-            ]
-          }
-        ],
-        lesson_groups: []
-      }
-    )
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
-  test 'Script DSL with skipped extras' do
-    input_dsl = <<~DSL
-      stage 'Lesson1'
-      level 'Level 1'
-      level 'Level 2'
-      no_extras
-    DSL
-    expected = DEFAULT_PROPS.merge(
-      {
-        stages: [
-          {
-            stage: "Lesson1",
-            stage_extras_disabled: true,
-            scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
             ]
           }
         ],

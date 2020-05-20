@@ -1,4 +1,4 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
 import CourseEditor from '@cdo/apps/templates/courseOverview/CourseEditor';
@@ -16,6 +16,8 @@ const defaultProps = {
   title: 'Computer Science Principles 2017',
   familyName: 'CSP',
   versionYear: '2017',
+  visible: false,
+  isStable: false,
   descriptionShort: 'Desc here',
   descriptionStudent: 'Desc here',
   descriptionTeacher: 'Desc here',
@@ -37,16 +39,34 @@ describe('CourseEditor', () => {
     restoreRedux();
   });
 
-  it('renders full course editor page', () => {
-    const wrapper = mount(
+  const createWrapper = overrideProps => {
+    const combinedProps = {...defaultProps, ...overrideProps};
+    return mount(
       <Provider store={getStore()}>
-        <CourseEditor {...defaultProps} />
+        <CourseEditor {...combinedProps} />
       </Provider>
     );
+  };
 
+  it('renders full course editor page', () => {
+    const wrapper = createWrapper({});
     assert.equal(wrapper.find('textarea').length, 3);
     assert.equal(wrapper.find('CourseScriptsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
+  });
+
+  describe('VisibleInTeacherDashboard', () => {
+    it('is unchecked when visible is false', () => {
+      const wrapper = createWrapper({});
+      const checkbox = wrapper.find('input[name="visible"]');
+      expect(checkbox.prop('checked')).to.be.false;
+    });
+
+    it('is checked when visible is true', () => {
+      const wrapper = createWrapper({visible: true});
+      const checkbox = wrapper.find('input[name="visible"]');
+      expect(checkbox.prop('checked')).to.be.true;
+    });
   });
 });

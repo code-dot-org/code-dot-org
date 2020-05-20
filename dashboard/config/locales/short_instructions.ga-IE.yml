@@ -600,6 +600,17 @@ ga-IE:
         uile rud: is féidir leat na rialacha nó fiú an spórt féin a athrú - tá cead
         do chinn agat! Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus
         lig do chairde an cluiche a imirt ar a guthán.'
+      OPD-K5-events-2: Ceangail an bloc `gread mar is gnáth` leis an teagmhas `nuair
+        a chliceáiltear`, ansin brúigh "Rith". Cliceáil nó tapáil an spás imeartha
+        chun Flappy a threorú go dtí an sprioc.
+      OPD-K5-events-4: Ceangail an bloc `cuir deireadh leis an gcluiche` leis an teagmhas
+        `nuair a bhuailtear leis an talamh`. Imir an cluiche agus tuairteáil an t-éan
+        in aghaidh an talaimh le dul ar aghaidh.
+      OPD-K5-forloops-5: Cabhraigh leis an mbeach an neachtar go léir a bhailiú.
+      OPD-K5-spritelab-6: Tá anam eachtrúil san iasc seo, agus ba mhaith leis bualadh
+        le hainmhithe mara eile. Cuir sprid nua san uisceadán. Úsáid culaith ar bith
+        seachas an ceann atá ar d'iascsa!
+      OPD-K5-spritelab-7: Cuir iompar le cara nua an éisc.
       Overworld Avoid Monsters: B'olc an mhaise duit bualadh i gcoinne Téaltóra. Téigh
         thar na téaltóirí go cúramach go dtí go mbainfidh tú do theach amach slán
         sábháilte.
@@ -1017,6 +1028,8 @@ ga-IE:
         an mhuc a shroicheadh! '
       courseA_maze_seq10_2019: 'Dúshlán: Seachain an TNT agus cabhraigh leis an éan
         an mhuc a shroicheadh! '
+      courseA_maze_seq10_copy: 'Dúshlán: Treoraigh an t-éan timpeall an TNT go dtí
+        an mhuc! '
       courseA_maze_seq11: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú leis
         an éan an mhuc a shroicheadh.
       courseA_maze_seq11_2018: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
@@ -1037,6 +1050,7 @@ ga-IE:
       courseA_maze_seq5: Bain triail as an gceann seo as an nua.
       courseA_maze_seq5_2018: Bain triail as.
       courseA_maze_seq5_2019: Bain triail as.
+      courseA_maze_seq5_copy: Bain triail as an gceann seo as an nua.
       courseA_maze_seq5a_2018: Cad is féidir leat cur le deireadh an chóid seo chun
         an t-éan a threorú go dtí an mhuc?
       courseA_maze_seq5a_2019: Cad is féidir leat cur le deireadh an chóid seo chun
@@ -1047,13 +1061,19 @@ ga-IE:
         leis an éan an mhuc a shroicheadh!
       courseA_maze_seq6_2019: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
         leis an éan an mhuc a shroicheadh!
+      courseA_maze_seq6_copy: Téigh i dtreo amháin, ansin i dtreo eile, chun cabhrú
+        leis an éan an mhuc a shroicheadh!
       courseA_maze_seq7: Déan amach céard atá ar iarraidh, cuir blocanna leis an gcód,
         agus treoraigh an t-éan go dtí an mhuc!
+      courseA_maze_seq7_copy: Déan amach céard atá ar iarraidh, cuir blocanna leis
+        an gcód, agus treoraigh an t-éan go dtí an mhuc!
       courseA_maze_seq8: Réitigh an dúshlán seo agus cabhraigh leis an éan an mhuc
         a shroicheadh!
       courseA_maze_seq8_2018: Réitigh an dúshlán seo agus cabhraigh leis an éan an
         mhuc a shroicheadh!
       courseA_maze_seq8_2019: Réitigh an dúshlán seo agus cabhraigh leis an éan an
+        mhuc a shroicheadh!
+      courseA_maze_seq8_copy: Réitigh an dúshlán seo agus cabhraigh leis an éan an
         mhuc a shroicheadh!
       courseA_maze_seq9: Cuir blocanna leis an gcód chun é a cheartú agus cabhraigh
         leis an éan an mhuc a shroicheadh!
@@ -1661,6 +1681,8 @@ ga-IE:
         triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
       courseC_starWars_loops2_2019: Chun an dramh-mhiotal go léir a bhailiú, bain
         triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
+      courseC_starWars_loops2_copy: Chun an dramh-mhiotal go léir a bhailiú, bain
+        triail as lúb a úsáideann bloc amháin laistigh de bhloc `athdhéan`.
       courseC_starWars_loops4: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan"
         a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis an líon is
         lú blocanna agus is féidir!
@@ -1670,6 +1692,9 @@ ga-IE:
       courseC_starWars_loops4_2019: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan"
         a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis an líon is
         lú blocanna agus is féidir!
+      courseC_starWars_loops4_copy: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan"
+        a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis an líon is
+        lú blocanna agus is féidir!
       courseC_starWars_loops7: An féidir leat an dramh-mhiotal go léir a bhailiú gan
         ach lúb amháin a úsáid? I dtús báire, bain triail as gan lúb, ansin aimsigh
         an cód athdhéanta agus cuir i lúb é.
@@ -1677,6 +1702,9 @@ ga-IE:
         gan ach lúb amháin a úsáid? I dtús báire, bain triail as gan lúb, ansin aimsigh
         an cód athdhéanta agus cuir i lúb é.
       courseC_starWars_loops7_2019: An féidir leat an dramh-mhiotal go léir a bhailiú
+        gan ach lúb amháin a úsáid? I dtús báire, bain triail as gan lúb, ansin aimsigh
+        an cód athdhéanta agus cuir i lúb é.
+      courseC_starWars_loops7_copy: An féidir leat an dramh-mhiotal go léir a bhailiú
         gan ach lúb amháin a úsáid? I dtús báire, bain triail as gan lúb, ansin aimsigh
         an cód athdhéanta agus cuir i lúb é.
       courseC_starWars_loops9: Úsáid ar fhoghlaim tú go dtí seo chun an dramh-mhiotal
@@ -1847,17 +1875,23 @@ ga-IE:
         Má tá, bailigh an neachtar.
       courseD_bee_conditionals1_predict1_2019: Féach an bhfuil bláth faoin scamall.
         Má tá, bailigh an neachtar.
+      courseD_bee_conditionals1_predict1_copy: Féach an bhfuil bláth faoin scamall.
+        Má tá, bailigh an neachtar.
       courseD_bee_conditionals4: Bailigh an neachtar go léir leis an líon is lú blocanna
         agus is féidir.
       courseD_bee_conditionals4_2018: Bailigh an neachtar go léir leis an líon is
         lú blocanna agus is féidir.
       courseD_bee_conditionals4_2019: Bailigh an neachtar go léir leis an líon is
         lú blocanna agus is féidir.
+      courseD_bee_conditionals4_copy: Bailigh an neachtar go léir leis an líon is
+        lú blocanna agus is féidir.
       courseD_bee_conditionals5: Bailigh an neachtar go léir leis an líon is lú blocanna
         agus is féidir
       courseD_bee_conditionals5_2018: Bailigh an neachtar go léir leis an líon is
         lú blocanna agus is féidir
       courseD_bee_conditionals5_2019: Bailigh an neachtar go léir leis an líon is
+        lú blocanna agus is féidir
+      courseD_bee_conditionals5_copy: Bailigh an neachtar go léir leis an líon is
         lú blocanna agus is féidir
       courseD_bee_conditionals9: Bailigh an neachtar go léir nó déan an mhil go léir.
       courseD_bee_conditionals9_2018: Bailigh an neachtar go léir nó déan an mhil
@@ -2242,23 +2276,34 @@ ga-IE:
       courseE_artist_functions1: Cabhraigh leis an zombaí spéaclaí a dhéanamh as cearnóga,
         100 picteilín ar gach taobh. Tá an droichead idir na spéaclaí 75 picteilín
         ar fad.
+      courseE_artist_functions1_copy: Cabhraigh leis an zombaí spéaclaí a dhéanamh
+        as cearnóga, 100 picteilín ar gach taobh. Tá an droichead idir na spéaclaí
+        75 picteilín ar fad.
       courseE_artist_functions2: 'An uair seo, úsáid an fheidhm `tarraing cearnóg`
         chun na spéaclaí a dhéanamh. '
       courseE_artist_functions2_2018: 'Úsáid an fheidhm "tarraing cearnóg" chun na
         spéaclaí a dhéanamh. '
       courseE_artist_functions2_2019: 'Úsáid an fheidhm "tarraing cearnóg" chun na
         spéaclaí a dhéanamh. '
+      courseE_artist_functions2_copy: 'An uair seo, úsáid an fheidhm `tarraing cearnóg`
+        chun na spéaclaí a dhéanamh. '
       courseE_artist_functions3: Is féidir leat an pictiúr seo a dhéanamh trí bhloc
         "athdhéan" a úsáid.
       courseE_artist_functions3_2018: Cruthaigh feidhm a dhéanfaidh an réalta seo.
       courseE_artist_functions3_2019: Cruthaigh feidhm a dhéanfaidh an réalta seo.
+      courseE_artist_functions3_copy: Is féidir leat an pictiúr seo a dhéanamh trí
+        bhloc "athdhéan" a úsáid.
       courseE_artist_functions4: Anois go bhfuil tú in ann réalta amháin a tharraingt,
+        bain triail as ceithre réalta!
+      courseE_artist_functions4_copy: Anois go bhfuil tú in ann réalta amháin a tharraingt,
         bain triail as ceithre réalta!
       courseE_artist_functions5: Tarraing na trí réalta sin amháin chun an dúshlán
         seo a réiteach.
       courseE_artist_functions5_2018: Tarraing na trí réalta sin amháin chun an dúshlán
         seo a réiteach.
       courseE_artist_functions5_2019: Tarraing na trí réalta sin amháin chun an dúshlán
+        seo a réiteach.
+      courseE_artist_functions5_copy: Tarraing na trí réalta sin amháin chun an dúshlán
         seo a réiteach.
       courseE_artist_ramp8: Anois déan cearnóg leis an Ealaíontóir!
       courseE_artist_ramp8_2: Anois déan cearnóg leis an Ealaíontóir!

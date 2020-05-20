@@ -976,6 +976,8 @@ de:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} prallt von {TARGET} ab"
       gamelab_changePropBy:
         text: ändern {SPRITE} {PROPERTY} um {VAL}
         options:
@@ -1026,6 +1028,8 @@ de:
         text: verstecke Titelbildschirm
       gamelab_isTouchingEdges:
         text: "{SPRITE} berührt den Rand"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} berührt {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} springe zu {LOCATION}"
       gamelab_keyPressed:
@@ -1098,6 +1102,8 @@ de:
             '"West"': West
       gamelab_moveToward:
         text: bewege {SPRITE} {DISTANCE} Pixel zu {TARGET}
+      gamelab_patrollingUpDown:
+        text: patrouilliert auf und ab
       gamelab_playSound:
         text: spieleTon {SOUND}
       gamelab_pointInDirection:
@@ -1168,18 +1174,31 @@ de:
             '"height"': Höhe
       gamelab_setTint:
         text: ändere die Farbe von {THIS} nach {COLOR}
+      gamelab_setupSim:
+        text: |-
+          Starte Simulation mit
+          {SPRITE1N}{SPRITE1COSTUME}Geschwindigkeit{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Geschwindigkeit{SPRITE2SPEED}
+          sammle
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: Zeige den Startbildschirm {BREAK} Titel {TITLE} Text {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} geklickt"
         options:
           CONDITION:
             '"when"': wenn
             '"while"': solange
+      gamelab_tumbling:
+        text: hingefallen
       gamelab_turn:
         text: drehe {SPRITE} {DIRECTION} {N} Grad
         options:
           DIRECTION:
             '"right"': rechts
             '"left"': links
+      gamelab_updateTitleWithColor:
+        text: Zeige den Startbildschirm {BREAK} Titel {TITLE} Farbe {COLOR}
       gamelab_whenDownArrow:
         text: Wenn Pfeil nach unten gedrückt
       gamelab_whenKey:
@@ -1241,6 +1260,8 @@ de:
           LOCATION:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": Fisch
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": kein Fisch
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mein-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nicht mein-label
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1308,9 +1329,12 @@ de:
           SELECT:
             '"all"': Alle
             '"this"': dies
+      Mikelab_groupDisplace:
+        text: Alle {COSTUME} blockieren {COSTUME2} von dem weiter laufen
       Mikelab_groupEdgesDisplace:
         text: der Rand hindert {COSTUME} an der Bewegung
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}'s {PROPERTY}"
         options:
           SELECT:
             '"average"': mittel
@@ -1396,14 +1420,17 @@ de:
         options:
           DANCE:
             MOVES.ClapHigh: Fisch
+            MOVES.Clown: mein-label
       Mikelab_ifRecognizeLabel:
         options:
           DANCE:
             MOVES.ClapHigh: Fisch
+            MOVES.Clown: mein-label
       Mikelab_ifRecognizeLabelOnly:
         options:
           DANCE:
             MOVES.ClapHigh: Fisch
+            MOVES.Clown: nicht mein-label
       Mikelab_locationAt:
         text: 'Position x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1555,7 +1582,10 @@ de:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: Starte Geschichte
       aalab_starwars_playSound:
+        text: Spiele{OPTION}Klang
         options:
           OPTION:
             '"random"': zufällig

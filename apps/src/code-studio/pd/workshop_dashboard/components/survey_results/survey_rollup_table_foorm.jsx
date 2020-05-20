@@ -27,13 +27,15 @@ const styles = {
   },
   headerRow: {
     borderTop: 'solid'
+  },
+  dateNotice: {
+    textAlign: 'right'
   }
 };
 
 export default class SurveyRollupTableFoorm extends React.Component {
   static propTypes = {
     workshopRollups: PropTypes.object.isRequired,
-    questions: PropTypes.object.isRequired,
     courseName: PropTypes.string.isRequired,
     isPerFacilitator: PropTypes.bool.isRequired,
     facilitators: PropTypes.object
@@ -374,7 +376,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
   // format numerator and denominator into format for displaying in the table
   getFormattedRowData(numerator, denominator) {
     if (numerator === null || numerator === undefined || numerator === '') {
-      console.log('found empty numerator');
       return '';
     }
     return `${numerator} / ${denominator}`;
@@ -440,16 +441,27 @@ export default class SurveyRollupTableFoorm extends React.Component {
     const rows = this.getTableRows();
     const columns = this.getTableColumns();
     return (
-      <Table.Provider className="table table-bordered" columns={columns}>
-        <Table.Header />
-        <Table.Body
-          rows={rows}
-          rowKey="id"
-          onRow={row => {
-            return {style: row.isHeader ? styles.headerRow : {}};
-          }}
-        />
-      </Table.Provider>
+      <div>
+        <Table.Provider className="table table-bordered" columns={columns}>
+          <Table.Header />
+          <Table.Body
+            rows={rows}
+            rowKey="id"
+            onRow={row => {
+              return {style: row.isHeader ? styles.headerRow : {}};
+            }}
+          />
+        </Table.Provider>
+        <div style={styles.dateNotice}>
+          The averages shown above are for workshops from May 2020 onwards.{' '}
+          <br />
+          Earlier averages can be found at{' '}
+          <a href="/pd/workshop_dashboard/legacy_survey_summaries">
+            Legacy Facilitator Survey Summaries
+          </a>
+          .
+        </div>
+      </div>
     );
   }
 }

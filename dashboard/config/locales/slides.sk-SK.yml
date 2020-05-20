@@ -648,7 +648,7 @@ sk:
           aby si si dal pri pohybe pozor.
     mc_congrats_share:
       1:
-        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
+        text: Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!
       2:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru.
           Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš
@@ -662,7 +662,7 @@ sk:
           a ukázal kamarátom svoj výtvor. Zabav sa!
     mc_congrats_no_share:
       1:
-        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
+        text: Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!
       2:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru.
           Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš
@@ -797,103 +797,214 @@ sk:
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
+        text: |-
+          Volám sa Melani. Som stážistka na code.org a som tiež študentkou informatiky. Mám rada informatiku, pretože je naozaj kreatívna. Chcem byť riešiteľom problémov. Chcem, aby všetko fungovalo podľa mojich predstáv. Potrebujem však byť aj dizajnér, umelec a
+          využiť kreatívnú stránku.
       2:
         image: notes/applab_intro_welcome_2.png
+        text: Vytvorenie vlastných aplikácií je jednoduché s App Lab! Či už si v programovaní
+          nováčik, alebo už máš skúsenosti. App Lab je skvelý na vytváranie nových
+          aplikácií a ich zdieľanie s priateľmi.
       3:
         image: notes/applab_intro_welcome_3.png
+        text: Toto je App Lab. Na ľavej strane je tvoja aplikácia. Na pravej strane
+          je kód, ktorý ju spustí. Program vytvoríš pretiahnutím blokov z panela nástrojov.
+          Pre začiatok postačí mať jeden blok s názvom "setProperty".
       4:
         image: notes/applab_intro_welcome_4.png
+        text: setProperty blok zmení vzhľad prvkov na obrazovke. Ako napríklad tlačidlá,
+          štítky alebo aj samotnú obrazovku. Najskôr sa musíš rozhodnúť, ktorý prvok
+          chceš zmeniť. Ak prejdeš myšou nad prvkom v aplikácii, môžeš vidieť jeho
+          meno alebo ID. Potom vyber toto ID z prvého rozbaľovacieho zoznamu.
       5:
         image: notes/applab_intro_welcome_5.png
+        text: Prvky majú veľa vlastností, ktoré môžeš meniť. Napríklad farbu textu,
+          farbu pozadia alebo veľkosť písma. V druhom rozbaľovacom zozname vidíš všetky
+          vlastnosti, ktoré môžeš meniť.
       6:
         image: notes/applab_intro_welcome_6.png
+        text: V poslednom rozbaľovacom zozname napíš hodnotu, ktorú chceš použiť.
+          Blok ti poskytne návrh. Vždy je však môžné napísať vlastné farby alebo čísla.
       7:
         image: notes/applab_intro_welcome_7.png
+        text: 'Po dokončení sa blok číta ako veta: ''Nastav farbu pozadia pre button1
+          na zelenú.'' Kliknutím na Spustiť zobrazíš zmeny vytvorené v kóde. Po Obnovení,
+          môžeš pretiahnuť viac blokov pre zmenu iných častí aplikácie. Ako napríklad
+          text!'
       8:
         image: notes/applab_intro_welcome_8.png
+        text: Teraz budeme pracovať v blokovom móde, ale App Lab tiež podporuje prácu
+          s textom.
       9:
         image: notes/applab_intro_welcome_9.png
+        text: V každom prípade budeš programovať v jazyku JavaScript, v jazyku webu.
+          Každá úroveň má cieľ, pokyny a obrázok toho, čo máš vytvoriť.
       10:
         image: notes/applab_intro_welcome_10.png
+        text: Ak by ti niečo nebolo jasné, klikni na tento obrázok a ukáže ti presne,
+          ako dokončiť úroveň. Ale najskôr zisti, či to dokážeš bez pomoci.
       11:
         image: notes/applab_intro_welcome_11.pngq
+        text: Po dokončení cieľa úrovne klikni na tlačidlo Dokončiť a pokračuj ďalej.
+          A to je všetko! Stlačením oranžového tlačidla "Pokračovať“ prejdeš na ďalšiu
+          úroveň a pokračuješ v dobrodružstve s App Lab!
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
+        text: |-
+          Aplikácie sú skvelé, pretože sú podobné ako začiatok podnikania. Všetko musíš navrhnúť od základov, potrebuješ všetko zorganizovať a vlastníkom práce, vytvorenej
+          pomocou kódu si ty.
       2:
         image: notes/applab_intro_events_2.png
+        text: |-
+          Keď už dokážeš zmeniť vzhľad aplikácie, sprav ju interaktívnu pomocou udalostí! Udalosti sú akcie, ako kliknutie na tlačidlo, posúvanie sa cez menu alebo posunutie kurzora nad obrázok. Interaktívne aplikácie potrebujú spôsoby, ako reagovať na udalosti, ako spustenie zvuku, keď kliknem na tlačidlo. Ak toto chceš urobiť v App Lab,
+          musíš použiť nový blok s názvom 'onEvent'.
       3:
         image: notes/applab_intro_events_3.png
+        text: |-
+          Tento program nastaví obrazovku na modrú. Ja chcem zmeniť obrazovku na zelenú, keď kliknem na toto tlačidlo. Najskôr budem musieť pretiahnuť onEvent blok. Po umiestnení kurzora viem, že ID tlačidla je "bigButton“ takže vyberiem toto ID v prvom
+          rozbaľovacom zozname.
       4:
         image: notes/applab_intro_events_4.png
+        text: Ďalej vyberiem typ udalosti. Je veľa možností, ktoré môžeš vybrať, ale
+          teraz si nechám možnosť kliknutie.
       5:
         image: notes/applab_intro_events_5.png
+        text: 'Nakoniec pridám kód do onEvent, ktorý zmení farbu pozadia obrazovky.
+          Tento blok môžeš prečítať ako vetu: "Po kliknutí na tlačidlo, spusti kód.“'
       6:
         image: notes/applab_intro_events_6.png
+        text: Poďme to skúsiť. Bloky mimo OnEvent sa tiež spustia, takže obrazovka
+          začína ako modrá.
       7:
         image: notes/applab_intro_events_7.png
+        text: A keď kliknem na veľké tlačidlo, kód v onEvent sa spustí a obrazovka
+          sa zmení na zelenú.
       8:
         image: notes/applab_intro_events_8.png
+        text: Ak chceš zmeniť viac vecí po udalosti, napríklad text na obrazovke,
+          jednoducho pridaj ďalší kód do onEvent.
       9:
         image: notes/applab_intro_events_9.png
+        text: Aby tvoj program reagoval na viac udalosti, pridaj ďalšie bloky onEvent.
+          Uisti sa však, že onEvent bloky nie sú vložené do seba. Teraz je čas to
+          vyskúšať. Zabav sa!
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
+        text: Ďalej sa naučíš pridávať obrázky a zvuky do tvojej aplikácie. Pozrime
+          sa na možnosti výberu zvukov.
       2:
         image: notes/applab_intro_sounds_2.png
+        text: V poli nástrojov vidíš nový blok s názvom "playSound“. Pretiahni ho
+          na pracovnú plochu. Zvuk si môžeš vybrať kliknutím na rozbaľovací zoznam
+          a potom kliknutím na "Vyber si".
       3:
         image: notes/applab_intro_sounds_3.png
+        text: |-
+          Odtiaľto môžeš nahrať zvukový súbor z počítača alebo vyhľadať zvuk vo zvukovej knižnici. Zvuková knižnica má veľa rôznych kategórií ako nástroje, hudba na pozadí
+          alebo zvieratá.
       4:
         image: notes/applab_intro_sounds_4.png
+        text: Keď už si našiel správny zvuk, klikni na tlačidlo "Choose". Po spustení
+          tohto bloku sa prehrá vybraný zvuk.
       5:
         image: notes/applab_intro_sounds_5.png
+        text: Ak chceš pridať obrázky do prvkov, stačí použiť blok setProperty. V
+          druhom rozbaľovacom zozname vyber možnosť "image"
       6:
         image: notes/applab_intro_sounds_6.png
-        text: Potom vyberte "Vybrať" z tretieho rozbaľovacieho menu.
+        text: Potom z tretieho rozbaľovacieho zoznamu vyber možnosť “Vyber si“.
       7:
         image: notes/applab_intro_sounds_7.png
+        text: |-
+          Odtiaľto môžeš nahrať obrázok z počítača alebo si môžeš vybrať z veľkého
+          množstva ikon v knižnici ikon.
       8:
         image: notes/applab_intro_sounds_8.png
+        text: Späť v móde kódu môžeš pomocou bloku "setProperty" zmeniť aj farbu svojej
+          ikony. Po výbere obrázka, klikni na tlačidlo "Spustiť" a uvidíš, ako vyzerá.
       9:
         image: notes/applab_intro_sounds_9.png
+        text: A to je všetko! Teraz môžeš pridávať obrázky a zvuky, aby tvoje aplikácie
+          boli ešte zábavnejšie.
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
+        text: Pre vytvorenie aplikácií, musíš začať navrhovať obrazovky a prvky od
+          základu. S App Lab je toto jednoduché vďaka Dizajn Módu.
       2:
         image: notes/applab_intro_designmode_2.png
-        text: Použite tlačidlo v hornej časti Vašej aplikácie pre vstup do Dizajnoavcieho
+        text: Pomocou tlačidla umiestneného nad appkou prepni AppLab do dizajnového
           módu.
       3:
         image: notes/applab_intro_designmode_3.png
+        text: Nové prvky môžeš pridať ich pretiahnutím na obrazovku. Môžeš ich presunúť
+          na rôzne miesta a zmeniť ich veľkosť pretiahnutím pravého dolného rohu.
       4:
         image: notes/applab_intro_designmode_4.png
+        text: Ak chceš zmeniť vlastnosti prvku, použi ovládacie prvky napravo. Napríklad
+          je veľmi ľahké zmeniť text tohto tlačidla, farbu a veľkosť písma.
       5:
         image: notes/applab_intro_designmode_5.png
+        text: Keď na obrazovku pridáš nový prvok, dostane všeobecné ID, napríklad
+          button1. Je vhodné zmeniť ID tohto tlačidla na niečo konkrétne ako "rightButton“.
+          Aby bolo možné toto tlačidlo ľahko spoznať pri programovaní.
       6:
         image: notes/applab_intro_designmode_6.png
+        text: |-
+          Keď pridáš prvok do svojej aplikácie omylom, jednoducho ho pretiahni preč alebo
+          klikni na Delete.
       7:
         image: notes/applab_intro_designmode_7.png
+        text: Do aplikácie môžeš pridať úplne nové obrazovky pretiahnutím prvku obrazovky
       8:
         image: notes/applab_intro_designmode_8.png
+        text: Z rozbaľovacieho zoznamu v hornej časti môžeš rýchlo prepínať medzi
+          vytvorenými obrazovkami.
       9:
         image: notes/applab_intro_designmode_9.png
+        text: V aplikácii budeš potrebovať spôsob, ako prepínať medzi všetkými obrazovkami,
+          preto bol do sady nástrojov pridaný blok setScreen. Použi "setScreen" vo
+          vnútri bloku "onEvent" na zmenu obrazovky pri kliknutí na tlačidlo.
       10:
         image: notes/applab_intro_designmode_10.png
+        text: V najbližších úrovniach budeš pracovať na jednom projekte. Najskôr pridáš
+          tlačidlo, potom pridáš novú obrazovku a nakoniec napíšeš kód, ktorý ťa cez
+          tlačidlo prepne na novú obrazovku.
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
+        text: Teraz, keď už ovládaš niektoré základy aplikácie App Lab ako je pridávanie
+          tlačidiel, zvukov, obrázkov, textu a nových obrazoviek, môžeš vytvárať najrôznejšie
+          aplikácie.
       2:
         image: notes/applab_intro_share_2.png
+        text: Na ďalšej úrovni nájdeš svoju dokončenú aplikáciu. S trochou kreativity
+          ju môžeš zmeniť na kvíz pre svojich priateľov, blahoželania pre svoju rodinu
+          alebo vytvoriť dobrodružnú hru. Všetky tieto aplikácie sú kombináciou zručností,
+          ktoré už vieš a verím, že zvládneš ešte viac.
       3:
         image: notes/applab_intro_share_3.png
+        text: Po dokončení aplikácie si ju môžeš poslať do telefónu a zistiť, ako
+          vyzerá. Stačí kliknúť na "Zdieľať“ a zadať svoje telefónne číslo.
       4:
         image: notes/applab_intro_share_4.png
+        text: Dostaneš textovú správu, ktorá ti umožní okamžite otvoriť aplikáciu.
       5:
         image: notes/applab_intro_share_5.png
+        text: Môžeš tiež zdieľať odkaz na svoju aplikáciu cez sociálne médiá alebo
+          ju uverejniť v galérii code.org, kde sa s ňou môžu ľudia hrať a zdieľať
+          ju.
       6:
         image: notes/applab_intro_share_6.png
+        text: |-
+          Zatiaľ sme preskumáli len základy toho čo App Lab dokáže. App Lab obsahuje pokročilé možnosti, nové prvky obrazovky a už aj hotové časti, takže môžes rýchlo vytvoriť interaktívne aplikácie. Na "code.org/applab“ nájdeš všetky možnosti
+          a aj nápady, ak chceš pokračovať ďalej.
       7:
         image: notes/applab_intro_share_7.png
+        text: Sme radi, že si s nami. Teraz choď vytvoriť a zdieľať svoju prvú aplikáciu
+          a pokračuj vo vytváraní aplikácií pomocou App Lab!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png

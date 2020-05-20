@@ -419,8 +419,20 @@ bn:
           stages:
             Teacher Dashboard:
               name: শিক্ষক ড্যাশবোর্ড
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         artistExemplar:
           description_audience: বয়স ৮-১৮
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         gradeKinder:
           stages:
             Events:
@@ -459,6 +471,10 @@ bn:
               name: মৌমাছি ডিবাগিং
             Bounce:
               name: বল লাফানো
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         csd3-2017:
           description_short: প্রোগ্রামিং
           stages:
@@ -502,6 +518,14 @@ bn:
               name: শিক্ষক ড্যাশবোর্ড
             Welcome!:
               name: স্বাগতম!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         basketball:
           stages:
             Bounce:
@@ -521,6 +545,10 @@ bn:
           stages:
             Lists:
               name: তালিকা
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -561,6 +589,14 @@ bn:
               name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         sciencepd4:
           stages:
             Welcome!:
@@ -583,6 +619,10 @@ bn:
               name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         csd6-draft:
           stages:
             Lists:
@@ -675,6 +715,54 @@ bn:
         coursef-2017:
           title: কোর্স F
           assignment_family_title: কোর্স F
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         express-2017:
           stages:
             Introduction:
@@ -870,6 +958,10 @@ bn:
           stages:
             The Internet:
               name: ইন্টারনেট
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
         csp3-2018:
           description_short: প্রোগ্রামিং
         csp4-2018:
@@ -880,10 +972,82 @@ bn:
           stages:
             While Loops:
               name: হোয়াইল লুপ
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         pre-express-2018:
           stages:
             Spelling Bee:
               name: বানান মৌমাছি
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         frozen-2018:
           stages:
             Artist:
@@ -896,6 +1060,14 @@ bn:
           stages:
             Artist:
               name: শিল্পী
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
         coursef-2019:
           stages:
             Conditionals with Cards:
@@ -904,6 +1076,13 @@ bn:
               name: শিল্পী
             Internet:
               name: ইন্টারনেট
+          lesson_groups:
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_internet:
+              display_name: ইন্টারনেট
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -916,6 +1095,15 @@ bn:
               name: দ্বিমিক ছবি
             Artist Binary:
               name: শিল্পী দ্বিমিক
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
         coursee-2019:
           stages:
             Nested Loops:
@@ -928,6 +1116,11 @@ bn:
               name: ইন্টারনেট
             Songwriting:
               name: গান লিখা
+          lesson_groups:
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
         express-2019:
           stages:
             Relay Programming:
@@ -938,22 +1131,59 @@ bn:
               name: শিল্পী দ্বিমিক
             Internet:
               name: ইন্টারনেট
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
         andrea-test:
           stages:
             'null':
               name: শূন্য
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         coursec-2019:
           stages:
             'Events: The Big Event':
               name: বড় ঘটনা
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
         coursea-2019:
           stages:
             'Programming: Happy Maps':
               name: আনন্দের মানচিত্র
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
         pre-express-2019:
           stages:
             Spelling Bee:
               name: বানান মৌমাছি
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
         csd2-2019:
           stages:
             Lists:
@@ -971,10 +1201,24 @@ bn:
           stages:
             Functions with Parameters:
               name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         csp1-2019:
           stages:
             The Internet:
               name: ইন্টারনেট
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
         csp3-2019:
           description_short: প্রোগ্রামিং
         csp4-2019:
@@ -985,14 +1229,96 @@ bn:
           stages:
             While Loops:
               name: হোয়াইল লুপ
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         time4csdemo:
           stages:
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: ছক-কাগজে প্রোগ্রামিং
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         csd2-pilot:
           stages:
             Lists:
@@ -1006,12 +1332,70 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         peru-2019:
           stages:
             Introduction:
               name: ভূমিকা
             Nested Loops:
               name: নেষ্টেড লুপ
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -1026,6 +1410,14 @@ bn:
               name: চলকগুলো
             For Loops:
               name: ফর লুপ
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1034,14 +1426,53 @@ bn:
           stages:
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: শর্তযুক্ত
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: শর্তযুক্ত
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: চলকগুলো
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1061,10 +1492,28 @@ bn:
           stages:
             'Programming: Happy Maps':
               name: আনন্দের মানচিত্র
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
         coursec-2020:
           stages:
             'Events: The Big Event':
               name: বড় ঘটনা
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1077,18 +1526,58 @@ bn:
               name: দ্বিমিক ছবি
             Artist Binary:
               name: শিল্পী দ্বিমিক
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
         coursee-2020:
           stages:
             'Functions: Songwriting':
               name: গান লিখা
+          lesson_groups:
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
         coursef-2020:
           stages:
             Internet:
               name: ইন্টারনেট
+          lesson_groups:
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
         pre-express-2020:
           stages:
             Spelling Bee:
               name: বানান মৌমাছি
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
         csp3-virtual:
           description_short: প্রোগ্রামিং
         csd3-virtual:
