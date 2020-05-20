@@ -3543,7 +3543,7 @@ class UserTest < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
 
-      @script = create(:script, hideable_stages: true)
+      @script = create(:script, hideable_lessons: true)
       @stage1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
       @stage2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
       @stage3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')

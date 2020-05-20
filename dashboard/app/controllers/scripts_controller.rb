@@ -179,14 +179,15 @@ class ScriptsController < ApplicationController
       :version_year,
       :project_sharing,
       :login_required,
-      :hideable_stages,
+      :hideable_stages, # TODO: remove once corresponding js change is deployed and no longer cached
+      :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
-      :stage_extras_available, # TODO: remove once corresopnding js change is deployed and no longer cached
+      :stage_extras_available, # TODO: remove once corresponding js change is deployed and no longer cached
       :lesson_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
