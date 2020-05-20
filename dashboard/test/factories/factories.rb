@@ -29,7 +29,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :section_hidden_stage do
+  factory :section_hidden_lesson do
     section
     lesson
   end
@@ -639,12 +639,6 @@ FactoryGirl.define do
 
   factory :level_source_image do
     level_source
-  end
-
-  factory :gallery_activity do
-    user
-    user_level {create(:user_level)}
-    level_source {create(:level_source, :with_image, level: user_level.level)}
   end
 
   factory :assessment_activity do

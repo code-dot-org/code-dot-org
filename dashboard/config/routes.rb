@@ -483,6 +483,9 @@ Dashboard::Application.routes.draw do
           get :fit_cohort
         end
       end
+
+      post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
+      get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
     end
   end
 
@@ -502,7 +505,9 @@ Dashboard::Application.routes.draw do
     post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
-    get 'workshop_survey/foorm/day/:day', to: 'workshop_daily_survey#new_general_foorm'
+    get 'workshop_daily_survey/day/:day', to: 'workshop_daily_survey#new_daily_foorm'
+    get 'workshop_pre_survey', to: 'workshop_daily_survey#new_pre_foorm'
+    get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
@@ -701,6 +706,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
+
+  get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 

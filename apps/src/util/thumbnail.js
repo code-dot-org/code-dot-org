@@ -3,12 +3,7 @@
  * of code studio apps.
  */
 
-import {
-  canvasFromImage,
-  canvasToBlob,
-  imageFromURI,
-  svgToDataURI
-} from '../imageUtils';
+import {canvasToBlob, svgToDataURI, toCanvas} from '../imageUtils';
 import {getStore} from '../redux';
 import project from '../code-studio/initApp/project';
 import {html2canvas} from '../util/htmlToCanvasWrapper';
@@ -75,8 +70,7 @@ export function captureThumbnailFromSvg(svg) {
   lastCaptureTimeMs = Date.now();
 
   svgToDataURI(svg)
-    .then(imageFromURI)
-    .then(canvasFromImage)
+    .then(toCanvas)
     .then(createThumbnail)
     .then(canvasToBlob)
     .then(project.saveThumbnail);

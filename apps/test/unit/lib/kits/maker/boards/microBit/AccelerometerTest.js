@@ -159,5 +159,11 @@ describe('MicroBitAccelerometer', function() {
       boardClient.receivedAnalogUpdate();
       expect(emitSpy).to.have.been.calledWith('change');
     });
+
+    it('emits the shake event when only one variable changes', () => {
+      boardClient.receivedEvent(27, 11);
+      expect(emitSpy).to.have.been.calledOnce;
+      expect(emitSpy).to.have.been.calledWith('shake');
+    });
   });
 });

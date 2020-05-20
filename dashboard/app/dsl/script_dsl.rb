@@ -3,7 +3,6 @@ class ScriptDSL < BaseDSL
     super
     @id = nil
     @stage = nil
-    @stage_flex_category = nil
     @lesson_group = nil
     @lesson_groups = []
     @stage_lockable = false
@@ -16,10 +15,10 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
-    @hideable_stages = false
+    @hideable_lessons = false
     @student_detail_progress_view = false
     @teacher_resources = []
-    @stage_extras_available = false
+    @lesson_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
     @has_lesson_plan = false
@@ -45,9 +44,9 @@ class ScriptDSL < BaseDSL
 
   boolean :hidden
   boolean :login_required
-  boolean :hideable_stages
+  boolean :hideable_lessons
   boolean :student_detail_progress_view
-  boolean :stage_extras_available
+  boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
@@ -97,17 +96,14 @@ class ScriptDSL < BaseDSL
         stage: @stage,
         visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
-        stage_extras_disabled: @stage_extras_disabled,
       }.compact
     end
     @stage = name
-    @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
     @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
-    @stage_extras_disabled = nil
   end
 
   # If visible_after value is blank default to next wednesday at 8am PDT
@@ -133,12 +129,13 @@ class ScriptDSL < BaseDSL
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      hideable_stages: @hideable_stages,
+      hideable_lessons: @hideable_lessons,
+      hideable_stages: @hideable_lessons, # TODO: remove after change to add hideable_lessons is deployed
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
-      stage_extras_available: @stage_extras_available,
+      lesson_extras_available: @lesson_extras_available,
       has_verified_resources: @has_verified_resources,
       has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
@@ -209,7 +206,6 @@ class ScriptDSL < BaseDSL
 
     level = {
       name: name,
-      stage_flex_category: @stage_flex_category,
       lesson_group: @lesson_group,
       stage_lockable: @stage_lockable,
       skin: @skin,
@@ -273,10 +269,6 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
   end
 
-  def no_extras
-    @stage_extras_disabled = true
-  end
-
   # @override
   def i18n_hash
     i18n_stage_strings = {}
@@ -318,11 +310,11 @@ class ScriptDSL < BaseDSL
 
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
-    s << 'hideable_stages true' if script.hideable_stages
+    s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
-    s << 'stage_extras_available true' if script.stage_extras_available
+    s << 'lesson_extras_available true' if script.lesson_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
@@ -366,7 +358,6 @@ class ScriptDSL < BaseDSL
 
     t = "stage '#{escape(stage.name)}'"
     t += ', lockable: true' if stage.lockable
-    t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
     t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
     s << t
     stage.script_levels.each do |sl|
@@ -394,7 +385,6 @@ class ScriptDSL < BaseDSL
         s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
       end
     end
-    s << 'no_extras' if stage.stage_extras_disabled
     s << ''
     s.join("\n")
   end

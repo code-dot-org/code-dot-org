@@ -2,39 +2,39 @@
 title: Socios
 ---
 
-La hora del código es conducido por la hora del código ordenador ciencia educación semana asesoramiento y comités de.
+La Hora del Código es conducida por el Comité Asesor y el Comité de Revisión de la Hora del Código y la Semana por la Educación en Ciencias de la Comunicación.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Este Comité de guías de la estrategia de la campaña hora de código.
+El [Comité Asesor]({{ urls/advisory_committee }}) está integrado por representantes de todos los niveles educativos, el mundo académico, entidades sin fines de lucro y con fines de lucro, y organizaciones internacionales. Este comité dirige la estrategia de la campaña de la Hora del Código.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Estos educadores revisan las actividades dirigidas por los estudiantes y planes de lecciones dirigidas por los maestros presentados por cientos de compañeros de actividades, la evaluación de las actividades de valor educativo, capacidad para involucrar a los estudiantes, y el potencial atractivo para diversos conjuntos de los estudiantes.
+El [Comité de Revisión](%= resolve_url('/review-committee') %) está integrado por 15 educadores de todos los niveles educativos que evalúan y recomiendan las actividades con la rúbrica del Comité Asesor. Estos educadores revisan las actividades dirigidas por los estudiantes y los planes de lecciones dirigidos por los docentes, presentados por cientos de socios de actividades. De esta manera, evalúan el valor educativo de las actividades, la capacidad para involucrar a los estudiantes y la posibilidad de atraer a diversos conjuntos de estudiantes.
 
-Trabajo y dedicación comités han contribuido al éxito de la hora del código y su visión de ofrecer una introducción a la informática para todos los estudiantes.
+El trabajo y la dedicación de ambos comités han contribuido al éxito de la Hora del Código y su visión orientada a ofrecer una introducción a las ciencias de la computación para todos los estudiantes.
 
-# Major Partners and Corporate Supporters
+# Principales socios y patrocinadores corporativos
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Socios internacionales
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Socios de planes de estudio y tutoriales
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Socios de infraestructura y herramientas
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Otros socios
 
 {{ partners/additional_partners }}
 

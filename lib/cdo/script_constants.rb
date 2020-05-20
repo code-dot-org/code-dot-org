@@ -238,7 +238,9 @@ module ScriptConstants
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     PIXELATION = 'pixelation'.freeze,
-    VIGENERE = 'vigenere'.freeze
+    VIGENERE = 'vigenere'.freeze,
+    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'

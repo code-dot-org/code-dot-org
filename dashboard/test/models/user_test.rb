@@ -1074,8 +1074,14 @@ class UserTest < ActiveSupport::TestCase
     sub_level1 = create :text_match, name: 'sublevel1'
     create :text_match, name: 'sublevel2'
 
-    level_group = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level_group.properties['pages'] = [{levels: ['level_multi1', 'level_multi2']}]
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+
+      page
+      level 'sublevel1'
+      level 'sublevel2'
+    DSL
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
     create(:script_level, script: script, levels: [level_group])
     create :user_script, user: user, script: script
@@ -3510,9 +3516,9 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'stage_extras_enabled?' do
-    script = create :script, stage_extras_available: true
-    other_script = create :script, stage_extras_available: true
+  test 'lesson_extras_enabled?' do
+    script = create :script, lesson_extras_available: true
+    other_script = create :script, lesson_extras_available: true
     teacher = create :teacher
     student = create :student
 
@@ -3523,21 +3529,21 @@ class UserTest < ActiveSupport::TestCase
     section3 = create :section, stage_extras: true, script_id: other_script.id
     section3.add_student(teacher)
 
-    assert student.stage_extras_enabled?(script)
-    refute student.stage_extras_enabled?(other_script)
+    assert student.lesson_extras_enabled?(script)
+    refute student.lesson_extras_enabled?(other_script)
 
-    assert teacher.stage_extras_enabled?(script)
-    assert teacher.stage_extras_enabled?(other_script)
+    assert teacher.lesson_extras_enabled?(script)
+    assert teacher.lesson_extras_enabled?(other_script)
 
-    refute (create :student).stage_extras_enabled?(script)
-    assert (create :teacher).stage_extras_enabled?(script)
+    refute (create :student).lesson_extras_enabled?(script)
+    assert (create :teacher).lesson_extras_enabled?(script)
   end
 
   class HiddenIds < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
 
-      @script = create(:script, hideable_stages: true)
+      @script = create(:script, hideable_lessons: true)
       @stage1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
       @stage2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
       @stage3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')
@@ -3581,14 +3587,14 @@ class UserTest < ActiveSupport::TestCase
     # Helper method that sets up some hidden stages for our two sections
     def hide_stages_in_sections(section1, section2)
       # stage 1 hidden in both sections
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @stage1.id)
 
       # stage 2 hidden in section 1
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage2.id)
+      SectionHiddenLesson.create(section_id: section1.id, stage_id: @stage2.id)
 
       # stage 3 hidden in section 2
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage3.id)
+      SectionHiddenLesson.create(section_id: section2.id, stage_id: @stage3.id)
     end
 
     # Same thing as hide_stages_in_sections, but hides scripts instead of stages
@@ -3621,7 +3627,7 @@ class UserTest < ActiveSupport::TestCase
       end
 
       # Hide the fifth lesson/stage
-      SectionHiddenStage.create(
+      SectionHiddenLesson.create(
         section_id: put_student_in_section(student, teacher, twenty_hour).id,
         stage_id: 5
       )
@@ -3646,7 +3652,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       # Hide the first lesson/stage
-      SectionHiddenStage.create(
+      SectionHiddenLesson.create(
         section_id: put_student_in_section(student, teacher, twenty_hour).id,
         stage_id: 1
       )
@@ -3794,14 +3800,14 @@ class UserTest < ActiveSupport::TestCase
       teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
 
       # stage 1 is hidden in the first section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
 
       # stage 1 and 2 are hidden in the second section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
+      SectionHiddenLesson.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
 
       # stage 3 is hidden in the section in which the teacher is a member
-      SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
+      SectionHiddenLesson.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
 
       # only the stages hidden in the owned section are considered hidden
       expected = {

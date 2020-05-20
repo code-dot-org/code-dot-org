@@ -1,7 +1,7 @@
 tts true
 hidden false
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
@@ -106,6 +106,6 @@ level 'U6 - Final Project - Student Introduction'
 level 'U6 - Final Project - Project Level'
 
 lesson_group 'cspSurvey', display_name: 'Survey'
-stage 'Post-Course Survey', flex_category: 'cspSurvey'
+stage 'Post-Course Survey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'
