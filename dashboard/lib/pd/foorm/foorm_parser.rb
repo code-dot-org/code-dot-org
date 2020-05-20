@@ -142,7 +142,7 @@ module Pd::Foorm
         elsif choice_hash.class == String
           choices_obj[choice_hash] = fill_question_placeholders(choice_hash)
           Honeybadger.notify(
-            "Foorm configuration without key-value choice detected. Choice is #{choice_hash}. Please update the survey configuration."
+            "Foorm configuration contains question without key-value choice. Choice is '#{choice_hash}'. Please update the survey configuration."
           )
         end
       end
