@@ -93,7 +93,7 @@ class ScriptDSL < BaseDSL
   def lesson(name, properties = {})
     if @lesson
       @lessons << {
-        stage: @lesson,
+        lesson: @lesson,
         visible_after: @lesson_visible_after,
         scriptlevels: @scriptlevels,
       }.compact
