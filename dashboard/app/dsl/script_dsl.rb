@@ -90,7 +90,7 @@ class ScriptDSL < BaseDSL
     @lesson_group = key
   end
 
-  def stage(name, properties = {})
+  def lesson(name, properties = {})
     if @lesson
       @lessons << {
         stage: @lesson,
@@ -122,7 +122,7 @@ class ScriptDSL < BaseDSL
   end
 
   def parse_output
-    stage(nil)
+    lesson(nil)
     {
       id: @id,
       stages: @lessons,
