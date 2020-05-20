@@ -1126,7 +1126,7 @@ class Script < ActiveRecord::Base
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
 
-      raw_lesson = raw_lessons.find {|rs| rs[:stage].downcase == lesson.name.downcase}
+      raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
       lesson.visible_after = raw_lesson[:visible_after]
       lesson.save! if lesson.changed?
     end
