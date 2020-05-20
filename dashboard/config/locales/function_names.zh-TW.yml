@@ -620,6 +620,8 @@ zh-TW:
         do something: 函式名稱
         draw hexagon: draw hexagon
         draw line of hexagons: draw line of hexagons
+      courseE_artist_functions1_copy:
+        draw ear stems: draw ear stems
       courseE_artist_functions2:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
@@ -629,17 +631,24 @@ zh-TW:
       courseE_artist_functions2_2019:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
+      courseE_artist_functions2_copy:
+        draw a square: 畫個正方形
+        draw ear stems: draw ear stems
       courseE_artist_functions3_2018:
         draw a star: 畫顆星星
       courseE_artist_functions3_2019:
         draw a star: 畫顆星星
       courseE_artist_functions4:
         draw a star: 畫顆星星
+      courseE_artist_functions4_copy:
+        draw a star: 畫顆星星
       courseE_artist_functions5:
         draw a star: 畫顆星星
       courseE_artist_functions5_2018:
         draw a star: 畫顆星星
       courseE_artist_functions5_2019:
+        draw a star: 畫顆星星
+      courseE_artist_functions5_copy:
         draw a star: 畫顆星星
       courseE_artist_functions7:
         draw a window: draw a window
@@ -736,6 +745,9 @@ zh-TW:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
       courseE_artist_functions_predict1_2019:
+        draw a square: 畫個正方形
+        draw ear stems: draw ear stems
+      courseE_artist_functions_predict1_copy:
         draw a square: 畫個正方形
         draw ear stems: draw ear stems
       courseE_artist_functions_predict2:

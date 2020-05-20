@@ -123,9 +123,9 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['support@code.org'], mail.to
+    assert_equal ['international@code.org'], mail.to
     assert_equal 'A teacher wants to connect with Code.org', mail.subject
-    assert_equal ['regional_partner_contact_request@code.org'], mail.from
+    assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail
   end
@@ -135,9 +135,9 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['support@code.org'], mail.to
+    assert_equal ['international@code.org'], mail.to
     assert_equal 'A teacher wants to connect with Code.org', mail.subject
-    assert_equal ['regional_partner_contact_request@code.org'], mail.from
+    assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail
   end

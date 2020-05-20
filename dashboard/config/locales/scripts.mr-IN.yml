@@ -40,10 +40,33 @@ mr:
           stages:
             Dance Party:
               name: डांस पार्टी
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         express-2019:
           stages:
             Dance Party:
               name: डांस पार्टी
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         dance-2019:
           stages:
             Dance Party:
@@ -52,14 +75,41 @@ mr:
           stages:
             Events:
               name: ईव्हेंट्स
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         coursed-2020:
           stages:
             Dance Party:
               name: डांस पार्टी
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         express-2020:
           stages:
             Dance Party:
               name: डांस पार्टी
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ईव्हेंट्स
         code-break:
           stages:
             Events:

@@ -86,12 +86,6 @@ my:
   project:
     name: "အမည္"
     saved: "သိမ်းထားပြီးပါပြီ"
-  flex_category:
-    csf_loops: 'Loops'
-    csf_variables: 'Variables'
-    csp_variables: 'Variables'
-    csp_lists: 'စာရင်းများ'
-    csp_loops: 'Loops'
   hoc_download:
     minecraft_name: 'Minecraft Hour of Code'
   pd:

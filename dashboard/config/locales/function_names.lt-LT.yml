@@ -145,17 +145,23 @@ lt-LT:
         draw a square: nubrėžk kvadratą
       courseE_artist_functions2_2019:
         draw a square: nubrėžk kvadratą
+      courseE_artist_functions2_copy:
+        draw a square: nubrėžk kvadratą
       courseE_artist_functions3_2018:
         draw a star: nupiešk žvaigždę
       courseE_artist_functions3_2019:
         draw a star: nupiešk žvaigždę
       courseE_artist_functions4:
         draw a star: nupiešk žvaigždę
+      courseE_artist_functions4_copy:
+        draw a star: nupiešk žvaigždę
       courseE_artist_functions5:
         draw a star: nupiešk žvaigždę
       courseE_artist_functions5_2018:
         draw a star: nupiešk žvaigždę
       courseE_artist_functions5_2019:
+        draw a star: nupiešk žvaigždę
+      courseE_artist_functions5_copy:
         draw a star: nupiešk žvaigždę
       courseE_artist_functions7:
         draw a house: namas
@@ -204,6 +210,8 @@ lt-LT:
       courseE_artist_functions_predict1_2018:
         draw a square: nubrėžk kvadratą
       courseE_artist_functions_predict1_2019:
+        draw a square: nubrėžk kvadratą
+      courseE_artist_functions_predict1_copy:
         draw a square: nubrėžk kvadratą
       courseE_artist_functions_predict2:
         do something: daryk kažką

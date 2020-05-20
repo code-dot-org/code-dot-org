@@ -1655,6 +1655,60 @@ it-IT:
       New Sports Project: 'Ora comandi tu. Puoi modificare tutte le regole, combinando
         i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per
         consentire agli amici di provare il tuo gioco sui loro telefoni.'
+      OPD-K5-events-2: Collega il blocco `sbatti le ali per un numero di volte normale`
+        all'evento `quando si clicca`, quindi premi "Esegui". Clicca o tocca nello
+        spazio di gioco per far volare Flappy verso la sua destinazione.
+      OPD-K5-events-3: Prova ad aggiungere un blocco che imposti la velocità quando
+        viene premuto il pulsante "Esegui".  Gioca volando fino a destinazione per
+        continuare.
+      OPD-K5-events-4: Collega il blocco `fine del gioco` all'evento `quando precipita
+        a terra`. Gioca facendo precipitare a terra l'uccellino per continuare.
+      OPD-K5-events-5: Collega un blocco all'evento `quando colpisce un ostacolo`
+        in modo che il gioco finisca quando Flappy si schianta contro la prima serie
+        di tubi.
+      OPD-K5-events-6: Aggiungi un blocco all'evento `quando supera un ostacolo`,
+        quindi premi "Esegui" per segnare un punto facendo volare Flappy oltre la
+        prima serie di tubi.
+      OPD-K5-forloops-1: Raccogli il nettare da ogni fiore usando il minor numero
+        possibile di blocchi.
+      OPD-K5-forloops-2: Scrivi il codice per aiutare l'ape a raccogliere tutto il
+        nettare.
+      OPD-K5-forloops-5: Aiuta l'ape a raccogliere tutto il nettare.
+      OPD-K5-forloops-6: Prova a raccogliere il nettare contando alla rovescia da
+        5 a 1 con passo 1.
+      OPD-K5-forloops-7: Prova a raccogliere il nettare da questi fiori usando un
+        passo di 2.
+      OPD-K5-projects-2: Scegli uno sfondo e un personaggio che sarà l'eroe del tuo
+        gioco.
+      OPD-K5-projects-3: Collega le azioni da svolgere ai gestori di eventi per far
+        muovere il tuo eroe.
+      OPD-K5-projects-4: Aggiungi altri due o più personaggi al tuo gioco e falli
+        muovere.
+      OPD-K5-projects-5: Escogita qualche modo interessante per modificare il punteggio
+        durante lo svolgimento del gioco. Per completare l'esercizio, fai in modo
+        che giocando il punteggio diventi uguale a 10 e vai a toccare la bandierina.
+      OPD-K5-projects-6: Ora dedica un po' di tempo a controllare che il gioco funzioni
+        proprio come desideravi. Aggiungi un modo per vincere e perdere, quindi gioca
+        fino a raggiungere una di queste due condizioni.
+      OPD-K5-projects-7: Hai finito! Ora puoi giocare con il tuo videogioco o condividerlo
+        con i tuoi amici e compagni di classe!
+      OPD-K5-spritelab-2: Modifica Dusty (il cespuglio rotolante) in un pesce.
+      OPD-K5-spritelab-3: Modifica il comportamento del pesce in modo che nuoti da
+        una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti presenti
+        nella cassetta degli attrezzi).
+      OPD-K5-spritelab-4: Usa il blocco `imposta il colore dello sfondo` per impostare
+        lo sfondo blu.
+      OPD-K5-spritelab-6: Il nostro pesce si sente un po' solo. Aggiungi un altro
+        personaggio nell'acquario.
+      OPD-K5-spritelab-7: Aggiungi un comportamento al nuovo amico del pesce.
+      OPD-K5-variables-2: 'Ora disegna tre di quei triangoli uno accanto all''altro.   '
+      OPD-K5-variables-5: Sposta la lunghezza di 50 pixel in una variabile (`length`),
+        in modo da poterla poi usare nei prossimi esercizi.
+      OPD-K5-variables-6: Ora, usa la variabile `length` (_lunghezza_) per fare in
+        modo che l'artista disegni i vari triangoli spostati ognuno in avanti di `length`
+        pixel e verso il basso di `length` pixel.
+      OPD-K5-variables-7: Aggiungi un'altra serie di cicli alla fine del programma
+        per aggiungere tre triangoli. Questa volta, salta in avanti e verso l'alto!
       Overworld Avoid Monsters: Incontrare un Creeper non è salutare. Muoviti con
         attenzione tra i Creeper e mettiti al sicuro a casa tua.
       Overworld Avoid Monsters_2019: Incontrare un Creeper non è salutare. Muoviti
@@ -2248,6 +2302,8 @@ it-IT:
         fino al maialino! '
       courseA_maze_seq10_2019: 'Sfida: Evita la dinamite (TNT) per far arrivare l''uccellino
         fino al maialino! '
+      courseA_maze_seq10_copy: 'Sfida: aggira la dinamite (TNT) per far arrivare l''uccellino
+        fino al maialino! '
       courseA_maze_seq11: Muovi in una direzione, poi in un'altra, per far arrivare
         l'uccellino fino al maialino.
       courseA_maze_seq11_2018: Muovi in una direzione, poi in un'altra, per far arrivare
@@ -2268,6 +2324,7 @@ it-IT:
       courseA_maze_seq5: Prova questo da solo dall'inizio.
       courseA_maze_seq5_2018: Fai un tentativo.
       courseA_maze_seq5_2019: Fai un tentativo.
+      courseA_maze_seq5_copy: Prova questo da solo dall'inizio.
       courseA_maze_seq5a_2018: Cosa devi aggiungere alla fine di questo programma
         per far arrivare l'uccellino fino al maialino?
       courseA_maze_seq5a_2019: Cosa devi aggiungere alla fine di questo programma
@@ -2278,13 +2335,19 @@ it-IT:
         l'uccellino fino al maialino!
       courseA_maze_seq6_2019: Muovi in una direzione, poi in un'altra per far arrivare
         l'uccellino fino al maialino!
+      courseA_maze_seq6_copy: Muovi in una direzione, poi in un'altra per far arrivare
+        l'uccellino fino al maialino!
       courseA_maze_seq7: Cerca di capire cosa manca, quindi aggiungi i blocchi necessari
         per far arrivare l'uccellino fino al maialino!
+      courseA_maze_seq7_copy: Cerca di capire cosa manca, quindi aggiungi i blocchi
+        necessari per far arrivare l'uccellino fino al maialino!
       courseA_maze_seq8: Risolvi questo esercizio per far arrivare l'uccellino fino
         al maialino!
       courseA_maze_seq8_2018: Risolvi questo esercizio per far arrivare l'uccellino
         fino al maialino!
       courseA_maze_seq8_2019: Risolvi questo esercizio per far arrivare l'uccellino
+        fino al maialino!
+      courseA_maze_seq8_copy: Risolvi questo esercizio per far arrivare l'uccellino
         fino al maialino!
       courseA_maze_seq9: 'Sfida: Correggi gli errori in questo esercizio, aggiungendo
         i blocchi necessari per far arrivare l''uccellino fino al maialino!'
@@ -3304,6 +3367,8 @@ it-IT:
         a creare un ciclo `ripeti ... volte` con un solo blocco all'interno.
       courseC_starWars_loops2_2019: Per recuperare tutti i rottami metallici, prova
         a creare un ciclo `ripeti ... volte` con un solo blocco all'interno.
+      courseC_starWars_loops2_copy: Per recuperare tutti i rottami metallici, prova
+        a creare un ciclo `ripeti ... volte` con un solo blocco all'interno.
       courseC_starWars_loops4: In questo esercizio, due cicli `ripeti ... volte` ti
         aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con il
         minor numero possibile di blocchi!
@@ -3313,17 +3378,24 @@ it-IT:
       courseC_starWars_loops4_2019: In questo esercizio, due cicli `ripeti ... volte`
         ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con
         il minor numero possibile di blocchi!
+      courseC_starWars_loops4_copy: In questo esercizio, due cicli `ripeti ... volte`
+        ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici con
+        il minor numero possibile di blocchi!
       courseC_starWars_loops5: Fai raccogliere a BB-8 tutti i rottami metallici il
         più velocemente possibile!
       courseC_starWars_loops5_2018: Fai raccogliere a BB-8 tutti i rottami metallici
         il più velocemente possibile!
       courseC_starWars_loops5_2019: Fai raccogliere a BB-8 tutti i rottami metallici
         il più velocemente possibile!
+      courseC_starWars_loops5_copy: Fai raccogliere a BB-8 tutti i rottami metallici
+        il più velocemente possibile!
       courseC_starWars_loops6: I cicli funzionano anche con più di un blocco al loro
         interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops6_2018: I cicli funzionano anche con più di un blocco
         al loro interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops6_2019: I cicli funzionano anche con più di un blocco
+        al loro interno!  Puoi far ripetere questa sequenza?
+      courseC_starWars_loops6_copy: I cicli funzionano anche con più di un blocco
         al loro interno!  Puoi far ripetere questa sequenza?
       courseC_starWars_loops7: Riesci a recuperare tutti i rottami metallici usando
         un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca il
@@ -3332,6 +3404,9 @@ it-IT:
         usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca
         il codice ripetuto da mettere nel ciclo.
       courseC_starWars_loops7_2019: Riesci a recuperare tutti i rottami metallici
+        usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca
+        il codice ripetuto da mettere nel ciclo.
+      courseC_starWars_loops7_copy: Riesci a recuperare tutti i rottami metallici
         usando un solo ciclo? Prova a programmare tutto con blocchi singoli, poi cerca
         il codice ripetuto da mettere nel ciclo.
       courseC_starWars_loops9: Sfrutta ciò che hai imparato per recuperare tutti i
@@ -3610,6 +3685,8 @@ it-IT:
         ogni nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals2_2019: Prima di prendere il nettare, controlla sotto
         ogni nuvola, per vedere se sta nascondendo un fiore.
+      courseD_bee_conditionals2_copy: Prima di prendere il nettare, controlla sotto
+        ogni nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals3: |-
         Aiuta l'ape a raccogliere tutto il nettare.
 
@@ -3622,17 +3699,25 @@ it-IT:
         Aiuta l'ape a raccogliere tutto il nettare.
 
         Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore.
+      courseD_bee_conditionals3_copy: |-
+        Aiuta l'ape a raccogliere tutto il nettare.
+
+        Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore.
       courseD_bee_conditionals4: Raccogli tutto il nettare usando il minor numero
         possibile di blocchi.
       courseD_bee_conditionals4_2018: Raccogli tutto il nettare usando il minor numero
         possibile di blocchi.
       courseD_bee_conditionals4_2019: Raccogli tutto il nettare usando il minor numero
         possibile di blocchi.
+      courseD_bee_conditionals4_copy: Raccogli tutto il nettare usando il minor numero
+        possibile di blocchi.
       courseD_bee_conditionals5: Raccogli tutto il nettare usando il minor numero
         possibile di blocchi
       courseD_bee_conditionals5_2018: Raccogli tutto il nettare usando il minor numero
         possibile di blocchi
       courseD_bee_conditionals5_2019: Raccogli tutto il nettare usando il minor numero
+        possibile di blocchi
+      courseD_bee_conditionals5_copy: Raccogli tutto il nettare usando il minor numero
         possibile di blocchi
       courseD_bee_conditionals6: Alcune di queste nubi potrebbero nascondere dei favi.
         Controlla sotto ogni nuvola se c'è un favo!
@@ -4191,25 +4276,36 @@ it-IT:
         da 25 pixel.
       courseE_artist_functions10_2019: Questa volta, usa file di 8 esagoni con lati
         da 25 pixel.
+      courseE_artist_functions1_copy: |-
+        Aiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.\
+        L'asta tra le lenti è lunga 75 pixel.
       courseE_artist_functions2: 'Questa volta, usa la funzione `disegna un quadrato`
         per creare gli occhiali. '
       courseE_artist_functions2_2018: 'Usa la funzione `disegna un quadrato` per creare
         gli occhiali. '
       courseE_artist_functions2_2019: 'Usa la funzione `disegna un quadrato` per creare
         gli occhiali. '
+      courseE_artist_functions2_copy: 'Questa volta, usa la funzione `disegna un quadrato`
+        per creare gli occhiali. '
       courseE_artist_functions3: Puoi realizzare questo disegno aggiungendo un blocco
         `ripeti ... volte`.
       courseE_artist_functions3_2018: Costruisci una funzione per disegnare questa
         stella.
       courseE_artist_functions3_2019: Costruisci una funzione per disegnare questa
         stella.
+      courseE_artist_functions3_copy: Puoi realizzare questo disegno aggiungendo un
+        blocco `ripeti ... volte`.
       courseE_artist_functions4: Ora che sai disegnare una stella, prova a disegnarne
+        quattro!
+      courseE_artist_functions4_copy: Ora che sai disegnare una stella, prova a disegnarne
         quattro!
       courseE_artist_functions5: Devi disegnare solo queste tre stelle per completare
         questo esercizio.
       courseE_artist_functions5_2018: Devi disegnare solo queste tre stelle per completare
         questo esercizio.
       courseE_artist_functions5_2019: Devi disegnare solo queste tre stelle per completare
+        questo esercizio.
+      courseE_artist_functions5_copy: Devi disegnare solo queste tre stelle per completare
         questo esercizio.
       courseE_artist_functions6: Crea questa finestra disegnando un quadrato e ruotandolo
         di 90 gradi prima di disegnarne un altro e così via.

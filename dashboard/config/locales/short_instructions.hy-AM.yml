@@ -478,6 +478,9 @@ hy-AM:
       courseE_artist_functions1: "\"Me zombie artist. Me love drawing!\"  \\\r\n\\\r\nHelp\nthe
         zombie draw square glasses.  \\\r\n\\\r\nThe bridge between the glasses is\n25
         pixels shorter than the width of the squares."
+      courseE_artist_functions1_copy: "\"Me zombie artist. Me love drawing!\"  \\\r\n\\\r\nHelp\nthe
+        zombie draw square glasses.  \\\r\n\\\r\nThe bridge between the glasses is\n25
+        pixels shorter than the width of the squares."
       courseE_bee_concept1: |-
         Collect all of the nectar from each flower.
         Use a nested loop.

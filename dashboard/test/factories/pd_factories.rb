@@ -1440,6 +1440,12 @@ FactoryGirl.define do
     questions '{}'
   end
 
+  factory :basic_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/sample"
+    foorm_submission_metadata
+    answers '{}'
+  end
+
   factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher
@@ -1455,7 +1461,7 @@ FactoryGirl.define do
   end
 
   factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_5"
+    form_name "surveys/pd/summer_workshop_post_survey"
     foorm_submission_metadata
 
     trait :answers_low do
@@ -1528,7 +1534,7 @@ FactoryGirl.define do
   end
 
   factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
-    form_name "surveys/pd/workshop_daily_survey_day_0"
+    form_name "surveys/pd/summer_workshop_pre_survey"
     foorm_submission_metadata
 
     trait :answers_low do

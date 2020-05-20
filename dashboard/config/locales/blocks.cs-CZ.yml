@@ -1693,7 +1693,7 @@ cs:
       craft_placePrismarine:
         text: polož prismarine
       craft_placeTorch:
-        text: umístni pochodeň
+        text: umísti pochodeň
       craft_repeatUntilConduit:
         text: |-
           opakuj dokud není dokončeno

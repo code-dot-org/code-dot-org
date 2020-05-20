@@ -406,6 +406,10 @@ fil-PH:
       K-1 Maze Loops 8: Gamitin ang `repeat` na mga loop para mapapunta ako sa baboy.
       NEW Course 4 Artist Params 2: Lumikha ng `draw a triangle` na function mula
         sa wala na gumagawa ng tatsulok na may 50 pixel ang mga gilid.
+      OPD-K5-projects-7: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong
+        laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
+      OPD-K5-variables-6: Ngayon, gamitin ang `length` na variable para mapatalon
+        ang artista paharap at pababa mga `length` pixels sa gitna ng mga tatsulok.
       Overworld Move to Sheep: Magdagdag ng pangalawang `move forward` na bloke para
         maabot ang tupa.
       Overworld Move to Sheep_2019: Magdagdag ng pangalawang `move forward` na bloke

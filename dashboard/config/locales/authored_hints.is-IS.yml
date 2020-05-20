@@ -4131,6 +4131,105 @@ is-IS:
       New Minecraft Hero Project:
         MC_HOC_2017_13_Cole_a: Prófaðu að láta Umbann byggja brýr svo að Alex eða
           Steve geti gengið um utan við jaðar kortsins.
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-events-3:
+        courseC_flappy_events2_a: 'Á kubbnum sem þarf að bæta við stendur `hraði`. '
+        courseC_flappy_events2_b: Tengdu kubbinn `hraði` við kubbinn `þegar keyrt`
+          til að leysa þessa þraut.
+      OPD-K5-events-4:
+        courseC_flappy_events3_a: Ef eitthvað er ekki að virka skaltu ganga úr skugga
+          um að kubbarnir þínir séu tengdir við réttu atburðina á vinnusvæðinu.
+      OPD-K5-events-5:
+        courseC_flappy_events4_a: Tengdu kubbinn `ljúka leik` við `þegar rekst á jörðina`
+          til að leysa þessa þraut.
+      OPD-K5-events-6:
+        courseC_flappy_events5_a: Þú verður að nota kubbinn `skora stig` til að klára
+          þetta borð.
+      OPD-K5-forloops-1:
+        courseF_bee_for1_a: Dragðu fjólubláan kubb inn í auða reitinn á `endurtaka`
+          kubbnum til að segja honum hve oft á að endurtaka.
+        courseF_bee_for1_b: Þú þarft að hafa tvo kubba í `endurtaka` lykkjunni til
+          að ná öllum blómasafanum.
+      OPD-K5-forloops-2:
+        courseF_bee_for2_a: Einfalt ráð er að vinna með bara eitt blóm í einu og prófa
+          oft.
+        courseF_bee_for2_b: Mundu að fara áfram á milli hverrar endurtekningar svo
+          að þú komist til allra blómanna.
+      OPD-K5-forloops-5:
+        courseF_bee_for4_a: Notaðu `frá` lykkju sem telur frá 1 til 7 með aukningu
+          um 1 til að leysa þessa þraut.
+        courseF_bee_for4_b: Innan í `frá` lykkjunni þarftu að hafa `færa áfram` skipun
+          og aðra lykkju til að safna blómasafa.
+        courseF_bee_for4_c: Gættu þess að nota breytuna `teljari` innan í innri `endurtaka`
+          lykkjunni til að ná nógu miklum blómasafa!
+      OPD-K5-forloops-6:
+        courseF_bee_for6_a: Ekki gleyma að nota `teljari` (counter) breytu innan í
+          `endurtaka` lykkjunni.
+        courseF_bee_for6_b: Innan í `frá` lykkjunni þarftu að hafa `færa áfram` skipun
+          og aðra lykkju til að safna blómasafa.
+        courseF_bee_for6_c: Lykkjan þín ætti að telja **frá 5 til 1**.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_a: "`Frá` lykkjan þín þarf að telja frá 1 til 7 með aukningunni
+          2."
+        courseF_bee_for7_b: Innan í `frá` lykkjunni þarftu að hafa `færa áfram` skipun
+          og aðra lykkju til að safna blómasafa.
+        courseF_bee_for7_c: Mundu að nota breytuna `teljari` í `endurtaka` lykkjunni.
+      OPD-K5-projects-2:
+        courseE_playLab_scaffold1_a: Kubburinn `stilla leikmann 1 á ??? mynd` er notaður
+          til að bæta leikmanni á sviðið.
+        courseE_playLab_scaffold1_b: Settu `hafa leikmann` kubbinn undir `þegar keyrt`
+          kubbinn til að leikmaðurinn birtist í byrjun forritsins.
+        courseE_playLab_scaffold1_c: Notaðu `hafa bakgrunn` kubb til að búa til bakgrunn
+          sviðsins.
+      OPD-K5-projects-3:
+        courseE_playLab_scaffold1_a: Smelltu á fellilistann á `þegar ___ ör` atvikinu
+          til að breyta stefnunni sem kubburinn stjórnar.
+        courseE_playLab_scaffold1_b: Þú ættir að hafa fjóra `þegar ör` atburðarkubba
+          með hreyfingu í tiltekna stefnu undir hverjum þeirra.
+        courseE_playLab_scaffold1_c: Þegar þetta er tilbúið ættir þú að geta hreyft
+          hetjuna þína með örvarlyklunum!
+      OPD-K5-projects-5:
+        courseE_playLab_scaffold4_a: Notaðu `skora stig` til að bæta við stigi og
+          `fjarlægja stig` til að draga stig frá.
+      OPD-K5-variables-1:
+        grade5_artist_variables_triangles1_a: Til að hafa 60 gráðu innra horn í þessum
+          þríhyrningi þarftu að snúa listamanninum um 120 gráður.
+        grade5_artist_variables_triangles1_b: Notaðu `endurtaka` lykkjuna svo kóðinn
+          verði styttri.
+        grade5_artist_variables_triangles1_c: Innan í lykkjunni ættir þú að fara áfram
+          um 50 díla og snúa svo til vinstri 120 gráður.
+      OPD-K5-variables-2:
+        courseF_artist_variables2_a: Mundu að fara áfram eftir að hafa teiknað hvern
+          þríhyrning.
+        courseF_artist_variables2_b: Nýja lykkjan þín mun innihalda lykkjuna fyrir
+          þríhyrninginn ásamt `færa áfram` skipun.
+      OPD-K5-variables-5:
+        courseF_artist_variables3_a: 'Breytan `lengd` verður notuð á tveimur stöðum
+          í kóðanum: Fyrir lengd hliðar í þríhyrningnum og fyrir hreyfinguna fram
+          á við á milli þríhyrninga.'
+        courseF_artist_variables3_b: 'Talnakubbur með gildið 50 ætti bara að vera
+          á einum stað: á eftir kubbnum `stilla breytuna lengd`.'
+      OPD-K5-variables-6:
+        courseF_artist_variables4_a: Kóðinn verður mjög svipaður kóðanum í síðustu
+          þraut nema hvað þú þarft að snúa listamanninum, láta hann hoppa niður og
+          svo snúa honum í upphaflega stefnu.
+        courseF_artist_variables4_c: |-
+          Þetta er mynstrið sem listamaðurinn mun fara eftir:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      OPD-K5-variables-7:
+        courseF_artist_variables5_a: Seinni helmingur kóðans ætti að vera næstum því
+          eins og fyrri hlutinn, nema hvað þú átt að snúa til _vinstri_, hoppa og
+          svo snúa til _hægri_.
+        courseF_artist_variables5_b: Fyrri helmingur kóðans mun teikna þrjá þríhyrninga
+          og seinni hlutinn mun teikna aðra þrjá.
+        courseF_artist_variables5_c: Byrjaðu á að bæta við sama kóða og í fyrri hluta
+          forritsins og breyttu svo kóðanum svo hann búi til myndina sem er sýnd.
+        courseF_artist_variables5_d: |-
+          Þetta er mynstrið sem listamaðurinn mun fylgja:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
       Overworld Avoid Monsters:
         mc_8_a: Það koma nokkrar leiðir til greina. Hver þeirra er styst?
         mc_8_b: Notaðu `endurtaka` lykkju til að einfalda kóðann.
@@ -6480,6 +6579,11 @@ is-IS:
           skrefin á blað.
         courseA_maze_seq10_b: Þú þarft að fara í 3 mismunandi áttir til að leysa þessa
           þraut.
+      courseA_maze_seq10_copy:
+        courseA_maze_seq10_a: Ef þú átt í erfiðleikum er gott ráð að byrja á að skrifa
+          skrefin á blað.
+        courseA_maze_seq10_b: Þú þarft að fara í þrjár mismunandi áttir til að leysa
+          þessa þraut.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Ef þú sérð ekki slóðina er gott ráð að nota fingur til
           að rekja leiðina frá fuglinum til svínsins.
@@ -6556,6 +6660,9 @@ is-IS:
           Þú þarft að nota þennan kubb:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_copy:
+        courseA_maze_seq5_a: Prófaðu að skrifa skrefin á blað til að finna lausnina!
+        courseA_maze_seq5_b: Þú þarft tvo kubba, sem vísa í 2 áttir.
       courseA_maze_seq5a_2018:
         '1': Segðu skrefin upphátt og gáðu hvort það hjálpar að finna svarið.
       courseA_maze_seq5a_2019:
@@ -6572,7 +6679,15 @@ is-IS:
         courseA_maze_seq6_a: Lokakóðinn þinn ætti að hafa 3 kubba sem færa.
         courseA_maze_seq6_b: Ef þú festist er ráð að reyna að skipta þrautinni í það
           sem gerist á undan horninu og það sem gerist eftir hornið.
+      courseA_maze_seq6_copy:
+        courseA_maze_seq6_a: Lokakóðinn þinn ætti að hafa 3 kubba sem færa.
+        courseA_maze_seq6_b: Ef þú festist er ráð að reyna að skipta þrautinni í það
+          sem gerist á undan horninu og það sem gerist eftir hornið.
       courseA_maze_seq7:
+        courseA_maze_seq7_a: Þú þarft að bæta við 1 kubbi til að færa fuglinn að svíninu.
+        courseA_maze_seq7_b: Ef þú finnur ekki svarið, ættirðu að prófa að teikna
+          þrautina á blað og nota fingur til að finna réttu hreyfingarnar.
+      courseA_maze_seq7_copy:
         courseA_maze_seq7_a: Þú þarft að bæta við 1 kubbi til að færa fuglinn að svíninu.
         courseA_maze_seq7_b: Ef þú finnur ekki svarið, ættirðu að prófa að teikna
           þrautina á blað og nota fingur til að finna réttu hreyfingarnar.
@@ -6583,6 +6698,9 @@ is-IS:
         courseA_maze_seq8_a: Ef þetta gengur ekki gætirðu prófað að teikna myndina
           á blað til að sjá hvernig fuglinn á að hreyfast.
       courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Ef þetta gengur ekki gætirðu prófað að teikna myndina
+          á blað til að sjá hvernig fuglinn á að hreyfast.
+      courseA_maze_seq8_copy:
         courseA_maze_seq8_a: Ef þetta gengur ekki gætirðu prófað að teikna myndina
           á blað til að sjá hvernig fuglinn á að hreyfast.
       courseA_maze_seq9:
@@ -10823,6 +10941,9 @@ is-IS:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2_a: Þú getur endurtekið kóða með því að draga fram
           `endurtaka` lykkju og setja kóðann í hana.
+      courseC_starWars_loops2_copy:
+        courseC_starWars_loops2_a: Þú getur endurtekið kóða með því að draga fram
+          `endurtaka` lykkju og setja kóðann í hana.
       courseC_starWars_loops4:
         courseC_starWars_loops4_c: Ef þú smellir á litlu píluna við hliðina á "vinstri"
           á `snúa til` kubbnum, getur þú breytt því í "hægri".
@@ -10841,7 +10962,18 @@ is-IS:
         courseC_starWars_loops4_a: Notaðu tvo `endurtaka` kubba.
         courseC_starWars_loops4_b: 'Í hvorri `endurtaka` lykkju verður bara ein skipun:
           `færa áfram`.'
+      courseC_starWars_loops4_copy:
+        courseC_starWars_loops4_c: Ef þú smellir á litlu píluna við hliðina á "vinstri"
+          á `snúa til` kubbnum, getur þú breytt því í "hægri".
+        courseC_starWars_loops4_a: Notaðu tvo `endurtaka` kubba.
+        courseC_starWars_loops4_b: 'Í hvorri `endurtaka` lykkju verður bara ein skipun:
+          `færa áfram`.'
       courseC_starWars_loops5:
+        courseC_starWars_loops5_b: Til að færast niður þarft þú að snúa og svo fara
+          áfram.
+        courseC_starWars_loops5_a: Besta lausnin notar eina `færa niður`skipun og
+          eina lykkju með annarri `færa` skipun.
+      courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: Til að færast niður þarft þú að snúa og svo fara
           áfram.
         courseC_starWars_loops5_a: Besta lausnin notar eina `færa niður`skipun og
@@ -10859,6 +10991,12 @@ is-IS:
           Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
           Það er kallað **földuð lykkja**.
       courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
+          svo að endurtekningum.
+        courseC_starWars_loops6_b: |-
+          Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\
+          Það er kallað **földuð lykkja**.
+      courseC_starWars_loops6_copy:
         courseC_starWars_loops6_a: Prófaðu að skrifa hreyfingarnar á blað og leita
           svo að endurtekningum.
         courseC_starWars_loops6_b: |-
@@ -10885,6 +11023,13 @@ is-IS:
           hreyfingarnar á blað og leita svo að endurtekningum.
         courseC_starWars_loops7_c: Ekki óttast að gera mistök! Keyrðu kóðann til að
           sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
+      courseC_starWars_loops7_copy:
+        courseC_starWars_loops7_a: Þetta mynstur virðist flóknara en það er í raun!
+          Prófaðu fyrst einfalt tröppumynstur. Nær það öllum málminum?
+        courseC_starWars_loops7_b: Ef þú átt í erfiðleikum með þraut er ráð að skrifa
+          hreyfingarnar á blað og leita svo að endurtekningum.
+        courseC_starWars_loops7_c: Ekki óttast að gera mistök! Keyrðu kóðann til að
+          sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
       courseC_starWars_loops8:
         course_starWars_loops8_a: Reyndu að skipta vandamálinu í minni hluta. Gefðu
           þér tíma. Þú þarft ekki að leysa þetta í fyrstu tilraun!
@@ -10904,6 +11049,15 @@ is-IS:
 
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Reyndu að skipta vandamálinu í minni hluta. Gefðu
+          þér tíma. Þú þarft ekki að leysa þetta í fyrstu tilraun!
+        course_starWars_loops8_b: Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri.
+          Hvernig leystirðu það áður?
+        course_starWars_loops8_c: |-
+          Kíktu á þessa slóð.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_copy:
         course_starWars_loops8_a: Reyndu að skipta vandamálinu í minni hluta. Gefðu
           þér tíma. Þú þarft ekki að leysa þetta í fyrstu tilraun!
         course_starWars_loops8_b: Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri.
@@ -11717,6 +11871,9 @@ is-IS:
       courseD_bee_conditionals1_predict1_2019:
         courseD_bee_conditionals1_a: Þú munt þurfa að nota `ef` kubb til að athuga
           hvort það sé blóm undir skýinu áður en þú reynir að ná í blómasafa.
+      courseD_bee_conditionals1_predict1_copy:
+        courseD_bee_conditionals1_a: Þú munt þurfa að nota `ef` kubb til að athuga
+          hvort það sé blóm undir skýinu áður en þú reynir að ná í blómasafa.
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -11747,6 +11904,18 @@ is-IS:
           setningu.
         courseD_bee_conditionals2_c: Þú þarft ekki að athuga með býkúpur. Undir skýi
           eru annað hvort blóm eða ekkert.
+      courseD_bee_conditionals2_copy:
+        courseD_bee_conditionals2_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
+          á myndbandið1!
+        courseD_bee_conditionals2_a: Stundum er blóm á reit, en stundum ekki.  Ef
+          þú vilt að kóðinn ráði við bæði tilfellin, skaltu gæta þess að nota `ef`
+          setningu.
+        courseD_bee_conditionals2_b: Þú getur notað `endurtaka` lykkju eða `meðan
+          slóð framundan` til að fara í gegnum þetta völundarhús.
+        courseD_bee_conditionals2_c: Þú þarft ekki að athuga með býkúpur. Undir skýi
+          eru annað hvort blóm eða ekkert.
+        courseD_bee_conditionals2_hintVid2: Þetta myndband getur hjálpað að leysa
+          þessa þraut.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -11777,6 +11946,18 @@ is-IS:
         courseD_bee_conditionals3_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
+      courseD_bee_conditionals3_copy:
+        courseD_bee_conditionals3_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
+          á myndbandið1!
+        courseD_bee_conditionals3_a: Gættu þess að nota `ef` setningu til að athuga
+          fyrir hvern reit hvort hann hafi blóm eða ekkert.
+        courseD_bee_conditionals3_b: Þú getur notað `endurtaka` lykkju eða `meðan`
+          lykkju til að láta býfluguna færast áfram. Þú færð að velja!
+        courseD_bee_conditionals3_c: Ekki hræðast að gera mistök! Prófaðu að bæta
+          við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
+          þú ekki hafa klárað lausnina.
+        courseD_bee_conditionals3_hintVid2: Þetta myndband getur hjálpað að leysa
+          þessa þraut.
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -11806,6 +11987,18 @@ is-IS:
           hulinn skýi, jafnvel þó þú sjáir alla slóðinaþ.
         courseD_bee_conditionals4_b: 'Notaðu `ef` setningu innan í lykkjunni til að
           athuga fyrir hvern reit hvort hann hafi blómasafa. '
+      courseD_bee_conditionals4_copy:
+        courseD_bee_conditionals4_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
+          á myndbandið1!
+        courseD_bee_conditionals4_a: Þú getur unnið með hvern reit eins og hann væri
+          hulinn skýi, jafnvel þó þú sjáir alla slóðinaþ.
+        courseD_bee_conditionals4_b: 'Notaðu `ef` setningu innan í lykkjunni til að
+          athuga fyrir hvern reit hvort hann hafi blómasafa. '
+        courseD_bee_conditionals4_c: Notaðu kubbinn <xml><block type="maze_untilBlocked"/></xml>
+          og í honum `færa áfram` og athuga með blóm. Ef það er blóm, hvað ætti býflugan
+          að gera?
+        courseD_bee_conditionals4_hintVid2: Þetta myndband getur hjálpað að leysa
+          þessa þraut.
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -11847,6 +12040,23 @@ is-IS:
         courseD_bee_conditionals5_c: Til að færa býfluguna niður slóðina þarf að nota
           `færa áfram`. Þegar hún færist þarf hún að athuga hvort þar sé blóm. `Ef
           við blóm` á býflugan að `sækja blómasafa`.
+      courseD_bee_conditionals5_copy:
+        courseD_bee_conditionals5_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
+          á myndbandið1!
+        courseD_bee_conditionals5_a: Hugsaðu hverja hlið á rétthyrndu slóðinni sem
+          sjálfstæða slóð. Settu `meðan slóð framundan` lykkju innan í `endurtaka`
+          lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf
+          að fara hverja slóð sem hefur blóm?
+        courseD_bee_conditionals5_c: Þrjár hliðar rétthyrningsins hafa blóm, svo að
+          kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að fara
+          eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf býflugan
+          að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef þar er
+          blóm, á býflugan að `sækja blómasafa`.
+        courseD_bee_conditionals5_b: Innan í `meðan slóð framundan` kubbi þarft þú
+          að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað
+          gerir þú ef þar er blóm?
+        courseD_bee_conditionals5_hintVid2: Þetta myndband getur hjálpað að leysa
+          þessa þraut.
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: Þarftu hjálp við að komast af stað? Kíktu
           á myndbandið1!
@@ -13890,6 +14100,13 @@ is-IS:
           Geturðu séð hvar þessi teikning gæti notað fall sem héti `röð sexhyrninga`?
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Hver ferningur hefur 100 díla hliðar. Það þýðir
+          að þú þarft að fara áfram um 175 díla áður en þú teiknar næsta ferning.
+        courseE_artist_functions1_b: Það er í lagi að láta línurnar skarast við gerð
+          gleraugnanna.
+        courseE_artist_functions1_c: Með `endurtaka` lykkju getur þú teiknað ferningana
+          fyrir gleraugnaumgjarðirnar með styttri kóða.
       courseE_artist_functions2:
         courseD_artist_functions2_b: Fallið sem þú skrifar ætti ekki að innihalda
           allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100
@@ -13932,6 +14149,20 @@ is-IS:
           -   Nota fall
           -   Fara áfram 100 + 75 díla
           -   Nota fall
+      courseE_artist_functions2_copy:
+        courseD_artist_functions2_b: Fallið sem þú skrifar ætti ekki að innihalda
+          allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100
+          díla hliðar.
+        courseD_artist_functions2_c: |-
+          Notaðu græna `teikna ferning` kubbinn til að "kalla á" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          Forritið þitt ætti að:
+
+          -   Nota fall
+          -   Fara áfram 100 + 75 díla
+          -   Nota fall
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           Þú getur leyst þessa þraut með því að bæta við lykkju sem endurtekur byrjunarkóðann 8 sinnum.
@@ -13939,7 +14170,23 @@ is-IS:
           Ef þú manst ekki hvernig byrjunarkóðinn var getur þú smellt á "byrja aftur" hnappinn fyrir ofan vinnusvæðið.
         courseD_artist_functions3_b: Lykkjan þín ætti að innihalda alla 3 kubbana
           sem byrjað er með.
+      courseE_artist_functions3_copy:
+        courseD_artist_functions3_a: |-
+          Þú getur leyst þessa þraut með því að bæta við lykkju sem endurtekur byrjunarkóðann 8 sinnum.
+
+          Ef þú manst ekki hvernig byrjunarkóðinn var getur þú smellt á "byrja aftur" hnappinn fyrir ofan vinnusvæðið.
+        courseD_artist_functions3_b: Lykkjan þín ætti að innihalda alla 3 kubbana
+          sem byrjað er með.
       courseE_artist_functions4:
+        courseD_artist_functions4_a: Prófaðu að nota fall!
+        courseD_artist_functions4_b: Dragðu kubbinn fyrir `teikna stjörnu` fallið
+          úr verkfærakassanum til að byrja að smíða fallið. Það ætti að innihalda
+          sama kóða og í síðustu þraut vegna þess að þú ert að teikna sama stjörnulaga
+          mynstrið.
+        courseD_artist_functions4_c: Notaðu græna `teikna stjörnu` kubbinn til að
+          kalla á þetta fall innan úr aðalforritinu þínu. Ekki gleyma að hoppa áfram
+          eftir hverja stjörnu!
+      courseE_artist_functions4_copy:
         courseD_artist_functions4_a: Prófaðu að nota fall!
         courseD_artist_functions4_b: Dragðu kubbinn fyrir `teikna stjörnu` fallið
           úr verkfærakassanum til að byrja að smíða fallið. Það ætti að innihalda
@@ -13965,6 +14212,14 @@ is-IS:
           inn í `teikna stjörnu` fallið og notaðu svo þetta fall til að teikna stjörnurnar
           þrjár!
       courseE_artist_functions5_2019:
+        courseD_artist_functions5_a: Ekki gefast upp! Mundu hvað þú hefur verið að
+          læra.
+        courseD_artist_functions5_b: Þú getur kallað á kóðann í falli hvenær sem er,
+          ekki bara innan úr lykkjum!
+        courseD_artist_functions5_c: Byrjaðu á að draga kóðann fyrir stjörnuformið
+          inn í `teikna stjörnu` fallið og notaðu svo þetta fall til að teikna stjörnurnar
+          þrjár!
+      courseE_artist_functions5_copy:
         courseD_artist_functions5_a: Ekki gefast upp! Mundu hvað þú hefur verið að
           læra.
         courseD_artist_functions5_b: Þú getur kallað á kóðann í falli hvenær sem er,

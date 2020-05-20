@@ -116,6 +116,11 @@ sr-SP:
           да треба да кренеш напред 175 пиксела пре него нацрташ свој следећи квадрат.
         courseE_artist_functions1_b: Сасвим је у реду да понављаш кружне линије да
           би направио наочаре.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: Сваки квадрат има страницу 100 пиксела, што значи
+          да треба да кренеш напред 175 пиксела пре него нацрташ свој следећи квадрат.
+        courseE_artist_functions1_b: Сасвим је у реду да понављаш кружне линије да
+          би направио наочаре.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
@@ -131,6 +136,13 @@ sr-SP:
           -   Помери напред за 100 + 75 пиксела
           -   Користи функцију
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          Твој програм треба да:
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
 

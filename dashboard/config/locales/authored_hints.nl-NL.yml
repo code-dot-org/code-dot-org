@@ -2224,6 +2224,19 @@ nl-NL:
           De 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt.
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien
           na het tekenen van ieder "bloemblad".
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Probeer de agent wat bruggen te laten bouwen zodat
+          Alex of Steve voorbij de grenzen van de kaart kunnen komen.
+      OPD-K5-events-2:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      OPD-K5-forloops-2:
+        courseF_bee_for2_b: Denk eraan om voorwaarts te bewegen tussen elke loop,
+          zodat je elke bloem bereikt.
+      OPD-K5-forloops-6:
+        courseF_bee_for6_c: Je lus zou moeten tellen **van 5 naar 1**.
+      OPD-K5-forloops-7:
+        courseF_bee_for7_c: Denk eraan om de `counter` variabele te gebruiken in je
+          `herhaal` lus.
       Overworld Chop Tree:
         mc_2_a: Je moet het `beweeg vooruit` blok twee keer gebruiken om bij de boom
           in de buurt te komen.
@@ -3219,6 +3232,9 @@ nl-NL:
       courseC_starWars_loops5:
         courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
           een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
+      courseC_starWars_loops5_copy:
+        courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
+          een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
       courseC_starWars_loops9:
         course_starWars_loops9_b: Je kan meer dan één blok binnen in een `herhaal`
           lus plaatsen.
@@ -3541,6 +3557,12 @@ nl-NL:
           tekent.
         courseE_artist_functions1_b: Het is oke om overlappende lijnen te gebruiken
           om je bril te tekenen.
+      courseE_artist_functions1_copy:
+        courseE_artist_functions1_a: De vierkanten hebben elk zijden van 100 pixels,
+          dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant
+          tekent.
+        courseE_artist_functions1_b: Het is oke om overlappende lijnen te gebruiken
+          om je bril te tekenen.
       courseE_artist_functions2:
         courseD_artist_functions2_a: |-
           Je programma: moet:
@@ -3556,6 +3578,13 @@ nl-NL:
           -   100 + 75 pixels vooruit bewegen
           -   functie gebruiken
       courseE_artist_functions2_2019:
+        courseD_artist_functions2_a: |-
+          Je programma: moet:
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
+      courseE_artist_functions2_copy:
         courseD_artist_functions2_a: |-
           Je programma: moet:
 
