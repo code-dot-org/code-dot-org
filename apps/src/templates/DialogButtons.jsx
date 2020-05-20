@@ -89,7 +89,7 @@ export default class DialogButtons extends Component {
           <LegacyButton
             type="cancel"
             size="large"
-            arrow="left"
+            arrow={isRtl ? 'right' : 'left'}
             id="again-button"
             className="launch"
           >
