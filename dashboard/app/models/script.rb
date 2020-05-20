@@ -878,7 +878,7 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         lesson_groups = script_data[:lesson_groups]
-        lessons = script_data[:stages]
+        lessons = script_data[:lessons]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
@@ -1260,7 +1260,7 @@ class Script < ActiveRecord::Base
             properties: Script.build_property_hash(general_params)
           },
           script_data[:lesson_groups],
-          script_data[:stages]
+          script_data[:lessons]
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
