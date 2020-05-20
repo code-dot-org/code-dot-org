@@ -1,5 +1,5 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 lesson_extras_available true
 pilot_experiment 'time4cs-control'
 editor_experiment 'broward'
