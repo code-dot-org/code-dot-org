@@ -2,16 +2,16 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @stage = nil
+    @lesson = nil
     @lesson_group = nil
     @lesson_groups = []
-    @stage_lockable = false
-    @stage_visible_after = nil
+    @lesson_lockable = false
+    @lesson_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
     @scriptlevels = []
-    @stages = []
+    @lessons = []
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
@@ -91,16 +91,16 @@ class ScriptDSL < BaseDSL
   end
 
   def stage(name, properties = {})
-    if @stage
-      @stages << {
-        stage: @stage,
-        visible_after: @stage_visible_after,
+    if @lesson
+      @lessons << {
+        stage: @lesson,
+        visible_after: @lesson_visible_after,
         scriptlevels: @scriptlevels,
       }.compact
     end
-    @stage = name
-    @stage_lockable = properties[:lockable]
-    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
+    @lesson = name
+    @lesson_lockable = properties[:lockable]
+    @lesson_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
@@ -125,7 +125,7 @@ class ScriptDSL < BaseDSL
     stage(nil)
     {
       id: @id,
-      stages: @stages,
+      stages: @lessons,
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
@@ -207,7 +207,7 @@ class ScriptDSL < BaseDSL
     level = {
       name: name,
       lesson_group: @lesson_group,
-      stage_lockable: @stage_lockable,
+      stage_lockable: @lesson_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
@@ -246,7 +246,7 @@ class ScriptDSL < BaseDSL
       end
     else
       script_level = {
-        stage: @stage,
+        stage: @lesson,
         levels: [level]
       }
 
@@ -261,7 +261,7 @@ class ScriptDSL < BaseDSL
   end
 
   def variants
-    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
+    @current_scriptlevel = {levels: [], properties: {}, stage: @lesson}
   end
 
   def endvariants
@@ -272,7 +272,7 @@ class ScriptDSL < BaseDSL
   # @override
   def i18n_hash
     i18n_stage_strings = {}
-    @stages.each do |stage|
+    @lessons.each do |stage|
       i18n_stage_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
