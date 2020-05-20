@@ -7,42 +7,27 @@ class ContactRollupsV2
   end
 
   def collect_and_process_contacts
-    number_of_extractions = 2
-    successful_extraction_count = 0
-
-    @log_collector.time_and_raise!('Deletes intermediate content from previous runs') do
+    @log_collector.time!('Deletes intermediate content from previous runs') do
       truncate_or_delete_table ContactRollupsRaw
       truncate_or_delete_table ContactRollupsProcessed
     end
 
-    @log_collector.time_and_continue('Extracts data from dashboard email_preferences') do
+    @log_collector.time!('Extracts data from dashboard email_preferences') do
       ContactRollupsRaw.extract_email_preferences
-      successful_extraction_count += 1
     end
 
-    @log_collector.time_and_continue('Extracts parent emails from dashboard.users') do
+    @log_collector.time!('Extracts parent emails from dashboard.users') do
       ContactRollupsRaw.extract_parent_emails
-      successful_extraction_count += 1
     end
 
-    # If all extractions fail, there is no reason to continue.
-    return unless successful_extraction_count
-    @log_collector.time_and_raise!('Processes all extracted data') do
+    @log_collector.time!('Processes all extracted data') do
       ContactRollupsProcessed.import_from_raw_table
     end
 
-    # Update the final table only if all the steps above have passed to avoid saving incomplete data.
-    if successful_extraction_count != number_of_extractions
-      @log_collector.info("Skips overwriting contact_rollups_final_table")
-      return
-    end
-
-    @log_collector.time_and_raise!("Overwrites contact_rollups_final table") do
+    @log_collector.time!("Overwrites contact_rollups_final table") do
       truncate_or_delete_table ContactRollupsFinal
       ContactRollupsFinal.insert_from_processed_table
     end
-  rescue StandardError => e
-    @log_collector.record_exception(e)
   end
 
   def sync_contacts_with_pardot
