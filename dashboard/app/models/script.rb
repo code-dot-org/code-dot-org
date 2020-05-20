@@ -1322,14 +1322,20 @@ class Script < ActiveRecord::Base
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
       stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      # temporarily include "stage" strings under both "stages" and "lessons"
+      # while we transition from the former term to the latter.
+      # TODO FND-1122
       metadata_i18n['stages'] = {}
+      metadata_i18n['lessons'] = {}
       unless stage_descriptions.nil?
         JSON.parse(stage_descriptions).each do |stage|
           stage_name = stage['name']
-          metadata_i18n['stages'][stage_name] = {
+          stage_data = {
             'description_student' => stage['descriptionStudent'],
             'description_teacher' => stage['descriptionTeacher']
           }
+          metadata_i18n['stages'][stage_name] = stage_data
+          metadata_i18n['lessons'][stage_name] = stage_data
         end
       end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
@@ -1491,13 +1497,19 @@ class Script < ActiveRecord::Base
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
+    # temporarily include "stage" strings under both "stages" and "lessons"
+    # while we transition from the former term to the latter.
+    # TODO FND-1122
     data['stages'] = {}
+    data['lessons'] = {}
     lessons.each do |stage|
-      data['stages'][stage.name] = {
+      stage_data = {
         'name' => stage.name,
         'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
         'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
       }
+      data['stages'][stage.name] = stage_data
+      data['lessons'][stage.name] = stage_data
     end
 
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
