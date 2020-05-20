@@ -499,19 +499,27 @@ class Blockly < Level
       function_name = function.at_xpath('./title[@name="NAME"]')
       next unless function_name
       localized_name = I18n.t(
-        function_name.content,
-        scope: [:data, :function_names, name],
+        "name",
+        scope: [:data, :function_definitions, name, function_name.content],
+        default: nil,
+        smart: true
+      )
+      function_description = function.at_xpath('./mutation/description')
+      localized_description = I18n.t(
+        "description",
+        scope: [:data, :function_definitions, name, function_name.content],
         default: nil,
         smart: true
       )
       function_name.content = localized_name if localized_name
+      function_description.content = localized_description if localized_description
     end
     block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
       mutation = function.at_xpath('./mutation')
       next unless mutation
       localized_name = I18n.t(
-        mutation.attr('name'),
-        scope: [:data, :function_names, name],
+        "name",
+        scope: [:data, :function_definitions, name, mutation.attr('name')],
         default: nil,
         smart: true
       )
