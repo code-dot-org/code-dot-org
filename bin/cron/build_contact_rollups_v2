@@ -9,7 +9,7 @@ def main
   log_collector = LogCollector.new "Build contact rollups V2"
 
   # Build new daily table of contact rollups
-  ContactRollupsV2.build_contact_rollups(log_collector)
+  ContactRollupsV2.build_contact_rollups(log_collector: log_collector)
   puts log_collector.to_s
 end
 
