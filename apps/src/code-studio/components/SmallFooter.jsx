@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getStore} from '@cdo/apps/redux';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -183,6 +184,16 @@ export default class SmallFooter extends React.Component {
         maxWidth: '50%',
         minWidth: this.state.baseWidth
       },
+      copyrightRtl: {
+        display:
+          this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
+        position: 'absolute',
+        bottom: 0,
+        right: 0,
+        width: 650,
+        maxWidth: '50%',
+        minWidth: this.state.baseWidth
+      },
       copyrightScrollArea: {
         overflowY: 'auto',
         maxHeight: this.props.phoneFooter ? 210 : undefined,
@@ -193,7 +204,8 @@ export default class SmallFooter extends React.Component {
       moreMenu: {
         display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
         bottom: this.state.baseHeight,
-        width: this.state.baseWidth
+        width: this.state.baseWidth,
+        right: 0
       },
       listItem: {
         height: this.props.rowHeight,
@@ -205,6 +217,7 @@ export default class SmallFooter extends React.Component {
       }
     };
 
+    const isRtl = getStore().getState().isRtl;
     const caretIcon =
       this.state.menuState === MenuState.EXPANDED
         ? 'fa fa-caret-down'
@@ -242,7 +255,10 @@ export default class SmallFooter extends React.Component {
             </a>
           </small>
         </div>
-        <div id="copyright-flyout" style={styles.copyright}>
+        <div
+          id="copyright-flyout"
+          style={isRtl ? styles.copyrightRtl : styles.copyright}
+        >
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
             <SafeMarkdown
               markdown={decodeURIComponent(
