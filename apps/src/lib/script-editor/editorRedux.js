@@ -231,12 +231,12 @@ function lessonGroups(state = [], action) {
         position: action.position,
         lessons: []
       });
+      updateGroupPositions(newState);
       break;
     }
     case ADD_LESSON: {
       const lessons = newState[action.group - 1].lessons;
       lessons.push({
-        id: state.newLessonId,
         name: action.lessonName,
         levels: []
       });
