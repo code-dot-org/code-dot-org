@@ -48,7 +48,6 @@ var DROPLET_BLOCK_I18N_PREFIX = 'dropletBlock_';
  * @constructor
  */
 var DropletFunctionTooltip = function(appMsg, definition) {
-  console.log(definition);
   this.appMsg = appMsg;
 
   /** @type {string} */
