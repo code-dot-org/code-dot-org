@@ -272,7 +272,7 @@ class ScriptDSL < BaseDSL
   def i18n_hash
     i18n_stage_strings = {}
     @lessons.each do |stage|
-      i18n_stage_strings[stage[:stage]] = {'name' => stage[:stage]}
+      i18n_stage_strings[stage[:lesson]] = {'name' => stage[:lesson]}
     end
 
     i18n_lesson_group_strings = {}
