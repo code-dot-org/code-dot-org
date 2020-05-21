@@ -1031,7 +1031,7 @@ class Script < ActiveRecord::Base
         level
       end
 
-      lesson_name = raw_script_level.delete(:stage)
+      lesson_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
       if new_suffix && properties[:variants]

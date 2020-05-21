@@ -245,7 +245,7 @@ class ScriptDSL < BaseDSL
       end
     else
       script_level = {
-        stage: @lesson,
+        lesson: @lesson,
         levels: [level]
       }
 
@@ -260,7 +260,7 @@ class ScriptDSL < BaseDSL
   end
 
   def variants
-    @current_scriptlevel = {levels: [], properties: {}, stage: @lesson}
+    @current_scriptlevel = {levels: [], properties: {}, lesson: @lesson}
   end
 
   def endvariants
