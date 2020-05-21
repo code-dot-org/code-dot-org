@@ -53,30 +53,6 @@ class P5LabView extends React.Component {
   }
 
   getLibraryManifest() {
-    /*if (this.props.spriteLab) {
-      //return new Promise(resolve => {
-      //  resolve(spriteCostumeLibrary);
-      //});
-      if (this.state && this.state.libraryManifest) {
-        return new Promise(resolve => {
-          resolve(this.state.libraryManifest);
-        });
-      } else {
-        return fetch('/api/v1/animation-library/manifest/spritelab').then(
-          response => {
-            console.log('got the manifest');
-            const response_json = response.json();
-            this.setState({libraryManifest: response_json});
-            return response_json;
-          }
-        );
-      }
-    } else {
-      return new Promise(resolve => {
-        resolve(animationLibrary);
-      });
-    }*/
-    console.log(this.state.libraryManifest);
     return this.state.libraryManifest;
   }
 

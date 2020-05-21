@@ -52,32 +52,8 @@ export default class AnimationPickerBody extends React.Component {
   state = {
     searchQuery: '',
     categoryQuery: '',
-    currentPage: 0,
-    libraryManifest: undefined
+    currentPage: 0
   };
-
-  componentDidMount() {
-    /*this.props.getLibraryManifest().then(response => {
-      const initialState = {
-        searchQuery: '',
-        categoryQuery: '',
-        currentPage: 0,
-        libraryManifest: response
-      };
-      const {results, pageCount} = searchAssets(
-        initialState.searchQuery,
-        initialState.categoryQuery,
-        initialState.libraryManifest,
-        initialState.currentPage,
-        MAX_SEARCH_RESULTS
-      );
-      this.setState({
-        ...initialState,
-        results,
-        pageCount
-      });
-    });*/
-  }
 
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
@@ -105,7 +81,6 @@ export default class AnimationPickerBody extends React.Component {
   handleScroll = event => {
     const scrollWindow = event.target;
     const {currentPage, results, pageCount} = this.state;
-    console.log(currentPage, pageCount, scrollWindow);
     const nextPage = currentPage + 1;
     if (
       scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
