@@ -1529,6 +1529,21 @@ class Census::StateCsOffering < ApplicationRecord
     end
   end
 
+  # Test seeding an object from S3 to find issues.
+  # This method does not check if the object had been seeded before
+  # and does not write to the database.
+  # @example: Census::StateCsOffering.seed_from_s3_test('AL', 2019, 1)
+  def self.seed_from_s3_test(state_code, school_year, update)
+    object_key = construct_object_key(state_code, school_year, update)
+    begin
+      AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+        seed_from_csv(state_code, school_year, update, filename, true)
+      end
+    rescue Aws::S3::Errors::NotFound
+      CDO.log.warn "State CS Offering seeding: Object #{object_key} not found in S3"
+    end
+  end
+
   def self.seed
     if CDO.stub_school_data
       STATES_USING_FORMAT_V2_IN_2017_18.each do |state_code|
