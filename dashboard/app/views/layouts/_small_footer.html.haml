@@ -3,14 +3,13 @@
 :ruby
   full_width = local_assigns[:full_width]
   channel = local_assigns[:channel]
-  menu_items = []
   reactProps = {
     i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
     privacyPolicyInBase: true,
     copyrightInBase: true,
     baseCopyrightString: I18n.t('footer.copyright'),
     baseMoreMenuString: I18n.t('footer.more'),
-    menuItems: menu_items,
+    menuItems: [],
     copyrightStrings: build_copyright_strings,
     # false because we're not rendering into a phone wireframe here
     phoneFooter: false,

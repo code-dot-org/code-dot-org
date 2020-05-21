@@ -508,6 +508,14 @@ $small-footer-standard-width: 400px;
 
     .more-link {
       margin: 0 $small-footer-horizontal-margin;
+      background-color: $dark-charcoal;
+      border: 0;
+      color: $light_gray;
+      font-size: 14px;
+      padding: 0;
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 

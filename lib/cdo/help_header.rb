@@ -97,8 +97,9 @@ class HelpHeader
     # https://developers.google.com/web/tools/lighthouse/audits/noopener
     entries.each do |entry|
       entry[:target] = "_blank"
-      # We don't need to protect against cross-site issues if we are staying
-      # on our own site.
+      # We don't need to protect against cross-site issues if we are staying on our own site. We should avoid adding
+      # these protections because we use them. For example, the report abuse page uses the referrer attribute to know
+      # which page the user probably wants to report.
       entry[:rel] = "noopener noreferrer nofollow" unless URI(entry[:url]).host.
                                                             blank?
     end
