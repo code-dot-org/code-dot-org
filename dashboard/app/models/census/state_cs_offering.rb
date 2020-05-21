@@ -640,19 +640,18 @@ class Census::StateCsOffering < ApplicationRecord
     2156
   ).freeze
 
-  OH_COURSE_CODES = [
-    UNSPECIFIED_COURSE,
-    '031700',
-    '145060',
-    '145070',
-    '290200',
-    '290310',
-    '145090',
-    '175004',
-    '290250',
-    '145065',
-    '321600'
-  ].freeze
+  OH_COURSE_CODES = %w(
+    031700
+    145060
+    145070
+    290200
+    290310
+    145090
+    175004
+    290250
+    145065
+    321600
+  ).freeze
 
   OK_COURSE_CODES = %w(
     2510
