@@ -206,7 +206,7 @@ class ScriptDSL < BaseDSL
     level = {
       name: name,
       lesson_group: @lesson_group,
-      stage_lockable: @lesson_lockable,
+      lesson_lockable: @lesson_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
