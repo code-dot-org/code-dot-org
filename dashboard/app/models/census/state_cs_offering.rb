@@ -1510,6 +1510,7 @@ class Census::StateCsOffering < ApplicationRecord
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
     # The first school year where we have data is 2015-2016
+    seeded_objects = []
     current_year = Date.today.year
     (2015..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
@@ -1518,14 +1519,18 @@ class Census::StateCsOffering < ApplicationRecord
           begin
             AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
               seed_from_csv(state_code, school_year, update, filename, dry_run)
+              seeded_objects << object_key
             end
           rescue Aws::S3::Errors::NotFound
             # We don't expect every school year to be there so skip anything that isn't found.
-            CDO.log.warn "State CS Offering seeding: object #{object_key} not found in S3 - skipping."
+            # Note: Don't print out this warning in a dry run to reduce noises.
+            CDO.log.warn "State CS Offering seeding: object #{object_key} not found in S3 - skipping." unless dry_run
           end
         end
       end
     end
+    CDO.log.info "Seeded data from #{seeded_objects.count} object(s)."
+    CDO.log.info seeded_objects.join("\n")
     CDO.log.info "This is a dry run. No data is written to the database." if dry_run
   end
 
