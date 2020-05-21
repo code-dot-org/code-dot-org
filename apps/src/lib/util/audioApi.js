@@ -156,7 +156,7 @@ export const commands = {
         }
         Sounds.getSingleton().playBytes(result.audioData, {
           volume: 1.0,
-          loop: !!false,
+          loop: false,
           forceHTML5: forceHTML5,
           allowHTML5Mobile: true
         });
@@ -179,7 +179,7 @@ export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
-  playSpeech: (text, gender, language = 'en-US') =>
+  playSpeech: (text, gender, language = 'English') =>
     executeCmd(null, 'playSpeech', {text, gender, language})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?
