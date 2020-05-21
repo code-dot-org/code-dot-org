@@ -38,10 +38,10 @@ const dropletConfig = {
     parent: executors,
     paramButtons: {minArgs: 2, maxArgs: 3},
     paletteParams: ['text', 'gender', 'language'],
-    params: ['"Hello World!"', '"female"', '"en-us"'],
+    params: ['"Hello World!"', '"female"', '"English"'],
     dropdown: {
       1: ['"female"', '"male"'],
-      2: ['"en-us"']
+      2: ['"English"']
     },
     nativeCallsBackInterpreter: true,
     assetTooltip: {0: chooseAsset.bind(null, 'audio')}
