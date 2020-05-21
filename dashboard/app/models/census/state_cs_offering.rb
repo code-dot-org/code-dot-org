@@ -1527,21 +1527,23 @@ class Census::StateCsOffering < ApplicationRecord
         end
       end
     end
+    CDO.log.info "This is a dry run. No data is written to the database." if dry_run
   end
 
   # Test seeding an object from S3 to find issues.
   # This method does not check if the object had been seeded before
   # and does not write to the database.
   # @example: Census::StateCsOffering.seed_from_s3_test('AL', 2019, 1)
-  def self.seed_from_s3_test(state_code, school_year, update)
+  def self.seed_from_s3_test(state_code, school_year, update = 1)
     object_key = construct_object_key(state_code, school_year, update)
     begin
       AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
         seed_from_csv(state_code, school_year, update, filename, true)
       end
     rescue Aws::S3::Errors::NotFound
-      CDO.log.warn "State CS Offering seeding: Object #{object_key} not found in S3"
+      CDO.log.warn "State CS Offering seeding: Object #{object_key} not found in S3."
     end
+    CDO.log.info "This is a dry run. No data is written to the database."
   end
 
   def self.seed
