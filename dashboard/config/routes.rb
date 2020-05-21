@@ -204,7 +204,7 @@ Dashboard::Application.routes.draw do
         # for building the app, in view only mode. Specifically, appending 'embed_app_and_code' to a project does the following:
         #
         # - set view options to remove headers/footers
-        # - set a view option 'iframeEmbedAppAndCode' to true, setting the cofnig.level.iframeEmbedAppAndCode variable to true on the client side
+        # - set a view option 'iframeEmbedAppAndCode' to true, setting the config.level.iframeEmbedAppAndCode variable to true on the client side
         #   This makes a number of changes to how StudioApp behaves, and some changes to how P5Lab.js behaves
         get "/#{key}/:channel_id/embed_app_and_code", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed_app_and_code", iframe_embed_app_and_code: true, readonly: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
