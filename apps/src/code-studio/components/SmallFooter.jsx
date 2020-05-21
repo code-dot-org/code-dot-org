@@ -248,10 +248,9 @@ export default class SmallFooter extends React.Component {
           <button
             className="copyright-link no-mc"
             type="button"
-            href="javascript:void(0)"
             onClick={this.clickBaseCopyright}
           >
-            ©
+            &copy;
           </button>
         </span>
       );
@@ -265,15 +264,16 @@ export default class SmallFooter extends React.Component {
         this.state.menuState === MenuState.EXPANDED
           ? 'fa fa-caret-down'
           : 'fa fa-caret-up';
+      // FND-1169: Copyright should be a <button>, not a <a>
       return (
-        <a
+        <button
+          type="button"
           className="more-link"
-          href="javascript:void(0)"
           onClick={this.clickBaseMenu}
         >
           {this.props.baseMoreMenuString + ' '}
           <i className={caretIcon} />
-        </a>
+        </button>
       );
     }
   }
