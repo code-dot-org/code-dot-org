@@ -1352,13 +1352,13 @@ body.iframe_embed_app_and_code {
   }
 
   html[dir=rtl] .flip-x-close & {
-    left: auto;
-    right: $cornerOffset;
+    right: auto;
+    left: $cornerOffset;
   }
 
   html[dir=rtl] .flip-x-close &:hover {
-    left: auto;
-    right: $cornerOffset - $movement;
+    right: auto;
+    left: $cornerOffset - $movement;
   }
 }
 
