@@ -23,7 +23,7 @@ module Pd::Foorm
       )
 
       expected_result = {
-        'Day 0': {
+        'Pre Workshop': {
           general: {
             response_count: 2,
             'surveys/pd/summer_workshop_pre_survey.0': {
@@ -91,7 +91,7 @@ module Pd::Foorm
         ws_submissions
       ).with_indifferent_access
 
-      facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       assert_not_empty facilitator_answers
       expected_matrix_data = {
         demonstrated_knowledge: {"7": 1, "1": 1},
@@ -148,7 +148,7 @@ module Pd::Foorm
         healthy_relationship: {"1": 3}
       }.with_indifferent_access
 
-      facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      facilitator_answers = summarized_answers['Post Workshop'.to_s][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       assert_not_empty facilitator_answers
 
       assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.id]

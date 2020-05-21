@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FlexGroup from './FlexGroup';
+import LessonGroup from './LessonGroup';
 import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import $ from 'jquery';
@@ -187,6 +187,22 @@ export default class ScriptEditor extends React.Component {
               By default students start in the summary view. When this box is
               checked, we instead stick everyone into detail view to start for
               this script.
+            </p>
+          </HelpTip>
+        </label>
+        <label>
+          Display project sharing column in Teacher Dashboard
+          <input
+            name="project_sharing"
+            type="checkbox"
+            defaultChecked={this.props.projectSharing}
+            style={styles.checkbox}
+          />
+          <HelpTip>
+            <p>
+              If checked, the "Sharing" column in the "Manage Students" tab of
+              Teacher Dashboard will be displayed by default for sections
+              assigned to this script.
             </p>
           </HelpTip>
         </label>
@@ -459,7 +475,7 @@ export default class ScriptEditor extends React.Component {
 
         <h2>Lessons and Levels</h2>
         {this.props.beta ? (
-          <FlexGroup />
+          <LessonGroup />
         ) : (
           <div>
             {betaWarning || (

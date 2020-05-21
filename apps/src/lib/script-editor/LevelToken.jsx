@@ -81,6 +81,7 @@ class LevelToken extends Component {
     removeLevel: PropTypes.func.isRequired,
     level: levelShape.isRequired,
     lessonPosition: PropTypes.number.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired,
     dragging: PropTypes.bool.isRequired,
     draggedLevelPos: PropTypes.bool.isRequired,
     delta: PropTypes.number,
@@ -93,6 +94,7 @@ class LevelToken extends Component {
 
   toggleExpand = () => {
     this.props.toggleExpand(
+      this.props.lessonGroupPosition,
       this.props.lessonPosition,
       this.props.level.position
     );
@@ -168,6 +170,7 @@ class LevelToken extends Component {
               <LevelTokenDetails
                 level={this.props.level}
                 lessonPosition={this.props.lessonPosition}
+                lessonGroupPosition={this.props.lessonGroupPosition}
               />
             )}
           </div>
@@ -182,8 +185,8 @@ export default connect(
     levelKeyList: state.levelKeyList
   }),
   dispatch => ({
-    toggleExpand(lesson, level) {
-      dispatch(toggleExpand(lesson, level));
+    toggleExpand(groupPosition, lessonPosition, levelPosition) {
+      dispatch(toggleExpand(groupPosition, lessonPosition, levelPosition));
     }
   })
 )(LevelToken);

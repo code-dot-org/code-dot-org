@@ -112,11 +112,10 @@ class ScriptsController < ApplicationController
       beta: beta,
       betaWarning: beta_warning,
       levelKeyList: beta && Level.key_list,
-      stageLevelData: @script_file,
+      lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
-      flex_category_map: I18n.t('flex_category'),
       is_levelbuilder: current_user.levelbuilder?
     }
   end
