@@ -6,6 +6,7 @@ import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {getStore} from '@cdo/apps/redux';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -163,6 +164,16 @@ export default class SmallFooter extends React.Component {
         maxWidth: '50%',
         minWidth: this.state.baseWidth
       },
+      copyrightRtl: {
+        display:
+          this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
+        position: 'absolute',
+        bottom: 0,
+        right: 0,
+        width: 650,
+        maxWidth: '50%',
+        minWidth: this.state.baseWidth
+      },
       copyrightScrollArea: {
         maxHeight: this.props.phoneFooter ? 210 : undefined,
         marginBottom: this.state.baseHeight - 1
@@ -192,7 +203,10 @@ export default class SmallFooter extends React.Component {
           {this.renderCopyright()}
           {this.renderMoreMenuButton()}
         </div>
-        <div id="copyright-flyout" style={styles.copyright}>
+        <div
+          id="copyright-flyout"
+          style={isRtl ? styles.copyrightRtl : styles.copyright}
+        >
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
             <h4>{this.props.baseCopyrightString}</h4>
             <SafeMarkdown
