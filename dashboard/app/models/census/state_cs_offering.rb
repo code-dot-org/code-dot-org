@@ -1537,7 +1537,11 @@ class Census::StateCsOffering < ApplicationRecord
   # Test seeding an object from S3 to find issues.
   # This method does not check if the object had been seeded before
   # and does not write to the database.
-  # @example: Census::StateCsOffering.seed_from_s3_test('AL', 2019, 1)
+  # @example:
+  #   Census::StateCsOffering.seed_from_s3_test('AL', 2019)
+  #     will seed from state_cs_offerings/AL/2019-2020.csv object
+  #   Census::StateCsOffering.seed_from_s3_test('WA', 2019, 'x')
+  #     will seed from state_cs_offerings/WA/2019-2020.x.csv object
   def self.seed_from_s3_test(state_code, school_year, update = 1)
     object_key = construct_object_key(state_code, school_year, update)
     begin
