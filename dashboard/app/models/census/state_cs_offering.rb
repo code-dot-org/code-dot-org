@@ -1454,8 +1454,10 @@ class Census::StateCsOffering < ApplicationRecord
     end
   end
 
-  def self.seed_from_csv(state_code, school_year, update, filename)
+  def self.seed_from_csv(state_code, school_year, update, filename, dry_run = false)
     ActiveRecord::Base.transaction do
+      succeeded = 0
+      skipped = 0
       CSV.foreach(filename, {headers: true}) do |row|
         row_hash = row.to_hash
         state_school_id = get_state_school_id(state_code, row_hash, school_year, update)
@@ -1463,19 +1465,28 @@ class Census::StateCsOffering < ApplicationRecord
         # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
         if school && state_school_id
-          courses.each do |course|
-            find_or_create_by!(
-              school: school,
-              course: course,
-              school_year: school_year,
-            )
+          unless dry_run
+            courses.each do |course|
+              find_or_create_by!(
+                school: school,
+                course: course,
+                school_year: school_year,
+              )
+            end
           end
+          succeeded += 1
         else
+          skipped += 1
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
-          CDO.log.warn "State CS Offering seeding: skipping unknown state school id #{state_school_id}"
+          CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1} "\
+            "unknown state school id #{state_school_id}"
         end
       end
+
+      object_key = construct_object_key(state_code, school_year, update)
+      CDO.log.info "State CS Offering seeding: done processing object #{object_key}, "\
+        "#{succeeded} rows succeeded, #{skipped} rows skipped"
     end
   end
 
@@ -1490,7 +1501,7 @@ class Census::StateCsOffering < ApplicationRecord
     "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.csv"
   end
 
-  def self.seed_from_s3
+  def self.seed_from_s3(dry_run = false)
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
     # The first school year where we have data is 2015-2016
@@ -1501,7 +1512,7 @@ class Census::StateCsOffering < ApplicationRecord
           object_key = construct_object_key(state_code, school_year, update)
           begin
             AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
-              seed_from_csv(state_code, school_year, update, filename)
+              seed_from_csv(state_code, school_year, update, filename, dry_run)
             end
           rescue Aws::S3::Errors::NotFound
             # We don't expect every school year to be there so skip anything that isn't found.
