@@ -26,6 +26,7 @@ class Census::StateCsOffering < ApplicationRecord
     AK
     AL
     AR
+    AZ
     CA
     CO
     CT
@@ -69,6 +70,7 @@ class Census::StateCsOffering < ApplicationRecord
     UT
     VA
     VT
+    WA
     WI
     WV
     WY
