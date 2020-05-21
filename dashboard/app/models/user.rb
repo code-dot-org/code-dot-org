@@ -1993,7 +1993,7 @@ class User < ActiveRecord::Base
     return true if teacher?
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.stage_extras
+      section.script_id == script.id && section.lesson_extras
     end
   end
 
@@ -2257,7 +2257,7 @@ class User < ActiveRecord::Base
   private
 
   def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   def hidden_script_ids(sections)
