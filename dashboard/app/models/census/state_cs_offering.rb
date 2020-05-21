@@ -76,7 +76,7 @@ class Census::StateCsOffering < ApplicationRecord
     WY
   ).freeze
 
-  SUPPORTED_UPDATES = [1, 2].freeze
+  SUPPORTED_UPDATES = [1, 2, 3].freeze
 
   # The following states use the "V2" format for CSV files in 2017-2018.
   # (The expectation is that all states will use the new format as of 2019-20.)
