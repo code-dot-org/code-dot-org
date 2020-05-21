@@ -10,7 +10,7 @@ require 'cdo/google/sheet'
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
 #
-def get_data
+def get_rows
   subjects = [
     Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP,
     Pd::SharedWorkshopConstants::SUBJECT_CSF_101,
@@ -34,7 +34,7 @@ end
 
 def main
   sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
-  sheet.export(tab_name: 'summer_workshops', data: get_data)
+  sheet.export(tab_name: 'summer_workshops', rows: get_rows)
 end
 
 main
