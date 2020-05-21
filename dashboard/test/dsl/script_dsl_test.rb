@@ -15,7 +15,6 @@ class ScriptDslTest < ActiveSupport::TestCase
     login_required: false,
     professional_learning_course: nil,
     hideable_lessons: false,
-    hideable_stages: false,
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
@@ -52,20 +51,20 @@ class ScriptDslTest < ActiveSupport::TestCase
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: 'Lesson1',
+            lesson: 'Lesson1',
             scriptlevels: [
-              {stage: 'Lesson1', levels: [{name: 'Level 1'}]},
-              {stage: 'Lesson1', levels: [{name: 'Level 2'}]},
-              {stage: 'Lesson1', levels: [{name: 'Level 3'}]}
+              {lesson: 'Lesson1', levels: [{name: 'Level 1'}]},
+              {lesson: 'Lesson1', levels: [{name: 'Level 2'}]},
+              {lesson: 'Lesson1', levels: [{name: 'Level 3'}]}
             ]
           },
           {
-            stage: 'Lesson2',
+            lesson: 'Lesson2',
             scriptlevels: [
-              {stage: 'Lesson2', levels: [{name: 'Level 4'}]},
-              {stage: 'Lesson2', levels: [{name: 'Level 5'}]}
+              {lesson: 'Lesson2', levels: [{name: 'Level 4'}]},
+              {lesson: 'Lesson2', levels: [{name: 'Level 5'}]}
             ]
           }
         ],
@@ -103,19 +102,19 @@ level 'Level 3'
 "
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
               {
-                stage: "Lesson1",
+                lesson: "Lesson1",
                 levels: [{name: "Level 2a"}, {name: "Level 2b"}],
                 properties: {
                   variants: {"Level 2b" => {active: false}}
                 }
               },
-              {stage: "Lesson1", levels: [{name: "Level 3"}]}
+              {lesson: "Lesson1", levels: [{name: "Level 3"}]}
             ]
           }
         ],
@@ -146,20 +145,20 @@ endvariants
 "
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
               {
-                stage: "Lesson1",
+                lesson: "Lesson1",
                 levels: [{name: "Level 2a"}, {name: "Level 2b"}],
                 properties: {
                   variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
                 }
               },
               {
-                stage: "Lesson1",
+                lesson: "Lesson1",
                 levels: [{name: "Level 3a"}, {name: "Level 3b"}],
                 properties: {
                   variants: {
@@ -169,7 +168,7 @@ endvariants
                 }
               },
               {
-                stage: "Lesson1",
+                lesson: "Lesson1",
                 levels: [{name: "Level 4a"}, {name: "Level 4b"}],
                 properties: {
                   variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
@@ -227,17 +226,17 @@ endvariants
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", stage_lockable: true}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1", lesson_lockable: true}]},
             ]
           },
           {
-            stage: "Lesson2",
+            lesson: "Lesson2",
             scriptlevels: [
-              {stage: "Lesson2", levels: [{name: "Level 2"}]},
+              {lesson: "Lesson2", levels: [{name: "Level 2"}]},
             ]
           }
         ],
@@ -378,13 +377,13 @@ endvariants
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
-              {stage: "Lesson1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
+              {lesson: "Lesson1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
             ]
           }
         ],
@@ -408,20 +407,20 @@ level 'Level 3'
 "
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
               {
-                stage: "Lesson1",
+                lesson: "Lesson1",
                 levels: [{name: "Level 2a"}, {name: "Level 2b"}],
                 properties: {
                   variants: {"Level 2b" => {active: false}},
                   progression: 'Foo'
                 }
               },
-              {stage: "Lesson1", levels: [{name: "Level 3"}]}
+              {lesson: "Lesson1", levels: [{name: "Level 3"}]}
             ]
           }
         ],
@@ -462,16 +461,16 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
-              {stage: "Lesson1", levels: [{name: "Level 3"}], properties: {challenge: true}},
-              {stage: "Lesson1", levels: [{name: "Level 4"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 3"}], properties: {challenge: true}},
+              {lesson: "Lesson1", levels: [{name: "Level 4"}]},
               {
-                stage: "Lesson1",
+                lesson: "Lesson1",
                 levels: [
                   {name: "Level 5"},
                   {name: "Level 5.1"},
@@ -502,13 +501,13 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             visible_after: '2020-04-01 08:00:00 -0700',
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
             ]
           }
         ],
@@ -529,13 +528,13 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             visible_after: '2020-04-01 10:00:00 -0700',
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
             ]
           }
         ],
@@ -577,12 +576,12 @@ level 'Level 3'
             display_name: "Overview"
           }
         ],
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1", lesson_group: "required"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2", lesson_group: "required"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1", lesson_group: "required"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 2", lesson_group: "required"}]},
             ]
           }
         ]
@@ -659,7 +658,7 @@ level 'Level 3'
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [],
+        lessons: [],
         lesson_groups: [],
         project_sharing: true
       }
@@ -685,7 +684,7 @@ level 'Level 3'
     input_dsl = "curriculum_umbrella 'CSF'"
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [],
+        lessons: [],
         lesson_groups: [],
         curriculum_umbrella: 'CSF'
       }
@@ -723,12 +722,12 @@ level 'Level 3'
         family_name: "family name",
         version_year: "3035",
         is_stable: true,
-        stages: [
+        lessons: [
           {
-            stage: "Lesson1",
+            lesson: "Lesson1",
             scriptlevels: [
-              {stage: "Lesson1", levels: [{name: "Level 1"}]},
-              {stage: "Lesson1", levels: [{name: "Level 2"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 1"}]},
+              {lesson: "Lesson1", levels: [{name: "Level 2"}]},
             ]
           }
         ],
@@ -789,10 +788,10 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "stage 1",
-            scriptlevels: [{stage: "stage 1", levels: [{name: "maze 1", named_level: true}]},]
+            lesson: "stage 1",
+            scriptlevels: [{lesson: "stage 1", levels: [{name: "maze 1", named_level: true}]},]
           }
         ],
         lesson_groups: []
@@ -832,10 +831,10 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "stage 1",
-            scriptlevels: [{stage: "stage 1", levels: [{name: "maze 1", assessment: true}]},]
+            lesson: "stage 1",
+            scriptlevels: [{lesson: "stage 1", levels: [{name: "maze 1", assessment: true}]},]
           }
         ],
         lesson_groups: []
@@ -857,12 +856,12 @@ level 'Level 3'
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Bob's stage",
+            lesson: "Bob's stage",
             scriptlevels: [
-              {stage: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
-              {stage: "Bob's stage", levels: [{name: 'Level 2'}]},
+              {lesson: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
+              {lesson: "Bob's stage", levels: [{name: 'Level 2'}]},
             ]
           }
         ],
