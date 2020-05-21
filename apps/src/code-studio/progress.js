@@ -95,7 +95,7 @@ progress.renderStageProgress = function(
     store,
     {
       name,
-      stages: [stageData],
+      lessons: [stageData],
       disablePostMilestone,
       age_13_required,
       id: stageData.script_id
