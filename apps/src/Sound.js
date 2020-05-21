@@ -23,6 +23,7 @@ function isIE9() {
  * @property {string} mp3
  * @property {string} ogg
  * @property {string} wav
+ * @property {bytes} bytes
  * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
@@ -339,22 +340,55 @@ Sound.prototype.getPlayableFile = function() {
   return false;
 };
 
+Sound.prototype.getPlayableBytes = function() {
+  try {
+    if (!window.Audio) {
+      return false;
+    }
+
+    var audioTest = new window.Audio();
+    if (
+      this.config.hasOwnProperty('bytes') &&
+      audioTest.canPlayType('audio/wav')
+    ) {
+      return this.config.bytes;
+    }
+  } catch (e) {}
+
+  return false;
+};
+
 Sound.prototype.preload = function() {
   var file = this.getPlayableFile();
-  if (!file) {
+  var bytes = this.getPlayableBytes();
+  if (!file && !bytes) {
     return;
   }
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    this.preloadViaWebAudio(file, function(buffer) {
-      self.reusableBuffer = buffer;
-    });
+    if (file) {
+      this.preloadViaWebAudio(file, function(buffer) {
+        self.reusableBuffer = buffer;
+      });
+    } else {
+      self.audioContext.decodeAudioData(bytes, function(buffer) {
+        self.reusableBuffer = buffer;
+        self.onSoundLoaded();
+      });
+    }
     return;
   }
 
   if (window.Audio) {
     var audioElement = new window.Audio(file);
+    if (file) {
+      audioElement = new window.Audio(file);
+    } else {
+      const blob = new Blob([bytes], {type: 'audio/wav'});
+      const url = window.URL.createObjectURL(blob);
+      audioElement = new window.Audio(url);
+    }
     if (!audioElement || !audioElement.play) {
       return;
     }

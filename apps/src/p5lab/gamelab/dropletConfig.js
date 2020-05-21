@@ -55,6 +55,7 @@ module.exports.blocks = [
   //  {func: 'height', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   {...audioApiDropletConfig.playSound, category: 'World'},
   {...audioApiDropletConfig.stopSound, category: 'World'},
+  {...audioApiDropletConfig.playSpeech, category: 'World'},
   {
     func: 'keyIsPressed',
     category: 'World',
