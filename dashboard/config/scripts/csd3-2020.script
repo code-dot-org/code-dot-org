@@ -6,8 +6,6 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
-project_widget_visible true
-project_widget_types ["gamelab", "weblab"]
 family_name 'csd3'
 version_year '2020'
 project_sharing true
@@ -324,7 +322,6 @@ level 'CSD U3 game sprite movement_2020', progression: 'Project - Sprites and In
 level 'CSD U3 game user controls_2020', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions_2020', progression: 'Project - Sprites and Interactions'
 level 'CSD games project review', progression: 'Review Your Game'
-level 'CSD games project challenge choice', progression: 'Challenges'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2020', progression: 'Reflection', assessment: true
 
 stage 'Post-Project Test', lockable: true
