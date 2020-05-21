@@ -89,6 +89,7 @@ class Census::StateCsOffering < ApplicationRecord
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     AK
     AR
+    CA
     CO
     CT
     FL
@@ -107,6 +108,7 @@ class Census::StateCsOffering < ApplicationRecord
     MT
     ND
     NE
+    NJ
     NM
     NY
     OH
@@ -117,10 +119,11 @@ class Census::StateCsOffering < ApplicationRecord
     SD
     TX
     UT
+    VA
+    WA
     WI
     WV
     WY
-    VA
   ).freeze
 
   # For a few states, we already placed a 2017-2018 CSV on S3 using their V1 format,
