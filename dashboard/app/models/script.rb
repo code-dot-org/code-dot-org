@@ -993,7 +993,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         lesson_group_key = raw_level.delete(:lesson_group)
-        lockable = !!raw_level.delete(:stage_lockable)
+        lockable = !!raw_level.delete(:lesson_lockable)
 
         key = raw_level.delete(:name)
 
