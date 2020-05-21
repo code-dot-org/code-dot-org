@@ -106,6 +106,32 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal student.id, summary[:user_id]
   end
 
+  test 'teacher panel summarize with progress on this level in another script' do
+    sl = create(:script_level)
+    student = create :student
+    create(:user_level, user: student, level: sl.level)
+
+    sl_other = create(:script_level, levels: sl.levels)
+    ul_other = create(:user_level, user: student, level: sl.level)
+    ul_other.update(script: sl.script)
+
+    User.track_level_progress(
+      user_id: student.id,
+      level_id: sl_other.level.id,
+      script_id: sl_other.script.id,
+      new_result: ActivityConstants::BEST_PASS_RESULT,
+      submitted: true,
+      level_source_id: nil
+    )
+
+    summary = sl.summarize_for_teacher_panel(student)
+    assert_equal sl.assessment, summary[:assessment]
+    assert_equal sl.position, summary[:levelNumber]
+    assert_equal LEVEL_STATUS.not_tried, summary[:status]
+    assert_equal false, summary[:passed]
+    assert_equal student.id, summary[:user_id]
+  end
+
   test 'teacher panel summarize for BubbleChoice level' do
     student = create :student
     sublevel1 = create :level, name: 'choice_1'
