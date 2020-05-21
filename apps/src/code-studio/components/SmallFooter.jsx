@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
-import cookies from 'js-cookie';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -271,7 +271,7 @@ export default class SmallFooter extends React.Component {
           className="more-link"
           onClick={this.clickBaseMenu}
         >
-          {this.props.baseMoreMenuString + ' '}
+          {this.props.baseMoreMenuString}&nbsp;
           <i className={caretIcon} />
         </button>
       );
@@ -279,11 +279,9 @@ export default class SmallFooter extends React.Component {
   }
 
   renderMoreMenu(styles) {
-    const userAlreadyReportedAbuse =
-      cookies.get('reported_abuse') &&
-      _.includes(JSON.parse(cookies.get('reported_abuse')), this.props.channel);
-
-    if (userAlreadyReportedAbuse) {
+    const channelId = this.props.channel;
+    const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+    if (alreadyReportedAbuse) {
       _.remove(this.props.menuItems, function(menuItem) {
         return menuItem.key === 'report-abuse';
       });

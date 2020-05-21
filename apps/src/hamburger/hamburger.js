@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
-import cookies from 'js-cookie';
-import _ from 'lodash';
-import {getChannelIdFromUrl} from '@cdo/apps/code-studio/components/ReportAbuseForm';
+import {
+  getChannelIdFromUrl,
+  userAlreadyReportedAbuse
+} from '@cdo/apps/reportAbuse';
 
 export const initHamburger = function() {
   $(function() {
@@ -72,11 +73,9 @@ export const initHamburger = function() {
       });
     });
 
-    let channelId = getChannelIdFromUrl(location.href);
-    const userAlreadyReportedAbuse =
-      cookies.get('reported_abuse') &&
-      _.includes(JSON.parse(cookies.get('reported_abuse')), channelId);
-    if (userAlreadyReportedAbuse) {
+    const channelId = getChannelIdFromUrl(location.href);
+    const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+    if (alreadyReportedAbuse) {
       let reportAbuseButton = $('#report-abuse');
       if (reportAbuseButton) {
         reportAbuseButton.hide();

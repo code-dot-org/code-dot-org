@@ -5,7 +5,6 @@
  *
  */
 import $ from 'jquery';
-import cookies from 'js-cookie';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -79,6 +78,7 @@ import {
   expoCancelApkBuild
 } from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 
 /**
  * Create a namespace for the application.
@@ -213,14 +213,9 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
     }
   ].filter(item => item);
 
-  var userAlreadyReportedAbuse =
-    cookies.get('reported_abuse') &&
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    );
-
-  if (userAlreadyReportedAbuse) {
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'report-abuse';
     });
