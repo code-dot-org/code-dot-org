@@ -352,21 +352,21 @@ class ScriptDSL < BaseDSL
         s << t
       end
       lesson_group.lessons.each do |lesson|
-        s << serialize_stage(lesson)
+        s << serialize_lesson(lesson)
       end
     end
     s << ''
     s.join("\n")
   end
 
-  def self.serialize_stage(stage)
+  def self.serialize_lesson(lesson)
     s = []
 
-    t = "lesson '#{escape(stage.name)}'"
-    t += ', lockable: true' if stage.lockable
-    t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
+    t = "lesson '#{escape(lesson.name)}'"
+    t += ', lockable: true' if lesson.lockable
+    t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t
-    stage.script_levels.each do |sl|
+    lesson.script_levels.each do |sl|
       type = 'level'
       type = 'bonus' if sl.bonus
 
