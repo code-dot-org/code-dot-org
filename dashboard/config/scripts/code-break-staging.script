@@ -107,7 +107,7 @@ level 'Episode 9 Share', progression: 'Share Your Work!'
 
 stage 'AI with Kat Graham & Cody Simpson'
 level 'CodeBreak Episode 10 Placeholder', progression: 'Code Break: Episode 10'
-level 'Episode 9 Instructions', progression: 'Practice'
+level 'Episode 10 Instructions', progression: 'Practice'
 level 'CourseF_Oceans_Video_Machine_Learning', progression: 'Practice'
 level 'CourseF_Oceans_FishVTrash', progression: 'Practice'
 level 'CourseF_Oceans_CreaturesVTrashDemo', progression: 'Practice'
