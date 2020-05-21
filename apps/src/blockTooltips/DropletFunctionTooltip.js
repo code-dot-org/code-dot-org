@@ -48,6 +48,7 @@ var DROPLET_BLOCK_I18N_PREFIX = 'dropletBlock_';
  * @constructor
  */
 var DropletFunctionTooltip = function(appMsg, definition) {
+  console.log(definition);
   this.appMsg = appMsg;
 
   /** @type {string} */
@@ -64,12 +65,12 @@ var DropletFunctionTooltip = function(appMsg, definition) {
   this.customDocURL = definition.customDocURL;
 
   var localizedDescription = this.getLocalization(this.descriptionKey());
+  this.showExamplesLink = true;
   if (definition.comment) {
     this.description = definition.comment;
     this.showCodeLink = true;
     this.showExamplesLink = false;
   } else if (localizedDescription) {
-    this.showExamplesLink = true;
     this.description = localizedDescription();
   }
 
