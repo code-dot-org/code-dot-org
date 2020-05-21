@@ -326,12 +326,12 @@ class ScriptTest < ActiveSupport::TestCase
     Script.add_script(
       {name: 'test script', hidden: true},
       [],
-      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
       [],
-      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
@@ -339,12 +339,12 @@ class ScriptTest < ActiveSupport::TestCase
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
       [],
-      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
       [],
-      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [{lesson: "Lesson1", scriptlevels: [{lesson: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
