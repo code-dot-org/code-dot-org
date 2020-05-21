@@ -381,7 +381,7 @@ Sound.prototype.preload = function() {
   }
 
   if (window.Audio) {
-    var audioElement = new window.Audio(file);
+    let audioElement;
     if (file) {
       audioElement = new window.Audio(file);
     } else {
