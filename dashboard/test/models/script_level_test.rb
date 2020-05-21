@@ -582,7 +582,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create :script_level, script: script, lesson: stage
     section = create :section
 
-    create :section_hidden_stage, lesson: stage, section: section
+    create :section_hidden_lesson, lesson: stage, section: section
 
     assert_equal true, script_level.hidden_for_section?(section.id)
   end
