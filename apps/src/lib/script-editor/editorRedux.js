@@ -196,10 +196,10 @@ function updateGroupPositions(lessonGroups) {
   }
 }
 
-function updateLessonPositions(lessonsGroups) {
+function updateLessonPositions(lessonGroups) {
   let relativePosition = 1;
   let absolutePosition = 1;
-  lessonsGroups.forEach(lessonGroup => {
+  lessonGroups.forEach(lessonGroup => {
     lessonGroup.lessons.forEach(lesson => {
       lesson.position = absolutePosition;
       if (lesson.lockable) {
