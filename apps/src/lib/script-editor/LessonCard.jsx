@@ -10,9 +10,9 @@ import {
   moveLevelToLesson,
   addLevel,
   setLessonLockable,
-  setFlexCategory
+  setLessonGroup
 } from './editorRedux';
-import FlexCategorySelector from './FlexCategorySelector';
+import LessonGroupSelector from './LessonGroupSelector';
 import color from '../../util/color';
 import RemoveLevelDialog from './RemoveLevelDialog';
 
@@ -65,8 +65,9 @@ export class UnconnectedLessonCard extends Component {
     setLessonLockable: PropTypes.func.isRequired,
     lessonsCount: PropTypes.number.isRequired,
     lesson: PropTypes.object.isRequired,
+    lessonGroupPosition: PropTypes.number.isRequired,
     lessonMetrics: PropTypes.object.isRequired,
-    setFlexCategory: PropTypes.func.isRequired,
+    setLessonGroup: PropTypes.func.isRequired,
     setTargetLesson: PropTypes.func.isRequired,
     targetLessonPos: PropTypes.number
   };
@@ -83,7 +84,7 @@ export class UnconnectedLessonCard extends Component {
     initialClientY: null,
     newPosition: null,
     startingPositions: null,
-    editingFlexCategory: false,
+    editingLessonGroup: false,
     levelPosToRemove: null
   };
 
@@ -151,11 +152,12 @@ export class UnconnectedLessonCard extends Component {
   };
 
   handleDragStop = () => {
-    const {lesson, targetLessonPos} = this.props;
+    const {lesson, lessonGroupPosition, targetLessonPos} = this.props;
     if (targetLessonPos === lesson.position) {
       // When dragging within a lesson, reorder the level within that lesson.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
+          lessonGroupPosition,
           lesson.position,
           this.state.draggedLevelPos,
           this.state.newPosition
@@ -164,6 +166,7 @@ export class UnconnectedLessonCard extends Component {
     } else if (targetLessonPos) {
       // When dragging between lessons, move it to the end of the new lesson.
       this.props.moveLevelToLesson(
+        lessonGroupPosition,
         lesson.position,
         this.state.draggedLevelPos,
         targetLessonPos
@@ -182,7 +185,10 @@ export class UnconnectedLessonCard extends Component {
   };
 
   handleAddLevel = () => {
-    this.props.addLevel(this.props.lesson.position);
+    this.props.addLevel(
+      this.props.lessonGroupPosition,
+      this.props.lesson.position
+    );
   };
 
   handleRemoveLevel = levelPos => {
@@ -193,25 +199,30 @@ export class UnconnectedLessonCard extends Component {
     this.setState({levelPosToRemove: null});
   };
 
-  handleEditFlexCategory = () => {
+  handleEditLessonGroup = () => {
     this.setState({
-      editingFlexCategory: true
+      editingLessonGroup: true
     });
   };
 
-  handleSetFlexCategory = newFlexCategory => {
-    this.setState({editingFlexCategory: false});
-    if (this.props.lesson.flex_category !== newFlexCategory) {
-      this.props.setFlexCategory(this.props.lesson.position, newFlexCategory);
+  handleSetLessonGroup = newLessonGroupPosition => {
+    this.setState({editingLessonGroup: false});
+    if (this.props.lessonGroupPosition !== newLessonGroupPosition + 1) {
+      this.props.setLessonGroup(
+        this.props.lesson.position,
+        this.props.lessonGroupPosition,
+        newLessonGroupPosition + 1
+      );
     }
   };
 
-  hideFlexCategorySelector = () => {
-    this.setState({editingFlexCategory: false});
+  hideLessonGroupSelector = () => {
+    this.setState({editingLessonGroup: false});
   };
 
   toggleLockable = () => {
     this.props.setLessonLockable(
+      this.props.lessonGroupPosition,
       this.props.lesson.position,
       !this.props.lesson.lockable
     );
@@ -222,7 +233,7 @@ export class UnconnectedLessonCard extends Component {
   }
 
   render() {
-    const {lesson, targetLessonPos} = this.props;
+    const {lesson, targetLessonPos, lessonGroupPosition} = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetLesson = targetLessonPos === lesson.position;
     return (
@@ -235,6 +246,7 @@ export class UnconnectedLessonCard extends Component {
           <OrderControls
             type={ControlTypes.Lesson}
             position={lesson.position}
+            parentPosition={lessonGroupPosition}
             total={this.props.lessonsCount}
             name={this.props.lesson.name}
           />
@@ -262,6 +274,7 @@ export class UnconnectedLessonCard extends Component {
             key={level.position + '_' + level.ids[0]}
             level={level}
             lessonPosition={lesson.position}
+            lessonGroupPosition={lessonGroupPosition}
             dragging={!!draggedLevelPos}
             draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
@@ -270,7 +283,7 @@ export class UnconnectedLessonCard extends Component {
           />
         ))}
         <div style={styles.bottomControls}>
-          {!this.state.editingFlexCategory && (
+          {!this.state.editingLessonGroup && (
             <span>
               <button
                 onMouseDown={this.handleAddLevel}
@@ -282,22 +295,22 @@ export class UnconnectedLessonCard extends Component {
                 Add Level
               </button>
               <button
-                onMouseDown={this.handleEditFlexCategory}
+                onMouseDown={this.handleEditLessonGroup}
                 className="btn"
                 style={styles.addLevel}
                 type="button"
               >
                 <i style={{marginRight: 7}} className="fa fa-pencil" />
-                Edit Flex Category
+                Edit Lesson Group
               </button>
             </span>
           )}
-          {this.state.editingFlexCategory && (
-            <FlexCategorySelector
-              labelText="Flex Category"
+          {this.state.editingLessonGroup && (
+            <LessonGroupSelector
+              labelText="Lesson Group"
               confirmButtonText="Save"
-              onConfirm={this.handleSetFlexCategory}
-              onCancel={this.hideFlexCategorySelector}
+              onConfirm={this.handleSetLessonGroup}
+              onCancel={this.hideLessonGroupSelector}
             />
           )}
         </div>
@@ -305,6 +318,7 @@ export class UnconnectedLessonCard extends Component {
            interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLevelDialog
           lesson={lesson}
+          lessonGroupPosition={lessonGroupPosition}
           levelPosToRemove={levelPosToRemove}
           handleClose={this.handleClose}
         />
@@ -320,6 +334,6 @@ export default connect(
     moveLevelToLesson,
     addLevel,
     setLessonLockable,
-    setFlexCategory
+    setLessonGroup
   }
 )(UnconnectedLessonCard);
