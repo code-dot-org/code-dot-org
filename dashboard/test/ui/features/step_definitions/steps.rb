@@ -345,7 +345,7 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
 end
 
 When /^I (?:open|close) the small footer menu$/ do
-  menu_selector = 'div.small-footer-base a.more-link'
+  menu_selector = 'div.small-footer-base button.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible
     And I click selector "#{menu_selector}"
