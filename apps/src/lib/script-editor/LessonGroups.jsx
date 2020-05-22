@@ -46,7 +46,7 @@ const styles = {
 // Replace ' with \'
 const escape = str => str.replace(/'/, "\\'");
 
-class LessonGroup extends Component {
+class LessonGroups extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
@@ -271,4 +271,4 @@ export default connect(
       dispatch(addLesson(position, lessonName));
     }
   })
-)(LessonGroup);
+)(LessonGroups);
