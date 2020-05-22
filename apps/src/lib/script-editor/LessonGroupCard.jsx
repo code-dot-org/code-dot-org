@@ -6,7 +6,12 @@ import color from '../../util/color';
 import {borderRadius} from './constants';
 import OrderControls from './OrderControls';
 import LessonCard from './LessonCard';
-import {addLesson, removeGroup, moveGroup} from './editorRedux';
+import {
+  addLesson,
+  removeGroup,
+  moveGroup,
+  convertGroupToUserFacing
+} from './editorRedux';
 
 const styles = {
   groupHeader: {
@@ -46,13 +51,28 @@ class LessonGroupCard extends Component {
     //redux
     addLesson: PropTypes.func.isRequired,
     moveGroup: PropTypes.func.isRequired,
-    removeGroup: PropTypes.func.isRequired
+    removeGroup: PropTypes.func.isRequired,
+    convertGroupToUserFacing: PropTypes.func.isRequired
   };
 
   handleAddLesson = lessonGroupPosition => {
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
       this.props.addLesson(lessonGroupPosition, newLessonName);
+    }
+  };
+
+  handleMakeUserFacing = lessonGroupPosition => {
+    const newLessonGroupKey = prompt('Enter new lesson group key');
+    const newLessonGroupDisplayName = prompt(
+      'Enter new lesson group display name'
+    );
+    if (newLessonGroupKey && newLessonGroupDisplayName) {
+      this.props.convertGroupToUserFacing(
+        lessonGroupPosition,
+        newLessonGroupKey,
+        newLessonGroupDisplayName
+      );
     }
   };
 
@@ -76,8 +96,9 @@ class LessonGroupCard extends Component {
     return (
       <div>
         <div style={styles.groupHeader}>
-          Lesson Group: {lessonGroup.key || '(none)'}: "
-          {lessonGroup.display_name || 'Content'}"
+          {lessonGroup.user_facing
+            ? `Lesson Group: ${lessonGroup.key}: "${lessonGroup.display_name}"`
+            : 'Lesson Group: Not User Facing (No Display Name)'}
           <OrderControls
             name={lessonGroup.key || '(none)'}
             move={this.handleMoveLessonGroup}
@@ -89,6 +110,7 @@ class LessonGroupCard extends Component {
             return (
               <LessonCard
                 key={`lesson-${index}`}
+                lessonGroupCount={this.props.lessonGroupCount}
                 lessonsCount={lessonGroup.lessons.length}
                 lesson={lesson}
                 lessonGroupPosition={lessonGroup.position}
@@ -115,6 +137,20 @@ class LessonGroupCard extends Component {
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
             Add Lesson
           </button>
+          {!this.props.lessonGroup.user_facing && (
+            <button
+              onMouseDown={this.handleMakeUserFacing.bind(
+                null,
+                lessonGroup.position
+              )}
+              className="btn"
+              style={styles.addLesson}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Set Display Name
+            </button>
+          )}
         </div>
       </div>
     );
@@ -134,6 +170,9 @@ export default connect(
     },
     moveGroup(position, direction) {
       dispatch(moveGroup(position, direction));
+    },
+    convertGroupToUserFacing(position, key, displayName) {
+      dispatch(convertGroupToUserFacing(position, key, displayName));
     }
   })
 )(LessonGroupCard);
