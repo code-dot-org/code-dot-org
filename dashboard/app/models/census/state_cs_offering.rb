@@ -1489,24 +1489,25 @@ class Census::StateCsOffering < ApplicationRecord
         end
       end
 
-      object_key = construct_object_key(state_code, school_year, update)
-      CDO.log.info "State CS Offering seeding: done processing object #{object_key}, "\
-        "#{succeeded} rows succeeded, #{skipped} rows skipped"
+      CDO.log.info "State CS Offering seeding: done processing "\
+        "#{state_code}-#{school_year}-#{update} data. "\
+        "#{succeeded} rows succeeded, #{skipped} rows skipped."
     end
   end
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
   # Construct a path to the CSV.
-  # @param {string} state_code - Something like "CA".
-  # @param {number} school_year - Something like 2018.
-  # @param {number} update - Something like 2.
-  def self.construct_object_key(state_code, school_year, update = 1)
+  # @param [string] state_code - Something like "CA".
+  # @param [number] school_year - Something like 2018.
+  # @param [number] update - Something like 2.
+  # @param [string] file_extension
+  def self.construct_object_key(state_code, school_year, update = 1, file_extension = 'csv')
     update_string = update == 1 ? "" : ".#{update}"
-    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.csv"
+    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.#{file_extension}"
   end
 
-  def self.seed_from_s3(dry_run = false)
+  def self.seed_from_s3(dry_run: false, file_extension: 'csv')
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
     # The first school year where we have data is 2015-2016
@@ -1515,7 +1516,7 @@ class Census::StateCsOffering < ApplicationRecord
     (2015..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
         SUPPORTED_UPDATES.each do |update|
-          object_key = construct_object_key(state_code, school_year, update)
+          object_key = construct_object_key(state_code, school_year, update, file_extension)
           begin
             AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key, dry_run) do |filename|
               seed_from_csv(state_code, school_year, update, filename, dry_run)
