@@ -88,6 +88,16 @@ class Census::ApCsOffering < ApplicationRecord
     end
   end
 
+  # Test seeding an object from S3 to find issues.
+  # This method does not check if the object had been seeded before
+  # and does not write to the database.
+  #
+  # @example:
+  #   Census::ApCsOffering.dry_seed_s3_object('CSP', 2017)
+  #   will seed from ap_cs_offerings/CSP-2017-2028.csv object.
+  #
+  #   Census::StateCsOffering.dry_seed_s3_object('CSA', 2019, 'txt')
+  #   will seed from ap_cs_offerings/CSA-2019-2020.txt object.
   def self.dry_seed_s3_object(course, school_year, file_extension = 'csv')
     object_key = construct_object_key(course, school_year, file_extension)
     AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
