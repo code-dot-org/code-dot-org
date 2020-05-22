@@ -33,6 +33,7 @@ describe('LessonCard', () => {
       moveLesson,
       removeLesson,
       lessonsCount: 1,
+      lessonGroupsCount: 1,
       lesson: {
         name: 'Lesson 1',
         levels: [],

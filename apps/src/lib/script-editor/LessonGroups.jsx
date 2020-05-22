@@ -167,7 +167,7 @@ class LessonGroups extends Component {
           <LessonGroupCard
             key={lessonGroup.key}
             lessonGroup={lessonGroup}
-            lessonGroupCount={lessonGroups.length}
+            lessonGroupsCount={lessonGroups.length}
             setLessonMetrics={this.setLessonMetrics}
             setTargetLesson={this.setTargetLesson}
             targetLessonPos={this.state.targetLessonPos}

@@ -74,7 +74,7 @@ export class UnconnectedLessonCard extends Component {
     targetLessonPos: PropTypes.number,
     moveLesson: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
-    lessonGroupCount: PropTypes.number.isRequired
+    lessonGroupsCount: PropTypes.number.isRequired
   };
 
   /**
@@ -318,7 +318,7 @@ export class UnconnectedLessonCard extends Component {
                 <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                 Add Level
               </button>
-              {this.props.lessonGroupCount > 1 && (
+              {this.props.lessonGroupsCount > 1 && (
                 <button
                   onMouseDown={this.handleEditLessonGroup}
                   className="btn"

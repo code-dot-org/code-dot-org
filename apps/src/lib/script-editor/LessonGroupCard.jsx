@@ -42,7 +42,7 @@ const styles = {
 class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: PropTypes.object.isRequired,
-    lessonGroupCount: PropTypes.number.isRequired,
+    lessonGroupsCount: PropTypes.number.isRequired,
     setLessonMetrics: PropTypes.func.isRequired,
     setTargetLesson: PropTypes.func.isRequired,
     targetLessonPos: PropTypes.number,
@@ -79,7 +79,7 @@ class LessonGroupCard extends Component {
   handleMoveLessonGroup = direction => {
     if (
       (this.props.lessonGroup.position !== 1 && direction === 'up') ||
-      (this.props.lessonGroup.position !== this.props.lessonGroupCount &&
+      (this.props.lessonGroup.position !== this.props.lessonGroupsCount &&
         direction === 'down')
     ) {
       this.props.moveGroup(this.props.lessonGroup.position, direction);
@@ -110,7 +110,7 @@ class LessonGroupCard extends Component {
             return (
               <LessonCard
                 key={`lesson-${index}`}
-                lessonGroupCount={this.props.lessonGroupCount}
+                lessonGroupsCount={this.props.lessonGroupsCount}
                 lessonsCount={lessonGroup.lessons.length}
                 lesson={lesson}
                 lessonGroupPosition={lessonGroup.position}
