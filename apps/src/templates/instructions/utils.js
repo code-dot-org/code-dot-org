@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import Blockly from '@code-dot-org/blockly';
 import $ from 'jquery';
+import {getStore} from '@cdo/apps/redux';
 
 /**
  * @param {ReactComponent} component
@@ -64,6 +65,15 @@ export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
   container.style.height = height + 'px';
   container.style.width = width + 'px';
   blockSpace.blockSpaceEditor.svgResize();
+
+  // Instruction Markup is not rendering blocks correctly in RTL views
+  const isRtl = getStore().getState().isRtl;
+  if (isRtl && container.closest('.instructions-markdown')) {
+    const undraggables = container.querySelectorAll('.blocklyUndraggable');
+    for (const undraggable of undraggables) {
+      undraggable.setAttribute('transform', 'translate(' + width + ', 0)');
+    }
+  }
 }
 
 /**

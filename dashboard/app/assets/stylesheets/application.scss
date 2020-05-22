@@ -3412,3 +3412,25 @@ h2.danger {
     display: none;
   }
 }
+
+// Hack-fix for instructions markup
+.csf-top-instructions {
+  html[dir=rtl] & {
+    & > div {
+      & > div {
+        padding: 5px 10px 5px 76px !important;
+
+        .instructions-markdown {
+          p {
+            display: flex !important;
+            flex-wrap: wrap !important;
+
+            xml {
+              padding: 0 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
