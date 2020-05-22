@@ -250,7 +250,7 @@
      "rows": 3
     }
     ],
-     "visibleIff": "{is_virtual} = 'false'"
+     "visibleIf": "{is_virtual} = 'false'"
     },    
     {
      "type": "panel",
@@ -284,12 +284,8 @@
               "text": "The virtual meeting tool(s) met my learning needs."
             },
             {
-              "value": "I_experienced_Internet_co",
-              "text": "I experienced Internet connection issues that impacted my ability to participate and engage fully."
-            },
-            {
-              "value": "Others_experienced_Intern",
-              "text": "Others experienced Internet connection issues that impacted my ability to participate and engage fully."
+              "value": "adequate_internet",
+              "text": "My internet connection and technology was adequate to fully participate."
             }
           ],
           "columns": [
@@ -313,7 +309,7 @@
           "visible": true
         }
      ],
-     "visibleIff": "{is_virtual} = 'true'",
+     "visibleIf": "{is_virtual} = 'true'",
      "title": "Participating in a Virtual Meeting"
     },
     {
@@ -656,7 +652,7 @@
        "title": "[PLACEHOLDER - CSP Free Response - IF needed]"
       }
      ],
-     "visibleIff": "{workshop_course} = 'CS Principles'",
+     "visibleIf": "{workshop_course} = 'CS Principles'",
      "title": "Teaching CS Principles"
     },
     {
@@ -764,7 +760,7 @@
           "visible": true
         }
      ],
-     "visibleIff": "{workshop_course} = 'CS Discoveries'",
+     "visibleIf": "{workshop_course} = 'CS Discoveries'",
      "title": "CS Discoveries"
     },
     {
