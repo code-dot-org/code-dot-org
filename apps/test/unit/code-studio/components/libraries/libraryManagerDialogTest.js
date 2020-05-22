@@ -227,7 +227,7 @@ describe('LibraryManagerDialog', () => {
       );
       wrapper.instance().onOpen();
       expect(setProjectLibraries.notCalled).to.be.true;
-      wrapper.instance().removeLibrary('first');
+      wrapper.instance().removeLibrary('abc123');
       expect(setProjectLibraries.withArgs([projectLibraries[1]]).calledOnce).to
         .be.true;
       window.dashboard.project.setProjectLibraries.restore();
