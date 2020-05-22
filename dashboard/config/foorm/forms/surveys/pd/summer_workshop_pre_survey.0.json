@@ -1,8 +1,23 @@
 {
  "pages": [
   {
-   "name": "teaching_context",
+   "name": "preamble_page",
    "elements": [
+    {
+     "type": "html",
+     "name": "preamble",
+     "html": "<h2><strong>Code.org {workshop_course} Professional Learning Program Pre-Survey</strong></h2>\n<p><strong>Welcome to the program!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about 10 minutes to complete. </p>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
+    }
+   ]
+  },
+  {
+   "name": "page_teaching_context",
+   "elements": [
+    {
+     "type": "html",
+     "name": "question1",
+     "html": "<h2>Teaching Context</h2>\nFirst, we have some questions about the context in which you are teaching {workshop_course}. Your responses help us understand issues that may be unique to your local context and allow us to develop programming to provide you with support."
+    },
     {
      "type": "radiogroup",
      "name": "required_course_status",
@@ -85,174 +100,197 @@
      ]
     },
     {
-     "type": "checkbox",
-     "name": "course_type",
-     "visibleIf": "{workshop_course} = 'CS Principles'",
-     "title": " I plan to teach {workshop_course} as...[check all that apply] ",
-     "hasOther": true,
-     "otherPlaceHolder": "Other",
-     "choices": [
+     "type": "panel",
+     "name": "csp_panel_ap",
+     "elements": [
       {
-       "value": "AP",
-       "text": "An AP Course"
+       "type": "html",
+       "name": "question6",
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
       },
       {
-       "value": "honors",
-       "text": "An honors course (non-AP) "
+       "type": "checkbox",
+       "name": "course_type",
+       "title": " I plan to teach {workshop_course} as...[check all that apply] ",
+       "hasOther": true,
+       "otherPlaceHolder": "Other",
+       "choices": [
+        {
+         "value": "AP",
+         "text": "An AP Course"
+        },
+        {
+         "value": "honors",
+         "text": "An honors course (non-AP) "
+        },
+        {
+         "value": "regular",
+         "text": "A regular course (non-AP) "
+        }
+       ],
+       "otherText": "Other"
       },
       {
-       "value": "regular",
-       "text": "A regular course (non-AP) "
+       "type": "radiogroup",
+       "name": "taught_ap_before",
+       "title": "Have you taught an AP class before?",
+       "choices": [
+        {
+         "value": "yes",
+         "text": "Yes"
+        },
+        {
+         "value": "no",
+         "text": "No"
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "other_aps_taught",
+       "visibleIf": "{taught_ap_before} = 'yes'",
+       "title": "What other AP course(s) have you taught? [check all that apply] ",
+       "choices": [
+        {
+         "value": "computer_science_a",
+         "text": "AP Computer Science A"
+        },
+        {
+         "value": "calculus",
+         "text": "AP Calculus (AB or BC)"
+        },
+        {
+         "value": "statistics",
+         "text": "AP Statistics"
+        },
+        {
+         "value": "sciences",
+         "text": "AP Sciences"
+        },
+        {
+         "value": "english",
+         "text": "AP English"
+        },
+        {
+         "value": "world_languages",
+         "text": "AP World Languages"
+        },
+        {
+         "value": "history_social_sciences",
+         "text": "AP History and Social Sciences"
+        },
+        {
+         "value": "arts",
+         "text": "AP Arts"
+        },
+        {
+         "value": "capstone",
+         "text": "AP Capstone"
+        }
+       ],
+       "colCount": 2
+      },
+      {
+       "type": "checkbox",
+       "name": "grade_levels_csp",
+       "title": "I plan to teach CS Principles to students in the following grade levels. (check all that apply)",
+       "choices": [
+        {
+         "value": "8",
+         "text": "8th"
+        },
+        {
+         "value": "9",
+         "text": "9th"
+        },
+        {
+         "value": "10",
+         "text": "10th"
+        },
+        {
+         "value": "11",
+         "text": "11th"
+        },
+        {
+         "value": "12",
+         "text": "12th"
+        },
+        {
+         "value": "not_sure",
+         "text": "not sure"
+        }
+       ]
       }
      ],
-     "otherText": "Other"
-    },
-    {
-     "type": "radiogroup",
-     "name": "taught_ap_before",
      "visibleIf": "{workshop_course} = 'CS Principles'",
-     "title": "Have you taught an AP class before?",
-     "choices": [
-      {
-       "value": "yes",
-       "text": "Yes"
-      },
-      {
-       "value": "no",
-       "text": "No"
-      }
-     ]
+     "title": ">>CSP PANEL<<"
     },
     {
-     "type": "checkbox",
-     "name": "other_aps_taught",
-     "visibleIf": "{taught_ap_before} = 'yes'",
-     "title": "What other AP course(s) have you taught? [check all that apply] ",
-     "choices": [
+     "type": "panel",
+     "name": "csd_panel_teaching_context",
+     "elements": [
       {
-       "value": "computer_science_a",
-       "text": "AP Computer Science A"
+       "type": "html",
+       "name": "question7",
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>"
       },
       {
-       "value": "calculus",
-       "text": "AP Calculus (AB or BC)"
-      },
-      {
-       "value": "statistics",
-       "text": "AP Statistics"
-      },
-      {
-       "value": "sciences",
-       "text": "AP Sciences"
-      },
-      {
-       "value": "english",
-       "text": "AP English"
-      },
-      {
-       "value": "world_languages",
-       "text": "AP World Languages"
-      },
-      {
-       "value": "history_social_sciences",
-       "text": "AP History and Social Sciences"
-      },
-      {
-       "value": "arts",
-       "text": "AP Arts"
-      },
-      {
-       "value": "capstone",
-       "text": "AP Capstone"
+       "type": "checkbox",
+       "name": "grade_levels_csd",
+       
+       "title": "I plan to teach CS Discoveries to students in the following grade levels. (check all that apply)",
+       "choices": [
+        {
+         "value": "4",
+         "text": "4th"
+        },
+        {
+         "value": "5",
+         "text": "5th"
+        },
+        {
+         "value": "6",
+         "text": "6th"
+        },
+        {
+         "value": "7",
+         "text": "7th"
+        },
+        {
+         "value": "8",
+         "text": "8th"
+        },
+        {
+         "value": "9",
+         "text": "9th"
+        },
+        {
+         "value": "10",
+         "text": "10th"
+        },
+        {
+         "value": "11",
+         "text": "11th"
+        },
+        {
+         "value": "12",
+         "text": "12th"
+        },
+        {
+         "value": "not_sure",
+         "text": "not sure"
+        }
+       ]
       }
      ],
-     "colCount": 2
-    },
-    {
-     "type": "checkbox",
-     "name": "grade_levels_csp",
-     "visibleIf": "{workshop_course} = 'CS Principles'",
-     "title": "I plan to teach CS Principles to students in the following grade levels. (check all that apply)",
-     "choices": [
-      {
-       "value": "8",
-       "text": "8th"
-      },
-      {
-       "value": "9",
-       "text": "9th"
-      },
-      {
-       "value": "10",
-       "text": "10th"
-      },
-      {
-       "value": "11",
-       "text": "11th"
-      },
-      {
-       "value": "12",
-       "text": "12th"
-      },
-      {
-       "value": "not_sure",
-       "text": "not sure"
-      }
-     ]
-    },
-    {
-     "type": "checkbox",
-     "name": "grade_levels_csd",
      "visibleIf": "{workshop_course} = 'CS Discoveries'",
-     "title": "I plan to teach CS Discoveries to students in the following grade levels. (check all that apply)",
-     "choices": [
-      {
-       "value": "4",
-       "text": "4th"
-      },
-      {
-       "value": "5",
-       "text": "5th"
-      },
-      {
-       "value": "6",
-       "text": "6th"
-      },
-      {
-       "value": "7",
-       "text": "7th"
-      },
-      {
-       "value": "8",
-       "text": "8th"
-      },
-      {
-       "value": "9",
-       "text": "9th"
-      },
-      {
-       "value": "10",
-       "text": "10th"
-      },
-      {
-       "value": "11",
-       "text": "11th"
-      },
-      {
-       "value": "12",
-       "text": "12th"
-      },
-      {
-       "value": "not_sure",
-       "text": "not sure"
-      }
-     ]
+     "title": ">>CSD Panel<<"
     },
     {
      "type": "text",
      "name": "total_k12_years",
      "title": "How many years have you taught at the K-12 level (any subject)?",
-     "description": "Please enter a whole number. If you are about to enter your first year teaching, enter 0.",
+     "description": "Please enter a whole number. If you are about to start your first year teaching, enter 0.",
      "inputType": "number"
     },
     {
@@ -293,13 +331,16 @@
       }
      ]
     }
-   ],
-   "title": "Teaching Context",
-   "description": "First, we have some questions about the context in which you are teaching {workshop_course}. Your responses help us understand issues that may be unique to your local context and allow us to develop programming to provide you with support."
+   ]
   },
   {
-   "name": "teaching_computer_science",
+   "name": "page_teaching_computer_science",
    "elements": [
+    {
+     "type": "html",
+     "name": "question5",
+     "html": "<h2>Teaching Computer Science</h2>"
+    },
     {
      "type": "matrix",
      "name": "cs_community",
@@ -358,77 +399,193 @@
      ]
     },
     {
-     "type": "html",
-     "name": "self_assessment_ratings_3",
-     "html": "<p>Whether you are new to teaching computer science or a seasoned veteran, you have certain expectations about what kinds of teaching strategies computer science teachers use with students in classrooms.\n\nWe'll use the \"true of me now\" scale used previously to have you self-assess your current knowledge and skills teaching computer science. Instead of concerns, please think about how true it is that you can do certain things in terms of your own development and preparation for teaching computer science.  </p>\n<p>\n\nA concrete strategy is a specific teaching technique, method, or named practice that you could describe or demonstrate to another teacher right now, if asked.</pr>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\">\n              <caption>\n                &nbsp;\n              </caption>\n              <tbody>\n                <tr>\n                  <td style=\"width: 13%; padding-top: 3px; text-align: center; vertical-align: top;\">\n                    <span style=\"font-size: 13.3333px;\">\n                      <strong>N/A</strong>\n                    </span>\n                  </td>\n                  <td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\">\n                    <strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong>\n                  </td>\n                  <td style=\"width: 24.7981%; text-align: center; vertical-align: top;\">\n                    <strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong>\n                  </td>\n                  <td style=\"width: 20.2019%; text-align: center; vertical-align: top;\">\n                    <strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"width: 13%; text-align: center; vertical-align: middle;\">\n                    <span style=\"font-size: 10pt;\">\n                      Irrelevant\n                    </span>\n                  </td>\n                  <td style=\"width: 23%; text-align: center; vertical-align: middle;\">\n                    <span style=\"font-size: 10pt;\">\n                      <b>Not true of me now</b></br>\n <i>not well prepared, need more development </i>\n                    </span>\n                  </td>\n                  <td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\">\n                    <span style=\"font-size: 10pt;\">\n                      <b>Somewhat true of me now</b></br><i>somewhat prepared, in process developing</i>\n                    </span>\n                  </td>\n                  <td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\">\n                    <span style=\"font-size: 10pt;\">\n                      <b>Very true of me now</b></br><i>well prepared, current strengths </i>\n                    </span>\n                  </td>\n                </tr>\n              </tbody>\n            </table>"
-    },
-    {
-     "type": "matrix",
-     "name": "concrete_strategies",
-     "title": "Right now, I have concrete teaching strategies to... ",
-     "columns": [
+     "type": "panel",
+     "name": "csd_panel_teaching_practices",
+     "elements": [
       {
-       "value": "0",
-       "text": "N/A"
+       "type": "html",
+       "name": "question4",
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>\n"
       },
       {
-       "value": "1",
-       "text": "1"
+       "type": "html",
+       "name": "true_of_me_now_scale_expl",
+       "html": "<h2><strong><span style=\"font-size: 14pt;\">Self-assessment of Computer Science Teaching Practices</span></strong></h2>\n<p>Please use the \"true of me now\" scale to self-assess your current knowledge and skills teaching computer science. Please think about how true it is that you <em>can do</em> certain things <strong>in terms of your own <em>development</em> and <em>preparation</em></strong> for teaching computer science <strong>right now</strong>.  </p>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption> </caption>\n<tbody>\n<tr>\n<td style=\"width: 13%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 13.3333px;\"><strong>N/A</strong></span></td>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 13%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\">Irrelevant</span></td>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me now</strong><br /><em> not well prepared, need more development</em><br /></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong><br /><em>somewhat prepared, in process developing</em></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong><br /><em>well prepared, current strengths</em><br /></span></td>\n</tr>\n</tbody>\n</table>\n\n<p>Below, we ask the degree to which you believe you have <strong>concrete teaching strategies. </strong>A <strong>concrete teaching strategy</strong> is a specific teaching technique, method, or named practice that you could describe or demonstrate to another teacher right now, if asked.</p>"
       },
       {
-       "value": "2",
-       "text": "2"
-      },
-      {
-       "value": "3",
-       "text": "3"
-      },
-      {
-       "value": "4",
-       "text": "4"
-      },
-      {
-       "value": "5",
-       "text": "5"
-      },
-      {
-       "value": "6",
-       "text": "6"
-      },
-      {
-       "value": "7",
-       "text": "7"
+       "type": "matrix",
+       "name": "codedotorg_teaching_strategies_csd",
+       "title": "Right now, I have concrete teaching strategies to...",
+       "columns": [
+        {
+         "value": "1",
+         "text": "N/A"
+        },
+        {
+         "value": "2",
+         "text": "1"
+        },
+        {
+         "value": "3",
+         "text": "2"
+        },
+        {
+         "value": "4",
+         "text": "3"
+        },
+        {
+         "value": "5",
+         "text": "4"
+        },
+        {
+         "value": "6",
+         "text": "5"
+        },
+        {
+         "value": "7",
+         "text": "6"
+        },
+        {
+         "value": "8",
+         "text": "7"
+        }
+       ],
+       "rows": [
+        {
+         "value": "ensure_that_students_work",
+         "text": "ensure that students work collaboratively."
+        },
+        {
+         "value": "ensure_that_every_student",
+         "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, or small-group or large-group discussions."
+        },
+        {
+         "value": "create_a_culture_in_which",
+         "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
+        },
+        {
+         "value": "provide_frequent_opportun",
+         "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
+        },
+        {
+         "value": "create_a_classroom_cultur",
+         "text": "create a classroom culture in which students regularly get feedback on their work."
+        },
+        {
+         "value": "support_student_understan",
+         "text": "support student understanding and use of CS vocabulary."
+        },
+        {
+         "value": "differentiate_instruction",
+         "text": "differentiate instruction to meet student needs."
+        },
+        {
+         "value": "create_a_culture_in_which",
+         "text": "create a culture in which students know where to find and how to use resources to support problem solving."
+        }
+       ]
       }
      ],
-     "rows": [
+     "visibleIf": "{workshop_course} = 'CS Discoveries'",
+     "title": ">>CS Discoveries Panel<<"
+    },
+    {
+     "type": "panel",
+     "name": "csp_panel_teaching_practices",
+     "elements": [
       {
-       "value": "work_collaboratively",
-       "text": "ensure that students work collaboratively when writing code."
+       "type": "html",
+       "name": "question1",
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
       },
       {
-       "value": "culture_peer_feedback",
-       "text": "create a classroom culture in which students regularly get feedback on their work from their peers."
+       "type": "html",
+       "name": "true_of_me_now_scale_expl",
+       "html": "<h2><strong><span style=\"font-size: 14pt;\">Self-assessment of Computer Science Teaching Practices</span></strong></h2>\n<p>Please use the \"true of me now\" scale to self-assess your current knowledge and skills teaching computer science. Please think about how true it is that you <em>can do</em> certain things <strong>in terms of your own <em>development</em> and <em>preparation</em></strong> for teaching computer science <strong>right now</strong>.  </p>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption> </caption>\n<tbody>\n<tr>\n<td style=\"width: 13%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 13.3333px;\"><strong>N/A</strong></span></td>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 13%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\">Irrelevant</span></td>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me now</strong><br /><em> not well prepared, need more development</em><br /></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong><br /><em>somewhat prepared, in process developing</em></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong><br /><em>well prepared, current strengths</em><br /></span></td>\n</tr>\n</tbody>\n</table>\n\n<p>Below, we ask the degree to which you believe you have <strong>concrete teaching strategies. </strong>A <strong>concrete teaching strategy</strong> is a specific teaching technique, method, or named practice that you could describe or demonstrate to another teacher right now, if asked.</p>"
       },
       {
-       "value": "group_discussions",
-       "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion."
-      },
-      {
-       "value": "normalize_failure",
-       "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
-      },
-      {
-       "value": "reflective_writing",
-       "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
+       "type": "matrix",
+       "name": "codedotorg_teaching_strategies_csp",
+       "title": "Right now, I have concrete teaching strategies to...",
+       "columns": [
+        {
+         "value": "0",
+         "text": "N/A"
+        },
+        {
+         "value": "1",
+         "text": "1"
+        },
+        {
+         "value": "2",
+         "text": "2"
+        },
+        {
+         "value": "3",
+         "text": "3"
+        },
+        {
+         "value": "4",
+         "text": "4"
+        },
+        {
+         "value": "5",
+         "text": "5"
+        },
+        {
+         "value": "6",
+         "text": "6"
+        },
+        {
+         "value": "7",
+         "text": "7"
+        }
+       ],
+       "rows": [
+        {
+         "value": "ensure_that_students_work",
+         "text": "ensure that students work collaboratively when writing code."
+        },
+        {
+         "value": "create_a_classroom_cultur",
+         "text": "create a classroom culture in which students regularly get feedback on their work from their peers."
+        },
+        {
+         "value": "ensure_that_every_student",
+         "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group, or large-group discussions. "
+        },
+        {
+         "value": "create_a_culture_in_which",
+         "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
+        },
+        {
+         "value": "provide_frequent_opportun",
+         "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
+        },
+        {
+         "value": "support_student_understan",
+         "text": "support student understanding and use of of CS vocabulary."
+        },
+        {
+         "value": "support_students_in_becom",
+         "text": "support students in becoming informed decision makers about the impact of technology."
+        }
+       ]
       }
-     ]
+     ],
+     "visibleIf": "{workshop_course} = 'CS Principles'",
+     "title": ">>CS Principles Panel<<"
     }
-   ],
-   "title": "Teaching Computer Science"
+   ]
   },
   {
-   "name": "teaching_philosophy",
+   "name": "page_teaching_philosophy",
    "elements": [
+    {
+     "type": "html",
+     "name": "question3",
+     "html": "<h2>Teaching Philosophy</h2>"
+    },
     {
      "type": "html",
      "name": "philosophy_description",
@@ -446,12 +603,12 @@
     },
     {
      "type": "html",
-     "name": "statement_AB_expertise",
+     "name": "lead_learner_statements",
      "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\" </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</span>\n                    \n                  </td>\n                </tr>\n              </tbody>\n</table>"
     },
     {
      "type": "rating",
-     "name": "expertise_rating",
+     "name": "lead_learner",
      "indent": 12,
      "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
      "titleLocation": "hidden",
@@ -460,26 +617,12 @@
     },
     {
      "type": "html",
-     "name": "statement_AB_vocabulary",
-     "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"For computer science instruction, I think it’s important to present students with appropriate terms and vocabulary before they explore a concept or problem in more depth.\"</span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">\"I like to present students with a computer science problem, or with tools that let them explore a concept before teaching the terms and vocabulary.\"</span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-    },
-    {
-     "type": "rating",
-     "name": "vocabulary_rating",
-     "indent": 12,
-     "title": "ABC CBV. 1. Vocabulary before activity  --- 5. vocabulary after activity",
-     "titleLocation": "hidden",
-     "minRateDescription": "Strongly aligned with A",
-     "maxRateDescription": "Strongly aligned with B"
-    },
-    {
-     "type": "html",
-     "name": "statement_AB_recruiting",
+     "name": "recruit_responsibility_statements",
      "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Computer science teachers’ responsibility is to promote their computer science classes broadly, to all students. The diversity of the class will reflect those most interested in taking a computer science class. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\"> Computer science teachers have a responsibility to recruit a set of students into their classrooms that are representative of the school’s population in terms of diversity (gender, racial, socio-economic, etc.) </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
     },
     {
      "type": "rating",
-     "name": "recruiting_rating",
+     "name": "recruit_responsibility",
      "indent": 12,
      "title": "Recruit Responsibility. 1. recruit students interested in CS  --- 5. recruit representative population",
      "titleLocation": "hidden",
@@ -488,12 +631,12 @@
     },
     {
      "type": "html",
-     "name": "statement_AB_time_prioritization",
+     "name": "prioritize_time_statements",
      "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">It’s important that the teacher prioritize their time and resources for students who have the most need. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">  \tThe teacher should ensure that their time, and students’ access to resources are distributed equally for all. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
     },
     {
      "type": "rating",
-     "name": "time_prioritization_ratings",
+     "name": "prioritize_time",
      "indent": 12,
      "title": "Prioritize Time. 1. prioritize most need --- 5. distribute equally",
      "titleLocation": "hidden",
@@ -502,24 +645,28 @@
     },
     {
      "type": "html",
-     "name": "statement_AB_material",
+     "name": "instructional_focus_statements",
      "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
     },
     {
      "type": "rating",
-     "name": "material_ratings",
+     "name": "instructional_focus",
      "indent": 12,
      "title": "Instructional focus. 1. more material,some students struggle --- 5. less material, leave fewer behind",
      "titleLocation": "hidden",
      "minRateDescription": "Strongly aligned with A",
      "maxRateDescription": "Strongly aligned with B"
     }
-   ],
-   "title": "Teaching Philosophy"
+   ]
   },
   {
-   "name": "wrap_up_submit",
+   "name": "page_wrap_up_submit",
    "elements": [
+    {
+     "type": "html",
+     "name": "question2",
+     "html": "<h2>Wrap Up and Submit</h2>\n<p>As a reminder this survey is <strong>confidential</strong>. We collect this information for program improvement. None of your responses will ever be tied back to you personally.</p>"
+    },
     {
      "type": "radiogroup",
      "name": "highest_level_cs_education",
@@ -583,6 +730,8 @@
      "title": "What is your year of birth? ",
      "description": "Please enter a whole number e.g. 1975. ",
      "inputType": "number",
+     "min": "1930",
+     "max": "2000",
      "placeHolder": "enter a number"
     },
     {
@@ -656,8 +805,7 @@
      "name": "thank_you",
      "html": "<h2>Thank you!</h2>\n<p>Thank you so much for taking the time to complete this survey. Your input and feedback is vital for our programs.</p>\n"
     }
-   ],
-   "title": "Wrap Up and Submit"
+   ]
   }
  ]
 }
