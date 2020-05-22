@@ -223,7 +223,7 @@ class Pd::Enrollment < ActiveRecord::Base
       # TODO: This is a temporary, fake URL. Wire up a real one!
       CDO.studio_url '/pd/workshop_survey/post'
     elsif workshop.local_summer?
-      url_for(action: 'new_post_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
+      CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
     elsif workshop.teachercon?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
     elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course)
