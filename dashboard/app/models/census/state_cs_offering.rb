@@ -1507,7 +1507,7 @@ class Census::StateCsOffering < ApplicationRecord
     "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}#{update_string}.#{file_extension}"
   end
 
-  def self.seed_from_s3(dry_run: false, file_extension: 'csv')
+  def self.seed_from_s3(file_extension: 'csv', dry_run: false)
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
     # The first school year where we have data is 2015-2016
@@ -1541,10 +1541,10 @@ class Census::StateCsOffering < ApplicationRecord
   #
   # @example:
   #   Census::StateCsOffering.dry_seed_s3_object('AL', 2019, 1)
-  #     will seed from state_cs_offerings/AL/2019-2020.csv object
+  #   will seed from state_cs_offerings/AL/2019-2020.csv object
   #
   #   Census::StateCsOffering.dry_seed_s3_object('WA', 2019, 2, 'txt')
-  #     will seed from state_cs_offerings/WA/2019-2020.2.txt object
+  #   will seed from state_cs_offerings/WA/2019-2020.2.txt object
   def self.dry_seed_s3_object(state_code, school_year, update, file_extension = 'csv')
     object_key = construct_object_key(state_code, school_year, update, file_extension)
     AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
