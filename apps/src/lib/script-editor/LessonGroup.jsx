@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import color from '../../util/color';
 import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import LessonCard from './LessonCard';
 import {NEW_LEVEL_ID, addLesson, addGroup} from './editorRedux';
-import FlexCategorySelector from './FlexCategorySelector';
+import NewLessonGroupInput from './NewLessonGroupInput';
 
 const styles = {
   groupHeader: {
@@ -41,53 +40,49 @@ const styles = {
     border: '1px solid #ccc',
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
-  },
-  flexCategorySelector: {
-    height: 30,
-    marginBottom: 30
   }
 };
 
 // Replace ' with \'
 const escape = str => str.replace(/'/, "\\'");
 
-class FlexGroup extends Component {
+class LessonGroup extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
-    lessons: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.object.isRequired,
-    flexCategoryMap: PropTypes.object.isRequired
+    lessonGroups: PropTypes.array.isRequired,
+    levelKeyList: PropTypes.object.isRequired
   };
 
   state = {
-    addingFlexCategory: false,
+    addingLessonGroup: false,
     // Which lesson a level is currently being dragged to.
     targetLessonPos: null
   };
 
-  handleAddFlexCategory = () => {
+  handleAddLessonGroup = () => {
     this.setState({
-      addingFlexCategory: true
+      addingLessonGroup: true
     });
   };
 
-  createFlexCategory = newFlexCategory => {
-    this.hideFlexCategorySelector();
-    const newLessonName = prompt('Enter new lesson name');
-    if (newLessonName) {
-      this.props.addGroup(newLessonName, newFlexCategory);
-    }
+  createLessonGroup = (newLessonGroupKey, newLessonGroupName) => {
+    this.hideLessonGroupCreate();
+    this.props.addGroup(
+      this.props.lessonGroups.length,
+      newLessonGroupKey,
+      newLessonGroupName
+    );
   };
 
-  hideFlexCategorySelector = () => {
-    this.setState({addingFlexCategory: false});
+  hideLessonGroupCreate = () => {
+    this.setState({addingLessonGroup: false});
   };
 
-  handleAddLesson = position => {
+  handleAddLesson = lessonGroupPosition => {
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
-      this.props.addLesson(position, newLessonName);
+      this.props.addLesson(lessonGroupPosition, newLessonName);
     }
   };
 
@@ -95,35 +90,47 @@ class FlexGroup extends Component {
     this.setState({targetLessonPos});
   };
 
+  serializeLessonGroups = lessonGroups => {
+    let s = [];
+    lessonGroups.forEach(lessonGroup => {
+      if (lessonGroup.user_facing && lessonGroup.lessons.length > 0) {
+        let t = `lesson_group '${lessonGroup.key}'`;
+        t += `, display_name: '${escape(lessonGroup.display_name)}'`;
+        s.push(t);
+      }
+      lessonGroup.lessons.forEach(lesson => {
+        s = s.concat(this.serializeLesson(lesson));
+      });
+    });
+
+    s.push('');
+    return s.join('\n');
+  };
+
   /**
    * Generate the ScriptDSL format.
-   * @param lessons
+   * @param lesson
    * @return {string}
    */
-  serializeLessons = lessons => {
+  serializeLesson = lesson => {
     let s = [];
-    lessons.forEach(lesson => {
-      let t = `stage '${escape(lesson.name)}'`;
-      if (lesson.lockable) {
-        t += ', lockable: true';
+    let t = `stage '${escape(lesson.name)}'`;
+    if (lesson.lockable) {
+      t += ', lockable: true';
+    }
+    s.push(t);
+    lesson.levels.forEach(level => {
+      if (level.ids.length > 1) {
+        s.push('variants');
+        level.ids.forEach(id => {
+          s = s.concat(this.serializeLevel(id, level, level.activeId === id));
+        });
+        s.push('endvariants');
+      } else {
+        s = s.concat(this.serializeLevel(level.ids[0], level));
       }
-      if (lesson.flex_category) {
-        t += `, flex_category: '${escape(lesson.flex_category)}'`;
-      }
-      s.push(t);
-      lesson.levels.forEach(level => {
-        if (level.ids.length > 1) {
-          s.push('variants');
-          level.ids.forEach(id => {
-            s = s.concat(this.serializeLevel(id, level, level.activeId === id));
-          });
-          s.push('endvariants');
-        } else {
-          s = s.concat(this.serializeLevel(level.ids[0], level));
-        }
-      });
-      s.push('');
     });
+    s.push('');
     return s.join('\n');
   };
 
@@ -174,35 +181,30 @@ class FlexGroup extends Component {
   lessonMetrics = {};
 
   render() {
-    const groups = _.groupBy(
-      this.props.lessons,
-      lesson => lesson.flex_category || ''
-    );
-    let afterLesson = 1;
-    const {flexCategoryMap} = this.props;
+    const {lessonGroups} = this.props;
 
     return (
       <div>
-        {_.keys(groups).map(group => (
-          <div key={group}>
+        {lessonGroups.map((lessonGroup, index) => (
+          <div key={lessonGroup.key}>
             <div style={styles.groupHeader}>
-              Flex Category: {group || '(none)'}: "
-              {flexCategoryMap[group] || 'Content'}"
+              Lesson Group: {lessonGroup.key || '(none)'}: "
+              {lessonGroup.display_name || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
-                position={afterLesson}
-                total={Object.keys(groups).length}
-                name={group || '(none)'}
+                position={index + 1}
+                total={lessonGroups.length}
+                name={lessonGroup.key || '(none)'}
               />
             </div>
             <div style={styles.groupBody}>
-              {groups[group].map((lesson, index) => {
-                afterLesson++;
+              {lessonGroup.lessons.map((lesson, index) => {
                 return (
                   <LessonCard
                     key={`lesson-${index}`}
-                    lessonsCount={this.props.lessons.length}
+                    lessonsCount={lessonGroup.lessons.length}
                     lesson={lesson}
+                    lessonGroupPosition={lessonGroup.position}
                     ref={lessonCard => {
                       if (lessonCard) {
                         const metrics = ReactDOM.findDOMNode(
@@ -218,7 +220,7 @@ class FlexGroup extends Component {
                 );
               })}
               <button
-                onMouseDown={this.handleAddLesson.bind(null, afterLesson - 1)}
+                onMouseDown={this.handleAddLesson.bind(null, index + 1)}
                 className="btn"
                 style={styles.addLesson}
                 type="button"
@@ -229,31 +231,27 @@ class FlexGroup extends Component {
             </div>
           </div>
         ))}
-        {!this.state.addingFlexCategory && (
+        {!this.state.addingLessonGroup && (
           <button
-            onMouseDown={this.handleAddFlexCategory}
+            onMouseDown={this.handleAddLessonGroup}
             className="btn"
             style={styles.addGroup}
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Flex Category
+            Add Lesson Group
           </button>
         )}
-        {this.state.addingFlexCategory && (
-          <div style={styles.flexCategorySelector}>
-            <FlexCategorySelector
-              labelText="New Flex Category"
-              confirmButtonText="Create"
-              onConfirm={this.createFlexCategory}
-              onCancel={this.hideFlexCategorySelector}
-            />
-          </div>
+        {this.state.addingLessonGroup && (
+          <NewLessonGroupInput
+            onConfirm={this.createLessonGroup}
+            onCancel={this.hideLessonGroupCreate}
+          />
         )}
         <input
           type="hidden"
           name="script_text"
-          value={this.serializeLessons(this.props.lessons)}
+          value={this.serializeLessonGroups(lessonGroups)}
         />
       </div>
     );
@@ -263,15 +261,14 @@ class FlexGroup extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    lessons: state.lessons,
-    flexCategoryMap: state.flexCategoryMap
+    lessonGroups: state.lessonGroups
   }),
   dispatch => ({
-    addGroup(lessonName, groupName) {
-      dispatch(addGroup(lessonName, groupName));
+    addGroup(position, groupKey, groupName) {
+      dispatch(addGroup(position, groupKey, groupName));
     },
     addLesson(position, lessonName) {
       dispatch(addLesson(position, lessonName));
     }
   })
-)(FlexGroup);
+)(LessonGroup);
