@@ -121,6 +121,8 @@ class LessonGroupCard extends Component {
   }
 }
 
+export const UnconnectedLessonGroupCard = LessonGroupCard;
+
 export default connect(
   state => ({}),
   dispatch => ({
