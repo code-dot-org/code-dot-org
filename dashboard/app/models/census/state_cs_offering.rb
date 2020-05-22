@@ -1537,20 +1537,21 @@ class Census::StateCsOffering < ApplicationRecord
   # Test seeding an object from S3 to find issues.
   # This method does not check if the object had been seeded before
   # and does not write to the database.
+  #
   # @example:
-  #   Census::StateCsOffering.seed_from_s3_test('AL', 2019)
+  #   Census::StateCsOffering.dry_seed_s3_object('AL', 2019, 1)
   #     will seed from state_cs_offerings/AL/2019-2020.csv object
-  #   Census::StateCsOffering.seed_from_s3_test('WA', 2019, 'x')
-  #     will seed from state_cs_offerings/WA/2019-2020.x.csv object
-  def self.seed_from_s3_test(state_code, school_year, update = 1)
-    object_key = construct_object_key(state_code, school_year, update)
-    begin
-      AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
-        seed_from_csv(state_code, school_year, update, filename, true)
-      end
-    rescue Aws::S3::Errors::NotFound
-      CDO.log.warn "State CS Offering seeding: Object #{object_key} not found in S3."
+  #
+  #   Census::StateCsOffering.dry_seed_s3_object('WA', 2019, 2, 'txt')
+  #     will seed from state_cs_offerings/WA/2019-2020.2.txt object
+  def self.dry_seed_s3_object(state_code, school_year, update, file_extension = 'csv')
+    object_key = construct_object_key(state_code, school_year, update, file_extension)
+    AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+      seed_from_csv(state_code, school_year, update, filename, true)
     end
+  rescue Aws::S3::Errors::NoSuchKey
+    CDO.log.warn "State CS Offering seeding: Object #{object_key} not found in S3."
+  ensure
     CDO.log.info "This is a dry run. No data is written to the database."
   end
 
