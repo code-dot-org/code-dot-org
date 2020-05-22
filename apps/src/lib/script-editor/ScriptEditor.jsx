@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import LessonGroup from './LessonGroup';
+import LessonGroups from './LessonGroups';
 import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import $ from 'jquery';
@@ -475,7 +475,7 @@ export default class ScriptEditor extends React.Component {
 
         <h2>Lessons and Levels</h2>
         {this.props.beta ? (
-          <LessonGroup />
+          <LessonGroups />
         ) : (
           <div>
             {betaWarning || (
