@@ -31,23 +31,23 @@ class Census::ApCsOffering < ApplicationRecord
   def self.seed_from_csv(course, school_year, filename)
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
-        raw_school_code = row.to_hash['School Code']
-        raw_school_name = row.to_hash['School Name']
+        raw_school_code = row.to_hash['School Code']  # College Board attending institution (AI) code
         next unless raw_school_code
         normalized_school_code = Census::ApSchoolCode.normalize_school_code(raw_school_code)
-        unless normalized_school_code == '000000'
-          begin
-            ap_school_code = Census::ApSchoolCode.find([normalized_school_code, school_year])
-            Census::ApCsOffering.find_or_create_by!(
-              ap_school_code: ap_school_code,
-              course: course,
-              school_year: school_year
-            )
-          rescue ActiveRecord::RecordNotFound
-            # We don't have mapping for every school code so skip over any that
-            # can't be found in the database.
-            CDO.log.warn "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
-          end
+        next if normalized_school_code == '000000'
+
+        begin
+          ap_school_code = Census::ApSchoolCode.find([normalized_school_code, school_year])
+          Census::ApCsOffering.find_or_create_by!(
+            ap_school_code: ap_school_code,
+            course: course,
+            school_year: school_year
+          )
+        rescue ActiveRecord::RecordNotFound
+          # We don't have mapping for every school code so skip over any that
+          # can't be found in the database.
+          raw_school_name = row.to_hash['School Name']
+          CDO.log.warn "AP CS Offering seeding: skipping unknown school code #{normalized_school_code}, school name #{raw_school_name}"
         end
       end
     end
