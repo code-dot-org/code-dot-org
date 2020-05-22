@@ -249,11 +249,11 @@ export class LibraryManagerDialog extends React.Component {
     );
   };
 
-  removeLibrary = libraryName => {
+  removeLibrary = channelId => {
     const {projectLibraries} = this.state;
     dashboard.project.setProjectLibraries(
       projectLibraries.filter(library => {
-        return library.name !== libraryName;
+        return library.channelId !== channelId;
       })
     );
     this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
