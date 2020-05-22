@@ -193,6 +193,8 @@ class LessonGroups extends Component {
   }
 }
 
+export const UnconnectedLessonGroups = LessonGroups;
+
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
