@@ -5,7 +5,7 @@ theme: responsive
 
 # Privacy Policy
 
-Date of Last Revision: April 8, 2020
+Date of Last Revision: May 21, 2020
 
 
 ## About Code.org
@@ -215,7 +215,7 @@ We may also share the list of schools (solely the school identities, without any
 
 We also provide teachers other opportunities (such as when adding their school to the map of schools teaching Computer Science) to share their contact information (name, school, email) — at their option and under their control — with a Code.org Local Partner so that teachers can be contacted about local professional learning workshops, resources, and events. 
 
-Our partners can sometimes provide additional programs or services such as scholarships or free supplies for schools. When these services or programs are available locally, teachers will have the option to share their email address, school name, and school ID with a specific partner to opt in to a specific service or program to support their classroom.
+Our partners can sometimes provide additional programs or services such as scholarships or free supplies for schools. When these services or programs are available locally, teachers will have the option to share their email address, school name, school address, and school ID with a specific partner to opt in to a specific service or program to support their classroom.
 
 ### We may share de-identified information on school or district usage with our Local Partners
 
