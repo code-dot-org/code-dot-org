@@ -63,8 +63,8 @@ class Census::ApCsOffering < ApplicationRecord
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
-  def self.construct_object_key(course, school_year)
-    "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
+  def self.construct_object_key(course, school_year, file_extension = 'csv')
+    "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.#{file_extension}"
   end
 
   def self.seed_from_s3
@@ -86,6 +86,17 @@ class Census::ApCsOffering < ApplicationRecord
         end
       end
     end
+  end
+
+  def self.dry_seed_s3_object(course, school_year, file_extension = 'csv')
+    object_key = construct_object_key(course, school_year, file_extension)
+    AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
+      seed_from_csv(course, school_year, filename, true)
+    end
+  rescue Aws::S3::Errors::NoSuchKey
+    CDO.log.warn "AP CS Offering seeding: Object #{object_key} not found in S3."
+  ensure
+    CDO.log.info "This is a dry run. No data is written to the database."
   end
 
   def self.seed
