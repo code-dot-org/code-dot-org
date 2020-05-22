@@ -23,9 +23,8 @@ module Pd
       day = params[:day].to_i
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
 
-      unless validate_new_general_parameters(workshop)
-        return
-      end
+      # Do nothing if there is no enrollment.
+      return unless validate_enrolled(workshop)
 
       # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
       # have saved.
@@ -35,6 +34,12 @@ module Pd
         else
           return new_daily_foorm
         end
+      end
+
+      # Beyond here is for a non-Foorm survey.
+
+      unless validate_new_general_parameters(workshop)
+        return
       end
 
       session = get_session_for_workshop_and_day(workshop, day)

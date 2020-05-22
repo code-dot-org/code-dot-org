@@ -87,17 +87,7 @@ module Pd
       assert_not_enrolled
     end
 
-    test 'pre-workshop survey redirects to thanks when a response exists' do
-      setup_summer_workshop
-      create :pd_workshop_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
-        day: 0, form_id: FAKE_DAILY_FORM_IDS[0]
-
-      sign_in @enrolled_summer_teacher
-      get '/pd/workshop_survey/day/0'
-      assert_redirected_to action: 'thanks'
-    end
-
-    test 'pre-workshop foorm survey redirects to thanks when a response exists' do
+    test 'pre-workshop foorm survey shows thanks when a response exists' do
       setup_summer_workshop
       create :day_0_workshop_foorm_submission,
         :answers_high,
@@ -200,19 +190,7 @@ module Pd
       assert_no_attendance
     end
 
-    test 'daily workshop survey redirects to first facilitator form when a response exists' do
-      setup_summer_workshop
-      Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
-      create :pd_workshop_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
-        day: 1, form_id: FAKE_DAILY_FORM_IDS[1], pd_session: @summer_workshop.sessions[0]
-
-      sign_in @enrolled_summer_teacher
-      get '/pd/workshop_survey/day/1'
-      assert_redirected_to action: :new_facilitator, session_id: @summer_workshop.sessions[0].id, facilitator_index: 0
-    end
-
-    test 'daily summer workshop survey with open session attendance displays embedded JotForm' do
+    test 'daily summer workshop survey with open session attendance displays foorm' do
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
@@ -222,7 +200,7 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
-      assert_response :success
+      assert_template :new_general_foorm
     end
 
     test 'academic year workshop with open session attendance displays embedded Jotform' do
@@ -360,18 +338,6 @@ module Pd
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0"
       assert_redirected_to action: :new_facilitator, session_id: @summer_workshop.sessions[0].id, facilitator_index: 1
-    end
-
-    test 'last facilitator specific survey redirects to thanks when response exists' do
-      setup_summer_workshop
-      Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
-      create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
-        day: 1, form_id: FAKE_FACILITATOR_FORM_ID, pd_session: @summer_workshop.sessions[0], facilitator: @facilitators[1]
-
-      sign_in @enrolled_summer_teacher
-      get "/pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/1"
-      assert_redirected_to '/pd/workshop_survey/thanks'
     end
 
     test 'facilitator specific survey with open session attendance displays embedded JotForm' do
