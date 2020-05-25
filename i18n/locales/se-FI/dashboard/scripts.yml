@@ -27,6 +27,9 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+          lessons:
+            Events:
+              name: Dáhpáhusaid
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -53,6 +56,9 @@ se:
               display_name: Dáhpáhusaid
         k5-onlinepd-2019:
           stages:
+            Events:
+              name: Dáhpáhusaid
+          lessons:
             Events:
               name: Dáhpáhusaid
         time4cs-control-unit-1:
