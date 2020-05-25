@@ -4,32 +4,32 @@ theme: responsive
 style_min: true
 ---
 
-# Các khoá học được dạy từ A - F
+# Teaching Courses A-F
 
-## Mục lục
+## Table of Contents
 
-* [Tổng quát](#overview)
-* [Dạy những khoá học mới](#newcourses)
-* [Câu truyện Vòng tròn Thời gian (Khoá học A và B)](#circletime)
-* [Bài Đoạn đầu đài & Thử thách những câu đố (Mọi lứa tuổi)](#scaffolding)
-* [Hoạt độn Bắt cầu dành cho Các khoá học chưa được Nạp (Mọi lứa tuổi)](#unplugged)
-* [Các Dự án Kết thúc Khóa học (Khóa học E & F)](#endofcourse)
-* [Kết luận ](#conclusion)
-* [Những câu hỏi thường gặp](#faq)
+* [Overview](#overview)
+* [Teaching the new courses](#newcourses)
+* [Circle-Time Stories (Courses A and B)](#circletime)
+* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
+* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
+* [End of Course Projects (Courses E & F)](#endofcourse)
+* [Conclusion](#conclusion)
+* [FAQs](#faq)
 
 <a id="overview"></a>
 
-## Tổng quát
-Ngành giáo dục khoa học máy tính đã có sự thay đổi lớn sau khi thành lập các khóa học cơ bản về Khoa học máy tính. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## Overview
+The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
 
-Khóa học Khoa học máy tính cơ bản A- F, là câu trả lời của chúng tôi cho vấn đề đó.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
 
-* Khóa học A: Mẫu giáo
-* Khóa học B: Lớp 1
-* Khóa học C: Lớp 2
-* Khóa học D: Lớp 3
-* Khóa học E: Lớp 4
-* Khóa học F: Lớp 5
+* Course A: Kindergarten
+* Course B: 1st Grade
+* Course C: 2nd Grade
+* Course D: 3rd Grade
+* Course E: 4th Grade
+* Course F: 5th Grade
 * Pre-reader Express Course: Kindergarten - 1st Grade
 * Express Course: 2nd Grade - 5th Grade
 
@@ -37,7 +37,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 <a id="newcourses"></a>
 
-## Dạy những khoá học mới
+## Teaching the new courses
 As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
 The main updates to the courses are:
@@ -51,7 +51,7 @@ The rest of this guide will present each idea in more detail, offering tips and 
 
 <a id="circletime"></a>
 
-## Câu truyện Vòng tròn Thời gian (Khoá học A và B)
+## Circle-Time Stories (Courses A and B)
 Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
 
 Here is how the circle-time stories are intended to be used:
@@ -74,7 +74,7 @@ If you are unable to gather your entire class together, Code.org has provided a 
 
 <a id="scaffolding"></a>
 
-## Bài Đoạn đầu đài & Thử thách những câu đố (Mọi lứa tuổi)
+## Lesson Scaffolding & Challenge Puzzles (All Ages)
 Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
 
 Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
@@ -97,7 +97,7 @@ Some final notes for this area:
 
 <a id="unplugged"></a>
 
-## Hoạt độn Bắt cầu dành cho Các khoá học chưa được Nạp (Mọi lứa tuổi)
+## Bridging Activities For Unplugged Lessons (All Ages)
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 
 Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
@@ -106,7 +106,7 @@ For the most part, bridging activities can be created either by taking the subje
 
 <a id="endofcourse"></a>
 
-## Các Dự án Kết thúc Khóa học (Khóa học E & F)
+## End of Course Projects (Courses E & F)
 For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
 
 The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
@@ -125,14 +125,14 @@ No matter how thoroughly students embed themselves in their projects, they are s
 
 <a id="conclusion"></a>
 
-## Kết luận
+## Conclusion
 As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
 
 We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
 
 <a id="faq"></a>
 
-## Những câu hỏi thường gặp
+## FAQs
 
 | Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
