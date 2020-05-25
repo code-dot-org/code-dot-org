@@ -9,16 +9,26 @@ de-DE:
       BinaryImages: Binärbilder
       BinaryImages_2018: Binärbilder
       BuildingAFoundation: Grundlagen aufbauen
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title
+
+'
       ComputationalThinking: Computerorientiertes Denken
       Conditionals: Bedingungen
       Conditionals_2018: Bedingungen
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Algorithmen in der realen Welt: Würfelrennen'
       DigitalCitizenship: Digitalen Staatsbürgerschaft
       DigitalFootprint: Dein digitaler Fußabdruck
       DigitalFootprint_2018: Dein digitaler Fußabdruck
       EnvelopeVariables: Umschlag-Variablen
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title
+
+'
       ForLoopFun: "„Zähle mit“-Schleifenspaß"
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title
+
+'
       FunctionalSuncatchers: Funktionale Sonnenfänger
       GettingLoopy: Schöne Schleifen
       GettingLoopy_2018: Schöne Schleifen
@@ -27,6 +37,7 @@ de-DE:
       GraphPaperProgramming: Programmieren auf Millimeterpapier
       GraphPaperProgramming_2018: Programmieren auf Millimeterpapier
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Lückentexte
       MoveIt: Achtung, fertig, LOS
       MoveItMoveIt_2018: Bewegung, Bewegung
@@ -37,6 +48,7 @@ de-DE:
       RelayProgramming: Relais-Programmierung
       RelayProgramming_2018: Relais-Programmierung
       SongwritingParameters: Songschreiben
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Komponieren mit Parametern
       TangramAlgorithms: Tangram-Algorithmen
       UnplugHappyMaps: Glücklich Karten
@@ -56,3 +68,6 @@ de-DE:
       courseE_unplugged_privateInformation: 'Bildung für gesunden Menschenverstand:
         Private und persönliche Daten '
       courseF_unplugged_powerOfWords: Aktivität ohne Computer
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title
+
+'
