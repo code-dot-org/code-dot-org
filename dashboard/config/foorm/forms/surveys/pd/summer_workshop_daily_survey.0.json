@@ -42,7 +42,7 @@
     },
     {
      "type": "comment",
-     "name": "whatSupported",
+     "name": "what_supported",
      "title": "What supported your learning the most today and why?",
      "cols": 60,
      "rows": 2
@@ -69,7 +69,7 @@
      "templateElements": [
       {
        "type": "comment",
-       "name": "facilitator_did_well",
+       "name": "facilitator_feedback_FR",
        "title": "Do you have any feedback about today for {panel.facilitator_name}?",
        "rows": 2
       }
