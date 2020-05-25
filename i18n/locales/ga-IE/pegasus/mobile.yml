@@ -1459,6 +1459,8 @@
   header_teacher_community: "Comhphobal múinteoirí"
   header_help_support: 'Cabhair agus tacaíocht '
   header_report_bug: "Déan tuairisc ar fhadhb"
+  header_legal_privacy: "Polasaí Príobháideachais"
+  header_legal_tos: "Téarmaí Seirbhíse"
   header_tutorials: "Cúrsaí Teagaisc"
   app_lab_documentation: "Saotharlann Aipeanna: Doiciméadú"
   app_lab_tutorials: "Saotharlann Aipeanna: Cúrsaí Teagaisc"
