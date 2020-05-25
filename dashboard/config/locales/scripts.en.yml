@@ -25803,7 +25803,7 @@ en:
               name: Conditionals with Sal Khan & Flo Vaughn
             Events with Macklemore & Scott Forstall:
               name: Events with Macklemore & Scott Forstall
-            AI with Kat Graham & Cody Simpson: &1
+            AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
           title: Code Break
           description_audience: ''
@@ -25829,7 +25829,8 @@ en:
               name: Variables with Yara Shahidi & Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Events with Macklemore & Scott Forstall
-            AI with Kat Graham & Cody Simpson: *1
+            AI with Kat Graham & Cody Simpson:
+              name: AI with Kat Graham & Cody Simpson
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -25974,7 +25975,7 @@ en:
               name: Variables with Yara Shahidi & Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Events with Macklemore & Scott Forstall
-            AI with Kat Graham & Cody Simpson: &2
+            AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
           title: Code Break for Younger Students
           description_audience: ''
@@ -26000,7 +26001,8 @@ en:
               name: Variables with Yara Shahidi & Fuzzy Khosrowshahi
             Events with Macklemore & Scott Forstall:
               name: Events with Macklemore & Scott Forstall
-            AI with Kat Graham & Cody Simpson: *2
+            AI with Kat Graham & Cody Simpson:
+              name: AI with Kat Graham & Cody Simpson
         no-lg:
           stages:
             new stage:
