@@ -939,6 +939,8 @@ es-MX:
     open_response_body: "¡Gracias por tu respuesta!"
     correct_title: Correcto
     correct_body: Esa es la respuesta correcta.
+  lesson_extras:
+    bonus_level: Nivel de bonificación
   dialog:
     ok: Aceptar
     startover_title: "¿Seguro que quieres empezar de nuevo?"
