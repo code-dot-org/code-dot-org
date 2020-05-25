@@ -54,6 +54,41 @@ ar:
               name: 'مختبر اللعب: إنشاء قصة'
             The Big Event:
               name: الحدث الكبير
+          lessons:
+            Happy Maps:
+              name: الخرائط السعيدة
+            Move it, Move it:
+              name: حركها ! حركها
+            'Jigsaw: Learn to drag and drop':
+              name: 'بانوراما: تعلم السحب والإسقاط'
+            'Maze: Sequence':
+              name: 'المتاهة : التسلسل'
+            'Maze: Debugging':
+              name: 'متاهة: تصحيح الأخطاء'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            'Bee: Sequence':
+              name: 'التهجئة: التسلسل'
+            'Artist: Sequence':
+              name: 'الرسام : التسلسل'
+            Building a Foundation:
+              name: بناء قاعدة
+            'Artist: Shapes':
+              name: 'الفنان: الأشكال'
+            Spelling Bee:
+              name: مسابقة التهجئة
+            Getting Loopy:
+              name: القبض على المعتوهون
+            'Maze: Loops':
+              name: 'المتاهة : الحلقات'
+            'Bee: Loops':
+              name: 'النحلة : الحلقات'
+            The Big Event:
+              name: الحدث الكبير
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
+            'Artist: Loops':
+              name: 'الرسام : الحلقات'
         course2:
           title: الدورة الثانية
           description: تم تصميم الدورة 2 للطلاب الذين يستطيعون القراءة وليس لديهم
@@ -100,6 +135,43 @@ ar:
               name: الحدث الكبير
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
+          lessons:
+            Graph Paper Programming:
+              name: برمجة ورقة الرسم البياني
+            'Real-life Algorithms: Paper Planes':
+              name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+            'Maze: Sequence':
+              name: 'المتاهة : التسلسل'
+            'Artist: Sequence':
+              name: 'الرسام : التسلسل'
+            Getting Loopy:
+              name: القبض على المعتوهون
+            'Maze: Loops':
+              name: 'المتاهة : الحلقات'
+            'Artist: Loops':
+              name: 'الرسام : الحلقات'
+            'Bee: Loops':
+              name: 'النحلة : الحلقات'
+            Relay programming:
+              name: برمجة السباق
+            'Bee: Debugging':
+              name: 'النحلة: تصحيح الأخطاء'
+            'Artist: Debugging':
+              name: 'الرسام : تصحيح الأخطاء'
+            Conditionals:
+              name: الجمل الشرطية
+            'Bee: Conditionals':
+              name: 'النحلة: الجمل الشرطية'
+            Binary Bracelets:
+              name: أساور الثنائية
+            The Big Event:
+              name: الحدث الكبير
+            Flappy:
+              name: فلابي
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+            'Artist: Nested Loops':
+              name: 'الرسام : الحلقات المتداخلة'
         course3:
           title: الدورة الثالثة
           description: الدرس الثالث مصمم للطلبة الذين أكملوا الدرس الثاني ، الطلبة
@@ -151,6 +223,45 @@ ar:
               name: 'مختبر اللعب : أنشئ لعبة'
             'Studio: Create a Story':
               name: 'مختبر اللعب: إنشاء قصة'
+          lessons:
+            Computational Thinking:
+              name: التفكير الحسابي
+            Maze:
+              name: المتاهة
+            Artist:
+              name: الرسام
+            Functional Suncatchers:
+              name: وظيفية Suncatchers
+            'Artist: Functions':
+              name: 'الرسام : المهام'
+            'Bee: Functions':
+              name: 'النحلة : الوظائف'
+            'Bee: Conditionals':
+              name: 'النحلة: الجمل الشرطية'
+            'Maze: Conditionals':
+              name: 'المتاهة : الجمل الشرطية'
+            Songwriting:
+              name: تأليف الأغاني
+            Dice Race:
+              name: سباق الزهر
+            'Artist: Nested Loops':
+              name: 'الرسام : الحلقات المتداخلة'
+            'Farmer: While Loops':
+              name: 'المُزارع : حلقات طالما'
+            'Bee: Nested Loops':
+              name: 'النحلة : الحلقات المتداخلة'
+            'Bee: Debugging':
+              name: 'النحلة: تصحيح الأخطاء'
+            Bounce:
+              name: الارتداد
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Artist: Patterns':
+              name: 'الفنان: أنماط'
         playlab:
           title: مختبر اللعب
           description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
@@ -158,11 +269,17 @@ ar:
           stages:
             Play Lab:
               name: مختبر اللعب
+          lessons:
+            Play Lab:
+              name: مختبر اللعب
         artist:
           title: الرسام
           description: ارسم صور رائعة و صمم مع الرسام !
           description_short: ارسم صور رائعة و صمم مع الرسام !
           stages:
+            Artist:
+              name: الرسام
+          lessons:
             Artist:
               name: الرسام
         hourofcode:
@@ -175,6 +292,9 @@ ar:
           stages:
             Maze:
               name: المتاهة
+          lessons:
+            Maze:
+              name: المتاهة
         frozen:
           title: برمج مع آنا و إلسا
           description: هيا نستخدم التعليمات البرمجية لنشارك آنا وإلسا رحلتهم لاستكشاف
@@ -183,6 +303,9 @@ ar:
           description_short: هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا
             في رحلتهم لاستكشاف سحر وجمال الجليد.
           stages:
+            Artist:
+              name: الرسام
+          lessons:
             Artist:
               name: الرسام
         course4:
@@ -240,6 +363,51 @@ ar:
               name: ": موصول تأليف الأغاني مع المعلمات"
             'Unplugged: Tangrams':
               name: 'غير موصول: تانغرام Tangrams'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'غير موصول: تانغرام Tangrams'
+            Maze and Bee:
+              name: المتاهة والنحل
+            Artist:
+              name: الرسام
+            'Unplugged: Envelope Variables':
+              name: 'موصول: المتغيرات المغلف'
+            'Unplugged: Madlibs':
+              name: 'موصول: مادليبس'
+            'Artist: Variables':
+              name: 'الفنان: المتغيرات'
+            'Play Lab: Variables':
+              name: 'تشغيل مختبر: المتغيرات'
+            'Unplugged: For Loop Fun':
+              name: 'موصول: للمتعة حلقة'
+            'Bee: For Loops':
+              name: 'النحل: للحلقات'
+            'Artist: For Loops':
+              name: 'الفنان: للحلقات'
+            'Play Lab: For Loops':
+              name: 'تشغيل مختبر: للحلقات'
+            'Artist: Functions':
+              name: 'الرسام : المهام'
+            'Unplugged: Songwriting with Parameters':
+              name: ": موصول تأليف الأغاني مع المعلمات"
+            'Artist: Functions with Parameters':
+              name: مهام الرسام مع المعلمات
+            'Play Lab: Functions with Parameters':
+              name: 'مختبر اللعب: وظائف مع المعلمات'
+            'Bee: Functions with Parameters':
+              name: 'نحلة: وظائف مع المعلمات'
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+            Super Challenge - Variables:
+              name: سوبر التحدي-المتغيرات
+            Super Challenge - For Loops:
+              name: تحدي سوبر-للحلقات
+            Super Challenge - Functions and Parameters:
+              name: تحدي سوبر--مهام والمعلمات
+            Extreme Challenge - Comprehensive:
+              name: التحدي الشديد-شاملة
         Course4pre:
           title: شرط أساسي بالطبع 4
           description: رامبوب موجزاً للمفاهيم للطلاب الذين لم تتخذ بالطبع 2 و 3.
@@ -264,6 +432,25 @@ ar:
               name: 'المُزارع : حلقات طالما'
             'Maze: Sequence':
               name: 'المتاهة : التسلسل'
+          lessons:
+            'Maze: Sequence':
+              name: 'المتاهة : التسلسل'
+            'Artist: Sequence':
+              name: 'الرسام : التسلسل'
+            'Artist: Loops':
+              name: 'الرسام : الحلقات'
+            'Bee: Conditionals':
+              name: 'النحلة: الجمل الشرطية'
+            'Artist: Nested Loops':
+              name: 'الرسام : الحلقات المتداخلة'
+            'Farmer: While Loops':
+              name: 'المُزارع : حلقات طالما'
+            'Bee: Nested Loops':
+              name: 'النحلة : الحلقات المتداخلة'
+            'Artist: Functions':
+              name: 'الرسام : المهام'
+            'Bee: Debugging':
+              name: 'النحلة: تصحيح الأخطاء'
         usability:
           stages:
             Binary:
@@ -276,6 +463,17 @@ ar:
               name: مقدمة
             Variables:
               name: المتغيرات
+          lessons:
+            Intro:
+              name: مقدمة
+            Variables:
+              name: المتغيرات
+            For Loops:
+              name: للحلقات
+            Functions and Functions with Parameters:
+              name: الوظائف والمهام مع المعلمات
+            Binary:
+              name: ثنائي
         algebra:
           stages:
             'Calc: Defining Variables':
@@ -288,12 +486,53 @@ ar:
               name: 'موصول: الوصفة التصميم'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'موصول: ألعاب الفيديو وتنسيق طائرات'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'موصول: ألعاب الفيديو وتنسيق طائرات'
+            'Calc: Evaluation Blocks':
+              name: 'احسب: كتل التقييم'
+            'Eval: Strings and Images':
+              name: 'Eval: سلاسل والصور'
+            'Unplugged: Contracts':
+              name: 'موصول: العقود'
+            'Eval: Writing Contracts':
+              name: 'Eval: كتابة العقود'
+            'Calc: Defining Variables':
+              name: 'احسب: تعريف المتغيرات'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'مختبر اللعب: تعريف المتغيرات (اللعبة الكبرى)'
+            'Unplugged: The Design Recipe':
+              name: 'موصول: الوصفة التصميم'
+            'Play Lab: Animation (Big Game)':
+              name: 'مختبر اللعب: الرسوم المتحركة (اللعبة الكبرى)'
+            'Unplugged: Booleans':
+              name: 'غير موصول: القيم المنطقية'
+            'Eval: Boolean Operators':
+              name: 'Eval: عوامل التشغيل المنطقية'
+            'Play Lab: Booleans':
+              name: 'تشغيل مختبر: القيم المنطقية'
+            'Play Lab: Boolean (Big Game)':
+              name: 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'موصول: الشرطية ووظائف Piecewise'
+            'Eval: Conditionals':
+              name: 'التقييم: الجمل الشرطية'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'غير موصول: الكشف عن التصادم وصيغة المسافة'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'مختبر اللعب: الكشف عن التصادم (اللعبة الكبرى)'
         infinity:
           stages:
             Infinity:
               name: ما لانهاية
+          lessons:
+            Infinity:
+              name: ما لانهاية
         algebrademo:
           stages:
+            The Design Recipe:
+              name: وصفه التصميم
+          lessons:
             The Design Recipe:
               name: وصفه التصميم
         K5PD:
@@ -351,6 +590,47 @@ ar:
               name: المتاهة
             Wrap-up:
               name: الجلسة الختامية
+          lessons:
+            Introduction to Computer Science:
+              name: مقدمة لعلوم الحاسب الآلي
+            The Maze:
+              name: المتاهة
+            Computational Thinking:
+              name: التفكير الحسابي
+            Graph Paper Programming:
+              name: برمجة ورقة الرسم البياني
+            The Artist:
+              name: الاعب
+            Algorithms:
+              name: الخوارزميات
+            The Artist 2:
+              name: الرسام 2
+            Functions:
+              name: دوال
+            The Farmer:
+              name: المزارع
+            Conditionals:
+              name: الجمل الشرطية
+            The Artist 3:
+              name: الرسام 3
+            Song Writing:
+              name: كتابة الاغنية
+            The Farmer 2:
+              name: المزارع 2
+            Abstraction:
+              name: خلاصة
+            The Artist 4:
+              name: الرسام 4
+            Relay Programming:
+              name: برمجة السباق
+            The Farmer 3:
+              name: المزارع 3
+            The Internet:
+              name: الانترنت
+            The Artist 5:
+              name: الرسام 5
+            Wrap-up:
+              name: الجلسة الختامية
         edit-code:
           title: تعديل كود البرنامج
           description: تعديل كود البرنامج
@@ -364,6 +644,15 @@ ar:
               name: الاعب
             The Maze:
               name: المتاهة
+          lessons:
+            The Maze:
+              name: المتاهة
+            Applab:
+              name: معمل التطبيقات
+            The Artist:
+              name: الاعب
+            Play Lab:
+              name: مختبر اللعب
         events:
           title: الأحداث
           description: الأحداث
@@ -375,6 +664,13 @@ ar:
               name: تقييم
             Studio:
               name: ستوديو
+          lessons:
+            Bounce:
+              name: الارتداد
+            Studio:
+              name: ستوديو
+            Eval:
+              name: تقييم
         flappy:
           title: رمز لعبة flappy
           description: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس
@@ -382,14 +678,23 @@ ar:
           stages:
             Flappy Code:
               name: رمز لعبة flappy
+          lessons:
+            Flappy Code:
+              name: رمز لعبة flappy
         jigsaw:
           title: بانوراما
           stages:
             Jigsaw:
               name: بانوراما
+          lessons:
+            Jigsaw:
+              name: بانوراما
         step:
           title: الخطوة
           stages:
+            Step:
+              name: الخطوة
+          lessons:
             Step:
               name: الخطوة
         Hour of Code:
@@ -399,12 +704,21 @@ ar:
           stages:
             Hour of Code 2013:
               name: ساعة من البرمجة 2013
+          lessons:
+            Hour of Code 2013:
+              name: ساعة من البرمجة 2013
         CodeStudioPuzzleChallenge:
           stages:
             Puzzles:
               name: ألغاز
+          lessons:
+            Puzzles:
+              name: ألغاز
         Tutorial Video - Code Studio Puzzle Challenge:
           stages:
+            Puzzles:
+              name: ألغاز
+          lessons:
             Puzzles:
               name: ألغاز
         cspunit1:
@@ -416,12 +730,27 @@ ar:
               name: بايت واحجام الملفات
             Sending Binary Messages:
               name: إرسال رسائل بالنظام الثنائي
+          lessons:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
         algebraPD:
           stages:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
+          lessons:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
         algPDmiami:
           stages:
+            Booleans:
+              name: القيم المنطقية
+            Luigi's Pizza:
+              name: بيتزا لويجي
+          lessons:
             Booleans:
               name: القيم المنطقية
             Luigi's Pizza:
@@ -433,8 +762,18 @@ ar:
               name: إضافة الدوال
             While Loops:
               name: حلقات بينما
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
+            While Loops:
+              name: حلقات بينما
         algebraPD3:
           stages:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
+            The Design Recipe:
+              name: وصفه التصميم
+          lessons:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
             The Design Recipe:
@@ -443,12 +782,23 @@ ar:
           stages:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
+          lessons:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
         algebraPD-iZone:
           stages:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
+          lessons:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
         sciencePD2:
           stages:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
+          lessons:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
@@ -460,6 +810,9 @@ ar:
               name: المفاتيح وكلمات المرور
             The Internet:
               name: الانترنت
+          lessons:
+            The Internet:
+              name: الانترنت
         algebraPD2a:
           stages:
             Booleans:
@@ -468,6 +821,13 @@ ar:
               name: بيتزا لويجي
             The Design Recipe:
               name: وصفه التصميم
+          lessons:
+            The Design Recipe:
+              name: وصفه التصميم
+            Booleans:
+              name: القيم المنطقية
+            Luigi's Pizza:
+              name: بيتزا لويجي
         allthethings:
           stages:
             Artist:
@@ -490,6 +850,27 @@ ar:
               name: متعدد
             Studio:
               name: ستوديو
+          lessons:
+            Jigsaw:
+              name: بانوراما
+            Maze:
+              name: المتاهة
+            Artist:
+              name: الرسام
+            Bee:
+              name: نحلة
+            Flappy:
+              name: فلابي
+            Bounce:
+              name: الارتداد
+            Multi:
+              name: متعدد
+            Match:
+              name: مماثلة
+            Studio:
+              name: ستوديو
+            Minecraft:
+              name: Minecraft
         algebraPD2b:
           stages:
             Booleans:
@@ -498,6 +879,13 @@ ar:
               name: 'التقييم: الجمل الشرطية'
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
+          lessons:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
+            Booleans:
+              name: القيم المنطقية
+            'Eval: Conditionals':
+              name: 'التقييم: الجمل الشرطية'
         cspfacilitator:
           stages:
             App Lab:
@@ -506,6 +894,13 @@ ar:
               name: محاكاة الإنترنت
             Welcome!:
               name: مرحبا !
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            Internet Simulator:
+              name: محاكاة الإنترنت
+            App Lab:
+              name: مختبر التطبيق
         ECSPD2:
           stages:
             0: |-
@@ -518,6 +913,17 @@ ar:
               name: مرحبا !
             Wrap-up:
               name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: الجلسة الختامية
         algebraPD2:
           stages:
             Teacher Dashboard:
@@ -526,8 +932,20 @@ ar:
               name: وصفه التصميم
             Welcome!:
               name: مرحبا !
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            The Design Recipe:
+              name: وصفه التصميم
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
         sciencePD2b:
           stages:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
+          lessons:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
@@ -538,8 +956,18 @@ ar:
               name: مرحبا !
             Wrap-Up:
               name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
         sciencePD2b-iZone:
           stages:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
+          lessons:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
@@ -556,6 +984,17 @@ ar:
               name: مرحبا !
             Wrap-up:
               name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: الجلسة الختامية
         ECSPD2-NexTech:
           stages:
             0: |-
@@ -566,6 +1005,17 @@ ar:
               What Is a Computer?
             Welcome!:
               name: مرحبا !
+            Wrap-up:
+              name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: الجلسة الختامية
         asUnplugged:
@@ -588,6 +1038,25 @@ ar:
               name: تأليف الأغاني
             The Big Event:
               name: الحدث الكبير
+          lessons:
+            Happy Maps:
+              name: الخرائط السعيدة
+            Move it, Move it:
+              name: حركها ! حركها
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Graph Paper Programming:
+              name: برمجة ورقة الرسم البياني
+            Building a Foundation:
+              name: بناء قاعدة
+            Getting Loopy:
+              name: القبض على المعتوهون
+            The Big Event:
+              name: الحدث الكبير
+            Binary Bracelets:
+              name: أساور الثنائية
+            Songwriting:
+              name: تأليف الأغاني
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -603,11 +1072,17 @@ ar:
           stages:
             While Loops:
               name: حلقات بينما
+          lessons:
+            While Loops:
+              name: حلقات بينما
         gumball:
           title: مختبر اللّعب غامبول
           description: تخيّل قصة أو إصنع لعبة مع مختبر اللّعب غامبول!
           description_short: تخيّل قصة أو إصنع لعبة مع مختبر اللّعب غامبول!
           stages:
+            Gumball Play Lab:
+              name: مختبر اللّعب غامبول
+          lessons:
             Gumball Play Lab:
               name: مختبر اللّعب غامبول
         starwars:
@@ -619,6 +1094,9 @@ ar:
           stages:
             Hour of Code 2015:
               name: ساعة من البرمجة 2015
+          lessons:
+            Hour of Code 2015:
+              name: ساعة من البرمجة 2015
         starwarsblocks:
           title: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
           description: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة،
@@ -626,6 +1104,9 @@ ar:
           description_short: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
             مجرة بعيدة، بعيدة جدا.
           stages:
+            Hour of Code 2015:
+              name: ساعة من البرمجة 2015
+          lessons:
             Hour of Code 2015:
               name: ساعة من البرمجة 2015
         mc:
@@ -636,8 +1117,16 @@ ar:
           stages:
             Hour of Code 2015:
               name: ساعة من البرمجة 2015
+          lessons:
+            Hour of Code 2015:
+              name: ساعة من البرمجة 2015
         ScienceP3OLPT3:
           stages:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
+          lessons:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
@@ -658,6 +1147,19 @@ ar:
               name: 'Eval: كتابة العقود'
             'Unplugged: Contracts':
               name: 'موصول: العقود'
+            'Unplugged: The Design Recipe':
+              name: 'موصول: الوصفة التصميم'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'احسب: كتل التقييم'
+            'Eval: Strings and Images':
+              name: 'Eval: سلاسل والصور'
+            'Unplugged: Contracts':
+              name: 'موصول: العقود'
+            'Eval: Writing Contracts':
+              name: 'Eval: كتابة العقود'
+            'Calc: Defining Variables':
+              name: 'احسب: تعريف المتغيرات'
             'Unplugged: The Design Recipe':
               name: 'موصول: الوصفة التصميم'
         AlgebraB:
@@ -684,8 +1186,34 @@ ar:
               name: 'موصول: الشرطية ووظائف Piecewise'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'موصول: ألعاب الفيديو وتنسيق طائرات'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'موصول: ألعاب الفيديو وتنسيق طائرات'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'مختبر اللعب: تعريف المتغيرات (اللعبة الكبرى)'
+            'Play Lab: Animation (Big Game)':
+              name: 'مختبر اللعب: الرسوم المتحركة (اللعبة الكبرى)'
+            'Unplugged: Booleans':
+              name: 'غير موصول: القيم المنطقية'
+            'Eval: Boolean Operators':
+              name: 'Eval: عوامل التشغيل المنطقية'
+            'Play Lab: Booleans':
+              name: 'تشغيل مختبر: القيم المنطقية'
+            'Play Lab: Boolean (Big Game)':
+              name: 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'موصول: الشرطية ووظائف Piecewise'
+            'Eval: Conditionals':
+              name: 'التقييم: الجمل الشرطية'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'غير موصول: الكشف عن التصادم وصيغة المسافة'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'مختبر اللعب: الكشف عن التصادم (اللعبة الكبرى)'
         algebraPD1:
           stages:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
+          lessons:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
         csp1-2017:
@@ -705,6 +1233,15 @@ ar:
               display_name: 'الفصل 1: تمثيل المعلومات ونقلها'
             csp1_2:
               display_name: 'الفصل 2: اختراع الإنترنت'
+          lessons:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
+            The Internet:
+              name: الانترنت
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -718,6 +1255,11 @@ ar:
               display_name: 'الفصل 2: معالجة البيانات وتصويرها'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         csp3-2017:
           description_short: البرمجة
           stages:
@@ -732,6 +1274,11 @@ ar:
               display_name: تقييم الفصل
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         csp4-2017:
           stages:
             Post-Course Survey:
@@ -743,6 +1290,9 @@ ar:
               display_name: تقييم الفصل
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         csp5-2017:
           stages:
             While Loops:
@@ -756,6 +1306,11 @@ ar:
               display_name: 'الفصل 2: البرمجة باستخدام بنيات البيانات'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            While Loops:
+              name: حلقات بينما
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         CSDU3-Draft:
           description_short: البرمجة
           stages:
@@ -771,6 +1326,9 @@ ar:
           stages:
             Teacher Dashboard:
               name: لَوْحَة التَحَكُّم
+          lessons:
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
         cspunit1-support:
           stages:
             Sending Binary Messages:
@@ -782,6 +1340,9 @@ ar:
               display_name: محتوى
             practice:
               display_name: تمارين معلم الرياضيات
+          lessons:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -794,8 +1355,14 @@ ar:
           stages:
             Game Lab:
               name: أداة Game Lab
+          lessons:
+            Game Lab:
+              name: أداة Game Lab
         MikeTest:
           stages:
+            Artist Functions:
+              name: وظائف الرسام
+          lessons:
             Artist Functions:
               name: وظائف الرسام
         artistExemplar:
@@ -810,6 +1377,9 @@ ar:
               display_name: تمارين معلم الرياضيات
         kinderTest:
           stages:
+            'Bee: Conditionals':
+              name: 'النحلة: الجمل الشرطية'
+          lessons:
             'Bee: Conditionals':
               name: 'النحلة: الجمل الشرطية'
         gradeKinder:
@@ -876,6 +1446,17 @@ ar:
               name: مرحبا !
             Wrap-up:
               name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: الجلسة الختامية
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -914,6 +1495,15 @@ ar:
               display_name: استبيان
             csd_survey:
               display_name: استبيان ما بعد الدورة التدريبية
+          lessons:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         grade2:
           stages:
             Flappy:
@@ -946,6 +1536,27 @@ ar:
               name: المتغيرات
             While Loops:
               name: حلقات بينما
+          lessons:
+            Events:
+              name: الأحداث
+            Loops:
+              name: الحلقات
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals:
+              name: الجمل الشرطية
+            While Loops:
+              name: حلقات بينما
+            Functions:
+              name: دوال
+            Variables:
+              name: المتغيرات
+            For Loops:
+              name: للحلقات
+            Functions with Parameters:
+              name: الدوال والمعاملات
+            Binary:
+              name: ثنائي
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -954,6 +1565,13 @@ ar:
               name: وصفه التصميم
             Welcome!:
               name: مرحبا !
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            The Design Recipe:
+              name: وصفه التصميم
+            Teacher Dashboard:
+              name: لَوْحَة التَحَكُّم
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -982,6 +1600,9 @@ ar:
           stages:
             Bounce:
               name: الارتداد
+          lessons:
+            Bounce:
+              name: الارتداد
         fesbinary:
           title: ثنائي
           stages:
@@ -1002,6 +1623,9 @@ ar:
               display_name: 'الفصل 2: التصميم و CSS'
             csd_survey:
               display_name: استبيان ما بعد الدورة التدريبية
+          lessons:
+            Lists:
+              name: القوائم
         csp2-support:
           lesson_groups:
             required:
@@ -1027,8 +1651,14 @@ ar:
           stages:
             Minecraft Hour of Code Designer:
               name: ساعة من البرمجة مع ماينكرافت نسخة المصمم
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: ساعة من البرمجة مع ماينكرافت نسخة المصمم
         flappy-impact-study:
           stages:
+            Flappy Code:
+              name: رمز لعبة flappy
+          lessons:
             Flappy Code:
               name: رمز لعبة flappy
         coursea-draft:
@@ -1037,8 +1667,18 @@ ar:
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
             Going Places Safely:
               name: الذهاب للأماكن بأمان
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
         courseb-draft:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
             Your Digital Footprint:
@@ -1053,6 +1693,13 @@ ar:
               name: البصمة الرقمية الخاصة بك
             Building a Foundation:
               name: بناء قاعدة
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            'Real-life Algorithms: Paper Planes':
+              name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+            Binary Bracelets:
+              name: أساور الثنائية
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -1067,6 +1714,19 @@ ar:
               name: الحلقات المتداخلة
             Introduction:
               name: مقدمة
+          lessons:
+            Introduction:
+              name: مقدمة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -1084,6 +1744,15 @@ ar:
               display_name: محتوى
             extra_course_content:
               display_name: محتوى الدورة الممتازة
+          lessons:
+            Introduction:
+              name: مقدمة
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1099,6 +1768,15 @@ ar:
           lesson_groups:
             content:
               display_name: محتوى
+          lessons:
+            Introduction:
+              name: مقدمة
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Songwriting with Parameters:
+              name: تأليف الأغاني مع المعلمات
         classic-hoc-impact-study:
           description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
             الممتعة!
@@ -1111,14 +1789,27 @@ ar:
           stages:
             Hour of Code 2013:
               name: ساعة من البرمجة 2013
+          lessons:
+            Hour of Code 2013:
+              name: ساعة من البرمجة 2013
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
               name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
         2016_sciencePD_phase2b:
           stages:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
+          lessons:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
@@ -1145,6 +1836,11 @@ ar:
               name: مرحبا !
             Wrap-Up:
               name: الجلسة الختامية
+          lessons:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
         science-pd-ol-pt-5:
           stages:
             Welcome!:
@@ -1158,8 +1854,16 @@ ar:
           lesson_groups:
             content:
               display_name: محتوى
+          lessons:
+            Binary:
+              name: ثنائي
         sciencepd5:
           stages:
+            Welcome!:
+              name: مرحبا !
+            Wrap-Up:
+              name: الجلسة الختامية
+          lessons:
             Welcome!:
               name: مرحبا !
             Wrap-Up:
@@ -1181,6 +1885,9 @@ ar:
               display_name: محتوى
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         csd6-draft:
           stages:
             Lists:
@@ -1196,8 +1903,14 @@ ar:
               display_name: 'الفصل 2: بناء نماذج أوليّة مادية
 
 '
+          lessons:
+            Functions with Parameters:
+              name: الدوال والمعاملات
         workshop-gamelab:
           stages:
+            Introduction:
+              name: مقدمة
+          lessons:
             Introduction:
               name: مقدمة
         csd5-draft:
@@ -1212,6 +1925,9 @@ ar:
           stages:
             Introduction:
               name: مقدمة
+          lessons:
+            Introduction:
+              name: مقدمة
         coursee-ramp:
           stages:
             Introduction:
@@ -1220,6 +1936,13 @@ ar:
               name: الجمل الشرطية
             'Real Life Algorithms: Dice Race':
               name: 'خوارزميات الحياة الحقيقية: سباق النرد'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'خوارزميات الحياة الحقيقية: سباق النرد'
+            Introduction:
+              name: مقدمة
+            Conditionals:
+              name: الجمل الشرطية
         csd6-2017:
           stages:
             Lists:
@@ -1265,6 +1988,11 @@ ar:
               name: السرعة
             Functions:
               name: دوال
+          lessons:
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         csd2-draft:
           stages:
             Lists:
@@ -1285,6 +2013,9 @@ ar:
           stages:
             Introduction:
               name: مقدمة
+          lessons:
+            Introduction:
+              name: مقدمة
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -1293,30 +2024,63 @@ ar:
           stages:
             Bounce:
               name: الارتداد
+          lessons:
+            Bounce:
+              name: الارتداد
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
           title: الدورة A
           assignment_family_title: الدورة A
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
           title: الدورة B
           assignment_family_title: الدورة B
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'خوارزميات من واقع الحياة : طائرات ورقية'
           title: الدورة C
           assignment_family_title: الدورة C
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            'Real-life Algorithms: Paper Planes':
+              name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+            Binary Bracelets:
+              name: أساور الثنائية
         coursed-2017:
           stages:
             Nested Loops:
               name: الحلقات المتداخلة
           title: الدورة D
           assignment_family_title: الدورة D
+          lessons:
+            Introduction:
+              name: مقدمة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
         coursee-2017:
           stages:
             Envelope Variables:
@@ -1338,6 +2102,19 @@ ar:
               display_name: محتوى الدورة E
             extra_course_content:
               display_name: محتوى الدورة الممتازة
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Introduction:
+              name: مقدمة
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         coursef-2017:
           stages:
             Building a Foundation:
@@ -1349,6 +2126,17 @@ ar:
               display_name: اذهب إلى الدروة F (اختياري)
             csf_f_2:
               display_name: محتوى الدورة F
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Introduction:
+              name: مقدمة
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Songwriting with Parameters:
+              name: تأليف الأغاني مع المعلمات
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -1452,8 +2240,20 @@ ar:
           lesson_groups:
             content:
               display_name: محتوى
+          lessons:
+            Introduction:
+              name: مقدمة
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
         pre-express-2017:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Spelling Bee:
+              name: مسابقة التهجئة
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
             Spelling Bee:
@@ -1474,6 +2274,9 @@ ar:
               display_name: تقييم الفصل
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -1499,6 +2302,15 @@ ar:
               display_name: محتوى الدورة E
             extra_course_content:
               display_name: محتوى الدورة الممتازة
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         new-d:
           stages:
             Introduction:
@@ -1517,6 +2329,21 @@ ar:
               name: بناء قاعدة
             Loops in Ice Age:
               name: الحلقات في العصر الجليدي
+          lessons:
+            Introduction:
+              name: مقدمة
+            Building a Foundation:
+              name: بناء قاعدة
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
         csp3-a:
           lesson_groups:
             csp3_1:
@@ -1532,6 +2359,13 @@ ar:
           lesson_groups:
             content:
               display_name: محتوى
+          lessons:
+            Introduction:
+              name: مقدمة
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
         new-e:
           stages:
             Building a Foundation:
@@ -1549,6 +2383,15 @@ ar:
               display_name: محتوى الدورة E
             extra_course_content:
               display_name: محتوى الدورة الممتازة
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         new-f:
           stages:
             Building a Foundation:
@@ -1564,6 +2407,15 @@ ar:
               display_name: اذهب إلى الدروة F (اختياري)
             csf_f_2:
               display_name: محتوى الدورة F
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Songwriting with Parameters:
+              name: تأليف الأغاني مع المعلمات
         csd5-old:
           lesson_groups:
             csd5_1:
@@ -1587,6 +2439,9 @@ ar:
               display_name: 'الفصل 1: لغات البرمجة والخوارزميات'
             cspAssessment:
               display_name: تقييم الفصل
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
@@ -1597,6 +2452,9 @@ ar:
           description_short: ماين كرافت عادت بنشاط جديد من انشطة ساعة من البرمجة!
           description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
             رحلة عبر Minecraft مع البرمجة.
+          lessons:
+            Minecraft Hour of Code:
+              name: ساعة البرمجة ماين كرافت
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -1606,6 +2464,9 @@ ar:
               display_name: 'الفصل 2: استكشاف مهمة الأداء ببرنامج التعيين المتقدم'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         csp-create-2017:
           stages:
             Post-Course Survey:
@@ -1615,6 +2476,9 @@ ar:
               display_name: 'الفصل 3: إنشاء مهمة الأداء ببرنامج التعيين المتقدم'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Post-Course Survey:
+              name: استبيان ما بعد الدورة التدريبية
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1636,6 +2500,19 @@ ar:
               display_name: محتوى الدورة E
             extra_course_content:
               display_name: محتوى الدورة الممتازة
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Introduction:
+              name: مقدمة
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1653,6 +2530,17 @@ ar:
               display_name: اذهب إلى الدروة F (اختياري)
             csf_f_2:
               display_name: محتوى الدورة F
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Introduction:
+              name: مقدمة
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Songwriting with Parameters:
+              name: تأليف الأغاني مع المعلمات
         csd6-old:
           stages:
             Lists:
@@ -1666,6 +2554,11 @@ ar:
               display_name: 'الفصل 2: بناء نماذج أوليّة مادية
 
 '
+          lessons:
+            Lists:
+              name: القوائم
+            For Loops:
+              name: للحلقات
         csd3-1819draft:
           stages:
             Variables:
@@ -1684,6 +2577,15 @@ ar:
               display_name: 'الفصل 2: إنشاء الألعاب'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         csd3-2018:
           description_short: البرمجة
           stages:
@@ -1702,6 +2604,15 @@ ar:
               display_name: 'الفصل 2: إنشاء الألعاب'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         csd2-2018:
           stages:
             Lists:
@@ -1713,6 +2624,9 @@ ar:
               display_name: 'الفصل 2: التصميم و CSS'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Lists:
+              name: القوائم
         coursea-2018:
           assignment_family_title: الدورة A
           stages:
@@ -1726,6 +2640,11 @@ ar:
               name: الذهاب للأماكن بأمان
             'Persistence & Frustration: Stevie and the Big Project':
               name: ستيفي والمشروع الضخم
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
         express-2018:
           assignment_family_title: دورة سريعة
           stages:
@@ -1763,6 +2682,27 @@ ar:
               name: برمجة السباق
             Graph Paper Programming:
               name: برمجة ورقة الرسم البياني
+          lessons:
+            Graph Paper Programming:
+              name: برمجة ورقة الرسم البياني
+            Relay Programming:
+              name: برمجة السباق
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Binary Bracelets:
+              name: أساور الثنائية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         courseb-2018:
           assignment_family_title: الدورة B
           stages:
@@ -1772,6 +2712,13 @@ ar:
               name: البصمة الرقمية الخاصة بك
             Move It, Move It:
               name: حركها , حركها
+          lessons:
+            Move It, Move It:
+              name: حركها , حركها
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         coursed-2018:
           assignment_family_title: الدورة D
           stages:
@@ -1795,6 +2742,19 @@ ar:
               name: برمجة ورقة الرسم البياني
             Relay Programming:
               name: برمجة السباق
+          lessons:
+            Relay Programming:
+              name: برمجة السباق
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
         coursec-2018:
           assignment_family_title: الدورة C
           stages:
@@ -1804,6 +2764,13 @@ ar:
               name: القبض على المعتوهون
             'Events: The Big Event':
               name: الحدث الكبير
+            Binary Bracelets:
+              name: أساور الثنائية
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            'Real-life Algorithms: Paper Planes':
+              name: 'خوارزميات من واقع الحياة : طائرات ورقية'
             Binary Bracelets:
               name: أساور الثنائية
         csd6-2018:
@@ -1819,6 +2786,9 @@ ar:
 '
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Functions with Parameters:
+              name: الدوال والمعاملات
         coursee-2018:
           assignment_family_title: الدورة E
           stages:
@@ -1845,6 +2815,19 @@ ar:
               display_name: محتوى الدورة E
             extra_course_content:
               display_name: محتوى الدورة الممتازة
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Nested Loops:
+              name: الحلقات المتداخلة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Conditionals:
+              name: الجمل الشرطية
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         coursef-2018:
           assignment_family_title: الدورة F
           stages:
@@ -1867,6 +2850,15 @@ ar:
               display_name: اذهب إلى الدروة F (اختياري)
             csf_f_2:
               display_name: محتوى الدورة F
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
         csp1-2018:
           stages:
             Sending Binary Messages:
@@ -1882,6 +2874,13 @@ ar:
               display_name: 'الفصل 1: تمثيل المعلومات ونقلها'
             csp1_2:
               display_name: 'الفصل 2: اختراع الإنترنت'
+          lessons:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
+            The Internet:
+              name: الانترنت
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -1917,6 +2916,9 @@ ar:
               display_name: "(قديم) الوحدة 1: معلومات رقمية"
             cspAssessment:
               display_name: تقييم الفصل
+          lessons:
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
         csp3-2018:
           description_short: البرمجة
           stages:
@@ -1929,6 +2931,9 @@ ar:
               display_name: تقييم الفصل
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
         csp-explore-2018:
           lesson_groups:
             csp_ap_2:
@@ -1960,6 +2965,9 @@ ar:
               display_name: 'الفصل 2: البرمجة باستخدام بنيات البيانات'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            While Loops:
+              name: حلقات بينما
         csppostap-2018:
           lesson_groups:
             csp_postap_1:
@@ -2092,6 +3100,15 @@ ar:
               name: البصمة الرقمية الخاصة بك
             'Persistence & Frustration: Stevie and the Big Project':
               name: ستيفي والمشروع الضخم
+          lessons:
+            Move It, Move It:
+              name: حركها , حركها
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+            Spelling Bee:
+              name: مسابقة التهجئة
         fit-test:
           lesson_groups:
             required:
@@ -2102,8 +3119,14 @@ ar:
           stages:
             Artist:
               name: الرسام
+          lessons:
+            Artist:
+              name: الرسام
         frozen-2018-test:
           stages:
+            Artist:
+              name: الرسام
+          lessons:
             Artist:
               name: الرسام
         dance:
@@ -2114,8 +3137,14 @@ ar:
           description_short: كاتي بيري، مادونا، جي بالفين، سيا، كيث أربان، سيارا،
             و25 مطرب ومطربة أخرين!
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
+          lessons:
+            Dance Party:
+              name: حفلة الرقص
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: الرسام
+          lessons:
             Artist:
               name: الرسام
         aquatic:
@@ -2125,6 +3154,9 @@ ar:
           title: 'المائي: الرحلة المائية'
           description_short: Minecraft عاد إليكم بأنشطة جديدة تمامًا ومخصصة لساعة
             من البرمجة!
+          lessons:
+            Aquatic:
+              name: Minecraft
         dance--draft:
           stages:
             Dance Party:
@@ -2174,6 +3206,15 @@ ar:
               display_name: الإنترنت
             csf_digcit:
               display_name: المواطنة الرقمية
+          lessons:
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         dance-low:
           stages:
             Dance Party:
@@ -2209,6 +3250,21 @@ ar:
               display_name: ثنائي
             csf_digcit:
               display_name: المواطنة الرقمية
+          lessons:
+            Relay Programming:
+              name: برمجة السباق
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            Dance Party:
+              name: حفلة الرقص
         coursee-2019:
           stages:
             Building a Foundation:
@@ -2236,6 +3292,9 @@ ar:
               display_name: الحلقات المتداخلة
             csf_functions:
               display_name: دوال
+          lessons:
+            Conditionals:
+              name: الجمل الشرطية
         express-2019:
           stages:
             Relay Programming:
@@ -2273,6 +3332,9 @@ ar:
               display_name: المتغيرات
             csf_for_loops:
               display_name: للحلقات
+          lessons:
+            Dance Party:
+              name: حفلة الرقص
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2312,6 +3374,9 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Binary Bracelets:
+              name: أساور الثنائية
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2333,6 +3398,11 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2352,6 +3422,11 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+            Move It, Move It:
+              name: حركها , حركها
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2367,8 +3442,16 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Spelling Bee:
+              name: مسابقة التهجئة
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         removed19:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
         csd2-2019:
@@ -2382,6 +3465,9 @@ ar:
               display_name: 'الفصل 2: التصميم و CSS'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Lists:
+              name: القوائم
         csd3-2019:
           description_short: البرمجة
           stages:
@@ -2400,6 +3486,15 @@ ar:
               display_name: 'الفصل 2: إنشاء الألعاب'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -2433,6 +3528,9 @@ ar:
 '
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Functions with Parameters:
+              name: الدوال والمعاملات
         csp4-pilot:
           stages:
             Surveys:
@@ -2463,6 +3561,13 @@ ar:
               display_name: 'الفصل 1: تمثيل المعلومات ونقلها'
             csp1_2:
               display_name: 'الفصل 2: اختراع الإنترنت'
+          lessons:
+            Sending Binary Messages:
+              name: إرسال رسائل بالنظام الثنائي
+            Binary Numbers:
+              name: أرقام ثنائية
+            The Internet:
+              name: الانترنت
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -2474,6 +3579,9 @@ ar:
               display_name: تقييم الفصل
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Bytes and File Sizes:
+              name: بايت واحجام الملفات
         csp3-2019:
           description_short: البرمجة
           stages:
@@ -2486,6 +3594,9 @@ ar:
               display_name: تقييم الفصل
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
         csp4-2019:
           lesson_groups:
             csp4_1_2018:
@@ -2505,6 +3616,9 @@ ar:
               display_name: 'الفصل 2: البرمجة باستخدام بنيات البيانات'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            While Loops:
+              name: حلقات بينما
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -2538,6 +3652,9 @@ ar:
               display_name: استبيان
             required:
               display_name: لمحة عامة
+          lessons:
+            Binary Numbers:
+              name: أرقام ثنائية
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2561,6 +3678,13 @@ ar:
               display_name: 'المجموعة 4: أثر الأصناف المنتشرة (على أرض إيفرجلادز)'
             time4cs_c5:
               display_name: 'المجموعة 5: إجراءات يتخذها المواطنون'
+          lessons:
+            Building a Foundation:
+              name: بناء قاعدة
+            Crowdsourcing:
+              name: حشد المصادر
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2725,6 +3849,15 @@ ar:
               display_name: 'الفصل 2: إنشاء الألعاب'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         csp3-pilot:
           lesson_groups:
             content:
@@ -2742,6 +3875,9 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -2818,6 +3954,11 @@ ar:
               name: مقدمة
             Nested Loops:
               name: الحلقات المتداخلة
+          lessons:
+            Introduction:
+              name: مقدمة
+            Nested Loops:
+              name: الحلقات المتداخلة
         csp6-pilot:
           lesson_groups:
             content:
@@ -2829,6 +3970,9 @@ ar:
             Dance Party:
               name: حفلة الرقص
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
+          lessons:
+            Dance Party:
+              name: حفلة الرقص
         k5-onlinepd-2019:
           stages:
             Sequencing:
@@ -2852,6 +3996,21 @@ ar:
               display_name: مفاهيم الترميز الأساسية وممارسات التدريس
             k5_diving_deeper:
               display_name: 'الدخول في التفاصيل: الدورات التدريبية هـ - و'
+          lessons:
+            Sequencing:
+              name: التجزيء
+            Loops:
+              name: الحلقات
+            Events:
+              name: الأحداث
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال
+            Variables:
+              name: المتغيرات
+            For Loops:
+              name: للحلقات
         dance-extras-2019:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         csp4-preview:
@@ -2883,6 +4042,11 @@ ar:
               display_name: الحلقات المتداخلة
             csf_functions:
               display_name: دوال
+          lessons:
+            Crowdsourcing:
+              name: حشد المصادر
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
         time4cs-experiment-unit-2:
           lesson_groups:
             time4cs_c1:
@@ -2914,6 +4078,9 @@ ar:
               display_name: 'مسرَّعة
 
 '
+          lessons:
+            Conditionals:
+              name: الجمل الشرطية
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -2933,6 +4100,9 @@ ar:
               display_name: 'مسرَّعة
 
 '
+          lessons:
+            Conditionals:
+              name: الجمل الشرطية
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -3018,6 +4188,9 @@ ar:
 '
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Functions with Parameters:
+              name: الدوال والمعاملات
         csd3-2020:
           description_short: البرمجة
           stages:
@@ -3038,6 +4211,17 @@ ar:
               display_name: 'الفصل 2: إنشاء الألعاب'
             cspSurvey:
               display_name: استبيان
+          lessons:
+            Variables:
+              name: المتغيرات
+            Text:
+              name: النص
+            Conditionals:
+              name: الجمل الشرطية
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         coursea-2020:
           stages:
             Going Places Safely:
@@ -3053,6 +4237,9 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -3070,6 +4257,9 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Move It, Move It:
+              name: حركها , حركها
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -3087,6 +4277,9 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Binary Bracelets:
+              name: أساور الثنائية
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3118,6 +4311,19 @@ ar:
               display_name: ثنائي
             csf_digcit:
               display_name: المواطنة الرقمية
+          lessons:
+            Relay Programming:
+              name: برمجة السباق
+            Dance Party:
+              name: حفلة الرقص
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            'Unplugged: Binary':
+              name: 'موصول: ثنائي'
+            Artist Binary:
+              name: ثنائي الفنان
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -3133,6 +4339,9 @@ ar:
               display_name: الحلقات المتداخلة
             csf_functions:
               display_name: دوال
+          lessons:
+            Conditionals:
+              name: الجمل الشرطية
         coursef-2020:
           stages:
             Envelope Variables:
@@ -3154,6 +4363,13 @@ ar:
               display_name: المتغيرات
             csf_for_loops:
               display_name: للحلقات
+          lessons:
+            Envelope Variables:
+              name: المتغيرات المغلف
+            Internet:
+              name: الإنترنت
+            For Loop Fun:
+              name: حلقة فور، مرح
         express-2020:
           stages:
             Dance Party:
@@ -3173,6 +4389,9 @@ ar:
               display_name: المتغيرات
             csf_for_loops:
               display_name: للحلقات
+          lessons:
+            Dance Party:
+              name: حفلة الرقص
         pre-express-2020:
           stages:
             Spelling Bee:
@@ -3186,6 +4405,11 @@ ar:
               display_name: الحلقات
             csf_events:
               display_name: الأحداث
+          lessons:
+            Spelling Bee:
+              name: مسابقة التهجئة
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         csp1-2020:
           stages:
             Binary Numbers:
@@ -3193,6 +4417,9 @@ ar:
           lesson_groups:
             csp_unit1_2020:
               display_name: "(قديم) الوحدة 1: معلومات رقمية"
+          lessons:
+            Binary Numbers:
+              name: أرقام ثنائية
         csp3-2020:
           lesson_groups:
             csp_unit3_2020:
@@ -3209,6 +4436,9 @@ ar:
           lesson_groups:
             csp3_1_2018:
               display_name: 'الوحدة 3: مقدمة في البرمجة'
+          lessons:
+            Creating Functions:
+              name: إضافة الدوال
         csd3-virtual:
           description_short: البرمجة
           stages:
@@ -3223,6 +4453,11 @@ ar:
           lesson_groups:
             csd3_1:
               display_name: 'الفصل 1: الصور والمتحركات'
+          lessons:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3233,6 +4468,9 @@ ar:
           stages:
             While Loops:
               name: حلقات بينما
+            Variables:
+              name: المتغيرات
+          lessons:
             Variables:
               name: المتغيرات
         virtual-holding-place:
@@ -3246,6 +4484,11 @@ ar:
               display_name: محتوى
             csd3_2:
               display_name: 'الفصل 2: إنشاء الألعاب'
+          lessons:
+            Velocity:
+              name: السرعة
+            Functions:
+              name: دوال
         code-break:
           stages:
             Algorithms:
@@ -3261,3 +4504,6 @@ ar:
               display_name: 'الفصل 1: البرمجة المسيَّرة بالأحداث'
             csp5_2:
               display_name: 'الفصل 2: البرمجة باستخدام بنيات البيانات'
+          lessons:
+            While Loops:
+              name: حلقات بينما
