@@ -110,7 +110,7 @@
       },
       {
        "type": "checkbox",
-       "name": "course_type",
+       "name": "teaching_csp_as",
        "title": " I plan to teach {workshop_course} as...[check all that apply] ",
        "hasOther": true,
        "otherPlaceHolder": "Other",
@@ -152,39 +152,39 @@
        "title": "What other AP course(s) have you taught? [check all that apply] ",
        "choices": [
         {
-         "value": "computer_science_a",
+         "value": "ap_csa",
          "text": "AP Computer Science A"
         },
         {
-         "value": "calculus",
+         "value": "ap_calc",
          "text": "AP Calculus (AB or BC)"
         },
         {
-         "value": "statistics",
+         "value": "ap_stats",
          "text": "AP Statistics"
         },
         {
-         "value": "sciences",
+         "value": "ap_sciences",
          "text": "AP Sciences"
         },
         {
-         "value": "english",
+         "value": "ap_english",
          "text": "AP English"
         },
         {
-         "value": "world_languages",
+         "value": "ap_world_lang",
          "text": "AP World Languages"
         },
         {
-         "value": "history_social_sciences",
+         "value": "ap_hist_and_soc_sci",
          "text": "AP History and Social Sciences"
         },
         {
-         "value": "arts",
+         "value": "ap_arts",
          "text": "AP Arts"
         },
         {
-         "value": "capstone",
+         "value": "ap_capstone",
          "text": "AP Capstone"
         }
        ],
@@ -237,7 +237,6 @@
       {
        "type": "checkbox",
        "name": "grade_levels_csd",
-       
        "title": "I plan to teach CS Discoveries to students in the following grade levels. (check all that apply)",
        "choices": [
         {
@@ -288,14 +287,14 @@
     },
     {
      "type": "text",
-     "name": "total_k12_years",
+     "name": "years_teaching",
      "title": "How many years have you taught at the K-12 level (any subject)?",
      "description": "Please enter a whole number. If you are about to start your first year teaching, enter 0.",
      "inputType": "number"
     },
     {
      "type": "text",
-     "name": "cs_k12_years",
+     "name": "years_teaching_cs",
      "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level (any subject)?",
      "description": "Please enter a whole number. Enter 0 if it's your first year teaching computer science.",
      "inputType": "number"
@@ -418,35 +417,35 @@
        "title": "Right now, I have concrete teaching strategies to...",
        "columns": [
         {
-         "value": "1",
+         "value": "0",
          "text": "N/A"
         },
         {
-         "value": "2",
+         "value": "1",
          "text": "1"
         },
         {
-         "value": "3",
+         "value": "2",
          "text": "2"
         },
         {
-         "value": "4",
+         "value": "3",
          "text": "3"
         },
         {
-         "value": "5",
+         "value": "4",
          "text": "4"
         },
         {
-         "value": "6",
+         "value": "5",
          "text": "5"
         },
         {
-         "value": "7",
+         "value": "6",
          "text": "6"
         },
         {
-         "value": "8",
+         "value": "7",
          "text": "7"
         }
        ],
@@ -593,7 +592,7 @@
     },
     {
      "type": "html",
-     "name": "statementAB",
+     "name": "statementAB_description",
      "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\">\n                    <em><span style=\"color: #999999;\">...</span></em>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\">\n                    <em><span style=\"color: #999999;\">...</span></em>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
     },
     {
@@ -707,7 +706,7 @@
     },
     {
      "type": "radiogroup",
-     "name": "teaching_plan",
+     "name": "assigned_or_chose_to_teach",
      "title": "Which of the following most closely applies to you about teaching {workshop_course} next school year: ",
      "choices": [
       {
