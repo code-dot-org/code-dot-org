@@ -44,6 +44,7 @@ var BlocklyWrapper = function(blocklyInstance) {
   this.FieldTextInput = this.blockly_.FieldTextInput;
   this.FieldVariable = this.blockly_.FieldVariable;
   this.Flyout = this.blockly_.Flyout;
+  this.FunctionEditor = this.blockly_.FunctionEditor;
 
   // CS in A
   this.FunctionalBlockUtils = this.blockly_.FunctionalBlockUtils;
