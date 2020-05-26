@@ -217,17 +217,20 @@ module AWS
     # The entire execution is wrapped in a transaction.
     # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
-    def self.seed_from_file(bucket, key)
+    # @param dry_run [Boolean] If true, do not update seeded object tracking.
+    def self.seed_from_file(bucket, key, dry_run = false)
       etag = create_client.head_object({bucket: bucket, key: key}).etag
       unless SeededS3Object.exists?(bucket: bucket, key: key, etag: etag)
         AWS::S3.process_file(bucket, key) do |filename|
           ActiveRecord::Base.transaction do
             yield filename
-            SeededS3Object.create!(
-              bucket: bucket,
-              key: key,
-              etag: etag,
-            )
+            unless dry_run
+              SeededS3Object.create!(
+                bucket: bucket,
+                key: key,
+                etag: etag,
+              )
+            end
           end
         end
       end
