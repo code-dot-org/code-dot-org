@@ -92,12 +92,11 @@ describe('Audio API', function() {
       // Check executors map arguments to object correctly
       let spy = sinon.spy();
       injectExecuteCmd(spy);
-      executors[funcName]('one', 'two', 'three', 'four');
+      executors[funcName]('this is text', 'female', 'nothing');
       expect(spy).to.have.been.calledOnce;
       expect(spy.firstCall.args[2]).to.deep.equal({
-        text: 'one',
-        gender: 'two',
-        language: 'three'
+        text: 'this is text',
+        gender: 'female'
       });
     });
   });
