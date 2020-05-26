@@ -121,8 +121,10 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # TODO: remove hideable_stages once change to add hideable_lessons is deployed
   serialized_attrs %w(
     hideable_stages
+    hideable_lessons
     peer_reviews_to_complete
     professional_learning_course
     redirect_to
@@ -130,7 +132,7 @@ class Script < ActiveRecord::Base
     project_widget_visible
     project_widget_types
     teacher_resources
-    stage_extras_available
+    lesson_extras_available
     has_verified_resources
     has_lesson_plan
     curriculum_path
@@ -201,8 +203,8 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.stage_extras_script_ids
-    @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
+  def self.lesson_extras_script_ids
+    @@lesson_extras_scripts ||= Script.all.select(&:lesson_extras_available?).pluck(:id)
   end
 
   def self.maker_unit_scripts
@@ -1320,14 +1322,20 @@ class Script < ActiveRecord::Base
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
       stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      # temporarily include "stage" strings under both "stages" and "lessons"
+      # while we transition from the former term to the latter.
+      # TODO FND-1122
       metadata_i18n['stages'] = {}
+      metadata_i18n['lessons'] = {}
       unless stage_descriptions.nil?
         JSON.parse(stage_descriptions).each do |stage|
           stage_name = stage['name']
-          metadata_i18n['stages'][stage_name] = {
+          stage_data = {
             'description_student' => stage['descriptionStudent'],
             'description_teacher' => stage['descriptionTeacher']
           }
+          metadata_i18n['stages'][stage_name] = stage_data
+          metadata_i18n['lessons'][stage_name] = stage_data
         end
       end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
@@ -1405,7 +1413,8 @@ class Script < ActiveRecord::Base
       is_stable: is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
-      hideable_stages: hideable_stages?,
+      hideable_stages: hideable_lessons?, # TODO: remove after corresponding js code is changed and not cached anymore
+      hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
@@ -1416,7 +1425,8 @@ class Script < ActiveRecord::Base
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      stage_extras_available: stage_extras_available,
+      stage_extras_available: lesson_extras_available, # TODO: remove after corresponding js code is changed and not cached anymore
+      lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
@@ -1451,7 +1461,7 @@ class Script < ActiveRecord::Base
   def summarize_for_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:stages] = lessons.map(&:summarize_for_edit)
+    summary[:lesson_groups] = lesson_groups.map(&:summarize_for_edit)
     summary
   end
 
@@ -1487,13 +1497,19 @@ class Script < ActiveRecord::Base
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
+    # temporarily include "stage" strings under both "stages" and "lessons"
+    # while we transition from the former term to the latter.
+    # TODO FND-1122
     data['stages'] = {}
+    data['lessons'] = {}
     lessons.each do |stage|
-      data['stages'][stage.name] = {
+      stage_data = {
         'name' => stage.name,
         'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
         'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
       }
+      data['stages'][stage.name] = stage_data
+      data['lessons'][stage.name] = stage_data
     end
 
     {'en' => {'data' => {'script' => {'name' => {new_name => data}}}}}
@@ -1567,14 +1583,19 @@ class Script < ActiveRecord::Base
   # Returns a property hash that always has the same keys, even if those keys were missing
   # from the input. This ensures that values can be un-set via seeding or the script edit UI.
   def self.build_property_hash(script_data)
+    # When adding a key, add it to the appropriate list based on whether you want it defaulted to nil or false.
+    # The existing keys in this list may not all be in the right place theoretically, but when adding a new key,
+    # try to put it in the appropriate place.
     nonboolean_keys = [
-      :hideable_stages,
+      :hideable_lessons,
+      :hideable_stages, # TODO: remove after corresponding dependencies are updated to use hideable_lessons
       :professional_learning_course,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,
       :project_widget_types,
-      :stage_extras_available,
+      :stage_extras_available, # TODO: remove after corresponding dependencies are updated to use lesson_extras_available
+      :lesson_extras_available,
       :curriculum_path,
       :script_announcements,
       :version_year,
@@ -1658,7 +1679,8 @@ class Script < ActiveRecord::Base
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
-    info[:stage_extras_available] = stage_extras_available
+    # TODO: remove stage_extras_available after correesponding js change is deployed and not cached
+    info[:stage_extras_available] = info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
     end
