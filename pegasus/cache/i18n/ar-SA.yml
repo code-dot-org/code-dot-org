@@ -1722,6 +1722,8 @@ ar-SA:
   header_teacher_community: مجتمع المدرسين
   header_help_support: 'المساعدة والدعم '
   header_report_bug: أبلغ عن وجود خلل
+  header_legal_privacy: سياسة الخصوصية
+  header_legal_tos: شروط الخدمة
   header_tutorials: الدروس
   header_documentation: الوثائق
   user_header_label: مرحباً %{username}

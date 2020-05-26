@@ -59,7 +59,7 @@ hi:
   next_resource: अगले संसाधन
   cancel: "रद्द करें"
   okay: "ठीक है"
-  or: "या"
+  or: "अथवा "
   heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
   join_section:
     code:

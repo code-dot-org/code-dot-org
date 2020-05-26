@@ -1076,6 +1076,8 @@ es:
             '"left"': izquierda
       gamelab_mouseLocation:
         text: posición del ratón
+      gamelab_moveBackward:
+        text: mover {SPRITE} {DISTANCE} pixeles hacia atrás
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixeles hacia adelante
       gamelab_moveInDirection:
@@ -1088,6 +1090,8 @@ es:
             '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
+      gamelab_objectSpritePointer:
+        text: objeto {SPRITE}
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:
@@ -1173,6 +1177,8 @@ es:
           DIRECTION:
             '"right"': derecha
             '"left"': izquierda
+      gamelab_updateTitleWithColor:
+        text: mostrar pantalla de título {BREAK} título {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: cuando se presiona la flecha abajo
       gamelab_whenKey:

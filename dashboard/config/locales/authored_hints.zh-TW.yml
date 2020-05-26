@@ -4403,9 +4403,9 @@ zh-TW:
             </block></xml>
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: 首先創建一個嵌套循環來創建四個八邊形。轉動45度生成八邊形。跳起來，然後每一個都轉90度。
-        courseD_artist_nestedLoops_challenge1_b: 添加代碼，在嵌套循環中繪製一個三角形。用120度的角度來改變你的三角形。
+        courseD_artist_nestedLoops_challenge1_b: 加入程式積木，在巢狀迴圈中繪製一個三角形。用120度的角度來改變你的三角形。
         courseD_artist_nestedLoops_challenge1_c: |-
-          使用嵌套循環：
+          使用巢狀迴圈：
 
           -   重複8次
           -   繪製一個八邊形
