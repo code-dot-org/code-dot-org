@@ -14,11 +14,12 @@ class ScriptDslTest < ActiveSupport::TestCase
     wrapup_video: nil,
     login_required: false,
     professional_learning_course: nil,
+    hideable_lessons: false,
     hideable_stages: false,
     student_detail_progress_view: false,
     peer_reviews_to_complete: nil,
     teacher_resources: [],
-    stage_extras_available: false,
+    lesson_extras_available: false,
     has_verified_resources: false,
     has_lesson_plan: false,
     curriculum_path: nil,
@@ -72,10 +73,20 @@ class ScriptDslTest < ActiveSupport::TestCase
       }
     )
 
-    i18n_expected = {'test' => {'stages' => {
-      'Lesson1' => {'name' => 'Lesson1'},
-      'Lesson2' => {'name' => 'Lesson2'}
-    }, "lesson_groups" => {}}}
+    # TODO: FND-1122
+    i18n_expected = {
+      'test' => {
+        'stages' => {
+          'Lesson1' => {'name' => 'Lesson1'},
+          'Lesson2' => {'name' => 'Lesson2'}
+        },
+        'lessons' => {
+          'Lesson1' => {'name' => 'Lesson1'},
+          'Lesson2' => {'name' => 'Lesson2'}
+        },
+        "lesson_groups" => {}
+      }
+    }
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
@@ -238,9 +249,9 @@ endvariants
     assert_equal expected, output
   end
 
-  test 'can set hideable_stages' do
+  test 'can set hideable_lessons' do
     input_dsl = <<~DSL
-      hideable_stages 'true'
+      hideable_lessons 'true'
 
       stage 'Lesson1'
       level 'Level 1'
@@ -248,7 +259,7 @@ endvariants
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal true, output[:hideable_stages]
+    assert_equal true, output[:hideable_lessons]
   end
 
   test 'can set student_detail_progress_view' do
@@ -859,10 +870,18 @@ level 'Level 3'
       }
     )
 
-    i18n_expected = {'test' => {'stages' => {
-      "Bob's stage" => {'name' => "Bob's stage"}
-    },
-      "lesson_groups" => {}}}
+    # TODO: FND-1122
+    i18n_expected = {
+      'test' => {
+        'stages' => {
+          "Bob's stage" => {'name' => "Bob's stage"}
+        },
+        'lessons' => {
+          "Bob's stage" => {'name' => "Bob's stage"}
+        },
+        "lesson_groups" => {}
+      }
+    }
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end

@@ -138,7 +138,7 @@ progress.renderStageProgress = function(
  * @param {boolean} scriptData.plc
  * @param {object[]} scriptData.stages
  * @param {string} scriptData.name
- * @param {boolean} scriptData.hideable_stages
+ * @param {boolean} scriptData.hideable_lessons
  * @param {boolean} scriptData.isHocScript
  * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
@@ -162,7 +162,7 @@ progress.renderCourseProgress = function(scriptData) {
     store.dispatch(setSections(scriptData.sections));
   }
 
-  store.dispatch(setPageType, pageTypes.scriptOverview);
+  store.dispatch(setPageType(pageTypes.scriptOverview));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -326,7 +326,7 @@ function initializeStoreWithProgress(
     );
   }
 
-  if (scriptData.hideable_stages) {
+  if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }

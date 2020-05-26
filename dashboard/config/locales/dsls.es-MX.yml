@@ -2900,6 +2900,39 @@ es-MX:
           ## Duración del curso
 
           Completar este curso en línea debería tomar entre 3 y 7 horas, dependiendo de tu conocimiento previo y de cuán profundamente quieras adentrarte en los recursos de Code.org.
+      OPD-K5 About_copy:
+        markdown: |
+          # Bienvenidos a "Enseñanza de los Fundamentos de la Ciencia de la Computación"
+
+          <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+          ## ¿Para qué es este curso en línea?
+          Este curso en línea tiene la intención de ser una introducción al programa y los recursos de los Fundamentos de la Ciencia de la Computación de Code.org para docentes. Mediante la lectura, la visualización de videos, completar desafíos interactivos y la reflexión sobre tu aprendizaje, desarrollarás tu propia comprensión de cómo enseñar los Fundamentos de Ciencias de la Computación en tu clase.
+
+          ## ¿A quién está destinado este curso en línea?
+          Este curso en línea está diseñado para **docentes de escuelas primarias que estén interesados ​​en enseñar los Fundamentos de de la Ciencia de la Computación a sus alumnos**. Esto puede variar desde docentes de clase y de STEM hasta bibliotecarios y todo el resto de los docentes.
+
+          Si eres un docente de <a href="https://code.org/educate/csd" target="blank">escuela secundaria</a> o <a href="https://code.org/educate/csp" target="blank">preparatoria</a> interesado en enseñar nuestros cursos de secundaria o preparatoria, te recomendamos que busques <a href="https://code.org/educate/professional-learning/middle-high" target="blank"> oportunidades de desarrollo profesional más constantes y detalladas</a>.
+
+          ## ¿Aprenderé ciencia de la computación a través de este curso en línea?
+          Si bien existen oportunidades para aprender y practicar conceptos básicos de codificación y ver cómo se presentan a los estudiantes en el plan de estudios, no se trata de una introducción integral a la ciencia de la computación para adultos. Al final del curso, proporcionaremos otros recursos que pueden ayudarte a profundizar los conceptos de ciencias de la computación.
+
+          ## ¿Necesito tener alguna experiencia para tomar este curso en línea?
+          No se necesita experiencia previa en codificación o educación en ciencia de la computación.
+
+          ## ¿Cuánto tiempo dura este curso en línea?
+          Completar este curso en línea debería tomar entre 4 y 6 horas.
+
+          ## ¿Puedo cambiar el tamaño de fuente del texto en este curso?
+          ¡Sabemos que el texto en esta plataforma puede parecer pequeño!
+
+          Para agrandar el tamaño de la fuente:
+          - En Mac, haz clic en "Comando" y "+"
+          - En Windows, haz clic en "Control" y "+"
+
+          Para reducir el tamaño:
+          - En Mac, haz clic en "Comando" y "-"
+          - En Windows, haz clic en "Control" y "-"
       OPD-K5 Assessment:
         markdown: "# Planificación > Otros recursos\n\nCuando inicias sesión en Code.org
           como profesor, tienes acceso a muchas funciones que tus alumnos no tienen.
@@ -3009,6 +3042,32 @@ es-MX:
           <br/>
 
           > ¡Eso es todo! Siéntete libre de volver a este nivel en cualquier momento si necesitas una actualización sobre cómo funciona esta plataforma.
+      OPD-K5 CS Tips_copy:
+        markdown: |+
+          # Navegar este curso en línea
+
+          A medida que completes este curso, te familiarizarás con todo lo que tiene para ofrecer Fundamentos de la Ciencia de la Computación.
+
+          Si tienes algún problema, la información a continuación te ayudará a navegar y utilizar este espacio para tu aprendizaje profesional a medida que completas este curso en línea. ¡Siéntete libre de volver a este nivel en cualquier momento!
+
+          ---
+
+          ## Fragmentos conceptuales
+          La página principal de este curso en línea se muestra a continuación. Esta página se divide en cuatro **fragmentos conceptuales**. Esto refleja cómo se presentan los cursos de Fundamentos de la Ciencia de la Computación.
+
+          ![](https://images.code.org/5227343bf74975b4678e42b50fdcd085-image-1573235429162.50.02 AM.png)
+          ## Lecciones
+          Cada sección se compone de **lecciones**, que representan diferentes temas e ideas.
+
+          ## Niveles (burbujas)
+          Cada etapa está compuesta de niveles, que parecen burbujas. **Los diamantes** representan niveles como este, que contienen videos, lecturas o preguntas individuales. Algunos **círculos** son desafíos en línea que completarás para practicar conceptos de codificación. Otros **círculos** son preguntas de respuesta libre, para las que deberás enviar una respuesta y volver a consultar más adelante. Los colores de la burbuja cambiarán en base a tu progreso. En este curso de desarrollo profesional en línea, verás los siguientes tipos de burbujas:
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+
+
       OPD-K5 Celebrate:
         markdown: |
           # Pasos siguientes > ¡Celebra!
@@ -3180,6 +3239,83 @@ es-MX:
           - Compartirás tus conclusiones y comentarios sobre este curso
 
           > **Nota**: Los tiempos sugeridos se proporcionan arriba para ayudarte a planificar tu aprendizaje. Ten en cuenta que es posible que desees pasar más o menos tiempo en una etapa determinada, dependiendo de tu conocimiento previo, interés y capacidad. Ten en cuenta que este curso es totalmente autodidacta; siempre puedes abandonar el curso y regresar o volver a visitar cualquier etapa o nivel en cualquier momento.
+      OPD-K5 Outline_copy:
+        markdown: "# Esquema del curso\n\nEl curso se divide en cuatro fragmentos
+          conceptuales, cada uno con lecciones. Las lecciones consisten en diferentes
+          \"niveles\", que los estudiantes y docentes denominan coloquialmente burbujas,
+          etapas o desafíos. Esta es una descripción general de lo que aprenderá si
+          completas el curso completo:\n\n## Comienzo\n\n### Lección 1: Bienvenido
+          a 'Enseñanza de los Fundamentos de la Ciencia de la Computación' (15 minutos)\n-
+          Revisar los detalles del curso\n- Comprender qué es la ciencia de la computación
+          y diferenciar entre \"codificación\" y \"ciencia de la computación\"\n-
+          Identificar los beneficios de la enseñanza y el aprendizaje de la ciencia
+          de la computación.\n- Planificar tu participación en este curso\n\n### Lección
+          2: Conocer los Cursos de Fundamentos de Ciencia de la Computación (15-20
+          minutos)\n- Familiarizarse con el contenido y la organización de los cursos
+          de Fundamentos de Ciencia de la Computación\n- Identificar qué curso es
+          el más apropiado para tus estudiantes\n- Comprender la importancia del profesor
+          en el programa de Fundamentos de la Ciencia de la Computación\n- Comprender
+          diferentes tipos de lecciones de Fundamentos de Ciencias de la Computación\n\n##
+          Conceptos básicos de codificación y prácticas de enseñanza\n\n### Lección
+          3: Secuenciación (15-45 minutos)\n- Definir \"programa\" y \"algoritmo\"\n-
+          Identificar dónde se introduce la secuenciación en los cursos de Fundamentos
+          de la Ciencia de la Computación\n- Usar el motor de programación visual
+          de Code.org para escribir programas simples\n- Explorar una lección fuera
+          de línea sobre secuenciación y reflexionar sobre la aplicación en la clase\n-
+          Pensar en cómo usar los planes de lecciones\n\n### Lección 4: Bucles (15-45
+          minutos)\n- Definir \"bucles\" y explicar su importancia\n- Identificar
+          dónde se introducen los bucles en los cursos de Fundamentos de la Ciencia
+          de la Computación\n- Explorar una lección fuera de línea sobre bucles y
+          reflexionar sobre la aplicación en la clase\n- Practicar la codificación
+          de bucles simples\n- Comprender los beneficios de la programación de pares\n\n###
+          Lección 5: Eventos (15-45 minutos)\n- Definir \"eventos\" y explicar su
+          importancia\n- Identificar dónde se introducen los eventos en los cursos
+          de Fundamentos de la Ciencia de la Computación\n- Explorar una lección fuera
+          de línea sobre eventos y reflexionar sobre la aplicación en la clase\n-
+          Practicar la codificación de eventos simples\n- Comprender el proceso de
+          depuración\n\n### Lección 6: Condicionales (15-45 minutos)\n- Definir \"condicionales\"
+          y explicar su importancia\n- Identificar dónde se introducen los condicionales
+          en los cursos de Fundamentos de la Ciencia de la Computación\n- Explorar
+          una lección fuera de línea sobre condicionales y reflexionar sobre la aplicación
+          en la clase\n- Practicar la codificación de condicionales simples\n- Comprender
+          la práctica docente del diario\n\n### Lección 7: Proyectos de fin de curso
+          (15-45 minutos)\n- Comprender el beneficio de los proyectos de fin de curso\n-
+          Identificar dónde se introducen los proyectos de fin de curso en los cursos
+          de Fundamentos de la Ciencia de la Computación\n- Practicar la codificación
+          de un proyecto\n\n## [Optional] Adentrarse más profundo: Cursos E y F\nDeberás
+          completar esta sección si estás enseñando los cursos E o F. Esta sección
+          se sumerge en algunos de los conceptos más difíciles cubiertos en estos
+          cursos para estudiantes mayores.\n\n### Lección 8: Funciones (30-45 minutos)\n-
+          Identificar si enseñará los cursos E o F a los estudiantes\n- Definir \"funciones\"
+          y explicar su importancia\n- Identificar dónde se introducen las funciones
+          en los cursos de Fundamentos de la Ciencia de la Computación\n- Explorar
+          la lección fuera de línea sobre funciones y reflexionar sobre la aplicación
+          en la clase\n- Practicar la codificación de funciones simples\n\n### Lección
+          9: Variables (30-45 minutos)\n- Definir \"variable\" y explicar su importancia\n-
+          Identificar dónde se introducen las variables en los cursos de Fundamentos
+          de la Ciencia de la Computación\n- Explorar la lección fuera de línea sobre
+          variables y reflexionar sobre la aplicación en clase\n- Practica la codificación
+          con variables\n\n### Lección 10: Para bucles (30-45 minutos)\n- Definir
+          \"bucles para\" y explicar su importancia\n- Identificar dónde se introducen
+          los \"bucles para\" en los cursos de Fundamentos de Ciencias de la Computación\n-
+          Explorar la lección fuera de línea sobre \"bucles para\" y reflexionar sobre
+          la aplicación en el aula\n- Practicar la codificación con \"bucles para\"\n\n###
+          Lección 11: Laboratorio de sprites (15-45 minutos)\n- Definir \"sprite\"
+          y \"comportamiento\"\n- Identificar dónde se introducen los sprites y los
+          comportamientos en los cursos de Fundamentos de la Ciencia de la Computación\n-
+          Explorar el entorno de codificación Laboratorio de sprites \n\n## Próximos
+          pasos\n\n### Lección 12: Repasar tus reflexiones (15 minutos)\n- Revisar
+          as reflexiones que has hecho a lo largo del curso hasta ahora\n\n### Lección
+          13: Próximos pasos (15 minutos)\n- Explorar los recursos para maestros\n-
+          Planificar los próximos pasos que puedes seguir para continuar tu aprendizaje\n-
+          Conectarse con una comunidad global de educadores interesados ​​en la educación
+          de la ciencia de la computación\n- Compartir tus conclusiones y comentarios
+          sobre este curso\n\n> **Nota**: Los tiempos sugeridos se proporcionan arriba
+          para ayudarte a planificar tu aprendizaje. Ten en cuenta que es posible
+          que desees pasar más o menos tiempo en una etapa determinada, dependiendo
+          de tu conocimiento previo, interés y capacidad. Ten en cuenta que este curso
+          es totalmente autodidacta. Siempre puedes abandonar el curso y regresar,
+          o volver a visitar cualquier etapa o nivel cuando quieras.\n"
       OPD-K5 Pair:
         markdown: |+
           # Mejores prácticas > Programación en pareja
@@ -3261,6 +3397,31 @@ es-MX:
           y cuándo completarás este curso en línea para asegurarte de obtener el mayor
           beneficio de la experiencia. Cuando hayas esbozado un buen plan, continúa
           sumergiéndote más profundamente en la Etapa 1.\n"
+      OPD-K5 Participation_copy:
+        markdown: |
+          # Planificar tu participación
+
+          Antes de comenzar, tómate un momento para considerar tus necesidades de aprendizaje, objetivos y la experiencia única de aprender en un entorno en línea, a tu propio ritmo, ¡especialmente si este es tu primer curso en línea!
+
+          ## Realizar la encuesta previa
+          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes <a href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">esta breve encuesta</a>. La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos dirá un poco sobre quién eres tú y cómo podemos apoyarte.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">Hacer la encuesta</a>
+
+
+          ## Ve a tu propio ritmo
+
+          Este curso en línea autoguiado está diseñado para ponerte en el asiento del conductor y darte el control sobre tu propio aprendizaje. **Tómate tu tiempo y trabaja en este curso a tu propio ritmo. Se ofrecen tiempos sugeridos para cada etapa. **Si resulta que pasas más o menos tiempo en una etapa determinada, ¡no te preocupes! Nuestro objetivo principal es que te diviertas, aprendas lo básico y apliques lo que aprendes en tu práctica de clase de la forma que mejor te convenga.
+
+          ## Encuentra ayuda cuando la necesites
+
+          Si en algún momento del curso, te quedas atascado, dirígete a <a href="http://support.code.org" target="blank">support.code.org</a> y visita nuestros <a href="https://forum.code.org/" target="blank">foros de comunidad</a>. Probablemente encontrarás la respuesta a tu pregunta allí. Si no la encuentras o todavía estás atascado, puedes enviar un correo electrónico a <a href="mailto:support@code.org" target="blank">support@code.org</a> y un miembro del personal de Code.org se pondrá en contacto contigo tan pronto como sea posible.
+
+          ¡Otra forma de obtener apoyo que te recomendamos es trabajar en este curso en línea con un compañero o grupo de colegas!
+
+          ## Encuentra la experiencia de aprendizaje que funcione para ti
+
+          Finalmente, el aprendizaje en línea no es para todos. Este curso no tiene un instructor o mecanismo incorporado para comunicarte en tiempo real con tus compañeros. Si necesitas atención más personalizada o sabes que aprendes mejor en una clase del mundo real donde hay más oportunidades de colaboración y participación, te recomendamos que busques uno de nuestras <a href="http://code.org/professional-development-workshops" target="blank">oportunidades de desarrollo profesional en persona</a>.
       OPD-K5 PostSurvey:
         markdown: |+
           # Primeros pasos: realiza la encuesta posterior
@@ -3382,6 +3543,26 @@ es-MX:
           > **Consejo de enseñanza:** Si bien la informática puede ser una disciplina rica y compleja, en Code.org reconocemos que los maestros y los estudiantes necesitan dominar los conceptos básicos antes de sumergirse en proyectos de nivel superior. Este curso en línea te enseña a ti, el profesor, los conceptos básicos para que puedas ayudar a tus estudiantes a hacerlo también.
 
           En la siguiente etapa, te presentaremos brevemente algunos marcos para pensar sobre el resto del contenido de este curso. Luego, nos sumergiremos y comenzaremos a aprender computación.
+      OPD-K5 Stage2Go_copy:
+        markdown: |
+          # Reflexión
+
+          <img src="https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg" class="level-image">
+
+          ## Hacer una pausa y reflexionar
+          Esperamos que, hasta ahora, este curso te haya dado una idea de lo que es la ciencia de la computación, por qué es importante y cómo está estructurado Fundamentos de la Ciencia de la Computación para enseñar a los estudiantes de primaria los conceptos básicos de ciencias de la computación. Tómate un momento para hacer una pausa y reflexionar sobre lo que sientes que has aprendido de este curso hasta ahora, y volver a las partes sobre las que puedes haber tenido preguntas.
+
+          Recuerda que siempre puedes hacer referencia a la <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview" target="blank">Guía del plan de estudios de Fundamentos de la Ciencia de la Computación</a> para obtener más información.
+
+          ## Cosas para recordar
+          A medida que avanzas en este curso, ten en cuenta:
+          - Como con cualquier disciplina, el camino hacia el dominio de la ciencia de la computación es infinito. Desde principiantes hasta veteranos, **todos tienen algo que aprender.**
+          - La programación se vuelve más cómoda cada vez que vuelves a ella. **No vas a ser un experto la primera vez.**
+          - No hay forma de evitarlo, la acción de programar y **aprender a programar lleva tiempo, ¡pero cualquiera puede hacerlo!**
+
+          <br/>
+
+          > **Conclusión clave: **El objetivo de las próximas lecciones no es convertirte en un científico de la ciencia de la computación, sino ayudarte a sentirte lo suficientemente cómodo con los conceptos básicos para que compartas tu conocimiento con tus estudiantes.
       OPD-K5 Stage2Overview:
         markdown: |
           # Fundamentos de Ciencias de la Computación > Descripción general de la etapa
@@ -3429,6 +3610,22 @@ es-MX:
           > **Qué esperar en esta etapa:** En los niveles que siguen, comenzaremos con un plan de lección desconectado para presentarte un concepto, para modelar cómo presentaría ideas a los estudiantes en su clase. Luego, te proporcionaremos instrucciones en video y te presentaremos una serie de desafíos y te pediremos que apliques tu aprendizaje. Para completar un desafío, deberás escribir código usando bloques de código Blockly. Estas lecciones son del Curso A, que está destinado a estudiantes de jardín de infantes. Cerraremos con la oportunidad de reflexionar sobre cómo puedes enseñar este concepto a tus alumnos. Debes pasar entre 10 y 30 minutos en esta etapa.
 
           ¿Listo? ¡Vamos!
+      OPD-K5 Stage3Start_copy:
+        markdown: |+
+          # Resumen: secuenciación
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          En los niveles que siguen, aprenderás acerca de un concepto de codificación a través de lecciones fuera de línea y desafíos en línea. Para completar un desafío, deberás escribir código usando bloques de códigos Blockly. También aprenderás sobre una práctica de enseñanza clave.
+
+          ## Concepto de codificación: secuenciación
+          - Podrás definir "algoritmo" y "programa"
+
+          ## Práctica docente: uso de planes de lecciones
+          - Comprenderás la importancia de utilizar planes de lecciones fuera de línea y en línea
+          - Tendrás la oportunidad de ver y practicar con las Guías de planificación de implementación de lecciones
+
+
       OPD-K5 Stage3aGo:
         content1: descripción aquí
         markdown: "# Secuenciación > Lecciones desconectadas\n\nComo mencionamos,
@@ -3478,6 +3675,35 @@ es-MX:
           adición de bucles.\n"
       OPD-K5 Stage3aGo_copy:
         content1: descripción aquí
+        markdown: |
+          # Lección fuera de línea: Mapas felices
+
+          Nos gusta presentar temas de ciencia de la computación con lecciones fuera de línea. Luego, usamos actividades de coordinación para pasar a las lecciones en línea más adelante. Comenzar con estas lecciones fuera de línea introduce conceptos de una manera divertida y amigable. Luego, los estudiantes ya se sienten familiarizados con el concepto cuando llegan a las lecciones en línea, y pueden relacionarlas con la actividad fuera de línea.
+
+          Para estas etapas de programación que atravesarás, también comenzaremos con ejemplos de lecciones fuera de línea. Lee el siguiente plan de lección y mira los videos que lo acompañan, pensando en cómo implementarías esto en tu clase con tus alumnos.
+
+          ***
+          Los Fundamentos de la Ciencia de la Computación principalmente enseñan a los estudiantes cómo escribir programas de computadora. Para hacerlo, comenzaremos con **secuenciación**.
+          > La **secuenciación** describe el proceso simple de ordenar pasos de manera lineal.
+
+          Por ejemplo:
+          - Paso 1: Hervir el huevo
+          - Paso 2: Romper el huevo
+          - Paso 3: Comer el huevo
+
+          Las secuencias son la base de los **algoritmos**.
+          > Los **algoritmos** son listas de pasos para completar una tarea. Los programas, entonces, son algoritmos transcritos en código para que una computadora los ejecute.
+
+          ***
+          ## **1. Revisa el plan de lección "<a href="https://curriculum.code.org/csf-19/coursea/3/" target="blank">Mapas felices</a>" del Curso A.**
+
+          El Curso A está destinado a estudiantes de jardín de infantes. La secuenciación también aparece en otros cursos, y puedes encontrar ejemplos de esas lecciones en la parte inferior de esta página.
+
+          ## **2. Mira el video del estudiante: Mapas felices (que se encuentra en el plan de la lección)**
+          Este es un video que mostrarías a tus alumnos para ayudarles a introducir el concepto de secuenciación y comenzar la lección fuera de línea.
+
+          ***
+          <a href="https://curriculum.code.org/csf-19/coursea/3/" target="blank">![](https://images.code.org/8871ce7afb8fa81eb805d4640e1b9a95-image-1573079151706.25.15 PM.png)</a>
       OPD-K5 Stage4Go:
         markdown: |+
           # Bucles > Lecciones desconectadas
@@ -3871,6 +4097,76 @@ es-MX:
            - **[Fundamentos de la Ciencia de la Computación Pre-Express](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Edades de 4-8)
 
 
+      OPD-K5 Welcome 2_copy:
+        markdown: "# Cursos de Fundamentos de la Ciencia de la Computación\n\nEl objetivo
+          del desarrollo profesional de Code.org es preparar a docentes como usted
+          para integrar la ciencia de la computación en tus clases y apoyar tu crecimiento
+          como docente. Después de completar este curso en línea, estarás listo para
+          enseñar uno o más de los siguientes cursos de Fundamentos de la Ciencia
+          de la Computación de Code.org en tu clase.\n\n**Tómate un momento para mirar
+          la tabla a continuación y piensa qué curso o cursos serán los más adecuados
+          para tus estudiantes**.\n\n<table style=\"width:100%; border-style:none;\">\n
+          \ <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n      <b><a href=\"https://curriculum.code.org/csf-19/coursea/\"
+          target=\"blank\" style=\"color: white\">Curso A</a></b><br/>\n      <i>Educación
+          preescolar</i>\n    </th>\n    <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/courseb/\"
+          target=\"blank\" style=\"color: white\">Curso B</a><br/>\n        <i>Grado
+          1</i>\n    </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursec/\"
+          target=\"blank\" style=\"color: white\">Curso C</a><br/>\n        <i>Grado
+          2</i>\n    </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursed/\"
+          target=\"blank\" style=\"color: white\">Curso D</a><br/>\n        <i>Grado
+          3</i>\n    </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursee/\"
+          target=\"blank\" style=\"color: white\">Curso E</a><br/>\n        <i>Grado
+          4</i>\n    </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursef/\"
+          target=\"blank\" style=\"color: white\">Curso F</a><br/>\n        <i>Grado
+          5</i>\n    </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 lecciones,
+          ~12 horas para completar</td>\n    <td style=\"background-color:#ffe599;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 lecciones,
+          ~12 horas para completar</td>\n    <td style=\"background-color:#d2da0e;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lecciones,
+          ~18 horas para completar</td>\n    <td style=\"background-color:#68ebf5;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lecciones,
+          ~18 horas para completar</td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lecciones,
+          ~18-20 horas para completar</td>\n    <td style=\"background-color:#c9c1e9;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lecciones,
+          ~20-22 horas para completar</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\"
+          style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">Conceptos</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Ciudadanía digital</li>\n        <li>Secuenciación</li>\n
+          \       <li>Bucles</li>\n        <li>Eventos</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Ciudadanía digital</li>\n        <li>Secuenciación</li>\n        <li>Bucles</li>\n
+          \       <li>Impactos de la computación</li>\n        <li>Eventos</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Ciudadanía digital</li>\n        <li>Secuenciación</li>\n        <li>Binario</li>\n
+          \       <li>Bucles</li>\n        <li>Eventos</li>\n        <li>Datos</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Secuenciación</li>\n        <li>Eventos</li>\n        <li>Bucles</li>\n
+          \       <li>Condicionales</li>\n        <li>Binario</li>\n        <li>Ciudadanía
+          digital</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Sprites</li>\n        <li>Ciudadanía
+          digital</li>\n        <li>Impactos de la computación</li>\n        <li>Bucles
+          anidados</li>\n        <li>Funciones</li>\n      </ul>\n    </td>\n    <td
+          style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align:
+          text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Variables</li>\n
+          \       <li>Datos</li>\n        <li>Bucles para</li>\n        <li>Internet</li>\n
+          \       <li>Sprites</li>\n        <li>Ciudadanía digital</li>\n        </ul>\n
+          \   </td>\n</table>\n<br/>\n\n**Más adelante, si deseas ver aún más detalles
+          sobre lo que hay en cada curso, puedes consultar nuestra exhaustiva <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\"
+          target=\"blank\">Guía del Plan de Estudios de Fundamentos de Ciencias de
+          la \nComputación</a>.**\n\n\n\n"
       OPD-K5 What is Mastery:
         markdown: |
           # Mirando hacia el futuro > ¿Qué es el dominio?
@@ -3912,6 +4208,40 @@ es-MX:
           En **Etapa 9**, explorarás los currículos y recursos gratuitos de Code.org para profesores. Puedes optar por utilizar cualquiera de estos recursos u otros recursos curriculares de tu elección. Completar este curso te dará los conceptos básicos que necesitas para comprender cualquier plan de estudios de ciencias de la computación.
 
           En **Etapas 10 y 11**, te guiaremos en la dirección de los recursos que puedes usar para aprender más o sentirte más preparado para enseñar estos conceptos en tu clase.
+      OPD-K5 What is Mastery_copy:
+        markdown: |
+          # Mirar hacia el futuro
+
+          ## Prácticas de enseñanza
+          En el siguiente fragmento conceptual, aprenderás sobre las siguientes prácticas de enseñanza:
+
+          - Encontrar y utilizar planes de lecciones
+          - Programación de pares
+          - Depuración
+          - Diario
+
+          ## Conceptos básicos de codificación
+          En el siguiente fragmento conceptual, practicarás los siguientes conceptos básicos de informática:
+
+          - Secuenciación
+          - Bucles
+          - Eventos
+          - Condicionales
+
+          En estas lecciones, podrás:
+          - Definir y explicar qué se entiende por concepto central y por qué es importante en la ciencia de la programación
+          - Escribir programas simples aplicando el concepto (mediante el uso de programación visual para resolver desafíos)
+          - Reflexionar sobre cómo podrías integrar el concepto en su práctica
+
+          ## ¿Cómo sé si debo pasar a la siguiente lección?
+
+          A medida que completas cada lección, pregúntate:
+
+          - ¿Podría definir y explicar la importancia de este concepto central en particular a alguien sin conocimiento de ciencia de la computación?
+          - ¿Pude completar con éxito los desafíos simples en esta lección?
+          - ¿Tengo algunas ideas sobre cómo podría usar esto en mi clase?
+
+          Si respondes "sí" a cada pregunta, continúa con la próxima lección. Si respondes "no" a alguna de las preguntas, considera volver a leer la lección o explorar más sobre el tema en uno de los cursos de Fundamentos de Ciencias de la Computación antes de continuar.
       OPD-K5 Why teach CS:
         markdown: |-
           # Fundamentos de Ciencias de la Computación > ¿Por qué enseñar informática?
@@ -3926,6 +4256,37 @@ es-MX:
           Explora videos inspiradores >></button></a><a href="http://code.org/promote" target="blank"><button class="default">Explora la investigación >></button></a>
 
           Dedica unos minutos a explorar nuestra investigación y toma nota de los hechos o ideas relevantes o interesantes que descubras.
+      OPD-K5 Why teach CS_copy:
+        markdown: "# ¿Por qué enseñar ciencia de la computación?\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\"
+          class=\"level-image\">\n\n### **Desarrolla habilidades importantes**\nLa
+          investigación muestra que la ciencia de la computación promueve el pensamiento
+          crítico, la creatividad, la resolución de problemas y la participación en
+          habilidades del mundo real. \n\n### **Mejora el rendimiento en otras materias**\nNo
+          necesitas ser un maestro de STEM para ver el beneficio de la Ciencia de
+          la Computación en tu salón de clases. Un <a href=\"https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e\"
+          target=\"blank\">reciente estudio de investigación</a> descubrió que las
+          clases con docentes ingeniosos obtienen puntajes más altos en las pruebas
+          estandarizadas de inglés, matemáticas y ciencias después de enseñar las
+          lecciones de Fundamentos de Ciencias de la Computación.\n\n### **Desarrolla
+          confianza e interés desde el principio**\nSi esperamos hasta la escuela
+          secundaria o la universidad para presentarles la ciencia de la computación
+          a los estudiantes, algunos de ellos ya habrán decidido que la ciencia de
+          la computación no es para ellos o sentirán que ya están demasiado atrasados
+          ​​en comparación con los estudiantes que la estudian fuera de la escuela.\n\nExponer
+          a los estudiantes a la ciencia de la computación en los grados K-5, cuando
+          no tienen que elegir una clase como lo harían en la escuela secundaria,
+          les permite a todos los estudiantes ver qué tan accesible es la materia
+          y decidir si la disfrutan.\n\n### **¡Es divertido!**\n¡La ciencia de la
+          computación les brinda a los estudiantes la oportunidad de colaborar, ser
+          creativos y expresarse!\n\n### **¿Necesitas más convencimiento?**\nCode.org
+          tiene muchos recursos para ayudarte (además de a los estudiantes, tu administración,
+          los padres y tu comunidad) a comprender por qué la Ciencia de la Computación
+          es importante en la clase. A continuación, echa un vistazo a nuestra inspiradora
+          serie de videos, así como a algunas de las estadísticas y evidencia sobre
+          la educación de las ciencia de la computación.\n\n> <a href=\"http://code.org/educate/inspire\"
+          target=\"blank\"><button class=\"default\">Explora videos inspiradores >></button></a>\n\n>
+          <a href=\"http://code.org/promote\" target=\"blank\"><button class=\"default\">Explora
+          la investigación >></button></a>\n\n<img src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">\n"
       OPD-K5 Younger Grades:
         markdown: |
           # ¿Por qué enseñar computación en los primeros grados?
@@ -3983,6 +4344,20 @@ es-MX:
         content1: descripción aquí
       OPD-K5 lesson plans:
         content1: descripción aquí
+        markdown: "# Planes de lecciones\n\n## ¿Dónde encuentro planes de lecciones?\nPuedes
+          ver todos los planes de lecciones para todos los cursos de Fundamentos de
+          la Ciencia de la Computación <a href=\"https://curriculum.code.org/csf-19/\"
+          target=\"blank\">aquí</a>. \n\n## ¿Hay planes de lecciones para lecciones
+          fuera de línea ***y*** en línea?\n¡Si!\n\n## ¿Cómo se estructuran los planes
+          de lecciones?\n\nCada plan de lección tiene una estructura común diseñada
+          para facilitar la búsqueda de lo que necesitas. Mientras planificas una
+          lección, te recomendamos comenzar con la descripción general, luego revisar
+          la actividad principal para tener una idea más profunda de lo que sucederá
+          en la lección y cuánto tiempo puede llevar.\n\n<img src=\"https://images.code.org/f5ada4cd79f47502741adc86ed6f4430-image-1571693286262.27.12
+          PM.png\">\n\n## ¿Dónde puedo obtener más información sobre los planes de
+          lecciones?\nHay mucha más información sobre los planes de lecciones en la
+          <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\"
+          target=\"blank\">guía del plan de estudios</a>!\n\n\n"
       OPD-K5 loops introduced:
         content1: descripción aquí
       OPD-K5 project:
@@ -3991,8 +4366,54 @@ es-MX:
         content1: descripción aquí
       OPD-K5 role_of_teacher:
         content1: descripción aquí
+        markdown: |
+          # El rol del profesor
+
+          <img src="https://images.code.org/cd6529b3552a2911cb907aceb59932b1-image-1571688504066.JPG" class="level-image">
+
+          Creemos que los estudiantes aprenden mejor con la ayuda de un docente capacitado. Los cursos de Fundamentos de Ciencias de la Computación A-F están diseñados para funcionar mejor en un salón de clases, dirigidos por un docente que participe.
+
+          Sabemos que muchos docentes son nuevos en la ciencia de la computación y, por esa razón, diseñamos un plan de estudios con la idea de que el instructor se desempañará como el alumno principal. Como alumno principal, el rol del docente pasa de ser la fuente de conocimiento a ser un líder en la búsqueda de conocimiento.
+
+          El mantra del alumno principal es: **"Puede que no sepa la respuesta, pero sé que juntos podemos resolverla".**
+
+          Puedes leer más acerca de ser un alumno líder, así como otros enfoques pedagógicos de nuestros valores, en la <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#" target="blank">guía del programa</a>.
       OPD-K5 sequencing introduced:
         content1: descripción aquí
+        markdown: |+
+          # Secuenciación: ¿Dónde se la introduce?
+
+          Esto te da una idea de cuándo se introduce la secuencia en los cursos A-F. No es necesario que mires todas estas lecciones, profundizaremos en algunas en esta parte del curso en línea, pero siéntete libre de hacer referencia a esto según sea necesario.
+
+          ## <a href="https://curriculum.code.org/csf-19/coursea/" target="blank">Curso A</a>
+          - Lección 2: Aprender a arrastrar y soltar
+          - Lección 3 (Fuera de línea): mapas felices
+          - Lección 4: Secuenciación con Scrat
+          - Lección 5 (Programación con Scrat)
+          - Lección 6: Programación con Rey y BB-8
+
+          ## <a href="https://curriculum.code.org/csf-19/courseb/" target="blank">Curso B</a>
+          - Lección 2 (Fuera de línea): Muévelo, Muévelo
+          - Lección 3: Secuenciación con Angry Birds
+          - Lección 4: Programación con Angry Birds
+          - Lección 5: Programación con Cosechadora
+
+          ## <a href="https://curriculum.code.org/csf-19/coursec/" target="blank">Curso C</a>
+          - Lección 3: (Fuera de línea): My Robotic Friends, Jr.
+          - Lección 4: Programación con Angry Birds
+          - Lección 5: Depuración en laberinto
+          - Lección 6: Recolectando tesoros con Laurel
+          - Lección 7: Crear arte con código
+
+          ## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank">Curso D</a>
+          - Lección 1 (Fuera de línea): Programación de papel cuadriculado
+          - Lección 2: Introducción a los desafíos en línea
+          - Lección 3: Programación de retransmisión
+          - Lección 4: Depuración con Laurel
+
+          ## <a href="https://curriculum.code.org/csf-19/coursee/" target="blank">Curso E</a>
+          - Lección 1: Secuenciación en el laberinto
+
       OPD-K5 sprite lab:
         content1: descripción aquí
       OPD-K5 sprite lab introduction:
@@ -4003,8 +4424,45 @@ es-MX:
         content1: descripción aquí
       OPD-K5 types of lessons:
         content1: descripción aquí
+        markdown: |+
+          # Organización de cursos de Fundamentos de la Ciencia de la Computación
+
+          ## Fragmentos conceptuales
+
+          Cada curso de Fundamentos de la Ciencia de la Computación está organizado en fragmentos conceptuales, las grandes ideas que proporcionan estructura a un curso. Los fragmentos conceptuales facilitan a los docentes ver de un vistazo lo que se cubre en un curso. **Code.org proporciona <a href="http://curriculum.code.org/csf-19" target="blank"> planes de lecciones </a> para cada lección del plan de estudios, tanto dentro como fuera de la computadora**. Los diferentes tipos de lecciones en cada fragmento conceptual se explican en detalle a continuación.
+
+          A modo de ilustración, estas son cinco lecciones contenidas en el fragmento conceptual "Bucles" del Curso C, tal como aparecen en el curso.
+
+
+          <img src="https://images.code.org/953ebc5b17a97ee7fc9ee9261b4ee132-image-1571689334077.png">
+
+          ## Lecciones fuera de línea
+          **Estas lecciones se realizan fuera de la computadora y, a menudo, se utilizan para introducir un nuevo concepto de una manera práctica y tangible. **Los estudiantes, a menudo, trabajarán con lápiz y papel u objetos didácticos físicos. Estas son oportunidades kinestésicas colocadas intencionalmente que ayudan a los estudiantes a digerir conceptos complicados de manera que se relacionen con sus propias vidas. A menudo, una lección fuera de línea prepara el escenario para una lección posterior de desarrollo de habilidades que investiga el mismo concepto en la computadora.
+
+          ## Lecciones fuera de línea - Desarrollo de habilidades
+          **Estas lecciones se realizan en la computadora y brindan a los estudiantes una práctica estructurada con una nueva herramienta o concepto de programación. **Estas progresiones de desafíos generalmente comienzan con una secuencia de desafíos de práctica que aumenta gradualmente hasta llegar a un reto de desafío. A menudo hay desafíos adicionales después del reto que intencionalmente se vuelven más fáciles para ayudar a desarrollar la eficacia y confianza al final de la lección.
+
+
+          ## Lecciones fuera de línea - Aplicación
+          **Estas lecciones se realizan en la computadora y les dan a los estudiantes espacio para aplicar los conceptos aprendidos de manera creativa. **Estas lecciones generalmente guían a los estudiantes a través de la creación de un miniproyecto que será único para ellos en función de sus propias decisiones creativas. ¡No hay respuestas correctas o incorrectas aquí!
+
+          ## Proyectos de fin de curso
+          Cada curso ofrece la oportunidad para que los estudiantes tomen lo que han aprendido al final de una lección y lo combinen en un proyecto único que represente su propia creatividad. Aprenderemos más sobre ellos más adelante en este curso.
+
       OPD-K5 using lesson plans:
         content1: descripción aquí
+        markdown: |+
+          # Práctica docente: uso de planes de lecciones
+
+          <img src="https://images.code.org/bf355a9cc76e248efa509ee0cea0b10c-image-1573174157169.48.54 PM.png" class="level-image">
+
+          ## ¿Cuál es el beneficio de seguir un plan de lección (incluso para lecciones en línea)?
+
+          Los planes de lecciones en línea generalmente tienen muchas de las mismas características que sus contrapartes fuera de línea. Las lecciones comenzarán y terminarán con debates o actividades que ayuden a motivar y sintetizar el aprendizaje. Los momentos clave para contactarte con tus alumnos se anotan en los planes de lecciones. Los estudiantes usarán una computadora, pero las formas en que los estudiantes interactúan entre sí y tu rol como docente siguen siendo consideraciones importantes.
+
+          Los planes de lecciones brindan oportunidades para introducir conceptos, hacer que los estudiantes reflexionen sobre lo que han aprendido y colaborar.
+
+
       OPD-K5 variables:
         content1: descripción aquí
       OPD-K5 variables introduction:

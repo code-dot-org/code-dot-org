@@ -29,10 +29,14 @@ class PardotV2
     state: {field: :db_State},
   }.freeze
 
-  def initialize
+  def initialize(is_dry_run: false)
     @new_prospects = []
     @updated_prospects = []
     @updated_prospect_deltas = []
+
+    # Relevant only during dry runs
+    @dry_run = is_dry_run
+    @dry_run_api_endpoints_hit = []
   end
 
   # Retrieves new (email, Pardot ID) mappings from Pardot
@@ -141,9 +145,9 @@ class PardotV2
     return [], [] unless delta.present?
 
     email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    prospect = new_prospect_data.merge email_pardot_id
+    prospect = email_pardot_id.merge new_prospect_data
     @updated_prospects << prospect
-    prospect_delta = delta.merge email_pardot_id
+    prospect_delta = email_pardot_id.merge delta
     @updated_prospect_deltas << prospect_delta
 
     delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
@@ -185,9 +189,26 @@ class PardotV2
     url = self.class.build_batch_url api_endpoint, prospects
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      #   Use an instance variable to remember the number of failures.
-      errors = self.class.submit_batch_request api_endpoint, prospects
+      if @dry_run
+        # During a dry run, we want to display two example batch of prospects.
+        # One for newly created prospects, and one for updated prospects.
+        # If we did not include this limit, the entire batch would be displayed,
+        # which could be overwhelming for debugging purposes.
+        unless @dry_run_api_endpoints_hit.include? api_endpoint
+          log "[Sample Batch] Prospects to sync to Pardot: #{prospects.length}"
+          log "[Sample Batch] Query string:\n#{url}"
+          log '[Sample Batch] Prospects to be synced:'
+          prospects.each do |prospect|
+            log prospect
+          end
+
+          @dry_run_api_endpoints_hit << api_endpoint
+        end
+      else
+        # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
+        #   Use an instance variable to remember the number of failures.
+        errors = self.class.submit_batch_request api_endpoint, prospects
+      end
       submissions = prospects.clone
       prospects.clear
     end
@@ -353,14 +374,14 @@ class PardotV2
     end
   end
 
-  # Calculates what needs to change to transform an old data to a new data.
+  # Identifies additional information that is in new data but not in old data.
   # Example:
-  #   old_data = {key1: 1, key2: 2, key3: nil}
-  #   new_data = {key1: 1.1, k4: 4}
-  #   delta output = {key1: 1.1, key2: nil, key4: 4}
-  #   The output means to transform old_data into new_data, we have to reset value for key1,
-  #   unset key2 value (i.e. set it to nil), ignore key3 (because its old value was nil)
-  #   and set key4.
+  #   old_data = {key1: 'v1', key2: 'v2', key3: nil}
+  #   new_data = {key1: 'v1.1', key2: 'v2', key4: 'v4'}
+  #   delta output = {key1: 'v1.1', key4: 'v4'}
+  #   The output means there is a new value for key1,
+  #   key2 and key3 are ignored (no new information about these keys in new_data),
+  #   and set key4 for the first time.
   #
   # @param [Hash] old_data
   # @param [Hash] new_data
@@ -369,17 +390,10 @@ class PardotV2
     return new_data unless old_data.present?
 
     # Set key-value pairs that exist only in the new data
-    delta = {}
-    new_data.each_pair do |key, val|
-      delta[key] = val unless old_data.key?(key) && old_data[key] == val
+    {}.tap do |delta|
+      new_data.each_pair do |key, val|
+        delta[key] = val unless old_data.key?(key) && old_data[key] == val
+      end
     end
-
-    # Unset entries that exist only in the old data and not in the new data.
-    # Ignore entries with values are nil.
-    old_data.each_pair do |key, val|
-      delta[key] = nil unless new_data.key?(key) || val.nil?
-    end
-
-    delta
   end
 end

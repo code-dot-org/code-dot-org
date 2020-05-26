@@ -1,6 +1,6 @@
 hidden false
-hideable_stages true
-stage_extras_available true
+hideable_lessons true
+lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/pre-express/{LESSON}'
 project_widget_visible true
@@ -8,7 +8,7 @@ project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'pre-express'
 version_year '2019'
 is_stable true
-supported_locales ["es-MX", "fr-FR", "zh-CN"]
+supported_locales ["cs-CZ", "es-MX", "fr-FR", "sk-SK", "zh-CN"]
 curriculum_umbrella 'CSF'
 tts true
 
