@@ -232,11 +232,11 @@ const sectionPartialCompletedLesson = {
   }
 };
 
-const studentLevelScoresByStageComplete = {
+const studentLevelScoresByLessonComplete = {
   92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
 };
 
-const studentLevelScoresByStageIncomplete = {
+const studentLevelScoresByLessonIncomplete = {
   92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
 };
 
@@ -261,7 +261,7 @@ export const fakeState = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: {92: {662: {}}}
+    studentLevelScoresByLesson: {92: {662: {}}}
   },
   teacherSections: teacherSections
 };
@@ -304,7 +304,7 @@ export const stateForTeacherMarkedCompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
     selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
@@ -320,7 +320,7 @@ export const stateForTeacherMarkedIncompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageIncomplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonIncomplete,
     selectedLessons: []
   },
   teacherSections: teacherSections
@@ -336,7 +336,7 @@ export const stateForTeacherMarkedAndProgress = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
     selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
