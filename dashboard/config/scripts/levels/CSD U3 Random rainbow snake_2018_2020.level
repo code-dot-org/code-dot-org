@@ -65,8 +65,8 @@
     "rubric_performance_level_3": "At least one student-created circle has a new color, appears at a random vertical position, and has a different horizontal position than any others.",
     "rubric_performance_level_4": "No student produced circles, or any new circles share a color or horizontal position with circles produced by the original code.",
     "encrypted": "false",
-    "preload_asset_list": null,
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

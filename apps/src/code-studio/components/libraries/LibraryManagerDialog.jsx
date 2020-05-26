@@ -249,11 +249,11 @@ export class LibraryManagerDialog extends React.Component {
     );
   };
 
-  removeLibrary = libraryName => {
+  removeLibrary = channelId => {
     const {projectLibraries} = this.state;
     dashboard.project.setProjectLibraries(
       projectLibraries.filter(library => {
-        return library.name !== libraryName;
+        return library.channelId !== channelId;
       })
     );
     this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
@@ -274,7 +274,7 @@ export class LibraryManagerDialog extends React.Component {
     return projectLibraries.map(library => {
       return (
         <LibraryListItem
-          key={library.name}
+          key={library.channelId}
           library={library}
           onUpdate={
             updatedLibraryChannels.includes(library.channelId)

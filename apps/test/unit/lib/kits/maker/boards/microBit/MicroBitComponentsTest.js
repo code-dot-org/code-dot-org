@@ -27,7 +27,8 @@ describe('MicroBit Components', () => {
           'buttonB',
           'ledScreen',
           'tempSensor',
-          'accelerometer'
+          'accelerometer',
+          'compass'
         ]);
       });
     });
@@ -128,6 +129,20 @@ describe('MicroBit Components', () => {
     });
   });
 
+  describe('compass', () => {
+    let compass;
+
+    beforeEach(() => {
+      return createMicroBitComponents(board).then(
+        components => (compass = components.compass)
+      );
+    });
+
+    it('bound to the board controller', () => {
+      expect(compass.board.mb).to.equal(board);
+    });
+  });
+
   describe('cleanupMicroBitComponents()', () => {
     let components;
 
@@ -142,23 +157,23 @@ describe('MicroBit Components', () => {
     });
 
     it('destroys everything that createMicroBitComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(5);
+      expect(Object.keys(components)).to.have.length(6);
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components if shouldDestroyComponents is false', () => {
-      expect(Object.keys(components)).to.have.length(5);
+      expect(Object.keys(components)).to.have.length(6);
       cleanupMicroBitComponents(
         components,
         false /* shouldDestroyComponents */
       );
-      expect(Object.keys(components)).to.have.length(5);
+      expect(Object.keys(components)).to.have.length(6);
     });
 
     it('does not destroy components not created by createMicroBitComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(6);
+      expect(Object.keys(components)).to.have.length(7);
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');
@@ -203,9 +218,11 @@ describe('MicroBit Components', () => {
     it('starts components with sensors', () => {
       const tempSpy = sinon.spy(components.tempSensor, 'start');
       const accelSpy = sinon.spy(components.accelerometer, 'start');
+      const compassSpy = sinon.spy(components.compass, 'start');
       enableMicroBitComponents(components);
       expect(tempSpy).to.have.been.calledOnce;
       expect(accelSpy).to.have.been.calledOnce;
+      expect(compassSpy).to.have.been.calledOnce;
     });
   });
 });

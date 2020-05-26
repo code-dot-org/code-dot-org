@@ -112,11 +112,10 @@ class ScriptsController < ApplicationController
       beta: beta,
       betaWarning: beta_warning,
       levelKeyList: beta && Level.key_list,
-      stageLevelData: @script_file,
+      lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
-      flex_category_map: I18n.t('flex_category'),
       is_levelbuilder: current_user.levelbuilder?
     }
   end
@@ -179,14 +178,15 @@ class ScriptsController < ApplicationController
       :version_year,
       :project_sharing,
       :login_required,
-      :hideable_stages,
+      :hideable_stages, # TODO: remove once corresponding js change is deployed and no longer cached
+      :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
-      :stage_extras_available, # TODO: remove once corresopnding js change is deployed and no longer cached
+      :stage_extras_available, # TODO: remove once corresponding js change is deployed and no longer cached
       :lesson_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
