@@ -6,7 +6,30 @@ module PardotHelpers
   ERROR_INVALID_API_KEY = 'Invalid API key or user key'
   ERROR_PROSPECT_DELETED_FROM_PARDOT = 'Prospect deleted from Pardot'
 
-  class InvalidApiKeyException < RuntimeError
+  class InvalidApiKeyException < RuntimeError; end
+
+  # Tries a given block a certain number of times.
+  # Retries if the block fails because of one of the retriable errors/exceptions.
+  #
+  # @param max_tries [Integer]
+  # @param retriable_errors [Array<Exception>]
+  # @raise [ArgumentError] if no block given
+  # @raise One of the retriable errors if they occurs more than max_tries times
+  def try_with_exponential_backoff(max_tries, retriable_errors = [Net::ReadTimeout])
+    raise ArgumentError.new('No block given') unless block_given?
+
+    max_sleep_seconds = 10
+    tries = 0
+    begin
+      tries += 1
+      yield
+    rescue *retriable_errors => e
+      if tries < max_tries
+        sleep([2**tries, max_sleep_seconds].min)
+        retry
+      end
+      raise e
+    end
   end
 
   private
