@@ -21,7 +21,6 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
 experiments.STUDENT_LIBRARIES = 'student-libraries';
 experiments.BETT_DEMO = 'bett-demo';
