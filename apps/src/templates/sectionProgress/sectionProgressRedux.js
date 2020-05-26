@@ -50,7 +50,7 @@ export const addScriptData = (scriptId, scriptData) => {
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
-    stages: scriptData.stages
+    stages: scriptData.lessons
   };
   return {type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData};
 };

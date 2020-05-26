@@ -186,12 +186,13 @@ export default class EnrollmentsPanel extends React.Component {
       return null;
     }
 
-    if (course === 'CS Fundamentals' && subject === 'Intro') {
-      if (lastSessionDate >= new Date('2020-05-08')) {
-        return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
-      } else {
-        return `/pd/workshop_dashboard/survey_results/${workshopId}`;
-      }
+    // Local summer or CSF Intro after 5/8/2020 will use Foorm for survey completion.
+    if (
+      lastSessionDate >= new Date('2020-05-08') &&
+      (subject === '5-day Summer' ||
+        (course === 'CS Fundamentals' && subject === 'Intro'))
+    ) {
+      return `/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`;
     } else {
       return `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
     }

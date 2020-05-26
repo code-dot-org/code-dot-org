@@ -1,4 +1,8 @@
+/*globals dashboard*/
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
 
@@ -106,20 +110,50 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
         offsetX,
         offsetY,
         functionReady: function(_, contents) {
-          if (!this.showExamplesLink) {
-            return;
+          var tooltip = this.dropletTooltipManager.getDropletTooltip(funcName);
+          if (tooltip.showExamplesLink) {
+            var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
+            // Important this binds to mouseDown/touchDown rather than click, needs to
+            // happen before `blur` which triggers the ace editor completer popup
+            // hide which in turn would hide the link and not show the docs.
+            dom.addClickTouchEvent(
+              seeExamplesLink,
+              function(event) {
+                this.dropletTooltipManager.showDocFor(funcName);
+                event.stopPropagation();
+              }.bind(this)
+            );
+          } else if (tooltip.showCodeLink) {
+            var showCodeLink = contents.find('.tooltip-code-link > a')[0];
+            // Important this binds to mouseDown/touchDown rather than click, needs to
+            // happen before `blur` which triggers the ace editor completer popup
+            // hide which in turn would hide the link and not show the docs.
+            dom.addClickTouchEvent(showCodeLink, event => {
+              var projectLibraries = dashboard.project.getProjectLibraries();
+              var libraryName = funcName.split('.')[0];
+              var library = projectLibraries.find(
+                library => library.name === libraryName
+              );
+              if (library) {
+                $('.tooltipstered').tooltipster('hide');
+                $('body').append("<div id='libraryFunctionTooltipModal' />");
+                ReactDOM.render(
+                  <LibraryViewCode
+                    title={library.name}
+                    description={library.description}
+                    onClose={() => {
+                      var element = document.getElementById(
+                        'libraryFunctionTooltipModal'
+                      );
+                      element.parentNode.removeChild(element);
+                    }}
+                    sourceCode={library.source}
+                  />,
+                  document.querySelector('#libraryFunctionTooltipModal')
+                );
+              }
+            });
           }
-          var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
-          // Important this binds to mouseDown/touchDown rather than click, needs to
-          // happen before `blur` which triggers the ace editor completer popup
-          // hide which in turn would hide the link and not show the docs.
-          dom.addClickTouchEvent(
-            seeExamplesLink,
-            function(event) {
-              this.dropletTooltipManager.showDocFor(funcName);
-              event.stopPropagation();
-            }.bind(this)
-          );
         }.bind(this)
       });
 
@@ -157,8 +191,8 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function(functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    showExamplesLink: this.showExamplesLink,
-    customExamplesLink: tooltipInfo.customExamplesLink
+    showExamplesLink: tooltipInfo.showExamplesLink,
+    showCodeLink: tooltipInfo.showCodeLink
   });
 };
 

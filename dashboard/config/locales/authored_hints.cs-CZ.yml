@@ -3364,6 +3364,78 @@ cs-CZ:
       courseE_farmer_functions5c:
         courseE_farmer_functions5c_b: Neboj se dělat chyby! Zkus používat bloky a
           spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseE_farmer_ramp11a:
+        courseE_farmer_ramp12_a: Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát
+          má hlínu sebrat, použij blok  `dokud tady je hromádka`.
+      courseE_farmer_ramp11a_2018:
+        courseE_farmer_ramp12_a: Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát
+          má hlínu sebrat, použij blok  `dokud tady je hromádka`.
+      courseE_farmer_ramp11a_2019:
+        courseE_farmer_ramp12_a: Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát
+          má hlínu sebrat, použij blok  `dokud tady je hromádka`.
+      courseE_farmer_ramp11b:
+        courseE_farmer_ramp11b_a: Můžeš zasadit svůj `dokud` blok do bloku `opakuj`
+          a tím svůj kód zkrátit.
+      courseE_farmer_ramp11b_2018:
+        courseE_farmer_ramp11b_a: Můžeš zasadit svůj `dokud` blok do bloku `opakuj`
+          a tím svůj kód zkrátit.
+      courseE_farmer_ramp11b_2019:
+        courseE_farmer_ramp11b_a: Můžeš zasadit svůj `dokud` blok do bloku `opakuj`
+          a tím svůj kód zkrátit.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Kolem všech bloků budeš stále muset použít blok  `opakuj`  a
+          říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát.
+      courseE_farmer_ramp12_forswap_2018:
+        courseE_farmer_ramp12_b: Kolem všech bloků budeš stále muset použít blok  `opakuj`  a
+          říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát.
+      courseE_farmer_ramp12_forswap_2019:
+        courseE_farmer_ramp12_b: Kolem všech bloků budeš stále muset použít blok  `opakuj`  a
+          říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát.
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: Stále budeš muset použít blok `opakuj dokud`  jako
+          první.  Až se dostaneš k salátu,  použij blok `dokud`.
+      courseE_farmer_ramp12c_2018:
+        courseE_farmer_ramp12b_b: Stále budeš muset použít blok `opakuj dokud`  jako
+          první.  Až se dostaneš k salátu,  použij blok `dokud`.
+      courseE_farmer_ramp12c_2019:
+        courseE_farmer_ramp12b_b: Stále budeš muset použít blok `opakuj dokud`  jako
+          první.  Až se dostaneš k salátu,  použij blok `dokud`.
+      courseE_farmer_ramp12d:
+        courseE_farmer_ramp12d_b: Opět budeš muset vložit bloky `opakuj dokud` a `dokud
+          tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!
+      courseE_farmer_ramp12d_2018:
+        courseE_farmer_ramp12d_b: Opět budeš muset vložit bloky `opakuj dokud` a `dokud
+          tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!
+      courseE_farmer_ramp12d_2019:
+        courseE_farmer_ramp12d_b: Opět budeš muset vložit bloky `opakuj dokud` a `dokud
+          tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: Řešení této úlohy bude hodně podobné předchozímu
+          řešení, jen se farmářka musí otáčet opačným směrem.
+      courseE_farmer_ramp12e_2018:
+        courseE_farmer_ramp12e_b: Řešení této úlohy bude hodně podobné předchozímu
+          řešení, jen se farmářka musí otáčet opačným směrem.
+      courseE_farmer_ramp12e_2019:
+        courseE_farmer_ramp12e_b: Řešení této úlohy bude hodně podobné předchozímu
+          řešení, jen se farmářka musí otáčet opačným směrem.
+      courseE_farmer_ramp12f:
+        courseE_farmer_ramp12f_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12f_2018:
+        courseE_farmer_ramp12f_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12f_2019:
+        courseE_farmer_ramp12f_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12g:
+        courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12g_2018:
+        courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
+      courseE_farmer_ramp12g_2019:
+        courseE_farmer_ramp12G_b: Použij `když/jinak` blok a pomoz farmářce se rozhodnout,
+          jestli má zahnout vlevo nebo vpravo.
       courseF_artist_for3:
         courseF_artist_for3_b: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
