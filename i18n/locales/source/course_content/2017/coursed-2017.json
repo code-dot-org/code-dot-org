@@ -1411,7 +1411,7 @@
       "courseD_artist_binary1_b": "The artist will draw a white space for every 1 and a black space for every 0.",
       "courseD_artist_binary1_c": "This is how you can input your binary code:\n\n[][0]"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw bit": {
         "name": "draw bit"
       },
@@ -1426,7 +1426,7 @@
     "authored_hints": {
       "courseD_artist_binary2_a": "Just click `Run` to see this program in action!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1441,7 +1441,7 @@
       "courseD_artist_binary3_a": "One of the four binary patterns in the toolbox will solve this puzzle!",
       "courseD_artist_binary3_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1456,7 +1456,7 @@
       "courseD_artist_binary4_a": "Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?",
       "courseD_artist_binary4_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1472,7 +1472,7 @@
       "courseD_artist_binary5_b": "You only need to switch two rows to make a smile.",
       "courseD_artist_binary5_c": "If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1487,7 +1487,7 @@
       "courseD_artist_binary6_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary6_b": "You can build your binary string a bit at a time, and keep testing!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1502,7 +1502,7 @@
       "courseD_artist_binary7_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary7_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1518,7 +1518,7 @@
       "courseD_artist_binary8_b": "Try running the code first to see what you have to work with.",
       "courseD_artist_binary8_c": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },
@@ -1529,7 +1529,7 @@
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/10": {
     "short_instructions": "Finish the code to create this drawing.",
-    "function_defintions": {
+    "function_definitions": {
       "draw": {
         "name": "draw"
       },

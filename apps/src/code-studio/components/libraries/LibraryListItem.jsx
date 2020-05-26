@@ -158,7 +158,7 @@ export class LibraryListItem extends React.Component {
               <button
                 type="button"
                 key={'remove-' + library.id}
-                onClick={() => this.props.onRemove(library.name)}
+                onClick={() => this.props.onRemove(library.channelId)}
                 style={[styles.actionBtn, styles.removeBtn]}
                 disabled={!!library.fromLevelbuilder}
               >

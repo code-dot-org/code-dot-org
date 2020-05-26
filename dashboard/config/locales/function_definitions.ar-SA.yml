@@ -1,7 +1,7 @@
 ---
 ar-SA:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -1264,6 +1264,16 @@ ar-SA:
           name: تفقد المربع من الذرة
         get all pumpkins:
           name: احصل على كل اليقطين
+      courseE_farmer_functions10b:
+        navigate:
+          name: تصفَح
+      courseE_farmer_functions11_predict:
+        check and pick:
+          name: قم بالفحص والالتقاط
+        find pumpkin:
+          name: اعثر على القرع
+        wander path:
+          name: تجول في المسار
       courseE_farmer_functions11_predict_2018:
         check square for corn:
           name: تفقد المربع من الذرة
@@ -1286,6 +1296,9 @@ ar-SA:
       courseE_farmer_functions2b_2019:
         check square for corn:
           name: تفقد المربع من الذرة
+      courseE_farmer_functions2ba:
+        corn and pumpkin:
+          name: ذرة وقرع
       courseE_farmer_functions2ba_2018:
         check square for corn:
           name: تفقد المربع من الذرة
@@ -1296,6 +1309,9 @@ ar-SA:
           name: تفقد المربع من الذرة
         get all pumpkins:
           name: احصل على كل اليقطين
+      courseE_farmer_functions3c:
+        corn and pumpkin:
+          name: ذرة وقرع
       courseE_farmer_functions3c1_2018:
         check square for corn:
           name: تفقد المربع من الذرة
@@ -1316,6 +1332,21 @@ ar-SA:
           name: تفقد المربع من الذرة
         get all pumpkins:
           name: احصل على كل اليقطين
+      courseE_farmer_functions4b:
+        corn and pumpkin:
+          name: ذرة وقرع
+      courseE_farmer_functions5c:
+        corn and pumpkin:
+          name: ذرة وقرع
+      courseE_farmer_functions6c:
+        corn and pumpkin:
+          name: ذرة وقرع
+      courseE_farmer_functions8b:
+        navigate:
+          name: تصفَح
+      courseE_farmer_functions9b:
+        navigate:
+          name: تصفَح
       courseE_playLab_challenge1:
         win game:
           name: الفوز باللعبة

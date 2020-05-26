@@ -95,7 +95,7 @@ describe('ManageStudentsTable', () => {
       login_type: SectionLoginType.picture,
       grade: '2',
       code: 'PMTKVH',
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       sharing_disabled: false,
       script: null,

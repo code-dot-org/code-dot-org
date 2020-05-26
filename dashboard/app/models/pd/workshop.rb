@@ -59,12 +59,20 @@ class Pd::Workshop < ActiveRecord::Base
     #   - Uses a different, virtual-specific post-workshop survey.
     'virtual',
 
-    # If true, our system will not send any emails related to this workshop
-    # *except* for the post-workshop survey, which is exempt from this policy
+    # If true, our system will not send enrollee-facing
+    # emails related to this workshop *except* for a receipt for the teacher
+    # if they cancel their enrollment and the post-workshop survey,
+    # which is exempt from this policy
     # because it is important for our measurement of workshop outcomes.
     # This option is useful to regional partners who may wish to have more
     # direct control over workshop communication, at the cost of managing it
     # themselves.
+    # Note that this is one of (at least) three mechanisms we use to suppress
+    # email in various cases -- see Workshop.suppress_reminders? for
+    # subject-specific suppression of reminder emails, and
+    # WorkshopMailer.check_should_send, which suppresses ALL email
+    # for workshops with a virtual subject (note, this is different than the
+    # virtual serialized attribute)
     'suppress_email'
   ]
 
@@ -176,7 +184,7 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
-  scope :in_year, ->(year = Date.now.year) do
+  scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
     scheduled_start_on_or_before(Date.new(year + 1))
   end
@@ -385,6 +393,11 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
+  # Note that this is one of (at least) three mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email' and
+  # WorkshopMailer.check_should_send, which suppresses ALL email
+  # for workshops with a virtual subject (note, this is different than the
+  # virtual serialized attribute)
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
@@ -613,6 +626,33 @@ class Pd::Workshop < ActiveRecord::Base
   # Get all the teachers that have actually attended this workshop via the attendence.
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
+  end
+
+  # Get all teachers who have attended all sessions of this workshop.
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
+
+    # Filter attendances to only scholarship teachers
+    if filter_by_cdo_scholarship
+      scholarship_teachers = Pd::ScholarshipInfo.where(
+        {
+          application_year: school_year,
+          course: course_key,
+          scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
+        }
+      ).pluck(:user_id)
+      teachers_attending.select! {|teacher| scholarship_teachers.include? teacher.id}
+    end
+
+    # Get number of sessions attended by teacher
+    attendance_count_by_teacher = Hash[
+      teachers_attending.uniq.map do |teacher|
+        [teacher, teachers_attending.count(teacher)]
+      end
+    ]
+
+    # Return only teachers who attended all sessions
+    attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
   end
 
   def local_summer?

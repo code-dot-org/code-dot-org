@@ -96,7 +96,7 @@ zh-TW:
         turtle_4_4: 這個程式大致和上個關卡相同，只是在每個三角形畫完後轉向 36 度。這樣需要重複的次數共是多少呢？（提示：在轉向的角度超過 360
           度後，畫出的圖形會繞成一圈。）
         turtle_4_5: 這個程式和上個關卡大致相同，只是將轉向次數變成 36 次。這樣轉向的角度總共是多少呢？（提供：在轉向的角度超過 360 度後，畫出的圖形會繞成一圈。）
-        turtle_4_6: 你可以只用 3 個積木就畫出一個邊長 20 像素的三角形嗎？
+        turtle_4_6: 你可以只用 3 個積木就畫出一個邊長 20 像素的廣場嗎？
         turtle_4_7: 這是上個關卡畫正方形的程式。你可以重複畫出 10 個一樣的正方形來組合成一個梯子嗎？提示：你只需要再添加 2 個積木。
         turtle_4_8: 這是前一個關卡的解法。你可以只添加 2 個積木來完成這幅畫嗎？
         turtle_4_9: 這是前一個關卡的解法。應該要轉幾度才能完成這件繪圖作品呢？(可能需要多猜幾次才能猜對喔！)
@@ -372,6 +372,8 @@ zh-TW:
         CSF_collector_repeat_loops: 和收藏家學迴圈（Loop）
         CSF_collector_text_blocks: 計算機科學基礎：收藏家
         CSF_create_functions: 建立函式
+        CSF_debugging_k1_blocks: 除錯
+        CSF_debugging_text_blocks: 除錯
         CSF_EF_cs_matters: 計算機科學很重要
         CSF_maze_intro_k1_blocks: Code Studio 介紹
         CSF_maze_intro_text_blocks: Code Studio 介紹
@@ -481,6 +483,7 @@ zh-TW:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: 和 BB-8 一起學迴圈
         CSF_harvester_skinOverview_K-1: 收割者
+        CSF_harvester_loops_K1: 和收割者一起學迴圈（Loop）
         CSF_scrat_loops_K1: 冰河歷險紀中的迴圈
         CSF_scrat_loops_CF: 冰河歷險紀中的迴圈
         CSF_if_allskins: 如果積木
@@ -528,6 +531,7 @@ zh-TW:
         CSF_SpriteLab_Intro_v2: Sprite Lab 簡介
         CSF_Spritelab_MakeSprite_v2: 如何建立一個角色
         CSF_SpriteLab_SpritesInAction_v2: 運行中的角色
+        csd_debugging: 除錯
         csd_applab_designmode_short: App Lab 設計模式
         csp-pd-welcome: 歡迎來到這個大家庭！
         CSF-Teaching-Problem-Solving: CSF 教學：解決問題
@@ -546,6 +550,8 @@ zh-TW:
         hoc_dance_properties_2019: 舞蹈派對 2019 - 屬性
         csd_what_computers_do: 電腦用來做甚麼？
         csf_my_online_neighborhood_2020: 我的線上鄰居
+        csf_follow_the_digital_trail: 跟隨數位蹤跡
+        csf_private_and_personal_information: 私密與個人資訊
         csd_what_computers_are: 電腦是什麼？
     callout:
       text:
