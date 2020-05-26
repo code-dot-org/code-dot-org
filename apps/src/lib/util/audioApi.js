@@ -159,7 +159,7 @@ export const commands = {
         synthesizer.close();
       },
       error => {
-        console.log(error);
+        console.warn(error);
         synthesizer.close();
       }
     );
