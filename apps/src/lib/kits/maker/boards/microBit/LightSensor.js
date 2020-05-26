@@ -4,18 +4,20 @@ import {sensor_channels} from './MicroBitConstants';
 export default class LightSensor extends EventEmitter {
   constructor(board) {
     super();
-    this.threshold = 128;
-    this.rangeMin = 0;
-    this.rangeMax = 255;
-    this.currentReading = 0;
+    this.state = {
+      threshold: 128,
+      rangeMin: 0,
+      rangeMax: 255,
+      currentReading: 0
+    };
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
       // Only emit the data event when the value is above the threshold or the
       // previous reading was above the threshold
       if (
         this.this.board.mb.analogChannel[sensor_channels.lightSensor] >=
-          this.threshold ||
-        this.currentReading >= this.threshold
+          this.state.threshold ||
+        this.state.currentReading >= this.state.threshold
       ) {
         this.emit('data');
       }
@@ -23,17 +25,17 @@ export default class LightSensor extends EventEmitter {
       // If the light value has changed, update the local value and
       // trigger a change event
       if (
-        this.currentReading !==
+        this.state.currentReading !==
         this.board.mb.analogChannel[sensor_channels.lightSensor]
       ) {
         if (
           this.this.board.mb.analogChannel[sensor_channels.lightSensor] >=
-            this.threshold ||
-          this.currentReading >= this.threshold
+            this.state.threshold ||
+          this.state.currentReading >= this.state.threshold
         ) {
           this.emit('change');
         }
-        this.currentReading = this.board.mb.analogChannel[
+        this.state.currentReading = this.board.mb.analogChannel[
           sensor_channels.lightSensor
         ];
       }
@@ -45,12 +47,15 @@ export default class LightSensor extends EventEmitter {
         get: function() {
           let ratio =
             this.board.mb.analogChannel[sensor_channels.lightSensor] / 255;
-          return this.rangeMin + ratio * (this.rangeMax - this.rangeMin);
+          return (
+            this.state.rangeMin +
+            ratio * (this.state.rangeMax - this.state.rangeMin)
+          );
         }
       },
       threshold: {
         set: function(value) {
-          this.threshold = value;
+          this.state.threshold = value;
         }
       }
     });
@@ -69,7 +74,7 @@ export default class LightSensor extends EventEmitter {
   getAveragedValue() {}
 
   setRange(min, max) {
-    this.rangeMin = min;
-    this.rangeMax = max;
+    this.state.rangeMin = min;
+    this.state.rangeMax = max;
   }
 }
