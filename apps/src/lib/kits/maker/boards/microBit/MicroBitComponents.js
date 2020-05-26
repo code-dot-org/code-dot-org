@@ -6,6 +6,7 @@ import LedScreen from './LedScreen';
 import Accelerometer from './Accelerometer';
 import MicroBitThermometer from './MicroBitThermometer';
 import Compass from './Compass';
+import LightSensor from './LightSensor';
 
 /**
  * Initializes a set of components for the currently
@@ -21,7 +22,8 @@ export function createMicroBitComponents(board) {
     ledScreen: new LedScreen({mb: board}),
     tempSensor: new MicroBitThermometer({mb: board}),
     accelerometer: new Accelerometer({mb: board}),
-    compass: new Compass({mb: board})
+    compass: new Compass({mb: board}),
+    lightSensor: new LightSensor({mb: board})
   });
 }
 
@@ -55,6 +57,10 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     components.compass.stop();
   }
 
+  if (components.lightSensor) {
+    components.lightSensor.stop();
+  }
+
   if (shouldDestroyComponents) {
     delete components.ledScreen;
     delete components.buttonA;
@@ -62,6 +68,7 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     delete components.accelerometer;
     delete components.tempSensor;
     delete components.compass;
+    delete components.lightSensor;
   }
 }
 
@@ -82,6 +89,10 @@ export function enableMicroBitComponents(components) {
   if (components.compass) {
     components.compass.start();
   }
+
+  if (components.lightSensor) {
+    components.lightSensor.start();
+  }
 }
 
 /**
@@ -93,5 +104,6 @@ export const componentConstructors = {
   LedScreen,
   Accelerometer,
   MicroBitThermometer,
-  Compass
+  Compass,
+  LightSensor
 };
