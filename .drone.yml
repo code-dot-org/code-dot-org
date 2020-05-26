@@ -5,7 +5,7 @@ name: unit
 clone:
   disable: true
 
-steps:
+steps: 
 - name: clone
   image: docker:git
   commands:
@@ -107,7 +107,7 @@ services:
   ports:
   - 6379
 
-steps: 
+steps:
 - name: clone
   image: docker:git
   commands:
