@@ -79,15 +79,14 @@ describe('Audio API', function() {
   });
 
   describe('playSpeech', function() {
-    it('has three arguments, "text", "gender", and "language"', function() {
+    it('has two arguments, "text" and "gender"', function() {
       const funcName = 'playSpeech';
-      // Check droplet config for the 3 documented params
+      // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'text',
-        'gender',
-        'language'
+        'gender'
       ]);
-      expect(dropletConfig[funcName].params).to.have.length(3);
+      expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
       let spy = sinon.spy();
