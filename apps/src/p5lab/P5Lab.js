@@ -425,8 +425,7 @@ P5Lab.prototype.init = function(config) {
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted,
-    librariesEnabled: !!config.level.librariesEnabled
+    isSubmitted: !!config.level.submitted
   });
 
   if (startInAnimationTab(getStore().getState())) {
