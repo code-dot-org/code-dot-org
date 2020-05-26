@@ -14,7 +14,7 @@ require 'cdo/google/sheet'
 EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
 LATEST_WORKSHOP_START_DATE = Date.new(2020, 8, 31)
 
-def update_tabs(sheet)
+def get_rows
   # Seed results array with a header row
   results = [%w(teacher_email first_name last_name workshop_id
                 workshop_start_date workshop_course regional_partner)]
@@ -41,29 +41,13 @@ def update_tabs(sheet)
     ]
   end
 
-  sheet.export(
-    sheet_name: 'enrollments',
-    rows: results
-  )
-end
-
-def notify_of_external_sharing(sheet)
-  external_emails = sheet.external_emails_with_access
-  if external_emails.present?
-    email_domains = external_emails.map {|email| email.slice(/@.*/)}.uniq
-    error_msg = "Document containing PII information is shared to "\
-      "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
-      "Please check with PLC team that this is intentional!"
-
-    Honeybadger.notify error_msg
-    puts error_msg
-  end
+  results
 end
 
 def main
   sheet = Google::Sheet.new CDO.enrollments_summer_2020_gsheet_key
-  update_tabs(sheet)
-  notify_of_external_sharing(sheet)
+  sheet.export(tab_name: 'enrollments', rows: get_rows)
+  sheet.notify_of_external_sharing
 end
 
 main
