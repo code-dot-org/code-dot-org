@@ -28,7 +28,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    cr = ContactRollupsV2.new(is_dry_run: false).build_and_sync
+    ContactRollupsV2.new(is_dry_run: false).build_and_sync
 
     # Verify email preference
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email_preference.email, pardot_id: 1)
@@ -75,7 +75,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    cr = ContactRollupsV2.new(is_dry_run: false).build_and_sync
+    ContactRollupsV2.new(is_dry_run: false).build_and_sync
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
@@ -92,15 +92,11 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.expects(:submit_batch_request).never
     ContactRollupsPardotMemory.expects(:save_accepted_submissions).never
     ContactRollupsPardotMemory.expects(:save_rejected_submissions).never
+
     # Called when downloading Pardot ID-email mappings
     PardotV2.expects(:post_with_auth_retry).never
 
     # Execute the pipeline
-    log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(
-      log_collector: log_collector,
-      sync_with_pardot: true,
-      is_dry_run: true
-    )
+    ContactRollupsV2.new(is_dry_run: true).build_and_sync
   end
 end
