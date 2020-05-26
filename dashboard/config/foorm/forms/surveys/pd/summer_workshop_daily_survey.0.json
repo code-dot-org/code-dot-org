@@ -1,8 +1,7 @@
 {
- "title": "converted from jotform",
  "pages": [
   {
-   "name": "page 1",
+   "name": "page_1",
    "elements": [
     {
      "type": "html",
@@ -43,24 +42,48 @@
     },
     {
      "type": "comment",
-     "name": "whatSupported",
+     "name": "what_supported",
      "title": "What supported your learning the most today and why?",
-     "cols": 60
+     "cols": 60,
+     "rows": 2
     },
     {
      "type": "comment",
      "name": "what_detracted",
      "title": "What detracted from your learning today and why?",
-     "cols": 60
+     "cols": 60,
+     "rows": 2
     },
     {
      "type": "comment",
      "name": "discuss_tomorrow",
      "title": "What is one thing you hope to discuss or learn more about the next time we meet?",
-     "cols": 60
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "paneldynamic",
+     "name": "facilitators",
+     "title": "Facilitator Feedback",
+     "description": "Please leave feedback for your facilitator(s).",
+     "templateElements": [
+      {
+       "type": "comment",
+       "name": "facilitator_feedback_FR",
+       "title": "Do you have any feedback about today for {panel.facilitator_name}?",
+       "rows": 2
+      }
+     ],
+     "templateTitle": "Facilitator {panel.facilitator_position} - {panel.facilitator_name}",
+     "allowAddPanel": false,
+     "allowRemovePanel": false
+    },
+    {
+     "type": "html",
+     "name": "question1",
+     "html": "<p> Thank you for the feedback and for participating today!</p>"
     }
-   ],
-   "title": "converted questions"
+   ]
   }
  ]
 }
