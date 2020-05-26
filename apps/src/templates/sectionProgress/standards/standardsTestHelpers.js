@@ -110,7 +110,7 @@ export const standardsData = [
   }
 ];
 
-export const stageId = 662;
+export const lessonId = 662;
 export const scriptId = 92;
 
 const scriptDataByScript = {
@@ -125,7 +125,7 @@ const scriptDataByScript = {
         script_id: 92,
         script_name: 'coursea-2019',
         script_stages: 3,
-        id: stageId,
+        id: lessonId,
         position: 1,
         relative_position: 1,
         name: 'Going Places Safely',
@@ -192,7 +192,7 @@ const scriptDataByScript = {
   }
 };
 
-export const pluggedStage = scriptDataByScript[scriptId].stages[1];
+export const pluggedLesson = scriptDataByScript[scriptId].stages[1];
 
 const sectionCompletedLesson = {
   92: {
@@ -232,11 +232,11 @@ const sectionPartialCompletedLesson = {
   }
 };
 
-const studentLevelScoresByStageComplete = {
+const studentLevelScoresByLessonComplete = {
   92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
 };
 
-const studentLevelScoresByStageIncomplete = {
+const studentLevelScoresByLessonIncomplete = {
   92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
 };
 
@@ -261,7 +261,7 @@ export const fakeState = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: {92: {662: {}}}
+    studentLevelScoresByLesson: {92: {662: {}}}
   },
   teacherSections: teacherSections
 };
@@ -304,7 +304,7 @@ export const stateForTeacherMarkedCompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
     selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
@@ -320,7 +320,7 @@ export const stateForTeacherMarkedIncompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageIncomplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonIncomplete,
     selectedLessons: []
   },
   teacherSections: teacherSections
@@ -336,7 +336,7 @@ export const stateForTeacherMarkedAndProgress = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    studentLevelScoresByLesson: studentLevelScoresByLessonComplete,
     selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
