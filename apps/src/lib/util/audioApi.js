@@ -5,7 +5,8 @@ import {apiValidateType, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
 import {
   SpeechConfig,
-  SpeechSynthesizer
+  SpeechSynthesizer,
+  SpeechSynthesisOutputFormat
 } from 'microsoft-cognitiveservices-speech-sdk';
 
 /**
@@ -118,19 +119,13 @@ export const commands = {
   playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
-    apiValidateType(
-      opts,
-      'playSpeech',
-      'language',
-      opts.language,
-      'string',
-      OPTIONAL
-    );
 
     const speechConfig = SpeechConfig.fromAuthorizationToken(
       appOptions.azureSpeechServiceToken,
       appOptions.azureSpeechServiceRegion
     );
+    speechConfig.speechSynthesisOutputFormat =
+      SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
     let voice;
     if (opts.gender === 'male') {
@@ -179,7 +174,6 @@ export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
-  playSpeech: (text, gender, language = 'English') =>
-    executeCmd(null, 'playSpeech', {text, gender, language})
+  playSpeech: (text, gender) => executeCmd(null, 'playSpeech', {text, gender})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

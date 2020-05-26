@@ -36,12 +36,11 @@ const dropletConfig = {
   playSpeech: {
     func: 'playSpeech',
     parent: executors,
-    paramButtons: {minArgs: 2, maxArgs: 3},
-    paletteParams: ['text', 'gender', 'language'],
-    params: ['"Hello World!"', '"female"', '"English"'],
+    paramButtons: {minArgs: 2, maxArgs: 2},
+    paletteParams: ['text', 'gender'],
+    params: ['"Hello World!"', '"female"'],
     dropdown: {
-      1: ['"female"', '"male"'],
-      2: ['"English"']
+      1: ['"female"', '"male"']
     },
     nativeCallsBackInterpreter: true,
     assetTooltip: {0: chooseAsset.bind(null, 'audio')}
