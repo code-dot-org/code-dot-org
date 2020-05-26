@@ -11,7 +11,8 @@ require 'csv'
 s3_client = Aws::S3::Client.new
 cloudwatch_client = Aws::CloudWatch::Client.new
 PRIMARY_REGION = 'us-east-1'.freeze
-ACTIVITY_PERIOD_DAYS = 30.days     # Window of time within which bucket Metrics are collected.
+ACTIVITY_WINDOW = 7.days     # Window of time within which bucket Metrics are collected.
+METRIC_GRANULARITY = 1.hour
 
 Bucket = Struct.new(
   :name,
@@ -22,7 +23,8 @@ Bucket = Struct.new(
   :size,
   :object_count,
   :bytes_uploaded,
-  :put_requests
+  :put_requests,
+  :delete_requests
 )
 
 buckets = []
@@ -59,9 +61,9 @@ s3_buckets.each do |s3_bucket|
             value: 'StandardStorage'
           }
         ],
-        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        start_time: Time.now - ACTIVITY_WINDOW,
         end_time: Time.now,
-        period: ACTIVITY_PERIOD_DAYS,
+        period: METRIC_GRANULARITY,
         statistics: ['Average'],
         unit: 'Bytes'
       }
@@ -80,9 +82,9 @@ s3_buckets.each do |s3_bucket|
             value: 'AllStorageTypes'
           }
         ],
-        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        start_time: Time.now - ACTIVITY_WINDOW,
         end_time: Time.now,
-        period: ACTIVITY_PERIOD_DAYS,
+        period: METRIC_GRANULARITY,
         statistics: ['Average'],
         unit: 'Count'
       }
@@ -101,13 +103,13 @@ s3_buckets.each do |s3_bucket|
             value: 'EntireBucket'
           }
         ],
-        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        start_time: Time.now - ACTIVITY_WINDOW,
         end_time: Time.now,
-        period: ACTIVITY_PERIOD_DAYS,
+        period: METRIC_GRANULARITY,
         statistics: ['Sum'],
         unit: 'Bytes'
       }
-    )&.datapoints&.last&.sum
+    )&.datapoints&.sum(&:sum)
 
   bucket[:put_requests] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'PutRequests', client: cloudwatch_client).
     get_statistics(
@@ -122,13 +124,34 @@ s3_buckets.each do |s3_bucket|
             value: 'EntireBucket'
           }
         ],
-        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        start_time: Time.now - ACTIVITY_WINDOW,
         end_time: Time.now,
-        period: ACTIVITY_PERIOD_DAYS,
+        period: METRIC_GRANULARITY,
         statistics: ['Sum'],
         unit: 'Count'
       }
-    )&.datapoints&.last&.sum
+    )&.datapoints&.sum(&:sum)
+
+  bucket[:delete_requests] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'DeleteRequests', client: cloudwatch_client).
+    get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'BucketName',
+            value: bucket[:name],
+          },
+          {
+            name: 'FilterId',
+            value: 'EntireBucket'
+          }
+        ],
+        start_time: Time.now - ACTIVITY_WINDOW,
+        end_time: Time.now,
+        period: METRIC_GRANULARITY,
+        statistics: ['Sum'],
+        unit: 'Count'
+      }
+    )&.datapoints&.sum(&:sum)
 
 rescue StandardError => error
   puts error.message
