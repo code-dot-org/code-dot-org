@@ -1,7 +1,7 @@
 hidden 'false'
 login_required 'false'
 
-stage 'Gumball Play Lab'
+lesson 'Gumball Play Lab'
 skin 'gumball'
 video_key_for_next_level 'gumball_intro'
 level 'blockly:Studio:gumball_hello1'
