@@ -106,12 +106,14 @@
       {
        "type": "html",
        "name": "question6",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
       },
       {
        "type": "checkbox",
        "name": "teaching_csp_as",
-       "title": " I plan to teach {workshop_course} as...[check all that apply] ",
+       "title": " I plan to teach {workshop_course} as...",
+       "description": "Check all that apply.",
        "hasOther": true,
        "otherPlaceHolder": "Other",
        "choices": [
@@ -149,7 +151,8 @@
        "type": "checkbox",
        "name": "other_aps_taught",
        "visibleIf": "{taught_ap_before} = 'yes'",
-       "title": "What other AP course(s) have you taught? [check all that apply] ",
+       "title": "What other AP course(s) have you taught? ",
+       "description": "Check all that apply.",
        "choices": [
         {
          "value": "ap_csa",
@@ -222,8 +225,7 @@
        ]
       }
      ],
-     "visibleIf": "{workshop_course} = 'CS Principles'",
-     "title": ">>CSP PANEL<<"
+     "visibleIf": "{workshop_course} = 'CS Principles'"
     },
     {
      "type": "panel",
@@ -232,6 +234,7 @@
       {
        "type": "html",
        "name": "question7",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>"
       },
       {
@@ -282,22 +285,23 @@
        ]
       }
      ],
-     "visibleIf": "{workshop_course} = 'CS Discoveries'",
-     "title": ">>CSD Panel<<"
+     "visibleIf": "{workshop_course} = 'CS Discoveries'"
     },
     {
      "type": "text",
      "name": "years_teaching",
      "title": "How many years have you taught at the K-12 level (any subject)?",
      "description": "Please enter a whole number. If you are about to start your first year teaching, enter 0.",
-     "inputType": "number"
+     "inputType": "number",
+     "min": 0
     },
     {
      "type": "text",
      "name": "years_teaching_cs",
-     "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level (any subject)?",
+     "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level?",
      "description": "Please enter a whole number. Enter 0 if it's your first year teaching computer science.",
-     "inputType": "number"
+     "inputType": "number",
+     "min": 0
     },
     {
      "type": "radiogroup",
@@ -351,49 +355,49 @@
       },
       {
        "value": "2",
-       "text": "Disagree "
+       "text": "Disagree"
       },
       {
        "value": "3",
-       "text": "Slightly Disagree "
+       "text": "Slightly Disagree"
       },
       {
        "value": "4",
-       "text": "Neutral "
+       "text": "Neutral"
       },
       {
        "value": "5",
-       "text": "Slightly Agree "
+       "text": "Slightly Agree"
       },
       {
        "value": "6",
-       "text": "Agree "
+       "text": "Agree"
       },
       {
        "value": "7",
-       "text": "Strongly Agree "
+       "text": "Strongly Agree"
       }
      ],
      "rows": [
       {
-       "value": "connected_community",
-       "text": "I feel connected to a community of computer science teachers."
+       "value": "someone_to_turn_to",
+       "text": "When I need help teaching computer science, I have someone to turn to."
       },
       {
-       "value": "have_help",
-       "text": "When I need help teaching computer science I have someone to turn to."
+       "value": "know_teacher_leaders",
+       "text": "I know computer science teacher-leaders and role models in my community."
       },
       {
-       "value": "know_leaders",
-       "text": "I know computer science teacher leaders and role models in my community."
-      },
-      {
-       "value": "part_movement",
+       "value": "part_of_cs_movement",
        "text": "I feel like I'm part of a broad computer science education movement."
       },
       {
-       "value": "regional_partner_is_resource",
-       "text": "I see my Regional Partner as a hub of resources and support for computer science education in my community."
+       "value": "see_rp_as_resource",
+       "text": "I see my Regional Partner as a resource and support for computer science education in my community."
+      },
+      {
+       "value": "excited_to_collaborate",
+       "text": "I am excited to collaborate with other computer science teachers in my community."
       }
      ]
     },
@@ -404,6 +408,7 @@
       {
        "type": "html",
        "name": "question4",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>\n"
       },
       {
@@ -451,27 +456,27 @@
        ],
        "rows": [
         {
-         "value": "ensure_that_students_work",
+         "value": "work_collaboratively",
          "text": "ensure that students work collaboratively."
         },
         {
-         "value": "ensure_that_every_student",
+         "value": "equitable_discussion",
          "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, or small-group or large-group discussions."
         },
         {
-         "value": "create_a_culture_in_which",
+         "value": "normalize_failure",
          "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
         },
         {
-         "value": "provide_frequent_opportun",
+         "value": "journaling",
          "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
         },
         {
-         "value": "create_a_classroom_cultur",
+         "value": "regular_feedback",
          "text": "create a classroom culture in which students regularly get feedback on their work."
         },
         {
-         "value": "support_student_understan",
+         "value": "cs_vocab",
          "text": "support student understanding and use of CS vocabulary."
         },
         {
@@ -479,13 +484,14 @@
          "text": "differentiate instruction to meet student needs."
         },
         {
-         "value": "create_a_culture_in_which",
+         "value": "problem_solving_autonomy",
          "text": "create a culture in which students know where to find and how to use resources to support problem solving."
         }
        ]
       }
      ],
      "visibleIf": "{workshop_course} = 'CS Discoveries'",
+     "questionTitleLocation": "hidden",
      "title": ">>CS Discoveries Panel<<"
     },
     {
@@ -495,6 +501,7 @@
       {
        "type": "html",
        "name": "question1",
+       "visible": false,
        "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
       },
       {
@@ -542,37 +549,38 @@
        ],
        "rows": [
         {
-         "value": "ensure_that_students_work",
+         "value": "pair_programming",
          "text": "ensure that students work collaboratively when writing code."
         },
         {
-         "value": "create_a_classroom_cultur",
+         "value": "peer_feedback",
          "text": "create a classroom culture in which students regularly get feedback on their work from their peers."
         },
         {
-         "value": "ensure_that_every_student",
+         "value": "equitable_discussion",
          "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group, or large-group discussions. "
         },
         {
-         "value": "create_a_culture_in_which",
+         "value": "normalize_failure",
          "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
         },
         {
-         "value": "provide_frequent_opportun",
+         "value": "journaling",
          "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
         },
         {
-         "value": "support_student_understan",
-         "text": "support student understanding and use of of CS vocabulary."
+         "value": "cs_vocab",
+         "text": "support student understanding and use of CS vocabulary."
         },
         {
-         "value": "support_students_in_becom",
+         "value": "impacts_of_tech",
          "text": "support students in becoming informed decision makers about the impact of technology."
         }
        ]
       }
      ],
      "visibleIf": "{workshop_course} = 'CS Principles'",
+     "questionTitleLocation": "hidden",
      "title": ">>CS Principles Panel<<"
     }
    ]
@@ -587,18 +595,8 @@
     },
     {
      "type": "html",
-     "name": "philosophy_description",
-     "html": "<p>Below are pairs of statements from computer science teachers describing various philosophies or approaches to teaching, presented as <strong>Statement A</strong> and <strong>Statement B </strong>like so:  </p>"
-    },
-    {
-     "type": "html",
-     "name": "statementAB_description",
-     "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\">\n                    <em><span style=\"color: #999999;\">...</span></em>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\">\n                    <em><span style=\"color: #999999;\">...</span></em>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-    },
-    {
-     "type": "html",
      "name": "rating_description",
-     "html": "Please <b>select the value 1-5</b> that best shows how closely your own beliefs are to one of the statements in a given pair.\n\nPlease respond freely based on your <b>personal beliefs</b> and philosophy - there is no right or wrong way to respond."
+     "html": "<p>Below are pairs of statements from computer science teachers describing various philosophies or approaches to teaching, presented as <strong>Statement A</strong> and <strong>Statement B </strong>like so:  </p>  <div class='foorm-survey-rating-question-sample'><img src='/shared/images/foorm/foorm_rating_question_sample.png'/></div> Please <b>select the value 1-5</b> that best shows how closely your own beliefs are to one of the statements in a given pair.\n\nPlease respond freely based on your <b>personal beliefs</b> and philosophy - there is no right or wrong way to respond."
     },
     {
      "type": "html",
@@ -608,7 +606,6 @@
     {
      "type": "rating",
      "name": "lead_learner",
-     "indent": 12,
      "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
      "titleLocation": "hidden",
      "minRateDescription": "Strongly aligned with A",
@@ -622,7 +619,6 @@
     {
      "type": "rating",
      "name": "recruit_responsibility",
-     "indent": 12,
      "title": "Recruit Responsibility. 1. recruit students interested in CS  --- 5. recruit representative population",
      "titleLocation": "hidden",
      "minRateDescription": "Strongly aligned with A",
@@ -636,7 +632,6 @@
     {
      "type": "rating",
      "name": "prioritize_time",
-     "indent": 12,
      "title": "Prioritize Time. 1. prioritize most need --- 5. distribute equally",
      "titleLocation": "hidden",
      "minRateDescription": "Strongly aligned with A",
@@ -650,7 +645,6 @@
     {
      "type": "rating",
      "name": "instructional_focus",
-     "indent": 12,
      "title": "Instructional focus. 1. more material,some students struggle --- 5. less material, leave fewer behind",
      "titleLocation": "hidden",
      "minRateDescription": "Strongly aligned with A",
@@ -729,8 +723,8 @@
      "title": "What is your year of birth? ",
      "description": "Please enter a whole number e.g. 1975. ",
      "inputType": "number",
-     "min": "1930",
-     "max": "2000",
+     "min": 1930,
+     "max": 2000,
      "placeHolder": "enter a number"
     },
     {
