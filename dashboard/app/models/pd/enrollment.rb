@@ -174,6 +174,12 @@ class Pd::Enrollment < ActiveRecord::Base
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
     end
 
+    # Filter out legacy (pre-Foorm) local summer and CSF Intro surveys so that we aren't
+    # providing a link to fill them out.
+    _, other_enrollments = other_enrollments.partition do |enrollment|
+      (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
+    end
+
     new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
       [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
