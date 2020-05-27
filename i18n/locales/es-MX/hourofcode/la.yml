@@ -982,7 +982,8 @@ la:
     de 180 países comenzando con una Hora del Código.
   learn_banner_beyond: "¿Quieres seguir aprendiendo? <a id='learn_banner_beyond'>Ve
     más allá de una hora</a>"
-  learn_banner_beyond_markdown: "¿Quieres seguir aprendiendo? [Go beyond an hour](%{url})"
+  learn_banner_beyond_markdown: "¿Quieres seguir aprendiendo? [Ve más allá de una
+    hora](%{url})"
   learn_banner_teachers: 'Profesores: <a id=''teacher_banner_host''>Organiza una Hora
     del Código</a> o <a id=''teacher_banner_howto''>lee la Guía para hacerlo</a>.'
   learn_banner_teachers_markdown: 'Para profesores: [Organiza una hora](%{host_url})

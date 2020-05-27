@@ -1,6 +1,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
-require 'cdo/google_drive'
+require 'cdo/google/drive'
 require 'cgi'
 require 'fileutils'
 require 'psych'

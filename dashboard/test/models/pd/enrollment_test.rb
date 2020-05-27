@@ -102,7 +102,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csf_intro_workshop = build :csf_intro_workshop
     csf_intro_workshop_enrollment = build :pd_enrollment, workshop: csf_intro_workshop
 
-    assert_equal "/pd/workshop_survey/day/0?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
     assert_equal "/pd/pre_workshop_survey/#{csp_academic_year_workshop_enrollment.code}",
       URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path
@@ -139,9 +139,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
   end
 
   test 'exit_survey_url falls back to last valid day' do
@@ -330,7 +330,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
 
     # complete survey
-    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user
+    create :day_5_workshop_foorm_submission,
+      :answers_high,
+      user: enrollment.user,
+      pd_workshop_id: enrollment.workshop.id
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
