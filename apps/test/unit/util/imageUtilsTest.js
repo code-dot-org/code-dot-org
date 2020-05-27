@@ -1,6 +1,4 @@
 import {
-  blobToDataURI,
-  dataURIFromURI,
   dataURIToBlob,
   dataURIToFramedBlob,
   imageFromURI,
@@ -8,7 +6,7 @@ import {
   toImage,
   toImageData
 } from '@cdo/apps/imageUtils';
-import {assert, expect} from 'chai';
+import {assert} from 'chai';
 import expectedPng from './expected.png';
 import assertVisualMatch from '../../util/assertVisualMatch';
 
@@ -18,12 +16,9 @@ const TEST_DATA_URI =
 describe('image utils', () => {
   it('overlays an image inside the Artist frame', done => {
     dataURIToFramedBlob(TEST_DATA_URI, actual => {
-      dataURIFromURI(expectedPng).then(expected => {
-        blobToDataURI(actual, actual => {
-          expect(expected).to.equal(actual);
-          done();
-        });
-      });
+      assertVisualMatch(expectedPng, actual)
+        .then(done)
+        .catch(done);
     });
   });
 
