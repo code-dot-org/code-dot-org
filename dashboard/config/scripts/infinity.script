@@ -1,6 +1,6 @@
 hidden 'false'
 
-stage 'Infinity'
+lesson 'Infinity'
 level 'Infinity_move_right'
 level 'Infinity_say'
 level 'Infinity_move_directions'
