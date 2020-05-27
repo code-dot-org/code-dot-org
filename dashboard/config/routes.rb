@@ -4,8 +4,6 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
-  get 'spriteCostumeLibrary.json', to: 'levels#spritelabCostumeLibrary'
-
   # React-router will handle sub-routes on the client.
   get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
@@ -200,6 +198,15 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
+
+        # appending 'embed_app_and_code' to a project renders a page with just the app editor. It is distinct from appending 'embed'
+        # to a project in that appending 'embed' renders only the app, wheras 'embed_app_and_code renders the app and the workspace
+        # for building the app, in view only mode. Specifically, appending 'embed_app_and_code' to a project does the following:
+        #
+        # - set view options to remove headers/footers
+        # - set a view option 'iframeEmbedAppAndCode' to true, setting the config.level.iframeEmbedAppAndCode variable to true on the client side
+        #   This makes a number of changes to how StudioApp behaves, and some changes to how P5Lab.js behaves
+        get "/#{key}/:channel_id/embed_app_and_code", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed_app_and_code", iframe_embed_app_and_code: true, readonly: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
@@ -506,7 +513,9 @@ Dashboard::Application.routes.draw do
     post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
-    get 'workshop_survey/foorm/day/:day', to: 'workshop_daily_survey#new_general_foorm'
+    get 'workshop_daily_survey/day/:day', to: 'workshop_daily_survey#new_daily_foorm'
+    get 'workshop_pre_survey', to: 'workshop_daily_survey#new_pre_foorm'
+    get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
