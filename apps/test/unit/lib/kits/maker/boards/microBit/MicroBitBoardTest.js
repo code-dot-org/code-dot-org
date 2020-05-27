@@ -8,13 +8,14 @@ import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitCo
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
 
-const MB_COMPONENT_COUNT = 7;
+const MB_COMPONENT_COUNT = 8;
 const MB_COMPONENTS = [
   'LedScreen',
   'MicroBitButton',
   'Accelerometer',
   'MicroBitThermometer',
-  'Compass'
+  'Compass',
+  'LightSensor'
 ];
 
 describe('MicroBitBoard', () => {
@@ -159,6 +160,30 @@ describe('MicroBitBoard', () => {
           });
         });
 
+        describe('lightSensor', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.lightSensor;
+          });
+
+          it('value', () => {
+            expect(component).to.have.property('value');
+          });
+
+          it('threshold', () => {
+            expect(component).to.have.property('threshold');
+          });
+
+          it('start()', () => {
+            expect(component.start).to.be.a('function');
+          });
+
+          it('setRange()', () => {
+            expect(component.setRange).to.be.a('function');
+          });
+        });
+
         describe('accelerometer', () => {
           let component;
 
@@ -207,6 +232,7 @@ describe('MicroBitBoard', () => {
         expect(board.prewiredComponents_.compass).to.be.a('object');
         expect(board.prewiredComponents_.buttonA).to.be.a('object');
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
+        expect(board.prewiredComponents_.lightSensor).to.be.a('object');
       });
     });
   });

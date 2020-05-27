@@ -1,5 +1,5 @@
 import {EventEmitter} from 'events';
-import {sensor_channels} from './MicroBitConstants';
+import {sensor_channels, roundToHundredth} from './MicroBitConstants';
 
 export default class LightSensor extends EventEmitter {
   constructor(board) {
@@ -15,30 +15,24 @@ export default class LightSensor extends EventEmitter {
       // Only emit the data event when the value is above the threshold or the
       // previous reading was above the threshold
       if (
-        this.this.board.mb.analogChannel[sensor_channels.lightSensor] >=
+        this.board.mb.analogChannel[sensor_channels.lightSensor] >=
           this.state.threshold ||
         this.state.currentReading >= this.state.threshold
       ) {
         this.emit('data');
-      }
 
-      // If the light value has changed, update the local value and
-      // trigger a change event
-      if (
-        this.state.currentReading !==
-        this.board.mb.analogChannel[sensor_channels.lightSensor]
-      ) {
+        // If the light value has changed, trigger a change event
         if (
-          this.this.board.mb.analogChannel[sensor_channels.lightSensor] >=
-            this.state.threshold ||
-          this.state.currentReading >= this.state.threshold
+          this.state.currentReading !==
+          this.board.mb.analogChannel[sensor_channels.lightSensor]
         ) {
           this.emit('change');
         }
-        this.state.currentReading = this.board.mb.analogChannel[
-          sensor_channels.lightSensor
-        ];
       }
+
+      this.state.currentReading = this.board.mb.analogChannel[
+        sensor_channels.lightSensor
+      ];
     });
     this.start();
 
@@ -47,15 +41,18 @@ export default class LightSensor extends EventEmitter {
         get: function() {
           let ratio =
             this.board.mb.analogChannel[sensor_channels.lightSensor] / 255;
-          return (
+          return roundToHundredth(
             this.state.rangeMin +
-            ratio * (this.state.rangeMax - this.state.rangeMin)
+              ratio * (this.state.rangeMax - this.state.rangeMin)
           );
         }
       },
       threshold: {
         set: function(value) {
           this.state.threshold = value;
+        },
+        get: function(value) {
+          return this.state.threshold;
         }
       }
     });

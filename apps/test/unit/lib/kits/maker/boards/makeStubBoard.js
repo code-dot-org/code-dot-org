@@ -80,4 +80,6 @@ export class MicrobitStubBoard {
   reset() {}
 
   trackDigitalComponent() {}
+
+  enableLightSensor() {}
 }
