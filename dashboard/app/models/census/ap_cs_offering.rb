@@ -98,6 +98,10 @@ class Census::ApCsOffering < ApplicationRecord
   #
   #   Census::StateCsOffering.dry_seed_s3_object('CSA', 2019, 'txt')
   #   will seed from ap_cs_offerings/CSA-2019-2020.txt object.
+  #
+  # @note: A CSV file with valid format name in S3 will be automatically
+  # picked up by the +seed_from_s3+ method as part of the build seeding process.
+  # To prevent that, use a different file extension such as .test or .xyz.
   def self.dry_seed_s3_object(course, school_year, file_extension = 'csv')
     object_key = construct_object_key(course, school_year, file_extension)
     AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
