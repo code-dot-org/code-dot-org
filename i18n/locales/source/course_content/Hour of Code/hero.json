@@ -85,7 +85,7 @@
     "callouts": {
       "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
     },
-    "function_defintions": {
+    "function_definitions": {
       "build bridge": {
         "name": "build bridge"
       }
@@ -100,7 +100,7 @@
       "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
       "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
     },
-    "function_defintions": {
+    "function_definitions": {
       "clear path": {
         "name": "clear path"
       }
@@ -114,7 +114,7 @@
       "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
       "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "fix long path": {
         "name": "fix long path"
       },
@@ -135,7 +135,7 @@
     "callouts": {
       "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
     },
-    "function_defintions": {
+    "function_definitions": {
       "build short bridge": {
         "name": "build short bridge"
       },
@@ -151,7 +151,7 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "function 1": {
         "name": "function 1"
       },

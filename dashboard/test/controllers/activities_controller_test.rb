@@ -888,10 +888,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups], script_dsl[0][:stages])
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups], script_dsl[0][:lessons])
 
     last_level_in_first_stage = script.lessons.first.script_levels.last
     post :milestone,
@@ -1135,5 +1135,42 @@ class ActivitiesControllerTest < ActionController::TestCase
       level_id: multi_sublevel.id
     )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
+  end
+
+  test "milestone_for_bubble_choice_sublevel_also_stores_progress_for_parent_level" do
+    sublevel1 = create :applab, name: 'choice_1'
+    sublevel2 = create :gamelab, name: 'choice_2'
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    assert_nil UserLevel.find_by(user: @user, level: sublevel1, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: bubble_choice, script: script)
+
+    milestone_params = {
+      user_id: @user.id,
+      script_level_id: script_level.id,
+      level_id: sublevel1.id,
+      program: '<hey>',
+      app: 'applab',
+      result: 'true',
+      pass: 'true',
+      testResult: '100',
+      submitted: false
+    }
+
+    post :milestone, params: milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
+    refute_nil user_level
+    assert_equal 100, user_level.best_result
+
+    assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
+
+    parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
+    refute_nil parent_user_level
+    assert_equal 100, parent_user_level.best_result
   end
 end

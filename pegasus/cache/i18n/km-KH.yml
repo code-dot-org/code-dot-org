@@ -813,6 +813,8 @@ km-KH:
   header_about: អំពី
   header_teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
   header_report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
+  header_legal_privacy: សិទ្ធបុគ្គល
+  header_legal_tos: លក្ខខណ្ឌ
   user_header_label: សួស្តី%{username}
   user_header_team: ក្រុម
   user_header_settings: គណនី​របស់​ខ្ញុំ
