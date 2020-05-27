@@ -29,7 +29,7 @@ export function blobToDataURI(blob, onComplete) {
 }
 
 export function dataURIToSourceSize(dataURI) {
-  return imageFromURI(dataURI).then(image => ({
+  return toImage(dataURI).then(image => ({
     x: image.width,
     y: image.height
   }));
@@ -65,15 +65,6 @@ export function dataURIToFramedBlob(dataURI, callback) {
     }
   };
   frame.src = artistShareFrame;
-}
-
-export function imageFromURI(uri) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve(image);
-    image.onerror = err => reject(err);
-    image.src = uri;
-  });
 }
 
 export function svgToDataURI(svg, imageType = 'image/png', options = {}) {
