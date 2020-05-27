@@ -1383,6 +1383,8 @@
   header_teacher_community: "Komunita učitelů"
   header_help_support: 'Nápověda a podpora '
   header_report_bug: "Nahlásit chybu"
+  header_legal_privacy: "Zásady ochrany osobních údajů"
+  header_legal_tos: "Podmínky"
   header_tutorials: "Návody"
   header_documentation: "Dokumentace"
   user_header_label: "Ahoj %{username}"

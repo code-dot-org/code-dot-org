@@ -1393,6 +1393,8 @@
   header_teacher_community: "先生のコミュニティ"
   header_help_support: 'ヘルプとサポート '
   header_report_bug: "バグを報告"
+  header_legal_privacy: "プライバシー ポリシー"
+  header_legal_tos: "利用規約"
   header_tutorials: "チュートリアル"
   header_documentation: "ドキュメント"
   user_header_label: "やあ %{username}"

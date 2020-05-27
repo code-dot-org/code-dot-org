@@ -379,6 +379,8 @@
   header_about: "Tentang"
   header_help_support: 'Bantuan dan sokongan '
   header_report_bug: "Laporkan masalah"
+  header_legal_privacy: "Dasar Privasi"
+  header_legal_tos: "Terma Perkhidmatan"
   user_header_label: "Hi %{username}"
   user_header_settings: "Akaun saya"
   user_header_logout: "Daftar keluar"

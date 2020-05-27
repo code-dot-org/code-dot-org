@@ -319,8 +319,8 @@ class ProjectsListTest < ActionController::TestCase
     User = Struct.new(:id, :name, :user_type)
     teacher = User.new(6, teacher_name, 'teacher')
     student = User.new(4, student_name, 'student')
-    Section = Struct.new(:students, :user, :id)
-    section = Section.new([student], teacher, 321)
+    Section = Struct.new(:students, :user, :id, :name)
+    section = Section.new([student], teacher, 321, 'sectionName')
 
     PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
 
@@ -365,8 +365,8 @@ class ProjectsListTest < ActionController::TestCase
     }
     User = Struct.new(:id, :name, :user_type)
     teacher = User.new(4, teacher_name, 'teacher')
-    Section = Struct.new(:students, :user, :id)
-    section = Section.new([], teacher, 321)
+    Section = Struct.new(:students, :user, :id, :name)
+    section = Section.new([], teacher, 321, 'sectionName')
 
     PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
 

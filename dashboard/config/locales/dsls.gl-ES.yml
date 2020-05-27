@@ -556,17 +556,23 @@ gl-ES:
           * [Detective Social - Guía de actividades en inglés]
           (https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
 
+        teacher_markdown: "* [Cando é importante a túa privacidade? - en inglés] (https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit)
+          – Exemplar da guía de actividades ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Social Sleuth](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/)
+          – Guía de actividades ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))"
       CSD U2 L6 Overview:
         markdown: |-
           # Resumo
 
-          Esta lección presenta as listas ordenadas e non ordenadas e as etiquetas HTML asociadas &lt;ul&gt;,&lt;ol&gt; e &lt;li&gt;. A clase mostra o uso das etiquetas, logo regresa ao proxecto da páxina web persoal para agregar unha nova páxina HTML que inclúa as novas etiquetas.
+          Esta lección presenta as listas ordenadas e non ordenadas e as etiquetas HTML asociadas &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;. A clase mostra o uso das etiquetas, logo regresa ao proxecto da páxina web persoal para agregar unha nova páxina HTML que inclúa as novas etiquetas.
 
           ## Código presentado
 
-          *  **[Unordered List](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
-          *  **[List Item](//studio.code.org/docs/weblab/li/)** - `<li></li>`
-          *  **[Ordered List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+          * **[Lista desordenada – en inglés](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          * **[Elemento da lista – en inglés](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          * **[Lista ordenada – en inglés](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
       CSD U2 L7 Overview:
         markdown: |-
           # Resumo

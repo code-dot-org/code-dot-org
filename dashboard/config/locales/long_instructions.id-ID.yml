@@ -1159,24 +1159,23 @@ id-ID:
         Agent untuk membantu Anda menjelajahi dunia ini."
       New Minecraft Hero Project: "**Main Bebas:** Sekarang terserah Anda! Gunakan
         kode Agent untuk membantu Anda menjelajahi dunia ini."
-      OPD-K5-events-2: "Tempelkan blok `jumlah kepakan normal` ke event `saat mengklik`,
+      OPD-K5-events-2: "Tempelkan blok `flap normal amount` ke event `when click`,
         lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain untuk menggerakkan
         Flappy ke target."
-      OPD-K5-events-3: "Event `saat dijalankan` memungkinkan Anda menjalankan kode
-        tak lama setelah permainan dimulai.  \n\nCoba tambahkan blok yang mengatur
-        kecepatan level saat tombol \"Run\" ditekan. \n\n* * *\n\nMainkan permainan
-        dan kepakkan ke target untuk melanjutkan."
-      OPD-K5-events-4: "Now we've added the ground. \n\nTempelkan blok `akhiri permainan`
-        ke event `saat menabrak tanah`.\n\n* * *\n\nMainkan permainannya dan jatuhkan
-        burung ke tanah untuk melanjutkan."
-      OPD-K5-events-5: "Flappy akan terbang melalui rintangan kecuali Anda menulis
-        kode yang membuatnya menabrak. \n\nTempelkan blok ke event `ketika menabrak
-        rintangan` sehingga permainan berakhir ketika Flappy membentur tumpukan pipa
-        pertama."
+      OPD-K5-events-3: "Event `when run` memungkinkan Anda menjalankan kode tak lama
+        setelah permainan dimulai.  \n\nCoba tambahkan blok yang mengatur kecepatan
+        level saat tombol \"Run\" ditekan. \n\n* * *\n\nMainkan permainan dan kepakkan
+        ke target untuk melanjutkan."
+      OPD-K5-events-4: "Sekarang kita sudah menambahkan tanah. \n\nTempelkan blok
+        `end game` ke event `when hit the ground`.\n\n* * *\n\nMainkan permainannya
+        dan jatuhkan burung ke tanah untuk melanjutkan."
+      OPD-K5-events-5: "Flappy akan terbang melewati rintangan kecuali Anda menulis
+        kode yang membuatnya menabrak. \n\nTempelkan blok ke event `when hit an obstacle`
+        sehingga permainan berakhir ketika Flappy membentur kelompok pipa pertama."
       OPD-K5-events-6: "Kami sudah menambahkan papan skor untuk menghitung poin ketika
-        Flappy melewati rintangan.  \n\nTambahkan blok ke event `ketika melewati rintangan`
+        Flappy melewati rintangan.  \n\nTambahkan blok ke event `when pass an obstacle`
         yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan Flappy melewati
-        tumpukan pipa pertama."
+        kelompok pipa pertama."
       OPD-K5-projects-2: |-
         Sungguh menakjubkan betapa banyaknya pelajaran yang sudah Anda petik! Ayo buat permainan langkah demi langkah.
 
@@ -1435,7 +1434,7 @@ id-ID:
         \  \n\nKomentar hanya digunakan untuk **Anda**, tidak memengaruhi area bermain."
       course1_artist_loops_challenge4: _"Saatnya melemparkan dadu! Apakah Anda bisa
         membantu saya menggambarkan ini?"_
-      course1_maze_debugging_challenge1: Debug level ini. Hapus blok-blok ekstra,
+      course1_maze_debugging_challenge1: Debug level ini. Singkirkan blok-blok ekstra,
         dan tambahi blok-blok yang hilang. Giring burungnya ke babi!
       course1_maze_debugging_challenge2: Debug level ini. Bloknya sudah benar, tertapi
         urutannya salah!
@@ -1447,7 +1446,7 @@ id-ID:
         -   _Segitiga_ dibuat dengan belokan **120 derajat**.
       course2_bee_conditionals_challenge2: Kumpulkan semua nektar dan buat semua madu.
         Anda dapat mengumpulkan semua nektar di satu bunga dengan menggunakan loop
-        `selagi nektar > 0`.
+        `while nectar > 0`.
       course2_collector_prog_challenge1: Lihat dengan cermat! Bisakah Anda mengumpulkan
         **10** buah harta karun seluruhnya?
       course2_harvester_loops_challenge1: Kumpulkan semua jagung.
@@ -1460,7 +1459,7 @@ id-ID:
         berkali-kali - kapan pun dan di mana pun Anda inginkan! Coba kode ini untuk
         mengetahui cara kerjanya, lalu ubahlah untuk membuat desain sendiri yang memukau!
       course3_artist_functions_challenge2: |-
-        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `lompat ke` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
+        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `jump to` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
 
         <xml>
           <block type="jump_to_xy">
@@ -1475,9 +1474,9 @@ id-ID:
         \ _Menyentuh dinosaurus mengurangi banyak poin._\n\nIni adalah jenis permainan
         lain yang sudah dimulai untuk Anda! Mainkan untuk mengetahui cara kerjanya.
         \n\nHarus terjadi sesuatu ketika Anda mendapat cukup poin atau ketika Anda
-        kehabisan poin. Tambahkan kode tertentu ke fungsi `menang permainan` dan `kalah
-        permainan` untuk membuat permainannya berjalan semestinya. \nKlik tips untuk
-        mendapatkan ide!"
+        kehabisan poin. Tambahkan kode tertentu ke fungsi `win game` dan `lose game`
+        untuk membuat permainannya berjalan semestinya. \nKlik tips untuk mendapatkan
+        ide!"
       course4_artist_binary_challenge1: Anda hanya dapat menggunakan setiap nilai
         berpasangan (0 atau 1) masing-masing sekali dalam teka-teki ini. Coba gunakan
         lingkaran bersarang untuk menyelesaikan gambar ini.
@@ -1488,7 +1487,7 @@ id-ID:
       course4_artist_concept_challenge2: Buat lima desain kincir menggunakan kode
         di bawah ini.
       course4_artist_functions_challenge2: |-
-        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `lompat ke` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
+        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `jump to` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
 
         <xml>
           <block type="jump_to_xy">
@@ -1499,27 +1498,27 @@ id-ID:
         untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus
         dan ganti dengan komposisi yang berbeda)
       courseA_artist_loops10: |-
-        ## Saatnya balik ke daratan. Bantu saya menaruh batu agar saya tidak jatuh tenggelam!
+        ## Saatnya balik ke daratan. Bantu saya menaruh batu agar saya tidak jatuh!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops10_2018: |-
-        ## Saatnya balik ke daratan. Bantu saya menaruh batu agar saya tidak jatuh tenggelam!
+        ## Saatnya balik ke daratan. Bantu saya menaruh batu agar saya tidak jatuh!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops10_2019: |-
-        ## Saatnya balik ke daratan. Bantu saya menaruh batu agar saya tidak jatuh tenggelam!
+        ## Saatnya balik ke daratan. Bantu saya menaruh batu agar saya tidak jatuh!
 
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
-        ## Bantu saya membuat undak-undakan untuk melihat kapal pergi berlayar.
+        ## Bantu saya membuat langkah-langkah untuk melihat kapal pergi berlayar.
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2018: |-
-        ## Bantu saya membuat undak-undakan untuk melihat kapal pergi berlayar.
+        ## Bantu saya membuat langkah-langkah untuk melihat kapal pergi berlayar.
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops11_2019: |-
-        ## Bantu saya membuat undak-undakan untuk melihat kapal pergi berlayar.
+        ## Bantu saya membuat langkah-langkah untuk melihat kapal pergi berlayar.
 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12: |-
@@ -1652,7 +1651,7 @@ id-ID:
 
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1: |-
-        Anda dapat menggunakan loop untuk membuat banyak garis di dalam baris.
+        Anda dapat menggunakan loop untuk membuat banyak garis sekaligus.
 
         Bisakah Anda menggambar rumah? Buat rupa gambarnya sesuka hati Anda!  Coba cari pola-pola yang berulang!
 
@@ -1660,7 +1659,7 @@ id-ID:
 
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge1_2018: |-
-        Anda dapat menggunakan loop untuk membuat banyak garis di dalam baris.
+        Anda dapat menggunakan loop untuk membuat banyak garis sekaligus.
 
         Bisakah Anda menggambar rumah? Buat rupa gambarnya sesuka hati Anda!  Coba cari pola-pola yang berulang!
 
@@ -1668,7 +1667,7 @@ id-ID:
 
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge1_2019: |-
-        Anda dapat menggunakan loop untuk membuat banyak garis di dalam baris.
+        Anda dapat menggunakan loop untuk membuat banyak garis sekaligus.
 
         Bisakah Anda menggambar rumah? Buat rupa gambarnya sesuka hati Anda!  Coba cari pola-pola yang berulang!
 
@@ -1688,9 +1687,9 @@ id-ID:
 
         Gunakan blok di toolbox untuk menggambar tiga tenda ini.
       courseA_collector_loops1: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya.
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Buat dia bergerak ke sana-sini dan dapatkan harta karun sebanyak-banyaknya.
 
-        Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
+        Pindahkan blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseA_collector_loops12: |-
         _"Eureka!  Ambil harta karun sebanyak-banyaknya!"_\
         (Anda tidak harus mengambil semuanya.)
@@ -1701,15 +1700,15 @@ id-ID:
         _"Eureka!  Ambil harta karun sebanyak-banyaknya!"_\
         (Anda tidak harus mengambil semuanya.)
       courseA_collector_loops1_2018: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya.
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Buat dia bergerak ke sana-sini dan dapatkan harta karun sebanyak-banyaknya.
 
-        Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
+        Pindahkan blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseA_collector_loops1_2019: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya.
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Buat dia bergerak ke sana-sini dan dapatkan harta karun sebanyak-banyaknya.
 
-        Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
+        Pindahkan blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseA_collector_loops2: |-
-        Ambil ketiga tumpukan! Gerakkan Laurel ke tiap-tiap biji harta karun, lalu gunakan blok ini:
+        Ambil ketiga tumpukan! Gerakkan Laurel ke tiap-tiap harta karun, lalu gunakan blok ini:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: 'Bawa ketiga timbunan! Pindahkan Laurel ke setiap
         bagian harta karun, lalu gunakan blok ini: <xml><block type="collector_collect"/></xml>'
@@ -1733,7 +1732,7 @@ id-ID:
         bug? Saya tahu jalan yang harus dilalui, tetapi saya tidak yakin berapa langkah
         yang harus ditempuh."_
       courseA_collector_preLoops7: |-
-        Ambil ketiga tumpukan! Gerakkan Laurel ke tiap-tiap biji harta karun, lalu gunakan blok ini:
+        Ambil ketiga tumpukan! Gerakkan Laurel ke tiap-tiap harta karun, lalu gunakan blok ini:
           <xml><block type="collector_collect"/></xml>
       courseA_harvester_loops1: Bantu pemanen mengambil semua jagung!
       courseA_harvester_loops10: Bantu pemanen memilih lima bulir jagung!
@@ -1846,7 +1845,7 @@ id-ID:
         tambahkan ke bagian bawah blok lain untuk menyelesaikan kode ini?
       courseA_maze_ramp5a_2018: Cobalah ini semua sendiri!
       courseA_maze_ramp5a_2019: Cobalah ini semua sendiri!
-      courseA_maze_seq1: _"Mainkan blok-blok ini dan coba giring saya ke babi jelek!"_
+      courseA_maze_seq1: _"Mainkan blok-blok ini dan coba giring saya ke babi jahat!"_
       courseA_maze_seq10: |-
         **Tantangan:** Putari TNT agar burung sampai ke babi!
 
@@ -1860,7 +1859,7 @@ id-ID:
 
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
-        Saatnya teka-teki pendek! Gerakkan satu arah, lalu ke arah lainnya untuk menggiring burung ke babi.
+        Saatnya puzzle pendek! Gerakkan ke satu arah, lalu ke arah lainnya untuk menggiring burung ke babi.
 
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq11_2018: Waktu untuk teka-teki yang lebih singkat! Bergerak
@@ -1875,19 +1874,19 @@ id-ID:
       courseA_maze_seq12_2019: Bawa babi itu!
       courseA_maze_seq13_2019: Tangkap babi itu bagaimana pun caranya!
       courseA_maze_seq1_2018: _"Mainkan blok-blok ini dan coba giring saya ke babi
-        jelek!"_
+        jahat!"_
       courseA_maze_seq1_2019: _"Mainkan blok-blok ini dan coba giring saya ke babi
-        jelek!"_
+        jahat!"_
       courseA_maze_seq2: |-
-        _"Ada bug! Perbaiki kode agar saya sampai ke babi."_
+        _"Ada bug! Perbaiki code agar saya sampai ke babi."_
 
         ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
       courseA_maze_seq3: |-
-        _"Perbaiki kode agar saya sampai ke babi!"_
+        _"Perbaiki code agar saya sampai ke babi!"_
 
         ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
-      courseA_maze_seq4: "_\"Ada yang tidak beres.\"_ \n\nHAPUS blok agar burung sampai
-        ke babi!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq4: "_\"Ada yang tidak beres.\"_ \n\nSINGKIRKAN blok agar burung
+        sampai ke babi!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
       courseA_maze_seq5: |-
         Coba sendiri yang ini sejak awal.
 
@@ -1907,23 +1906,23 @@ id-ID:
 
         Apa yang dapat Anda tambahkan di akhir kode ini untuk membawa burung ke babi?
       courseA_maze_seq6: |-
-        Gerakkan satu arah, lalu ke arah lainnya untuk menggiring burung ke babi!
+        Gerakkan ke satu arah, lalu ke arah lainnya untuk menggiring burung ke babi!
 
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
-      courseA_maze_seq6_2018: Gerakkan satu arah, lalu ke arah lainnya untuk menggiring
+      courseA_maze_seq6_2018: Gerakkan ke satu arah, lalu ke arah lainnya untuk menggiring
         burung ke babi!
-      courseA_maze_seq6_2019: Gerakkan satu arah, lalu ke arah lainnya untuk menggiring
+      courseA_maze_seq6_2019: Gerakkan ke satu arah, lalu ke arah lainnya untuk menggiring
         burung ke babi!
       courseA_maze_seq6_copy: |-
-        Gerakkan satu arah, lalu ke arah lainnya untuk menggiring burung ke babi!
+        Gerakkan ke satu arah, lalu ke arah lainnya untuk menggiring burung ke babi!
 
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq7: |-
-        Tebak apa yang kurang lalu tambahkan blok agar burung sampai ke babi!
+        Temukan apa yang kurang lalu tambahkan blok agar burung sampai ke babi!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq7_copy: |-
-        Tebak apa yang kurang lalu tambahkan blok agar burung sampai ke babi!
+        Temukan apa yang kurang lalu tambahkan blok agar burung sampai ke babi!
 
         ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
       courseA_maze_seq8: |-
@@ -1940,12 +1939,12 @@ id-ID:
         **Tantangan:** Debug level ini dengan menambahkan blok untuk menggiring burung sampai ke babi!
 
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
-      courseA_maze_seq_challenge1: Debug level ini. Hapus blok-blok ekstra, dan tambahi
-        blok-blok yang hilang. Giring burungnya ke babi!
-      courseA_maze_seq_challenge1_2018: Debug level ini. Hapus blok-blok ekstra, dan
+      courseA_maze_seq_challenge1: Debug level ini. Singkirkan blok-blok ekstra, dan
         tambahi blok-blok yang hilang. Giring burungnya ke babi!
-      courseA_maze_seq_challenge1_2019: Debug level ini. Hapus blok-blok ekstra, dan
-        tambahi blok-blok yang hilang. Giring burungnya ke babi!
+      courseA_maze_seq_challenge1_2018: Debug level ini. Singkirkan blok-blok ekstra,
+        dan tambahi blok-blok yang hilang. Giring burungnya ke babi!
+      courseA_maze_seq_challenge1_2019: Debug level ini. Singkirkan blok-blok ekstra,
+        dan tambahi blok-blok yang hilang. Giring burungnya ke babi!
       courseA_maze_seq_challenge2_2019: Telusuri jalan untuk menggiring burung ke
         babi. Hindari TNT atau bulu-bulu akan beterbangan!
       courseA_playLab_events1_2019: Ini adalah tingkat Play Lab. Pindahkan blok ke
@@ -2004,37 +2003,37 @@ id-ID:
       courseA_playlab_events_challenge1: |-
         Mengklik Olive akan memunculkan Robin! Apakah Anda juga dapat menulis kode untuk menampilkan karakter selebihnya?
 
-        Dalam teka-teki ini, pastikan mengklik tips! Tips tersebut akan membantu Anda mengerjakan proyek ini langkah demi langkah!
+        Dalam puzzle ini, pastikan mengklik tips! Tips tersebut akan membantu Anda mengerjakan proyek ini langkah demi langkah!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseA_playlab_events_challenge1_2018: |-
         Mengklik Olive akan memunculkan Robin! Apakah Anda juga dapat menulis kode untuk menampilkan karakter selebihnya?
 
-        Dalam teka-teki ini, pastikan mengklik tips! Tips tersebut akan membantu Anda mengerjakan proyek ini langkah demi langkah!
+        Dalam puzzle ini, pastikan mengklik tips! Tips tersebut akan membantu Anda mengerjakan proyek ini langkah demi langkah!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseA_playlab_events_challenge1_2019: |-
         Mengklik Olive akan memunculkan Robin! Apakah Anda juga dapat menulis kode untuk menampilkan karakter selebihnya?
 
-        Dalam teka-teki ini, pastikan mengklik tips! Tips tersebut akan membantu Anda mengerjakan proyek ini langkah demi langkah!
+        Dalam puzzle ini, pastikan mengklik tips! Tips tersebut akan membantu Anda mengerjakan proyek ini langkah demi langkah!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseA_playlab_events_challenge2: |-
         Beri semuanya sesuatu untuk dikerjakan ketika Anda mengklik mereka. Apa yang akan diucapkan binatang? Apa lagi yang akan terjadi?
 
-        Dalam teka-teki ini, pastikan mengklik tips. Tips akan memberikan hal-hal seru yang layak dicoba!
+        Dalam puzzle ini, pastikan mengklik tips. Tips akan memberikan hal-hal seru yang layak dicoba!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseA_playlab_events_challenge2_2018: |-
         Beri semuanya sesuatu untuk dikerjakan ketika Anda mengklik mereka. Apa yang akan diucapkan binatang? Apa lagi yang akan terjadi?
 
-        Dalam teka-teki ini, pastikan mengklik tips. Tips akan memberikan hal-hal seru yang layak dicoba!
+        Dalam puzzle ini, pastikan mengklik tips. Tips akan memberikan hal-hal seru yang layak dicoba!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseA_playlab_events_challenge2_2019: |-
         Beri semuanya sesuatu untuk dikerjakan ketika Anda mengklik mereka. Apa yang akan diucapkan binatang? Apa lagi yang akan terjadi?
 
-        Dalam teka-teki ini, pastikan mengklik tips. Tips akan memberikan hal-hal seru yang layak dicoba!
+        Dalam puzzle ini, pastikan mengklik tips. Tips akan memberikan hal-hal seru yang layak dicoba!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseB_Scrat_ramp1_2018: Untuk membawa Scrat ke biji, pasang blok <xml><block
@@ -2103,8 +2102,8 @@ id-ID:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
-      courseB_artist_loops1_2019: Ini adalah jenis teka-teki baru bernama "Artist".
-        Coba mainkan semua level dan rasakan keseruannya.
+      courseB_artist_loops1_2019: Ini adalah jenis puzzle baru bernama "Artist". Coba
+        mainkan level tersebut dan gambarlah sesuatu yang menyenangkan.
       courseB_artist_loops2_2019: Artis sedang mencoba menggambar garis **6** kali,
         tetapi tidak berhasil. Apakah anda dapat membantu?
       courseB_artist_loops3_2019: Bantu artis menggambar garis 7 kali untuk membuat
@@ -2142,9 +2141,9 @@ id-ID:
       courseB_artist_loops_challenge2_2019: Gambar X sebanyak mungkin. Kamu bisa menggambar
         3 kali berturut-turut?
       courseB_collector_loops1: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya.
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Buat dia bergerak ke sana-sini dan dapatkan harta karun sebanyak-banyaknya.
 
-        Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
+        Pindahkan blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseB_collector_loops10_2019: Bantu Laurel mengambil semua harta karun dari
         gua ini.
       courseB_collector_loops11_2019: Eureka! Ambil sebanyak mungkin harta karun!
@@ -2192,15 +2191,15 @@ id-ID:
       courseB_collector_loops_challenge2a: |-
         _"Ayo ambil harta karunnya!"_
 
-        Bantu Laurel setidaknya mendapat **5** harta karun untuk menyelesaikan teka-teki ini.
+        Bantu Laurel setidaknya mendapatkan **5** harta karun untuk menyelesaikan puzzle ini.
       courseB_collector_loops_challenge2a_2018: |-
         _"Ayo ambil harta karunnya!"_
 
-        Bantu Laurel setidaknya mendapat **5** harta karun untuk menyelesaikan teka-teki ini.
+        Bantu Laurel setidaknya mendapatkan **5** harta karun untuk menyelesaikan puzzle ini.
       courseB_collector_loops_challenge2a_2019: |-
         _"Ayo ambil harta karunnya!"_
 
-        Bantu Laurel setidaknya mendapat **5** harta karun untuk menyelesaikan teka-teki ini.
+        Bantu Laurel setidaknya mendapatkan **5** harta karun untuk menyelesaikan puzzle ini.
       courseB_iceage_loops1: Bantu Scrat melintasi es yang licin untuk menuju ke biji!
       courseB_iceage_loops10: Bantu Scrat sepenuhnya menuju ke biji!
       courseB_iceage_loops10_2019: Bantu Scrat sepenuhnya menuju ke biji!
@@ -2454,31 +2453,31 @@ id-ID:
         Penguin bergerak sana-sini menggunakan tombol atas / bawah / kiri / kanan
         untuk memukul semua target!
       courseC_PlayLab_events7: |-
-        Blok `ulangi selamanya` memungkinkan Anda menjalankan kode berulang-ulang selamanya. Gunakan blok ini untuk menggerakkan Chomp si Dino (aktor 2) naik-turun sebesar 400 piksel selamanya.
+        Blok `repeat forever` memungkinkan Anda menjalankan kode berulang-ulang selamanya. Gunakan blok ini untuk menggerakkan Chomp si Dino (aktor 2) naik-turun sebesar 400 piksel selamanya.
 
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events7_2018: |-
-        Blok `ulangi selamanya` memungkinkan Anda menjalankan kode berulang-ulang selamanya. Gunakan blok ini untuk menggerakkan Chomp si Dino (aktor 2) naik-turun sebesar 400 piksel selamanya.
+        Blok `repeat forever` memungkinkan Anda menjalankan kode berulang-ulang selamanya. Gunakan blok ini untuk menggerakkan Chomp si Dino (aktor 2) naik-turun sebesar 400 piksel selamanya.
 
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events7_2019: |-
-        Blok `ulangi selamanya` memungkinkan Anda menjalankan kode berulang-ulang selamanya. Gunakan blok ini untuk menggerakkan Chomp si Dino (aktor 2) naik-turun sebesar 400 piksel selamanya.
+        Blok `repeat forever` memungkinkan Anda menjalankan kode berulang-ulang selamanya. Gunakan blok ini untuk menggerakkan Chomp si Dino (aktor 2) naik-turun sebesar 400 piksel selamanya.
 
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events8: |-
-        Bisakah Anda memerintah Waddles (aktor 1) berseru "Aduh!" dan membunyikan suara "brak" jika dia menabrak Chomp?
+        Bisakah Anda memerintah Waddles (aktor 1) berseru "Aduh!" dan membunyikan suara "tabrak" jika dia menabrak Chomp?
 
         Ketika selesai, mainkan permainannya untuk mewujudkan hal itu.
 
         ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
       courseC_PlayLab_events8_2018: |-
-        Bisakah Anda memerintah Waddles (aktor 1) berseru "Aduh!" dan membunyikan suara "brak" jika dia menabrak Chomp?
+        Bisakah Anda memerintah Waddles (aktor 1) berseru "Aduh!" dan membunyikan suara "tabrak" jika dia menabrak Chomp?
 
         Ketika selesai, mainkan permainannya untuk mewujudkan hal itu.
 
         ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
       courseC_PlayLab_events8_2019: |-
-        Bisakah Anda memerintah Waddles (aktor 1) berseru "Aduh!" dan membunyikan suara "brak" jika dia menabrak Chomp?
+        Bisakah Anda memerintah Waddles (aktor 1) berseru "Aduh!" dan membunyikan suara "tabrak" jika dia menabrak Chomp?
 
         Ketika selesai, mainkan permainannya untuk mewujudkan hal itu.
 
@@ -2488,7 +2487,7 @@ id-ID:
       courseC_PlayLab_events_challenge1: |-
         Gunakan blok baru untuk otomatis membuat Waddles bergerak kembali ke awal saat dia menabrak Dinosaurus dan saat dia mencetak poin. Dengan cara ini, permainan Anda jadi lebih menantang dan seru!
 
-        Mainkan permainan dan gerakkan Waddles dengan panah sampai Anda mendapatkan cukup poin. Waddles harus digerakkan ke posisi  `kiri tengah` layar untuk menyelesaikan tantangan ini.
+        Mainkan permainan dan gerakkan Waddles dengan panah sampai Anda mendapatkan cukup poin. Waddles harus digerakkan ke posisi  `middle left` (tengah kiri) layar untuk menyelesaikan tantangan ini.
       courseC_PlayLab_events_challenge1_2018: |-
         Gunakan blok baru untuk membuat Waddles secara otomatis mundur ke titik awal saat dia bertemu dengan Dinosaurus dan saat dia berhasil mendapat poin. Ini akan membuat permainanmu menjadi lebih menantang dan menyenangkan!
 
@@ -2498,7 +2497,7 @@ id-ID:
 
         Mainkanlah dan gerakkan Waddles dengan tombol panah hingga kamu memperoleh 5 poin atau lebih. Waddles harus bergerak ke posisi `tengah kiri` layar untuk menyelesaikan tantangan ini.
       courseC_artist_loop1: "Hebat!\"\\_ \n\nAyo, tambahkan sedikit gaya dengan mengganti
-        kuasnya dengan blok `setel pola` sebelum loopnya mulai."
+        kuasnya dengan blok `set pattern` sebelum loopnya mulai."
       courseC_artist_loop1_2018: "_\"Hebat!\"_ \n\nAyo, tambahkan gaya dengan mengganti
         kuasnya dengan blok <xml><block type=\"draw_line_style_pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml>
         sebelum loopnya mulai."
@@ -2579,7 +2578,7 @@ id-ID:
         lingkaran?  \n\n-   Coba gunakan blok `atur pola` sebelum Anda memulai lingkaran
         untuk membuat karya seni!\n\n* * *\n\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)\n![expandable](https://images.code.org/55285e9e5c5ae1cf1c895cc0bf92824d-image-1553100970790.png)\n![expandable](https://images.code.org/6b8e67db2a3b341bc56fa53f67c284c2-image-1553100974645.png)"
       courseC_artist_loops6a: |-
-        Tambahkan stiker ketiga ke sembarang titik dalam loop sesuka Anda! Bagaimana tampilannya sekarang?
+        Tambahkan stiker ketiga ke titik mana saja dalam loop sesuka Anda! Bagaimana tampilannya sekarang?
 
         -   Ubah pola pada kuas agar lebih variatif!
 
@@ -2587,7 +2586,7 @@ id-ID:
 
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2018: |-
-        Tambahkan stiker ketiga ke sembarang titik dalam loop sesuka Anda! Bagaimana tampilannya sekarang?
+        Tambahkan stiker ketiga ke titik mana saja dalam loop sesuka Anda! Bagaimana tampilannya sekarang?
 
         -   Ubah pola pada kuas agar lebih variatif!
 
@@ -2644,17 +2643,17 @@ id-ID:
         ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
         ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
       courseC_artist_loopsPre1a: |-
-        Sekarang masukkan kode ini ke dalam blok `ulangi` dan ulangilah **6** kali.
+        Sekarang masukkan kode ini ke dalam blok `repeat` dan ulangi **6** kali.
 
-        -   Ingat bahwa kami telah menambahkan belok 60 derajat pada akhir kode yang diulang untuk mendapatkan rotasi penuh.
+        -   Perhatikan bahwa kita telah menambahkan satu perputaran 60 derajat pada akhir kode loop untuk mendapatkan rotasi penuh.
       courseC_artist_loopsPre1a_2018: |-
-        Sekarang masukkan kode ini ke dalam blok `ulangi` dan ulangilah **6** kali.
+        Sekarang masukkan kode ini ke dalam blok `repeat` dan ulangi **6** kali.
 
-        -   Ingat bahwa kami telah menambahkan belok 60 derajat pada akhir kode yang diulang untuk mendapatkan rotasi penuh.
+        -   Perhatikan bahwa kita telah menambahkan satu perputaran 60 derajat pada akhir kode loop untuk mendapatkan rotasi penuh.
       courseC_artist_loopsPre1a_2019: |-
-        Sekarang masukkan kode ini ke dalam blok `ulangi` dan ulangilah **6** kali.
+        Sekarang masukkan kode ini ke dalam blok `repeat` dan ulangi **6** kali.
 
-        -   Ingat bahwa kami telah menambahkan belok 60 derajat pada akhir kode yang diulang untuk mendapatkan rotasi penuh.
+        -   Perhatikan bahwa kita telah menambahkan satu perputaran 60 derajat pada akhir kode loop untuk mendapatkan rotasi penuh.
       courseC_artist_loopsPrePre1a: |-
         Gunakan blok <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> untuk membawa artis ke tengah-tengah area bermain.\
         Lalu buat garis berukuran 50 piksel dengan blok <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
@@ -2796,15 +2795,15 @@ id-ID:
 
         Bantu kolektor mendapatkan sedikitnya **5** buah harta karun.
       courseC_collector_prog1: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya. Gunakan blok `kumpulkan` untuk mengambil harta karun!
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya. Gunakan blok `collect` untuk mengambil harta karun!
 
         Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseC_collector_prog1_2018: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya. Gunakan blok `kumpulkan` untuk mengambil harta karun!
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya. Gunakan blok `collect` untuk mengambil harta karun!
 
         Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseC_collector_prog1_2019: |-
-        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya. Gunakan blok `kumpulkan` untuk mengambil harta karun!
+        **Bermain Bebas:** Ini adalah Laurel si Petualang! Gerak-gerakkan dia dan dapatkan harta karun sebanyak-banyaknya. Gunakan blok `collect` untuk mengambil harta karun!
 
         Seret blok ke area kerja dan coba tebak cara mendapatkan harta karun. Dapatkan sedikitnya satu item untuk lulus level ini.
       courseC_collector_prog2: Gerakkan Laurel ke harta karun, lalu gunakan <xml><block
@@ -2814,36 +2813,36 @@ id-ID:
       courseC_collector_prog2_2019: Pindahkan Laurel ke harta karun, lalu gunakan
         blok <xml><block type="collector_collect" block-text="collect"/></xml> untuk
         mengambilnya.
-      courseC_collector_prog3: "_\"Urutan itu penting!\"_ \n\nBlok yang Anda butuhkan
-        sudah ada di area kerja, tetapi belum terhubung.\\\nSusun bloknya untuk mengumpulkan
-        harta karun dan memecahkan teka-teki."
-      courseC_collector_prog3_2018: "_\"Urutan itu penting!\"_ \n\nBlok yang Anda
-        butuhkan sudah ada di area kerja, tetapi belum terhubung.\\\nSusun bloknya
-        untuk mengumpulkan harta karun dan memecahkan teka-teki."
-      courseC_collector_prog3_2019: "_\"Urutan itu penting!\"_ \n\nBlok yang Anda
-        butuhkan sudah ada di area kerja, tetapi belum terhubung.\\\nSusun bloknya
-        untuk mengumpulkan harta karun dan memecahkan teka-teki."
-      courseC_collector_prog4: "_\"Urutan itu penting!\"_ \n\nBlok yang Anda butuhkan
-        sudah ada di area kerja, tetapi belum terhubung.\n\nSusun bloknya untuk mengumpulkan
-        semua harta karun dan memecahkan teka-teki."
-      courseC_collector_prog4_2018: "_\"Urutan itu penting!\"_ \n\nBlok yang Anda
-        butuhkan sudah ada di area kerja, tetapi belum terhubung.\n\nSusun bloknya
-        untuk mengumpulkan semua harta karun dan memecahkan teka-teki."
-      courseC_collector_prog4_2019: "_\"Urutan itu penting!\"_ \n\nBlok yang Anda
-        butuhkan sudah ada di area kerja, tetapi belum terhubung.\n\nSusun bloknya
-        untuk mengumpulkan semua harta karun dan memecahkan teka-teki."
+      courseC_collector_prog3: "_\"Urutan itu penting!\"_ \n\nBlok yang anda butuhkan
+        sudah ada di area kerja, tetapi belum tersambung.\\\nSusun bloknya untuk mengumpulkan
+        harta karun dan memecahkan puzzle."
+      courseC_collector_prog3_2018: "_\"Urutan itu penting!\"_ \n\nBlok yang anda
+        butuhkan sudah ada di area kerja, tetapi belum tersambung.\\\nSusun bloknya
+        untuk mengumpulkan harta karun dan memecahkan puzzle."
+      courseC_collector_prog3_2019: "_\"Urutan itu penting!\"_ \n\nBlok yang anda
+        butuhkan sudah ada di area kerja, tetapi belum tersambung.\\\nSusun bloknya
+        untuk mengumpulkan harta karun dan memecahkan puzzle."
+      courseC_collector_prog4: "_\"Urutan itu penting!\"_ \n\nBlok yang anda butuhkan
+        sudah ada di area kerja, tetapi belum tersambung.\n\nSusun bloknya untuk mengumpulkan
+        semua harta karun dan memecahkan puzzle."
+      courseC_collector_prog4_2018: "_\"Urutan itu penting!\"_ \n\nBlok yang anda
+        butuhkan sudah ada di area kerja, tetapi belum tersambung.\n\nSusun bloknya
+        untuk mengumpulkan semua harta karun dan memecahkan puzzle."
+      courseC_collector_prog4_2019: "_\"Urutan itu penting!\"_ \n\nBlok yang anda
+        butuhkan sudah ada di area kerja, tetapi belum tersambung.\n\nSusun bloknya
+        untuk mengumpulkan semua harta karun dan memecahkan puzzle."
       courseC_collector_prog5: |-
         _"Bantu saya mengumpulkan setiap buah harta karun!"_
 
-        Susunan blok-blok ini salah. Bisakah Anda memperbaikinya?
+        Susunan blok-blok ini salah. Bisakah anda memperbaikinya?
       courseC_collector_prog5_2018: |-
         _"Bantu saya mengumpulkan setiap buah harta karun!"_
 
-        Susunan blok-blok ini salah. Bisakah Anda memperbaikinya?
+        Susunan blok-blok ini salah. Bisakah anda memperbaikinya?
       courseC_collector_prog5_2019: |-
         _"Bantu saya mengumpulkan setiap buah harta karun!"_
 
-        Susunan blok-blok ini salah. Bisakah Anda memperbaikinya?
+        Susunan blok-blok ini salah. Bisakah anda memperbaikinya?
       courseC_collector_prog6: |-
         _"Bantu saya mengumpulkan semua harta karun!"_
 
@@ -2871,11 +2870,11 @@ id-ID:
 
         Meskipun sudah benar susunannya, selalu saja ada yang terlewat.\
         Gunakan blok dari toolbox untuk mengumpulkan semua harta karun.
-      courseC_collector_prog8: _"Terus kerja keras ya! Bantu saya mengumpulkan semua
-        harta karun."_
-      courseC_collector_prog8_2018: _"Terus kerja keras ya! Bantu saya mengumpulkan
+      courseC_collector_prog8: _"Pertahankan kerja baik anda! Bantu saya mengumpulkan
         semua harta karun."_
-      courseC_collector_prog8_2019: _"Terus kerja keras ya! Bantu saya mengumpulkan
+      courseC_collector_prog8_2018: _"Pertahankan kerja baik anda! Bantu saya mengumpulkan
+        semua harta karun."_
+      courseC_collector_prog8_2019: _"Pertahankan kerja baik anda! Bantu saya mengumpulkan
         semua harta karun."_
       courseC_collector_prog9: _"Ayo ambil semua harta karun!"_
       courseC_collector_prog9_2018: _"Ayo ambil semua harta karun!"_
@@ -2888,90 +2887,90 @@ id-ID:
         Kumpulkan sedikitnya **10** untuk menyelesaikan tantangan ini!
       courseC_data wizard: Tekan Jalankan. Penyihir akan membuat hewan muncul.Hitung
         mereka. Apa yang Anda perhatikan?
-      courseC_flappy_events1: "Tempelkan blok `jumlah kepakan normal` ke event `saat
-        mengklik`, lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain
-        untuk menggerakkan Flappy ke target."
+      courseC_flappy_events1: "Tempelkan blok `flap normal amount` ke event `when
+        click`, lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain untuk
+        menggerakkan Flappy ke target."
       courseC_flappy_events10: |-
         Buat permainan Flappy Anda sendiri!
 
-        Anda dapat mengganti visualisasi dan aturan...bahkan gravitasi! Setelah selesai, klik "Selesai" untuk memberikannya kepada teman lewat ponsel.
+        Anda dapat mengganti penampilan dan aturan...bahkan gravitasi! Setelah selesai, klik "Selesai" untuk memberikannya kepada teman lewat ponsel.
       courseC_flappy_events10_2018: |-
         Buat permainan Flappy Anda sendiri!
 
-        Anda dapat mengganti visualisasi dan aturan...bahkan gravitasi! Setelah selesai, klik "Selesai" untuk memberikannya kepada teman lewat ponsel.
+        Anda dapat mengganti penampilan dan aturan...bahkan gravitasi! Setelah selesai, klik "Selesai" untuk memberikannya kepada teman lewat ponsel.
       courseC_flappy_events10_2019: |-
         Buat permainan Flappy Anda sendiri!
 
-        Anda dapat mengganti visualisasi dan aturan...bahkan gravitasi! Setelah selesai, klik "Selesai" untuk memberikannya kepada teman lewat ponsel.
-      courseC_flappy_events1_2018: "Tempelkan blok `jumlah kepakan normal` ke event
-        `saat mengklik`, lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain
-        untuk menggerakkan Flappy ke target."
-      courseC_flappy_events1_2019: "Tempelkan blok `jumlah kepakan normal` ke event
-        `saat mengklik`, lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain
-        untuk menggerakkan Flappy ke target."
-      courseC_flappy_events2: "Event `saat dijalankan` memungkinkan Anda menjalankan
+        Anda dapat mengganti penampilan dan aturan...bahkan gravitasi! Setelah selesai, klik "Selesai" untuk memberikannya kepada teman lewat ponsel.
+      courseC_flappy_events1_2018: "Tempelkan blok `flap normal amount` ke event `when
+        click`, lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain untuk
+        menggerakkan Flappy ke target."
+      courseC_flappy_events1_2019: "Tempelkan blok `flap normal amount` ke event `when
+        click`, lalu tekan \"Run\".   \n\n* * *\n\nKlik atau ketuk area bermain untuk
+        menggerakkan Flappy ke target."
+      courseC_flappy_events2: "Event `when run` memungkinkan Anda menjalankan kode
+        tak lama setelah permainan dimulai.  \n\nCoba tambahkan blok yang mengatur
+        kecepatan level saat tombol \"Run\" ditekan. \n\n* * *\n\nMainkan permainan
+        dan kepakkan ke target untuk melanjutkan."
+      courseC_flappy_events2_2018: "Event `when run` memungkinkan Anda menjalankan
         kode tak lama setelah permainan dimulai.  \n\nCoba tambahkan blok yang mengatur
         kecepatan level saat tombol \"Run\" ditekan. \n\n* * *\n\nMainkan permainan
         dan kepakkan ke target untuk melanjutkan."
-      courseC_flappy_events2_2018: "Event `saat dijalankan` memungkinkan Anda menjalankan
+      courseC_flappy_events2_2019: "Event `when run` memungkinkan Anda menjalankan
         kode tak lama setelah permainan dimulai.  \n\nCoba tambahkan blok yang mengatur
         kecepatan level saat tombol \"Run\" ditekan. \n\n* * *\n\nMainkan permainan
         dan kepakkan ke target untuk melanjutkan."
-      courseC_flappy_events2_2019: "Event `saat dijalankan` memungkinkan Anda menjalankan
-        kode tak lama setelah permainan dimulai.  \n\nCoba tambahkan blok yang mengatur
-        kecepatan level saat tombol \"Run\" ditekan. \n\n* * *\n\nMainkan permainan
-        dan kepakkan ke target untuk melanjutkan."
-      courseC_flappy_events3: "Now we've added the ground. \n\nTempelkan blok `akhiri
-        permainan` ke event `saat menabrak tanah`.\n\n* * *\n\nMainkan permainannya
+      courseC_flappy_events3: "Sekarang kita sudah menambahkan tanah. \n\nTempelkan
+        blok `end game` ke event `when hit the ground`.\n\n* * *\n\nMainkan permainannya
         dan jatuhkan burung ke tanah untuk melanjutkan."
-      courseC_flappy_events3_2018: "Now we've added the ground. \n\nTempelkan blok
-        `akhiri permainan` ke event `saat menabrak tanah`.\n\n* * *\n\nMainkan permainannya
+      courseC_flappy_events3_2018: "Sekarang kita sudah menambahkan tanah. \n\nTempelkan
+        blok `end game` ke event `when hit the ground`.\n\n* * *\n\nMainkan permainannya
         dan jatuhkan burung ke tanah untuk melanjutkan."
-      courseC_flappy_events3_2019: "Now we've added the ground. \n\nTempelkan blok
-        `akhiri permainan` ke event `saat menabrak tanah`.\n\n* * *\n\nMainkan permainannya
+      courseC_flappy_events3_2019: "Sekarang kita sudah menambahkan tanah. \n\nTempelkan
+        blok `end game` ke event `when hit the ground`.\n\n* * *\n\nMainkan permainannya
         dan jatuhkan burung ke tanah untuk melanjutkan."
-      courseC_flappy_events4: "Flappy akan terbang melalui rintangan kecuali Anda
-        menulis kode yang membuatnya menabrak. \n\nTempelkan blok ke event `ketika
-        menabrak rintangan` sehingga permainan berakhir ketika Flappy membentur tumpukan
+      courseC_flappy_events4: "Flappy akan terbang melewati rintangan kecuali Anda
+        menulis kode yang membuatnya menabrak. \n\nTempelkan blok ke event `when hit
+        an obstacle` sehingga permainan berakhir ketika Flappy membentur kelompok
         pipa pertama."
-      courseC_flappy_events4_2018: "Flappy akan terbang melalui rintangan kecuali
-        Anda menulis kode yang membuatnya menabrak. \n\nTempelkan blok ke event `ketika
-        menabrak rintangan` sehingga permainan berakhir ketika Flappy membentur tumpukan
+      courseC_flappy_events4_2018: "Flappy akan terbang melewati rintangan kecuali
+        Anda menulis kode yang membuatnya menabrak. \n\nTempelkan blok ke event `when
+        hit an obstacle` sehingga permainan berakhir ketika Flappy membentur kelompok
         pipa pertama."
-      courseC_flappy_events4_2019: "Flappy akan terbang melalui rintangan kecuali
-        Anda menulis kode yang membuatnya menabrak. \n\nTempelkan blok ke event `ketika
-        menabrak rintangan` sehingga permainan berakhir ketika Flappy membentur tumpukan
+      courseC_flappy_events4_2019: "Flappy akan terbang melewati rintangan kecuali
+        Anda menulis kode yang membuatnya menabrak. \n\nTempelkan blok ke event `when
+        hit an obstacle` sehingga permainan berakhir ketika Flappy membentur kelompok
         pipa pertama."
       courseC_flappy_events5: "Kami sudah menambahkan papan skor untuk menghitung
-        poin ketika Flappy melewati rintangan.  \n\nTambahkan blok ke event `ketika
-        melewati rintangan` yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan
-        Flappy melewati tumpukan pipa pertama."
+        poin ketika Flappy melewati rintangan.  \n\nTambahkan blok ke event `when
+        pass an obstacle` yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan
+        Flappy melewati kelompok pipa pertama."
       courseC_flappy_events5_2018: "Kami sudah menambahkan papan skor untuk menghitung
-        poin ketika Flappy melewati rintangan.  \n\nTambahkan blok ke event `ketika
-        melewati rintangan` yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan
-        Flappy melewati tumpukan pipa pertama."
+        poin ketika Flappy melewati rintangan.  \n\nTambahkan blok ke event `when
+        pass an obstacle` yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan
+        Flappy melewati kelompok pipa pertama."
       courseC_flappy_events5_2019: "Kami sudah menambahkan papan skor untuk menghitung
-        poin ketika Flappy melewati rintangan.  \n\nTambahkan blok ke event `ketika
-        melewati rintangan` yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan
-        Flappy melewati tumpukan pipa pertama."
-      courseC_flappy_events6: "Klik panah turun di dalam blok `kepakan dengan jumlah
-        normal` untuk mendapatkan daya kepak yang berbeda.  \n\nLihat apakah Anda
+        poin ketika Flappy melewati rintangan.  \n\nTambahkan blok ke event `when
+        pass an obstacle` yang mencetak poin, lalu tekan \"Run\" untuk menerbangkan
+        Flappy melewati kelompok pipa pertama."
+      courseC_flappy_events6: "Klik panah turun di dalam blok `flap a normal amount`
+        untuk mendapatkan daya kepak yang berbeda.  \n\nLihat apakah Anda masih dapat
+        mencetak poin setelah membuat Flappy mengepak lebih banyak atau lebih sedikit
+        setiap kali Anda mengklik."
+      courseC_flappy_events6_2018: "Klik panah turun di dalam blok `flap a normal
+        amount` untuk mendapatkan daya kepak yang berbeda.  \n\nLihat apakah Anda
         masih dapat mencetak poin setelah membuat Flappy mengepak lebih banyak atau
         lebih sedikit setiap kali Anda mengklik."
-      courseC_flappy_events6_2018: "Klik panah turun di dalam blok `kepakan dengan
-        jumlah normal` untuk mendapatkan daya kepak yang berbeda.  \n\nLihat apakah
-        Anda masih dapat mencetak poin setelah membuat Flappy mengepak lebih banyak
-        atau lebih sedikit setiap kali Anda mengklik."
-      courseC_flappy_events6_2019: "Klik panah turun di dalam blok `kepakan dengan
-        jumlah normal` untuk mendapatkan daya kepak yang berbeda.  \n\nLihat apakah
-        Anda masih dapat mencetak poin setelah membuat Flappy mengepak lebih banyak
-        atau lebih sedikit setiap kali Anda mengklik."
+      courseC_flappy_events6_2019: "Klik panah turun di dalam blok `flap a normal
+        amount` untuk mendapatkan daya kepak yang berbeda.  \n\nLihat apakah Anda
+        masih dapat mencetak poin setelah membuat Flappy mengepak lebih banyak atau
+        lebih sedikit setiap kali Anda mengklik."
       courseC_flappy_events7: Selanjutnya, coba ganti adegan dengan menempelkan blok
-        ke event "ketika dijalankan".
+        ke event "when run".
       courseC_flappy_events7_2018: Selanjutnya, coba ganti adegan dengan menempelkan
-        blok ke event "ketika dijalankan".
+        blok ke event "when run".
       courseC_flappy_events7_2019: Selanjutnya, coba ganti adegan dengan menempelkan
-        blok ke event "ketika dijalankan".
+        blok ke event "when run".
       courseC_flappy_events8: |-
         Anda dapat mengatur latar belakang sewaktu-waktu, tidak melulu saat permainan dimulai.
 
@@ -2992,17 +2991,17 @@ id-ID:
       courseC_flappy_events9_2019: Untuk menciptakan variasi, alih-alih mengakhiri
         permainan ketika Flappy menabrak rintangan, coba setel skornya kembali ke
         0.
-      courseC_harvester_loops1: "Loop dapat digunakan untuk mengulang lebih baik daripada
-        gerakan.  \n\nGunakan loop untuk mengumpulkan keempat labu."
+      courseC_harvester_loops1: "Loop dapat digunakan untuk mengulang lebih banyak
+        daripada gerakan.  \n\nGunakan loop untuk mengumpulkan keempat labu."
       courseC_harvester_loops10: Kumpulkan semua jagung dan semua labu.
       courseC_harvester_loops10_2018: Kumpulkan semua jagung dan semua labu.
       courseC_harvester_loops10_2019: Kumpulkan semua jagung dan semua labu.
       courseC_harvester_loops11: Kumpulkan semua jagung dan semua labu.
       courseC_harvester_loops11_2018: Kumpulkan semua jagung dan semua labu.
       courseC_harvester_loops11_2019: Kumpulkan semua jagung dan semua labu.
-      courseC_harvester_loops1_2018: "Loop dapat digunakan untuk mengulang lebih baik
+      courseC_harvester_loops1_2018: "Loop dapat digunakan untuk mengulang lebih banyak
         daripada gerakan.  \n\nGunakan loop untuk mengumpulkan keempat labu."
-      courseC_harvester_loops1_2019: "Loop dapat digunakan untuk mengulang lebih baik
+      courseC_harvester_loops1_2019: "Loop dapat digunakan untuk mengulang lebih banyak
         daripada gerakan.  \n\nGunakan loop untuk mengumpulkan keempat labu."
       courseC_harvester_loops2: Bisakah Anda menggabungkan dua loop berbeda untuk
         bergerak menuju labu, lalu mengumpulkan semuanya?
@@ -3061,17 +3060,17 @@ id-ID:
         kode untuk membantu Scrat sampai ke akorn."
       courseC_maze_debugging1_2019: "Kode ini tidak benar-benar tepat!  \n\nPerbaiki
         kode untuk membantu Scrat sampai ke akorn."
-      courseC_maze_debugging3: "Ada sesuatu yang tidak beres. \n\nHapus blok untuk
-        menggiring Scrat ke akorn!"
-      courseC_maze_debugging3_2018: "Ada sesuatu yang tidak beres. \n\nHapus blok
+      courseC_maze_debugging3: "Ada sesuatu yang tidak beres. \n\nSingkirkan blok
         untuk menggiring Scrat ke akorn!"
-      courseC_maze_debugging3_2019: "Ada sesuatu yang tidak beres. \n\nHapus blok
-        untuk menggiring Scrat ke akorn!"
-      courseC_maze_programming1: Untuk teka-teki ini, seret semua blok sekaligus dan
-        klik "Run" untuk memulainya!
-      courseC_maze_programming1_2018: Untuk teka-teki ini, seret semua blok sekaligus
+      courseC_maze_debugging3_2018: "Ada sesuatu yang tidak beres. \n\nSingkirkan
+        blok untuk menggiring Scrat ke akorn!"
+      courseC_maze_debugging3_2019: "Ada sesuatu yang tidak beres. \n\nSingkirkan
+        blok untuk menggiring Scrat ke akorn!"
+      courseC_maze_programming1: Untuk puzzle ini, pindahkan semua blok sekaligus
         dan klik "Run" untuk memulainya!
-      courseC_maze_programming1_2019: Untuk teka-teki ini, seret semua blok sekaligus
+      courseC_maze_programming1_2018: Untuk puzzle ini, pindahkan semua blok sekaligus
+        dan klik "Run" untuk memulainya!
+      courseC_maze_programming1_2019: Untuk puzzle ini, pindahkan semua blok sekaligus
         dan klik "Run" untuk memulainya!
       courseC_maze_programming2: Seret blok <xml><block type="maze_moveForward"/></xml>
         ekstra keluar dari toolbox untuk menyelesaikan kode Anda.
@@ -3114,15 +3113,15 @@ id-ID:
 
         Avoid the TNT.
       courseC_maze_programming6: |-
-        _"Tenang saja dan bantu saya menemukan babi jelek itu. Kalau tidak, saya bisa marah!"_
+        _"Tenang saja dan bantu saya menemukan babi jahat itu. Kalau tidak, saya bisa marah!"_
 
         Giring burungnya ke babi dan hindari TNT.
       courseC_maze_programming6_2018: |-
-        _"Tenang saja dan bantu saya menemukan babi jelek itu. Kalau tidak, saya bisa marah!"_
+        _"Tenang saja dan bantu saya menemukan babi jahat itu. Kalau tidak, saya bisa marah!"_
 
         Giring burungnya ke babi dan hindari TNT.
       courseC_maze_programming6_2019: |-
-        _"Tenang saja dan bantu saya menemukan babi jelek itu. Kalau tidak, saya bisa marah!"_
+        _"Tenang saja dan bantu saya menemukan babi jahat itu. Kalau tidak, saya bisa marah!"_
 
         Giring burungnya ke babi dan hindari TNT.
       courseC_maze_programming7: |-
@@ -3137,18 +3136,18 @@ id-ID:
         _"Saatnya marah!"_
 
         **Tantangan:** Kode ini banyak bug-nya. Anda harus menghapus beberapa blok dan menambahkan blok lain.
-      courseC_maze_programming8: _"Tenang saja dan bantu saya menemukan babi jelek
+      courseC_maze_programming8: _"Tenang saja dan bantu saya menemukan babi jahat
         itu."_
       courseC_maze_programming8_2018: _"Tenang saja dan bantu saya menemukan babi
-        jelek itu."_
+        jahat itu."_
       courseC_maze_programming8_2019: _"Tenang saja dan bantu saya menemukan babi
-        jelek itu."_
+        jahat itu."_
       courseC_maze_programming8_predict1: _"Tenang saja dan bantu saya menemukan babi
-        jelek itu."_
+        jahat itu."_
       courseC_maze_programming8_predict1_2018: _"Tenang saja dan bantu saya menemukan
-        babi jelek itu."_
+        babi jahat itu."_
       courseC_maze_programming8_predict1_2019: _"Tenang saja dan bantu saya menemukan
-        babi jelek itu."_
+        babi jahat itu."_
       courseC_maze_programming9: _"Sekarang, bantu saya mengintai babi dengan cara
         sesuka Anda!"_
       courseC_maze_programming9_2018: _"Sekarang, bantu saya mengintai babi dengan
@@ -3171,73 +3170,73 @@ id-ID:
         cara untuk memecahkan masalah yang sama. Kadang-kadang lebih cepat mundur
         daripada maju!
       courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Ayo ambil pecahan logam, BB-8!\"_ \n\nGunakan lima blok yang sama untuk
-        mengambil pecahan logam. Pecahan logam berkilau seperti ini: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+        _\"Ayo ambil logam rongsokan, BB-8!\"_ \n\nGunakan lima blok yang sama untuk
+        mengambil logam rongsokan. Logam rongsokan berkilau seperti ini: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops10: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
          _"Ayo BB-8!"_
 
-        Pekerjaan Anda bagus! Jaga terus ya!
+        Pekerjaan Anda bagus! Ayo dipertahankan!
       courseC_starWars_loops10_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
          _"Ayo BB-8!"_
 
-        Pekerjaan Anda bagus! Jaga terus ya!
+        Pekerjaan Anda bagus! Ayo dipertahankan!
       courseC_starWars_loops10_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
          _"Ayo BB-8!"_
 
-        Pekerjaan Anda bagus! Jaga terus ya!
+        Pekerjaan Anda bagus! Ayo dipertahankan!
       courseC_starWars_loops11: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus maju, BB-8!"_
 
-        Anda hampir sampai! Kali ini, pilih jalur kesukaan Anda!
+        Anda hampir sampai! Kali ini, pilih jalur kesukaan anda!
       courseC_starWars_loops11_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus maju, BB-8!"_
 
-        Anda hampir sampai! Kali ini, pilih jalur kesukaan Anda!
+        Anda hampir sampai! Kali ini, pilih jalur kesukaan anda!
       courseC_starWars_loops11_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus maju, BB-8!"_
 
-        Anda hampir sampai! Kali ini, pilih jalur kesukaan Anda!
+        Anda hampir sampai! Kali ini, pilih jalur kesukaan anda!
       courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Ayo ambil pecahan logam, BB-8!\"_ \n\nGunakan lima blok yang sama untuk
-        mengambil pecahan logam. Pecahan logam berkilau seperti ini: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+        _\"Ayo ambil logam rongsokan, BB-8!\"_ \n\nGunakan lima blok yang sama untuk
+        mengambil logam rongsokan. Logam rongsokan berkilau seperti ini: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Ayo ambil pecahan logam, BB-8!\"_ \n\nGunakan lima blok yang sama untuk
-        mengambil pecahan logam. Pecahan logam berkilau seperti ini: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+        _\"Ayo ambil logam rongsokan, BB-8!\"_ \n\nGunakan lima blok yang sama untuk
+        mengambil logam rongsokan. Logam rongsokan berkilau seperti ini: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops2: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ayo, BB-8!"_
 
-        Untuk mengambil semua pecahan logam, coba buat loop yang hanya menggunakan satu blok di dalam blok `ulangi`.
+        Untuk mengambil semua logam rongsokan, coba buat loop yang hanya menggunakan satu blok di dalam blok `repeat`.
       courseC_starWars_loops2_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ayo, BB-8!"_
 
-        Untuk mengambil semua pecahan logam, coba buat loop yang hanya menggunakan satu blok di dalam blok `ulangi`.
+        Untuk mengambil semua logam rongsokan, coba buat loop yang hanya menggunakan satu blok di dalam blok `repeat`.
       courseC_starWars_loops2_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ayo, BB-8!"_
 
-        Untuk mengambil semua pecahan logam, coba buat loop yang hanya menggunakan satu blok di dalam blok `ulangi`.
+        Untuk mengambil semua logam rongsokan, coba buat loop yang hanya menggunakan satu blok di dalam blok `repeat`.
       courseC_starWars_loops2_copy: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Go BB-8!"_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Ayo, BB-8!"_
 
-        Untuk mengambil semua pecahan logam, coba buat loop yang hanya menggunakan satu blok di dalam blok `ulangi`.
+        Untuk mengambil semua logam rongsokan, coba buat loop yang hanya menggunakan satu blok di dalam blok `repeat`.
       courseC_starWars_loops4: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus semangat, BB-8."_
 
-        Dalam teka-teki ini, dua loop `ulangi` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
+        Dalam puzzle ini, dua loop `repeat` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
       courseC_starWars_loops4_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus semangat, BB-8."_
 
-        Dalam teka-teki ini, dua loop `ulangi` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
+        Dalam puzzle ini, dua loop `repeat` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
       courseC_starWars_loops4_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus semangat, BB-8."_
 
-        Dalam teka-teki ini, dua loop `ulangi` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
+        Dalam puzzle ini, dua loop `repeat` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
       courseC_starWars_loops4_copy: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus semangat, BB-8."_
 
-        Dalam teka-teki ini, dua loop `ulangi` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
+        Dalam puzzle ini, dua loop `repeat` akan membantu Anda membawa BB-8 ke semua pecahan logam dengan jumlah blok paling sedikit!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ayo, BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -3249,51 +3248,51 @@ id-ID:
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Bisakah Anda mengambil semuanya?"_
 
-        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang urutan ini?
+        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang (loop) urutan ini?
       courseC_starWars_loops6_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Bisakah Anda mengambil semuanya?"_
 
-        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang urutan ini?
+        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang (loop) urutan ini?
       courseC_starWars_loops6_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Bisakah Anda mengambil semuanya?"_
 
-        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang urutan ini?
+        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang (loop) urutan ini?
       courseC_starWars_loops6_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Bisakah Anda mengambil semuanya?"_
 
-        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang urutan ini?
+        Loop bahkan bekerja dengan lebih dari satu blok di dalam!  Bisakah Anda mengulang (loop) urutan ini?
       courseC_starWars_loops7: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Anda pasti bisa!"_
 
-        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode berulang untuk dimasukkan ke dalam loop.
+        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode yang berulang untuk dimasukkan ke dalam loop.
       courseC_starWars_loops7_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Anda pasti bisa!"_
 
-        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode berulang untuk dimasukkan ke dalam loop.
+        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode yang berulang untuk dimasukkan ke dalam loop.
       courseC_starWars_loops7_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Anda pasti bisa!"_
 
-        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode berulang untuk dimasukkan ke dalam loop.
+        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode yang berulang untuk dimasukkan ke dalam loop.
       courseC_starWars_loops7_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Anda pasti bisa!"_
 
-        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode berulang untuk dimasukkan ke dalam loop.
+        Bisakah Anda mencoba mengambil semua pecahan logam hanya dengan satu loop? Coba diprogram semua lalu cari kode yang berulang untuk dimasukkan ke dalam loop.
       courseC_starWars_loops8: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
 
-        **Tantangan:** Gabungkan ide dari beberapa teka-teki terakhir untuk menyelesaikan level ini.
+        **Tantangan:** Gabungkan ide dari beberapa puzzle terakhir untuk menyelesaikan level ini.
       courseC_starWars_loops8_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
 
-        **Tantangan:** Gabungkan ide dari beberapa teka-teki terakhir untuk menyelesaikan level ini.
+        **Tantangan:** Gabungkan ide dari beberapa puzzle terakhir untuk menyelesaikan level ini.
       courseC_starWars_loops8_2019: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
 
-        **Tantangan:** Gabungkan ide dari beberapa teka-teki terakhir untuk menyelesaikan level ini.
+        **Tantangan:** Gabungkan ide dari beberapa puzzle terakhir untuk menyelesaikan level ini.
       courseC_starWars_loops8_copy: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Terus kerja keras ya, BB-8."_
 
-        **Tantangan:** Gabungkan ide dari beberapa teka-teki terakhir untuk menyelesaikan level ini.
+        **Tantangan:** Gabungkan ide dari beberapa puzzle terakhir untuk menyelesaikan level ini.
       courseC_starWars_loops9: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Maju terus!"_
 
@@ -3433,17 +3432,17 @@ id-ID:
       courseD_artist_nestedLoops1a_2019: "Sekarang ulangi segitiga 6 kali. \n\nSetiap
         selesai satu segitiga, putar posisi 60 derajat untuk menggambar segitiga berikutnya. "
       courseD_artist_nestedLoops2: |-
-        Kali ini, selesaikan teka-teki menggunakan blok sedikit mungkin.
+        Kali ini, selesaikan puzzle dengan menggunakan jumlah blok sesedikit mungkin.
 
         Setiap selesai satu segitiga, Anda harus memutar posisi 60 derajat sebelum menggambar segitiga berikutnya.
         Lihat betapa mudahnya jika menggunakan **loop berlapis**?
       courseD_artist_nestedLoops2_2018: |-
-        Kali ini, selesaikan teka-teki menggunakan blok sedikit mungkin.
+        Kali ini, selesaikan puzzle dengan menggunakan jumlah blok sesedikit mungkin.
 
         Setiap selesai satu segitiga, Anda harus memutar posisi 60 derajat sebelum menggambar segitiga berikutnya.
         Lihat betapa mudahnya jika menggunakan **loop berlapis**?
       courseD_artist_nestedLoops2_2019: |-
-        Kali ini, selesaikan teka-teki menggunakan blok sedikit mungkin.
+        Kali ini, selesaikan puzzle dengan menggunakan jumlah blok sesedikit mungkin.
 
         Setiap selesai satu segitiga, Anda harus memutar posisi 60 derajat sebelum menggambar segitiga berikutnya.
         Lihat betapa mudahnya jika menggunakan **loop berlapis**?
@@ -3490,17 +3489,17 @@ id-ID:
         -   Anda harus belok **60 derajat di antara tiap-tiap kotak**. Mengapa? Karena ada 6 kotak, dan 360 derajat (satu putaran penuh) dibagi 6 sama dengan 60 derajat.
         -   Pastikan Anda melompat **50 piksel agar sampai di kotak berikutnya**
       courseD_artist_nestedLoops8: |-
-        Dengan bekal pengetahuan dari beberapa teka-teki terakhir, buat gambar ini dari nol.
+        Dengan bekal pengetahuan dari beberapa puzzle terakhir, buat gambar ini dari awal.
 
-        -   Setiap heksagon memiliki **sisi 50 pikse** dan **belokan 60 derajat**
+        -   Setiap heksagon memiliki **sisi 50 piksel** dan **belokan 60 derajat**
       courseD_artist_nestedLoops8_2018: |-
-        Dengan bekal pengetahuan dari beberapa teka-teki terakhir, buat gambar ini dari nol.
+        Dengan bekal pengetahuan dari beberapa puzzle terakhir, buat gambar ini dari awal.
 
-        -   Setiap heksagon memiliki **sisi 50 pikse** dan **belokan 60 derajat**
+        -   Setiap heksagon memiliki **sisi 50 piksel** dan **belokan 60 derajat**
       courseD_artist_nestedLoops8_2019: |-
-        Dengan bekal pengetahuan dari beberapa teka-teki terakhir, buat gambar ini dari nol.
+        Dengan bekal pengetahuan dari beberapa puzzle terakhir, buat gambar ini dari awal.
 
-        -   Setiap heksagon memiliki **sisi 50 pikse** dan **belokan 60 derajat**
+        -   Setiap heksagon memiliki **sisi 50 piksel** dan **belokan 60 derajat**
       courseD_artist_nestedLoops9: |-
         **Tantangan:** Bisakah Anda mengira-ngira cara membuat gambar seperti ini?
 
@@ -3640,34 +3639,34 @@ id-ID:
       courseD_bee_conditionals6: |-
         _"Sekarang saya hanya ingin membuat madu."_
 
-        Mungkin ada sarang madu di bawah sebagian awan ini. Pastikan diperiksa siapa tahu tersembunyi sarang madu di bawah tiap-tiap awan! Jika ada sarang madu, lebah hanya perlu membuat madu _satu kali_.
+        Mungkin ada sarang lebah di bawah sebagian awan ini. Pastikan diperiksa siapa tahu tersembunyi sarang lebah di bawah tiap-tiap awan! Jika ada sarang lebah, lebah hanya perlu membuat madu _satu kali_.
       courseD_bee_conditionals6_2018: |-
         _"Sekarang saya hanya ingin membuat madu."_
 
-        Mungkin ada sarang madu di bawah sebagian awan ini. Pastikan diperiksa siapa tahu tersembunyi sarang madu di bawah tiap-tiap awan! Jika ada sarang madu, lebah hanya perlu membuat madu _satu kali_.
+        Mungkin ada sarang lebah di bawah sebagian awan ini. Pastikan diperiksa siapa tahu tersembunyi sarang lebah di bawah tiap-tiap awan! Jika ada sarang lebah, lebah hanya perlu membuat madu _satu kali_.
       courseD_bee_conditionals6_2019: |-
         _"Sekarang saya hanya ingin membuat madu."_
 
-        Mungkin ada sarang madu di bawah sebagian awan ini. Pastikan diperiksa siapa tahu tersembunyi sarang madu di bawah tiap-tiap awan! Jika ada sarang madu, lebah hanya perlu membuat madu _satu kali_.
+        Mungkin ada sarang lebah di bawah sebagian awan ini. Pastikan diperiksa siapa tahu tersembunyi sarang lebah di bawah tiap-tiap awan! Jika ada sarang lebah, lebah hanya perlu membuat madu _satu kali_.
       courseD_bee_conditionals7: "Kadang-kadang awan menutupi bunga, kadang-kadang
-        awan menutupi sarang madu!  \n\nGunakan blok `jika/maka` untuk mengumpulkan
+        awan menutupi sarang lebah!  \n\nGunakan blok `if/else` untuk mengumpulkan
         nektar pada bunga dan membuat madu di sarang. Ingat: jika ada bunga, lebah
-        hanya perlu mengisap nektar _satu kali_. Jika ada sarang madu, lebah hanya
-        perlu membuat madu _satu kali_."
+        hanya perlu mengisap nektar _satu kali_. Jika ada sarang, lebah hanya perlu
+        membuat madu _satu kali_."
       courseD_bee_conditionals7_2018: "Kadang-kadang awan menutupi bunga, kadang-kadang
-        awan menutupi sarang madu!  \n\nGunakan blok `jika/maka` untuk mengumpulkan
+        awan menutupi sarang lebah!  \n\nGunakan blok `if/else` untuk mengumpulkan
         nektar pada bunga dan membuat madu di sarang. Ingat: jika ada bunga, lebah
-        hanya perlu mengisap nektar _satu kali_. Jika ada sarang madu, lebah hanya
-        perlu membuat madu _satu kali_."
+        hanya perlu mengisap nektar _satu kali_. Jika ada sarang, lebah hanya perlu
+        membuat madu _satu kali_."
       courseD_bee_conditionals7_2019: "Kadang-kadang awan menutupi bunga, kadang-kadang
-        awan menutupi sarang madu!  \n\nGunakan blok `jika/maka` untuk mengumpulkan
+        awan menutupi sarang lebah!  \n\nGunakan blok `if/else` untuk mengumpulkan
         nektar pada bunga dan membuat madu di sarang. Ingat: jika ada bunga, lebah
-        hanya perlu mengisap nektar _satu kali_. Jika ada sarang madu, lebah hanya
-        perlu membuat madu _satu kali_."
+        hanya perlu mengisap nektar _satu kali_. Jika ada sarang, lebah hanya perlu
+        membuat madu _satu kali_."
       courseD_bee_conditionals7_predict2: "Kadang-kadang awan menutupi bunga, kadang-kadang
-        awan menutupi sarang madu!  \n\nGunakan blok `jika/maka` untuk mengumpulkan
+        awan menutupi sarang lebah!  \n\nGunakan blok `if/else` untuk mengumpulkan
         nektar pada bunga dan membuat madu di sarang. Ingat: hanya akan **ada** _satu_
-        sarang madu atau _satu_ bunga di balik tiap-tiap awan."
+        sarang lebah atau _satu_ bunga di balik tiap-tiap awan."
       courseD_bee_conditionals7_predict2_2018: "Terkadang awan menutupi bunga, terkadang
         menutupi sarang lebah! \n\nGunakan blok `jika/lain` untuk mengumpulkan madu
         bunga pada bunga dan membuat madu di sarang lebah. Ingatlah: hanya akan ada
@@ -3677,50 +3676,50 @@ id-ID:
         bunga pada bunga dan membuat madu di sarang lebah. Ingatlah: hanya akan ada
         _satu_ sarang lebah atau _satu_ bunga di balik setiap awan."
       courseD_bee_conditionals8: |-
-        **Tantangan:** Akan ada bunga atau sarang madu di bawah tiap-tiap awan itu!
+        **Tantangan:** Akan ada bunga atau sarang lebah di bawah tiap-tiap awan itu!
 
         Kumpulkan nektar satu kali jika ada bunga.
-        Kalau tidak, buat madu satu kali (karena ada sarang madu).
+        Kalau tidak, buat madu satu kali (karena ada sarang lebah).
       courseD_bee_conditionals8_2018: |-
-        **Tantangan:** Akan ada bunga atau sarang madu di bawah tiap-tiap awan itu!
+        **Tantangan:** Akan ada bunga atau sarang lebah di bawah tiap-tiap awan itu!
 
         Kumpulkan nektar satu kali jika ada bunga.
-        Kalau tidak, buat madu satu kali (karena ada sarang madu).
+        Kalau tidak, buat madu satu kali (karena ada sarang lebah).
       courseD_bee_conditionals8_2019: |-
-        **Tantangan:** Akan ada bunga atau sarang madu di bawah tiap-tiap awan itu!
+        **Tantangan:** Akan ada bunga atau sarang lebah di bawah tiap-tiap awan itu!
 
         Kumpulkan nektar satu kali jika ada bunga.
-        Kalau tidak, buat madu satu kali (karena ada sarang madu).
+        Kalau tidak, buat madu satu kali (karena ada sarang lebah).
       courseD_bee_conditionals9: Kumpulkan semua nektar atau buat semua madu. Anda
         hanya dapat mengumpulkan nektar dari bunga dan membuat madu dari sarang. Periksa
-        setiap kotak jika ada bunga atau sarang madu. Hanya akan ada satu bunga atau
-        satu sarang madu di balik setiap awan.
+        setiap kotak jika ada bunga atau sarang lebah. Hanya akan ada satu bunga atau
+        satu sarang lebah di balik setiap awan.
       courseD_bee_conditionals9_2018: Kumpulkan semua nektar atau buat semua madu.
         Anda hanya dapat mengumpulkan nektar dari bunga dan membuat madu dari sarang.
-        Periksa setiap kotak jika ada bunga atau sarang madu. Hanya akan ada satu
-        bunga atau satu sarang madu di balik setiap awan.
+        Periksa setiap kotak jika ada bunga atau sarang lebah. Hanya akan ada satu
+        bunga atau satu sarang lebah di balik setiap awan.
       courseD_bee_conditionals9_2019: Kumpulkan semua nektar atau buat semua madu.
         Anda hanya dapat mengumpulkan nektar dari bunga dan membuat madu dari sarang.
-        Periksa setiap kotak jika ada bunga atau sarang madu. Hanya akan ada satu
-        bunga atau satu sarang madu di balik setiap awan.
+        Periksa setiap kotak jika ada bunga atau sarang lebah. Hanya akan ada satu
+        bunga atau satu sarang lebah di balik setiap awan.
       courseD_bee_conditionals_challenge1: Kumpulkan semua nektar atau buat semua
         madu. Anda hanya dapat mengumpulkan nektar dari bunga dan membuat madu dari
-        sarang. Periksa setiap kotak jika ada bunga atau sarang madu.
+        sarang. Periksa setiap kotak jika ada bunga atau sarang lebah.
       courseD_bee_conditionals_challenge1_2018: Kumpulkan semua nektar atau buat semua
         madu. Anda hanya dapat mengumpulkan nektar dari bunga dan membuat madu dari
-        sarang. Periksa setiap kotak jika ada bunga atau sarang madu.
+        sarang. Periksa setiap kotak jika ada bunga atau sarang lebah.
       courseD_bee_conditionals_challenge1_2019: Kumpulkan semua nektar atau buat semua
         madu. Anda hanya dapat mengumpulkan nektar dari bunga dan membuat madu dari
-        sarang. Periksa setiap kotak jika ada bunga atau sarang madu.
+        sarang. Periksa setiap kotak jika ada bunga atau sarang lebah.
       courseD_bee_conditionals_challenge2: Kumpulkan semua nektar dan buat semua madu.
         Anda dapat mengumpulkan semua nektar di satu bunga dengan menggunakan loop
-        `selagi nektar > 0`.
+        `while nectar > 0`.
       courseD_bee_conditionals_challenge2_2018: Kumpulkan semua nektar dan buat semua
         madu. Anda dapat mengumpulkan semua nektar di satu bunga dengan menggunakan
-        loop `selagi nektar > 0`.
+        loop `while nectar > 0`.
       courseD_bee_conditionals_challenge2_2019: Kumpulkan semua nektar dan buat semua
         madu. Anda dapat mengumpulkan semua nektar di satu bunga dengan menggunakan
-        loop `selagi nektar > 0`.
+        loop `while nectar > 0`.
       courseD_bee_debugging_challenge1a: |-
         _"Ngung ngung! Saya tahu cara mengisap nektar, sekarang bantu saya membuat madu!"_
 
@@ -3788,7 +3787,7 @@ id-ID:
       courseD_collector_debugging10_predict1: |-
         _"Ini pulau harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_debugging1a_2018: |-
         _"Aduh! Ada masalah."_
 
@@ -3855,30 +3854,31 @@ id-ID:
       courseD_collector_debugging8: |-
         _"Begitu banyak harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_debugging8a_2018: |-
         _"Begitu banyak harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_debugging8a_2019: |-
         _"Begitu banyak harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_debugging9: |-
         _"Ini pulau harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_debugging9a_2018: |-
         _"Ini pulau harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_debugging9a_2019: |-
         _"Ini pulau harta karun!"_
 
-        Bantu Laurel memperbaiki kode untuk mengambil semua harta karun.
+        Bantu Laurel memperbaiki code untuk mengambil semua harta karun.
       courseD_collector_nested_loops_challenge2a: "_\"Ayo berburu harta karun - menggunakan
         loop!\"_ \n\nBantu Laurel mengumpulkan sedikitnya dua tumpuk harta karun hanya
-        menggunakan blok-blok di dalam toolbox. Anda berpeluang mengumpulkan 4 seluruhnya."
+        menggunakan blok-blok di dalam toolbox. Anda berpeluang mengumpulkan 4 itu
+        semua."
       courseD_collector_ramp10: Buat Laurel mengitari lapangan ini untuk mengumpulkan
         harta karun yang ditemui.
       courseD_collector_ramp8: |-
@@ -3997,7 +3997,7 @@ id-ID:
       courseD_maze_ramp6: |-
         _"Tenang saja dan bantu saya menemukan babi jelek itu. Kalau tidak, saya bisa marah!"_
 
-        Ketika ada beberapa blok yang sama dalam suatu baris, coba saja gunakan loop `ulangi`.  Cara ini juga efektif dengan kode lebih sederhana!
+        Ketika ada beberapa blok yang sama dalam suatu baris, coba saja gunakan loop `repeat`.  Cara ini juga efektif dengan kode yang lebih sederhana!
       courseD_maze_ramp7: "_\"Ini saatnya marah!\"_  \n\nGunakan yang sudah Anda pelajari
         untuk menggiring burung ke babi!"
       courseD_playLab_cond1: "Untuk memulai permainan, Perompak Pegleg (aktor 1) harus
@@ -4012,9 +4012,9 @@ id-ID:
         Pegleg (aktor 1) poin ketika dia berhasil sampai ke naga (aktor 2). "
       courseD_playLab_cond2_2018: "Saatnya menambah poin!  \n\nEdit kode untuk memberi
         Pegleg (aktor 1) poin ketika dia berhasil sampai ke naga (aktor 2). "
-      courseD_playLab_cond3: 'Gunakan loop `ulangi selamanya` untuk membuat naga (aktor
+      courseD_playLab_cond3: 'Gunakan loop `repeat forever` untuk membuat naga (aktor
         2) berubah emosinya secara acak setiap detik.  '
-      courseD_playLab_cond3_2018: 'Gunakan loop `ulangi selamanya` untuk membuat naga
+      courseD_playLab_cond3_2018: 'Gunakan loop `repeat forever` untuk membuat naga
         (aktor 2) berubah emosinya secara acak setiap detik.  '
       courseD_playLab_cond3a: "Saatnya menggunakan pengetahuan yang sudah didapat
         tentang persyaratan agar permainan ini terasa mengasyikkan. \n\nTambahkan
@@ -4035,18 +4035,18 @@ id-ID:
       courseD_playLab_cond5: |-
         Sekarang kita perlu cara untuk menang.
 
-        Tambahkan loop `ulangi selamanya` yang terus-menerus memeriksa **jika** skor di atas 5, maka mengakhiri permainan sebagai **menang**.
+        Tambahkan loop `repeat forever` yang terus-menerus memeriksa **jika** skor di atas 5, maka mengakhiri permainan sebagai **menang**.
       courseD_playLab_cond5_2018: |-
         Sekarang kita perlu cara untuk menang.
 
-        Tambahkan loop `ulangi selamanya` yang terus-menerus memeriksa **jika** skor di atas 5, maka mengakhiri permainan sebagai **menang**.
+        Tambahkan loop `repeat forever` yang terus-menerus memeriksa **jika** skor di atas 5, maka mengakhiri permainan sebagai **menang**.
       courseD_playLab_cond6: "Wow, permainan ini sulit menangnya!\n\nAyo kita sesuaikan
         permainan ini agar terasa lebih seru.  Tantangan ini memiliki dua bagian:\n\n*
         * *\n\n1.  Perlambat ninja (aktor 3) sebelum Anda menyetelnya untuk mengejar
-        perompak (aktor 1).  \n\n2.  Gunakan loop `ulangi selamanya` untuk melihat
-        apakah perompak berada di \"zona aman\" di bawah garis gurita (lebih besar
-        daripada 225 piksel turun). Jika iya, setel ninjanya untuk **kabur** dari
-        perompak.  Sebaliknya, setel ninjanya untuk **mengejar** perompak.  "
+        perompak (aktor 1).  \n\n2.  Gunakan loop `repeat forever` untuk melihat apakah
+        perompak berada di \"zona aman\" di bawah garis gurita (lebih besar daripada
+        225 piksel turun). Jika iya, setel ninjanya untuk **kabur** dari perompak.
+        \ Sebaliknya, setel ninjanya untuk **mengejar** perompak.  "
       courseD_playLab_cond6_2018: "Wow, permainan ini sulit dimenangkan!\n\nAyo sesuaikan
         permainan ini agar lebih menyenangkan. Tantangan ini memiliki dua bagian:\n\n*
         * *\n\n1.  Perlambat ninja (aktor 3) sebelum Anda mengaturnya untuk mengejar
@@ -4173,8 +4173,8 @@ id-ID:
         Panjang jembatan antarkacamata adalah 75 piksel.
       courseE_artist_functions2: "Fungsi memudahkan Anda menentukan blok baru! \n\nKami
         sudah memindahkan blok yang diperlukan untuk menggambar persegi empat menjadi
-        fungsi `gambar persegi empat`. Kali ini, gunakan fungsi `gambar persegi empat`untuk
-        membuat kacamata. \n\n* * *\n\nPersegi empat itu berjarak 75 piksel."
+        fungsi `draw a square`. Kali ini, gunakan fungsi `draw a square`untuk membuat
+        kacamata. \n\n* * *\n\nPersegi empat itu berjarak 75 piksel."
       courseE_artist_functions2_2018: "Ini adalah fungsi yang disebut `menggambar
         kotak`. Gunakan untuk menyelesaikan gambar ini. \n\n* * *\n\nKotak adalah
         75 piksel terpisah."
@@ -4183,8 +4183,8 @@ id-ID:
         75 piksel terpisah."
       courseE_artist_functions2_copy: "Fungsi memudahkan Anda menentukan blok baru!
         \n\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi empat
-        menjadi fungsi `gambar persegi empat`. Kali ini, gunakan fungsi `gambar persegi
-        empat`untuk membuat kacamata. \n\n* * *\n\nPersegi empat itu berjarak 75 piksel."
+        menjadi fungsi `draw a square`. Kali ini, gunakan fungsi `draw a square`untuk
+        membuat kacamata. \n\n* * *\n\nPersegi empat itu berjarak 75 piksel."
       courseE_artist_functions3: "Kami akan segera kembali ke fungsi. Ayo istirahat
         sambil praktik membuat bintang ini. \n\nAnda dapat membuat gambar ini dengan
         menambahkan blok ulangi."
@@ -4249,9 +4249,9 @@ id-ID:
         persegi empat, lalu membelok 90 derajat sebelum menggambar yang lain, dan
         seterusnya."
       courseE_artist_functions7: "Ayo ambil kode untuk jendela dan tambahkan ke fungsi
-        `gambar jendela`. Sekarang kita dapat memanggil fungsi ini setiap kali kita
+        `draw a window`. Sekarang kita dapat memanggil fungsi ini setiap kali kita
         perlu menggambar jendela tanpa harus menulis kodenya lagi. \n\n![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)\n\nCoba
-        pecahkan teka-teki ini dengan membuat `gambar jendela` dan memanggilnya lima
+        pecahkan teka-teki ini dengan membuat `draw a window` dan memanggilnya lima
         kali. Awasi pintu!\n\n-   Jarak jendela atas adalah 50 piksel satu sama lain.
         \ \n-   Jarak jendela bawah adalah 100 piksel di bawah deretan jendela atas."
       courseE_artist_functions7_2018: "Menggambar semua jendela ini satu per satu
@@ -4328,7 +4328,7 @@ id-ID:
         kode ini untuk mengetahui cara kerjanya, lalu ubahlah untuk membuat desain
         sendiri yang memukau!
       courseE_artist_functions_challenge2: |-
-        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `lompat ke` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
+        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `jump to` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
 
         <xml>
           <block type="jump_to_xy">
@@ -4336,7 +4336,7 @@ id-ID:
             <title name="YPOS">???</title>
             </block></xml>
       courseE_artist_functions_challenge2_2018: |-
-        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `lompat ke` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
+        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `jump to` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
 
         <xml>
           <block type="jump_to_xy">
@@ -4344,7 +4344,7 @@ id-ID:
             <title name="YPOS">???</title>
             </block></xml>
       courseE_artist_functions_challenge2_2019: |-
-        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `lompat ke` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
+        Anda tidak hanya dapat melompat ke beberapa lokasi yang sudah ditentukan, seperti pojok kanvas, Anda juga dapat menggunakan perintah `jump to` untuk sampai di sembarang tempat yang Anda sukai! Coba kode ini untuk mengetahui cara kerjanya, lalu buat sendiri programnya!
 
         <xml>
           <block type="jump_to_xy">
@@ -4360,13 +4360,13 @@ id-ID:
       courseE_artist_functions_predict1_copy: 'Berikut adalah teka-teki yang menggunakan
         fungsi yang sudah kami tentukan. '
       courseE_artist_ramp8: |-
-        Sip!  Sekarang ayo gunakan loop `ulangi` untuk membuat persegi empat menggunakan Artis!  Blok untuk artis sedikit berbeda dengan teka-teki lain, tetapi idenya tetap sama.
+        Sip!  Sekarang ayo gunakan loop `repeat` untuk membuat persegi empat menggunakan Artis!  Blok untuk artis sedikit berbeda dengan teka-teki lain, tetapi idenya tetap sama.
 
         * * *
 
         ##### Panjang setiap sisi persegi empat adalah 200 piksel, dan Anda hanya perlu belok 90 derajat untuk membuat setiap sudut.
       courseE_artist_ramp8_2: |-
-        Sip!  Sekarang ayo gunakan loop `ulangi` untuk membuat persegi empat menggunakan Artis!  Blok untuk artis sedikit berbeda dengan teka-teki lain, tetapi idenya tetap sama.
+        Sip!  Sekarang ayo gunakan loop `repeat` untuk membuat persegi empat menggunakan Artis!  Blok untuk artis sedikit berbeda dengan teka-teki lain, tetapi idenya tetap sama.
 
         * * *
 
@@ -4409,9 +4409,9 @@ id-ID:
       courseE_bee_functions3: Fungsi adalah blok kode yang melakukan suatu tugas.
         Gunakan fungsi "dapatkan 5" untuk mendapatkan 5 madu pada satu waktu. Pastikan
         juga untuk menggunakan pengulangan untuk mendapatkan jumlah blok yang ideal.
-      courseE_bee_functions4: "Fungsi `bergerak dan dapatkan nektar` membelokkan lebah,
-        mengumpulkan nektar, dan kemudian mengembalikan lebah ke tempat semula.  \n\nGunakan
-        fungsi `bergerak dan dapatkan nektar` untuk mengumpulkan semua nektar."
+      courseE_bee_functions4: "Fungsi `move and get nectar` membelokkan lebah, mengumpulkan
+        nektar, dan kemudian mengembalikan lebah ke tempat semula.  \n\nGunakan fungsi
+        `move and get nectar` untuk mengumpulkan semua nektar."
       courseE_bee_functions8: "**Tantangan:** Bunga-bunga ini dapat memiliki nektar
         dalam jumlah yang berbeda setiap kali Anda menjalankan teka-teki. \n\nBuat
         fungsi yang mengumpulkan semua nektar dari setiap bunga."
@@ -4501,7 +4501,7 @@ id-ID:
         memperhatikan adanya kode berulang di dalam teka-teki terakhir?  Tidak ada
         gunanya memasukkan semua kode ke dalam loop, tetapi kita **dapat** menggunakan
         fungsi.  \n\nUntuk teka-teki ini, kami telah memindahkan kode berulang ke
-        dalam fungsi yang disebut `jagung dan labu`. Sekarang yang perlu Anda lakukan
+        dalam fungsi yang disebut `corn and pumpkin`. Sekarang yang perlu Anda lakukan
         adalah meletakkan **blok panggilan fungsi** `jagung dan labu` yang kecil ke
         dalam kode di lokasi Anda membutuhkannya.\n\n* * *\n\n##### Setiap tunas akan
         menumbuhkan _satu_ jagung atau kosong."
@@ -4577,15 +4577,15 @@ id-ID:
       courseE_farmer_functions9b: Perhatikan teka-teki ini. Bisakah Anda menebak polanya?
       courseE_farmer_ramp11a: "Astaga!  Tumpukan ini begitu besar sehingga sulit ditebak
         berapa banyak kotoran di dalamnya.  \n\n* * *\n\nKami sudah menambahkan blok
-        baru yang disebut blok `selagi ada tumpukan` ke toolbox.  Gunakan blok ini
+        baru yang disebut blok `while there is a pile` ke toolbox.  Gunakan blok ini
         untuk menghilangkan kotoran hanya ketika masih ada kotoran yang bisa disekop! "
       courseE_farmer_ramp11a_2018: "Astaga!  Tumpukan ini begitu besar sehingga sulit
         ditebak berapa banyak kotoran di dalamnya.  \n\n* * *\n\nKami sudah menambahkan
-        blok baru yang disebut blok `selagi ada tumpukan` ke toolbox.  Gunakan blok
+        blok baru yang disebut blok `while there is a pile` ke toolbox.  Gunakan blok
         ini untuk menghilangkan kotoran hanya ketika masih ada kotoran yang bisa disekop! "
       courseE_farmer_ramp11a_2019: "Astaga!  Tumpukan ini begitu besar sehingga sulit
         ditebak berapa banyak kotoran di dalamnya.  \n\n* * *\n\nKami sudah menambahkan
-        blok baru yang disebut blok `selagi ada tumpukan` ke toolbox.  Gunakan blok
+        blok baru yang disebut blok `while there is a pile` ke toolbox.  Gunakan blok
         ini untuk menghilangkan kotoran hanya ketika masih ada kotoran yang bisa disekop! "
       courseE_farmer_ramp11b: Ayo kita coba lagi, tetapi dengan lebih banyak tumpukan!
       courseE_farmer_ramp11b_2018: Ayo kita coba lagi, tetapi dengan lebih banyak
@@ -4651,9 +4651,9 @@ id-ID:
         \ _Menyentuh dinosaurus mengurangi banyak poin._\n\nIni adalah jenis permainan
         lain yang sudah dimulai untuk Anda! Mainkan untuk mengetahui cara kerjanya.
         \n\nHarus terjadi sesuatu ketika Anda mendapat cukup poin atau ketika Anda
-        kehabisan poin. Tambahkan kode tertentu ke fungsi `menang permainan` dan `kalah
-        permainan` untuk membuat permainannya berjalan semestinya. \nKlik tips untuk
-        mendapatkan ide!"
+        kehabisan poin. Tambahkan kode tertentu ke fungsi `win game` dan `lose game`
+        untuk membuat permainannya berjalan semestinya. \nKlik tips untuk mendapatkan
+        ide!"
       courseE_playLab_scaffold1: |-
         Sungguh menakjubkan betapa banyaknya pelajaran yang sudah Anda petik! Ayo buat permainan langkah demi langkah.
 
@@ -4755,12 +4755,18 @@ id-ID:
       frozen square snowflake: Dapatkah kamu membuat sebuah kepingan salju dengan
         menggunakan blok "Ulangi" untuk membuat sebuah persegi sebanyak 10 kali, dan
         blok "Belok" untuk berbelok 36 derajat antara setiap persegi?
-      grade2_collector_10: Kumpulkan buah harta karun sebanyak-banyaknya untuk menyelesaikan
-        tahapan ini!
-      grade2_collector_10_2018: Kumpulkan buah harta karun sebanyak-banyaknya untuk
-        menyelesaikan tahapan ini!
-      grade2_collector_10_2019: Kumpulkan buah harta karun sebanyak-banyaknya untuk
-        menyelesaikan tahapan ini!
+      grade2_collector_10: |-
+        Anda hampir selesai!
+
+        Kumpulkan harta karun sebanyak-banyaknya untuk menyelesaikan tahapan ini!
+      grade2_collector_10_2018: |-
+        Anda hampir selesai!
+
+        Kumpulkan harta karun sebanyak-banyaknya untuk menyelesaikan tahapan ini!
+      grade2_collector_10_2019: |-
+        Anda hampir selesai!
+
+        Kumpulkan harta karun sebanyak-banyaknya untuk menyelesaikan tahapan ini!
       grade2_collector_A: Bantu Laurel mengumpulkan semua harta karun.
       grade2_collector_A_2018: Bantu Laurel mengumpulkan semua harta karun.
       grade2_collector_A_2019: Bantu Laurel mengumpulkan semua harta karun.

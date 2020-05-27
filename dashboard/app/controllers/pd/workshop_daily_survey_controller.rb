@@ -22,6 +22,22 @@ module Pd
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+
+      # Do nothing if there is no enrollment.
+      return unless validate_enrolled(workshop)
+
+      # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
+      # have saved.
+      if workshop.local_summer?
+        if day == 0
+          return new_pre_foorm
+        else
+          return new_daily_foorm
+        end
+      end
+
+      # Beyond here is for a non-Foorm survey.
+
       unless validate_new_general_parameters(workshop)
         return
       end
@@ -114,7 +130,9 @@ module Pd
     end
 
     def new_general_foorm(survey_names, day:)
-      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      # We may be redirecting from our legacy route which uses enrollment_code
+      enrollment_code = params[:enrollmentCode] || params[:enrollment_code]
+      workshop = get_workshop_for_new_general(enrollment_code, current_user)
       unless validate_enrolled(workshop)
         return
       end
@@ -228,6 +246,13 @@ module Pd
     def new_post
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
+
+      # Use Foorm for local summer workshops. This preserves the legacy url, which facilitators may
+      # have saved.
+      if workshop.local_summer?
+        return new_post_foorm
+      end
+
       session = workshop.sessions.last
       session_count = workshop.last_valid_day
       return render_404 unless session

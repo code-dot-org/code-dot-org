@@ -45,9 +45,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      end
     end
   end
 
@@ -89,9 +91,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
+      end
     end
   end
 
@@ -106,9 +110,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
         }
       end
 
-      import! batch,
-        validate: false,
-        on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
+      transaction do
+        import! batch,
+          validate: false,
+          on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
+      end
     end
   end
 
@@ -168,7 +174,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # In addition, they must not be previously rejected by Pardot as invalid emails
     # or have been deleted by someone in Pardot.
     <<-SQL.squish
-      SELECT processed.email, processed.data
+      SELECT
+        processed.email,
+        processed.data
       FROM contact_rollups_processed AS processed
       LEFT OUTER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
@@ -187,8 +195,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # will resuscitate it as an active prospect.
     <<-SQL.squish
       SELECT
-        processed.email, processed.data,
-        pardot.pardot_id, pardot.data_synced,
+        processed.email,
+        processed.data,
+        pardot.pardot_id,
+        pardot.data_synced,
         COALESCE(pardot.pardot_id_updated_at > pardot.data_synced_at, FALSE) AS pardot_id_changed
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
@@ -250,9 +260,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    import! emails_and_data,
-      validate: false,
-      on_duplicate_key_update: [:data_synced, :data_synced_at]
+    transaction do
+      import! emails_and_data,
+        validate: false,
+        on_duplicate_key_update: [:data_synced, :data_synced_at]
+    end
   end
 
   def self.save_rejected_submissions(submissions, submitted_time)
@@ -264,8 +276,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    import! emails_and_errors,
-      validate: false,
-      on_duplicate_key_update: [:data_rejected_reason, :data_rejected_at]
+    transaction do
+      import! emails_and_errors,
+        validate: false,
+        on_duplicate_key_update: [:data_rejected_reason, :data_rejected_at]
+    end
   end
 end

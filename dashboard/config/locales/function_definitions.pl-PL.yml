@@ -86,15 +86,30 @@ pl-PL:
       2-3 Bee Functions 1:
         get 2 nectar:
           name: zbierz 2 nektary
+      2-3 Bee Functions 10:
+        collect purple nectar:
+          name: zbierz fioletowy nektar
+      2-3 Bee Functions 2:
+        get 5:
+          name: weź 5
       2-3 Bee Functions 4:
         move and get nectar:
           name: idź i zbierz nektar
+      2-3 Bee Functions 5:
+        move and get 4:
+          name: rusz się i weź 4
+      2-3 Bee Functions 6:
+        move and get 4:
+          name: rusz się i weź 4
       2-3 Bee Functions 8:
         get 7 nectar make 7 honey:
           name: zbierz 7 nektarów zrób 7 miodów
       2-3 Bee Functions 9:
         get 7 make 7:
           name: zbierz 7 zrób 7
+      2-3 Bee Functions Assessment 1:
+        get 7:
+          name: weź 7
       4-5 Artist 3:
         draw a flower:
           name: narysuj kwiatka
@@ -102,10 +117,17 @@ pl-PL:
         draw a tree:
           name: narysuj drzewo
       4-5 Artist 7:
+        draw triangle:
+          name: narysuj trójkąt
         draw a circle:
           name: narysuj okrąg
         draw a car:
           name: narysuj samochod
+      4-5 Artist 8:
+        draw circle:
+          name: narysuj okrąg
+        draw goal:
+          name: narysuj bramkę
       4-5 Bee Conditionals 7:
         check purple flower:
           name: sprawdź fioletowy kwiat
@@ -174,6 +196,12 @@ pl-PL:
       Find the Wizard:
         do something:
           name: wykonaj coś
+      Function intro Ryan:
+        build bridge:
+          name: zbuduj most
+      Function intro Ryan_2019:
+        build bridge:
+          name: zbuduj most
       Geometric Sun:
         diamond:
           name: diament
@@ -184,6 +212,32 @@ pl-PL:
           name: diament
         draw a house:
           name: narysuj dom
+      MC_HOC_2017_07_Cole:
+        clear path:
+          name: wyczyść ścieżkę
+      MC_HOC_2017_07_Cole_2019:
+        clear path:
+          name: wyczyść ścieżkę
+      MC_HOC_2017_10_RETRY:
+        fix long path:
+          name: napraw długą ścieżkę
+        fix short path:
+          name: napraw krótką ścieżkę
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path:
+          name: napraw długą ścieżkę
+        fix short path:
+          name: napraw krótką ścieżkę
+      MC_HOC_2017_Ali:
+        build short bridge:
+          name: zbuduj krótki most
+        build long bridge:
+          name: zbuduj długi most
+      MC_HOC_2017_Ali_2019:
+        build short bridge:
+          name: zbuduj krótki most
+        build long bridge:
+          name: zbuduj długi most
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: narysuj kwadrat
@@ -264,6 +318,8 @@ pl-PL:
       New Play Lab Project:
         jump:
           name: skocz
+        patrol:
+          description: funkcja patrolu, która ma parametr aktora i prędkości
       Standalone_Artist_7:
         draw a flower:
           name: narysuj kwiatka
@@ -416,12 +472,18 @@ pl-PL:
       courseE_artist_functions9:
         do something:
           name: wykonaj coś
+        draw triangle:
+          name: narysuj trójkąt
       courseE_artist_functions9_2018:
         do something:
           name: wykonaj coś
+        draw triangle:
+          name: narysuj trójkąt
       courseE_artist_functions9_2019:
         do something:
           name: wykonaj coś
+        draw triangle:
+          name: narysuj trójkąt
       courseE_artist_functionsProj_2018:
         draw square:
           name: narysuj kwadrat
@@ -473,9 +535,15 @@ pl-PL:
       courseE_bee_functions2:
         get 2 nectar:
           name: zbierz 2 nektary
+      courseE_bee_functions3:
+        get 5:
+          name: weź 5
       courseE_bee_functions4:
         move and get nectar:
           name: idź i zbierz nektar
+      courseE_bee_functions5:
+        move and get 4:
+          name: rusz się i weź 4
       courseE_bee_functions6:
         get 7 nectar make 7 honey:
           name: zbierz 7 nektarów zrób 7 miodów
