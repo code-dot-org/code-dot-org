@@ -24,7 +24,7 @@ module Crowdin
       languages.each_with_index do |language, i|
         code = language["code"]
         @logger.debug("#{language['name']} (#{code}): #{i}/#{num_languages}")
-        @logger.info("~#{i + 1 * 100 / num_languages}% complete (#{i}/#{num_languages})") if i > 0 && i % (num_languages / 5) == 0
+        @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % (num_languages / 5) == 0
 
         etags[code] ||= {}
         files = @project.list_files
