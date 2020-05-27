@@ -57,6 +57,8 @@ module Crowdin
         File.write(@etags_json, JSON.pretty_generate(etags))
         File.write(@changes_json, JSON.pretty_generate(changes))
       end
+
+      File.write(@changes_json, JSON.pretty_generate(changes))
     end
 
     # Downloades all files referenced in @changes_json to @locales_dir
