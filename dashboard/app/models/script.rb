@@ -922,7 +922,7 @@ class Script < ActiveRecord::Base
           key: '',
           script: script,
           user_facing: false,
-          position: 0
+          position: 1
         )
 
         script_lesson_groups << lesson_group
