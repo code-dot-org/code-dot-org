@@ -6,8 +6,8 @@
 
 require_relative 'i18n_script_utils'
 
-require_relative './crowdin/utils'
-require_relative './crowdin/project'
+require 'cdo/crowdin/utils'
+require 'cdo/crowdin/project'
 
 def sync_down
   I18nScriptUtils.with_syncronous_stdout do
