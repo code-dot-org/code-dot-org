@@ -60,7 +60,7 @@ hi:
   next_resource: अगले संसाधन
   cancel: रद्द करें
   okay: ठीक है
-  or: या
+  or: 'अथवा '
   heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
   join_section:
     code:
@@ -191,6 +191,12 @@ hi:
     email_preference_yes: हां
     email_preference_no: नहीं
     email_preference_required: आपको ईमेल प्राथमिकता बतानी होगी।
+    parent_account_checkbox: मैं अपने बच्चे की ओर साइन अप करने वाले माता-पिता/अभिभावक
+      हूं
+    parent_account_email_progress_permission: क्या हम आपको आपके बच्चे की प्रगति और
+      प्रोजेक्ट्स, और उनके पाठ्यक्रम और कंप्यूटर साइंस के बारे में अपडेट भेजने के
+      लिए कभी-कभी ईमेल कर सकते हैं? [(हमारी गोपनीयता नीति देखें)](%{privacy_policy_url})
+    parent_account_email_label: माता-पिता/अभिभावक का ईमेल
   school_info:
     title: स्कूल संबंधी जानकारी (वैकल्पिक)
     school_country: स्कूल देश
@@ -515,8 +521,14 @@ hi:
     update: खाता अद्यतन करें
     account_successfully_updated: खाता सफलतापूर्वक अद्यतन हो गया।
     update_email: अद्यतन करें
+    for_parents_and_guardians: माता-पिता और अभिभावकों के लिए
+    link_a_parent_email: अपने बच्चे की प्रगति और प्रोजेक्ट्स के बारे में अपडेट रहने
+      के लिए इस खाते में माता-पिता/अभिभावक का ईमेल पता लिंक करें। आप पासवर्ड रिकवरी
+      के लिए भी इस ईमेल पते का उपयोग कर सकेंगे।
     parent_guardian_email_label: अभिभावक ईमेल/
     none: कोई नहीं
+    only_one_parent_email_supported_warning: 'ध्यान दें: हम इस समय केवल प्रति छात्र
+      खाता एक माता-पिता/अभिभावक ईमेल पते का समर्थन करने में सक्षम हैं।'
     encrypted: कूटलेखन किया
   user_level:
     completed: पूरा हो गया
@@ -1271,3 +1283,8 @@ hi:
     वेब पता देखें और दुबारा प्रस्तुत करें। या, हमारे मुख्य पृष्ठ पर जाएं
   page_not_found_button: मुख्य पृष्ठ पर वापस जाएं
   copy: प्रतिलिपि बनाएँ
+  parent_email_banner:
+    text: "**आप माता-पिता हैं या अभिभावक?** अपने बच्चे की प्रगति और प्रोजेक्ट्स के
+      बारे में अपडेट रहने के लिए इस ईमेल को अपने खाते से लिंक करें।"
+    link_your_email: अपना ईमेल लिंक करें
+    not_now: अभी नहीं

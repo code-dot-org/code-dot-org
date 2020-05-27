@@ -112,7 +112,7 @@ class P5LabView extends React.Component {
               allowedExtensions=".png,.jpg,.jpeg"
               getLibraryManifest={() => this.getLibraryManifest()}
               categories={this.getCategories()}
-              hideUploadOption={true}
+              hideUploadOption={this.props.spriteLab}
             />
           )}
         </div>
@@ -140,7 +140,7 @@ class P5LabView extends React.Component {
         channelId={this.getChannelId()}
         getLibraryManifest={() => this.getLibraryManifest()}
         categories={this.getCategories()}
-        hideUploadOption={true}
+        hideUploadOption={this.props.spriteLab}
       />
     ) : (
       undefined

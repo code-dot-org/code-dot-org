@@ -214,7 +214,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     submission = {email: 'valid@domain.com', db_Opt_In: 'Yes'}
     submitted_time = Time.now.utc
 
-    ContactRollupsPardotMemory.save_sync_results [submission], [], submitted_time
+    ContactRollupsPardotMemory.save_sync_results [submission], [], submitted_time, false
 
     record = ContactRollupsPardotMemory.find_by(
       email: submission[:email],
@@ -239,7 +239,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     ]
     submitted_time = Time.now.utc
 
-    ContactRollupsPardotMemory.save_sync_results submissions, [], submitted_time
+    ContactRollupsPardotMemory.save_sync_results submissions, [], submitted_time, false
 
     submissions.each do |submission|
       record = ContactRollupsPardotMemory.find_by(
@@ -256,7 +256,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
     submitted_time = Time.now.utc
 
-    ContactRollupsPardotMemory.save_sync_results [submission], errors, submitted_time
+    ContactRollupsPardotMemory.save_sync_results [submission], errors, submitted_time, false
 
     refute_nil ContactRollupsPardotMemory.find_by(
       email: submission[:email],

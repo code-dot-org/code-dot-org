@@ -1,7 +1,7 @@
 ---
 id-ID:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -151,6 +151,16 @@ id-ID:
       4-5 Bee Debugging 8:
         get 5 nectar:
           name: dapatkan 5 nektar
+      Alien Defender:
+        game has been won:
+          name: permainan telah dimenangkan
+      Choose Your Own Adventure:
+        witch ending:
+          name: tamatnya penyihir
+        story:
+          name: cerita
+        starting path:
+          name: jalur permulaan
       Course 4 Bee Params 5:
         get 5 nectar:
           name: dapatkan 5 nektar
@@ -188,6 +198,8 @@ id-ID:
         do something:
           name: buat sesuatu
       Find the Wizard:
+        check guess:
+          name: periksa tebak
         do something:
           name: buat sesuatu
       Geometric Sun:
@@ -200,6 +212,9 @@ id-ID:
           name: berlian
         draw a house:
           name: gambar sebuah rumah
+      Guess The Number:
+        check guess:
+          name: periksa tebak
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: menggambar sebuah persegi empat
@@ -501,9 +516,18 @@ id-ID:
       courseE_artist_functions_predict2_2019:
         do something:
           name: buat sesuatu
+      courseE_bee_concept4:
+        honey nectar:
+          name: nektar madu
       courseE_bee_functions1:
         do something:
           name: buat sesuatu
+      courseE_bee_functions10:
+        move and make honey:
+          name: bergerak dan buat madu
+      courseE_bee_functions11_predict1:
+        move and make honey:
+          name: bergerak dan buat madu
       courseE_bee_functions2:
         get 2 nectar:
           name: dapatkan 2 nektar
@@ -522,6 +546,12 @@ id-ID:
       courseE_bee_functions7:
         get 7 make 7:
           name: dapatkan 7 membuat 7
+      courseE_bee_functions8:
+        collect all nectar:
+          name: kumpulkan semua nektar
+      courseE_bee_functions9:
+        get all nectar:
+          name: dapatkan semua nektar
       courseE_bee_functions_challenge1:
         do something:
           name: buat sesuatu
@@ -537,6 +567,37 @@ id-ID:
       courseE_farmer_concept3:
         do something:
           name: buat sesuatu
+      courseE_farmer_functions10b:
+        navigate:
+          name: navigasi
+      courseE_farmer_functions11_predict:
+        check and pick:
+          name: periksa dan ambil
+        find pumpkin:
+          name: temukan labu
+        wander path:
+          name: jalur susuran
+      courseE_farmer_functions2ba:
+        corn and pumpkin:
+          name: jagung dan labu
+      courseE_farmer_functions3c:
+        corn and pumpkin:
+          name: jagung dan labu
+      courseE_farmer_functions4b:
+        corn and pumpkin:
+          name: jagung dan labu
+      courseE_farmer_functions5c:
+        corn and pumpkin:
+          name: jagung dan labu
+      courseE_farmer_functions6c:
+        corn and pumpkin:
+          name: jagung dan labu
+      courseE_farmer_functions8b:
+        navigate:
+          name: navigasi
+      courseE_farmer_functions9b:
+        navigate:
+          name: navigasi
       courseE_playLab_scaffold1:
         do something:
           name: buat sesuatu
@@ -552,19 +613,39 @@ id-ID:
       courseF_artist_fwp1:
         draw a square:
           name: menggambar sebuah persegi empat
+        checker:
+          name: pemeriksa
         do something:
           name: buat sesuatu
+        Make gingham:
+          name: Buat genggang
+        black outline:
+          name: garis luar hitam
       courseF_artist_fwp2:
         draw a square:
           name: menggambar sebuah persegi empat
+          description: gambar persegi empat dengan parameter panjang
+        checker:
+          name: pemeriksa
         do something:
           name: buat sesuatu
+        Make gingham:
+          name: Buat genggang
+        black outline:
+          name: garis luar hitam
       courseF_artist_fwp2_predict1:
         draw a square:
           name: menggambar sebuah persegi empat
+          description: gambar persegi empat dengan parameter panjang
       courseF_artist_fwp3:
         draw a square:
           name: menggambar sebuah persegi empat
+        draw a square2:
+          name: draw a square2
+        filled square:
+          name: persegi empat terisi
+        black outline:
+          name: garis luar hitam
       courseF_artist_fwp9:
         draw a star:
           name: menggambar bintang
@@ -582,9 +663,24 @@ id-ID:
       courseF_artist_fwp_challenge2:
         do something:
           name: buat sesuatu
+      courseF_bee_functions2:
+        get only nectar:
+          name: dapatkan nektar saja
+      courseF_bee_functions3:
+        only make honey:
+          name: buat madu saja
       courseF_bee_functions8a:
         do something:
           name: buat sesuatu
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney:
+          name: barisNektarAtauMadu
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney:
+          name: barisNektarAtauMadu
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney:
+          name: barisNektarAtauMadu
       courseF_bee_variables_7_2018:
         collect:
           name: kumpulkan

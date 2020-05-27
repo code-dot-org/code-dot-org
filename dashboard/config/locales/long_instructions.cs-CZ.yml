@@ -1018,6 +1018,101 @@ cs-CZ:
         abys dostal umělce do středu herní plochy.\\\nPak nakresli čáru dlouhou 50
         pixelů s blokem <xml><block type=\"draw_move_by_constant\" block-text=\"move
         forward\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_artist_prog1: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog1_2018: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog1_2019: |-
+        _"Ahoj, já jsem umělec. Můžeš napsat kód a já nakreslím téměř cokoliv."_
+
+        Hraj si s bloky v panelu a uvidíš, co se bude dít!
+      courseC_artist_prog2: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog2_2018: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog2_2019: |-
+        _"Udělejme klec pro mé zvířecí monstrum! “_
+
+        Přetáhni bloky na obrazovku, aby umělec kreslil přes šedé čáry na obrázku.\
+        (Každý řádek je dlouhý 100 pixelů)
+      courseC_artist_prog3: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog3_2018: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog3_2019: |-
+        _"Tato kosmická loď potřebuje okno!"_
+
+        Každá strana vnitřního čtverce je 100 pixelů a všechny úhly jsou 90 stupňů.
+      courseC_artist_prog4: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog4_2018: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog4_2019: |-
+        \_"Oh, ne! Starlin mazlíček odletěl pryč! Pomoz vesmírné ženě!" \_
+
+        Dokonči Starlinu raketu, aby mohla dohonit svého mazlíčka.\
+        (Každá strana trojúhelníku je dlouhá 100 pixelů a má vnější úhly 120 stupňů.)
+      courseC_artist_prog5: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog5_2018: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog5_2019: |-
+        _"Možná bychom měli udělat značku pro každého z našich mazlíčků pro případ, že by se ztratili!"_
+
+        Dokonči tuto značku nakreslením vnějšího obdélníku.\
+        (Dlouhé strany jsou každá 200 pixelů a krátké strany jsou každá 100 pixelů)
+      courseC_artist_prog6_2018: |-
+        _"Nyní označení pro Belle!"_
+
+        Nakresli tento čtverec se stranami 200 pixelů.
+      courseC_artist_prog6_2019: |-
+        _"Nyní označení pro Belle!"_
+
+        Nakresli tento čtverec se stranami 200 pixelů.
+      courseC_artist_prog7: "\\*\\* Výzva: \\*\\* Toto označení je speciální!  \n\nPřijdeš
+        na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů a každá z kratších
+        stran má 75 pixelů.)"
+      courseC_artist_prog7_2018: "\\*\\* Výzva: \\*\\* Toto označení je speciální!
+        \ \n\nPřijdeš na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů
+        a každá z kratších stran má 75 pixelů.)"
+      courseC_artist_prog7_2019: "\\*\\* Výzva: \\*\\* Toto označení je speciální!
+        \ \n\nPřijdeš na to, jak nakreslit obrys?\\\n(Dlouhá strana má 150 pixelů
+        a každá z kratších stran má 75 pixelů.)"
+      courseC_artist_prog8: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2018: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2019: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.\
+        (Každá strana má 150 pixelů)
       courseC_collector_prog1: |-
         **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
 
@@ -1093,6 +1188,8 @@ cs-CZ:
       courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
+      courseC_data wizard: Klikni na "Spustit". Kouzelník vyčaruje zvířata. Spočítej
+        je. Je v tom nějaká logika?
       courseC_flappy_events1: |-
         Připoj blok`mávni normálně` k události `když klikneš`, potom klikni na "Spustit".
 
@@ -2158,6 +2255,7 @@ cs-CZ:
         ptákovi pomohl najít prase!"
       courseD_maze_ramp5b_2019: "**Výzva:** Najdi správný směr v tomto bludišti, abys
         ptákovi pomohl najít prase!"
+      courseD_maze_ramp5c_2019: Pomoz Scratovi dostat se k žaludu.
       courseD_maze_ramp5d: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
@@ -2225,6 +2323,69 @@ cs-CZ:
         být výhonky buď kukuřice, **nebo** salát. Co musíš přidat do tohoto programu,
         abys zkontroloval každý výhonek předtím, než začneš sbírat? \n\n* * *\n\n#####
         Poznámka: Každý výhonek vyroste v buď **jednu** kukuřici, nebo **jeden** salát."
+      courseE_farmer_ramp11a: |-
+        No teda! Hromádka je tak velká, že je těžké odhadnout, kolik je v ní hlíny.
+
+        * * *
+
+        Přidali jsme do panelu nový blok, který jsme pojmenovali `dokud tady je hromádka`. Použij tento blok jen tehdy, když je tam stále ještě co nabírat.
+      courseE_farmer_ramp11a_2018: |-
+        No teda! Hromádka je tak velká, že je těžké odhadnout, kolik je v ní hlíny.
+
+        * * *
+
+        Přidali jsme do panelu nový blok, který jsme pojmenovali `dokud tady je hromádka`. Použij tento blok jen tehdy, když je tam stále ještě co nabírat.
+      courseE_farmer_ramp11a_2019: |-
+        No teda! Hromádka je tak velká, že je těžké odhadnout, kolik je v ní hlíny.
+
+        * * *
+
+        Přidali jsme do panelu nový blok, který jsme pojmenovali `dokud tady je hromádka`. Použij tento blok jen tehdy, když je tam stále ještě co nabírat.
+      courseE_farmer_ramp11b: Pojďme to zkusit znovu, ale s více hromádkami.
+      courseE_farmer_ramp11b_2018: Pojďme to zkusit znovu, ale s více hromádkami.
+      courseE_farmer_ramp11b_2019: Pojďme to zkusit znovu, ale s více hromádkami.
+      courseE_farmer_ramp12_forswap: Posbírej všechen salát.
+      courseE_farmer_ramp12_forswap_2018: Posbírej všechen salát.
+      courseE_farmer_ramp12_forswap_2019: Posbírej všechen salát.
+      courseE_farmer_ramp12b: Teď musí farmářka posbírat všechen salát. Použij `dokud
+        tam je salát` cyklus a dostaň je všechny!
+      courseE_farmer_ramp12b_2018: Teď musí farmářka posbírat všechen salát. Použij
+        `dokud tam je salát` cyklus a dostaň je všechny!
+      courseE_farmer_ramp12b_2019: Teď musí farmářka posbírat všechen salát. Použij
+        `dokud tam je salát` cyklus a dostaň je všechny!
+      courseE_farmer_ramp12c: Nyní je salát pouze na konci cesty. Postupuj po cestě
+        až do té doby, **opakuj dokud** narazíš na salát, potom sbírej, **dokud**
+        tam je stále co sbírat.
+      courseE_farmer_ramp12c_2018: Nyní je salát pouze na konci cesty. Postupuj po
+        cestě až do té doby, **opakuj dokud** narazíš na salát, potom sbírej, **dokud**
+        tam je stále co sbírat.
+      courseE_farmer_ramp12c_2019: Nyní je salát pouze na konci cesty. Postupuj po
+        cestě až do té doby, **opakuj dokud** narazíš na salát, potom sbírej, **dokud**
+        tam je stále co sbírat.
+      courseE_farmer_ramp12d: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12d_2018: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12d_2019: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12e: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12e_2018: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12e_2019: |-
+        Salát je rozmístěný po celé zahradě.\
+        Postupuj po cestě a **opakuj dokud** se dostaneš k hlávce salátu, potom salát sbírej, **dokud tam** nějaký je.
+      courseE_farmer_ramp12g: Posuň se dopředu až k salátu, potom zaboč doleva **když**  je
+        tam cesta, která vede doleva. Pokud není, zaboč doprava.
+      courseE_farmer_ramp12g_2018: Posuň se dopředu až k salátu, potom zaboč doleva
+        **když**  je tam cesta, která vede doleva. Pokud není, zaboč doprava.
+      courseE_farmer_ramp12g_2019: Posuň se dopředu až k salátu, potom zaboč doleva
+        **když**  je tam cesta, která vede doleva. Pokud není, zaboč doprava.
       courseF_bee_conditionals10: |-
         Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
 

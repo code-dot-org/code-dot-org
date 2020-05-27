@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'cdo/contact_rollups/v2/pardot'
-require 'cdo/log_collector'
 
 class ContactRollupsV2Test < ActiveSupport::TestCase
   test 'sync new contact' do
@@ -29,12 +28,9 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(log_collector, true)
+    ContactRollupsV2.new(is_dry_run: false).build_and_sync
 
-    # Verify results
-
-    # Email preference
+    # Verify email preference
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email_preference.email, pardot_id: 1)
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record.data_synced)
@@ -42,14 +38,6 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     contact_record = ContactRollupsFinal.find_by_email(email_preference.email)
     refute_nil contact_record
     assert_equal 1, contact_record.data['opt_in']
-
-    # Parent email
-    pardot_memory_record = ContactRollupsPardotMemory.find_by(email: student_with_parent_email.parent_email, pardot_id: 2)
-    refute_nil pardot_memory_record
-    assert_equal({}, pardot_memory_record.data_synced)
-
-    contact_record = ContactRollupsFinal.find_by_email(student_with_parent_email.parent_email)
-    refute_nil contact_record
   end
 
   test 'sync updated contact' do
@@ -79,8 +67,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(log_collector, true)
+    ContactRollupsV2.new(is_dry_run: false).build_and_sync
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
@@ -90,5 +77,18 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     contact_record = ContactRollupsFinal.find_by_email(email)
     refute_nil contact_record
     assert_equal 0, contact_record.data['opt_in']
+  end
+
+  test 'dry run makes no Pardot API calls' do
+    # Called when creating and updating Pardot prospects
+    PardotV2.expects(:submit_batch_request).never
+    ContactRollupsPardotMemory.expects(:save_accepted_submissions).never
+    ContactRollupsPardotMemory.expects(:save_rejected_submissions).never
+
+    # Called when downloading Pardot ID-email mappings
+    PardotV2.expects(:post_with_auth_retry).never
+
+    # Execute the pipeline
+    ContactRollupsV2.new(is_dry_run: true).build_and_sync
   end
 end

@@ -170,6 +170,9 @@ tr:
     email_preference_privacy: "(Bkz: Gizlilik İlkelerimiz)"
     email_preference_yes: "Evet"
     email_preference_no: "Hayır"
+    parent_account_checkbox: "Çocuğum adına kayıt olan bir ebeveyn/veliyim"
+    parent_account_email_progress_permission: "Size ara sıra çocuğunuzun gelişimi ve projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})"
+    parent_account_email_label: "Ebeveyn/Veli E-postası"
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -449,8 +452,11 @@ tr:
     update: "Hesabı güncelle"
     account_successfully_updated: "Hesap başarıyla güncellendi."
     update_email: "Güncelle"
+    for_parents_and_guardians: "Ebeveynler ve Veliler İçin"
+    link_a_parent_email: "Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için bu hesaba bir ebeveyn/veli e-posta adresi bağlayın. Bu e-posta adresini şifre kurtarma için de kullanabilirsiniz."
     parent_guardian_email_label: "Veli e-posta"
     none: "Hiçbiri"
+    only_one_parent_email_supported_warning: "Not: Şu anda öğrenci hesabı başına yalnızca bir ebeveyn/veli e-posta adresini destekleyebiliyoruz."
     encrypted: "sifrelenmis"
   user_level:
     completed: 'Tamamlandı'
@@ -954,3 +960,7 @@ tr:
   page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
   page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'
+  parent_email_banner:
+    text: "** Ebeveyn veya veli misiniz? ** Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için e-postanızı bu hesaba bağlayın!"
+    link_your_email: "E-postanızı bağlayın"
+    not_now: "Şimdi değil"

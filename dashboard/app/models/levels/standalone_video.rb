@@ -60,4 +60,24 @@ class StandaloneVideo < Level
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(user: params[:user], game: Game.standalone_video, level_num: 'custom'))
   end
+
+  def localized_long_instructions
+    return nil unless long_instructions
+    return long_instructions if I18n.en?
+    return I18n.t(name,
+      scope: [:data, "long_instructions"],
+      default: long_instructions,
+      smart: true
+    )
+  end
+
+  def localized_teacher_markdown
+    return nil unless teacher_markdown
+    return teacher_markdown if I18n.en?
+    return I18n.t(name,
+      scope: [:data, "teacher_markdown"],
+      default: teacher_markdown,
+      smart: true
+    )
+  end
 end
