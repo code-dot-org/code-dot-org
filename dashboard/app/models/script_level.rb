@@ -35,6 +35,8 @@ class ScriptLevel < ActiveRecord::Base
   belongs_to :lesson, inverse_of: :script_levels, foreign_key: 'stage_id'
   has_many :callouts, inverse_of: :script_level
 
+  validates :position, numericality: {greater_than: 0}
+
   validate :anonymous_must_be_assessment
 
   # Make sure we never create a level that is not an assessment, but is anonymous,

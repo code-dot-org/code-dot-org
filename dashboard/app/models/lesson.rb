@@ -34,6 +34,9 @@ class Lesson < ActiveRecord::Base
   belongs_to :lesson_group
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
 
+  validates :absolute_position, numericality: {greater_than: 0}
+  validates :relative_position, numericality: {greater_than: 0}
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
