@@ -53,7 +53,7 @@ export class SwipePrompt extends React.Component {
   }
 
   swipeOverlayOverrideSet() {
-    window.location.search.indexOf('force_show_swipe_overlay') !== -1;
+    return window.location.search.indexOf('force_show_swipe_overlay') !== -1;
   }
 
   touchSupported() {
@@ -61,12 +61,16 @@ export class SwipePrompt extends React.Component {
     // know that this is not foolproof for detecting touch support. It is
     // impossible to detect touch support with 100% certainty.
     // http://www.stucox.com/blog/you-cant-detect-a-touchscreen/
-    'ontouchstart' in window || navigator.maxTouchPoints;
+    return (
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints ||
+      this.swipeOverlayOverrideSet()
+    );
   }
 
   hideOverlayCookieSet() {
     return (
-      cookies.get(HideSwipeOverlayCookieName) && !this.swipeOverlayOverrideSet
+      cookies.get(HideSwipeOverlayCookieName) && !this.swipeOverlayOverrideSet()
     );
   }
 
@@ -82,7 +86,7 @@ export class SwipePrompt extends React.Component {
     if (
       this.hideOverlayCookieSet() ||
       hasBeenDismissed ||
-      !(this.touchSupported() || this.swipeOverlayOverrideSet()) ||
+      !this.touchSupported() ||
       !buttonsAreVisible ||
       buttonsAreDisabled
     ) {

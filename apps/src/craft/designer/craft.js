@@ -25,6 +25,7 @@ import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {ARROW_KEY_NAMES} from '../utils';
 import {
   showArrowButtons,
   hideArrowButtons,
@@ -712,18 +713,7 @@ Craft.runButtonClick = function() {
   let store = getStore();
   if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
     window.addEventListener('keydown', function hideOverlay(e) {
-      if (
-        [
-          'ArrowLeft',
-          'ArrowRight',
-          'ArrowUp',
-          'ArrowDown',
-          'Left',
-          'Right',
-          'Up',
-          'Down'
-        ].includes(e.key)
-      ) {
+      if (ARROW_KEY_NAMES.includes(e.key)) {
         store.dispatch(dismissSwipeOverlay('keyPress'));
         window.removeEventListener('keydown', hideOverlay);
       }
