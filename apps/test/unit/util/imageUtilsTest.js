@@ -7,8 +7,7 @@ import {
   toImageData
 } from '@cdo/apps/imageUtils';
 import {assert, expect} from 'chai';
-import expectedPhantomPng from './expected-phantom.png';
-import expectedChromePng from './expected-chrome.png';
+import expectedPng from './expected.png';
 import assertVisualMatch from '../../util/assertVisualMatch';
 
 const TEST_DATA_URI =
@@ -16,12 +15,6 @@ const TEST_DATA_URI =
 
 describe('image utils', () => {
   it('overlays an image inside the Artist frame', done => {
-    // Chrome and PhantomJS generate PNGs that _look_ the same but are are very different when
-    // you examine the files.  For now, we have fixtures for both since we want these tests to
-    // pass in both browsers.
-    const expectedPng = /PhantomJS/.test(window.navigator.userAgent)
-      ? expectedPhantomPng
-      : expectedChromePng;
     dataURIToFramedBlob(TEST_DATA_URI, actual => {
       dataURIFromURI(expectedPng).then(expected => {
         blobToDataURI(actual, actual => {
@@ -40,17 +33,17 @@ describe('image utils', () => {
     });
 
     it('converts an image element to a canvas', async () => {
-      const image = await imageFromURI(expectedChromePng);
+      const image = await imageFromURI(expectedPng);
       const result = await toCanvas(image);
       assert.instanceOf(result, HTMLCanvasElement);
       assertVisualMatch(image, result);
     });
 
     it('converts an image URI to a canvas', async () => {
-      assert.typeOf(expectedChromePng, 'string');
-      const result = await toCanvas(expectedChromePng);
+      assert.typeOf(expectedPng, 'string');
+      const result = await toCanvas(expectedPng);
       assert.instanceOf(result, HTMLCanvasElement);
-      assertVisualMatch(expectedChromePng, result);
+      assertVisualMatch(expectedPng, result);
     });
 
     it('converts a data URI to a canvas', async () => {
@@ -102,15 +95,15 @@ describe('image utils', () => {
     });
 
     it('converts an image element to an ImageData object', async () => {
-      const image = await imageFromURI(expectedChromePng);
+      const image = await imageFromURI(expectedPng);
       const result = await toImageData(image);
       assert.instanceOf(result, ImageData);
       assert.equal(522000, result.data.length);
     });
 
     it('converts an image URI string to an ImageData object', async () => {
-      assert.typeOf(expectedChromePng, 'string');
-      const result = await toImageData(expectedChromePng);
+      assert.typeOf(expectedPng, 'string');
+      const result = await toImageData(expectedPng);
       assert.instanceOf(result, ImageData);
       assert.equal(522000, result.data.length);
     });
