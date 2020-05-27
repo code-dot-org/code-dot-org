@@ -374,11 +374,13 @@ Sound.prototype.preload = function() {
         self.reusableBuffer = buffer;
       });
     } else {
-      //self.reusableBuffer = bytes;
-      //self.onSoundLoaded();
       self.audioContext.decodeAudioData(bytes, function(buffer) {
         self.reusableBuffer = buffer;
-        self.onSoundLoaded();
+        // THIS IS FOR FIREFOX
+        // https://github.com/microsoft/cognitive-services-speech-sdk-js/blob/1bc42c801f62b770327086d688a77b95e05628f7/src/sdk/Audio/SpeakerAudioDestination.ts#L66
+        if (!MediaSource.isTypeSupported('audio/mpeg')) {
+          self.onSoundLoaded();
+        }
       });
     }
     return;
