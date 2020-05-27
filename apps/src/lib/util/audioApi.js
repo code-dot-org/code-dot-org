@@ -124,6 +124,8 @@ export const commands = {
       appOptions.azureSpeechServiceToken,
       appOptions.azureSpeechServiceRegion
     );
+    speechConfig.speechSynthesisOutputFormat =
+      SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
     let voice;
     if (opts.gender === 'male') {
