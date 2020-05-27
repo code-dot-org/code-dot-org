@@ -128,15 +128,15 @@ class ContactRollupsPardotMemory < ApplicationRecord
       record_count += 1
       data = JSON.parse(record['data']).deep_symbolize_keys
       submissions, errors = pardot_writer.batch_create_prospects record['email'], data
-      save_sync_results(submissions, errors, Time.now.utc, is_dry_run)
+      save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
     end
 
     # There could be prospects left in the batch because batch size is not yet big enough
     # to trigger a Pardot request. Sends the remaining of the batch to Pardot now.
     submissions, errors = pardot_writer.batch_create_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc, is_dry_run)
+    save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
 
-    CDO.log.info "[Total] #{record_count} new prospects to be added" if is_dry_run
+    CDO.log.info "#{record_count} total new prospects to be added" if is_dry_run
   end
 
   def self.update_pardot_prospects(is_dry_run: false)
@@ -159,13 +159,13 @@ class ContactRollupsPardotMemory < ApplicationRecord
         old_prospect_data,
         new_contact_data
       )
-      save_sync_results(submissions, errors, Time.now.utc, is_dry_run)
+      save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
     end
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
-    save_sync_results(submissions, errors, Time.now.utc, is_dry_run)
+    save_sync_results(submissions, errors, Time.now.utc) unless submissions.blank? || is_dry_run
 
-    CDO.log.info "[Total] #{record_count} prospects to be updated" if is_dry_run
+    CDO.log.info "#{record_count} total prospects to be updated" if is_dry_run
   end
 
   def self.query_new_contacts
@@ -233,11 +233,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
   # @param [Array<Hash>] submissions an array of prospects that were synced/submitted to Pardot
   # @param [Array<Hash>] errors an array of hashes, each containing an index and an error message
   #   of a rejected prospect. Rejected prospects are a subset of all prospects submitted to Pardot.
-  # @param [Boolean] whether this is a dry run of the pipeline and sync to database should be skipped.
   # @param [Time] submitted_time time when submissions were sent to Pardot
-  def self.save_sync_results(submissions, errors, submitted_time, is_dry_run)
-    return if submissions.blank? || is_dry_run
-
+  def self.save_sync_results(submissions, errors, submitted_time)
     rejected_indexes = Set.new errors.pluck(:prospect_index)
     accepted_submissions = submissions.reject.with_index do |_, index|
       rejected_indexes.include? index
