@@ -3225,10 +3225,10 @@ h2.danger {
   table-layout: fixed;
 
   th {
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     font-family: 'Gotham 4r', sans-serif;
-    font-weight: normal;
+    font-weight: normal !important;
   }
 
   @media (min-width: 601px) {
