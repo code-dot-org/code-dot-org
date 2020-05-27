@@ -3222,19 +3222,32 @@ h2.danger {
 }
 
 .foorm-adjust-matrix {
+  table-layout: fixed;
+
   th {
-    font-size: 100%;
+    font-size: 13px;
     text-align: center;
+    font-family: 'Gotham 4r', sans-serif;
+    font-weight: normal;
   }
 
-  tr td:not(:first-child) {
-    text-align: center;
-    width: 10%;
+  @media (min-width: 601px) {
+    tr td:first-child {
+      width: 40%;
+    }
+
+    tr td:not(:first-child) {
+      text-align: center;
+    }
   }
 
   td {
     min-width: 0 !important;
   }
+}
+
+.foorm-adjust-rating {
+  text-align: center;
 }
 
 .foorm-button {
