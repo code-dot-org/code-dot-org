@@ -336,10 +336,11 @@ Sounds.prototype.playBytes = function(bytes, playbackOptions) {
   soundConfig.forceHTML5 = playbackOptions && playbackOptions.forceHTML5;
   soundConfig.allowHTML5Mobile =
     playbackOptions && playbackOptions.allowHTML5Mobile;
-  soundConfig.playAfterLoad = false;
+  soundConfig.playAfterLoad = true;
   soundConfig.playAfterLoadOptions = playbackOptions;
   soundConfig['bytes'] = bytes;
   let sound = new Sound(soundConfig, this.audioContext);
+  sound.preload();
   sound.play();
 };
 

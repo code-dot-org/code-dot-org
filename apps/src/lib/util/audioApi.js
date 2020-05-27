@@ -124,8 +124,6 @@ export const commands = {
       appOptions.azureSpeechServiceToken,
       appOptions.azureSpeechServiceRegion
     );
-    speechConfig.speechSynthesisOutputFormat =
-      SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
     let voice;
     if (opts.gender === 'male') {
@@ -133,13 +131,14 @@ export const commands = {
     } else {
       voice = 'en-US-AriaRUS';
     }
-    const synthesizer = new SpeechSynthesizer(speechConfig);
+    const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
     let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
       opts.text
     }</voice></speak>`;
     synthesizer.speakSsmlAsync(
       ssml,
       result => {
+        console.log(result);
         let forceHTML5 = false;
         if (window.location.protocol === 'file:') {
           // There is no way to make ajax requests from html on the filesystem.  So
