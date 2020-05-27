@@ -3,12 +3,20 @@ require 'parallel'
 
 module Crowdin
   class Utils
-    # @param [Crowdin::Project] project
+    # @param project [Crowdin::Project]
+    # @param options [Hash, nil]
+    # @param options.changes_json [String, nil] path to file where files with
+    #  changes will be written out in JSON format
+    # @param options.etags_json [String, nil] path to file where etags will be
+    #  written out in JSON format
+    # @param options.locales_dir [String, nil] path to directory where changed
+    #  files should be downloaded
+    # @param options.logger [Logger, nil]
     def initialize(project, options={})
       @project = project
-      @etags_json = options.fetch(:etags_json, File.join(File.dirname(__FILE__), "#{project.id}_etags.json"))
       @changes_json = options.fetch(:changes_json, "/tmp/#{project.id}_changes.json")
-      @locales_dir = options.fetch(:locales_dir, File.join(File.dirname(__FILE__), "..", "..", "..", "i18n", "locales"))
+      @etags_json = options.fetch(:etags_json, "/tmp/#{project.id}_etags.json")
+      @locales_dir = options.fetch(:locales_dir, "/tmp/locales")
       @logger = options.fetch(:logger, Logger.new(STDOUT))
     end
 
@@ -51,8 +59,7 @@ module Crowdin
       end
     end
 
-    # Downloades all files referenced in @changes_json, as determined by
-    # self.fetch_changes
+    # Downloades all files referenced in @changes_json to @locales_dir
     def download_changed_files
       changes = JSON.parse(File.read(@changes_json))
       @logger.info("#{changes.keys.length} languages have changes")

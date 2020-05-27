@@ -8,22 +8,29 @@ module Crowdin
 
     attr_reader :id
 
-    # @param [String] project_id
-    # @param [String] api_key
+    # @param project_id [String]
+    # @param api_key [String]
     # @see https://crowdin.com/project/codeorg/settings#api for an example of
-    #      how to retrieve these values for the "code.org" project
+    #  how to retrieve these values for the "code.org" project
     def initialize(project_id, api_key)
       @id = project_id
       self.class.base_uri("https://api.crowdin.com/api/project/#{project_id}")
       self.class.default_params key: api_key
     end
 
-    # https://support.crowdin.com/api/info/
+    # @see https://support.crowdin.com/api/info/
     def project_info
       self.class.post("/info")
     end
 
-    # https://support.crowdin.com/api/export-file/
+    # @param file [String] name of file (within crowdin) to be downloaded
+    # @param language [String] crowdin language code
+    # @param etag [String, nil] the file version tag returned by crowdin; can
+    #  be used to check for updates without re-downloading the whole file every
+    #  time
+    # @param attempts [Number, nil] how many times we should retry the download
+    #  if it fails
+    # @see https://support.crowdin.com/api/export-file/
     def export_file(file, language, etag=nil, attempts=3)
       options = {
         query: {
@@ -50,10 +57,18 @@ module Crowdin
       export_file(file, language, etag, attempts - 1)
     end
 
+    # Retrieve all languages currently enabled in the crowdin project. Each
+    # language is a hash containing the language name and code, as well as
+    # other internal crowdin values.
+    # @example [{"name"=>"Norwegian", "code"=>"no", "can_translate"=>"1", "can_approve"=>"1"}, ...]
+    # @return [Array<Hash>]
     def languages
       project_info["info"]["languages"]["item"]
     end
 
+    # Retrieve all files currently uploaded to the crowdin project.
+    # @example ["/dashboard/base.yml", "/dashboard/data.yml", ...]
+    # @return [Array<String>]
     def list_files
       files = project_info["info"]["files"]["item"]
       results = []
@@ -65,6 +80,15 @@ module Crowdin
 
     private
 
+    # Iterate through files as returned by crowdin. Crowdin returns files in a
+    # nested format, where each file is a "node", and directories are nodes
+    # that can contain other nodes. This helper simply knows how to traverse
+    # that simulated directory structure, and will yield each file in turn
+    # along with its directory.
+    # @param files [Array<Hash>]
+    # @param path [String, nil]
+    # @yield [name, path] the name of a file and the full path to the directory
+    #   in which it can be found.
     def each_file(files, path="")
       files = [files] unless files.is_a? Array
       files.each do |file|
