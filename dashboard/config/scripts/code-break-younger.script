@@ -101,7 +101,7 @@ level 'Episode 9 Challenge Instructions younger', progression: 'Challenges'
 level 'CodeBreak Dance Party Challenge', progression: 'Challenges'
 level 'Episode 9 Share', progression: 'Share Your Work!'
 
-stage 'AI with Kat Graham & Kate Park', visible_after: '2020-05-27 08:00:00 -0700'
+lesson 'AI with Kat Graham & Kate Park', visible_after: '2020-05-27 08:00:00 -0700'
 level 'CodeBreak Episode 10 Placeholder', progression: 'Code Break: Episode 10'
 level 'Episode 10 Instructions', progression: 'Practice'
 level 'CourseF_Oceans_Video_Machine_Learning', progression: 'Practice'
