@@ -1,4 +1,4 @@
-hideable_stages true
+hideable_lessons true
 
 lesson_group 'content', display_name: 'Content'
 stage 'Example Projects'
