@@ -349,7 +349,7 @@ Sound.prototype.getPlayableBytes = function() {
     var audioTest = new window.Audio();
     if (
       this.config.hasOwnProperty('bytes') &&
-      audioTest.canPlayType('audio/wav')
+      audioTest.canPlayType('audio/mp3')
     ) {
       return this.config.bytes;
     }
@@ -389,7 +389,7 @@ Sound.prototype.preload = function() {
     if (file) {
       audioElement = new window.Audio(file);
     } else {
-      const blob = new Blob([bytes], {type: 'audio/wav'});
+      const blob = new Blob([bytes], {type: 'audio/mpeg3'});
       const url = window.URL.createObjectURL(blob);
       audioElement = new window.Audio(url);
     }
