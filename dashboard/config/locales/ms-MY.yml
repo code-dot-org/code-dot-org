@@ -83,6 +83,11 @@ ms:
     field_is_required: adalah diperlukan
     email_preference_yes: Ya
     email_preference_no: Tidak
+    parent_account_checkbox: Saya ibubapa/penjaga yang daftar bagi pihak anak saya
+    parent_account_email_progress_permission: Bolehkah kami sekali-sekala e-mel anda
+      kemaskini kemajuan dan projek anak anda, serta kemaskini kursus dan sains komputer
+      mereka? [(Lihat polisi privasi kami)](%{privacy_policy_url})
+    parent_account_email_label: E-mel Ibubapa/Penjaga
   school_info:
     other: Lain-lain
   signin_form:
@@ -206,7 +211,13 @@ ms:
     current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)"
     update_email: Kemas kini
+    for_parents_and_guardians: Untuk Ibubapa dan Penjaga
+    link_a_parent_email: Sambungkan e-mel ibubapa/penjaga ke akaun ini untuk dikemaskini
+      mengenai kemajuan dan projek anak anda. Anda juga boleh guna e-mel ini untuk
+      pemulihan kata laluan.
     none: Tiada
+    only_one_parent_email_supported_warning: 'Nota: kami hanya dapat sokong satu e-mel
+      ibubapa/penjaga untuk setiap akaun pelajar pada masa ini.'
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -374,3 +385,8 @@ ms:
   gdpr_dialog:
     true: Ya
   copy: Salin
+  parent_email_banner:
+    text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini
+      untuk kemaskini kemajuan dan projek anak anda!"
+    link_your_email: Sambung e-mel
+    not_now: Nanti

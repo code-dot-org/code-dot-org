@@ -17213,10 +17213,18 @@ es-MX:
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
         > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Video_copy: |-
+        ## Conocer los Fundamentos de la Ciencia de la Computación
+
+        Comencemos por aprender un poco sobre los Fundamentos de la Ciencia de la Computación y cómo ha funcionado para los docentes y estudiantes de todo el mundo.
       OPD-K5 Closing: |-
         > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
         >
         > [Regístrate ahora] [0] para continuar aprendiendo ciencias de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarte con otros educadores apasionados en tu área.
+      OPD-K5 Closing_copy: |-
+        > **Si disfrutaste este curso, inscríbete en un taller en persona:**
+        >
+        > <a href="http://code.org/professional-development-workshops" target="blank">Regístrate ahora</a> para continuar aprendiendo ciencia de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarse con otros educadores apasionados en tu área.
       OPD-K5 EventsVid: |-
         Mira este video que define los "eventos" y muestra cómo funcionan en Fundamentos de la Ciencias de la Computación. Después, probarás algunos desafíos que requieren que codifiques eventos.
 
@@ -17224,6 +17232,10 @@ es-MX:
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
         que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         ¡En la página siguiente podrás escribir un programa similar!
+      OPD-K5 FirstProgram_copy: Mira el video a continuación, que explica un programa
+        en el que los jóvenes estudiantes escribirán en el <a href="https://studio.code.org/s/coursea-2019"
+        target="blank">Curso A</a>. En la siguiente página, ¡podrás escribir un programa
+        similar propio!
       OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
         planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
         cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
@@ -17270,10 +17282,71 @@ es-MX:
         Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
 
         **A medida que avanzas en las etapas 4-8**, tendrás la oportunidad de revisar algunas de nuestras actividades desconectadas para cada uno de los conceptos básicos cubiertos en este curso.
+      OPD-K5 Unplugged Video_copy: |-
+        ¡Puede parecer contraproducente enseñar ciencias de la computación lejos de la computadora! Sin embargo, hemos descubierto que algunas de las lecciones más impactantes son en realidad "fuera de línea" o realizadas con poca o ninguna tecnología.
+
+        Todos nuestros cursos de Fundamentos de la Ciencia de la Computación utilizan actividades fuera de línea para introducir conceptos de ciencia de la computación con objetos didácticos físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. También utilizamos actividades desconectadas para enseñar conceptos importantes que no son programación, como la ciudadanía digital. Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
       OPD-K5 WhatIsCS: ¿Alguna vez te has preguntado "Exactamente qué es la informática"?
         O "¿Por qué algunos programas de computadora se escriben con palabras y otros
         se escriben con imágenes?" Si es así, mira este video; es una gran introducción
         al campo de la ciencia de la computación.
+      OPD-K5 WhatIsCS_copy: |-
+        <span style="font-size: 1.1em">
+        ¿Alguna vez te has preguntado qué es la ciencia de la computación o qué tipos de lenguajes de programa existen? Este video proporciona una introducción al campo de la ciencia de la computación.
+        </span>
+      OPD-K5 conditionals free response: |-
+        # Reflexionar sobre condicionales
+
+        En esta lección, exploramos cómo los condicionales ayudan a los programadores a agregar lógica a su código.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de condicionales a tus alumnos? ¿Cuál es el beneficio de escribir un diario como práctica docente para la ciencia de la computación?
+      OPD-K5 events free response: |-
+        # Reflexionar sobre eventos
+
+        En esta lección, precalentaste tus habilidades de codificación mediante el uso de eventos para desencadenar ciertas acciones en tu programa.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de eventos a tus alumnos? ¿Cuáles son los pasos que podrías seguir para depurar un programa?
+      OPD-K5 for loops free response: |-
+        # Reflexionar sobre bucles para
+
+        Tómate un momento para reflexionar. ¿Cómo explicarías el concepto de bucles para a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 functions free response: |-
+        # Reflexionar sobre las funciones
+
+        En esta lección, exploramos cómo las funciones pueden convertirte en un mejor y más rápido programador al permitirte reutilizar segmentos de tu código. En la próxima lección, veremos el concepto de variables.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo explicarías el concepto de funciones a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 loops free response: |-
+        # Reflexionar sobre los bucles
+
+        En esta lección, exploramos cómo se pueden usar los bucles para hacer que el código sea más eficiente. En la próxima lección, veremos cómo los eventos pueden agregar interactividad a un programa.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo puedes conectar el concepto de bucles con la experiencia previa de tus alumnos fuera de la clase de Ciencias de la Computación? ¿Cuáles son los beneficios de la programación en pareja y cómo podrías usarla al enseñar esta lección?
+      OPD-K5 projects free response: |-
+        # Reflexionar sobre proyectos de fin de curso
+
+        Tómate un momento para reflexionar. ¿Cómo usarías los proyectos de fin de curso en tu clase? ¿Cuál es el beneficio de que los estudiantes completen un proyecto?
+      OPD-K5 sequencing free response: |-
+        # Reflexionar sobre la secuenciación
+
+        ¡Felicidades! Acabas de escribir un código. ¡Eres oficialmente un programador!
+
+        ¿Notaste que el último desafío fue un poco más difícil? Fue un desafío de reto. Los desafíos de reto están destinados a ampliar los límites de lo que harán los estudiantes. Dejamos en claro que deben intentarse, pero no exigimos que se completen para que los estudiantes tengan éxito en la lección.
+
+        Ahora tómate un momento para reflexionar. ¿Cómo describirías la diferencia entre ciencia de la computación y codificación? ¿Cómo explicarías la secuenciación y los algoritmos a tus alumnos?
+      OPD-K5 sprite lab free response: "# Reflexiona en Laboratorio de sprites\n\nTómate
+        un momento para reflexionar. ¿Cómo usarías el Laboratorio de sprites en tu
+        clase? "
+      OPD-K5 variables free response: |-
+        # Reflexionar sobre variables
+
+        Tómate un momento para reflexionar. ¿Cómo explicarías el concepto de variables a tus alumnos? ¿Cuál sería una práctica de enseñanza que podrías usar para enseñar este concepto?
+      OPD-K5 whats your plan: |-
+        # ¿Cuál es tu plan?
+
+        A lo largo del curso, se te pedirá que escribas reflexiones sobre lo que has aprendido. Una vez que envíes tu respuesta, se guardará y siempre podrás volver a ella. La revisaremos al final de este curso en línea.
+
+        Tómate un momento para reflexionar. ¿Cómo y cuándo completarás este curso en línea para asegurarte de obtener el mayor beneficio de la experiencia?
       OPD-K5-events-2: "Agrega el bloque `cantidad normal de aleteo` al evento `cuando
         hagas clic`, y luego presiona \"Ejecutar\".  \n\n* * *\n\nHaz clic o toca
         en el espacio de juego para mover a Flappy hacia el objetivo."

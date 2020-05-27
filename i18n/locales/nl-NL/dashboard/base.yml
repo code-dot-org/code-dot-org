@@ -151,6 +151,9 @@ nl:
     email_preference_privacy: "(Zie ons privacy beleid)"
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
+    parent_account_checkbox: "Ik ben een ouder/voogd die zich aanmeld namens mijn kind."
+    parent_account_email_progress_permission: "Kunnen wij u af en toe e-mailen over de voortgang van uw kind en de projecten, en u op de hoogte houden van hun cursus en informatica?  [(Zie ons privacybeleid)](%{privacy_policy_url})"
+    parent_account_email_label: "E-mail ouder/voog"
   school_info:
     title: 'Schoolinformatie (optioneel)'
     school_country: 'Land van de school'
@@ -400,8 +403,11 @@ nl:
     update: "Account bijwerken"
     account_successfully_updated: "Account succesvol bijgewerkt."
     update_email: "Bijwerken"
+    for_parents_and_guardians: "Voor ouders en voogden"
+    link_a_parent_email: "Koppel het e-mailadres van een ouder/voogd aan dit account om op de hoogte te blijven van de voorgang van uw kind en de projecten. U kunt dit e-mailadres ook gebruiken om wachtwoorden te herstellen."
     parent_guardian_email_label: "E-mail van de ouder/voogd"
     none: "Geen"
+    only_one_parent_email_supported_warning: "Opmerking: wij kunnen op dit moment slechts één e-mailadres van een ouder/voogd per account ondersteunen."
     encrypted: "Versleuteld"
   user_level:
     completed: 'Voltooid'
@@ -808,3 +814,7 @@ nl:
     yes: 'Ja'
   page_not_found_title: "Pagina niet gevonden"
   copy: 'Kopieër'
+  parent_email_banner:
+    text: "Bent u een ouder of voogd? Koppel uw e-mailadres aan dit account om op de hoogte te blijven van de voortgang van uw kind en projecten."
+    link_your_email: "Koppel uw e-mailadres"
+    not_now: "Niet nu"

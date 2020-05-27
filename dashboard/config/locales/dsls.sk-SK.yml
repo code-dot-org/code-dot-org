@@ -736,6 +736,24 @@ sk-SK:
         markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
           vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
           sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
+      CSD U3 Collisions SFLP:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní, ako sa používa blok „isTouching“, budete diskutovať o nových spôsoboch interakcie medzi dvoma „sprite“ objektmi. Potom použijete „isTouching“ na posunutie jedného „sprite” objektu druhým, a následne si precvičíte štyri bloky kolízie (collide, displace, bounce, and bounceOff).
+
+          ## Slovná zásoba
+
+          * **Abstrakcia** – zjednodušená reprezentácia niečoho komplexnejšieho. Abstrakcie umožňujú nedbať na detaily, čo napomáha pri zvládnutí komplexity. Vďaka nim sa vieme zamerať na podstatnejšie koncepty, a uvažovať nad problémami na vyššej úrovni.
+
+          ## Nový kód
+
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
       CSD U3 Entertainment:
         markdown: |+
           # Začni svoj prieskum
@@ -756,18 +774,65 @@ sk-SK:
         - {}
         - correct: true
         - {}
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
+
+          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
+           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
+           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
+           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
+
+          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
+           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
+           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
+           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
+
+          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
+           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
+           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
+           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
+      CSD U3 Functions SFLP:
+        markdown: |
+          # Prehľad
+
+          V tejto lekcii si povieme o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich sa častí. Naučíme sa, že na vyššej úrovni, alebo pomocou abstraktných krokov, sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom začneme funkcie tvoriť. Na konci lekcie tieto znalosti použijeme na  zefektívnenie a pridanie funkcionality do finálnej verzie tvojej hry.
+
+          ## Slovník
+
+          * **Funkcia** – Pomenovaná skupina programovacích inštrukcií. Funkcie sú opakovane použiteľné abstrakty, ktoré znižujú náročnosť písania a údržby programov.
+
+          ## Nový kód
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none = Definuj funkciu
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/) = Zavolaj funkciu
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -804,6 +869,15 @@ sk-SK:
         - text: Je pravda len raz, v momente pustenia klávesy.
         - text: Je pravda po celý čas, čo je klávesa stlačená, alebo držaná.
         title: 'Spájanie: odpovede na stlačenie kláves'
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          #Prehľad
+
+          Trieda je vyzvaná k tomu, aby sa zamyslela nad „problémom“ nudy a seba-vyjadrenia, a aby pouvažovala, ako k týmto problémom pristupuje vo svojom živote. Žiaci budú skúmať ako informatika vo všeobecnosti, a programovanie zvlášť, zohrávajú úlohu buď ako špecifická forma zábavy alebo ako prostriedok seba-vyjadrenia.
+
+          ##Zdroje
+
+          *[Informatika v zábavnom priemysle - Pracovný zošit] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
       CSD U3 Lesson Overview 10:
         markdown: |-
           # Prehľad
@@ -859,6 +933,22 @@ sk-SK:
           [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)\n* [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)\n*
           [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)\n* [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)\n*
           [sprite.visible](//studio.code.org/docs/gamelab/visible/)\n* [If/else statement](//studio.code.org/docs/gamelab/ifElseBlock/)\n\n"
+      CSD U3 Lesson Overview 14:
+        markdown: "# Prehľad\n\nTrieda navrhne a vytvorí interaktívnu pohľadnicu s
+          využitím všetkých programovacích techník, ktoré sa dosiaľ naučila. \n\n##
+          Zdroje\n\n* [Interaktívna pohľadnica – Plánovací hárok projektu] (https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)\n*
+          [Interaktívna pohľadnica – Hodnotenie svojho zadania] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)\n*
+          [Interaktívna pohľadnica – Hodnotiaci hárok učiteľa] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)"
+        teacher_markdown: |
+          * [Interactive Card](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [Interactive Card](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
+      CSD U3 SFLP Velocity:
+        markdown: "# Prehľad\n\nPo krátkom zopakovaní toho, ako sa kód pre počítanie
+          používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti, ktoré
+          priamo určujú jeho rýchlosť a spôsob otáčania sa. Používaním týchto vlastností
+          sa naučíš všetko potrebné na vytvorenie jednoduchej plošinovky. \n\n## Nový
+          kód\n* [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)\n*
+          [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)\n* [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)\n"
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1049,6 +1139,7 @@ sk-SK:
         - correct: true
         questions:
         - {}
+        title: Odhadni výsledok
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -1057,6 +1148,7 @@ sk-SK:
         - correct: true
         questions:
         - {}
+        title: Odhadni výsledok
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -1065,6 +1157,7 @@ sk-SK:
         - correct: true
         questions:
         - {}
+        title: Odhadni výsledok
       CSD U6 tugowar stop:
         markdown: |
           # Zastav sa
@@ -2476,34 +2569,34 @@ sk-SK:
         title: Multi premenná s včelou
       courseF_external_variableConstant_2018:
         markdown: "<h2>Viac o Premenných</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve si
-          sa naučil výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve sme
+          sa naučili výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
           premennú ako konštantu, hodnota, ktorú jej prvýkrát priradíš sa bude v programe
           opakovať bez ďalšieho zadania po stlačení  tlačidla \"Spustiť\".  </h3>\n<br/><hr/>\n<h3>V
           ďalšej časti budeš písať kód s použitím premenných, ktoré spôsobujú zmeny
           v rámci programu.</h3>"
       courseF_external_variableConstant_2018_2019:
         markdown: "<h2>Viac o Premenných</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve si
-          sa naučil výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Práve sme
+          sa naučili výborný spôsob ako použiť premennú...ako konštantu!  \nKeď použiješ
           premennú ako konštantu, hodnota, ktorú jej prvýkrát priradíš sa bude v programe
           opakovať bez ďalšieho zadania po stlačení  tlačidla \"Spustiť\".  </h3>\n<br/><hr/>\n<h3>V
           ďalšej časti budeš písať kód s použitím premenných, ktoré spôsobujú zmeny
           v rámci programu.</h3>"
       courseF_markdown_algorithms_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"algoritmy\"!**  \n\n\n\n### **Algoritmus
-          je zoznam krokov na splnenie úlohy**. Na algoritmoch je zábavné, že sám
-          rozhoduješ čo sa stane krok po kroku.\n\n### Algoritmus, ktorý píšeš pre
-          počítač sa volá **program**.  \n\n---\n\n## **Nauč sa slovíčka**\n\n* ###
-          **Algoritmus** - Zoznam krokov na splnenie úlohy\n\n* ### **Program** -
-          \ Algoritmus, ktorý bol nakódovaný tak, aby ho mohol používať počítač"
+        markdown: "# **Práve sme sa naučili \"algoritmy\"!**  \n\n\n\n### **Algoritmus
+          je zoznam krokov na splnenie úlohy**. Na algoritmoch je zábavné to, že rozhodnutie,
+          čo sa stane v jednotlivých krokoch je na tebe.\n\n### Algoritmus, ktorý
+          píšeš pre počítač sa volá **program**.  \n\n---\n\n## **Nauč sa slovíčka**\n\n*
+          ### **Algoritmus** - Zoznam krokov na splnenie úlohy\n\n* ### **Program**
+          -  Algoritmus, ktorý bol nakódovaný tak, aby ho mohol používať počítač"
       courseF_markdown_algorithms_intro:
         content1: Strana učebnice s obodovaním testu
         markdown: |-
           # **Na tejto hodine...**
 
-          ### Chcel by si hovoriť druhým čo majú robiť? A vždy ťa počúvajú?
+          ### Máš niekedy chuť ostatným hovoriť, čo majú robiť? A počúvajú ťa vždy, či len niekedy?
 
           ### Dnes budeš krok po kroku hovoriť počítaču čo má robiť - a bude ťa počúvať.
 
@@ -2518,14 +2611,14 @@ sk-SK:
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"podmieňovanie\"!**\n\n### Podmieňovanie
+        markdown: "# **Práve sme sa naučili \"podmieňovanie\"!**\n\n### Podmieňovanie
           je v informatike veľmi užitočné. Predstav si, že sa prihlásiš na svoju obľúbenú
-          webstránku a napíšeš heslo. Webstránka musí použiť podmieňovanie, aby si
-          overila *či* heslo ktoré si napísal pasuje s heslom, ktoré je uložené pri
-          tvojom užívateľskom mene. \n\n### `Ak` pasuje, tak sa prihlásiš! \n\n###
-          `Inak` ti vyhodí chybu.  \n\n---\n\n## **Nauč sa slovíčka**\n\n* ### **Podmienka**
-          - Niečo čo si program overí, predtým ako povolí činnosť\n\n* ### **Podmieňovanie**
-          - Príkazy, ktoré fungujú len za určitých podmienok"
+          webstránku a napíšeš heslo. Webstránka musí použiť podmienku, aby si overila
+          *či* je použité heslo zhodné s heslom, ktoré je uložené pri tvojom užívateľskom
+          mene. \n\n### `Ak` pasuje, tak sa prihlásiš! \n\n### `Inak` ti vyhodí chybu.
+          \ \n\n---\n\n## **Nauč sa slovíčka**\n\n* ### **Podmienka** - Niečo čo si
+          program overí, predtým ako povolí činnosť\n\n* ### **Podmieňovanie** - Príkazy,
+          ktoré fungujú len za určitých podmienok"
       courseF_markdown_conditionals_intro:
         content1: Strana učebnice s obodovaním testu
         markdown: "# **Na tejto hodine...**\n\n### **Podmienky** sú veci, ktoré môžu
@@ -2534,24 +2627,25 @@ sk-SK:
           **Nauč sa bloky**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)"
       courseF_markdown_debugging_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"debugging\"!**\n\n### **Bug je niečo,
+        markdown: "# **Práve sme sa naučili \"debugging\"!**\n\n### **\"Bug\" je niečo,
           čo nefunguje správne.** Je to chyba v programe. Keď hľadáš a opravuješ chyby,
-          vykonávaš **debugging** problému.\n\n### Potrebuješ sa naučiť **vytrvalosti**,
-          inými slovami, nevzdať sa, až kým nenájdeš a neopravíš všetky chyby. \n\n---\n\n##
-          **Nauč sa slovíčka**\n\n* ### **Bug** - Časť programu, ktorá nefunguje,
-          chyba\n\n* ### **Debbuging** - Hľadanie a odstraňovanie problémov v algoritmoch
-          alebo programe, odstraňovanie chýb\n\n* ### **Vytrvalosť** - Nevzdávať sa"
+          vykonávaš **\"debugging\"** problému.\n\n### Potrebuješ cvičiť svoju  **vytrvalosť**,
+          inými slovami schopnosť nevzdať sa, až kým nenájdeš a neopravíš všetky chyby.
+          \n\n---\n\n## **Nauč sa slovíčka**\n\n* ### **Bug** - Časť programu, ktorá
+          nefunguje, chyba\n\n* ### **Debbuging** - Hľadanie a odstraňovanie problémov
+          v algoritmoch alebo programe, odstraňovanie chýb\n\n* ### **Vytrvalosť**
+          - Nevzdávať sa"
       courseF_markdown_debugging_intro:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# Na tejto hodine...\n\n### Čo ťa napadne pri slovíčku bug, v angličtine
-          chrobák? \n\n### V informatike bug neznamená chrobák, ale aj tak spôsobuje
-          nepríjemnosti, chyby.\n\n### Úlohy z tejto hodiny už boli vyriešené! Ale
-          nie tak týchlo, zdá sa, že tam niečo nefunguje, Môžu za tým byť dáke bugy?\n\n---\n\n##
-          Nauč sa bloky\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)"
+        markdown: "# Na tejto hodine...\n\n### Čo ťa napadne pri slovíčku \"bug\",
+          v angličtine chrobák? \n\n### V informatike \"bug\" neznamená chrobák, ale
+          aj tak spôsobuje nepríjemnosti, chyby.\n\n### Úlohy z tejto hodiny už boli
+          vyriešené! Ale nie tak týchlo, zdá sa, že tam niečo nefunguje, Môžu za tým
+          byť dáke \"bugy\"?\n\n---\n\n## Nauč sa bloky\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)"
       courseF_markdown_forloops_end:
         content1: Strana učebnice s obodovaním testu
         markdown: |+
-          # **Práve si sa naučil "cyklus for"!**
+          # **Práve sme sa naučili "cyklus for"!**
 
           ### **Cykly for sú cykly, kde nastavíš hodnoty pre začiatok, koniec a krok.**
 
@@ -2568,7 +2662,7 @@ sk-SK:
       courseF_markdown_forloops_end_2019:
         content1: Strana učebnice s obodovaním testu
         markdown: |+
-          # **Práve si sa naučil "cyklus for"!**
+          # **Práve sme sa naučili "cyklus for"!**
 
           ### **Cykly for sú cykly, kde nastavíš hodnoty pre začiatok, koniec a krok.**
 
@@ -2608,7 +2702,7 @@ sk-SK:
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
       courseF_markdown_loops_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"cykly\"!**  \n\n### **Cyklus je činnosť,
+        markdown: "# **Práve sme sa naučili \"cykly\"!**  \n\n### **Cyklus je činnosť,
           ktorá sa vykonáva znovu a znovu.** Iné slovo pre takúto činnosť je opakovanie.
           \n\n### Cykly sú užitočné pre opakovanie vzorov. Možno by ti pomohlo najskôr
           napísať program bez cyklov, a potom skúsiť nájsť vzor správania. \n\n###
@@ -2625,10 +2719,10 @@ sk-SK:
           Nauč sa bloky\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)"
       courseF_markdown_nestedloops_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"vnorené cykly\"!**\n\n### **Vnorený cyklus
-          je cyklus vložený v inom cykle.** Predstav si ho ako vonkajší cyklus s iným
-          cyklom, ktorý sa v ňom udomácnil. \n\n### Vložené cykly sú výborné na opakovanie
-          vzorov správania. Ak sa správne použijú, vedia byť veľmi užitočné!\n\n---\n\n##
+        markdown: "# **Práve sme sa naučili \"vnorené cykly\"!**\n\n### **Vnorený
+          cyklus je cyklus vložený v inom cykle.** Predstav si ho ako vonkajší cyklus
+          s iným cyklom, ktorý sa v ňom udomácnil. \n\n### Vložené cykly sú výborné
+          na opakovanie vzorov správania. Ak sa správne použijú, vedia byť veľmi užitočné!\n\n---\n\n##
           **Nauč sa slovíčka**\n\n### __Vnorené cykly__ - cyklus vložený  v inom cykle"
       courseF_markdown_nestedloops_intro:
         content1: Strana učebnice s obodovaním testu
@@ -2638,14 +2732,14 @@ sk-SK:
           cyklus vo vnútri iného cyklu? Poďme to zistiť!\n\n---\n\n## **Nauč sa bloky**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)"
       courseF_markdown_variables_end:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"premenné\"!**\n\n### Premenná musí mať
+        markdown: "# **Práve sme sa naučili \"premenné\"!**\n\n### Premenná musí mať
           pridelený názov a hodnotu na to aby sa mohla použiť. Názoy ostáva nemenný,
           ale hodnota sa môže meniť. Týmto spôsobom môžeš použiť premenné ako náhradu,
           kedykoľvek to v programe potrebuješ.! \n\n---\n\n## **Nauč sa slovíčka**\n\n###
           **Premenná** - Náhrada za informáciu, ktorá sa môže zmeniť"
       courseF_markdown_variables_end_2019:
         content1: Strana učebnice s obodovaním testu
-        markdown: "# **Práve si sa naučil \"premenné\"!**\n\n### Premenná musí mať
+        markdown: "# **Práve sme sa naučili \"premenné\"!**\n\n### Premenná musí mať
           pridelený názov a hodnotu na to aby sa mohla použiť. Názoy ostáva nemenný,
           ale hodnota sa môže meniť. Týmto spôsobom môžeš použiť premenné ako náhradu,
           kedykoľvek to v programe potrebuješ.! \n\n---\n\n## **Nauč sa slovíčka**\n\n###
@@ -2881,7 +2975,7 @@ sk-SK:
         questions:
         - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
+        title: Objavujeme informatiku  - Študentský dotazník na konci kurzu
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: |+
           # Objavujeme informatiku - Záverečný dotazník
@@ -2902,73 +2996,73 @@ sk-SK:
 
 
       csd-post-survey-levelgroup-2018:
-        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
+        title: Objavujeme informatiku  - Študentský dotazník na konci kurzu
       csd-pulse-check-survey-1-levelgroup U1Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch1:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
-        title: Objavujeme Informatiku - rýchly prieskum!
+        title: Objavujeme informatiku - rýchly prieskum!
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.

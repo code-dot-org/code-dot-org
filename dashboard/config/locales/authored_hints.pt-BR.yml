@@ -4693,7 +4693,7 @@ pt-BR:
         courseA_collector_loops3_a: |-
           Experimente usar um laço de repetição
 
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>!
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
         courseA_collector_loops3_b: Lembre-se, você pode colocar mais de 1 bloco dentro
           de um laço <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
@@ -4931,9 +4931,15 @@ pt-BR:
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops2_2019:
-        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos `mover para
-          oeste`\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\ne **quatro** blocos
-          <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
+        courseA_harvester_loops2_a: |-
+          Seu código terá **quatro** blocos `mover para oeste`
+
+          <xml><block type="maze_moveWest"/></xml>
+
+          e **quatro** blocos <xml>
+          `pick corn`
+            <block type="harvester_corn"/>
+          </xml>
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops3:
