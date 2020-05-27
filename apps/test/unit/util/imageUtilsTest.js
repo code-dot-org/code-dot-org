@@ -1,7 +1,6 @@
 import {
   dataURIToBlob,
   dataURIToFramedBlob,
-  imageFromURI,
   toCanvas,
   toImage,
   toImageData
@@ -59,7 +58,7 @@ describe('image utils', () => {
     });
 
     it('converts an image element to a canvas', async () => {
-      const image = await imageFromURI(expectedPng);
+      const image = await toImage(expectedPng);
       const result = await toCanvas(image);
       assert.instanceOf(result, HTMLCanvasElement);
       assertVisualMatch(image, result);
@@ -120,7 +119,7 @@ describe('image utils', () => {
     });
 
     it('converts an image element to an ImageData object', async () => {
-      const image = await imageFromURI(expectedPng);
+      const image = await toImage(expectedPng);
       const result = await toImageData(image);
       assert.instanceOf(result, ImageData);
       assert.equal(522000, result.data.length);
