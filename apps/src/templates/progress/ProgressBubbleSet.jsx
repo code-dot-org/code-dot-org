@@ -85,7 +85,7 @@ class ProgressBubbleSet extends React.Component {
     return false;
   };
 
-  renderBubble = (level, index) => {
+  renderBubble = (level, index, isSublevel) => {
     const {
       levels,
       selectedSectionId,
@@ -114,7 +114,7 @@ class ProgressBubbleSet extends React.Component {
           <ProgressBubble
             level={level}
             disabled={this.bubbleDisabled(level)}
-            smallBubble={false}
+            smallBubble={isSublevel}
             selectedSectionId={selectedSectionId}
             selectedStudentId={selectedStudentId}
             hideToolTips={this.props.hideToolTips}
@@ -131,7 +131,18 @@ class ProgressBubbleSet extends React.Component {
 
     return (
       <div style={{...styles.main, ...style}}>
-        {levels.map((level, index) => this.renderBubble(level, index))}
+        {levels.map((level, index) => {
+          let bubbles = [];
+          bubbles.push(this.renderBubble(level, index, false));
+          if (level.sublevels) {
+            bubbles.concat(
+              level.sublevels.map((sublevel, index) => {
+                this.renderBubble(sublevel, index, true);
+              })
+            );
+          }
+          return bubbles;
+        })}
       </div>
     );
   }
