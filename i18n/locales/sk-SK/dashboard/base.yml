@@ -711,8 +711,8 @@ sk:
     wrong_body: "Ďakujeme za odoslanie odpovedí."
     correct_title: "Ďakujem"
     correct_body: "Ďakujeme za odoslanie odpovedí."
-    hide_survey_last_answer: "Tento prieskum je anonymný. Pre súhrnné informácie o výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu budú zobrazené pri účasti minimálne piatich študentov."
-    survey_submission_thankyou: "Ďakujeme vám za vyplnenie ankety! Formulár bol vymazaný, aby sme mohli Vaše odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné odpovede za celú triedu, avšak bez konkrétnych mien."
+    hide_survey_last_answer: "Tento dotazník je anonymný.  Výsledky sú dostupné v prehľade triedy, na záložke \"Hodnotenia/dotazníky\". Výsledky dotazníku budú zobrazené pri účasti minimálne piatich študentov."
+    survey_submission_thankyou: "Ďakujeme za vyplnenie ankety! Formulár bol vymazaný, aby sme mohli odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné odpovede za celú triedu, avšak bez konkrétnych mien."
   level_group-submittable:
     wrong_title: "Ďakujem"
     wrong_body: "Ďakujeme za odoslanie odpovedí."
@@ -721,9 +721,9 @@ sk:
     unsubmit-title: "Zrušiť zaslané odpovede"
     unsubmit-body: "Zrušenie zaslaných odpovedí vynuluje čas a dátum odoslania.  Si si istý?"
     submit-incomplete-title: "Odoslať odpovede"
-    submit-incomplete-body: "Niektoré otázky si nechal nevyplnené. Po odoslaní svoje odpovede už nemôžeš upravovať. Si si istý?"
+    submit-incomplete-body: "Niektoré otázky si zostali nevyplnené. Po odoslaní svoje odpovede už nemôžeš upravovať. Si si istý/-á?"
     submit-complete-title: "Odoslať odpovede"
-    submit-complete-body: "Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý?"
+    submit-complete-body: "Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý/á?"
   match:
     wrong_title: "Nesprávne riešenie"
     wrong_body: "Zadané riešenie nie je správne.  Prosím skúste to znova!"
@@ -802,7 +802,7 @@ sk:
     completed_too_many_blocks: dokončené, príliš veľa blokov
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
-    assessment: ocenenie
+    assessment: hodnotenie
     submitted: predložené
   studio:
     courses_working_on: "Kurzy na ktorých pracuješ"
