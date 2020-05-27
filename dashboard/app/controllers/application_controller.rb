@@ -209,7 +209,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_english_in_levelbuilder_mode
-    return redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
+    redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
   end
 
   def require_levelbuilder_mode
