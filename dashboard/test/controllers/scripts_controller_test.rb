@@ -209,6 +209,15 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: 'course1'}
+    end
+    assert_redirected_to "/"
+  end
+
   test "should get edit on test" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
