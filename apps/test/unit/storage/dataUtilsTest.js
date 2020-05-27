@@ -9,7 +9,6 @@ import {
   isBoolean,
   toBoolean
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('isBlank', () => {
   it('counts null, undefined, and empty string as blank', () => {
@@ -205,12 +204,6 @@ describe('castValue', () => {
   });
 
   describe('with applabDatasets experiment enabled', () => {
-    beforeEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, true);
-    });
-    afterEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, false);
-    });
     it('does not allow objects or arrays', () => {
       expect(() => castValue('[1, 2, 3]')).to.throw(
         /Invalid entry type: object/
@@ -253,12 +246,6 @@ describe('editableValue', () => {
   });
 
   describe('with applabDatasets experiment enabled', () => {
-    beforeEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, true);
-    });
-    afterEach(() => {
-      experiments.setEnabled(experiments.APPLAB_DATASETS, false);
-    });
     it('shows undefined', () => {
       expect(editableValue(undefined)).to.equal('undefined');
     });
