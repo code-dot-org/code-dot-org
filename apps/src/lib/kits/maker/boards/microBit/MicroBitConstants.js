@@ -12,3 +12,13 @@ export const EXTERNAL_PINS = [0, 1, 2];
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;
 }
+export const MB_COMPONENT_COUNT = 8;
+
+export const MB_COMPONENTS = [
+  'LedScreen',
+  'MicroBitButton',
+  'Accelerometer',
+  'MicroBitThermometer',
+  'Compass',
+  'LightSensor'
+];
