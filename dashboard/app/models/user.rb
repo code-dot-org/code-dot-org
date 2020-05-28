@@ -306,6 +306,9 @@ class User < ActiveRecord::Base
     end
   end
 
+  has_one :custom_script, class_name: 'Script', foreign_key: :owner_id
+  has_many :custom_levels, class_name: 'Level', foreign_key: :owner_id
+
   def email
     return read_attribute(:email) unless migrated?
     primary_contact_info.try(:email) || ''
