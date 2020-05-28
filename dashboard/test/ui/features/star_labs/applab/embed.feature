@@ -22,8 +22,8 @@ Feature: App Lab Embed
     And I wait until element ".fa-play" is visible
     And I click selector ".fa-play"
     And I wait until element "#divApplab > .screen > button#hello" is visible
-    Then I wait until element "a.more-link" is visible
-    And I click selector "a.more-link"
+    Then I wait until element "button.more-link" is visible
+    And I click selector "button.more-link"
     Then I wait until element "a:contains('How it Works (View Code)')" is visible
     And I click selector "a:contains('How it Works (View Code)')" to load a new tab
 
@@ -43,5 +43,5 @@ Feature: App Lab Embed
     And I wait until element ".fa-play" is visible
     And I click selector ".fa-play"
     And I wait until element "#divApplab > .screen > button#hello" is visible
-    Then I wait until element "a.more-link" is visible
-    And I click selector "a.more-link"
+    Then I wait until element "button.more-link" is visible
+    And I click selector "button.more-link"
