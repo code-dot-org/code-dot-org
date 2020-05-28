@@ -1,10 +1,13 @@
+hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit3/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit3/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit3/{LESSON}'
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit3/{LESSON}'
+family_name 'csp3'
+version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSP'
 
@@ -83,3 +86,4 @@ level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
 
 lesson 'Lesson 11: Assessment Day', lockable: true
 level 'CSP Unit 3 MC Assessment _2020', progression: 'Unit 3 Exam', assessment: true
+

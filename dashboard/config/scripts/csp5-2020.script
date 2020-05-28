@@ -1,11 +1,13 @@
+hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit5/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit5/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit5/{LESSON}'
-project_widget_types ["basketball"]
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit5/{LESSON}'
+family_name 'csp5'
+version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSP'
 
@@ -133,3 +135,4 @@ level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment
 lesson 'Lesson 18: Assessment Day', lockable: true
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
+
