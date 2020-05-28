@@ -10,7 +10,6 @@ import Radium from 'radium';
 import React from 'react';
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
-import experiments from '../../util/experiments';
 
 const styles = {
   buttonWrapper: {
@@ -66,9 +65,7 @@ class TableControls extends React.Component {
           <span style={styles.tableName}>{this.props.tableName}</span>
         </div>{' '}
         <div style={styles.buttonWrapper}>
-          {experiments.isEnabled(experiments.APPLAB_DATASETS) && (
-            <VisualizerModal key={this.props.tableName} />
-          )}
+          <VisualizerModal key={this.props.tableName} />
 
           {!this.props.readOnly && (
             <ConfirmDeleteButton
