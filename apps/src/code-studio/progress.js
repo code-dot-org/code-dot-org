@@ -95,7 +95,7 @@ progress.renderStageProgress = function(
     store,
     {
       name,
-      stages: [stageData],
+      lessons: [stageData],
       disablePostMilestone,
       age_13_required,
       id: stageData.script_id
@@ -300,7 +300,7 @@ function initializeStoreWithProgress(
       currentLevelId: currentLevelId,
       professionalLearningCourse: scriptData.plc,
       saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-      stages: scriptData.stages,
+      stages: scriptData.lessons,
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,

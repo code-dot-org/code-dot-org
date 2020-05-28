@@ -20324,7 +20324,7 @@ pt-BR:
         que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
         você clicar nele?  "
       Dance_2019_01: |-
-        Arraste o bloco [blockly block] [0] para a área de trabalho e conecte-o dentro do [blockly block] [1]
+        Arraste o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> para a área de trabalho e conecte-o dentro do <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>
           quadra.
 
           Escolha `gato` ou`preguiça` para criar seu primeiro dançarino.

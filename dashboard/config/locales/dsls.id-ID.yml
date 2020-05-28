@@ -1598,7 +1598,7 @@ id-ID:
           feedback: Si artis mengambar persegi empat.
         questions:
         - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
-            Anda mengklik "Run"?
+            anda mengklik "Run"?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: Si artis akan menggambar setiga sama sisi.
@@ -1612,7 +1612,7 @@ id-ID:
           feedback: Si artis mengambar persegi empat.
         questions:
         - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
-            Anda mengklik "Run"?
+            anda mengklik "Run"?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: Si artis akan menggambar setiga sama sisi.
@@ -1626,7 +1626,7 @@ id-ID:
           feedback: Si artis mengambar persegi empat.
         questions:
         - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
-            Anda mengklik "Run"?
+            anda mengklik "Run"?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1681,12 +1681,12 @@ id-ID:
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Program tidak akan gagal. Scrat akan sampai ke buah akorn.
-          feedback: Salah. Scrat salah jalan setelah belok terakhirnya.
-        - text: Scrat akan salah jalan setelah belok terakhirnya.
+          feedback: Salah. Scrat salah jalan setelah belokan terakhirnya.
+        - text: Scrat akan salah jalan setelah belokan terakhirnya.
           correct: true
           feedback: Benar!
         - text: Langkah Scrat kurang satu sehingga tidak sampai ke buah akorn.
-          feedback: Salah. Langkah kurang satu terjadi setelah Scrat salah belok.
+          feedback: Salah. Kekurangan satu langkah terjadi setelah Scrat salah belok.
         - text: Saya tidak tahu.
           feedback: 'Kesalahan pertama itu karena Scrat salah jalan setelah belok
             terakhirnya. '
@@ -1696,12 +1696,12 @@ id-ID:
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: Program tidak akan gagal. Scrat akan sampai ke buah akorn.
-          feedback: Salah. Scrat salah jalan setelah belok terakhirnya.
-        - text: Scrat akan salah jalan setelah belok terakhirnya.
+          feedback: Salah. Scrat salah jalan setelah belokan terakhirnya.
+        - text: Scrat akan salah jalan setelah belokan terakhirnya.
           correct: true
           feedback: Benar!
         - text: Langkah Scrat kurang satu sehingga tidak sampai ke buah akorn.
-          feedback: Salah. Langkah kurang satu terjadi setelah Scrat salah belok.
+          feedback: Salah. Kekurangan satu langkah terjadi setelah Scrat salah belok.
         - text: Saya tidak tahu.
           feedback: 'Kesalahan pertama itu karena Scrat salah jalan setelah belok
             terakhirnya. '
@@ -1711,12 +1711,12 @@ id-ID:
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: Program tidak akan gagal. Scrat akan sampai ke buah akorn.
-          feedback: Salah. Scrat salah jalan setelah belok terakhirnya.
-        - text: Scrat akan salah jalan setelah belok terakhirnya.
+          feedback: Salah. Scrat salah jalan setelah belokan terakhirnya.
+        - text: Scrat akan salah jalan setelah belokan terakhirnya.
           correct: true
           feedback: Benar!
         - text: Langkah Scrat kurang satu sehingga tidak sampai ke buah akorn.
-          feedback: Salah. Langkah kurang satu terjadi setelah Scrat salah belok.
+          feedback: Salah. Kekurangan satu langkah terjadi setelah Scrat salah belok.
         - text: Saya tidak tahu.
           feedback: 'Kesalahan pertama itu karena Scrat salah jalan setelah belok
             terakhirnya. '
@@ -1725,7 +1725,7 @@ id-ID:
             ini gagal?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - text: Burung akhirnya kurang satu langkah dari babi.
+        - text: Burung akhirnya akan kurang satu langkah dari babi.
           feedback: Salah. Kode ini membawa burungnya pas ke babi.
         - text: Burung pasti akan sampai ke babi.
           correct: true
@@ -1739,7 +1739,7 @@ id-ID:
             "Run"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - text: Burung akhirnya kurang satu langkah dari babi.
+        - text: Burung akhirnya akan kurang satu langkah dari babi.
           feedback: Salah. Kode ini membawa burungnya pas ke babi.
         - text: Burung pasti akan sampai ke babi.
           correct: true
@@ -1753,7 +1753,7 @@ id-ID:
             "Run"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - text: Burung akhirnya kurang satu langkah dari babi.
+        - text: Burung akhirnya akan kurang satu langkah dari babi.
           feedback: Salah. Kode ini membawa burungnya pas ke babi.
         - text: Burung pasti akan sampai ke babi.
           correct: true
@@ -1768,59 +1768,65 @@ id-ID:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 tidak akan bergerak.
-          feedback: Salah. Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
         - text: BB-8 hanya akan bergerak satu kotak
-          feedback: Salah. Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
-        - text: BB-8 akan bergerak 5 kali dan mengambil semua pecahan logam
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+        - text: BB-8 akan bergerak 5 kali dan mengambil semua logam rongsokan
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu
-          feedback: Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
+          feedback: Blok repeat akan membuat BB-8 bergerak maju sebanyak 5 kali.
         questions:
-        - text: Menurut Anda apa yang akan terjadi ketika Anda mengklik "Run"?
+        - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Run"?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 tidak akan bergerak.
-          feedback: Salah. Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
         - text: BB-8 hanya akan bergerak satu kotak
-          feedback: Salah. Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
-        - text: BB-8 akan bergerak 5 kali dan mengambil semua pecahan logam
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+        - text: BB-8 akan bergerak 5 kali dan mengambil semua logam rongsokan
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu
-          feedback: Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
+          feedback: Blok repeat akan membuat BB-8 bergerak maju sebanyak 5 kali.
         questions:
-        - text: Menurut Anda apa yang akan terjadi ketika Anda mengklik "Run"?
+        - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Run"?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 tidak akan bergerak.
-          feedback: Salah. Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
         - text: BB-8 hanya akan bergerak satu kotak
-          feedback: Salah. Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
-        - text: BB-8 akan bergerak 5 kali dan mengambil semua pecahan logam
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+        - text: BB-8 akan bergerak 5 kali dan mengambil semua logam rongsokan
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu
-          feedback: Blok ulangi akan membuat BB-8 bergerak maju 5 kali.
+          feedback: Blok repeat akan membuat BB-8 bergerak maju sebanyak 5 kali.
         questions:
-        - text: Menurut Anda apa yang akan terjadi ketika Anda mengklik "Run"?
+        - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Run"?
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 akan berjalan terlalu jauh dalam loop pertama.
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         - text: BB-8 tidak akan berjalan cukup jauh dalam loop pertama agar dapat
-            mengambil semua pecahan logam.
+            mengambil semua logam rongsokan.
           correct: true
           feedback: Benar!
-        - text: BB-8 akan mengumpulkan semua pecahan logam tanpa kesulitan.
+        - text: BB-8 akan mengumpulkan semua logam rongsokan tanpa kesulitan.
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         - text: Saya tidak tahu.
-          feedback: Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak, padahal
+          feedback: Loop pertama hanya memungkinkan BB-8 bergerak maju 2 kotak, padahal
             perlu bergerak maju sebanyak 3 kotak.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi saat Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
             "Run"?
       courseC_multi_starWars_predict2_2018:
         answers:
@@ -1828,17 +1834,17 @@ id-ID:
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         - text: BB-8 tidak akan berjalan cukup jauh dalam loop pertama agar dapat
-            mengambil semua pecahan logam.
+            mengambil semua logam rongsokan.
           correct: true
           feedback: Benar!
-        - text: BB-8 akan mengumpulkan semua pecahan logam tanpa kesulitan.
+        - text: BB-8 akan mengumpulkan semua logam rongsokan tanpa kesulitan.
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         - text: Saya tidak tahu.
-          feedback: Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak, padahal
+          feedback: Loop pertama hanya memungkinkan BB-8 bergerak maju 2 kotak, padahal
             perlu bergerak maju sebanyak 3 kotak.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi saat Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
             "Run"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
@@ -1846,17 +1852,17 @@ id-ID:
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         - text: BB-8 tidak akan berjalan cukup jauh dalam loop pertama agar dapat
-            mengambil semua pecahan logam.
+            mengambil semua logam rongsokan.
           correct: true
           feedback: Benar!
-        - text: BB-8 akan mengumpulkan semua pecahan logam tanpa kesulitan.
+        - text: BB-8 akan mengumpulkan semua logam rongsokan tanpa kesulitan.
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         - text: Saya tidak tahu.
-          feedback: Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak, padahal
+          feedback: Loop pertama hanya memungkinkan BB-8 bergerak maju 2 kotak, padahal
             perlu bergerak maju sebanyak 3 kotak.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi saat Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
             "Run"?
       courseD_multi_artist_binary8_predict1:
         answers:
@@ -1870,7 +1876,7 @@ id-ID:
           correct: true
           feedback: Benar!
         questions:
-        - text: Cermati kode di bawah ini. Gambar manakah yang akan muncul setelah
+        - text: Cermati code di bawah ini. Gambar manakah yang akan muncul setelah
             Anda mengklik "Run"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
@@ -1884,7 +1890,7 @@ id-ID:
           correct: true
           feedback: Benar!
         questions:
-        - text: Cermati kode di bawah ini. Gambar manakah yang akan muncul setelah
+        - text: Cermati code di bawah ini. Gambar manakah yang akan muncul setelah
             Anda mengklik "Run"?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
@@ -1898,7 +1904,7 @@ id-ID:
           correct: true
           feedback: Benar!
         questions:
-        - text: Cermati kode di bawah ini. Gambar manakah yang akan muncul setelah
+        - text: Cermati code di bawah ini. Gambar manakah yang akan muncul setelah
             Anda mengklik "Run"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
@@ -1975,100 +1981,100 @@ id-ID:
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya hanya akan mencoba
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
             mengisap nektar jika ada bunga di bawah awan.
         - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
             ada bunga di bawahnya.
           correct: true
           feedback: Benar!
         - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya akan mencoba mengisap
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memastikan lebahnya hanya akan mencoba mengisap
+          feedback: Blok `if at flower` memastikan lebahnya hanya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         questions:
-        - text: Awan menghalangi pandangan. Mungkin ada bunga di bawah awan ini. Jika
-            ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak ada bunga,
-            lebah tidak perlu melakukan apa-apa. Cermati kode di bawah ini. Menurut
-            Anda apa yang akan terjadi setelah Anda mengklik "Run"?
+        - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
+            Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
+            ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
+            ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Run"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya hanya akan mencoba
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
             mengisap nektar jika ada bunga di bawah awan.
         - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
             ada bunga di bawahnya.
           correct: true
           feedback: Benar!
         - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya akan mencoba mengisap
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memastikan lebahnya hanya akan mencoba mengisap
+          feedback: Blok `if at flower` memastikan lebahnya hanya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         questions:
-        - text: Awan menghalangi pandangan. Mungkin ada bunga di bawah awan ini. Jika
-            ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak ada bunga,
-            lebah tidak perlu melakukan apa-apa. Cermati kode di bawah ini. Menurut
-            Anda apa yang akan terjadi setelah Anda mengklik "Run"?
+        - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
+            Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
+            ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
+            ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Run"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya hanya akan mencoba
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
             mengisap nektar jika ada bunga di bawah awan.
         - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
             ada bunga di bawahnya.
           correct: true
           feedback: Benar!
         - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya akan mencoba mengisap
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memastikan lebahnya hanya akan mencoba mengisap
+          feedback: Blok `if at flower` memastikan lebahnya hanya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         questions:
-        - text: Awan menghalangi pandangan. Mungkin ada bunga di bawah awan ini. Jika
-            ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak ada bunga,
-            lebah tidak perlu melakukan apa-apa. Cermati kode di bawah ini. Menurut
-            Anda apa yang akan terjadi setelah Anda mengklik "Run"?
+        - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
+            Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
+            ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
+            ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Run"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya hanya akan mencoba
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
             mengisap nektar jika ada bunga di bawah awan.
         - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
             ada bunga di bawahnya.
           correct: true
           feedback: Benar!
         - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya akan mencoba mengisap
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memastikan lebahnya hanya akan mencoba mengisap
+          feedback: Blok `if at flower` memastikan lebahnya hanya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         questions:
-        - text: Awan menghalangi pandangan. Mungkin ada bunga di bawah awan ini. Jika
-            ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak ada bunga,
-            lebah tidak perlu melakukan apa-apa. Cermati kode di bawah ini. Menurut
-            Anda apa yang akan terjadi setelah Anda mengklik "Run"?
+        - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
+            Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
+            ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
+            ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Run"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: Lebah akan mengisap nektar di setiap bunga dan madu di setiap sarang.
           correct: true
           feedback: Benar!
         - text: Lebah akan mencoba mengisap nektar dari bunga dan sarang madu.
-          feedback: Salah. Blok `jika di bunga` memudahkan lebah mengisap nektar di
+          feedback: Salah. Blok `if at flower` memudahkan lebah mengisap nektar di
             setiap bunga dan madu di setiap sarang.
-        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang madu.
-          feedback: Salah. Salah. Blok `jika di bunga` memudahkan lebah mengisap nektar
+        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
+          feedback: Salah. Salah. Blok `if at flower` memudahkan lebah mengisap nektar
             di setiap bunga dan madu di setiap sarang..
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memudahkan lebah mengisap nektar di setiap
+          feedback: Blok `if at flower` memudahkan lebah mengisap nektar di setiap
             bunga dan madu di setiap sarang.
         questions:
         - text: 'Cermati kode di bawah ini.  Menurut Anda apa yang akan terjadi setelah
-            Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang madu atau *satu*
+            Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah atau *satu*
             bunga di balik tiap-tiap awan.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
@@ -2076,17 +2082,17 @@ id-ID:
           correct: true
           feedback: Benar!
         - text: Lebah akan mencoba mengisap nektar dari bunga dan sarang madu.
-          feedback: Salah. Blok `jika di bunga` memudahkan lebah mengisap nektar di
+          feedback: Salah. Blok `if at flower` memudahkan lebah mengisap nektar di
             setiap bunga dan madu di setiap sarang.
-        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang madu.
-          feedback: Salah. Salah. Blok `jika di bunga` memudahkan lebah mengisap nektar
+        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
+          feedback: Salah. Salah. Blok `if at flower` memudahkan lebah mengisap nektar
             di setiap bunga dan madu di setiap sarang..
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memudahkan lebah mengisap nektar di setiap
+          feedback: Blok `if at flower` memudahkan lebah mengisap nektar di setiap
             bunga dan madu di setiap sarang.
         questions:
         - text: 'Cermati kode di bawah ini.  Menurut Anda apa yang akan terjadi setelah
-            Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang madu atau *satu*
+            Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah atau *satu*
             bunga di balik tiap-tiap awan.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
@@ -2101,7 +2107,7 @@ id-ID:
             di setiap bunga dan membuat madu di setiap sarang lebah.
 
 '
-        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang madu.
+        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
           feedback: 'Salah. Salah. Blok `jika di bunga` membiarkan lebah mendapat
             madu bunga di setiap bunga dan membuat madu di setiap sarang lebah..
 
@@ -2121,69 +2127,69 @@ id-ID:
         answers:
         - text: Lebah akan bergerak maju dan hanya mengisap nektar satu kali.
           feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
-            dan mengisap nektar, sehingga memungkinkannya memecahkan teka-teki.
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         - text: Lebah hanya akan mendapat 2 unit nektar.
           feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
-            dan mengisap nektar, sehingga memungkinkannya memecahkan teka-teki.
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         - text: Lebah akan mendapatkan semua nektar.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
           feedback: Lebah mengulang tindakan berulang-ulang maju ke depan dan mengisap
-            nektar, sehingga memudahkannya memecahkan teka-teki.
+            nektar, sehingga memudahkannya memecahkan puzzle.
         questions:
-        - text: Cermati loop bercabang di bawah ini. Apa yang akan terjadi saat Anda
+        - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
             mengklik "Run"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Lebah akan bergerak maju dan hanya mengisap nektar satu kali.
           feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
-            dan mengisap nektar, sehingga memungkinkannya memecahkan teka-teki.
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         - text: Lebah hanya akan mendapat 2 unit nektar.
           feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
-            dan mengisap nektar, sehingga memungkinkannya memecahkan teka-teki.
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         - text: Lebah akan mendapatkan semua nektar.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
           feedback: Lebah mengulang tindakan berulang-ulang maju ke depan dan mengisap
-            nektar, sehingga memudahkannya memecahkan teka-teki.
+            nektar, sehingga memudahkannya memecahkan puzzle.
         questions:
-        - text: Cermati loop bercabang di bawah ini. Apa yang akan terjadi saat Anda
+        - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
             mengklik "Run"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: Lebah akan bergerak maju dan hanya mengisap nektar satu kali.
           feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
-            dan mengisap nektar, sehingga memungkinkannya memecahkan teka-teki.
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         - text: Lebah hanya akan mendapat 2 unit nektar.
           feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
-            dan mengisap nektar, sehingga memungkinkannya memecahkan teka-teki.
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         - text: Lebah akan mendapatkan semua nektar.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
           feedback: Lebah mengulang tindakan berulang-ulang maju ke depan dan mengisap
-            nektar, sehingga memudahkannya memecahkan teka-teki.
+            nektar, sehingga memudahkannya memecahkan puzzle.
         questions:
-        - text: Cermati loop bercabang di bawah ini. Apa yang akan terjadi saat Anda
+        - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
             mengklik "Run"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
-          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu
-            2 nektar dalam loop turun.  Semua ini berlangsung di dalam loop lain yang
-            terjadi dua kali. 4 kali 2 sama dengan 8!
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
         - text: '8'
           correct: true
           feedback: Benar!
         - text: '12'
-          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu
-            2 nektar dalam loop turun.  Semua ini berlangsung di dalam loop lain yang
-            terjadi dua kali. 4 kali 2 sama dengan 8!
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
         - text: Saya tidak tahu.
-          feedback: Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu 2 nektar
-            dalam loop turun.  Semua ini berlangsung di dalam loop lain yang terjadi
+          feedback: Lebah mengumpulkan 2 nektar dalam loop bergerak maju, lalu 2 nektar
+            di dalam loop turun.  Semua ini berlangsung di dalam loop lain yang terjadi
             dua kali. 4 kali 2 sama dengan 8!
         questions:
         - text: Cermati kode di bawah ini. Berapa banyak madu yang akan dihasilkan
@@ -2191,19 +2197,19 @@ id-ID:
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
-          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu
-            2 nektar dalam loop turun.  Semua ini berlangsung di dalam loop lain yang
-            terjadi dua kali. 4 kali 2 sama dengan 8!
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
         - text: '8'
           correct: true
           feedback: Benar!
         - text: '12'
-          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu
-            2 nektar dalam loop turun.  Semua ini berlangsung di dalam loop lain yang
-            terjadi dua kali. 4 kali 2 sama dengan 8!
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
         - text: Saya tidak tahu.
-          feedback: Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu 2 nektar
-            dalam loop turun.  Semua ini berlangsung di dalam loop lain yang terjadi
+          feedback: Lebah mengumpulkan 2 nektar dalam loop bergerak maju, lalu 2 nektar
+            di dalam loop turun.  Semua ini berlangsung di dalam loop lain yang terjadi
             dua kali. 4 kali 2 sama dengan 8!
         questions:
         - text: Cermati kode di bawah ini. Berapa banyak madu yang akan dihasilkan
@@ -2211,19 +2217,19 @@ id-ID:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
-          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu
-            2 nektar dalam loop turun.  Semua ini berlangsung di dalam loop lain yang
-            terjadi dua kali. 4 kali 2 sama dengan 8!
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
         - text: '8'
           correct: true
           feedback: Benar!
         - text: '12'
-          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu
-            2 nektar dalam loop turun.  Semua ini berlangsung di dalam loop lain yang
-            terjadi dua kali. 4 kali 2 sama dengan 8!
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
         - text: Saya tidak tahu.
-          feedback: Lebah mengumpulkan 2 nektar dalam loop maju ke depan, lalu 2 nektar
-            dalam loop turun.  Semua ini berlangsung di dalam loop lain yang terjadi
+          feedback: Lebah mengumpulkan 2 nektar dalam loop bergerak maju, lalu 2 nektar
+            di dalam loop turun.  Semua ini berlangsung di dalam loop lain yang terjadi
             dua kali. 4 kali 2 sama dengan 8!
         questions:
         - text: Cermati kode di bawah ini. Berapa banyak madu yang akan dihasilkan
@@ -2245,23 +2251,23 @@ id-ID:
           feedback: Laurel salah belok *dan* loop tidak berjalan cukup lama agar Laurel
             dapat mengambil semua harta karun.
         questions:
-        - text: 'Cermati kode di bawah ini.  Mengapa Laurel tidak akan mengumpulkan
+        - text: 'Cermati code di bawah ini.  Mengapa Laurel tidak akan mengumpulkan
             semua harta karun saat Anda mengklik "Run"? Peringatan: Pertanyaan ini
             mengecoh, pastikan Anda membaca semua opsi sebelum menjawab!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - text: Pemanen akan mengumpulkan semua hasil panen.
-          feedback: Salah. Tidak ada kode di sini untuk mengumpulkan labu.
+          feedback: Salah. Tidak ada code di sini untuk mengumpulkan labu.
         - text: Pemanen tidak akan mengumpulkan hasil panen sedikit pun dengan jalur
             yang sedang dilaluinya.
-          feedback: Salah. Kode akan memerintahkan pemanen membuat pola undak-undakan
+          feedback: Salah. Code akan memerintahkan pemanen membuat pola undak-undakan
             berkali-kali dan mengumpulkan jagung atau selada sebanyak-banyaknya saat
             lewat. Dia tidak akan mengambil labu.
         - text: Pemanen akan mengumpulkan semua hasil panen, kecuali labu.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
-          feedback: Kode akan memerintahkan pemanen membuat pola undak-undakan berkali-kali
+          feedback: Code akan memerintahkan pemanen membuat pola undak-undakan berkali-kali
             dan mengumpulkan jagung atau selada sebanyak-banyaknya saat lewat. Dia
             tidak akan mengambil labu.
         markdown: |
@@ -2315,70 +2321,70 @@ id-ID:
       courseD_multi_farmer_ramp13:
         answers:
         - text: Petani akan berjalan sampai ke ujung jalur dan memanen labu.
-          feedback: Salah. Blok `ambil labu` ada di dalam loop, sehingga petani akan
+          feedback: Salah. Blok `pick pumpkin` ada di dalam loop sehingga petani akan
             mencoba mengambil labu di setiap langkah, bukan melulu di akhir jalur.
         - text: Petani akan mencoba mengambil labu di setiap kotak, tetapi tak akan
             pernah berhasil mengambil labu.
           correct: true
           feedback: Benar!
         - text: Petani akan berjalan empat kotak, lalu mencoba mengambil satu labu.
-          feedback: Salah. Blok `ambil labu` ada di dalam loop, sehingga petani akan
+          feedback: Salah. Blok `pick pumpkin` ada di dalam loop sehingga petani akan
             mencoba mengambil labu di setiap langkah, bukan melulu di akhir jalur.
         - text: Saya tidak tahu.
-          feedback: Blok `ambil labu` ada di dalam loop, sehingga petani akan mencoba
+          feedback: Blok `pick pumpkin` ada di dalam loop sehingga petani akan mencoba
             mengambil labu di setiap langkah, bukan melulu di akhir jalur.
-        markdown: Berikut ini jenis teka-teki baru yang menggunakan blok yang mirip
-          dengan teka-teki yang sudah Anda lihat. Bisakah Anda memprediksi apa yang
-          akan terjadi saat Anda menjalankan kode di bawah ini?
+        markdown: Berikut ini jenis puzzle baru yang menggunakan blok yang mirip dengan
+          puzzle yang sudah Anda lihat. Bisakah Anda memprediksi apa yang akan terjadi
+          saat Anda menjalankan code di bawah ini?
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - text: Tidak ada. Kode ini hanya akan membiarkan tanah yang rata.
-          feedback: Salah. Tidak ada kode untuk menghilangkan kotoran dari tumpukan.
-        - text: Kode ini akan membiarkan tumpukan tak terjamah sama sekali.
+        - text: Tidak ada. code ini hanya akan membiarkan tanah yang rata.
+          feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan tumpukan tak terjamah sama sekali.
           correct: true
           feedback: Benar!
-        - text: Kode ini akan membiarkan lubang tak terjamah sama sekali.
-          feedback: Salah. Loop `selagi` akan menangani loop segala ukuran, tetapi
-            tidak ada kode untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan lubang tak terjamah sama sekali.
+          feedback: Salah. Loop `while` akan menangani loop segala ukuran, tetapi
+            tidak ada code untuk menghilangkan kotoran dari tumpukan.
         - text: Saya tidak tahu.
-          feedback: Loop `selagi` akan menangani loop segala ukuran, tetapi tidak
-            ada kode untuk menghilangkan kotoran dari tumpukan.
+          feedback: Loop `while` akan menangani segala ukuran loop, tetapi tidak ada
+            code untuk menghilangkan kotoran dari tumpukan.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan tersisa pada akhir teka-teki
+        - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
             ini?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - text: Tidak ada. Kode ini hanya akan membiarkan tanah yang rata.
-          feedback: Salah. Tidak ada kode untuk menghilangkan kotoran dari tumpukan.
-        - text: Kode ini akan membiarkan tumpukan tak terjamah sama sekali.
+        - text: Tidak ada. code ini hanya akan membiarkan tanah yang rata.
+          feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan tumpukan tak terjamah sama sekali.
           correct: true
           feedback: Benar!
-        - text: Kode ini akan membiarkan lubang tak terjamah sama sekali.
-          feedback: Salah. Loop `selagi` akan menangani loop segala ukuran, tetapi
-            tidak ada kode untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan lubang tak terjamah sama sekali.
+          feedback: Salah. Loop `while` akan menangani loop segala ukuran, tetapi
+            tidak ada code untuk menghilangkan kotoran dari tumpukan.
         - text: Saya tidak tahu.
-          feedback: Loop `selagi` akan menangani loop segala ukuran, tetapi tidak
-            ada kode untuk menghilangkan kotoran dari tumpukan.
+          feedback: Loop `while` akan menangani segala ukuran loop, tetapi tidak ada
+            code untuk menghilangkan kotoran dari tumpukan.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan tersisa pada akhir teka-teki
+        - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
             ini?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - text: Tidak ada. Kode ini hanya akan membiarkan tanah yang rata.
-          feedback: Salah. Tidak ada kode untuk menghilangkan kotoran dari tumpukan.
-        - text: Kode ini akan membiarkan tumpukan tak terjamah sama sekali.
+        - text: Tidak ada. code ini hanya akan membiarkan tanah yang rata.
+          feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan tumpukan tak terjamah sama sekali.
           correct: true
           feedback: Benar!
-        - text: Kode ini akan membiarkan lubang tak terjamah sama sekali.
-          feedback: Salah. Loop `selagi` akan menangani loop segala ukuran, tetapi
-            tidak ada kode untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan lubang tak terjamah sama sekali.
+          feedback: Salah. Loop `while` akan menangani loop segala ukuran, tetapi
+            tidak ada code untuk menghilangkan kotoran dari tumpukan.
         - text: Saya tidak tahu.
-          feedback: Loop `selagi` akan menangani loop segala ukuran, tetapi tidak
-            ada kode untuk menghilangkan kotoran dari tumpukan.
+          feedback: Loop `while` akan menangani segala ukuran loop, tetapi tidak ada
+            code untuk menghilangkan kotoran dari tumpukan.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan tersisa pada akhir teka-teki
+        - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
             ini?
       courseD_multi_farmer_while4_predict1:
         answers:
@@ -2396,7 +2402,7 @@ id-ID:
           feedback: Petani akan menghilangkan kotoran sepanjang ada tumpukan, lalu
             berhenti ketika tumpukan hilang
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Run"?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
@@ -2414,7 +2420,7 @@ id-ID:
           feedback: Petani akan menghilangkan kotoran sepanjang ada tumpukan, lalu
             berhenti ketika tumpukan hilang
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Run"?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
@@ -2432,7 +2438,7 @@ id-ID:
           feedback: Petani akan menghilangkan kotoran sepanjang ada tumpukan, lalu
             berhenti ketika tumpukan hilang
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Run"?
       courseD_multi_maze_until10_predict2:
         answers:
@@ -2440,16 +2446,16 @@ id-ID:
           correct: true
           feedback: Benar!
         - text: Zombi akan berhasil sampai ke bunga matahari.
-          feedback: Salah. Dalam kode ini, zombi berusaha belok kanan *sebelum* melihat-lihat
-            apakah bisa berjalan lurus.  Karena itulah, teka-teki gagal.
+          feedback: Salah. Dalam code ini, zombi berusaha belok kanan *sebelum* melihat-lihat
+            apakah bisa berjalan lurus.  Karena itulah, puzzle gagal.
         - text: Zombi akan belok kanan di jalur pertama dan berputar-putar selamanya.
           feedback: Salah. Zombi hanya berusaha belok kanan atau lurus. Dia tidak
             pernah berusaha belok kiri sehingga dia terjebak nyaris seketika.
         - text: Saya tidak tahu.
-          feedback: Dalam kode ini, zombi berusaha belok kanan *sebelum* melihat-lihat
-            apakah bisa berjalan lurus.  Karena itulah, teka-teki gagal.
+          feedback: Dalam code ini, zombi berusaha belok kanan *sebelum* melihat-lihat
+            apakah bisa berjalan lurus.  Karena itulah, puzzle gagal.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Run"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
@@ -2466,7 +2472,7 @@ id-ID:
           feedback: Dalam kode ini, zombie akan melewati jalan yang benar dan akhirnya
             bolak-balik selamanya.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Run"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
@@ -2483,7 +2489,7 @@ id-ID:
           feedback: Dalam kode ini, zombie akan melewati jalan yang benar dan akhirnya
             bolak-balik selamanya.
         questions:
-        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Run"?
       courseD_multi_maze_until2_predict1:
         answers:
@@ -2538,11 +2544,11 @@ id-ID:
             Anda mengklik "Run"?
       courseD_multi_scrat_predict1:
         answers:
-        - feedback: Salah. Peletakan blok 'gerak maju' ke dalam blok 'ulangi' akan
+        - feedback: Salah. Peletakan blok 'move forward' ke dalam blok 'repeat' akan
             menyebabkan Scrat bergerak maju tiga kali.
         - correct: true
           feedback: Benar!
-        - feedback: Salah. Peletakan blok 'gerak maju' ke dalam blok 'ulangi' akan
+        - feedback: Salah. Peletakan blok 'move forward' ke dalam blok 'repeat' akan
             menyebabkan Scrat bergerak maju tiga kali.
         - text: Saya tidak tahu.
         questions:
@@ -3050,7 +3056,7 @@ id-ID:
           feedback: Salah. Variabel `panjang` perlu berada di dalam loop `ulangi`
             agar bisa terjadi.
         - text: Si artis akan menggambar tiga sisi terbuka dengan belokan 50 derajat.
-          feedback: Salah.  Variabel `panjang` perlu digunakan di dalam blok `belok`
+          feedback: Salah.  Variabel `lenght` perlu digunakan di dalam blok `turn`
             agar bisa terjadi.
         - text: Saya tidak tahu.
           feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
@@ -3067,7 +3073,7 @@ id-ID:
           feedback: Salah. Variabel `panjang` perlu berada di dalam loop `ulangi`
             agar bisa terjadi.
         - text: Si artis akan menggambar tiga sisi terbuka dengan belokan 50 derajat.
-          feedback: Salah.  Variabel `panjang` perlu digunakan di dalam blok `belok`
+          feedback: Salah.  Variabel `lenght` perlu digunakan di dalam blok `turn`
             agar bisa terjadi.
         - text: Saya tidak tahu.
           feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
@@ -3084,7 +3090,7 @@ id-ID:
           feedback: Salah. Variabel `panjang` perlu berada di dalam loop `ulangi`
             agar bisa terjadi.
         - text: Si artis akan menggambar tiga sisi terbuka dengan belokan 50 derajat.
-          feedback: Salah.  Variabel `panjang` perlu digunakan di dalam blok `belok`
+          feedback: Salah.  Variabel `lenght` perlu digunakan di dalam blok `turn`
             agar bisa terjadi.
         - text: Saya tidak tahu.
           feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
@@ -3095,17 +3101,17 @@ id-ID:
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya hanya akan mencoba
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
             mengisap nektar jika ada bunga di bawah awan.
         - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
             ada bunga di bawahnya.
           correct: true
           feedback: Benar!
         - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
-          feedback: Salah. Blok `jika di bunga` memastikan lebahnya akan mencoba mengisap
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memastikan lebahnya hanya akan mencoba mengisap
+          feedback: Blok `if at flower` memastikan lebahnya hanya akan mencoba mengisap
             nektar jika ada bunga di bawah awan.
         markdown: "Awan menutupi pemandangan. Bisa jadi ada bunga di bawah awan ini.
           Jika ada bunga, lebah harus mengumpulkan nektar **satu kali**. \n"
@@ -3124,11 +3130,11 @@ id-ID:
             di setiap bunga dan membuat madu jika tidak ada bunga (sehingga ada sarang.).
 
 '
-        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang madu.
-          feedback: Salah. Salah. Blok `jika di bunga` memudahkan lebah mengisap nektar
+        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
+          feedback: Salah. Salah. Blok `if at flower` memudahkan lebah mengisap nektar
             di setiap bunga dan madu di setiap sarang.
         - text: Saya tidak tahu.
-          feedback: Blok `jika di bunga` memudahkan lebah mengisap nektar di setiap
+          feedback: Blok `if at flower` memudahkan lebah mengisap nektar di setiap
             bunga, sebaliknya akan membuat madu.
         markdown: "Kadang-kadang awan menutupi bunga, kadang-kadang menutupi sarang
           lebah! Apa pun itu, hanya akan ada **satu** bunga atau **satu** sarang lebah
@@ -3320,7 +3326,7 @@ id-ID:
         - text: Apa yang akan terjadi ketika Anda menekan tombol "Run"?
       grade2_multi_collector_A_predict1:
         answers:
-        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan kode ini.
+        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
           feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
             tidak ada sehingga muncul kesalahan.
         - text: Laurel akan mencoba mengumpulkan harta karun di tempat yang tidak
@@ -3334,11 +3340,11 @@ id-ID:
           feedback: Laurel mencoba mengumpulkan harta karun di tempat yang tidak ada
             sehingga muncul kesalahan.
         questions:
-        - text: Cermati kode di bawah ini. Jika kode dijalankan sampai akhir (dengan
+        - text: Cermati code di bawah ini. Jika code dijalankan sampai akhir (dengan
             mengabaikan kesalahan) berapa buah harta karun yang akan dikumpulkan Laurel?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan kode ini.
+        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
           feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
             tidak ada sehingga muncul kesalahan.
         - text: Laurel akan mencoba mengumpulkan harta karun di tempat yang tidak
@@ -3356,7 +3362,7 @@ id-ID:
             programnya dijalankan?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan kode ini.
+        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
           feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
             tidak ada sehingga muncul kesalahan.
         - text: Laurel akan mencoba mengumpulkan harta karun di tempat yang tidak

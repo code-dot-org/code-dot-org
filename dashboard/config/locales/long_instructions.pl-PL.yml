@@ -69,6 +69,20 @@ pl-PL:
       2-3 Artist Debugging Assessment 1: "**Sprawdzian:** \nDlaczego boki tego kwadratu
         pod koniec są o 75 pikseli za krótkie?  \n\nGdzie jest błąd w kodzie?"
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
+      2-3 Artist Functions 1: "\"Ja być zombie artysta. Ja kochać rysować!\" \n\nPomóż
+        zombie narysować kwadratowe okulary.  \n\nPołączenie pomiędzy szkłami jest
+        o 25 pikseli krótsze od szerokości kwadratów, która jest równa 100 pikseli."
+      2-3 Artist Functions 11: "Zmieniliśmy nazwę funkcji \"narysuj kwadrat\" na \"narysuj
+        sześciokąt\", ale ona nadal robi nam kwadraty!  \n\nCzy potrafisz zmodyfikować
+        funkcję \"narysuj sześciokąt\" tak, aby rysowała sześciokąt o bokach długości
+        50 pikseli? \n\nNarysuj obrazek, używając nowej funkcji!"
+      2-3 Artist Functions 2: "Funkcje pozwalają ci stwarzać nowe bloki! \n\nPrzerzuciliśmy
+        bloki potrzebne do narysowania kwadratu do funkcji nazwanej \"narysuj kwadrat\".
+        Tym razem użyj funkcji \"narysuj kwadrat\", aby stworzyć okulary. "
+      2-3 Artist Functions 3: "Zmień funkcję do narysowania kwadratu z bokami o długości
+        115, aby narysować większe okulary. \n\nKwadraty są teraz oddalone od siebie
+        o 45 pikseli."
+      2-3 Artist Functions 4: Teraz umieść funkcję w pętli, aby narysować te 3 kwadraty.
       2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
         kwadrat o bokach, które mają 100 pikseli?<br/>
       2-3 Artist Loops New 10: Teraz połączmy trochę V razem w pętlę.
@@ -186,6 +200,19 @@ pl-PL:
         Napraw błąd (błędy), aby zebrać cały nektar i wyprodukować cały miód.
       2-3 Bee Functions 1: "Funkcje są blokami kodu, które wykonują określone zadanie.
         \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
+      2-3 Bee Functions 10: "Liczba nektarów w fioletowych kwiatkach zmienia się między
+        1 a 0 za każdym razem, gdy uruchomisz łamigłówkę.   \n\nStwórz funkcję, która
+        zbiera nektar tylko z fioletowych kwiatków, które go mają."
+      2-3 Bee Functions 2: "Funkcje to bloki kodu, które wykonują konkretne zadania.
+        \ \n\nUżyj funkcji \"weź 5\", aby zebrać 5 nektarów naraz. "
+      2-3 Bee Functions 4: "Funkcja \"rusz się i weź nektar\" obraca pszczółkę, zbiera
+        nektar i wtedy przenosi pszczółkę do początkowej pozycji.  \n\nUżyj tej funkcji,
+        aby zebrać cały nektar."
+      2-3 Bee Functions Assessment 1: "**Sprawdzian:** Użyj podanej funkcji do zebrania
+        nektaru z każdego kwiatka."
+      2-3 Bee Functions Assessment 2: "**Sprawdzian:**Stwórz funkcję do obrotu, poruszenia
+        się naprzód i wyprodukowania 3 plastrów miodu. Potem powróć pszczółką tam,
+        gdzie zaczęła i obróć się do tyłu."
       2-3 Bee Loops 1: |-
         Te kwiaty wyglądają przepysznie!
 
@@ -226,6 +253,8 @@ pl-PL:
         używając tylko 5 bloków! "
       4-5 Artist 1: 'Pomóż mi ukończyć rysowanie mojego pudełka. (Każda linia jest
         długa na 300 pikseli) '
+      4-5 Artist 11: "Dokończ zielone linie.  \n\nLinie mają długość 300 pikseli i
+        leżą 15 pikseli od siebie."
       4-5 Artist 2: Zapętlij ten kod, używając bloku "powtórz", aby ukończyć kwadrat.
       4-5 Artist 3: "To prostokątne kwietne łóżko ma obwód równy 600.\\\nDłuższy bok
         ma długość 200. \n\nNarysuj ten prostokąt, używając możliwie najmniejszej
@@ -237,6 +266,18 @@ pl-PL:
         kolorów."
       4-5 Artist 5: Czym możemy zastąpić "???", aby zombie ukończył ten rysunek, używając
         podanej pętli?
+      4-5 Artist 6: Ten trójkąt równoboczny ma kąty równe 60, 60 oraz 60 stopni. Każdy
+        bok ma 200 pikseli. Ukończ rysunek.
+      4-5 Artist 7: "Ten trójkąt prostokątny ma kąty równe 30, 60 oraz 90 stopni.
+        \ Długość pochylonego boku (długość przeciwprostokątnej) wynosi 200 pikseli.
+        \n\nUkończ rysunek."
+      4-5 Artist 8: "Linia po środku boiska do piłki nożnej jest _prostopadła_ do
+        linii bocznych.\\\nTen prostokąt ma obwód równy 800 pikseli w sumie i ma długość
+        240 pikseli. Jaki jest wysoki?   \n\nNarysuj granice boiska i linię po środku."
+      4-5 Artist 9: "Narysuj prawą połowę tego obrazka, aby projekt był symetryczny.
+        \nTrójkąty są równoboczne i mają boki o długości 50 pikseli."
+      4-5 Artist Assessment 1: "**Sprawdzian:** Użyj pętli, aby narysować trójkąt
+        równoboczny. Każdy bok ma 300 pikseli."
       4-5 Artist Free Draw 1: Wolny wybór!  Narysuj cokolwiek, co inspiruje Cię do
         kreatywności.
       4-5 Artist Patterns 7: Zmodyfikujmy kod z ostatniej łamigłówki, aby utworzyć
@@ -267,6 +308,11 @@ pl-PL:
         \\\r \\\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź
         do otworu i wypełnij go całkowicie."
       Alien Defender: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\"><img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\">\n\n**Cel:** Zamaluj ekran na zielono. \n\n**Jak:**
+        Przeciągnij blok \"setProperty()\" na obszar roboczy. Użyj rozwijanych list
+        i ustaw \"\"background-color\"\" na kolor zielony. Potem wciśnij \"Run\".\n\n**Utknąłeś?
+        Kliknij tutaj:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       AppLab Intro 7 - Change Text 2: |-
         <div style="float:right">
         <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
@@ -277,6 +323,55 @@ pl-PL:
         **Jak:** Potrzebujesz dwie linijki kodu. Dla  "label1"  ustaw `"font-size"` na `80` i `"text-color"` na `"blue"`.
 
         **Utknąłeś Kliknij tutaj:**![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\"><img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n\n**Cel:** Pomaluj przyciski na \"red\"
+        i \"blue\". Potem zmień tekst w dużej pomarańczowej etykiecie.\n\n**Jak:**
+        \n\n-   Pamiętaj, że możesz najeżdżać na elementy, aby zobaczyć ich \"\"id\"\".\n-
+        \  Ustaw \"\"background-color\"\" przycisków na \"\"red\"\" oraz \"\"blue\"\".\n-
+        \  Ustaw własność \"\"text\"\" etykiety na cokolwiek zechcesz, jak \"\"Witaj
+        w mojej aplikacji!\"\"\n\n**Utknąłeś? Kliknij tutaj:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Cel:** Ekran będzie na początku niebieski. Dodaj kod, aby zrobił się zielony, gdy klikniesz przycisk "Green-ify".
+
+        **Jak:** Dodaj kod w środku "onEvent()", który zmienia ""background-color"" ekranu na "green".
+
+        **Utknąłeś? Kliknij tutaj:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Cel:** Pomóż dokończyć tę aplikację latarki. Przycisk "On" zmienia już kolor ekranu na biały. Uruchom aplikację i wypróbuj ją. Potem napisz kod, aby przycisk "Off" zmieniał kolor ekranu z powrotem na czarny.
+
+        **Jak:** Dodaj kod w środku pustego bloku "onEvent()", który ustawia ""background-color"" ekranu na ""black"", a ""text-color"" etykiety na ""white"".
+
+        **Utknąłeś? Kliknij tutaj:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Cel:** Ta płytaz dźwiękami
+        jest prawie gotowa! Uruchom ją, aby zobaczyć jak działa. Potem dodaj obrazek,
+        tekst i dźwięk do ostatniego przycisku.\n\n**Jak:** \n\n-   Dodaj blok \"onEvent()\"
+        do programu i ustaw \"id\" na \"button4\". Przeciągnij blok \"playSound()\"
+        do bloku \"onEvent()\" i wybierz dźwięk z biblioteki. \n-   Dodaj blok \"setProperty()\"
+        (poza twoim blokiem \"onEvent()\"), aby zmienić własność \"\"image\"\" przycisku.
+        Wybierz obraz, używając trzeciej rozwijanej listy.\n-   Dodaj jeszcze jeden
+        blok \"setProperty()\", aby zmienić \"\"text\"\" przycisku.\n\n**Utknąłeś?
+        Kliknij tutaj:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Cel:** Dodaj drugi przycisk do ekranu, który mówi "Right!" z ""id"" ""rightButton"".
+
+        **Jak:** W Trybie projektowania przeciągnij nowy przycisk. Dostosuj jego pozycję i kształt. Potem ustaw jego ""id"", ""text"", ""background-color"" oraz ""font size"".
+
+        **Utknąłeś? Kliknij tutaj:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Cel:** Stwórz nowy ekran nazwany ""rightScreen"". Dodaj tekstową etykietę, która mówi "Poszedłeś w prawo!".
+
+        **Jak:** W Trybie projektowania przeciągnij nowy element ekranu. Zmień jego ""id"" na ""rightScreen"". Potem przeciągnij etykietę na ekran i zmień tekst na "Poszedłeś w prawo!".
+
+        **Utknąłeś? Kliknij tutaj:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       CSD Problem Solving Process Video: |-
         ## Pytania do przemyślenia
 

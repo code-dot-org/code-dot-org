@@ -1365,6 +1365,8 @@
   header_teacher_community: "Спільнота вчителів"
   header_help_support: 'Допомога та підтримка '
   header_report_bug: "Сповістити про проблему"
+  header_legal_privacy: "Політика конфіденційності"
+  header_legal_tos: "Умови надання послуг"
   header_tutorials: "Навчальні матеріали"
   header_documentation: "Документація"
   user_header_label: "Привіт %{username}"

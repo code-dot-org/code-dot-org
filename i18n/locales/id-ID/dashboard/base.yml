@@ -374,6 +374,7 @@ id:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Play Lab/Lab Permainan'
       playlab_k1: 'Play Lab (pra-pembaca)'
+      spritelab: 'Sprite Lab'
       starwars: 'Perang Bintang'
       starwarsblocks: 'Star wars(blok)'
       starwarsblocks_hour: 'Star wars(blok)'
@@ -495,6 +496,7 @@ id:
     no_primary_course: "Coba kursus di Code Studio"
     choose_next_course: "Coba kursus Code Studio dengan memilih salah satu di bawah ini"
     print_certificate: "Cetak Sertifikat"
+  certificate_sponsor_message: "%{sponsor_name} banyak memberikan sumbangan untuk mensponsori pembelajaran Anda."
   move_students:
     new_section_dne: "Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan kode bagian berbeda."
     section_code_cant_be_current_section: "Bagian saat ini tidak boleh sama dengan bagian yang baru."
@@ -850,6 +852,7 @@ id:
     instructor_feedback: 'Umpan balik instruktur'
     peer_feedback: 'Peer Feedback'
     outdated: 'Umpan balik ini telah ditambahkan sebelumnya diserahkan versi'
+    peer_review: 'Penelaahan Sejawat'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan oleh Code.org.
