@@ -51,10 +51,22 @@ class Foorm::Form < ActiveRecord::Base
     latest_version = Foorm::Form.where(name: form_name).maximum(:version)
     return nil if latest_version.nil?
 
-    form = Foorm::Form.where(name: form_name, version: latest_version).first
+    questions = get_questions_for_name_and_version(form_name, latest_version)
+
+    return questions, latest_version
+  end
+
+  def self.get_questions_for_name_and_version(form_name, form_version)
+    form = Foorm::Form.where(name: form_name, version: form_version).first
 
     # Substitute any questions from the library.
     questions = JSON.parse(form.questions)
+    questions = fill_in_library_items(questions)
+
+    return questions
+  end
+
+  def self.fill_in_library_items(questions)
     questions["pages"]&.each do |page|
       page["elements"]&.map! do |element|
         if element["type"] == "library_item"
@@ -70,7 +82,6 @@ class Foorm::Form < ActiveRecord::Base
         end
       end
     end
-
-    return questions, latest_version
+    return questions
   end
 end
