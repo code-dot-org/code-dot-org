@@ -32,8 +32,10 @@ module Crowdin
     #  details
     # @param attempts [Number, nil] how many times we should retry the download
     #  if it fails
+    # @param only_head [Boolean, nil] whether to make a HEAD request rather
+    #  than a full GET request. Defaults to false.
     # @see https://support.crowdin.com/api/export-file/
-    def export_file(file, language, etag=nil, attempts=3)
+    def export_file(file, language, etag: nil, attempts: 3, only_head: false)
       options = {
         query: {
           file: file,
@@ -46,7 +48,8 @@ module Crowdin
           "If-None-Match" => etag
         }
       end
-      self.class.get("/export-file", options)
+
+      only_head ? self.class.head("/export-file", options) : self.class.get("/export-file", options)
     rescue Net::ReadTimeout => error
       # Handle a timeout by simply retrying. We default to three attempts before
       # giving up; if this doesn't work out, other things we could consider:
@@ -56,7 +59,7 @@ module Crowdin
       #   - increasing the timeout, either globally or for this specific call
       STDERR.puts "Crowdin.export_file(#{file}) timed out: #{error}"
       raise if attempts <= 1
-      export_file(file, language, etag, attempts - 1)
+      export_file(file, language, etag: etag, attempts: attempts - 1, only_head: only_head)
     end
 
     # Retrieve all languages currently enabled in the crowdin project. Each
