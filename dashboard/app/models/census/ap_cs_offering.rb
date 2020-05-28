@@ -47,8 +47,8 @@ class Census::ApCsOffering < ApplicationRecord
               course: course,
               school_year: school_year
             )
-            succeeded += 1
           end
+          succeeded += 1
         rescue ActiveRecord::RecordNotFound
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
