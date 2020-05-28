@@ -169,7 +169,6 @@ module UsersHelper
         level = Level.cache_find(level_id)
         sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
         if level.is_a?(BubbleChoice) # we have a parent level
-          sublevels = {}
           # get progress for sublevels to save in levels hash
           level.sublevels.each do |sublevel|
             ul = user_levels_by_level.try(:[], sublevel.id)
@@ -190,7 +189,7 @@ module UsersHelper
               next
             end
 
-            sublevels[sublevel.id] = {
+            levels[sublevel.id] = {
               status: completion_status,
               result: ul.try(:best_result) || 0,
               submitted: submitted ? true : nil,
@@ -229,7 +228,6 @@ module UsersHelper
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
           locked: locked ? true : nil,
-          sublevels: sublevels,
           last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
         }.compact
 
