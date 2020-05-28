@@ -55,7 +55,7 @@ class Census::ApSchoolCode < ApplicationRecord
       end
     end
 
-    CDO.log.info "AP School Code seeding: done processing {school_year} data. "\
+    CDO.log.info "AP School Code seeding: done processing #{school_year} data. "\
       "#{succeeded} rows succeeded, #{skipped} rows skipped."
   end
 

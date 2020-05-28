@@ -31,6 +31,7 @@ class Census::ApCsOffering < ApplicationRecord
   def self.seed_from_csv(course, school_year, filename, dry_run = false)
     succeeded = 0
     skipped = 0
+
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         raw_school_code = row.to_hash['School Code']  # College Board attending institution (AI) code
@@ -57,6 +58,7 @@ class Census::ApCsOffering < ApplicationRecord
         end
       end
     end
+
     CDO.log.info "AP CS Offering seeding: done processing #{course}-#{school_year} data. "\
       "#{succeeded} rows succeeded, #{skipped} rows skipped."
   end
@@ -99,9 +101,9 @@ class Census::ApCsOffering < ApplicationRecord
   #   Census::StateCsOffering.dry_seed_s3_object('CSA', 2019, 'txt')
   #   will seed from ap_cs_offerings/CSA-2019-2020.txt object.
   #
-  # @note: A CSV file with valid format name in S3 will be automatically
+  # @note: A CSV file with a right format name in S3 will be automatically
   # picked up by the +seed_from_s3+ method as part of the build seeding process.
-  # To prevent that, use a different file extension such as .test or .xyz.
+  # To prevent that, use a different file extension such as .test or .txt.
   def self.dry_seed_s3_object(course, school_year, file_extension = 'csv')
     object_key = construct_object_key(course, school_year, file_extension)
     AWS::S3.process_file(CENSUS_BUCKET_NAME, object_key) do |filename|
