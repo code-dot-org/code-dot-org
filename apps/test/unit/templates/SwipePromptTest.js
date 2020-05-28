@@ -3,6 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedSwipePrompt as SwipePrompt} from '@cdo/apps/templates/SwipePrompt';
 import sinon from 'sinon';
+import cookies from 'js-cookie';
 
 const visibleOverlayProps = {
   buttonsAreVisible: true,
@@ -29,8 +30,8 @@ describe('SwipePrompt', () => {
     });
 
     it('when the override is set', () => {
-      sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
-      sinon.stub(instance, 'touchSupported').returns(false);
+      sinon.stub(cookies, 'get').returns(true);
+      sinon.stub(instance, 'touchSupported').returns(true);
       sinon.stub(instance, 'swipeOverlayOverrideSet').returns(true);
       wrapper.setProps({}); // force a re-render
       expect(wrapper.find('svg').exists()).to.be.true;
