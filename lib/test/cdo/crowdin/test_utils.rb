@@ -15,7 +15,7 @@ class MockCrowdinProject < Minitest::Mock
     ["/foo.bar", "/baz.bat"]
   end
 
-  def export_file(file, language, etag=nil)
+  def export_file(file, language, etag: nil, attempts: 3, only_head: false)
     mock_response = Minitest::Mock.new
     if etag.nil?
       def mock_response.body; "test"; end
