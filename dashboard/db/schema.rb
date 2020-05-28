@@ -556,6 +556,7 @@ ActiveRecord::Schema.define(version: 20200602014720) do
     t.boolean  "published",                           default: false, null: false
     t.text     "notes",                 limit: 65535
     t.text     "audit_log",             limit: 65535
+    t.integer  "owner_id"
     t.index ["game_id"], name: "index_levels_on_game_id", using: :btree
     t.index ["name"], name: "index_levels_on_name", using: :btree
   end

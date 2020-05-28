@@ -16,6 +16,7 @@
 #  published             :boolean          default(FALSE), not null
 #  notes                 :text(65535)
 #  audit_log             :text(65535)
+#  owner_id              :integer
 #
 # Indexes
 #
@@ -29,6 +30,7 @@ class Level < ActiveRecord::Base
   has_and_belongs_to_many :script_levels
   belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
+  belongs_to :owner, class_name: 'User'
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
