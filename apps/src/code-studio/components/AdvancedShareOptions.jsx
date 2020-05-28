@@ -5,6 +5,7 @@ import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 
@@ -104,6 +105,7 @@ class AdvancedShareOptions extends React.Component {
     shareUrl: PropTypes.string.isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
     openLibraryCreationDialog: PropTypes.func.isRequired,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
@@ -393,7 +395,13 @@ class AdvancedShareOptions extends React.Component {
   };
 
   render() {
-    let {expanded, exportApp, allowExportExpo, onExpand} = this.props;
+    let {
+      expanded,
+      exportApp,
+      allowExportExpo,
+      onExpand,
+      librariesEnabled
+    } = this.props;
     let {selectedOption} = this.state;
     if (!selectedOption) {
       // no options are available. Render nothing.
@@ -420,10 +428,15 @@ class AdvancedShareOptions extends React.Component {
         ShareOptions.EMBED,
         i18n.embed()
       );
-      libraryTab = this.renderAdvancedListItem(
-        ShareOptions.LIBRARY,
-        i18n.shareLibrary()
-      );
+      if (
+        experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
+        librariesEnabled
+      ) {
+        libraryTab = this.renderAdvancedListItem(
+          ShareOptions.LIBRARY,
+          i18n.shareLibrary()
+        );
+      }
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
@@ -466,7 +479,9 @@ class AdvancedShareOptions extends React.Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    librariesEnabled: state.pageConstants.librariesEnabled
+  }),
   dispatch => ({
     openLibraryCreationDialog() {
       dispatch(showLibraryCreationDialog());

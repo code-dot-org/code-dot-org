@@ -13,6 +13,7 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
+import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   iconContainer: {
@@ -111,6 +112,12 @@ class SettingsCog extends Component {
     };
   }
 
+  areLibrariesEnabled() {
+    let experimentOn = experiments.isEnabled(experiments.STUDENT_LIBRARIES);
+    let pageConstants = getStore().getState().pageConstants;
+    return experimentOn || (pageConstants && pageConstants.librariesEnabled);
+  }
+
   render() {
     const {isRunning, runModeIndicators} = this.props;
 
@@ -137,7 +144,9 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          <ManageLibraries onClick={this.manageLibraries} />
+          {this.areLibrariesEnabled() && (
+            <ManageLibraries onClick={this.manageLibraries} />
+          )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}

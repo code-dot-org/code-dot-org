@@ -68,7 +68,8 @@ var ALLOWED_KEYS = new Set([
   'expoCheckApkBuild',
   'expoCancelApkBuild',
   'allowExportExpo',
-  'widgetMode'
+  'widgetMode',
+  'librariesEnabled'
 ]);
 
 const initialState = {
