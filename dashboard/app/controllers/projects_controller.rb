@@ -291,9 +291,10 @@ class ProjectsController < ApplicationController
     end
 
     iframe_embed = params[:iframe_embed] == true
+    iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
     readonly = params[:readonly] == true
-    if iframe_embed
+    if iframe_embed || iframe_embed_app_and_code
       # explicitly set security related headers so that this page can actually
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
@@ -304,10 +305,10 @@ class ProjectsController < ApplicationController
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
+      iframe_embed_app_and_code: iframe_embed_app_and_code,
       project_type: params[:key]
     )
     # for sharing pages, the app will display the footer inside the playspace instead
-    no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
     view_options(
@@ -315,10 +316,10 @@ class ProjectsController < ApplicationController
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
-      no_footer: no_footer,
+      no_footer: sharing || iframe_embed_app_and_code,
       code_studio_logo: sharing && !iframe_embed,
-      no_header: sharing,
-      small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
+      no_header: sharing || iframe_embed_app_and_code,
+      small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
     )

@@ -1560,28 +1560,34 @@ pt-PT:
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - text: 'O pássaro irá contra a dinamite. '
         - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - text: 'O pássaro irá contra a dinamite. '
         - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - text: 'O pássaro irá contra a dinamite. '
         - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
         questions:
         - {}
       courseC_multi_starWars_predict1:
@@ -1989,7 +1995,8 @@ pt-PT:
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - {}
         - text: Eu não sei.
@@ -1998,7 +2005,8 @@ pt-PT:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - {}
         - text: Eu não sei.
@@ -2007,7 +2015,8 @@ pt-PT:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
           feedback: Certo!
         - {}
         - text: Eu não sei.

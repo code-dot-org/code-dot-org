@@ -8,7 +8,6 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
-import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -71,6 +70,7 @@ import {
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 
 var copyrightStrings;
@@ -281,22 +281,24 @@ StudioApp.prototype.init = function(config) {
 
   this.configureDom(config);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <div>
-        <InstructionsDialogWrapper
-          showInstructionsDialog={autoClose => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-        />
-        <FinishDialog
-          onContinue={() => this.onContinue()}
-          getShareUrl={() => this.lastShareUrl}
-        />
-      </div>
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <div>
+          <InstructionsDialogWrapper
+            showInstructionsDialog={autoClose => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+          />
+          <FinishDialog
+            onContinue={() => this.onContinue()}
+            getShareUrl={() => this.lastShareUrl}
+          />
+        </div>
+      </Provider>,
+      document.body.appendChild(document.createElement('div'))
+    );
+  }
 
   if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
@@ -324,6 +326,18 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.level.iframeEmbedAppAndCode) {
+    StudioApp.prototype.handleIframeEmbedAppAndCode_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      noHowItWorks: config.noHowItWorks,
+      isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
+      wireframeShare: config.wireframeShare
+    });
+  }
+
   if (config.share) {
     this.handleSharing_({
       makeUrl: config.makeUrl,
@@ -333,13 +347,15 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
-  this.authoredHintsController_.init(
-    config.level.authoredHints,
-    hintsUsedIds,
-    config.scriptId,
-    config.serverLevelId
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+    this.authoredHintsController_.init(
+      config.level.authoredHints,
+      hintsUsedIds,
+      config.scriptId,
+      config.serverLevelId
+    );
+  }
   if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(
       config.authoredHintViewRequestsUrl
@@ -807,7 +823,7 @@ export function makeFooterMenuItems() {
     },
     {
       text: msg.copyright(),
-      link: '#',
+      link: 'javascript:void(0)',
       copyright: true
     },
     {
@@ -827,14 +843,9 @@ export function makeFooterMenuItems() {
     footerMenuItems.shift();
   }
 
-  var userAlreadyReportedAbuse =
-    cookies.get('reported_abuse') &&
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    );
-
-  if (userAlreadyReportedAbuse) {
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'report-abuse';
     });
@@ -860,7 +871,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
-    phoneFooter: true
+    phoneFooter: true,
+    channel: project.getCurrentId()
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
@@ -2062,7 +2074,7 @@ StudioApp.prototype.configureDom = function(config) {
       document.body.className += ' embedded_iframe';
     }
 
-    if (config.pinWorkspaceToBottom) {
+    if (config.pinWorkspaceToBottom && !config.level.iframeEmbedAppAndCode) {
       var bodyElement = document.body;
       bodyElement.style.overflow = 'hidden';
       bodyElement.className = bodyElement.className + ' pin_bottom';
@@ -2171,6 +2183,13 @@ StudioApp.prototype.handleHideSource_ = function(options) {
       }
     }
   }
+};
+
+StudioApp.prototype.handleIframeEmbedAppAndCode_ = function() {
+  document.body.style.backgroundColor = 'transparent';
+  document.body.className += 'iframe_embed_app_and_code';
+  var vizColumn = document.getElementById('visualizationColumn');
+  $(vizColumn).addClass('chromelessShare');
 };
 
 /**

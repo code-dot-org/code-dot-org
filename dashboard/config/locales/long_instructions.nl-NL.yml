@@ -185,6 +185,10 @@ nl-NL:
       4-5 Artist Assessment 1: "**Opdracht:** Gebruik een lus om de gelijkzijdige
         driehoek te tekenen. Elke zijde is 300 pixels lang."
       4-5 Artist Free Draw 1: Vrij tekenen! Teken wat in je opkomt.
+      4-5 Artist Patterns 1: |-
+        Teken dit vierkant met behulp van een lus.
+
+        Elke zijde is 20 pixels lang.
       4-5 Artist Patterns 10: "Deze code tekent twee rijen zeshoeken\n\n-   herhaal
         dit geheel 4 keer om een hele honinggraat te tekenen \\\r \n    \\\r \n    Je
         zal 120 pixel terug moeten gaan in je allerlaatste lus (herhaling) om zeker
@@ -415,6 +419,8 @@ nl-NL:
         herhaal blok om de cirkel van kleuren te maken.
       Course 4 Artist 5: Teken de andere helft van deze tekening zodat het symmetrisch
         is. De driehoeken zijn gelijkzijdig en zijn 50 pixels lang.
+      Course 4 Artist 6: Maak de code af om deze drie gelijkzijdige driehoeken te
+        tekenen.
       Course 4 Artist 8: Teken deze zon met een door 12 keer door het hele code blok
         te lussen.
       Course 4 Artist Binary 1: Hier is een functie die een binaire reeks van enen
@@ -422,6 +428,8 @@ nl-NL:
         boven naar beneden te gaan, en zo alle vierkanten te vullen als het een 1
         ziet en niets te doen als het een 0 ziet. Voer deze code uit om te zien hoe
         de artiest binair een patroon kan tekenen.
+      Course 4 Artist For Loops 1: Gebruik een herhaal blok om deze 50 pixels brede
+        driehoek te tekenen.
       Course 4 Artist For Loops 11a: "Laten we het samen voegen! Met behulp van je
         kennis over \"for loops\" en de \"counter\" maken we deze tekening waar elke
         vorm twee zijden meer heeft dan de laatste. Zorg ervoor dat elke zijde 10
@@ -438,6 +446,12 @@ nl-NL:
       Course 4 Artist For Loops 8: De kortste lijn in deze spiraal van vierkanten
         is 10, de langste is 200, en elke lijn is 10 pixels korter dan de vorige.
         Kun jij deze te gekke afbeelding afmaken door de ontbrekende blokken plaatsen?
+      Course 4 Artist Vars 1: |-
+        Laten we een gelijkzijdige driehoek tekenen.
+
+        Deze moet precies 100 pixels lang zijn aan elke zijde.
+
+        <br/>
       Course 4 Artist Vars 14: 'Vrij Spel: Probeer het eens nu je algoritme met nog
         een lus genest is. Experimenteer met het veranderen van de waarden van je
         twee variabelen om coole patronen te tekenen.'
@@ -446,6 +460,9 @@ nl-NL:
         ingesteld is. Kun je de rekenblokken gebruiken om de code compleet te maken?
       Course 4 Artist Vars 7: Kun je de variable "zijden" aanpassen om mij te helpen
         deze zeshoek te tekenen?
+      Course 4 Bee Params 1: Schrijf een reeks om alle nector op te halen door gebruik
+        te maken van `get 3 nectar` (haal drie nectar) welke draait, dan beweegt om
+        de nector op te halen en dan weer terug gaat naar de oorspronkelijke locatie.
       Course 4 Bee Params 2: Pas de functie "krijg 3 nectar" aan zodat het mij naar
         rechts naar de bloemen laat draaien in plaats van links.
       Course 4 Bee Params 5: Laten we helemaal opnieuw beginnen - kun je een nieuwe
@@ -462,10 +479,17 @@ nl-NL:
       Course 4 EC 2a: "**Mega uitdaging:** Geen regels, geen hints. Los het op!"
       Course 4 EC 2b: "**Mega uitdaging:** Geen regels, geen hints. Los het op!"
       Course 4 EC 2c: "**Mega uitdaging:** Geen regels, geen hints. Los het op!"
+      Course 4 Play Lab Params 1: Hier is een functie genaamd `spring` die je karakter
+        100 pixels omhoog laat springen. Start het programma en gebruik de spring
+        functie om alle vlaggen te verzamelen door de hond met de pijltjestoetsen
+        te bewegen.
       Course 4 Play Lab Params 3: 'Laten we een andere parameter toevoegen aan de
         jump-functie, zodat we het kunnen gebruiken met andere figuren. Elk figuur
         stelt een nummer voor, beginnend bij 1. verander de "jump"-functie, zodat
         het ook om de "actor"-parameter vraagt. '
+      Course 4 Play Lab Params 4: Hier is een functie genaamd `patrol` ("patrouilleer").
+        Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten
+        bewegen.
       Course 4 Play Lab Params 5: Voeg een 'speler'-parameter toe aan de 'patrol'-functie,
         zodat we hem kunnen aanroepen voor alle spelers op het scherm. De spelers
         hebben nummer 1, 2 en 3.
@@ -476,6 +500,18 @@ nl-NL:
       Course 4 Play Lab Params 8: Gebruik een "wanneer de speler aanraakt"-blok om
         de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij een
         van de andere spelers aanraakt.
+      Course 4 Play Lab Params 9: |-
+        Hier is ons spel van eerder, maar de meeste code is nu verborgen. Er is een nieuwe functie `score_points` ("punten\_scoren").
+
+        * * *
+
+        #### Pas de functie zo aan dat de "punten"-parameter toegevoegd wordt aan de "speler\_score" variabele.
+
+        #### De variabele "speler\_score" moet iedere keer stijgen als Hond Kat raakt met hartjes en dalen als Kat Hond raakt met een broodje.
+
+        * * *
+
+        Let op: als je klaar bent, klik dan op "Start" om af te spelen. Als Hond 6 punten scoort ga je verder naar de volgende puzzel.
       Course 4 Play Lab Vars 1: Hier hoef je niet te programmeren. druk gewoon op
         de knop "uitvoeren" om het spel te spelen! In dit spel ben je een hond die
         meer vlaggen moet verzamelen dan de kat. gebruik de pijltjes om de hond te
@@ -509,6 +545,8 @@ nl-NL:
         lussen wijzigen zodat de wedstrijd eindigt op een gelijke stand?
       Course 4 Playlab For Loops 5b: Pas het interval in deze `herhaal` lussen aan
         zodat deze twee spelers op exact dezelfde plaats eindigen.
+      Course 4 SCF 1b: "**Functies super uitdaging:** Kan je bedenken hoe je al deze
+        honing kan verzamelen met zo min mogelijk blokken?"
       CourseD_Dance_Party_01: |-
         _Laten we een dansfeestje houden!_
 
@@ -1044,6 +1082,10 @@ nl-NL:
         code, behalve voor de getallen in de lussen. Laten we nectar verzamelen!
       New Minecraft Hero Project: "**Vrij spel:** Het is nu aan jou! Gebruik de code
         van de agent om de wereld te verkennen."
+      OPD-K5-variables-1: |-
+        Laten we een gelijkzijdige driehoek tekenen.
+
+        Deze moet precies 50 pixels lang zijn aan elke zijde.
       Overworld Chop Tree: Hout is een erg belangrijke grondstof. Veel dingen worden
         er van gemaakt. Loop naar de boom en gebruik het `vernietig blok` commando
         om de boom om te hakken.
@@ -1401,6 +1443,18 @@ nl-NL:
       frozen square snowflake: Kun je een sneeuwvlok maken door met het "Herhaal"
         blok 10 vierkanten te maken en met het "Draai" blok 36 graden te draaien tussen
         de vierkanten?
+      grade5_artist_variables_triangles1: |-
+        Laten we een gelijkzijdige driehoek tekenen.
+
+        Deze moet precies 50 pixels lang zijn aan elke zijde.
+      grade5_artist_variables_triangles1_2018: |-
+        Laten we een gelijkzijdige driehoek tekenen.
+
+        Deze moet precies 50 pixels lang zijn aan elke zijde.
+      grade5_artist_variables_triangles1_2019: |-
+        Laten we een gelijkzijdige driehoek tekenen.
+
+        Deze moet precies 50 pixels lang zijn aan elke zijde.
       iceage_throw_hearts: Sid wil zijn oma, Granny, laten weten dat hij van haar
         houdt. Gebruik het "speler geef" commando om Sid (speler 1) hartjes te geven
         aan Granny (speler 2)! Verander Granny's stemming in blij wanneer ze wordt

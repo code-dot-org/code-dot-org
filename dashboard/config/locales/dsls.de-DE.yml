@@ -4114,6 +4114,15 @@ de-DE:
         title: 'Bienen-Variablen Multi
 
 '
+      courseF_external_variableConstant:
+        markdown: "\"<h2>Mehr über Variablen</h2> \n\n<img src=\"\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"\"
+          style=\"\"padding-left: 30px; width:300px; float:right;\"\"/>\n<h3>Du hast
+          gerade eine großartige Möglichkeit kennengelernt, wie du eine Variable...als
+          Konstante verwenden kannst! Wenn du eine Variable als Konstante verwendest,
+          bestimmst du einen Wert einmal und verwendest dann diesen *gleichen* Wert
+          mehrmals in deinem Programm, ohne ihn zu ändern, nachdem du auf \"\"Ausführen\"\"
+          geklickt hast. </h3>\n <br/><hr/> \n<h3> Im nächsten Teil der Serie wirst
+          du Code mit Variablen schreiben, die sich *im Programm ändern*.</h3>\"\n"
       courseF_external_variableConstant_2018:
         markdown: '<h2>Mehr zu Variablen</h2> <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"
           style="padding-left: 30px; Breite:300px; float:right;"/ <h3>Du hast gerade
@@ -4323,11 +4332,26 @@ de-DE:
         - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - correct: true
+        - text: 'Der Maler wird die gleiche Funktion verwenden, um zwei unterschiedlich
+            große Kästen zu zeichnen.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Der Maler wird zwei verschiedene Funktionen verwenden, um zwei unterschiedlich
+            große Kästen zu zeichnen.
+
+'
+          feedback: 'Falsch. Durch die Verwendung von Parametern kann man mit einer
+            einzigen Funktion verschiedene Ergebnisse bewirken.
+
+'
         - text: Der Maler wird zwei verschiedene Funktionen verwenden, um den gleich
             großen Kasten zweimal zu zeichnen.
+          feedback: 'Falsch. Durch die Verwendung von Parametern kann man mit einer
+            einzigen Funktion verschiedene Ergebnisse bewirken.
+
+'
         - text: Ich weiß es nicht.
           feedback: Das Programm verwendet Parameter, die es einer einzigen Funktion
             ermöglichen, zwei unterschiedlich große Boxen zu erstellen.
@@ -4336,7 +4360,9 @@ de-DE:
 
 
         questions:
-        - {}
+        - text: 'Was wird passieren, wenn du dieses Programm ausführst?
+
+'
       courseF_multi_artist_variables3a_predict1:
         answers:
         - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
@@ -4348,6 +4374,10 @@ de-DE:
 
 '
         - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `drehen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
         - text: Ich weiß es nicht.
           feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
             bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
@@ -4368,6 +4398,10 @@ de-DE:
 
 '
         - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `drehen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
         - text: Ich weiß es nicht.
           feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
             bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
@@ -4388,6 +4422,10 @@ de-DE:
 
 '
         - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `drehen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
         - text: Ich weiß es nicht.
           feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
             bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
@@ -4422,18 +4460,41 @@ de-DE:
 
 '
         questions:
-        - {}
+        - text: 'Wenn keine Blume vorhanden ist, sollte die Biene nichts tun. Schaue
+            dir den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
+
+'
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
+        - text: 'Die Biene bekommt an jeder Blüte Nektar, sonst macht sie Honig.
+
+'
+          correct: true
           feedback: Richtig!
         - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
             den Waben zu holen.
+          feedback: 'Falsch. Der Baustein `wenn an der Blüte` lässt die Biene an jeder
+            Blüte Nektar bekommen und Honig machen, wenn keine Blüte vorhanden ist
+            (also eine Wabe.).
+
+'
         - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
             den Waben zu holen.
+          feedback: 'Falsch. Falsch. Der Baustein `wenn an der Blüte` lässt die Biene
+            an jeder Blüte Nektar und an jeder Wabe Honig erhalten.
+
+'
         - text: Ich weiß es nicht.
+          feedback: 'Der Baustein `wenn an der Blüte` lässt die Biene an jeder Blüte
+            Nektar bekommen, sonst macht sie Honig.
+
+'
         questions:
-        - {}
+        - text: 'Schau dir den nachfolgenden Code genau an. Was passiert deiner Meinung
+            nach, wenn du auf "Ausführen" klickst?
+
+'
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
@@ -4550,13 +4611,40 @@ de-DE:
         - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - correct: true
+        - text: 'Der Pirat würde sagen: "Es freut mich, dich kennenzulernen, Ali"
+            und das ist alles.
+
+'
+          correct: true
           feedback: 'Richtig. '
-        - {}
+        - text: 'Der Pirat würde sagen: "Es freut mich, dich kennenzulernen, Ali"
+            und das ist alles.
+
+'
+          feedback: 'Falsch. Beachte, dass der `verbinden`-Baustein den gewählte Namen
+            in den Satz des Piraten einfügt.
+
+'
         - text: 'Der Pirat würde sagen: "Ali" und das ist alles.'
+          feedback: 'Falsch. Beachte, dass der `verbinden`-Baustein den gewählte Namen
+            in den Satz des Piraten einfügt.
+
+'
         - text: Ich weiß es nicht.
+          feedback: 'Incorrect. Notice that the `join` block inserts the provided
+            name into the pirate''s sentence.
+
+'
+        markdown: "\"**Diese Aufgabe verwendet einen neuen Baustein, der als `fragen`-Baustein
+          bezeichnet wird.** \n\nDer `fragen`-Baustein hält das Programm an und fordert
+          den Benutzer auf, Text einzugeben.\n\nDer Text, den der Benutzer eingibt,
+          wird dann in der Variablen gespeichert, die am Ende des `fragen‘-Bausteins
+          angezeigt wird. In diesem Fall handelt ist es die Variable `Name`.\"\n"
         questions:
-        - {}
+        - text: 'Was würde passieren, wenn der Benutzer bei der Eingabeaufforderung
+            den Namen "Ali" eingibt?
+
+'
       courseF_project_exemplars_2019:
         content1: Test Markdown Lehrbuchseite
         markdown: |+

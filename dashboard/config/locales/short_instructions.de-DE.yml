@@ -776,10 +776,29 @@ de-DE:
         Bienen beim Einsammeln des Nektars auf ihrem Weg zur Bienenwabe zu helfen.
         Benutze so wenige Bausteine, wie möglich!  Vergiss nicht am Schluss Honig
         zu erzeugen!
+      Course 4 Bee Params 1: Schreibe ein Programm, um allen Nektar zu sammeln. Benutze
+        dazu die Funktion "sammle 3 Nektar". Sie dreht die Biene, bewegt sie zum Nektar,
+        sammelt ihn ein und bewegt die Biene wieder zurück zum Ausgangspunkt.
+      Course 4 Bee Params 2: Ändere die "sammle 3 Nektar"-Funktion, so dass sie mich
+        nach rechts zu den Blumen drehen lässt statt nach links.
+      Course 4 Bee Params 3: 'Jetzt sind auf beiden Seiten Blumen! Für dich stehen
+        die Variablen „links“ und „rechts“ zur Verfügung. Die Funktion „Nimm 3 Nektar“
+        wurde außerdem um den Parameter „Richtung“ ergänzt. Ändere die Funktion „Nimm
+        3 Nektar“ so, dass die Biene sich in die richtige Richtung dreht, wenn ihr
+        die Variablen „links“ oder „rechts“ übergeben werden.  '
+      Course 4 Bee Params 4: Benutze die neue Funktion, um Nektar von allen Blumen
+        zu sammeln. Verwende die Variablen "links" und "rechts".
       Course 4 Bee Params 5: 'Lass uns von vorne beginnen - erstelle eine neue Funktion
         mit einem Parameter für die Richtung. Gib ihr die Bezeichnung: „Nimm 5 Nektar".'
+      Course 4 Bee Params 6: Wäre es nicht schön, den ganzen Nektar mit nur einer
+        Funktion zu sammeln? Versuche mit dem neuen Parameter „Nektarportionen“ die
+        Menge an Nektar, die gesammelt werden soll, zu steuern. Vielleicht möchtest
+        du der Funktion auch einen neuen Namen geben?
       Course 4 Bee Params 7: Probiere deine neue Funktion aus, um all diesen Nektar
         zu sammeln.
+      Course 4 Bee Params 8: 'Herausforderung: Jetzt kümmern wir uns noch um Honig.
+        Ändere deine Funktion so, dass sie die Anzahl der Honig- und Nektarportionen
+        verwendet.  Wie kannst du mit der Anzahl entscheiden, was zu tun ist?'
       Course 4 EC 1a: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 EC 1b: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 EC 2a: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
@@ -794,11 +813,11 @@ de-DE:
       Course 4 Play Lab Params 9: "Hier ist unser Spiel aus einer früheren Phase,
         doch der größte Teil des Codes ist versteckt. Es gibt eine neue Funktion „Erziele\\_Punkte“.\n\nBearbeite
         die Funktion so, dass der Variablen „Spieler\\_Punkte“ ein Parameter „Punkte“
-        hinzugefügt wird.\n\nDie Variable „Spieler\\_Punkte“ soll immer dann erhöht
-        werden, wenn der Hund die Katze mit seinen Herzen trifft, wird der Hund von
-        der Katze mit Herzen getroffen, soll die Punktezahl verringert werden.\n\nHinweis:
-        Wenn du fertig bist, klicke zum Spielen auf „Ausführen“.  Wenn der Hund 6
-        Punkte erreicht hat geht es zur nächsten Aufgabe weiter. "
+        hinzugefügt wird.\n\nDie Variable „Spieler\\_Punkte“ soll erhöht werden, wenn
+        der Hund die Katze mit Apfelkuchen trifft, und verringert werden, wenn die
+        Katze den Hund mit einem Sandwich trifft.\n\nHinweis: Wenn du fertig bist,
+        klicke zum Spielen auf „Ausführen“.  Wenn der Hund 6 Punkte erreicht hat geht
+        es zur nächsten Aufgabe weiter. "
       Course 4 Play Lab Vars 1: Diesmal musst du keinen Code schreiben! Einfach „Ausführen“
         klicken und spielen! In diesem Spiel bist du der Hund, der versucht, mehr
         Flaggen als die Katze zu sammeln. Benutze den Nach-unten-Pfeil, um den Hund
@@ -4721,9 +4740,28 @@ de-DE:
         Siehst du, was passiert, wenn wir anfangen mit den Bits kreativ zu werden?
       grade5_pixelation: Kodiere ein Bild von allem, was du magst, mit Binärdateien.
         Die binäre Sprache wird nur mit '0' und '1' dargestellt.
+      iceage_click_hello: Kannst du Sid helfen, seine Freunde zu rufen, wenn du auf
+        ihn klickst?
+      iceage_free_play: Zeit für dein eigenes Spiel oder deine eigene Geschichte!
+      iceage_hello1: Hilf Sid dabei, "Hallo!" zu sagen, indem den `sagen`-Baustein
+        herausziehst und ihn mit dem unteren Ende des `wenn ausgeführt wird`-Ereignisses
+        verbindest.
+      iceage_hello2: Hilf Manny und Sid, sich gegenseitig zu begrüßen, indem du zweimal
+        den `Figur sagt ___` Baustein verwendest.
       iceage_move_events: Schreibe Code, damit Scrat alle Eicheln bekommt!
+      iceage_move_to_actor: Verbinde einen Baustein mit dem Ereignis `wenn die Figur
+        berührt`, um einen Ton abzuspielen, wenn Diego Manny findet.
       iceage_move_to_flag: Scrat sucht nach seiner Eichel! Kannst du ihm helfen, die
         letzten 200 Pixel zu verschieben?
+      iceage_repeat: Hilf Granny, sich etwas zu bewegen, indem du sie wiederholt nach
+        links und nach rechts bewegst.
+      iceage_sound_and_points: Kannst du dieses Programm so beenden, dass ihr beide
+        **einen Ton** abspielt und **einen Punkt** macht, wenn Sid und Granny zusammenstoßen?
+      iceage_throw_hearts: Verwende den Befehl `Figur __ wirft`, um Sid (Figur 1)
+        Herzen zu Granny (Figur 2) werfen zu lassen und programmiere Grannys Stimmung
+        als glücklich, wenn sie von den Herzen getroffen wird.
+      iceage_warn_ice_age: Ändere die Szene zu einem eisigen Hintergrund und stelle
+        Sids (Figur 1) Geschwindigkeit auf schnell ein.
       k-1 maze 1: Kannst du mich nach Westen bewegen, damit ich zum Schwein komme?
       mike3bit: Wir beginnen mit dem 4x2-Bild, das Maddie erstellt hat, aber wir haben
         die letzten Pixel weggelassen. Vervollständige das Bild, indem du herausfinden,
