@@ -243,6 +243,14 @@ class Ability
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
     end
 
+    # allow teachers to create and edit their own custom levels
+    if user.persisted?
+      can :create, Level
+      can :manage, Level do |level|
+        level.owner == user
+      end
+    end
+
     if user.persisted?
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment

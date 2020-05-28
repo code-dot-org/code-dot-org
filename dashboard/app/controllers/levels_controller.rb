@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
+  # before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -279,6 +279,10 @@ class LevelsController < ApplicationController
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
     create_level_params[:editor_experiment] = editor_experiment if editor_experiment
+
+    unless current_user&.permission?(UserPermission::LEVELBUILDER)
+      create_level_params[:owner_id] = current_user&.id
+    end
 
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
