@@ -5,8 +5,9 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
-import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
@@ -276,13 +277,12 @@ class WordOrPictureLogins extends React.Component {
         )}
         {students.length >= 1 && (
           <span>
-            <Button
-              __useDeprecatedTag
-              text={i18n.printLoginCards_button()}
-              color={Button.ButtonColor.gray}
-              onClick={this.printLoginCards}
-              icon="print"
-              iconClassName="fa"
+            <PrintLoginCards
+              sectionId={section.id}
+              onPrintLoginCards={this.printLoginCards}
+              entryPointForMetrics={
+                PrintLoginCardsButtonMetricsCategory.LOGIN_INFO
+              }
             />
             <br />
             <div id="printArea" style={styles.container}>

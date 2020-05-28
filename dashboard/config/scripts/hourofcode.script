@@ -1,7 +1,7 @@
 hidden false
 wrapup_video 'hoc_wrapup'
 
-stage 'Maze'
+lesson 'Maze'
 skin 'birds'
 video_key_for_next_level 'maze_intro'
 concepts 'sequence'

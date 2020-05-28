@@ -6,7 +6,7 @@
       "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "draw a star": {
         "name": "draw a star",
         "description": "draw a star with given points and sides of given length"
@@ -43,7 +43,7 @@
       "New Play Lab Project_callout2": "Hit \"Run\" to save and run your program",
       "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
     },
-    "function_defintions": {
+    "function_definitions": {
       "jump": {
         "name": "jump",
         "description": "jump function block with height and actor parameter"
@@ -70,7 +70,7 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some bridges so that Alex or Steve can walk around beyond the edges of the map."
     },
-    "function_defintions": {
+    "function_definitions": {
       "function 1": {
         "name": "function 1"
       },

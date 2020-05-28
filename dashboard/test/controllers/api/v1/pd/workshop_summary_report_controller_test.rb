@@ -21,6 +21,8 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     num_registered
     num_qualified_teachers
     days
+    num_hours
+    num_scholarship_teachers_attending_all_sessions
   ).tap do |fields|
     (1..Pd::Payment::WorkshopSummary::REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
       fields << "facilitator_name_#{n}"
