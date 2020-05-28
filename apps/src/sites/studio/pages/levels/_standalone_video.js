@@ -6,6 +6,9 @@ import {
 } from '@cdo/apps/code-studio/levels/postOnLoad';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import React from 'react';
+import ReactDom from 'react-dom';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 $(document).ready(() => {
   registerGetResult();
@@ -55,4 +58,17 @@ $(document).ready(() => {
     videoFullWidth,
     videoRoundedCorners
   );
+
+  // Render markdown contents
+  $('.standalone-video > .markdown-container').each(function() {
+    const container = this;
+    if (!container.dataset.markdown) {
+      return;
+    }
+
+    ReactDom.render(
+      React.createElement(SafeMarkdown, container.dataset, null),
+      container
+    );
+  });
 });

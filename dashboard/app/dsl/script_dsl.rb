@@ -2,20 +2,20 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @stage = nil
+    @lesson = nil
     @lesson_group = nil
     @lesson_groups = []
-    @stage_lockable = false
-    @stage_visible_after = nil
+    @lesson_lockable = false
+    @lesson_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
     @scriptlevels = []
-    @stages = []
+    @lessons = []
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
-    @hideable_stages = false
+    @hideable_lessons = false
     @student_detail_progress_view = false
     @teacher_resources = []
     @lesson_extras_available = false
@@ -44,7 +44,7 @@ class ScriptDSL < BaseDSL
 
   boolean :hidden
   boolean :login_required
-  boolean :hideable_stages
+  boolean :hideable_lessons
   boolean :student_detail_progress_view
   boolean :lesson_extras_available
   boolean :project_widget_visible
@@ -90,17 +90,17 @@ class ScriptDSL < BaseDSL
     @lesson_group = key
   end
 
-  def stage(name, properties = {})
-    if @stage
-      @stages << {
-        stage: @stage,
-        visible_after: @stage_visible_after,
+  def lesson(name, properties = {})
+    if @lesson
+      @lessons << {
+        lesson: @lesson,
+        visible_after: @lesson_visible_after,
         scriptlevels: @scriptlevels,
       }.compact
     end
-    @stage = name
-    @stage_lockable = properties[:lockable]
-    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
+    @lesson = name
+    @lesson_lockable = properties[:lockable]
+    @lesson_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
@@ -122,14 +122,14 @@ class ScriptDSL < BaseDSL
   end
 
   def parse_output
-    stage(nil)
+    lesson(nil)
     {
       id: @id,
-      stages: @stages,
+      lessons: @lessons,
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      hideable_stages: @hideable_stages,
+      hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
@@ -206,7 +206,7 @@ class ScriptDSL < BaseDSL
     level = {
       name: name,
       lesson_group: @lesson_group,
-      stage_lockable: @stage_lockable,
+      lesson_lockable: @lesson_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
@@ -245,7 +245,7 @@ class ScriptDSL < BaseDSL
       end
     else
       script_level = {
-        stage: @stage,
+        lesson: @lesson,
         levels: [level]
       }
 
@@ -260,7 +260,7 @@ class ScriptDSL < BaseDSL
   end
 
   def variants
-    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
+    @current_scriptlevel = {levels: [], properties: {}, lesson: @lesson}
   end
 
   def endvariants
@@ -271,8 +271,8 @@ class ScriptDSL < BaseDSL
   # @override
   def i18n_hash
     i18n_stage_strings = {}
-    @stages.each do |stage|
-      i18n_stage_strings[stage[:stage]] = {'name' => stage[:stage]}
+    @lessons.each do |stage|
+      i18n_stage_strings[stage[:lesson]] = {'name' => stage[:lesson]}
     end
 
     i18n_lesson_group_strings = {}
@@ -280,7 +280,14 @@ class ScriptDSL < BaseDSL
       i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
     end
 
-    {@name => {'stages' => i18n_stage_strings, 'lesson_groups' => i18n_lesson_group_strings}}
+    # temporarily include "stage" strings under both "stages" and "lessons"
+    # while we transition from the former term to the latter.
+    # TODO FND-1122
+    {@name => {
+      'stages' => i18n_stage_strings,
+      'lessons' => i18n_stage_strings,
+      'lesson_groups' => i18n_lesson_group_strings
+    }}
   end
 
   def self.parse_file(filename, name = nil)
@@ -309,7 +316,7 @@ class ScriptDSL < BaseDSL
 
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
-    s << 'hideable_stages true' if script.hideable_stages
+    s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
@@ -345,21 +352,21 @@ class ScriptDSL < BaseDSL
         s << t
       end
       lesson_group.lessons.each do |lesson|
-        s << serialize_stage(lesson)
+        s << serialize_lesson(lesson)
       end
     end
     s << ''
     s.join("\n")
   end
 
-  def self.serialize_stage(stage)
+  def self.serialize_lesson(lesson)
     s = []
 
-    t = "stage '#{escape(stage.name)}'"
-    t += ', lockable: true' if stage.lockable
-    t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
+    t = "lesson '#{escape(lesson.name)}'"
+    t += ', lockable: true' if lesson.lockable
+    t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     s << t
-    stage.script_levels.each do |sl|
+    lesson.script_levels.each do |sl|
       type = 'level'
       type = 'bonus' if sl.bonus
 

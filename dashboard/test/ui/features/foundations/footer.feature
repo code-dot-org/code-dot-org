@@ -8,12 +8,6 @@ Feature: Checking the footer appearance
     When I open my eyes to test "Desktop puzzle using light small footer"
     Then I see no difference for "small footer"
 
-    When I open the small footer menu
-    And I wait for 0.25 seconds
-    Then I see no difference for "footer menu"
-    And I close the small footer menu
-    And I wait for 0.25 seconds
-
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
     Then I see no difference for "copyright flyout"
@@ -24,12 +18,6 @@ Feature: Checking the footer appearance
     Then I see no difference for "smaller small footer"
     And I wait for 0.25 seconds
 
-    When I open the small footer menu
-    And I wait for 0.25 seconds
-    Then I see no difference for "smaller footer menu"
-    And I close the small footer menu
-    And I wait for 0.25 seconds
-
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
     Then I see no difference for "smaller copyright flyout"
@@ -38,13 +26,6 @@ Feature: Checking the footer appearance
 
     # Now, variations where we resize while the flyouts are open, to make
     # sure they update their size/position properly during the resize
-    When I open the small footer menu
-    And I wait for 0.25 seconds
-    Then I see no difference for "menu resize before"
-    When I drag the visualization grippy by 400 pixels
-    Then I see no difference for "menu resize after"
-    And I close the small footer menu
-    And I wait for 0.25 seconds
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
@@ -61,12 +42,6 @@ Feature: Checking the footer appearance
 
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
     Then I see no difference for "small footer"
-
-    When I open the small footer menu
-    And I wait for 0.25 seconds
-    Then I see no difference for "footer menu"
-    And I close the small footer menu
-    And I wait for 0.25 seconds
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
@@ -101,12 +76,6 @@ Feature: Checking the footer appearance
     And I wait for 2 seconds
     And I wait until element "#runButton" is visible
     Then I see no difference for "how it works small footer"
-
-    When I open the small footer menu
-    And I wait for 0.25 seconds
-    Then I see no difference for "how it works footer menu"
-    And I close the small footer menu
-    And I wait for 0.25 seconds
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
