@@ -72,13 +72,8 @@ class ScriptDslTest < ActiveSupport::TestCase
       }
     )
 
-    # TODO: FND-1122
     i18n_expected = {
       'test' => {
-        'stages' => {
-          'Lesson1' => {'name' => 'Lesson1'},
-          'Lesson2' => {'name' => 'Lesson2'}
-        },
         'lessons' => {
           'Lesson1' => {'name' => 'Lesson1'},
           'Lesson2' => {'name' => 'Lesson2'}
@@ -869,12 +864,8 @@ level 'Level 3'
       }
     )
 
-    # TODO: FND-1122
     i18n_expected = {
       'test' => {
-        'stages' => {
-          "Bob's stage" => {'name' => "Bob's stage"}
-        },
         'lessons' => {
           "Bob's stage" => {'name' => "Bob's stage"}
         },

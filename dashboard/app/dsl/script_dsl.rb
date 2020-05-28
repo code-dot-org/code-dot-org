@@ -270,9 +270,9 @@ class ScriptDSL < BaseDSL
 
   # @override
   def i18n_hash
-    i18n_stage_strings = {}
+    i18n_lesson_strings = {}
     @lessons.each do |stage|
-      i18n_stage_strings[stage[:lesson]] = {'name' => stage[:lesson]}
+      i18n_lesson_strings[stage[:lesson]] = {'name' => stage[:lesson]}
     end
 
     i18n_lesson_group_strings = {}
@@ -280,12 +280,8 @@ class ScriptDSL < BaseDSL
       i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
     end
 
-    # temporarily include "stage" strings under both "stages" and "lessons"
-    # while we transition from the former term to the latter.
-    # TODO FND-1122
     {@name => {
-      'stages' => i18n_stage_strings,
-      'lessons' => i18n_stage_strings,
+      'lessons' => i18n_lesson_strings,
       'lesson_groups' => i18n_lesson_group_strings
     }}
   end
