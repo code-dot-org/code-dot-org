@@ -59,7 +59,7 @@ class FoormEditor extends React.Component {
     this.props.populateCodeMirror();
   }
 
-  updateNumFacilitators = e => {
+  updateFacilitators = e => {
     if (this.state.num_facilitators !== e.target.value) {
       let num_facilitators = e.target.value;
       let facilitators = [];
@@ -154,7 +154,7 @@ class FoormEditor extends React.Component {
                 <input
                   type="number"
                   value={this.state.num_facilitators}
-                  onChange={this.updateNumFacilitators}
+                  onChange={this.updateFacilitators}
                 />
               </label>
               <label>
