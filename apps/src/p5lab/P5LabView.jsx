@@ -52,9 +52,9 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
-  getLibraryManifest() {
+  getLibraryManifest = () => {
     return this.state.libraryManifest;
-  }
+  };
 
   getCategories() {
     return this.props.spriteLab ? CostumeCategories : AnimationCategories;
@@ -110,7 +110,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              getLibraryManifest={() => this.getLibraryManifest()}
+              getLibraryManifest={this.getLibraryManifest}
               categories={this.getCategories()}
               hideUploadOption={this.props.spriteLab}
             />
@@ -138,7 +138,7 @@ class P5LabView extends React.Component {
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        getLibraryManifest={() => this.getLibraryManifest()}
+        getLibraryManifest={this.getLibraryManifest}
         categories={this.getCategories()}
         hideUploadOption={this.props.spriteLab}
       />
