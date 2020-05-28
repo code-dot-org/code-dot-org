@@ -56,7 +56,26 @@ class FoormEditor extends React.Component {
 
     this.state = {
       formKey: 0,
-      formPreviewQuestions: null
+      formPreviewQuestions: null,
+      surveyData: {
+        num_facilitators: 2,
+        workshop_course: 'CS Principles',
+        workshop_subject: '5-day Summer',
+        regional_partner_name: 'Regional Partner A',
+        is_virtual: true,
+        facilitators: [
+          {
+            facilitator_id: 1,
+            facilitator_name: 'Alice',
+            facilitator_position: 1
+          },
+          {
+            facilitator_id: 2,
+            facilitator_name: 'Bob',
+            facilitator_position: 2
+          }
+        ]
+      }
     };
   }
 
@@ -106,6 +125,15 @@ class FoormEditor extends React.Component {
           </div>
         ) : (
           <div>
+            <form>
+              <label>
+                Course:{' '}
+                <input
+                  type="text"
+                  value={this.state.surveyData.workshop_course}
+                />
+              </label>
+            </form>
             <Button onClick={this.previewFoorm}>Preview</Button>
             {this.state.formPreviewQuestions && (
               // key allows us to force re-render when preview is clicked
