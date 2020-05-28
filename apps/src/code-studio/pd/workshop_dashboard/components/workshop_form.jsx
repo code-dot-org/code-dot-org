@@ -687,10 +687,11 @@ export class WorkshopForm extends React.Component {
       return false;
     }
     return (
-      this.state.sessionsModified ||
-      this.state.location_name !== workshop.location_name ||
-      this.state.location_address !== workshop.location_address ||
-      this.state.notes !== workshop.notes
+      (this.state.sessionsModified ||
+        this.state.location_name !== workshop.location_name ||
+        this.state.location_address !== workshop.location_address ||
+        this.state.notes !== workshop.notes) &&
+      this.state.location_address !== ''
     );
   }
 
@@ -937,11 +938,6 @@ export class WorkshopForm extends React.Component {
         validation.style.location_name = 'error';
         validation.help.location_name = 'Required.';
       }
-      if (!this.state.location_address) {
-        validation.isValid = false;
-        validation.style.location_address = 'error';
-        validation.help.location_address = 'Required.';
-      }
       if (!this.state.capacity) {
         validation.isValid = false;
         validation.style.capacity = 'error';
@@ -1072,7 +1068,7 @@ export class WorkshopForm extends React.Component {
               </FormGroup>
             </Col>
             <Col sm={6}>
-              <FormGroup validationState={validation.style.location_address}>
+              <FormGroup>
                 <ControlLabel>Location Address</ControlLabel>
                 <FormControl
                   type="text"
@@ -1089,7 +1085,6 @@ export class WorkshopForm extends React.Component {
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
-                <HelpBlock>{validation.help.location_address}</HelpBlock>
               </FormGroup>
             </Col>
           </Row>
