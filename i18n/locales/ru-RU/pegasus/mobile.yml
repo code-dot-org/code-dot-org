@@ -1341,6 +1341,8 @@
   header_teacher_community: "Сообщество учителей"
   header_help_support: 'Помощь и поддержка '
   header_report_bug: "Сообщить об ошибке"
+  header_legal_privacy: "Политика конфиденциальности"
+  header_legal_tos: "Условия предоставления услуг"
   header_tutorials: "Обучающие материалы"
   sprite_lab_tutorials: "Лаборатория спрайтов: учебники"
   header_documentation: "Документация"

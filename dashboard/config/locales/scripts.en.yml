@@ -25805,7 +25805,7 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
-            AI with Kat Graham & Kate Park: &1
+            AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
           title: Code Break
           description_audience: ''
@@ -25833,7 +25833,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
-            AI with Kat Graham & Kate Park: *1
+            AI with Kat Graham & Kate Park:
+              name: AI with Kat Graham & Kate Park
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -25980,7 +25981,7 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
-            AI with Kat Graham & Kate Park: &2
+            AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
           title: Code Break for Younger Students
           description_audience: ''
@@ -26008,7 +26009,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
-            AI with Kat Graham & Kate Park: *2
+            AI with Kat Graham & Kate Park:
+              name: AI with Kat Graham & Kate Park
         no-lg:
           stages:
             new stage:

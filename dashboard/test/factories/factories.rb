@@ -736,6 +736,10 @@ FactoryGirl.define do
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
     script
+
+    position do |lesson_group|
+      (lesson_group.script.lesson_groups.maximum(:position) || 0) + 1
+    end
   end
 
   factory :lesson do

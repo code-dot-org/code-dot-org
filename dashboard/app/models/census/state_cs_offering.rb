@@ -163,18 +163,9 @@ class Census::StateCsOffering < ApplicationRecord
 
   # By default we treat the lack of state data for high schools as an
   # indication that the school doesn't teach cs. We aren't as confident
-  # that the state data is conplete for the following states so we do
+  # that the state data is complete for the following states so we do
   # not want to treat the lack of data as a no for those.
-  INFERRED_NO_EXCLUSION_LIST = %w(
-    CO
-    DE
-    ID
-    ME
-    MI
-    OH
-    TN
-    TX
-  ).freeze
+  INFERRED_NO_EXCLUSION_LIST = [].freeze
 
   def self.infer_no(state_code)
     INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase

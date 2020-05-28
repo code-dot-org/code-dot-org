@@ -8,7 +8,6 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
-import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -71,6 +70,7 @@ import {
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 
 var copyrightStrings;
 
@@ -822,7 +822,7 @@ export function makeFooterMenuItems() {
     },
     {
       text: msg.copyright(),
-      link: '#',
+      link: 'javascript:void(0)',
       copyright: true
     },
     {
@@ -842,14 +842,9 @@ export function makeFooterMenuItems() {
     footerMenuItems.shift();
   }
 
-  var userAlreadyReportedAbuse =
-    cookies.get('reported_abuse') &&
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    );
-
-  if (userAlreadyReportedAbuse) {
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'report-abuse';
     });
@@ -875,7 +870,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
-    phoneFooter: true
+    phoneFooter: true,
+    channel: project.getCurrentId()
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);

@@ -325,7 +325,13 @@ pl-PL:
         4-5_Artist_8_a: "Dłuższe boki mają po 240 pikseli.  Oznacza to, że 2 krótsze
           boki mają razem: \n\n\\*\\* 800-240 - 240 = 320 \\*\\*\n\nIle to \\*\\*
           320/2 \\*\\*? "
+        4-5_Artist_8_b: "Ten obrazek może być zrobiony na 2 metody!  \n\n-   Narysuj
+          dwa prostokąty o długości **120** i wysokości **160**, z pokrywającym się
+          bokiem\n\n-   Narysuj jeden prostokąt o długości **240** i wysokości **160**.
+          Potem dodaj linię po środku."
       4-5 Artist 9:
+        4-5_Artist_9_a: 'Jeżeli trójkąt jest równoboczny, to wszystkie boki i wszystkie
+          kąty są takie same.  '
         4-5_Artist_9_b: Trzeba będzie narysować trzy trójkąty tej samej wielkości.
           Nie zapomnij, aby skoczyć na nową pozycję, po narysowaniu każdego z nich.
       4-5 Artist Assessment 1:

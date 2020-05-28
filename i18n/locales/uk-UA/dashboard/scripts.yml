@@ -53,6 +53,41 @@ uk:
               name: 'Ігрова студія: Створення історії'
             The Big Event:
               name: Велика подія
+          lessons:
+            Happy Maps:
+              name: Щасливі карти
+            Move it, Move it:
+              name: Рухайся, рухайся
+            'Jigsaw: Learn to drag and drop':
+              name: 'Пазли: вчимося перетягувати'
+            'Maze: Sequence':
+              name: 'Лабіринт: послідовність'
+            'Maze: Debugging':
+              name: 'Лабіринт: відлагодження'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            'Bee: Sequence':
+              name: 'Бджілка: послідовність'
+            'Artist: Sequence':
+              name: 'Художник: послідовність'
+            Building a Foundation:
+              name: Закладання основ
+            'Artist: Shapes':
+              name: 'Художник: фігури'
+            Spelling Bee:
+              name: Грамотна Бджілка
+            Getting Loopy:
+              name: Економія на повторах
+            'Maze: Loops':
+              name: 'Лабіринт: цикли'
+            'Bee: Loops':
+              name: 'Бджілка: цикли'
+            The Big Event:
+              name: Велика подія
+            Going Places Safely:
+              name: Безпечне добирання
+            'Artist: Loops':
+              name: 'Художник: цикли'
         course2:
           title: Курс 2
           description: Курс 2 розроблено для учнів, котрі вміють читати, але не мають попереднього досвіду програмування. Протягом навчання учні створюватимуть програми для розв'язування задач та розроблятимуть інтерактивні ігри чи історії, якими зможуть поділитися з іншими. Рекомендується для 2-5 класів.
@@ -97,6 +132,43 @@ uk:
               name: Велика подія
             Your Digital Footprint:
               name: Твій цифровий слід
+          lessons:
+            Graph Paper Programming:
+              name: Програмування по клітинках
+            'Real-life Algorithms: Paper Planes':
+              name: 'Життєві алгоритми: Паперові літачки'
+            'Maze: Sequence':
+              name: 'Лабіринт: послідовність'
+            'Artist: Sequence':
+              name: 'Художник: послідовність'
+            Getting Loopy:
+              name: Економія на повторах
+            'Maze: Loops':
+              name: 'Лабіринт: цикли'
+            'Artist: Loops':
+              name: 'Художник: цикли'
+            'Bee: Loops':
+              name: 'Бджілка: цикли'
+            Relay programming:
+              name: Естафетне програмування
+            'Bee: Debugging':
+              name: 'Бджілка - відлагодження'
+            'Artist: Debugging':
+              name: 'Художник: відлагодження'
+            Conditionals:
+              name: Умови
+            'Bee: Conditionals':
+              name: 'Бджілка - умови'
+            Binary Bracelets:
+              name: Двійкові браслети
+            The Big Event:
+              name: Велика подія
+            Flappy:
+              name: Пурх
+            Your Digital Footprint:
+              name: Твій цифровий слід
+            'Artist: Nested Loops':
+              name: 'Художник - вкладені цикли'
         course3:
           title: Курс 3
           description: Курс 3 розроблено для учнів, котрі опанували Курс 2. Учні глибше розглянуть ті поняття програмування, з якими ознайомились у попередніх курсах, щоб розробляти гнучкіші рішення для складніших задач. До кінця навчання учні створять інтерактивні історії та ігри, якими зможуть поділитися з іншими. Рекомендується для 4-5 класів.
@@ -145,11 +217,53 @@ uk:
               name: 'Ігрова студія: Створення історії'
             'Studio: Create a Story':
               name: 'Ігрова студія: Створення історії'
+          lessons:
+            Computational Thinking:
+              name: Обчислювальне мислення
+            Maze:
+              name: Лабіринт
+            Artist:
+              name: Художник
+            Functional Suncatchers:
+              name: Функції для блискіток
+            'Artist: Functions':
+              name: 'Художник - функції'
+            'Bee: Functions':
+              name: 'Бджілка - функції'
+            'Bee: Conditionals':
+              name: 'Бджілка - умови'
+            'Maze: Conditionals':
+              name: 'Лабіринт - умови'
+            Songwriting:
+              name: Написання пісень
+            Dice Race:
+              name: Гонка в кубики
+            'Artist: Nested Loops':
+              name: 'Художник - вкладені цикли'
+            'Farmer: While Loops':
+              name: 'Фермерка - цикли "поки"'
+            'Bee: Nested Loops':
+              name: 'Бджілка - вкладені цикли'
+            'Bee: Debugging':
+              name: 'Бджілка - відлагодження'
+            Bounce:
+              name: Арканоід
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Artist: Patterns':
+              name: 'Художник: візерунки'
         playlab:
           title: Ігрова студія
           description: Складіть історію або створіть гру в Ігровій студії!
           description_short: Створіть історію або гру в спеціальній студії!
           stages:
+            Play Lab:
+              name: Ігрова студія
+          lessons:
             Play Lab:
               name: Ігрова студія
         artist:
@@ -159,6 +273,9 @@ uk:
           stages:
             Artist:
               name: Художник
+          lessons:
+            Artist:
+              name: Художник
         hourofcode:
           title: Лабіринт
           description: Спробуйте основи інформатики з персонажами  Angry Birds, Plants vs. Zombies, та Білкою з Льодовикового періоду!
@@ -166,11 +283,17 @@ uk:
           stages:
             Maze:
               name: Лабіринт
+          lessons:
+            Maze:
+              name: Лабіринт
         frozen:
           title: Програмуємо з Анною та Ельзою
           description: Скористаємось вмінням програмувати, щоб допомогти Анні та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори, покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!
           description_short: Вивчимо програмування, приєднавшись до Анни та Ельзи у подорожі чарівною зимовою казкою.
           stages:
+            Artist:
+              name: Художник
+          lessons:
             Artist:
               name: Художник
         course4:
@@ -223,6 +346,51 @@ uk:
               name: 'Безмашинні вправи: написання пісень з параметрами'
             'Unplugged: Tangrams':
               name: 'Безмашинні вправи: танграм'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'Безмашинні вправи: танграм'
+            Maze and Bee:
+              name: Бджілка у лабіринті
+            Artist:
+              name: Художник
+            'Unplugged: Envelope Variables':
+              name: 'Безмашинні вправи: конвертні змінні'
+            'Unplugged: Madlibs':
+              name: 'Безмашинні вправи: пропуски'
+            'Artist: Variables':
+              name: 'Художник: змінні'
+            'Play Lab: Variables':
+              name: 'Ігрова лабораторія: змінні'
+            'Unplugged: For Loop Fun':
+              name: 'Безмашинні вправи: ігри з циклами'
+            'Bee: For Loops':
+              name: 'Бджілка - цикли з параметром'
+            'Artist: For Loops':
+              name: 'Художник - цикли з параметром'
+            'Play Lab: For Loops':
+              name: 'Ігрова лабораторія - цикли з параметром'
+            'Artist: Functions':
+              name: 'Художник - функції'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Безмашинні вправи: написання пісень з параметрами'
+            'Artist: Functions with Parameters':
+              name: 'Художник: функції з параметрами'
+            'Play Lab: Functions with Parameters':
+              name: 'Ігрова лабораторія: Функції з параметрами'
+            'Bee: Functions with Parameters':
+              name: 'Бджілка: Функції з параметрами'
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Super Challenge - Variables:
+              name: Супер завдання - Змінні
+            Super Challenge - For Loops:
+              name: Супер завдання - цикли Для
+            Super Challenge - Functions and Parameters:
+              name: Супер завдання - функції та параметри
+            Extreme Challenge - Comprehensive:
+              name: Екстремальний виклик - комплексний
         Course4pre:
           title: Знання, необхідні для курсу 4
           description: Коротке узагальнення понять для учнів, котрі не проходили курси 2 та 3.
@@ -246,6 +414,25 @@ uk:
               name: 'Фермерка - цикли "поки"'
             'Maze: Sequence':
               name: 'Лабіринт: послідовність'
+          lessons:
+            'Maze: Sequence':
+              name: 'Лабіринт: послідовність'
+            'Artist: Sequence':
+              name: 'Художник: послідовність'
+            'Artist: Loops':
+              name: 'Художник: цикли'
+            'Bee: Conditionals':
+              name: 'Бджілка - умови'
+            'Artist: Nested Loops':
+              name: 'Художник - вкладені цикли'
+            'Farmer: While Loops':
+              name: 'Фермерка - цикли "поки"'
+            'Bee: Nested Loops':
+              name: 'Бджілка - вкладені цикли'
+            'Artist: Functions':
+              name: 'Художник - функції'
+            'Bee: Debugging':
+              name: 'Бджілка - відлагодження'
         usability:
           title: Тестування юзабіліті
           description: Підбірка Курсу 4 рівня для тестування юзабіліті.
@@ -260,6 +447,17 @@ uk:
               name: Вступ
             Variables:
               name: змінні
+          lessons:
+            Intro:
+              name: Вступ
+            Variables:
+              name: змінні
+            For Loops:
+              name: Цикли For
+            Functions and Functions with Parameters:
+              name: Функції та функції з параметрами
+            Binary:
+              name: Двійкова система
         algebra:
           title: Інформатика в алгебрі
           description: Вивчайте функціональне програмування через алгебру
@@ -283,11 +481,49 @@ uk:
               name: 'Безмашинна вправа: Створення рецепту'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Безмашинна вправа: відео-ігри та координатні площини'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Безмашинна вправа: відео-ігри та координатні площини'
+            'Calc: Evaluation Blocks':
+              name: 'Калькулятор: оцінювання блоків'
+            'Eval: Strings and Images':
+              name: 'Оцінка: рядки та картинки'
+            'Unplugged: Contracts':
+              name: 'Безмашинна вправа: Визначення'
+            'Eval: Writing Contracts':
+              name: 'Оцінка: написання визначень'
+            'Calc: Defining Variables':
+              name: 'Калькулятор: визначення змінних'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Ігрова лабораторія: визначення змінних (Велика гра)'
+            'Unplugged: The Design Recipe':
+              name: 'Безмашинна вправа: Створення рецепту'
+            'Play Lab: Animation (Big Game)':
+              name: 'Ігрова лабораторія: анімація (Велика гра)'
+            'Unplugged: Booleans':
+              name: 'Безмашинна вправа: логічні вирази'
+            'Eval: Boolean Operators':
+              name: 'Оцінка: логічні вирази'
+            'Play Lab: Booleans':
+              name: 'Ігрова лабораторія: логічні вирази'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Ігрова лабораторія: логічні значення (Велика гра)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Безмашинна вправа: Умови та складні функції'
+            'Eval: Conditionals':
+              name: 'Оцінка: умови'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Безмашинна вправа: Виявлення зіткнень та формула відстані'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Ігрова лабораторія: виявлення зіткнень (Велика гра)'
         infinity:
           title: Ігрова лабораторія Діснея Infinity
           description: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
           description_short: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
           stages:
+            Infinity:
+              name: Infinity
+          lessons:
             Infinity:
               name: Infinity
         algebrademo:
@@ -303,6 +539,17 @@ uk:
               name: Оцінкові блоки
             Making Pictures:
               name: Зробити зображення
+            The Design Recipe:
+              name: Створення рецепту
+          lessons:
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Making Pictures:
+              name: Зробити зображення
+            Defining Variables:
+              name: Визначення змінних
+            Defining Simple Functions:
+              name: Визначити прості функції
             The Design Recipe:
               name: Створення рецепту
         K5PD:
@@ -371,6 +618,47 @@ uk:
               name: Лабіринт
             Wrap-up:
               name: Підведення підсумків
+          lessons:
+            Introduction to Computer Science:
+              name: Вступ до інформатики
+            The Maze:
+              name: Лабіринт
+            Computational Thinking:
+              name: Обчислювальне мислення
+            Graph Paper Programming:
+              name: Програмування по клітинках
+            The Artist:
+              name: Художник
+            Algorithms:
+              name: Алгоритми
+            The Artist 2:
+              name: Художник 2
+            Functions:
+              name: функції
+            The Farmer:
+              name: Фермерка
+            Conditionals:
+              name: Умови
+            The Artist 3:
+              name: Художник 3
+            Song Writing:
+              name: Написання пісень
+            The Farmer 2:
+              name: Фермерка 2
+            Abstraction:
+              name: Абстракції
+            The Artist 4:
+              name: Художник 4
+            Relay Programming:
+              name: Естафетне програмування
+            The Farmer 3:
+              name: Фермерка 3
+            The Internet:
+              name: Інтернет
+            The Artist 5:
+              name: Художник 5
+            Wrap-up:
+              name: Підведення підсумків
         edit-code:
           title: Редагування коду
           description: Редагування коду
@@ -382,6 +670,13 @@ uk:
               name: Художник
             The Maze:
               name: Лабіринт
+          lessons:
+            The Maze:
+              name: Лабіринт
+            The Artist:
+              name: Художник
+            Play Lab:
+              name: Ігрова студія
         events:
           title: Події
           description: Події
@@ -395,11 +690,23 @@ uk:
               name: Оцінювання
             Studio:
               name: Студія
+          lessons:
+            Bounce:
+              name: Арканоід
+            Studio:
+              name: Студія
+            Calc:
+              name: Калькулятор
+            Eval:
+              name: Оцінювання
         flappy:
           title: Код Пурха
           description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!
           description_short: Створіть власну гру в Пурха!
           stages:
+            Flappy Code:
+              name: Код Пурха
+          lessons:
             Flappy Code:
               name: Код Пурха
         jigsaw:
@@ -409,11 +716,17 @@ uk:
           stages:
             Jigsaw:
               name: Пазли
+          lessons:
+            Jigsaw:
+              name: Пазли
         step:
           title: Крок
           description: Покроковий підручник
           description_short: Покроковий підручник
           stages:
+            Step:
+              name: Крок
+          lessons:
             Step:
               name: Крок
         Hour of Code:
@@ -423,12 +736,21 @@ uk:
           stages:
             Hour of Code 2013:
               name: Година коду 2013
+          lessons:
+            Hour of Code 2013:
+              name: Година коду 2013
         CodeStudioPuzzleChallenge:
           stages:
             Puzzles:
               name: Задачі
+          lessons:
+            Puzzles:
+              name: Задачі
         Tutorial Video - Code Studio Puzzle Challenge:
           stages:
+            Puzzles:
+              name: Задачі
+          lessons:
             Puzzles:
               name: Задачі
         cspunit1:
@@ -438,12 +760,24 @@ uk:
               name: Двійкові Числа
             Personal Innovations:
               name: Особисті інновації
+          lessons:
+            Personal Innovations:
+              name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
         algebraPD:
           stages:
             Evaluation Blocks:
               name: Оцінкові блоки
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Teacher Dashboard:
+              name: Панель вчителя
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+            Evaluation Blocks:
+              name: Оцінкові блоки
             Teacher Dashboard:
               name: Панель вчителя
         algPDmiami:
@@ -454,21 +788,42 @@ uk:
               name: Оцінкові блоки
             Strings and Images:
               name: Рядки та зображення
+          lessons:
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Strings and Images:
+              name: Рядки та зображення
+            Booleans:
+              name: Логічні вирази
         CSPPD:
           stages:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+          lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         ECSPD:
           stages:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
         sciencePD:
           stages:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+          lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         cspunit3:
           description_short: Програмування
           stages:
+            Creating Functions:
+              name: Створення функцій
+            While Loops:
+              name: Цикли "поки"
+          lessons:
             Creating Functions:
               name: Створення функцій
             While Loops:
@@ -485,12 +840,29 @@ uk:
               name: Панель вчителя
             The Design Recipe:
               name: Створення рецепту
+          lessons:
+            Teacher Dashboard:
+              name: Панель вчителя
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Strings and Images:
+              name: Рядки та зображення
+            The Design Recipe:
+              name: Створення рецепту
+            Next Steps:
+              name: Наступні Кроки
         ECSPD-NexTech:
           stages:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
         ECSPD-iZone:
           stages:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+          lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         algebraPD-NexTech:
@@ -501,6 +873,13 @@ uk:
               name: Знайомство з профессійним кодуванням
             Teacher Dashboard:
               name: Панель вчителя
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Teacher Dashboard:
+              name: Панель вчителя
         algebraPD-iZone:
           stages:
             Evaluation Blocks:
@@ -509,12 +888,25 @@ uk:
               name: Знайомство з профессійним кодуванням
             Teacher Dashboard:
               name: Панель вчителя
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Teacher Dashboard:
+              name: Панель вчителя
         sciencePD-NexTech:
           stages:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
         sciencePD-iZone:
           stages:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+          lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         sciencePD2:
@@ -525,9 +917,17 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
         cspunit2:
           description_short: Програмування
           stages:
+            The Internet:
+              name: Інтернет
+          lessons:
             The Internet:
               name: Інтернет
         algebraPD2a:
@@ -546,6 +946,19 @@ uk:
               name: Рядки та зображення
             The Design Recipe:
               name: Створення рецепту
+          lessons:
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Strings and Images:
+              name: Рядки та зображення
+            Defining Variables:
+              name: Визначення змінних
+            The Design Recipe:
+              name: Створення рецепту
+            Booleans:
+              name: Логічні вирази
+            Free Play:
+              name: Вільна гра
         allthethings:
           title: Все!
           description: Всі типи рівнів для тестування інтерфейсу
@@ -577,6 +990,33 @@ uk:
               name: Пікселізаціі
             Studio:
               name: Студія
+          lessons:
+            Jigsaw:
+              name: Пазли
+            Maze:
+              name: Лабіринт
+            Artist:
+              name: Художник
+            Bee:
+              name: Бджілка
+            Flappy:
+              name: Пурх
+            Bounce:
+              name: Арканоід
+            Multi:
+              name: Множинний вибір
+            Match:
+              name: Відповідність
+            Odometer:
+              name: Одометр
+            Pixelation:
+              name: Пікселізаціі
+            AppLab:
+              name: Програмна лабораторія
+            Studio:
+              name: Студія
+            Minecraft:
+              name: Майнкрафт
         algebraPD2b:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -599,6 +1039,25 @@ uk:
               name: Рядки та зображення
             Teacher Dashboard:
               name: Панель вчителя
+          lessons:
+            Best Practices for Teaching Computer Science:
+              name: Успішні методики викладання інформатики
+            Teacher Dashboard:
+              name: Панель вчителя
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Strings and Images:
+              name: Рядки та зображення
+            Defining Variables:
+              name: Визначення змінних
+            Defining Functions:
+              name: Визначення функцій
+            Booleans:
+              name: Логічні вирази
+            'Eval: Conditionals':
+              name: 'Оцінка: умови'
+            Next Steps:
+              name: Наступні Кроки
         cspfacilitator:
           stages:
             App Lab:
@@ -607,11 +1066,23 @@ uk:
               name: Інтернет симулятор
             Welcome!:
               name: Ласкаво просимо!
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            Internet Simulator:
+              name: Інтернет симулятор
+            App Lab:
+              name: App Lab
         K5-OnlinePD:
           title: Викладання основ інформатики
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
           description_short: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
           stages:
+            Best Practices for Teaching Computer Science:
+              name: Успішні методики викладання інформатики
+            Next Steps:
+              name: Наступні Кроки
+          lessons:
             Best Practices for Teaching Computer Science:
               name: Успішні методики викладання інформатики
             Next Steps:
@@ -630,6 +1101,17 @@ uk:
               name: Ласкаво просимо!
             Wrap-up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Підведення підсумків
         algebraPD2:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -640,10 +1122,22 @@ uk:
               name: Створення рецепту
             Welcome!:
               name: Ласкаво просимо!
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            The Design Recipe:
+              name: Створення рецепту
+            Teacher Dashboard:
+              name: Панель вчителя
         sciencePD2b:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           stages:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
+          lessons:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
@@ -656,14 +1150,27 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
         Equity-OnlinePD:
           stages:
+            Next Steps:
+              name: Наступні Кроки
+          lessons:
             Next Steps:
               name: Наступні Кроки
         sciencePD2b-iZone:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           stages:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
+          lessons:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
@@ -682,6 +1189,17 @@ uk:
               name: Ласкаво просимо!
             Wrap-up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Підведення підсумків
         ECSPD2-NexTech:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -694,6 +1212,17 @@ uk:
               What Is a Computer?
             Welcome!:
               name: Ласкаво просимо!
+            Wrap-up:
+              name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Підведення підсумків
         asUnplugged:
@@ -716,6 +1245,25 @@ uk:
               name: Написання пісень
             The Big Event:
               name: Велика подія
+          lessons:
+            Happy Maps:
+              name: Щасливі карти
+            Move it, Move it:
+              name: Рухайся, рухайся
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Graph Paper Programming:
+              name: Програмування по клітинках
+            Building a Foundation:
+              name: Закладання основ
+            Getting Loopy:
+              name: Економія на повторах
+            The Big Event:
+              name: Велика подія
+            Binary Bracelets:
+              name: Двійкові браслети
+            Songwriting:
+              name: Написання пісень
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -733,9 +1281,15 @@ uk:
           stages:
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
+          lessons:
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
         cspunit3temp:
           description_short: Програмування
           stages:
+            While Loops:
+              name: Цикли "поки"
+          lessons:
             While Loops:
               name: Цикли "поки"
         gumball:
@@ -745,11 +1299,17 @@ uk:
           stages:
             Gumball Play Lab:
               name: Ігрова студія Гамбола
+          lessons:
+            Gumball Play Lab:
+              name: Ігрова студія Гамбола
         starwars:
           title: 'Зоряні війни: Закодуємо далеку Галактику'
           description: Навчись програмувати дроїдів, створи власну гру Зоряних воєн у далекій-далекій галактиці.
           description_short: Навчись програмувати дроїдів, створи власну гру Зоряних воєн у далекій-далекій галактиці.
           stages:
+            Hour of Code 2015:
+              name: Година коду 2015
+          lessons:
             Hour of Code 2015:
               name: Година коду 2015
         starwarsblocks:
@@ -759,6 +1319,9 @@ uk:
           stages:
             Hour of Code 2015:
               name: Година коду 2015
+          lessons:
+            Hour of Code 2015:
+              name: Година коду 2015
         mc:
           title: Година коду від Майнкрафт
           description: Використай блоки коду, щоб допомогти Стіву та Алексу в їхніх пригодах у світі Майнкрафт
@@ -766,8 +1329,16 @@ uk:
           stages:
             Hour of Code 2015:
               name: Година коду 2015
+          lessons:
+            Hour of Code 2015:
+              name: Година коду 2015
         ScienceP3OLPT3:
           stages:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
+          lessons:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
@@ -790,6 +1361,19 @@ uk:
               name: 'Оцінка: написання визначень'
             'Unplugged: Contracts':
               name: 'Безмашинна вправа: Визначення'
+            'Unplugged: The Design Recipe':
+              name: 'Безмашинна вправа: Створення рецепту'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'Калькулятор: оцінювання блоків'
+            'Eval: Strings and Images':
+              name: 'Оцінка: рядки та картинки'
+            'Unplugged: Contracts':
+              name: 'Безмашинна вправа: Визначення'
+            'Eval: Writing Contracts':
+              name: 'Оцінка: написання визначень'
+            'Calc: Defining Variables':
+              name: 'Калькулятор: визначення змінних'
             'Unplugged: The Design Recipe':
               name: 'Безмашинна вправа: Створення рецепту'
         AlgebraB:
@@ -819,6 +1403,29 @@ uk:
               name: 'Безмашинна вправа: Умови та складні функції'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Безмашинна вправа: відео-ігри та координатні площини'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Безмашинна вправа: відео-ігри та координатні площини'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Ігрова лабораторія: визначення змінних (Велика гра)'
+            'Play Lab: Animation (Big Game)':
+              name: 'Ігрова лабораторія: анімація (Велика гра)'
+            'Unplugged: Booleans':
+              name: 'Безмашинна вправа: логічні вирази'
+            'Eval: Boolean Operators':
+              name: 'Оцінка: логічні вирази'
+            'Play Lab: Booleans':
+              name: 'Ігрова лабораторія: логічні вирази'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Ігрова лабораторія: логічні значення (Велика гра)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Безмашинна вправа: Умови та складні функції'
+            'Eval: Conditionals':
+              name: 'Оцінка: умови'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Безмашинна вправа: Виявлення зіткнень та формула відстані'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Ігрова лабораторія: виявлення зіткнень (Велика гра)'
         algebraPD1:
           title: Інформатика в алгебрі - Частина 1
           stages:
@@ -826,6 +1433,13 @@ uk:
               name: Оцінкові блоки
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Teacher Dashboard:
+              name: Панель вчителя
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+            Evaluation Blocks:
+              name: Оцінкові блоки
             Teacher Dashboard:
               name: Панель вчителя
         csp1-2017:
@@ -845,6 +1459,15 @@ uk:
               display_name: 'Глава 1: Представлення та передача інформації'
             csp1_2:
               display_name: 'Глава 2: Винайти інтернет'
+          lessons:
+            Personal Innovations:
+              name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
+            The Internet:
+              name: Інтернет
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp2-2017:
           stages:
             Post-Course Survey:
@@ -856,6 +1479,9 @@ uk:
               display_name: 'Глава 2. Маніпулювання та візуалізація даних'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp3-2017:
           description_short: Програмування
           stages:
@@ -870,6 +1496,11 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Creating Functions:
+              name: Створення функцій
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp4-2017:
           stages:
             Simple Encryption:
@@ -883,6 +1514,11 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Simple Encryption:
+              name: Просте шифрування
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp5-2017:
           stages:
             While Loops:
@@ -896,6 +1532,11 @@ uk:
               display_name: 'Глава 2: Програмування з структурами даних'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            While Loops:
+              name: Цикли "поки"
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         CSDU3-Draft:
           description_short: Програмування
           stages:
@@ -905,6 +1546,9 @@ uk:
               name: Швидкість
         2016_sciencePD_phase1:
           stages:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+          lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         TEMP CSD Unit 3:
@@ -919,8 +1563,18 @@ uk:
               name: Знайомство з профессійним кодуванням
             Teacher Dashboard:
               name: Панель вчителя
+          lessons:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+            Evaluation Blocks:
+              name: Оцінкові блоки
+            Teacher Dashboard:
+              name: Панель вчителя
         sciencePD1:
           stages:
+            Introduction to PD:
+              name: Знайомство з профессійним кодуванням
+          lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         cspunit1-support:
@@ -943,12 +1597,18 @@ uk:
           stages:
             Game Lab:
               name: Ігрова лабораторія
+          lessons:
+            Game Lab:
+              name: Ігрова лабораторія
         CSDU2-Draft:
           stages:
             Peer Review:
               name: Рецензування
         MikeTest:
           stages:
+            Artist Functions:
+              name: Художник - функції
+          lessons:
             Artist Functions:
               name: Художник - функції
         artistExemplar:
@@ -963,6 +1623,9 @@ uk:
               display_name: Методики викладання
         kinderTest:
           stages:
+            'Bee: Conditionals':
+              name: 'Бджілка - умови'
+          lessons:
             'Bee: Conditionals':
               name: 'Бджілка - умови'
         gradeKinder:
@@ -1029,6 +1692,17 @@ uk:
               name: Ласкаво просимо!
             Wrap-up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Підведення підсумків
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -1067,6 +1741,15 @@ uk:
               display_name: Опитування
             csd_survey:
               display_name: Опитування після закінчення курсу
+          lessons:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         grade2:
           stages:
             Flappy:
@@ -1099,6 +1782,27 @@ uk:
               name: змінні
             While Loops:
               name: Цикли "поки"
+          lessons:
+            Events:
+              name: Події
+            Loops:
+              name: Цикли
+            Nested Loops:
+              name: Вкладені цикли
+            Conditionals:
+              name: Умови
+            While Loops:
+              name: Цикли "поки"
+            Functions:
+              name: функції
+            Variables:
+              name: змінні
+            For Loops:
+              name: Цикли For
+            Functions with Parameters:
+              name: Функції з параметрами
+            Binary:
+              name: Двійкова система
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -1107,6 +1811,13 @@ uk:
               name: Створення рецепту
             Welcome!:
               name: Ласкаво просимо!
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            The Design Recipe:
+              name: Створення рецепту
+            Teacher Dashboard:
+              name: Панель вчителя
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -1138,8 +1849,14 @@ uk:
           stages:
             Bounce:
               name: Арканоід
+          lessons:
+            Bounce:
+              name: Арканоід
         hoc-encryption:
           stages:
+            Simple Encryption:
+              name: Просте шифрування
+          lessons:
             Simple Encryption:
               name: Просте шифрування
         fesbinary:
@@ -1164,6 +1881,9 @@ uk:
               display_name: 'Глава: Стилізація та CSS'
             csd_survey:
               display_name: Опитування після закінчення курсу
+          lessons:
+            Lists:
+              name: Списки
         csp2-support:
           lesson_groups:
             required:
@@ -1187,8 +1907,14 @@ uk:
           stages:
             Minecraft Hour of Code Designer:
               name: Година коду від Майнкрафт - Розробник
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: Година коду від Майнкрафт - Розробник
         flappy-impact-study:
           stages:
+            Flappy Code:
+              name: Код Пурха
+          lessons:
             Flappy Code:
               name: Код Пурха
         coursea-draft:
@@ -1197,8 +1923,18 @@ uk:
               name: 'Життєві алгоритми: посадити насіння'
             Going Places Safely:
               name: Безпечне добирання
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Going Places Safely:
+              name: Безпечне добирання
         courseb-draft:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Your Digital Footprint:
+              name: Твій цифровий слід
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
             Your Digital Footprint:
@@ -1213,6 +1949,13 @@ uk:
               name: Твій цифровий слід
             Building a Foundation:
               name: Закладання основ
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            'Real-life Algorithms: Paper Planes':
+              name: 'Життєві алгоритми: Паперові літачки'
+            Binary Bracelets:
+              name: Двійкові браслети
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -1227,6 +1970,19 @@ uk:
               name: Вкладені цикли
             Introduction:
               name: Вступ
+          lessons:
+            Introduction:
+              name: Вступ
+            Nested Loops:
+              name: Вкладені цикли
+            Conditionals with Cards:
+              name: Листівки та умови
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -1244,6 +2000,15 @@ uk:
               display_name: Зміст
             extra_course_content:
               display_name: Додатковий вміст курсу
+          lessons:
+            Introduction:
+              name: Вступ
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1261,6 +2026,17 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+          lessons:
+            Introduction:
+              name: Вступ
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Songwriting with Parameters:
+              name: Пісні з параметрами
         classic-hoc-impact-study:
           description_short: Спробуйте основи інформатики з цікавими персонажами!
           stages:
@@ -1271,11 +2047,17 @@ uk:
           stages:
             Hour of Code 2013:
               name: Година коду 2013
+          lessons:
+            Hour of Code 2013:
+              name: Година коду 2013
         sports:
           title: Закодуй власну спортивну гру
           description_short: Закодуй власний спорт
           description: Закодуй власний спорт
           stages:
+            Sports:
+              name: Спорт
+          lessons:
             Sports:
               name: Спорт
         2016_sciencePD-phase2b:
@@ -1284,8 +2066,18 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
         2016_sciencePD_phase2b:
           stages:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
+          lessons:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
@@ -1312,6 +2104,11 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+          lessons:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
         science-pd-ol-pt-5:
           stages:
             Welcome!:
@@ -1325,8 +2122,16 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+          lessons:
+            Binary:
+              name: Двійкова система
         sciencepd5:
           stages:
+            Welcome!:
+              name: Ласкаво просимо!
+            Wrap-Up:
+              name: Підведення підсумків
+          lessons:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
@@ -1348,6 +2153,9 @@ uk:
               display_name: Зміст
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csd6-draft:
           stages:
             Lists:
@@ -1361,8 +2169,14 @@ uk:
               display_name: 'Глава 1: Програмування з обладнанням'
             csd6_2:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+          lessons:
+            Functions with Parameters:
+              name: Функції з параметрами
         workshop-gamelab:
           stages:
+            Introduction:
+              name: Вступ
+          lessons:
             Introduction:
               name: Вступ
         csd5-draft:
@@ -1375,6 +2189,9 @@ uk:
           stages:
             Introduction:
               name: Вступ
+          lessons:
+            Introduction:
+              name: Вступ
         coursee-ramp:
           stages:
             Introduction:
@@ -1383,6 +2200,13 @@ uk:
               name: Умови
             'Real Life Algorithms: Dice Race':
               name: 'Життєві алгоритми: гонка в кубики'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'Життєві алгоритми: гонка в кубики'
+            Introduction:
+              name: Вступ
+            Conditionals:
+              name: Умови
         csd6-2017:
           stages:
             Lists:
@@ -1424,6 +2248,11 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+          lessons:
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         csd2-draft:
           stages:
             Lists:
@@ -1446,6 +2275,11 @@ uk:
               name: Вступ
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
+          lessons:
+            Introduction:
+              name: Вступ
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -1454,8 +2288,16 @@ uk:
           stages:
             Peer Review:
               name: Рецензування
+          lessons:
+            Peer Review:
+              name: Рецензування
         artist-and-bb8:
           stages:
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
+            Bounce:
+              name: Арканоід
+          lessons:
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
             Bounce:
@@ -1467,6 +2309,11 @@ uk:
           title: Курс А
           assignment_family_title: Курс А
           description_audience: 'Вік: 4-7'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Going Places Safely:
+              name: Безпечне добирання
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1474,6 +2321,11 @@ uk:
           title: Курс Б
           assignment_family_title: Курс Б
           description_audience: 'Вік: 5-8'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Your Digital Footprint:
+              name: Твій цифровий слід
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1481,6 +2333,13 @@ uk:
           title: Курс В
           assignment_family_title: Курс В
           description_audience: 'Вік: 6-10'
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            'Real-life Algorithms: Paper Planes':
+              name: 'Життєві алгоритми: Паперові літачки'
+            Binary Bracelets:
+              name: Двійкові браслети
         coursed-2017:
           stages:
             Nested Loops:
@@ -1488,6 +2347,19 @@ uk:
           title: Курс Г
           assignment_family_title: Курс Г
           description_audience: 'Вік: 7-11'
+          lessons:
+            Introduction:
+              name: Вступ
+            Nested Loops:
+              name: Вкладені цикли
+            Conditionals with Cards:
+              name: Листівки та умови
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1512,6 +2384,19 @@ uk:
               display_name: Зміст курсу E
             extra_course_content:
               display_name: Додатковий вміст курсу
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
+            Introduction:
+              name: Вступ
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         coursef-2017:
           stages:
             Building a Foundation:
@@ -1524,6 +2409,19 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Introduction:
+              name: Вступ
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Songwriting with Parameters:
+              name: Пісні з параметрами
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -1628,6 +2526,13 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+          lessons:
+            Introduction:
+              name: Вступ
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1635,6 +2540,11 @@ uk:
             Spelling Bee:
               name: Грамотна Бджілка
           description_audience: 'Вік: 4-8'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Spelling Bee:
+              name: Грамотна Бджілка
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -1651,6 +2561,9 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Creating Functions:
+              name: Створення функцій
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -1676,6 +2589,15 @@ uk:
               display_name: Зміст курсу E
             extra_course_content:
               display_name: Додатковий вміст курсу
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         new-d:
           stages:
             Introduction:
@@ -1694,6 +2616,21 @@ uk:
               name: Закладання основ
             Loops in Ice Age:
               name: Петлі в Ice Age
+          lessons:
+            Introduction:
+              name: Вступ
+            Building a Foundation:
+              name: Закладання основ
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
         csp3-a:
           lesson_groups:
             csp3_1:
@@ -1709,6 +2646,13 @@ uk:
           lesson_groups:
             content:
               display_name: Зміст
+          lessons:
+            Introduction:
+              name: Вступ
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
         new-e:
           stages:
             Building a Foundation:
@@ -1726,6 +2670,15 @@ uk:
               display_name: Зміст курсу E
             extra_course_content:
               display_name: Додатковий вміст курсу
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         new-f:
           stages:
             Building a Foundation:
@@ -1743,6 +2696,17 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Songwriting with Parameters:
+              name: Пісні з параметрами
         csd5-old:
           lesson_groups:
             csd5_1:
@@ -1764,14 +2728,25 @@ uk:
               display_name: 'Глава 1: Мови програмування та алгоритми'
             cspAssessment:
               display_name: Оцінка глави
+          lessons:
+            Creating Functions:
+              name: Створення функцій
         pwc:
           stages:
             Personal Innovations:
               name: Особисті інновації
             Simple Encryption:
               name: Просте шифрування
+          lessons:
+            Personal Innovations:
+              name: Особисті інновації
+            Simple Encryption:
+              name: Просте шифрування
         hero:
           stages:
+            Minecraft Hour of Code:
+              name: Година коду від Майнкрафт
+          lessons:
             Minecraft Hour of Code:
               name: Година коду від Майнкрафт
         csp-explore-2017:
@@ -1783,6 +2758,9 @@ uk:
               display_name: 'Глава 2: Дослідження продуктивності AP'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp-create-2017:
           stages:
             Post-Course Survey:
@@ -1792,6 +2770,9 @@ uk:
               display_name: 'Глава 3: Створення завдання ефективності AP'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1813,6 +2794,19 @@ uk:
               display_name: Зміст курсу E
             extra_course_content:
               display_name: Додатковий вміст курсу
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
+            Introduction:
+              name: Вступ
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1832,6 +2826,19 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Introduction:
+              name: Вступ
+            Ice Age Play Lab:
+              name: Ігрова студія Льодовикового періоду
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Songwriting with Parameters:
+              name: Пісні з параметрами
         csd6-old:
           stages:
             Lists:
@@ -1843,6 +2850,11 @@ uk:
               display_name: 'Глава 1: Програмування з обладнанням'
             csd6_2:
               display_name: 'Глава 2: Побудова фізичних прототипів'
+          lessons:
+            Lists:
+              name: Списки
+            For Loops:
+              name: Цикли For
         csd3-1819draft:
           stages:
             Variables:
@@ -1861,6 +2873,15 @@ uk:
               display_name: 'Глава 2: Побудова ігор'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         csd3-2018:
           description_short: "Програмування"
           stages:
@@ -1879,6 +2900,15 @@ uk:
               display_name: 'Глава 2: Побудова ігор'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         csd2-2018:
           stages:
             Lists:
@@ -1890,6 +2920,9 @@ uk:
               display_name: 'Глава: Стилізація та CSS'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Lists:
+              name: Списки
         coursea-2018:
           assignment_family_title: Курс А
           description_audience: 'Вік: 4-7'
@@ -1904,6 +2937,11 @@ uk:
               name: Безпечне добирання
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+            Going Places Safely:
+              name: Безпечне добирання
         express-2018:
           description_audience: 'Вік: 9-18'
           stages:
@@ -1941,6 +2979,27 @@ uk:
               name: Естафетне програмування
             Graph Paper Programming:
               name: Програмування по клітинках
+          lessons:
+            Graph Paper Programming:
+              name: Програмування по клітинках
+            Relay Programming:
+              name: Естафетне програмування
+            Conditionals with Cards:
+              name: Листівки та умови
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Binary Bracelets:
+              name: Двійкові браслети
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         courseb-2018:
           assignment_family_title: Курс Б
           description_audience: 'Вік: 5-8'
@@ -1951,6 +3010,13 @@ uk:
               name: Твій цифровий слід
             Move It, Move It:
               name: Рухайся, рухайся
+          lessons:
+            Move It, Move It:
+              name: Рухайся, рухайся
+            Your Digital Footprint:
+              name: Твій цифровий слід
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         coursed-2018:
           assignment_family_title: Курс Г
           description_audience: 'Вік: 7-11'
@@ -1975,6 +3041,19 @@ uk:
               name: Програмування по клітинках
             Relay Programming:
               name: Естафетне програмування
+          lessons:
+            Relay Programming:
+              name: Естафетне програмування
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            Digital Citizenship:
+              name: Цифрове громадянство
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
         coursec-2018:
           assignment_family_title: Курс В
           description_audience: 'Вік: 6-10'
@@ -1985,6 +3064,13 @@ uk:
               name: Економія на повторах
             'Events: The Big Event':
               name: Велика подія
+            Binary Bracelets:
+              name: Двійкові браслети
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            'Real-life Algorithms: Paper Planes':
+              name: 'Життєві алгоритми: Паперові літачки'
             Binary Bracelets:
               name: Двійкові браслети
         csd6-2018:
@@ -1998,6 +3084,9 @@ uk:
               display_name: 'Глава 2: Побудова фізичних прототипів'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Functions with Parameters:
+              name: Функції з параметрами
         coursee-2018:
           assignment_family_title: Курс Ґ
           description_audience: 'Вік: 8-12'
@@ -2025,6 +3114,19 @@ uk:
               display_name: Зміст курсу E
             extra_course_content:
               display_name: Додатковий вміст курсу
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Nested Loops:
+              name: Вкладені цикли
+            Conditionals with Cards:
+              name: Листівки та умови
+            Conditionals:
+              name: Умови
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         coursef-2018:
           assignment_family_title: Курс Д
           description_audience: 'Вік: 9-13'
@@ -2050,6 +3152,15 @@ uk:
               display_name: Просунутися до Курсу F (опціонально)
             csf_f_2:
               display_name: Зміст курсу F
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Conditionals with Cards:
+              name: Листівки та умови
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
         csp1-2018:
           stages:
             Personal Innovations:
@@ -2065,6 +3176,13 @@ uk:
               display_name: 'Глава 1: Представлення та передача інформації'
             csp1_2:
               display_name: 'Глава 2: Винайти інтернет'
+          lessons:
+            Personal Innovations:
+              name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
+            The Internet:
+              name: Інтернет
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -2107,6 +3225,9 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Creating Functions:
+              name: Створення функцій
         csp-explore-2018:
           lesson_groups:
             csp_ap_2:
@@ -2130,6 +3251,9 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Simple Encryption:
+              name: Просте шифрування
         csp5-2018:
           stages:
             While Loops:
@@ -2141,6 +3265,9 @@ uk:
               display_name: 'Глава 2: Програмування з структурами даних'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            While Loops:
+              name: Цикли "поки"
         csppostap-2018:
           lesson_groups:
             csp_postap_1:
@@ -2272,6 +3399,15 @@ uk:
               name: Твій цифровий слід
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+          lessons:
+            Move It, Move It:
+              name: Рухайся, рухайся
+            Your Digital Footprint:
+              name: Твій цифровий слід
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Spelling Bee:
+              name: Грамотна Бджілка
         fit-test:
           lesson_groups:
             required:
@@ -2282,8 +3418,14 @@ uk:
           stages:
             Artist:
               name: Художник
+          lessons:
+            Artist:
+              name: Художник
         frozen-2018-test:
           stages:
+            Artist:
+              name: Художник
+          lessons:
             Artist:
               name: Художник
         dance:
@@ -2292,8 +3434,14 @@ uk:
               name: Танцювальна вечірка
           title: Танцювальна вечірка
           description_short: Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25 виконавців!
+          lessons:
+            Dance Party:
+              name: Танцювальна вечірка
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: Художник
+          lessons:
             Artist:
               name: Художник
         aquatic:
@@ -2346,6 +3494,15 @@ uk:
               display_name: Інтернет
             csf_digcit:
               display_name: Цифрове громадянство
+          lessons:
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
         dance-low:
           stages:
             Dance Party:
@@ -2382,6 +3539,21 @@ uk:
               display_name: Двійкова система
             csf_digcit:
               display_name: Цифрове громадянство
+          lessons:
+            Relay Programming:
+              name: Естафетне програмування
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Digital Citizenship:
+              name: Цифрове громадянство
+            Dance Party:
+              name: Танцювальна вечірка
         coursee-2019:
           description_audience: 'Вік: 8-12'
           stages:
@@ -2408,6 +3580,9 @@ uk:
               display_name: Вкладені цикли
             csf_functions:
               display_name: функції
+          lessons:
+            Conditionals:
+              name: Умови
         express-2019:
           description_audience: 'Вік: 9-18'
           stages:
@@ -2446,6 +3621,9 @@ uk:
               display_name: змінні
             csf_for_loops:
               display_name: Цикли For
+          lessons:
+            Dance Party:
+              name: Танцювальна вечірка
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2496,6 +3674,9 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Binary Bracelets:
+              name: Двійкові браслети
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2518,6 +3699,11 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Going Places Safely:
+              name: Безпечне добирання
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         courseb-2019:
           description_audience: 'Вік: 5-8'
           stages:
@@ -2538,6 +3724,11 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Your Digital Footprint:
+              name: Твій цифровий слід
+            Move It, Move It:
+              name: Рухайся, рухайся
         pre-express-2019:
           description_audience: 'Вік: 4-8'
           stages:
@@ -2554,8 +3745,16 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Spelling Bee:
+              name: Грамотна Бджілка
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         removed19:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Життєві алгоритми: посадити насіння'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
         csd2-2019:
@@ -2569,6 +3768,9 @@ uk:
               display_name: 'Глава: Стилізація та CSS'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Lists:
+              name: Списки
         csd3-2019:
           description_short: "Програмування"
           stages:
@@ -2587,6 +3789,15 @@ uk:
               display_name: 'Глава 2: Побудова ігор'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -2616,6 +3827,9 @@ uk:
               display_name: 'Глава 2: Побудова фізичних прототипів'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Functions with Parameters:
+              name: Функції з параметрами
         csp4-pilot:
           stages:
             Surveys:
@@ -2646,6 +3860,13 @@ uk:
               display_name: 'Глава 1: Представлення та передача інформації'
             csp1_2:
               display_name: 'Глава 2: Винайти інтернет'
+          lessons:
+            Personal Innovations:
+              name: Особисті інновації
+            Binary Numbers:
+              name: Двійкові Числа
+            The Internet:
+              name: Інтернет
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
@@ -2666,6 +3887,9 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Creating Functions:
+              name: Створення функцій
         csp4-2019:
           stages:
             Simple Encryption:
@@ -2677,6 +3901,9 @@ uk:
               display_name: Оцінка глави
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Simple Encryption:
+              name: Просте шифрування
         csp5-2019:
           stages:
             While Loops:
@@ -2688,6 +3915,9 @@ uk:
               display_name: 'Глава 2: Програмування з структурами даних'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            While Loops:
+              name: Цикли "поки"
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -2717,6 +3947,9 @@ uk:
               display_name: Опитування
             required:
               display_name: Огляд
+          lessons:
+            Binary Numbers:
+              name: Двійкові Числа
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2738,6 +3971,13 @@ uk:
               display_name: 'Інвазивні впливи на Еверглейдс'
             time4cs_c5:
               display_name: 'Громадяни впливають на зміни в Еверглейдс'
+          lessons:
+            Building a Foundation:
+              name: Закладання основ
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Листівки та умови
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2886,6 +4126,9 @@ uk:
               display_name: 'Глава: Стилізація та CSS'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CSS Classes:
+              name: Класи CSS
         csd3-pilot:
           description_short: "Програмування"
           stages:
@@ -2904,6 +4147,15 @@ uk:
               display_name: 'Глава 2: Побудова ігор'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         csp3-pilot:
           lesson_groups:
             content:
@@ -2921,6 +4173,9 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -2997,6 +4252,11 @@ uk:
               name: Вступ
             Nested Loops:
               name: Вкладені цикли
+          lessons:
+            Introduction:
+              name: Вступ
+            Nested Loops:
+              name: Вкладені цикли
         csp6-pilot:
           lesson_groups:
             content:
@@ -3005,6 +4265,9 @@ uk:
               display_name: Огляд
         dance-2019:
           stages:
+            Dance Party:
+              name: Танцювальна вечірка
+          lessons:
             Dance Party:
               name: Танцювальна вечірка
         k5-onlinepd-2019:
@@ -3032,6 +4295,21 @@ uk:
           lesson_groups:
             k5_next_steps:
               display_name: Наступні Кроки
+          lessons:
+            Sequencing:
+              name: Послідовність дій
+            Loops:
+              name: Цикли
+            Events:
+              name: Події
+            Conditionals:
+              name: Умови
+            Functions:
+              name: функції
+            Variables:
+              name: змінні
+            For Loops:
+              name: Цикли For
         dance-extras-2019:
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         csp4-preview:
@@ -3063,6 +4341,11 @@ uk:
               display_name: Вкладені цикли
             csf_functions:
               display_name: функції
+          lessons:
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Листівки та умови
         time4cs-experiment-unit-2:
           lesson_groups:
             time4cs_c1:
@@ -3092,6 +4375,9 @@ uk:
               display_name: Цифрове громадянство
             ramp_up:
               display_name: Просунутися
+          lessons:
+            Conditionals:
+              name: Умови
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -3109,6 +4395,9 @@ uk:
               display_name: Цифрове громадянство
             ramp_up:
               display_name: Просунутися
+          lessons:
+            Conditionals:
+              name: Умови
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -3154,6 +4443,9 @@ uk:
               display_name: 'Глава: Стилізація та CSS'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            CSS Classes:
+              name: Класи CSS
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -3191,6 +4483,9 @@ uk:
               display_name: 'Глава 2: Побудова фізичних прототипів'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Functions with Parameters:
+              name: Функції з параметрами
         csd3-2020:
           description_short: "Програмування"
           stages:
@@ -3211,6 +4506,17 @@ uk:
               display_name: 'Глава 2: Побудова ігор'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Variables:
+              name: змінні
+            Text:
+              name: Текст
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         coursea-2020:
           description_audience: 'Вік: 4-7'
           stages:
@@ -3227,6 +4533,9 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         courseb-2020:
           description_audience: 'Вік: 5-8'
           stages:
@@ -3245,6 +4554,9 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Move It, Move It:
+              name: Рухайся, рухайся
         coursec-2020:
           description_audience: 'Вік: 6-10'
           stages:
@@ -3263,6 +4575,9 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Binary Bracelets:
+              name: Двійкові браслети
         coursed-2020:
           description_audience: 'Вік: 7-11'
           stages:
@@ -3295,6 +4610,19 @@ uk:
               display_name: Двійкова система
             csf_digcit:
               display_name: Цифрове громадянство
+          lessons:
+            Relay Programming:
+              name: Естафетне програмування
+            Dance Party:
+              name: Танцювальна вечірка
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
         coursee-2020:
           description_audience: 'Вік: 8-12'
           stages:
@@ -3309,6 +4637,9 @@ uk:
               display_name: Вкладені цикли
             csf_functions:
               display_name: функції
+          lessons:
+            Conditionals:
+              name: Умови
         coursef-2020:
           description_audience: 'Вік: 9-13'
           stages:
@@ -3329,6 +4660,13 @@ uk:
               display_name: змінні
             csf_for_loops:
               display_name: Цикли For
+          lessons:
+            Envelope Variables:
+              name: Конвертні змінні
+            Internet:
+              name: Інтернет
+            For Loop Fun:
+              name: Ігри з циклами
         express-2020:
           description_audience: 'Вік: 9-18'
           stages:
@@ -3349,6 +4687,9 @@ uk:
               display_name: змінні
             csf_for_loops:
               display_name: Цикли For
+          lessons:
+            Dance Party:
+              name: Танцювальна вечірка
         pre-express-2020:
           description_audience: 'Вік: 4-8'
           stages:
@@ -3363,6 +4704,11 @@ uk:
               display_name: Цикли
             csf_events:
               display_name: Події
+          lessons:
+            Spelling Bee:
+              name: Грамотна Бджілка
+            Loops in Ice Age:
+              name: Петлі в Ice Age
         csp1-2020:
           stages:
             Binary Numbers:
@@ -3370,6 +4716,9 @@ uk:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Розділ 1: Цифрова інформація'
+          lessons:
+            Binary Numbers:
+              name: Двійкові Числа
         csp3-virtual:
           description_short: Програмування
           stages:
@@ -3378,6 +4727,9 @@ uk:
           lesson_groups:
             csp3_1_2018:
               display_name: 'Блок 3: Введення в програмування'
+          lessons:
+            Creating Functions:
+              name: Створення функцій
         csd3-virtual:
           description_short: "Програмування"
           stages:
@@ -3392,6 +4744,11 @@ uk:
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
+          lessons:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
         csd2-virtual:
           stages:
             CSS Classes:
@@ -3401,10 +4758,16 @@ uk:
               display_name: 'Глава 1: Веб-контент та HTML'
             csd2_2:
               display_name: 'Глава: Стилізація та CSS'
+          lessons:
+            CSS Classes:
+              name: Класи CSS
         csp5-virtual:
           stages:
             While Loops:
               name: Цикли "поки"
+            Variables:
+              name: змінні
+          lessons:
             Variables:
               name: змінні
         virtual-holding-place:
@@ -3418,6 +4781,11 @@ uk:
               display_name: Зміст
             csd3_2:
               display_name: 'Глава 2: Побудова ігор'
+          lessons:
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
         code-break:
           stages:
             Algorithms:
@@ -3433,3 +4801,6 @@ uk:
               display_name: 'Глава 1: Програмування, кероване подіями'
             csp5_2:
               display_name: 'Глава 2: Програмування з структурами даних'
+          lessons:
+            While Loops:
+              name: Цикли "поки"
