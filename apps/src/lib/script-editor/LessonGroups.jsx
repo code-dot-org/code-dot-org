@@ -7,13 +7,21 @@ import NewLessonGroupInput from './NewLessonGroupInput';
 import LessonGroupCard from './LessonGroupCard';
 
 const styles = {
+  addGroupWithWarning: {
+    margin: '0 0 30px 0',
+    display: 'flex',
+    alignItems: 'center'
+  },
   addGroup: {
     fontSize: 14,
     color: 'white',
     background: color.cyan,
     border: `1px solid ${color.cyan}`,
-    boxShadow: 'none',
-    margin: '0 0 30px 0'
+    boxShadow: 'none'
+  },
+  displayNameWarning: {
+    marginLeft: 5,
+    marginTop: 5
   }
 };
 
@@ -159,7 +167,7 @@ class LessonGroups extends Component {
           <LessonGroupCard
             key={lessonGroup.key}
             lessonGroup={lessonGroup}
-            lessonGroupCount={lessonGroups.length}
+            lessonGroupsCount={lessonGroups.length}
             setLessonMetrics={this.setLessonMetrics}
             setTargetLesson={this.setTargetLesson}
             targetLessonPos={this.state.targetLessonPos}
@@ -167,15 +175,24 @@ class LessonGroups extends Component {
           />
         ))}
         {!this.state.addingLessonGroup && (
-          <button
-            onMouseDown={this.handleAddLessonGroup}
-            className="btn"
-            style={styles.addGroup}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Lesson Group
-          </button>
+          <div style={styles.addGroupWithWarning}>
+            <button
+              onMouseDown={this.handleAddLessonGroup}
+              className="btn"
+              style={styles.addGroup}
+              type="button"
+              disabled={!this.props.lessonGroups[0].user_facing}
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Lesson Group
+            </button>
+            {!this.props.lessonGroups[0].user_facing && (
+              <span style={styles.displayNameWarning}>
+                You must set the display name of the existing lesson group
+                before adding more.
+              </span>
+            )}
+          </div>
         )}
         {this.state.addingLessonGroup && (
           <NewLessonGroupInput
