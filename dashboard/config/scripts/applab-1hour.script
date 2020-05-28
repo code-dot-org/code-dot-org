@@ -1,6 +1,6 @@
 login_required true
 
-stage 'Room Escape'
+lesson 'Room Escape'
 level 'Escape Room Example', named: true
 level 'Overview: Design Mode', named: true
 level 'Overview: Images', named: true
