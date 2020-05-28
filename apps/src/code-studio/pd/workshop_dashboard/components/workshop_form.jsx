@@ -683,15 +683,18 @@ export class WorkshopForm extends React.Component {
 
   shouldConfirmSave() {
     const workshop = this.props.workshop;
+
     if (!workshop || workshop.enrolled_teacher_count === 0) {
       return false;
     }
+
     return (
-      (this.state.sessionsModified ||
-        this.state.location_name !== workshop.location_name ||
-        this.state.location_address !== workshop.location_address ||
-        this.state.notes !== workshop.notes) &&
-      this.state.location_address !== ''
+      this.state.sessionsModified ||
+      this.state.location_name !== workshop.location_name ||
+      (this.state.location_address === ''
+        ? null
+        : this.state.location_address) !== workshop.location_address ||
+      this.state.notes !== workshop.notes
     );
   }
 
@@ -997,9 +1000,6 @@ export class WorkshopForm extends React.Component {
                       <p>When a workshop is virtual, our system:</p>
                       <ul>
                         <li>
-                          Does not require you to enter a location address
-                        </li>
-                        <li>
                           Will not send email notifications, such as enrollment
                           receipts and workshop reminders
                         </li>
@@ -1069,7 +1069,7 @@ export class WorkshopForm extends React.Component {
             </Col>
             <Col sm={6}>
               <FormGroup>
-                <ControlLabel>Location Address</ControlLabel>
+                <ControlLabel>Location Address (optional)</ControlLabel>
                 <FormControl
                   type="text"
                   key={this.state.useAutocomplete} // Change key to force re-draw
