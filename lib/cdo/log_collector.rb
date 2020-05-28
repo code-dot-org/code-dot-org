@@ -1,4 +1,4 @@
-# LogCollector is a simple container that collects errors and important info
+# LogCollector is a simple container that collects log messages and exceptions
 # when executing a task. It can also time block execution and log the result.
 #
 # LogCollector is helpful when we want to
@@ -7,13 +7,13 @@
 #   such as HoneyBadger and Slack.
 #
 class LogCollector
-  attr_reader :errors, :logs, :task_name
+  attr_reader :exceptions, :logs, :task_name
 
   def initialize(task_name = nil)
     @task_name = task_name
 
-    # List of rescued error objects
-    @errors = []
+    # List of rescued exceptions
+    @exceptions = []
 
     # List of message logs
     @logs = []
@@ -38,9 +38,10 @@ class LogCollector
     )
     record_exception(e)
   end
+  alias_method :time_and_continue, :time
 
   # Execute a block and time it.
-  # Re-raise execption if caught, do not save. This will disrupt the caller's flow.
+  # Re-raise exception if caught, do not save. This will disrupt the caller's flow.
   #
   # @param action_name [string] friendly name for the given block
   #
@@ -62,6 +63,7 @@ class LogCollector
     # To be handled by caller
     raise
   end
+  alias_method :time_and_raise!, :time!
 
   def info(message)
     logs << "[#{Time.now}] INFO: #{message}"
@@ -72,20 +74,18 @@ class LogCollector
   end
 
   def record_exception(e)
-    errors << e
+    exceptions << e
     error("Exception caught: #{e.inspect}. Stack trace:\n#{e.backtrace.join("\n")}")
   end
 
   def ok?
-    errors.blank?
+    exceptions.blank?
   end
 
   def to_s
-    str = "#{task_name} task recorded #{errors.size} error(s) and #{logs.size} log message(s)."
-    logs.each {|log| str.concat("\n#{log}")}
-    str
+    str = "#{task_name} task recorded #{exceptions.size} exceptions(s) and #{logs.size} log message(s).\n"
+    str + logs.join("\n")
   end
-
   alias_method :inspect, :to_s
 
   def self.get_friendly_time(value)

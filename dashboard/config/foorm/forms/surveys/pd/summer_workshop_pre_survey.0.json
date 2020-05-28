@@ -593,18 +593,8 @@
     },
     {
      "type": "html",
-     "name": "philosophy_description",
-     "html": "<p>Below are pairs of statements from computer science teachers describing various philosophies or approaches to teaching, presented as <strong>Statement A</strong> and <strong>Statement B </strong>like so:  </p>"
-    },
-    {
-     "type": "html",
-     "name": "statementAB_description",
-     "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\">\n                    <em><span style=\"color: #999999;\"><em>\"Quote from teacher.\"</em></span></em>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: center;\">\n                    <em><span style=\"color: #999999;\"><em>\"Different quote from teacher.\"</em></span></em>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
-    },
-    {
-     "type": "html",
      "name": "rating_description",
-     "html": "Please <b>select the value 1-5</b> that best shows how closely your own beliefs are to one of the statements in a given pair.\n\nPlease respond freely based on your <b>personal beliefs</b> and philosophy - there is no right or wrong way to respond."
+     "html": "<p>Below are pairs of statements from computer science teachers describing various philosophies or approaches to teaching, presented as <strong>Statement A</strong> and <strong>Statement B </strong>like so:  </p>  <div class='foorm-survey-rating-question-sample'><img src='/shared/images/foorm/foorm_rating_question_sample.png'/></div> Please <b>select the value 1-5</b> that best shows how closely your own beliefs are to one of the statements in a given pair.\n\nPlease respond freely based on your <b>personal beliefs</b> and philosophy - there is no right or wrong way to respond."
     },
     {
      "type": "html",
