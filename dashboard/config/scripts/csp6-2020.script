@@ -1,10 +1,12 @@
+hidden false
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit6/"], ["vocabulary", "https://curriculum.code.org/csp-20/unit6/vocab/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit6/{LESSON}'
-pilot_experiment 'csp-2020-access'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit6/{LESSON}'
+version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSP'
 
@@ -39,3 +41,4 @@ level 'U6 L05 Speedup Forever', progression: 'Check For Understanding', assessme
 lesson 'Lesson 6: Assessment Day', lockable: true
 level 'CSP U6L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 6 AP-Style Assessment _2020', progression: 'Unit 6 Exam', assessment: true
+
