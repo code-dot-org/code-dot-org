@@ -93,7 +93,7 @@ class Lesson < ActiveRecord::Base
 
   def localized_name
     if script.lessons.many?
-      I18n.t "data.script.name.#{script.name}.lessons.#{name}.name"
+      I18n.t "data.script.name.#{script.name}.stages.#{name}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
     end
@@ -140,8 +140,8 @@ class Lesson < ActiveRecord::Base
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
-        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{name}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{name}.description_teacher", default: '')),
+        description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: '')),
         unplugged: display_as_unplugged
       }
 
@@ -185,7 +185,7 @@ class Lesson < ActiveRecord::Base
   def summarize_for_edit
     summary = summarize.dup
     # Do not let script name override lesson name when there is only one lesson
-    summary[:name] = I18n.t("data.script.name.#{script.name}.lessons.#{name}.name")
+    summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
     summary.freeze
   end
 
