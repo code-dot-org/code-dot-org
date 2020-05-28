@@ -618,7 +618,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_empty script.lessons
 
     script_text = <<~SCRIPT_TEXT
-      stage 'stage 1'
+      lesson 'stage 1'
       level '#{level.name}'
     SCRIPT_TEXT
 
@@ -767,7 +767,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'course1'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
   end
 
   test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
@@ -780,7 +780,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
     Timecop.return
   end
 
@@ -794,7 +794,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    assert response.body.include? 'The lesson stage 1 will be visible after'
+    assert response.body.include? 'The lesson lesson 1 will be visible after'
     Timecop.return
   end
 
@@ -808,7 +808,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
     Timecop.return
   end
 
@@ -822,7 +822,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    refute response.body.include? 'visible after'
     Timecop.return
   end
 end
