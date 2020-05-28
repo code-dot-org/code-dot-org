@@ -1327,6 +1327,7 @@ ActiveRecord::Schema.define(version: 20200602014720) do
     t.text     "properties",      limit: 65535
     t.string   "new_name"
     t.string   "family_name"
+    t.integer  "owner_id"
     t.index ["family_name"], name: "index_scripts_on_family_name", using: :btree
     t.index ["name"], name: "index_scripts_on_name", unique: true, using: :btree
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true, using: :btree

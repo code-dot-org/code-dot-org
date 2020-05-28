@@ -13,6 +13,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
+#  owner_id        :integer
 #
 # Indexes
 #
@@ -44,6 +45,7 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
+  belongs_to :owner, class_name: 'User'
   has_many :course_scripts
   has_many :courses, through: :course_scripts
 
