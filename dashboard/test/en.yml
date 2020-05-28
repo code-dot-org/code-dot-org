@@ -1,26 +1,15 @@
 # Translations file for tests
-# TODO: FND-1122
 en:
   data:
     script:
       name:
         Report Script:
-          stages:
-            Report Stage 1:
-              name: report-stage-1
-            Report Stage 2:
-              name: report-stage-2
           lessons:
             Report Stage 1:
               name: report-stage-1
             Report Stage 2:
               name: report-stage-2
         Milestone Script:
-          stages:
-            Milestone Stage 1:
-              name: milestone-stage-1
-            Milestone Stage 2:
-              name: milestone-stage-2
           lessons:
             Milestone Stage 1:
               name: milestone-stage-1
@@ -28,22 +17,12 @@ en:
               name: milestone-stage-2
         laurel:
           title: custom-script-laurel
-          stages:
-            Laurel Stage 1:
-              name: laurel-stage-1
-            Laurel Stage 2:
-              name: laurel-stage-2
           lessons:
             Laurel Stage 1:
               name: laurel-stage-1
             Laurel Stage 2:
               name: laurel-stage-2
         text-response-script:
-          stages:
-            First Stage:
-              name: First Stage
-            Second Stage:
-              name: Second Stage
           lessons:
             First Stage:
               name: First Stage
