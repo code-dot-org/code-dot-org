@@ -1034,6 +1034,8 @@
   header_about: "Sobre"
   header_teacher_community: "Comunidade de profesorado"
   header_report_bug: "Comunicar un erro"
+  header_legal_privacy: "Política de Privacidade"
+  header_legal_tos: "Termos de Servizo"
   user_header_label: "Ola, %{username}"
   user_header_team: "Equipo"
   user_header_settings: "A miña conta"

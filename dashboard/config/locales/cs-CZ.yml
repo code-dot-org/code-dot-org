@@ -188,6 +188,12 @@ cs:
     email_preference_yes: Ano
     email_preference_no: Ne
     email_preference_required: Musíte vyplnit nastavení e-mailové komunikace.
+    parent_account_checkbox: Jsem rodič nebo zákonný zástupce přihlašující se jménem
+      svého dítěte.
+    parent_account_email_progress_permission: Smíme Vám příležitostně poslat e-mail
+      s novinkami o pokroku a projektech Vašeho dítěte a s novinkami o jeho výuce
+      a počítačové vědě? [(Viz naše zásady ochrany osobních údajů)](%{privacy_policy_url})
+    parent_account_email_label: E-mail rodiče nebo zákonného zástupce
   school_info:
     title: Název školy (nepovinné)
     school_country: Země školy
@@ -388,6 +394,7 @@ cs:
       dance: Taneční večírek
       flappy: Flappy
       frozen: Frozen
+      gamelab: Game Lab
       gamelab_jr: Game Lab (beta)
       gumball: Gumball
       iceage: Doba ledová
@@ -498,8 +505,15 @@ cs:
     update: Aktualizovat účet
     account_successfully_updated: Účet úspěšně aktualizován.
     update_email: Aktualizovat
+    for_parents_and_guardians: Pro rodiče a zákonné zástupce
+    link_a_parent_email: Když k tomuto účtu připojíte e-mailovou adresu rodiče nebo
+      zákonného zástupce, budete dostávat pravidelné aktualizace o pokroku a projektech
+      vašeho dítěte. Tuto e-mailovou adresu budete také moci použít k obnovení hesla.
     parent_guardian_email_label: E-mail rodiče/zákonného zástupce
     none: Žádný
+    only_one_parent_email_supported_warning: 'Poznámka: v současnosti můžeme podporovat
+      jen jednu e-mailovou adresu rodiče nebo zákonného zástupce na jeden studentský
+      účet.'
     encrypted: šifrováno
   user_level:
     completed: Dokončeno
@@ -634,6 +648,7 @@ cs:
     autoplay_option: Automatické přehrávání videí
     download: Stáhnout Video
     show_notes: Zobrazit poznámky
+    show_video: Zobrazit video
     label: Video
   compatibility:
     upgrade:
@@ -708,6 +723,7 @@ cs:
       title: Galerie
       body: Zobrazit galerii app a uměleckých obrázků vytvořené našimi uživateli
     gamelab:
+      title: Game Lab
       body: Game Lab je programovací prostředí, kde můžete tvořit jednoduché animace
         a hry - s objekty a postavami, které interagují navzájem.
       audience: Věk 13 +
@@ -1061,8 +1077,10 @@ cs:
   pd:
     form_labels:
       first_name: Křestní jméno
+      first_name_preferred: Preferované jméno
       last_name: Příjmení
       email: E-mail
+      gender: Rod
       school_name: Název školy
       school_country: Země školy
     form_entries:
@@ -1113,6 +1131,9 @@ cs:
         raspberry: Raspberry Pi
         other: 'Ostatní:'
       workshop_course:
+        csf_af: Základy informatiky (Kurzy A-F)
+        csf_express: Základy informatiky (Zrychlené kurzy)
+        csd: Objevujeme informatiku
         csp: Principy informatiky 2016-2017
       email_opt_in:
         opt_in_yes: Ano
@@ -1132,3 +1153,8 @@ cs:
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů
   copy: Kopírovat
+  parent_email_banner:
+    text: "**Jste rodič nebo zákonný zástupce?** Připojte k tomuto účtu svůj e-mail
+      a budete dostávat aktuální informace o pokroku a projektech svého dítěte!"
+    link_your_email: Připojte svůj e-mail.
+    not_now: Teď ne.

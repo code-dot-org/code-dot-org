@@ -1,7 +1,7 @@
 ---
 de-DE:
   data:
-    function_defintions:
+    function_definitions:
       2-3 Artist 11:
         x:
           name: x
@@ -262,9 +262,9 @@ de-DE:
           name: springen
       Course 4 Play Lab Params 10:
         level_up:
-          name: level_up
+          name: Level_aufsteigen
         score_points:
-          name: score_points
+          name: Erziele_Punkte
       Course 4 Play Lab Params 2:
         jump:
           name: springen
@@ -276,7 +276,7 @@ de-DE:
           name: Funktionsblock
       Course 4 Play Lab Params 9:
         score_points:
-          name: score_points
+          name: Erziele_Punkte
       Course 4 Play Lab Vars 1:
         set score:
           name: Punktestand setzen
@@ -323,9 +323,9 @@ de-DE:
           name: Funktionsblock
       FoodFight:
         level_up:
-          name: level_up
+          name: Level_aufsteigen
         score_points:
-          name: score_points
+          name: Erziele_Punkte
       Function intro Ryan:
         build bridge:
           name: baue Brücke

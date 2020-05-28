@@ -64,6 +64,20 @@ pl-PL:
       2-3 Artist Debugging Assessment 1: "Sprawdzian: Dlaczego boki tego kwadratu
         pod koniec są o 75 pikseli za krótkie?  \n\nGdzie jest błąd w kodzie?"
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
+      2-3 Artist Functions 1: "\"Ja być zombie artysta. Ja kochać rysować!\"  \n\nPomóż
+        zombie narysować kwadratowe okulary.  \n\nPołączenie pomiędzy szkłami jest
+        o 25 pikseli krótsze od szerokości kwadratów, która jest równa 100 pikseli."
+      2-3 Artist Functions 11: "Zmieniliśmy nazwę funkcji \"narysuj kwadrat\" na \"narysuj
+        sześciokąt\", ale ona nadal robi nam kwadraty! Czy potrafisz zmodyfikować
+        funkcję \"narysuj sześciokąt\" tak, aby rysowała sześciokąt o bokach długości
+        50 pikseli? \n\nNarysuj obrazek, używając nowej funkcji! "
+      2-3 Artist Functions 2: "Funkcje pozwalają ci stwarzać nowe bloki! \n\nPrzerzuciliśmy
+        bloki potrzebne do narysowania kwadratu do funkcji nazwanej \"narysuj kwadrat\".
+        Tym razem użyj funkcji \"narysuj kwadrat\", aby stworzyć okulary. "
+      2-3 Artist Functions 3: "Zmień funkcję do narysowania kwadratu z bokami o długości
+        115, aby narysować większe okulary. \n\nKwadraty są teraz oddalone od siebie
+        o 45 pikseli."
+      2-3 Artist Functions 4: Teraz umieść funkcję w pętli, aby narysować te 3 kwadraty.
       2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
         kwadrat o bokach, które mają 100 pikseli?
       2-3 Artist Loops New 10: Teraz połączmy trochę V razem w pętlę.
@@ -181,9 +195,29 @@ pl-PL:
         Sprawdzian: Czas, byś pokazał, co potrafisz!
 
         Napraw błąd (błędy), aby zebrać cały nektar i wyprodukować cały miód.
+      2-3 Bee Functions 10: "Liczba nektarów w fioletowych kwiatkach zmienia się między
+        1 a 0 za każdym razem, gdy uruchomisz łamigłówkę.   \n\nStwórz funkcję, która
+        zbiera nektar tylko z fioletowych kwiatków, które go mają."
+      2-3 Bee Functions 2: "Funkcje to bloki kodu, które wykonują konkretne zadania.
+        \ \n\nUżyj funkcji \"weź 5\", aby zebrać 5 nektarów naraz. "
       2-3 Bee Functions 3: Zbierz cały nektar z każdego kwiatka.
+      2-3 Bee Functions 4: "Funkcja \"rusz się i weź nektar\" obraca pszczółkę, zbiera
+        nektar i wtedy przenosi pszczółkę do początkowej pozycji.  \n\nUżyj tej funkcji,
+        aby zebrać cały nektar."
+      2-3 Bee Functions 5: Teraz jest więcej nektaru w kwiatkach. Zmień podaną funkcję
+        tak, aby zbierała 4 nektary i użyj jej do zebrania całego nektaru z kwiatków.
       2-3 Bee Functions 6: Teraz użyj tej samej funkcji, aby zebrać nektar z trzech
         kwiatów.
+      2-3 Bee Functions 8: Stwórz swoją własną funkcję, która zbiera 7 nektarów, idzie
+        do przodu i produkuje 7 plastrów miodu. Użyj tej funkcji do zebrania nektaru
+        z każdego kwiatka i wyprodukowania miodu na każdym plastrze.
+      2-3 Bee Functions 9: Stwórz swoją własną funkcję, która idzie w dół ścieżki,
+        zbiera nektar, produkuje miód i przenosi pszczółkę na górę ścieżki.
+      2-3 Bee Functions Assessment 1: 'Sprawdzian: Użyj podanej funkcji do zebrania
+        nektaru z każdego kwiatka.'
+      2-3 Bee Functions Assessment 2: 'Sprawdzian: Stwórz funkcję do obrotu, poruszenia
+        się naprzód i wyprodukowania 3 plastrów miodu. Potem powróć pszczółką tam,
+        gdzie zaczęła i obróć się do tyłu.'
       2-3 Bee Loops 1: |-
         Te kwiaty wyglądają przepysznie!
 
@@ -253,6 +287,8 @@ pl-PL:
         użyciu tylko 5 bloków! '
       4-5 Artist 1: 'Pomóż mi ukończyć rysowanie mojego pudełka. (Każda linia jest
         długa na 300 pikseli) '
+      4-5 Artist 11: Dokończ zielone linie. Linie mają długość 300 pikseli i leżą
+        15 pikseli od siebie.
       4-5 Artist 2: Zapętlij ten kod, używając bloku "powtórz", aby ukończyć kwadrat.
       4-5 Artist 3: To prostokątne kwietne łóżko ma obwód równy 600. Dłuższy bok ma
         długość 200. Narysuj ten prostokąt, używając możliwie najmniejszej liczby
@@ -263,6 +299,16 @@ pl-PL:
         koło kolorów.
       4-5 Artist 5: Czym możemy zastąpić "???", aby zombie ukończył ten rysunek, używając
         podanej pętli?
+      4-5 Artist 6: Ten trójkąt równoboczny ma kąty równe 60, 60 oraz 60 stopni. Każdy
+        bok ma 200 pikseli. Ukończ rysunek.
+      4-5 Artist 7: Ten trójkąt prostokątny ma kąty równe 30, 60 oraz 90 stopni. Długość
+        pochylonego boku (długość przeciwprostokątnej) wynosi 200 pikseli. Ukończ
+        rysunek.
+      4-5 Artist 8: "Linia po środku boiska do piłki nożnej jest prostopadła do linii
+        bocznych.\\\nTen prostokąt ma obwód równy 800 pikseli w sumie i ma długość
+        240 pikseli. Jaki jest wysoki?   \n\nNarysuj granice boiska i linię po środku."
+      4-5 Artist 9: Narysuj prawą połowę tego obrazka, aby projekt był symetryczny.
+        Trójkąty są równoboczne i mają boki o długości 50 pikseli.
       4-5 Artist Assessment 1: 'Sprawdzian: Użyj pętli, aby narysować trójkąt równoboczny.
         Każdy bok ma długość 300 pikseli.'
       4-5 Artist Free Draw 1: Wolny wybór!  Narysuj cokolwiek, co inspiruje Cię do
