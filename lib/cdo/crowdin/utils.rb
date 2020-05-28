@@ -30,16 +30,16 @@ module Crowdin
       languages = @project.languages
       num_languages = languages.length
       languages.each_with_index do |language, i|
-        code = language["code"]
-        @logger.debug("#{language['name']} (#{code}): #{i}/#{num_languages}")
+        language_code = language["code"]
+        @logger.debug("#{language['name']} (#{language_code}): #{i}/#{num_languages}")
         @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % (num_languages / 5) == 0
 
-        etags[code] ||= {}
+        etags[language_code] ||= {}
         files = @project.list_files
 
-        results = Parallel.map(files) do |file|
-          etag = etags[code].fetch(file, nil)
-          response = @project.export_file(file, code, etag)
+        changed_files = Parallel.map(files) do |file|
+          etag = etags[language_code].fetch(file, nil)
+          response = @project.export_file(file, language_code, etag: etag, only_head: true)
           case response.code
           when 200
             [file, response.headers["etag"]]
@@ -50,14 +50,18 @@ module Crowdin
           end
         end.compact
 
-        next if results.empty?
+        next if changed_files.empty?
 
-        changes[code] = results.to_h
-        etags[code].merge!(changes[code])
+        changes[language_code] = changed_files.to_h
+        etags[language_code].merge!(changes[language_code])
         File.write(@etags_json, JSON.pretty_generate(etags))
         File.write(@changes_json, JSON.pretty_generate(changes))
       end
 
+      # Write changes out one final time; in the case that no language had
+      # changes, we would otherwise skip the write on every loop and leave any
+      # existing changes file unchanged. We could alternatively achieve this by
+      # writing (or removing) the file before starting.
       File.write(@changes_json, JSON.pretty_generate(changes))
     end
 
