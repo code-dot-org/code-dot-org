@@ -688,6 +688,8 @@ export class WorkshopForm extends React.Component {
       return false;
     }
 
+    // If location address is modified, then returned to blank,
+    // this.state.location_address is a blank string instead of null.
     return (
       this.state.sessionsModified ||
       this.state.location_name !== workshop.location_name ||
