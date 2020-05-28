@@ -13,11 +13,11 @@ def sync_down
   I18nScriptUtils.with_syncronous_stdout do
     puts "Beginning sync down"
 
+    logger = Logger.new(STDOUT)
+    logger.level = Logger::INFO
+
     CROWDIN_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
-
-      logger = Logger.new(STDOUT)
-      logger.level = Logger::INFO
       api_key = YAML.load_file(options[:identity_file])["api_key"]
       project_id = YAML.load_file(options[:config_file])["project_identifier"]
       project = Crowdin::Project.new(project_id, api_key)
