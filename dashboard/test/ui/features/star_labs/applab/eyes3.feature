@@ -20,8 +20,8 @@ Scenario: Data Browser
   And I wait until element "th .test-tableNameDiv:contains(column1)" is visible
   And I press "addColumnButton"
   And I press enter key
-  And I press keys "foo" for element "#addDataTableRow :nth-child(2) input"
-  And I press keys "bar" for element "#addDataTableRow :nth-child(3) input"
+  And I press keys "1" for element "#addDataTableRow :nth-child(2) input"
+  And I press keys "2" for element "#addDataTableRow :nth-child(3) input"
   And element "#addDataTableRow button:contains(Add Row)" is visible
   And I click selector "#addDataTableRow button:contains(Add Row)"
   And I wait until element "button:contains(Edit)" is visible
