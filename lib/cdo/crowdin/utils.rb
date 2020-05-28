@@ -61,7 +61,7 @@ module Crowdin
       File.write(@changes_json, JSON.pretty_generate(changes))
     end
 
-    # Downloades all files referenced in @changes_json to @locales_dir
+    # Downloads all files referenced in @changes_json to @locales_dir
     def download_changed_files
       changes = JSON.parse(File.read(@changes_json))
       @logger.info("#{changes.keys.length} languages have changes")
