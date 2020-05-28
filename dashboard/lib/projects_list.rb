@@ -139,7 +139,7 @@ module ProjectsList
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
             project_owner = section_users.find {|user| user.id == student_storage_ids[project[:storage_id]]}
-            project_data = get_library_row_data(project, channel_id, project_owner)
+            project_data = get_library_row_data(project, channel_id, section.name, project_owner)
             if project_data && (project_owner.user_type == 'student' || project_data[:sharedWith].include?(section.id))
               projects_list_data << project_data
             end
@@ -269,9 +269,10 @@ module ProjectsList
     # pull various fields out of the user and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single library or a list of libraries.
-    def get_library_row_data(project, channel_id, user = nil)
+    def get_library_row_data(project, channel_id, section_name, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       {
+        sectionName: section_name,
         channel: channel_id,
         name: project_value['libraryName'],
         description: project_value['libraryDescription'],

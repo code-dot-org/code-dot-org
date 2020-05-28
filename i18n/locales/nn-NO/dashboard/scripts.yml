@@ -58,6 +58,41 @@ nn:
               name: 'Spel-lab: Lag ei historie'
             The Big Event:
               name: Den store hendinga
+          lessons:
+            Happy Maps:
+              name: Glade Kart
+            Move it, Move it:
+              name: Flytt, flytt
+            'Jigsaw: Learn to drag and drop':
+              name: 'Puslespel: Lær å dra og sleppe'
+            'Maze: Sequence':
+              name: 'Labyrint: sekvens'
+            'Maze: Debugging':
+              name: 'Labyrint: Feilsøking'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            'Bee: Sequence':
+              name: 'Staving: Rekkefølge'
+            'Artist: Sequence':
+              name: 'Kunstnar: Sekvens'
+            Building a Foundation:
+              name: Bygge eit fundament
+            'Artist: Shapes':
+              name: 'Kunstnar: Former'
+            Spelling Bee:
+              name: Stavekonkurranse
+            Getting Loopy:
+              name: Me blir sløyfete
+            'Maze: Loops':
+              name: 'Labyrint: Sløyfer'
+            'Bee: Loops':
+              name: 'Staving: Løkker'
+            The Big Event:
+              name: Den store hendinga
+            Going Places Safely:
+              name: Går stader trygt
+            'Artist: Loops':
+              name: 'Kunstnar: Løkker'
         course2:
           title: Kurs 2
           description: Kurs 2 er laga for elevar som kan lese, men ikkje har tidlegere erfaring med programmering. I dette kurset vil elevane lage program for å løyse problem, og utvikle interaktive spel eller historier dei kan dele. Tilrådd for 2.-5.klasse.
@@ -102,6 +137,43 @@ nn:
               name: Den store hendinga
             Your Digital Footprint:
               name: Dine digitale fotspor
+          lessons:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            'Real-life Algorithms: Paper Planes':
+              name: 'Verkelege algoritmar: Papirfly'
+            'Maze: Sequence':
+              name: 'Labyrint: sekvens'
+            'Artist: Sequence':
+              name: 'Kunstnar: Sekvens'
+            Getting Loopy:
+              name: Me blir sløyfete
+            'Maze: Loops':
+              name: 'Labyrint: Sløyfer'
+            'Artist: Loops':
+              name: 'Kunstnar: Løkker'
+            'Bee: Loops':
+              name: 'Staving: Løkker'
+            Relay programming:
+              name: Programmeringsstafett
+            'Bee: Debugging':
+              name: 'Bier: Feilsøking'
+            'Artist: Debugging':
+              name: 'Kunstnar: Feilsøking'
+            Conditionals:
+              name: Betingelser
+            'Bee: Conditionals':
+              name: 'Bier: Vilkår'
+            Binary Bracelets:
+              name: Binær armbånd
+            The Big Event:
+              name: Den store hendinga
+            Flappy:
+              name: Flakse
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            'Artist: Nested Loops':
+              name: 'Kunstnar: Løkker inni løkker'
         course3:
           title: Kurs 3
           description: Kurs 3 er laga for elevar som har fullført kurs 1 og 2. Elevane vil gå nærare inn på tema som har vore presentert i tidlegare kurs, og dei vil lære meir fleksible løysingar på meir komplekse problem. Ved slutten av dette kurset vil elevane lage interaktive historier og spel som dei kan dele med andre. Tilrådd for 4.-5. klasse.
@@ -150,11 +222,53 @@ nn:
               name: 'Spel-lab: Lag eit spel'
             'Studio: Create a Story':
               name: 'Spel-lab: Lag ei historie'
+          lessons:
+            Computational Thinking:
+              name: Programmeringstenking
+            Maze:
+              name: Labyrint
+            Artist:
+              name: Kunstnar
+            Functional Suncatchers:
+              name: Fungerande solfangarar
+            'Artist: Functions':
+              name: 'Kunstnar: Funksjonar'
+            'Bee: Functions':
+              name: 'Bier: Funksjonar'
+            'Bee: Conditionals':
+              name: 'Bier: Vilkår'
+            'Maze: Conditionals':
+              name: 'Labyrint: Vilkår'
+            Songwriting:
+              name: Låtskriving
+            Dice Race:
+              name: Terning Kappløp
+            'Artist: Nested Loops':
+              name: 'Kunstnar: Løkker inni løkker'
+            'Farmer: While Loops':
+              name: 'Bonde: Medan-løkker'
+            'Bee: Nested Loops':
+              name: 'Bier: Løkker inni løkker'
+            'Bee: Debugging':
+              name: 'Bier: Feilsøking'
+            Bounce:
+              name: Sprett
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            'Artist: Patterns':
+              name: 'Kunstnar: Mønster'
         playlab:
           title: Spel-lab
           description: Lag ein historie eller eit spel med Spel-lab!
           description_short: Lag ein historie eller eit spel med Spel-lab!
           stages:
+            Play Lab:
+              name: Spel-lab
+          lessons:
             Play Lab:
               name: Spel-lab
         artist:
@@ -164,6 +278,9 @@ nn:
           stages:
             Artist:
               name: Kunstnar
+          lessons:
+            Artist:
+              name: Kunstnar
         hourofcode:
           title: Klassisk labyrint
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds, planter mot zombiar og Scrat frå Istid!
@@ -171,11 +288,17 @@ nn:
           stages:
             Maze:
               name: Labyrint
+          lessons:
+            Maze:
+              name: Labyrint
         frozen:
           title: Koding med Anna og Elsa
           description: La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!
           description_short: La oss bruke kode for å bli med Anna og Elsa som utforskar den magiske og vakre isen.
           stages:
+            Artist:
+              name: Kunstnar
+          lessons:
             Artist:
               name: Kunstnar
         course4:
@@ -228,6 +351,51 @@ nn:
               name: 'Trådlaust: Låtskriving med parameter'
             'Unplugged: Tangrams':
               name: 'Trådlaust: Tangram-puslespel'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'Trådlaust: Tangram-puslespel'
+            Maze and Bee:
+              name: Labyrint og bier
+            Artist:
+              name: Kunstnar
+            'Unplugged: Envelope Variables':
+              name: 'Trådlaust: Konvolutt-variable'
+            'Unplugged: Madlibs':
+              name: 'Trådlaust: Adjektiv-historier'
+            'Artist: Variables':
+              name: 'Kunstnar: Variablar'
+            'Play Lab: Variables':
+              name: 'Spel-lab: Variable'
+            'Unplugged: For Loop Fun':
+              name: 'Trådlaust: Moro med for-løkker'
+            'Bee: For Loops':
+              name: 'Bier: For-løkker'
+            'Artist: For Loops':
+              name: 'Kunstnar: For-løkker'
+            'Play Lab: For Loops':
+              name: 'Spel-lab: For-løkker'
+            'Artist: Functions':
+              name: 'Kunstnar: Funksjonar'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Trådlaust: Låtskriving med parameter'
+            'Artist: Functions with Parameters':
+              name: 'Kunstnar: Funksjonar med parameter'
+            'Play Lab: Functions with Parameters':
+              name: 'Spel-lab: Funksjonar med parameter'
+            'Bee: Functions with Parameters':
+              name: 'Bier: Funksjonar med parameter'
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
+            Super Challenge - Variables:
+              name: Superutfordring - Variablar
+            Super Challenge - For Loops:
+              name: Superutfordring - For-løkker
+            Super Challenge - Functions and Parameters:
+              name: Superutfordring - Funksjoner og parametere
+            Extreme Challenge - Comprehensive:
+              name: Superutfordring - Omfattande
         Course4pre:
           title: Kurs 4 forkunnskapar
           description: Ei kort oppsummering av konsept for elevar som ikkje har tatt kurs 2 og 3.
@@ -251,6 +419,25 @@ nn:
               name: 'Bonde: Medan-løkker'
             'Maze: Sequence':
               name: 'Labyrint: sekvens'
+          lessons:
+            'Maze: Sequence':
+              name: 'Labyrint: sekvens'
+            'Artist: Sequence':
+              name: 'Kunstnar: Sekvens'
+            'Artist: Loops':
+              name: 'Kunstnar: Løkker'
+            'Bee: Conditionals':
+              name: 'Bier: Vilkår'
+            'Artist: Nested Loops':
+              name: 'Kunstnar: Løkker inni løkker'
+            'Farmer: While Loops':
+              name: 'Bonde: Medan-løkker'
+            'Bee: Nested Loops':
+              name: 'Bier: Løkker inni løkker'
+            'Artist: Functions':
+              name: 'Kunstnar: Funksjonar'
+            'Bee: Debugging':
+              name: 'Bier: Feilsøking'
         usability:
           title: Testing om det er brukarvenleg
           description: Eit utval av tema om test om det er brukbart for kurs 4.
@@ -265,6 +452,17 @@ nn:
               name: Introduksjon
             Variables:
               name: Variablar
+          lessons:
+            Intro:
+              name: Introduksjon
+            Variables:
+              name: Variablar
+            For Loops:
+              name: For-løkker
+            Functions and Functions with Parameters:
+              name: Funksjonar og funksjonar med parameter
+            Binary:
+              name: Binær
         algebra:
           stages:
             'Calc: Defining Variables':
@@ -307,11 +505,51 @@ nn:
               name: 'Trådlaust: Design oppskrifta'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Trådlaust: Videospel og kooridinat-plan'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Trådlaust: Videospel og kooridinat-plan'
+            'Calc: Evaluation Blocks':
+              name: 'Rekning: Evaluering av blokker'
+            'Eval: Strings and Images':
+              name: 'Eval: Tekst og bilder'
+            'Unplugged: Contracts':
+              name: 'Trådlaust: Kontrakter'
+            'Eval: Writing Contracts':
+              name: 'Eval: Skrive kontrakter'
+            'Calc: Defining Variables':
+              name: 'Rekning: Definere Variablar'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Spel-lab: Definere variablar (Stort spel)'
+            'Unplugged: The Design Recipe':
+              name: 'Trådlaust: Design oppskrifta'
+            'Play Lab: Defining Functions':
+              name: 'Spellab: Definerande funksjonar'
+            'Play Lab: Animation (Big Game)':
+              name: 'Spel-lab: Animasjon (Stort spel)'
+            'Unplugged: Booleans':
+              name: 'Trådlaust: Boolske variable'
+            'Eval: Boolean Operators':
+              name: 'Eval: Boolske operatorar'
+            'Play Lab: Booleans':
+              name: 'Spel-lab: Boolske verdiar'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Spel-lab: Boolsk (Stort spel)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Trådlaust: Vilkår og stykkevise funksjonar'
+            'Eval: Conditionals':
+              name: 'Eval: Vilkår'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Trådlaust: Deteksjon av kollisjonar og distanseformelen'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Spel-lab: Deteksjon av kollisjon (Stort spel)'
         infinity:
           title: Disney Infinity Spel-Lab
           description: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
           description_short: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
           stages:
+            Infinity:
+              name: Uendeleg
+          lessons:
             Infinity:
               name: Uendeleg
         algebrademo:
@@ -324,6 +562,17 @@ nn:
               name: Evalueringsblokker
             Making Pictures:
               name: Å lage bilder
+            The Design Recipe:
+              name: Design-oppskrifta
+          lessons:
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Making Pictures:
+              name: Å lage bilder
+            Defining Variables:
+              name: Definering av variablar
+            Defining Simple Functions:
+              name: Definering av enkle funksjonar
             The Design Recipe:
               name: Design-oppskrifta
         K5PD:
@@ -377,6 +626,27 @@ nn:
               name: Peer to Peer - sende tall
             Routers and addresses:
               name: Rutere og adresser
+          lessons:
+            Overview and Setup Instructions:
+              name: Oversikt og installasjonsinstruksjon
+            Peer to Peer - Sending Bits on a Shared Wire:
+              name: Peer to Peer - sender biter på en delt Wire
+            Peer to Peer - Sending Numbers:
+              name: Peer to Peer - sende tall
+            Peer to Peer - Sending Ascii:
+              name: Peer to Peer - sende Ascii
+            Broadcasting messages:
+              name: Kringkasting av meldingar
+            Routers and addresses:
+              name: Rutere og adresser
+            Packets and Reliability:
+              name: Pakker og pålitelegheit
+            Manual DNS:
+              name: Manuell DNS
+            Automatic DNS node:
+              name: Automatisk DNS-node
+            Internet Simulator Freeplay:
+              name: Frileik med internettsimulator
         pixelation:
           stages:
             Black & White Pixelation Freeplay:
@@ -389,6 +659,17 @@ nn:
               name: Frileik i fargepikselering
             Color Pixelation Tutorial:
               name: Rettleiing i fargepikselering
+          lessons:
+            Black & White Pixelation Tutorial:
+              name: Rettleiingar svart og hvit pikselering
+            Black & White Pixelation Freeplay:
+              name: Frileik svart og hvit pikselering
+            Color Pixelation Tutorial:
+              name: Rettleiing i fargepikselering
+            Color Pixelation Examples:
+              name: Døme på fargepikselering
+            Color Pixelation Freeplay:
+              name: Frileik i fargepikselering
         20-hour:
           title: Aksellerert intro til CS-kurs
           description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse og oppover, men det er morosamt å lære for alle aldersgruppe.
@@ -435,6 +716,47 @@ nn:
               name: Labyrinten
             Wrap-up:
               name: Oppsummering
+          lessons:
+            Introduction to Computer Science:
+              name: Introduksjon til informatikk
+            The Maze:
+              name: Labyrinten
+            Computational Thinking:
+              name: Programmeringstenking
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            The Artist:
+              name: Kunstnaren
+            Algorithms:
+              name: Algoritmer
+            The Artist 2:
+              name: Kunstnaren 2
+            Functions:
+              name: Funksjonar
+            The Farmer:
+              name: Bonden
+            Conditionals:
+              name: Betingelser
+            The Artist 3:
+              name: Kunstnaren 3
+            Song Writing:
+              name: Låtskriving
+            The Farmer 2:
+              name: Bonden 2
+            Abstraction:
+              name: Abstraksjon
+            The Artist 4:
+              name: Kunstnaren 4
+            Relay Programming:
+              name: Programmeringsstafett
+            The Farmer 3:
+              name: Bonden 3
+            The Internet:
+              name: Internett
+            The Artist 5:
+              name: Kunstnaren 5
+            Wrap-up:
+              name: Oppsummering
         edit-code:
           title: Rediger kode
           description: Rediger kode
@@ -450,6 +772,17 @@ nn:
               name: Kunstnaren
             The Maze:
               name: Labyrinten
+          lessons:
+            The Maze:
+              name: Labyrinten
+            Applab:
+              name: AppLab
+            The Artist:
+              name: Kunstnaren
+            Play Lab:
+              name: Spel-lab
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
         events:
           title: Hendingar
           description: Hendingar
@@ -463,11 +796,23 @@ nn:
               name: Evaluer
             Studio:
               name: Studio
+          lessons:
+            Bounce:
+              name: Sprett
+            Studio:
+              name: Studio
+            Calc:
+              name: Rekne ut
+            Eval:
+              name: Evaluer
         flappy:
           title: Flakse-kode
           description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa i Flaksekode!
           description_short: Lag ditt eige Flakse-spel på mindre enn ti minutt!
           stages:
+            Flappy Code:
+              name: Flakse-kode
+          lessons:
             Flappy Code:
               name: Flakse-kode
         jigsaw:
@@ -477,11 +822,17 @@ nn:
           stages:
             Jigsaw:
               name: Puslespill
+          lessons:
+            Jigsaw:
+              name: Puslespill
         step:
           title: Steg
           description: Trinnguide
           description_short: Trinnguide
           stages:
+            Step:
+              name: Steg
+          lessons:
             Step:
               name: Steg
         Hour of Code:
@@ -491,12 +842,21 @@ nn:
           stages:
             Hour of Code 2013:
               name: Kodetimen 2013
+          lessons:
+            Hour of Code 2013:
+              name: Kodetimen 2013
         CodeStudioPuzzleChallenge:
           stages:
             Puzzles:
               name: Oppgåve
+          lessons:
+            Puzzles:
+              name: Oppgåve
         Tutorial Video - Code Studio Puzzle Challenge:
           stages:
+            Puzzles:
+              name: Oppgåve
+          lessons:
             Puzzles:
               name: Oppgåve
         cspunit1:
@@ -533,6 +893,37 @@ nn:
               name: Sende formatert tekst
             Sending Numbers:
               name: Sende tal
+          lessons:
+            Personal Innovations:
+              name: Personlege innovasjonar
+            Sending Binary Messages:
+              name: Sende binære meldingar
+            Sending Complex Messages:
+              name: Sende komplekse meldingar
+            Sending Binary Messages with the Internet Simulator:
+              name: Sende binære meldingar med Internett Simulator
+            Sending Bits in the Real World:
+              name: Sende bits i den verkelege verda
+            Number Systems:
+              name: Talsystem
+            Binary Numbers:
+              name: Binære tal
+            Sending Numbers:
+              name: Sende tal
+            Encoding Numbers in the Real World:
+              name: Kode tal i den verkelege verda
+            Encoding and Sending Text:
+              name: Koding og sende tekst
+            Sending Formatted Text:
+              name: Sende formatert tekst
+            Bytes and File Sizes:
+              name: Byte- og arkivstorleikar
+            Encoding B&W Images:
+              name: Kode svart/kvit-bilete
+            Encoding Color Images:
+              name: Kode fargebilete
+            Lossy Compression and File Formats:
+              name: Lossykomprimering og filformat
         algebraPD:
           stages:
             Course Overview:
@@ -547,6 +938,19 @@ nn:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Kvifor informatikk tilhøyrer Algebra
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Course Overview:
+              name: Kursoversikt
+            Why Computer Science belongs in Algebra:
+              name: Kvifor informatikk tilhøyrer Algebra
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Teacher Dashboard:
+              name: Lærarmodus
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         algPDmiami:
           stages:
             Booleans:
@@ -571,6 +975,29 @@ nn:
               name: Spelet ditt - Kollisjonsdeteksjon
             Your Game - Player Movement:
               name: Spelet ditt - Rørsle på spelar
+          lessons:
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Strings and Images:
+              name: Strenger og bilder
+            Rocket-Height:
+              name: Raketthøgde
+            Design Recipe Practice:
+              name: Øvingar i designoppskrift
+            Your Game - Animation:
+              name: Spelet ditt - Animasjon
+            Booleans:
+              name: Boolske verdiar
+            Sam the Bat:
+              name: Flaggermusa Sam
+            Your Game - Booleans:
+              name: Spelet ditt - Boolske verdier
+            Luigi's Pizza:
+              name: Luigis pizza
+            Your Game - Player Movement:
+              name: Spelet ditt - Rørsle på spelar
+            Your Game - Collision Detection:
+              name: Spelet ditt - Kollisjonsdeteksjon
         CSPPD:
           stages:
             Exploring CSP Instructional Materials:
@@ -587,8 +1014,28 @@ nn:
               name: Læringsstrategiar
             What is CSP?:
               name: Kva er datavitskap?
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            What is CSP?:
+              name: Kva er datavitskap?
+            Exploring CSP Instructional Materials:
+              name: Utforske undervisningsmateriell i datavitskap
+            Impact of Computer Science:
+              name: Verkning av informatikk
+            Growth Mindset:
+              name: Tankesett på vekst
+            Teaching Strategies:
+              name: Læringsstrategiar
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         CSPLessonSamples:
           stages:
+            Lesson 14:
+              name: Leksjon 14
+            Lesson 15:
+              name: Leksjon 15
+          lessons:
             Lesson 14:
               name: Leksjon 14
             Lesson 15:
@@ -605,12 +1052,31 @@ nn:
               name: Førebu personleg PD
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Impact of Computer Science:
+              name: Verkning av informatikk
+            Growth Mindset:
+              name: Tankesett på vekst
+            Teaching Strategies:
+              name: Læringsstrategiar
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         sciencePD:
           stages:
             Introduction to PD:
               name: Introduksjon til PD
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
         cspunit3:
           stages:
+            Creating Functions:
+              name: Lag Funksjonar
+            While Loops:
+              name: Medan-løkker
+          lessons:
             Creating Functions:
               name: Lag Funksjonar
             While Loops:
@@ -631,6 +1097,21 @@ nn:
               name: Lærarmodus
             The Design Recipe:
               name: Design-oppskrifta
+          lessons:
+            Course Overview:
+              name: Kursoversikt
+            Computer Science Pedagogy:
+              name: Pedagogikk for Informatikk
+            Teacher Dashboard:
+              name: Lærarmodus
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Strings and Images:
+              name: Strenger og bilder
+            The Design Recipe:
+              name: Design-oppskrifta
+            Next Steps:
+              name: Neste steg
         ECSPD-NexTech:
           stages:
             Growth Mindset:
@@ -643,6 +1124,17 @@ nn:
               name: Førebu personleg PD
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Impact of Computer Science:
+              name: Verkning av informatikk
+            Growth Mindset:
+              name: Tankesett på vekst
+            Teaching Strategies:
+              name: Læringsstrategiar
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         ECSPD-iZone:
           stages:
             Growth Mindset:
@@ -655,6 +1147,17 @@ nn:
               name: Førebu personleg PD
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Impact of Computer Science:
+              name: Verkning av informatikk
+            Growth Mindset:
+              name: Tankesett på vekst
+            Teaching Strategies:
+              name: Læringsstrategiar
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         algebraPD-NexTech:
           stages:
             Course Overview:
@@ -669,6 +1172,19 @@ nn:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Kvifor informatikk tilhøyrer Algebra
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Course Overview:
+              name: Kursoversikt
+            Why Computer Science belongs in Algebra:
+              name: Kvifor informatikk tilhøyrer Algebra
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Teacher Dashboard:
+              name: Lærarmodus
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         algebraPD-iZone:
           stages:
             Course Overview:
@@ -683,12 +1199,31 @@ nn:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Kvifor informatikk tilhøyrer Algebra
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Course Overview:
+              name: Kursoversikt
+            Why Computer Science belongs in Algebra:
+              name: Kvifor informatikk tilhøyrer Algebra
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Teacher Dashboard:
+              name: Lærarmodus
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         sciencePD-NexTech:
           stages:
             Introduction to PD:
               name: Introduksjon til PD
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
         sciencePD-iZone:
           stages:
+            Introduction to PD:
+              name: Introduksjon til PD
+          lessons:
             Introduction to PD:
               name: Introduksjon til PD
         sciencePD2:
@@ -699,10 +1234,18 @@ nn:
               name: Velkomen!
             Wrap-Up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
         cspunit2:
           stages:
             The Internet:
               name: Internett er for alle
+          lessons:
+            The Internet:
+              name: Internett
         algebraPD2a:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
@@ -725,6 +1268,25 @@ nn:
               name: Strenger og bilder
             The Design Recipe:
               name: Design-oppskrifta
+          lessons:
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Strings and Images:
+              name: Strenger og bilder
+            Defining Variables:
+              name: Definering av variablar
+            Rocket-Height:
+              name: Raketthøgde
+            The Design Recipe:
+              name: Design-oppskrifta
+            Booleans:
+              name: Boolske verdiar
+            Sam the Bat:
+              name: Flaggermusa Sam
+            Luigi's Pizza:
+              name: Luigis pizza
+            Free Play:
+              name: Gjer kva du vil
         allthethings:
           title: Alt!
           description: Alle nivå typer for UI tester
@@ -758,6 +1320,35 @@ nn:
               name: Studio
             Web Lab:
               name: Nett-lab
+          lessons:
+            Jigsaw:
+              name: Puslespill
+            Maze:
+              name: Labyrint
+            Artist:
+              name: Kunstnar
+            Bee:
+              name: Bier
+            PlayLab:
+              name: Spellab
+            Flappy:
+              name: Flakse
+            Bounce:
+              name: Sprett
+            Multi:
+              name: Multi
+            Match:
+              name: Kamp
+            Odometer:
+              name: Kilometerteller
+            AppLab:
+              name: AppLab
+            Studio:
+              name: Studio
+            Minecraft:
+              name: Minecraft
+            Web Lab:
+              name: Nett-lab
         algebraPD2b:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
@@ -784,6 +1375,29 @@ nn:
               name: Lærarmodus
             Writing Contracts:
               name: Skriv kontrakter
+          lessons:
+            Course Overview:
+              name: Kursoversikt
+            Teacher Dashboard:
+              name: Lærarmodus
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Strings and Images:
+              name: Strenger og bilder
+            Writing Contracts:
+              name: Skriv kontrakter
+            Defining Variables:
+              name: Definering av variablar
+            Defining Functions:
+              name: Definering av funksjonar
+            Rocket-Height:
+              name: Raketthøgde
+            Booleans:
+              name: Boolske verdiar
+            'Eval: Conditionals':
+              name: 'Eval: Vilkår'
+            Next Steps:
+              name: Neste steg
         cspfacilitator:
           stages:
             App Lab:
@@ -796,8 +1410,24 @@ nn:
               name: Leksjon i tekskomprimering
             Welcome!:
               name: Velkomen!
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            Internet Simulator:
+              name: Internettsimulator
+            App Lab:
+              name: App-lab
+            Broadcast Lesson:
+              name: Kringkaste leksjon
+            Text Compression Lesson:
+              name: Leksjon i tekskomprimering
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: Grunnleggande informatikk
+            Next Steps:
+              name: Neste steg
+          lessons:
             Computer Science Fundamentals:
               name: Grunnleggande informatikk
             Next Steps:
@@ -816,6 +1446,17 @@ nn:
               name: Velkomen!
             Wrap-up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Oppsummering
         algebraPD2:
           description: Støtte for akademisk år
           description_short: Støtte for akademisk år
@@ -828,10 +1469,24 @@ nn:
               name: Design-oppskrifta
             Welcome!:
               name: Velkomen!
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            The Design Recipe:
+              name: Design-oppskrifta
+            Teacher Dashboard:
+              name: Lærarmodus
+            Lesson Prep:
+              name: Førebuing av leksjon
         sciencePD2b:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
+          lessons:
             Welcome!:
               name: Velkomen!
             Wrap-Up:
@@ -844,14 +1499,27 @@ nn:
               name: Velkomen!
             Wrap-Up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
         Equity-OnlinePD:
           stages:
+            Next Steps:
+              name: Neste steg
+          lessons:
             Next Steps:
               name: Neste steg
         sciencePD2b-iZone:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           stages:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
+          lessons:
             Welcome!:
               name: Velkomen!
             Wrap-Up:
@@ -870,6 +1538,17 @@ nn:
               name: Velkomen!
             Wrap-up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Oppsummering
         ECSPD2-NexTech:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
@@ -884,8 +1563,28 @@ nn:
               name: Velkomen!
             Wrap-up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Oppsummering
         CSPPD2:
           stages:
+            Lesson Chunk 1- Sending Binary Messages:
+              name: Leksjon del 1 - Sende binære meldingar
+            Lesson Chunk 2- Encoding and Sending Numbers:
+              name: Leksjon del 2 - Kode og sende tal
+            Lesson Chunk 3- Encoding and Sending Text:
+              name: Leksjon del 3 - Kode og sende tekst
+            Lesson Chunk 4- Compressing and Storing Information:
+              name: Leksjon del 4 - Komprimering og lagring av informasjon
+          lessons:
             Lesson Chunk 1- Sending Binary Messages:
               name: Leksjon del 1 - Sende binære meldingar
             Lesson Chunk 2- Encoding and Sending Numbers:
@@ -914,8 +1613,30 @@ nn:
               name: Låtskriving
             The Big Event:
               name: Den store hendinga
+          lessons:
+            Happy Maps:
+              name: Glade Kart
+            Move it, Move it:
+              name: Flytt, flytt
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            Building a Foundation:
+              name: Bygge eit fundament
+            Getting Loopy:
+              name: Me blir sløyfete
+            The Big Event:
+              name: Den store hendinga
+            Binary Bracelets:
+              name: Binær armbånd
+            Songwriting:
+              name: Låtskriving
         algebraPD3a:
           stages:
+            Lesson Prep:
+              name: Førebuing av leksjon
+          lessons:
             Lesson Prep:
               name: Førebuing av leksjon
         ECSPD3-Unit2:
@@ -924,20 +1645,37 @@ nn:
               name: Gjennomgang av oppgåva
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Teaching Strategies:
+              name: Læringsstrategiar
+            Lesson Overviews:
+              name: Gjennomgang av oppgåva
         ECSPD3-Unit3:
           stages:
+            Teaching Strategies:
+              name: Læringsstrategiar
+          lessons:
             Teaching Strategies:
               name: Læringsstrategiar
         ECSPD3-Unit4:
           stages:
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Teaching Strategies:
+              name: Læringsstrategiar
         ECSPD3-Unit5:
           stages:
             Unit 5 lessons:
               name: Eining 5-leksjonar
+          lessons:
+            Unit 5 lessons:
+              name: Eining 5-leksjonar
         ECSPD3-Unit6:
           stages:
+            Unit 6 lessons:
+              name: Eining 6-leksjonar
+          lessons:
             Unit 6 lessons:
               name: Eining 6-leksjonar
         ScienceP3OLPT2:
@@ -958,6 +1696,17 @@ nn:
               name: Undervisningsstøtte - Leksjonar 4-7
             Teaching Support - Lessons 8-12:
               name: Undervisningsstøtte - Leksjonar 8-12
+          lessons:
+            Teaching Support - Lessons 1-3:
+              name: Undervisningsstøtte - Leksjonar 1-3
+            Teaching Support - Lessons 4-7:
+              name: Undervisningsstøtte - Leksjonar 4-7
+            Teaching Support - Lessons 8-12:
+              name: Undervisningsstøtte - Leksjonar 8-12
+            Teaching Support - Lessons 13-16:
+              name: Undervisningsstøtte - Leksjonar 13-16
+            Teaching Support - Lessons 17-20:
+              name: Undervisningsstøtte - Leksjonar 17-20
         Special Fun:
           description_audience: Frå 10+ år (etter Kurs 3)
         SpecialSeries:
@@ -969,8 +1718,14 @@ nn:
           stages:
             Ice Age Play Lab:
               name: Istid Spel-lab
+          lessons:
+            Ice Age Play Lab:
+              name: Istid Spel-lab
         cspunit3temp:
           stages:
+            While Loops:
+              name: Medan-løkker
+          lessons:
             While Loops:
               name: Medan-løkker
         gumball:
@@ -980,11 +1735,17 @@ nn:
           stages:
             Gumball Play Lab:
               name: Gumball Spel-lab
+          lessons:
+            Gumball Play Lab:
+              name: Gumball Spel-lab
         starwars:
           title: 'Star Wars: Skap ein galakse med kode'
           description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           stages:
+            Hour of Code 2015:
+              name: Kodetimen 2015
+          lessons:
             Hour of Code 2015:
               name: Kodetimen 2015
         starwarsblocks:
@@ -994,6 +1755,9 @@ nn:
           stages:
             Hour of Code 2015:
               name: Kodetimen 2015
+          lessons:
+            Hour of Code 2015:
+              name: Kodetimen 2015
         mc:
           title: Kodetimen med Minecraft
           description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda
@@ -1001,8 +1765,16 @@ nn:
           stages:
             Hour of Code 2015:
               name: Kodetimen 2015
+          lessons:
+            Hour of Code 2015:
+              name: Kodetimen 2015
         ScienceP3OLPT3:
           stages:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
+          lessons:
             Welcome!:
               name: Velkomen!
             Wrap-Up:
@@ -1023,6 +1795,21 @@ nn:
               name: 'Trådlaust: Kontrakter'
             'Unplugged: The Design Recipe':
               name: 'Trådlaust: Design oppskrifta'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'Rekning: Evaluering av blokker'
+            'Eval: Strings and Images':
+              name: 'Eval: Tekst og bilder'
+            'Unplugged: Contracts':
+              name: 'Trådlaust: Kontrakter'
+            'Eval: Writing Contracts':
+              name: 'Eval: Skrive kontrakter'
+            'Calc: Defining Variables':
+              name: 'Rekning: Definere Variablar'
+            'Unplugged: The Design Recipe':
+              name: 'Trådlaust: Design oppskrifta'
+            'Play Lab: Defining Functions':
+              name: 'Spellab: Definerande funksjonar'
         AlgebraB:
           stages:
             'Eval: Boolean Operators':
@@ -1047,6 +1834,29 @@ nn:
               name: 'Trådlaust: Vilkår og stykkevise funksjonar'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Trådlaust: Videospel og kooridinat-plan'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Trådlaust: Videospel og kooridinat-plan'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Spel-lab: Definere variablar (Stort spel)'
+            'Play Lab: Animation (Big Game)':
+              name: 'Spel-lab: Animasjon (Stort spel)'
+            'Unplugged: Booleans':
+              name: 'Trådlaust: Boolske variable'
+            'Eval: Boolean Operators':
+              name: 'Eval: Boolske operatorar'
+            'Play Lab: Booleans':
+              name: 'Spel-lab: Boolske verdiar'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Spel-lab: Boolsk (Stort spel)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Trådlaust: Vilkår og stykkevise funksjonar'
+            'Eval: Conditionals':
+              name: 'Eval: Vilkår'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Trådlaust: Deteksjon av kollisjonar og distanseformelen'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Spel-lab: Deteksjon av kollisjon (Stort spel)'
         algebraPD1:
           stages:
             Course Overview:
@@ -1061,6 +1871,19 @@ nn:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Kvifor informatikk tilhøyrer Algebra
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Course Overview:
+              name: Kursoversikt
+            Why Computer Science belongs in Algebra:
+              name: Kvifor informatikk tilhøyrer Algebra
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Teacher Dashboard:
+              name: Lærarmodus
+            Preparing for in-person PD:
+              name: Førebu personleg PD
         csp1-2017:
           stages:
             Binary Numbers:
@@ -1086,6 +1909,23 @@ nn:
               display_name: 'Kapittel 1: Representere og formidle informasjon'
             csp1_2:
               display_name: 'Kapittel 2: Finne opp Internett'
+          lessons:
+            Personal Innovations:
+              name: Personlege innovasjonar
+            Sending Binary Messages:
+              name: Sende binære meldingar
+            Sending Binary Messages with the Internet Simulator:
+              name: Sende binære meldingar med Internett Simulator
+            Number Systems:
+              name: Talsystem
+            Binary Numbers:
+              name: Binære tal
+            Sending Numbers:
+              name: Sende tal
+            The Internet:
+              name: Internett
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1105,6 +1945,17 @@ nn:
               display_name: 'Kapittel 2: Manipulere og visualisere data'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Bytes and File Sizes:
+              name: Byte- og arkivstorleikar
+            Encoding B&W Images:
+              name: Kode svart/kvit-bilete
+            Encoding Color Images:
+              name: Kode fargebilete
+            Lossy Compression and File Formats:
+              name: Lossykomprimering og filformat
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp3-2017:
           stages:
             Creating Functions:
@@ -1118,6 +1969,11 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Creating Functions:
+              name: Lag Funksjonar
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp4-2017:
           stages:
             Simple Encryption:
@@ -1133,6 +1989,11 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Simple Encryption:
+              name: Enkel kryptering
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp5-2017:
           stages:
             While Loops:
@@ -1146,6 +2007,11 @@ nn:
               display_name: 'Kapittel 2: Programmering med datastrukturar'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            While Loops:
+              name: Medan-løkker
+            Post-Course Survey:
+              name: Undersøking etter kurs
         CSDU3-Draft:
           stages:
             Functions:
@@ -1154,6 +2020,9 @@ nn:
               name: Fart
         2016_sciencePD_phase1:
           stages:
+            Introduction to PD:
+              name: Introduksjon til PD
+          lessons:
             Introduction to PD:
               name: Introduksjon til PD
         CSF_Secret_Sample:
@@ -1168,8 +2037,20 @@ nn:
               name: Lærarmodus
             Why Computer Science belongs in Algebra:
               name: Kvifor informatikk tilhøyrer Algebra
+          lessons:
+            Introduction to PD:
+              name: Introduksjon til PD
+            Why Computer Science belongs in Algebra:
+              name: Kvifor informatikk tilhøyrer Algebra
+            Evaluation Blocks:
+              name: Evalueringsblokker
+            Teacher Dashboard:
+              name: Lærarmodus
         sciencePD1:
           stages:
+            Introduction to PD:
+              name: Introduksjon til PD
+          lessons:
             Introduction to PD:
               name: Introduksjon til PD
         cspunit1-support:
@@ -1183,6 +2064,9 @@ nn:
               display_name: Innhald
             practice:
               display_name: Undervisningspraksis
+          lessons:
+            Sending Binary Messages:
+              name: Sende binære meldingar
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -1195,12 +2079,18 @@ nn:
           stages:
             Game Lab:
               name: Spel-lab
+          lessons:
+            Game Lab:
+              name: Spel-lab
         CSDU2-Draft:
           stages:
             Peer Review:
               name: Gjennomgang av annan elev
         MikeTest:
           stages:
+            Artist Functions:
+              name: 'Kunstnar: Funksjonar'
+          lessons:
             Artist Functions:
               name: 'Kunstnar: Funksjonar'
         artistExemplar:
@@ -1230,8 +2120,28 @@ nn:
               display_name: Innhald
             practice:
               display_name: Undervisningspraksis
+          lessons:
+            Lesson 1,4:
+              name: Leksjon 1,4
+            Lesson 1,6:
+              name: Leksjon 1,6
+            Lesson 1,9:
+              name: Leksjon 1,9
+            Lesson 1,10:
+              name: Leksjon 1,10
+            Lesson 1,11:
+              name: Leksjon 1,11
+            Lesson 2,2:
+              name: Leksjon 2,2
+            Lesson 2,3:
+              name: Leksjon 2,3
+            Lesson 2,10:
+              name: Leksjon 2,10
         kinderTest:
           stages:
+            'Bee: Conditionals':
+              name: 'Bier: Vilkår'
+          lessons:
             'Bee: Conditionals':
               name: 'Bier: Vilkår'
         gradeKinder:
@@ -1294,26 +2204,54 @@ nn:
               name: Velkomen!
             Wrap-up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Oppsummering
         ecs-unit2:
           stages:
             Lesson Overviews:
               name: Gjennomgang av oppgåva
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Teaching Strategies:
+              name: Læringsstrategiar
+            Lesson Overviews:
+              name: Gjennomgang av oppgåva
         ecs-unit3:
           stages:
+            Teaching Strategies:
+              name: Læringsstrategiar
+          lessons:
             Teaching Strategies:
               name: Læringsstrategiar
         ecs-unit4:
           stages:
             Teaching Strategies:
               name: Læringsstrategiar
+          lessons:
+            Teaching Strategies:
+              name: Læringsstrategiar
         ecs-unit5:
           stages:
             Unit 5 lessons:
               name: Eining 5-leksjonar
+          lessons:
+            Unit 5 lessons:
+              name: Eining 5-leksjonar
         ecs-unit6:
           stages:
+            Unit 6 lessons:
+              name: Eining 6-leksjonar
+          lessons:
             Unit 6 lessons:
               name: Eining 6-leksjonar
         grade3:
@@ -1351,6 +2289,23 @@ nn:
               display_name: Innhald
             practice:
               display_name: Undervisningspraksis
+          lessons:
+            Lesson 1,4:
+              name: Leksjon 1,4
+            Lesson 1,6:
+              name: Leksjon 1,6
+            Lesson 1,9:
+              name: Leksjon 1,9
+            Lesson 1,10:
+              name: Leksjon 1,10
+            Lesson 1,11:
+              name: Leksjon 1,11
+            Lesson 2,2:
+              name: Leksjon 2,2
+            Lesson 2,3:
+              name: Leksjon 2,3
+            Lesson 2,10:
+              name: Leksjon 2,10
         csd3-2017:
           stages:
             Velocity:
@@ -1370,6 +2325,15 @@ nn:
               display_name: Undersøking
             csd_survey:
               display_name: Undersøking etter kurs
+          lessons:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         grade2:
           stages:
             Flappy:
@@ -1402,6 +2366,27 @@ nn:
               name: Variablar
             While Loops:
               name: Medan-løkker
+          lessons:
+            Events:
+              name: Hendingar
+            Loops:
+              name: Løkker
+            Nested Loops:
+              name: Løkker i løkke
+            Conditionals:
+              name: Betingelser
+            While Loops:
+              name: Medan-løkker
+            Functions:
+              name: Funksjonar
+            Variables:
+              name: Variablar
+            For Loops:
+              name: For-løkker
+            Functions with Parameters:
+              name: Funksjonar med parameter
+            Binary:
+              name: Binær
         algebrapdnext:
           stages:
             Lesson Prep:
@@ -1412,6 +2397,15 @@ nn:
               name: Design-oppskrifta
             Welcome!:
               name: Velkomen!
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            The Design Recipe:
+              name: Design-oppskrifta
+            Teacher Dashboard:
+              name: Lærarmodus
+            Lesson Prep:
+              name: Førebuing av leksjon
         csd1-2017:
           lesson_groups:
             cspSurvey:
@@ -1482,6 +2476,19 @@ nn:
               display_name: Innhald
             practice:
               display_name: Undervisningspraksis
+          lessons:
+            'Lessons 2 - 3: Binary Messages':
+              name: 'Leksjonar 2 - 3: Binære meldingar'
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Leksjonar 4 - 6: Koding og sende tal'
+            'Lesson 7: Encoding and Sending Text':
+              name: 'Leksjon 7: Koding og sende tekst'
+            'Lesson 9: Internet Addressing':
+              name: 'Leksjon 9: Internettadressering'
+            'Lessons 10 - 11: Routers, Redundancy, and Packets':
+              name: 'Leksjonar 10 - 11: Rutarar, redundans og pakkar'
+            'Lessons 12 - 13: Abstraction on the Internet':
+              name: 'Leksjonar 12 - 13: Abstraksjon på internett'
         basketball:
           title: Lag eit basketballspel
           description_short: Velg laget ditt og programmer et basketballspel
@@ -1489,8 +2496,14 @@ nn:
           stages:
             Bounce:
               name: Sprett
+          lessons:
+            Bounce:
+              name: Sprett
         hoc-encryption:
           stages:
+            Simple Encryption:
+              name: Enkel kryptering
+          lessons:
             Simple Encryption:
               name: Enkel kryptering
         fesbinary:
@@ -1515,6 +2528,9 @@ nn:
               display_name: 'Kapittel 2: Styling og CSS'
             csd_survey:
               display_name: Undersøking etter kurs
+          lessons:
+            Lists:
+              name: Lister
         csp2-support:
           stages:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
@@ -1528,6 +2544,11 @@ nn:
               display_name: Innhald
             practice:
               display_name: Undervisningspraksis
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Leksjonar 1 - 2: Bytes, filsstorleikar og tekstkomprimering'
+            'Lessons 3 - 4 : Encoding Images':
+              name: 'Leksjonar 3-4: Kode bilete'
         csd4-2017:
           lesson_groups:
             csd4_1:
@@ -1543,8 +2564,14 @@ nn:
           stages:
             Minecraft Hour of Code Designer:
               name: Kodetimens Minecraft-designer
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: Kodetimens Minecraft-designer
         flappy-impact-study:
           stages:
+            Flappy Code:
+              name: Flakse-kode
+          lessons:
             Flappy Code:
               name: Flakse-kode
         coursea-draft:
@@ -1555,6 +2582,13 @@ nn:
               name: Hendingar i Spel-lab
             Going Places Safely:
               name: Går stader trygt
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         courseb-draft:
           stages:
             Events in Play Lab:
@@ -1563,6 +2597,13 @@ nn:
               name: 'Verkelege algoritmar: Plante eit frø'
             Your Digital Footprint:
               name: Dine digitale fotspor
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         coursec-draft:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1575,6 +2616,15 @@ nn:
               name: Dine digitale fotspor
             Building a Foundation:
               name: Bygge eit fundament
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            'Real-life Algorithms: Paper Planes':
+              name: 'Verkelege algoritmar: Papirfly'
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+            Binary Bracelets:
+              name: Binær armbånd
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -1591,6 +2641,21 @@ nn:
               name: Løkker i løkke
             Introduction:
               name: Introduksjon
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Nested Loops:
+              name: Løkker i løkke
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -1610,6 +2675,17 @@ nn:
               display_name: Innhald
             extra_course_content:
               display_name: Ekstra kursinnhald
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Conditionals:
+              name: Betingelser
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1629,6 +2705,19 @@ nn:
           lesson_groups:
             content:
               display_name: Innhald
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Ice Age Play Lab:
+              name: Istid Spel-lab
+            Envelope Variables:
+              name: Konvolutt-variablar
+            Variables in Play Lab:
+              name: Variablar i Spellab
+            For Loop Fun:
+              name: Morro med for-løkker
+            Songwriting with Parameters:
+              name: Låtskriving med parameter
         classic-hoc-impact-study:
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
           stages:
@@ -1639,11 +2728,17 @@ nn:
           stages:
             Hour of Code 2013:
               name: Kodetimen 2013
+          lessons:
+            Hour of Code 2013:
+              name: Kodetimen 2013
         sports:
           title: Kode din eigen sport
           description_short: Kode din eigen sport
           description: Kode din eigen sport
           stages:
+            Sports:
+              name: Sport
+          lessons:
             Sports:
               name: Sport
         2016_sciencePD-phase2b:
@@ -1652,8 +2747,18 @@ nn:
               name: Velkomen!
             Wrap-Up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
         2016_sciencePD_phase2b:
           stages:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
+          lessons:
             Welcome!:
               name: Velkomen!
             Wrap-Up:
@@ -1680,6 +2785,11 @@ nn:
               name: Velkomen!
             Wrap-Up:
               name: Oppsummering
+          lessons:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
         science-pd-ol-pt-5:
           stages:
             Welcome!:
@@ -1695,8 +2805,18 @@ nn:
           lesson_groups:
             content:
               display_name: Innhald
+          lessons:
+            Snowflakes:
+              name: Snøfnugg
+            Binary:
+              name: Binær
         sciencepd5:
           stages:
+            Welcome!:
+              name: Velkomen!
+            Wrap-Up:
+              name: Oppsummering
+          lessons:
             Welcome!:
               name: Velkomen!
             Wrap-Up:
@@ -1718,6 +2838,9 @@ nn:
               display_name: Innhald
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csd6-draft:
           stages:
             Lists:
@@ -1731,8 +2854,14 @@ nn:
               display_name: 'Kapittel 1: Programmering med maskinvare'
             csd6_2:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
+          lessons:
+            Functions with Parameters:
+              name: Funksjonar med parameter
         workshop-gamelab:
           stages:
+            Introduction:
+              name: Introduksjon
+          lessons:
             Introduction:
               name: Introduksjon
         csd5-draft:
@@ -1745,6 +2874,9 @@ nn:
           stages:
             Introduction:
               name: Introduksjon
+          lessons:
+            Introduction:
+              name: Introduksjon
         coursee-ramp:
           stages:
             Introduction:
@@ -1753,6 +2885,13 @@ nn:
               name: Betingelser
             'Real Life Algorithms: Dice Race':
               name: 'Verkelige algoritmar: Terningkamp'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'Verkelige algoritmar: Terningkamp'
+            Introduction:
+              name: Introduksjon
+            Conditionals:
+              name: Betingelser
         csd6-2017:
           stages:
             Lists:
@@ -1794,6 +2933,11 @@ nn:
               name: Fart
             Functions:
               name: Funksjonar
+          lessons:
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         csd2-draft:
           stages:
             Lists:
@@ -1816,6 +2960,11 @@ nn:
               name: Introduksjon
             Ice Age Play Lab:
               name: Istid Spel-lab
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Ice Age Play Lab:
+              name: Istid Spel-lab
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -1824,8 +2973,16 @@ nn:
           stages:
             Peer Review:
               name: Gjennomgang av annan elev
+          lessons:
+            Peer Review:
+              name: Gjennomgang av annan elev
         artist-and-bb8:
           stages:
+            Ice Age Play Lab:
+              name: Istid Spel-lab
+            Bounce:
+              name: Sprett
+          lessons:
             Ice Age Play Lab:
               name: Istid Spel-lab
             Bounce:
@@ -1839,6 +2996,13 @@ nn:
           title: Kurs A
           assignment_family_title: Kurs A
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1848,6 +3012,13 @@ nn:
           title: Kurs B
           assignment_family_title: Kurs B
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1856,6 +3027,15 @@ nn:
               name: Hendingar i Spel-lab
           title: Kurs C
           assignment_family_title: Kurs C
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            'Real-life Algorithms: Paper Planes':
+              name: 'Verkelege algoritmar: Papirfly'
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+            Binary Bracelets:
+              name: Binær armbånd
         coursed-2017:
           stages:
             Nested Loops:
@@ -1865,6 +3045,21 @@ nn:
           title: Kurs D
           assignment_family_title: Kurs D
           description_short: Få eit raskt overblikk over konsepta frå kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Nested Loops:
+              name: Løkker i løkke
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1895,6 +3090,21 @@ nn:
               display_name: Kursinnhald E
             extra_course_content:
               display_name: Ekstra kursinnhald
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops:
+              name: Løkker i løkke
+            Introduction:
+              name: Introduksjon
+            Conditionals:
+              name: Betingelser
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         coursef-2017:
           stages:
             Variables in Play Lab:
@@ -1914,6 +3124,25 @@ nn:
               display_name: Oppgrader til Kurs F (valfritt)
             csf_f_2:
               display_name: Kursinnhald F
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Introduction:
+              name: Introduksjon
+            Ice Age Play Lab:
+              name: Istid Spel-lab
+            Conditionals in Minecraft:
+              name: Betingelser i Minecraft
+            Envelope Variables:
+              name: Konvolutt-variablar
+            Variables in Play Lab:
+              name: Variablar i Spellab
+            For Loop Fun:
+              name: Morro med for-løkker
+            Songwriting with Parameters:
+              name: Låtskriving med parameter
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -2021,8 +3250,26 @@ nn:
           lesson_groups:
             content:
               display_name: Innhald
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops:
+              name: Løkker i løkke
+            Conditionals in Minecraft:
+              name: Betingelser i Minecraft
+            Variables in Play Lab:
+              name: Variablar i Spellab
         pre-express-2017:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+            Spelling Bee:
+              name: Stavekonkurranse
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
             Events in Play Lab:
@@ -2044,6 +3291,9 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Creating Functions:
+              name: Lag Funksjonar
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -2073,6 +3323,19 @@ nn:
               display_name: Kursinnhald E
             extra_course_content:
               display_name: Ekstra kursinnhald
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Conditionals:
+              name: Betingelser
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         new-d:
           stages:
             Introduction:
@@ -2091,6 +3354,21 @@ nn:
               name: 'Kunstnar: binær'
             Building a Foundation:
               name: Bygge eit fundament
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Building a Foundation:
+              name: Bygge eit fundament
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
         csp3-a:
           lesson_groups:
             csp3_1:
@@ -2110,6 +3388,17 @@ nn:
           lesson_groups:
             content:
               display_name: Innhald
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops:
+              name: Løkker i løkke
+            Conditionals in Minecraft:
+              name: Betingelser i Minecraft
+            Variables in Play Lab:
+              name: Variablar i Spellab
         new-e:
           stages:
             Building a Foundation:
@@ -2131,6 +3420,19 @@ nn:
               display_name: Kursinnhald E
             extra_course_content:
               display_name: Ekstra kursinnhald
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Conditionals:
+              name: Betingelser
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         new-f:
           stages:
             Building a Foundation:
@@ -2154,6 +3456,23 @@ nn:
               display_name: Oppgrader til Kurs F (valfritt)
             csf_f_2:
               display_name: Kursinnhald F
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Ice Age Play Lab:
+              name: Istid Spel-lab
+            Conditionals in Minecraft:
+              name: Betingelser i Minecraft
+            Envelope Variables:
+              name: Konvolutt-variablar
+            Variables in Play Lab:
+              name: Variablar i Spellab
+            For Loop Fun:
+              name: Morro med for-løkker
+            Songwriting with Parameters:
+              name: Låtskriving med parameter
         csd5-old:
           lesson_groups:
             csd5_1:
@@ -2175,8 +3494,16 @@ nn:
               display_name: 'Kapittel 1: Programmeringsspråk og algoritmar'
             cspAssessment:
               display_name: Vurdering av kapittel
+          lessons:
+            Creating Functions:
+              name: Lag Funksjonar
         pwc:
           stages:
+            Personal Innovations:
+              name: Personlege innovasjonar
+            Simple Encryption:
+              name: Enkel kryptering
+          lessons:
             Personal Innovations:
               name: Personlege innovasjonar
             Simple Encryption:
@@ -2190,6 +3517,9 @@ nn:
           title: 'Minecraft: Helten si reise'
           description_short: Minecraft er tilbake med ein heilt ny aktivitet i Kodetimen!
           description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
+          lessons:
+            Minecraft Hour of Code:
+              name: Kodetimen med Minecraft
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -2199,6 +3529,9 @@ nn:
               display_name: 'Kapittel 2: AP utforske ytelsesoppgave'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp-create-2017:
           stages:
             Post-Course Survey:
@@ -2208,6 +3541,9 @@ nn:
               display_name: 'Kapittel 3: AP opprette ytelsesoppgåve'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Post-Course Survey:
+              name: Undersøking etter kurs
         course-e-2018:
           stages:
             Building a Foundation:
@@ -2231,6 +3567,21 @@ nn:
               display_name: Kursinnhald E
             extra_course_content:
               display_name: Ekstra kursinnhald
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops:
+              name: Løkker i løkke
+            Introduction:
+              name: Introduksjon
+            Conditionals:
+              name: Betingelser
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         course-f-2018:
           stages:
             Building a Foundation:
@@ -2256,6 +3607,25 @@ nn:
               display_name: Oppgrader til Kurs F (valfritt)
             csf_f_2:
               display_name: Kursinnhald F
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Introduction:
+              name: Introduksjon
+            Ice Age Play Lab:
+              name: Istid Spel-lab
+            Conditionals in Minecraft:
+              name: Betingelser i Minecraft
+            Envelope Variables:
+              name: Konvolutt-variablar
+            Variables in Play Lab:
+              name: Variablar i Spellab
+            For Loop Fun:
+              name: Morro med for-løkker
+            Songwriting with Parameters:
+              name: Låtskriving med parameter
         csd6-old:
           stages:
             Lists:
@@ -2267,6 +3637,11 @@ nn:
               display_name: 'Kapittel 1: Programmering med maskinvare'
             csd6_2:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
+          lessons:
+            Lists:
+              name: Lister
+            For Loops:
+              name: For-løkker
         csd3-1819draft:
           stages:
             Variables:
@@ -2284,6 +3659,15 @@ nn:
               display_name: 'Kapittel 2: Bygge spel'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         csd3-2018:
           stages:
             Variables:
@@ -2301,6 +3685,15 @@ nn:
               display_name: 'Kapittel 2: Bygge spel'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         csd2-2018:
           stages:
             Lists:
@@ -2312,6 +3705,9 @@ nn:
               display_name: 'Kapittel 2: Styling og CSS'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Lists:
+              name: Lister
         coursea-2018:
           assignment_family_title: Kurs A
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
@@ -2328,6 +3724,13 @@ nn:
               name: Hendingar i Spellab
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og det store prosjektet
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         express-2018:
           assignment_family_title: Ekspresskurs
           stages:
@@ -2369,6 +3772,27 @@ nn:
               name: Programmeringsstafett
             Graph Paper Programming:
               name: Programmering på millimeterpapir
+          lessons:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              name: Programmeringsstafett
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
+            Binary Bracelets:
+              name: Binær armbånd
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         courseb-2018:
           assignment_family_title: Kurs B
           stages:
@@ -2380,6 +3804,13 @@ nn:
               name: Hendingar i Spellab
             Move It, Move It:
               name: Flytt den, flytt den
+          lessons:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         coursed-2018:
           assignment_family_title: Kurs D
           stages:
@@ -2403,6 +3834,19 @@ nn:
               name: Programmering på millimeterpapir
             Relay Programming:
               name: Programmeringsstafett
+          lessons:
+            Relay Programming:
+              name: Programmeringsstafett
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Build a Play Lab Game:
+              name: Bygg eit spel i Spellab
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
         coursec-2018:
           assignment_family_title: Kurs C
           stages:
@@ -2416,6 +3860,15 @@ nn:
               name: Hendingar i Spellab
             Binary Bracelets:
               name: Binær armbånd
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            'Real-life Algorithms: Paper Planes':
+              name: 'Verkelege algoritmar: Papirfly'
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+            Binary Bracelets:
+              name: Binær armbånd
         csd6-2018:
           stages:
             Functions with Parameters:
@@ -2427,6 +3880,9 @@ nn:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Functions with Parameters:
+              name: Funksjonar med parameter
         coursee-2018:
           assignment_family_title: Kurs E
           stages:
@@ -2455,6 +3911,19 @@ nn:
               display_name: Kursinnhald E
             extra_course_content:
               display_name: Ekstra kursinnhald
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops:
+              name: Løkker i løkke
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Conditionals:
+              name: Betingelser
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         coursef-2018:
           assignment_family_title: Kurs F
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
@@ -2485,6 +3954,17 @@ nn:
               display_name: Oppgrader til Kurs F (valfritt)
             csf_f_2:
               display_name: Kursinnhald F
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
         csp1-2018:
           stages:
             Personal Innovations:
@@ -2508,6 +3988,21 @@ nn:
               display_name: 'Kapittel 1: Representere og formidle informasjon'
             csp1_2:
               display_name: 'Kapittel 2: Finne opp Internett'
+          lessons:
+            Personal Innovations:
+              name: Personlege innovasjonar
+            Sending Binary Messages:
+              name: Sende binære meldingar
+            Sending Binary Messages with the Internet Simulator:
+              name: Sende binære meldingar med Internett Simulator
+            Number Systems:
+              name: Talsystem
+            Binary Numbers:
+              name: Binære tal
+            Sending Numbers:
+              name: Sende tal
+            The Internet:
+              name: Internett
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -2547,6 +4042,13 @@ nn:
               display_name: 'Eining 2: Digital informasjon'
             cspAssessment:
               display_name: Vurdering av kapittel
+          lessons:
+            Bytes and File Sizes:
+              name: Byte- og arkivstorleikar
+            Encoding B&W Images:
+              name: Kode svart/kvit-bilete
+            Encoding Color Images:
+              name: Kode fargebilete
         csp3-2018:
           stages:
             Creating Functions:
@@ -2558,6 +4060,9 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Creating Functions:
+              name: Lag Funksjonar
         csp-explore-2018:
           lesson_groups:
             csp_ap_2:
@@ -2581,6 +4086,9 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Simple Encryption:
+              name: Enkel kryptering
         csp5-2018:
           stages:
             While Loops:
@@ -2592,6 +4100,9 @@ nn:
               display_name: 'Kapittel 2: Programmering med datastrukturar'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            While Loops:
+              name: Medan-løkker
         csppostap-2018:
           lesson_groups:
             csp_postap_1:
@@ -2724,6 +4235,15 @@ nn:
               name: Dine digitale fotspor
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og det store prosjektet
+          lessons:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+            Spelling Bee:
+              name: Stavekonkurranse
         fit-test:
           lesson_groups:
             required:
@@ -2734,8 +4254,14 @@ nn:
           stages:
             Artist:
               name: Kunstnar
+          lessons:
+            Artist:
+              name: Kunstnar
         frozen-2018-test:
           stages:
+            Artist:
+              name: Kunstnar
+          lessons:
             Artist:
               name: Kunstnar
         dance:
@@ -2745,8 +4271,14 @@ nn:
           title: Dansefest
           description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
           description: Programmer din egen dansefest du kan dele med vennene dine!
+          lessons:
+            Dance Party:
+              name: Dansefest
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: Kunstnar
+          lessons:
             Artist:
               name: Kunstnar
         aquatic:
@@ -2754,6 +4286,9 @@ nn:
             Aquatic:
               name: Vatn
           description_short: Minecraft er tilbake med ein heilt ny aktivitet til Kodetimen!
+          lessons:
+            Aquatic:
+              name: Vatn
         dance--draft:
           stages:
             Dance Party:
@@ -2804,6 +4339,15 @@ nn:
               display_name: Internett
             csf_digcit:
               display_name: Digitalt statsborgerskap
+          lessons:
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -2839,6 +4383,19 @@ nn:
               display_name: Binær
             csf_digcit:
               display_name: Digitalt statsborgerskap
+          lessons:
+            Relay Programming:
+              name: Programmeringsstafett
+            Conditionals with Cards:
+              name: Vilkår med kort
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:
@@ -2866,6 +4423,9 @@ nn:
               display_name: Løkker i løkke
             csf_functions:
               display_name: Funksjonar
+          lessons:
+            Conditionals:
+              name: Betingelser
         express-2019:
           stages:
             Relay Programming:
@@ -2903,6 +4463,9 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+          lessons:
+            Dance Party:
+              name: Dansefest
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2944,6 +4507,11 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Binary Bracelets:
+              name: Binær armbånd
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2968,6 +4536,11 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2987,6 +4560,13 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -3008,8 +4588,14 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Spelling Bee:
+              name: Stavekonkurranse
         removed19:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Verkelege algoritmar: Plante eit frø'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
         csd2-2019:
@@ -3023,6 +4609,9 @@ nn:
               display_name: 'Kapittel 2: Styling og CSS'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Lists:
+              name: Lister
         csd3-2019:
           stages:
             Variables:
@@ -3040,6 +4629,15 @@ nn:
               display_name: 'Kapittel 2: Bygge spel'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -3069,6 +4667,9 @@ nn:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Functions with Parameters:
+              name: Funksjonar med parameter
         csp4-pilot:
           stages:
             Surveys:
@@ -3107,6 +4708,21 @@ nn:
               display_name: 'Kapittel 1: Representere og formidle informasjon'
             csp1_2:
               display_name: 'Kapittel 2: Finne opp Internett'
+          lessons:
+            Personal Innovations:
+              name: Personlege innovasjonar
+            Sending Binary Messages:
+              name: Sende binære meldingar
+            Sending Binary Messages with the Internet Simulator:
+              name: Sende binære meldingar med Internett Simulator
+            Number Systems:
+              name: Talsystem
+            Binary Numbers:
+              name: Binære tal
+            Sending Numbers:
+              name: Sende tal
+            The Internet:
+              name: Internett
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -3122,6 +4738,13 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Bytes and File Sizes:
+              name: Byte- og arkivstorleikar
+            Encoding B&W Images:
+              name: Kode svart/kvit-bilete
+            Encoding Color Images:
+              name: Kode fargebilete
         csp3-2019:
           stages:
             Creating Functions:
@@ -3133,6 +4756,9 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Creating Functions:
+              name: Lag Funksjonar
         csp4-2019:
           stages:
             Simple Encryption:
@@ -3144,6 +4770,9 @@ nn:
               display_name: Vurdering av kapittel
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Simple Encryption:
+              name: Enkel kryptering
         csp5-2019:
           stages:
             While Loops:
@@ -3155,6 +4784,9 @@ nn:
               display_name: 'Kapittel 2: Programmering med datastrukturar'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            While Loops:
+              name: Medan-løkker
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -3190,6 +4822,9 @@ nn:
               display_name: Undersøking
             required:
               display_name: Oversyn
+          lessons:
+            Binary Numbers:
+              name: Binære tal
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3213,6 +4848,15 @@ nn:
               display_name: 'Samling 4: Påverknad frå innvaderande artar (i Everglades)'
             time4cs_c5:
               display_name: 'Samling 5: Innbyggarar tar grep'
+          lessons:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Vilkår med kort
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -3378,6 +5022,17 @@ nn:
               display_name: 'Kapittel 2: Bygge spel'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         csp3-pilot:
           lesson_groups:
             content:
@@ -3468,6 +5123,11 @@ nn:
               name: Introduksjon
             Nested Loops:
               name: Løkker i løkke
+          lessons:
+            Introduction:
+              name: Introduksjon
+            Nested Loops:
+              name: Løkker i løkke
         csp6-pilot:
           lesson_groups:
             content:
@@ -3479,6 +5139,9 @@ nn:
             Dance Party:
               name: Dansefest
           description: Programmer din egen dansefest du kan dele med vennene dine!
+          lessons:
+            Dance Party:
+              name: Dansefest
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -3508,6 +5171,21 @@ nn:
               display_name: 'Djupdykk: Kurs E og F'
             k5_next_steps:
               display_name: Neste steg
+          lessons:
+            Sequencing:
+              name: Sekvensiering
+            Loops:
+              name: Løkker
+            Events:
+              name: Hendingar
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funksjonar
+            Variables:
+              name: Variablar
+            For Loops:
+              name: For-løkker
         dance-extras-2019:
           description: Gå vidare etter den første timen med større prosjektidear.
         csp4-preview:
@@ -3539,6 +5217,11 @@ nn:
               display_name: Løkker i løkke
             csf_functions:
               display_name: Funksjonar
+          lessons:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Vilkår med kort
         time4cs-experiment-unit-2:
           lesson_groups:
             time4cs_c1:
@@ -3568,6 +5251,9 @@ nn:
               display_name: Digitalt statsborgerskap
             ramp_up:
               display_name: Oppgrader
+          lessons:
+            Conditionals:
+              name: Betingelser
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -3585,6 +5271,9 @@ nn:
               display_name: Digitalt statsborgerskap
             ramp_up:
               display_name: Oppgrader
+          lessons:
+            Conditionals:
+              name: Betingelser
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -3664,6 +5353,9 @@ nn:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Functions with Parameters:
+              name: Funksjonar med parameter
         csd3-2020:
           stages:
             Variables:
@@ -3685,6 +5377,19 @@ nn:
               display_name: 'Kapittel 2: Bygge spel'
             cspSurvey:
               display_name: Undersøking
+          lessons:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Text:
+              name: Tekst
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         coursea-2020:
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
           stages:
@@ -3703,6 +5408,9 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         courseb-2020:
           stages:
             Your Digital Footprint:
@@ -3722,6 +5430,11 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -3741,6 +5454,11 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Binary Bracelets:
+              name: Binær armbånd
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3770,6 +5488,17 @@ nn:
               display_name: Binær
             csf_digcit:
               display_name: Digitalt statsborgerskap
+          lessons:
+            Relay Programming:
+              name: Programmeringsstafett
+            Dance Party:
+              name: Dansefest
+            Conditionals with Cards:
+              name: Vilkår med kort
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -3783,6 +5512,9 @@ nn:
               display_name: Løkker i løkke
             csf_functions:
               display_name: Funksjonar
+          lessons:
+            Conditionals:
+              name: Betingelser
         coursef-2020:
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
           stages:
@@ -3803,6 +5535,13 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+          lessons:
+            Envelope Variables:
+              name: Konvolutt-variablar
+            Internet:
+              name: Internett
+            For Loop Fun:
+              name: Morro med for-løkker
         express-2020:
           stages:
             Dance Party:
@@ -3822,6 +5561,9 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+          lessons:
+            Dance Party:
+              name: Dansefest
         pre-express-2020:
           stages:
             Spelling Bee:
@@ -3833,6 +5575,9 @@ nn:
               display_name: Løkker
             csf_events:
               display_name: Hendingar
+          lessons:
+            Spelling Bee:
+              name: Stavekonkurranse
         csp1-2020:
           stages:
             Binary Numbers:
@@ -3840,6 +5585,9 @@ nn:
           lesson_groups:
             csp_unit1_2020:
               display_name: '(gammel) Eining 1: Digital informasjon'
+          lessons:
+            Binary Numbers:
+              name: Binære tal
         csp3-virtual:
           stages:
             Creating Functions:
@@ -3847,6 +5595,9 @@ nn:
           lesson_groups:
             csp3_1_2018:
               display_name: 'Eining 3: Introduksjon til programmering'
+          lessons:
+            Creating Functions:
+              name: Lag Funksjonar
         csd3-virtual:
           stages:
             Variables:
@@ -3862,6 +5613,13 @@ nn:
           lesson_groups:
             csd3_1:
               display_name: 'Kapittel 1: Bilder og animasjonar'
+          lessons:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Conditionals:
+              name: Betingelser
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3872,6 +5630,9 @@ nn:
           stages:
             While Loops:
               name: Medan-løkker
+            Variables:
+              name: Variablar
+          lessons:
             Variables:
               name: Variablar
         virtual-holding-place:
@@ -3885,6 +5646,11 @@ nn:
               display_name: Innhald
             csd3_2:
               display_name: 'Kapittel 2: Bygge spel'
+          lessons:
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
         code-break:
           stages:
             Algorithms:
@@ -3900,3 +5666,6 @@ nn:
               display_name: 'Kapittel 1: Hendingdriven programmering'
             csp5_2:
               display_name: 'Kapittel 2: Programmering med datastrukturar'
+          lessons:
+            While Loops:
+              name: Medan-løkker

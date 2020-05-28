@@ -1682,6 +1682,8 @@ nl-NL:
   header_teacher_community: Lerarengemeenschap
   header_help_support: Hulp en ondersteuning
   header_report_bug: Rapporteer bugs
+  header_legal_privacy: Privacybeleid
+  header_legal_tos: Gebruiksvoorwaarden
   header_tutorials: Tutorials
   header_documentation: Documentatie
   user_header_label: Hallo %{username}
