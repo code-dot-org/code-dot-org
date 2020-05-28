@@ -83,6 +83,14 @@ class Census::StateCsOffering < ApplicationRecord
   STATES_USING_FORMAT_V2_IN_2017_18 = %w(
     CA
     HI
+    IL
+    MA
+    MD
+    NE
+    NY
+    OR
+    PA
+    VA
   ).freeze
 
   # The following states use the "V2" format for CSV files in 2018-2019.
@@ -131,6 +139,7 @@ class Census::StateCsOffering < ApplicationRecord
   # For such states, we specify which update of the 2017-2018 file is in the V2
   # format.
   UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18 = {
+    NJ: 2,
     RI: 2
   }.freeze
 
@@ -1472,11 +1481,11 @@ class Census::StateCsOffering < ApplicationRecord
           end
           succeeded += 1
         else
-          skipped += 1
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
           CDO.log.warn "State CS Offering seeding: skipping row #{succeeded + skipped + 1} "\
             "unknown state school id #{state_school_id}"
+          skipped += 1
         end
       end
 
