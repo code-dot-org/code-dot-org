@@ -19,6 +19,7 @@ const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_LESSON = 'scriptEditor/REMOVE_LESSON';
 const SET_LESSON_LOCKABLE = 'scriptEditor/SET_LESSON_LOCKABLE';
 const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
+const CONVERT_GROUP = 'scriptEditor/CONVERT_GROUP';
 
 // NOTE: Position for Lesson Groups, Lessons and Levels is 1 based.
 
@@ -188,6 +189,13 @@ export const setLessonGroup = (
   lessonPosition,
   oldGroupPosition,
   newGroupPosition
+});
+
+export const convertGroupToUserFacing = (groupPosition, key, displayName) => ({
+  type: CONVERT_GROUP,
+  groupPosition,
+  key,
+  displayName
 });
 
 function updateGroupPositions(lessonGroups) {
@@ -433,6 +441,12 @@ function lessonGroups(state = [], action) {
       newLessons.push(curLesson);
       updateLessonPositions(newState);
 
+      break;
+    }
+    case CONVERT_GROUP: {
+      newState[action.groupPosition - 1].key = action.key;
+      newState[action.groupPosition - 1].display_name = action.displayName;
+      newState[action.groupPosition - 1].user_facing = true;
       break;
     }
   }

@@ -455,37 +455,66 @@ $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #copyright-flyout, #more-menu {
-  background-color: $blockly_flyout_gray; /* Matches blockly flyout */
-  color: $light_gray;
+  background-color: $background_gray;
+  color: $dimgray;
   font-size: 14px;
   a {
     font-family: $gotham-bold;
     font-weight: normal;
     &:link {
-      color: $light_gray;
+      color: $charcoal;
       text-decoration: none;
     }
     &:visited {
-      color: $light_gray;
+      color: $charcoal;
       text-decoration: none;
     }
     &:hover {
-      color: $dark_charcoal;
+      color: $charcoal;
       background-color: transparent;
-      text-decoration: underline;
+      text-decoration: none;
     }
     &:active {
-      color: $light_gray;
+      color: $charcoal;
       background-color: transparent;
       text-decoration: none;
     }
   }
 
+  h4 {
+    color: $dimgray;
+  }
+
   .dark & {
     background-color: $dark-charcoal;
+    border: 0;
+    color: $light_gray;
+    justify-content: flex-end;
+    margin: 0;
     a {
-      &:hover {
+      &:link {
         color: $lightest_gray;
+      }
+      &:visited {
+        color: $lightest_gray;
+      }
+      &:hover {
+        color: $white;
+      }
+      &:active {
+        color: $white;
+      }
+    }
+
+    .more-link {
+      margin: 0 $small-footer-horizontal-margin;
+      background-color: $dark-charcoal;
+      border: 0;
+      color: $light_gray;
+      font-size: 14px;
+      padding: 0;
+      &:hover {
+        box-shadow: none;
       }
     }
   }
@@ -500,9 +529,12 @@ $small-footer-standard-width: 400px;
 .small-footer-base {
   position: absolute;
   bottom: 0;
-  width: $small-footer-standard-width;
-  overflow: hidden;
-  padding-left: $codeApp-left-margin;
+  margin: 0 $codeApp-left-margin;
+  display: flex;
+  border-top: 1px solid $lighter_gray;
+  padding: 6px 0 3px 0;
+  width: 100%;
+  max-width: $small-footer-standard-width;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
@@ -510,25 +542,57 @@ $small-footer-standard-width: 400px;
    */
   margin-top: 5px;
 
-  form {
-    float: left;
-    margin-right: $small-footer-horizontal-margin;
-  }
-
   select {
+    color: $charcoal;
     width: 80px;
     font-size: 11px;
     height: 18px;
-    margin-bottom: 0;
+    margin: 0;
+    line-height: 18px;
+    padding: 0;
+    border: 0;
   }
 
-  small {
-    display: block;
-    float: right;
-    margin-right: $small-footer-horizontal-margin;
-    padding-top: 3px;
-    white-space: nowrap;
+  .copyright-button, .i18n-dropdown-container, .globe-icon {
+    align-self: center;
   }
+
+  .copyright-button {
+    margin: 0 10px;
+    button {
+      padding: 3px;
+      font-size: 16px;
+      line-height: 16px;
+      margin: 0;
+      border: 1px solid $lighter_gray;
+      background-color: $background-gray;
+    }
+  }
+
+  .globe-icon {
+    color: $charcoal;
+    font-size: 18px;
+    margin: 0 1px;
+  }
+
+  .i18n-dropdown-container {
+    display: flex;
+    border: 1px solid $lighter_gray;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 0 0 0 4px;
+    margin: 0;
+  }
+
+  .i18n-dropdown-container:dir(rtl) {
+    padding: 0 4px 0 0;
+  }
+}
+
+#copyright-scroll-area {
+  overflow-y: auto;
+  padding: 0.8em;
+  border-bottom: 1px solid $lighter_gray;
 }
 
 .responsive-content-mobile-footer {
@@ -548,7 +612,6 @@ $small-footer-standard-width: 400px;
     }
   }
 }
-
 
 #more-menu {
   display: none;
@@ -579,6 +642,18 @@ $small-footer-standard-width: 400px;
         color: $dark_charcoal;
       }
     }
+  }
+}
+
+.dark {
+  #copyright-flyout {
+    background-color: $dark-charcoal;
+  }
+  #copyright-scroll-area {
+    background-color: $dark-charcoal;
+  }
+  .small-footer-base {
+    font-size: 12px;
   }
 }
 
@@ -3225,10 +3300,10 @@ h2.danger {
   table-layout: fixed;
 
   th {
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     font-family: 'Gotham 4r', sans-serif;
-    font-weight: normal;
+    font-weight: normal !important;
   }
 
   @media (min-width: 601px) {
