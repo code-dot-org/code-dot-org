@@ -13,13 +13,19 @@
     "name_suffix": "_2020",
     "long_instructions": "# Share Your Content and HTML\r\n\r\nShare your web page with your teammates, and copy and paste the code for their pages into your project.\r\n\r\n# Do This\r\n* \"Share\" your page, and give the link to your teammates.\r\n* Get the \"Share\" link from each of your teammates and click the \"View Code\" link at the bottom of the screen.\r\n* Copy the HTML from your teammates' pages into your project.\r\n* Copy and paste the correct navigation bar onto each page.\r\n* Check that all of the links and images work correctly.\r\n\r\n",
     "reference_links": [
-      "/docs/concepts/html/html-tags/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/hyperlinks/",
+      "/docs/concepts/css/classes/",
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
       "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/html/formatting-html/"
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/",
     "encrypted": "false",
     "mini_rubric": "false",
     "encrypted_examples": [
@@ -28,7 +34,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 16:46:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-14 17:05:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 16:29:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:30:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 21:04:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:19:40 +0000\",\"changed\":[\"project_template_level_name\",\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:10:07 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:29:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:34:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 16:46:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-14 17:05:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 16:29:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:30:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 21:04:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:19:40 +0000\",\"changed\":[\"project_template_level_name\",\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:22:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:10:07 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:29:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:34:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:05:23 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
