@@ -32,8 +32,9 @@
 - if !@level.is_a?(BubbleChoice)
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
+
 .field
-  = f.label :video_key, 'Level Video'
+  %h3 Video
   %p
     Add new videos by going to
     %a{href:"/videos/new"} the add video page
@@ -41,6 +42,9 @@
       %p Warning: This is a DSL defined level. You can use the dropdown to find the video key that you'd like to use, but selecting in the dropdown will NOT be sufficient to associate the video with the level. If you'd like to add a video to this level you need to add video_key 'video_key' to the DSL box.
   = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
   .video-preview{style: 'display: block'}
+
+  - if (@level.uses_droplet?) || @level.is_a?(Blockly)
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :never_autoplay_video, description: "Never autoplay video"}
 
 -# Deprecated for Sprite Lab and Dance
 - if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab) || @level.is_a?(BubbleChoice))
