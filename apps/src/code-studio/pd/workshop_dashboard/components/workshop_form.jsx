@@ -683,13 +683,19 @@ export class WorkshopForm extends React.Component {
 
   shouldConfirmSave() {
     const workshop = this.props.workshop;
+
     if (!workshop || workshop.enrolled_teacher_count === 0) {
       return false;
     }
+
+    // If location address is modified, then returned to blank,
+    // this.state.location_address is a blank string instead of null.
     return (
       this.state.sessionsModified ||
       this.state.location_name !== workshop.location_name ||
-      this.state.location_address !== workshop.location_address ||
+      (this.state.location_address === ''
+        ? null
+        : this.state.location_address) !== workshop.location_address ||
       this.state.notes !== workshop.notes
     );
   }
@@ -937,11 +943,6 @@ export class WorkshopForm extends React.Component {
         validation.style.location_name = 'error';
         validation.help.location_name = 'Required.';
       }
-      if (!this.state.location_address) {
-        validation.isValid = false;
-        validation.style.location_address = 'error';
-        validation.help.location_address = 'Required.';
-      }
       if (!this.state.capacity) {
         validation.isValid = false;
         validation.style.capacity = 'error';
@@ -1000,9 +1001,6 @@ export class WorkshopForm extends React.Component {
                     <HelpTip>
                       <p>When a workshop is virtual, our system:</p>
                       <ul>
-                        <li>
-                          Does not require you to enter a location address
-                        </li>
                         <li>
                           Will not send email notifications, such as enrollment
                           receipts and workshop reminders
@@ -1072,8 +1070,8 @@ export class WorkshopForm extends React.Component {
               </FormGroup>
             </Col>
             <Col sm={6}>
-              <FormGroup validationState={validation.style.location_address}>
-                <ControlLabel>Location Address</ControlLabel>
+              <FormGroup>
+                <ControlLabel>Location Address (optional)</ControlLabel>
                 <FormControl
                   type="text"
                   key={this.state.useAutocomplete} // Change key to force re-draw
@@ -1089,7 +1087,6 @@ export class WorkshopForm extends React.Component {
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
-                <HelpBlock>{validation.help.location_address}</HelpBlock>
               </FormGroup>
             </Col>
           </Row>
