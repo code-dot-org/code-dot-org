@@ -4,7 +4,7 @@
   %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
-- if !@level.is_a?(BubbleChoice)
+- if !(@level.is_a?(BubbleChoice) || @level.is_a?(CurriculumReference))
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
 =render partial: 'levels/editors/fields/callouts', locals: {f: f}
@@ -32,5 +32,5 @@
     %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
     = f.text_field :editor_experiment, placeholder: 'Editor Experiment'
 
-= render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined))
+= render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
 = render partial: 'levels/editors/fields/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
