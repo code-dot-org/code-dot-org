@@ -2,5 +2,5 @@
   Code Area
 
 #instructions_area.in.collapse
-= render partial: 'levels/editors/droplet', locals: {f: f} if @level.uses_droplet?
-= render partial: 'levels/editors/blockly', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly)
+  = render partial: 'levels/editors/droplet', locals: {f: f} if @level.uses_droplet?
+  = render partial: 'levels/editors/blockly', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly)
