@@ -1,11 +1,26 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import msg from '@cdo/locale';
+import color from '../util/color';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 
 export const ParamType = {
   TABLE: 'TABLE',
   COLUMN: 'COLUMN'
+};
+
+const styles = {
+  title: {
+    paddingLeft: '1em',
+    fontFamily: "'Gotham 7r', sans-serif",
+    color: color.teal
+  },
+  option: {
+    paddingLeft: '2em',
+    fontFamily: "'Gotham 7r', sans-serif",
+    color: color.purple
+  }
 };
 
 export default class GetColumnParamPicker extends React.Component {
@@ -45,11 +60,20 @@ export default class GetColumnParamPicker extends React.Component {
       options = this.state.columns;
     }
     return (
-      <BaseDialog isOpen handleClose={this.props.onClose}>
+      <BaseDialog isOpen useUpdatedStyles handleClose={this.props.onClose}>
+        <h1 style={styles.title}>
+          {this.props.param === ParamType.TABLE
+            ? msg.chooseTable()
+            : msg.chooseColumn({table: this.props.table})}
+        </h1>
         <div>
           {options.map(option => (
             <p key={option}>
-              <a href="#" onClick={() => this.chooseOption(option)}>
+              <a
+                href="#"
+                onClick={() => this.chooseOption(option)}
+                style={styles.option}
+              >
                 {option}
               </a>
             </p>
