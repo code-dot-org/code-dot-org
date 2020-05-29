@@ -204,11 +204,11 @@ class PardotV2
         # If we did not include this limit, the entire batch would be displayed,
         # which could be overwhelming for debugging purposes.
         unless @dry_run_api_endpoints_hit.include? api_endpoint
-          log "[Sample Batch] Prospects to sync to Pardot: #{prospects.length}"
-          log "[Sample Batch] Query string:\n#{url}"
-          log '[Sample Batch] Prospects to be synced:'
+          self.class.log "Prospects in sample batch to sync to Pardot: #{prospects.length}"
+          self.class.log "Query string for sample batch:\n#{url}"
+          self.class.log 'Prospects to be synced in sample batch:'
           prospects.each do |prospect|
-            log prospect
+            self.class.log prospect
           end
 
           @dry_run_api_endpoints_hit << api_endpoint

@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/script-editor/LessonGroupCard';
 
 const defaultProps = {
-  lessonGroupCount: 1,
+  lessonGroupsCount: 1,
   setLessonMetrics: () => {},
   setTargetLesson: () => {},
   targetLessonPos: 1,
@@ -12,11 +12,12 @@ const defaultProps = {
   addLesson: () => {},
   moveGroup: () => {},
   removeGroup: () => {},
+  convertGroupToUserFacing: () => {},
   lessonGroup: {
     key: 'lg-key',
     display_name: 'Display Name',
     position: 1,
-    user_facing: false,
+    user_facing: true,
     lessons: [
       {
         id: 100,
