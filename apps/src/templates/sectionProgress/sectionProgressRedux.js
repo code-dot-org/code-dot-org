@@ -334,6 +334,11 @@ export const getColumnWidthsForDetailView = state => {
         // Circle bubble
         width = width + PROGRESS_BUBBLE_WIDTH;
       }
+      if (levels[levelIndex].sublevels) {
+        // SMALL_DOT_SIZE == 9 from progressStyles
+        // TODO: make consistent with multiGridConstants
+        width = width + levels[levelIndex].sublevels.length * 9;
+      }
     }
     columnLengths.push(width || 0);
   }

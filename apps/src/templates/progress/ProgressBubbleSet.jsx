@@ -128,20 +128,22 @@ class ProgressBubbleSet extends React.Component {
 
   render() {
     const {levels, style} = this.props;
-
     return (
       <div style={{...styles.main, ...style}}>
         {levels.map((level, index) => {
-          let bubbles = [];
-          bubbles.push(this.renderBubble(level, index, false));
-          if (level.sublevels) {
-            bubbles.concat(
-              level.sublevels.map((sublevel, index) => {
-                this.renderBubble(sublevel, index, true);
-              })
-            );
-          }
-          return bubbles;
+          return (
+            <span>
+              {this.renderBubble(level, index, false)}
+              {level.sublevels &&
+                level.sublevels.map((sublevel, index) => {
+                  return (
+                    <span key={index}>
+                      {this.renderBubble(sublevel, index, true)}
+                    </span>
+                  );
+                })}
+            </span>
+          );
         })}
       </div>
     );
