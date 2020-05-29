@@ -1,0 +1,23 @@
+name 'Episode 11 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Functions in Artist
+
+**Do This:** link to artist
+
+## Code-Alongs
+
+## Sprite Lab: Code along with Sofia to build the Carrot Stew Game
+
+
+## App Lab: Code along with Darius to build the Outdoor Scene App
+
+
+MARKDOWN
