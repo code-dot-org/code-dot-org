@@ -119,7 +119,14 @@ export const commands = {
   playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
-
+    apiValidateType(
+      opts,
+      'playSpeech',
+      'language',
+      opts.language,
+      'string',
+      OPTIONAL
+    );
     const speechConfig = SpeechConfig.fromAuthorizationToken(
       appOptions.azureSpeechServiceToken,
       appOptions.azureSpeechServiceRegion
@@ -127,11 +134,13 @@ export const commands = {
     speechConfig.speechSynthesisOutputFormat =
       SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
-    let voice;
-    if (opts.gender === 'male') {
-      voice = 'en-US-BenjaminRUS';
-    } else {
-      voice = 'en-US-AriaRUS';
+    let voice = appOptions.azureSpeechServiceLanguages['en-US']['female'];
+    if (
+      appOptions.azureSpeechServiceLanguages[opts.language] &&
+      appOptions.azureSpeechServiceLanguages[opts.language][opts.gender]
+    ) {
+      voice =
+        appOptions.azureSpeechServiceLanguages[opts.language][opts.gender];
     }
     const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
     let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
@@ -175,6 +184,7 @@ export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
-  playSpeech: (text, gender) => executeCmd(null, 'playSpeech', {text, gender})
+  playSpeech: (text, gender, language = 'en-US') =>
+    executeCmd(null, 'playSpeech', {text, gender, language})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

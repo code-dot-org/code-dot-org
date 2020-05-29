@@ -487,6 +487,29 @@ module LevelsHelper
       response = http.request(request)
       speech_service_options[:azureSpeechServiceToken] = response.body
       speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+      uri = URI.parse("https://westus.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      header = {'Authorization': 'Bearer ' + response.body}
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      request = Net::HTTP::Get.new(uri.request_uri, header)
+      response = http.request(request)
+      all_voices = JSON.parse(response.body)
+      language_dictionary = {}
+      all_voices.each do |voice|
+        if language_dictionary[voice["Locale"]].nil?
+          language_dictionary[voice["Locale"]] = {}
+          language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
+        elsif language_dictionary[voice["Locale"]][voice["Gender"].downcase].nil?
+          language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
+        end
+      end
+      language_dictionary.keys.each do |language|
+        if language_dictionary[language].size < 2
+          language_dictionary.delete(language)
+        end
+      end
+      speech_service_options[:azureSpeechServiceLanguages] = languageDictionary
     end
 
     speech_service_options
