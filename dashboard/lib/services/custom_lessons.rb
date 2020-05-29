@@ -1,5 +1,7 @@
 class Services::CustomLessons
   def self.create_custom_applab_level(user)
+    # TODO: wrap steps 1 - 3 in a transaction
+
     # 1. creates a custom_script for the user, if they do not have one already
     if user.custom_script.nil?
       script_name = "#{user.username}-#{SecureRandom.uuid}"
