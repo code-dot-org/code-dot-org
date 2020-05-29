@@ -235,7 +235,6 @@ export var blocks = [
   },
   {...audioApiDropletConfig.playSound, category: 'UI controls'},
   {...audioApiDropletConfig.stopSound, category: 'UI controls'},
-  {...audioApiDropletConfig.playSpeech, category: 'UI controls'},
   {
     func: 'showElement',
     parent: api,
@@ -1122,6 +1121,10 @@ if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
     nativeIsAsync: true,
     type: 'value'
   });
+}
+
+if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
+  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
 }
 
 export const categories = {
