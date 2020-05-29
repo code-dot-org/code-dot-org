@@ -119,3 +119,11 @@ level 'CourseF_Oceans_Long', progression: 'Practice'
 level 'Episode 10 Challenge Instructions', progression: 'Challenges'
 level 'Episode 10 Share', progression: 'Share Your Work!'
 
+lesson 'Abstraction with Susan Wojcicki & China Anne McClain'
+level 'CodeBreak Episode 11 Placeholder', progression: 'Code Break: Episode 11'
+level 'Episode 11 Instructions', progression: 'Practice'
+level 'CodeBreak E11 Practice', progression: 'Practice'
+level 'Episode 11 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E11 Challenges', progression: 'Challenges'
+level 'Episode 11 Share', progression: 'Share Your Work!'
+
