@@ -22,13 +22,6 @@
       Notes for yourself or other Levelbuilders. Viewable here and here alone.
     = f.text_area :notes, rows: 6, class: "input-block-level"
 
-.field
-  %legend.control-legend.collapsed{data: {toggle: "collapse", target: "#audit_log_info"}}
-    Audit Log
-  %p A log of the people who most recently edited this level (up to the last 10 people)
-  #audit_log_info.collapse
-    = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
-
 - if !@level.is_a?(BubbleChoice)
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
