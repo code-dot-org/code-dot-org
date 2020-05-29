@@ -504,18 +504,22 @@ class Blockly < Level
         default: nil,
         smart: true
       )
+      original_function_name = function_name.content
+      function_name.content = localized_name if localized_name
       function_mutation = function.at_xpath('./mutation')
+      next unless function_mutation
       function_description = function_mutation.at_xpath('./description')
       localized_description = I18n.t(
         "description",
-        scope: [:data, :function_definitions, name, function_name.content],
+        scope: [:data, :function_definitions, name, original_function_name],
         default: nil,
         smart: true
       )
+      function_description.content = localized_description if localized_description
       function_mutation.xpath("./arg").each do |parameter|
         localized_parameter = I18n.t(
           parameter["name"],
-          scope: [:data, :function_definitions, name, function_name.content, "parameters"],
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
           default: nil,
           smart: true
         )
@@ -525,14 +529,12 @@ class Blockly < Level
         parameter_name = parameter.content
         localized_parameter = I18n.t(
           parameter_name,
-          scope: [:data, :function_definitions, name, function_name.content, "parameters"],
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
           default: nil,
           smart: true
         )
         parameter.content = localized_parameter if localized_parameter
       end
-      function_name.content = localized_name if localized_name
-      function_description.content = localized_description if localized_description
     end
     block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
       mutation = function.at_xpath('./mutation')
