@@ -1,3 +1,4 @@
+/* globals appOptions */
 import {getStore} from '../../redux';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {executors} from './audioApi';
@@ -36,11 +37,12 @@ const dropletConfig = {
   playSpeech: {
     func: 'playSpeech',
     parent: executors,
-    paramButtons: {minArgs: 2, maxArgs: 2},
-    paletteParams: ['text', 'gender'],
-    params: ['"Hello World!"', '"female"'],
+    paramButtons: {minArgs: 2, maxArgs: 3},
+    paletteParams: ['text', 'gender', 'language'],
+    params: ['"Hello World!"', '"female"', '"en-US"'],
     dropdown: {
-      1: ['"female"', '"male"']
+      1: ['"female"', '"male"'],
+      2: Object.keys(appOptions.azureSpeechServiceLanguages).map(x => `"${x}"`)
     },
     nativeCallsBackInterpreter: true,
     assetTooltip: {0: chooseAsset.bind(null, 'audio')}
