@@ -1,7 +1,7 @@
 require 'cdo/log_collector'
 
 class ContactRollupsV2
-  def initialize(is_dry_run: true)
+  def initialize(is_dry_run: false)
     @is_dry_run = is_dry_run
     @log_collector = LogCollector.new('Contact Rollups')
   end
