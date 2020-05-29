@@ -64,6 +64,7 @@ module Crowdin
 
     # Downloads all files referenced in @changes_json to @locales_dir
     def download_changed_files
+      raise "No existing changes json at #{@changes_json}; please run fetch_changes first" unless File.exist?(@changes_json)
       changes = JSON.parse(File.read(@changes_json))
       @logger.info("#{changes.keys.length} languages have changes")
       @project.languages.each do |language|
