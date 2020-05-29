@@ -27,6 +27,9 @@ const styles = {
     // dot size, plus borders, plus margin, minus our height of "background"
     top: (DOT_SIZE + 4 + 6 - 10) / 2
   },
+  backgroundSublevel: {
+    top: 4
+  },
   backgroundDiamond: {
     top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2
   },
@@ -99,9 +102,12 @@ class ProgressBubbleSet extends React.Component {
           style={[
             styles.background,
             level.isConceptLevel && styles.backgroundDiamond,
+            isSublevel && styles.backgroundSublevel,
             level.isUnplugged && styles.backgroundPill,
-            index === 0 && styles.backgroundFirst,
-            index === levels.length - 1 && styles.backgroundLast
+            !isSublevel && index === 0 && styles.backgroundFirst,
+            !level.sublevels &&
+              index === levels.length - 1 &&
+              styles.backgroundLast
           ]}
         />
         <div
