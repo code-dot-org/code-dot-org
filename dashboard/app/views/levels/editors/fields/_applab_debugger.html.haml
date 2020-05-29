@@ -1,0 +1,11 @@
+%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#debugger"}}
+  Debugger
+#debugger.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
+  = render partial: 'levels/editors/fields/watchers_ui', locals: {f: f}
+  .field
+    = f.label :slider_speed, 'Slider speed'
+    %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
+    = f.number_field :slider_speed, :step => 0.1
+

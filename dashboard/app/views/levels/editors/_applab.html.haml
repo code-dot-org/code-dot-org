@@ -1,20 +1,14 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/editors/_applab.js')}
 
-.field
-  = f.label :slider_speed, 'Slider speed'
-  %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
-  = f.number_field :slider_speed, :step => 0.1
+= render partial: 'levels/editors/fields/applab_debugger', locals: {f: f}
+
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode: Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode."}
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
-
-= render partial: 'levels/editors/fields/watchers_ui', locals: {f: f}
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
 .field
@@ -49,9 +43,6 @@
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}
   %p
     Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
-
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
 
 = render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
 
