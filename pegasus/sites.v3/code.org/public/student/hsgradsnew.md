@@ -20,9 +20,9 @@ While Code.org doesn’t offer post-secondary courses, we encourage students to 
 
 - <a href="#careerpath">Choosing your career path and program</a><br>
 - <a href="#alternatives">Alternatives to the College Pathway</a><br>
-- <a href="#mentorship">Mentorship and Community</a><br>
-- <a href="#online-classes">Free Online Courses</a><br>
-- <a href="#internships">Professional Experiences</a><br>
+- <a href="#mentorship">Mentorship programs and community</a><br>
+- <a href="#online-classes">Free online courses</a><br>
+- <a href="#internships">Internships and work opportunities</a><br>
 
 <a id="careerpath"></a>
 
@@ -62,7 +62,7 @@ Heading straight to university isn’t for everyone. If you aren’t planning on
 ### Offerings available from our donors:
 
 <center><img src="/images/fit-500/hero-image-plualsight-2019.png" class="responsive" style="padding-bottom: 10px; padding-top:10px; max-width: 100%"></center>
-- [Pluralsight](https://www.pluralsight.com/). Use this summer to continue your learning with Pluralsight One’s course library, available for [free to Code.org classroom students](https://code.org/pluralsight) for a year if they sign up by **June 30th**. Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management. A personal plan begins at $35/month. 
+- [Pluralsight](https://www.pluralsight.com/). Use this summer to continue your learning with Pluralsight One’s course library, available for [free to Code.org classroom students](https://code.org/pluralsight) for a year after sign up. Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management. A personal plan begins at $35/month. 
 - [AWS Educate Cloud Skills Badges](https://aws.amazon.com/education/awseducate/code-org/). With comprehensive resources for building skills in cloud technology and computer science, AWS Educate offers free, self-paced interactive challenges and hands on activities to go beyond the K-12 CS Framework. Students can earn badges for various levels of skills.
 - [Microsoft Learn](https://docs.microsoft.com/en-us/learn/). Master industry-recognized Microsoft technologies at your own pace with free modules, tutorials, and learning paths designed to prepare you for [Microsoft certifications](https://www.microsoft.com/learning/certification-overview.aspx).
 - [TechPrep by Facebook](https://techprep.org/get-started/). Created for students and guardians looking to better understand computer science and programming pathways, TechPrep by Facebook is a collection of fun videos and resources to help you find the information you need.
@@ -81,9 +81,10 @@ Mentorship programs and community
 Connect and network with others in the CS space through events and programs.
 
 - NCWIT [Aspirations in Computing (AiC)](https://www.aspirations.org/aspirations-computing) provides a long-term community for female technologists, from K-12 through higher education and beyond. In addition to academic awards offered across education levels, AiC also offers a networking group that includes virtual as well as in-person meetups. 
-- Through a variety of programs, [Code 2040](http://www.code2040.org/) connects Black & Latinx tech talent with companies, mentors, and peers committed to racial equity and inclusion in the tech sector.
-- Tech [Meetups](https://www.meetup.com/find/tech/). With groups across the world, you can find - or create - a Tech Meetup near you.
 - [Built by Girls](https://www.builtbygirls.com/) gives high school and college women access to professional advisors, exclusive events at top tech companies, and resources to help them explore and land their first internship or job.
+- Through a variety of programs, [Code 2040](http://www.code2040.org/) connects Black & Latinx tech talent with companies, mentors, and peers committed to racial equity and inclusion in the tech sector.
+- [Rewriting the Code (RTC)](https://rewritingthecode.org/bridge-program/) connects like-minded college women pursuing computer science and engineering, provides them with vast resources, and exposes them to tech companies seeking interns and employees. The Rewriting the Code community is thriving with 6,000+ students and has become the 'go to' hub for college women in tech. Incoming freshmen may join RTC's free community today to get connected with an RTC student mentor on the campus you'll be attending in the fall!
+- Tech [Meetups](https://www.meetup.com/find/tech/). With groups across the world, you can find - or create - a Tech Meetup near you.
 
 <center><img src="/images/fit-550/marketing/HoC-2015-ACE-HS--42.jpg" class="responsive" style="padding-bottom: 10px; padding-top:10px; max-width: 100%"></center>
 
