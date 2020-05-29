@@ -509,7 +509,7 @@ module LevelsHelper
           language_dictionary.delete(language)
         end
       end
-      speech_service_options[:azureSpeechServiceLanguages] = languageDictionary
+      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
     end
 
     speech_service_options
