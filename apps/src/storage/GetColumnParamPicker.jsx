@@ -20,6 +20,9 @@ const styles = {
     paddingLeft: '2em',
     fontFamily: "'Gotham 7r', sans-serif",
     color: color.purple
+  },
+  error: {
+    padding: '2em'
   }
 };
 
@@ -67,17 +70,25 @@ export default class GetColumnParamPicker extends React.Component {
             : msg.chooseColumn({table: this.props.table})}
         </h1>
         <div>
-          {options.map(option => (
-            <p key={option}>
-              <a
-                href="#"
-                onClick={() => this.chooseOption(option)}
-                style={styles.option}
-              >
-                {option}
-              </a>
+          {options.length === 0 ? (
+            <p style={styles.error}>
+              {this.props.param === ParamType.TABLE
+                ? msg.noTablesInProject()
+                : msg.noColumnsInTable({table: this.props.table})}
             </p>
-          ))}
+          ) : (
+            options.map(option => (
+              <p key={option}>
+                <a
+                  href="#"
+                  onClick={() => this.chooseOption(option)}
+                  style={styles.option}
+                >
+                  {option}
+                </a>
+              </p>
+            ))
+          )}
         </div>
       </BaseDialog>
     );
