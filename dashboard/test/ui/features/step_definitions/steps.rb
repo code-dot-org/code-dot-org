@@ -1033,6 +1033,12 @@ Given(/^I view the temp script edit page$/) do
   }
 end
 
+Given(/^I try to view the temp script edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+  }
+end
+
 Given(/^I delete the temp script$/) do
   browser_request(
     url: '/api/test/destroy_script',
