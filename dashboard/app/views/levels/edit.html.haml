@@ -25,8 +25,9 @@
 
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/instructions_area', locals: {f: f} unless @level.is_a? EvaluationMulti
+    = render partial: 'levels/editors/instructions_area', locals: {f: f} unless (@level.is_a?(EvaluationMulti) || @level.is_a?(BubbleChoice))
     = render partial: 'levels/editors/code_area', locals: {f: f} if @level.uses_droplet? || @level.is_a?(Blockly)
+    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
     = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
@@ -43,7 +44,6 @@
     = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
     = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
-    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
     = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
