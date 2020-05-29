@@ -3,6 +3,13 @@
 
 #deprecated.collapse
 
+  - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
+    .field
+      = f.label 'notes'
+      %p
+        Notes for yourself or other Levelbuilders. Viewable here and here alone.
+      = f.text_area :notes, rows: 6, class: "input-block-level"
+
   .field
     = f.label 'concepts'
     %p
