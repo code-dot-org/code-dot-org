@@ -25,6 +25,9 @@ module Crowdin
     # the last sync," and writes the results out to @changes_json.
     def fetch_changes
       etags = File.exist?(@etags_json) ? JSON.parse(File.read(@etags_json)) : {}
+
+      # Clear out existing changes json if it exists
+      File.write(@changes_json, '{}')
       changes = {}
 
       languages = @project.languages
@@ -57,12 +60,6 @@ module Crowdin
         File.write(@etags_json, JSON.pretty_generate(etags))
         File.write(@changes_json, JSON.pretty_generate(changes))
       end
-
-      # Write changes out one final time; in the case that no language had
-      # changes, we would otherwise skip the write on every loop and leave any
-      # existing changes file unchanged. We could alternatively achieve this by
-      # writing (or removing) the file before starting.
-      File.write(@changes_json, JSON.pretty_generate(changes))
     end
 
     # Downloads all files referenced in @changes_json to @locales_dir
