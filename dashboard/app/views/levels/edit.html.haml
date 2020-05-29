@@ -5,6 +5,10 @@
 
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
+
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
   .field
     / dsl-defined levels specify a name directly in the DSL text
     - unless @level.is_a? DSLDefined
