@@ -1382,6 +1382,7 @@ ActiveRecord::Schema.define(version: 20200518181001) do
     t.boolean  "autoplay_enabled",  default: false,   null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
+    t.index ["script_id"], name: "fk_rails_5c2401d1cb", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
