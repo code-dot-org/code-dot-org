@@ -2,7 +2,8 @@ import $ from 'jquery';
 import {renderCourseProgress} from '@cdo/apps/code-studio/progress';
 import {
   setVerified,
-  setVerifiedResources
+  setVerifiedResources,
+  setOwner
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
@@ -40,6 +41,10 @@ function initPage() {
 
   if (scriptData.is_verified_teacher) {
     store.dispatch(setVerified());
+  }
+
+  if (scriptData.is_owner) {
+    store.dispatch(setOwner());
   }
 
   if (scriptData.script_announcements) {
