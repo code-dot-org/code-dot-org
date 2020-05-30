@@ -45,7 +45,8 @@ export default class TeacherHomepage extends Component {
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
-    specialAnnouncement: shapes.specialAnnouncement
+    specialAnnouncement: shapes.specialAnnouncement,
+    customScriptPath: PropTypes.string
   };
 
   state = {
@@ -161,6 +162,10 @@ export default class TeacherHomepage extends Component {
     });
   }
 
+  viewCustomLessons = () => {
+    window.location = this.props.customScriptPath;
+  };
+
   render() {
     const {
       courses,
@@ -249,6 +254,13 @@ export default class TeacherHomepage extends Component {
           text="Create Lesson"
           color={Button.ButtonColor.orange}
         />
+        {this.props.customScriptPath && (
+          <Button
+            onClick={this.viewCustomLessons}
+            text="View My Lessons"
+            color={Button.ButtonColor.blue}
+          />
+        )}
         <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}

@@ -79,6 +79,7 @@ function showHomepage() {
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
+            customScriptPath={homepageData.customScriptPath}
           />
         )}
         {!isTeacher && (
