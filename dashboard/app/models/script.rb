@@ -1570,6 +1570,7 @@ class Script < ActiveRecord::Base
   end
 
   def localized_title
+    return "My Lessons" if owner
     I18n.t "data.script.name.#{name}.title"
   end
 
@@ -1578,6 +1579,7 @@ class Script < ActiveRecord::Base
   end
 
   def localized_description
+    return "My Lessons description" if owner
     I18n.t "data.script.name.#{name}.description"
   end
 

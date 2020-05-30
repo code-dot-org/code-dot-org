@@ -92,6 +92,7 @@ class Lesson < ActiveRecord::Base
   end
 
   def localized_name
+    return name if script.owner
     if script.lessons.many?
       I18n.t "data.script.name.#{script.name}.stages.#{name}.name"
     else
