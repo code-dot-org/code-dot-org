@@ -6,6 +6,13 @@ class Services::CustomLessons
     if user.custom_script.nil?
       script_name = "#{user.username}-#{SecureRandom.uuid}"
       user.create_custom_script(name: script_name, owner: user)
+      user.save!
+      user.reload
+      user.custom_script.lesson_groups.create(
+        key: '',
+        user_facing: false,
+        position: 1
+      )
     end
 
     # 2. creates a custom level for the user
@@ -13,7 +20,6 @@ class Services::CustomLessons
     new_level = user.custom_levels.create(name: level_name, type: 'Applab')
 
     # 3. puts the new custom level inside a new lesson in the custom_script
-    # TODO: auto-create lesson group if script did not exist
     lesson_group = user.custom_script.lesson_groups.first
     last_lesson = lesson_group.lessons.last
     new_position = last_lesson ? last_lesson.relative_position + 1 : 1
