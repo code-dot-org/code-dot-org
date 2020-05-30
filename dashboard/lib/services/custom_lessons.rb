@@ -15,14 +15,21 @@ class Services::CustomLessons
       )
     end
 
-    # 2. creates a custom level for the user
-    level_name = "#{user.username}-#{SecureRandom.uuid}"
-    new_level = user.custom_levels.create(name: level_name, type: 'Applab', game: Game.applab)
-
-    # 3. puts the new custom level inside a new lesson in the custom_script
     lesson_group = user.custom_script.lesson_groups.first
     last_lesson = lesson_group.lessons.last
     new_position = last_lesson ? last_lesson.relative_position + 1 : 1
+
+    # 2. creates a custom level for the user
+    level_name = "#{user.username}-#{SecureRandom.uuid}"
+    display_name = "Lesson #{new_position} Level"
+    new_level = user.custom_levels.create(
+      name: level_name,
+      type: 'Applab',
+      game: Game.applab,
+      properties: {display_name: display_name}
+    )
+
+    # 3. puts the new custom level inside a new lesson in the custom_script
     new_lesson = lesson_group.lessons.create(
       absolute_position: new_position,
       relative_position: new_position,
