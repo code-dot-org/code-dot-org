@@ -470,6 +470,13 @@ class ApiController < ApplicationController
     )
   end
 
+  # POST /api/create_custom_lesson
+  def create_custom_lesson
+    return head :forbidden unless current_user&.teacher?
+    script_level = Services::CustomLessons.create_custom_applab_level(current_user)
+    render json: {location: build_script_level_path(script_level)}
+  end
+
   private
 
   def load_section

@@ -713,6 +713,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  post '/api/create_custom_lesson', to: 'api#create_custom_lesson'
+
   get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
 
   get 'foorm/editor', to: 'foorm_editor#index', constraints: {name: /.*/}

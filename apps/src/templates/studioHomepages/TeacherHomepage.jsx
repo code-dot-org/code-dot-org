@@ -17,6 +17,7 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
+import Button from '../Button';
 
 const styles = {
   clear: {
@@ -151,6 +152,15 @@ export default class TeacherHomepage extends Component {
       .show();
   }
 
+  createCustomLesson() {
+    $.ajax({
+      url: '/api/create_custom_lesson',
+      type: 'post'
+    }).done(data => {
+      window.location = data.location;
+    });
+  }
+
   render() {
     const {
       courses,
@@ -234,6 +244,11 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
+        <Button
+          onClick={this.createCustomLesson}
+          text="Create Lesson"
+          color={Button.ButtonColor.orange}
+        />
         <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}
