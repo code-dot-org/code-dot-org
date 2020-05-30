@@ -5,7 +5,13 @@ class Services::CustomLessons
     # 1. creates a custom_script for the user, if they do not have one already
     if user.custom_script.nil?
       script_name = "#{user.username}-#{SecureRandom.uuid}"
-      user.create_custom_script(name: script_name, owner: user)
+      user.create_custom_script(
+        name: script_name,
+        owner: user,
+        properties: {
+          hideable_lessons: true
+        }
+      )
       user.save!
       user.reload
       user.custom_script.lesson_groups.create(
