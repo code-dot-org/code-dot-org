@@ -7,7 +7,8 @@
 - if !(@level.is_a?(BubbleChoice) || @level.is_a?(CurriculumReference))
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
-=render partial: 'levels/editors/fields/callouts', locals: {f: f}
+=render partial: 'levels/editors/fields/callouts', locals: {f: f} unless (@level.is_a?(CurriculumReference) || @level.is_a?(DSLDefined))
+
 - if @level.respond_to? :free_play
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
