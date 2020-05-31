@@ -23,6 +23,12 @@
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
+  -if current_user.levelbuilder?
+    .field
+      = f.label :editor_experiment, 'Editor Experiment'
+      %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
+      = f.text_field :editor_experiment, placeholder: 'Editor Experiment'
+
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
