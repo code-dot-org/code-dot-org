@@ -27,11 +27,5 @@
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
 
--if current_user.levelbuilder?
-  .field
-    = f.label :editor_experiment, 'Editor Experiment'
-    %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
-    = f.text_field :editor_experiment, placeholder: 'Editor Experiment'
-
 = render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
 = render partial: 'levels/editors/fields/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
