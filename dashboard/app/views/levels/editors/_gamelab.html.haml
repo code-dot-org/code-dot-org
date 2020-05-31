@@ -10,12 +10,6 @@
 
 = render partial: 'levels/editors/fields/submittable', locals: {f: f}
 
-= render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
-
-.field.aligned-input-group
-  = boolean_check_box f, :hide_view_data_button
-  = f.label 'Hide View Data Button'
-
 = render partial: 'levels/editors/fields/validation_code', locals: {f: f}
 
 = render partial: 'levels/editors/fields/animation', locals: {f: f}
