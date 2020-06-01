@@ -6,11 +6,7 @@
 
 = render partial: 'levels/editors/fields/debugger', locals: {f: f}
 
-%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#display-area"}}
-  Display Area
-#display-area.in.collapse
-  = render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
-  = render partial: 'levels/editors/fields/animation', locals: {f: f}
+= render partial: 'levels/editors/fields/display_area', locals: {f: f}
 
 :javascript
   window.toggleBlock = function (elementId) {

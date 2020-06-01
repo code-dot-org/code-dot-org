@@ -13,10 +13,7 @@
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode: Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode."}
 
-= render partial: 'levels/editors/fields/applab_design_mode', locals: {f: f}
-
-= render partial: 'levels/editors/fields/applab_data', locals: {f: f}
-
+= render partial: 'levels/editors/fields/display_area', locals: {f: f}
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'applab'}
 
 :ruby
