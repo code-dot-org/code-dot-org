@@ -4,6 +4,9 @@
   %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/_all.js')}
+
 .field
   = f.label 'Documentation'
   Find documentation for levelbuilder and its processes
