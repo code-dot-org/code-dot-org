@@ -11,7 +11,7 @@
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
 = render partial: 'levels/editors/fields/callouts', locals: {f: f} unless (@level.is_a?(CurriculumReference) || @level.is_a?(DSLDefined))
-= render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.respond_to?(:disable_sharing)
+= render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
 = render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
 
 - if @level.respond_to? :free_play
