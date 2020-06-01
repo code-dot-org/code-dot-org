@@ -101,10 +101,10 @@ class ManifestBuilder
         #{dim 'd[ o_0 ]b'}
     EOS
 
-    if @options[:spritelab] && @option[:upload_to_s3]
+    if @options[:spritelab] && @options[:upload_to_s3]
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
-        "spritelabCostumeLibrary.json",
+        "manifests/spritelabCostumeLibrary.json",
         JSON.pretty_generate(
           {
             # JSON-style file comment
