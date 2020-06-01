@@ -4,15 +4,15 @@ module Pd::Foorm
   class FoormParserTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      @daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
-      @daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
+      @daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_pre_survey')
+      @daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/summer_workshop_post_survey')
     end
 
     test 'parses day 0 form correctly' do
       parsed_form = FoormParser.parse_forms([@daily_survey_day_0])
       expected_form = {
         general: {
-          'surveys/pd/workshop_daily_survey_day_0.0': {
+          'surveys/pd/summer_workshop_pre_survey.0': {
             course_length_weeks: {
               title: "For a typical section of {workshop_course} that you will teach, approximately how many WEEKS will the class run?",
               type: "singleSelect",
@@ -84,8 +84,8 @@ module Pd::Foorm
       parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
 
       assert_equal 2, parsed_forms[:general].keys.length
-      assert_equal 'surveys/pd/workshop_daily_survey_day_0.0', parsed_forms[:general].keys[0]
-      assert_equal 'surveys/pd/workshop_daily_survey_day_5.0', parsed_forms[:general].keys[1]
+      assert_equal 'surveys/pd/summer_workshop_pre_survey.0', parsed_forms[:general].keys[0]
+      assert_equal 'surveys/pd/summer_workshop_post_survey.0', parsed_forms[:general].keys[1]
     end
 
     test 'parses panel questions correctly' do

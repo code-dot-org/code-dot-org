@@ -1484,13 +1484,20 @@ $examples-link-font: $gotham-extra-bold;
 
 $see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link, .tooltip-choose-link {
+.tooltip-example-link,
+.tooltip-choose-link,
+.tooltip-code-link {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a, .tooltip-choose-link > a {
-  &:hover, &:link, &:active, &:visited {
+.tooltip-example-link > a,
+.tooltip-choose-link > a,
+.tooltip-code-link > a {
+  &:hover,
+  &:link,
+  &:active,
+  &:visited {
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
     font-family: $gotham-bold;

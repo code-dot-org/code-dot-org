@@ -1,4 +1,4 @@
 has_lesson_plan true
 
-stage 'Vigenere'
+lesson 'Vigenere'
 level 'Vigenere'

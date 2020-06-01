@@ -54,17 +54,24 @@ class Pd::Workshop < ActiveRecord::Base
     # Indicates that this workshop will be conducted virtually, which has the
     # following effects in our system:
     #   - Ensures `suppress_email` is set (see below)
-    #   - Makes `location_address` optional, and does not autofill a value
     #     when it is left blank.
     #   - Uses a different, virtual-specific post-workshop survey.
     'virtual',
 
-    # If true, our system will not send any emails related to this workshop
-    # *except* for the post-workshop survey, which is exempt from this policy
+    # If true, our system will not send enrollee-facing
+    # emails related to this workshop *except* for a receipt for the teacher
+    # if they cancel their enrollment and the post-workshop survey,
+    # which is exempt from this policy
     # because it is important for our measurement of workshop outcomes.
     # This option is useful to regional partners who may wish to have more
     # direct control over workshop communication, at the cost of managing it
     # themselves.
+    # Note that this is one of (at least) three mechanisms we use to suppress
+    # email in various cases -- see Workshop.suppress_reminders? for
+    # subject-specific suppression of reminder emails, and
+    # WorkshopMailer.check_should_send, which suppresses ALL email
+    # for workshops with a virtual subject (note, this is different than the
+    # virtual serialized attribute)
     'suppress_email'
   ]
 
@@ -290,7 +297,9 @@ class Pd::Workshop < ActiveRecord::Base
     course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
-    "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
+    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
+    name += " in #{friendly_location}" if friendly_location.present?
+    name[0...255]
   end
 
   def friendly_subject
@@ -309,17 +318,20 @@ class Pd::Workshop < ActiveRecord::Base
   # 1. known variant of TBA? use TBA
   # 2. processed location? use city, state
   # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use TBA
+  # 4. no location address at all? use blank
   def friendly_location
     return 'Location TBA' if location_address_tba?
     return 'Virtual Workshop' if location_address_virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || 'Location TBA'
+    location_address.presence || ''
   end
 
+  # Returns date and location (only date if no location specified)
   def date_and_location_name
-    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
-    "#{date_string}, #{friendly_location}#{teachercon? ? ' TeacherCon' : ''}"
+    date_and_location_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    date_and_location_string += ", #{friendly_location}" if friendly_location.present?
+    date_and_location_string += ' TeacherCon' if teachercon?
+    date_and_location_string
   end
 
   # Puts workshop in 'In Progress' state
@@ -385,6 +397,11 @@ class Pd::Workshop < ActiveRecord::Base
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
+  # Note that this is one of (at least) three mechanisms we use to suppress
+  # email in various cases -- see the serialized attribute 'suppress_email' and
+  # WorkshopMailer.check_should_send, which suppresses ALL email
+  # for workshops with a virtual subject (note, this is different than the
+  # virtual serialized attribute)
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
@@ -615,6 +632,33 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 
+  # Get all teachers who have attended all sessions of this workshop.
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
+
+    # Filter attendances to only scholarship teachers
+    if filter_by_cdo_scholarship
+      scholarship_teachers = Pd::ScholarshipInfo.where(
+        {
+          application_year: school_year,
+          course: course_key,
+          scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
+        }
+      ).pluck(:user_id)
+      teachers_attending.select! {|teacher| scholarship_teachers.include? teacher.id}
+    end
+
+    # Get number of sessions attended by teacher
+    attendance_count_by_teacher = Hash[
+      teachers_attending.uniq.map do |teacher|
+        [teacher, teachers_attending.count(teacher)]
+      end
+    ]
+
+    # Return only teachers who attended all sessions
+    attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
+  end
+
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
   end
@@ -637,6 +681,10 @@ class Pd::Workshop < ActiveRecord::Base
 
   def csf?
     course == COURSE_CSF
+  end
+
+  def csf_intro?
+    course == Pd::Workshop::COURSE_CSF && subject == Pd::Workshop::SUBJECT_CSF_101
   end
 
   def csf_201?
