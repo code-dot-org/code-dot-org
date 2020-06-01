@@ -2300,10 +2300,29 @@ de-DE:
       Course 4 Bee 3: Das unbekannte Objekt ist entweder eine Blume oder eine Bienenwabe.
         Benutze den `wenn/ansonsten`-Baustein, um Nektar zu machen, **wenn** es eine
         Blüte ist, **ansonsten** mache Honig (denn dann wäre es eine Honigwabe).
+      Course 4 Bee Params 1: Schreibe ein Programm, um allen Nektar zu sammeln. Benutze
+        dazu die Funktion "sammle 3 Nektar". Sie dreht die Biene, bewegt sie zum Nektar,
+        sammelt ihn ein und bewegt die Biene wieder zurück zum Ausgangspunkt.
+      Course 4 Bee Params 2: Ändere die "sammle 3 Nektar"-Funktion, so dass sie mich
+        nach rechts zu den Blumen drehen lässt statt nach links.
+      Course 4 Bee Params 3: |-
+        Jetzt sind auf beiden Seiten Blumen!
+
+        Für dich stehen die Variablen „links“ und „rechts“ zur Verfügung. Die Funktion „Nimm 3 Nektar“ wurde außerdem um den Parameter „Richtung“ ergänzt.
+
+        **Ändere die Funktion „Nimm 3 Nektar“ so, dass die Biene sich in die richtige Richtung dreht, wenn ihr die Variablen „links“ oder „rechts“ übergeben werden.**
+      Course 4 Bee Params 6: |-
+        Wäre es nicht schön, den ganzen Nektar mit nur einer Funktion zu sammeln?
+
+        Versuche mit dem neuen Parameter „Nektarportionen“ die Menge an Nektar, die gesammelt werden soll, zu steuern. Vielleicht möchtest du der Funktion auch einen neuen Namen geben?
       Course 4 Bee Params 7: |-
         Versuche, mit Ihrer neuen Funktion all diesen Nektar zu sammeln.
 
         <br/>
+      Course 4 Bee Params 8: |-
+        **Herausforderung:** Jetzt kümmern wir uns noch um Honig.
+
+        Ändere deine Funktion so, dass sie die Anzahl der Honig- und Nektarportionen verwendet.  Wie kannst du mit der Anzahl entscheiden, was zu tun ist?
       Course 4 EC 1a: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
         nur die Aufgabe!"
       Course 4 EC 1b: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
@@ -5150,6 +5169,27 @@ de-DE:
       courseC_artist_prog8_2019: |-
         Noch ein Tag.  Dies ist ein Dreieck für Pi.\
         (Jede Seite ist 150 Pixel lang)
+      courseC_artist_prog_challenge1: Zeichne für jedes Tier einen Raum. Für diese
+        Aufgabe gibt es viele Lösungen, hab Spaß dabei! Jedes Feld hat 100 Pixel lange
+        Seiten.
+      courseC_artist_prog_challenge1_2018: Zeichne für jedes Tier einen Raum. Für
+        diese Aufgabe gibt es viele Lösungen, hab Spaß dabei! Jedes Feld hat 100 Pixel
+        lange Seiten.
+      courseC_artist_prog_challenge1_2019: Zeichne für jedes Tier einen Raum. Für
+        diese Aufgabe gibt es viele Lösungen, hab Spaß dabei! Jedes Feld hat 100 Pixel
+        lange Seiten.
+      courseC_artist_prog_challenge2a: |-
+        "_""Hilf mir, die gelben Linien auf dieser Straße zu malen!""_
+
+        Die drei Liniensegmente sind 150, 100 und 200 Pixel lang!"
+      courseC_artist_prog_challenge2a_2018: |-
+        "_""Hilf mir, die gelben Linien auf dieser Straße zu malen!""_
+
+        Die drei Liniensegmente sind 150, 100 und 200 Pixel lang!"
+      courseC_artist_prog_challenge2a_2019: |-
+        "_""Hilf mir, die gelben Linien auf dieser Straße zu malen!""_
+
+        Die drei Liniensegmente sind 150, 100 und 200 Pixel lang!"
       courseC_collector_loops_challenge2: |-
         _„Lass uns gemeinsam auf Schatzsuche gehen!“_
 
@@ -8195,8 +8235,46 @@ de-DE:
         -   Vielleicht möchtest du zuerst etwas auf Millimeterpapier planen und skizzieren.
         -   Stelle etwas dar, vielleicht deinen ausgeschriebenen Namen, deine Initialen, ein Symbol oder Logo irgendeiner Art.
         -   Werde kreativ! Das Bild muss kein perfektes Quadrat sein, es kann lang und dünn sein.
+      iceage_click_hello: Kannst du Sid helfen, seine Freunde zu rufen, wenn du auf
+        ihn klickst? Wenn du fertig bist, drücke "Ausführen", um zu spielen. Klicke
+        auf Sid, um zu sehen, wie dein Code funktioniert!
+      iceage_free_play: "\"Zeit für dein eigenes Spiel oder deine eigene Geschichte!
+        \n\nWenn du fertig bist, klicke auf \"\"Fertigstellen\"\", damit Freunde dein
+        Spiel auf ihren Handies, Tablets oder Computern ausprobieren können! \nDir
+        fällt nicht ein? Klicke auf die Hinweise für Einzelheiten.\""
+      iceage_hello1: Sid (Figur 1) möchte alle für ein neues Abenteuer zusammentrommeln.
+        Kannst du ihm dabei helfen, "Hallo!" zu sagen, indem den `sagen`-Baustein
+        herausziehst und ihn mit dem unteren Ende des `wenn ausgeführt wird`-Ereignisses
+        verbindest? Vergiss nicht, "Hallo!" hineinzutippen!
+      iceage_hello2: Manny (Figur 2) hat Sid (Figur 1) gefunden und will ihn zu einem
+        Abenteuer einladen. Hilf ihnen, sich gegenseitig zu begrüßen, indem du den
+        Baustein `Figur sagt ___` zweimal verwendest.
+      iceage_move_events: Scrat sucht immer noch nach Eicheln! Hilf ihm, herumzuhüpfen,
+        indem du bei jedem der Ereignisse einen Baustein `Figur 1` hinzufügst und
+        indem sich bei jeder Pfeiltaste die Richtung ändert. Wenn du fertig bist,
+        klicke auf "Ausführen" und versuche, alle Eicheln einzusammeln.
+      iceage_move_to_actor: Diego (Figur 1) ist auf der Suche nach Manny (Figur 2).
+        Kannst du den beiden helfen, zusammenzufinden? Verbinde einen Baustein mit
+        dem Ereignis `wenn die Figur berührt`, um einen Ton abzuspielen, wenn sie
+        sich finden.
       iceage_move_to_flag: Scrat sucht nach seiner Eichel! Kannst du ihm helfen, die
         letzten 200 Pixel zu verschieben?
+      iceage_repeat: Der Baustein `endlos wiederholen` ermöglicht es dir, Code kontinuierlich
+        auszuführen. Kannst du Bausteine hineinlegen, um Granny etwas Bewegung zu
+        verschaffen, indem du sie wiederholt nach links und nach rechts bewegst?
+      iceage_sound_and_points: Hier ist dein Code aus der letzten Aufgabe, sowie der
+        Code, um Granny nach links und rechts zu bewegen. Kannst du das Programm so
+        beenden, dass ihr beide **einen Ton** abspielt und **einen Punkt** macht,
+        wenn Sid und Granny zusammenstoßen? Drücke auf "Ausführen", um das Spiel zu
+        spielen.
+      iceage_throw_hearts: Sid möchte seiner Großmutter Granny sagen, dass er sie
+        lieb hat. Verwende den Befehl `Figur __ werfen`, damit Sid (Figur 1) Herzen
+        zu Granny (Figur 2) werfen kann! Programmiere Grannys Stimmung als glücklich,
+        wenn sie von den Herzen getroffen wird.
+      iceage_warn_ice_age: Alle müssen sich schneller bewegen, denn es zieht ein Eissturm
+        auf! Ändere die Szene zu einem eisigen Hintergrund und stelle Sids (Figur
+        1) Geschwindigkeit auf schnell ein. Drücke "Ausführen" und bewege Sid zu Diego,
+        damit er ihn warnt.
       mike3bit: "# 3-Bit-Farbe\n\n**Anweisungen**\n\n-   Wir beginnen mit dem 4x2-Bild
         das Maddie erstellt hat, aber wir haben die letzten Pixel weggelassen. \n-
         \  Beende das Bild, indem Du herausfindest, welche Farben fehlt und kodieren

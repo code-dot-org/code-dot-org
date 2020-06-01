@@ -1959,6 +1959,8 @@ el-GR:
   header_teacher_community: Κοινότητα δασκάλων
   header_help_support: 'Βοήθεια και υποστήριξη '
   header_report_bug: Αναφορά προβλήματος
+  header_legal_privacy: Πολιτική Απορρήτου
+  header_legal_tos: Όροι
   header_tutorials: Οδηγοί εκμάθησης
   header_documentation: Τεκμηρίωση
   user_header_label: Γεια σου %{username}

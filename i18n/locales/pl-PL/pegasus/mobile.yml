@@ -1418,6 +1418,8 @@
   header_teacher_community: "Społeczność nauczycieli"
   header_help_support: 'Pomoc i wsparcie '
   header_report_bug: "Zgłoś błąd"
+  header_legal_privacy: "Polityka prywatności"
+  header_legal_tos: "Regulamin"
   header_tutorials: "Samouczki"
   header_documentation: "Dokumentacja"
   user_header_label: "Witaj %{username}"
