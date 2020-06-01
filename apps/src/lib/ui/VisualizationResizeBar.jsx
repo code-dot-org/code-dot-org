@@ -145,5 +145,5 @@ export default connect(state => ({
     state.pageConstants.noVisualization ||
     // e.g. share pages
     (state.pageConstants.hideSource && !state.pageConstants.isResponsive),
-  isRtl: state.pageConstants.isRtl
+  isRtl: state.isRtl
 }))(VisualizationResizeBar);
