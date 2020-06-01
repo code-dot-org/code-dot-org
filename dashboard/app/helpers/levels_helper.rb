@@ -5,6 +5,7 @@ require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
+require 'cdo/languages'
 require 'net/http'
 require 'uri'
 require 'json'
@@ -504,11 +505,13 @@ module LevelsHelper
           language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
         end
       end
+      all_languages = Languages.get_locale.map {|lang| lang[:locale_s]}
       language_dictionary.keys.each do |language|
-        if language_dictionary[language].size < 2
+        if language_dictionary[language].size < 2 || !(all_languages.include? language)
           language_dictionary.delete(language)
         end
       end
+      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
       speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
     end
 
