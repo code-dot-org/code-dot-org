@@ -4,7 +4,10 @@
   %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
-- if !(@level.is_a?(BubbleChoice) || @level.is_a?(CurriculumReference))
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/_all.js')}
+
+- if !@level.is_a?(BubbleChoice)
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
 = render partial: 'levels/editors/fields/callouts', locals: {f: f} unless (@level.is_a?(CurriculumReference) || @level.is_a?(DSLDefined))
@@ -25,3 +28,4 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
 
 = render partial: 'levels/editors/fields/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
+
