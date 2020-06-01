@@ -17,6 +17,7 @@ import {
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import OwnedLesson from './OwnedLesson';
 
 const styles = {
   buttonContainer: {
@@ -41,7 +42,8 @@ class ProgressLessonTeacherInfo extends React.Component {
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenStage: PropTypes.func.isRequired
+    toggleHiddenStage: PropTypes.func.isRequired,
+    isScriptOwner: PropTypes.bool
   };
 
   onClickHiddenToggle = value => {
@@ -66,7 +68,8 @@ class ProgressLessonTeacherInfo extends React.Component {
       scriptAllowsHiddenStages,
       hiddenStageState,
       hasNoSections,
-      lesson
+      lesson,
+      isScriptOwner
     } = this.props;
 
     const showHiddenForSectionToggle =
@@ -97,6 +100,7 @@ class ProgressLessonTeacherInfo extends React.Component {
             onChange={this.onClickHiddenToggle}
           />
         )}
+        {isScriptOwner && <OwnedLesson lessonId={lesson.id} />}
       </TeacherInfoBox>
     );
   }
@@ -112,7 +116,8 @@ export default connect(
     scriptName: state.progress.scriptName,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0
+      state.teacherSections.sectionIds.length === 0,
+    isScriptOwner: state.verifiedTeacher.isOwner
   }),
   {toggleHiddenStage}
 )(ProgressLessonTeacherInfo);
