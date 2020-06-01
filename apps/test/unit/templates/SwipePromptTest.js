@@ -35,6 +35,7 @@ describe('SwipePrompt', () => {
       sinon.stub(instance, 'swipeOverlayOverrideSet').returns(true);
       wrapper.setProps({}); // force a re-render
       expect(wrapper.find('svg').exists()).to.be.true;
+      cookies.get.restore();
     });
 
     it('and hides when dismissed', () => {
