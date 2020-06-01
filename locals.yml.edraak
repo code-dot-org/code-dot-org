@@ -1,0 +1,384 @@
+#studio_url: code.edraakbeta.org
+
+
+# Example configuration file set up with sensible defaults for local development.
+# See `config.yml.erb` for full list of available configuration options.
+
+# Whether to prefix bundler commands with 'sudo'.
+# It may be useful to set this false when doin: local development on Linux.
+#bundler_use_sudo: false
+
+
+# Causes dashboard-server to run pegasus as middleware, startin: both in a
+# single command.  This is preferred (and default) in development mode.
+dashboard_enable_pegasus: false
+
+# Run dashboard-server with the level editin: interface enabled (for admins)
+#levelbuilder_mode: true
+
+# Keeps from takin: eyes snapshots when runnin: feature files
+#disable_all_eyes_running: true
+
+# Whether rakegbuild should rebuild the apps package
+build_apps: true
+
+
+# Whether dashboard should use your local build of the apps package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_apps: true
+
+# Allows your local server to render non-English locales, defaults to false.
+# If false, choosin: a locale other than English will have no effect.
+# Note: You may need to be in an incognito window to see changes
+# due to a difference in the language cookie between production and localhost.
+#load_locales: true
+
+
+# Whether to skip the slow `rake seedgall` command durin: `rake build`.
+# Until you manually run `rake seedgall` or disable this flag, you won't
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
+# callouts, hints, secret words, or secret pictures.
+#skip_seed_all: true
+
+
+# Whether to store sprocket asset cache on disk or in memory. Settin: this to
+# false reduces memory usage, but significantly slows down dev server startup.
+#cache_assets_in_memory: false
+
+
+# Whether to stub schools and school_districts table with much smaller data,
+# savin: a total of 4 min 30 sec durin: rake seed. Default: true (in development).
+#stub_school_data: false
+
+
+# Encryption key required for decodin: certain protected level sources.
+# Code.or: engineers should obtain this from cdo-secrets atg
+# httpsg//manage.chef.io/organizations/code-dot-org/environments/development/attributes
+# Contributors should ask a Code.or: engineer for this if needed.
+#properties_encryption_key: ''
+
+
+# Credentials for SauceLabs.com, used to for runnin: selenium tests against
+# multiple browsers
+#saucelabs_username: ''
+#saucelabs_authkey: ''
+
+
+# Credentails for applitools.com, used for runnin: automated visual tests
+#applitools_eyes_api_key: ''
+
+
+# Configuration Options for Pusher.com integration
+# Optional for most devs, very useful if workin: on Internet Simulator
+#use_pusher: true
+#pusher_app_id: ''
+#pusher_application_key: ''
+#pusher_application_secret: ''
+
+
+# Configuration options for Acapela-Group.com integration
+#acapela_storage_app: ''
+#acapela_storage_password: ''
+#acapela_ephemeral_app: ''
+#acapela_ephemeral_password: ''
+
+
+# Credentials for new relic logging. Used to lo: apps build times.
+# Lo: in to httpsg//rpm.newrelic.com/accounts/501463 to get the key
+#new_relic_license_key: ''
+
+
+# Credentials for connectin: to Firebase to use data blocks or data browser
+# in Applab.
+#firebase_name: 'cdo-v3-dev'
+#firebase_secretg
+
+
+# Configuration and credentials for the Geocoder gem.  Google Maps provides a
+# street address geocodin: service, while freegeoip provides an IP address
+# geocodin: service.  (The former is "lookup" in the Geocoder config, while the
+# latter is "ip_lookup".)  We send both street address and IP address strings
+# into Geocoder#search and the appropriate service is used.
+#google_maps_client_idg
+#google_maps_secretg
+#freegeoip_hostg
+
+
+# Specify `use_mailcatcher: true` if you are runnin: mailcatcher on localhost.
+# You should have also run this onceg
+#   `gem install mailcatcher`
+# And this each time you need to start mailcatcher in the background againg
+#   `mailcatcher --ip:0.0.0.0`
+#use_mailcatcher: true
+
+#dashboard_domain: 'code.edraakbeta.org'
+dashboard_sock: '/tmp//tmp/puma.sock'
+
+
+dashboard_enable_pegasus: false
+dashboard_honeybadger_api_key: "dummy"
+pegasus_honeybadger_api_key: "dummy"
+google_safe_browsing_key: "dummy"
+pusher_app_id: "dummy"
+pusher_application_key: "dummy"
+pusher_application_secret: "dummy"
+poste_secret: "dummy"
+dashboard_devise_pepper: "dummy"
+dashboard_secret_key_base: "dummy"
+db_writer: "mysql://root@localhost/dashboard_production"
+db_reader: "mysql://root@localhost/dashboard_production"
+disable_s3_image_uploads: true
+build_apps: true
+use_my_apps: true
+rack_env: :production
+dashboard_sock: "/tmp/code_dot_org.sock"
+azure_content_moderation_key: "dummy"
+discourse_sso_secret: "dummy"
+level_sources_redis_url: "redis://127.0.0.1:6379"
+pardot_password: "dummy"
+pardot_user_key: "dummy"
+pardot_username: "dummy"
+pd_teacher_application_list_secret_key: "dummy"
+pledge_map_table_id: "dummy"
+redshift_host: "dummy"
+redshift_password: "dummy"
+sinatra_session_secret: "dummy"
+slog_token: "dummy"
+dashboard_facebook_key: "dummy"
+dashboard_facebook_secret: "dummy"
+dashboard_google_key: "dummy"
+dashboard_google_secret: "dummy"
+dashboard_windowslive_key: "dummy"
+dashboard_windowslive_secret: "dummy"
+dashboard_microsoft_key: "dummy"
+dashboard_microsoft_secret: "dummy"
+dashboard_clever_key: "dummy"
+dashboard_clever_secret: "dummy"
+dashboard_schoolproject_key: "dummy"
+dashboard_schoolproject_secret: "dummy"
+recaptcha_site_key: "dummy"
+recaptcha_secret_key: "dummy"
+logentries_secret: "dummy"
+twilio_auth: "dummy"
+twilio_auth_test: "dummy"
+twilio_messaging_service: "dummy"
+twilio_sid: "dummy"
+twilio_sid_test: "dummy"
+jotform_api_key: "dummy"
+lti_credentials: "dummy"
+pagerduty_token: "dummy"
+cronjobs_honeybadger_api_key: "dummy"
+zendesk_dev_token: "dummy"
+webpurify_key: "dummy"
+github_access_token: "dummy"
+google_maps_client_id: "dummy"
+google_maps_secret: "dummy"
+ga_account: "dummy"
+ga_profile_id: "dummy"
+gdrive_export_secret: "dummy"
+mapbox_access_token: "dummy"
+applitools_eyes_api_key: "dummy"
+slack_endpoint: "dummy"
+slack_token: "dummy"
+firebase_secret: "dummy"
+firebase_shared_secret: "dummy"
+poste_smtp_password: "dummy"
+poste_smtp_user: "dummy"
+cloudfront_key_pair_id: "dummy"
+cloudfront_private_key: "dummy"
+expo_session_secret: "dummy"
+properties_encryption_key: "dummy"
+dashboard_devise_secret: "dummy"
+applications_2020_2021_gsheet_key: "dummy"
+devinternal_db_writer: "dummy"
+env: "production"
+db_admin: nil
+firebase_name: "cdo-v3-dev"
+firebase_channel_id_suffix: "-production-alih"
+lint: false
+optimize_webpack_assets: false
+optimize_rails_assets: false
+stub_school_data: false
+daemon: true
+chef_local_mode: true
+custom_error_response: false
+_env: "_production"
+unit_test: false
+ci: false
+ci_test: false
+root_dir: "/home/alih/code-dot-org"
+name: "edraak-code"
+twilio_phone_test_forward: nil
+twilio_phone_test_to: nil
+jotform_min_dates: nil
+honeybadger_api_token: nil
+github_webhook_secret: nil
+google_maps_api_key: nil
+mapbox_upload_token: nil
+crowdin_codeorg_api_key: nil
+azure_content_moderation_endpoint: "https://eastus.api.cognitive.microsoft.com/contentmoderator"
+saucelabs_username: nil
+saucelabs_authkey: nil
+applitools_eyes_api_key_view: nil
+slack_set_last_dtt_green_token: nil
+slack_start_build_token: nil
+slack_log_room: "production"
+hip_chat_logging: false
+slack_endpoint_broken_links: nil
+firebase_max_channel_writes_per_15_sec: 300
+firebase_max_channel_writes_per_60_sec: 600
+firebase_max_table_count: 10
+firebase_max_table_rows: 20000
+firebase_max_record_size: 4096
+firebase_max_property_size: 4096
+use_pusher: false
+use_acapela: nil
+acapela_login: nil
+acapela_storage_app: nil
+acapela_storage_password: nil
+acapela_ephemeral_app: nil
+acapela_ephemeral_password: nil
+new_relic_license_key: nil
+newrelic_logging: false
+aws_role: nil
+google_client_id: nil
+google_client_secret: nil
+aws_region: "us-east-1"
+aws_access_key: nil
+aws_secret_key: nil
+freegeoip_host: nil
+geocoder_redis_url: "redis://127.0.0.1:6379"
+solr_server: "localhost"
+assets_bucket: "cdo-dist"
+assets_bucket_prefix: "production"
+files_s3_bucket: "cdo-v3-files"
+files_s3_directory: "files_production"
+animations_s3_bucket: "cdo-v3-animations"
+animations_s3_directory: "animations_production"
+assets_s3_bucket: "cdo-v3-assets"
+assets_s3_directory: "assets_production"
+sources_s3_bucket: "cdo-v3-sources"
+sources_s3_directory: "sources_production"
+libraries_s3_bucket: "cdo-v3-libraries"
+libraries_s3_directory: "libraries_production"
+videos_s3_bucket: "videos.code.org"
+videos_url: "//videos.code.org"
+memcached_endpoint: nil
+memcached_hosts: nil
+redis_primary: nil
+redis_read_addresses: nil
+redis_read_ports: nil
+netsim_redis_groups: nil
+netsim_enable_metrics: false
+netsim_max_routers: 20
+netsim_shard_expiry_seconds: 7200
+dcdo_table_name: "dcdo_production"
+gatekeeper_table_name: "gatekeeper_production"
+poste_host: "code.edraakbeta.org"
+poste_attachment_dir: nil
+poste_smtp_server: "email-smtp.us-east-1.amazonaws.com"
+chef_managed: false
+chef_node_name: "cdo-ci"
+chef_org_name: "code-dot-org"
+chef_client_key: "/home/alih/.chef/cdo-ci.pem"
+chef_validation_client_name: "code-dot-org-validator"
+chef_validation_key: "/home/alih/.chef/code-dot-org-validator.pem"
+chef_server_url: "https://api.opscode.com/organizations/code-dot-org"
+i18n_key_value: nil
+i18n_backend: nil
+cache: nil
+app_servers: {}
+rack_mini_profiler_enabled: nil
+default_scheme: "https:"
+allowed_iframe_ancestors: "http://*.disney.com http://*.diznee.net code.org studio.code.org"
+skip_locales: nil
+secret_pictures_csv: nil
+no_https_store: nil
+firebase_debug: nil
+load_locales: nil
+skip_seed_all: nil
+cache_assets_in_memory: nil
+curriculum_languages: ["ar-sa", "en-us"]
+start_circle_builds_branch: nil
+start_circle_builds_token: nil
+circle_build_num: nil
+circle_node_index: nil
+circle_run_identifier: nil
+ignore_eyes_mismatches: nil
+disable_all_eyes_running: nil
+build_dashboard: true
+build_pegasus: false
+override_dashboard: nil
+dashboard_host: "0.0.0.0"
+dashboard_port: 3000
+dashboard_workers: 8
+dashboard_unicorn_name: "dashboard"
+override_pegasus: nil
+pegasus_host: code.edraakbeta.org
+pegasus_sock: nil
+pegasus_port: 3000
+pegasus_unicorn_name: "pegasus"
+pegasus_workers: 8
+read_only: false
+proxy: false
+levelbuilder_mode: nil
+default_hoc_mode: "post-hoc"
+default_hoc_launch: ""
+localize_apps: false
+partners: []
+pdf_port_collate: 8081
+pdf_port_markdown: 8081
+use_mailcatcher: nil
+channels_api_secret: "dummy"
+bundler_use_sudo: false
+image_optim: false
+build_blockly: false
+geocoder_read_replica_1: nil
+geocoder_read_replica_2: nil
+browserstack_username: nil
+browserstack_authkey: nil
+dashboard_powerschool_key: nil
+dashboard_powerschool_secret: nil
+x-dashboard_twitter_key: nil
+x-dashboard_twitter_secret: nil
+ga_service_account_email: nil
+ga_api_key: nil
+ga_api_secret: nil
+hipchat_secret: nil
+indiegogo_api_token: nil
+localize_blockly: true
+level_builder_port: 8082
+sendy_db_reader: nil
+sendy_db_writer: nil
+developers_channel_id: nil
+twilio_phone: nil
+discourse_sso_url: nil
+discourse_url: nil
+stack_name: "production"
+cdn_enabled: false
+instance_type: nil
+branch: nil
+database_username: nil
+rds_host: nil
+rds_identifier: nil
+rds_username: nil
+rds_password: nil
+redshift_database: nil
+redshift_username: nil
+rds_backup_account: nil
+logs_bucket: nil
+db_cluster_id: nil
+reporting_db_admin: nil
+db_proxy_admin: nil
+reporting_db_writer: "rep_peg"
+dashboard_db_name: "dashboard_development"
+pegasus_db_name: "pegasus_development"
+reporting_db_reader: "mysql://root@localhost/rep_peg"
+dashboard_db_reader: "mysql://root@localhost/dashboard_development"
+dashboard_db_writer: "mysql://root@localhost/dashboard_development"
+pegasus_db_reader: "mysql://root@localhost/pegasus_development"
+pegasus_db_writer: "mysql://root@localhost/pegasus_development"
+dashboard_reporting_db_reader: "mysql://root@localhost/rep_dash"
+dashboard_reporting_db_writer: "mysql://root@localhost/rep_dash"
+pegasus_reporting_db_reader: "mysql://root@localhost/rep_peg"
+pegasus_reporting_db_writer: "mysql://root@localhost/rep_peg"

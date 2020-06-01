@@ -70,7 +70,7 @@ module Dashboard
 
     config.encoding = 'utf-8'
 
-    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
+    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('code.edraakbeta.org')
 
     config.generators do |g|
       g.template_engine :haml
@@ -137,7 +137,7 @@ module Dashboard
     config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
 
     # use https://(*-)studio.code.org urls in mails
-    config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
+    config.action_mailer.default_url_options = {host: CDO.canonical_hostname('code.edraakbeta.org'), protocol: 'https'}
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {

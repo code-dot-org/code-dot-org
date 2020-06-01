@@ -90,8 +90,7 @@ module.exports = function(config) {
       showDiff: true
     },
 
-    hostname: 'localhost-studio.code.org',
-
+    hostname: 'code.edraakbeta.org',
     // web server port
     port: PORT,
 
