@@ -20,6 +20,7 @@ require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'
 require_relative '../../deployment'
+require_relative '../../lib/cdo/aws/s3'
 require_relative '../../lib/cdo/cdo_cli'
 require_relative '../../lib/cdo/png_utils'
 require_relative './constants'
@@ -102,6 +103,7 @@ class ManifestBuilder
     EOS
 
     if @options[:spritelab] && @options[:upload_to_s3]
+      info "Uploading file to S3"
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         "manifests/spritelabCostumeLibrary.json",
@@ -124,7 +126,8 @@ class ManifestBuilder
           }
         ),
         acl: 'public-read',
-        no_random: true
+        no_random: true,
+        content_type: 'json'
       )
     end
 

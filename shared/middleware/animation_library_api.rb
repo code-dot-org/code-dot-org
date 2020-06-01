@@ -47,7 +47,6 @@ class AnimationLibraryApi < Sinatra::Base
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
       object("manifests/spritelabCostumeLibrary.json").
-      find {|version| !version.head.delete_marker}.
       get
     content_type result.content_type
     cache_for 3600
