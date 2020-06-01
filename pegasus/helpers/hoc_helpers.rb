@@ -1,5 +1,6 @@
 require 'rmagick'
 require 'cdo/graphics/certificate_image'
+require 'cdo/graphics/edraak_certificate_image'  # Edraak Specific
 require 'dynamic_config/gatekeeper'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'.freeze

@@ -96,7 +96,12 @@ get '/v2/hoc/certificate/:filename' do |filename|
 
   format = extname[1..-1]
   begin
-    image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
+    # Edraak Specific: use customized certificate creation
+    # image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
+    image = edraak_create_course_certificate_image(
+      data['name'], data['course'], data['sponsor'], data['course_title'], request.locale
+    )
+    # End of Edraak Specific
     image.format = format
 
     content_type format.to_sym
