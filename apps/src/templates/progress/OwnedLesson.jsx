@@ -13,12 +13,14 @@ const styles = {
 
 const OwnedLesson = ({lessonId}) => {
   const handleClick = () => {
-    $.ajax({
-      type: 'DELETE',
-      url: `/lessons/${lessonId}`
-    }).success(() => {
-      window.location.reload();
-    });
+    if (window.confirm('Are you sure you want to delete this lesson?')) {
+      $.ajax({
+        type: 'DELETE',
+        url: `/lessons/${lessonId}`
+      }).success(() => {
+        window.location.reload();
+      });
+    }
   };
 
   return (
