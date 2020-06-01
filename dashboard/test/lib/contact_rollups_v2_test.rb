@@ -28,7 +28,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    ContactRollupsV2.new(is_dry_run: false).build_and_sync
+    ContactRollupsV2.new.build_and_sync
 
     # Verify email preference
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email_preference.email, pardot_id: 1)
@@ -67,7 +67,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
-    ContactRollupsV2.new(is_dry_run: false).build_and_sync
+    ContactRollupsV2.new.build_and_sync
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
