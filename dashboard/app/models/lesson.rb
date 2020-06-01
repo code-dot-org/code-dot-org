@@ -28,7 +28,7 @@ class Lesson < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  has_many :script_levels, -> {order('position ASC')}, inverse_of: :lesson, foreign_key: 'stage_id'
+  has_many :script_levels, -> {order('position ASC')}, inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group

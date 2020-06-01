@@ -249,6 +249,9 @@ class Ability
       can :manage, Level do |level|
         level.owner == user
       end
+      can :destroy, Lesson do |lesson|
+        lesson&.script&.owner == user
+      end
     end
 
     if user.persisted?

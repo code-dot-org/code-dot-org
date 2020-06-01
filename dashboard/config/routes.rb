@@ -267,6 +267,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :lessons, only: [:destroy]
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
