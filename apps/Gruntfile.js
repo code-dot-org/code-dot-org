@@ -594,6 +594,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/datasets/edit_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
+    'levels/editors/fields/_video':
+      './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
     'levels/editors/_blockly':
