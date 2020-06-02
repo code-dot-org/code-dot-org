@@ -30,15 +30,9 @@
   = f.label :failure_condition, 'Failure condition'
   %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
   = f.text_area :failure_condition, rows: 4
-.field
-  = f.label :soft_buttons, 'Controls buttons'
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
-  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
+
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :edge_collisions, description: "Edge collisions"}
 .field
