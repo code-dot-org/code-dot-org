@@ -501,6 +501,7 @@ module LevelsHelper
         if language_dictionary[voice["Locale"]].nil?
           language_dictionary[voice["Locale"]] = {}
           language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
+          language_dictionary[voice["Locale"]]["languageCode"] = voice["Locale"]
         elsif language_dictionary[voice["Locale"]][voice["Gender"].downcase].nil?
           language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
         end
