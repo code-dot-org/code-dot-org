@@ -64,12 +64,12 @@ var DropletFunctionTooltip = function(appMsg, definition) {
   this.customDocURL = definition.customDocURL;
 
   var localizedDescription = this.getLocalization(this.descriptionKey());
+  this.showExamplesLink = true;
   if (definition.comment) {
     this.description = definition.comment;
     this.showCodeLink = true;
     this.showExamplesLink = false;
   } else if (localizedDescription) {
-    this.showExamplesLink = true;
     this.description = localizedDescription();
   }
 
