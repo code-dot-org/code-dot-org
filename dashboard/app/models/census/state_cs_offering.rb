@@ -151,7 +151,6 @@ class Census::StateCsOffering < ApplicationRecord
     DC: 2,
     DE: 2,
     NH: 2,
-    NJ: 2,
     VT: 2
   }.freeze
 
