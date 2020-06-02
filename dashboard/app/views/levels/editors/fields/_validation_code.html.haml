@@ -16,3 +16,6 @@
 
   - if @level.is_a?(Applab)
     = render partial: 'levels/editors/fields/applab_validations', locals: {f: f}
+
+  - if @level.is_a?(Studio)
+    = render partial: 'levels/editors/fields/studio_validations', locals: {f: f}
