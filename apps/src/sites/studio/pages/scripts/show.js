@@ -3,7 +3,7 @@ import {renderCourseProgress} from '@cdo/apps/code-studio/progress';
 import {
   setVerified,
   setVerifiedResources,
-  setOwner
+  setScriptOwner
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
@@ -43,8 +43,8 @@ function initPage() {
     store.dispatch(setVerified());
   }
 
-  if (scriptData.is_owner) {
-    store.dispatch(setOwner());
+  if (scriptData.is_script_owner) {
+    store.dispatch(setScriptOwner());
   }
 
   if (scriptData.script_announcements) {

@@ -1,19 +1,19 @@
 const SET_VERIFIED = 'verifiedTeacher/SET_VERIFIED';
 const SET_VERIFIED_RESOURCES = 'verifiedTeacher/SET_VERIFIED_RESOURCES';
-const SET_OWNER = 'verifiedTeacher/SET_OWNER';
+const SET_SCRIPT_OWNER = 'verifiedTeacher/SET_SCRIPT_OWNER';
 
 export const setVerified = () => ({type: SET_VERIFIED});
 export const setVerifiedResources = hasVerifiedResources => ({
   type: SET_VERIFIED_RESOURCES
 });
-export const setOwner = () => ({type: SET_OWNER});
+export const setScriptOwner = () => ({type: SET_SCRIPT_OWNER});
 
 const initialState = {
   isVerified: false,
   // True if a page (course/script) has resources that are only available to
   // verified teachers
   hasVerifiedResources: false,
-  isOwner: false
+  isScriptOwner: false
 };
 
 export default function verifiedTeacher(state = initialState, action) {
@@ -31,10 +31,10 @@ export default function verifiedTeacher(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_OWNER) {
+  if (action.type === SET_SCRIPT_OWNER) {
     return {
       ...state,
-      isOwner: true
+      isScriptOwner: true
     };
   }
 

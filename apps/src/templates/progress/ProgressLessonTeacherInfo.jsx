@@ -117,7 +117,7 @@ export default connect(
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0,
-    isScriptOwner: state.verifiedTeacher.isOwner
+    isScriptOwner: state.verifiedTeacher.isScriptOwner
   }),
   {toggleHiddenStage}
 )(ProgressLessonTeacherInfo);
