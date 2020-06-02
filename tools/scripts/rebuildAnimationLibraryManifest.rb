@@ -40,6 +40,10 @@ cli_parser = OptionParser.new do |opts|
     options[:verbose] = true
   end
 
+  opts.on('-u', '--upload', 'Upload Spritelab manifest to S3') do
+    options[:upload_to_s3] = true
+  end
+
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit
