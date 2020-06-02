@@ -5,6 +5,10 @@
 
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
+
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
   .field
     / dsl-defined levels specify a name directly in the DSL text
     - unless @level.is_a? DSLDefined
@@ -52,6 +56,7 @@
     = render partial: 'levels/editors/fields/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
     // Note that many DSL levels also use this partial. See _dsl.html.haml
     = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f} if (@level.include_teacher_only_markdown_editor?)
+    = render partial: 'levels/editors/fields/audit_log', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/fields/deprecated', locals: {f: f} unless @level.is_a? EvaluationMulti
   .field
     = f.hidden_field :published
