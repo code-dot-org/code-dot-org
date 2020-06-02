@@ -424,7 +424,13 @@ class Pd::Enrollment < ActiveRecord::Base
   private_class_method def self.filter_for_academic_year_survey_completion(academic_year_enrollments, select_completed)
     completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+      begin
+        Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+      # if we can't find the expected form id we will get a key error. Consider this to be a completed survey as there
+      # is no survey.
+      rescue KeyError
+        true
+      end
     end
 
     select_completed ? completed_surveys : uncompleted_surveys
