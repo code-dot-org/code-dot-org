@@ -69,7 +69,8 @@ export default function reducer(state = initialState, action) {
     // Re-initializing with full set of stages shouldn't blow away currentStageId
     const currentStageId =
       state.currentStageId || (stages.length === 1 ? stages[0].id : undefined);
-    const skipStageNumber = !!action.professionalLearningCourse;
+    const skipStageNumber =
+      !!action.professionalLearningCourse || action.isScriptOwned;
     // extract fields we care about from action
     return {
       ...state,
@@ -373,7 +374,8 @@ export const initProgress = ({
   scriptDescription,
   betaTitle,
   courseId,
-  isFullProgress
+  isFullProgress,
+  isScriptOwned
 }) => ({
   type: INIT_PROGRESS,
   currentLevelId,
@@ -387,7 +389,8 @@ export const initProgress = ({
   scriptDescription,
   betaTitle,
   courseId,
-  isFullProgress
+  isFullProgress,
+  isScriptOwned
 });
 
 export const mergeProgress = levelProgress => ({

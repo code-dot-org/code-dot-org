@@ -308,7 +308,8 @@ function initializeStoreWithProgress(
       scriptDescription: scriptData.description,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress
+      isFullProgress: isFullProgress,
+      isScriptOwned: scriptData.is_owned
     })
   );
 

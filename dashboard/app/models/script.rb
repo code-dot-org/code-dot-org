@@ -1449,6 +1449,7 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      is_owned: !!owner,
     }
 
     # Filter out stages that have a visible_after date in the future
