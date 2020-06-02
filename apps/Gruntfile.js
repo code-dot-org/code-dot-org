@@ -635,6 +635,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/amazon_future_engineer_eligibility':
+      './src/sites/code.org/pages/public/amazonFutureEngineerEligibility.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
