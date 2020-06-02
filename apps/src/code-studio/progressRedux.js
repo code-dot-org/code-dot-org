@@ -69,13 +69,14 @@ export default function reducer(state = initialState, action) {
     // Re-initializing with full set of stages shouldn't blow away currentStageId
     const currentStageId =
       state.currentStageId || (stages.length === 1 ? stages[0].id : undefined);
+    const skipStageNumber = !!action.professionalLearningCourse;
     // extract fields we care about from action
     return {
       ...state,
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: processedStages(stages, action.professionalLearningCourse),
+      stages: processedStages(stages, skipStageNumber),
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
@@ -273,12 +274,12 @@ export const getLevelResult = level => {
  * - Removes 'hidden' field
  * - Adds 'stageNumber' field for non-lockable, non-PLC stages
  */
-export function processedStages(stages, isPlc) {
+export function processedStages(stages, skipStageNumber) {
   let numberOfNonLockableStages = 0;
 
   return stages.map(stage => {
     let stageNumber;
-    if (!isPlc && !stage.lockable) {
+    if (!skipStageNumber && !stage.lockable) {
       numberOfNonLockableStages++;
       stageNumber = numberOfNonLockableStages;
     }
