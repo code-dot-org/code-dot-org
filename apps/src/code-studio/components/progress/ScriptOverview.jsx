@@ -24,6 +24,7 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
+import Button from '@cdo/apps/templates/Button';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -57,7 +58,8 @@ class ScriptOverview extends React.Component {
     currentCourseId: PropTypes.number,
     hiddenStageState: PropTypes.object,
     selectedSectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
+    isScriptOwner: PropTypes.bool
   };
 
   constructor(props) {
@@ -75,6 +77,15 @@ class ScriptOverview extends React.Component {
       showRedirectDialog: false
     });
   };
+
+  createCustomLesson() {
+    $.ajax({
+      url: '/api/create_custom_lesson',
+      type: 'post'
+    }).done(() => {
+      window.location.reload();
+    });
+  }
 
   render() {
     const {
@@ -101,7 +112,8 @@ class ScriptOverview extends React.Component {
       courseName,
       showAssignButton,
       userId,
-      assignedSectionId
+      assignedSectionId,
+      isScriptOwner
     } = this.props;
 
     const displayRedirectDialog =
@@ -159,6 +171,13 @@ class ScriptOverview extends React.Component {
           </div>
         )}
         <ProgressTable />
+        {onOverviewPage && isScriptOwner && (
+          <Button
+            onClick={this.createCustomLesson}
+            text="Create Lesson"
+            color={Button.ButtonColor.blue}
+          />
+        )}
         {onOverviewPage && (
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
         )}
@@ -185,5 +204,6 @@ export default connect((state, ownProps) => ({
     ownProps.id,
     ownProps.courseId,
     false
-  )
+  ),
+  isScriptOwner: state.verifiedTeacher.isScriptOwner
 }))(UnconnectedScriptOverview);
