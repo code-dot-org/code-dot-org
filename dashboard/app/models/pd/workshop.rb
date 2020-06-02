@@ -663,6 +663,10 @@ class Pd::Workshop < ActiveRecord::Base
     subject == SUBJECT_SUMMER_WORKSHOP
   end
 
+  def csp_wfrt?
+    subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+  end
+
   def teachercon?
     subject == SUBJECT_TEACHER_CON
   end
