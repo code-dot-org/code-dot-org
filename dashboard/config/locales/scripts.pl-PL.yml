@@ -1384,8 +1384,16 @@ pl:
               name: DNS w świecie rzeczywistym
             HTTP and Abstraction:
               name: HTTP i abstrakcja
+            Tell Me a Secret - Encrypting Text:
+              name: Powiedz mi sekret - szyfrowanie tekstu
             Cracking the Code:
               name: Łamanie kodu
+            Encryption Algorithms:
+              name: Algorytmy szyfrowania
+            Algorithms Detour - Hard Problems TSP:
+              name: Algorytmy objazdu - trudne problemy TSP
+            One Way Functions - Ice Cream Vans:
+              name: Funkcje jednokierunkowe - samochody dostawcze lodów
         algebraPD2a:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -7736,6 +7744,8 @@ pl:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
           lessons:
+            Events with Sprite Lab:
+              name: Wydarzenia z Sprite Lab
             Loops with the Artist:
               name: Pętle z artystą
             Envelope Variables:
@@ -8027,6 +8037,8 @@ pl:
               name: Patrząc w przyszłość
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
+            'End of Course Project: Create a Play Lab Game':
+              name: 'Projekt na koniec kursu: Utwórz grę Play Lab'
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -9834,6 +9846,8 @@ pl:
               name: Patrząc w przyszłość
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
+            'End of Course Project: Create a Play Lab Game':
+              name: 'Projekt na koniec kursu: Utwórz grę Play Lab'
         coursed-2020:
           description_audience: Wiek 7-11
           stages:
@@ -9941,6 +9955,8 @@ pl:
             csf_for_loops:
               display_name: Pętle dla (for)
           lessons:
+            Events with Sprite Lab:
+              name: Wydarzenia z Sprite Lab
             Loops with the Artist:
               name: Pętle z artystą
             The Power of Words:
@@ -10338,6 +10354,8 @@ pl:
               name: Wydarzenia z Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI z Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI z Kat Graham & Kate Park
           lessons:
             Episode 1 - Algorithms with Hill Harper:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
@@ -10355,6 +10373,8 @@ pl:
               name: Wydarzenia z Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI z Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI z Kat Graham & Kate Park
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -10375,6 +10395,8 @@ pl:
               name: Wydarzenia z Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI z Kat Graham & Cody Simpson
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
           title: Inscenizacja Code Break
           lessons:
             Conditionals with Sal Khan & Flo Vaughn:
@@ -10385,6 +10407,8 @@ pl:
               name: Wydarzenia z Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI z Kat Graham & Cody Simpson
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstrakcja z Susan Wojcicki & China Anne McClain
         code-break-younger-staging:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -10434,6 +10458,8 @@ pl:
               name: Wydarzenia z Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI z Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI z Kat Graham & Kate Park
           title: Code Break dla młodszych uczniów
           description: Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu,
             Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo,
@@ -10455,6 +10481,8 @@ pl:
               name: Wydarzenia z Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI z Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI z Kat Graham & Kate Park
         no-lg:
           stages:
             new stage:
