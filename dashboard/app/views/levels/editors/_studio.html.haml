@@ -30,7 +30,4 @@
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :sprites_hidden_to_start, description: "Sprites hidden to start"}
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :remove_items_when_actor_collides, description: "Remove an item (e.g. a stormtrooper) when the actor collides with it"}
 
-%div.collapsed_area_header{data: {toggle: "collapse", target: "#cs_in_a"}}
-  CS in A Options
-.collapse{id: "cs_in_a"}
-  = render partial: 'levels/editors/cs_in_a', locals: {f: f}
+= render partial: 'levels/editors/cs_in_a', locals: {f: f}
