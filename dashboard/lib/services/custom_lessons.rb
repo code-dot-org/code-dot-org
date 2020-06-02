@@ -4,7 +4,7 @@ class Services::CustomLessons
 
     # 1. creates a custom_script for the user, if they do not have one already
     if user.custom_script.nil?
-      script_name = "#{user.username}-#{SecureRandom.uuid}"
+      script_name = "custom-lessons-#{user.id}"
       user.create_custom_script(
         name: script_name,
         owner: user,
