@@ -180,6 +180,13 @@ class Pd::Enrollment < ActiveRecord::Base
       (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
     end
 
+    # we currently don't have a post survey for CSP for returning teachers.
+    # Once we do we will need to convert _ to a useful variable.
+    _, other_enrollments = other_enrollments.partition do |enrollment|
+      enrollment.workshop.course == Pd::Workshop::COURSE_CSP &&
+        enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    end
+
     new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
       [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
