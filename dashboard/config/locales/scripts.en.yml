@@ -25017,7 +25017,13 @@ en:
           description_short: Practice and complete the Create Performance Task (PT).
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           lesson_groups: {}
-          lessons: {}
+          lessons:
+            Create PT - Review the Task:
+              name: Create PT - Review the Task
+            Create PT - Make a Plan:
+              name: Create PT - Make a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
         csp9-2020:
           stages:
             new stage:
