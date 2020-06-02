@@ -164,6 +164,35 @@ The animation has been skipped.
         #{dim 'd[ o_0 ]b'}
     EOS
 
+    if @options[:spritelab] && @options[:upload_to_s3]
+      info "Uploading file to S3"
+      AWS::S3.upload_to_bucket(
+        DEFAULT_S3_BUCKET,
+        "manifests/spritelabCostumeLibrary.json",
+        JSON.pretty_generate(
+          {
+            # JSON-style file comment
+            '//': [
+              'Animation Library Manifest',
+              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
+            ],
+
+            # Strip aliases from metadata - they're no longer needed since they
+            #   are represented in the alias map.
+            # Also sort for stable updates
+            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+            # Sort alias map for stable updates
+            'aliases': alias_map.sort.to_h
+          }
+        ),
+        acl: 'public-read',
+        no_random: true,
+        content_type: 'json'
+      )
+    end
+
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
