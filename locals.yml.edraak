@@ -196,8 +196,8 @@ db_admin: nil
 firebase_name: "cdo-v3-dev"
 firebase_channel_id_suffix: "-production-alih"
 lint: false
-optimize_webpack_assets: false
-optimize_rails_assets: false
+optimize_webpack_assets: true
+optimize_rails_assets: true
 stub_school_data: false
 daemon: true
 chef_local_mode: true
