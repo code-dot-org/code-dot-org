@@ -505,7 +505,7 @@ module LevelsHelper
           language_dictionary[voice["Locale"]][voice["Gender"].downcase] = voice["ShortName"]
         end
       end
-      all_languages = Languages.get_locale.map {|lang| lang[:locale_s]}
+      all_languages = Languages.get_locale.map {|language| language[:locale_s]}
       language_dictionary.keys.each do |language|
         if language_dictionary[language].size < 2 || !(all_languages.include? language)
           language_dictionary.delete(language)
