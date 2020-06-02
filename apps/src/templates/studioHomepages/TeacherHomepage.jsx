@@ -249,16 +249,18 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <Button
-          onClick={this.createCustomLesson}
-          text="Create Lesson"
-          color={Button.ButtonColor.orange}
-        />
+        {!this.props.customScriptPath && (
+          <Button
+            onClick={this.createCustomLesson}
+            text="Create Lesson"
+            color={Button.ButtonColor.orange}
+          />
+        )}
         {this.props.customScriptPath && (
           <Button
             onClick={this.viewCustomLessons}
             text="View My Lessons"
-            color={Button.ButtonColor.blue}
+            color={Button.ButtonColor.orange}
           />
         )}
         <TeacherSections queryStringOpen={queryStringOpen} />
