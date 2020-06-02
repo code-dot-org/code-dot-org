@@ -968,7 +968,7 @@
     {
      "type": "html",
      "name": "thank_you_header",
-     "html": "<img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"<img src='/shared/images/foorm/codeheartyou.png'/>\" />\n<p>Thanks from Code.org for your time, commitment and passion for teaching {workshop_course} this year.</p>\n<p><strong>You are making a difference for your students.</strong> We're looking forward to what's next. Onward!</p>"
+     "html": "<img style='display: block; margin-left: auto; margin-right: auto;', src='/shared/images/foorm/codeheartyou.png'/>\n<p>Thanks from Code.org for your time, commitment and passion for teaching {workshop_course} this year.</p>\n<p><strong>You are making a difference for your students.</strong> We're looking forward to what's next. Onward!</p>"
     }
    ]
   }
