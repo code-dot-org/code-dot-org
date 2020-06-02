@@ -253,6 +253,10 @@ nl-NL:
       4-5 Artist Assessment 1: 'Beoordeling: Gebruik een lus om een gelijkzijdige
         driehoek te tekenen. Elke zijde is 300 pixels.'
       4-5 Artist Free Draw 1: Vrij tekenen! Teken wat in je opkomt.
+      4-5 Artist Patterns 1: |-
+        Teken dit vierkant met behulp van een lus.
+
+        Elke zijde is 20 pixels lang.
       4-5 Artist Patterns 10: "Deze code tekent twee rijen zeshoeken\n\n-   herhaal
         dit geheel 4 keer om een hele honinggraat te tekenen \\\r \n    \\\r \n    Je
         zal 120 pixel terug moeten gaan in je allerlaatste lus (herhaling) om zeker
@@ -494,6 +498,8 @@ nl-NL:
         herhaal blok om de cirkel van kleuren te maken.
       Course 4 Artist 5: Teken de andere helft van deze tekening zodat het symmetrisch
         is. De driehoeken zijn gelijkzijdig en zijn 50 pixels lang.
+      Course 4 Artist 6: Maak de code af om deze drie gelijkzijdige driehoeken te
+        tekenen.
       Course 4 Artist 7: 'Nest nu deze lus in een andere lus om 10 driehoeken te tekenen.
         Dit noemen we een geneste loop. Hint: De 10 driehoeken bijelkaar vormen een
         draai van 360 graden.  '
@@ -528,6 +534,8 @@ nl-NL:
         met \"pixels\" gemaakt waar je doorheen kan lopen en waarin je ontwerpen kan
         maken door sommige vierkantjes aan te zetten. Kun je de kunstenaar '01010101'
         in binair laten tekenen op de eerste regel?"
+      Course 4 Artist For Loops 1: Gebruik een herhaal blok om deze 50 pixels brede
+        driehoek te tekenen.
       Course 4 Artist For Loops 11a: "Laten we het samen voegen! Met behulp van je
         kennis over \"for loops\" en de \"counter\" maken we deze tekening waar elke
         vorm twee zijden meer heeft dan de laatste. Zorg ervoor dat elke zijde 10
@@ -558,6 +566,10 @@ nl-NL:
         <https://studio.code.org/c/106387604> voor de oplossing."
       Course 4 Artist Functions Inspiration: Klik hier om de tips opnieuw te zien.
       Course 4 Artist Functions challenge: Klik hier om de tips opnieuw te zien.
+      Course 4 Artist Vars 1: |-
+        Laten we een gelijkzijdige driehoek tekenen.
+
+        Deze moet precies 100 pixels lang zijn aan elke zijde.
       Course 4 Artist Vars 11: Hier is hetzelfde algoritme wat we gebruikten voor
         de laatste puzzel - hoe moet je de variabele "zijden" instellen om dit beeld
         van vierkanten te tekenen?

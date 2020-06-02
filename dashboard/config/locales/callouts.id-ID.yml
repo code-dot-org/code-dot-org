@@ -397,13 +397,13 @@ id-ID:
           baik dengan jagung, tapi bagaimana dengan sayuran lainnya?
       courseA_artist_loops4:
         courseA_artist_loops4_1: Angka ini memberitahu anda seberapa banyak blok yang
-          dapat anda gunakan dalam teka-teki ini.
+          dapat anda gunakan dalam puzzle ini.
       courseA_artist_loops4_2018:
         courseA_artist_loops4_1: Angka ini memberitahu anda seberapa banyak blok yang
-          dapat anda gunakan dalam teka-teki ini.
+          dapat anda gunakan dalam puzzle ini.
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: Angka ini memberitahu anda seberapa banyak blok yang
-          dapat anda gunakan dalam teka-teki ini.
+          dapat anda gunakan dalam puzzle ini.
       courseA_artist_loops7:
         courseA_artist_loops7_1: Angka ini berarti bahwa hanya satu dari jenis blok
           ini yang dapat digunakan di jawaban akhir.
@@ -414,14 +414,14 @@ id-ID:
         courseA_artist_loops7_1: Angka ini berarti bahwa hanya satu dari jenis blok
           ini yang dapat digunakan di jawaban akhir.
       courseA_artist_loops8:
-        courseA_artist_loops8_1: Apakah Anda tahu bahwa Anda bisa menggambar ulang
-          kapan pun Anda perlu?
+        courseA_artist_loops8_1: Apakah anda tahu bahwa anda bisa menggambar ulang
+          sebuah garis kapan pun anda perlu?
       courseA_artist_loops8_2018:
-        courseA_artist_loops8_1: Apakah Anda tahu bahwa Anda bisa menggambar ulang
-          kapan pun Anda perlu?
+        courseA_artist_loops8_1: Apakah anda tahu bahwa anda bisa menggambar ulang
+          sebuah garis kapan pun anda perlu?
       courseA_artist_loops8_2019:
-        courseA_artist_loops8_1: Apakah Anda tahu bahwa Anda bisa menggambar ulang
-          kapan pun Anda perlu?
+        courseA_artist_loops8_1: Apakah anda tahu bahwa anda bisa menggambar ulang
+          sebuah garis kapan pun anda perlu?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
@@ -430,13 +430,13 @@ id-ID:
         courseA_collector_loops1_1: Gunakan blok ini untuk mengumpulkan harta karun.
       courseA_collector_loops3:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
-          yang dapat anda gunakan dalam teka-teki ini.
+          yang dapat anda gunakan dalam puzzle ini.
       courseA_collector_loops3_2018:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
-          yang dapat anda gunakan dalam teka-teki ini.
+          yang dapat anda gunakan dalam puzzle ini.
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Angka ini memberitahu anda seberapa banyak blok
-          yang dapat anda gunakan dalam teka-teki ini.
+          yang dapat anda gunakan dalam puzzle ini.
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
@@ -464,18 +464,18 @@ id-ID:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseA_maze_seq1:
-        courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+        courseA_maze_seq1_1: Klik icon bola lampu saat anda membutuhkan petunjuk!
       courseA_maze_seq1_2018:
-        courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+        courseA_maze_seq1_1: Klik icon bola lampu saat anda membutuhkan petunjuk!
       courseA_maze_seq1_2019:
-        courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+        courseA_maze_seq1_1: Klik icon bola lampu saat anda membutuhkan petunjuk!
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: Gunakan tombol langkah agar dituntun langkah demi
-          langkah dalam menjalankan programnya. Hal ini akan membantu Anda menemukan
+          langkah dalam menjalankan programnya. Hal ini akan membantu anda menemukan
           bug!
       courseA_maze_seq4:
         made_of_stone: Blok-blok tersebut terbuat dari batu. Anda bisa memindahkannya,
-          tetapi Anda tidak beloh menghapusnya!
+          tetapi anda tidak beloh menghapusnya!
       courseA_playLab_events4:
         courseA_playlab_events4_callout1: Ini merupakan satu seruan
       courseA_playLab_events4_2018:
@@ -483,23 +483,23 @@ id-ID:
       courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: Ini merupakan satu seruan
       courseA_playLab_events5:
-        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah event.
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah panah event.
       courseA_playLab_events5_2018:
-        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah event.
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah panah event.
       courseA_playLab_events5_2019:
-        courseA_playLab_events5_1: Klik disini untuk mengubah arah anak panah event.
+        courseA_playLab_events5_1: Klik disini untuk mengubah arah panah event.
       courseA_playLab_events6:
-        courseA_playLab_events6_1: Hal ini akan memungkinkan Anda untuk memilih sebuah
-          suara secara "acak", Anda tidak akan tahu suara apa yang akan Anda dapatkan
-          sampai Anda mendengarnya!
+        courseA_playLab_events6_1: Hal ini akan memungkinkan anda untuk memilih sebuah
+          suara secara "acak", yang berarti anda tidak akan tahu suara apa yang akan
+          anda dapatkan sampai anda mendengarnya!
       courseA_playLab_events6_2018:
-        courseA_playLab_events6_1: Hal ini akan memungkinkan Anda untuk memilih sebuah
-          suara secara "acak", Anda tidak akan tahu suara apa yang akan Anda dapatkan
-          sampai Anda mendengarnya!
+        courseA_playLab_events6_1: Hal ini akan memungkinkan anda untuk memilih sebuah
+          suara secara "acak", yang berarti anda tidak akan tahu suara apa yang akan
+          anda dapatkan sampai anda mendengarnya!
       courseA_playLab_events6_2019:
-        courseA_playLab_events6_1: Hal ini akan memungkinkan Anda untuk memilih sebuah
-          suara secara "acak", Anda tidak akan tahu suara apa yang akan Anda dapatkan
-          sampai Anda mendengarnya!
+        courseA_playLab_events6_1: Hal ini akan memungkinkan anda untuk memilih sebuah
+          suara secara "acak", yang berarti anda tidak akan tahu suara apa yang akan
+          anda dapatkan sampai anda mendengarnya!
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
@@ -530,14 +530,14 @@ id-ID:
       courseB_collector_loops1_2019:
         courseB_collector_loops1_1: Gunakan blok ini untuk mengumpulkan harta karun.
       courseB_maze_seq1:
-        courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+        courseB_maze_seq1: Klik icon bola lampu saat anda membutuhkan petunjuk!
       courseB_maze_seq1_2018:
-        courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+        courseB_maze_seq1: Klik icon bola lampu saat anda membutuhkan petunjuk!
       courseB_maze_seq1_2019:
-        courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+        courseB_maze_seq1: Klik icon bola lampu saat anda membutuhkan petunjuk!
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Gunakan tombol langkah agar dituntun langkah demi
-          langkah dalam menjalankan programnya. Hal ini akan membantu Anda menemukan
+          langkah dalam menjalankan programnya. Hal ini akan membantu anda menemukan
           bug!
       courseB_maze_seq3:
         courseB_maze_seq3_1: Blok-blok yang warna abu-abu terbuat dari batu dan tidak
@@ -595,14 +595,14 @@ id-ID:
           alat? Jangan cemas, kami akan tunjukkan cara menggunakannya nanti dalam
           materi lain.
       courseC_collector_prog7:
-        courseC_collector_prog7_1: Kamu bisa mengambil lagi blok dari dalam kotak
-          peralatan jika kamu membutuhkannya!
+        courseC_collector_prog7_1: Anda bisa mengambil lebih banyak blok dari dalam
+          toolbox jika anda membutuhkannya!
       courseC_collector_prog7_2018:
-        courseC_collector_prog7_1: Kamu bisa mengambil lagi blok dari dalam kotak
-          peralatan jika kamu membutuhkannya!
+        courseC_collector_prog7_1: Anda bisa mengambil lebih banyak blok dari dalam
+          toolbox jika anda membutuhkannya!
       courseC_collector_prog7_2019:
-        courseC_collector_prog7_1: Kamu bisa mengambil lagi blok dari dalam kotak
-          peralatan jika kamu membutuhkannya!
+        courseC_collector_prog7_1: Anda bisa mengambil lebih banyak blok dari dalam
+          toolbox jika anda membutuhkannya!
       courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: Angka empat pada labu menandakan bahwa
           ada empat labu yang bisa dipilih.
@@ -679,17 +679,17 @@ id-ID:
         courseC_maze_programming7_2: Blok-blok tersebut terbuat dari batu dan tidak
           bisa dibuang.
       courseC_starWars_loops2:
-        courseC_starWars_loops2: Kamu hanya punya satu blok yang tersedia di dalam
-          teka-teki ini.
+        courseC_starWars_loops2: Anda hanya punya satu blok yang tersedia di dalam
+          puzzle ini.
       courseC_starWars_loops2_2018:
-        courseC_starWars_loops2: Kamu hanya punya satu blok yang tersedia di dalam
-          teka-teki ini.
+        courseC_starWars_loops2: Anda hanya punya satu blok yang tersedia di dalam
+          puzzle ini.
       courseC_starWars_loops2_2019:
-        courseC_starWars_loops2: Kamu hanya punya satu blok yang tersedia di dalam
-          teka-teki ini.
+        courseC_starWars_loops2: Anda hanya punya satu blok yang tersedia di dalam
+          puzzle ini.
       courseC_starWars_loops2_copy:
-        courseC_starWars_loops2: Kamu hanya punya satu blok yang tersedia di dalam
-          teka-teki ini.
+        courseC_starWars_loops2: Anda hanya punya satu blok yang tersedia di dalam
+          puzzle ini.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Kamu tidak harus menggunakan warna agar teka-teki
           ini benar. Namun jika kamu mau melakukannya, blok `warna acak` ini lebih
@@ -703,7 +703,7 @@ id-ID:
           ini benar. Namun jika kamu mau melakukannya, blok `warna acak` ini lebih
           mudah digunakan!
       courseD_artist_ramp11:
-        courseD_artist_ramp11_1: Kamu bisa merubah angka ini.
+        courseD_artist_ramp11_1: Anda bisa merubah angka ini.
         courseD_artist_ramp11_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
       courseD_bee_conditionals2:
@@ -885,11 +885,11 @@ id-ID:
         courseE_artist_functions_challenge2_callout2: Jika anda tidak menyukai desain
           ini, ubah desain ini menjadi apapun yang anda inginkan!
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
+        courseE_artist_ramp8_1: Anda bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
       courseE_artist_ramp8_2:
-        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
+        courseE_artist_ramp8_1: Anda bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
       courseE_farmer_functions1:

@@ -17,7 +17,6 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
-import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -216,7 +215,14 @@ export var blocks = [
     category: 'UI controls',
     paletteParams: ['id'],
     params: ['"id"'],
-    dropdown: {0: idDropdownWithSelector('img')},
+    dropdown: {
+      0: function() {
+        return [
+          ...idDropdownWithSelector('img')(),
+          ...idDropdownWithSelector('.img-upload')()
+        ];
+      }
+    },
     type: 'value'
   },
   {
@@ -227,7 +233,7 @@ export var blocks = [
     params: ['"id"', '"https://code.org/images/logo.png"'],
     dropdown: {
       0: idDropdownWithSelector('img'),
-      1: function() {
+      1: () => {
         return getAssetDropdown('image');
       }
     },
@@ -1108,11 +1114,8 @@ export var blocks = [
     docFunc: 'comment',
     category: 'Goals',
     noAutocomplete: true
-  }
-];
-
-if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-  blocks.push({
+  },
+  {
     func: 'getColumn',
     parent: api,
     category: 'Data',
@@ -1120,8 +1123,8 @@ if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
     params: ['"mytable"', '"mycolumn"'],
     nativeIsAsync: true,
     type: 'value'
-  });
-}
+  }
+];
 
 export const categories = {
   'UI controls': {

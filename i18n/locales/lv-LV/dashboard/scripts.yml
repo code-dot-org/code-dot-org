@@ -48,6 +48,41 @@ lv:
               name: 'Spēļu laboratorija: izvedot stāstu'
             The Big Event:
               name: Lielais notikums
+          lessons:
+            Happy Maps:
+              name: Laimīgās kartes
+            Move it, Move it:
+              name: Pārvieto to, pārvieto to
+            'Jigsaw: Learn to drag and drop':
+              name: 'Puzle: Mācies vilkt un nomest'
+            'Maze: Sequence':
+              name: 'Labirints: secība'
+            'Maze: Debugging':
+              name: 'Labirints: atkļūdošana'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            'Bee: Sequence':
+              name: 'Bite: Secība'
+            'Artist: Sequence':
+              name: 'Māsklinieks: secība'
+            Building a Foundation:
+              name: Veidot pamatus
+            'Artist: Shapes':
+              name: 'Mākslinieks: formas'
+            Spelling Bee:
+              name: Burtošanas bite
+            Getting Loopy:
+              name: Kļūst ciklisks
+            'Maze: Loops':
+              name: 'Labirints: Cikli'
+            'Bee: Loops':
+              name: 'Bite: Cikli'
+            The Big Event:
+              name: Lielais notikums
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
+            'Artist: Loops':
+              name: 'Mākslinieks: cikli'
         course2:
           title: Kurss 2
           description: 2. kurss ir veidots skolēniem, kuri prot lasīt un kuriem nav ieprieksējās programmēšnas pieredzes. Šajā kursā skolēni veidos programmas, kas risina problēmas, un radīs interaktīvas spēles vai stāstus ar kuriem var dalīties vai publicēt. Iteicams no 2.-5. klasei.
@@ -91,6 +126,43 @@ lv:
               name: Lielais notikums
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
+          lessons:
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+            'Real-life Algorithms: Paper Planes':
+              name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            'Maze: Sequence':
+              name: 'Labirints: secība'
+            'Artist: Sequence':
+              name: 'Māsklinieks: secība'
+            Getting Loopy:
+              name: Kļūst ciklisks
+            'Maze: Loops':
+              name: 'Labirints: Cikli'
+            'Artist: Loops':
+              name: 'Mākslinieks: cikli'
+            'Bee: Loops':
+              name: 'Bite: Cikli'
+            Relay programming:
+              name: Releju programmēšana
+            'Bee: Debugging':
+              name: 'Bite: atkļūdošana'
+            'Artist: Debugging':
+              name: 'Mākslinieks: atkļūdošana'
+            Conditionals:
+              name: Sazarojumi
+            'Bee: Conditionals':
+              name: 'Bite: nosacījumi'
+            Binary Bracelets:
+              name: Binārās aproces
+            The Big Event:
+              name: Lielais notikums
+            Flappy:
+              name: Flapijs
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            'Artist: Nested Loops':
+              name: 'Mākslinieks: Cikls ciklā'
         course3:
           title: Kurss 3
           description_short: 3. kurss seko 2. kursam.
@@ -138,11 +210,53 @@ lv:
               name: 'Spēļu laboratorija: Izveidot spēli'
             'Studio: Create a Story':
               name: 'Spēļu laboratorija: izvedot stāstu'
+          lessons:
+            Computational Thinking:
+              name: Algoritmiska domāšana
+            Maze:
+              name: Labirints
+            Artist:
+              name: Mākslinieks
+            Functional Suncatchers:
+              name: funkcionālie saulķērāji
+            'Artist: Functions':
+              name: 'Mākslinieks: Funkcijas'
+            'Bee: Functions':
+              name: 'Bites funkcijas'
+            'Bee: Conditionals':
+              name: 'Bite: nosacījumi'
+            'Maze: Conditionals':
+              name: 'Labirinta nosacījums'
+            Songwriting:
+              name: Dziesmu rakstīšana
+            Dice Race:
+              name: kauliņu skrējiens
+            'Artist: Nested Loops':
+              name: 'Mākslinieks: Cikls ciklā'
+            'Farmer: While Loops':
+              name: 'Lauksaimnieks: Nosacījuma cikli'
+            'Bee: Nested Loops':
+              name: 'Bite: Nosacījuma cikli'
+            'Bee: Debugging':
+              name: 'Bite: atkļūdošana'
+            Bounce:
+              name: Atlekt
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Artist: Patterns':
+              name: 'Mākslinieks: raksti'
         playlab:
           title: Spēles laboratorija
           description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
           description_short: Izveidot stāstu vai spēli ar Spēles laboratoriju!
           stages:
+            Play Lab:
+              name: Spēles laboratorija
+          lessons:
             Play Lab:
               name: Spēles laboratorija
         artist:
@@ -152,10 +266,16 @@ lv:
           stages:
             Artist:
               name: Mākslinieks
+          lessons:
+            Artist:
+              name: Mākslinieks
         hourofcode:
           description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem, augiem pret zombijiem un Skretu no Ledus laikmeta!
           description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
           stages:
+            Maze:
+              name: Labirints
+          lessons:
             Maze:
               name: Labirints
         frozen:
@@ -163,6 +283,9 @@ lv:
           description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
           description_short: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu un burvību.
           stages:
+            Artist:
+              name: Mākslinieks
+          lessons:
             Artist:
               name: Mākslinieks
         course4:
@@ -206,6 +329,43 @@ lv:
               name: 'Atvienots: Dziesmu rakstīšana ar parametriem'
             'Unplugged: Tangrams':
               name: 'Atvienots: Tangrams'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'Atvienots: Tangrams'
+            Maze and Bee:
+              name: Labirints un Bite
+            Artist:
+              name: Mākslinieks
+            'Unplugged: Envelope Variables':
+              name: 'Atvienots: Aplokšņu mainīgie'
+            'Unplugged: Madlibs':
+              name: 'Atvienots: Madlibs spēle'
+            'Artist: Variables':
+              name: 'Izpildītājs: Mainīgie'
+            'Play Lab: Variables':
+              name: 'Spēles laboratorija: Mainīgie'
+            'Unplugged: For Loop Fun':
+              name: 'Atvienots: jautrība ar "for" cikliem'
+            'Bee: For Loops':
+              name: 'Bite: Cikls ar skaitītāju'
+            'Artist: For Loops':
+              name: 'Mākslinieks: Cikls ar skaitītāju'
+            'Play Lab: For Loops':
+              name: 'Spēles laboratorija: Cikls ar skaitītāju'
+            'Artist: Functions':
+              name: 'Mākslinieks: Funkcijas'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Atvienots: Dziesmu rakstīšana ar parametriem'
+            'Artist: Functions with Parameters':
+              name: 'Mākslinieks: Funckijas ar parametriem'
+            'Play Lab: Functions with Parameters':
+              name: 'Spēles laboratorija: Funckijas ar parametriem'
+            'Bee: Functions with Parameters':
+              name: 'Bite: Funckijas ar parametriem'
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
         Course4pre:
           title: 4. kursa priekšnoteikums
           description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un 3. kursu.
@@ -229,6 +389,25 @@ lv:
               name: 'Lauksaimnieks: Nosacījuma cikli'
             'Maze: Sequence':
               name: 'Labirints: secība'
+          lessons:
+            'Maze: Sequence':
+              name: 'Labirints: secība'
+            'Artist: Sequence':
+              name: 'Māsklinieks: secība'
+            'Artist: Loops':
+              name: 'Mākslinieks: cikli'
+            'Bee: Conditionals':
+              name: 'Bite: nosacījumi'
+            'Artist: Nested Loops':
+              name: 'Mākslinieks: Cikls ciklā'
+            'Farmer: While Loops':
+              name: 'Lauksaimnieks: Nosacījuma cikli'
+            'Bee: Nested Loops':
+              name: 'Bite: Nosacījuma cikli'
+            'Artist: Functions':
+              name: 'Mākslinieks: Funkcijas'
+            'Bee: Debugging':
+              name: 'Bite: atkļūdošana'
         usability:
           title: lietojamības testēšana
           description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
@@ -243,6 +422,17 @@ lv:
               name: Ievads
             Variables:
               name: Mainīgie
+          lessons:
+            Intro:
+              name: Ievads
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+            Functions and Functions with Parameters:
+              name: funkcijas un funkcijas ar parametriem
+            Binary:
+              name: Binārie
         algebra:
           stages:
             'Eval: Conditionals':
@@ -253,12 +443,53 @@ lv:
               name: 'Atvienots: Dizaina recepte'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Atvienots: Videospēles un koordinātu plaksnes'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Atvienots: Videospēles un koordinātu plaksnes'
+            'Calc: Evaluation Blocks':
+              name: 'Kalkulators: Novērtēšanas bloki'
+            'Eval: Strings and Images':
+              name: 'Vērtēšana: simbolu virkne un attēli'
+            'Unplugged: Contracts':
+              name: 'Atvienots: līgumi'
+            'Eval: Writing Contracts':
+              name: 'Vērtēšana: Rakstiski līgumi'
+            'Calc: Defining Variables':
+              name: 'Kalkulātors: mainīgo definēšana'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Spēlu laboratorija: mainīgo definēšana (liela spēle)'
+            'Unplugged: The Design Recipe':
+              name: 'Atvienots: Dizaina recepte'
+            'Play Lab: Animation (Big Game)':
+              name: 'Spēlu laboratorija: animācija (liela spēle)'
+            'Unplugged: Booleans':
+              name: 'Atvienots: Būls'
+            'Eval: Boolean Operators':
+              name: 'Vērtēšana: būla operatori'
+            'Play Lab: Booleans':
+              name: 'Spēles laboratorija: Būls'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Spēļu laboratorija: būla operatori (liela spēle)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Atvienots: nosacījumi un hibrīdfunkcijas'
+            'Eval: Conditionals':
+              name: 'Vērtēšana: nosacījumi'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Atvienots: Sadursmes atklāšana un distances formula'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Spēlu laboratorija: sadursmes noteikšana (liela spēle)'
         infinity:
           stages:
             Infinity:
               name: Bezgalība
+          lessons:
+            Infinity:
+              name: Bezgalība
         algebrademo:
           stages:
+            The Design Recipe:
+              name: Dizaina recepte
+          lessons:
             The Design Recipe:
               name: Dizaina recepte
         K5PD:
@@ -311,6 +542,47 @@ lv:
               name: Labirints
             Wrap-up:
               name: Ietīt
+          lessons:
+            Introduction to Computer Science:
+              name: Ievads datorzinātnēs
+            The Maze:
+              name: Labirints
+            Computational Thinking:
+              name: Algoritmiska domāšana
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+            The Artist:
+              name: Mākslinieks
+            Algorithms:
+              name: Algoritmi
+            The Artist 2:
+              name: Mākslinieks 2
+            Functions:
+              name: Funkcijas
+            The Farmer:
+              name: Fermeris
+            Conditionals:
+              name: Sazarojumi
+            The Artist 3:
+              name: Mākslinieks 3
+            Song Writing:
+              name: Dziesmas rakstīšana
+            The Farmer 2:
+              name: Fermeris 2
+            Abstraction:
+              name: Abstrakcija
+            The Artist 4:
+              name: Mākslinieks 4
+            Relay Programming:
+              name: Releju programmēšana
+            The Farmer 3:
+              name: Fermeris 3
+            The Internet:
+              name: Internets
+            The Artist 5:
+              name: Mākslinieks 5
+            Wrap-up:
+              name: Ietīt
         edit-code:
           title: rediģēt kodu
           description: rediģēt kodu
@@ -322,11 +594,21 @@ lv:
               name: Mākslinieks
             The Maze:
               name: Labirints
+          lessons:
+            The Maze:
+              name: Labirints
+            The Artist:
+              name: Mākslinieks
+            Play Lab:
+              name: Spēles laboratorija
         events:
           title: Pasākumi
           description: Pasākumi
           description_short: Pasākumi
           stages:
+            Bounce:
+              name: Atlekt
+          lessons:
             Bounce:
               name: Atlekt
         flappy:
@@ -335,14 +617,23 @@ lv:
           stages:
             Flappy Code:
               name: Flappy kods
+          lessons:
+            Flappy Code:
+              name: Flappy kods
         jigsaw:
           title: Puzle
           stages:
             Jigsaw:
               name: Puzle
+          lessons:
+            Jigsaw:
+              name: Puzle
         step:
           title: Solis
           stages:
+            Step:
+              name: Solis
+          lessons:
             Step:
               name: Solis
         Hour of Code:
@@ -351,12 +642,23 @@ lv:
           stages:
             Teacher Dashboard:
               name: Skolotāju darba galds
+          lessons:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
         algPDmiami:
           stages:
             Booleans:
               name: Booleans
+          lessons:
+            Booleans:
+              name: Booleans
         cspunit3:
           stages:
+            Creating Functions:
+              name: Funkciju veidošana
+            While Loops:
+              name: Nosacījuma cikli
+          lessons:
             Creating Functions:
               name: Funkciju veidošana
             While Loops:
@@ -367,20 +669,37 @@ lv:
               name: Skolotāju darba galds
             The Design Recipe:
               name: Dizaina recepte
+          lessons:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
+            The Design Recipe:
+              name: Dizaina recepte
         algebraPD-NexTech:
           stages:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
+          lessons:
             Teacher Dashboard:
               name: Skolotāju darba galds
         algebraPD-iZone:
           stages:
             Teacher Dashboard:
               name: Skolotāju darba galds
+          lessons:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
         sciencePD2:
           stages:
             Wrap-Up:
               name: Kopsavilkums
+          lessons:
+            Wrap-Up:
+              name: Kopsavilkums
         cspunit2:
           stages:
+            The Internet:
+              name: Internets
+          lessons:
             The Internet:
               name: Internets
         algebraPD2a:
@@ -389,6 +708,11 @@ lv:
               name: Booleans
             The Design Recipe:
               name: Dizaina recepte
+          lessons:
+            The Design Recipe:
+              name: Dizaina recepte
+            Booleans:
+              name: Booleans
         allthethings:
           stages:
             Artist:
@@ -407,6 +731,23 @@ lv:
               name: Labirints
             Multi:
               name: Multi
+          lessons:
+            Jigsaw:
+              name: Puzle
+            Maze:
+              name: Labirints
+            Artist:
+              name: Mākslinieks
+            Bee:
+              name: Bite
+            Flappy:
+              name: Flapijs
+            Bounce:
+              name: Atlekt
+            Multi:
+              name: Multi
+            Match:
+              name: Sakrīt
         algebraPD2b:
           stages:
             Booleans:
@@ -415,14 +756,35 @@ lv:
               name: 'Vērtēšana: nosacījumi'
             Teacher Dashboard:
               name: Skolotāju darba galds
+          lessons:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
+            Booleans:
+              name: Booleans
+            'Eval: Conditionals':
+              name: 'Vērtēšana: nosacījumi'
         cspfacilitator:
           stages:
             App Lab:
               name: Aplikāciju laborotorija
             Internet Simulator:
               name: Interneta simulators
+          lessons:
+            Internet Simulator:
+              name: Interneta simulators
+            App Lab:
+              name: Aplikāciju laborotorija
         ECSPD2:
           stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Ietīt
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -437,16 +799,30 @@ lv:
               name: Skolotāju darba galds
             The Design Recipe:
               name: Dizaina recepte
+          lessons:
+            The Design Recipe:
+              name: Dizaina recepte
+            Teacher Dashboard:
+              name: Skolotāju darba galds
         sciencePD2b:
           stages:
+            Wrap-Up:
+              name: Kopsavilkums
+          lessons:
             Wrap-Up:
               name: Kopsavilkums
         science-PD2:
           stages:
             Wrap-Up:
               name: Kopsavilkums
+          lessons:
+            Wrap-Up:
+              name: Kopsavilkums
         sciencePD2b-iZone:
           stages:
+            Wrap-Up:
+              name: Kopsavilkums
+          lessons:
             Wrap-Up:
               name: Kopsavilkums
         ECSPD2-iZone:
@@ -459,8 +835,26 @@ lv:
               What Is a Computer?
             Wrap-up:
               name: Ietīt
+          lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Ietīt
         ECSPD2-NexTech:
           stages:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Ietīt
+          lessons:
             0: |-
               Unit 1, Days 1-2
               What Is a Computer?
@@ -489,6 +883,25 @@ lv:
               name: Dziesmu rakstīšana
             The Big Event:
               name: Lielais notikums
+          lessons:
+            Happy Maps:
+              name: Laimīgās kartes
+            Move it, Move it:
+              name: Pārvieto to, pārvieto to
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+            Building a Foundation:
+              name: Veidot pamatus
+            Getting Loopy:
+              name: Kļūst ciklisks
+            The Big Event:
+              name: Lielais notikums
+            Binary Bracelets:
+              name: Binārās aproces
+            Songwriting:
+              name: Dziesmu rakstīšana
         ScienceP3OLPT2:
           stages:
             Wrap-Up:
@@ -501,10 +914,16 @@ lv:
           stages:
             While Loops:
               name: Nosacījuma cikli
+          lessons:
+            While Loops:
+              name: Nosacījuma cikli
         mc:
           description_short: Iepazīsti Minecraft pasauli, izmantojot kodu
         ScienceP3OLPT3:
           stages:
+            Wrap-Up:
+              name: Kopsavilkums
+          lessons:
             Wrap-Up:
               name: Kopsavilkums
         AlgebraA:
@@ -519,6 +938,19 @@ lv:
               name: 'Vērtēšana: Rakstiski līgumi'
             'Unplugged: Contracts':
               name: 'Atvienots: līgumi'
+            'Unplugged: The Design Recipe':
+              name: 'Atvienots: Dizaina recepte'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'Kalkulators: Novērtēšanas bloki'
+            'Eval: Strings and Images':
+              name: 'Vērtēšana: simbolu virkne un attēli'
+            'Unplugged: Contracts':
+              name: 'Atvienots: līgumi'
+            'Eval: Writing Contracts':
+              name: 'Vērtēšana: Rakstiski līgumi'
+            'Calc: Defining Variables':
+              name: 'Kalkulātors: mainīgo definēšana'
             'Unplugged: The Design Recipe':
               name: 'Atvienots: Dizaina recepte'
         AlgebraB:
@@ -545,20 +977,55 @@ lv:
               name: 'Atvienots: nosacījumi un hibrīdfunkcijas'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Atvienots: Videospēles un koordinātu plaksnes'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Atvienots: Videospēles un koordinātu plaksnes'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Spēlu laboratorija: mainīgo definēšana (liela spēle)'
+            'Play Lab: Animation (Big Game)':
+              name: 'Spēlu laboratorija: animācija (liela spēle)'
+            'Unplugged: Booleans':
+              name: 'Atvienots: Būls'
+            'Eval: Boolean Operators':
+              name: 'Vērtēšana: būla operatori'
+            'Play Lab: Booleans':
+              name: 'Spēles laboratorija: Būls'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Spēļu laboratorija: būla operatori (liela spēle)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Atvienots: nosacījumi un hibrīdfunkcijas'
+            'Eval: Conditionals':
+              name: 'Vērtēšana: nosacījumi'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Atvienots: Sadursmes atklāšana un distances formula'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Spēlu laboratorija: sadursmes noteikšana (liela spēle)'
         algebraPD1:
           stages:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
+          lessons:
             Teacher Dashboard:
               name: Skolotāju darba galds
         csp1-2017:
           stages:
             The Internet:
               name: Internets
+          lessons:
+            The Internet:
+              name: Internets
         csp3-2017:
           stages:
             Creating Functions:
               name: Funkciju veidošana
+          lessons:
+            Creating Functions:
+              name: Funkciju veidošana
         csp5-2017:
           stages:
+            While Loops:
+              name: Nosacījuma cikli
+          lessons:
             While Loops:
               name: Nosacījuma cikli
         CSDU3-Draft:
@@ -573,6 +1040,9 @@ lv:
           stages:
             Teacher Dashboard:
               name: Skolotāju darba galds
+          lessons:
+            Teacher Dashboard:
+              name: Skolotāju darba galds
         cspunit1-support:
           lesson_groups:
             required:
@@ -585,6 +1055,9 @@ lv:
           stages:
             Artist Functions:
               name: Mākslinieks funkcijas
+          lessons:
+            Artist Functions:
+              name: Mākslinieks funkcijas
         artistExemplar:
           description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
         teachercon:
@@ -593,6 +1066,9 @@ lv:
               display_name: Pārskats
         kinderTest:
           stages:
+            'Bee: Conditionals':
+              name: 'Bite: nosacījumi'
+          lessons:
             'Bee: Conditionals':
               name: 'Bite: nosacījumi'
         gradeKinder:
@@ -651,6 +1127,15 @@ lv:
               What Is a Computer?
             Wrap-up:
               name: Ietīt
+          lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            Wrap-up:
+              name: Ietīt
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -675,6 +1160,15 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+          lessons:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
         grade2:
           stages:
             Flappy:
@@ -707,12 +1201,38 @@ lv:
               name: Mainīgie
             While Loops:
               name: Nosacījuma cikli
+          lessons:
+            Events:
+              name: Pasākumi
+            Loops:
+              name: Cikli
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals:
+              name: Sazarojumi
+            While Loops:
+              name: Nosacījuma cikli
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
+            Binary:
+              name: Binārie
         algebrapdnext:
           stages:
             Teacher Dashboard:
               name: Skolotāju darba galds
             The Design Recipe:
               name: Dizaina recepte
+          lessons:
+            The Design Recipe:
+              name: Dizaina recepte
+            Teacher Dashboard:
+              name: Skolotāju darba galds
         csp-online-test:
           lesson_groups:
             required:
@@ -723,6 +1243,9 @@ lv:
               display_name: Pārskats
         basketball:
           stages:
+            Bounce:
+              name: Atlekt
+          lessons:
             Bounce:
               name: Atlekt
         fesbinary:
@@ -738,6 +1261,9 @@ lv:
           stages:
             Lists:
               name: Saraksti
+          lessons:
+            Lists:
+              name: Saraksti
         csp2-support:
           lesson_groups:
             required:
@@ -746,14 +1272,27 @@ lv:
           stages:
             Flappy Code:
               name: Flappy kods
+          lessons:
+            Flappy Code:
+              name: Flappy kods
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Going Places Safely:
               name: Nokļūst galamērķos droši
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
         courseb-draft:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Your Digital Footprint:
@@ -768,6 +1307,13 @@ lv:
               name: Tavs digitālais nospiedums
             Building a Foundation:
               name: Veidot pamatus
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            'Real-life Algorithms: Paper Planes':
+              name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            Binary Bracelets:
+              name: Binārās aproces
         coursed-draft:
           stages:
             Conditionals with Cards:
@@ -782,6 +1328,19 @@ lv:
               name: Cikls ciklā
             Introduction:
               name: Ievads
+          lessons:
+            Introduction:
+              name: Ievads
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
         coursee-draft:
           stages:
             Digital Citizenship:
@@ -794,6 +1353,15 @@ lv:
               name: Ievads
             Conditionals:
               name: Sazarojumi
+          lessons:
+            Introduction:
+              name: Ievads
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -806,6 +1374,15 @@ lv:
               name: Dziesmu rakstīšana ar Parametriem
             Introduction:
               name: Ievads
+          lessons:
+            Introduction:
+              name: Ievads
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Songwriting with Parameters:
+              name: Dziesmu rakstīšana ar Parametriem
         classic-hoc-impact-study:
           description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
         hoc-impact-study:
@@ -814,8 +1391,14 @@ lv:
           stages:
             Wrap-Up:
               name: Kopsavilkums
+          lessons:
+            Wrap-Up:
+              name: Kopsavilkums
         2016_sciencePD_phase2b:
           stages:
+            Wrap-Up:
+              name: Kopsavilkums
+          lessons:
             Wrap-Up:
               name: Kopsavilkums
         csp3-support:
@@ -830,6 +1413,9 @@ lv:
           stages:
             Wrap-Up:
               name: Kopsavilkums
+          lessons:
+            Wrap-Up:
+              name: Kopsavilkums
         science-pd-ol-pt-5:
           stages:
             Wrap-Up:
@@ -838,8 +1424,14 @@ lv:
           stages:
             Binary:
               name: Binārie
+          lessons:
+            Binary:
+              name: Binārie
         sciencepd5:
           stages:
+            Wrap-Up:
+              name: Kopsavilkums
+          lessons:
             Wrap-Up:
               name: Kopsavilkums
         csp5-support:
@@ -854,12 +1446,21 @@ lv:
               name: '"par" cikli'
             Functions with Parameters:
               name: Funkcijas ar parametriem
+          lessons:
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
         workshop-gamelab:
           stages:
             Introduction:
               name: Ievads
+          lessons:
+            Introduction:
+              name: Ievads
         coursed-ramp:
           stages:
+            Introduction:
+              name: Ievads
+          lessons:
             Introduction:
               name: Ievads
         coursee-ramp:
@@ -870,6 +1471,13 @@ lv:
               name: Sazarojumi
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmi dzīvē: Metamo kauliņu sacīkstes'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'Algoritmi dzīvē: Metamo kauliņu sacīkstes'
+            Introduction:
+              name: Ievads
+            Conditionals:
+              name: Sazarojumi
         csd6-2017:
           stages:
             Lists:
@@ -896,6 +1504,11 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+          lessons:
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
         csd2-draft:
           stages:
             Lists:
@@ -916,26 +1529,62 @@ lv:
           stages:
             Introduction:
               name: Ievads
+          lessons:
+            Introduction:
+              name: Ievads
         artist-and-bb8:
           stages:
+            Bounce:
+              name: Atlekt
+          lessons:
             Bounce:
               name: Atlekt
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            'Real-life Algorithms: Paper Planes':
+              name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            Binary Bracelets:
+              name: Binārās aproces
         coursed-2017:
           stages:
             Nested Loops:
               name: Cikls ciklā
+          lessons:
+            Introduction:
+              name: Ievads
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
         coursee-2017:
           stages:
             Envelope Variables:
@@ -951,6 +1600,19 @@ lv:
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+            Introduction:
+              name: Ievads
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         coursef-2017:
           stages:
             Building a Foundation:
@@ -958,6 +1620,17 @@ lv:
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Introduction:
+              name: Ievads
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Songwriting with Parameters:
+              name: Dziesmu rakstīšana ar Parametriem
         cspnovice:
           lesson_groups:
             required:
@@ -1026,8 +1699,20 @@ lv:
               name: Veidot pamatus
             Nested Loops:
               name: Cikls ciklā
+          lessons:
+            Introduction:
+              name: Ievads
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
         pre-express-2017:
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            Spelling Bee:
+              name: Burtošanas bite
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Spelling Bee:
@@ -1038,6 +1723,9 @@ lv:
               name: Paldies
         csp3-research-mxghyt:
           stages:
+            Creating Functions:
+              name: Funkciju veidošana
+          lessons:
             Creating Functions:
               name: Funkciju veidošana
         e-f-ramp:
@@ -1055,6 +1743,15 @@ lv:
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         new-d:
           stages:
             Introduction:
@@ -1071,8 +1768,28 @@ lv:
               name: 'Mākslinieks: Binārais'
             Building a Foundation:
               name: Veidot pamatus
+          lessons:
+            Introduction:
+              name: Ievads
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
         new-express:
           stages:
+            Introduction:
+              name: Ievads
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+          lessons:
             Introduction:
               name: Ievads
             Building a Foundation:
@@ -1092,6 +1809,15 @@ lv:
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         new-f:
           stages:
             Building a Foundation:
@@ -1105,8 +1831,20 @@ lv:
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Songwriting with Parameters:
+              name: Dziesmu rakstīšana ar Parametriem
         csp3-staging:
           stages:
+            Creating Functions:
+              name: Funkciju veidošana
+          lessons:
             Creating Functions:
               name: Funkciju veidošana
         course-e-2018:
@@ -1126,6 +1864,19 @@ lv:
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+            Introduction:
+              name: Ievads
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1141,14 +1892,39 @@ lv:
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Introduction:
+              name: Ievads
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Songwriting with Parameters:
+              name: Dziesmu rakstīšana ar Parametriem
         csd6-old:
           stages:
             Lists:
               name: Saraksti
             For Loops:
               name: '"par" cikli'
+          lessons:
+            Lists:
+              name: Saraksti
+            For Loops:
+              name: '"par" cikli'
         csd3-1819draft:
           stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+          lessons:
             Variables:
               name: Mainīgie
             Conditionals:
@@ -1167,14 +1943,31 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+          lessons:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
         csd2-2018:
           stages:
+            Lists:
+              name: Saraksti
+          lessons:
             Lists:
               name: Saraksti
         coursea-2018:
           stages:
             'Programming: Happy Maps':
               name: Laimīgās kartes
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Going Places Safely:
               name: Nokļūst galamērķos droši
         express-2018:
@@ -1213,6 +2006,27 @@ lv:
               name: Releju programmēšana
             Graph Paper Programming:
               name: Rūtiņpapīra programmēšana
+          lessons:
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Binary Bracelets:
+              name: Binārās aproces
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1221,6 +2035,11 @@ lv:
               name: Tavs digitālais nospiedums
             Move It, Move It:
               name: Ej, ej
+          lessons:
+            Move It, Move It:
+              name: Ej, ej
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1241,6 +2060,17 @@ lv:
               name: Rūtiņpapīra programmēšana
             Relay Programming:
               name: Releju programmēšana
+          lessons:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1251,8 +2081,18 @@ lv:
               name: Lielais notikums
             Binary Bracelets:
               name: Binārās aproces
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            'Real-life Algorithms: Paper Planes':
+              name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            Binary Bracelets:
+              name: Binārās aproces
         csd6-2018:
           stages:
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
+          lessons:
             Functions with Parameters:
               name: Funkcijas ar parametriem
         coursee-2018:
@@ -1274,6 +2114,19 @@ lv:
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Conditionals:
+              name: Sazarojumi
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -1293,16 +2146,34 @@ lv:
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
         csp1-2018:
           stages:
+            The Internet:
+              name: Internets
+          lessons:
             The Internet:
               name: Internets
         csp3-2018:
           stages:
             Creating Functions:
               name: Funkciju veidošana
+          lessons:
+            Creating Functions:
+              name: Funkciju veidošana
         csp5-2018:
           stages:
+            While Loops:
+              name: Nosacījuma cikli
+          lessons:
             While Loops:
               name: Nosacījuma cikli
         csd1-dlp-18:
@@ -1383,6 +2254,13 @@ lv:
               name: Ej, ej
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
+          lessons:
+            Move It, Move It:
+              name: Ej, ej
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            Spelling Bee:
+              name: Burtošanas bite
         fit-test:
           lesson_groups:
             required:
@@ -1391,12 +2269,21 @@ lv:
           stages:
             Artist:
               name: Mākslinieks
+          lessons:
+            Artist:
+              name: Mākslinieks
         frozen-2018-test:
           stages:
             Artist:
               name: Mākslinieks
+          lessons:
+            Artist:
+              name: Mākslinieks
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: Mākslinieks
+          lessons:
             Artist:
               name: Mākslinieks
         cspplayground:
@@ -1432,6 +2319,15 @@ lv:
               display_name: Internets
             csf_digcit:
               display_name: Digitālā pilsonība
+          lessons:
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1457,6 +2353,17 @@ lv:
               display_name: Binārie
             csf_digcit:
               display_name: Digitālā pilsonība
+          lessons:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Digital Citizenship:
+              name: Digitālā pilsonība
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1480,6 +2387,9 @@ lv:
               display_name: Cikls ciklā
             csf_functions:
               display_name: Funkcijas
+          lessons:
+            Conditionals:
+              name: Sazarojumi
         express-2019:
           stages:
             Relay Programming:
@@ -1535,6 +2445,9 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Binary Bracelets:
+              name: Binārās aproces
         coursea-2019:
           stages:
             'Programming: Happy Maps':
@@ -1548,6 +2461,9 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1563,6 +2479,11 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            Move It, Move It:
+              name: Ej, ej
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1576,12 +2497,21 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Spelling Bee:
+              name: Burtošanas bite
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
         csd2-2019:
           stages:
+            Lists:
+              name: Saraksti
+          lessons:
             Lists:
               name: Saraksti
         csd3-2019:
@@ -1594,8 +2524,20 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+          lessons:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
         csd6-2019:
           stages:
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
+          lessons:
             Functions with Parameters:
               name: Funkcijas ar parametriem
         csp4-pilot:
@@ -1612,12 +2554,21 @@ lv:
           stages:
             The Internet:
               name: Internets
+          lessons:
+            The Internet:
+              name: Internets
         csp3-2019:
           stages:
             Creating Functions:
               name: Funkciju veidošana
+          lessons:
+            Creating Functions:
+              name: Funkciju veidošana
         csp5-2019:
           stages:
+            While Loops:
+              name: Nosacījuma cikli
+          lessons:
             While Loops:
               name: Nosacījuma cikli
         csp1-pilot:
@@ -1632,6 +2583,13 @@ lv:
               name: nosacījumi ar kārtēm
             Building a Foundation:
               name: Veidot pamatus
+          lessons:
+            Building a Foundation:
+              name: Veidot pamatus
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1728,6 +2686,15 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+          lessons:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
         csp3-pilot:
           lesson_groups:
             required:
@@ -1788,6 +2755,11 @@ lv:
               name: Ievads
             Nested Loops:
               name: Cikls ciklā
+          lessons:
+            Introduction:
+              name: Ievads
+            Nested Loops:
+              name: Cikls ciklā
         csp6-pilot:
           lesson_groups:
             required:
@@ -1800,6 +2772,19 @@ lv:
               name: Sazarojumi
             Events:
               name: Pasākumi
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+          lessons:
+            Loops:
+              name: Cikli
+            Events:
+              name: Pasākumi
+            Conditionals:
+              name: Sazarojumi
             Functions:
               name: Funkcijas
             Variables:
@@ -1833,6 +2818,11 @@ lv:
               display_name: Cikls ciklā
             csf_functions:
               display_name: Funkcijas
+          lessons:
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -1846,6 +2836,9 @@ lv:
               display_name: Pasākumi
             csf_digcit:
               display_name: Digitālā pilsonība
+          lessons:
+            Conditionals:
+              name: Sazarojumi
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
@@ -1859,6 +2852,9 @@ lv:
               display_name: Pasākumi
             csf_digcit:
               display_name: Digitālā pilsonība
+          lessons:
+            Conditionals:
+              name: Sazarojumi
         csp7-pilot:
           lesson_groups:
             required:
@@ -1881,6 +2877,9 @@ lv:
           stages:
             Functions with Parameters:
               name: Funkcijas ar parametriem
+          lessons:
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
         csd3-2020:
           stages:
             Variables:
@@ -1893,6 +2892,17 @@ lv:
               name: Funkcijas
             Text:
               name: Teksts
+          lessons:
+            Variables:
+              name: Mainīgie
+            Text:
+              name: Teksts
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
         coursea-2020:
           stages:
             Going Places Safely:
@@ -1921,6 +2931,9 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Move It, Move It:
+              name: Ej, ej
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -1936,6 +2949,9 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Binary Bracelets:
+              name: Binārās aproces
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1961,6 +2977,15 @@ lv:
               display_name: Binārie
             csf_digcit:
               display_name: Digitālā pilsonība
+          lessons:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -1972,6 +2997,9 @@ lv:
               display_name: Cikls ciklā
             csf_functions:
               display_name: Funkcijas
+          lessons:
+            Conditionals:
+              name: Sazarojumi
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1989,6 +3017,13 @@ lv:
               display_name: Mainīgie
             csf_for_loops:
               display_name: '"par" cikli'
+          lessons:
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            Internet:
+              name: Internets
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
         express-2020:
           lesson_groups:
             csf_loops:
@@ -2010,8 +3045,14 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+          lessons:
+            Spelling Bee:
+              name: Burtošanas bite
         csp3-virtual:
           stages:
+            Creating Functions:
+              name: Funkciju veidošana
+          lessons:
             Creating Functions:
               name: Funkciju veidošana
         csd3-virtual:
@@ -2024,14 +3065,27 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+          lessons:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
         csp5-virtual:
           stages:
             While Loops:
               name: Nosacījuma cikli
             Variables:
               name: Mainīgie
+          lessons:
+            Variables:
+              name: Mainīgie
         virtual-holding-place:
           stages:
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+          lessons:
             Velocity:
               name: Ātrums
             Functions:
@@ -2044,5 +3098,8 @@ lv:
               name: Pasākumi
         csp5-virtual-part2:
           stages:
+            While Loops:
+              name: Nosacījuma cikli
+          lessons:
             While Loops:
               name: Nosacījuma cikli

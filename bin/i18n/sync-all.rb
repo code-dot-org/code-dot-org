@@ -204,6 +204,13 @@ class I18nSync
 
     I18nScriptUtils.git_add_and_commit(
       [
+        "bin/i18n/crowdin/*etags.json"
+      ],
+      "etags updates"
+    )
+
+    I18nScriptUtils.git_add_and_commit(
+      [
         "pegasus/cache",
         "i18n/locales/*-*/pegasus",
       ],

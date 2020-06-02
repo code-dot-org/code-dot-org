@@ -1475,6 +1475,8 @@
   header_teacher_community: "Comunidad de docentes"
   header_help_support: 'Ayuda y soporte '
   header_report_bug: "Reportar un error"
+  header_legal_privacy: "Política de privacidad"
+  header_legal_tos: "Términos de uso"
   header_tutorials: "Tutoriales"
   app_lab_documentation: "Documentación del Laboratorio de aplicaciones"
   app_lab_tutorials: "Tutoriales del Laboratorio de aplicaciones"

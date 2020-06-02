@@ -9520,14 +9520,23 @@ de-DE:
         courseC_artist_prog2_a: '*"Wenn du den Baustein <xml><block type="draw_move_by_constant"><title
           name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
           verwendest, werde ich eine Linie zeichnen."*'
+        courseC_artist_prog2_b: Kriegst du die Kurve hier nicht richtig? Verwende
+          den Baustein <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title
+          name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog2_2018:
         courseC_artist_prog2_a: '*"Wenn du den Baustein <xml><block type="draw_move_by_constant"><title
           name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
           verwendest, werde ich eine Linie zeichnen."*'
+        courseC_artist_prog2_b: Kriegst du die Kurve hier nicht richtig? Verwende
+          den Baustein <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title
+          name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog2_2019:
         courseC_artist_prog2_a: '*"Wenn du den Baustein <xml><block type="draw_move_by_constant"><title
           name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
           verwendest, werde ich eine Linie zeichnen."*'
+        courseC_artist_prog2_b: Kriegst du die Kurve hier nicht richtig? Verwende
+          den Baustein <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title
+          name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog3:
         courseC_artist_prog3_a: "Um dieses Fenster zu erstellen, zeichne einfach ein
           Quadrat mit 100-Pixel-Seiten.\n\n-   vorwärts bewegen \n-   drehen \n-   vorwärts
@@ -9675,6 +9684,30 @@ de-DE:
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
+      courseC_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: Du kannst dies als ein Rechteck mit einer
+          Linie in der Mitte oder als zwei verschiedene Quadrate zeichnen!
+      courseC_artist_prog_challenge1_2018:
+        courseC_artist_prog_challenge1_a: Du kannst dies als ein Rechteck mit einer
+          Linie in der Mitte oder als zwei verschiedene Quadrate zeichnen!
+      courseC_artist_prog_challenge1_2019:
+        courseC_artist_prog_challenge1_a: Du kannst dies als ein Rechteck mit einer
+          Linie in der Mitte oder als zwei verschiedene Quadrate zeichnen!
+      courseC_artist_prog_challenge2a:
+        courseC_artist_prog_challenge2_a: Wenn du die erste Linie gezogen hast, drehe
+          dich nach links, bevor du die zweite Linie ziehst.
+        courseC_artist_prog_challenge2_b: Nachdem du die zweite Linie gezogen hast,
+          drehe dich nach rechts, bevor du die dritte Linie ziehst.
+      courseC_artist_prog_challenge2a_2018:
+        courseC_artist_prog_challenge2_a: Wenn du die erste Linie gezogen hast, drehe
+          dich nach links, bevor du die zweite Linie ziehst.
+        courseC_artist_prog_challenge2_b: Nachdem du die zweite Linie gezogen hast,
+          drehe dich nach rechts, bevor du die dritte Linie ziehst.
+      courseC_artist_prog_challenge2a_2019:
+        courseC_artist_prog_challenge2_a: Wenn du die erste Linie gezogen hast, drehe
+          dich nach links, bevor du die zweite Linie ziehst.
+        courseC_artist_prog_challenge2_b: Nachdem du die zweite Linie gezogen hast,
+          drehe dich nach rechts, bevor du die dritte Linie ziehst.
       courseC_collector_loops_challenge2:
         courseC_maze_loops_challenge2_b: Verwende Schleifen, damit du nicht zu viele
           ˋsammelnˋ-Bausteine brauchst!
@@ -18056,6 +18089,54 @@ de-DE:
           um deinen Code zu verkürzen.
         grade5_artist_variables_triangles1_c: Du willst dich in deiner Schleife um
           50 Pixel vorwärts bewegen und dich dann um 120 Grad nach links drehen.
+      iceage_click_hello:
+        iceage_click_hello_a: Füge einen oder mehrere "Figur 1 sagt"-Bausteine zu
+          dem Ereignis "wenn angeklickt" hinzu, um diese Aufgabe abzuschließen.
+      iceage_free_play:
+        iceage_free_play_a: Kannst du Sid und Manny mit Eiskristallen kämpfen lassen?
+        iceage_free_play_b: Lass Granny Diego jagen. Das Spiel endet als Sieg, wenn
+          sie ihn fängt.
+        iceage_free_play_c: Kannst du Sid Schneeflocken auf Diego werfen lassen und
+          dafür sorgen, dass Diego bei jedem Treffer größer wird? Das Spiel endet
+          als Sieg, wenn Diego 5 Mal getroffen wird.
+      iceage_hello1:
+        iceage_hello1_a: Du musst nur einen Baustein hinzufügen, um diese Aufgabe
+          zu lösen. Ziehe den `sagen`-Baustein aus der Werkzeugleiste heraus und verbinde
+          ihn mit dem `wenn ausgeführt wird`Ereignisbaustein, der sich bereits im
+          Arbeitsbereich befindet. Als nächstes tippe "Hallo!" hinein.
+      iceage_hello2:
+        iceage_hello2_a: Um diese Aufgabe zu lösen, musst du Sid etwas sagen lassen,
+          indem du den Baustein `Figur 1 sagt` verwendest. Du musst auch Manny etwas
+          mit dem `Figur 2 sagt`-Baustein sagen lassen.
+      iceage_move_events:
+        iceage_move_events_a: Jedes der "Wenn \_\_\_ Pfeil"-Ereignisse muss mit einem
+          anderen "Figur 1 bewegen"-Befehl verbunden sein, um diese Aufgabe zu lösen.
+      iceage_move_to_actor:
+        iceage_move_to_actor_a: Für diese Aufgabe kannst du entweder Diego um 200
+          Pixel nach unten oder Manny um 200 Pixel nach oben verschieben.
+        iceage_move_to_actor_b: Verbinde den `Ton__abspielen`-Baustein mit dem Ereignis
+          `wenn Figur 1 Figur 2 berührt`, um diese Aufgabe abzuschließen.
+      iceage_move_to_flag:
+        iceage_hello3_a: Verwende den Baustein `Figur 1 nach rechts um 200 Pixel verschieben`,
+          um diese Aufgabe zu lösen.
+      iceage_repeat:
+        iceage_repeat_a: Verwende die beiden Bausteine `Figur 1 nach links bewegen`
+          und `Figur 1 nach rechts bewegen`, um diese Aufgabe zu lösen.
+      iceage_sound_and_points:
+        iceage_sound_and_points_a: Du musst zwei Bausteine unter dem Ereignis `wenn
+          Figur 1 Figur 2 berührt` hinzufügen.
+        iceage_sound_and_points_b: Du benötigst den `Punkt`-Baustein und den `Spiel
+          \_\_\_\_\_\_ Ton ab\` Baustein, um diesen Level zu bestehen.
+      iceage_throw_hearts:
+        iceage_throw_hearts_a: Wann willst du Granny Herzen schicken? Wenn ein Pfeil
+          gedrückt wird? Wenn du auf Sid klickst? Wenn du auf Granny klickst? Du hast
+          die Wahl!
+        iceage_throw_hearts_b: Um Granny glücklich zu machen, wenn sie ein Herz erhält,
+          musst du den `Stimmung von Figur 2 auf glücklich setzen`Baustein unter dem
+          Ereignis `wenn Figur 2 das Geschoss berührt` verbinden.
       iceage_warn_ice_age:
         iceage_warn_ice_age_a: 'Du solltest nur zwei Blöcke hinzufügen müssen, um
           dieses Puzzle zu vervollständigen. '
+        iceage_warn_ice_age_b: Füge die beiden neuen Bausteine unter dem Ereignis
+          `wenn ausgeführt wird` hinzu, damit sie unmittelbar nach dem Programmstart
+          ausgeführt werden.

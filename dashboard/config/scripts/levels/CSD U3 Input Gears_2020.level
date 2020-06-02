@@ -91,7 +91,7 @@
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
     "show_debug_watch": "true",
-    "encrypted_examples": "RGw/zx1snIRr0CgGlXj29iiDvbUHBrhBFwibH+Ior1dHcG6miA6vnHNeWDFb\nL4XH1h9f2ZSmdCm2kZmdTwcznA==\n",
+    "encrypted_examples": "1MJQafSMTFzmsXItzQFy5Ma7J79qUs60kuaVq1hYLR8xDrSCHDqlxwqMVEfx\nzoBavFyUz2u4sxY1lVJlOeAHdQ==\n",
     "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blue_gear\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"green_gear\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"red_gear\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  blueGear.rotation = blueGear.rotation - 1;\r\n  greenGear.rotation = greenGear.rotation + 1;\r\n  redGear.rotation = redGear.rotation + 1;\r\n  drawSprites();\r\n}\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -100,24 +100,28 @@
     "parent_level_id": 18562,
     "name_suffix": "_2020",
     "reference_links": [
-      "/docs/gamelab/keyDown/index.html",
-      "/docs/csd-1718/if_statements/index.html",
-      "/docs/csd-1718/booleans/index.html",
-      "/docs/csd-1718/counter_pattern/index.html",
-      "/docs/csd-1718/sprite_properties/index.html",
-      "/docs/csd-1718/sprites/index.html"
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/javascript/random-numbers/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/"
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:24:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 19:04:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:24:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 19:04:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-21 17:38:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:37:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

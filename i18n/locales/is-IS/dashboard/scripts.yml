@@ -62,6 +62,41 @@ is:
               name: 'Leikjasmiðja: Búa til sögu'
             The Big Event:
               name: Stórviðburður
+          lessons:
+            Happy Maps:
+              name: Krúttleg kort
+            Move it, Move it:
+              name: Hreyfa, hreyfa
+            'Jigsaw: Learn to drag and drop':
+              name: 'Púsl: Læra að draga og sleppa'
+            'Maze: Sequence':
+              name: 'Völundarhús: Röð'
+            'Maze: Debugging':
+              name: 'Völundarhús: Villuleit'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            'Bee: Sequence':
+              name: 'Býfluga: Röð'
+            'Artist: Sequence':
+              name: 'Listamaður: Röð'
+            Building a Foundation:
+              name: Að byggja grunn
+            'Artist: Shapes':
+              name: 'Listamaður: Form'
+            Spelling Bee:
+              name: Stafsetning
+            Getting Loopy:
+              name: Lykkjulæti
+            'Maze: Loops':
+              name: 'Völundarhús: Lykkjur'
+            'Bee: Loops':
+              name: 'Býfluga: Lykkjur'
+            The Big Event:
+              name: Stórviðburður
+            Going Places Safely:
+              name: Ferðast í öryggi
+            'Artist: Loops':
+              name: 'Listamaður: Lykkjur'
         course2:
           title: Námskeið 2
           description: Byrja með Námskeið 2 fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Mælt með fyrir 2. - 5. bekk.
@@ -106,6 +141,43 @@ is:
               name: Stórviðburður
             Your Digital Footprint:
               name: Stafræna fótsporið þitt
+          lessons:
+            Graph Paper Programming:
+              name: Forritun rúðublaða
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algrím úr raunheimi: Pappírsskutlur'
+            'Maze: Sequence':
+              name: 'Völundarhús: Röð'
+            'Artist: Sequence':
+              name: 'Listamaður: Röð'
+            Getting Loopy:
+              name: Lykkjulæti
+            'Maze: Loops':
+              name: 'Völundarhús: Lykkjur'
+            'Artist: Loops':
+              name: 'Listamaður: Lykkjur'
+            'Bee: Loops':
+              name: 'Býfluga: Lykkjur'
+            Relay programming:
+              name: Boðhlaupsforritun
+            'Bee: Debugging':
+              name: 'Býfluga: Villuleit'
+            'Artist: Debugging':
+              name: 'Listamaður: Villuleit'
+            Conditionals:
+              name: Skilyrði
+            'Bee: Conditionals':
+              name: 'Býfluga: Skilyrði'
+            Binary Bracelets:
+              name: Stafræn armbönd
+            The Big Event:
+              name: Stórviðburður
+            Flappy:
+              name: Flappy
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            'Artist: Nested Loops':
+              name: 'Listamaður: Innri lykkjur'
         course3:
           title: Námskeið 3
           description: Námskeið 3 er ætlað nemendum sem hafa lokið Námskeiði 2. Nemendur munu kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum til að geta beitt sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo deilt með öðrum. Mælt með fyrir 4. - 5. bekk.
@@ -154,11 +226,53 @@ is:
               name: 'Leikjasmiðja: Búa til leik'
             'Studio: Create a Story':
               name: 'Leikjasmiðja: Búa til sögu'
+          lessons:
+            Computational Thinking:
+              name: Tölvunarmiðuð hugsun
+            Maze:
+              name: Völundarhús
+            Artist:
+              name: Listamaður
+            Functional Suncatchers:
+              name: Sólarskraut með föllum
+            'Artist: Functions':
+              name: 'Listamaður: Föll'
+            'Bee: Functions':
+              name: 'Býfluga: Föll'
+            'Bee: Conditionals':
+              name: 'Býfluga: Skilyrði'
+            'Maze: Conditionals':
+              name: 'Völundarhús: Skilyrði'
+            Songwriting:
+              name: Lagasmíð
+            Dice Race:
+              name: Teningakapp
+            'Artist: Nested Loops':
+              name: 'Listamaður: Innri lykkjur'
+            'Farmer: While Loops':
+              name: 'Bóndi: Meðan lykkjur'
+            'Bee: Nested Loops':
+              name: 'Býfluga: Innri lykkjur'
+            'Bee: Debugging':
+              name: 'Býfluga: Villuleit'
+            Bounce:
+              name: Skopp
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
+            Digital Citizenship:
+              name: Stafrænn borgari
+            'Artist: Patterns':
+              name: 'Listamaður: Mynstur'
         playlab:
           title: Leikjasmiðjan
           description: Búðu til sögu eða leik með Leikjasmiðjunni!
           description_short: Búðu til sögu eða leik með Leikjasmiðju!
           stages:
+            Play Lab:
+              name: Leikjasmiðjan
+          lessons:
             Play Lab:
               name: Leikjasmiðjan
         artist:
@@ -168,6 +282,9 @@ is:
           stages:
             Artist:
               name: Listamaður
+          lessons:
+            Artist:
+              name: Listamaður
         hourofcode:
           title: Völundarhús
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
@@ -175,11 +292,17 @@ is:
           stages:
             Maze:
               name: Völundarhús
+          lessons:
+            Maze:
+              name: Völundarhús
         frozen:
           title: Kóðaðu með Önnu og Elsu
           description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að deila með vinum!
           description_short: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra og fegurð íss.
           stages:
+            Artist:
+              name: Listamaður
+          lessons:
             Artist:
               name: Listamaður
         course4:
@@ -232,6 +355,51 @@ is:
               name: 'Verkefni án tölvu: Lagasmíð með stikum'
             'Unplugged: Tangrams':
               name: 'Verkefni án tölvu: Tangram'
+          lessons:
+            'Unplugged: Tangrams':
+              name: 'Verkefni án tölvu: Tangram'
+            Maze and Bee:
+              name: Völundarhús og býfluga
+            Artist:
+              name: Listamaður
+            'Unplugged: Envelope Variables':
+              name: 'Verkefni án tölvu: Umslagabreytur'
+            'Unplugged: Madlibs':
+              name: 'Verkefni án tölvu: Fyllt í eyður'
+            'Artist: Variables':
+              name: 'Listamaður: Breytur'
+            'Play Lab: Variables':
+              name: 'Leikjasmiðjan: Breytur'
+            'Unplugged: For Loop Fun':
+              name: 'Verkefni án tölvu: Fyndnar frá lykkjur'
+            'Bee: For Loops':
+              name: 'Býfluga: Frá lykkjur'
+            'Artist: For Loops':
+              name: 'Listamaður: Frá lykkjur'
+            'Play Lab: For Loops':
+              name: 'Leikjasmiðjan: Frá lykkjur'
+            'Artist: Functions':
+              name: 'Listamaður: Föll'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Verkefni án tölvu: Lagasmíð með stikum'
+            'Artist: Functions with Parameters':
+              name: 'Listamaður: Föll með stikum'
+            'Play Lab: Functions with Parameters':
+              name: 'Leikjasmiðjan: Föll með stikum'
+            'Bee: Functions with Parameters':
+              name: 'Býfluga: Föll með stikum'
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
+            Super Challenge - Variables:
+              name: Ofurþraut - Breytur
+            Super Challenge - For Loops:
+              name: Ofuráskorun - Frá lykkjur
+            Super Challenge - Functions and Parameters:
+              name: Ofuráskorun - Föll og stikar
+            Extreme Challenge - Comprehensive:
+              name: Ýkt áskorun - Fjölþætt
         Course4pre:
           title: Forkröfur Námskeiðs 4
           description: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki farið á Námskeið 2 og 3.
@@ -255,6 +423,25 @@ is:
               name: 'Bóndi: Meðan lykkjur'
             'Maze: Sequence':
               name: 'Völundarhús: Röð'
+          lessons:
+            'Maze: Sequence':
+              name: 'Völundarhús: Röð'
+            'Artist: Sequence':
+              name: 'Listamaður: Röð'
+            'Artist: Loops':
+              name: 'Listamaður: Lykkjur'
+            'Bee: Conditionals':
+              name: 'Býfluga: Skilyrði'
+            'Artist: Nested Loops':
+              name: 'Listamaður: Innri lykkjur'
+            'Farmer: While Loops':
+              name: 'Bóndi: Meðan lykkjur'
+            'Bee: Nested Loops':
+              name: 'Býfluga: Innri lykkjur'
+            'Artist: Functions':
+              name: 'Listamaður: Föll'
+            'Bee: Debugging':
+              name: 'Býfluga: Villuleit'
         usability:
           title: Notkunarprófun
           description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
@@ -269,6 +456,17 @@ is:
               name: Kynning
             Variables:
               name: Breytur
+          lessons:
+            Intro:
+              name: Kynning
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+            Functions and Functions with Parameters:
+              name: Föll og föll með stikum
+            Binary:
+              name: Tvíundir
         algebra:
           title: Tölvunarfræði í algebru
           description: Læra fallmiðaða forritun í gegnum algebru
@@ -314,11 +512,55 @@ is:
               name: 'Verkefni án tölvu: Hönnunaruppskriftin'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+            'Calc: Evaluation Blocks':
+              name: 'Reikningur: Matskubbar'
+            'Eval: Strings and Images':
+              name: 'Greining: Strengir og myndir'
+            'Unplugged: Contracts':
+              name: 'Verkefni án tölvu: Samningar'
+            'Eval: Writing Contracts':
+              name: 'Greining: Ritun samninga'
+            'Calc: Defining Variables':
+              name: 'Reiknir: Skilgreining breytna'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Leikjasmiðjan: Skilgreina breytur (Stórleikur)'
+            'Eval: Defining Functions':
+              name: 'Mat: Skilgreining falla'
+            'Unplugged: The Design Recipe':
+              name: 'Verkefni án tölvu: Hönnunaruppskriftin'
+            'Play Lab: Defining Functions':
+              name: 'Leikjasmiðjan: Skilgreining á föllum'
+            'Eval: Functions':
+              name: 'Mat: Föll'
+            'Play Lab: Animation (Big Game)':
+              name: 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+            'Unplugged: Booleans':
+              name: 'Verkefni án tölvu: Boolean gildi'
+            'Eval: Boolean Operators':
+              name: 'Greining: Boolean virkjar'
+            'Play Lab: Booleans':
+              name: 'Leikjasmiðjan: Boolean gildi'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Verkefni án tölvu: Skilyrði og Piecewise föll'
+            'Eval: Conditionals':
+              name: 'Greining: Skilyrði'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
         infinity:
           title: Disney Infinity leikjasmiðja
           description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
           description_short: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
           stages:
+            Infinity:
+              name: Óendanleiki
+          lessons:
             Infinity:
               name: Óendanleiki
         algebrademo:
@@ -334,6 +576,17 @@ is:
               name: Matskubbar
             Making Pictures:
               name: Gerð mynda
+            The Design Recipe:
+              name: Hönnunaruppskriftin
+          lessons:
+            Evaluation Blocks:
+              name: Matskubbar
+            Making Pictures:
+              name: Gerð mynda
+            Defining Variables:
+              name: Skilgreining breytna
+            Defining Simple Functions:
+              name: Skilgreining einfaldra falla
             The Design Recipe:
               name: Hönnunaruppskriftin
         K5PD:
@@ -389,6 +642,27 @@ is:
               name: Milli jafningja - Sending talna
             Routers and addresses:
               name: Beinar og vistföng
+          lessons:
+            Overview and Setup Instructions:
+              name: Yfirlit og uppsetningarleiðbeiningar
+            Peer to Peer - Sending Bits on a Shared Wire:
+              name: Milli jafningja - Sending bita á samnýttri línu
+            Peer to Peer - Sending Numbers:
+              name: Milli jafningja - Sending talna
+            Peer to Peer - Sending Ascii:
+              name: Milli jafningja - Sending Ascii
+            Broadcasting messages:
+              name: Sending boða
+            Routers and addresses:
+              name: Beinar og vistföng
+            Packets and Reliability:
+              name: Pakkar og áreiðanleiki
+            Manual DNS:
+              name: Handvirkt DNS
+            Automatic DNS node:
+              name: Sjálfvirk DNS stöð
+            Internet Simulator Freeplay:
+              name: Internet-hermir frjáls æfing
         pixelation:
           title: Dílamynstur
           description: Búa til myndir með bitum og bætum.
@@ -404,6 +678,17 @@ is:
               name: Lituð dílamynstur - frjáls æfing
             Color Pixelation Tutorial:
               name: Lituð dílamynstur - kennslustund
+          lessons:
+            Black & White Pixelation Tutorial:
+              name: Svart-hvít dílamynstur - kennslustund
+            Black & White Pixelation Freeplay:
+              name: Svart-hvít dílamynstur - frjáls æfing
+            Color Pixelation Tutorial:
+              name: Lituð dílamynstur - kennslustund
+            Color Pixelation Examples:
+              name: Lituð dílamynstur - dæmi
+            Color Pixelation Freeplay:
+              name: Lituð dílamynstur - frjáls æfing
         20-hour:
           title: Kynning á tölvunarfræði, hraðnámskeið
           description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
@@ -450,6 +735,47 @@ is:
               name: Völundarhúsið
             Wrap-up:
               name: Samantekt
+          lessons:
+            Introduction to Computer Science:
+              name: Kynning á tölvunarfræði
+            The Maze:
+              name: Völundarhúsið
+            Computational Thinking:
+              name: Tölvunarmiðuð hugsun
+            Graph Paper Programming:
+              name: Forritun rúðublaða
+            The Artist:
+              name: Listamaðurinn
+            Algorithms:
+              name: Algrím
+            The Artist 2:
+              name: Listamaðurinn 2
+            Functions:
+              name: Föll
+            The Farmer:
+              name: Bóndinn
+            Conditionals:
+              name: Skilyrði
+            The Artist 3:
+              name: Listamaðurinn 3
+            Song Writing:
+              name: Lagasmíð
+            The Farmer 2:
+              name: Bóndinn 2
+            Abstraction:
+              name: Útdráttur
+            The Artist 4:
+              name: Listamaðurinn 4
+            Relay Programming:
+              name: Boðhlaupsforritun
+            The Farmer 3:
+              name: Bóndinn 3
+            The Internet:
+              name: Internetið
+            The Artist 5:
+              name: Listamaðurinn 5
+            Wrap-up:
+              name: Samantekt
         edit-code:
           title: Breyta kóða
           description: Breyta kóða
@@ -465,6 +791,17 @@ is:
               name: Listamaðurinn
             The Maze:
               name: Völundarhúsið
+          lessons:
+            The Maze:
+              name: Völundarhúsið
+            Applab:
+              name: App-smiðjan
+            The Artist:
+              name: Listamaðurinn
+            Play Lab:
+              name: Leikjasmiðjan
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
         events:
           title: Atvik
           description: Atvik
@@ -478,11 +815,23 @@ is:
               name: Mat
             Studio:
               name: Stúdíó
+          lessons:
+            Bounce:
+              name: Skopp
+            Studio:
+              name: Stúdíó
+            Calc:
+              name: Reikningur
+            Eval:
+              name: Mat
         flappy:
           title: Flappy kóði
           description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
           description_short: Skrifaðu þinn eigin Flappy leik!
           stages:
+            Flappy Code:
+              name: Flappy kóði
+          lessons:
             Flappy Code:
               name: Flappy kóði
         jigsaw:
@@ -492,11 +841,17 @@ is:
           stages:
             Jigsaw:
               name: Púsl
+          lessons:
+            Jigsaw:
+              name: Púsl
         step:
           title: Þrep
           description: Kennsla í skrefum
           description_short: Kennsla í skrefum
           stages:
+            Step:
+              name: Þrep
+          lessons:
             Step:
               name: Þrep
         Hour of Code:
@@ -506,6 +861,9 @@ is:
           stages:
             Hour of Code 2013:
               name: Klukkustund kóðunar 2013
+          lessons:
+            Hour of Code 2013:
+              name: Klukkustund kóðunar 2013
         CodeStudioPuzzleChallenge:
           title: Áskorun - Þraut í kóðastúdíói
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
@@ -513,11 +871,17 @@ is:
           stages:
             Puzzles:
               name: Þrautir
+          lessons:
+            Puzzles:
+              name: Þrautir
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Leiðsögn - Þrautaáskorun í kóðastúdíói
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
           description_short: Taktu áskorun!
           stages:
+            Puzzles:
+              name: Þrautir
+          lessons:
             Puzzles:
               name: Þrautir
         cspunit1:
@@ -559,6 +923,39 @@ is:
               name: Sending talna
             Text Compression:
               name: Þjöppun texta
+          lessons:
+            Personal Innovations:
+              name: Persónuleg nýsköpun
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Sending Complex Messages:
+              name: Sending flóknari skilaboða
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending tvenndarboða með Internet-herminum
+            Sending Bits in the Real World:
+              name: Sending bita í raunheimi
+            Number Systems:
+              name: Talnakerfi
+            Binary Numbers:
+              name: Tvíundartölur
+            Sending Numbers:
+              name: Sending talna
+            Encoding Numbers in the Real World:
+              name: Kóðun talna í raunheimi
+            Encoding and Sending Text:
+              name: Kóðun og sending texta
+            Sending Formatted Text:
+              name: Sending sniðins texta
+            Bytes and File Sizes:
+              name: Bæti og skráastærðir
+            Text Compression:
+              name: Þjöppun texta
+            Encoding B&W Images:
+              name: Kóðun S/H mynda
+            Encoding Color Images:
+              name: Kóðun litmynda
+            Lossy Compression and File Formats:
+              name: Þjöppun með tapi og skráasnið
         algebraPD:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '1. áfangi: Netkynning'
@@ -576,6 +973,19 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            Course Overview:
+              name: Yfirlit námskeiðs
+            Why Computer Science belongs in Algebra:
+              name: Hvers vegna tölvunarfræði á heima í algebru
+            Evaluation Blocks:
+              name: Matskubbar
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         algPDmiami:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna algebru með fallmiðaðri forritun
@@ -603,11 +1013,37 @@ is:
               name: Leikur þinn - skynjun árekstra
             Your Game - Player Movement:
               name: Leikur þinn - hreyfing leikmanna
+          lessons:
+            Evaluation Blocks:
+              name: Matskubbar
+            Strings and Images:
+              name: Strengir og myndir
+            Rocket-Height:
+              name: Hæð-flaugar
+            Design Recipe Practice:
+              name: Hönnunaruppskrift æfð
+            Your Game - Animation:
+              name: Leikur þinn - hreyfing
+            Booleans:
+              name: Boolean gildi
+            Sam the Bat:
+              name: Leðurblakan Sammi
+            Your Game - Booleans:
+              name: Leikur þinn - Boole gildi
+            Luigi's Pizza:
+              name: Pítsustaður Luigi
+            Your Game - Player Movement:
+              name: Leikur þinn - hreyfing leikmanna
+            Your Game - Collision Detection:
+              name: Leikur þinn - skynjun árekstra
         text-compression:
           title: Þjöppun texta
           description: Þjappa texta með því að greina endurtekin mynstur.
           description_short: Þjappa texta með því að greina endurtekin mynstur.
           stages:
+            Text Compression:
+              name: Þjöppun texta
+          lessons:
             Text Compression:
               name: Þjöppun texta
         CSPPD:
@@ -629,9 +1065,29 @@ is:
               name: Kennslunálganir
             What is CSP?:
               name: Hvað er átt við með Grundvelli Tölvunarfræði (GT)?
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What is CSP?:
+              name: Hvað er átt við með Grundvelli Tölvunarfræði (GT)?
+            Exploring CSP Instructional Materials:
+              name: Könnun á kennsluefni fyrir Grundvöll Tölvunarfræði (GT)
+            Impact of Computer Science:
+              name: Áhrif tölvunarfræði
+            Growth Mindset:
+              name: Vaxtarhugur
+            Teaching Strategies:
+              name: Kennslunálganir
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         CSPLessonSamples:
           title: Sýnishorn GT kennslustunda
           stages:
+            Lesson 14:
+              name: Kennslustund 14
+            Lesson 15:
+              name: Kennslustund 15
+          lessons:
             Lesson 14:
               name: Kennslustund 14
             Lesson 15:
@@ -652,6 +1108,19 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What is ECS?:
+              name: Hvað er ECS?
+            Impact of Computer Science:
+              name: Áhrif tölvunarfræði
+            Growth Mindset:
+              name: Vaxtarhugur
+            Teaching Strategies:
+              name: Kennslunálganir
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         sciencePD:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -670,12 +1139,33 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What to Expect:
+              name: Við hverju má búast
+            Using Computer Models in Science:
+              name: Notkun tölvulíkana í vísindum
+            Using Models in the Classroom:
+              name: Notkun líkana í skólastofunni
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
+            The Tutorial:
+              name: Kennslustundin
+            Post-Survey:
+              name: Eftirkönnun
         rbo-reference:
           stages:
             reference:
               name: tilvísun
+          lessons:
+            reference:
+              name: tilvísun
         Test Wednesday:
           stages:
+            PDK5 Intro:
+              name: Kynning á PDK5
+          lessons:
             PDK5 Intro:
               name: Kynning á PDK5
         cspunit3:
@@ -737,6 +1227,61 @@ is:
               name: Notkun breytna í öppum
             While Loops:
               name: Á meðan lykkjur
+          lessons:
+            The Need For Programming Languages:
+              name: Þörfin fyrir forritunarmál
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            Functions and Top-Down Design:
+              name: Föll og ofansækin hönnun
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
+            Practice PT - Design a Digital Scene:
+              name: Fagnámsæfing - Hanna stafræna sviðsmynd
+            Events Unplugged:
+              name: Atburðir án tölvu
+            Event-Driven Programming and Debugging:
+              name: Atburðaknúin forritun og villuleit
+            Beyond Buttons Toward Apps:
+              name: Frá hnöppum til appa
+            Introducing Design Mode:
+              name: Kynning á Hönnunarstöðu
+            Multi-screen Apps:
+              name: Öpp með fleiri en eina skjámynd
+            Controlling Memory with Variables:
+              name: Stjórnun minnis með breytum
+            Using Variables in Apps:
+              name: Notkun breytna í öppum
+            User Input and Strings:
+              name: Inntak notanda og strengir
+            Introduction to Digital Assistants:
+              name: Kynning á stafrænum hjálparhellum
+            Understanding Program Flow and Logic:
+              name: Að skilja flæði og rökvísi forrita
+            Introduction to Conditional Logic:
+              name: Kynning á rökvísi í skilyrðingum
+            Compound Conditional Logic:
+              name: Samsettar skilyrðingar
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Image Scroller with Key Events:
+              name: Myndfletting með atburðum lykla
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Canvas and Arrays in Apps:
+              name: Myndflötur og fylki í öppum
+            'Practice PT: Create':
+              name: 'Fagnámsæfing - Skapa'
         algebraPD3:
           stages:
             Computer Science Pedagogy:
@@ -755,6 +1300,23 @@ is:
               name: Stórleikurinn
             The Design Recipe:
               name: Hönnunaruppskriftin
+          lessons:
+            Course Overview:
+              name: Yfirlit námskeiðs
+            Computer Science Pedagogy:
+              name: Kennsluhættir í tölvunarfræði
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Evaluation Blocks:
+              name: Matskubbar
+            Strings and Images:
+              name: Strengir og myndir
+            The Design Recipe:
+              name: Hönnunaruppskriftin
+            The Big Game:
+              name: Stórleikurinn
+            Next Steps:
+              name: Næstu skref
         ECSPD-NexTech:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -771,6 +1333,19 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What is ECS?:
+              name: Hvað er ECS?
+            Impact of Computer Science:
+              name: Áhrif tölvunarfræði
+            Growth Mindset:
+              name: Vaxtarhugur
+            Teaching Strategies:
+              name: Kennslunálganir
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         ECSPD-iZone:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -787,6 +1362,19 @@ is:
               name: Kennslunálganir
             What is ECS?:
               name: Hvað er ECS?
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What is ECS?:
+              name: Hvað er ECS?
+            Impact of Computer Science:
+              name: Áhrif tölvunarfræði
+            Growth Mindset:
+              name: Vaxtarhugur
+            Teaching Strategies:
+              name: Kennslunálganir
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         algebraPD-NexTech:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '1. áfangi: Netkynning'
@@ -804,6 +1392,19 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            Course Overview:
+              name: Yfirlit námskeiðs
+            Why Computer Science belongs in Algebra:
+              name: Hvers vegna tölvunarfræði á heima í algebru
+            Evaluation Blocks:
+              name: Matskubbar
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         algebraPD-iZone:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '1. áfangi: Netkynning'
@@ -821,6 +1422,19 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            Course Overview:
+              name: Yfirlit námskeiðs
+            Why Computer Science belongs in Algebra:
+              name: Hvers vegna tölvunarfræði á heima í algebru
+            Evaluation Blocks:
+              name: Matskubbar
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         sciencePD-NexTech:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -839,6 +1453,21 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What to Expect:
+              name: Við hverju má búast
+            Using Computer Models in Science:
+              name: Notkun tölvulíkana í vísindum
+            Using Models in the Classroom:
+              name: Notkun líkana í skólastofunni
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
+            The Tutorial:
+              name: Kennslustundin
+            Post-Survey:
+              name: Eftirkönnun
         sciencePD-iZone:
           description: '1. áfangi: Netkynning'
           description_short: '1. áfangi: Netkynning'
@@ -857,6 +1486,21 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What to Expect:
+              name: Við hverju má búast
+            Using Computer Models in Science:
+              name: Notkun tölvulíkana í vísindum
+            Using Models in the Classroom:
+              name: Notkun líkana í skólastofunni
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
+            The Tutorial:
+              name: Kennslustundin
+            Post-Survey:
+              name: Eftirkönnun
         sciencePD2:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -875,6 +1519,21 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Review StarLogo Nova:
+              name: Skoðun á StarLogo Nova
+            Creating Breeds in Starlogo Nova:
+              name: Gerð afbrigða í Starlogo Nova
+            Revisiting Agent Movement:
+              name: Hreyfingar leikmanna - aftur
+            Epidemic Model Extensions:
+              name: Viðbætur við farsóttalíkan
+            Thinking Ahead to Implementation:
+              name: Horft fram á við til framkvæmdar
+            Wrap-Up:
+              name: Samantekt
         sciencePD3:
           stages:
             Decode and Share:
@@ -883,6 +1542,13 @@ is:
               name: Leyndarlíkan
             Welcome Back!:
               name: Velkomin aftur!
+          lessons:
+            Welcome Back!:
+              name: Velkomin aftur!
+            Mystery Model:
+              name: Leyndarlíkan
+            Decode and Share:
+              name: Afkóða og deila
         cspunit2:
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
@@ -910,6 +1576,21 @@ is:
               name: Þörfin fyrir vistföng
             The Need for DNS:
               name: Þörfin fyrir DNS
+          lessons:
+            The Internet:
+              name: Internetið
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Invent an Addressing Protocol:
+              name: Finna upp vistafangastaðal
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+            Packets and Making a Reliable Internet:
+              name: Pakkar og gerð áreiðanlegs internets
+            The Need for DNS:
+              name: Þörfin fyrir DNS
+            DNS in the Real World:
+              name: DNS í raunheimi
         algebraPD2a:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -943,6 +1624,35 @@ is:
               name: Strengir og myndir
             The Design Recipe:
               name: Hönnunaruppskriftin
+          lessons:
+            Evaluation Blocks:
+              name: Matskubbar
+            Strings and Images:
+              name: Strengir og myndir
+            Defining Variables:
+              name: Skilgreining breytna
+            Big Game - Variables:
+              name: Stórleikur - Breytur
+            Rocket-Height:
+              name: Hæð-flaugar
+            The Design Recipe:
+              name: Hönnunaruppskriftin
+            Big Game - Animation:
+              name: Stórleikur - Hreyfimyndir
+            Booleans:
+              name: Boolean gildi
+            Sam the Bat:
+              name: Leðurblakan Sammi
+            Big Game - Booleans:
+              name: Stórleikur - Boole gildi
+            Luigi's Pizza:
+              name: Pítsustaður Luigi
+            Big Game - Player Movement:
+              name: Stórleikur - Hreyfing leikmanna
+            Big Game - Collision Detection:
+              name: Stórleikur - Skynjun árekstra
+            Free Play:
+              name: Frjáls æfing
         allthethings:
           title: All þetta!
           description: Allar gerðir borða fyrir prófun á notendaviðmóti (UI). Vinsamlegast skráðu þig inn til að prófa borð í applab (applab borð virka aðeins eftir innskráningu. Venjulega látum við fólk skrá sig inn, en það er aðeins hægt að framfylgja því fyrir heila skriftu og væri hvimleitt að þurfa að gera fyrir þessa skriftu).
@@ -1012,6 +1722,69 @@ is:
               name: Kvikasmiðjan
             Dance Lab:
               name: Danssmiðja
+          lessons:
+            Jigsaw:
+              name: Púsl
+            Maze:
+              name: Völundarhús
+            Artist:
+              name: Listamaður
+            Bee:
+              name: Býfluga
+            PlayLab:
+              name: Leikjasmiðja
+            Farmer:
+              name: Bóndi
+            Flappy:
+              name: Flappy
+            Bounce:
+              name: Skopp
+            Multi:
+              name: Val
+            Multi2:
+              name: Val2
+            Match:
+              name: Tengja
+            Odometer:
+              name: Vegmælir
+            Text Compression:
+              name: Þjöppun texta
+            Pixelation:
+              name: Dílamynstur
+            AppLab:
+              name: App-smiðjan
+            Gamelab:
+              name: Leikjasmiðja
+            Online PD:
+              name: Fagmenntun á netinu
+            Markdown Details:
+              name: Markdown upplýsingar
+            Studio:
+              name: Stúdíó
+            Multi page assessment:
+              name: Mat með meira en eina síðu
+            Star wars:
+              name: Stjörnustríð
+            Minecraft:
+              name: Minecraft
+            Free Response:
+              name: Frjálst svar
+            Anonymous student survey:
+              name: Nafnlaus nemendakönnun
+            Anonymous student survey 2:
+              name: Nafnlaus nemendakönnun 2
+            Web Lab:
+              name: Vefsmiðja
+            Single page assessment:
+              name: Mat með einni síðu
+            Standalone video:
+              name: Stakt myndband
+            Curriculum Reference:
+              name: Tilvísun í námskrá
+            Sprite Lab:
+              name: Kvikasmiðjan
+            Dance Lab:
+              name: Danssmiðja
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -1041,6 +1814,31 @@ is:
               name: Stjórnborð kennara
             Writing Contracts:
               name: Ritun samninga
+          lessons:
+            Course Overview:
+              name: Yfirlit námskeiðs
+            Best Practices for Teaching Computer Science:
+              name: Bestu aðferðir við kennslu tölvunarfræði
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Evaluation Blocks:
+              name: Matskubbar
+            Strings and Images:
+              name: Strengir og myndir
+            Writing Contracts:
+              name: Ritun samninga
+            Defining Variables:
+              name: Skilgreining breytna
+            Defining Functions:
+              name: Skilgreining falla
+            Rocket-Height:
+              name: Hæð-flaugar
+            Booleans:
+              name: Boolean gildi
+            'Eval: Conditionals':
+              name: 'Greining: Skilyrði'
+            Next Steps:
+              name: Næstu skref
         cspfacilitator:
           stages:
             App Lab:
@@ -1057,6 +1855,21 @@ is:
               name: Textaþjöppunargræja
             Welcome!:
               name: Velkomin!
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Pixelation Widget:
+              name: Dílamynstursgræja
+            Text Compression Widget:
+              name: Textaþjöppunargræja
+            Internet Simulator:
+              name: Internet hermir
+            App Lab:
+              name: Appsmiðjan
+            Broadcast Lesson:
+              name: Útvörpuð kennslustund
+            Text Compression Lesson:
+              name: Kennslustund í þjöppun texta
         K5-OnlinePD:
           stages:
             Best Practices for Teaching Computer Science:
@@ -1081,6 +1894,29 @@ is:
               name: Næstu skref
             Planning:
               name: Áætlanagerð
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Computer Science Fundamentals:
+              name: Grunnatriði tölvunarfræði
+            Looking Ahead:
+              name: Horft fram á við
+            'Mastering the Basics: Sequencing':
+              name: 'Grunnfærni: Skipanaröðin'
+            'Mastering the Basics: Loops':
+              name: 'Grunnfærni: Lykkjur'
+            'Mastering the Basics: Conditionals':
+              name: 'Grunnfærni: Skilyrðingar'
+            'Mastering the Basics: Functions':
+              name: 'Grunnfærni: Föll'
+            'Mastering the Basics: Events':
+              name: 'Grunnfærni: Atburðir'
+            Best Practices for Teaching Computer Science:
+              name: Bestu aðferðir við kennslu tölvunarfræði
+            Planning:
+              name: Áætlanagerð
+            Next Steps:
+              name: Næstu skref
         ECSPD2:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1107,12 +1943,40 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Eining 1, dagar 3-4 Að kaupa tölvu
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Eining 1, dagar 5-7 Leit og vefur 2
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Eining 1, dagar 8-9 Áhrif tölva og boðskipta
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Eining 1, dagur 10 Að segja sögu með gögnum
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Eining 1, dagar 11-14 Mótun og hönnun gagna
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
+            Unit 1, Day 17-19 What Is Intelligence?:
+              name: Eining 1, dagar 17-19 Hvað er greind?
+            Wrap-up:
+              name: Samantekt
         equityPD:
           stages:
             Equity PD:
               name: Fagþróun - Sanngirni
             Necessary Background:
               name: Nauðsynlegur bakgrunnur
+          lessons:
+            Necessary Background:
+              name: Nauðsynlegur bakgrunnur
+            Equity PD:
+              name: Fagþróun - Sanngirni
         algebraPD2:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1129,6 +1993,19 @@ is:
               name: Hönnunaruppskriftin
             Welcome!:
               name: Velkomin!
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Teaching with Puzzles:
+              name: Kennt með þrautalausnum
+            Teaching with the Design Recipe:
+              name: Kennt með Hönnunaruppskriftinni
+            The Design Recipe:
+              name: Hönnunaruppskriftin
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Lesson Prep:
+              name: Kennslustund undirbúin
         sciencePD2b:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1147,12 +2024,32 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Review StarLogo Nova:
+              name: Skoðun á StarLogo Nova
+            Reviewing the Modules:
+              name: Kennslueiningar skoðaðar
+            Advanced StarLogo Nova:
+              name: Ítarlegra StarLogo Nova
+            Remixing Phases 1 and 2:
+              name: Þættir 1 og 2 endurblandaðir
+            Thinking Ahead to Implementation:
+              name: Horft fram á við til framkvæmdar
+            Wrap-Up:
+              name: Samantekt
         equity-pd:
           stages:
             Code.org Equity PD:
               name: Code.org fagþróun - Sanngirni
             Necessary Background:
               name: Nauðsynlegur bakgrunnur
+          lessons:
+            Necessary Background:
+              name: Nauðsynlegur bakgrunnur
+            Code.org Equity PD:
+              name: Code.org fagþróun - Sanngirni
         science-PD2:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1171,6 +2068,21 @@ is:
               name: Velkomin!
             Wrap-Up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Review StarLogo Nova:
+              name: Skoðun á StarLogo Nova
+            Reviewing the Modules:
+              name: Kennslueiningar skoðaðar
+            Advanced StarLogo Nova:
+              name: Ítarlegra StarLogo Nova
+            Remixing Phases 1 and 2:
+              name: Þættir 1 og 2 endurblandaðir
+            Thinking Ahead to Implementation:
+              name: Horft fram á við til framkvæmdar
+            Wrap-Up:
+              name: Samantekt
         Equity-OnlinePD:
           stages:
             Creating Equitable Learning Environments:
@@ -1179,6 +2091,15 @@ is:
               name: Fyrstu skrefin
             Introduction to Equity:
               name: Kynning á sanngirni
+            Next Steps:
+              name: Næstu skref
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Introduction to Equity:
+              name: Kynning á sanngirni
+            Creating Equitable Learning Environments:
+              name: Að skapa sanngjörn námsumhverfi
             Next Steps:
               name: Næstu skref
         sciencePD2b-iZone:
@@ -1197,6 +2118,21 @@ is:
               name: Horft fram á við til framkvæmdar
             Welcome!:
               name: Velkomin!
+            Wrap-Up:
+              name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Review StarLogo Nova:
+              name: Skoðun á StarLogo Nova
+            Reviewing the Modules:
+              name: Kennslueiningar skoðaðar
+            Advanced StarLogo Nova:
+              name: Ítarlegra StarLogo Nova
+            Remixing Phases 1 and 2:
+              name: Þættir 1 og 2 endurblandaðir
+            Thinking Ahead to Implementation:
+              name: Horft fram á við til framkvæmdar
             Wrap-Up:
               name: Samantekt
         ECSPD2-iZone:
@@ -1225,6 +2161,29 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Eining 1, dagar 3-4 Að kaupa tölvu
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Eining 1, dagar 5-7 Leit og vefur 2
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Eining 1, dagar 8-9 Áhrif tölva og boðskipta
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Eining 1, dagur 10 Að segja sögu með gögnum
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Eining 1, dagar 11-14 Mótun og hönnun gagna
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
+            Unit 1, Day 17-19 What Is Intelligence?:
+              name: Eining 1, dagar 17-19 Hvað er greind?
+            Wrap-up:
+              name: Samantekt
         ECSPD2-NexTech:
           description: '2. áfangi á neti: Blandað sumarnám'
           description_short: '2. áfangi á neti: Blandað sumarnám'
@@ -1251,8 +2210,38 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Eining 1, dagar 3-4 Að kaupa tölvu
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Eining 1, dagar 5-7 Leit og vefur 2
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Eining 1, dagar 8-9 Áhrif tölva og boðskipta
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Eining 1, dagur 10 Að segja sögu með gögnum
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Eining 1, dagar 11-14 Mótun og hönnun gagna
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
+            Unit 1, Day 17-19 What Is Intelligence?:
+              name: Eining 1, dagar 17-19 Hvað er greind?
+            Wrap-up:
+              name: Samantekt
         CSPPD2:
           stages:
+            Getting Started:
+              name: Fyrstu skrefin
+            Welcome to the Course!:
+              name: Velkomin á námskeiðið!
+            Wrap Up and Next Steps:
+              name: Samantekt og næstu skref
+          lessons:
             Getting Started:
               name: Fyrstu skrefin
             Welcome to the Course!:
@@ -1279,10 +2268,32 @@ is:
               name: Lagasmíð
             The Big Event:
               name: Stórviðburður
+          lessons:
+            Happy Maps:
+              name: Krúttleg kort
+            Move it, Move it:
+              name: Hreyfa, hreyfa
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Graph Paper Programming:
+              name: Forritun rúðublaða
+            Building a Foundation:
+              name: Að byggja grunn
+            Getting Loopy:
+              name: Lykkjulæti
+            The Big Event:
+              name: Stórviðburður
+            Binary Bracelets:
+              name: Stafræn armbönd
+            Songwriting:
+              name: Lagasmíð
         vigenere:
           description: Nota Vigenere Cipher græjuna til að kanna dulkóðun og afkóðun skilaboða með Vigenere Cipher dulmáli.
           description_short: Nota Vigenere Cipher græjuna til að kanna dulkóðun og afkóðun skilaboða með Vigenere Cipher dulmáli.
           stages:
+            Vigenere:
+              name: Vigenere
+          lessons:
             Vigenere:
               name: Vigenere
         algebraPD3a:
@@ -1296,8 +2307,20 @@ is:
               name: Uppfærslur - Hönnunaruppskriftin
             Updates - Tweaks and Polish:
               name: Uppfærslur - Fínstillingar og fágun
+          lessons:
+            Updates - Tweaks and Polish:
+              name: Uppfærslur - Fínstillingar og fágun
+            Updates - The Big Game and Projects:
+              name: Uppfærslur - Stórleikur og verkefni
+            Updates - The Design Recipe:
+              name: Uppfærslur - Hönnunaruppskriftin
+            Lesson Prep:
+              name: Kennslustund undirbúin
         sciencePD3_pre1:
           stages:
+            Welcome Back!:
+              name: Velkomin aftur!
+          lessons:
             Welcome Back!:
               name: Velkomin aftur!
         ECSPD3-Unit2:
@@ -1312,6 +2335,17 @@ is:
               name: Kennslunálganir
             Unit 2 Challenge:
               name: Áskorun 2. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Intro to Unit 2:
+              name: Kynning á 2. einingu
+            Teaching Strategies:
+              name: Kennslunálganir
+            Lesson Overviews:
+              name: Yfirlit kennslustunda
+            Unit 2 Challenge:
+              name: Áskorun 2. einingar
         ECSPD3-Unit3:
           stages:
             Getting Started:
@@ -1324,6 +2358,17 @@ is:
               name: Áskorun 3. einingar
             Unit 3 Day-by-Day:
               name: Dagskrá 3. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Intro to Unit 3:
+              name: Kynning á 3. einingu
+            Teaching Strategies:
+              name: Kennslunálganir
+            Unit 3 Day-by-Day:
+              name: Dagskrá 3. einingar
+            Unit 3 Challenge:
+              name: Áskorun 3. einingar
         ECSPD3-Unit4:
           stages:
             Getting Started:
@@ -1336,6 +2381,17 @@ is:
               name: Áskorun 4. einingar
             Unit 4 Day-by-Day:
               name: Dagskrá 4. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Intro to Unit 4:
+              name: Kynning á 4. einingu
+            Teaching Strategies:
+              name: Kennslunálganir
+            Unit 4 Day-by-Day:
+              name: Dagskrá 4. einingar
+            Unit 4 Challenge:
+              name: Áskorun 4. einingar
         ECSPD3-Unit5:
           stages:
             Complete the Challenge:
@@ -1350,6 +2406,19 @@ is:
               name: Yfirlit 5. einingar
             Unit 5 lessons:
               name: Kennslustundir 5. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 5 Overview:
+              name: Yfirlit 5. einingar
+            Unit 5 lessons:
+              name: Kennslustundir 5. einingar
+            Introduction to the Unit 5 Challenge:
+              name: Kynning á áskorun 5. einingar
+            Complete the Challenge:
+              name: Ljúka áskoruninni
+            Share out and Submit:
+              name: Deila og senda inn
         ECSPD3-Unit6:
           stages:
             Alternative Ideas for Unit 6:
@@ -1364,6 +2433,19 @@ is:
               name: Yfirlit 6. einingar
             Unit 6 lessons:
               name: Kennslustundir 6. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 6 Overview:
+              name: Yfirlit 6. einingar
+            Unit 6 lessons:
+              name: Kennslustundir 6. einingar
+            Alternative Ideas for Unit 6:
+              name: Aðrar hugmyndir fyrir 6. einingu
+            Unit 6 Challenge:
+              name: Áskorun 6. einingar
+            Share out and Submit:
+              name: Deila og senda inn
         cspunit4draft:
           description_short: Gögn
           stages:
@@ -1413,6 +2495,53 @@ is:
               name: Það sem gögn geta sagt okkur
             Why Make Apps?:
               name: Af hverju búa til öpp?
+          lessons:
+            Finding Trends with Visualizations:
+              name: Leitni fundin sjónrænt
+            Good and Bad Data Visualizations:
+              name: Góðar og slæmar sjóngerðir gagna
+            Check Your Assumptions:
+              name: Kannaðu hvað þú heldur
+            Making Data Visualizations:
+              name: Gögn gerð sjónræn
+            Cleaning Data:
+              name: Hreinsun gagna
+            Creating Summary Tables:
+              name: Gerð samantektartaflna
+            Why Make Apps?:
+              name: Af hverju búa til öpp?
+            Creating Javascript Objects:
+              name: Gerð Javascript hluta
+            Permanent Data Storage:
+              name: Varanleg vistun gagna
+            Reading Records:
+              name: Lestur færslna
+            Search Terms:
+              name: Leitarorð
+            Import, Export, and Visualize Data:
+              name: Innflutningur, útflutningur og sjóngerð gagna
+            Interpreting Data Visualizations:
+              name: Túlkun sjóngerðra gagna
+            How is Data Collected?:
+              name: Hvernig er gögnum safnað?
+            Using Data in the Real World:
+              name: Notkun gagna í raunheimi
+            Data, Security, and Privacy:
+              name: Gögn, öryggi og persónuvernd
+            Privacy vs Utility:
+              name: Persónuvernd gegn notagildi
+            Privacy in a Digital World:
+              name: Persónuvernd í stafrænum heimi
+            Compiling Data:
+              name: Söfnun gagna
+            Designing Data Collection:
+              name: Söfnun gagna hönnuð
+            Designing for Your User:
+              name: Hannað fyrir notandann
+            What Data Can Tell Us:
+              name: Það sem gögn geta sagt okkur
+            Permanent Data Storage and Clicker Completion:
+              name: Varanleg vistun gagna og lokið við Clicker
         ScienceP3OLPT2:
           stages:
             Earth Science Challenges:
@@ -1442,6 +2571,19 @@ is:
               name: Stuðningur við kennslu - Tímar 4-7
             Teaching Support - Lessons 8-12:
               name: Stuðningur við kennslu - Tímar 8-12
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Teaching Support - Lessons 1-3:
+              name: Stuðningur við kennslu - Tímar 1-3
+            Teaching Support - Lessons 4-7:
+              name: Stuðningur við kennslu - Tímar 4-7
+            Teaching Support - Lessons 8-12:
+              name: Stuðningur við kennslu - Tímar 8-12
+            Teaching Support - Lessons 13-16:
+              name: Stuðningur við kennslu - Tímar 13-16
+            Teaching Support - Lessons 17-20:
+              name: Stuðningur við kennslu - Tímar 17-20
         CSPPD3-Unit2:
           stages:
             Challenge Overview:
@@ -1454,6 +2596,17 @@ is:
               name: Deila og senda inn
             Unit 2 Overview:
               name: Yfirlit 2. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 2 Overview:
+              name: Yfirlit 2. einingar
+            Challenge Overview:
+              name: Yfirlit áskorana
+            Complete the Challenge:
+              name: Ljúka áskoruninni
+            Share out and Submit:
+              name: Deila og senda inn
         duino:
           stages:
             Basic Circuits:
@@ -1464,9 +2617,21 @@ is:
               name: DótBóti
             Making Music:
               name: Lagasmíð
+          lessons:
+            Basic Circuits:
+              name: Grunnrásir
+            Blinky Lights:
+              name: Blikkljós
+            Making Music:
+              name: Lagasmíð
+            JunkBot:
+              name: DótBóti
         Special Fun:
           description_audience: Fyrir 10-18 ára
           stages:
+            Halloween 2015:
+              name: Hrekkjavaka 2015
+          lessons:
             Halloween 2015:
               name: Hrekkjavaka 2015
         SpecialSeries:
@@ -1476,11 +2641,17 @@ is:
               name: Vor 2016
             Halloween 2015:
               name: Hrekkjavaka 2015
+          lessons:
+            Halloween 2015:
+              name: Hrekkjavaka 2015
         iceage:
           title: Ice Age Leikjasmiðja
           description: Búðu til sögu eða leik með Ice Age Leikjasmiðju!
           description_short: Búðu til sögu eða leik með Ice Age Leikjasmiðju!
           stages:
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+          lessons:
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
         CSPPD3-Unit3:
@@ -1495,6 +2666,17 @@ is:
               name: Deila og senda inn
             Unit 3 Overview:
               name: Yfirlit 3. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 3 Overview:
+              name: Yfirlit 3. einingar
+            Challenge Overview:
+              name: Yfirlit áskorana
+            Complete the Challenge:
+              name: Ljúka áskoruninni
+            Share out and Submit:
+              name: Deila og senda inn
         cspunit3temp:
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
@@ -1514,8 +2696,28 @@ is:
               name: Unnið með fylki
             While Loops:
               name: Á meðan lykkjur
+          lessons:
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Image Scroller with Key Events:
+              name: Myndfletting með atburðum lykla
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Canvas and Arrays in Apps:
+              name: Myndflötur og fylki í öppum
+            'Practice PT: Create':
+              name: 'Fagnámsæfing - Skapa'
         CSP-Unit3-Support:
           stages:
+            Unit 3 Overview:
+              name: Yfirlit 3. einingar
+          lessons:
             Unit 3 Overview:
               name: Yfirlit 3. einingar
         gumball:
@@ -1525,11 +2727,17 @@ is:
           stages:
             Gumball Play Lab:
               name: Gumball Leikjasmiðja
+          lessons:
+            Gumball Play Lab:
+              name: Gumball Leikjasmiðja
         starwars:
           title: 'Star Wars: Gerð Vetrarbrautar með Kóða'
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           stages:
+            Hour of Code 2015:
+              name: Klukkustund kóðunar 2015
+          lessons:
             Hour of Code 2015:
               name: Klukkustund kóðunar 2015
         starwarsblocks:
@@ -1539,11 +2747,17 @@ is:
           stages:
             Hour of Code 2015:
               name: Klukkustund kóðunar 2015
+          lessons:
+            Hour of Code 2015:
+              name: Klukkustund kóðunar 2015
         mc:
           title: Klukkustund kóðunar með Minecraft
           description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim
           description_short: Kannaðu Minecraft heim með kóða
           stages:
+            Hour of Code 2015:
+              name: Klukkustund kóðunar 2015
+          lessons:
             Hour of Code 2015:
               name: Klukkustund kóðunar 2015
         CSPPD3-Unit3-pt2:
@@ -1554,8 +2768,20 @@ is:
               name: Ljúka áskoruninni
             Share out and Submit:
               name: Deila og senda inn
+          lessons:
+            Challenge Overview:
+              name: Yfirlit áskorana
+            Complete the Challenge:
+              name: Ljúka áskoruninni
+            Share out and Submit:
+              name: Deila og senda inn
         ScienceP3OLPT3:
           stages:
+            Welcome!:
+              name: Velkomin!
+            Wrap-Up:
+              name: Samantekt
+          lessons:
             Welcome!:
               name: Velkomin!
             Wrap-Up:
@@ -1581,6 +2807,21 @@ is:
               name: Kynning á gagnavinnslu
             Making Data Visualizations:
               name: Gögn gerð sjónræn
+          lessons:
+            Finding Trends with Visualizations:
+              name: Leitni fundin sjónrænt
+            Check Your Assumptions:
+              name: Kannaðu hvað þú heldur
+            Good and Bad Data Visualizations:
+              name: Góðar og slæmar sjóngerðir gagna
+            Making Data Visualizations:
+              name: Gögn gerð sjónræn
+            Cleaning Data:
+              name: Hreinsun gagna
+            Creating Summary Tables:
+              name: Gerð samantektartaflna
+            Identifying People with Data:
+              name: Að bera kennsl á fólk með gögnum
         CSPPD3-Unit4:
           stages:
             Challenge Overview:
@@ -1597,6 +2838,21 @@ is:
               name: Deila og senda inn
             Unit 4 Overview:
               name: Yfirlit 4. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 4 Overview:
+              name: Yfirlit 4. einingar
+            Chapter 1 Overview:
+              name: Yfirlit 1. kafla
+            Chapter 2 Overview:
+              name: Yfirlit 2. kafla
+            Challenge Overview:
+              name: Yfirlit áskorana
+            Complete the Challenge:
+              name: Ljúka áskoruninni
+            Share out and Submit:
+              name: Deila og senda inn
         cspunit6draft:
           stages:
             Creating Javascript Objects:
@@ -1617,6 +2873,25 @@ is:
               name: Uppfærsla færslna
             Visualizing Data:
               name: Sjóngerving gagna
+          lessons:
+            Creating Javascript Objects:
+              name: Gerð Javascript hluta
+            Permanent Data Storage:
+              name: Varanleg vistun gagna
+            Reading Records:
+              name: Lestur færslna
+            Deleting Records:
+              name: Að eyða færslum
+            Updating Records:
+              name: Uppfærsla færslna
+            Importing and Exporting Data:
+              name: Inn- og útflutningur gagna
+            Visualizing Data:
+              name: Sjóngerving gagna
+            Sample Apps:
+              name: App dæmi
+            Final Project:
+              name: Lokaverkefni
         CSPPD3-Unit5:
           stages:
             Challenge Overview:
@@ -1629,6 +2904,17 @@ is:
               name: Deila og senda inn
             Unit 5 Overview:
               name: Yfirlit 5. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 5 Overview:
+              name: Yfirlit 5. einingar
+            Challenge Overview:
+              name: Yfirlit áskorana
+            Complete the Challenge:
+              name: Ljúka áskoruninni
+            Share out and Submit:
+              name: Deila og senda inn
         cspunit6:
           stages:
             Creating Javascript Objects:
@@ -1649,6 +2935,25 @@ is:
               name: Uppfærsla færslna
             Visualizing Data:
               name: Sjóngerving gagna
+          lessons:
+            Creating Javascript Objects:
+              name: Gerð Javascript hluta
+            Permanent Data Storage:
+              name: Varanleg vistun gagna
+            Reading Records:
+              name: Lestur færslna
+            Deleting Records:
+              name: Að eyða færslum
+            Updating Records:
+              name: Uppfærsla færslna
+            Importing and Exporting Data:
+              name: Inn- og útflutningur gagna
+            Visualizing Data:
+              name: Sjóngerving gagna
+            Sample Apps:
+              name: App dæmi
+            Final Project:
+              name: Lokaverkefni
         AlgebraA:
           description: Læra fallmiðaða forritun í gegnum algebru
           description_short: Læra fallmiðaða forritun í gegnum algebru
@@ -1673,6 +2978,27 @@ is:
               name: 'Án tölvu: Fljót föll'
             'Unplugged: The Design Recipe':
               name: 'Verkefni án tölvu: Hönnunaruppskriftin'
+          lessons:
+            'Calc: Evaluation Blocks':
+              name: 'Reikningur: Matskubbar'
+            'Eval: Strings and Images':
+              name: 'Greining: Strengir og myndir'
+            'Unplugged: Contracts':
+              name: 'Verkefni án tölvu: Samningar'
+            'Eval: Writing Contracts':
+              name: 'Greining: Ritun samninga'
+            'Calc: Defining Variables':
+              name: 'Reiknir: Skilgreining breytna'
+            'Unplugged: Fast Functions':
+              name: 'Án tölvu: Fljót föll'
+            'Eval: Defining Functions':
+              name: 'Mat: Skilgreining falla'
+            'Unplugged: The Design Recipe':
+              name: 'Verkefni án tölvu: Hönnunaruppskriftin'
+            'Eval: Functions':
+              name: 'Mat: Föll'
+            'Play Lab: Defining Functions':
+              name: 'Leikjasmiðjan: Skilgreining á föllum'
         AlgebraB:
           title: 'Tölvunarfræði í algebru'
           description: Læra fallmiðaða forritun í gegnum algebru
@@ -1700,6 +3026,29 @@ is:
               name: 'Verkefni án tölvu: Skilyrði og Piecewise föll'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+          lessons:
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Leikjasmiðjan: Skilgreina breytur (Stórleikur)'
+            'Play Lab: Animation (Big Game)':
+              name: 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+            'Unplugged: Booleans':
+              name: 'Verkefni án tölvu: Boolean gildi'
+            'Eval: Boolean Operators':
+              name: 'Greining: Boolean virkjar'
+            'Play Lab: Booleans':
+              name: 'Leikjasmiðjan: Boolean gildi'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Verkefni án tölvu: Skilyrði og Piecewise föll'
+            'Eval: Conditionals':
+              name: 'Greining: Skilyrði'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Verkefni án tölvu: Skynjun árekstra og fjarlægðarformúlan'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Leikjasmiðjan: Skynjun árekstra (Stórleikur)'
         algebraPD1:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna algebru með fallmiðaðri forritun
@@ -1717,9 +3066,25 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            Course Overview:
+              name: Yfirlit námskeiðs
+            Why Computer Science belongs in Algebra:
+              name: Hvers vegna tölvunarfræði á heima í algebru
+            Evaluation Blocks:
+              name: Matskubbar
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Preparing for in-person PD:
+              name: Staðbundin starfsþróun undirbúin
         algebraPD3c:
           title: Tölvunarfræði í algebru - fagmenntun
           stages:
+            Getting Started:
+              name: Fyrstu skrefin
+          lessons:
             Getting Started:
               name: Fyrstu skrefin
         csp1-2017:
@@ -1755,6 +3120,31 @@ is:
               display_name: 'Kafli 1: Framsetning og flutningur upplýsinga'
             csp1_2:
               display_name: 'Kafli 2: Að finna upp internetið'
+          lessons:
+            Personal Innovations:
+              name: Persónuleg nýsköpun
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending tvenndarboða með Internet-herminum
+            Number Systems:
+              name: Talnakerfi
+            Binary Numbers:
+              name: Tvíundartölur
+            Sending Numbers:
+              name: Sending talna
+            The Internet:
+              name: Internetið
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+            Packets and Making a Reliable Internet:
+              name: Pakkar og gerð áreiðanlegs internets
+            The Need for DNS:
+              name: Þörfin fyrir DNS
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1788,6 +3178,31 @@ is:
               display_name: 'Kafli 2: Mótun og sjóngerving gagna'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Bytes and File Sizes:
+              name: Bæti og skráastærðir
+            Text Compression:
+              name: Þjöppun texta
+            Encoding B&W Images:
+              name: Kóðun S/H mynda
+            Encoding Color Images:
+              name: Kóðun litmynda
+            Lossy Compression and File Formats:
+              name: Þjöppun með tapi og skráasnið
+            Finding Trends with Visualizations:
+              name: Leitni fundin sjónrænt
+            Check Your Assumptions:
+              name: Kannaðu hvað þú heldur
+            Good and Bad Data Visualizations:
+              name: Góðar og slæmar sjóngerðir gagna
+            Making Data Visualizations:
+              name: Gögn gerð sjónræn
+            Cleaning Data:
+              name: Hreinsun gagna
+            Creating Summary Tables:
+              name: Gerð samantektartaflna
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp3-2017:
           description_short: Lærðu undirstöðu í JavaScript forritun með nálgun sem beitir ofan-frá hönnun og notar klassíska "turtle" teiknun.
           stages:
@@ -1816,6 +3231,23 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            The Need For Programming Languages:
+              name: Þörfin fyrir forritunarmál
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            Functions and Top-Down Design:
+              name: Föll og ofansækin hönnun
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
+            Practice PT - Design a Digital Scene:
+              name: Fagnámsæfing - Hanna stafræna sviðsmynd
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp4-2017:
           stages:
             Identifying People with Data:
@@ -1833,6 +3265,13 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Identifying People with Data:
+              name: Að bera kennsl á fólk með gögnum
+            Simple Encryption:
+              name: Einföld dulkóðun
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -1916,6 +3355,39 @@ is:
               display_name: 'Kafli 2: Forritað með formgerðum gagna'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Multi-screen Apps:
+              name: Öpp með fleiri en eina skjámynd
+            Controlling Memory with Variables:
+              name: Stjórnun minnis með breytum
+            Unit 5 Assessment 1:
+              name: 5. eining - Mat 1
+            User Input and Strings:
+              name: Inntak notanda og strengir
+            '"If" Statements Unplugged':
+              name: '''Ef'' yrðingar án tölvu'
+            '"if-else-if" and Conditional Logic':
+              name: '"ef-annars-ef" og rökvísi skilyrðinga'
+            Unit 5 Assessment 2:
+              name: 5. eining - Mat 2
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Unit 5 Assessment 3:
+              name: 5. eining - Mat 3
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Unit 5 Assessment 4:
+              name: 5. eining - Mat 4
+            'Practice PT: Create':
+              name: 'Fagnámsæfing - Skapa'
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         CSDU3-Draft:
           description_short: Forritun
           stages:
@@ -1973,6 +3445,21 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What to Expect:
+              name: Við hverju má búast
+            Using Computer Models in Science:
+              name: Notkun tölvulíkana í vísindum
+            Using Models in the Classroom:
+              name: Notkun líkana í skólastofunni
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
+            The Tutorial:
+              name: Kennslustundin
+            Post-Survey:
+              name: Eftirkönnun
         TEMP CSD Unit 3:
           description_short: Forritun
           stages:
@@ -1994,6 +3481,15 @@ is:
               name: Stjórnborð kennara
             Why Computer Science belongs in Algebra:
               name: Hvers vegna tölvunarfræði á heima í algebru
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            Why Computer Science belongs in Algebra:
+              name: Hvers vegna tölvunarfræði á heima í algebru
+            Evaluation Blocks:
+              name: Matskubbar
+            Teacher Dashboard:
+              name: Stjórnborð kennara
         sciencePD1:
           description_short: '1. áfangi: Netkynning'
           stages:
@@ -2011,8 +3507,28 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+          lessons:
+            Introduction to PD:
+              name: Kynning á PD
+            What to Expect:
+              name: Við hverju má búast
+            Using Computer Models in Science:
+              name: Notkun tölvulíkana í vísindum
+            Using Models in the Classroom:
+              name: Notkun líkana í skólastofunni
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
+            The Tutorial:
+              name: Kennslustundin
+            Post-Survey:
+              name: Eftirkönnun
         cspoptional:
           stages:
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem:
+              name: Kafli 4 - Erfið verkefni - Farandsalavandamálið
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
+              name: Kafli 4 - Einstefnuföll - Vandamál heitra reita
+          lessons:
             Unit 4 - Hard Problems - The Traveling Salesperson Problem:
               name: Kafli 4 - Erfið verkefni - Farandsalavandamálið
             Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
@@ -2034,6 +3550,15 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Intro to the Unit:
+              name: Kynning á kaflanum
+            Chapter Overviews:
+              name: Yfirlit kafla
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Encoding and Sending Numbers:
+              name: Kóðun og sending talna
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -2046,12 +3571,20 @@ is:
           stages:
             Game Lab:
               name: Leikjasmiðjan
+          lessons:
+            Game Lab:
+              name: Leikjasmiðjan
         csp-facilitators:
           stages:
             Introduction to Events:
               name: Kynning á atburðum
             Introduction to Text Compression:
               name: Kynning á textaþjöppun
+          lessons:
+            Introduction to Text Compression:
+              name: Kynning á textaþjöppun
+            Introduction to Events:
+              name: Kynning á atburðum
         CSDU2-Draft:
           stages:
             Classes and External Style Sheets:
@@ -2088,6 +3621,9 @@ is:
           stages:
             Artist Functions:
               name: Listamaður - föll
+          lessons:
+            Artist Functions:
+              name: Listamaður - föll
         artistExemplar:
           description_audience: Fyrir 8-18 ára
         teachercon:
@@ -2121,8 +3657,34 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Introduction to Teachercon:
+              name: Kynning á Teachercon
+            Lesson 1,4:
+              name: Kennslustund 1,4
+            Lesson 1,6:
+              name: Kennslustund 1,6
+            Lesson 1,9:
+              name: Kennslustund 1,9
+            Lesson 1,10:
+              name: Kennslustund 1,10
+            Lesson 1,11:
+              name: Kennslustund 1,11
+            Lesson 2,2:
+              name: Kennslustund 2,2
+            Lesson 2,3:
+              name: Kennslustund 2,3
+            Lesson 2,10:
+              name: Kennslustund 2,10
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         kinderTest:
           stages:
+            'Bee: Conditionals':
+              name: 'Býfluga: Skilyrði'
+          lessons:
             'Bee: Conditionals':
               name: 'Býfluga: Skilyrði'
         gradeKinder:
@@ -2271,6 +3833,29 @@ is:
               name: Velkomin!
             Wrap-up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            0: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            1: |-
+              Eining 1, dagar 1-2 Hvað er tölva?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Eining 1, dagar 3-4 Að kaupa tölvu
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Eining 1, dagar 5-7 Leit og vefur 2
+            Unit 1, Days 8-9 Impact of Computers and Communication:
+              name: Eining 1, dagar 8-9 Áhrif tölva og boðskipta
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Eining 1, dagur 10 Að segja sögu með gögnum
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Eining 1, dagar 11-14 Mótun og hönnun gagna
+            Unit 1, Day 15-16 Computer Programs and Following Directions:
+              name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
+            Unit 1, Day 17-19 What Is Intelligence?:
+              name: Eining 1, dagar 17-19 Hvað er greind?
+            Wrap-up:
+              name: Samantekt
         ecs-unit2:
           stages:
             Getting Started:
@@ -2281,6 +3866,17 @@ is:
               name: Yfirlit kennslustunda
             Teaching Strategies:
               name: Kennslunálganir
+            Unit 2 Challenge:
+              name: Áskorun 2. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Intro to Unit 2:
+              name: Kynning á 2. einingu
+            Teaching Strategies:
+              name: Kennslunálganir
+            Lesson Overviews:
+              name: Yfirlit kennslustunda
             Unit 2 Challenge:
               name: Áskorun 2. einingar
         ecs-unit3:
@@ -2295,6 +3891,17 @@ is:
               name: Áskorun 3. einingar
             Unit 3 Day-by-Day:
               name: Dagskrá 3. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Intro to Unit 3:
+              name: Kynning á 3. einingu
+            Teaching Strategies:
+              name: Kennslunálganir
+            Unit 3 Day-by-Day:
+              name: Dagskrá 3. einingar
+            Unit 3 Challenge:
+              name: Áskorun 3. einingar
         ecs-unit4:
           stages:
             Getting Started:
@@ -2307,6 +3914,17 @@ is:
               name: Áskorun 4. einingar
             Unit 4 Day-by-Day:
               name: Dagskrá 4. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Intro to Unit 4:
+              name: Kynning á 4. einingu
+            Teaching Strategies:
+              name: Kennslunálganir
+            Unit 4 Day-by-Day:
+              name: Dagskrá 4. einingar
+            Unit 4 Challenge:
+              name: Áskorun 4. einingar
         ecs-unit5:
           stages:
             Complete the Challenge:
@@ -2317,6 +3935,15 @@ is:
               name: Kynning á áskorun 5. einingar
             Share out and Submit:
               name: Deila og senda inn
+            Unit 5 Overview:
+              name: Yfirlit 5. einingar
+            Unit 5 lessons:
+              name: Kennslustundir 5. einingar
+            Unit 5 Challenge:
+              name: Áskorun 5. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
             Unit 5 Overview:
               name: Yfirlit 5. einingar
             Unit 5 lessons:
@@ -2337,6 +3964,17 @@ is:
               name: Yfirlit 6. einingar
             Unit 6 lessons:
               name: Kennslustundir 6. einingar
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+            Unit 6 Overview:
+              name: Yfirlit 6. einingar
+            Unit 6 lessons:
+              name: Kennslustundir 6. einingar
+            Alternative Ideas for Unit 6:
+              name: Aðrar hugmyndir fyrir 6. einingu
+            Unit 6 Challenge:
+              name: Áskorun 6. einingar
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -2376,6 +4014,27 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Introduction to Teachercon:
+              name: Kynning á Teachercon
+            Lesson 1,4:
+              name: Kennslustund 1,4
+            Lesson 1,6:
+              name: Kennslustund 1,6
+            Lesson 1,9:
+              name: Kennslustund 1,9
+            Lesson 1,10:
+              name: Kennslustund 1,10
+            Lesson 1,11:
+              name: Kennslustund 1,11
+            Lesson 2,2:
+              name: Kennslustund 2,2
+            Lesson 2,3:
+              name: Kennslustund 2,3
+            Lesson 2,10:
+              name: Kennslustund 2,10
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
         csd3-2017:
           description_short: Forritun
           stages:
@@ -2453,6 +4112,33 @@ is:
               display_name: Könnun
             csd_survey:
               display_name: Könnun eftir námskeið
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Shapes and Randomization:
+              name: Form og handahóf
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         grade2:
           stages:
             At The Dog Park:
@@ -2471,6 +4157,13 @@ is:
               name: Stórviðburður
         transferring-over:
           stages:
+            Course 2 Stage 17:
+              name: Námskeið 2 áfangi 17
+            Course 3 Stage 16:
+              name: Námskeið 3 áfangi 16
+            Course 3 Stage 17:
+              name: Námskeið 3 áfangi 17
+          lessons:
             Course 2 Stage 17:
               name: Námskeið 2 áfangi 17
             Course 3 Stage 16:
@@ -2499,6 +4192,27 @@ is:
               name: Breytur
             While Loops:
               name: Á meðan lykkjur
+          lessons:
+            Events:
+              name: Atvik
+            Loops:
+              name: Lykkjur
+            Nested Loops:
+              name: Innri lykkjur
+            Conditionals:
+              name: Skilyrði
+            While Loops:
+              name: Á meðan lykkjur
+            Functions:
+              name: Föll
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+            Functions with Parameters:
+              name: Föll með stikum
+            Binary:
+              name: Tvíundir
         algebrapdnext:
           description: Kenna algebru með fallmiðaðri forritun
           stages:
@@ -2514,8 +4228,24 @@ is:
               name: Hönnunaruppskriftin
             Welcome!:
               name: Velkomin!
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Teaching with Puzzles:
+              name: Kennt með þrautalausnum
+            Teaching with the Design Recipe:
+              name: Kennt með Hönnunaruppskriftinni
+            The Design Recipe:
+              name: Hönnunaruppskriftin
+            Teacher Dashboard:
+              name: Stjórnborð kennara
+            Lesson Prep:
+              name: Kennslustund undirbúin
         csp-pre-survey:
           stages:
+            Anonymous student pre-survey:
+              name: Nafnlaus forkönnun nemenda
+          lessons:
             Anonymous student pre-survey:
               name: Nafnlaus forkönnun nemenda
         csd1-2017:
@@ -2540,6 +4270,17 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Storage:
+              name: Vistun
+            Apps and Problem Solving:
+              name: Öpp og Þrautalausnir
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
         csp-online-test:
           stages:
             Group Work and Peer Learning:
@@ -2559,6 +4300,13 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Unit 5 Overview:
+              name: Yfirlit 5. einingar
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         csp1-support:
           stages:
             Group Work and Peer Learning:
@@ -2572,11 +4320,19 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         basketball:
           title: Velja lið og búa til körfuboltaleik
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
           stages:
+            Bounce:
+              name: Skopp
+          lessons:
             Bounce:
               name: Skopp
         sample-csp5:
@@ -2585,6 +4341,9 @@ is:
               name: Stjórnun minnis með breytum
         hoc-encryption:
           stages:
+            Simple Encryption:
+              name: Einföld dulkóðun
+          lessons:
             Simple Encryption:
               name: Einföld dulkóðun
         fesbinary:
@@ -2640,6 +4399,21 @@ is:
               display_name: 'Kafli 2: Útlitsmótun og CSS'
             csd_survey:
               display_name: Könnun eftir námskeið
+          lessons:
+            Exploring Websites:
+              name: Könnun Vefsetra
+            Intro to HTML:
+              name: Kynning á HTML
+            Lists:
+              name: Listar
+            Intellectual Property and Images:
+              name: Höfundarréttur og Myndir
+            Project - Multi-Page Websites:
+              name: Verkefni - Fjölsíðna Vefsetur
+            Sources and Search Engines:
+              name: Heimildir og leitarvélar
+            RGB Colors and Classes:
+              name: RGB Litir og Klasar
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -2655,6 +4429,13 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Unit 2 Overview:
+              name: Yfirlit 2. einingar
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         csd4-2017:
           stages:
             Identifying User Needs:
@@ -2666,6 +4447,9 @@ is:
               display_name: 'Kafli 2: Frumgerðir appa'
             csd_survey:
               display_name: Könnun eftir námskeið
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
         minecraft:
           title: Klukkustund kóðunar - Minecraft Hönnuður
           description_short: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
@@ -2673,8 +4457,14 @@ is:
           stages:
             Minecraft Hour of Code Designer:
               name: Klukkustund kóðunar - Minecraft Hönnuður
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: Klukkustund kóðunar - Minecraft Hönnuður
         flappy-impact-study:
           stages:
+            Flappy Code:
+              name: Flappy kóði
+          lessons:
             Flappy Code:
               name: Flappy kóði
         coursea-draft:
@@ -2686,6 +4476,13 @@ is:
               name: Ferðast í öryggi
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Going Places Safely:
+              name: Ferðast í öryggi
         courseb-draft:
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           stages:
@@ -2695,6 +4492,13 @@ is:
               name: Raðir og algrím
             More Computer Science:
               name: Meiri tölvunarfræði
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
             Your Digital Footprint:
@@ -2710,6 +4514,13 @@ is:
               name: Stafræna fótsporið þitt
             Building a Foundation:
               name: Að byggja grunn
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algrím úr raunheimi: Pappírsskutlur'
+            Binary Bracelets:
+              name: Stafræn armbönd
         coursed-draft:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           stages:
@@ -2725,6 +4536,19 @@ is:
               name: Innri lykkjur
             Introduction:
               name: Kynning
+          lessons:
+            Introduction:
+              name: Kynning
+            Nested Loops:
+              name: Innri lykkjur
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Digital Citizenship:
+              name: Stafrænn borgari
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
         coursee-draft:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           stages:
@@ -2747,6 +4571,17 @@ is:
               display_name: Innihald
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
+          lessons:
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
+            Introduction:
+              name: Kynning
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         coursef-draft:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           stages:
@@ -2787,6 +4622,35 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+          lessons:
+            Introduction:
+              name: Kynning
+            The Power of Words:
+              name: Afl orða
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+            Envelope Variables:
+              name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Songwriting with Parameters:
+              name: Lagasmíð með stikum
+            Conditionals and Functions in Bee:
+              name: Býflugan - Skilyrðingar og Föll
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         classic-hoc-impact-study:
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum fígúrum!
           stages:
@@ -2797,6 +4661,9 @@ is:
           stages:
             Hour of Code 2013:
               name: Klukkustund kóðunar 2013
+          lessons:
+            Hour of Code 2013:
+              name: Klukkustund kóðunar 2013
         sports:
           title: Kóðaðu þinn eigin íþróttaleik
           description_short: Blandaðu saman íþróttum
@@ -2804,8 +4671,26 @@ is:
           stages:
             Sports:
               name: Íþróttir
+          lessons:
+            Sports:
+              name: Íþróttir
         2016_sciencePD-phase2b:
           stages:
+            Welcome!:
+              name: Velkomin!
+            Review StarLogo Nova:
+              name: Skoðun á StarLogo Nova
+            Reviewing the Modules:
+              name: Kennslueiningar skoðaðar
+            Advanced StarLogo Nova:
+              name: Ítarlegra StarLogo Nova
+            Remixing Phases 1 and 2:
+              name: Þættir 1 og 2 endurblandaðir
+            Thinking Ahead to Implementation:
+              name: Horft fram á við til framkvæmdar
+            Wrap-Up:
+              name: Samantekt
+          lessons:
             Welcome!:
               name: Velkomin!
             Review StarLogo Nova:
@@ -2836,8 +4721,26 @@ is:
               name: Horft fram á við til framkvæmdar
             Wrap-Up:
               name: Samantekt
+          lessons:
+            Welcome!:
+              name: Velkomin!
+            Review StarLogo Nova:
+              name: Skoðun á StarLogo Nova
+            Reviewing the Modules:
+              name: Kennslueiningar skoðaðar
+            Advanced StarLogo Nova:
+              name: Ítarlegra StarLogo Nova
+            Remixing Phases 1 and 2:
+              name: Þættir 1 og 2 endurblandaðir
+            Thinking Ahead to Implementation:
+              name: Horft fram á við til framkvæmdar
+            Wrap-Up:
+              name: Samantekt
         sciencepd3-2016:
           stages:
+            Welcome Back!:
+              name: Velkomin aftur!
+          lessons:
             Welcome Back!:
               name: Velkomin aftur!
         csp3-support:
@@ -2855,12 +4758,22 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Unit 3 Overview:
+              name: Yfirlit 3. einingar
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         csdgraveyard:
           stages:
             new stage:
               name: nýr áfangi
             Introduction to Styling with CSS (2.7):
               name: Kynning á útlitsmótun með CSS (2.7)
+            External Style Sheets:
+              name: Ytri stílsíður
+          lessons:
             External Style Sheets:
               name: Ytri stílsíður
         csp4-support:
@@ -2880,8 +4793,22 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Unit 4 Overview:
+              name: Yfirlit 4. einingar
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         sciencepd4:
           stages:
+            Welcome!:
+              name: Velkomin!
+            Thinking About Implementation:
+              name: Hugsað til framkvæmdar
+            Wrap-Up:
+              name: Samantekt
+          lessons:
             Welcome!:
               name: Velkomin!
             Thinking About Implementation:
@@ -2911,8 +4838,24 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+          lessons:
+            Snowflakes:
+              name: Snjókorn
+            Binary:
+              name: Tvíundir
         sciencepd5:
           stages:
+            Welcome!:
+              name: Velkomin!
+            Earth Science Challenges:
+              name: Áskoranir í jarðvísindum
+            Life Science Challenges:
+              name: Áskoranir í lífvísindum
+            Physical Science Challenges:
+              name: Áskoranir í raunvísindum
+            Wrap-Up:
+              name: Samantekt
+          lessons:
             Welcome!:
               name: Velkomin!
             Earth Science Challenges:
@@ -2938,6 +4881,13 @@ is:
               display_name: Innihald
             practice:
               display_name: Kennsluaðferðir
+          lessons:
+            Unit 5 Overview:
+              name: Yfirlit 5. einingar
+            Group Work and Peer Learning:
+              name: Hópvinna og jafningjanám
+            Measuring Student Learning:
+              name: Mæling á námi nemenda
         csppostap-2017:
           stages:
             Creating Javascript Objects:
@@ -2965,8 +4915,32 @@ is:
               display_name: Innihald
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Creating Javascript Objects:
+              name: Gerð Javascript hluta
+            Permanent Data Storage:
+              name: Varanleg vistun gagna
+            Reading Records:
+              name: Lestur færslna
+            Deleting Records:
+              name: Að eyða færslum
+            Updating Records:
+              name: Uppfærsla færslna
+            Importing and Exporting Data:
+              name: Inn- og útflutningur gagna
+            Visualizing Data:
+              name: Sjóngerving gagna
+            Sample Apps:
+              name: App dæmi
+            Final Project:
+              name: Lokaverkefni
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         gamelab-demo:
           stages:
+            Simple Sprite Movement:
+              name: Einföld hreyfing kvika
+          lessons:
             Simple Sprite Movement:
               name: Einföld hreyfing kvika
         csd6-draft:
@@ -2988,8 +4962,20 @@ is:
               display_name: 'Kafli 1: Forritun vélbúnaðar'
             csd6_2:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions with Parameters:
+              name: Föll með stikum
         workshop-gamelab:
           stages:
+            Introduction:
+              name: Kynning
+            Sprites:
+              name: Kvikar
+            'Project: Interactive Card':
+              name: 'Verkefni: Gagnvirkt kort'
+          lessons:
             Introduction:
               name: Kynning
             Sprites:
@@ -3015,6 +5001,9 @@ is:
           stages:
             Introduction:
               name: Kynning
+          lessons:
+            Introduction:
+              name: Kynning
         coursee-ramp:
           stages:
             Introduction:
@@ -3023,6 +5012,13 @@ is:
               name: Skilyrði
             'Real Life Algorithms: Dice Race':
               name: 'Algrím úr raunheimi: Teningakapp'
+          lessons:
+            'Real Life Algorithms: Dice Race':
+              name: 'Algrím úr raunheimi: Teningakapp'
+            Introduction:
+              name: Kynning
+            Conditionals:
+              name: Skilyrði
         csd6-2017:
           stages:
             Lists:
@@ -3137,6 +5133,39 @@ is:
               name: Notkun leikjahönnunarferlisins
             'Project: Design a Game':
               name: 'Verkefni: Hanna leik'
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Variables Unplugged:
+              name: Breytur - án tölvu
+            Variables and Animation:
+              name: Breytur og hreyfing
+            Sprites and Properties:
+              name: Kvikar og eiginleikar
+            Sprites and Images:
+              name: Kvikar og myndir
+            Conditionals and Keyboard Input:
+              name: Skilyrðingar og inntak lykla
+            Complex Conditionals:
+              name: Samsettar skilyrðingar
+            'Project: Interactive Card':
+              name: 'Verkefni: Gagnvirkt kort'
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
+            'Project: Design a Game':
+              name: 'Verkefni: Hanna leik'
         csd2-draft:
           stages:
             Images in HTML:
@@ -3217,8 +5246,18 @@ is:
               name: Ice Age Leikjasmiðja
             Conditionals and Functions in Bee:
               name: Býflugan - Skilyrðingar og Föll
+          lessons:
+            Introduction:
+              name: Kynning
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+            Conditionals and Functions in Bee:
+              name: Býflugan - Skilyrðingar og Föll
         fmscsd3preview:
           stages:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+          lessons:
             Drawing in Game Lab:
               name: Teikning í Leikjasmiðju
         csp-post-survey:
@@ -3239,8 +5278,26 @@ is:
               name: Að gefa út vef
             Sources and Search Engines:
               name: Heimildir og leitarvélar
+          lessons:
+            Describing Web pages:
+              name: Lýsing vefsíðna
+            Images in HTML:
+              name: Myndir í HTML
+            Classes:
+              name: Klasar
+            Peer Review:
+              name: Álit samnemenda
+            Publishing a Website:
+              name: Að gefa út vef
+            Sources and Search Engines:
+              name: Heimildir og leitarvélar
         artist-and-bb8:
           stages:
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+            Bounce:
+              name: Skopp
+          lessons:
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
             Bounce:
@@ -3258,6 +5315,13 @@ is:
           description_audience: 'Aldur: 4-7'
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Going Places Safely:
+              name: Ferðast í öryggi
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3268,6 +5332,13 @@ is:
           assignment_family_title: Námskeið B
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri. (Svipað og Námskeið A en með meiri fjölbreytni fyrir eldri nemendur.)
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -3276,6 +5347,13 @@ is:
           assignment_family_title: Námskeið C
           description_audience: 'Aldur: 6-10'
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algrím úr raunheimi: Pappírsskutlur'
+            Binary Bracelets:
+              name: Stafræn armbönd
         coursed-2017:
           stages:
             Nested Loops:
@@ -3284,6 +5362,19 @@ is:
           assignment_family_title: Námskeið D
           description_audience: 'Aldur: 7-11'
           description_short: Hér er farið fljótt yfir hugtök frá Námskeiði C og svo haldið lengra með algrímum, földuðum lykkjum, skilyrðingum og fleiru.
+          lessons:
+            Introduction:
+              name: Kynning
+            Nested Loops:
+              name: Innri lykkjur
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Digital Citizenship:
+              name: Stafrænn borgari
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
         coursee-2017:
           stages:
             The Power of Words:
@@ -3329,6 +5420,21 @@ is:
               display_name: Innihald Námskeiðs E
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Nested Loops:
+              name: Innri lykkjur
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
+            Introduction:
+              name: Kynning
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         coursef-2017:
           stages:
             Variables in Artist:
@@ -3358,6 +5464,35 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Introduction:
+              name: Kynning
+            The Power of Words:
+              name: Afl orða
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+            Envelope Variables:
+              name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Songwriting with Parameters:
+              name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -3478,6 +5613,27 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+          lessons:
+            Introduction:
+              name: Kynning
+            Building a Foundation:
+              name: Að byggja grunn
+            Nested Loops:
+              name: Innri lykkjur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3489,6 +5645,13 @@ is:
           title: Hraðnámskeið ólæsra
           description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta bekk.'
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Spelling Bee:
+              name: Stafsetning
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -3523,6 +5686,21 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            The Need For Programming Languages:
+              name: Þörfin fyrir forritunarmál
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            Functions and Top-Down Design:
+              name: Föll og ofansækin hönnun
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
+            Practice PT - Design a Digital Scene:
+              name: Fagnámsæfing - Hanna stafræna sviðsmynd
         csd4-draft:
           stages:
             Identifying User Needs:
@@ -3532,6 +5710,9 @@ is:
               display_name: 'Kafli 1: Notendamiðuð hönnun'
             csd4_2:
               display_name: 'Kafli 2: Frumgerðir appa'
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -3553,6 +5734,17 @@ is:
               display_name: Innihald Námskeiðs E
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         new-d:
           stages:
             Introduction:
@@ -3571,6 +5763,21 @@ is:
               name: Að byggja grunn
             Loops in Ice Age:
               name: Lykkjur í Ísöld
+          lessons:
+            Introduction:
+              name: Kynning
+            Building a Foundation:
+              name: Að byggja grunn
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Digital Citizenship:
+              name: Stafrænn borgari
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
         csp3-a:
           stages:
             new stage:
@@ -3603,6 +5810,27 @@ is:
           lesson_groups:
             content:
               display_name: Innihald
+          lessons:
+            Introduction:
+              name: Kynning
+            Building a Foundation:
+              name: Að byggja grunn
+            Nested Loops:
+              name: Innri lykkjur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         new-e:
           stages:
             Building a Foundation:
@@ -3622,6 +5850,17 @@ is:
               display_name: Innihald Námskeiðs E
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         new-f:
           stages:
             Building a Foundation:
@@ -3655,6 +5894,33 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            The Power of Words:
+              name: Afl orða
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+            Envelope Variables:
+              name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Songwriting with Parameters:
+              name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         csd5-old:
           stages:
             8-bit Numbers:
@@ -3666,6 +5932,9 @@ is:
               display_name: 'Kafli 1: Kóðun upplýsinga'
             csd5_2:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
+          lessons:
+            8-bit Numbers:
+              name: 8-bita Tölur
         hocali:
           stages:
             new stage:
@@ -3679,6 +5948,9 @@ is:
               display_name: 'Kafli 1: Notendamiðuð hönnun'
             csd4_2:
               display_name: 'Kafli 2: Frumgerðir appa'
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -3700,10 +5972,30 @@ is:
               display_name: 'Kafli 1: Forritunarmál og algrím'
             cspAssessment:
               display_name: Kaflamat
+          lessons:
+            The Need For Programming Languages:
+              name: Þörfin fyrir forritunarmál
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            Functions and Top-Down Design:
+              name: Föll og ofansækin hönnun
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
+            Practice PT - Design a Digital Scene:
+              name: Fagnámsæfing - Hanna stafræna sviðsmynd
         pwc:
           stages:
             new stage:
               name: nýr áfangi
+            Personal Innovations:
+              name: Persónuleg nýsköpun
+            Simple Encryption:
+              name: Einföld dulkóðun
+          lessons:
             Personal Innovations:
               name: Persónuleg nýsköpun
             Simple Encryption:
@@ -3713,6 +6005,9 @@ is:
             Minecraft Hour of Code:
               name: Klukkustund kóðunar með Minecraft
           description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
+          lessons:
+            Minecraft Hour of Code:
+              name: Klukkustund kóðunar með Minecraft
         csp-explore-2017:
           stages:
             new stage:
@@ -3724,6 +6019,9 @@ is:
               display_name: 'Kafli 2: AP - Skilningsverkefni'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp-create-2017:
           stages:
             Post-Course Survey:
@@ -3733,8 +6031,14 @@ is:
               display_name: 'Kafli 3: AP - Sköpunarverkefni'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         aws-demo:
           stages:
+            new stage:
+              name: nýr áfangi
+          lessons:
             new stage:
               name: nýr áfangi
         colehoc17:
@@ -3764,6 +6068,21 @@ is:
               display_name: Innihald Námskeiðs E
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Nested Loops:
+              name: Innri lykkjur
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
+            Introduction:
+              name: Kynning
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         course-f-2018:
           stages:
             Building a Foundation:
@@ -3799,6 +6118,35 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Introduction:
+              name: Kynning
+            The Power of Words:
+              name: Afl orða
+            Ice Age Play Lab:
+              name: Ice Age Leikjasmiðja
+            Envelope Variables:
+              name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Songwriting with Parameters:
+              name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         csd6-old:
           stages:
             Lists:
@@ -3812,6 +6160,13 @@ is:
               display_name: 'Kafli 1: Forritun vélbúnaðar'
             csd6_2:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+          lessons:
+            Lists:
+              name: Listar
+            For Loops:
+              name: Frá lykkjur
+            Timed Loops:
+              name: Tímasettar lykkjur
         csd3-1819draft:
           stages:
             Drawing in Game Lab:
@@ -3848,8 +6203,38 @@ is:
               display_name: 'Kafli 2: Gerð leikja'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Shapes and Randomization:
+              name: Form og handahóf
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         textbook:
           stages:
+            new stage:
+              name: nýr áfangi
+          lessons:
             new stage:
               name: nýr áfangi
         csd3-2018:
@@ -3909,6 +6294,33 @@ is:
               display_name: 'Kafli 2: Gerð leikja'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Shapes and Randomization:
+              name: Form og handahóf
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         csd2-2018:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           stages:
@@ -3933,6 +6345,21 @@ is:
               display_name: 'Kafli 2: Útlitsmótun og CSS'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Exploring Websites:
+              name: Könnun Vefsetra
+            Intro to HTML:
+              name: Kynning á HTML
+            Lists:
+              name: Listar
+            Intellectual Property and Images:
+              name: Höfundarréttur og Myndir
+            Project - Multi-Page Websites:
+              name: Verkefni - Fjölsíðna Vefsetur
+            Sources and Search Engines:
+              name: Heimildir og leitarvélar
+            RGB Colors and Classes:
+              name: RGB Litir og Klasar
         coursea-2018:
           title: Námskeið A (2018)
           assignment_family_title: Námskeið A
@@ -3963,6 +6390,17 @@ is:
               name: Röð aðgerða með Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            Going Places Safely:
+              name: Ferðast í öryggi
         express-2018:
           assignment_family_title: Hraðnámskeið
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -4015,6 +6453,35 @@ is:
               name: Boðhlaupsforritun
             Graph Paper Programming:
               name: Forritun rúðublaða
+          lessons:
+            Graph Paper Programming:
+              name: Forritun rúðublaða
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            The Power of Words:
+              name: Afl orða
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Revise Your Project:
+              name: Fara yfir verkefnið
+            Binary Bracelets:
+              name: Stafræn armbönd
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         courseb-2018:
           assignment_family_title: Námskeið B
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -4029,6 +6496,13 @@ is:
               name: Lykkjur með Láru
             Move It, Move It:
               name: Hreyfa sig, hreyfa sig
+          lessons:
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         coursed-2018:
           assignment_family_title: Námskeið D
           description_audience: 'Aldur: 7-11'
@@ -4053,6 +6527,19 @@ is:
               name: Forritun rúðublaða
             Relay Programming:
               name: Boðhlaupsforritun
+          lessons:
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Digital Citizenship:
+              name: Stafrænn borgari
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
         coursec-2018:
           assignment_family_title: Námskeið C
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
@@ -4068,6 +6555,15 @@ is:
               name: Stafræn armbönd
             Looking Ahead:
               name: Horft fram á við
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algrím úr raunheimi: Pappírsskutlur'
+            Looking Ahead:
+              name: Horft fram á við
+            Binary Bracelets:
+              name: Stafræn armbönd
         csd6-2018:
           stages:
             Making Music:
@@ -4081,6 +6577,11 @@ is:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions with Parameters:
+              name: Föll með stikum
         coursee-2018:
           assignment_family_title: Námskeið E
           description_audience: 'Aldur: 8 - 12'
@@ -4110,6 +6611,19 @@ is:
               display_name: Innihald Námskeiðs E
             extra_course_content:
               display_name: Viðbótarefni námskeiðs
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Nested Loops:
+              name: Innri lykkjur
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Conditionals:
+              name: Skilyrði
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         coursef-2018:
           assignment_family_title: Námskeið F
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
@@ -4148,6 +6662,23 @@ is:
               display_name: Uppfærsla í Námskeið F (val)
             csf_f_2:
               display_name: Innihald Námskeiðs F
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            The Power of Words:
+              name: Afl orða
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Revise Your Project:
+              name: Fara yfir verkefnið
         csp1-2018:
           stages:
             Personal Innovations:
@@ -4179,6 +6710,29 @@ is:
               display_name: 'Kafli 1: Framsetning og flutningur upplýsinga'
             csp1_2:
               display_name: 'Kafli 2: Að finna upp internetið'
+          lessons:
+            Personal Innovations:
+              name: Persónuleg nýsköpun
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending tvenndarboða með Internet-herminum
+            Number Systems:
+              name: Talnakerfi
+            Binary Numbers:
+              name: Tvíundartölur
+            Sending Numbers:
+              name: Sending talna
+            The Internet:
+              name: Internetið
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+            Packets and Making a Reliable Internet:
+              name: Pakkar og gerð áreiðanlegs internets
+            The Need for DNS:
+              name: Þörfin fyrir DNS
         csd1-2018:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           stages:
@@ -4201,6 +6755,13 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
         csd4-2018:
           stages:
             Identifying User Needs:
@@ -4212,6 +6773,9 @@ is:
               display_name: 'Kafli 2: Frumgerðir appa'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
         csd5-2018:
           description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
           description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
@@ -4264,6 +6828,15 @@ is:
               display_name: 'Kafli 2 - Stafrænar upplýsingar'
             cspAssessment:
               display_name: Kaflamat
+          lessons:
+            Bytes and File Sizes:
+              name: Bæti og skráastærðir
+            Text Compression:
+              name: Þjöppun texta
+            Encoding B&W Images:
+              name: Kóðun S/H mynda
+            Encoding Color Images:
+              name: Kóðun litmynda
         csp3-2018:
           description_short: Lærðu undirstöðu í JavaScript forritun með nálgun sem beitir ofan-frá hönnun og notar klassíska "turtle" teiknun.
           stages:
@@ -4290,6 +6863,21 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            The Need For Programming Languages:
+              name: Þörfin fyrir forritunarmál
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            Functions and Top-Down Design:
+              name: Föll og ofansækin hönnun
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
+            Practice PT - Design a Digital Scene:
+              name: Fagnámsæfing - Hanna stafræna sviðsmynd
         csp-explore-2018:
           lesson_groups:
             csp_ap_2:
@@ -4319,6 +6907,15 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Finding Trends with Visualizations:
+              name: Leitni fundin sjónrænt
+            Check Your Assumptions:
+              name: Kannaðu hvað þú heldur
+            Identifying People with Data:
+              name: Að bera kennsl á fólk með gögnum
+            Simple Encryption:
+              name: Einföld dulkóðun
         csp5-2018:
           stages:
             Multi-screen Apps:
@@ -4358,6 +6955,35 @@ is:
               display_name: 'Kafli 2: Forritað með formgerðum gagna'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Multi-screen Apps:
+              name: Öpp með fleiri en eina skjámynd
+            Controlling Memory with Variables:
+              name: Stjórnun minnis með breytum
+            Unit 5 Assessment 1:
+              name: 5. eining - Mat 1
+            User Input and Strings:
+              name: Inntak notanda og strengir
+            '"If" Statements Unplugged':
+              name: '''Ef'' yrðingar án tölvu'
+            '"if-else-if" and Conditional Logic':
+              name: '"ef-annars-ef" og rökvísi skilyrðinga'
+            Unit 5 Assessment 2:
+              name: 5. eining - Mat 2
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Unit 5 Assessment 3:
+              name: 5. eining - Mat 3
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Unit 5 Assessment 4:
+              name: 5. eining - Mat 4
         csppostap-2018:
           stages:
             Creating Javascript Objects:
@@ -4397,6 +7023,33 @@ is:
               display_name: 'Kafli 2: Öpp og gagnagrunnar'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Good and Bad Data Visualizations:
+              name: Góðar og slæmar sjóngerðir gagna
+            Making Data Visualizations:
+              name: Gögn gerð sjónræn
+            Cleaning Data:
+              name: Hreinsun gagna
+            Creating Summary Tables:
+              name: Gerð samantektartaflna
+            Creating Javascript Objects:
+              name: Gerð Javascript hluta
+            Permanent Data Storage:
+              name: Varanleg vistun gagna
+            Reading Records:
+              name: Lestur færslna
+            Deleting Records:
+              name: Að eyða færslum
+            Updating Records:
+              name: Uppfærsla færslna
+            Importing and Exporting Data:
+              name: Inn- og útflutningur gagna
+            Visualizing Data:
+              name: Sjóngerving gagna
+            Sample Apps:
+              name: App dæmi
+            Final Project:
+              name: Lokaverkefni
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -4522,6 +7175,17 @@ is:
               name: Stafræna fótsporið þitt
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
+          lessons:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Spelling Bee:
+              name: Stafsetning
         fit-test:
           lesson_groups:
             required:
@@ -4532,8 +7196,14 @@ is:
           stages:
             Artist:
               name: Listamaður
+          lessons:
+            Artist:
+              name: Listamaður
         frozen-2018-test:
           stages:
+            Artist:
+              name: Listamaður
+          lessons:
             Artist:
               name: Listamaður
         dance:
@@ -4544,8 +7214,14 @@ is:
               name: Danspartý
           title: Danspartý
           description_short: Með Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 öðrum!
+          lessons:
+            Dance Party:
+              name: Danspartý
         frozen-2018-test-b:
           stages:
+            Artist:
+              name: Listamaður
+          lessons:
             Artist:
               name: Listamaður
         aquatic:
@@ -4610,6 +7286,21 @@ is:
               display_name: Kvikar
             csf_digcit:
               display_name: Stafrænn borgari
+          lessons:
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Internet:
+              name: Internet
+            The Power of Words:
+              name: Afl orða
+            Crowdsourcing:
+              name: Hópvistun
         dance-low:
           stages:
             Dance Party:
@@ -4646,6 +7337,21 @@ is:
               display_name: Tvíundir
             csf_digcit:
               display_name: Stafrænn borgari
+          lessons:
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
+            Digital Citizenship:
+              name: Stafrænn borgari
+            Dance Party:
+              name: Danspartý
         coursee-2019:
           description_audience: 'Aldur: 8 - 12'
           stages:
@@ -4674,6 +7380,9 @@ is:
               display_name: Innri lykkjur
             csf_functions:
               display_name: Föll
+          lessons:
+            Conditionals:
+              name: Skilyrði
         express-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4722,6 +7431,13 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+          lessons:
+            Dance Party:
+              name: Danspartý
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
         csd1-2019:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           stages:
@@ -4740,6 +7456,13 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
         andrea-test:
           stages:
             new stage:
@@ -4779,6 +7502,11 @@ is:
               display_name: Atvik
             csf_data:
               display_name: Gögn
+          lessons:
+            Binary Bracelets:
+              name: Stafræn armbönd
+            Looking Ahead:
+              name: Horft fram á við
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -4813,6 +7541,11 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Going Places Safely:
+              name: Ferðast í öryggi
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         courseb-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4841,6 +7574,15 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Programming in Harvester:
+              name: Forritun með Hirðinum
         pre-express-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4863,8 +7605,20 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            Spelling Bee:
+              name: Stafsetning
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         removed19:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Kembing: Ófundnir böggar'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algrím úr raunheimi: Sá fræi'
+          lessons:
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
@@ -4897,6 +7651,21 @@ is:
               display_name: 'Kafli 2: Útlitsmótun og CSS'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Exploring Websites:
+              name: Könnun Vefsetra
+            Intro to HTML:
+              name: Kynning á HTML
+            Lists:
+              name: Listar
+            Intellectual Property and Images:
+              name: Höfundarréttur og Myndir
+            Project - Multi-Page Websites:
+              name: Verkefni - Fjölsíðna Vefsetur
+            Sources and Search Engines:
+              name: Heimildir og leitarvélar
+            RGB Colors and Classes:
+              name: RGB Litir og Klasar
         csd3-2019:
           description_short: "Forritun"
           stages:
@@ -4954,6 +7723,33 @@ is:
               display_name: 'Kafli 2: Gerð leikja'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Shapes and Randomization:
+              name: Form og handahóf
+            Variables:
+              name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         csd4-2019:
           stages:
             Identifying User Needs:
@@ -4967,6 +7763,9 @@ is:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
         csd5-2019:
           description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
           description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
@@ -5003,6 +7802,11 @@ is:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions with Parameters:
+              name: Föll með stikum
         csp4-pilot:
           stages:
             Surveys:
@@ -5049,6 +7853,29 @@ is:
               display_name: 'Kafli 1: Framsetning og flutningur upplýsinga'
             csp1_2:
               display_name: 'Kafli 2: Að finna upp internetið'
+          lessons:
+            Personal Innovations:
+              name: Persónuleg nýsköpun
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending tvenndarboða með Internet-herminum
+            Number Systems:
+              name: Talnakerfi
+            Binary Numbers:
+              name: Tvíundartölur
+            Sending Numbers:
+              name: Sending talna
+            The Internet:
+              name: Internetið
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+            Packets and Making a Reliable Internet:
+              name: Pakkar og gerð áreiðanlegs internets
+            The Need for DNS:
+              name: Þörfin fyrir DNS
         csp2-2019:
           stages:
             Bytes and File Sizes:
@@ -5066,6 +7893,15 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Bytes and File Sizes:
+              name: Bæti og skráastærðir
+            Text Compression:
+              name: Þjöppun texta
+            Encoding B&W Images:
+              name: Kóðun S/H mynda
+            Encoding Color Images:
+              name: Kóðun litmynda
         csp3-2019:
           description_short: Lærðu undirstöðu í JavaScript forritun með nálgun sem beitir ofan-frá hönnun og notar klassíska "turtle" teiknun.
           stages:
@@ -5090,6 +7926,21 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            The Need For Programming Languages:
+              name: Þörfin fyrir forritunarmál
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            Functions and Top-Down Design:
+              name: Föll og ofansækin hönnun
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
+            Practice PT - Design a Digital Scene:
+              name: Fagnámsæfing - Hanna stafræna sviðsmynd
         csp4-2019:
           stages:
             Finding Trends with Visualizations:
@@ -5107,6 +7958,15 @@ is:
               display_name: Kaflamat
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Finding Trends with Visualizations:
+              name: Leitni fundin sjónrænt
+            Check Your Assumptions:
+              name: Kannaðu hvað þú heldur
+            Identifying People with Data:
+              name: Að bera kennsl á fólk með gögnum
+            Simple Encryption:
+              name: Einföld dulkóðun
         csp5-2019:
           stages:
             Multi-screen Apps:
@@ -5144,6 +8004,35 @@ is:
               display_name: 'Kafli 2: Forritað með formgerðum gagna'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Multi-screen Apps:
+              name: Öpp með fleiri en eina skjámynd
+            Controlling Memory with Variables:
+              name: Stjórnun minnis með breytum
+            Unit 5 Assessment 1:
+              name: 5. eining - Mat 1
+            User Input and Strings:
+              name: Inntak notanda og strengir
+            '"If" Statements Unplugged':
+              name: '''Ef'' yrðingar án tölvu'
+            '"if-else-if" and Conditional Logic':
+              name: '"ef-annars-ef" og rökvísi skilyrðinga'
+            Unit 5 Assessment 2:
+              name: 5. eining - Mat 2
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Unit 5 Assessment 3:
+              name: 5. eining - Mat 3
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Unit 5 Assessment 4:
+              name: 5. eining - Mat 4
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -5191,6 +8080,33 @@ is:
               display_name: 'Kafli 2: Öpp og gagnagrunnar'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Good and Bad Data Visualizations:
+              name: Góðar og slæmar sjóngerðir gagna
+            Making Data Visualizations:
+              name: Gögn gerð sjónræn
+            Cleaning Data:
+              name: Hreinsun gagna
+            Creating Summary Tables:
+              name: Gerð samantektartaflna
+            Creating Javascript Objects:
+              name: Gerð Javascript hluta
+            Permanent Data Storage:
+              name: Varanleg vistun gagna
+            Reading Records:
+              name: Lestur færslna
+            Deleting Records:
+              name: Að eyða færslum
+            Updating Records:
+              name: Uppfærsla færslna
+            Importing and Exporting Data:
+              name: Inn- og útflutningur gagna
+            Visualizing Data:
+              name: Sjóngerving gagna
+            Sample Apps:
+              name: App dæmi
+            Final Project:
+              name: Lokaverkefni
         csp1-pilot:
           stages:
             new stage:
@@ -5208,6 +8124,9 @@ is:
               display_name: Könnun
             required:
               display_name: Yfirlit
+          lessons:
+            Binary Numbers:
+              name: Tvíundartölur
         csd-videos:
           stages:
             new stage:
@@ -5235,6 +8154,13 @@ is:
               display_name: 'Utanaðkomandi áhrif í Everglades'
             time4cs_c5:
               display_name: 'Borgarar til hins betra í Everglades'
+          lessons:
+            Building a Foundation:
+              name: Að byggja grunn
+            Crowdsourcing:
+              name: Hópvistun
+            Conditionals with Cards:
+              name: Skilyrði með kortum
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -5385,6 +8311,11 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
         csd2-pilot:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           stages:
@@ -5411,6 +8342,11 @@ is:
               display_name: 'Kafli 2: Útlitsmótun og CSS'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Intro to HTML:
+              name: Kynning á HTML
+            Images:
+              name: Myndir
         csd3-pilot:
           description_short: "Forritun"
           stages:
@@ -5470,6 +8406,31 @@ is:
               display_name: 'Kafli 2: Gerð leikja'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Variables:
+              name: Breytur
+            Sprite Properties:
+              name: Eiginleikar kvika
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         maddie-test:
           stages:
             new stage:
@@ -5483,6 +8444,9 @@ is:
               display_name: Innihald
             required:
               display_name: Yfirlit
+          lessons:
+            Debugging:
+              name: Villuleit
         csl-vn:
           stages:
             Loops in Ice Age:
@@ -5494,6 +8458,9 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -5568,6 +8535,13 @@ is:
           lesson_groups:
             csd1_2:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
         csp2-pilot:
           stages:
             new stage:
@@ -5581,10 +8555,20 @@ is:
               display_name: Innihald
             required:
               display_name: Yfirlit
+          lessons:
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
         peru-2019:
           stages:
             new stage:
               name: nýr áfangi
+            Introduction:
+              name: Kynning
+            Nested Loops:
+              name: Innri lykkjur
+          lessons:
             Introduction:
               name: Kynning
             Nested Loops:
@@ -5597,6 +8581,9 @@ is:
               display_name: Yfirlit
         dance-2019:
           stages:
+            Dance Party:
+              name: Danspartý
+          lessons:
             Dance Party:
               name: Danspartý
         k5-onlinepd-2019:
@@ -5650,6 +8637,23 @@ is:
               display_name: 'Kafað dýpra: Námskeið E og F'
             k5_next_steps:
               display_name: Næstu skref
+          lessons:
+            Sequencing:
+              name: Skipanaröð
+            Loops:
+              name: Lykkjur
+            Events:
+              name: Atvik
+            Conditionals:
+              name: Skilyrði
+            Functions:
+              name: Föll
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+            Sprite Lab:
+              name: Kvikasmiðjan
         dance-extras-2019:
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         csp10-pilot:
@@ -5690,6 +8694,11 @@ is:
               display_name: Innri lykkjur
             csf_functions:
               display_name: Föll
+          lessons:
+            Crowdsourcing:
+              name: Hópvistun
+            Conditionals with Cards:
+              name: Skilyrði með kortum
         time4cs-experiment-unit-2:
           lesson_groups:
             time4cs_c1:
@@ -5723,6 +8732,11 @@ is:
               display_name: Stafrænn borgari
             ramp_up:
               display_name: Efling
+          lessons:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
         time4cs-experiment-unit-1:
           stages:
             Sequencing in Maze:
@@ -5744,6 +8758,11 @@ is:
               display_name: Stafrænn borgari
             ramp_up:
               display_name: Efling
+          lessons:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -5800,6 +8819,11 @@ is:
               display_name: 'Kafli 2: Útlitsmótun og CSS'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Intro to HTML:
+              name: Kynning á HTML
+            Images:
+              name: Myndir
         csd1-2020:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           stages:
@@ -5821,6 +8845,13 @@ is:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
             csd1_3:
               display_name: Annað kennsluefni
+          lessons:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
         csd4-2020:
           stages:
             Identifying User Needs:
@@ -5834,6 +8865,9 @@ is:
               display_name: 'Kafli 2: Lausn vandamála með gögn'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Identifying User Needs:
+              name: Greining á þörfum notenda
         csd5-2020:
           description: Þessi eining er um mikilvægi gagna við lausn vandamála og undirstrikar hvernig tölvur geta hjálpað í þessu ferli. Fyrsti kaflinn kannar mismunandi kerfi sem notuð eru til að geyma upplýsingar á tölvutæku formi og þær áskoranir og málamiðlanir sem leiða af notkun þessara kerfa. Í öðrum kaflanum læra nemendur um notkun gagnasafna við lausn vandamála og hvernig tölvur bæta sjálfvirkni í það ferli. Kaflinn endar á því að skoða hvernig mætti beita gagnalausnaferlinu á sviði sem nemendur velja.
           description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
@@ -5870,6 +8904,11 @@ is:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions with Parameters:
+              name: Föll með stikum
         csd3-2020:
           description_short: "Forritun"
           stages:
@@ -5927,6 +8966,33 @@ is:
               display_name: 'Kafli 2: Gerð leikja'
             cspSurvey:
               display_name: Könnun
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Variables:
+              name: Breytur
+            Sprite Properties:
+              name: Eiginleikar kvika
+            Text:
+              name: texti
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         coursea-2020:
           title: Námskeið A (2019)
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -5951,6 +9017,9 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         courseb-2020:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -5977,6 +9046,13 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Programming in Harvester:
+              name: Forritun með Hirðinum
         coursec-2020:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
@@ -6000,6 +9076,11 @@ is:
               display_name: Atvik
             csf_data:
               display_name: Gögn
+          lessons:
+            Binary Bracelets:
+              name: Stafræn armbönd
+            Looking Ahead:
+              name: Horft fram á við
         coursed-2020:
           description_audience: 'Aldur: 7-11'
           stages:
@@ -6032,6 +9113,19 @@ is:
               display_name: Tvíundir
             csf_digcit:
               display_name: Stafrænn borgari
+          lessons:
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Dance Party:
+              name: Danspartý
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
         coursee-2020:
           description_audience: 'Aldur: 8 - 12'
           stages:
@@ -6048,6 +9142,9 @@ is:
               display_name: Innri lykkjur
             csf_functions:
               display_name: Föll
+          lessons:
+            Conditionals:
+              name: Skilyrði
         coursef-2020:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 9-13'
@@ -6078,6 +9175,19 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+          lessons:
+            The Power of Words:
+              name: Afl orða
+            Envelope Variables:
+              name: Umslagabreytur
+            Internet:
+              name: Internet
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
         express-2020:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -6104,6 +9214,13 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+          lessons:
+            Dance Party:
+              name: Danspartý
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
         pre-express-2020:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -6120,6 +9237,13 @@ is:
               display_name: Lykkjur
             csf_events:
               display_name: Atvik
+          lessons:
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            Spelling Bee:
+              name: Stafsetning
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         csp1-2020:
           stages:
             new stage:
@@ -6129,10 +9253,18 @@ is:
           lesson_groups:
             csp_unit1_2020:
               display_name: 'Kafli 1 - Stafrænar upplýsingar'
+          lessons:
+            Binary Numbers:
+              name: Tvíundartölur
         csp2-2020:
           stages:
             new stage:
               name: nýr áfangi
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+          lessons:
             The Need for Addressing:
               name: Þörfin fyrir vistföng
             Routers and Redundancy:
@@ -6146,6 +9278,9 @@ is:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Eining 3: Kynning á gerð appa'
+          lessons:
+            Debugging:
+              name: Villuleit
         csp6-2020:
           stages:
             new stage:
@@ -6189,6 +9324,15 @@ is:
           lesson_groups:
             csp3_1_2018:
               display_name: 'Kafli 3: Inngangur að forritun'
+          lessons:
+            Using Simple Commands:
+              name: Notkun einfaldra skipana
+            Creating Functions:
+              name: Gerð falla
+            APIs and Function Parameters:
+              name: API og stikar falla
+            Looping and Random Numbers:
+              name: Lykkjur og slembitölur
         csd3-virtual:
           description_short: "Forritun"
           stages:
@@ -6244,10 +9388,24 @@ is:
           lesson_groups:
             csd3_1:
               display_name: 'Kafli 1: Myndir og Hreyfing'
+          lessons:
+            Drawing in Game Lab:
+              name: Teikning í Leikjasmiðju
+            Variables:
+              name: Breytur
+            Sprite Properties:
+              name: Eiginleikar kvika
+            Sprite Movement:
+              name: Hreyfing kvika
+            Conditionals:
+              name: Skilyrði
         jess-test-script:
           stages:
             new stage:
               name: nýr áfangi
+            Debugging:
+              name: Villuleit
+          lessons:
             Debugging:
               name: Villuleit
         csd2-virtual:
@@ -6261,6 +9419,11 @@ is:
               display_name: 'Kafli 1: Innihald vefja og HTML'
             csd2_2:
               display_name: 'Kafli 2: Útlitsmótun og CSS'
+          lessons:
+            Intro to HTML:
+              name: Kynning á HTML
+            Images:
+              name: Myndir
         csp5-virtual:
           stages:
             Multi-screen Apps:
@@ -6293,6 +9456,15 @@ is:
               name: 5. eining - Mat 4
             Variables:
               name: Breytur
+          lessons:
+            Multi-screen Apps:
+              name: Öpp með fleiri en eina skjámynd
+            Variables:
+              name: Breytur
+            User Input and Strings:
+              name: Inntak notanda og strengir
+            '"if-else-if" and Conditional Logic':
+              name: '"ef-annars-ef" og rökvísi skilyrðinga'
         virtual-holding-place:
           stages:
             Velocity:
@@ -6314,6 +9486,21 @@ is:
               display_name: Innihald
             csd3_2:
               display_name: 'Kafli 2: Gerð leikja'
+          lessons:
+            Velocity:
+              name: Hraði
+            Collision Detection:
+              name: Skynjun árekstra
+            Complex Sprite Movement:
+              name: Samsett kvikahreyfing
+            Collisions:
+              name: Árekstrar
+            Functions:
+              name: Föll
+            The Game Design Process:
+              name: Ferli leikjahönnunar
+            Using the Game Design Process:
+              name: Notkun leikjahönnunarferlisins
         code-break:
           stages:
             new stage:
@@ -6349,3 +9536,20 @@ is:
               display_name: 'Kafli 1: Atburðaknúin forritun'
             csp5_2:
               display_name: 'Kafli 2: Forritað með formgerðum gagna'
+          lessons:
+            Unit 5 Assessment 2:
+              name: 5. eining - Mat 2
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Unit 5 Assessment 3:
+              name: 5. eining - Mat 3
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Unit 5 Assessment 4:
+              name: 5. eining - Mat 4
