@@ -1,7 +1,8 @@
 //CS in A stuff
-%div.collapsed_area_header{data: {toggle: "collapse", target: "#cs_in_a"}}
+%h1.control-legend.collapsed{data: {toggle: "collapse", target: "#cs_in_a"}}
   CS in A Options
-.collapse{id: "cs_in_a"}
+
+#cs_in_a.collapse
   - if @level.respond_to? :coordinate_grid_background
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
 
