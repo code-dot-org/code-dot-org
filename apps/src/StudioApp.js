@@ -1473,19 +1473,6 @@ StudioApp.prototype.resizeVisualization = function(width) {
   );
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
-
-    // If the small print and language selector are on the same line,
-    // the small print should float right.  Otherwise, it should float left.
-    var languageSelector = smallFooter.querySelector('form');
-    var smallPrint = smallFooter.querySelector('small');
-    if (
-      languageSelector &&
-      smallPrint.offsetTop === languageSelector.offsetTop
-    ) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
   }
 
   // Fire resize so blockly and droplet handle this type of resize properly:

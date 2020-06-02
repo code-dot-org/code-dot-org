@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200518181001) do
+ActiveRecord::Schema.define(version: 20200529004150) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1777,6 +1777,7 @@ ActiveRecord::Schema.define(version: 20200518181001) do
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
   add_foreign_key "sections", "courses"
+  add_foreign_key "sections", "scripts"
   add_foreign_key "state_cs_offerings", "schools", column: "state_school_id", primary_key: "state_school_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
