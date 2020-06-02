@@ -823,7 +823,7 @@
     {
      "type": "rating",
      "name": "instructional_focus",
-     "title": "Instructional focus.  1. less material, leave fewer behind <---> 5. more material, some students struggle",
+     "title": "Instructional focus. 1. less material, leave fewer behind <---> 5. more material, some students struggle",
      "correctAnswer": 1,
      "titleLocation": "hidden",
      "minRateDescription": "Strongly aligned with A",
