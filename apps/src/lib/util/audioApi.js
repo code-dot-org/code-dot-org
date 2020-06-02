@@ -1,13 +1,15 @@
 /* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, OPTIONAL} from './javascriptMode';
+import {apiValidateType, outputWarning, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
 import {
   SpeechConfig,
   SpeechSynthesizer,
   SpeechSynthesisOutputFormat
 } from 'microsoft-cognitiveservices-speech-sdk';
+import {findProfanity} from '@cdo/apps/code-studio/components/libraries/util';
+import i18n from '@cdo/locale';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -116,7 +118,7 @@ export const commands = {
       Sounds.getSingleton().stopAllAudio();
     }
   },
-  playSpeech(opts) {
+  async playSpeech(opts) {
     apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
     apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
     apiValidateType(
@@ -135,18 +137,31 @@ export const commands = {
       SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
     let voice = appOptions.azureSpeechServiceLanguages['English']['female'];
+    let languageCode = 'en';
     if (
       appOptions.azureSpeechServiceLanguages[opts.language] &&
       appOptions.azureSpeechServiceLanguages[opts.language][opts.gender]
     ) {
       voice =
         appOptions.azureSpeechServiceLanguages[opts.language][opts.gender];
+      languageCode =
+        appOptions.azureSpeechServiceLanguages[opts.language]['languageCode'];
+    }
+    const profaneWords = await findProfanity(opts.text, languageCode);
+    if (profaneWords && profaneWords.length > 0) {
+      outputWarning(
+        i18n.textToSpeechProfanity({
+          profanityCount: profaneWords.length,
+          profaneWords: profaneWords.join(', ')
+        })
+      );
+      return;
     }
     const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
     let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
       opts.text
     }</voice></speak>`;
-    synthesizer.speakSsmlAsync(
+    await synthesizer.speakSsmlAsync(
       ssml,
       result => {
         let forceHTML5 = false;
