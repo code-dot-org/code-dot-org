@@ -6,18 +6,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-## Instructions
+## Functions with Minecraft
 
-### Functions in Artist
+**Do This:** Practice recognizing reusable patterns and using named blocks to call functions. Help Steve or Alex navigate their world!
 
-**Do This:** link to artist
-
-## Code-Alongs
-
-## Sprite Lab: Code along with Sofia to build the Carrot Stew Game
-
-
-## App Lab: Code along with Darius to build the Outdoor Scene App
-
-
+![](https://images.code.org/89501131062c8d3f9f01902c696ef499-image-1591111167502.gif)
 MARKDOWN
