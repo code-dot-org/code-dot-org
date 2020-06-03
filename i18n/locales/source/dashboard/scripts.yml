@@ -25805,6 +25805,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI with Kat Graham & Kate Park
           title: Code Break
           description_audience: ''
           description_short: ''
@@ -25831,6 +25833,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI with Kat Graham & Kate Park
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -25875,6 +25879,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
           title: Code Break Staging
           description_audience: ''
           description_short: ''
@@ -25901,6 +25907,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
         code-break-younger-staging:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -25977,6 +25985,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI with Kat Graham & Kate Park
           title: Code Break for Younger Students
           description_audience: ''
           description_short: ''
@@ -26003,6 +26013,8 @@ en:
               name: Events with Macklemore & Scott Forstall
             AI with Kat Graham & Cody Simpson:
               name: AI with Kat Graham & Cody Simpson
+            AI with Kat Graham & Kate Park:
+              name: AI with Kat Graham & Kate Park
         no-lg:
           stages:
             new stage:

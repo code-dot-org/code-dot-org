@@ -1,5 +1,16 @@
 import i18n from './locale';
 
+export const ARROW_KEY_NAMES = [
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowUp',
+  'ArrowDown',
+  'Left',
+  'Right',
+  'Up',
+  'Down'
+];
+
 /**
  * provides a mapping from the block name as used by things like the Blockly
  * placeBlock configuration to the internationalized display name
