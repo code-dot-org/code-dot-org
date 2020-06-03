@@ -27,12 +27,10 @@ class Services::CustomLessons
 
     # 2. creates a custom level for the user
     level_name = "#{user.username}-#{SecureRandom.uuid}"
-    display_name = "Lesson #{new_position} Level"
     new_level = user.custom_levels.create(
       name: level_name,
       type: 'Applab',
-      game: Game.applab,
-      properties: {display_name: display_name}
+      game: Game.applab
     )
 
     # 3. puts the new custom level inside a new lesson in the custom_script
@@ -46,10 +44,6 @@ class Services::CustomLessons
       script: user.custom_script,
       levels: [new_level],
       position: 1,
-      # TODO: before launch, use progression instead of named_level.
-      # for now, make it so that the level edit page can be used to control how
-      # the progression name appears on the script overview page.
-      named_level: true
     )
   end
 end
