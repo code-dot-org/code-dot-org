@@ -69,12 +69,65 @@ sk-SK:
         -   [Aplikácie a riešenie problémov](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Príklad hodnotenia spolužiakov ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
 
         [/KEY]
+      CSD U3 - Booleans Video_2019: "## Cieľ diskusie\n\nŠtudenti by mali vedieť vysvetliť,
+        že logický výraz je niečo, čo vieme označiť ako \"pravda\", alebo \"nepravda\"
+        - podobne, ako keď sa pýtame otázku z možnou odpoveďou \"Áno\", alebo \"Nie\".
+        Formálnejšie povedané, logické výrazy _vyhodnotíme_  ako \"pravda\", alebo
+        \"nepravda\". To znamená, že keď počítač vyhodnocuje logický výraz, tak skontroluje,
+        či tento výraz popisuje situáciu, ktorá je pravdivá, či nepravdivá a potom
+        použije hodnotu `true` (pravda), či `false` nepravda pri ďalšom behu programu.\n\nPríklady
+        logických výrazov vyhodnotených ako pravda sú `3 > 1`  a `4 <= 7`, ale skúste
+        študentov doviesť ku výrazom, ktoré skôr použijú ako premenné v svojom programe,
+        napríklad `vekZiaka < 70`, či `velkostTriedy > 2`.\n\nPríklady logických výrazov,
+        ktoré sú nepravda sú `4 == 7`, `menoSkoly == \"Hogwarts\"`, či `aktualnyRok
+        < 1000`. \n\nPoznámka: Logické výrazy môžeme tiež nájsť pod označením Booleovské
+        operátory (či v A.j. bežne označované ako Boolean expressions)."
+      CSD U3 Complex Movement counter prediction gamelab: |-
+        Tip!
+
+            Táto úloha predstavuje hlavný programátorský koncept predstavený v dnešnej lekcii. Dnes budeme kombinovať kód pre počítanie s  blokmi určujúcimi rýchlosť. Pozbuďte študentov, aby o kóde detailne popremýšľali ešte predtým ako si ho spustia.
+      CSD U3 Complex Movement counter prediction gamelab_2018: |-
+        Tip!
+
+            Táto úloha predstavuje hlavný programátorský koncept predstavený v dnešnej lekcii. Dnes budeme kombinovať kód pre počítanie s  blokmi určujúcimi rýchlosť. Pozbuďte študentov, aby o kóde detailne popremýšľali ešte predtým ako si ho spustia.
+      CSD U3 Complex Movement counter prediction gamelab_2019: |-
+        Tip!
+
+            Táto úloha predstavuje hlavný programátorský koncept predstavený v dnešnej lekcii. Dnes budeme kombinovať kód pre počítanie s  blokmi určujúcimi rýchlosť. Pozbuďte študentov, aby o kóde detailne popremýšľali ešte predtým ako si ho spustia.
+      CSD U3 Functions Reset Sprite: "**Prečo používať funkcie** \n\nTáto a ďalšie
+        2 úlohy predstavia tri ciele používania funkcií: odstrániť z programu repetíciu,
+        umožniť jednoducho zmeniť kód na viacerých miestách zároveň a lepšie kód zorganizovať..
+        Študenti si tiež vytvoria vlastné funkcie. "
+      CSD U3 Functions Reset Sprite_2018: "**Prečo používať funkcie** \n\nTáto a ďalšie
+        2 úlohy predstavia tri ciele používania funkcií: odstrániť z programu repetíciu,
+        umožniť jednoducho zmeniť kód na viacerých miestách zároveň a lepšie kód zorganizovať..
+        Študenti si tiež vytvoria vlastné funkcie. "
+      CSD U3 Functions Reset Sprite_2019: "**Prečo používať funkcie** \n\nTáto a ďalšie
+        2 úlohy predstavia tri ciele používania funkcií: odstránenie zbytočných repetícií
+        v programe, umožnenie jednoduchej zmeny kódu na viacerých miestách zároveň
+        a lepšia organizácia kódu. Študenti si tiež vytvoria vlastné funkcie. "
+      CSD U3 Functions Write Reset: "**Funkcie v kontexte** \n\nV tejto a nasledujúcich
+        2 úlohách študenti využijú funkcie na zorganizovanie kódu v rámci jednoduchej
+        hry.  Viacero schopností a zručností z tejto lekcie študenci prepoužijú aj
+        pri tvorbe svojich projektov, či pri iných úlohách."
+      CSD U3 Functions Write Reset_2018: "**Funkcie v kontexte** \n\nV tejto a nasledujúcich
+        2 úlohách študenti využijú funkcie na zorganizovanie kódu v rámci jednoduchej
+        hry.  Viacero schopností a zručností z tejto lekcie študenci prepoužijú aj
+        pri tvorbe svojich projektov, či pri iných úlohách."
+      CSD U3 Functions Write Reset_2019: "**Funkcie v kontexte** \n\nV tejto a nasledujúcich
+        2 úlohách študenti využijú funkcie na zorganizovanie kódu v rámci jednoduchej
+        hry.  Viacero schopností a zručností z tejto lekcie študenci prepoužijú aj
+        pri tvorbe svojich projektov, či pri iných úlohách."
       CSD U3 debug: Toto je vhodná úloha na overenie toho, či žiaci chápu podstatu
         rozmiestňovania tvarov v Game Labe.
       CSD U3 debug_2018: Toto je vhodná úloha na overenie toho, či žiaci chápu podstatu
         rozmiestňovania tvarov v Game Labe.
       CSD U3 debug_2019: Toto je vhodná úloha na overenie toho, či žiaci chápu podstatu
         rozmiestňovania tvarov v Game Labe.
+      CSD U3 function video: |-
+        # Cieľ diskusie
+
+        Uistite sa, že študenti pochopili 2 kroky potrebné pri vytváraní funkcií a že funkcie vnímajú ako spôsob "zgrupovania", či abstrakcie. Definícia funkcie by mala obsahovať všetok kód, ktorý chceme spustiť a názov funkcie by mal byť krátkym popisom účelu tohoto kódu. Funkciu zavoláme na každom mieste programu, na ktorom chceme, aby tento kód zbehol.
       CSD U3 plotting shapes map: |-
         # Zjednodušené tvary
 

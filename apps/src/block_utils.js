@@ -1030,32 +1030,15 @@ exports.createJsWrapperBlockCreator = function(
 
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag
         // behavior and indicates the sibling block to shadow the value from
-        if (this.type === 'gamelab_clickedSpritePointer') {
+        if (blockText === 'clicked {SPRITE}') {
           this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_spriteClicked' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
+          this.setBlockToShadow('gamelab_allSpritesWithAnimation');
         }
-        if (this.type === 'gamelab_subjectSpritePointer') {
+        if (blockText === 'subject sprite') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[1] &&
-              root.getConnections_()[1].targetBlock()
-          );
         }
-        if (this.type === 'gamelab_objectSpritePointer') {
+        if (blockText === 'object sprite') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
-          this.setBlockToShadow(
-            root =>
-              root.type === 'gamelab_checkTouching' &&
-              root.getConnections_()[2] &&
-              root.getConnections_()[2].targetBlock()
-          );
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);

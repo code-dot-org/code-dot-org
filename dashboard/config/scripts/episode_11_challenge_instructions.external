@@ -18,7 +18,13 @@ markdown <<MARKDOWN
 
 ## App Lab
 
-**Do This:** Create your own scene using the Outdoor Scene library. Add ants & ladybugs! Modify the code and change the colors or sizes of the insects and plants. 
+**Do This:** 
+
+* Create your own scene using the Outdoor Scene library. Add ants & ladybugs! Modify the code and change the colors or sizes of the insects and plants. 
+* Create your own library to share with your friends and family! Make your own functions and share them using the new library tool. 
+
+*Reminder: Look under "Advanced Options" in the share menu to share your library!*
+
 
 ![](https://images.code.org/c031a3cfbac28746d42469eaf7a5748f-image-1590783071689.gif)
 MARKDOWN
