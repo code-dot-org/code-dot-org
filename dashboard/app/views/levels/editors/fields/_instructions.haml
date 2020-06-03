@@ -4,23 +4,9 @@
     Instructions
 
   #instructions.in.collapse
-
     %p
-      Every level can have a combination of short and long instructions. When both
-      are present, the long instructions will be presented by default but the
-      instructions component can be "collapsed" down to show just the short
-      instructions. This allows us to provide both detailed, potentially verbose
-      instructions in the long instructions and short reminders of level goals
-      that don't take up too much screen space in the short instructions.
-
-    %p
-      If only one version of instructions is provided, only that version will be
-      shown.
-
-    %p
-      If neither instructions field is provided, the entire instructions component
-      (including the hint prompt) will be omitted.
-
+      Learn how to use long and short instructions
+      = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Editing-Level-Instructions', target: '_blank'
     .field
       = f.label :short_instructions, "Short Instructions"
       ~ f.text_area :short_instructions,
