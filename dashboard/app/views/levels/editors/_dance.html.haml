@@ -15,10 +15,6 @@
 
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'dance'}
 
-= render partial: 'levels/editors/fields/custom_block', locals: {f: f}
-
-= render partial: 'levels/editors/fields/custom_helper_library', locals: {f: f}
-
 :javascript
   window.toggleBlock = function (elementId) {
     var element = document.getElementById(elementId);
