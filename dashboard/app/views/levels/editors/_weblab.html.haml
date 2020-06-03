@@ -4,8 +4,6 @@
     Sources
 = f.text_area :start_sources, placeholder: 'Starting sources', rows: 40, class: "input-block-level", value: @level.start_sources
 
-= render partial: 'levels/editors/fields/submittable', locals: {f: f}
-
 .field
   = f.label :project_template_level_name, 'Project Template Level Name'
   %p What this does:
