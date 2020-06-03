@@ -4,9 +4,10 @@
   #tts-error.alert.alert-error{style: "display: none"}
     #alert-content
   .row
-    .span6
-      %h5 Short Instructions
-      = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+    - unless (@level.is_a?(Applab) || (@level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)) || @level.is_a?(Weblab))
+      .span6
+        %h5 Short Instructions
+        = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
     .span6
       %h5 Long Instructions
       = f.text_area :tts_long_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
