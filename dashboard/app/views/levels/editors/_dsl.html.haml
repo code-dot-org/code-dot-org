@@ -42,11 +42,12 @@
 
 // Don't not use the _teacher_only_markdown.haml partial for DSL levels because they need
 // extra functionality (initializeEmbeddedMarkdownEditor) to save the markdown content into the level file
-%legend.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
-  Teacher Only Markdown
+- unless @level.is_a?(EvaluationMulti)
+  %legend.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
+    Teacher Only Markdown
 
-#teacher_only_markdown.in.collapse
-  .field.teacher-only-markdown
+  #teacher_only_markdown.in.collapse
+    .field.teacher-only-markdown
 
-    %textarea#level_teacher_markdown_textarea
-    #level_teacher_markdown_textarea_preview
+      %textarea#level_teacher_markdown_textarea
+      #level_teacher_markdown_textarea_preview
