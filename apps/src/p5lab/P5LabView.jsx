@@ -19,7 +19,6 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
 import animationLibrary from './gamelab/animationLibrary.json';
-import spriteCostumeLibrary from './spritelab/spriteCostumeLibrary.json';
 import {AnimationCategories} from './gamelab/constants';
 import {CostumeCategories} from './spritelab/constants';
 
@@ -53,9 +52,9 @@ class P5LabView extends React.Component {
     return undefined;
   }
 
-  getLibraryManifest() {
-    return this.props.spriteLab ? spriteCostumeLibrary : animationLibrary;
-  }
+  getLibraryManifest = () => {
+    return this.state.libraryManifest;
+  };
 
   getCategories() {
     return this.props.spriteLab ? CostumeCategories : AnimationCategories;
@@ -63,6 +62,15 @@ class P5LabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
+    if (this.props.spriteLab) {
+      fetch('/api/v1/animation-library/manifest/spritelab')
+        .then(response => response.json())
+        .then(libraryManifest => {
+          this.setState({libraryManifest});
+        });
+    } else {
+      this.setState({libraryManifest: animationLibrary});
+    }
   }
 
   renderCodeMode() {
@@ -102,7 +110,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               allowedExtensions=".png,.jpg,.jpeg"
-              libraryManifest={this.getLibraryManifest()}
+              getLibraryManifest={this.getLibraryManifest}
               categories={this.getCategories()}
               hideUploadOption={this.props.spriteLab}
             />
@@ -130,7 +138,7 @@ class P5LabView extends React.Component {
       interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab
         channelId={this.getChannelId()}
-        libraryManifest={this.getLibraryManifest()}
+        getLibraryManifest={this.getLibraryManifest}
         categories={this.getCategories()}
         hideUploadOption={this.props.spriteLab}
       />
