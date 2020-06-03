@@ -12,8 +12,6 @@ theme: responsive
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/code.org/public/student/middle-high.js')}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
-
-%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
 = view 'mobilecheck.js'
 
 .solid-block-header
@@ -60,5 +58,4 @@ To see what's available in your language, visit our course catalog.
 %hr/
 
 %h1 Courses from 3rd parties
-
 = view :learn_carousels, variation:'middle_high'
