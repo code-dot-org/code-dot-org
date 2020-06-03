@@ -238,7 +238,10 @@
     },
     "function_definitions": {
       "draw flame": {
-        "name": "draw flame"
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
       },
       "draw fire": {
         "name": "draw fire"
@@ -1692,14 +1695,21 @@
     },
     "function_definitions": {
       "draw a loop": {
-        "name": "draw a loop"
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
       },
       "n-sided shape": {
         "name": "n-sided shape",
         "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length "
       },
       "draw spiral circle": {
-        "name": "draw spiral circle"
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
       }
     }
   },

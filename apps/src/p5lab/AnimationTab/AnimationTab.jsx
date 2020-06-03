@@ -62,7 +62,7 @@ class AnimationTab extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,
-    libraryManifest: PropTypes.object.isRequired,
+    getLibraryManifest: PropTypes.func.isRequired,
     categories: PropTypes.object.isRequired,
     hideUploadOption: PropTypes.bool.isRequired,
 
@@ -100,7 +100,7 @@ class AnimationTab extends React.Component {
           <AnimationPicker
             channelId={this.props.channelId}
             allowedExtensions=".png,.jpg,.jpeg"
-            libraryManifest={this.props.libraryManifest}
+            getLibraryManifest={this.props.getLibraryManifest}
             categories={this.props.categories}
             hideUploadOption={this.props.hideUploadOption}
           />
