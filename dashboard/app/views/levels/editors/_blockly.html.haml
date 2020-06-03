@@ -17,7 +17,7 @@
     = f.select :skin, options_for_select(@level.class.skins, @level.skin)
   - unless @level.is_a? GamelabJr
     .field
-      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is Pre-Reader level"}
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
   .field
