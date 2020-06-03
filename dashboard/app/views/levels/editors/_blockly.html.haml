@@ -43,7 +43,6 @@
       %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
       = f.number_field :step_speed
 
-  = render partial: 'levels/editors/fields/authored_hints', locals: {f: f}
   = render partial: 'levels/editors/fields/blockly_xml_editors', locals:{f: f}
 
   :ruby
