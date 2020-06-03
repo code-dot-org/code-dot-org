@@ -71,6 +71,7 @@ import {
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 
 var copyrightStrings;
 
@@ -956,7 +957,7 @@ StudioApp.prototype.toggleRunReset = function(button) {
   }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
-  $('.arrow').prop('disabled', showRun);
+  getStore().dispatch(setArrowButtonDisabled(showRun));
 };
 
 StudioApp.prototype.isRunning = function() {
@@ -1473,19 +1474,6 @@ StudioApp.prototype.resizeVisualization = function(width) {
   );
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
-
-    // If the small print and language selector are on the same line,
-    // the small print should float right.  Otherwise, it should float left.
-    var languageSelector = smallFooter.querySelector('form');
-    var smallPrint = smallFooter.querySelector('small');
-    if (
-      languageSelector &&
-      smallPrint.offsetTop === languageSelector.offsetTop
-    ) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
   }
 
   // Fire resize so blockly and droplet handle this type of resize properly:
