@@ -24,7 +24,6 @@
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
-#  fk_rails_5c2401d1cb        (script_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
