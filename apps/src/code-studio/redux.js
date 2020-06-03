@@ -14,6 +14,7 @@ import publishDialog from '../templates/projects/publishDialog/publishDialogRedu
 import projects from '../templates/projects/projectsRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 
 registerReducers({
   header,
@@ -29,7 +30,8 @@ registerReducers({
   publishDialog,
   projects,
   verifiedTeacher,
-  currentUser
+  currentUser,
+  arrowDisplay
 });
 
 export {getStore};
