@@ -25813,7 +25813,7 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
-            Abstraction with Susan Wojcicki & China Anne McClain: &1
+            Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
           title: Code Break
           description_audience: ''
@@ -25843,7 +25843,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
-            Abstraction with Susan Wojcicki & China Anne McClain: *1
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -26000,7 +26001,7 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
-            Abstraction with Susan Wojcicki & China Anne McClain: &2
+            Abstraction with Susan Wojcicki & China Anne McClain:
               name: Abstraction with Susan Wojcicki & China Anne McClain
           title: Code Break for Younger Students
           description_audience: ''
@@ -26030,7 +26031,8 @@ en:
               name: AI with Kat Graham & Cody Simpson
             AI with Kat Graham & Kate Park:
               name: AI with Kat Graham & Kate Park
-            Abstraction with Susan Wojcicki & China Anne McClain: *2
+            Abstraction with Susan Wojcicki & China Anne McClain:
+              name: Abstraction with Susan Wojcicki & China Anne McClain
         no-lg:
           stages:
             new stage:
