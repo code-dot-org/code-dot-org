@@ -66,8 +66,12 @@ const placeholderSession = {
   endTime: '5:00pm'
 };
 
+// When selecting whether a workshop is virtual through the UI,
+// a user is really selecting two things:
+//  a) whether the workshop is occurring virtually, and
+//  b) if there's a third party responsible for the content/structure of the workshop.
+// These two things are stored as separate attributes in the workshop model.
 const virtualWorkshopTypes = ['regional', 'friday_institute'];
-
 const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
@@ -746,7 +750,10 @@ export class WorkshopForm extends React.Component {
 
   currentVirtualStatus = () => {
     const {virtual, third_party_provider} = this.state;
-    if (third_party_provider) {
+
+    // First, check if the third party provider is a valid
+    // virtual workshop type.
+    if (virtualWorkshopTypes.includes(third_party_provider)) {
       return third_party_provider;
     } else if (virtual) {
       return 'regional';
@@ -762,12 +769,12 @@ export class WorkshopForm extends React.Component {
     const value = event.target.value;
     const virtual = virtualWorkshopTypes.includes(value);
     const suppress_email = virtual || this.state.suppress_email;
-    let stateUpdates = {
+
+    this.setState({
       virtual,
       suppress_email,
       third_party_provider: thirdPartyProviders.includes(value) ? value : null
-    };
-    this.setState(stateUpdates);
+    });
   };
 
   handleSuppressEmailChange = event => {
@@ -1207,11 +1214,11 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     <option key={'in_person'} value={'in_person'}>
       No, this is an in-person workshop.
     </option>
-    <option key={'regional'} value={'regional'}>
-      Yes, this is a virtual workshop.
-    </option>
     <option key={'friday_institute'} value={'friday_institute'}>
-      Friday Institute Virtual
+      Yes, this is a Code.org-Friday Institute virtual workshop.
+    </option>
+    <option key={'regional'} value={'regional'}>
+      Yes, this is a regional virtual workshop.
     </option>
   </FormControl>
 );
