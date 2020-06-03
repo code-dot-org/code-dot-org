@@ -154,14 +154,27 @@ function initProjects() {
           // this method is expected to return a Promise. Since this file does not go through our
           // pipeline and can't be ES6, return a "then" method with a Promise-like interface
           then: function(callback) {
+            var studentCode = '';
             // Store the source in whichever format the level specifies.
             if (isHexSelected()) {
               var hexCode = pixel_data.value.replace(/[^0-9A-F]/gi, "");
-              callback(isHexLevel() ? hexCode : hexToBinPvt(hexCode));
+              studentCode = isHexLevel() ? hexCode : hexToBinPvt(hexCode);
             } else {
               var binCode = pixel_data.value.replace(/[^01]/gi, "");
-              callback(isHexLevel() ? binToHexPvt(binCode) : binCode);
+              studentCode = isHexLevel() ? binToHexPvt(binCode) : binCode;
             }
+
+            // Versions 2 & 3 store the height & width in the first two bytes.
+            // We need to explicitly store it for version 1. Note: Version 1 is
+            // never hex. Only binary.
+            if(options.version === "1") {
+              studentCode = JSON.stringify({
+                width: widthText.value,
+                height: heightText.value,
+                binaryCode: studentCode
+              })
+            }
+            callback(studentCode);
           }
         };
       },
@@ -205,7 +218,19 @@ function initProjects() {
 }
 
 function pixelationDisplay() {
-  pixel_data.value = options.projectData || options.data;
+  if (options.version == "1" && options.projectData) {
+    var projectData = JSON.parse(options.projectData)
+    // Legacy "version 1" projects do not have the height & width stored, they
+    // only have the binary code stored as a string.
+    if (typeof projectData === "object") {
+      // This is a newer "version 1" project. Get the width & height
+      widthText.value = widthRange.value = projectData.width;
+      heightText.value = heightRange.value = projectData.height;
+      pixel_data.value = projectData.binaryCode;
+    }
+  }
+
+  pixel_data.value = pixel_data.value || options.projectData || options.data;
   drawGraph(null, false, true);
   formatBitDisplay();
 }
