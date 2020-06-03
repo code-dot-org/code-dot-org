@@ -1,9 +1,7 @@
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';
-import ScriptEditor, {
-  VisibleAndPilotExperiment
-} from '@cdo/apps/lib/script-editor/ScriptEditor';
+import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 describe('ScriptEditor', () => {
   const DEFAULT_PROPS = {
@@ -20,6 +18,16 @@ describe('ScriptEditor', () => {
     versionYearOptions: []
   };
 
+  describe('Script Editor', () => {
+    it('has the correct number of each editor field type', () => {
+      const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
+      expect(wrapper.find('input').length).to.equal(21);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
+      expect(wrapper.find('textarea').length).to.equal(2);
+      expect(wrapper.find('select').length).to.equal(5);
+    });
+  });
+
   describe('VisibleInTeacherDashboard', () => {
     it('is checked when hidden is false', () => {
       const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
@@ -31,40 +39,6 @@ describe('ScriptEditor', () => {
       const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={true} />);
       const checkbox = wrapper.find('input[name="visible_to_teachers"]');
       expect(checkbox.prop('checked')).to.be.false;
-    });
-  });
-
-  describe('VisibleAndPilotExperiment', () => {
-    it('visible is disabled and unchecked when pilotExperiment is present', () => {
-      const wrapper = mount(
-        <VisibleAndPilotExperiment
-          visible={true}
-          pilotExperiment="test-pilot"
-        />
-      );
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('disabled')).to.be.true;
-      expect(checkbox.prop('checked')).to.be.false;
-    });
-
-    it('visible updates state as pilotExperiment changes', () => {
-      const wrapper = mount(<VisibleAndPilotExperiment visible={true} />);
-      const visibleInTeacherDashboard = () =>
-        wrapper.find('input[name="visible_to_teachers"]');
-      const pilotExperiment = () =>
-        wrapper.find('input[name="pilot_experiment"]');
-
-      expect(pilotExperiment().prop('value')).to.equal('');
-      expect(visibleInTeacherDashboard().prop('checked')).to.be.true;
-      expect(visibleInTeacherDashboard().prop('disabled')).to.be.false;
-
-      pilotExperiment().simulate('change', {target: {value: 'test-pilot'}});
-      expect(visibleInTeacherDashboard().prop('checked')).to.be.false;
-      expect(visibleInTeacherDashboard().prop('disabled')).to.be.true;
-
-      pilotExperiment().simulate('change', {target: {value: ''}});
-      expect(visibleInTeacherDashboard().prop('checked')).to.be.true;
-      expect(visibleInTeacherDashboard().prop('disabled')).to.be.false;
     });
   });
 });

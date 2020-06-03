@@ -64,7 +64,7 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "encrypted_examples": "98TQoiB/FYSBd/uGDj7Hs/K/HzNUfLw3sZ2rBaeQjTesO/XWhwderA+B1xcu\nFDP7\n",
+    "encrypted_examples": "noqH7jzfEETtkPmwrmdJIOfEMZRz1sF2pPMN5eHof+QZKQgrBLV5AmLSnVgU\nY6ned/wh0gBeR7I3RDHkSuP87A==\n",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -75,15 +75,19 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
-    "preload_asset_list": null,
     "display_name": "Calling Functions in the Draw Loop",
-    "bubble_choice_description": "Call the function to draw the background in the draw loop",
+    "bubble_choice_description": "Call the function to draw the background in the draw loop.",
     "thumbnail_url": "https://images.code.org/c5beba0b6e1c2a77e9caa795b73c7fd6-image-1585697151938.png",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "reference_links": [
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
+    ],
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:14:37 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:26:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:14:37 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:26:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-12 21:39:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-28 18:05:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-06-02 18:10:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

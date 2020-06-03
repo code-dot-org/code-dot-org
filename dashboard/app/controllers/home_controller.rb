@@ -94,7 +94,7 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:stageExtrasScriptIds] = Script.stage_extras_script_ids
+    @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
     @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
     @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'

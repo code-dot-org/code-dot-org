@@ -33,8 +33,8 @@ require_relative 'upload_i18n_translation_percentages_to_gdrive'
 
 require 'optparse'
 
-IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d')}".freeze
-DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d')}".freeze
+IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d-%Y')}".freeze
+DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d-%Y')}".freeze
 
 class I18nSync
   def initialize(args)
@@ -201,6 +201,13 @@ class I18nSync
   def create_down_out_pr
     return unless should_i "create the down & out PR"
     `git checkout -B #{DOWN_OUT_BRANCH}`
+
+    I18nScriptUtils.git_add_and_commit(
+      [
+        "bin/i18n/crowdin/*etags.json"
+      ],
+      "etags updates"
+    )
 
     I18nScriptUtils.git_add_and_commit(
       [

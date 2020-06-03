@@ -26,7 +26,8 @@ export class WorkshopManagement extends React.Component {
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
     showSurveyUrl: PropTypes.bool,
-    date: PropTypes.string
+    date: PropTypes.string,
+    endDate: PropTypes.string
   };
 
   static defaultProps = {
@@ -79,12 +80,16 @@ export class WorkshopManagement extends React.Component {
   };
 
   use_foorm_route = () => {
-    let workshop_date = new Date(this.props.date);
+    let workshop_date = this.props.endDate
+      ? new Date(this.props.endDate)
+      : new Date(this.props.date);
 
+    // Local summer or CSF Intro after 5/8/2020 will use Foorm for survey completion.
     return (
       workshop_date >= new Date('2020-05-08') &&
-      this.props.subject === SubjectNames.SUBJECT_CSF_101 &&
-      this.props.course === 'CS Fundamentals'
+      (this.props.subject === '5-day Summer' ||
+        (this.props.subject === SubjectNames.SUBJECT_CSF_101 &&
+          this.props.course === 'CS Fundamentals'))
     );
   };
 

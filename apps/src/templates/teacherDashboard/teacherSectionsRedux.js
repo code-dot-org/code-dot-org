@@ -275,9 +275,16 @@ export const finishEditingSection = () => (dispatch, getState) => {
 };
 
 export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
     submitEditingSection(dispatch, getState)
       .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
         reload();
       })
       .fail((jqXhr, status) => {
@@ -754,6 +761,7 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       initialCourseId: initialSectionData.courseId,
       initialScriptId: initialSectionData.scriptId,
+      initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -782,7 +790,7 @@ export default function teacherSections(state = initialState, action) {
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
@@ -827,6 +835,22 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    if (section.loginType !== state.initialLoginType) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'edit-section-details',
+          event: 'change-login-type',
+          data_json: JSON.stringify({
+            sectionId: section.id,
+            initialLoginType: state.initialLoginType,
+            updatedLoginType: section.loginType
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+
     let assignmentData = {
       section_id: section.id,
       section_creation_timestamp: section.createdAt,
@@ -843,12 +867,15 @@ export default function teacherSections(state = initialState, action) {
       !(typeof assignmentData.script_id === 'undefined') ||
       !(typeof assignmentData.course_id === 'undefined')
     ) {
-      firehoseClient.putRecord({
-        study: 'assignment',
-        study_group: 'v1',
-        event: newSection ? 'create_section' : 'edit_section_details',
-        data_json: JSON.stringify(assignmentData)
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'assignment',
+          study_group: 'v1',
+          event: newSection ? 'create_section' : 'edit_section_details',
+          data_json: JSON.stringify(assignmentData)
+        },
+        {includeUserId: true}
+      );
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -1041,6 +1068,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
@@ -1052,7 +1083,7 @@ export const sectionFromServerSection = serverSection => ({
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.stage_extras,
+  stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
   autoplayEnabled: serverSection.autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
@@ -1088,7 +1119,7 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    stage_extras: section.stageExtras,
+    lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
     autoplay_enabled: section.autoplayEnabled,
     sharing_disabled: section.sharingDisabled,

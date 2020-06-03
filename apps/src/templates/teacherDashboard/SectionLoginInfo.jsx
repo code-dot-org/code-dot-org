@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import Button from '@cdo/apps/templates/Button';
+import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
+import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
-import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -54,6 +56,7 @@ class SectionLoginInfo extends React.Component {
             section={section}
             students={students}
             autoPrint={autoPrint}
+            loginType={section.loginType}
           />
         )}
         {section.loginType === SectionLoginType.email && (
@@ -104,19 +107,9 @@ class OAuthLogins extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.loginInfo_signingIn()}</h1>
-        {loginType === SectionLoginType.google_classroom && (
-          <p>
-            {`${i18n.loginInfo_signingInDescription()} ${i18n.loginInfo_signingInGoogle()}`}
-            <br />
-            <img src={googleSignInButton} style={{maxWidth: '50%'}} />
-          </p>
-        )}
-        {loginType === SectionLoginType.clever && (
-          <p>{i18n.loginInfo_signingInClever()}</p>
-        )}
+        <SignInInstructions loginType={loginType} />
         <br />
-        <h1>{i18n.syncingYourStudents()}</h1>
+        <h2 style={styles.heading}>{i18n.syncingYourStudents()}</h2>
         <div>
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
@@ -144,7 +137,7 @@ class EmailLogins extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.loginInfo_joinTitle()}</h1>
+        <h2 style={styles.heading}>{i18n.loginInfo_joinTitle()}</h2>
         <p>{i18n.loginInfo_joinBody()}</p>
         <ol>
           <li>
@@ -164,10 +157,9 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
         <br />
-        <h1>{i18n.loginInfo_signingIn()}</h1>
-        <p>{i18n.loginInfo_signingInDescription()}</p>
+        <SignInInstructions loginType={SectionLoginType.email} />
         <br />
-        <h1>{i18n.loginInfo_resetTitle()}</h1>
+        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
         <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
             url: getManageStudentsUrl(sectionId)
@@ -201,6 +193,10 @@ const styles = {
   img: {
     width: 150,
     marginTop: 10
+  },
+  heading: {
+    color: color.purple,
+    marginTop: 0
   }
 };
 
@@ -248,34 +244,32 @@ class WordOrPictureLogins extends React.Component {
 
     return (
       <div>
-        <h1>{i18n.loginInfo_signingIn()}</h1>
-        <p>{i18n.loginInfo_signinSteps()}</p>
-        <ol>
-          <li>
-            {i18n.loginInfo_signinStep1({joinUrl: `${studioUrlPrefix}/join`})}
-          </li>
-          <li>{i18n.loginInfo_signinStep2({code: section.code})}</li>
-          <li>{i18n.loginInfo_signinStep3()}</li>
-          {section.loginType === SectionLoginType.picture && (
-            <li>{i18n.loginInfo_signinStep4_secretPicture()}</li>
-          )}
-          {section.loginType === SectionLoginType.word && (
-            <li>{i18n.loginInfo_signinStep4_secretWords()}</li>
-          )}
-          <li>{i18n.loginInfo_signinStep5()}</li>
-        </ol>
+        <SignInInstructions
+          loginType={section.loginType}
+          studioUrlPrefix={studioUrlPrefix}
+          sectionCode={section.code}
+        />
         <p>
-          {i18n.loginInfo_signinStepsReset({wordOrPicture: section.loginType})}
+          {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
         <br />
-        <h1>{i18n.loginInfo_resetTitle()}</h1>
-        <SafeMarkdown
-          markdown={i18n.loginInfo_resetSecretBody({
-            url: manageStudentsUrl
-          })}
-        />
+        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
+        {section.loginType === SectionLoginType.picture && (
+          <SafeMarkdown
+            markdown={i18n.loginInfoResetSecretPicDesc({
+              url: manageStudentsUrl
+            })}
+          />
+        )}
+        {section.loginType === SectionLoginType.word && (
+          <SafeMarkdown
+            markdown={i18n.loginInfoResetSecretWordDesc({
+              url: manageStudentsUrl
+            })}
+          />
+        )}
         <br />
-        <h1>{i18n.printLoginCards_title()}</h1>
+        <h2 style={styles.heading}>{i18n.printLoginCards_title()}</h2>
         {students.length < 1 && (
           <SafeMarkdown
             markdown={i18n.loginInfo_noStudents({url: manageStudentsUrl})}
@@ -283,13 +277,12 @@ class WordOrPictureLogins extends React.Component {
         )}
         {students.length >= 1 && (
           <span>
-            <Button
-              __useDeprecatedTag
-              text={i18n.printLoginCards_button()}
-              color={Button.ButtonColor.orange}
-              onClick={this.printLoginCards}
-              icon="print"
-              iconClassName="fa"
+            <PrintLoginCards
+              sectionId={section.id}
+              onPrintLoginCards={this.printLoginCards}
+              entryPointForMetrics={
+                PrintLoginCardsButtonMetricsCategory.LOGIN_INFO
+              }
             />
             <br />
             <div id="printArea" style={styles.container}>

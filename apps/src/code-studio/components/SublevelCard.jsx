@@ -8,18 +8,19 @@ import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagI
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import queryString from 'query-string';
 
-const THUMBNAIL_IMAGE_SIZE = 150;
+const THUMBNAIL_IMAGE_SIZE = 200;
 const MARGIN = 10;
+const WIDTH = 435;
 
 const styles = {
   row: {
     display: 'flex',
+    width: WIDTH,
     marginBottom: MARGIN,
+    marginRight: MARGIN,
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2,
-    width: 400,
-    marginRight: 10
+    borderRadius: 2
   },
   thumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
@@ -50,12 +51,11 @@ const styles = {
     width: 30
   },
   column: {
-    width: 280,
     marginLeft: MARGIN * 2,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    margin: 10
+    margin: MARGIN
   },
   bubbleAndTitle: {
     display: 'flex',
@@ -64,10 +64,12 @@ const styles = {
   },
   title: {
     minHeight: 30,
-    fontSize: 20,
+    fontSize: 16,
+    lineHeight: '25px',
     fontFamily: '"Gotham 5r"',
     color: color.teal,
-    marginLeft: 10,
+    marginBottom: 10,
+    marginLeft: MARGIN,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
     hyphens: 'auto',
@@ -75,7 +77,7 @@ const styles = {
     alignItems: 'center'
   },
   description: {
-    marginTop: MARGIN
+    marginTop: 5
   }
 };
 
@@ -166,7 +168,10 @@ export default class SublevelCard extends React.Component {
     if (isLessonExtra) {
       return (
         <a style={styles.flagBubble} href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon perfect={sublevel.perfect} />
+          <LessonExtrasFlagIcon
+            perfect={sublevel.perfect}
+            style={styles.flagBubble}
+          />
         </a>
       );
     }
@@ -186,7 +191,12 @@ export default class SublevelCard extends React.Component {
         className="uitest-bubble-choice"
       >
         <a href={this.getSublevelUrl()}>{this.renderThumbnail()}</a>
-        <div style={styles.column}>
+        <div
+          style={{
+            ...styles.column,
+            ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)}
+          }}
+        >
           <div style={styles.bubbleAndTitle}>
             {this.renderBubble()}
             <a

@@ -4,7 +4,7 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
-import {VisibleAndPilotExperiment} from '../../lib/script-editor/ScriptEditor.jsx';
+import VisibleAndPilotExperiment from '../../lib/script-editor/VisibleAndPilotExperiment';
 
 const styles = {
   input: {

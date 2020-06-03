@@ -409,9 +409,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/6/puzzle/5": {
@@ -422,8 +429,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/6/puzzle/6": {
@@ -1789,8 +1798,10 @@
     "callouts": {
       "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
     },
-    "function_names": {
-      "build bridge": "build bridge"
+    "function_definitions": {
+      "build bridge": {
+        "name": "build bridge"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/20/puzzle/9": {
@@ -1802,8 +1813,10 @@
       "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
       "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
     },
-    "function_names": {
-      "clear path": "clear path"
+    "function_definitions": {
+      "clear path": {
+        "name": "clear path"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/20/puzzle/10": {
@@ -1814,9 +1827,13 @@
       "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
       "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
     },
-    "function_names": {
-      "fix long path": "fix long path",
-      "fix short path": "fix short path"
+    "function_definitions": {
+      "fix long path": {
+        "name": "fix long path"
+      },
+      "fix short path": {
+        "name": "fix short path"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/20/puzzle/11": {
@@ -1831,9 +1848,13 @@
     "callouts": {
       "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
     },
-    "function_names": {
-      "build short bridge": "build short bridge",
-      "build long bridge": "build long bridge"
+    "function_definitions": {
+      "build short bridge": {
+        "name": "build short bridge"
+      },
+      "build long bridge": {
+        "name": "build long bridge"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/20/puzzle/12": {
@@ -1843,9 +1864,13 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
     },
-    "function_names": {
-      "function 1": "function 1",
-      "function 2": "function 2"
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/2": {
@@ -1869,8 +1894,10 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "check square for corn": "check square for corn"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/4": {
@@ -1884,8 +1911,10 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "check square for corn": "check square for corn"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/5": {
@@ -1894,17 +1923,25 @@
     "authored_hints": {
       "courseE_farmer_functions2ba_a": "Use the green `get all pumpkins` block to make sure you get all of the pumpkins!"
     },
-    "function_names": {
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/6": {
     "short_instructions": "Try on a longer path.",
     "long_instructions": "Great!  Try your functions out on a longer path.",
-    "function_names": {
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/7": {
@@ -1914,10 +1951,16 @@
       "coursee_farmer_functions3c1_2018_a": "You'll need to use the `pick along path` function three times to solve this puzzle.",
       "coursee_farmer_functions3c1_2018_b": "What code do you need to add to get around the corners?"
     },
-    "function_names": {
-      "pick along path": "pick along path",
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/8": {
@@ -1930,8 +1973,10 @@
       "courseE_farmer_functions7a1_2018_a": "Create your function under the `functions` section in the toolbox.",
       "courseE_farmer_functions7a1_2018_b": "Don't forget to use your function when you're done making it!"
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/10": {
@@ -1941,8 +1986,10 @@
       "courseE_farmer_functions8a1_2018a": "Start this puzzle off by coding the same function you made in the last puzzle.",
       "courseE_farmer_functions8a1_2018b": "After the function runs the first time, you'll need to make one extra turn before you can run it again."
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/11": {
@@ -1953,18 +2000,28 @@
       "courseE_farmer_functions9a1_2018b": "Use the same steps from the previous puzzle to solve the first half of this puzzle.",
       "courseE_farmer_functions9a1_2018c": "You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again."
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/12": {
     "short_instructions": "Use everything that you've learned so far to solve this puzzle!",
     "long_instructions": "**Challenge:** Use everything that you've learned so far to solve this puzzle in 19 blocks or less!",
-    "function_names": {
-      "pick along path": "pick along path",
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins",
-      "pumpkin square": "pumpkin square"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      },
+      "pumpkin square": {
+        "name": "pumpkin square"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/13": {
@@ -1973,21 +2030,39 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "pick along path": "pick along path",
-      "check for corn": "check for corn",
-      "corn rectangle": "corn rectangle",
-      "lettuce stairs": "lettuce stairs"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check for corn": {
+        "name": "check for corn"
+      },
+      "corn rectangle": {
+        "name": "corn rectangle"
+      },
+      "lettuce stairs": {
+        "name": "lettuce stairs"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/21/puzzle/14": {
     "long_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
-    "function_names": {
-      "pick along path": "pick along path",
-      "pumpkin square": "pumpkin square",
-      "check square for corn": "check square for corn",
-      "get produce": "get produce",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "pumpkin square": {
+        "name": "pumpkin square"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get produce": {
+        "name": "get produce"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     },
     "contained levels": [
       {
@@ -2025,9 +2100,13 @@
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/1": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     },
     "contained levels": [
       {
@@ -2074,16 +2153,22 @@
     "callouts": {
       "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/3": {
     "short_instructions": "Build a function that will create this star.",
     "long_instructions": "Build a function that will create this star.\n\n* * *\n\n-   Each arm of the star is 25 pixels long\n-   You need to turn 45 degrees to get 8 arms\n-   It is okay to go forward and backward over the same arm",
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/4": {
@@ -2094,8 +2179,10 @@
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by creating your `draw a star` function, then use this function to draw the three stars!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/5": {
@@ -2105,9 +2192,13 @@
       "courseD_artist_functions7_a": "Try creating your function first then add windows one at a time.",
       "courseD_artist_functions7_b": "To get from the top windows to the bottom windows, simply turn the artist right, jump 150 pixels, then turn the artist right again!  Now the artist will be facing the correct direction to finish the rest of the house!"
     },
-    "function_names": {
-      "draw a window": "draw a window",
-      "draw a house": "draw a house"
+    "function_definitions": {
+      "draw a window": {
+        "name": "draw a window"
+      },
+      "draw a house": {
+        "name": "draw a house"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/6": {
@@ -2116,9 +2207,13 @@
     "callouts": {
       "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/7": {
@@ -2129,10 +2224,16 @@
       "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.",
       "courseD_artist_functions8_d": "To make a line of squares,\n\n-   repeat 3 times\n    -   draw a square\n    -   jump forward **100 pixels**"
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/8": {
@@ -2143,11 +2244,19 @@
       "courseD_artist_functions8_a": "The second line of squares is just a 180 degree turn different than the first!",
       "courseD_artist_functions8_c": "At the end of each line of squares, the artist only needs to turn 180 degrees before drawing the next line of squares.  Put the whole thing in a repeat loop to set you up for the next exercise!"
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square",
-      "do something": "do something",
-      "staggered squares": "staggered squares"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/9": {
@@ -2160,11 +2269,19 @@
       "courseD_artist_functions8_c": "At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.",
       "courseD_artist_functions8_g": "[][0]"
     },
-    "function_names": {
-      "do something": "do something",
-      "staggered squares": "staggered squares",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/10": {
@@ -2177,10 +2294,16 @@
       "courseD_artist_functions9_c": "To draw a line of triangles:\n\n-   repeat 4 times\n    -   draw a triangle\n    -   jump forward 50 pixels",
       "courseD_artist_functions9_d": "To draw the diamond:\n\n-   repeat 2 times\n    -   draw a line of triangles\n    -   turn 60 degrees\n    -   draw a line of triangles\n    -   turn 120 degrees"
     },
-    "function_names": {
-      "do something": "do something",
-      "draw triangle": "draw triangle",
-      "draw line of triangles": "draw line of triangles"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw triangle": {
+        "name": "draw triangle"
+      },
+      "draw line of triangles": {
+        "name": "draw line of triangles"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/11": {
@@ -2191,17 +2314,29 @@
       "courseD_artist_functions10_a": "To avoid using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.",
       "courseD_artist_functions10_c": "Do you see where this drawing could use a function called `line of hexagons`?\n\n[][0]"
     },
-    "function_names": {
-      "do something": "do something",
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw hexagon": {
+        "name": "draw hexagon"
+      },
+      "draw line of hexagons": {
+        "name": "draw line of hexagons"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/puzzle/12": {
-    "function_names": {
-      "draw line of polygons": "draw line of polygons",
-      "draw polygon": "draw polygon",
-      "do something": "do something"
+    "function_definitions": {
+      "draw line of polygons": {
+        "name": "draw line of polygons"
+      },
+      "draw polygon": {
+        "name": "draw polygon"
+      },
+      "do something": {
+        "name": "do something"
+      }
     },
     "contained levels": [
       {
@@ -2240,12 +2375,22 @@
   "https://studio.code.org/s/express-2018/stage/22/puzzle/13": {
     "short_instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
     "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \n\nCan you make something like this pinwheel?",
-    "function_names": {
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons",
-      "staggered squares": "staggered squares",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
+    "function_definitions": {
+      "draw hexagon": {
+        "name": "draw hexagon"
+      },
+      "draw line of hexagons": {
+        "name": "draw line of hexagons"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/extras?level_name=courseE_artist_functions_challenge1_2018": {
@@ -2259,9 +2404,13 @@
       "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/22/extras?level_name=courseE_artist_functions_challenge2_2018": {
@@ -2274,9 +2423,13 @@
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/23/puzzle/1": {
@@ -2322,8 +2475,10 @@
       "courseE_artist_concept1_b": "Try using a function here so you don't have to write the code for a hexagon over and over again.",
       "courseE_artist_concept1_c": "Use the `set width` block before each function call to change the pen width."
     },
-    "function_names": {
-      "draw a hexagon": "draw a hexagon"
+    "function_definitions": {
+      "draw a hexagon": {
+        "name": "draw a hexagon"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/24/puzzle/6": {
@@ -2341,8 +2496,10 @@
       "courseE_farmer_concept2_b": "A function which turns, goes down the path, gathers pumpkins, and returns to the main horizontal path could be helpful here.",
       "courseE_farmer_concept2_c": "Your main program can call this function with the green `do something` block."
     },
-    "function_names": {
-      "get pumpkin": "get pumpkin"
+    "function_definitions": {
+      "get pumpkin": {
+        "name": "get pumpkin"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/24/puzzle/8": {
@@ -2370,10 +2527,16 @@
       "courseE_artist_concept4_b": "Try creating one square. Then make a line of squares.  What comes next?",
       "courseE_artist_concept4_c": "After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw a line of squares": "draw a line of squares",
-      "draw a plane of squares": "draw a plane of squares"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw a plane of squares": {
+        "name": "draw a plane of squares"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/24/extras?level_name=courseE_artist_concept_challenge1_2018": {
@@ -2384,8 +2547,10 @@
       "courseE_artist_concept_challenge1_b": "The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. ",
       "courseE_artist_concept_challenge1_c": "This is the design you want to repeat to make the full shape:\n\n[][0]"
     },
-    "function_names": {
-      "do something": "do something"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/24/extras?level_name=courseE_artist_concept_challenge2_2018": {
@@ -2395,8 +2560,10 @@
       "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
       "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw pinwheel": "draw pinwheel"
+    "function_definitions": {
+      "draw pinwheel": {
+        "name": "draw pinwheel"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/25/puzzle/1": {
@@ -2599,14 +2766,18 @@
     "callouts": {
       "courseF_bee_functions_1_2018_1": "You can find your variables under here!"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/2": {
     "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/3": {
@@ -2615,40 +2786,54 @@
     "authored_hints": {
       "courseF_beevariables_3a": "To subtract one from the variable, you can use this code in your program:\n[blockly block][0]"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/4": {
     "short_instructions": "Edit the code to work for this puzzle.",
     "long_instructions": "\"Un-BEE-lievable!\"\n\nEdit the code to make it work for this puzzle.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/5": {
     "short_instructions": "Create your own code to solve this puzzle",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/6": {
     "short_instructions": "**Challenge** Now give this puzzle a try!",
-    "function_names": {
-      "collect stairs": "collect stairs"
+    "function_definitions": {
+      "collect stairs": {
+        "name": "collect stairs"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/7": {
     "short_instructions": "This puzzle is a little different.  What do you need to do to solve it?",
-    "function_names": {
-      "collect": "collect"
+    "function_definitions": {
+      "collect": {
+        "name": "collect"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/30/puzzle/8": {
     "short_instructions": "How many nectar will the bee collect from this flower?",
-    "function_names": {
-      "move and increment": "move and increment",
-      "collect": "collect"
+    "function_definitions": {
+      "move and increment": {
+        "name": "move and increment"
+      },
+      "collect": {
+        "name": "collect"
+      }
     },
     "contained levels": [
       {
@@ -2896,8 +3081,10 @@
   "https://studio.code.org/s/express-2018/stage/33/extras?level_name=courseF_bee_for_challenge1_2018": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/33/extras?level_name=courseF_bee_for_challenge2_2018": {
@@ -3275,10 +3462,24 @@
     "callouts": {
       "InspirationalArtwork_1": "Try using the `comment` block under this label to leave yourself notes inside your program!"
     },
-    "function_names": {
-      "draw a loop": "draw a loop",
-      "n-sided shape": "n-sided shape",
-      "draw spiral circle": "draw spiral circle"
+    "function_definitions": {
+      "draw a loop": {
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      },
+      "n-sided shape": {
+        "name": "n-sided shape",
+        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length "
+      },
+      "draw spiral circle": {
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/38/puzzle/3": {
@@ -3357,9 +3558,16 @@
       "courseD_artist_binary1_b": "The artist will draw a white space for every 1 and a black space for every 0.",
       "courseD_artist_binary1_c": "This is how you can input your binary code:\n\n[][0]"
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/3": {
@@ -3368,9 +3576,16 @@
     "authored_hints": {
       "courseD_artist_binary2_a": "Just click `Run` to see this program in action!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/4": {
@@ -3379,9 +3594,16 @@
       "courseD_artist_binary3_a": "One of the four binary patterns in the toolbox will solve this puzzle!",
       "courseD_artist_binary3_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/5": {
@@ -3390,9 +3612,16 @@
       "courseD_artist_binary4_a": "Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?",
       "courseD_artist_binary4_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/6": {
@@ -3402,9 +3631,16 @@
       "courseD_artist_binary5_b": "You only need to switch two rows to make a smile.",
       "courseD_artist_binary5_c": "If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/7": {
@@ -3413,9 +3649,16 @@
       "courseD_artist_binary6_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary6_b": "You can build your binary string a bit at a time, and keep testing!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/8": {
@@ -3424,9 +3667,16 @@
       "courseD_artist_binary7_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary7_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/9": {
@@ -3436,16 +3686,30 @@
       "courseD_artist_binary8_b": "Try running the code first to see what you have to work with.",
       "courseD_artist_binary8_c": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/10": {
     "short_instructions": "Finish the code to create this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     },
     "contained levels": [
       {
@@ -3484,17 +3748,31 @@
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/11": {
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits!",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/extras?level_name=courseD_artist_binary_challenge1_2018": {
     "short_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "long_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/extras?level_name=courseD_artist_binary_challenge2_2018": {
@@ -3503,9 +3781,16 @@
     "authored_hints": {
       "courseD_artist_binary_challenge2_a": "There are only few lines wrong in the original program."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/express-2018/stage/46/puzzle/1": {

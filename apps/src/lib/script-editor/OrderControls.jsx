@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {ControlTypes} from './constants';
-import {moveGroup, moveStage, removeGroup, removeStage} from './editorRedux';
 import Dialog from '../../templates/Dialog';
 
 const styles = {
@@ -15,13 +12,10 @@ const styles = {
   }
 };
 
-export class UnconnectedOrderControls extends Component {
+export default class OrderControls extends Component {
   static propTypes = {
     move: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,
-    type: PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
-    position: PropTypes.number.isRequired,
-    total: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
   };
 
@@ -30,15 +24,11 @@ export class UnconnectedOrderControls extends Component {
   };
 
   handleMoveUp = () => {
-    if (this.props.position !== 1) {
-      this.props.move(this.props.type, this.props.position, 'up');
-    }
+    this.props.move('up');
   };
 
   handleMoveDown = () => {
-    if (this.props.position !== this.props.total) {
-      this.props.move(this.props.type, this.props.position, 'down');
-    }
+    this.props.move('down');
   };
 
   handleRemove = () => {
@@ -47,7 +37,7 @@ export class UnconnectedOrderControls extends Component {
 
   handleConfirm = () => {
     this.setState({showConfirm: false});
-    this.props.remove(this.props.type, this.props.position);
+    this.props.remove();
   };
 
   handleClose = () => {
@@ -56,10 +46,8 @@ export class UnconnectedOrderControls extends Component {
 
   render() {
     const {showConfirm} = this.state;
-    const {type, name} = this.props;
-    const text =
-      `Are you sure you want to remove the ${type} named "${name}" ` +
-      'and all its contents from the script?';
+    const {name} = this.props;
+    const text = `Are you sure you want to remove "${name}" and all its contents from the script?`;
     return (
       <div style={styles.controls}>
         <i
@@ -91,21 +79,3 @@ export class UnconnectedOrderControls extends Component {
     );
   }
 }
-
-const OrderControls = connect(
-  state => ({}),
-  dispatch => ({
-    move(type, position, direction) {
-      type === ControlTypes.Group
-        ? dispatch(moveGroup(position, direction))
-        : dispatch(moveStage(position, direction));
-    },
-    remove(type, position) {
-      type === ControlTypes.Group
-        ? dispatch(removeGroup(position))
-        : dispatch(removeStage(position));
-    }
-  })
-)(UnconnectedOrderControls);
-
-export default OrderControls;

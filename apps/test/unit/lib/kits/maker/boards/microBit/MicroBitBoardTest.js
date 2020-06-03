@@ -8,6 +8,15 @@ import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitCo
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
 
+const MB_COMPONENT_COUNT = 7;
+const MB_COMPONENTS = [
+  'LedScreen',
+  'MicroBitButton',
+  'Accelerometer',
+  'MicroBitThermometer',
+  'Compass'
+];
+
 describe('MicroBitBoard', () => {
   let board;
 
@@ -32,16 +41,170 @@ describe('MicroBitBoard', () => {
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
+
+    /**
+     * After installing on the interpreter, test that the components and
+     * component constructors are available from the interpreter
+     */
+    describe('Micro Bit components accessible from interpreter', () => {
+      let jsInterpreter;
+      let board;
+
+      beforeEach(() => {
+        board = new MicroBitBoard();
+        sinon.stub(board.boardClient_, 'connect').callsFake(() => {
+          board.boardClient_.myPort = {write: () => {}};
+          sinon.stub(board.boardClient_.myPort, 'write');
+        });
+
+        jsInterpreter = {
+          globalProperties: {},
+          createGlobalProperty: function(key, value) {
+            jsInterpreter.globalProperties[key] = value;
+          },
+          addCustomMarshalObject: sinon.spy()
+        };
+
+        return board.connect();
+      });
+
+      describe('adds component constructors', () => {
+        beforeEach(() => {
+          board.installOnInterpreter(jsInterpreter);
+        });
+
+        it(`correct number of them`, () => {
+          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
+            MB_COMPONENTS.length
+          );
+        });
+
+        MB_COMPONENTS.forEach(constructor => {
+          it(constructor, () => {
+            expect(jsInterpreter.globalProperties).to.have.ownProperty(
+              constructor
+            );
+            expect(jsInterpreter.globalProperties[constructor]).to.be.a(
+              'function'
+            );
+            const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
+              call => call[0].instance
+            );
+            expect(passedObjects).to.include(
+              jsInterpreter.globalProperties[constructor]
+            );
+          });
+        });
+      });
+
+      describe('adds components', () => {
+        beforeEach(() => {
+          board.installOnInterpreter(jsInterpreter);
+        });
+
+        it(`correct number of them`, () => {
+          let globalPropsCount = MB_COMPONENTS.length + MB_COMPONENT_COUNT;
+          expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
+            globalPropsCount
+          );
+        });
+
+        ['buttonA', 'buttonB'].forEach(button => {
+          describe(button, () => {
+            let component;
+
+            beforeEach(() => {
+              component = jsInterpreter.globalProperties[button];
+            });
+
+            it('isPressed', () =>
+              expect(component.isPressed).to.be.a('boolean'));
+            it('holdtime', () => expect(component.holdtime).to.be.a('number'));
+          });
+        });
+
+        describe('ledScreen', () => {
+          function expectLedToHaveFunction(fnName) {
+            expect(jsInterpreter.globalProperties.ledScreen[fnName]).to.be.a(
+              'function'
+            );
+          }
+
+          // Set of required functions derived from our dropletConfig
+          [
+            'on',
+            'off',
+            'toggle',
+            'clear',
+            'scrollString',
+            'scrollNumber'
+          ].forEach(fnName => {
+            it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
+          });
+        });
+
+        describe('tempSensor', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.tempSensor;
+          });
+
+          it('F', () => {
+            expect(component).to.have.property('F');
+          });
+
+          it('C', () => {
+            expect(component).to.have.property('C');
+          });
+        });
+
+        describe('accelerometer', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.accelerometer;
+          });
+
+          it('start()', () => expect(component.start).to.be.a('function'));
+          it('getOrientation()', () =>
+            expect(component.getOrientation).to.be.a('function'));
+          it('getAcceleration()', () =>
+            expect(component.getAcceleration).to.be.a('function'));
+        });
+
+        describe('compass', () => {
+          let component;
+
+          beforeEach(() => {
+            component = jsInterpreter.globalProperties.compass;
+          });
+
+          it('start()', () => expect(component.start).to.be.a('function'));
+          it('getHeading()', () =>
+            expect(component.getHeading).to.be.a('function'));
+        });
+
+        describe('board', () => {
+          it('exists', () => {
+            expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
+          });
+        });
+      });
+    });
   });
 
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(6);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(
+          MB_COMPONENT_COUNT
+        );
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.ledScreen).to.be.a('object');
         expect(board.prewiredComponents_.tempSensor).to.be.a('object');
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
+        expect(board.prewiredComponents_.compass).to.be.a('object');
         expect(board.prewiredComponents_.buttonA).to.be.a('object');
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
       });
