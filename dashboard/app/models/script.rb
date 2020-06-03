@@ -866,6 +866,7 @@ class Script < ActiveRecord::Base
   # script and any associated levels, appending new_suffix to the name when
   # copying. Any new_properties are merged into the properties of the new script.
   def self.setup(custom_files, new_suffix: nil, new_properties: {})
+    all_levels_by_key = Level.all.index_by(&:key)
     transaction do
       scripts_to_add = []
 
@@ -895,7 +896,7 @@ class Script < ActiveRecord::Base
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups, raw_lessons|
-        add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+        add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment], all_levels_by_key: all_levels_by_key)
       end
       [added_scripts, custom_i18n]
     end
@@ -903,7 +904,7 @@ class Script < ActiveRecord::Base
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lesson_groups, raw_lessons, new_suffix: nil, editor_experiment: nil)
+  def self.add_script(options, raw_lesson_groups, raw_lessons, new_suffix: nil, editor_experiment: nil, all_levels_by_key: nil)
     raw_script_levels = raw_lessons.map {|lesson| lesson[:scriptlevels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
@@ -912,7 +913,7 @@ class Script < ActiveRecord::Base
     script_lessons = []
     script_lesson_groups = []
     script_levels_by_lesson = {}
-    levels_by_key = script.levels.index_by(&:key)
+    levels_by_key = all_levels_by_key || script.levels.index_by(&:key)
     lockable_count = 0
     non_lockable_count = 0
 
