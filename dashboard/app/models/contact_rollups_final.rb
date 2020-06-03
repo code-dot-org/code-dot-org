@@ -23,6 +23,8 @@ class ContactRollupsFinal < ApplicationRecord
       FROM contact_rollups_processed;
     SQL
 
-    transaction {ActiveRecord::Base.connection.exec_query(insert_sql)}
+    ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
+      ContactRollupsV2::DASHBOARD_DB_WRITER.run(insert_sql)
+    end
   end
 end
