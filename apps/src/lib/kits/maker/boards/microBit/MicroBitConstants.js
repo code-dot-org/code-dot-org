@@ -12,6 +12,9 @@ export const EXTERNAL_PINS = [0, 1, 2];
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;
 }
+
+// Component count includes values for board component and accounts for
+// button A and button B
 export const MB_COMPONENT_COUNT = 8;
 
 export const MB_COMPONENTS = [
