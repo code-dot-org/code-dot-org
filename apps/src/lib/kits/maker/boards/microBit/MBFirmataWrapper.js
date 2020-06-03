@@ -6,6 +6,7 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(SerialPort) {
     super(SerialPort);
     this.digitalCallbacks = [];
+    this.setAnalogSamplingInterval(50);
   }
 
   setPinMode(pin, mode) {
