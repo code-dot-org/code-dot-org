@@ -909,7 +909,8 @@ class Script < ActiveRecord::Base
     script.update!(hidden: true) if new_suffix
     chapter = 0
     lesson_position = 0; script_level_position = Hash.new(0)
-    script_lessons = []
+    old_script_lessons = script.lessons.all
+    new_script_lessons = []
     script_lesson_groups = []
     script_levels_by_lesson = {}
     levels_by_key = script.levels.index_by(&:key)
@@ -1072,7 +1073,7 @@ class Script < ActiveRecord::Base
         raise "could not find lesson group '#{lesson_group_key}' for script '#{script.name}'" unless lesson_group
 
         # check if that lesson exists for the script otherwise create a new lesson
-        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
+        lesson = (old_script_lessons + new_script_lessons).detect {|s| s.name == lesson_name} ||
           Lesson.find_or_create_by(
             name: lesson_name,
             script: script
@@ -1089,7 +1090,7 @@ class Script < ActiveRecord::Base
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?
         (script_levels_by_lesson[lesson.id] ||= []) << script_level
-        unless script_lessons.include?(lesson)
+        unless new_script_lessons.include?(lesson)
           if lockable
             lesson.assign_attributes(relative_position: (lockable_count += 1))
           else
@@ -1097,7 +1098,7 @@ class Script < ActiveRecord::Base
           end
           lesson.assign_attributes(absolute_position: (lesson_position += 1))
           lesson.save! if lesson.changed?
-          script_lessons << lesson
+          new_script_lessons << lesson
         end
       end
       script_level.assign_attributes(script_level_attributes)
@@ -1105,7 +1106,7 @@ class Script < ActiveRecord::Base
       script_level
     end
 
-    script_lessons.each do |lesson|
+    new_script_lessons.each do |lesson|
       # make sure we have an up to date view
       lesson.reload
       lesson.script_levels = script_levels_by_lesson[lesson.id]
@@ -1131,10 +1132,10 @@ class Script < ActiveRecord::Base
       lesson.save! if lesson.changed?
     end
 
-    Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
+    Script.prevent_non_consecutive_lessons_with_same_lesson_group(new_script_lessons)
     Script.prevent_lesson_group_with_no_lessons(script)
 
-    script.lessons = script_lessons
+    script.lessons = new_script_lessons
     script.reload.lessons
     script.generate_plc_objects
 
