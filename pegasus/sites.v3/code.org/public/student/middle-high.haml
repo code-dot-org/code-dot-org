@@ -11,6 +11,7 @@ theme: responsive
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/code.org/public/student/middle-high.js')}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 
 %link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
 = view 'mobilecheck.js'
@@ -37,7 +38,7 @@ To see what's available in your language, visit our course catalog.
 %br/
 %br/
 %h2 Make your own apps, games, and webpages
-#educate-resources-grid
+.hoc-tiles-container
 
 %div{style: "clear: both;"}
 %br/
