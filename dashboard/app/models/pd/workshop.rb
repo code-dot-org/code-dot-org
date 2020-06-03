@@ -58,6 +58,14 @@ class Pd::Workshop < ActiveRecord::Base
     #   - Uses a different, virtual-specific post-workshop survey.
     'virtual',
 
+    # Allows a workshop to be associated with a third party
+    # organization.
+    # Only current allowed values are "friday_institute" and nil.
+    # "friday_institute" represents The Friday Institute,
+    # a regional partner whose model of virtual workshop is being used
+    # by several partners during summer 2020.
+    'third_party_provider',
+
     # If true, our system will not send enrollee-facing
     # emails related to this workshop *except* for a receipt for the teacher
     # if they cancel their enrollment and the post-workshop survey,
@@ -84,6 +92,7 @@ class Pd::Workshop < ActiveRecord::Base
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
   validate :all_virtual_workshops_suppress_email
+  validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
