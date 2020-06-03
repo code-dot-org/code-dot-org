@@ -30,7 +30,13 @@ class Services::CustomLessons
     new_level = user.custom_levels.create(
       name: level_name,
       type: 'Applab',
-      game: Game.applab
+      game: Game.applab,
+      # This is needed to make level.custom? return true, but is not correct
+      # because this has typically been a user id on the levelbuilder machine.
+      user_id: user.id,
+      properties: {
+        code_functions: Applab.palette
+      }
     )
 
     # 3. puts the new custom level inside a new lesson in the custom_script
