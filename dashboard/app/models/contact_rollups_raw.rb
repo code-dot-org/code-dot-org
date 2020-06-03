@@ -20,7 +20,10 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_email_preferences
     query = get_extraction_query('email_preferences', 'email', ['opt_in'])
-    transaction {ActiveRecord::Base.connection.execute(query)}
+
+    ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
+      ContactRollupsV2::DASHBOARD_DB_WRITER.run(query)
+    end
   end
 
   def self.extract_parent_emails
@@ -31,7 +34,9 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
 
     query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
-    transaction {ActiveRecord::Base.connection.execute(query)}
+    ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
+      ContactRollupsV2::DASHBOARD_DB_WRITER.run(query)
+    end
   end
 
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
@@ -48,7 +53,7 @@ class ContactRollupsRaw < ApplicationRecord
     source_name ||= "dashboard.#{source}"
     wrapped_source = source_is_subquery ? "(#{source}) AS subquery" : source
 
-    <<~SQL
+    <<~SQL.squish
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         #{email_column},
