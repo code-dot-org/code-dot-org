@@ -80,6 +80,8 @@ class Lesson < ActiveRecord::Base
   end
 
   def localized_title
+    return localized_name if script.owner
+
     # The standard case for localized_title is something like "Lesson 1: Maze".
     # In the case of lockable lessons, we don't want to include the Lesson 1
     return localized_name if lockable
