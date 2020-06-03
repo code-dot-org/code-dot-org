@@ -5,7 +5,7 @@ class ContactRollupsV2
 
   DASHBOARD_DB_WRITER = sequel_connect(
     CDO.dashboard_db_writer,
-    CDO.dashboard_db_writer,
+    CDO.dashboard_db_reader,
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
