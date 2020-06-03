@@ -912,6 +912,7 @@ class Script < ActiveRecord::Base
     old_script_lessons = script.lessons.all
     new_script_lessons = []
     script_lesson_groups = []
+    old_script_levels = script.script_levels.all
     script_levels_by_lesson = {}
     levels_by_key = script.levels.index_by(&:key)
     lockable_count = 0
@@ -1049,7 +1050,7 @@ class Script < ActiveRecord::Base
         assessment: assessment
       }
       script_level_attributes[:properties] = properties.with_indifferent_access
-      script_level = script.script_levels.detect do |sl|
+      script_level = old_script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
       end || ScriptLevel.create!(script_level_attributes) do |sl|
