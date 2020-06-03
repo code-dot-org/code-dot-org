@@ -1117,13 +1117,13 @@ class Script < ActiveRecord::Base
       # has a pages property and more than one page in that array.)
       # This is because only the final level in a lesson can be a multi-page
       # assessment.
-      lesson.script_levels.each do |script_level|
+      script_levels_by_lesson[lesson.id].each do |script_level|
         if !script_level.end_of_stage? && script_level.long_assessment?
           raise "Only the final level in a lesson may be a multi-page assessment.  Script: #{script.name}"
         end
       end
 
-      if lesson.lockable && !lesson.script_levels.last.assessment?
+      if lesson.lockable && !script_levels_by_lesson[lesson.id].last.assessment?
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
 
