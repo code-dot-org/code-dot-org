@@ -93,6 +93,7 @@ class Pd::Workshop < ActiveRecord::Base
   validates_inclusion_of :funded, in: [true, false]
   validate :all_virtual_workshops_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
+  validate :friday_institute_workshops_must_be_virtual
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -125,6 +126,12 @@ class Pd::Workshop < ActiveRecord::Base
   def all_virtual_workshops_suppress_email
     if virtual? && !suppress_email?
       errors.add :properties, 'All virtual workshops must suppress email.'
+    end
+  end
+
+  def friday_institute_workshops_must_be_virtual
+    if third_party_provider == 'friday_institute' && !virtual?
+      errors.add :properties, 'Friday Institute workshops must be virtual'
     end
   end
 
