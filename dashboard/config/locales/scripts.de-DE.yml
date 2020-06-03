@@ -633,6 +633,8 @@ de:
         netsim:
           title: Internet-Simulator
           stages:
+            Internet Simulator Freeplay:
+              name: Internet Simulator Freispiel
             Manual DNS:
               name: Manulles DNS
             Overview and Setup Instructions:
@@ -650,6 +652,8 @@ de:
               name: Pakete und Zuverlässigkeit
             Manual DNS:
               name: Manulles DNS
+            Internet Simulator Freeplay:
+              name: Internet Simulator Freispiel
         pixelation:
           description: Erstelle Bilder mit Bits und Bytes.
           description_short: Erstelle Bilder mit Bits und Bytes.
@@ -1431,6 +1435,8 @@ de:
               name: DNS in der realen Welt
             Encryption Algorithms:
               name: Schlüssel und Passwörter
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             Routers and Redundancy:
               name: Router und Redundanz
             Tell Me a Secret - Encrypting Text:
@@ -1448,6 +1454,8 @@ de:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
               name: Router und Redundanz
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             Algorithms Detour - Minimum Spanning Tree:
               name: 'Algorithmen in Kürze: Minimaler Spannbaum'
             Algorithms Detour - Shortest Path:
@@ -1462,6 +1470,8 @@ de:
               name: HTTP und Abstraktion
             Cracking the Code:
               name: Den Code knacken
+            Encryption Algorithms:
+              name: Verschlüsselungsalgorithmen
         algebraPD2a:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -2613,6 +2623,8 @@ de:
               name: Datensätze löschen
             Final Project:
               name: Abschließende Herausforderung
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Permanent Data Storage:
               name: Permanente Datenspeicherung
             Sample Apps:
@@ -2630,6 +2642,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -2667,6 +2681,8 @@ de:
               name: Datensätze löschen
             Final Project:
               name: Abschließende Herausforderung
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Permanent Data Storage:
               name: Permanente Datenspeicherung
             Sample Apps:
@@ -2684,6 +2700,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -2806,6 +2824,8 @@ de:
               name: HTTP und Abstraktion
             Number Systems:
               name: Zahlensystem
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             Personal Innovations:
               name: Persönliche Innovationen
             Routers and Redundancy:
@@ -2856,6 +2876,8 @@ de:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
               name: Router und Redundanz
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             The Need for DNS:
               name: Die Notwendigkeit von DNS
             HTTP and Abstraction:
@@ -2994,6 +3016,8 @@ de:
           stages:
             Cracking the Code:
               name: Den Code knacken
+            Encryption with Keys and Passwords:
+              name: Verschlüsselung mit Schlüsseln und Passwörtern
             Simple Encryption:
               name: Einfache Verschlüsselung
             What is Big Data?:
@@ -3014,6 +3038,8 @@ de:
               name: Was ist Big Data?
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Encryption with Keys and Passwords:
+              name: Verschlüsselung mit Schlüsseln und Passwörtern
             Unit 4 Chapter 1 Assessment:
               name: Lerneinheit 4 Kapitel 1 Herausforderung
             Post-Course Survey:
@@ -3141,6 +3167,10 @@ de:
               name: 'Projekt: Ein Spiel erstellen'
             Velocity:
               name: Geschwindigkeit
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
         2016_sciencePD_phase1:
           description: In Partnerschaft mit dem Projekt GUTS
           description_short: In Partnerschaft mit dem Projekt GUTS
@@ -3925,6 +3955,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             'Project: Build a Game':
               name: 'Projekt: Ein Spiel erstellen'
             'Project: Design a Game':
@@ -3956,6 +3990,21 @@ de:
               name: Variablen
             Sprites:
               name: Sprites
+            The Counter Pattern Unplugged:
+              description_student: In dieser unplugged Lektion wird das zugrunde liegende
+                Verhalten von Variablen untersucht. Unter Verwendung von Notizzetteln
+                und Zeichenketten zur Simulation von Variablen innerhalb eines Programms
+                implementiert die Klasse einige kurze Programme. Sobald die Schülerinnen
+                und Schüler mit dieser Syntax vertraut sind, verwenden sie den gleichen
+                Prozess mit Sprite-Eigenschaften und verfolgt den Fortschritt eines
+                Sprites über den Bildschirm.
+              description_teacher: Die Schülerinnen und Schüler erforschen das zugrundeliegende
+                Verhalten von Variablen durch eine unplugged Aktivität. Mit Hilfe
+                von Notizkarten und Zeichenketten zur Simulation von Variablen innerhalb
+                eines Programms implementieren die Schülerinnen und Schüler einige
+                kurze Programme. Sobald sie mit dieser Syntax vertraut sind, verwenden
+                sie denselben Prozess mit Sprite-Eigenschaften und verfolgen den Fortschritt
+                eines Sprites über den Bildschirm.
             Conditionals:
               name: Bedingungen
             Keyboard Input:
@@ -4013,6 +4062,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
         grade2:
@@ -4559,6 +4612,8 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             Presenting Your Design:
               name: Präsentierung Deines Designs
             Designing Apps for Good:
@@ -4602,6 +4657,18 @@ de:
               description_student: Jedes Team bereitet eine Präsentation vor, um die
                 von ihnen entwickelte App anzupreisen. Dies ist die Zeit, um Anstrengungen,
                 Erfolge und Pläne für die Zukunft zu teilen.
+              description_teacher: Zu diesem Zeitpunkt haben die Teams ein Thema von
+                persönlicher und gesellschaftlicher Bedeutung erforscht, sowohl einen
+                Papierprototypen als auch einen digitalen Prototyp entwickelt und
+                getestet und an der ersten Anwendung nachgearbeitet, um neue Funktionen
+                und Fehlerbehebungen einzubauen. Jetzt ist es an der Zeit für sie,
+                zu überprüfen, was sie getan haben, und eine kohärente Präsentation
+                zusammenzustellen, um ihren Entstehungsprozess zu demonstrieren. Mit
+                Hilfe der bereitgestellten Präsentationsvorlage bereiten sich die
+                Teams darauf vor, über ihren Prozess der Anwendungsentwicklung zu
+                berichten, einschließlich des Problems, das sie zu lösen beabsichtigen,
+                der Art und Weise, wie sie das Feedback aus den Tests einbezogen haben,
+                und ihrer Pläne für die Zukunft.
             Project - Paper Prototype:
               name: Projekt - Papier-Prototyp
               description_student: Anhand der Interview-Informationen aus der vorhergehenden
@@ -4615,6 +4682,18 @@ de:
               description_student: Jedes Team bereitet eine Präsentation vor, um die
                 von ihnen entwickelte App anzupreisen. Dies ist die Zeit, um Anstrengungen,
                 Erfolge und Pläne für die Zukunft zu teilen.
+              description_teacher: Zu diesem Zeitpunkt haben die Teams ein Thema von
+                persönlicher und gesellschaftlicher Bedeutung erforscht, sowohl einen
+                Papierprototypen als auch einen digitalen Prototyp entwickelt und
+                getestet und an der ersten Anwendung nachgearbeitet, um neue Funktionen
+                und Fehlerbehebungen einzubauen. Jetzt ist es an der Zeit für sie,
+                zu überprüfen, was sie getan haben, und eine kohärente Präsentation
+                zusammenzustellen, um ihren Entstehungsprozess zu demonstrieren. Mit
+                Hilfe der bereitgestellten Präsentationsvorlage bereiten sich die
+                Teams darauf vor, über ihren Prozess der Anwendungsentwicklung zu
+                berichten, einschließlich des Problems, das sie zu lösen beabsichtigen,
+                der Art und Weise, wie sie das Feedback aus den Tests einbezogen haben,
+                und ihrer Pläne für die Zukunft.
           lesson_groups:
             csd4_1:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
@@ -4625,6 +4704,8 @@ de:
           lessons:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -4792,6 +4873,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -4824,6 +4907,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -4846,6 +4931,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -4882,6 +4969,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -5169,6 +5258,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -5191,6 +5282,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -5234,6 +5327,8 @@ de:
               name: Karte
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
+            The Program Design Process:
+              name: Der Programm Design Prozess
             Making Music:
               name: Musik machen
             Accelerometer:
@@ -5248,6 +5343,8 @@ de:
           lessons:
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Making Music:
@@ -5403,6 +5500,8 @@ de:
                 Abschlussprojekt dienen.
             'Project: Prototype an Innovation':
               name: 'Projekt: Prototyp einer Innovation'
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
               description_student: Die Schülerinnen und Schüler nehmen, was sie im
@@ -5431,6 +5530,8 @@ de:
                 Computer sein kann.
             Analog Input_:
               name: Analoger Eingang
+            The Program Design Process_:
+              name: Der Programm Design Prozess
             Arrays and Color LEDs_:
               name: Felder und Farb-LEDs
             'Project: Make a Game_':
@@ -5466,6 +5567,8 @@ de:
             csd_survey:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
           lessons:
+            The Program Design Process_:
+              name: Der Programmdesign-Prozess_
             'Project: Make a Game__':
               name: 'Projekt: Erstelle ein Spiel__'
             Accelerometer_:
@@ -5505,6 +5608,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             'Project: Design a Game':
               name: 'Projekt: Entwerfe ein Spiel'
         csd5-2017:
@@ -5527,10 +5634,42 @@ de:
               name: 8-Bit-Zahlen
             Encryption:
               name: Verschlüsselung
+              description_student: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
+              description_teacher: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
             Structuring Data:
               name: Daten strukturieren
             Keeping Data Secret:
               name: Daten Geheim Halten
+              description_student: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
+              description_teacher: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
           lesson_groups:
             csd5_1:
               display_name: 'Kapitel 1: Darstellung von Informationen'
@@ -5569,6 +5708,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             'Project: Design a Game':
               name: 'Projekt: Entwerfe ein Spiel'
           lessons:
@@ -5588,6 +5731,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             'Project: Design a Game':
               name: 'Projekt: Entwerfe ein Spiel'
         csd1-old:
@@ -5699,6 +5846,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             'Project: Design a Game':
               name: 'Projekt: Entwerfe ein Spiel'
             'null':
@@ -5988,6 +6139,7 @@ de:
               description_student: Hier sind einige Spiele und Zeichnungen. Spiele
                 mit jedem von ihnen, um Ideen für eigene Projekte zu bekommen!
             The Design Process:
+              name: Der Design Prozess
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Hier erfährst du etwas über den Entwurfsprozess, den
                 du für deine eigene Kreation verwenden wirst.
@@ -6013,6 +6165,11 @@ de:
               name: Überarbeiten Dein Projekt
             Presentation Your Project:
               name: Präsentiere Dein Projekt
+            Private and Personal Information:
+              description_student: Das Internet macht Spaß und ist aufregend, aber
+                es ist auch wichtig, dass man sicher bleibt. In dieser Lektion lernst
+                du den Unterschied zwischen Informationen, die sicher ausgetauscht
+                werden können, und Informationen, die privat sind.
             Build a Star Wars Game:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
@@ -6035,6 +6192,11 @@ de:
                 mit ihren Lieben mit einem speziellen Link teilen. Die Lektionsanleitung
                 für alle vier Phasen des Prozesses finden Sie in der ersten Phase
                 dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: 'Jenseits von Programmierung: Das Internet'
+              description_student: Hast du dich jemals gefragt, wie Informationen
+                im Internet verbreitet werden? Das ist keine Magie! In dieser Lektion
+                lernst du die Grundlagen, wie das Internet funktioniert.
             Crowdsourcing:
               description_student: In dieser Lektion lernst du etwas über Crowdsourcing,
                 den Prozess des Aufbaus eines Projekts mit einem Team.
@@ -6087,6 +6249,8 @@ de:
               name: Funktionen mit der Erntearbeiterin
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -6117,6 +6281,7 @@ de:
                 zeigen dir eine Handvoll vorgefertigter Spiele und Illustrationen,
                 die dir helfen sollen, deinen Plan für dein GROSSES Projekt zu entwickeln.
             The Design Process:
+              name: Der Design Prozess
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Hier erfährst du etwas über den Entwurfsprozess, den
                 du für deine eigene Kreation verwenden wirst.
@@ -6213,6 +6378,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -6523,6 +6690,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -6531,6 +6700,8 @@ de:
               name: Stelle dein Projekt vor
             Nested Loops Project in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            'How it Works: The Internet':
+              name: 'Jenseits von Programmierung: Das Internet'
             'Common Sense Education: Digital Citizenship':
               name: 'Digitale Staatsbürgerschaft: Digitale Staatsbürgerschaft praktizieren'
             Events in Star Wars:
@@ -6561,6 +6732,8 @@ de:
               name: Grundlagen aufbauen
             Nested Loops:
               name: Verschachtelte Schleifen
+            'How it Works: The Internet':
+              name: 'Wie funktioniert es: Das Internet'
             Events in Star Wars:
               name: Ereignisse mit Star Wars
             Events with Flappy:
@@ -6573,6 +6746,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -6668,6 +6843,8 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             Project - Paper Prototype:
               name: Projekt - Papier-Prototyp
             Market Research:
@@ -6688,6 +6865,8 @@ de:
           lessons:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             Project - Paper Prototype:
               name: Projekt - Papier-Prototyp
             Market Research:
@@ -6742,6 +6921,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -6778,6 +6959,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -6839,6 +7022,8 @@ de:
           stages:
             Introduction:
               name: Einführung
+            'How it Works: The Internet':
+              name: 'Wie funktioniert es: Das Internet'
             Events in Star Wars:
               name: Ereignisse mit Star Wars
             Events with Flappy:
@@ -6849,6 +7034,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -6875,6 +7062,8 @@ de:
               name: Debuggen mit Scrat
             Nested Loops:
               name: Verschachtelte Schleifen
+            'How it Works: The Internet':
+              name: 'Wie funktioniert es: Das Internet'
             Events in Star Wars:
               name: Ereignisse mit Star Wars
             Events with Flappy:
@@ -6885,6 +7074,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -6916,6 +7107,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -6950,6 +7143,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -6984,6 +7179,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -7022,6 +7219,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -7073,6 +7272,8 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             Project - Paper Prototype:
               name: Projekt - Papier-Prototyp
             Market Research:
@@ -7093,6 +7294,8 @@ de:
           lessons:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             Project - Paper Prototype:
               name: Projekt - Papier-Prototyp
             Market Research:
@@ -7267,6 +7470,8 @@ de:
               name: Funktionen mit der Biene
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -7310,6 +7515,8 @@ de:
               name: Funktionen mit der Erntearbeiterin
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -7344,6 +7551,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -7383,6 +7592,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -7451,6 +7662,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
           description_short: Programmierung
@@ -7486,6 +7701,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
         textbook:
@@ -7515,6 +7734,21 @@ de:
               name: Variablen
             Sprites:
               name: Sprites
+            The Counter Pattern Unplugged:
+              description_student: In dieser unplugged Lektion wird das zugrunde liegende
+                Verhalten von Variablen untersucht. Unter Verwendung von Notizzetteln
+                und Zeichenketten zur Simulation von Variablen innerhalb eines Programms
+                implementiert die Klasse einige kurze Programme. Sobald die Schülerinnen
+                und Schüler mit dieser Syntax vertraut sind, verwenden sie den gleichen
+                Prozess mit Sprite-Eigenschaften und verfolgt den Fortschritt eines
+                Sprites über den Bildschirm.
+              description_teacher: Die Schülerinnen und Schüler erforschen das zugrundeliegende
+                Verhalten von Variablen durch eine unplugged Aktivität. Mit Hilfe
+                von Notizkarten und Zeichenketten zur Simulation von Variablen innerhalb
+                eines Programms implementieren die Schülerinnen und Schüler einige
+                kurze Programme. Sobald sie mit dieser Syntax vertraut sind, verwenden
+                sie denselben Prozess mit Sprite-Eigenschaften und verfolgen den Fortschritt
+                eines Sprites über den Bildschirm.
             Conditionals:
               name: Bedingungen
             Keyboard Input:
@@ -7535,6 +7769,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
               description_student: Die Klasse plant und baut Originalspiele unter
@@ -7574,6 +7812,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
         csd2-2018:
@@ -7788,6 +8030,8 @@ de:
               name: Grundlagen aufbauen
             Nested Loops:
               name: Verschachtelte Schleifen
+            'How it Works: The Internet':
+              name: 'Wie funktioniert es: Das Internet'
             'Events: The Big Event':
               name: Der große Event
             Events in Star Wars:
@@ -7800,6 +8044,8 @@ de:
               name: Funktionen mit Parametern
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -7881,6 +8127,8 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -8086,6 +8334,8 @@ de:
               name: Binäre Armbänder
         csd6-2018:
           stages:
+            The Program Design Process_:
+              name: Der Programmdesign-Prozess_
             'Project: Make a Game__':
               name: 'Projekt: Erstelle ein Spiel__'
             Accelerometer_:
@@ -8094,6 +8344,8 @@ de:
               name: 'Projekt: Prototyp einer Innovation_'
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Arrays and Color LEDs:
@@ -8116,6 +8368,8 @@ de:
           lessons:
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Arrays and Color LEDs:
@@ -8156,6 +8410,11 @@ de:
               description_student: Diese schnelle Einführung gibt dir die Möglichkeit,
                 die meisten der Fähigkeiten zu üben, die du zum Lösen der Rätsel in
                 diesem Kurs benötigst.
+            Private and Personal Information:
+              description_student: Das Internet macht Spaß und ist aufregend, aber
+                es ist auch wichtig, dass man sicher bleibt. In dieser Lektion lernst
+                du den Unterschied zwischen Informationen, die sicher ausgetauscht
+                werden können, und Informationen, die privat sind.
             Build a Star Wars Game:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
@@ -8174,6 +8433,7 @@ de:
               description_student: Hier sind einige Spiele und Zeichnungen. Spiele
                 mit jedem von ihnen, um Ideen für eigene Projekte zu bekommen!
             The Design Process:
+              name: Der Design Prozess
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Hier erfährst du etwas über den Entwurfsprozess, den
                 du für deine eigene Kreation verwenden wirst.
@@ -8208,6 +8468,9 @@ de:
                 dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: das Internet
+              description_student: Hast du dich jemals gefragt, wie Informationen
+                im Internet verbreitet werden? Das ist keine Magie! In dieser Lektion
+                lernst du die Grundlagen, wie das Internet funktioniert.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: In dieser Lektion lernst du etwas über Crowdsourcing,
@@ -8250,6 +8513,8 @@ de:
               name: Urheberrecht und Kreativität
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Present Your Project:
@@ -8313,6 +8578,7 @@ de:
                 zeigen dir eine Handvoll vorgefertigter Spiele und Illustrationen,
                 die dir helfen sollen, deinen Plan für dein GROSSES Projekt zu entwickeln.
             The Design Process:
+              name: Der Design Prozess
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Hier erfährst du etwas über den Entwurfsprozess, den
                 du für deine eigene Kreation verwenden wirst.
@@ -8383,6 +8649,8 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -8412,6 +8680,8 @@ de:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
               name: Router und Redundanz
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             The Need for DNS:
               name: Die Notwendigkeit von DNS
             HTTP and Abstraction:
@@ -8446,6 +8716,8 @@ de:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
               name: Router und Redundanz
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             The Need for DNS:
               name: Die Notwendigkeit von DNS
             HTTP and Abstraction:
@@ -8522,6 +8794,8 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -8557,6 +8831,18 @@ de:
               description_student: Jedes Team bereitet eine Präsentation vor, um die
                 von ihnen entwickelte App anzupreisen. Dies ist die Zeit, um Anstrengungen,
                 Erfolge und Pläne für die Zukunft zu teilen.
+              description_teacher: Zu diesem Zeitpunkt haben die Teams ein Thema von
+                persönlicher und gesellschaftlicher Bedeutung erforscht, sowohl einen
+                Papierprototypen als auch einen digitalen Prototyp entwickelt und
+                getestet und an der ersten Anwendung nachgearbeitet, um neue Funktionen
+                und Fehlerbehebungen einzubauen. Jetzt ist es an der Zeit für sie,
+                zu überprüfen, was sie getan haben, und eine kohärente Präsentation
+                zusammenzustellen, um ihren Entstehungsprozess zu demonstrieren. Mit
+                Hilfe der bereitgestellten Präsentationsvorlage bereiten sich die
+                Teams darauf vor, über ihren Prozess der Anwendungsentwicklung zu
+                berichten, einschließlich des Problems, das sie zu lösen beabsichtigen,
+                der Art und Weise, wie sie das Feedback aus den Tests einbezogen haben,
+                und ihrer Pläne für die Zukunft.
           lesson_groups:
             csd4_1:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
@@ -8567,6 +8853,8 @@ de:
           lessons:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -8591,6 +8879,22 @@ de:
               name: Zahlendarstellung
             Keeping Data Secret:
               name: Daten geheim halten
+              description_student: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
+              description_teacher: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
             Structuring Data:
               name: Daten strukturieren
             Project - Solve a Data Problem:
@@ -8732,6 +9036,8 @@ de:
               name: Was ist Big Data?
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Encryption with Keys and Passwords:
+              name: Verschlüsselung mit Schlüsseln und Passwörtern
             Unit 4 Chapter 1 Assessment:
               name: Lerneinheit 4 Kapitel 1 Herausforderung
             Finding Trends with Visualizations:
@@ -8758,6 +9064,8 @@ de:
               name: Prüfe deine Voraussetzungen
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Encryption with Keys and Passwords:
+              name: Verschlüsselung mit Schlüsseln und Passwörtern
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
         csp5-2018:
@@ -8830,6 +9138,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -8882,6 +9192,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -9480,6 +9792,7 @@ de:
                 zeigen dir eine Handvoll vorgefertigter Spiele und Illustrationen,
                 die dir helfen sollen, deinen Plan für dein GROSSES Projekt zu entwickeln.
             The Design Process:
+              name: Der Design Prozess
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Hier erfährst du etwas über den Entwurfsprozess, den
                 du für deine eigene Kreation verwenden wirst.
@@ -9540,6 +9853,9 @@ de:
               name: Urheberrecht und Kreativität
             Internet:
               name: das Internet
+              description_student: Hast du dich jemals gefragt, wie Informationen
+                im Internet verbreitet werden? Das ist keine Magie! In dieser Lektion
+                lernst du die Grundlagen, wie das Internet funktioniert.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: In dieser Lektion lernst du etwas über Crowdsourcing,
@@ -9723,6 +10039,11 @@ de:
               name: Eingebettete Schleifen bei der Eiskönigin
             Conditionals with Cards:
               name: Bedingungen mit Karten
+            Private and Personal Information:
+              description_student: Das Internet macht Spaß und ist aufregend, aber
+                es ist auch wichtig, dass man sicher bleibt. In dieser Lektion lernst
+                du den Unterschied zwischen Informationen, die sicher ausgetauscht
+                werden können, und Informationen, die privat sind.
             Build a Star Wars Game:
               name: Erstelle ein Star Wars Spiel
               description_student: Spüre die Kraft, wenn duu in dieser Lektion dein
@@ -9746,6 +10067,7 @@ de:
               description_student: Hier sind einige Spiele und Zeichnungen. Spiele
                 mit jedem von ihnen, um Ideen für eigene Projekte zu bekommen!
             The Design Process:
+              name: Der Design Prozess
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Hier erfährst du etwas über den Entwurfsprozess, den
                 du für deine eigene Kreation verwenden wirst.
@@ -9780,6 +10102,9 @@ de:
                 dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: Internet
+              description_student: Hast du dich jemals gefragt, wie Informationen
+                im Internet verbreitet werden? Das ist keine Magie! In dieser Lektion
+                lernst du die Grundlagen, wie das Internet funktioniert.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: In dieser Lektion lernst du etwas über Crowdsourcing,
@@ -9793,10 +10118,22 @@ de:
               description_student: Projekte dieser Größenordnung brauchen Zeit und
                 viel Planung. Finde deine Inspiration, entwickle einen Plan und setze
                 deine Kreativität frei!
+            Access Ability:
+              name: Entwerfen für Barrierefreiheit
+              description_student: 'In dieser Lektion lernen die Schülerinnen und
+                Schüler die Zugänglichkeit und den Wert von Empathie durch Brainstorming
+                und das Entwerfen zugänglicher Lösungen für hypothetische Anwendungen
+                kennen. '
+              description_teacher: 'In dieser Lektion lernen die Schülerinnen und
+                Schüler die Zugänglichkeit und den Wert von Empathie durch Brainstorming
+                und das Entwerfen zugänglicher Lösungen für hypothetische Anwendungen
+                kennen. '
             Digital Sharing:
               name: Digitale Teilhabe
             Simon Says:
               name: Simon sagt
+            Designing for Accessibility:
+              name: Entwerfen für Barrierefreiheit
             Songwriting:
               name: Songschreiben
           lesson_groups:
@@ -9872,6 +10209,8 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Explore Project Ideas:
               name: Entdecke Projektideen
+            The Design Process:
+              name: Der Design Prozess
             Build Your Project:
               name: Entwickele Dein Projekt
             Revise Your Project:
@@ -10089,6 +10428,8 @@ de:
                 sie die Grafik oder die Regeln ändern.
             Binary Bracelets:
               name: Binäre Armbänder
+            Create a Design with Loops:
+              name: Entwurf eines Designs mit Schleifen
             'End of Course Project: Create a Play Lab Game':
               name: Projekt am Ende des Kurses
               description_student: Mach deine Hände bereit für jede Menge Programmierung!
@@ -10518,6 +10859,21 @@ de:
               name: Variablen
             Sprites:
               name: Sprites
+            The Counter Pattern Unplugged:
+              description_student: In dieser unplugged Lektion wird das zugrunde liegende
+                Verhalten von Variablen untersucht. Unter Verwendung von Notizzetteln
+                und Zeichenketten zur Simulation von Variablen innerhalb eines Programms
+                implementiert die Klasse einige kurze Programme. Sobald die Schülerinnen
+                und Schüler mit dieser Syntax vertraut sind, verwenden sie den gleichen
+                Prozess mit Sprite-Eigenschaften und verfolgt den Fortschritt eines
+                Sprites über den Bildschirm.
+              description_teacher: Die Schülerinnen und Schüler erforschen das zugrundeliegende
+                Verhalten von Variablen durch eine unplugged Aktivität. Mit Hilfe
+                von Notizkarten und Zeichenketten zur Simulation von Variablen innerhalb
+                eines Programms implementieren die Schülerinnen und Schüler einige
+                kurze Programme. Sobald sie mit dieser Syntax vertraut sind, verwenden
+                sie denselben Prozess mit Sprite-Eigenschaften und verfolgen den Fortschritt
+                eines Sprites über den Bildschirm.
             Conditionals:
               name: Bedingungen
             Keyboard Input:
@@ -10538,6 +10894,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
               description_student: Die Klasse plant und baut Originalspiele unter
@@ -10579,6 +10939,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
             Post-Project Test:
@@ -10587,6 +10951,8 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -10622,6 +10988,18 @@ de:
               description_student: Jedes Team bereitet eine Präsentation vor, um die
                 von ihnen entwickelte App anzupreisen. Dies ist die Zeit, um Anstrengungen,
                 Erfolge und Pläne für die Zukunft zu teilen.
+              description_teacher: Zu diesem Zeitpunkt haben die Teams ein Thema von
+                persönlicher und gesellschaftlicher Bedeutung erforscht, sowohl einen
+                Papierprototypen als auch einen digitalen Prototyp entwickelt und
+                getestet und an der ersten Anwendung nachgearbeitet, um neue Funktionen
+                und Fehlerbehebungen einzubauen. Jetzt ist es an der Zeit für sie,
+                zu überprüfen, was sie getan haben, und eine kohärente Präsentation
+                zusammenzustellen, um ihren Entstehungsprozess zu demonstrieren. Mit
+                Hilfe der bereitgestellten Präsentationsvorlage bereiten sich die
+                Teams darauf vor, über ihren Prozess der Anwendungsentwicklung zu
+                berichten, einschließlich des Problems, das sie zu lösen beabsichtigen,
+                der Art und Weise, wie sie das Feedback aus den Tests einbezogen haben,
+                und ihrer Pläne für die Zukunft.
             Post-Project Test:
               name: Test nach dem Projekt
           lesson_groups:
@@ -10636,6 +11014,8 @@ de:
           lessons:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -10662,6 +11042,22 @@ de:
               name: Zahlendarstellung
             Keeping Data Secret:
               name: Daten geheim halten
+              description_student: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
+              description_teacher: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
             Structuring Data:
               name: Daten strukturieren
             Project - Solve a Data Problem:
@@ -10694,6 +11090,8 @@ de:
           stages:
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Arrays and Color LEDs:
@@ -10718,6 +11116,8 @@ de:
           lessons:
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Arrays and Color LEDs:
@@ -10814,6 +11214,8 @@ de:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
               name: Router und Redundanz
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             The Need for DNS:
               name: Die Notwendigkeit von DNS
             HTTP and Abstraction:
@@ -10848,6 +11250,8 @@ de:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
               name: Router und Redundanz
+            Packets and Making a Reliable Internet:
+              name: Pakete und wie das Internet zuverlässig wird
             The Need for DNS:
               name: Die Notwendigkeit von DNS
             HTTP and Abstraction:
@@ -10938,6 +11342,8 @@ de:
               name: Prüfe deine Voraussetzungen
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Encryption with Keys and Passwords:
+              name: Verschlüsselung mit Schlüsseln und Passwörtern
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
             Mid-Year Survey:
@@ -10960,6 +11366,8 @@ de:
               name: Prüfe deine Voraussetzungen
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Encryption with Keys and Passwords:
+              name: Verschlüsselung mit Schlüsseln und Passwörtern
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
         csp5-2019:
@@ -11059,6 +11467,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -11093,6 +11503,8 @@ de:
               name: Datensätze löschen
             Updating Records:
               name: Datensätze aktualisieren
+            Importing and Exporting Data:
+              name: Importieren und Exportieren von Daten
             Visualizing Data:
               name: Datensätze anzeigen
             Sample Apps:
@@ -12014,6 +12426,21 @@ de:
               name: Variablen
             Sprites:
               name: Sprites
+            The Counter Pattern Unplugged:
+              description_student: In dieser unplugged Lektion wird das zugrunde liegende
+                Verhalten von Variablen untersucht. Unter Verwendung von Notizzetteln
+                und Zeichenketten zur Simulation von Variablen innerhalb eines Programms
+                implementiert die Klasse einige kurze Programme. Sobald die Schülerinnen
+                und Schüler mit dieser Syntax vertraut sind, verwenden sie den gleichen
+                Prozess mit Sprite-Eigenschaften und verfolgt den Fortschritt eines
+                Sprites über den Bildschirm.
+              description_teacher: Die Schülerinnen und Schüler erforschen das zugrundeliegende
+                Verhalten von Variablen durch eine unplugged Aktivität. Mit Hilfe
+                von Notizkarten und Zeichenketten zur Simulation von Variablen innerhalb
+                eines Programms implementieren die Schülerinnen und Schüler einige
+                kurze Programme. Sobald sie mit dieser Syntax vertraut sind, verwenden
+                sie denselben Prozess mit Sprite-Eigenschaften und verfolgen den Fortschritt
+                eines Sprites über den Bildschirm.
             Conditionals:
               name: Bedingungen
             Keyboard Input:
@@ -12034,6 +12461,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
               description_student: Die Klasse plant und baut Originalspiele unter
@@ -12081,6 +12512,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
             Post-Project Test:
@@ -12329,12 +12764,20 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Building a Network:
+              name: Ein Netzwerk aufbauen
             IP Addresses:
               name: IP Adressen
             Routers and Redundancy:
               name: Router und Redundanz
             Packets:
               name: Pakete
+            The Growing Internet:
+              name: Das wachsende Internet
+            Internet Dilemmas pt 1:
+              name: Internet-Dilemmata Teil 1
+            Internet Dilemmas, pt 2:
+              name: Internet-Dilemmata Teil 2
             Unit 2 Assessment:
               name: Lerneinheit 2 Herausforderung
             Unit 2 STUDENT Survey:
@@ -12343,6 +12786,8 @@ de:
               name: Einheit 2 LEHRER Umfrage
             DNS and HTTP:
               name: DNS und HTTP
+            Welcome to the Internet:
+              name: Willkommen im Internet
             The Need for Addressing:
               name: Die Notwendigkeit von Addressierung
             Project - Internet Dilemmas Part 1:
@@ -12355,6 +12800,10 @@ de:
             required:
               display_name: Übersicht
           lessons:
+            Welcome to the Internet:
+              name: Willkommen im Internet
+            Building a Network:
+              name: Ein Netzwerk aufbauen
             The Need for Addressing:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
@@ -13030,6 +13479,8 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -13065,6 +13516,18 @@ de:
               description_student: Jedes Team bereitet eine Präsentation vor, um die
                 von ihnen entwickelte App anzupreisen. Dies ist die Zeit, um Anstrengungen,
                 Erfolge und Pläne für die Zukunft zu teilen.
+              description_teacher: Zu diesem Zeitpunkt haben die Teams ein Thema von
+                persönlicher und gesellschaftlicher Bedeutung erforscht, sowohl einen
+                Papierprototypen als auch einen digitalen Prototyp entwickelt und
+                getestet und an der ersten Anwendung nachgearbeitet, um neue Funktionen
+                und Fehlerbehebungen einzubauen. Jetzt ist es an der Zeit für sie,
+                zu überprüfen, was sie getan haben, und eine kohärente Präsentation
+                zusammenzustellen, um ihren Entstehungsprozess zu demonstrieren. Mit
+                Hilfe der bereitgestellten Präsentationsvorlage bereiten sich die
+                Teams darauf vor, über ihren Prozess der Anwendungsentwicklung zu
+                berichten, einschließlich des Problems, das sie zu lösen beabsichtigen,
+                der Art und Weise, wie sie das Feedback aus den Tests einbezogen haben,
+                und ihrer Pläne für die Zukunft.
             Post-Project Test:
               name: Test nach dem Projekt
           lesson_groups:
@@ -13079,6 +13542,8 @@ de:
           lessons:
             Analysis of Design:
               name: Analyse der Planung
+            User-Centered Design Micro Activity:
+              name: Mikroaktivität zu benutzerzentriertem Design
             User Interfaces:
               name: Benutzeroberflächen
             Project - Paper Prototype:
@@ -13105,6 +13570,22 @@ de:
               name: Zahlendarstellung
             Keeping Data Secret:
               name: Daten geheim halten
+              description_student: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
+              description_teacher: Die Schülerinnen und Schüler führen eine Diskussion
+                über die verschiedenen Sicherheitsstufen, die sie sich für persönliche
+                Daten wünschen.  Sobald die Klasse ein Verständnis für die Bedeutung
+                des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung
+                von Informationen kennen, indem sie eine Notiz für einen Partner verschlüsseln
+                und die Notiz des Partners entschlüsseln.  Die Klasse schließt mit
+                einer Diskussion über die Bedeutung sowohl der physischen als auch
+                der digitalen Sicherheit.
             Structuring Data:
               name: Daten strukturieren
             Project - Solve a Data Problem:
@@ -13137,6 +13618,8 @@ de:
           stages:
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Arrays and Color LEDs:
@@ -13161,6 +13644,8 @@ de:
           lessons:
             Analog Input:
               name: Analoger Eingang
+            The Program Design Process:
+              name: Der Programm Design Prozess
             'Project: Make a Game':
               name: 'Projekt: Ein Spiel erstellen'
             Arrays and Color LEDs:
@@ -13190,6 +13675,21 @@ de:
               name: Zufällige Zahlen
             Sprite Properties:
               name: Sprite Eigenschaften
+            The Counter Pattern Unplugged:
+              description_student: In dieser unplugged Lektion wird das zugrunde liegende
+                Verhalten von Variablen untersucht. Unter Verwendung von Notizzetteln
+                und Zeichenketten zur Simulation von Variablen innerhalb eines Programms
+                implementiert die Klasse einige kurze Programme. Sobald die Schülerinnen
+                und Schüler mit dieser Syntax vertraut sind, verwenden sie den gleichen
+                Prozess mit Sprite-Eigenschaften und verfolgt den Fortschritt eines
+                Sprites über den Bildschirm.
+              description_teacher: Die Schülerinnen und Schüler erforschen das zugrundeliegende
+                Verhalten von Variablen durch eine unplugged Aktivität. Mit Hilfe
+                von Notizkarten und Zeichenketten zur Simulation von Variablen innerhalb
+                eines Programms implementieren die Schülerinnen und Schüler einige
+                kurze Programme. Sobald sie mit dieser Syntax vertraut sind, verwenden
+                sie denselben Prozess mit Sprite-Eigenschaften und verfolgen den Fortschritt
+                eines Sprites über den Bildschirm.
             Conditionals:
               name: Bedingungen
             Keyboard Input:
@@ -13204,6 +13704,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
             Post-Project Test:
@@ -13262,6 +13766,10 @@ de:
               name: 'Mini-Projekt: Flyer-Spiel'
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
             Post-Project Test:
@@ -13618,6 +14126,21 @@ de:
             Alien Dance Party with Sprite Lab:
               description_student: Erstelle ein interaktives Projekt, das mit Klassenkameraden
                 geteilt werden kann.
+            Private and Personal Information:
+              description_student: Das Internet macht Spaß und ist aufregend, aber
+                es ist auch wichtig, dass man sicher bleibt. In dieser Lektion lernst
+                du den Unterschied zwischen Informationen, die sicher ausgetauscht
+                werden können, und Informationen, die privat sind.
+            Access Ability:
+              name: Entwerfen für Barrierefreiheit
+              description_student: 'In dieser Lektion lernen die Schülerinnen und
+                Schüler die Zugänglichkeit und den Wert von Empathie durch Brainstorming
+                und das Entwerfen zugänglicher Lösungen für hypothetische Anwendungen
+                kennen. '
+              description_teacher: 'In dieser Lektion lernen die Schülerinnen und
+                Schüler die Zugänglichkeit und den Wert von Empathie durch Brainstorming
+                und das Entwerfen zugänglicher Lösungen für hypothetische Anwendungen
+                kennen. '
             Nested Loops in Bee:
               name: Eingebettete Schleifen im Labyrinth
             Nested Loops in Frozen:
@@ -13633,6 +14156,8 @@ de:
                 deine Kreativität frei!
             Digital Sharing:
               name: Digitale Teilhabe
+            Designing for Accessibility:
+              name: Entwerfen für Barrierefreiheit
           lesson_groups:
             ramp_up:
               display_name: Hochfahren (Ramp-Up)
@@ -13663,6 +14188,8 @@ de:
               name: Eingebettete Schleifen bei der Eiskönigin
             Functions in Harvester:
               name: Funktionen mit der Erntearbeiterin
+            Designing for Accessibility:
+              name: Entwerfen für Barrierefreiheit
             End of Course Project:
               name: Projekt am Ende des Kurses
         coursef-2020:
@@ -13687,6 +14214,9 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Internet:
               name: das Internet
+              description_student: Hast du dich jemals gefragt, wie Informationen
+                im Internet verbreitet werden? Das ist keine Magie! In dieser Lektion
+                lernst du die Grundlagen, wie das Internet funktioniert.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: In dieser Lektion lernst du etwas über Crowdsourcing,
@@ -13881,6 +14411,10 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Welcome to the Internet:
+              name: Willkommen im Internet
+            Building a Network:
+              name: Ein Netzwerk aufbauen
             The Need for Addressing:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
@@ -13897,6 +14431,10 @@ de:
             csp_unit2_2020:
               display_name: 'Lektion 2: Das Internet'
           lessons:
+            Welcome to the Internet:
+              name: Willkommen im Internet
+            Building a Network:
+              name: Ein Netzwerk aufbauen
             The Need for Addressing:
               name: Die Notwendigkeit von Addressierung
             Routers and Redundancy:
@@ -14102,6 +14640,21 @@ de:
               name: Variablen
             Sprites:
               name: Sprites
+            The Counter Pattern Unplugged:
+              description_student: In dieser unplugged Lektion wird das zugrunde liegende
+                Verhalten von Variablen untersucht. Unter Verwendung von Notizzetteln
+                und Zeichenketten zur Simulation von Variablen innerhalb eines Programms
+                implementiert die Klasse einige kurze Programme. Sobald die Schülerinnen
+                und Schüler mit dieser Syntax vertraut sind, verwenden sie den gleichen
+                Prozess mit Sprite-Eigenschaften und verfolgt den Fortschritt eines
+                Sprites über den Bildschirm.
+              description_teacher: Die Schülerinnen und Schüler erforschen das zugrundeliegende
+                Verhalten von Variablen durch eine unplugged Aktivität. Mit Hilfe
+                von Notizkarten und Zeichenketten zur Simulation von Variablen innerhalb
+                eines Programms implementieren die Schülerinnen und Schüler einige
+                kurze Programme. Sobald sie mit dieser Syntax vertraut sind, verwenden
+                sie denselben Prozess mit Sprite-Eigenschaften und verfolgen den Fortschritt
+                eines Sprites über den Bildschirm.
             Conditionals:
               name: Bedingungen
             Keyboard Input:
@@ -14122,6 +14675,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
               description_student: Die Klasse plant und baut Originalspiele unter
@@ -14311,6 +14868,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
           lesson_groups:
@@ -14327,6 +14888,10 @@ de:
               name: Kollisionen
             Functions:
               name: Funktionen
+            The Game Design Process:
+              name: Der Spieledesign Prozess
+            Using the Game Design Process:
+              name: Verwendung des Spielentwurfsprozesses
             Project - Design a Game:
               name: Projekt - Entwerfe ein Spiel
         code-break:
@@ -14339,6 +14904,36 @@ de:
               name: Algorithmen
             Events:
               name: Ereignisse
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+          lessons:
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+        code-break-staging:
+          stages:
+            Encryption with Ashton Kutcher & Mia Gil Epner:
+              name: Verschlüsselung mit Ashton Kutcher & Mia Gil Epner
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+          lessons:
+            Encryption with Ashton Kutcher & Mia Gil Epner:
+              name: Verschlüsselung mit Ashton Kutcher & Mia Gil Epner
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+        code-break-younger-staging:
+          stages:
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+          lessons:
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+        code-break-younger:
+          stages:
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
+          lessons:
+            The Internet with Keegan-Michael Key & Vint Cerf:
+              name: Das Internet mit Keegan-Michael Key & Vint Cerf
         no-lg:
           stages:
             new stage:

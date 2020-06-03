@@ -173,6 +173,8 @@ ms:
       report_bug: "Laporkan masalah"
       educate_hoc: "Hour of Code"
       about: "Tentang"
+      legal_privacy: "Dasar Privasi"
+      legal_tos: "Terma Perkhidmatan"
     user:
       classroom: 'Laman Utama Guru'
       label: 'Hi %{username}'
