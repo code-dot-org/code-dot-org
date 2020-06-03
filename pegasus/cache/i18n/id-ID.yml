@@ -628,6 +628,7 @@ id-ID:
   sports_video_title: Dorong dirimu. Setiap orang bisa belajar.
   sports_select_theme: Pilih tema tutorial Anda
   sports_basketball_title: Buat sebuah permainan basket
+  sports_all_sports_title: Padu dan padankan lintas olahraga
   sports_featured_athletes: Atlet unggulan
   sports_athletes_title: Atlet unggulan
   sports_athlete_Draymond: Draymoon Green, peraih medali emas olimpiade dan juara
@@ -1553,6 +1554,8 @@ id-ID:
   coursea_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat seni,
+    cerita, dan permainan Anda sendiri.
   coursed_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1562,6 +1565,8 @@ id-ID:
   coursea-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2017_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2017_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2017_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1571,6 +1576,8 @@ id-ID:
   coursea-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2018_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2018_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2018_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -1580,6 +1587,8 @@ id-ID:
   coursea-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama
     dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2019_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat
+    seni, cerita, dan permainan Anda sendiri.
   coursed-2019_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian
     algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2019_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian
@@ -2164,6 +2173,7 @@ id-ID:
   header_help_support: 'Bantuan dan dukungan '
   header_report_bug: Laporkan masalah
   header_report_abuse: Laporkan penyalahgunaan
+  header_legal: Privasi & Hukum
   header_legal_privacy: Kebijakan privasi
   header_legal_tos: Ketentuan Layanan
   header_tutorials: Tutorial
