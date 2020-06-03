@@ -1065,11 +1065,11 @@ class Script < ActiveRecord::Base
           raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{lesson_name} does not have a lesson group."
         end
         # find the lesson group for this lesson
-        lesson_group = LessonGroup.find_by!(
-          key: lesson_group_key.presence || "",
-          script: script,
-          user_facing: lesson_group_key.present?
-        )
+        lesson_group = script_lesson_groups.detect do |lg|
+          lg.key == (lesson_group_key.presence || "") &&
+            lg.user_facing == lesson_group_key.present?
+        end
+        raise "could not find lesson group '#{lesson_group_key}' for script '#{script.name}'" unless lesson_group
 
         # check if that lesson exists for the script otherwise create a new lesson
         lesson = script.lessons.detect {|s| s.name == lesson_name} ||
