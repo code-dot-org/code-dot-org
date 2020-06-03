@@ -3,8 +3,6 @@
   %p Title to show on level pages (but not in level groups).
   = f.text_field :title
 
-= render partial: 'levels/editors/fields/submittable', locals: {f: f}
-
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :peer_reviewable, description: "Is peer reviewable"}
   %p
