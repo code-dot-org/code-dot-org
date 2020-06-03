@@ -1,23 +1,36 @@
-.field
-  = f.label :edit_code,'Droplet level'
-.field
-  = f.label :code_functions, 'Edit Droplet Palette'
-  = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
+%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#toolbox"}}
+  Toolbox
 
-.field
-  = f.label :start_blocks, 'Edit Starting JavaScript Program'
-  .row
-    .span8
-      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
-    #start-preview.span4
-.field
-  = f.label :palette_category_at_start
-  = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
-.field
+#toolbox.in.collapse
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
-.field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
-.field
+
+  - if @level.is_a? Applab
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
+
+  .field
+    = f.label :palette_category_at_start
+    = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
+
+  .field
+    = f.label :code_functions, 'Edit Droplet Palette'
+    = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
+
+  %legend.control-legend.collapsed{data: {toggle: "collapse", target: "#libraries"}}
+    Libraries
+
+  #libraries.in.collapse
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :libraries_enabled, description: "Enable Libraries"}
+    = f.label :start_libraries,'User-Created Toolbox Libraries (make sure that Enable Libraries ^ is checked)'
+    = f.text_area :start_libraries, value: @level.start_libraries
+
+%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#starter-code"}}
+  Starter Code
+
+#starter-code.in.collapse
   = f.label :text_mode_at_start, 'Code View When Level Starts'
   %p What mode the code is presented as when the level loads
   .aligned-input-group
@@ -29,11 +42,13 @@
   .aligned-input-group
     = f.radio_button :text_mode_at_start, 'true'
     = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :libraries_enabled, description: "Enable Libraries"}
-.field
-  = f.label :start_libraries,'User-Created Toolbox Libraries (make sure that Enable Libraries ^ is checked)'
-  = f.text_area :start_libraries, value: @level.start_libraries
+  .field
+    = f.label :start_blocks, 'Edit Starting JavaScript Program'
+    .row
+      .span8
+        ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
+      #start-preview.span4
+
 :ruby
   script_data = {
     pageOptions: {

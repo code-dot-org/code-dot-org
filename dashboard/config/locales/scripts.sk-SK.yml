@@ -2494,8 +2494,30 @@ sk:
                 a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
                 a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
                 ktorej postava lieta a zbiera mince.
+            Collisions:
+              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
+                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
+                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
+                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
+                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
+                (collide, displace, bounce, and bounceOff).
+
+'
             Functions:
               name: Funkcie
+              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
+                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
+                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
+                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
+                a pridanie funkcionality do finálnej verzie hry.
+
+'
+            The Game Design Process:
+              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
+                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
             Variables:
               name: Premenné
             Sprites:
@@ -5686,8 +5708,30 @@ sk:
                 a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
                 a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
                 ktorej postava lieta a zbiera mince.
+            Collisions:
+              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
+                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
+                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
+                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
+                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
+                (collide, displace, bounce, and bounceOff).
+
+'
             Functions:
               name: Funkcie
+              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
+                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
+                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
+                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
+                a pridanie funkcionality do finálnej verzie hry.
+
+'
+            The Game Design Process:
+              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
+                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -8595,8 +8639,30 @@ sk:
                 a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
                 a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
                 ktorej postava lieta a zbiera mince.
+            Collisions:
+              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
+                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
+                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
+                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
+                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
+                (collide, displace, bounce, and bounceOff).
+
+'
             Functions:
               name: Funkcie
+              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
+                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
+                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
+                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
+                a pridanie funkcionality do finálnej verzie hry.
+
+'
+            The Game Design Process:
+              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
+                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -9183,8 +9249,30 @@ sk:
                 a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
                 a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
                 ktorej postava lieta a zbiera mince.
+            Collisions:
+              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
+                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
+                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
+                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
+                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
+                (collide, displace, bounce, and bounceOff).
+
+'
             Functions:
               name: Funkcie
+              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
+                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
+                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
+                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
+                a pridanie funkcionality do finálnej verzie hry.
+
+'
+            The Game Design Process:
+              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
+                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
             Sprite Properties:
               name: Vlastnosti postáv
           lesson_groups:
@@ -9842,8 +9930,31 @@ sk:
                 využíva spolu s kódom pre počítanie, vďaka čomu objavíte viacero typov
                 výsledných pohybov.\nNaučíte sa simulovať gravitáciu a vyskúšate tvoriť
                 nové pohyby len pomocou kombinácie blokov, ktoré už poznáte."
+            Collisions:
+              description_student: "**Otázka dňa: Ako môžu programátori pracovať s
+                abstrakciou tak, aby vytvorili ďalšie abstrakcie?**\r\n\r\nV tejto
+                lekcii sa naučíme nové spôsoby, akými „sprite“ objekty vedia na seba
+                pôsobiť. Po stručnom zopakovaní používania bloku `isTouching` prediskutujeme
+                nové spôsoby interakcie medzi dvoma „sprite“ objektami. Potom použijeme
+                `isTouching` na posunutie jedného „sprite” objektu druhým a následne
+                si precvičíme štyri bloky kolízie (`collide`, `displace`, `bounce`,
+                and `bounceOff`)."
             Functions:
               name: Funkcie
+              description_student: "**Otázka dňa: Ako môžu programátori využiť funkcie
+                na vytvorenie vlastných abstrakcií?**\r\n\r\nV tejto lekcii si povieme
+                o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia
+                jeho opakujúcich sa častí. Ukážeme si, že na vyššej, abstraktnejšej
+                úrovni sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.
+                \ Potom začneme funkcie tvoriť. "
+            The Game Design Process:
+              description_student: "**Otázka dňa:  Ako nám môže plán pomôcť pri vytváraní
+                veľkého projektu?**\r\n\r\n\r\nTáto lekcia ti predstaví proces, ktorý
+                použiješ pri navrhovaní hier. Projektový sprievodca nám pomôže  zadefinovať
+                \"Spritov\", premenné a funkcie ešte predtým, než začneme so samotným
+                programovaním. Celým procesom si prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba."
             Text:
               name: Text
             Mouse Input:
@@ -10783,8 +10894,30 @@ sk:
                 a doprava. V posledných častiach skombinujete tieto pohyby na animáciu
                 a kontrolu jedného “sprite” objektu a vytvoríte jednoduchú hru, v
                 ktorej postava lieta a zbiera mince.
+            Collisions:
+              description_student: 'V tejto lekcii sa naučíme nové spôsoby, akými
+                „sprite“ objekty vedia na seba pôsobiť. Po stručnom zopakovaní používania
+                bloku `isTouching`, prediskutujeme nové spôsoby interakcie medzi dvoma
+                „sprite“ objektami. Potom použijeme `isTouching` na posunutie jedného
+                „sprite” objektu druhým a následne si precvičíme štyri bloky kolízie
+                (collide, displace, bounce, and bounceOff).
+
+'
             Functions:
               name: Funkcie
+              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+                organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
+                sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
+                jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
+                začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
+                a pridanie funkcionality do finálnej verzie hry.
+
+'
+            The Game Design Process:
+              description_student: Táto lekcia ti predstaví proces, ktorý použiješ
+                pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach.
+                Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie.
+                Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
             Sprite Properties:
               name: Vlastnosti postáv
           lesson_groups:

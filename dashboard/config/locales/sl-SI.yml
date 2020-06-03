@@ -232,6 +232,8 @@ sl:
       help_us: Pomagaj nam
       teach: Predavaj
       about: O programu
+      legal_privacy: Izjava o zasebnosti
+      legal_tos: Pogoje storitve
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: Nadzorna plošča za okrožje

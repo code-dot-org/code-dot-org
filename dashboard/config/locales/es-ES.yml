@@ -404,6 +404,8 @@ es:
       help_us: Ayudenos
       teach: Enseñar
       about: Acerca de
+      legal_privacy: Política de Privacidad
+      legal_tos: Términos de uso
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de distrito
