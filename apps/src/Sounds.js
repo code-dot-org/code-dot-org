@@ -75,6 +75,7 @@ export default function Sounds() {
   }
 
   this.soundsById = {};
+  this.textBytesByLanguage = {};
 
   /** @private {function[]} */
   this.whenAudioUnlockedCallbacks_ = [];
@@ -236,6 +237,54 @@ Sounds.prototype.checkDidSourcePlay_ = function(source, context, onComplete) {
 };
 
 /**
+ * Registers the bytes of text to speech.
+ * @param {string} language the language the text is spoken in.
+ * @param {string} text the text that is being spoken.
+ * @param {boolean} hasProfanity
+ * @param {Array.<string>} profaneWords an array of profane words in the text if there are any. Otherwise null.
+ * @param {string} gender the gender of the voice used to speak the text. Optional
+ * @param {Array.<bytes>} bytes the bytes of the speech.
+ */
+Sounds.prototype.registerTextBytes = function(
+  language,
+  text,
+  hasProfanity,
+  profaneWords = null,
+  gender = null,
+  bytes = null
+) {
+  if (!this.textBytesByLanguage[language]) {
+    this.textBytesByLanguage[language] = {};
+  }
+  if (!this.textBytesByLanguage[language][text]) {
+    this.textBytesByLanguage[language][text] = {};
+  }
+  this.textBytesByLanguage[language][text]['hasProfanity'] = hasProfanity;
+  this.textBytesByLanguage[language][text]['profaneWords'] = profaneWords;
+  console.log(gender, bytes);
+  if (gender !== null) {
+    console.log("I'm caching bytes");
+    this.textBytesByLanguage[language][text][gender] = bytes;
+  }
+};
+
+/**
+ * Retrieves the bytes of text to speech if it exists.
+ * @param {string} language the language the text is spoken in.
+ * @param {string} text the text that is being spoken.
+ * @returns {Object} if text bytes found, null otherwise.
+ */
+Sounds.prototype.getTextBytes = function(language, text) {
+  if (
+    !this.textBytesByLanguage[language] ||
+    !this.textBytesByLanguage[language][text]
+  ) {
+    return null;
+  }
+  return this.textBytesByLanguage[language][text];
+};
+
+/**
  * Registers a sound from a list of sound URL paths.
  * Note: you can only register one sound resource per file type
  * @param {Array.<string>} soundPaths list of sound file URLs ending in their
@@ -339,6 +388,7 @@ Sounds.prototype.playBytes = function(bytes, playbackOptions) {
   soundConfig.playAfterLoad = true;
   soundConfig.playAfterLoadOptions = playbackOptions;
   soundConfig['bytes'] = bytes;
+  soundConfig.fromCached = playbackOptions.fromCached;
   let sound = new Sound(soundConfig, this.audioContext);
   sound.preload();
   sound.play();

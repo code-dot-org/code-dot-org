@@ -129,15 +129,9 @@ export const commands = {
       'string',
       OPTIONAL
     );
-    const speechConfig = SpeechConfig.fromAuthorizationToken(
-      appOptions.azureSpeechServiceToken,
-      appOptions.azureSpeechServiceRegion
-    );
-    speechConfig.speechSynthesisOutputFormat =
-      SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
 
     let voice = appOptions.azureSpeechServiceLanguages['English']['female'];
-    let languageCode = 'en';
+    let languageCode = 'en-US';
     if (
       appOptions.azureSpeechServiceLanguages[opts.language] &&
       appOptions.azureSpeechServiceLanguages[opts.language][opts.gender]
@@ -146,47 +140,97 @@ export const commands = {
         appOptions.azureSpeechServiceLanguages[opts.language][opts.gender];
       languageCode =
         appOptions.azureSpeechServiceLanguages[opts.language]['languageCode'];
+    } else {
+      opts.language = 'English';
+      opts.gender = 'female';
     }
-    const profaneWords = await findProfanity(opts.text, languageCode);
-    if (profaneWords && profaneWords.length > 0) {
+
+    const cachedBytes = Sounds.getSingleton().getTextBytes(
+      opts.language,
+      opts.text
+    );
+    if (cachedBytes === null) {
+      const profaneWords = await findProfanity(opts.text, languageCode);
+      if (profaneWords && profaneWords.length > 0) {
+        outputWarning(
+          i18n.textToSpeechProfanity({
+            profanityCount: profaneWords.length,
+            profaneWords: profaneWords.join(', ')
+          })
+        );
+        Sounds.getSingleton().registerTextBytes(
+          opts.language,
+          opts.text,
+          true,
+          profaneWords
+        );
+        return;
+      }
+    } else if (cachedBytes['hasProfanity']) {
       outputWarning(
         i18n.textToSpeechProfanity({
-          profanityCount: profaneWords.length,
-          profaneWords: profaneWords.join(', ')
+          profanityCount: cachedBytes['profaneWords'].length,
+          profaneWords: cachedBytes['profaneWords'].join(', ')
         })
       );
       return;
     }
-    const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
-    let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
-      opts.text
-    }</voice></speak>`;
-    await synthesizer.speakSsmlAsync(
-      ssml,
-      result => {
-        let forceHTML5 = false;
-        if (window.location.protocol === 'file:') {
-          // There is no way to make ajax requests from html on the filesystem.  So
-          // the only way to play sounds is using HTML5. This scenario happens when
-          // students export their apps and run them offline. At this point, their
-          // uploaded sound files are exported as well, which means varnish is not
-          // an issue.
-          forceHTML5 = true;
-        }
-        Sounds.getSingleton().playBytes(result.audioData, {
-          volume: 1.0,
-          loop: false,
-          forceHTML5: forceHTML5,
-          allowHTML5Mobile: true
-        });
 
-        synthesizer.close();
-      },
-      error => {
-        console.warn(error);
-        synthesizer.close();
-      }
-    );
+    let forceHTML5 = false;
+    if (window.location.protocol === 'file:') {
+      // There is no way to make ajax requests from html on the filesystem.  So
+      // the only way to play sounds is using HTML5. This scenario happens when
+      // students export their apps and run them offline. At this point, their
+      // uploaded sound files are exported as well, which means varnish is not
+      // an issue.
+      forceHTML5 = true;
+    }
+
+    if (cachedBytes !== null && cachedBytes[opts.gender] !== null) {
+      Sounds.getSingleton().playBytes(cachedBytes[opts.gender].slice(0), {
+        volume: 1.0,
+        loop: false,
+        forceHTML5: forceHTML5,
+        allowHTML5Mobile: true,
+        fromCached: true
+      });
+    } else {
+      const speechConfig = SpeechConfig.fromAuthorizationToken(
+        appOptions.azureSpeechServiceToken,
+        appOptions.azureSpeechServiceRegion
+      );
+      speechConfig.speechSynthesisOutputFormat =
+        SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
+      const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
+      let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
+        opts.text
+      }</voice></speak>`;
+      await synthesizer.speakSsmlAsync(
+        ssml,
+        result => {
+          Sounds.getSingleton().registerTextBytes(
+            opts.language,
+            opts.text,
+            false,
+            null,
+            opts.gender,
+            result.audioData.slice(0)
+          );
+          Sounds.getSingleton().playBytes(result.audioData, {
+            volume: 1.0,
+            loop: false,
+            forceHTML5: forceHTML5,
+            allowHTML5Mobile: true
+          });
+
+          synthesizer.close();
+        },
+        error => {
+          console.warn(error);
+          synthesizer.close();
+        }
+      );
+    }
   }
 };
 
