@@ -1,2 +1,8 @@
-.field.hide_share_and_remix
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_share_and_remix, description: "Hide Share and Remix buttons in header"}
+.field
+  %h3 Sharing
+  - if @level.respond_to? :disable_sharing
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
+    %p If set, this level cannot be shared or saved to galleries even if it's free play.
+
+  - if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_share_and_remix, description: "Hide Share and Remix buttons in header"}
