@@ -1,6 +1,14 @@
 require 'cdo/log_collector'
 
 class ContactRollupsV2
+  MAX_EXECUTION_TIME_SEC = 18_000
+
+  DASHBOARD_DB_WRITER = sequel_connect(
+    CDO.dashboard_db_writer,
+    CDO.dashboard_db_writer,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
+
   def initialize(is_dry_run: false)
     @is_dry_run = is_dry_run
     @log_collector = LogCollector.new('Contact Rollups')
