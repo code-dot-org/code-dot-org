@@ -69,53 +69,6 @@ describe('EditSectionForm', () => {
       SectionLoginType.clever
     );
   });
-  it('renders LoginTypeField with email, word and picture options for personal email sections', () => {
-    const wrapper = mount(
-      <EditSectionForm
-        title="Edit section details"
-        handleSave={() => {}}
-        handleClose={() => {}}
-        editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
-        validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
-        sections={{}}
-        section={{
-          ...testSection,
-          loginType: SectionLoginType.email
-        }}
-        isSaveInProgress={false}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
-        updateHiddenScript={() => {}}
-        assignedScriptName="script name"
-      />
-    );
-    const loginTypeField = wrapper.find('LoginTypeField');
-    assert.equal(loginTypeField.length, 1);
-    assert.equal(loginTypeField.find('option').length, 3);
-    assert.equal(
-      loginTypeField
-        .find('option')
-        .at(0)
-        .props().value,
-      SectionLoginType.word
-    );
-    assert.equal(
-      loginTypeField
-        .find('option')
-        .at(1)
-        .props().value,
-      SectionLoginType.picture
-    );
-    assert.equal(
-      loginTypeField
-        .find('option')
-        .at(2)
-        .props().value,
-      SectionLoginType.email
-    );
-  });
   it('renders LoginTypeField with word and picture options for word sections', () => {
     const wrapper = mount(
       <EditSectionForm
@@ -189,6 +142,31 @@ describe('EditSectionForm', () => {
         .props().value,
       SectionLoginType.picture
     );
+  });
+  it('does not render LoginTypeField for personal email sections', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{
+          ...testSection,
+          loginType: SectionLoginType.email
+        }}
+        isSaveInProgress={false}
+        stageExtrasAvailable={() => false}
+        hiddenStageState={{}}
+        updateHiddenScript={() => {}}
+        assignedScriptName="script name"
+      />
+    );
+    const loginTypeField = wrapper.find('LoginTypeField');
+    assert.equal(loginTypeField.length, 0);
   });
   it('does not render LoginTypeField for Google Classroom sections', () => {
     const wrapper = mount(

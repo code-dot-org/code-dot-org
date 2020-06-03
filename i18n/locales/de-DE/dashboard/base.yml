@@ -173,8 +173,8 @@ de:
     email_preference_no: "Nein"
     email_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
     parent_account_checkbox: "Ich bin einer der Eltern/ein Vormund und melde mich für mein Kind an."
-    parent_account_email_progress_permission: "Können wir E-Mails ab und zu austauschen, über den Fortschritt ihres Kindes und dessen Projekte, und dessen Kurse in Informatik aktualisieren? [(Siehe unsere Datenschutzbestimmungen)] (%{privacy_policy_url})"
-    parent_account_email_label: "Eltern/Vormund E-Mail"
+    parent_account_email_progress_permission: "Dürfen wir Ihnen gelegentliche Updates über den Fortschritt Ihres Kindes und Projekte, Updates über dessen Kurs und Informatik per E-Mail senden? [(Siehe unsere Datenschutzbestimmungen)](%{privacy_policy_url})"
+    parent_account_email_label: "E-Mail der Eltern/Erziehungsberechtigten"
   school_info:
     title: 'Schulinformationen (optional)'
     school_country: 'Land der Schule'
@@ -443,7 +443,7 @@ de:
     delete_text_teacher_managed_note: "Du hast keine Berechtigung, dieses Konto zu löschen, da es von deinem Lehrer verwaltet wird. Dein(e) Lehrer müssen dich aus ihren Bereichen entfernen, bevor du dein Konto löschen kannst."
     delete_text_teacher_note: "Bitte bemerke: Das Löschen Ihres Accounts löscht nicht die Accounts Ihrer Schüler."
     delete_confirm: 'Bist du sicher, dass du deinen Account löschen willst?'
-    deleted_user: 'Benutzer entfernen'
+    deleted_user: 'Gelöschter Benutzer'
     no_password_because_oauth: 'Kein Passwort, da du dich als Drittanbieter einloggst.'
     no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
     create_personal_login: 'Erstelle ein persönliches Login'
@@ -466,11 +466,11 @@ de:
     auth_option_saved: "Du hast erfolgreich deinen %{provider} Account mit deiner E-Mail %{email} verknüpft."
     auth_option_saved_no_email: "Du hast erfolgreich deinen %{provider} Account verbunden."
     update_email: "Aktualisieren"
-    for_parents_and_guardians: "Für Eltern und Vormünde"
-    link_a_parent_email: "Verbinde einen Elternteil/einen Vormund mit diesem Konto, um immer aktuelle Informationen über den Fortschritt und die Projekte ihres Kindes zu haben."
+    for_parents_and_guardians: "Für Eltern und und Erziehungsberechtigte"
+    link_a_parent_email: "Verbinden Sie Eltern/Erziehungsberechtigte mit diesem Konto, damit Sie stets über den aktuellen Fortschritt und die Projekte Ihres Kindes informiert sind. Sie können diese E-Mail-Adresse auch für die Passwortwiederherstellung verwenden."
     parent_guardian_email_label: "Eltern / Erziehungsberechtigten E-Mail-Adresse"
     none: "Keiner"
-    only_one_parent_email_supported_warning: "Hinweis: derzeit können Sie lediglich die E-Mail-Adresse von einem Elternteil/einem Vormund auf jedem Studentenkonto unterstützen."
+    only_one_parent_email_supported_warning: "Hinweis: Es kann derzeit nur eine E-Mail-Adresse von Eltern/Erziehungsberechtigten mit dem Schülerkonto verbunden werden."
     encrypted: "verschlüsselt"
   user_level:
     completed: 'Abgeschlossen'
@@ -752,6 +752,8 @@ de:
     open_response_body: "Danke für deine Antwort!"
     correct_title: "Richtig"
     correct_body: "Das ist die richtige Antwort."
+  lesson_extras:
+    bonus_level: "Bonus-Level"
   dialog:
     ok: "OK"
     startover_title: "Bist du dir sicher, dass du neu anfangen möchtest?"
@@ -879,100 +881,6 @@ de:
     peer_feedback: 'Rückmeldung von Mitschülern'
     outdated: 'Dieses Feedback wurde für eine frühere Version hinzugefügt'
     peer_review: 'Peer Review'
-  flex_category:
-    required: 'Übersicht'
-    content: 'Inhalt'
-    practice: 'Lehrer Übungen'
-    peer_review: 'Peer Review'
-    ramp_up: 'Hochfahren (Ramp-Up)'
-    end_of_course_project: 'Projekt am Ende des Kurses'
-    optional: 'Optional'
-    main_course: 'Hauptkurs'
-    extra_course_content: 'Extra Kurs Inhalte'
-    csf_e_1: 'Hochfahren  nach Kurs E (Option)'
-    csf_e_2: 'Kurs E Inhalt'
-    csf_f_1: 'Hochfahren  nach Kurs F (Option)'
-    csf_f_2: 'Kurs F Inhalt'
-    csf_digcit: 'Digitalen Staatsbürgerschaft'
-    csf_jigsaw: 'Puzzle'
-    csf_sequencing: 'Sequencing (Reihenfolgeplanung)'
-    csf_loops: 'Schleifen'
-    csf_events: 'Ereignisse'
-    csf_online_safety: 'Online-Sicherheit'
-    csf_binary: 'Binärdatei'
-    csf_data: 'Daten'
-    csf_conditionals: 'Bedingungen'
-    csf_sprites: 'Sprites'
-    csf_nested_loops: 'Verschachtelte Schleifen'
-    csf_functions: 'Funktionen'
-    csf_variables: 'Variablen'
-    csf_for_loops: '"Zähle mit"-Schleifen'
-    csf_internet: 'Internet'
-    csf_warmup: 'Aufwärmübung'
-    csd1_1: 'Kapitel 1: Der Problemlösungsprozess'
-    csd1_2: 'Kapitel 2: Computer und Problemlösung'
-    csd1_3: 'Alternate Lessons (alternative Lerneinheiten)'
-    csd2_1: 'Kapitel 1: Webinhalte und HTML'
-    csd2_2: 'Kapitel 2: Styling und CSS'
-    csd3_1: 'Kapitel 1: Bilder und Animationen'
-    csd3_2: 'Kapitel 2: Erstellen von Spielen'
-    csd4_1: 'Kapitel 1: Benutzerzentriertes Design'
-    csd4_2: 'Kapitel 2: App Prototyping'
-    csd5_1: 'Kapitel 1: Darstellung von Informationen'
-    csd5_2: 'Kapitel 2: Datenprobleme lösen'
-    csd6_1: 'Kapitel 1: Programmierung mit Hardware'
-    csd6_2: 'Chapter 2: Aufbau von physischen Prototypen'
-    csd_survey: '(Post-Course Survey) Überprüfung nach dem Kurs'
-    csp1_1: 'Kapitel 1: Darstellung und Übertragung von Informationen'
-    csp1_2: 'Kapitel 2: Die Erfindung des Internets'
-    csp2_1: 'Kapitel 1: Kodierung und Komprimierung komplexer Informationen'
-    csp2_2: 'Kapitel 2: Daten manipulieren und visualisieren'
-    csp3_1: 'Kapitel 1: Programmiersprachen und Algorithmen'
-    csp4_1: 'Kapitel 1: Große Datenmengen und Verschlüsselung'
-    csp5_1: 'Kapitel 1: Ereignisgesteuerte Programmierung'
-    csp5_2: 'Kapitel 2: Programmierung mit Datenstrukturen'
-    cspSurvey: 'Umfrage'
-    cspAssessment: 'Kapitel über Bewertung'
-    csp_ap_1: 'Chapter 1: AP technischer Aufbau'
-    csp_ap_2: 'Chapter 2: AP Leistungsaufgabe untersuchen'
-    csp_ap_3: 'Chapter 3: AP Leistungsaufgabe erstellen'
-    csp_postap_1: 'Kapitel 1: Daten manipulieren und visualisieren'
-    csp_postap_2: 'Kapitel 2: Apps und Datenbanken'
-    csp2_1_2018: 'Einheit 2: Digitale Informationen'
-    csp3_1_2018: 'Einheit 3: Einführung in die Programmierung'
-    csp4_1_2018: 'Lektion 4: Big Data und Datenschutz'
-    csp_variables: 'Variablen'
-    csp_conditionals: 'Bedingungen'
-    csp_functions: 'Funktionen'
-    csp_project: 'Projekt'
-    csp_lists: 'Listen'
-    csp_loops: 'Schleifen'
-    csp_traversals: 'Traversierungen'
-    csp_libraries: 'Bibliotheken'
-    csp_parameters_return_values: 'Parameter und Rückgabewerte'
-    csp_unit1_2020: 'Einheit 2: Digitale Informationen'
-    csp_unit2_2020: 'Lektion 2: Das Internet'
-    csp_unit3_2020: 'Lerneinheit 3: Einführung in das App Design '
-    csp_unit6_2020: 'Lerneinheit 6: Algorithmen'
-    csp_unit8_2020: 'Lerneinheit 8: PT Prep erstellen'
-    csp_unit9_2020: 'Lektion 9: Daten'
-    csp_unit10_2020: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
-    dlp: 'Anregungen zum Nachdenken'
-    time4cs_c1: 'Everglades und seine Ökosysteme'
-    time4cs_c2: 'Nahrungsketten in den Everglades'
-    time4cs_c3: 'Leben in den Everglades'
-    time4cs_c4: 'Invasive Auswirkungen auf die Everglades'
-    time4cs_c5: 'Bürger beeinflussen den Wandel in den Everglades'
-    time4cs_c6: 'Bedingungen (Überprüfung)'
-    k5_getting_started: 'Erste Schritte'
-    k5_csf_intro: 'Lernen Sie die CS Fundamentals Kurse kennen'
-    k5_coding_concepts: 'Kodierungskonzepte und Unterrichtsstrategien'
-    k5_next_steps: 'Nächste Schritte'
-    k5_basic_concepts: 'Grundlegende Kodierungskonzepte und Unterrichtsmethoden'
-    k5_diving_deeper: 'Tiefer eintauchen: Kurse E und F'
-    web_lab_projects: 'Web Lab Projekte'
-    game_lab_projects: 'Spielelabor Projekte'
-    app_lab_projects: 'App-Labor Projekte'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."
@@ -1163,6 +1071,6 @@ de:
       error_invalid_user: 'Ungültige Benutzer ID. Versuche dich später wieder einzuloggen.'
       error_no_code: 'Bitte geben Sie ihren Login Code ein'
   parent_email_banner:
-    text: "**Bist du ein Elternteil oder ein Vormund?** Verbinde dann deine E-Mail-Adresse zu diesem Konto, sodass du immer aktuell über den Fortschritt und die Projekte deines Kindes informiert bist.!"
-    link_your_email: "Deine E-Mail-Adresse linken"
-    not_now: "Nicht jetzt"
+    text: "** Sind Sie die Eltern oder Erziehungsberechtigten?** Verbinden Sie Ihre E-Mail-Adresse mit diesem Konto, damit Sie stets über den aktuellen Fortschritt und die Projekte Ihres Kindes informiert sind!"
+    link_your_email: "Ihre E-Mail-Adresse verlinken"
+    not_now: "Später"

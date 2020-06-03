@@ -34,7 +34,7 @@ function showHomepage() {
   registerReducers({locales});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
+  store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
   store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));

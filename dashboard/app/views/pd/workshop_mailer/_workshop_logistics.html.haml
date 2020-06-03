@@ -13,8 +13,9 @@
       Location:
     %td
       = @workshop.location_name
-      %br
-      = @workshop.location_address
+      - if @workshop.location_address.present?
+        %br
+        = @workshop.location_address
   %tr
     %td.heading
       Organizer:

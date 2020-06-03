@@ -25,7 +25,7 @@
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/1/puzzle/7": {
-    "long_instructions": "## Getting Started: Why Computer Science (CS) Fundamentals?\n\nYou'll complete this free, self-paced course using the same learning platform you can use in your classroom with your students. \n\nLet's start by learning a bit about what Computer Science (CS) Fundamentals is, and how it's worked for teachers and students around the globe. In the next level, we'll cover how to interact with the CS Fundamentals learning platform, which you'll be using to complete this course.\n\n> ## Reflect\n>\n> What are your first impressions of CS Fundamentals?\n>\n> [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.\n>\n> <a href=\"http://ctt.ec/Bfjw3\" target=\"blank\"><button class=\"default\">Share on Twitter >></button></a><br><br>\n> Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2]."
+    "long_instructions": "## Getting Started: Why Computer Science (CS) Fundamentals?\n\nYou'll complete this free, self-paced course using the same learning platform you can use in your classroom with your students. \n\nLet's start by learning a bit about what Computer Science (CS) Fundamentals is, and how it's worked for teachers and students around the globe. In the next level, we'll cover how to interact with the CS Fundamentals learning platform, which you'll be using to complete this course.\n\n> ## Reflect\n>\n> What are your first impressions of CS Fundamentals?\n>\n> [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.\n>\n> <a href=\"http://ctt.ec/Bfjw3\" target=\"blank\">Share on Twitter >></a>\n>\n> Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2]."
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/1/puzzle/8": {
     "dsls": {
@@ -335,15 +335,21 @@
     "callouts": {
       "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
     },
-    "function_names": {
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/5": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     },
     "contained levels": [
       {
@@ -390,9 +396,13 @@
     "callouts": {
       "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/7": {
@@ -411,8 +421,10 @@
       "courseD_artist_functions4_b": "Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.",
       "courseD_artist_functions4_c": "Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": {
@@ -423,8 +435,10 @@
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/10": {

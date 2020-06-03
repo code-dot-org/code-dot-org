@@ -648,7 +648,7 @@ sk:
           aby si si dal pri pohybe pozor.
     mc_congrats_share:
       1:
-        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
+        text: Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!
       2:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru.
           Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš
@@ -662,7 +662,7 @@ sk:
           a ukázal kamarátom svoj výtvor. Zabav sa!
     mc_congrats_no_share:
       1:
-        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
+        text: Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!
       2:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru.
           Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš
@@ -828,7 +828,7 @@ sk:
       7:
         image: notes/applab_intro_welcome_7.png
         text: 'Po dokončení sa blok číta ako veta: ''Nastav farbu pozadia pre button1
-          na zelenú.'' Kliknutím na Spustiť zobrazíš zmeny vytvorené v kóde.. Po Obnovení,
+          na zelenú.'' Kliknutím na Spustiť zobrazíš zmeny vytvorené v kóde. Po Obnovení,
           môžeš pretiahnuť viac blokov pre zmenu iných častí aplikácie. Ako napríklad
           text!'
       8:
@@ -914,7 +914,7 @@ sk:
           druhom rozbaľovacom zozname vyber možnosť "image"
       6:
         image: notes/applab_intro_sounds_6.png
-        text: Potom vyberte "Vybrať" z tretieho rozbaľovacieho menu.
+        text: Potom z tretieho rozbaľovacieho zoznamu vyber možnosť “Vyber si“.
       7:
         image: notes/applab_intro_sounds_7.png
         text: |-
@@ -935,7 +935,7 @@ sk:
           základu. S App Lab je toto jednoduché vďaka Dizajn Módu.
       2:
         image: notes/applab_intro_designmode_2.png
-        text: Použite tlačidlo v hornej časti Vašej aplikácie pre vstup do Dizajnoavcieho
+        text: Pomocou tlačidla umiestneného nad appkou prepni AppLab do dizajnového
           módu.
       3:
         image: notes/applab_intro_designmode_3.png

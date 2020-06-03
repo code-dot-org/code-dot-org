@@ -1,0 +1,14 @@
+name 'Episode 11 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Functions with Minecraft
+
+**Do This:** Practice recognizing reusable patterns and using named blocks to call functions. Help Steve or Alex navigate their world!
+
+![](https://images.code.org/89501131062c8d3f9f01902c696ef499-image-1591111167502.gif)
+MARKDOWN

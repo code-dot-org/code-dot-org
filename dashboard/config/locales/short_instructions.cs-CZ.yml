@@ -942,12 +942,27 @@ cs-CZ:
       courseB_starWars_prog1: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseB_starWars_prog1_2018: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseB_starWars_prog1_2019: '[][0] _"Přines ten šrot, BB-8!"_ '
+      courseC_PlayLab_events1: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
+      courseC_PlayLab_events1_2018: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
+      courseC_PlayLab_events1_2019: Napiš kód tak, aby pes Jorge (aktér 1) řekl "Ahoj".
+      courseC_PlayLab_events2: Teď zkus, aby prvně něco řekl pes Jorge (aktér 1) a
+        potom mu kočka Oliva (aktér 2) odpověděla?
+      courseC_PlayLab_events2_2018: Teď zkus, aby prvně něco řekl pes Jorge (aktér
+        1) a potom mu kočka Oliva (aktér 2) odpověděla?
+      courseC_PlayLab_events2_2019: Teď zkus, aby prvně něco řekl pes Jorge (aktér
+        1) a potom mu kočka Oliva (aktér 2) odpověděla?
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem
         k Olivii (kočka)?
       courseC_PlayLab_events3_2018: Můžete napsat program, aby se Jorge (pes) posunul
         směrem k Olivii (kočka)?
       courseC_PlayLab_events3_2019: Můžete napsat program, aby se Jorge (pes) posunul
         směrem k Olivii (kočka)?
+      courseC_PlayLab_events4: Umíš napsat program tak, aby Jorge (aktér 1) šel doprava
+        k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
+      courseC_PlayLab_events4_2018: Umíš napsat program tak, aby Jorge (aktér 1) šel
+        doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
+      courseC_PlayLab_events4_2019: Umíš napsat program tak, aby Jorge (aktér 1) šel
+        doprava k Olivě (aktér 2) a aby ona potom řekla "Ahoj" až k ní dojde?
       courseC_artist_loops1b_2019: 'Teď změň směr, kterým se nálepka nakreslí, přidáním
         příkazu `otoč se` do tvého kódu. '
       courseC_artist_loops2a_2019: Teď zkus použít cyklus k nakreslení několika kopií
@@ -958,6 +973,15 @@ cs-CZ:
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2019: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
+      courseC_artist_prog8: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2018: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.
+        (Každá strana má 150 pixelů)
+      courseC_artist_prog8_2019: |-
+        Ještě jedna značka. Toto je trojúhelník pro Pi.
+        (Každá strana má 150 pixelů)
       courseC_collector_prog2: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
         `sbírej`.
       courseC_collector_prog2_2018: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
@@ -976,6 +1000,8 @@ cs-CZ:
         všech **10** kousků pokladu?
       courseC_collector_prog_challenge1_2019: Podívejte se pozorně! Můžete získat
         všech **10** kousků pokladu?
+      courseC_data wizard: "Klikni na \"Spustit\". \nKouzelník vyčaruje zvířata. \n\nSpočítej
+        je. \nJe v tom nějaká logika?"
       courseC_flappy_events1: Připoj blok`mávni normálně` k události `když klikneš`,
         potom klikni na "Spustit".    Klikáním nebo dotekem v obrazovce ovládáš Flappyho.
         K dokončení úlohy se musíš dostat do cíle nahoře.
@@ -994,6 +1020,12 @@ cs-CZ:
         k události `při spuštění`.
       courseC_flappy_events7_2019: Dále zkus změnit pozadí připojením dalšího bloku
         k události `při spuštění`.
+      courseC_flappy_events9: Teď pro změnu, můžeš nastavit body na nulu místo toho,
+        aby hra skončila, když Flappy narazí do překážky.
+      courseC_flappy_events9_2018: Teď pro změnu, můžeš nastavit body na nulu místo
+        toho, aby hra skončila, když Flappy narazí do překážky.
+      courseC_flappy_events9_2019: Teď pro změnu, můžeš nastavit body na nulu místo
+        toho, aby hra skončila, když Flappy narazí do překážky.
       courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops10_2018: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops10_2019: Posbírej všechny kukuřice a dýně.

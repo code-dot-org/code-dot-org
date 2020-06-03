@@ -4693,7 +4693,7 @@ pt-BR:
         courseA_collector_loops3_a: |-
           Experimente usar um laço de repetição
 
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>!
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
         courseA_collector_loops3_b: Lembre-se, você pode colocar mais de 1 bloco dentro
           de um laço <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
@@ -4918,6 +4918,7 @@ pt-BR:
       courseA_harvester_loops1:
         courseA_harvester_loops1_a: |-
           Quando você se mover até algum milho, use esse bloco para pegá-lo!
+
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops1_2019:
         courseA_harvester_loops1_a: |-
@@ -4925,24 +4926,33 @@ pt-BR:
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2:
         courseA_harvester_loops2_a: "Seu código terá **quatro** blocos 'mover para
-          oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos  <xml>
-          'pegar milho' <block type=\"harvester_corn\"/>. "
+          oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos 'pegar
+          milho' <xml><block type=\"harvester_corn\"/></xml> . "
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops2_2019:
-        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos `mover para
-          oeste`\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\ne **quatro** blocos
-          <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
+        courseA_harvester_loops2_a: |-
+          Seu código terá **quatro** blocos `mover para oeste`
+
+          <xml><block type="maze_moveWest"/></xml>
+
+          e **quatro** blocos <xml>
+          `pick corn`
+            <block type="harvester_corn"/>
+          </xml>
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops3:
         courseA_harvester_loops3_a: |-
           Use um bloco `repetição` como este para te ajudar!
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">4</title></block></xml>
-        courseA_harvester_loops3_b: Para repetir o código, arraste um laço de `repetição`
-          (<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
-          config="2-10">4</title></block></xml>), e então coloque o bloco que você
-          quiser dentro dele.
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>
+        courseA_harvester_loops3_b: |-
+          Para repetir o código, arraste um laço de `repetição` (<xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>), e então coloque o bloco que você quiser dentro dele.
       courseA_harvester_loops3_2019:
         courseA_harvester_loops3_a: |-
           Use um bloco `repetição` como este para te ajudar!
@@ -4964,11 +4974,10 @@ pt-BR:
       courseA_harvester_loops5:
         courseA_harvester_loops5_a: Se você ficar preso, tente resolver esse desafio
           em 2 partes, uma parte antes do canto e outra depois do canto.
-        courseA_harvester_loops5_b: Seu código final terá **um** laço de `repetição`
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
-          config="2-10">6</title></block></xml>, **um** bloco `mover ao Sul` <xml><block
-          type="maze_moveSouth" limit="1"/></xml>, e **um** bloco `mover a leste`
-          <xml><block type="maze_moveEast" limit="1"/></xml>.
+        courseA_harvester_loops5_b: |-
+          Seu código final terá **um** laço de `repetição`<xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+              </block></xml>, **um** bloco `mover ao Sul` <xml><block type="maze_moveSouth" limit="1"/></xml>, e **um** bloco `mover a leste` <xml><block type="maze_moveEast" limit="1"/> </xml>.
         courseA_harvester_loops5_c: Use esse caminho para pegar todo o milho!
       courseA_harvester_loops5_2019:
         courseA_harvester_loops5_a: Se você ficar preso, tente resolver esse desafio
@@ -4980,10 +4989,11 @@ pt-BR:
           <xml><block type="maze_moveEast" limit="1"/></xml>.
         courseA_harvester_loops5_c: Use esse caminho para pegar todo o milho!
       courseA_harvester_loops5a:
-        courseA_harvester_loops5a_a: Você irá precisar de um laço de `repetição`<xml><block
-          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">6</title></block></xml>
-          após o outro.
-        courseA_harvester_loops5a_b: Um laço irá repetir o `mover ao Sul` <xml><block
+        courseA_harvester_loops5a_a: |-
+          Você irá precisar de um laço de `repetição`<xml> <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+            </block></xml> após o outro.
+        courseA_harvester_loops5a_b: Um laço irá repetir o `mover ao Sul`<xml><block
           type="maze_moveSouth" limit="1"/></xml>, e o outro irá repetir o `mover
           a Leste` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use esse caminho para se mover em uma direção,
@@ -5020,9 +5030,10 @@ pt-BR:
         courseA_harvester_loops6_b: Esse ~e o caminho que você deveria pegar para
           colher todo o milho.
       courseA_harvester_loops7:
-        courseA_harvester_loops7_a: Você irá precisar de dois laços de `repetição`
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
-          config="2-10">5</title></block></xml> um após o outro!
+        courseA_harvester_loops7_a: |-
+          Você irá precisar de dois laços de `repetição` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml> um após o outro!
         courseA_harvester_loops7_b: Use dois laços de repetição para seguir este caminho.
       courseA_harvester_loops7_2019:
         courseA_harvester_loops7_a: Você irá precisar de dois laços de `repetição`
@@ -5048,7 +5059,7 @@ pt-BR:
           Use este bloco para coletar o milho quando a colheitadeira o encontrar!
 
           <xml>
-          <block type="harvester_corn"/>
+            <block type="harvester_corn"/>
           </xml>
         courseA_harvester_seq1_b: |-
           A colheitadeira precisará mover a Leste três vezes para chegar ao milho. Use este bloco:
@@ -5072,7 +5083,7 @@ pt-BR:
           Use esse bloco para colher o milho quando a colheitadeira chegar até ele.
 
           <xml>
-          <block type="harvester_corn"/>
+            <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq13_2019:
         courseA_bee_seq1_a: |-
@@ -5106,6 +5117,7 @@ pt-BR:
       courseA_harvester_seq3:
         courseA_harvester_seq3_a: |-
           Você se lembrou de usar esse bloco?
+
           <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: Diga os passos em voz alta e veja se te ajuda a
           descobrir a resposta.
@@ -5120,6 +5132,7 @@ pt-BR:
           o milho? Quantos blocos já estão na sua área de trabalho?
         courseA_harvester_seq4_b: |-
           Você vai precisar de cinco blocos 'Mover Leste' e um bloco 'Colher Milho':
+
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq4_2019:
         courseA_harvester_seq4_a: Quantos espaços existem entre a Colheitadeira e
@@ -5133,6 +5146,7 @@ pt-BR:
         courseA_harvester_seq5_b: Você precisa remover um bloco.
         courseA_harvester_seq5_c: |-
           Jogue esse bloco no lixo!
+
           <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq5_2019:
         courseA_harvester_seq5_a: Quais blocos movem a colheitadeira para o caminho
@@ -5178,7 +5192,19 @@ pt-BR:
       courseA_maze_ramp2_2018:
         '1': |-
           Seu código deve se parecer com esse:
-          <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseA_maze_ramp2_2019:
         '1': |-
           Seu código deve se parecer com esse:

@@ -18,13 +18,9 @@
 class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
-  def self.truncate_table
-    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name}")
-  end
-
   def self.extract_email_preferences
     query = get_extraction_query('email_preferences', 'email', ['opt_in'])
-    ActiveRecord::Base.connection.execute(query)
+    transaction {ActiveRecord::Base.connection.execute(query)}
   end
 
   def self.extract_parent_emails
@@ -35,7 +31,7 @@ class ContactRollupsRaw < ApplicationRecord
     SQL
 
     query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
-    ActiveRecord::Base.connection.execute(query)
+    transaction {ActiveRecord::Base.connection.execute(query)}
   end
 
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)

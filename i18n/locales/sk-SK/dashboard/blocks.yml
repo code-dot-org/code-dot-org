@@ -115,7 +115,7 @@ sk:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: zmeň {SPRITE} {PROPERTY} o {VAL}
+        text: zmeň {PROPERTY} {SPRITE} o {VAL}
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -125,7 +125,7 @@ sk:
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
       Dancelab_changePropEachBy:
-        text: zmeň {GROUP} {PROPERTY} o {VAL}
+        text: zmeň {PROPERTY} pre {GROUP} o {VAL}
         options:
           GROUP:
             sprites: všetky
@@ -970,7 +970,7 @@ sk:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_changePropBy:
-        text: zmeň {SPRITE} {PROPERTY} o {VAL}
+        text: zmeň {PROPERTY} {SPRITE} o {VAL}
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -997,7 +997,7 @@ sk:
           s kostýmom {COSTUME}
           na {LOCATION}
       gamelab_destroy:
-        text: odstrániť {THIS}
+        text: odstráň {THIS}
       gamelab_draggable:
         text: je posúvateľný
       gamelab_edgesDisplace:
@@ -1024,7 +1024,7 @@ sk:
       gamelab_jumpTo:
         text: "{SPRITE} skoč {LOCATION}"
       gamelab_keyPressed:
-        text: "{CONDITION}{KEY} stlačené"
+        text: "{CONDITION} stlačíš {KEY}"
         options:
           CONDITION:
             '"when"': keď
@@ -1034,7 +1034,7 @@ sk:
             '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
-            '"space"': vesmír
+            '"space"': medzerník
             '"a"': a
             '"b"': b
             '"c"': c
@@ -1080,11 +1080,11 @@ sk:
       gamelab_mouseLocation:
         text: poloha myši
       gamelab_moveBackward:
-        text: pohni {SPRITE} {DISTANCE} pixelov dopredu
+        text: pohni {SPRITE} o {DISTANCE} pixelov dozadu
       gamelab_moveForward:
-        text: pohni {SPRITE} {DISTANCE} pixelov dopredu
+        text: pohni {SPRITE} o {DISTANCE} pixelov dopredu
       gamelab_moveInDirection:
-        text: pohni {SPRITE} {DISTANCE} pixelov {DIRECTION}
+        text: pohni {SPRITE} o {DISTANCE} pixelov {DIRECTION}
         options:
           DIRECTION:
             '"North"': Sever
@@ -1092,7 +1092,9 @@ sk:
             '"South"': Juh
             '"West"': Západ
       gamelab_moveToward:
-        text: pohni {SPRITE} pixelov {DISTANCE} smerom k {TARGET}
+        text: pohni {SPRITE} o {DISTANCE} pixelov smerom k {TARGET}
+      gamelab_patrollingUpDown:
+        text: hliadkovať hore-dole
       gamelab_playSound:
         text: prehrať zvuk {SOUND}
       gamelab_pointInDirection:
@@ -1112,13 +1114,13 @@ sk:
       gamelab_randomLocation:
         text: náhodná poloha
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} zastaviť všetko"
+        text: "{SPRITE} zastaví všetko"
       gamelab_removeBehaviorSimple:
         text: postava {SPRITE} zastav {BEHAVIOR}
       gamelab_removeTint:
-        text: odstrániť farbu z {THIS}
+        text: odstráň farbu z {THIS}
       gamelab_setAnimation:
-        text: zmeniť {THIS} kostým na {ANIMATION}
+        text: zmeň kostým {THIS} na {ANIMATION}
       gamelab_setBackground:
         text: nastav farbu pozadia {COLOR}
       gamelab_setBackgroundImage:
@@ -1154,13 +1156,13 @@ sk:
             '"width"': šírka
             '"height"': výška
       gamelab_setTint:
-        text: zmeniť farbu {THIS} na {COLOR}
+        text: zmeň farbu {THIS} na {COLOR}
       gamelab_setupSim:
         text: "nastav simuláciu s \n{SPRITE1N}{SPRITE1COSTUME}rýchlosť{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}rýchlosť{SPRITE2SPEED}\nzbieranie\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: zobraz titulnú obrazovku {BREAK} názov {TITLE} text {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} kliknuté"
+        text: "{CONDITION} klikneš na {SPRITE} "
         options:
           CONDITION:
             '"when"': keď
@@ -1267,7 +1269,7 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       Mikelab_groupChangeAnim:
-        text: zmeniť {SELECT} {COSTUME} na {COSTUME2}
+        text: zmeň {SELECT} {COSTUME} na {COSTUME2}
         options:
           SELECT:
             '"all"': všetky
@@ -1298,7 +1300,7 @@ sk:
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_groupDestroy:
-        text: odstrániť {SELECT} {COSTUME}
+        text: odstráň {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': všetky
@@ -1332,13 +1334,13 @@ sk:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupRemoveTint:
-        text: odstrániť farbu z {SELECT} {COSTUME}
+        text: odstráň farbu z {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupSetProp:
-        text: zmeňiť {PROPERTY} {SELECT} {COSTUME} cez {VAL}
+        text: nastav {PROPERTY} {SELECT} {COSTUME} na {VAL}
         options:
           SELECT:
             '"all"': všetky
@@ -1350,7 +1352,7 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       Mikelab_groupSetTint:
-        text: zmeniť farbu {SELECT} {COSTUME} na {COLOR}
+        text: zmeň farbu {SELECT} {COSTUME} na {COLOR}
         options:
           SELECT:
             '"all"': všetky
@@ -1368,7 +1370,7 @@ sk:
       Mikelab_hasBehavior:
         text: "{SPRITE} práve {BEHAVIOR}"
       Mikelab_hideFish:
-        text: odstrániť {TRASH}
+        text: odstráň {TRASH}
         options:
           TRASH:
             object: predmet
@@ -1547,7 +1549,7 @@ sk:
             '2': '2'
             '3': '3'
       aalab_moveInDirection:
-        text: pohni {SPRITE} {DISTANCE} pixelov {DIRECTION}
+        text: pohni {SPRITE} o {DISTANCE} pixelov {DIRECTION}
         options:
           DIRECTION:
             '"North"': Sever

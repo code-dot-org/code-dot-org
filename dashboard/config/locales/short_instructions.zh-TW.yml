@@ -24,6 +24,12 @@ zh-TW:
         評量：把最後一顆牙齒畫完。
         這顆牙寬：25 像素；高：25像素
       2-3 Artist Debugging 1: 這個帽子的寬度應該只有 50 像素，你能修正它嗎？
+      2-3 Artist Debugging 10: |-
+        在我的遊戲控制器上的方向鍵太窄了。
+
+        你能幫我製作寬度有 10 像素的方向鍵嗎？
+
+        先試試這個程式，看看是哪兒出錯了。
       2-3 Artist Debugging 11: |-
         我的雪花有個缺口！
 
@@ -32,13 +38,25 @@ zh-TW:
         畫出貓鬍鬚的程式不正確。
 
         修正這個程式來給貓畫上一樣長的鬍鬚。
+      2-3 Artist Debugging 3: |-
+        我的船破了個洞！
+
+        你需要修正什麼地方才能把線接起來？
+      2-3 Artist Debugging 5: "畫出腿和腳的程式有錯。 \n\n你能修正它嗎？"
+      2-3 Artist Debugging 6: |-
+        看來我好像坐在缺了個腳的椅子上！
+
+        編輯程式來畫個椅腳。
       2-3 Artist Debugging 7: |-
         看起來Ｃ被畫反了！
 
         你可以將它改正嗎？
       2-3 Artist Debugging 8: "我的老師告訴我們做事要有始有終！\\\r\n\\\r\n幫我完成我的風車，你可以找到錯誤的地方嗎？"
       2-3 Artist Debugging 9: "有個部分斷開了！\\\r\n\\\r\n畫出莖的程式碼不大正確。想一想，要如何才讓小藝術家畫出正確的莖？"
+      2-3 Artist Debugging Assessment 1: "評量：為什麼這個正方形用了 75 像素的邊長還是太小？ \n\n程式的哪個地方出錯了？"
       2-3 Artist Free Play: 自由遊戲！畫出你想要畫的任何東西。
+      2-3 Artist Functions 1: "「偶…殭屍…畫家，偶愛畫畫！」\n\n幫殭屍畫副方形眼鏡。 \n\n正方形的寬度是 100 像素，而鏡圈之間的鼻托比它短
+        25 像素。"
       2-3 Artist Functions 10: 自由發揮：這裏有 2 個函式：一個是 big gear（大齒輪），另一個是 small gear（小齒輪）。用它們來畫出一台機器的內部。
       2-3 Artist Functions 11: "我們已經將 `draw a square`（畫個正方形）函式重新命名成 `draw a hexagon`（畫個六邊形），但是它還是只能畫出正方形！你可以修改
         `draw a hexagon` 函式，讓它能畫出每邊長 50 像素的六邊形嗎？\\\r\n\\\r\n用新的函式把圖案畫出來吧！"
@@ -74,6 +92,11 @@ zh-TW:
         每畫出一次，需要轉向 60 度後再畫下一個。
       2-3 Artist Nested Loops 3: "你需要循環這個三角形 12 次才能畫出個圖案。\\\r\n\\\r\n用一圈 360 度除以圖形數量
         12，就可以知道每個形狀畫完後要轉向的角度是多少了。"
+      2-3 Artist Nested Loops 4: |-
+        循環這個菱形 12 次以畫出一朵花！
+
+        注意：我們在循環菱形 12 次所用的角度，和之前循環三角形 12 次所使用的角度是一樣的。\
+        你知道在每次畫出圖樣後，要轉多少角度嗎？
       2-3 Artist Nested Loops 5: "用巢狀迴圈來畫出這棟大樓的窗戶。\\\r\n\\\r\n這些窗戶邊長為 20 像素，間距為 20
         像素。"
       2-3 Artist Nested Loops 6: "這隻恐龍的尾巴上有 8 根尖刺。\\\r\n每個尖刺有 30 像素長。將三角形循環 8 次，並確保在畫出每個三角形之後向前跳！"
@@ -83,7 +106,12 @@ zh-TW:
         現在我們來添加一些草到圖片上。
 
         每簇草的間隔距離為 50 像素。
+      2-3 Artist Nested Loops 9: |-
+        再加一朵花我們就完成這幅圖囉。
+
+        循環這個菱形 12 次來畫出這朵花。
       2-3 Artist Nested Loops Free Play: 自由發揮，使用巢狀迴圈畫些有趣的東西。
+      2-3 Bee Conditionals 11: "我想知道那裡有些什麼！\n\n幫忙讓我在院子裡飛翔，並收集花朵中的花蜜。 "
       2-3 Bee Conditionals 12: 盡可能用最少的積木幫我找到全部的花蜜！
       2-3 Bee Conditionals 13: "這裡也太多活要做了吧！\\\r\n\\\r\n使用你所學到的來收集所有花蜜及蜂蜜。"
       2-3 Bee Conditionals 14: |-
@@ -107,9 +135,21 @@ zh-TW:
       2-3 Bee Debugging 1: 這些積木真是讓我一陣錯亂！修正錯誤（可能不只一個）來收集到所有的花蜜。
       2-3 Bee Debugging 10: "這個關卡讓我腦袋轉個不停！\\\r\n修正錯誤（可能不只一個）來收集所有的花蜜及蜂蜜。"
       2-3 Bee Debugging 2: "你可以找到是哪兒出了問題嗎？\\\r\n改正\n錯誤（可能不只一個）並收集到全部花蜜。"
+      2-3 Bee Debugging 3: |-
+        真是折騰人！
+
+        修正錯誤（可能不只一個）並收集全部的花蜜。
       2-3 Bee Debugging 4: 這些積木真是讓我一陣錯亂！修正錯誤（可能不只一個）來收集到所有的花蜜及蜂蜜。
       2-3 Bee Debugging 5: "那花看起來真美味！\\\r\n\\\r\n修正錯誤（可能不只一個）來收集到所有的花蜜。\\\r\n現在你可以同時使用運行和步進。"
+      2-3 Bee Debugging 6: |-
+        真是甜蜜的挑戰啊！
+
+        修正錯誤（可能不只一個）來收集到所有的花蜜。
       2-3 Bee Debugging 7: 修復錯誤（可能不只一個）以收集所有的花蜜與蜂蜜。
+      2-3 Bee Debugging 8: |-
+        那麼多美麗的花朵！
+
+        修正錯誤（可能不只一個）以收集所有的花蜜。
       2-3 Bee Debugging 9: "有點耐心！\\\r\n\\\r\n你需要修復程式裡的一些問題，才能夠收集所有的花蜜和蜂蜜。"
       2-3 Bee Debugging Assessment 1: "評量：是時候看看你學得如何了！\\\r\n\\\r\n改正錯誤（可能不只一個），收集全部的花蜜及蜂蜜。"
       2-3 Bee Functions 1: 函式是一段程式碼，用來執行某個任務。請使用 get 2 nectar（採集 2 個花蜜）函式，從每一朵花中採集花蜜。
@@ -179,9 +219,14 @@ zh-TW:
       4-5 Artist 5: 我們可以把「???」換成什麼，殭屍才可以用提供的迴圈完成這個圖案？
       4-5 Artist 6: 這個正三角形的三個角都是 60 度，三個邊都是 200 像素。完成這個圖形。
       4-5 Artist 7: 這個直角三角形的角度分別是 30、60、90 度。斜邊的長度是 200 像素。完成這個圖形。
+      4-5 Artist 8: "足球場上的中場線與邊線是垂直的。\\\n這個長方形的周長是 800 像素，長邊為 240 像素。它的高是多少？   \n\n請畫出邊線與中場線。"
       4-5 Artist 9: 畫出圖形的右半邊，以讓這個設計對稱。這是個正三角形，邊長為 50 像素。
       4-5 Artist Assessment 1: 評量：用迴圈畫出正三角形。每一邊長 300 像素。
       4-5 Artist Free Draw 1: 隨便畫吧！把你的靈感變成創作！
+      4-5 Artist Patterns 1: |-
+        使用迴圈來畫出這個正方形。
+
+        每個邊長是 20 像素。
       4-5 Artist Patterns 10: "這個是用來畫出 2 列六邊形的程式 - 循環整個程式 4 次就可以畫出整個蜂窩。\\\r\n\\\r\n你需要在每次的循環之後向後跳躍
         120 像素，以確保小藝術家不會跑出畫面。"
       4-5 Artist Patterns 11: 你需要重複迴圈多少次才可以畫出一個半圓？
@@ -207,6 +252,12 @@ zh-TW:
       4-5 Artist Patterns 9.5: 讓我們循環這段程式來畫出兩列六邊形。注意第二列是如何被移動到右邊的。
       4-5 Artist Patterns Free Play: 自由發揮 - 試著親手做一個自己的圖案！
       4-5 Bee Conditionals 1: 這雲遮住了我的視線！檢查看看雲的下面是不是有花朵，只有在有花朵的時候才採集花蜜。注意，它會變來變去的！
+      4-5 Bee Conditionals 2: |-
+        雲愈來愈多了！
+
+        檢查每個雲，在你採集花蜜前看看是不是有花朵藏在裡頭。
+
+        記住：雲底下藏的東西不見得一樣！
       4-5 Bee Conditionals 3: 現在蜜蜂只想要製作蜂蜜。在一些雲裡可能藏著蜂窩，仔細的檢查每個雲！
       4-5 Bee Conditionals 4: 有時雲裡面有花朵，有時雲裡藏著蜂窩！使用「如果…否則」積木，如果是花朵就收集花蜜。否則，就釀造蜂蜜（因為它是蜂窩）。
       4-5 Bee Conditionals 5: "雲下藏的不是花朵就是蜂窩！\\\r\n\\\r\n用`如果…否則`積木，如果是花的話就採集花蜜，\\\r\n否則，就釀造蜂蜜。"
@@ -251,6 +302,7 @@ zh-TW:
       4-5 Maze 12: 好啦，現在有點不一樣了。你能不能只用 6 個積木完成關卡？
       4-5 Maze 2: 讓殭屍吃到向日葵，記得要避開食殭花！
       4-5 Maze 3: 就速要... 吃到... 向日葵。
+      4-5 Maze 4: 使用 "重複" 積木來快速解決問題…
       4-5 Maze 5: 你可以用最少的積木來完成這個關卡嗎？
       4-5 Maze 6: 使用最少的積木讓我吃到向日葵！
       4-5 Maze 7: 讓殭屍快一點吃到向日葵！你能用 11 個以下的積木來完成這個關卡嗎？
@@ -260,7 +312,12 @@ zh-TW:
       4-5 Maze Conditionals 1: 使用`重複 直到`積木讓殭屍吃到向日葵。
       4-5 Maze Conditionals 10: "你可以只用 3 個積木來幫助殭屍解決更複雜的關卡嗎？ \\\r\n\\\r\n如果你成功了，不管怎樣曲折的路他都能克服！"
       4-5 Maze Conditionals 2: 使用`重複 直到`積木讓殭屍吃到向日葵。
+      4-5 Maze Conditionals 3: 使用`如果`積木來幫我決定何時要轉向。
       4-5 Maze Conditionals 4: 好啦，這個關卡的解法和上一關很像，但是請記住你是怎麼應用`如果`、`重複直到`積木的。
+      4-5 Maze Conditionals 5: |-
+        「偶想... 粗... 向日葵！」
+
+        使用 `如果` 陳述式，讓殭屍用最少的積木到達向日葵那裡。
       4-5 Maze Conditionals 6: "「偶想... 粗... 向日葵。」\\\r\n\\\r\n使用`如果`積木，讓殭屍用最少的積木到達向日葵那裡。"
       4-5 Maze Conditionals 7: 這個關卡的解法並不是特別困難，只不過請當心噬殭花！
       4-5 Maze Conditionals 8: "`如果…否則`積木可以檢查一個狀況，接著執行一個操作或另一個。\\\r\n\\\r\n使用這個新積木，讓我吃到向日葵。"
@@ -273,6 +330,14 @@ zh-TW:
       4-5 Nested Loops 3: "把起始程式碼嵌進另一個迴圈中來畫出一個太陽。\\\r\n\\\r\n要能夠製作出這樣酷炫的圖案，你必須在轉向之前向前跳一段距離。"
       4-5 Nested Loops 5: 重複執行已有的程式來畫出一個風車。
       4-5 Nested Loops 6: 你可以藉由重複畫三角形的代碼來畫出一個六邊形嗎？
+      4-5 Nested Loops 7: |-
+        重複這個設計 10 次！
+
+        每一次重複的時候，你得轉幾個彎？
+      4-5 Nested Loops 8: |-
+        重複這個設計 6 次！
+
+        每一次重複的時候，你得轉幾個彎？
       4-5 Nested Loops 9: 在鱷魚的嘴內畫出牙齒!
       4-5 Nested Loops Assessment 1: 評量：使用一個巢狀迴圈來完成這個設計。
       4-5 While Loops 1: 把我移動到洞口，然後使用`填充`積木，鏟 2 鏟土填平它。
@@ -281,6 +346,8 @@ zh-TW:
         盡可能使用最少的積木來完成這個關卡！
 
         讓我移動到土堆上並把土鏟平，再移動到坑洞上並把洞填滿。
+      4-5 While Loops 4: "哇，瞧瞧這兒！\n\n我不知道要用多少鏟土才可以把坑洞填平。\\\\\n\n你可以寫一個程式，讓它不斷的用 `填充`
+        積木填土，直到地面變平坦嗎？  "
       4-5 While Loops 5: 哇，現在這裡有兩個很深的坑洞！你可以寫個程式，填滿它們直到地面變平整嗎？
       4-5 While Loops 6: 哇，現在這裡有一個很大的土堆！你可以寫個程式剷平它們嗎？
       4-5 While Loops 7: 哇，現在這裡有三個土堆！你可以寫個程式，挖除它們直到地面變平整嗎？
@@ -388,6 +455,10 @@ zh-TW:
       Course 4 Artist Functions Inspiration: 點擊此處再次觀看提示。
       Course 4 Artist Functions challenge: 點擊此處再次觀看提示。
       Course 4 Artist Inspire: "想再看個啟發人的設計或者提示嗎？點擊這裡！ \\\r\n\\\r\n除此之外，你也可以設計自己的圖形！"
+      Course 4 Artist Vars 1: |-
+        讓我們來畫一個等邊三角形。
+
+        每條邊的長度必須正好是100畫素。
       Course 4 Artist Vars 11: 這裡是更複雜的程式，不過用的是和上個關卡相同的概念 - 你應該將 sides（邊）變數設成多少，才可以畫出這個用正方形組合出來的圖案呢？
       Course 4 Artist Vars 12: 我們將 sides（邊數）參數設為 5。添加到算式中的邊數越多，圖形就會變得愈大！注意這裡有另外一個參數叫做
         length（長度）。我們可以在「移動-向前」的地方用到它。將 length 設成 75 讓每個形狀的邊長變成 75。
@@ -931,32 +1002,44 @@ zh-TW:
         你能寫個程式把我的朋友找出來嗎？
       course2_artist_nestedLoops_challenge1: 你知道要怎麼製作出這樣的圖像嗎？
       course2_artist_nestedLoops_challenge2: 你知道要怎麼製作出這樣的圖像嗎？
+      course2_artist_prog_challenge1: 給每隻動物畫房間。有很多不同的方法可以通過這個關卡，請盡情享受！最短的可能解法是 6 個積木，但是你想用多少都可以！
       course2_artist_prog_challenge2: _「幫我在這條路上頭漆上黃線！」_
       course2_bee_conditionals_challenge1: 收集所有的花蜜及蜂蜜。
       course2_bee_conditionals_challenge2: 收集所有的花蜜及蜂蜜。
       course2_collector_loops_challenge2: '試著收集到寶藏吧！ '
+      course2_collector_prog_challenge1: 仔細看！你可以收集全部 _10_ 件寶藏嗎？
+      course2_collector_prog_challenge2: 這裡有 20 件寶藏。收集至少一半即可完成挑戰！
       course2_harvester_loops_challenge1: 收集所有的玉米。
       course2_harvester_loops_challenge2: |-
         收集所有的生菜。
         注意避開樹木和田地！
       course2_maze_loops_challenge1: 現在，Scrat 想嘗試使用迴圈來找到他的橡樹果實！
+      course2_maze_programming_challenge1: _"豬躲起來了！你可以幫我找出到那裡的路嗎？"_
       course2_maze_programming_challenge2: 有時，解決同一個問題的方法不止一種。有時候，後退也比前進要快！
       course3_artist_functions_challenge1: 定義了一個函式之後，就可以一次又一次地呼叫它-隨時隨地！嘗試這段代碼來了解其工作原理，然後對其進行更改來做出自己的出色設計！
       course3_artist_functions_challenge2: 嘗試運行此代碼來查看其工作原理，然後使該程式成為你自己的程式！
+      course3_bee_debugging_challenge1: 觀察蜜蜂是如何採集花蜜的。你能使用相同的模式來幫助蜜蜂製作所有的蜂蜜嗎？
       course3_bee_functions_challenge1: 你要獨自應對這個挑戰。這可能會比看起來更「蜂」狂！
+      course3_bee_functions_challenge2: 這次挑戰，你要靠自己了！
       course3_bee_functions_challenge3: 創建一個新函式，以在有前進路徑時收集所有的花蜜和蜂蜜。使用此函式完成這一關！
       course3_bee_functions_challenge4: 用您學到的所有知識來完成這個關卡！
+      course3_collector_debugging_challenge2: 你是巢狀迴圈的專家嗎？運用你目前為止所學的技能，來收集所有的寶藏！
+      course3_farmer_condLoops_challenge1: 在南瓜處向右轉。採集所有作物來完成這一等級。每棵隱藏的作物只有一個玉米或生菜。
       course3_farmer_condLoops_challenge2: 採集所有作物，完成這一等級。
       course3_farmer_until_challenge2: 使用「if/else」模塊，沿著這條曲折的路徑走。在每個拐角處，使用一個迴圈中的「remove
         1」指令來清除土堆。
+      course3_maze_debugging_challenge1: _"我是在繞圈子嗎？"_
+      course3_maze_debugging_challenge2: _"如果常常轉彎，我可能會頭暈！請幫我在 4 個「轉向」指令之內到達橡果的位置。"_
       course3_maze_until_challenge1: 沒有提示，就是挑戰。讓僵屍到達向日葵的位置。
       course3_playLab_challenge1: 當你獲得足夠的分數或被扣光了分數時，應該會發生一些事情。在`遊戲勝利`和`遊戲失敗`函式中添加一些代碼，來使遊戲按其應有的方式運行。點擊提示來獲得點子！
       course4_artist_concept_challenge2: 使用以下代碼創建五個風車圖形。
       course4_artist_functions_challenge2: 嘗試運行此代碼來查看其工作原理，然後使該程式成為你自己的程式！
       course4_artist_fwp_challenge1: 試著運行這個程式，然後做些改變看看會發生什麼事。你能清楚的知道它是怎麼運作的嗎？（或著刪除它，然後用完全不同的程式碼來取代它）
+      course4_artist_variables_challenge1: 現在你已經學會了製作這樣的圖案所需的一切！ 這個關卡本來就是困難的。 在找到解決方案之前，你可以不放棄嗎？
       course4_bee_fwp_challenge1: 想要收穫所有玉米，只需在函式中使用一個「for」迴圈。相同的「for」迴圈可以使用「length」參數計數不同的最大值。
       course4_collector_nested_loops_challenge2: 幫助這位收藏家拿到至少2堆寶藏，只能使用工具箱中的模塊。有可能收集所有的4堆寶藏。
       course4_harvester_nested_loops_challenge1: "「我的農場需要幫助！幫我收割玉米，只能使用工具箱中的模塊。」"
+      course4_playlab_variables_challenge1: 使用這些積木讓角色共享敲門笑話。更改設定和笑話關鍵句，來講出自己的笑話！
       courseA_artist_loops1: 這是一類叫做「藝術家」的新型關卡。進入關卡來畫些有趣的東西。
       courseA_artist_loops10: 幫我放些石頭，我不想掉下去！
       courseA_artist_loops10_2018: 幫我放些石頭，我不想掉下去！
