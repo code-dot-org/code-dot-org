@@ -1330,7 +1330,7 @@ mn-MN:
       CourseD_Dance_Party_02: |-
         Энэ хандгайг бүжиглүүлье!
 
-        Ажлын талбар руу <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> блокийг татаж оруулаарай. Үүнийг <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> үйл явдлын блокийн доод хэсэг рүү холбоорой. Таны бүжигчин 4 дэх үйлдлийн дараа шинэ хөдөлгөөн хийж эхэлнэ.
+        Ажлын талбар руу <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> блокийг татаж оруулаарай. Үүнийг <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> үйл явдлын блокийн доод хэсэг рүү холбоорой. Таны бүжигчин 4 дэх үйлдлийн дараа шинэ хөдөлгөөн хийж эхэлнэ.
 
         **Үйлдэл**-ийг хөгжмийн хугацааг хэмжихэд ашиглана. Энэхүү сургалтын материал дээр, үйлдэл гэдэг нь 4 цохилтын урттай байна.
       CourseD_Dance_Party_03: |-
@@ -1361,7 +1361,7 @@ mn-MN:
         Бүжигчний шинж чанарыг хэрхэн өөрчилж болохыг бид одоо мэднэ. Түүнчлэн, бид энэхүү блокийг ашиглан хөгжимд автоматаар хариу үзүүлэхдээ ижил шинж чанарыг гүйцэтгэж болно:
         <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -1576,7 +1576,7 @@ mn-MN:
       Dance_Party_02: |-
         Энэ хандгайг бүжиглүүлье!
 
-        Ажлын талбар руу <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> блокийг татаж оруулаарай. Үүнийг <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> үйл явдлын блокийн доод хэсэг рүү холбоорой. Таны бүжигчин 4 дэх үйлдлийн дараа шинэ хөдөлгөөн хийж эхэлнэ.
+        Ажлын талбар руу <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> блокийг татаж оруулаарай. Үүнийг <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> үйл явдлын блокийн доод хэсэг рүү холбоорой. Таны бүжигчин 4 дэх үйлдлийн дараа шинэ хөдөлгөөн хийж эхэлнэ.
 
         **Үйлдэл**-ийг хөгжмийн хугацааг хэмжихэд ашиглана. Энэхүү сургалтын материал дээр, үйлдэл гэдэг нь 4 цохилтын урттай байна.
       Dance_Party_03: |-
@@ -1607,7 +1607,7 @@ mn-MN:
         Бүжигчний шинж чанарыг хэрхэн өөрчилж болохыг бид одоо мэднэ. Түүнчлэн, бид энэхүү блокийг ашиглан хөгжимд автоматаар хариу үзүүлэхдээ ижил шинж чанарыг гүйцэтгэж болно:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
