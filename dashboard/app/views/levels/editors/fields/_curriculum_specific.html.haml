@@ -24,8 +24,6 @@
   #plusAnswerContainedLevel
     %i.fa.fa-plus-circle
 
-= render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f}
-
 -# Deprecated for Sprite Lab and Dance
 - if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab))
   .field

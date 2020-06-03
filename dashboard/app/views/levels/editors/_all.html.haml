@@ -10,7 +10,10 @@
 - if !@level.is_a?(BubbleChoice)
   = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 
-=render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f} unless (@level.is_a?(CurriculumReference) || @level.is_a?(DSLDefined))
+= render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
+= render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
+
 - if @level.respond_to? :free_play
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
@@ -20,21 +23,9 @@
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
       %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
 
-- if @level.respond_to? :disable_sharing
-  .field
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
-    %p If set, this level cannot be shared or saved to galleries even if it's free play.
-
 - if @level.respond_to? :coordinate_grid_background
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
 
--if current_user.levelbuilder?
-  .field
-    = f.label :editor_experiment, 'Editor Experiment'
-    %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
-    = f.text_field :editor_experiment, placeholder: 'Editor Experiment'
-
-= render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
 = render partial: 'levels/editors/fields/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
 
