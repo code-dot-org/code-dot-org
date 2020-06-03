@@ -58,7 +58,7 @@ class AnimationPickerListItem extends React.Component {
   static propTypes = {
     animationProps: shapes.AnimationProps,
     icon: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string
@@ -103,7 +103,7 @@ class AnimationPickerListItem extends React.Component {
             />
           )}
         </div>
-        <div style={labelStyle}>{this.props.label}</div>
+        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
       </div>
     );
   }
