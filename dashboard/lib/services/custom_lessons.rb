@@ -40,10 +40,12 @@ class Services::CustomLessons
       name: "My Lesson #{new_position}",
       script: user.custom_script
     )
+    last_script_level = last_lesson && last_lesson.script_levels.last
     new_lesson.script_levels.create(
       script: user.custom_script,
       levels: [new_level],
       position: 1,
+      chapter: last_script_level ? last_script_level.chapter + 1 : 1
     )
   end
 end
