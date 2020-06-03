@@ -1087,7 +1087,6 @@ class Script < ActiveRecord::Base
 
         script_level_attributes[:stage_id] = lesson.id
         script_level_attributes[:position] = (script_level_position[lesson.id] += 1)
-        script_level.reload
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?
         (script_levels_by_lesson[lesson.id] ||= []) << script_level
