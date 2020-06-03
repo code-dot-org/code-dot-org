@@ -404,6 +404,8 @@ es-MX:
       help_us: Ayúdanos
       teach: Enseñar
       about: Acerca de
+      legal_privacy: Política de privacidad
+      legal_tos: Términos de uso
     user:
       classroom: Página de inicio para docentes
       district_dashboard: Panel del distrito
@@ -1372,7 +1374,7 @@ es-MX:
       error_invalid_user: ID de usuario inválida. Intenta iniciar sesión de nuevo.
       error_no_code: Por favor, ingresa tu código de inicio de sesión.
   parent_email_banner:
-    text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s
-      týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
+    text: "**¿Eres un padre o tutor?** ¡Conecta tu correo electrónico a esta cuenta
+      para mantenerte al tanto del progreso y proyectos de tu hijo!"
     link_your_email: Prepojte svoj e-mail
     not_now: Teraz nie

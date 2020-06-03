@@ -20,14 +20,19 @@
         %p the level cannot be renamed because it appears in a pilot script.
       - if @standalone
         %p the level cannot be renamed because it is a standalone project level.
-      .field
-        = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/instructions_area', locals: {f: f} unless @level.is_a? EvaluationMulti
+    = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
+    = render partial: 'levels/editors/instructions_area', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
+    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined))
+    // Note that many DSL levels also use this partial. See _dsl.html.haml
+    = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f} if (@level.include_teacher_only_markdown_editor?)
     = render partial: 'levels/editors/code_area', locals: {f: f} if @level.uses_droplet? || @level.is_a?(Blockly)
-    = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
+    = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
+    = render partial: 'levels/editors/all', locals: {f: f}
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
@@ -42,9 +47,6 @@
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)
     = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
     = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
-    = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
-    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
-    = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
     = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
@@ -54,7 +56,6 @@
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
-    = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
     = render partial: 'levels/editors/fields/audit_log', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/fields/deprecated', locals: {f: f} unless @level.is_a? EvaluationMulti
   .field
