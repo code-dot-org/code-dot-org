@@ -23,7 +23,6 @@ function isIE9() {
  * @property {string} mp3
  * @property {string} ogg
  * @property {string} wav
- * @property {bytes} bytes
  * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
@@ -340,64 +339,22 @@ Sound.prototype.getPlayableFile = function() {
   return false;
 };
 
-Sound.prototype.getPlayableBytes = function() {
-  try {
-    if (!window.Audio) {
-      return false;
-    }
-
-    var audioTest = new window.Audio();
-    if (
-      this.config.hasOwnProperty('bytes') &&
-      audioTest.canPlayType('audio/mp3')
-    ) {
-      return this.config.bytes;
-    }
-  } catch (e) {
-    console.warn('No bytes provided or mp3 is not supported');
-  }
-
-  return false;
-};
-
 Sound.prototype.preload = function() {
   var file = this.getPlayableFile();
-  var bytes = this.getPlayableBytes();
-  if (!file && !bytes) {
+  if (!file) {
     return;
   }
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    if (file) {
-      this.preloadViaWebAudio(file, function(buffer) {
-        self.reusableBuffer = buffer;
-      });
-    } else {
-      self.audioContext.decodeAudioData(bytes, function(buffer) {
-        self.reusableBuffer = buffer;
-
-        // This is for Firefox since MP3 playback is being blocked in the SDK.
-        // This causes normal audio playback to fail here:
-        // https://github.com/microsoft/cognitive-services-speech-sdk-js/blob/1bc42c801f62b770327086d688a77b95e05628f7/src/sdk/Audio/SpeakerAudioDestination.ts#L66
-        // so our own Sound play needs to be used.
-        if (!MediaSource.isTypeSupported('audio/mpeg')) {
-          self.onSoundLoaded();
-        }
-      });
-    }
+    this.preloadViaWebAudio(file, function(buffer) {
+      self.reusableBuffer = buffer;
+    });
     return;
   }
 
   if (window.Audio) {
-    let audioElement;
-    if (file) {
-      audioElement = new window.Audio(file);
-    } else {
-      const blob = new Blob([bytes], {type: 'audio/mpeg3'});
-      const url = window.URL.createObjectURL(blob);
-      audioElement = new window.Audio(url);
-    }
+    var audioElement = new window.Audio(file);
     if (!audioElement || !audioElement.play) {
       return;
     }

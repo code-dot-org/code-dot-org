@@ -12,7 +12,6 @@ import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import {getTables, getColumns} from '@cdo/apps/storage/getColumnDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
-import experiments from '../util/experiments';
 import {
   setPropertyDropdown,
   setPropertyValueSelector
@@ -1130,10 +1129,6 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
-
-if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
-  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
-}
 
 export const categories = {
   'UI controls': {
