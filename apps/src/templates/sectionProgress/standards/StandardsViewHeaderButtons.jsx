@@ -122,22 +122,22 @@ class StandardsViewHeaderButtons extends Component {
 
   onSaveUnpluggedLessonStatus = () => {
     const {sectionId, selectedLessons, unpluggedLessons} = this.props;
-    let selectedStageScores = [];
-    let unselectedStageScores = [];
-    const stageIds = _.map(unpluggedLessons, 'id');
-    const selectedStageIds = _.map(selectedLessons, 'id');
-    const unselectedStageIds = _.difference(stageIds, selectedStageIds);
+    let selectedLessonScores = [];
+    let unselectedLessonScores = [];
+    const lessonIds = _.map(unpluggedLessons, 'id');
+    const selectedLessonIds = _.map(selectedLessons, 'id');
+    const unselectedLessonIds = _.difference(lessonIds, selectedLessonIds);
 
-    for (var i = 0; i < selectedStageIds.length; i++) {
-      selectedStageScores[i] = {
-        stage_id: selectedStageIds[i],
+    for (var i = 0; i < selectedLessonIds.length; i++) {
+      selectedLessonScores[i] = {
+        stage_id: selectedLessonIds[i],
         score: TeacherScores.COMPLETE
       };
     }
 
-    for (var j = 0; j < unselectedStageIds.length; j++) {
-      unselectedStageScores[j] = {
-        stage_id: unselectedStageIds[j],
+    for (var j = 0; j < unselectedLessonIds.length; j++) {
+      unselectedLessonScores[j] = {
+        stage_id: unselectedLessonIds[j],
         score: TeacherScores.INCOMPLETE
       };
     }
@@ -149,7 +149,7 @@ class StandardsViewHeaderButtons extends Component {
       dataType: 'json',
       data: JSON.stringify({
         section_id: sectionId,
-        stage_scores: selectedStageScores.concat(unselectedStageScores)
+        stage_scores: selectedLessonScores.concat(unselectedLessonScores)
       })
     }).done(() => {
       if (this.state.isLessonStatusDialogOpen) {

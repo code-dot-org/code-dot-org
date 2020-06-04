@@ -149,15 +149,12 @@ export const commands = {
     synthesizer.speakSsmlAsync(
       ssml,
       result => {
-        let forceHTML5 = false;
-        if (window.location.protocol === 'file:') {
-          // There is no way to make ajax requests from html on the filesystem.  So
-          // the only way to play sounds is using HTML5. This scenario happens when
-          // students export their apps and run them offline. At this point, their
-          // uploaded sound files are exported as well, which means varnish is not
-          // an issue.
-          forceHTML5 = true;
-        }
+        // There is no way to make ajax requests from html on the filesystem.  So
+        // the only way to play sounds is using HTML5. This scenario happens when
+        // students export their apps and run them offline. At this point, their
+        // uploaded sound files are exported as well, which means varnish is not
+        // an issue.
+        const forceHTML5 = window.location.protocol === 'file:';
         Sounds.getSingleton().playBytes(result.audioData, {
           volume: 1.0,
           loop: false,
