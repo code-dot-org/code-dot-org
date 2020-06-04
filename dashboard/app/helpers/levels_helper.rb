@@ -5,6 +5,9 @@ require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
+require 'net/http'
+require 'uri'
+require 'json'
 
 module LevelsHelper
   include ApplicationHelper
@@ -469,6 +472,24 @@ module LevelsHelper
     end
 
     fb_options
+  end
+
+  def azure_speech_service_options
+    speech_service_options = {}
+
+    if @level.game.use_azure_speech_service?
+      uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      request = Net::HTTP::Post.new(uri.request_uri, header)
+      response = http.request(request)
+      speech_service_options[:azureSpeechServiceToken] = response.body
+      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
+    end
+
+    speech_service_options
   end
 
   # Options hash for Blockly
