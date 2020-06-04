@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -89,34 +91,53 @@ export class AmazonFutureEngineerEligibility extends React.Component {
     });
   };
 
+  handleDropdownChange = (field, event) => {
+    if (field === 'nces') {
+      this.setState({
+        schoolId: event ? event.value : '',
+        schoolName: event ? event.label : ''
+      });
+    }
+  };
+
   render() {
     // update ID and classname appropriately
     // should separate this little form group out into its own component (like DiscountCodeSchoolChoice)
     return (
       <div>
         {this.state.schoolEligible === null && (
-          <FormGroup
-            id={`regional-partner-mini-contact-form-${this.props.sourcePageId}`}
-            className="regional-partner-mini-contact-form"
-          >
-            <div style={styles.intro}>
-              Enter your teacher email address and select your school below to
-              find out if you're eligible to participate in the Amazon Future
-              Engineer program, which offers free support for participating
-              Code.org classrooms.
-            </div>
-            <FieldGroup
-              id="name"
-              label="Name"
-              type="text"
-              required={false}
-              onChange={this.handleChange}
-              defaultValue={this.state.name}
-            />
-            <Button id="submit" onClick={this.submit}>
-              Send
-            </Button>
-          </FormGroup>
+          <div>
+            <h2>Am I eligible?</h2>
+            <FormGroup
+              id={`regional-partner-mini-contact-form-${
+                this.props.sourcePageId
+              }`}
+              className="regional-partner-mini-contact-form"
+            >
+              <div style={styles.intro}>
+                Enter your teacher email address and select your school below to
+                find out if you're eligible to participate in the Amazon Future
+                Engineer program, which offers free support for participating
+                Code.org classrooms.
+              </div>
+              <FieldGroup
+                id="email"
+                label="Email"
+                type="text"
+                required={false}
+                onChange={this.handleChange}
+                defaultValue={this.state.name}
+              />
+              <SchoolAutocompleteDropdownWithLabel
+                setField={this.handleDropdownChange}
+                fieldName="school"
+                showRequiredIndicator={true}
+              />
+              <Button id="submit" onClick={this.submit}>
+                Send
+              </Button>
+            </FormGroup>
+          </div>
         )}
         {this.state.schoolEligible !== null && this.state.consent === false && (
           <AmazonFutureEngineerForm
@@ -165,16 +186,29 @@ export class AmazonFutureEngineerForm extends React.Component {
     return (
       <div>
         <div>
+          <div>
+            <ValidationStep
+              stepStatus={Status.SUCCEEDED}
+              stepName="You teach at an eligible school!"
+            />
+            We invite you to enroll in the Amazon Future Engineer program by
+            completing the information below.
+          </div>
           <form>
             <label htmlFor="email">Email:</label>
             <input id="email" type="text" />
             <br />
+
             <label htmlFor="first_name">First name:</label>
             <input type="text" id="first_name" />
             <br />
             <label htmlFor="last_name">Last name:</label>
             <input type="text" id="last_name" />
             <br />
+            <div>
+              How can Amazon Future Engineer help you grow computer science at
+              your school?
+            </div>
             <hr />
             <input type="checkbox" id="inspiration_kit" />
             <label htmlFor="inspiration_kit">
@@ -205,11 +239,18 @@ export class AmazonFutureEngineerForm extends React.Component {
               Amazon’s Privacy Policy.
             </label>
             <br />
+            <div>
+              By clicking Continue, you will receive an email from Amazon Future
+              Engineer to claim your benefits. You will also receive occasional
+              emails from Amazon Future Engineer about new opportunities. You
+              always have the choice to adjust your interest settings or
+              unsubscribe.
+            </div>
+            <Button id="submit" onClick={this.props.onClick}>
+              Continue
+            </Button>
           </form>
         </div>
-        <Button id="submit" onClick={this.props.onClick}>
-          Continue
-        </Button>
       </div>
     );
   }
