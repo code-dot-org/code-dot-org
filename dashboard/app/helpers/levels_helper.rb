@@ -488,7 +488,7 @@ module LevelsHelper
       response = http.request(request)
       speech_service_options[:azureSpeechServiceToken] = response.body
       speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
-      uri = URI.parse("https://westus.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
       header = {'Authorization': 'Bearer ' + response.body}
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
