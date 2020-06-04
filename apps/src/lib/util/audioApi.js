@@ -1,7 +1,13 @@
+/* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {apiValidateType, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
+import {
+  SpeechConfig,
+  SpeechSynthesizer,
+  SpeechSynthesisOutputFormat
+} from 'microsoft-cognitiveservices-speech-sdk';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -109,6 +115,51 @@ export const commands = {
     } else {
       Sounds.getSingleton().stopAllAudio();
     }
+  },
+  playSpeech(opts) {
+    apiValidateType(opts, 'playSpeech', 'text', opts.text, 'string');
+    apiValidateType(opts, 'playSpeech', 'gender', opts.gender, 'string');
+
+    const speechConfig = SpeechConfig.fromAuthorizationToken(
+      appOptions.azureSpeechServiceToken,
+      appOptions.azureSpeechServiceRegion
+    );
+    speechConfig.speechSynthesisOutputFormat =
+      SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
+
+    let voice;
+    if (opts.gender === 'male') {
+      voice = 'en-US-BenjaminRUS';
+    } else {
+      voice = 'en-US-AriaRUS';
+    }
+    const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
+    let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
+      opts.text
+    }</voice></speak>`;
+    synthesizer.speakSsmlAsync(
+      ssml,
+      result => {
+        // There is no way to make ajax requests from html on the filesystem.  So
+        // the only way to play sounds is using HTML5. This scenario happens when
+        // students export their apps and run them offline. At this point, their
+        // uploaded sound files are exported as well, which means varnish is not
+        // an issue.
+        const forceHTML5 = window.location.protocol === 'file:';
+        Sounds.getSingleton().playBytes(result.audioData, {
+          volume: 1.0,
+          loop: false,
+          forceHTML5: forceHTML5,
+          allowHTML5Mobile: true
+        });
+
+        synthesizer.close();
+      },
+      error => {
+        console.warn(error);
+        synthesizer.close();
+      }
+    );
   }
 };
 
@@ -119,6 +170,7 @@ export const commands = {
 export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
-  stopSound: url => executeCmd(null, 'stopSound', {url})
+  stopSound: url => executeCmd(null, 'stopSound', {url}),
+  playSpeech: (text, gender) => executeCmd(null, 'playSpeech', {text, gender})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

@@ -32,6 +32,18 @@ const dropletConfig = {
       0: () => getAssetDropdown('audio')
     },
     assetTooltip: {0: chooseAsset.bind(null, 'audio')}
+  },
+  playSpeech: {
+    func: 'playSpeech',
+    parent: executors,
+    paramButtons: {minArgs: 2, maxArgs: 2},
+    paletteParams: ['text', 'gender'],
+    params: ['"Hello World!"', '"female"'],
+    dropdown: {
+      1: ['"female"', '"male"']
+    },
+    nativeCallsBackInterpreter: true,
+    assetTooltip: {0: chooseAsset.bind(null, 'audio')}
   }
 };
 

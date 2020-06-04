@@ -11,6 +11,7 @@ import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
+import experiments from '../util/experiments';
 import {
   setPropertyDropdown,
   setPropertyValueSelector
@@ -1125,6 +1126,10 @@ export var blocks = [
     type: 'value'
   }
 ];
+
+if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
+  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
+}
 
 export const categories = {
   'UI controls': {

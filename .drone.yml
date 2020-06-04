@@ -107,7 +107,7 @@ services:
   ports:
   - 6379
 
-steps: 
+steps:
 - name: clone
   image: docker:git
   commands:
@@ -164,6 +164,10 @@ steps:
       from_secret: FIREBASE_NAME
     FIREBASE_SECRET:
       from_secret: FIREBASE_SECRET
+    AZURE_SPEEECH_SERVICE_KEY:
+      from_secret: AZURE_SPEECH_SERVICE_KEY
+    AZURE_SPEECH_SERVICE_REGION:
+      from_secret: AZURE_SPEECH_SERVICE_REGION
     SAUCE_USERNAME:
       from_secret: SAUCE_USERNAME
     SAUCE_ACCESS_KEY:
