@@ -17,7 +17,8 @@ const DEFAULT_MARGIN = 7;
 
 const styles = {
   dialog: {
-    padding: '0 15px'
+    padding: '0 15px',
+    cursor: 'default'
   },
   linkBox: {
     cursor: 'auto',
