@@ -4,7 +4,7 @@
     Instructions
 
   #instructions.in.collapse
-    - unless (@level.is_a?(Applab) || (@level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)) || @level.is_a?(Weblab) || @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse))
+    - unless (@level.is_a?(Applab) || (@level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)) || @level.is_a?(Weblab) || @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(Widget))
       %p
         Learn how to use long and short instructions
         = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Editing-Level-Instructions', target: '_blank'
@@ -36,7 +36,7 @@
         %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
           ~ f.text_area :long_instructions, rows: 4
 
-    = render partial: 'levels/editors/fields/tts', locals: {f: f} unless @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse)
+    = render partial: 'levels/editors/fields/tts', locals: {f: f} unless @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(Widget)
 
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
