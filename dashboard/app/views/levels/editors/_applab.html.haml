@@ -3,16 +3,9 @@
 
 = render partial: 'levels/editors/fields/debugger', locals: {f: f}
 
-.field
-  = f.label :slider_speed, 'Slider speed'
-  %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
-  = f.number_field :slider_speed, :step => 0.1
-
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
-
 = render partial: 'levels/editors/fields/applab_design_mode', locals: {f: f}
 = render partial: 'levels/editors/fields/applab_data', locals: {f: f}
+= render partial: 'levels/editors/fields/applab_turtle', locals: {f: f}
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'applab'}
 
 :ruby
