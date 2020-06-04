@@ -21,10 +21,14 @@ theme: responsive
 
 %h2 Learn the fundamentals with our self-paced courses
 
-%h3 Express course
+%h3
+  %strong
+    Express course
+
 A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour
 %a{href: CDO.studio_url('/s/20-hour')} Accelerated Course.
-To see what's available in your language, visit our course catalog.
+To see what's available in your language, visit our
+%a{href: CDO.studio_url('/courses')} course catalog.
 
 %div{style: "padding-top: 20px;"}
   %a{href: CDO.studio_url('/s/express')}
@@ -49,9 +53,12 @@ To see what's available in your language, visit our course catalog.
 
 %h1 Learning in the classroom
 %h2 Computer Science Discoveries
+%br/
 = view :csd_information
 %div{style: "clear: both;"}
+%br/
 %h2 Computer Science Principles (intro and AP course)
+%br/
 = view :csp_information
 %br/
 
