@@ -129,6 +129,10 @@ export const commands = {
       'string',
       OPTIONAL
     );
+    if (opts.text.length > 749) {
+      opts.text = opts.text.slice(0, 750);
+      outputWarning(i18n.textToSpeechTruncation());
+    }
 
     let voice = appOptions.azureSpeechServiceLanguages['English']['female'];
     let languageCode = 'en-US';

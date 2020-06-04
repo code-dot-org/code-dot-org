@@ -508,7 +508,7 @@ module LevelsHelper
       end
       all_languages = Languages.get_locale.map {|language| language[:locale_s]}
       language_dictionary.keys.each do |language|
-        if language_dictionary[language].size < 2 || !(all_languages.include? language)
+        if language_dictionary[language].size < 3 || !(all_languages.include? language)
           language_dictionary.delete(language)
         end
       end

@@ -261,9 +261,7 @@ Sounds.prototype.registerTextBytes = function(
   }
   this.textBytesByLanguage[language][text]['hasProfanity'] = hasProfanity;
   this.textBytesByLanguage[language][text]['profaneWords'] = profaneWords;
-  console.log(gender, bytes);
   if (gender !== null) {
-    console.log("I'm caching bytes");
     this.textBytesByLanguage[language][text][gender] = bytes;
   }
 };
