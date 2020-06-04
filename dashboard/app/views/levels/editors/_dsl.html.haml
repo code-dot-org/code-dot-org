@@ -23,32 +23,31 @@
     padding: 10px;
   }
 
-- if @level.filename
-  = "Filename: #{@level.filename}"
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this entire file"}
-  %p Use this if you want to prevent devious students from finding answers in our git repo
+%legend.control-legend{data: {toggle: "collapse", target: "#dsl_editor"}}
+  DSL Editor
 
-.script_text
-  = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
+#dsl_editor.in.collapse
+  .script_text
+    = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
-- if @level.supports_markdown?
-  - content_for(:head) do
-    %script{src: webpack_asset_path('js/levels/editors/_dsl.js')}
+  - if @level.supports_markdown?
+    - content_for(:head) do
+      %script{src: webpack_asset_path('js/levels/editors/_dsl.js')}
 
-  .markdown
-    %p Edit Markdown:
+    .markdown
+      %p Edit Markdown:
 
-    %textarea#level_markdown_textarea
-    #level_markdown_textarea_preview
+      %textarea#level_markdown_textarea
+      #level_markdown_textarea_preview
 
 // Don't not use the _teacher_only_markdown.haml partial for DSL levels because they need
 // extra functionality (initializeEmbeddedMarkdownEditor) to save the markdown content into the level file
-%legend.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
-  Teacher Only Markdown
+- unless @level.is_a?(EvaluationMulti)
+  %legend.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
+    Teacher Only Markdown
 
-#teacher_only_markdown.in.collapse
-  .field.teacher-only-markdown
+  #teacher_only_markdown.in.collapse
+    .field.teacher-only-markdown
 
-    %textarea#level_teacher_markdown_textarea
-    #level_teacher_markdown_textarea_preview
+      %textarea#level_teacher_markdown_textarea
+      #level_teacher_markdown_textarea_preview
