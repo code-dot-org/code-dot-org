@@ -4,6 +4,8 @@
   Bounce Settings
 
 #bounce.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
   .field
     = f.label :theme, 'Theme'
     %p
@@ -14,8 +16,3 @@
   .field
     = f.label :ball_direction, 'Ball Direction (in radians)'
     = f.number_field :ball_direction, step: :any
-
-  .field
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
-
