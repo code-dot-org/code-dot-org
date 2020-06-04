@@ -352,7 +352,8 @@ describe('entry tests', () => {
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
-          ]
+          ],
+          ['build/package/css/foorm.css', 'style/code-studio/foorm.scss']
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -599,6 +600,8 @@ describe('entry tests', () => {
     'levels/editors/_droplet':
       './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_video':
+      './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
     'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
@@ -702,7 +705,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/peer_reviews/dashboard.js',
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
-    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js'
+    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
+    'foorm/editor/index': './src/sites/studio/pages/foorm/editor/index.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included

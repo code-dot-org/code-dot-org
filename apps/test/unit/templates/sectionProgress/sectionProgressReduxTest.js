@@ -42,7 +42,7 @@ const fakeScriptData789 = {
   hasStandards: false,
   title: 'Title 789',
   path: '/',
-  stages: [{id: 1, levels: []}, {id: 2, levels: []}]
+  lessons: [{id: 1, levels: []}, {id: 2, levels: []}]
 };
 
 const fakeScriptData456 = {
@@ -51,7 +51,7 @@ const fakeScriptData456 = {
   hasStandards: false,
   title: 'Title 456',
   path: '/',
-  stages: [{id: 3, levels: []}, {id: 4, levels: []}]
+  lessons: [{id: 3, levels: []}, {id: 4, levels: []}]
 };
 
 const fakeStudentProgress = {
@@ -126,12 +126,22 @@ describe('sectionProgressRedux', () => {
     it('adds multiple scriptData info', () => {
       const action = addScriptData(456, fakeScriptData456);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.scriptDataByScript[456], fakeScriptData456);
+      const expected456 = {
+        ...fakeScriptData456,
+        stages: fakeScriptData456.lessons
+      };
+      delete expected456.lessons;
+      assert.deepEqual(nextState.scriptDataByScript[456], expected456);
 
       const action2 = addScriptData(789, fakeScriptData789);
       const nextState2 = sectionProgress(nextState, action2);
-      assert.deepEqual(nextState2.scriptDataByScript[456], fakeScriptData456);
-      assert.deepEqual(nextState2.scriptDataByScript[789], fakeScriptData789);
+      const expected789 = {
+        ...fakeScriptData789,
+        stages: fakeScriptData789.lessons
+      };
+      delete expected789.lessons;
+      assert.deepEqual(nextState2.scriptDataByScript[456], expected456);
+      assert.deepEqual(nextState2.scriptDataByScript[789], expected789);
     });
   });
 

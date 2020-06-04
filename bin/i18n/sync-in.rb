@@ -75,13 +75,18 @@ def get_i18n_strings(level)
 
       ## Function Names
       functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
-      i18n_strings['function_defintions'] = Hash.new unless functions.empty?
+      i18n_strings['function_definitions'] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
         description = function.at_xpath('./mutation/description')
-        i18n_strings['function_defintions'][name.content] = Hash.new
-        i18n_strings['function_defintions'][name.content]["name"] = name.content if name
-        i18n_strings['function_defintions'][name.content]["description"] = description.content if description
+        parameters = function.xpath('./mutation/arg').map do |parameter|
+          [parameter["name"], parameter["name"]]
+        end.to_h
+        function_definition = Hash.new
+        function_definition["name"] = name.content if name
+        function_definition["description"] = description.content if description
+        function_definition["parameters"] = parameters unless parameters.empty?
+        i18n_strings['function_definitions'][name.content] = function_definition
       end
 
       # Spritelab behaviors

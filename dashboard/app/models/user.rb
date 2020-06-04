@@ -1474,6 +1474,7 @@ class User < ActiveRecord::Base
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
       self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
+      return self
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
       return nil
@@ -1987,12 +1988,12 @@ class User < ActiveRecord::Base
       sections.find {|section| section.script_id == script.id}
   end
 
-  def stage_extras_enabled?(script)
-    return false unless script.stage_extras_available?
+  def lesson_extras_enabled?(script)
+    return false unless script.lesson_extras_available?
     return true if teacher?
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.stage_extras
+      section.script_id == script.id && section.lesson_extras
     end
   end
 
@@ -2256,7 +2257,7 @@ class User < ActiveRecord::Base
   private
 
   def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   def hidden_script_ids(sections)

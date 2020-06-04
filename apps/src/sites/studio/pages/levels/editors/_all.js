@@ -4,9 +4,6 @@ import $ from 'jquery';
 $(document).ready(initPage);
 
 function initPage() {
-  const script = document.querySelector('script[data-editorall]');
-  const config = JSON.parse(script.dataset.editorall);
-
   levelbuilder.jsonEditor('#callout_editor', {
     json_textarea: '#level_callout_json',
     add_button: '#add_callout',
@@ -70,26 +67,4 @@ function initPage() {
       .clone()
       .insertBefore('#plusPreloadAssetList');
   });
-
-  var videoInfos = config.video_infos;
-
-  function updateVideoPreview() {
-    var selectionValue = $('.video-dropdown')[0].value;
-    if (selectionValue) {
-      var videoInfo = videoInfos[selectionValue];
-      $('.video-preview').html(
-        window.dashboard.videos.createVideoWithFallback(
-          null,
-          videoInfo,
-          400,
-          400
-        )
-      );
-      $('.video-preview').show();
-    } else {
-      $('.video-preview').hide();
-    }
-  }
-  $('.video-dropdown').change(updateVideoPreview);
-  updateVideoPreview();
 }

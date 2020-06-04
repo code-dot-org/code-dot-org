@@ -8,7 +8,7 @@ require_relative 'i18n_script_utils'
 require 'open3'
 
 def sync_down
-  I18nScriptUtils.with_syncronous_stdout do
+  I18nScriptUtils.with_synchronous_stdout do
     puts "Beginning sync down"
 
     CROWDIN_PROJECTS.each do |name, options|
