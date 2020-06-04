@@ -1,9 +1,7 @@
 import initResponsive from '@cdo/apps/code-studio/responsive';
 
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
   initResponsive();
 
-  $(document).ready(function() {
-    $('.hoc-tiles-container').load('/dashboardapi/middle_high_student_labs');
-  });
+  $('.hoc-tiles-container').load('/dashboardapi/middle_high_student_labs');
 });

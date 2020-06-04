@@ -1,6 +1,6 @@
 <div class="col-33" style="padding-right: 20px;">
 
-<%= view :athome_vid_howcomputers %>
+{{ athome_vid_howcomputers }}
 
 </div>
 
@@ -13,7 +13,7 @@
 <div style="clear: both; margin-bottom: 40px"></div>
 <div class="col-33" style="padding-right: 20px;">
 
-<%= view :athome_vid_howinternet %>
+{{ athome_vid_howinternet }}
 
 </div>
 
