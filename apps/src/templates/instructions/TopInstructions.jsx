@@ -572,8 +572,9 @@ class TopInstructions extends Component {
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
-      this.state.tabSelected === TabType.COMMENTS &&
-      this.state.teacherViewingStudentWork;
+      this.state.tabSelected === TabType.TEACHER_ONLY ||
+      (this.state.tabSelected === TabType.COMMENTS &&
+        this.state.teacherViewingStudentWork);
 
     if (
       hidden ||
