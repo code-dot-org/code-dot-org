@@ -12,17 +12,17 @@ export const ParamType = {
 
 const styles = {
   title: {
-    paddingLeft: '1em',
+    paddingLeft: '15px',
     fontFamily: "'Gotham 7r', sans-serif",
     color: color.teal
   },
   option: {
-    paddingLeft: '2em',
+    paddingLeft: '30px',
     fontFamily: "'Gotham 7r', sans-serif",
     color: color.purple
   },
   error: {
-    padding: '2em'
+    padding: '30px'
   }
 };
 
@@ -55,27 +55,29 @@ export default class GetColumnParamPicker extends React.Component {
   }
 
   render() {
+    const reduxState = getStore().getState();
     let options = [];
-    if (this.props.param === ParamType.TABLE) {
-      const reduxState = getStore().getState();
-      options = Object.keys(reduxState.data.tableListMap);
-    } else if (this.props.param === ParamType.COLUMN) {
-      options = this.state.columns;
+    let title = '';
+    let error = '';
+    switch (this.props.param) {
+      case ParamType.TABLE:
+        options = Object.keys(reduxState.data.tableListMap);
+        title = msg.chooseTable();
+        error = msg.noTablesInProject();
+        break;
+      case ParamType.COLUMN:
+        options = this.state.columns;
+        title = msg.chooseColumn({table: this.props.table});
+        error = msg.noColumnsInTable({table: this.props.table});
+        break;
+      default:
     }
     return (
       <BaseDialog isOpen useUpdatedStyles handleClose={this.props.onClose}>
-        <h1 style={styles.title}>
-          {this.props.param === ParamType.TABLE
-            ? msg.chooseTable()
-            : msg.chooseColumn({table: this.props.table})}
-        </h1>
+        <h1 style={styles.title}>{title}</h1>
         <div>
           {options.length === 0 ? (
-            <p style={styles.error}>
-              {this.props.param === ParamType.TABLE
-                ? msg.noTablesInProject()
-                : msg.noColumnsInTable({table: this.props.table})}
-            </p>
+            <p style={styles.error}>{error}</p>
           ) : (
             options.map(option => (
               <p key={option}>
