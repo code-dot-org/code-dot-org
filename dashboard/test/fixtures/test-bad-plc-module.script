@@ -1,5 +1,5 @@
 professional_learning_course 'true'
 
 lesson_group 'bad_module_type', display_name: 'Bad Module Type'
-stage 'Sample Module'
+lesson 'Sample Module'
 level 'Level 1'

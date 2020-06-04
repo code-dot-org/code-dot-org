@@ -18,6 +18,16 @@ describe('ScriptEditor', () => {
     versionYearOptions: []
   };
 
+  describe('Script Editor', () => {
+    it('has the correct number of each editor field type', () => {
+      const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);
+      expect(wrapper.find('input').length).to.equal(21);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
+      expect(wrapper.find('textarea').length).to.equal(2);
+      expect(wrapper.find('select').length).to.equal(5);
+    });
+  });
+
   describe('VisibleInTeacherDashboard', () => {
     it('is checked when hidden is false', () => {
       const wrapper = mount(<ScriptEditor {...DEFAULT_PROPS} hidden={false} />);

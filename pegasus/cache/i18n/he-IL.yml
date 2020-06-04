@@ -1205,6 +1205,8 @@ he-IL:
   header_about: אודות
   header_teacher_community: קהילת המורים
   header_report_bug: דווח תקלה
+  header_legal_privacy: הצהרת פרטיות
+  header_legal_tos: תנאים
   header_tutorials: מדריכים
   header_documentation: מסמכים
   user_header_label: היי %{username}

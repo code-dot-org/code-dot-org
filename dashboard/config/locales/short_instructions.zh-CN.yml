@@ -1789,9 +1789,9 @@ zh-CN:
       courseC_collector_prog8: _"继续保持良好的工作! 帮我收集所有的宝藏。“_
       courseC_collector_prog8_2018: _"继续保持良好的工作! 帮我收集所有的宝藏。“_
       courseC_collector_prog8_2019: _"继续保持良好的工作! 帮我收集所有的宝藏。“_
-      courseC_collector_prog9: _"让我们得到所有的宝藏!_
-      courseC_collector_prog9_2018: _"让我们得到所有的宝藏!_
-      courseC_collector_prog9_2019: _"让我们得到所有的宝藏!_
+      courseC_collector_prog9: '*_"让我们得到所有的宝藏!_*'
+      courseC_collector_prog9_2018: '*_"让我们得到所有的宝藏!_*'
+      courseC_collector_prog9_2019: '*_"让我们得到所有的宝藏!_*'
       courseC_collector_prog_challenge1: 仔细看! 你能收集所有 **10** 块宝藏吗？
       courseC_collector_prog_challenge1_2018: 仔细看! 你能收集所有 **10** 块宝藏吗？
       courseC_collector_prog_challenge1_2019: 仔细看! 你能收集所有 **10** 块宝藏吗？

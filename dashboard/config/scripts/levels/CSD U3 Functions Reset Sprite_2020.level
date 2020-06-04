@@ -40,7 +40,7 @@
     "all_animations_single_frame": "true",
     "show_debug_watch": "true",
     "teacher_markdown": "**Why Use Functions** \r\n\r\nThis and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels.",
-    "encrypted_examples": "m2oxUtj2asHs9b6GR1fab1PmWoNWjzSEiOvwY0K0xEGywvxPP5WfUEv8ABnl\nshvM\n",
+    "encrypted_examples": "DusiBp6A3e3IIpE4eKzPI4kCNm5H86dUFIGqV9/A0LkRz9uyzUx9lCT4Kk6r\n4d4Ax1wK7IseDjZMHZCVXPhKFQ==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -50,15 +50,19 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
-    "preload_asset_list": null,
     "display_name": "Calling Functions Multiple Times",
-    "bubble_choice_description": "Make the flyer reappear on the right side when it goes off the left",
-    "thumbnail_url": "https://images.code.org/c5beba0b6e1c2a77e9caa795b73c7fd6-image-1585697151938.png",
-    "libraries_enabled": "false"
+    "bubble_choice_description": "Make the flyer reappear on the right side when it goes off the left.",
+    "thumbnail_url": "https://images.code.org/6c432d98a24f494226864f0ed93adba9-image-1589320643875.gif",
+    "libraries_enabled": "false",
+    "reference_links": [
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/"
+    ],
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:52 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:14:52 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:29:14 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 22:56:52 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:14:52 +0000\",\"changed\":[\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:29:14 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-12 21:47:13 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-12 21:57:42 +0000\",\"changed\":[\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-28 18:05:46 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-06-02 18:11:53 +0000\",\"changed\":[\"encrypted_examples\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

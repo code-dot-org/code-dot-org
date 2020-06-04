@@ -68,7 +68,8 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
     # Eagerly send a batch-create request
-    submitted, errors = PardotV2.new.batch_create_prospects contact[:email], contact[:data], true
+    pardot_writer = PardotV2.new
+    submitted, errors = pardot_writer.batch_create_prospects contact[:email], contact[:data], true
 
     expected_submissions = [{email: contact[:email], db_Opt_In: 'Yes'}]
     assert_equal expected_submissions, submitted
@@ -128,8 +129,9 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
+    pardot_writer = PardotV2.new
     # Eagerly submit an update request
-    submissions, errors = PardotV2.new.batch_update_prospects(
+    submissions, errors = pardot_writer.batch_update_prospects(
       *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data),
       true
     )
@@ -295,16 +297,16 @@ class PardotV2Test < Minitest::Test
     tests = [
       {old_data: nil, new_data: {}, expected_delta: {}},
       {old_data: nil, new_data: {k1: 'v1'}, expected_delta: {k1: 'v1'}},
-      {old_data: {k1: 'v1'}, new_data: {}, expected_delta: {k1: nil}},
+      {old_data: {k1: 'v1'}, new_data: {}, expected_delta: {}},
       {old_data: {k1: 'v1'}, new_data: {k1: 'v1'}, expected_delta: {}},
       {old_data: {k1: 'v1'}, new_data: {k1: 'v1.1'}, expected_delta: {k1: 'v1.1'}},
-      {old_data: {k1: 'v1'}, new_data: {k2: 'v2'}, expected_delta: {k1: nil, k2: 'v2'}},
+      {old_data: {k1: 'v1'}, new_data: {k2: 'v2'}, expected_delta: {k2: 'v2'}},
       {old_data: {k1: nil}, new_data: {k2: 'v2'}, expected_delta: {k2: 'v2'}},
       {
-        old_data: {k1: 'v1', k2: 'v2', k3: nil},
-        new_data: {k1: 'v1.1', k4: 'v4'},
-        expected_delta: {k1: 'v1.1', k2: nil, k4: 'v4'}
-      },
+        old_data: {key1: 'v1', key2: 'v2', key3: nil},
+        new_data: {key1: 'v1.1', key2: 'v2', key4: 'v4'},
+        expected_delta: {key1: 'v1.1', key4: 'v4'}
+      }
     ]
 
     tests.each_with_index do |test, index|

@@ -10,9 +10,9 @@ import sectionStandardsProgress, {
   getLessonSelectionStatus
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {
-  stageId,
+  lessonId,
   scriptId,
-  pluggedStage,
+  pluggedLesson,
   stateForTeacherMarkedAndProgress,
   stateForTeacherMarkedIncompletedLesson,
   stateForTeacherMarkedCompletedLesson,
@@ -27,14 +27,14 @@ describe('sectionStandardsProgressRedux', () => {
   describe('getLessonSelectionStatus', () => {
     it('returns true if lesson is in selected list', () => {
       expect(
-        getLessonSelectionStatus(stateForTeacherMarkedCompletedLesson, stageId)
+        getLessonSelectionStatus(stateForTeacherMarkedCompletedLesson, lessonId)
       ).to.equal(true);
     });
     it('returns false if lesson is not in selected', () => {
       expect(
         getLessonSelectionStatus(
           stateForTeacherMarkedIncompletedLesson,
-          stageId
+          lessonId
         )
       ).to.equal(false);
     });
@@ -300,9 +300,9 @@ describe('sectionStandardsProgressRedux', () => {
   });
 
   describe('getUnPluggedLessonCompletionStatus', () => {
-    it('incomplete when no teacher scores for stage', () => {
+    it('incomplete when no teacher scores for lesson', () => {
       expect(
-        getUnpluggedLessonCompletionStatus(fakeState, scriptId, stageId)
+        getUnpluggedLessonCompletionStatus(fakeState, scriptId, lessonId)
       ).to.deep.equal({
         completed: false,
         inProgress: false,
@@ -310,12 +310,12 @@ describe('sectionStandardsProgressRedux', () => {
       });
     });
 
-    it('incomplete when teacher scores stage as incomplete', () => {
+    it('incomplete when teacher scores lesson as incomplete', () => {
       expect(
         getUnpluggedLessonCompletionStatus(
           stateForTeacherMarkedIncompletedLesson,
           scriptId,
-          stageId
+          lessonId
         )
       ).to.deep.equal({
         completed: false,
@@ -324,12 +324,12 @@ describe('sectionStandardsProgressRedux', () => {
       });
     });
 
-    it('complete when teacher scores stage as complete', () => {
+    it('complete when teacher scores lesson as complete', () => {
       expect(
         getUnpluggedLessonCompletionStatus(
           stateForTeacherMarkedCompletedLesson,
           scriptId,
-          stageId
+          lessonId
         )
       ).to.deep.equal({
         completed: true,
@@ -342,7 +342,7 @@ describe('sectionStandardsProgressRedux', () => {
   describe('getPluggedLessonCompletionStatus', () => {
     it('accurately calculates no progress', () => {
       expect(
-        getPluggedLessonCompletionStatus(fakeState, pluggedStage)
+        getPluggedLessonCompletionStatus(fakeState, pluggedLesson)
       ).to.deep.equal({
         completed: false,
         inProgress: false,
@@ -354,7 +354,7 @@ describe('sectionStandardsProgressRedux', () => {
       expect(
         getPluggedLessonCompletionStatus(
           stateForPartiallyCompletedLesson,
-          pluggedStage
+          pluggedLesson
         )
       ).to.deep.equal({
         completed: false,
@@ -365,7 +365,7 @@ describe('sectionStandardsProgressRedux', () => {
 
     it('accurately calculates > 80% of students completed > 60% of levels', () => {
       expect(
-        getPluggedLessonCompletionStatus(stateForCompletedLesson, pluggedStage)
+        getPluggedLessonCompletionStatus(stateForCompletedLesson, pluggedLesson)
       ).to.deep.equal({
         completed: true,
         inProgress: true,
