@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import $ from 'jquery';
+import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from './shapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -43,6 +45,7 @@ const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
+const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -118,6 +121,17 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   sectionId: sectionId,
   students: studentInfo
 });
+export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
+
+// pageType describes the current route the user is on. Used only for logging.
+// Enum of allowed values:
+export const pageTypes = {
+  level: 'level',
+  scriptOverview: 'script_overview',
+  courseOverview: 'course_overview',
+  stageExtras: 'stage_extras',
+  homepage: 'homepage'
+};
 
 /**
  * Set the list of sections to display.
@@ -137,6 +151,37 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+  return dispatch(finishEditingSection());
+};
+
+/**
+ * Assigns a course to a given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ * @param {number} courseId
+ * @param {number} scriptId
+ */
+export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+  return (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    dispatch(
+      editSectionProperties({
+        courseId: courseId,
+        scriptId: scriptId
+      })
+    );
+    return dispatch(finishEditingSection(pageType));
+  };
+};
+
+/**
+ * Removes assignments from the given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ */
+export const unassignSection = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
   return dispatch(finishEditingSection());
 };
 
@@ -176,11 +221,7 @@ export const editSectionProperties = props => ({
  */
 export const cancelEditingSection = () => ({type: EDIT_SECTION_CANCEL});
 
-/**
- * Submit staged section changes to the server.
- * Closes UI and updates section table on success.
- */
-export const finishEditingSection = () => (dispatch, getState) => {
+export const submitEditingSection = (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
@@ -189,20 +230,50 @@ export const finishEditingSection = () => (dispatch, getState) => {
     ? '/dashboardapi/sections'
     : `/dashboardapi/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
+  return $.ajax({
+    url: dataUrl,
+    method: httpMethod,
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(serverSectionFromSection(section))
+  });
+};
+
+/**
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
+ */
+export const finishEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
-    $.ajax({
-      url: dataUrl,
-      method: httpMethod,
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(serverSectionFromSection(section))
-    })
+    submitEditingSection(dispatch, getState)
       .done(result => {
         dispatch({
           type: EDIT_SECTION_SUCCESS,
           sectionId: section.id,
           serverSection: result
         });
-        resolve();
+        resolve(result);
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
+      });
+  });
+};
+
+export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+  return new Promise((resolve, reject) => {
+    submitEditingSection(dispatch, getState)
+      .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
+        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
@@ -374,6 +445,7 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
+  stageExtrasScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -384,7 +456,9 @@ const initialState = {
   // Not populated until the RosterDialog is opened.
   classrooms: null,
   // Error that occurred while loading oauth classrooms
-  loadError: null
+  loadError: null,
+  // The page where the action is occurring
+  pageType: ''
 };
 
 /**
@@ -409,7 +483,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
-    hidden: false
+    hidden: false,
+    isAssigned: undefined
   };
 }
 
@@ -457,6 +532,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       validGrades: action.grades
+    };
+  }
+
+  if (action.type === SET_PAGE_TYPE) {
+    return {
+      ...state,
+      pageType: action.pageType
     };
   }
 
@@ -561,7 +643,7 @@ export default function teacherSections(state = initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage)
+      // in a way that only provides name/id per section, in other places (homepage, script overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
@@ -648,6 +730,9 @@ export default function teacherSections(state = initialState, action) {
         );
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialScriptId: initialSectionData.scriptId,
+      initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -673,7 +758,7 @@ export default function teacherSections(state = initialState, action) {
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
@@ -715,6 +800,49 @@ export default function teacherSections(state = initialState, action) {
       } else {
         newSectionIds = [section.id, ...state.sectionIds];
       }
+    }
+
+    if (section.loginType !== state.initialLoginType) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'edit-section-details',
+          event: 'change-login-type',
+          data_json: JSON.stringify({
+            sectionId: section.id,
+            initialLoginType: state.initialLoginType,
+            updatedLoginType: section.loginType
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+
+    let assignmentData = {
+      section_id: section.id,
+      section_creation_timestamp: section.createdAt,
+      page_name: state.pageType
+    };
+    if (section.scriptId !== state.initialScriptId) {
+      assignmentData.script_id = section.scriptId;
+    }
+    if (section.courseId !== state.initialCourseId) {
+      assignmentData.course_id = section.courseId;
+    }
+    if (
+      // If either of these is not undefined, then assignment changed and should be logged
+      !(typeof assignmentData.script_id === 'undefined') ||
+      !(typeof assignmentData.course_id === 'undefined')
+    ) {
+      firehoseClient.putRecord(
+        {
+          study: 'assignment',
+          study_group: 'v1',
+          event: newSection ? 'create_section' : 'edit_section_details',
+          data_json: JSON.stringify(assignmentData)
+        },
+        {includeUserId: true}
+      );
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -879,6 +1007,11 @@ export function assignedScriptName(state) {
   return assignment ? assignment.name : '';
 }
 
+export function getVisibleSections(state) {
+  const allSections = Object.values(getRoot(state).sections);
+  return (allSections || []).filter(s => !s.hidden);
+}
+
 /**
  * Gets the data needed by Reacttabular to show a sortable table
  * @param {object} state - Full store state
@@ -902,6 +1035,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
@@ -909,17 +1046,21 @@ export function getSectionRows(state, sectionIds) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.stage_extras,
+  stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null,
-  hidden: serverSection.hidden
+  scriptId: serverSection.script
+    ? serverSection.script.id
+    : serverSection.script_id || null,
+  hidden: serverSection.hidden,
+  isAssigned: serverSection.isAssigned
 });
 
 /**
@@ -944,7 +1085,7 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    stage_extras: section.stageExtras,
+    lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
@@ -1031,6 +1172,25 @@ export function sectionsNameAndId(state) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name
+  }));
+}
+
+export function sectionsForDropdown(
+  state,
+  scriptId,
+  courseId,
+  onCourseOverview
+) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name,
+    scriptId: state.sections[id].scriptId,
+    courseId: state.sections[id].courseId,
+    isAssigned:
+      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
+      (courseId !== null &&
+        state.sections[id].courseId === courseId &&
+        onCourseOverview)
   }));
 }
 

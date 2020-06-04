@@ -8,14 +8,15 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
-  '#school-info-inputs',
+  '#school-info-section',
   '#email-preference-radio'
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
-  '#student-consent'
+  '#student-consent',
+  '#parent-email-container'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -36,9 +37,20 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
+    renderParentSignUpSection();
   }
 
+  let alreadySubmitted = false;
   $('.finish-signup').submit(function() {
+    // prevent multiple submission. We want to do this to defend against
+    // attempting to create multiple accounts, and it's valid to simply disable
+    // after the first attempt here since this form is submitted via HTML and
+    // will therefore initiate a page load after submission.
+    if (alreadySubmitted) {
+      return false;
+    }
+
+    alreadySubmitted = true;
     // Clean up school data and set age for teachers.
     if (getUserType() === 'teacher') {
       cleanSchoolInfo();
@@ -60,6 +72,28 @@ $(document).ready(() => {
         'input[name="user[school_info_attributes][school_id]"]'
       );
       schoolIdEl.val('');
+    }
+  }
+
+  $('#user_parent_email_preference_opt_in_required').change(function() {
+    // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
+    // allows the parent sign up section of the form.
+    if (getUserType() === '') {
+      $('#user_user_type')
+        .val('student')
+        .change();
+    }
+    renderParentSignUpSection();
+  });
+
+  function renderParentSignUpSection() {
+    let checked = $('#user_parent_email_preference_opt_in_required').is(
+      ':checked'
+    );
+    if (checked) {
+      fadeInFields(['.parent-email-field']);
+    } else {
+      hideFields(['.parent-email-field']);
     }
   }
 

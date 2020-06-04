@@ -46,7 +46,7 @@
           %td
             %input{:hidden => true, :name => "user_id", :value => @user.id}
             .field
-              = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS)
+              = select_tag :permission, options_for_select(UserPermission::ASSIGNABLE_PERMISSIONS)
           %td
 %br
 %p View Users with selected Permission
@@ -78,7 +78,7 @@
 %br
 %p Grant selected Permission to a set of Users in bulk
 = form_tag url_for(action: 'bulk_grant_permission'), method: 'post', class: 'form-inline', enforce_utf8: false do
-  = select_tag :bulk_permission, options_for_select(UserPermission::VALID_PERMISSIONS, params[:bulk_permission]), class: 'form-control'
+  = select_tag :bulk_permission, options_for_select(UserPermission::ASSIGNABLE_PERMISSIONS, params[:bulk_permission]), class: 'form-control'
   = submit_tag('Assign', id: 'submitBulkAssignPermission')
   %p
   %p Please enter each email on a new line

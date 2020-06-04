@@ -31,6 +31,11 @@ commonStyles.teacherHeaderUnfocused = {
   color: color.dark_charcoal
 };
 
+commonStyles.minecraftHeader = {
+  backgroundColor: '#3b3b3b',
+  color: color.white
+};
+
 commonStyles.button = {
   paddingTop: 5,
   paddingBottom: 5,

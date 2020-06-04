@@ -1,10 +1,7 @@
 name 'AP_practice_Qs_rqb_74_CSP_4_2_2'
 wrong 'Algorithms are a tool for solving well defined computational problems.'
-wrong 'Some problems cannot be solved using any algorithms.
-
-'
-wrong 'An algorithm may use a heuristic to find an approximate solution when an exact solution cannot be found
-'
+wrong 'Some problems cannot be solved using any algorithms.'
+wrong 'An algorithm may use a heuristic to find an approximate solution when an exact solution cannot be found'
 right 'For any particular problem, there is one and only one algorithm that can solve it correctly.'
 markdown <<MARKDOWN
 Consider the following  statements about algorithms. Choose the statement that is NOT true.

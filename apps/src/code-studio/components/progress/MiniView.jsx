@@ -84,5 +84,5 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
   hasGroups: hasGroups(state.progress),
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId.toString()
 }))(MiniView);

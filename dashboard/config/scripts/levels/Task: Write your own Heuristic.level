@@ -5,18 +5,19 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "long_instructions": "# Task: Write your own Heuristic\r\n\r\n## Do the Activity\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers. In order to do this activity, you'll want to access the text compression widget (which is a bubble in this module) as well as the heuristic worksheet (linked below). \r\n\r\n- First, you'll want to play around with the text compression widget and get a sense of the types of patterns that you can pull out. \r\n- Then, work to develop your own heuristic! Feel free to follow <a href=”https://docs.google.com/document/d/1U1SPSyBYS9tnJmpnQd-xbWnhb6TpwdJ6i82H662hxdM/edit” target=_blank>this activity guide, from lesson 2.</a>\r\n\r\n<hr>\r\n\r\n### <a href= \"http://forum.code.org/c/csp2/lesson02\" target=_blank> Head to the Forum >></a>\r\n<hr>\r\n\r\n\r\n## Share Your Heuristic and Ideas\r\nHead to the forum and share your ideas about this activity. Specifically, share: \r\n\r\n- The heuristic you developed.\r\n- Misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.\r\n\r\n##  Submit the Link for your Forum Post\r\n\r\nOnce you’ve posted in the forum, share a link here. In order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Task: Write your own Heuristic\r\n\r\n## Do the Activity\r\n\r\nOne of the best ways to prepare to teach a lesson is by actually doing the activity yourself.  As you complete the activity, consider the misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers. In order to do this activity, you'll want to access the text compression widget (which is a bubble in this module) as well as the heuristic worksheet (linked below). \r\n\r\n- First, you'll want to play around with the text compression widget and get a sense of the types of patterns that you can pull out. \r\n- Then, work to develop your own heuristic! Feel free to follow <a href=\"https://docs.google.com/document/d/1U1SPSyBYS9tnJmpnQd-xbWnhb6TpwdJ6i82H662hxdM/edit\" target=_blank>this activity guide, from lesson 2.</a>\r\n\r\n<hr>\r\n\r\n### <a href= \"http://forum.code.org/c/csp2/lesson02\" target=_blank> Head to the Forum >></a>\r\n<hr>\r\n\r\n\r\n## Share Your Heuristic and Ideas\r\nHead to the forum and share your ideas about this activity. Specifically, share: \r\n\r\n- The heuristic you developed.\r\n- Misconceptions that your students may have and what sorts of questions you can ask to help them overcome these barriers.\r\n\r\n##  Submit the Link for your Forum Post\r\n\r\nOnce you’ve posted in the forum, share a link here. In order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false",
-    "optional": "false"
+    "optional": "false",
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 02:52:15 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 02:52:15 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-06 17:28:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

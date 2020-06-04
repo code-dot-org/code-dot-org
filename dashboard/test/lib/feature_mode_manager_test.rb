@@ -11,8 +11,8 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   HOC_SCRIPT = 'starwars'
 
   def setup
-    CDO.hip_chat_logging = false
-    CDO.slack_endpoint = nil
+    CDO.stubs(hip_chat_logging: false)
+    CDO.stubs(slack_endpoint: nil)
     @gatekeeper = GatekeeperBase.create
     @dcdo = DCDOBase.create
   end

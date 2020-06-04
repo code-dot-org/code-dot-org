@@ -204,7 +204,7 @@ module Api::V1::Pd
       email = params[:email]
       user = User.find_by_email email
       filtered_applications = @applications.where(
-        application_year: YEAR_19_20,
+        application_year: APPLICATION_CURRENT_YEAR,
         application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
         user: user
       )

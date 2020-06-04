@@ -1,0 +1,30 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:09:57.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template_virtual",
+    "hide_share_and_remix": "true",
+    "submittable": "false",
+    "parent_level_id": 20057,
+    "name_suffix": "_virtual",
+    "long_instructions": "# Add Styles\r\n\r\nNext, style the page according to your plan.\r\n\r\n# Do This\r\n* In the stylesheet, add CSS rule sets for your tags.\r\n* Check to make sure that the page looks right, then make any adjustments",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/html/formatting-html/"
+    ],
+    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "encrypted": "false",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 16:51:49 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 17:08:00 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-09-11 23:49:14 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-09-11 23:50:49 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 18:15:42 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:13:09 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:37:03 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</Weblab>

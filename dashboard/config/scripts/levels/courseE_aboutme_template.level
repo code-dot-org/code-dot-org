@@ -11,7 +11,7 @@
       "GamelabJr"
     ],
     "helper_libraries": [
-      "SpriteLab2Beta"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",

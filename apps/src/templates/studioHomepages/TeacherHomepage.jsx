@@ -14,6 +14,9 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import DonorTeacherBanner, {
+  donorTeacherBannerOptionsShape
+} from '@cdo/apps/templates/DonorTeacherBanner';
 
 const styles = {
   clear: {
@@ -32,18 +35,21 @@ export default class TeacherHomepage extends Component {
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
-    locale: PropTypes.string,
-    showCensusBanner: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
+    showCensusBanner: PropTypes.bool.isRequired,
+    donorBannerName: PropTypes.string,
+    donorTeacherBannerOptions: donorTeacherBannerOptionsShape,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
-    schoolYear: PropTypes.number
+    schoolYear: PropTypes.number,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner
+    showCensusBanner: this.props.showCensusBanner,
+    donorBannerName: this.props.donorBannerName
   };
 
   bindCensusBanner = banner => {
@@ -147,7 +153,6 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const {
-      hocLaunch,
       courses,
       topCourse,
       announcement,
@@ -155,17 +160,15 @@ export default class TeacherHomepage extends Component {
       ncesSchoolId,
       censusQuestion,
       schoolYear,
+      donorTeacherBannerOptions,
       teacherId,
       teacherName,
       teacherEmail,
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      locale
+      specialAnnouncement
     } = this.props;
-
-    // Show the special announcement for now.
-    const showSpecialAnnouncement = true;
 
     // Hide the regular announcement/notification for now.
     const showAnnouncement = false;
@@ -175,13 +178,8 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock
-            hocLaunch={hocLaunch}
-            hasIncompleteApplication={
-              !!sessionStorage['Teacher1920Application']
-            }
-          />
+        {isEnglish && specialAnnouncement && (
+          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
           <div>
@@ -189,7 +187,7 @@ export default class TeacherHomepage extends Component {
               type={announcement.type || 'bullhorn'}
               notice={announcement.heading}
               details={announcement.description}
-              dismissible={false}
+              dismissible={true}
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
@@ -226,7 +224,17 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
+        {isEnglish && this.state.donorBannerName && (
+          <div>
+            <DonorTeacherBanner
+              options={donorTeacherBannerOptions}
+              showPegasusLink={true}
+              source="teacher_home"
+            />
+            <div style={styles.clear} />
+          </div>
+        )}
+        <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

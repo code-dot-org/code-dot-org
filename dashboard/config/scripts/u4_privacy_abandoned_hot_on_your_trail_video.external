@@ -5,9 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # The Future of Big Data
 
-<iframe width="560" height = "315" src="https://www.youtube.com/embed/l_a0ecZ2Oe0" frameborder="0" allowfullscreen></iframe>
+[![](https://images.code.org/6f1a74bbbc95bce9012f4ba3d8ad6588-image-1571329339875.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0)
 
 [Source](http://www.fwthinking.com/video/clips/future-big-data-video/)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
 MARKDOWN

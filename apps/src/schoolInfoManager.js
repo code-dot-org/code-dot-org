@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'selectize';
 
 export default function SchoolInfoManager(existingOptions) {
   var districtListFirstLoad = true;
@@ -358,6 +359,11 @@ export default function SchoolInfoManager(existingOptions) {
   // values if they were provided.
 
   if (existingOptions) {
+    if (existingOptions.assumeUsa) {
+      $('#school-country-group').hide();
+      $('#school-country').val('US');
+    }
+
     if (existingOptions.country) {
       $('#school-country')
         .val(existingOptions.country)

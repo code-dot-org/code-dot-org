@@ -1,21 +1,19 @@
 :ruby
   providers = []
-  providers << {id: "ozobot", url: "https://ozobot.com/"}
-  providers << {id: "littlebits", url: "https://littlebits.com/"}
-  providers << {id: "kano", url: "https://kano.me/"}
-  providers << {id: "thimble", url: "https://www.thimble.io/"}
-  providers << {id: "dexter", url: "https://www.gigglebot.io/"}
-  providers << {id: "root", url: "https://rootrobotics.com/"}
+
+  providers << {id: "sphero", url: "https://sphero.com"}
+  providers << {id: "iRobot", url: "https://root.irobot.com"}
+  providers << {id: "microbit", url: "https://microbit.org"}
+  providers << {id: "Makeblock", url: "https://www.makeblock.com"}
 
 #joindescription
   #calltoaction
     %h2.join-us-header=hoc_s(:front_join_us_robotics)
-    =hoc_s(:front_join_us_robotics_link)
-    %br
-    %br
     .robotics-providers
+      .announcements-body
+        =hoc_s(:front_join_us_robotics_link)
       - providers.each do |provider|
         %a.category-link.robotics-provider{href: provider[:url], target: "_blank"}
-          %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-logo.png"}
-          %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-image.png"}
+          %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2019/#{provider[:id].downcase}-logo.png"}
+          %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2019/#{provider[:id].downcase}-image.png"}
     .clear

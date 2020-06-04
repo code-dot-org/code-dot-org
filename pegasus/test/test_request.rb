@@ -29,6 +29,12 @@ class RequestTest < Minitest::Test
     assert_nil req.location
   end
 
+  def test_saucelabs_ip
+    # This override is hard-coded in cdo/geocoder.
+    req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => '66.85.52.120'})
+    assert_equal 'US', req.location.country_code
+  end
+
   def test_gdpr
     assert Rack::Request.new('HTTP_CLOUDFRONT_VIEWER_COUNTRY' => 'gb').gdpr?
     refute Rack::Request.new('HTTP_CLOUDFRONT_VIEWER_COUNTRY' => 'us').gdpr?
@@ -40,5 +46,13 @@ class RequestTest < Minitest::Test
       body: {ip: user_ip, country_code: 'GB'}.to_json
     )
     assert Rack::Request.new('REMOTE_ADDR' => user_ip).gdpr?
+  end
+
+  def test_x_forwarded_host
+    request = Rack::Request.new(
+      'HTTP_X_FORWARDED_HOST' => 'code.org',
+      'HTTP_HOST' => 'hourofcode.com'
+    )
+    assert_equal 'hourofcode.com', request.site
   end
 end

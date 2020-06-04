@@ -1,0 +1,116 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:19.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "getText": null,
+      "setText": null,
+      "getNumber": null,
+      "ifBlock": null,
+      "ifElseBlock": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "console.log": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "orOperator": null,
+      "andOperator": null,
+      "functionParams_none": null,
+      "callMyFunction": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "PjleIEdB3s5+a4/8cIi9Zs46Dpf2db5QJbb4nxmqkom7NimX9vRphGHZFq1Z\noWGJRxGN2G+DlZGVro2/qDDmIw==\n",
+    "embed": "false",
+    "long_instructions": "<img src=\"https://images.code.org/42591321cf2bf9e4b90e89e0ea613c9f-image-1479909970655.gif\" style=\"float: right\">\r\n\r\n## Challenge: It's the weekend!\r\n\r\n**Make an app tells you whether to stay home or go to school based on what day of the week it is.**\r\n\r\n\r\nIn this challenge you will:\r\n\r\n* Add your own dropdown menu in design mode\r\n* Add an event handler for the dropdown\r\n* Write an if-statement that's slightly tricky\r\n\r\n## Do this:\r\n\r\n* In Design Mode **add a dropdown** menu and fill it with the days of the week: *Monday, Tuesday,...,Sunday*\r\n* **Add an event handler** for that dropdown that activates on *\"change\"*\r\n* **Add an `if-else` statement** to the event handler that checks which day was selected and...\r\n\r\n\t* **If** the day selected was a weekend day (*Saturday* or *Sunday*) then display a message that says \"It's the weekend! Stay home!\"\r\n\r\n\t* **Otherwise** (the day is a weekday) display a message that says \"It's a weekday. Go to school\".\r\n* Your message should be displayed by setting the text of the *msg_label* provided in design mode.\r\n\r\n## Testing:\r\n\r\n* Once you have something functional, make sure you test *every* day of the week to verify the output is correct\r\n* The if-statement here is trickier than before.\r\n\r\n<details>\r\n\r\n<summary>HINT: [click to expand]</summary>\r\n\r\n<br>\r\n\r\n<li>The trick here is that, unless you want to check all seven days with individual if-statements, you need to <strong>nest</strong> one if-statement inside another.</li>\r\n<li>The reason is that in order to know it's a weekday you need to know <em>both</em> that it's NOT Sunday <em>and</em> that it's not Saturday either.  That's two boolean conditions.</li>\r\n<li>Here is the skeleton of an if-else structure that will work.  Notice that the the if-statement that checks for Sunday is <em>inside</em> the else clause of the statement that checks for Saturday</li>\r\n\r\n\r\n<pre>\r\n\r\nIF it's saturday\r\n   ...\r\nELSE\r\n   IF it's sunday\r\n      ...\r\n   ELSE\r\n      ...\r\n</pre>\r\n\r\n\r\n</details>\r\n\r\n",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 24px; overflow: hidden; word-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 320px; height: 50px; position: absolute; left: 0px; top: 10px; background-color: rgb(0, 20, 108); text-align: center;\" id=\"label1\" class=\"\">What should I do today?</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 18px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 247px; height: 22px; position: absolute; left: 35px; top: 100px;\" id=\"label2\" class=\"\">Select the day of the week:</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 24px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 280px; height: 165px; position: absolute; left: 20px; top: 230px; background-color: rgb(238, 238, 238);\" id=\"msg_label\">Result..</label></div></div>",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "onEvent:3"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Your code should have an event handler for a dropdown menu. You need to add the dropdown menu in design mode. Then add an 'on change' event handler."
+      },
+      {
+        "entries": [
+          "getText"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Your code should include at least one call to `getText` which you need to get the value out of the dropdown menu."
+      },
+      {
+        "entries": [
+          "setText"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Your code should include at least one call to `setText` which you need to display the appropriate text into a text label.  The starting code provided one with id: `msg_label`"
+      }
+    ],
+    "teacher_markdown": "**Validation Note:** This level checks only for the presence of:\r\n* an event handler - supposed to be for the dropdown menu on \"change\"\r\n* a call to `getText` - presumably to get the text out of the dropdown menu they are supposed to add\r\n* a call to `setText` - presumably to display the appropriate message in the label with id: *msg_label*\r\n\r\n**Teaching Tips:**\r\n\r\n* Students may discover the `if-else-if` construct here because it's easy to find by simply clicking on the `+` next to the else clause.\r\n\r\n* However, the `if-else-if` structure is what you're learning next and this challenge is meant to motivate the need for it.  Up to you whether you want to force students to use nested `if` statements here or not.\r\n\r\n* One reason to use nested statement is that that's what you'll see on the AP exam.  The AP pseduocode has no concept of the `if-else-if` shorthand.  So it's good practice for that.",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 17226,
+    "name_suffix": "_virtual",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "expand_debugger": "false",
+    "mini_rubric": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-27 18:12:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-15 04:19:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

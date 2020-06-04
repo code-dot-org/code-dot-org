@@ -16,8 +16,8 @@ Students can build in-demand skills and learn from expert technologists. The Plu
 * Deeper dives into networking, databases, programming, game development and more<br>
 * Skill assessments to benchmark your abilities<br>
 * Learning paths to learn skills in an appropriate progression<br>
-* Channels to focus learning on goals 
-* Mobile and offline viewing to learn anytime, anywhere<br> 
+* Channels to focus learning on goals
+* Mobile and offline viewing to learn anytime, anywhere<br>
 * Access for a full year from the time they redeem the offering that is provided by their teacher<br>
 
 Curated by expert technologists, the library features over 350 courses totaling over 1,000 hours of content across four major areas: IT/OPs, software development, design/creative, and product management.
@@ -34,8 +34,6 @@ Curated by expert technologists, the library features over 350 courses totaling 
    * Select ‘Allow Editing’ and then ‘Save’ in the dialog to unlock the offer for that section.
 
 1. Lastly, have your students sign-in and [visit this page](https://studio.code.org/s/pluralsight/lockable/1/puzzle/1) to redeem the offer and sign up for a free Pluralsight One account.
-
-This offer will be available for redemption through **June 30, 2019**.
 
 ***
 #### About Pluralsight

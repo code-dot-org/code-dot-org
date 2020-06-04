@@ -16,7 +16,7 @@ function filterFiles(files) {
     return files;
   }
 
-  const allowedCharsRegex = /^[a-zA-Z\|]+$/;
+  const allowedCharsRegex = /^[a-zA-Z0-9\|]+$/;
   if (!LEVEL_TYPE.match(allowedCharsRegex)) {
     throw new Error(`LEVEL_TYPE '${LEVEL_TYPE}' contains illegal characters`);
   }

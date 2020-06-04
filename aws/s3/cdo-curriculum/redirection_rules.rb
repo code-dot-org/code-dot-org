@@ -65,7 +65,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-19/"
+      replace_key_prefix_with: "plcsf-20/"
     }
   },
   {
@@ -74,7 +74,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsd-19/"
+      replace_key_prefix_with: "plcsd-20/"
     }
   },
   {
@@ -83,16 +83,16 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsp-19/"
+      replace_key_prefix_with: "plcsp-20/"
     }
   },
   {
     condition: {
-      key_prefix_equals: "docs/"
+      key_prefix_equals: "documentation/"
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "documentation"
+      replace_key_prefix_with: "docs/"
     }
   },
 ]
@@ -107,7 +107,7 @@ website_configuration = {
   routing_rules: routing_rules
 }
 
-CDO.class::CURRICULUM_LANGUAGES.each do |lang|
+CDO.curriculum_languages.each do |lang|
   routing_rules << {
     condition: {
       http_error_code_returned_equals: "404",

@@ -17,7 +17,10 @@ const defaultProps = {
     passed: false,
     status: LevelStatus.not_tried,
     user_id: 1
-  }
+  },
+  students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
+  onSelectUser: () => {},
+  getSelectedUserId: () => {}
 };
 
 describe('SelectedStudentInfo', () => {
@@ -58,7 +61,6 @@ describe('SelectedStudentInfo', () => {
     );
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
-    expect(wrapper.find('Button')).to.have.length(1);
   });
 
   it('displays time and who they worked with as navigator if paired as driver on level', () => {

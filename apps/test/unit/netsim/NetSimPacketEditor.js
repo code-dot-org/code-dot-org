@@ -1,5 +1,5 @@
 /** @file Tests for NetSimPacketEditor */
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');

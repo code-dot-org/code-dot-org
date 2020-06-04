@@ -1,12 +1,8 @@
 name 'AP_practice_Qs_rqb_115_CSP_2_2_3'
-wrong 'Logic Gates
-'
-wrong 'Transistors
-'
-wrong 'Processor
-'
-right 'Video Card
-'
+wrong 'Logic Gates'
+wrong 'Transistors'
+wrong 'Processor'
+right 'Video Card'
 markdown <<MARKDOWN
 Which hardware component offers the highest level of abstraction? 
 MARKDOWN

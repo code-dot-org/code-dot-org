@@ -1,16 +1,4 @@
 ---
-<%
-  require 'country_codes'
-  require 'state_abbr'
-  splat = request.splat_path_info[1..-1].split("/")
-  country_code = splat.first
-  country = country_name_from_code(country_code)
-  if country_code == 'us'
-    state_code = splat.last unless country_code == splat.last
-    state = get_us_state_from_abbr(state_code) unless state_code.nil_or_empty?
-  end
-%>
-title: <%= hoc_s(:events_all_title) %> - <%= state ? state : country %>
 layout: wide
 nav: events_nav
 ---
@@ -37,6 +25,7 @@ nav: events_nav
   else
     state_code = nil
   end
+  @header["title"] = "#{hoc_s(:events_all_title)} - #{state ? state : country}"
 
   results = Forms.events_by_name("HocSignup#{hoc_year}", country_code, state_code)
   pass unless results.count > 0

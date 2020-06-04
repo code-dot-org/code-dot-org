@@ -55,6 +55,10 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {
+  showArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -68,7 +72,7 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Whether we are showing debug information
 var showDebugInfo = false;
@@ -1098,6 +1102,12 @@ var setSvgText = (Studio.setSvgText = function(opts) {
  *  machine for consumption by the student's event-handling code.
  */
 function callHandler(name, allowQueueExtension, extraArgs = []) {
+  if (['when-up', 'when-down', 'when-left', 'when-right'].includes(name)) {
+    let store = getStore();
+    if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+      store.dispatch(dismissSwipeOverlay('buttonKeyPress'));
+    }
+  }
   if (level.autoArrowSteer) {
     var moveDir;
     switch (name) {
@@ -2363,18 +2373,6 @@ Studio.init = function(config) {
       !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
   };
 
-  if (
-    config.embed &&
-    config.level.longInstructions &&
-    !config.level.shortInstructions
-  ) {
-    // if we are an embedded level with long instructions but no short
-    // instructions, we want to display CSP-style instructions and not be
-    // centered
-    config.noInstructionsWhenCollapsed = true;
-    config.centerEmbedded = false;
-  }
-
   // for hoc2015x, we only have permission to show the Rey avatar for approved
   // scripts. For all others, we override the avatars with an empty image
   if (
@@ -2650,9 +2648,8 @@ Studio.reset = function(first) {
     softButtonCount++;
   }
   if (softButtonCount) {
-    $('#soft-buttons')
-      .removeClass('soft-buttons-none')
-      .addClass('soft-buttons-' + softButtonCount);
+    getStore().dispatch(showArrowButtons());
+    $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
 
   // True if we should fail before execution, even if freeplay
@@ -3048,7 +3045,7 @@ Studio.displayFeedback = function() {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
-      getStore().getState().progress.signInState === SignInState.SignedIn;
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
       feedbackType: Studio.testResults,
@@ -3064,12 +3061,7 @@ Studio.displayFeedback = function() {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToLegacyGalleryUrl:
-        level.freePlay &&
-        Studio.response &&
-        Studio.response.save_to_gallery_url,
-      // save to the project gallery instead of the legacy gallery
+      // save to the project gallery
       saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
@@ -5523,7 +5515,7 @@ Studio.setMap = function(opts) {
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
   Studio.wallMapCollisions = true;
-  Studio.walls.setWallMapRequested(useMap);
+  Studio.walls.setWallMapRequested(mapValue);
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.

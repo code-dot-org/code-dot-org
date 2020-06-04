@@ -16,7 +16,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @learning_module = create :plc_learning_module
     @learning_module.plc_course_unit.script.update(peer_reviews_to_complete: 1)
 
-    @script_level = create :script_level, levels: [level], stage: @learning_module.stage
+    @script_level = create :script_level, levels: [level], lesson: @learning_module.lesson
     @script = @script_level.script
 
     @level_source = create :level_source, data: 'My submitted answer'
@@ -25,7 +25,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   setup do
     sign_in(@user)
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
-    User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
+    User.track_level_progress(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
     @peer_review = PeerReview.first
     @peer_review.user_level.update_column(:best_result, ActivityConstants::UNREVIEWED_SUBMISSION_RESULT)
   end
@@ -90,13 +90,12 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Submitting a review redirects to the index if user is a plc reviewer' do
-    plc_reviewer = create :teacher
-    plc_reviewer.permission = 'plc_reviewer'
+    plc_reviewer = create :plc_reviewer
 
-    sign_out(@user)
-    sign_in(plc_reviewer)
+    sign_out @user
+    sign_in plc_reviewer
 
-    @peer_review.update(reviewer_id: plc_reviewer.id)
+    @peer_review.update reviewer_id: plc_reviewer.id
     post :update, params: {
       id: @peer_review.id,
       peer_review: {status: 'accepted', data: 'This is great'}
@@ -106,17 +105,19 @@ class PeerReviewsControllerTest < ActionController::TestCase
     assert_redirected_to peer_reviews_dashboard_path
   end
 
-  test 'Submitting a review that throws an exception logs an error to Honeybadger' do
-    @peer_review.update(reviewer_id: @user.id)
-    PeerReview.any_instance.stubs(:update!).raises(ActiveRecord::RecordNotSaved)
-    Honeybadger.expects(:notify)
+  test 'Submitting a review requires a status if user is a plc reviewer' do
+    plc_reviewer = create :plc_reviewer
+    @peer_review.update reviewer_id: plc_reviewer.id
 
-    post :update, params: {
-      id: @peer_review.id,
-      peer_review: {status: 'accepted', data: 'This is great'}
-    }
+    sign_out @user
+    sign_in plc_reviewer
 
-    assert_redirected_to peer_review_path(@peer_review)
+    assert_raises(ActiveRecord::RecordInvalid) do
+      post :update, params: {
+        id: @peer_review.id,
+        peer_review: {data: 'This is great'}
+      }
+    end
   end
 
   test 'Submitting a review redirects to the script view' do

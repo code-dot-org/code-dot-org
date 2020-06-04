@@ -1,0 +1,10 @@
+name 'SimonSays-Unplugged_experiment'
+editor_experiment 'broward'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Simon Says
+
+Play a game and think about what commands are needed to get the right result.
+MARKDOWN

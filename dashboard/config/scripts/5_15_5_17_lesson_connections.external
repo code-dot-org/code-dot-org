@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 **Lesson Type:** Programming | Unplugged | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/15/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/15/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 This lesson will probably take two days to complete. It builds on students’ knowledge of arrays by introducing students to algorithms that process lists of data. In addition to arrays, this lesson should also reinforce students’ knowledge of algorithms as a **precise sequence of instructions that can be executed by a computer and are implemented using programming languages** (4.1).  As students process arrays, they should recognize that they are designing algorithms with repeating steps that can be programmed as a loop.
 
@@ -20,7 +20,7 @@ There are many situations where we want to repeat a section of code a predetermi
 
 **Lesson Type:** Programming| App Lab | 
 
-<a href = “https://curriculum.code.org/csp/unit5/16/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/16/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 This is the first lesson in which students learn about return values: an abstraction used to manage the complexity of programs allowing functions to have output values that can be stored in variables or used by other functions.  The ability to return values is closely tied to the concept of scope. All variables declared within a function are in local scope and so will be removed once the end of the function is reached. As a result any useful information generated during that function will be lost. One solution to this problem is storing the value in a global variable, but this is generally considered bad programming practice. Global variables can be accessed by many functions and so reasoning about their logic requires considering the logic of all of those functions. Return values are a way to move information out of the local scope of a function without using a global variable. As a result a function call can be treated as if it were the type of data that a function returns, and it is up to the programmer to determine if or how it will be used.
 
@@ -31,7 +31,7 @@ This is the first lesson in which students learn about return values: an abstrac
 
 **Lesson Type:** Programming | Arrays | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/17/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/17/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 Students continue to practice working with arrays and are introduced to a new user interface element, the canvas. Although the canvas is a design tool that will not be used on the AP exam, it an element that can be used to facilitate students’ development of arrays, loops, and return values. The canvas includes commands for drawing simple geometric shapes (circles, rectangles, lines) and also triggers mouse and key events like any other user interface element. Over the course of the lesson, students combine these features to make an app that allows a user to draw an image while recording every dot drawn on the canvas in an array. By processing this array in different ways, the app will allow students to redraw their image in different styles, like random, spray paint, and sketching. Along the way, students use their knowledge of functions with return values to make code which is easy to manage and reuse.
 

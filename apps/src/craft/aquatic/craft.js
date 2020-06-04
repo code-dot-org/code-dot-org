@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import craftMsg from '../simple/locale';
+import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
@@ -20,7 +20,7 @@ import Sounds from '@cdo/apps/Sounds';
 
 import {TestResults} from '@cdo/apps/constants';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -259,6 +259,15 @@ Craft.init = function(config) {
             );
             visualizationColumn.style.width = this.nativeVizWidth + 'px';
           }
+
+          // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
+          Craft.gameController.game.device.whenReady(
+            () => {
+              Craft.gameController.game.scale.compatibility.scrollTo = false;
+            },
+            this,
+            false
+          );
         },
         twitter: {
           text: 'Share on Twitter',
@@ -677,7 +686,7 @@ Craft.reportResult = function(success) {
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function(response) {
       const isSignedIn =
-        getStore().getState().progress.signInState === SignInState.SignedIn;
+        getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,

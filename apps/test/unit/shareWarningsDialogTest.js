@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';

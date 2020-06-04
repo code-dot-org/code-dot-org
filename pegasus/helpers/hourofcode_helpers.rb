@@ -22,10 +22,27 @@ HOC_I18N = hoc_load_i18n
 # When called from the other sites, it uses request.locale and converts that XX-XX
 # locale code into a two-letter language code which notably involves a database hit to
 # do that conversion using information in the cdo-languages gsheet.
-def hoc_s(id)
+#
+# Can be called with markdown: true to render the string as (HTML-safe)
+# markdown, or with markdown: :inline to render as inline markdown.
+def hoc_s(id, markdown: false, locals: nil)
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  HOC_I18N[language][id] || HOC_I18N['en'][id]
+  string = HOC_I18N[language][id] || HOC_I18N['en'][id]
+
+  # manually implement a very simple version of string interpolation
+  if locals.present?
+    locals.each do |key, value|
+      string.gsub!(/%{#{key}}/, value)
+    end
+  end
+
+  if markdown
+    type = markdown == :inline ? :inline_md : :safe_md
+    string = @actionview.render(inline: string, type: type)
+  end
+
+  string
 end
 
 def hoc_canonicalized_i18n_path(uri, query_string)

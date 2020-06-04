@@ -1,0 +1,12 @@
+name 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020'
+title 'CS Discoveries Rapid Survey!'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csd-pulse-check-survey-preamble_2018_2019_2020'
+level 'csd-pulse-check-survey-1-q1 U5Ch1_2018_2019_2020'
+level 'csd-pulse-check-survey-1-q2 U5Ch1_2018_2019_2020'
+level 'csd-pulse-check-survey-1-q3 U5Ch1_2018_2019_2020'
+level 'csd-pulse-check-survey-1-q4 U5Ch1_2018_2019_2020'
+level 'csd-pulse-check-survey-1-q5 U5Ch1_2018_2019_2020'

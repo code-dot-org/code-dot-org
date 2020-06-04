@@ -19,6 +19,7 @@ import {
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
+import firehoseClient from '../../lib/util/firehose';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -100,7 +101,7 @@ class ProgressBubble extends React.Component {
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
-    stageTrophyEnabled: PropTypes.bool,
+    lessonTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
@@ -111,6 +112,22 @@ class ProgressBubble extends React.Component {
     currentLocation: window.location
   };
 
+  recordProgressTabProgressBubbleClick = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_level',
+        data_json: JSON.stringify({
+          student_id: this.props.selectedStudentId,
+          level_url: this.props.level.url,
+          section_id: this.props.selectedSectionId
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+
   render() {
     const {
       level,
@@ -118,7 +135,7 @@ class ProgressBubble extends React.Component {
       selectedSectionId,
       selectedStudentId,
       currentLocation,
-      stageTrophyEnabled,
+      lessonTrophyEnabled,
       pairingIconEnabled,
       hideAssessmentIcon
     } = this.props;
@@ -131,7 +148,8 @@ class ProgressBubble extends React.Component {
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
-    const hideNumber = levelIcon === 'lock' || level.paired || level.bonus;
+    const hideNumber =
+      level.letter || levelIcon === 'lock' || level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -201,7 +219,7 @@ class ProgressBubble extends React.Component {
       <div
         style={{
           // two pixels on each side for border, 2 pixels on each side for margin
-          width: stageTrophyEnabled ? width - 3 : width,
+          width: lessonTrophyEnabled ? width - 3 : width,
           display: 'flex',
           justifyContent: 'center'
         }}
@@ -215,6 +233,9 @@ class ProgressBubble extends React.Component {
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
+              {level.letter && (
+                <span id="test-bubble-letter"> {level.letter} </span>
+              )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
@@ -239,12 +260,19 @@ class ProgressBubble extends React.Component {
     );
 
     // If we have an href, wrap in an achor tag
+    // Only record the click if we are in the progress tab (currently
+    // hideAssessmentIcon is only true for progress tab_
     if (href) {
       bubble = (
         <a
           href={href}
           style={{textDecoration: 'none'}}
           className="uitest-ProgressBubble"
+          onClick={
+            hideAssessmentIcon
+              ? this.recordProgressTabProgressBubbleClick
+              : null
+          }
         >
           {bubble}
         </a>

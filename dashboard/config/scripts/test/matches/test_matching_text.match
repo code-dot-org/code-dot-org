@@ -1,6 +1,6 @@
 name 'test matching text'
 title 'Matching'
-content1 'Some really easy stuff to match.  Drag it around until you get it.'
+content1 'Some really easy stuff to match. Drag it around until you get it.'
 height '20'
 
 question "What color is the sky?"

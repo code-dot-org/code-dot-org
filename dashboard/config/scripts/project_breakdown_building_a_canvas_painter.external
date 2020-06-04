@@ -17,8 +17,8 @@ Over the course of the lesson, students make an app that allows a user to draw a
 ## Canvas External Resources:
 Canvas is introduce in these lessons, but it is used more as a tool for array processing.  If you or your students would like to know more about canvas, you may want to check out the sources below.  Note that canvas is an HTML element, but students do not have to interact with the HTML because they are using the Design Mode of App Lab.  The resources below are not App Lab specific, so they do include reference to the HTML needed to draw in canvas.
 
-- <a href = “http://eloquentjavascript.net/16_canvas.html” target=_blank> Eloquent Javascript explains Canvas (low level) <i class="fa fa-external-link-square"/></a>
-- <a href = “http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/” target=_blank> Creating HTML5 Canvas Javascript Drawing App <i class="fa fa-external-link-square"/></a>
+- <a href = “http://eloquentjavascript.net/16_canvas.html” target=_blank> Eloquent Javascript explains Canvas (low level) <i class="fa fa-external-link-square"></i></a>
+- <a href = “http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/” target=_blank> Creating HTML5 Canvas Javascript Drawing App <i class="fa fa-external-link-square"></i></a>
 
 
 MARKDOWN

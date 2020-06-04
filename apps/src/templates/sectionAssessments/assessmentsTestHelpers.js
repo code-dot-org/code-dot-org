@@ -522,6 +522,14 @@ export const questionOne = [
     name: 'BrendanBrendanBrendanBrendan',
     response: `We do not make mistakes we just have happy little accidents. Once you learn the technique,
         ohhh! Turn you loose on the world; you become a tiger.,`
+  },
+  {
+    id: 5,
+    studentId: '214',
+    name: 'Awesome Coder',
+    response: `for (let ii = 0; ii < stuff.length; ii++) {
+    console.log("I fixed a bug!!!");
+}`
   }
 ];
 

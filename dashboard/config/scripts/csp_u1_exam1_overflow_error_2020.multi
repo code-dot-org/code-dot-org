@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-overflow-error_2020'
+height 'auto'
+
+question 'Your computer uses 4 bits to represent decimal numbers (0, 1, 2, 3 and so on) in binary. What is the SMALLEST number for which an overflow error occur?’
+wrong ‘14’
+wrong ‘15’
+right ‘16’
+wrong ‘17’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -38,10 +38,10 @@
     "block_pool": "Dancelab",
     "validation_code": "if (World.following_count == undefined) {\r\n  World.following_count = 0;\r\n}\r\n\r\nif(nativeAPI.getTime(\"measures\") > 8){\r\n  sprites.forEach(function(sprite) {\r\n    // If a sprite has more than one behavior, assume it's following music\r\n    if (sprite.behaviors.length > 1) World.following_count++;\r\n  });\r\n  // We start with one sprite following by default, make sure the student has added another\r\n  if (World.following_count > 1) {\r\n    nativeAPI.pass();\r\n  } else {\r\n    nativeAPI.fail('danceFeedbackUseStartMapping');\r\n  }\r\n}",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_36.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_37.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_38.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/shark_39.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_36.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_37.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_38.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/shark_39.png"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"ALIEN\", \"BEAR\", \"CAT\", \"DUCK\", \"FROG\", \"MOOSE\", \"PINEAPPLE\", \"ROBOT\", \"SHARK\", \"UNICORN\"];",
     "name_suffix": "_draft",

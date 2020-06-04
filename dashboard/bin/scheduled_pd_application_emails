@@ -12,6 +12,10 @@ def queue_pd_reminder_emails
       teacher_application.queue_email :principal_approval_teacher_reminder
     end
   end
+
+  # Queue reminder emails for teachers that have been accepted but have not yet
+  # registered for a workshop.
+  Services::RegistrationReminder.queue_registration_reminders!
 end
 
 # First, add PD reminder emails to the queue.

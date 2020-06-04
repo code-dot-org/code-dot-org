@@ -5,6 +5,7 @@
  *
  */
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
@@ -15,13 +16,10 @@ import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
+import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {
-  getColumnsRef,
-  onColumnNames,
-  addMissingColumns
-} from '../storage/firebaseMetadata';
-import {getDatabase} from '../storage/firebaseUtils';
+import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
+import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -39,18 +37,19 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
-import {setApplabLibraries} from '../code-studio/components/applabLibraryRedux';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
 import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
 import {
+  tableType,
   addTableName,
   deleteTableName,
   updateTableColumns,
   updateTableRecords,
-  updateKeyValueData
+  updateKeyValueData,
+  setLibraryManifest
 } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
@@ -73,8 +72,13 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import i18n from '../code-studio/i18n';
-import {generateExpoApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '../util/exporter';
+import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 
 /**
  * Create a namespace for the application.
@@ -98,10 +102,12 @@ var jsInterpreterLogger = null;
  */
 Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
-    jsInterpreterLogger.log(object);
+    jsInterpreterLogger.log({output: object, fromConsoleLog: true});
   }
 
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  getStore().dispatch(
+    jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
+  );
 };
 consoleApi.setLogMethod(Applab.log);
 
@@ -139,7 +145,10 @@ function loadLevel() {
   // This led to lots of hackery in the code to properly scale the visualization
   // area. Width/height are now constant, but much of the hackery still remains
   // since I don't understand it well enough.
-  Applab.appWidth = applabConstants.APP_WIDTH;
+  Applab.appWidth = level.widgetMode
+    ? applabConstants.WIDGET_WIDTH
+    : applabConstants.APP_WIDTH;
+
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -176,7 +185,8 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
-      text: i18n.t('footer.how_it_works'),
+      key: 'how-it-works',
+      text: commonMsg.howItWorks(),
       link: project.getProjectUrl('/view'),
       newWindow: true
     },
@@ -186,6 +196,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
+      key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -201,6 +212,15 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
       newWindow: true
     }
   ].filter(item => item);
+
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
+  }
+
   return footerMenuItems;
 };
 
@@ -268,8 +288,8 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function handleExecutionError(err, lineNumber, outputString) {
-  outputError(outputString, lineNumber);
+function handleExecutionError(err, lineNumber, outputString, libraryName) {
+  outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
 
   // prevent further execution
@@ -292,11 +312,6 @@ Applab.getHtml = function() {
     designMode.serializeToLevelHtml();
   }
   return Applab.levelHtml;
-};
-
-Applab.getLibraries = function() {
-  var libraries = getStore().getState().applabLibrary.libraries;
-  return libraries.length ? libraries : undefined;
 };
 
 /**
@@ -374,11 +389,25 @@ Applab.init = function(config) {
   // Necessary for tests.
   thumbnailUtils.init();
 
+  Applab.generatedProperties = {
+    ...config.initialGeneratedProperties
+  };
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
+  );
+  config.getGeneratedProperties = getGeneratedProperties;
+
+  // Set information about the current Applab level being displayed.
+  getStore().dispatch(
+    actions.setLevelData({
+      name: config.level.name,
+      isStartMode: config.isStartMode
+    })
+  );
+
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
-  config.getLibrary = getLibrary;
-  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -387,22 +416,19 @@ Applab.init = function(config) {
   }
 
   if (config.level.editBlocks) {
+    config.level.lastAttempt = '';
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
       start_html: Applab.getHtml(),
-      start_libraries: Applab.getLibraries()
+      start_libraries: JSON.stringify(project.getProjectLibraries())
     }));
-  } else if (!config.channel) {
-    throw new Error(
-      'Cannot initialize App Lab without a channel id. ' +
-        'You may need to sign in to your code studio account first.'
-    );
   }
   Applab.channelId = config.channel;
   Applab.storage = initFirebaseStorage({
     channelId: config.channel,
     firebaseName: config.firebaseName,
     firebaseAuthToken: config.firebaseAuthToken,
+    firebaseSharedAuthToken: config.firebaseSharedAuthToken,
     firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
     showRateLimitAlert: studioApp().showRateLimitAlert
   });
@@ -520,16 +546,17 @@ Applab.init = function(config) {
   };
 
   config.afterClearPuzzle = function() {
+    let startLibraries;
+    if (config.level.startLibraries) {
+      startLibraries = JSON.parse(config.level.startLibraries);
+    }
+    project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
-    Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      true,
-      () => {},
-      outputError
-    ); // overwrite = true
+    Applab.storage.clearAllData(
+      () => console.log('success'),
+      err => console.log(err)
+    );
     studioApp().resetButtonClick();
   };
 
@@ -553,11 +580,7 @@ Applab.init = function(config) {
 
   config.enableShowLinesCount = false;
 
-  // In Applab, we want our embedded levels to look the same as regular levels,
-  // just without the editor
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -574,21 +597,9 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
-  if (level.dataTables) {
-    Applab.storage.populateTable(
-      level.dataTables,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
-  }
-  if (level.dataProperties) {
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+  let isDataTabLoaded = Promise.resolve();
+  if (level.dataTables || level.dataProperties || level.dataLibraryTables) {
+    isDataTabLoaded = initDataTab(level);
   }
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
@@ -630,25 +641,42 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !config.share,
+    playspacePhoneFrame: !(config.share || config.level.widgetMode),
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !config.level.hideViewDataButton,
-    hasDesignMode: !config.level.hideDesignMode,
+    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
+    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
+    librariesEnabled: !!config.level.librariesEnabled,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
     showDebugWatch:
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
-      !!config.level.isProjectLevel || config.level.makerlabEnabled
+      !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    widgetMode: config.level.widgetMode
   });
 
   config.dropletConfig = dropletConfig;
@@ -681,38 +709,7 @@ Applab.init = function(config) {
     });
   }
 
-  var librariesExist = level.libraries && level.libraries.length > 0;
-
-  if (
-    !librariesExist &&
-    level.startLibraries &&
-    level.startLibraries.length > 0
-  ) {
-    level.libraries = level.startLibraries;
-    librariesExist = true;
-  }
-
-  // Libraries should be added to redux whether the experiment is enabled or
-  // not. This prevents work from being lost if a levelbuilder toggles the
-  // experiment flag.
-  if (librariesExist) {
-    getStore().dispatch(setApplabLibraries(level.libraries));
-  }
-
-  if (experiments.isEnabled('student-libraries') && librariesExist) {
-    level.libraries.forEach(library => {
-      config.dropletConfig.additionalPredefValues.push(library.name);
-    });
-    let importedConfigs = level.libraries
-      .map(library => library.dropletConfig)
-      .reduce((a, b) => a.concat(b));
-    if (importedConfigs) {
-      Object.keys(importedConfigs).map(key => {
-        config.dropletConfig.blocks.push(importedConfigs[key]);
-        level.codeFunctions[importedConfigs[key].func] = null;
-      });
-    }
-  }
+  studioApp().loadLibraryBlocks(config);
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
@@ -755,6 +752,13 @@ Applab.init = function(config) {
           );
         }
       }
+    })
+    .then(() => {
+      if (getStore().getState().pageConstants.widgetMode) {
+        isDataTabLoaded.then(() => {
+          Applab.runButtonClick();
+        });
+      }
     });
 
   if (IN_UNIT_TEST) {
@@ -762,6 +766,45 @@ Applab.init = function(config) {
   }
   return loader;
 };
+
+async function initDataTab(levelOptions) {
+  if (levelOptions.dataTables) {
+    Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
+  }
+  if (levelOptions.dataProperties) {
+    Applab.storage.populateKeyValue(
+      levelOptions.dataProperties,
+      () => {},
+      outputError
+    );
+  }
+  if (levelOptions.dataLibraryTables) {
+    const channelExists = await Applab.storage.channelExists();
+    const libraryManifest = await Applab.storage.getLibraryManifest();
+    if (!channelExists) {
+      const tables = levelOptions.dataLibraryTables.split(',');
+      tables.forEach(table => {
+        const datasetInfo = getDatasetInfo(table, libraryManifest.tables);
+        if (!datasetInfo) {
+          // We don't know what this table is, we should just skip it.
+          console.warn(`unknown table ${table}`);
+        } else if (datasetInfo.current) {
+          Applab.storage.addCurrentTableToProject(
+            table,
+            () => console.log('success'),
+            outputError
+          );
+        } else {
+          Applab.storage.copyStaticTable(
+            table,
+            () => console.log('success'),
+            outputError
+          );
+        }
+      });
+    }
+  }
+}
 
 function changedToDataMode(state, lastState) {
   return (
@@ -801,6 +844,12 @@ function setupReduxSubscribers(store) {
       );
     }
 
+    const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
+    const isPreview = state.data && state.data.isPreviewOpen;
+    if (isDataMode && isPreview && !lastIsPreview) {
+      onDataPreview(state.data.tableName);
+    }
+
     if (
       !lastState.runState ||
       state.runState.isRunning !== lastState.runState.isRunning
@@ -809,18 +858,49 @@ function setupReduxSubscribers(store) {
     }
   });
 
-  if (store.getState().pageConstants.hasDataMode) {
-    // Initialize redux's list of tables from firebase, and keep it up to date as
-    // new tables are added and removed.
-    const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
-    tablesRef.on('child_added', snapshot => {
+  // Initialize redux's list of tables from firebase, and keep it up to date as
+  // new tables are added and removed.
+  let subscribeToTable = function(tableRef, tableType) {
+    tableRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+          tableType
+        )
+      );
+    });
+    tableRef.on('child_removed', snapshot => {
+      store.dispatch(
+        deleteTableName(
           typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
         )
       );
     });
-    tablesRef.on('child_removed', snapshot => {
+  };
+
+  if (store.getState().pageConstants.hasDataMode) {
+    subscribeToTable(
+      getProjectDatabase().child('counters/tables'),
+      tableType.PROJECT
+    );
+
+    // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
+    Applab.storage
+      .getLibraryManifest()
+      .then(result => store.dispatch(setLibraryManifest(result)));
+    // /v3/channels/<channel_id>/current_tables tracks which
+    // current tables the project has imported. Here we initialize the
+    // redux list of current tables and keep it in sync
+    let currentTableRef = getProjectDatabase().child('current_tables');
+    currentTableRef.on('child_added', snapshot => {
+      store.dispatch(
+        addTableName(
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+          tableType.SHARED
+        )
+      );
+    });
+    currentTableRef.on('child_removed', snapshot => {
       store.dispatch(
         deleteTableName(
           typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
@@ -877,33 +957,36 @@ Applab.render = function() {
   );
 };
 
+/**
+ * Export the project for web or use within Expo.
+ * @param {Object} expoOpts
+ */
 Applab.exportApp = function(expoOpts) {
+  // Run, grab the html from divApplab, then reset:
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
 
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName = project.getCurrentName() || 'my-app';
-
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
-      {
-        appName,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      studioApp().config
-    );
-  }
-
   return Exporter.exportApp(
-    appName,
+    project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
     html,
     expoOpts,
     studioApp().config
+  );
+};
+
+Applab.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  Applab.generatedProperties.export = {
+    ...Applab.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
   );
 };
 
@@ -1106,11 +1189,6 @@ var displayFeedback = function() {
       tryAgainText: applabMsg.tryAgainText(),
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
-      // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToLegacyGalleryUrl:
-        level.freePlay &&
-        Applab.response &&
-        Applab.response.save_to_gallery_url,
       message: Applab.message,
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
@@ -1132,24 +1210,12 @@ Applab.onReportComplete = function(response) {
   displayFeedback();
 };
 
-/**
- * Generates a library from the functions in the project code
- */
-function getLibrary() {
-  var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
-  temporaryInterpreter.parse({code: studioApp().getCode()});
-  return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
-}
-
-/**
- * Returns true if a lint error (red gutter warning) exists in the code
- */
-function codeContainsError() {
-  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
-    return annotation.type === 'error';
-  });
-
-  return errors.length > 0;
+function getGeneratedProperties() {
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...Applab.generatedProperties
+  };
 }
 
 /**
@@ -1194,31 +1260,10 @@ Applab.execute = function() {
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
 
-    // Set up student-created libraries
-    if (experiments.isEnabled('student-libraries')) {
-      getStore()
-        .getState()
-        .applabLibrary.libraries.map(library => {
-          var functionNames = library.functionNames
-            .map(name => {
-              return name + ': ' + name;
-            })
-            .join(',');
-          var libraryClosure =
-            'var ' +
-            library.name +
-            ' = (function() {\n' +
-            library.source +
-            '\nreturn {' +
-            functionNames +
-            '};})();';
-          codeWhenRun = libraryClosure + codeWhenRun;
-        });
-    }
-
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
+      projectLibraries: level.projectLibraries,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true
@@ -1293,6 +1338,18 @@ function onInterfaceModeChange(mode) {
   requestAnimationFrame(() => showHideWorkspaceCallouts());
 }
 
+function onDataPreview(tableName) {
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
+    getStore().dispatch(updateTableColumns(tableName, columnNames));
+  });
+
+  getSharedDatabase()
+    .child(`storage/tables/${tableName}/records`)
+    .once('value', snapshot => {
+      getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
+    });
+}
+
 /**
  * Handle a view change within data mode.
  * @param {DataView} view
@@ -1301,37 +1358,47 @@ function onDataViewChange(view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-  const storageRef = getDatabase(Applab.channelId).child('storage');
+
+  const projectStorageRef = getProjectDatabase().child('storage');
+  const sharedStorageRef = getSharedDatabase().child('storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
   // only unlistening from 'value' events here.
-  storageRef.child('keys').off('value');
-  storageRef.child(`tables/${oldTableName}/records`).off('value');
-  getColumnsRef(oldTableName).off();
+  projectStorageRef.child('keys').off('value');
+  projectStorageRef.child(`tables/${oldTableName}/records`).off('value');
+  sharedStorageRef.child(`tables/${oldTableName}/records`).off('value');
+  getColumnsRef(getProjectDatabase(), oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
-      storageRef.child('keys').on('value', snapshot => {
+      projectStorageRef.child('keys').on('value', snapshot => {
         getStore().dispatch(updateKeyValueData(snapshot.val()));
       });
       return;
-    case DataView.TABLE:
-      // Add any columns which appear in records in Firebase to the list of columns in
-      // Firebase. Do NOT do this every time the records change, to avoid adding back
-      // a column shortly after it was explicitly renamed or deleted.
-      addMissingColumns(newTableName);
+    case DataView.TABLE: {
+      let newTableType = getStore().getState().data.tableListMap[newTableName];
+      let storageRef;
+      if (newTableType === tableType.SHARED) {
+        storageRef = sharedStorageRef.child(`tables/${newTableName}/records`);
+      } else {
+        storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
+      }
+      onColumnsChange(
+        newTableType === tableType.PROJECT
+          ? getProjectDatabase()
+          : getSharedDatabase(),
+        newTableName,
+        columnNames => {
+          getStore().dispatch(updateTableColumns(newTableName, columnNames));
+        }
+      );
 
-      onColumnNames(newTableName, columnNames => {
-        getStore().dispatch(updateTableColumns(newTableName, columnNames));
+      storageRef.on('value', snapshot => {
+        getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
       });
-
-      storageRef
-        .child(`tables/${newTableName}/records`)
-        .on('value', snapshot => {
-          getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
-        });
       return;
+    }
     default:
       return;
   }
@@ -1421,6 +1488,8 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.message = results.message;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
+  } else {
+    Applab.testResults = TestResults.SUBMITTED_RESULT;
   }
 
   // If we're failing due to failOnLintErrors, replace the previous test result

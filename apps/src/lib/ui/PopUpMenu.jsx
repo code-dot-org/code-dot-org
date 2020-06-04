@@ -21,7 +21,7 @@ const menuStyle = {
   borderRadius: 2,
   boxShadow: '3px 3px 3px gray',
   textAlign: 'left',
-  maxWidth: 200
+  maxWidth: 300
 };
 const tailBorderStyle = {
   position: 'absolute',

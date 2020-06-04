@@ -2,21 +2,13 @@
 Encoding.default_external = Encoding::UTF_8
 
 source "https://supermarket.chef.io"
-
-#metadata
-
-cookbook 'apt', '~> 2.6.0' # 6.0.0 requires Chef >= 12.9
-cookbook 'ark', '< 4.0.0' # 4.0.0 requires Chef >= 13.4
-cookbook 'build-essential', '~> 2.1.3'
-cookbook 'chef-client', '~> 4.2.0'
-cookbook 'ntp', '~> 1.8.6'
-cookbook 'seven_zip', '< 3.0.0' # 3.0.0 requires Chef >= 13
-
-# Not yet published to Supermarket: https://github.com/PaytmLabs/chef-ixgbevf/issues/1
-cookbook 'ixgbevf', github: 'wjordan/chef-ixgbevf', branch: 'cdo'
-
-# Ref: https://github.com/chef-cookbooks/chef_client_updater/pull/93
-cookbook 'chef_client_updater', github: 'wjordan/chef_client_updater', branch: 'update_rubygems_fix'
+cookbook 'apt'
+cookbook 'ark'
+cookbook 'build-essential'
+cookbook 'chef-client'
+cookbook 'ntp'
+cookbook 'seven_zip'
+cookbook 'chef_client_updater'
 
 # List all local cookbooks using local-mode Chef.
 require 'chef/local_mode'

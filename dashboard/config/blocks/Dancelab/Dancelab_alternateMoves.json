@@ -1,0 +1,183 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "alternateMoves",
+    "inline": false,
+    "blockText": "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}",
+    "color": [
+      270,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "bears",
+            "\"BEAR\""
+          ],
+          [
+            "cats",
+            "\"CAT\""
+          ],
+          [
+            "dogs",
+            "\"DOG\""
+          ],
+          [
+            "ducks",
+            "\"DUCK\""
+          ],
+          [
+            "frogs",
+            "\"FROG\""
+          ],
+          [
+            "moose",
+            "\"MOOSE\""
+          ],
+          [
+            "pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "robots",
+            "\"ROBOT\""
+          ],
+          [
+            "sharks",
+            "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "N",
+        "type": "ClampedNumber(0.1,)",
+        "field": true
+      },
+      {
+        "name": "MOVE1",
+        "options": [
+          [
+            "Body Roll",
+            "MOVES.Roll"
+          ],
+          [
+            "Clap High",
+            "MOVES.ClapHigh"
+          ],
+          [
+            "Dab",
+            "MOVES.Dab"
+          ],
+          [
+            "Double Down",
+            "MOVES.DoubleJam"
+          ],
+          [
+            "Drop",
+            "MOVES.Drop"
+          ],
+          [
+            "Floss",
+            "MOVES.Floss"
+          ],
+          [
+            "Fresh",
+            "MOVES.Fresh"
+          ],
+          [
+            "Gangnam",
+            "MOVES.Clown"
+          ],
+          [
+            "Star",
+            "MOVES.Kick"
+          ],
+          [
+            "This or That",
+            "MOVES.ThisOrThat"
+          ],
+          [
+            "Zombie",
+            "MOVES.Thriller"
+          ],
+          [
+            "None",
+            "MOVES.Rest"
+          ]
+        ]
+      },
+      {
+        "name": "MOVE2",
+        "options": [
+          [
+            "Body Roll",
+            "MOVES.Roll"
+          ],
+          [
+            "Clap High",
+            "MOVES.ClapHigh"
+          ],
+          [
+            "Dab",
+            "MOVES.Dab"
+          ],
+          [
+            "Double Down",
+            "MOVES.DoubleJam"
+          ],
+          [
+            "Drop",
+            "MOVES.Drop"
+          ],
+          [
+            "Floss",
+            "MOVES.Floss"
+          ],
+          [
+            "Fresh",
+            "MOVES.Fresh"
+          ],
+          [
+            "Gangnam",
+            "MOVES.Clown"
+          ],
+          [
+            "Star",
+            "MOVES.Kick"
+          ],
+          [
+            "This or That",
+            "MOVES.ThisOrThat"
+          ],
+          [
+            "Zombie",
+            "MOVES.Thriller"
+          ],
+          [
+            "None",
+            "MOVES.Rest"
+          ]
+        ]
+      }
+    ]
+  }
+}

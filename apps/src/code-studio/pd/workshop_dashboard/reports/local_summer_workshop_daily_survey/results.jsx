@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
 import ChoiceResponses from '../../components/survey_results/choice_responses';
-import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
+import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
 
@@ -11,14 +11,9 @@ export default class Results extends React.Component {
     questions: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    facilitators: PropTypes.object.isRequired,
-    facilitatorAverages: PropTypes.object.isRequired,
-    facilitatorResponseCounts: PropTypes.object.isRequired,
-    courseName: PropTypes.string.isRequired
-  };
-
-  state = {
-    facilitatorIds: Object.keys(this.props.facilitators)
+    courseName: PropTypes.string,
+    workshopRollups: PropTypes.object,
+    facilitatorRollups: PropTypes.object
   };
 
   /**
@@ -110,34 +105,54 @@ export default class Results extends React.Component {
     ));
   }
 
-  renderFacilitatorAverages() {
-    return Object.keys(this.props.facilitators).map((facilitator_id, i) => (
-      <Tab
-        eventKey={this.props.sessions.length + i + 1}
-        key={i}
-        title={this.props.facilitators[facilitator_id]}
-      >
-        <FacilitatorAveragesTable
-          facilitatorAverages={
-            this.props.facilitatorAverages[
-              this.props.facilitators[facilitator_id]
-            ]
-          }
-          facilitatorId={parseInt(facilitator_id, 10)}
-          facilitatorName={this.props.facilitators[facilitator_id]}
-          questions={this.props.facilitatorAverages['questions']}
-          courseName={this.props.courseName}
-          facilitatorResponseCounts={this.props.facilitatorResponseCounts}
-        />
-      </Tab>
-    ));
+  renderSurveyRollups() {
+    let tabs = [];
+    let key = 0;
+
+    if (this.props.workshopRollups) {
+      key += 1;
+      tabs.push(
+        <Tab
+          eventKey={this.props.sessions.length + key}
+          key={key}
+          title="Workshop Rollups"
+        >
+          <SurveyRollupTable
+            courseName={this.props.courseName}
+            rollups={this.props.workshopRollups.rollups}
+            questions={this.props.workshopRollups.questions}
+            facilitators={this.props.workshopRollups.facilitators}
+          />
+        </Tab>
+      );
+    }
+
+    if (this.props.facilitatorRollups) {
+      key += 1;
+      tabs.push(
+        <Tab
+          eventKey={this.props.sessions.length + key}
+          key={key}
+          title="Facilitator Rollups"
+        >
+          <SurveyRollupTable
+            courseName={this.props.courseName}
+            rollups={this.props.facilitatorRollups.rollups}
+            questions={this.props.facilitatorRollups.questions}
+            facilitators={this.props.facilitatorRollups.facilitators}
+          />
+        </Tab>
+      );
+    }
+
+    return tabs;
   }
 
   render() {
     return (
       <Tabs id="SurveyTab">
         {this.renderAllSessionsResults()}
-        {this.renderFacilitatorAverages()}
+        {this.renderSurveyRollups()}
       </Tabs>
     );
   }

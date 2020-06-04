@@ -1,0 +1,111 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "jumpToEach",
+    "blockText": "jump {GROUP} to {LOCATION}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "bears",
+            "\"BEAR\""
+          ],
+          [
+            "cats",
+            "\"CAT\""
+          ],
+          [
+            "dogs",
+            "\"DOG\""
+          ],
+          [
+            "ducks",
+            "\"DUCK\""
+          ],
+          [
+            "frogs",
+            "\"FROG\""
+          ],
+          [
+            "moose",
+            "\"MOOSE\""
+          ],
+          [
+            "pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "robots",
+            "\"ROBOT\""
+          ],
+          [
+            "sharks",
+            "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "LOCATION",
+        "options": [
+          [
+            "top",
+            "{x: 200, y: 100}"
+          ],
+          [
+            "bottom",
+            "{x: 200, y: 300}"
+          ],
+          [
+            "left",
+            "{x: 100, y: 200}"
+          ],
+          [
+            "right",
+            "{x: 300, y: 200}"
+          ],
+          [
+            "center",
+            "{x: 200, y: 200}"
+          ],
+          [
+            "top left",
+            "{x: 100, y: 100}"
+          ],
+          [
+            "top right",
+            "{x: 300, y: 100}"
+          ],
+          [
+            "bottom left",
+            "{x: 100, y: 300}"
+          ],
+          [
+            "bottom right",
+            "{x: 300, y: 300}"
+          ],
+          [
+            "random",
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}"
+          ]
+        ]
+      }
+    ]
+  }
+}

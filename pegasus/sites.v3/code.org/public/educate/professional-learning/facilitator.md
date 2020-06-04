@@ -17,7 +17,7 @@ theme: responsive
 
 Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators. 
 
-Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
+**If you are interested in joining the program, please sign up below to receive a reminder when applications open.**
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
 
@@ -160,6 +160,9 @@ We're seeking candidates who demonstrate the following qualities:
 
 <div style="clear:both"></div>
 
+
+<!--
+
 ## Learn more about the program
 
 ### Overview
@@ -191,7 +194,6 @@ In the meantime, be sure to visit our curriculum pages for additional informatio
 - [CS Principles - Grades 9-12](/educate/csp)
 
 
-<!--
 
 Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
 
@@ -221,6 +223,8 @@ Ready to apply? Follow these steps:
 The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.** Any appliaction submitted after January 31 will be considered if space is available.
 
 In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
+
+
 
 
 -->

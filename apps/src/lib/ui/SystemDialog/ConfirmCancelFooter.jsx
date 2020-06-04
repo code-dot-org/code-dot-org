@@ -47,6 +47,7 @@ export default class ConfirmCancelFooter extends React.Component {
     return (
       <div style={style}>
         <Button
+          __useDeprecatedTag
           onClick={onConfirm}
           text={confirmText}
           color={confirmColor}
@@ -56,6 +57,7 @@ export default class ConfirmCancelFooter extends React.Component {
         />
         <span style={messageStyle}>{children}</span>
         <Button
+          __useDeprecatedTag
           onClick={onCancel}
           text={cancelText}
           color={cancelColor}

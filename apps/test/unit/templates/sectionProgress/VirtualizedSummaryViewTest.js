@@ -1,9 +1,10 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
-import {UnconnectedVirtualizedSummaryView} from '@cdo/apps/templates/sectionProgress/VirtualizedSummaryView';
+import {expect} from '../../../util/deprecatedChai';
+import {UnconnectedVirtualizedSummaryView} from '@cdo/apps/templates/sectionProgress/summary/VirtualizedSummaryView';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {
   getStore,
   registerReducers,
@@ -23,7 +24,7 @@ describe('VirtualizedSummaryView', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress, scriptSelection});
+    registerReducers({sectionProgress, scriptSelection, currentUser});
     defaultProps = {
       getLevels: () => {
         return [{id: 789, status: 'perfect'}];

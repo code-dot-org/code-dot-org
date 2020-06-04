@@ -4,8 +4,8 @@
 #regional-partner-mini-contact-container{"data-source-page-id" => source_page_id, "data-options" => {notes: notes}, style: "background-color: #d9eff7; padding: 20px; border-radius: 10px;"}
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/regionalPartnerMiniContact.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/regionalPartnerMiniContact.js')}
 
 :javascript
   $(document).ready(window.showRegionalPartnerMiniContact);

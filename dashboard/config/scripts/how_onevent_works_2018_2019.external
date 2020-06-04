@@ -41,7 +41,7 @@ It's important to understand in Event-Driven programming that:
 * **Users trigger events** - Events occur when users click a button, tap the screen, move the mouse, type a key on the keyboard, etc.
 * **Events trigger code** - When an event occurs or "fires" it can be used to trigger a particular javascript function.
 
-App Lab's `onEvent` block is a type of event-handling function called an **Event Listener**. It wraps all of the setup up you need to do event handling into one command that has several parts. Here is an example with everything labeled:
+App Lab's `onEvent` block is a type of event-handling function called an **Event Listener**. It wraps up all the setup that you need to do for event handling into one command with several parts. Here is an example with everything labeled:
 
 <img src="https://images.code.org/a4cf535f00b0b77737d5259386b4442d-image-1476884080311.png" style="display: block; margin: auto">
 

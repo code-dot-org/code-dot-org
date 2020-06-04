@@ -2,8 +2,7 @@ name 'AP_practice_Qs_rqb_106_CSP_2_1_2'
 wrong '10020'
 wrong '4F'
 wrong '10111'
-right 'It is impossible to know without knowing the base system of each set of numbers. 
-'
+right 'It is impossible to know without knowing the base system of each set of numbers.'
 markdown <<MARKDOWN
 Which set of numbers has the greatest value? 
 

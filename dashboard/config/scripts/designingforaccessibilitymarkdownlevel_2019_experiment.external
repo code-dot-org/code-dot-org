@@ -1,0 +1,19 @@
+name 'DesigningForAccessibilityMarkdownLevel_2019_experiment'
+editor_experiment 'broward'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Designing for Accessibility
+
+* In the world of computer science, **accessibility** is about creating technology for people with disabilities.
+* Disabilities include physical, auditory, visual, and many others.
+* Disabilities are diverse and impact people in different ways, including how they use technology like **smartphone apps**.
+* Designing apps that are accessible for people with disabilities makes those apps better for everyone else as well!
+
+![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   blankStudentTransfer,
@@ -15,12 +15,12 @@ const studentData = [
   {id: 3, name: 'studentc'},
   {id: 0, name: 'studenta'}
 ];
-const sections = {
-  0: {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
-  1: {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
-  2: {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
-  3: {id: 3, name: 'sectiond', loginType: SectionLoginType.word}
-};
+const sections = [
+  {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
+  {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
+  {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
+  {id: 3, name: 'sectiond', loginType: SectionLoginType.word}
+];
 
 describe('MoveStudents', () => {
   let updateStudentTransfer;
@@ -44,57 +44,12 @@ describe('MoveStudents', () => {
     };
   });
 
-  it('opens a dialog with a table', () => {
-    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
-
-    wrapper.find('Button').simulate('click');
-    expect(wrapper.find('BaseDialog').exists()).to.be.true;
-    expect(wrapper.find('table').exists()).to.be.true;
-  });
-
-  it('renders students as rows', () => {
-    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
-
-    wrapper.find('Button').simulate('click');
-    const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells).to.have.length(3);
-  });
-
-  it('sorts students by name (ascending) by default', () => {
-    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
-
-    wrapper.find('Button').simulate('click');
-    const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0)).to.have.text('studenta');
-    expect(nameCells.at(1)).to.have.text('studentb');
-    expect(nameCells.at(2)).to.have.text('studentc');
-  });
-
-  it('sorts students by name (descending) on click', () => {
-    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
-
-    wrapper.find('Button').simulate('click');
-    wrapper.find('#uitest-name-header').simulate('click');
-    const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0)).to.have.text('studentc');
-    expect(nameCells.at(1)).to.have.text('studentb');
-    expect(nameCells.at(2)).to.have.text('studenta');
-  });
-
   it('renders only movable sections in dropdown', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
-
-    wrapper.find('Button').simulate('click');
-    const dropdownOptions = wrapper.find('select').find('option');
-    /**
-     * Dropdown options should include initial empty option, list of
-     * sections (excluding current section and any clever/google classroom sections),
-     * and 'Other teacher' option
-     */
-    expect(dropdownOptions).to.have.length(3);
-    expect(dropdownOptions.at(0)).to.have.text('');
-    expect(dropdownOptions.at(1)).to.have.text('sectiond');
-    expect(dropdownOptions.at(2)).to.have.text('Other teacher');
+    let dropdownOptions = wrapper.instance().getOptions();
+    expect(dropdownOptions).to.have.length(2);
+    expect(dropdownOptions[0].name).to.equal('sectiond');
+    expect(dropdownOptions[1].name).to.equal('Other teacher');
   });
 
   it('renders additional inputs if other teacher is selected', () => {
@@ -106,7 +61,8 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    wrapper.find('Button').simulate('click');
+    wrapper.instance().openDialog();
+    wrapper.update();
     expect(wrapper.find('#uitest-other-teacher').exists()).to.be.true;
   });
 
@@ -120,18 +76,16 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    wrapper.find('Button').simulate('click');
     expect(transferStudents).not.to.have.been.called;
-    wrapper.find('#uitest-submit').simulate('click');
+    wrapper.instance().transfer();
     expect(transferStudents).to.have.been.calledOnce;
   });
 
   it('calls cancelStudentTransfer on close', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
-    wrapper.find('Button').simulate('click');
     expect(cancelStudentTransfer).not.to.have.been.called;
-    wrapper.find('#uitest-cancel').simulate('click');
+    wrapper.instance().closeDialog();
     expect(cancelStudentTransfer).to.have.been.calledOnce;
   });
 
@@ -147,6 +101,42 @@ describe('MoveStudents', () => {
     wrapper.find('Button').simulate('click');
     const errorElement = wrapper.find('#uitest-error');
     expect(errorElement.exists()).to.be.true;
-    expect(errorElement).to.have.text(transferStatus.error);
+    expect(errorElement.text()).to.equal(transferStatus.error);
+  });
+
+  it('toggleStudentSelected calls updateStudentTransfer with an updated set of IDs', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+    wrapper.instance().toggleStudentSelected(1);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: [1]});
+  });
+
+  it('toggleStudentSelected adds a missing ID', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+    wrapper.instance().toggleStudentSelected(1);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: [1]});
+  });
+
+  it('toggleStudentSelected removes an existing ID', () => {
+    const studentTransfer = {...blankStudentTransfer, studentIds: [1]};
+    const props = {...DEFAULT_PROPS, transferData: studentTransfer};
+    const wrapper = mount(<MoveStudents {...props} />);
+    wrapper.instance().toggleStudentSelected(1);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: []});
+  });
+
+  it('toggleAll true adds all IDs', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+    wrapper.instance().toggleAll(true);
+    expect(updateStudentTransfer).to.have.been.calledWith({
+      studentIds: [1, 3, 0]
+    });
+  });
+
+  it('toggleAll removes all ID', () => {
+    const studentTransfer = {...blankStudentTransfer, studentIds: [1, 3]};
+    const props = {...DEFAULT_PROPS, transferData: studentTransfer};
+    const wrapper = mount(<MoveStudents {...props} />);
+    wrapper.instance().toggleAll(false);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: []});
   });
 });

@@ -1,0 +1,3 @@
+# Partials protect against directory transversal
+
+{{ ../public/test_md }}

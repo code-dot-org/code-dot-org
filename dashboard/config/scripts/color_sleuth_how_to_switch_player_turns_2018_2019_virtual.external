@@ -1,0 +1,88 @@
+name 'Color Sleuth - How to switch player turns_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Whose turn is it?
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Wow, it's really beginning to feel like a game!</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I know. So now let's think about scoring.</p>
+
+<p>It's not so simple because what we want is for the players to take turns.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Right, to update the score we need to know which player clicked a button.  That means we need a way to indicate whose turn it is, and then update things based on that.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I think we can just make another global variable to keep track.  We can just store a number: <code>1</code> for player 1 and <code>2</code> for player 2. Then every time a button is clicked, we make a new game board, and we can also switch the player from 1 to 2, or 2 to 1.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, so there are actually two major things we need to do:</p>
+
+<ol>
+<li>Alternate turns between player1 and player2 each time a button is clicked</li>
+
+<li>Update player1's score if it was her turn or player2's score if hers.</li>
+</ol>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Probably yeah. Also, I wanted to indicate on the screen whose turn it is by showing and hiding a simple gray box behind the player's score, like this:</p>
+
+</div>
+<img src="https://images.code.org/51b19966ec2e669a6c886a4d4d123243-image-1481213790493.png" alt="" style="display: block; margin: auto;">
+<div style="width: 400px; margin: auto">
+
+<p>So, part of alternating turns is to update the screen to show whose turn it is.  What should we do first?</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Well, I think we should start by getting the alternating player action working first. Because we can't really test whether we're updating the correct player's score unless we have it. </p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Mhm.  Good thinking. So let's start with get alternating turns working. </p>
+
+<p style="text-align: center"> ALEXIS  </p>
+
+<p>It seems like we're going to need a small if statement that says something like "if it's player1's turn right now, then make it player2's turn, otherwise (it must be player2's turn so) make it player1's turn."</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Maybe we should put the code into another function that handles just the switching of the player and updating the screen. Call it something like <code>switchPlayer()</code>.  </p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>I think I follow. let's make sure we're both thinking the same thing.  Let me add to the pseudocode here...</p>
+
+</div>
+<img src="https://images.code.org/a740db3276b9f1009d795fa30147399d-image-1481818219535.png" alt="" style="display: block; margin: auto;">
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I like it.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, let's add it with just console.log statements to verify for now.  We'll update the UI once we know we have the variable changing correctly.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Sounds good.  Let's do it.</p>
+
+</div>
+
+## Click to try it
+
+MARKDOWN

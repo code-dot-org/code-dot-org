@@ -1,7 +1,7 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
-import * as dontMarshalApi from './dontMarshalApi';
+import dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
@@ -15,7 +15,6 @@ import {
   setPropertyDropdown,
   setPropertyValueSelector
 } from './setPropertyDropdown';
-import {getListColumnDropdown} from './getListDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
 
@@ -35,6 +34,7 @@ var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
+var arrayBlockPrefix = 'list.';
 
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
@@ -215,7 +215,14 @@ export var blocks = [
     category: 'UI controls',
     paletteParams: ['id'],
     params: ['"id"'],
-    dropdown: {0: idDropdownWithSelector('img')},
+    dropdown: {
+      0: function() {
+        return [
+          ...idDropdownWithSelector('img')(),
+          ...idDropdownWithSelector('.img-upload')()
+        ];
+      }
+    },
     type: 'value'
   },
   {
@@ -226,7 +233,7 @@ export var blocks = [
     params: ['"id"', '"https://code.org/images/logo.png"'],
     dropdown: {
       0: idDropdownWithSelector('img'),
-      1: function() {
+      1: () => {
         return getAssetDropdown('image');
       }
     },
@@ -521,18 +528,6 @@ export var blocks = [
     dontMarshal: true
   },
 
-  {
-    func: 'getList',
-    parent: api,
-    category: 'Data',
-    params: ['tableName', 'columnName'],
-    dropdown: {
-      0: () => getAssetDropdown('dataset'),
-      1: getListColumnDropdown()
-    },
-    nativeIsAsync: true,
-    type: 'value'
-  },
   {
     func: 'startWebRequest',
     parent: api,
@@ -866,6 +861,12 @@ export var blocks = [
     type: 'value'
   },
   {
+    func: 'declareAssign_list_123',
+    block: 'var list = [1, 2, 3];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
     func: 'declareAssign_list_abd',
     block: 'var list = ["a", "b", "d"];',
     category: 'Variables',
@@ -884,6 +885,16 @@ export var blocks = [
     noAutocomplete: true,
     tipPrefix: arrayMethodPrefix,
     type: 'property'
+  },
+  {
+    func: 'join',
+    blockPrefix: arrayBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.join',
+    tipPrefix: arrayBlockPrefix,
+    paletteParams: ['separator'],
+    params: ['"-"'],
+    type: 'value'
   },
   {
     func: 'insertItem',
@@ -1103,6 +1114,15 @@ export var blocks = [
     docFunc: 'comment',
     category: 'Goals',
     noAutocomplete: true
+  },
+  {
+    func: 'getColumn',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'column'],
+    params: ['"mytable"', '"mycolumn"'],
+    nativeIsAsync: true,
+    type: 'value'
   }
 ];
 

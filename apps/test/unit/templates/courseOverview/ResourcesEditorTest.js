@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
@@ -85,7 +85,7 @@ describe('ResourcesEditor', () => {
       const wrapper = mount(<ResourcesEditor {...defaultProps} />);
       const resource = wrapper.find('Resource').at(0);
       assert.equal(resource.find('select').length, 1);
-      assert.equal(resource.find('option').length, 10);
+      assert.equal(resource.find('option').length, 11);
       assert.equal(resource.find('input').length, 1);
     });
   });

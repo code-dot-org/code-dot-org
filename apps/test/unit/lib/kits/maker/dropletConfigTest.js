@@ -1,5 +1,5 @@
 /** @file Test maker droplet config behavior */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import {
   blocks,
   getBoardEventDropdownForParam,

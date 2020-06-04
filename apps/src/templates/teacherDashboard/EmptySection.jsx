@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   text: {
@@ -21,7 +21,7 @@ export default class EmptySection extends React.Component {
 
     return (
       <div style={styles.text}>
-        <UnsafeRenderedMarkdown
+        <SafeMarkdown
           markdown={i18n.emptySection({
             url: `/teacher_dashboard/sections/${sectionId}/manage_students`
           })}

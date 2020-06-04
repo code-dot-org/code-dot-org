@@ -26,6 +26,7 @@ For example, in the picture on the right there is a stack of 14 lego blocks and 
 <br>
 
 <hr />
+
 ## Introduction to the Text Compression Widget
 
 In lesson 2, we use the Text Compression widget, which allows students to make their own lossy compression structure in a similar way. Because we’re compressing poems instead of legos, the repetitive characters may not all be in a row like the colored blocks (the word ‘yellow’ could appear six times within the body of the text). With the widget, we can replace repetitive words, phrases, or character with a single symbol. We used a dictionary to keep track of the mapping of symbols to what they represent. Once the text is compressed, we can use the dictionary key to return the piece of text to its original state in order to read it. The image below shows a poem from the text compression widget that has been compressed: 

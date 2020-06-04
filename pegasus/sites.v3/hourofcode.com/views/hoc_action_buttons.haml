@@ -6,11 +6,7 @@
   %a#videobutton.ctabuttontag{onclick: "adjustScroll('homepage-video');", style: "text-decoration: none;"}
     %button.ctabutton-white-inverse
       = hoc_s(:front_watch_regular_video)
--elsif ["pre-hoc"].include?(hoc_mode)
-  %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('join');", style: "text-decoration: none;"}
-    %button.ctabutton-white
-      = hoc_s(:front_join_us_button)
--elsif ["soon-hoc"].include?(hoc_mode)
+-elsif ["pre-hoc", "soon-hoc"].include?(hoc_mode)
   %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('join');", style: "text-decoration: none;"}
     %button.ctabutton-white
       = hoc_s(:front_join_us_button)

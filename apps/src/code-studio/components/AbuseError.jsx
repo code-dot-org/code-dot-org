@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -26,10 +26,10 @@ export default class AbuseError extends React.Component {
     return (
       <div className={this.props.className} style={this.props.style}>
         <div>
-          <UnsafeRenderedMarkdown markdown={this.props.i18n.tos} />
+          <SafeMarkdown markdown={this.props.i18n.tos} />
         </div>
         <div>
-          <UnsafeRenderedMarkdown markdown={this.props.i18n.contact_us} />
+          <SafeMarkdown markdown={this.props.i18n.contact_us} />
         </div>
       </div>
     );

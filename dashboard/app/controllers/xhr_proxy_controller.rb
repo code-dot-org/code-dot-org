@@ -26,11 +26,12 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
-    accuweather.com
+    allrecipes.com
     apex.oracle.com
-    api.coinmarketcap.com
     api.data.gov
     api.datamuse.com
+    api.energidataservice.dk
+    api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -39,38 +40,48 @@ class XhrProxyController < ApplicationController
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
+    api.uclassify.com
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
     code.org
     compete.hsctf.com
+    covidtracking.com
+    cryptonator.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    developer.accuweather.com
+    developers.zomato.com
+    donordrive.com
     dweet.io
     enclout.com
     githubusercontent.com
-    googleapis.com
     hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
+    images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
+    maps.googleapis.com
+    opentdb.com
+    pokeapi.co
     qrng.anu.edu.au
     quandl.com
-    query.yahooapis.com
     quizlet.com
     rejseplanen.dk
+    maker.ifttt.com
+    maps.googleapis.com
     noaa.gov
-    nuevaschool.ngrok.io
-    nuevaschool2.ngrok.io
-    nuevaschool3.ngrok.io
     numbersapi.com
+    pastebin.com
     random.org
+    restcountries.eu
     rhcloud.com
     runescape.com
     samples.openweathermap.org
@@ -78,6 +89,7 @@ class XhrProxyController < ApplicationController
     spreadsheets.google.com
     stats.minecraftservers.org
     swapi.co
+    theunitedstates.io
     transitchicago.com
     translate.yandex.net
     vpic.nhtsa.dot.gov

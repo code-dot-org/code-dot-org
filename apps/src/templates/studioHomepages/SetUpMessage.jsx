@@ -94,6 +94,7 @@ class SetUpMessage extends Component {
           <div style={[styles.description, localeStyle]}>{descriptionText}</div>
         </div>
         <Button
+          __useDeprecatedTag
           href={buttonUrl}
           onClick={onClick}
           className={buttonClass}

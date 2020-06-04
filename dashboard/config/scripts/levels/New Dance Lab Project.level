@@ -42,16 +42,14 @@
       "downButton",
       "upButton"
     ],
-    "default_song": "firework_katyperry",
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "default_song": "ificanthaveyou_shawnmendes",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-20 19:27:33 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-20 19:30:02 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\",\"toolbox_blocks\",\"hide_custom_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-17 14:56:25 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":15,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2018-10-23 22:23:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-23 22:32:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-23 22:34:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 05:25:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 05:26:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 21:20:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-21 22:27:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-28 20:09:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-28 20:09:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-12-17 23:19:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-09-20 19:27:33 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-20 19:30:02 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\",\"toolbox_blocks\",\"hide_custom_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-17 14:56:25 -0700\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":15,\"changed_by_email\":\"levelbuilder@code.org\"},{\"changed_at\":\"2018-10-23 22:23:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-23 22:32:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-23 22:34:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 05:25:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 05:26:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 21:20:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-21 22:27:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-28 20:09:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-28 20:09:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-12-17 23:19:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-11-04 23:12:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-18 19:55:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-19 21:55:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-19 22:13:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-19 22:23:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-20 16:47:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-22 17:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-22 17:19:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-22 17:19:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-12-05 16:13:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -66,6 +64,7 @@
       <xml>
         <category name="World">
           <block type="Dancelab_setBackgroundEffectWithPalette">
+            <title name="PALETTE">"rave"</title>
             <title name="EFFECT">"color_cycle"</title>
           </block>
           <block type="Dancelab_setForegroundEffectExtended">
@@ -108,7 +107,107 @@
             <title name="UNIT">"measures"</title>
           </block>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
         <category name="Dancers">
+          <block type="Dancelab_makeAnonymousDanceSprite">
+            <title name="COSTUME">"CAT"</title>
+            <title name="LOCATION">{x: 200, y: 100}</title>
+          </block>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"BEAR"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block>
+          <block type="Dancelab_layoutSprites">
+            <title name="GROUP">sprites</title>
+            <title name="FORMAT">"grid"</title>
+          </block>
+          <block type="Dancelab_jumpToEach">
+            <title name="GROUP">sprites</title>
+            <title name="LOCATION">{x: 200, y: 100}</title>
+          </block>
+          <block type="Dancelab_changeMoveEachLR">
+            <title name="GROUP">sprites</title>
+            <title name="MOVE">MOVES.ClapHigh</title>
+            <title name="DIR">-1</title>
+          </block>
+          <block type="Dancelab_doMoveEachLR">
+            <title name="GROUP">sprites</title>
+            <title name="MOVE">MOVES.Clown</title>
+            <title name="DIR">-1</title>
+          </block>
+          <block type="Dancelab_startMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+          <block type="Dancelab_alternateMoves">
+            <title name="GROUP">sprites</title>
+            <title name="N">2</title>
+            <title name="MOVE1">MOVES.Roll</title>
+            <title name="MOVE2">MOVES.ClapHigh</title>
+          </block>
+        </category>
+        <category name="Properties">
+          <block type="Dancelab_setTintEachInline">
+            <title name="THIS">sprites</title>
+            <title name="VAL">#ff0000</title>
+          </block>
+          <block type="Dancelab_setPropEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="VAL">50</title>
+          </block>
+          <block type="Dancelab_changePropEachBy">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="VAL">0</title>
+          </block>
+          <block type="Dancelab_setVisibleEach">
+            <title name="THIS">sprites</title>
+            <title name="VISIBILITY">true</title>
+          </block>
+          <block type="Dancelab_setPropRandomEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+          </block>
+          <block type="Dancelab_setDanceSpeedEach">
+            <title name="GROUP">sprites</title>
+            <title name="SPEED">2</title>
+          </block>
+          <block type="Dancelab_startMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="Dancelab_whenKey">
+            <title name="KEY">"up"</title>
+          </block>
+          <block type="Dancelab_whenPeak">
+            <title name="RANGE">0</title>
+          </block>
+          <block type="Dancelab_atTimestamp">
+            <title name="TIMESTAMP">4</title>
+            <title name="UNIT">"measures"</title>
+          </block>
+          <block type="Dancelab_everySeconds">
+            <title name="N">4</title>
+            <title name="UNIT">"measures"</title>
+          </block>
+        </category>
+        <category name="Named Dancers">
           <block type="Dancelab_makeNewDanceSprite">
             <title name="COSTUME">"CAT"</title>
             <title name="NAME">dancer1</title>
@@ -165,56 +264,6 @@
             <title name="SPEED">2</title>
           </block>
         </category>
-        <category name="Groups">
-          <block type="Dancelab_makeNewDanceSpriteGroup">
-            <title name="N">6</title>
-            <title name="COSTUME">"BEAR"</title>
-            <title name="LAYOUT">"circle"</title>
-          </block>
-          <block type="Dancelab_changeMoveEachLR">
-            <title name="GROUP">sprites</title>
-            <title name="MOVE">MOVES.ClapHigh</title>
-            <title name="DIR">-1</title>
-          </block>
-          <block type="Dancelab_doMoveEachLR">
-            <title name="GROUP">sprites</title>
-            <title name="MOVE">MOVES.Clown</title>
-            <title name="DIR">-1</title>
-          </block>
-          <block type="Dancelab_layoutSprites">
-            <title name="GROUP">sprites</title>
-            <title name="FORMAT">"grid"</title>
-          </block>
-          <block type="Dancelab_setPropEach">
-            <title name="GROUP">sprites</title>
-            <title name="PROPERTY">"scale"</title>
-            <title name="VAL">50</title>
-          </block>
-          <block type="Dancelab_setVisibleEach">
-            <title name="THIS">sprites</title>
-            <title name="VISIBILITY">true</title>
-          </block>
-          <block type="Dancelab_setDanceSpeedEach">
-            <title name="GROUP">sprites</title>
-            <title name="SPEED">2</title>
-          </block>
-        </category>
-        <category name="Events">
-          <block type="Dancelab_whenKey">
-            <title name="KEY">"up"</title>
-          </block>
-          <block type="Dancelab_whenPeak">
-            <title name="RANGE">0</title>
-          </block>
-          <block type="Dancelab_atTimestamp">
-            <title name="TIMESTAMP">4</title>
-            <title name="UNIT">"measures"</title>
-          </block>
-          <block type="Dancelab_everySeconds">
-            <title name="N">4</title>
-            <title name="UNIT">"measures"</title>
-          </block>
-        </category>
         <category name="Numbers">
           <block type="math_random_int">
             <value name="FROM">
@@ -246,10 +295,6 @@
           </block>
         </category>
         <category name="Logic">
-          <block type="Dancelab_ifDanceIs">
-            <title name="SPRITE">dancer1</title>
-            <title name="DANCE">0</title>
-          </block>
           <block type="controls_if">
             <value name="IF0">
               <block type="logic_compare">
@@ -276,6 +321,10 @@
           <block type="logic_negate"/>
           <block type="logic_boolean">
             <title name="BOOL">TRUE</title>
+          </block>
+          <block type="Dancelab_ifDanceIs">
+            <title name="SPRITE">dancer1</title>
+            <title name="DANCE">MOVES.ClapHigh</title>
           </block>
         </category>
       </xml>

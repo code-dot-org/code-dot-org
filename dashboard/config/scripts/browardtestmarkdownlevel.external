@@ -1,0 +1,19 @@
+name 'BrowardTestMarkdownLevel'
+title 'BrowardTestMarkdownLevel'
+description 'A level Amanda made to test out permission functionality'
+markdown <<MARKDOWN
+<H1>
+This is the title of the level
+</H1>
+This is my test level!
+<H2>
+This is a subtitle
+</H2>
+So much to learn, so much to do :-).
+
+
+*Italic*
+
+**Bold**
+
+MARKDOWN

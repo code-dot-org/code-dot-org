@@ -1,0 +1,28 @@
+.full-resource-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-resource-block .full-resource-image {
+  width: 100%;
+}
+
+.full-resource-block .description {
+  background-color: #00adbc;
+  color: white;
+  padding: 30px;
+}
+
+.full-resource-block .resource-title {
+  padding: 0px;
+  margin: 0px;
+  color: #5b6770;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 971px)
+{
+  .full-resource-block { flex-direction: row; }
+  .full-resource-block > * { width: 50%; }
+}

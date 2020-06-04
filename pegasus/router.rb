@@ -22,6 +22,7 @@ require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
 require 'sass'
 require 'sass/plugin'
+require 'haml'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -39,6 +40,8 @@ require src_dir 'curriculum_router'
 require src_dir 'homepage'
 require src_dir 'advocacy_site'
 require 'cdo/hamburger'
+
+require pegasus_dir 'helper_modules/multiple_extname_file_utils'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -100,20 +103,13 @@ class Documents < Sinatra::Base
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found', '.404']
     set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
-    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.txt']
+    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.partial']
     set :non_static_extnames,
       settings.not_found_extnames +
       settings.redirect_extnames +
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
-    set :markdown,
-      renderer: ::TextRender::MarkdownEngine::HTMLWithDivBrackets,
-      autolink: true,
-      tables: true,
-      space_after_headers: true,
-      fenced_code_blocks: true,
-      lax_spacing: true
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
@@ -159,7 +155,39 @@ class Documents < Sinatra::Base
       end
     end
 
-    @locals = {header: @header}
+    @actionview ||= begin
+      # Lazily require actionview_sinatra here, because it it turn will require
+      # ActionView::Base, which will in turn run the ActiveSupport load hooks for
+      # the class.
+      #
+      # This can cause some issues for environments that want to load both
+      # Pegasus and Dashboard, since if ActionView is loaded outside the context
+      # of Rails it won't load all functionality, and ActionView won't be
+      # re-initialized when it _does_ get loaded by Rails.
+      #
+      # This is similar to the lazy loading we need to do for Haml:
+      # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
+      require 'cdo/pegasus/actionview_sinatra'
+      ActionViewSinatra::Base.new(self)
+    end
+
+    update_actionview_assigns
+    @actionview.instance_variable_set("@_request", request)
+  end
+
+  # This will make all instance variables on our sinatra controller also
+  # available from our views. Inspired by similar behavior in Rails' controller
+  # logic:
+  # https://github.com/rails/rails/blob/c4d3e202e10ae627b3b9c34498afb45450652421/actionpack/lib/abstract_controller/rendering.rb#L66-L77
+  #
+  # If in the future Sinatra's controller functionality is replaced by Rails,
+  # this can probably go away.
+  def update_actionview_assigns
+    view_assigns = {}
+    instance_variables.each do |name|
+      view_assigns[name[1..-1]] = instance_variable_get(name)
+    end
+    @actionview.assign(view_assigns)
   end
 
   # Language selection
@@ -232,7 +260,7 @@ class Documents < Sinatra::Base
       transaction_name = transaction_name.sub(request.env[:splat_path_info], '') if request.env[:splat_path_info]
       NewRelic::Agent.set_transaction_name(transaction_name)
     end
-    not_found! if settings.not_found_extnames.include?(File.extname(path))
+    not_found! if MultipleExtnameFileUtils.file_has_any_extnames(path, settings.not_found_extnames)
     document path
   end
 
@@ -240,27 +268,27 @@ class Documents < Sinatra::Base
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
-    if params.key?('embedded') && @locals[:header]['embedded_layout']
-      @locals[:header]['layout'] = @locals[:header]['embedded_layout']
-      @locals[:header]['theme'] ||= 'none'
+    if params.key?('embedded') && @header['embedded_theme']
+      @header['theme'] = @header['embedded_theme']
+      @header['layout'] = 'none'
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
-    if @locals[:header]['content-type']
-      response.headers['Content-Type'] = @locals[:header]['content-type']
+    if @header['content-type']
+      response.headers['Content-Type'] = @header['content-type']
     end
-    layout = @locals[:header]['layout'] || 'default'
+    layout = @header['layout'] || 'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, @locals.merge({body: body.join('')}))
+      body render_template(template, {body: body.join('').html_safe})
     end
 
-    theme = @locals[:header]['theme'] || 'default'
+    theme = @header['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, @locals.merge({body: body.join('')}))
+      body render_template(template, {body: body.join('').html_safe})
     end
   end
 
@@ -304,15 +332,15 @@ class Documents < Sinatra::Base
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content, 1] unless match
 
-      yaml = erb(match[:yaml], path: path, line: 1)
-      header = YAML.load(yaml, path) || {}
+      header = YAML.load(match[:yaml], path) || {}
       raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
+
       remaining_content = match.post_match
       line = content.lines.count - remaining_content.lines.count + 1
       [header, remaining_content, line]
     rescue => e
       # Append rendered header to error message.
-      e.message << "\n#{yaml}" if yaml
+      e.message << "\n#{match[:yaml]}" if match[:yaml]
       raise
     end
 
@@ -338,7 +366,7 @@ class Documents < Sinatra::Base
       end
 
       response.headers['X-Pegasus-Version'] = '3'
-      render_(content, File.extname(path), path, line)
+      render_(content, path, line)
     rescue => e
       # Add document path to backtrace if not already included.
       if path && [e.message, *e.backtrace].none? {|location| location.include?(path)}
@@ -347,12 +375,25 @@ class Documents < Sinatra::Base
       raise
     end
 
-    def preprocess_markdown(markdown_content)
-      markdown_content.gsub(/```/, "```\n")
+    def render_partials(template_content)
+      # Template types that do not have thier own way of rendering partials
+      # (ie, markdown) can include other partials with the syntax:
+      #
+      #     {{ path/to/partial }}
+      #
+      # Because such content can be translated, we want to make sure that if a
+      # translator accidentally translates the path to the template, we simply
+      # render nothing rather than throwing an error
+      template_content.
+        gsub(/{{([^}]*)}}/) do
+          view($1.strip)
+        rescue
+          ''
+        end
     end
 
     def resolve_static(subdir, uri)
-      return nil if settings.non_static_extnames.include?(File.extname(uri))
+      return nil if MultipleExtnameFileUtils.file_has_any_extnames(uri, settings.non_static_extnames)
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
@@ -366,23 +407,13 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        extnames.each do |extname|
-          path = content_dir(dir, subdir, "#{uri}#{extname}")
-          if File.file?(path)
-            return path
-          end
-        end
+        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
+        return found.first unless found.empty?
       end
 
       # Also look for shared items.
-      extnames.each do |extname|
-        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
-        if File.file?(path)
-          return path
-        end
-      end
-
-      nil
+      found = MultipleExtnameFileUtils.find_with_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
+      return found.first unless found.empty?
     end
 
     # Scans the filesystem and finds all documents served by Pegasus CMS.
@@ -404,7 +435,7 @@ class Documents < Sinatra::Base
           # Reduce file to URI.
           uri = file.
             sub(site_sub, '').
-            sub(/#{File.extname(file)}$/, '').
+            sub(/(#{settings.template_extnames.join('|')})*$/, '').
             sub(/\/index$/, '')
 
           # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
@@ -466,44 +497,47 @@ class Documents < Sinatra::Base
     end
 
     def render_template(path, locals={})
-      render_(IO.read(path), File.extname(path), path, 0, locals)
+      render_(IO.read(path), path, 0, locals)
     rescue => e
       Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
     end
 
-    def render_(body, extname, path=nil, line=0, locals={})
-      locals = @locals.merge(locals).symbolize_keys
-      options = {locals: locals, line: line, path: path}
+    def render_(body, path=nil, line=0, locals={})
+      extensions = MultipleExtnameFileUtils.all_extnames(path)
 
-      case extname
-      when '.erb', '.html'
-        erb body, options
-      when '.haml'
-        haml body, options
-      when '.fetch'
-        url = erb(body, options)
+      # Now, apply the processing operations implied by each extension to the
+      # given file, in an "outside-in" order
+      # IE, "foo.md.erb" will be processed as an ERB template, then the result
+      # of that will be processed as a MD template
+      result = body
+      extensions.reverse.each do |extension|
+        case extension
+        when '.erb', '.html', '.haml', '.md'
+          # Symbolize the keys of the locals hash; previously, we supported
+          # using either symbols or strings in locals hashes but ActionView
+          # only allows symbols.
+          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
+        when '.fetch'
+          cache_file = cache_dir('fetch', request.site, request.path_info)
+          unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
+            FileUtils.mkdir_p File.dirname(cache_file)
+            IO.binwrite(cache_file, Net::HTTP.get(URI(result)))
+          end
+          pass unless File.file?(cache_file)
 
-        cache_file = cache_dir('fetch', request.site, request.path_info)
-        unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
-          FileUtils.mkdir_p File.dirname(cache_file)
-          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
+          cache :static
+          result = send_file(cache_file)
+        when '.partial'
+          result = render_partials(result)
+        when '.redirect', '.moved', '.301'
+          result = redirect result, 301
+        when '.found', '.302'
+          result = redirect result, 302
         end
-        pass unless File.file?(cache_file)
-
-        cache :static
-        send_file(cache_file)
-      when '.md', '.txt'
-        preprocessed = erb body, options
-        preprocessed = preprocess_markdown preprocessed
-        markdown preprocessed, options
-      when '.redirect', '.moved', '.301'
-        redirect erb(body, options), 301
-      when '.found', '.302'
-        redirect erb(body, options), 302
-      else
-        raise "'#{extname}' isn't supported."
       end
+
+      result
     end
 
     def social_metadata

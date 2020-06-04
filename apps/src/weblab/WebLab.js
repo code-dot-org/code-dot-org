@@ -16,8 +16,10 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {makeEnum} from '../utils';
+import {makeEnum, reload} from '../utils';
 import logToCloud from '../logToCloud';
+import firehoseClient from '../lib/util/firehose';
+import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -91,28 +93,36 @@ WebLab.prototype.init = function(config) {
   config.usesAssets = true;
 
   config.makeYourOwn = false;
-  config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
 
   config.afterClearPuzzle = config => {
-    return new Promise((resolve, reject) => {
+    return new Promise((_, reject) => {
       // Delete everything from the service and restart the initial sync
       filesApi.deleteAll(
-        (xhr, filesVersionId) => {
+        xhr => {
           this.fileEntries = null;
-          if (!this.brambleHost) {
-            reject(new Error('no bramble host'));
-            return;
-          }
-          // Force brambleHost to reload based on startSources
-          this.brambleHost.startInitialFileSync(err => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve();
-            }
-          }, true);
+          firehoseClient.putRecord(
+            {
+              study: 'weblab_loading_investigation',
+              study_group: 'empty_manifest',
+              event: 'clear_puzzle_success',
+              project_id: getCurrentId(),
+              data_json: JSON.stringify({
+                responseText: xhr.responseText
+              })
+            },
+            {includeUserId: true}
+          );
+          // The project has been reset, reload() the page now - don't resolve
+          // the promise, because that will lead to a project.save() that we
+          // don't want or need in this scenario.
+          reload();
+          reject(
+            new Error(
+              'deleteAll succeeded, weblab handling reload to avoid saving'
+            )
+          );
         },
         xhr => {
           console.warn(`WebLab: error deleteAll failed: ${xhr.status}`);
@@ -176,7 +186,7 @@ WebLab.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    documentationUrl: 'https://docs.code.org/weblab/',
+    documentationUrl: 'https://studio.code.org/docs/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted
@@ -369,7 +379,12 @@ WebLab.prototype.renameProjectFile = function(filename, newFilename, callback) {
 };
 
 // Called by Bramble when a file has been changed or created
-WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
+WebLab.prototype.changeProjectFile = function(
+  filename,
+  fileData,
+  callback,
+  skipPreWriteHook
+) {
   filesApi.putFile(
     filename,
     fileData,
@@ -379,7 +394,8 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
       callback(new Error(xhr.status));
-    }
+    },
+    skipPreWriteHook
   );
 };
 
@@ -390,6 +406,10 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
  */
 WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
+  filesApi.registerErrorAction(() => {
+    dashboard.assets.hideAssetManager();
+    getStore().dispatch(actions.changeShowError(true));
+  });
 };
 
 // Called by Bramble when project has changed
@@ -467,31 +487,50 @@ WebLab.prototype.onIsRunningChange = function() {};
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function() {
-  filesApi.getFiles(
-    result => {
-      assetListStore.reset(result.files);
-      this.fileEntries = assetListStore.list().map(fileEntry => ({
-        name: fileEntry.filename,
-        url: filesApi.basePath(fileEntry.filename),
-        versionId: fileEntry.versionId
-      }));
-      var latestFilesVersionId = result.filesVersionId;
-      this.initialFilesVersionId =
-        this.initialFilesVersionId || latestFilesVersionId;
+  const onFilesReady = (files, filesVersionId) => {
+    // Gather information when the weblab manifest is empty but should
+    // contain references to files (i.e. after changes have been made to the project)
+    if (filesVersionId && files && files.length === 0) {
+      firehoseClient.putRecord(
+        {
+          study: 'weblab_loading_investigation',
+          study_group: 'empty_manifest',
+          event: 'get_empty_manifest',
+          project_id: getCurrentId()
+        },
+        {includeUserId: true}
+      );
+    }
+    assetListStore.reset(files);
+    this.fileEntries = assetListStore.list().map(fileEntry => ({
+      name: fileEntry.filename,
+      url: filesApi.basePath(fileEntry.filename),
+      versionId: fileEntry.versionId
+    }));
+    this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
 
-      if (latestFilesVersionId !== this.initialFilesVersionId) {
-        // After we've detected the first change to the version, we store this
-        // version id so that subsequent writes will continue to replace the
-        // current version (until the browser page reloads)
-        project.filesVersionId = result.filesVersionId;
-      }
-      if (this.brambleHost) {
-        this.brambleHost.syncFiles(() => {});
-      }
-    },
+    if (filesVersionId !== this.initialFilesVersionId) {
+      // After we've detected the first change to the version, we store this
+      // version id so that subsequent writes will continue to replace the
+      // current version (until the browser page reloads)
+      project.filesVersionId = filesVersionId;
+    }
+    if (this.brambleHost) {
+      this.brambleHost.syncFiles(() => {});
+    }
+  };
+
+  filesApi.getFiles(
+    result => onFilesReady(result.files, result.filesVersionId),
     xhr => {
-      console.error('files API failed, status: ' + xhr.status);
-      this.fileEntries = null;
+      if (xhr.status === 404) {
+        // No files in this project yet, proceed with an empty file
+        // list and no start version id
+        onFilesReady([], null);
+      } else {
+        console.error('files API failed, status: ' + xhr.status);
+        this.fileEntries = null;
+      }
     },
     this.getCurrentFilesVersionId()
   );

@@ -1,13 +1,12 @@
 import React from 'react';
 import Radium from 'radium';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
-import experiments from '@cdo/apps/util/experiments';
-import {hideShareDialog} from './shareDialogRedux';
-import {showLibraryShareDialog} from './libraryShareDialogRedux';
+import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
+import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 
 const INSTRUCTIONS_LINK =
   'https://codeorg.zendesk.com/knowledge/articles/360004789872';
@@ -40,16 +39,6 @@ const style = {
     lineHeight: 'inherit',
     color: 'inherit'
   },
-  errorMessage: {
-    color: color.red,
-    margin: 7
-  },
-  libraryName: {
-    fontSize: 'large',
-    lineHeight: 'inherit',
-    color: 'inherit',
-    fontWeight: 'bold'
-  },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
   },
@@ -76,10 +65,6 @@ const style = {
   expoButtonLast: {
     marginRight: 0
   },
-  expoButtonApk: {
-    marginBottom: 10,
-    maxWidth: 280
-  },
   expoContainer: {
     display: 'flex',
     flexDirection: 'column'
@@ -104,14 +89,14 @@ const style = {
   },
   qrCode: {
     marginRight: 20
-  },
-  closeButton: {
-    marginRight: 0,
-    backgroundColor: color.orange,
-    color: color.white,
-    position: 'absolute',
-    right: 0
   }
+};
+
+const ShareOptions = {
+  EXPORT: 'export',
+  EXPORT_EXPO: 'exportExpo',
+  EMBED: 'embed',
+  LIBRARY: 'library'
 };
 
 class AdvancedShareOptions extends React.Component {
@@ -119,17 +104,15 @@ class AdvancedShareOptions extends React.Component {
     shareUrl: PropTypes.string.isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
+    openLibraryCreationDialog: PropTypes.func.isRequired,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
-    i18n: PropTypes.object.isRequired,
     channelId: PropTypes.string.isRequired,
     embedOptions: PropTypes.shape({
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired
-    }).isRequired,
-    openPublishLibraryDialog: PropTypes.func,
-    libraryName: PropTypes.string,
-    containsError: PropTypes.bool
+    }).isRequired
   };
 
   constructor(props) {
@@ -137,9 +120,9 @@ class AdvancedShareOptions extends React.Component {
     this.state = {
       selectedOption: props.exportApp
         ? props.allowExportExpo
-          ? 'exportExpo'
-          : 'export'
-        : 'embed',
+          ? ShareOptions.EXPORT_EXPO
+          : ShareOptions.EXPORT
+        : ShareOptions.EMBED,
       exportedExpoZip: false,
       exporting: false,
       exportingExpo: null,
@@ -210,35 +193,6 @@ class AdvancedShareOptions extends React.Component {
     }
   };
 
-  generateExpoApk = async () => {
-    const {expoSnackId, iconUri, splashImageUri} = this.state;
-    this.setState({generatingExpoApk: true});
-    try {
-      const expoApkUri = await this.props.exportApp({
-        mode: 'expoGenerateApk',
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      });
-      this.setState({
-        generatingExpoApk: false,
-        generatingExpoApkError: null,
-        expoApkUri
-      });
-    } catch (e) {
-      this.setState({
-        generatingExpoApk: false,
-        generatingExpoApkError:
-          'Failed to create Android app. Please try again later.'
-      });
-    }
-  };
-
-  visitExpoSite = () => {
-    const {expoSnackId} = this.state;
-    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
-  };
-
   renderEmbedTab() {
     let url = `${this.props.shareUrl}/embed`;
     if (this.state.embedWithoutCode) {
@@ -259,9 +213,7 @@ class AdvancedShareOptions extends React.Component {
     const iframeHtml = `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
-        <p style={style.p}>
-          {this.props.i18n.t('project.share_embed_description')}
-        </p>
+        <p style={style.p}>{i18n.shareEmbedDescription()}</p>
         <textarea
           type="text"
           onClick={e => e.target.select()}
@@ -279,50 +231,6 @@ class AdvancedShareOptions extends React.Component {
           />
           <span style={{marginLeft: 5}}>Hide ability to view code</span>
         </label>
-      </div>
-    );
-  }
-
-  clickedPublishLibrary = () => {
-    if (!this.props.containsError) {
-      this.props.openPublishLibraryDialog();
-    }
-  };
-
-  publishButtonStyle = () => {
-    return {
-      marginLeft: 0,
-      color: color.white,
-      backgroundColor: this.props.containsError
-        ? color.background_gray
-        : color.cyan
-    };
-  };
-
-  renderLibraryTab() {
-    return (
-      <div>
-        <p style={style.p}>
-          Library links let you add libraries to other projects. You can add
-          libraries to your project by going to the Settings icon in your
-          Toolbox, and choosing "Manage Libraries."
-        </p>
-        <p style={style.libraryName}>Library name: {this.props.libraryName}</p>
-        <div style={{display: 'flex'}}>
-          <button
-            type="button"
-            onClick={this.clickedPublishLibrary}
-            style={this.publishButtonStyle()}
-          >
-            Publish
-          </button>
-          {this.props.containsError && (
-            <p style={{...style.p, ...style.errorMessage}}>
-              We can’t publish your library because there is an error in the
-              code. Go look for the red error indicator and fix the bugs.
-            </p>
-          )}
-        </div>
       </div>
     );
   }
@@ -360,12 +268,7 @@ class AdvancedShareOptions extends React.Component {
   };
 
   renderExportExpoTab() {
-    const {
-      expoUri,
-      exportedExpoZip,
-      expoApkUri,
-      generatingExpoApk
-    } = this.state;
+    const {expoUri, exportedExpoZip} = this.state;
     const exportSpinner =
       this.state.exportingExpo === 'zip' ? (
         <i className="fa fa-spinner fa-spin" />
@@ -374,21 +277,10 @@ class AdvancedShareOptions extends React.Component {
       this.state.exportingExpo === 'publish' ? (
         <i className="fa fa-spinner fa-spin" />
       ) : null;
-    const generateApkSpinner = generatingExpoApk ? (
-      <i className="fa fa-spinner fa-spin" />
-    ) : null;
     // TODO: Make this use a nice UI component from somewhere.
     const alert = this.state.exportExpoError ? (
       <div className="alert fade in">{this.state.exportExpoError}</div>
     ) : null;
-    const apkAlert = this.state.generatingExpoApkError ? (
-      <div className="alert fade in">{this.state.generatingExpoApkError}</div>
-    ) : null;
-    const apkStatusString = expoApkUri
-      ? 'App created successfully'
-      : generatingExpoApk
-      ? 'Creating app...'
-      : '(This will take 5-10 minutes)';
 
     return (
       <div>
@@ -447,39 +339,6 @@ class AdvancedShareOptions extends React.Component {
                     value={expoUri}
                     style={style.expoInput}
                   />
-                  <button
-                    type="button"
-                    onClick={this.generateExpoApk}
-                    style={[style.expoButton, style.expoButtonApk]}
-                  >
-                    {generateApkSpinner}
-                    Create Android App
-                  </button>
-                  <button
-                    type="button"
-                    onClick={this.visitExpoSite}
-                    style={[style.expoButton, style.expoButtonApk]}
-                  >
-                    Visit Expo Site
-                  </button>
-                  <p style={style.p}>{apkStatusString}</p>
-                  {!!expoApkUri && (
-                    <div>
-                      <p style={[style.p, style.bold]}>
-                        Send this URL to an Android phone:
-                      </p>
-                    </div>
-                  )}
-                  {!!expoApkUri && (
-                    <input
-                      type="text"
-                      onClick={this.onInputSelect}
-                      readOnly="true"
-                      value={expoApkUri}
-                      style={style.expoInput}
-                    />
-                  )}
-                  {apkAlert}
                 </div>
               </div>
             </div>
@@ -505,115 +364,123 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
+  renderLibraryTab = () => {
+    return (
+      <div>
+        <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
+        <button
+          type="button"
+          onClick={this.props.openLibraryCreationDialog}
+          style={{marginLeft: 0}}
+        >
+          {i18n.shareLibrary()}
+        </button>
+      </div>
+    );
+  };
+
+  renderAdvancedListItem = (option, name) => {
+    return (
+      <li
+        style={[
+          style.nav.li,
+          this.state.selectedOption === option && style.nav.selectedLi
+        ]}
+        onClick={() => this.setState({selectedOption: option})}
+      >
+        {name}
+      </li>
+    );
+  };
+
   render() {
-    if (!this.state.selectedOption) {
+    let {
+      expanded,
+      exportApp,
+      allowExportExpo,
+      onExpand,
+      librariesEnabled
+    } = this.props;
+    let {selectedOption} = this.state;
+    if (!selectedOption) {
       // no options are available. Render nothing.
       return null;
     }
-    let optionsNav;
-    let selectedOption;
-    if (this.props.expanded) {
+
+    let optionsNav, selectedTab, libraryTab;
+    if (expanded) {
       let exportTab = null;
       let exportExpoTab = null;
-      if (this.props.exportApp) {
-        if (this.props.allowExportExpo) {
-          exportExpoTab = (
-            <li
-              style={[
-                style.nav.li,
-                this.state.selectedOption === 'exportExpo' &&
-                  style.nav.selectedLi
-              ]}
-              onClick={() => this.setState({selectedOption: 'exportExpo'})}
-            >
-              Run natively (Beta)
-            </li>
+      if (exportApp) {
+        if (allowExportExpo) {
+          exportExpoTab = this.renderAdvancedListItem(
+            ShareOptions.EXPORT_EXPO,
+            i18n.runNatively()
           );
         }
-        exportTab = (
-          <li
-            style={[
-              style.nav.li,
-              this.state.selectedOption === 'export' && style.nav.selectedLi
-            ]}
-            onClick={() => this.setState({selectedOption: 'export'})}
-          >
-            Export for web
-          </li>
+        exportTab = this.renderAdvancedListItem(
+          ShareOptions.EXPORT,
+          i18n.exportForWeb()
         );
       }
-      const embedTab = (
-        <li
-          style={[
-            style.nav.li,
-            this.state.selectedOption === 'embed' && style.nav.selectedLi
-          ]}
-          onClick={() => this.setState({selectedOption: 'embed'})}
-        >
-          {this.props.i18n.t('project.embed')}
-        </li>
+      const embedTab = this.renderAdvancedListItem(
+        ShareOptions.EMBED,
+        i18n.embed()
       );
+      if (librariesEnabled) {
+        libraryTab = this.renderAdvancedListItem(
+          ShareOptions.LIBRARY,
+          i18n.shareLibrary()
+        );
+      }
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
             {exportExpoTab}
             {exportTab}
             {embedTab}
-            {experiments.isEnabled('student-libraries') && (
-              <li
-                style={[
-                  style.nav.li,
-                  this.state.selectedOption === 'library' &&
-                    style.nav.selectedLi
-                ]}
-                onClick={() => this.setState({selectedOption: 'library'})}
-              >
-                Library
-              </li>
-            )}
+            {libraryTab}
           </ul>
         </div>
       );
-      switch (this.state.selectedOption) {
-        case 'export':
-          selectedOption = this.renderExportTab();
+      switch (selectedOption) {
+        case ShareOptions.EXPORT:
+          selectedTab = this.renderExportTab();
           break;
-        case 'exportExpo':
-          selectedOption = this.renderExportExpoTab();
+        case ShareOptions.EXPORT_EXPO:
+          selectedTab = this.renderExportExpoTab();
           break;
-        case 'embed':
-          selectedOption = this.renderEmbedTab();
+        case ShareOptions.EMBED:
+          selectedTab = this.renderEmbedTab();
           break;
-        case 'library':
-          selectedOption = this.renderLibraryTab();
+        case ShareOptions.LIBRARY:
+          selectedTab = this.renderLibraryTab();
           break;
       }
     }
     const expand =
-      this.props.expanded && this.state.selectedOption ? null : (
-        <a onClick={this.props.onExpand} style={style.expand}>
-          {this.props.i18n.t('project.advanced_share')}
+      expanded && selectedOption ? null : (
+        <a onClick={onExpand} style={style.expand}>
+          {i18n.advancedShare()}
         </a>
       );
     return (
       <div style={style.root}>
         {expand}
         {optionsNav}
-        {selectedOption}
+        {selectedTab}
       </div>
     );
   }
 }
 
-export const UnconnectedAdvancedShareOptions = Radium(AdvancedShareOptions);
 export default connect(
   state => ({
-    libraryName: state.libraryShareDialog.libraryName,
-    containsError: state.libraryShareDialog.containsError
+    librariesEnabled: state.pageConstants.librariesEnabled
   }),
   dispatch => ({
-    openPublishLibraryDialog() {
-      dispatch(showLibraryShareDialog());
+    openLibraryCreationDialog() {
+      dispatch(showLibraryCreationDialog());
       dispatch(hideShareDialog());
     }
   })

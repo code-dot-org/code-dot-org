@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import i18n from '@cdo/locale';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import Button from '@cdo/apps/templates/Button';
@@ -30,8 +30,16 @@ describe('TopCourse', () => {
           <div>{i18n.topCourseExplanation()}</div>
         </div>
         <div>
-          <Button href={topCourse.linkToOverview} text="View course" />
-          <Button href={topCourse.linkToLesson} text="Continue lesson" />
+          <Button
+            __useDeprecatedTag
+            href={topCourse.linkToOverview}
+            text="View course"
+          />
+          <Button
+            __useDeprecatedTag
+            href={topCourse.linkToLesson}
+            text="Continue lesson"
+          />
         </div>
       </div>
     );

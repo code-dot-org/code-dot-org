@@ -1,0 +1,20 @@
+name 'BrowardTestMarkdownLevel2'
+editor_experiment 'broward'
+title 'BrowardTestMarkdownLevel'
+description 'A level Amanda made and Dave updated to test out permission functionality'
+markdown <<MARKDOWN
+# This is the title of the level, updated again
+
+## This is my test level!
+
+### This is a subtitle
+So much to learn, so much to do :-).
+
+
+![](https://images.code.org/9d7cadabab53c930a0969d85126753e3-image-1575489741923.jpg)
+
+*Italic*
+
+**Bold**
+
+MARKDOWN

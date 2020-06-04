@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import i18n from '@cdo/locale';
 import {joinedSections} from './homepagesTestData';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
@@ -74,5 +74,19 @@ describe('SectionsAsStudentTable', () => {
       }
       expect(wrapper).to.containMatchingElement(<td>{section.teacherName}</td>);
     });
+  });
+
+  it('shows section codes correctly', () => {
+    const wrapper = shallow(
+      <SectionsAsStudentTable sections={joinedSections} canLeave={false} />,
+      {context: {store}}
+    ).dive();
+
+    expect(wrapper).to.containMatchingElement(<td>ClassOneCode</td>);
+    expect(wrapper).to.containMatchingElement(<td>ClassTwoCode</td>);
+    expect(wrapper).to.containMatchingElement(<td>Google Classroom</td>);
+    expect(wrapper).to.not.containMatchingElement(<td>DoNotShowThis</td>);
+    expect(wrapper).to.containMatchingElement(<td>Clever</td>);
+    expect(wrapper).to.not.containMatchingElement(<td>OrThisEither</td>);
   });
 });

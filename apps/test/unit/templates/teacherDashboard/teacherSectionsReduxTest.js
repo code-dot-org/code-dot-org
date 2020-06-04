@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import {
   stubRedux,
   restoreRedux,
@@ -36,6 +36,7 @@ import reducer, {
   sectionName,
   sectionProvider,
   isSectionProviderManaged,
+  getVisibleSections,
   isSaveInProgress,
   sectionsNameAndId,
   getSectionRows,
@@ -51,6 +52,8 @@ const {
   USER_EDITABLE_SECTION_PROPS
 } = __testInterface__;
 
+const createdAt = '2019-10-21T23:45:34.345Z';
+
 const sections = [
   {
     id: 11,
@@ -59,11 +62,12 @@ const sections = [
     login_type: 'picture',
     grade: '2',
     code: 'PMTKVH',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: null,
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 10,
     hidden: false
   },
@@ -74,7 +78,7 @@ const sections = [
     login_type: 'picture',
     grade: '11',
     code: 'DWGMFX',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     sharing_disabled: false,
     script: {
@@ -82,6 +86,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
+    createdAt: createdAt,
     studentCount: 1,
     hidden: false
   },
@@ -92,7 +97,7 @@ const sections = [
     login_type: 'email',
     grade: '10',
     code: 'WGYXTR',
-    stage_extras: true,
+    lesson_extras: true,
     pairing_allowed: false,
     sharing_disabled: false,
     script: {
@@ -100,6 +105,7 @@ const sections = [
       name: 'csp1'
     },
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 0,
     hidden: false
   }
@@ -171,7 +177,7 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    stage_extras_available: true
+    lesson_extras_available: true
   },
   {
     id: 112,
@@ -219,7 +225,7 @@ const validScripts = [
     category: 'other',
     position: null,
     category_priority: 3,
-    stage_extras_available: true
+    lesson_extras_available: true
   }
 ];
 
@@ -546,7 +552,8 @@ describe('teacherSectionsRedux', () => {
         code: '',
         courseId: null,
         scriptId: null,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined
       });
     });
   });
@@ -568,8 +575,10 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
+        createdAt: createdAt,
         studentCount: 1,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined
       });
     });
   });
@@ -672,12 +681,13 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
-      course_id: null,
-      script_id: null,
+      courseId: null,
+      scriptId: null,
+      createdAt: createdAt,
       hidden: false
     };
 
@@ -823,9 +833,11 @@ describe('teacherSectionsRedux', () => {
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseId: null,
+          courseId: undefined,
           scriptId: null,
-          hidden: false
+          createdAt: createdAt,
+          hidden: false,
+          isAssigned: undefined
         }
       });
     });
@@ -872,7 +884,7 @@ describe('teacherSectionsRedux', () => {
       login_type: 'email',
       grade: undefined,
       providerManaged: false,
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
@@ -1103,10 +1115,11 @@ describe('teacherSectionsRedux', () => {
       login_type: 'picture',
       grade: '2',
       code: 'PMTKVH',
-      stage_extras: false,
+      lesson_extras: false,
       pairing_allowed: true,
       script: null,
       course_id: 29,
+      createdAt: createdAt,
       studentCount: 10,
       hidden: false
     };
@@ -1118,7 +1131,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
       assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
       assert.strictEqual(
         section.sharing_disabled,
@@ -1698,6 +1711,54 @@ describe('teacherSectionsRedux', () => {
         ])
       );
       expect(isSectionProviderManaged(getState(), 11)).to.be.true;
+    });
+  });
+
+  describe('getVisibleSections', () => {
+    it('filters out hidden sections', () => {
+      const expectedVisibleSections = {
+        11: {id: 11, hidden: false},
+        1: {id: 1, hidden: null}
+      };
+      const state = {
+        teacherSections: {
+          sections: {
+            2: {id: 2, hidden: true},
+            ...expectedVisibleSections
+          }
+        }
+      };
+      const actualVisibleSections = getVisibleSections(state);
+
+      assert.deepEqual(
+        Object.values(expectedVisibleSections),
+        actualVisibleSections
+      );
+    });
+
+    it('returns an empty array if there are no visible sections', () => {
+      const state = {
+        teacherSections: {
+          sections: {
+            2: {id: 2, hidden: true},
+            1: {id: 1, hidden: true}
+          }
+        }
+      };
+      const visibleSections = getVisibleSections(state);
+
+      expect(visibleSections.length).to.equal(0);
+    });
+
+    it('does not error if there are no sections', () => {
+      const state = {
+        teacherSections: {
+          sections: {}
+        }
+      };
+      const visibleSections = getVisibleSections(state);
+
+      expect(visibleSections.length).to.equal(0);
     });
   });
 

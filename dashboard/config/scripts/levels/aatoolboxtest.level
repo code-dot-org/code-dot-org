@@ -36,7 +36,7 @@
 
     ],
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "block_pools": [
       "GamelabJr"

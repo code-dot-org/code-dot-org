@@ -1,0 +1,97 @@
+name 'OPD-K5 Outline_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Course outline
+
+The course is divided into four concept chunks, which each have lessons in them. Lessons consists of different "levels", which are colloquially referred to as bubbles, stages, or puzzles by students and teachers. Here's an overview of what you'll learn if you complete the entire course:
+
+## Getting Started
+
+### Lesson 1: Welcome to 'Teaching Computer Science Fundamentals' (15 minutes)
+- Review the course details
+- Understand what computer science is and differentiate between "coding" and computer science"
+- Identify the benefits of teaching and learning computer science
+- Plan your participation in this course
+
+### Lesson 2: Getting to know the Computer Science Fundamentals Courses (15-20 minutes)
+- Become familiar with the content and organization of the Computer Science Fundamentals courses
+- Identify which course is most appropriate for your students
+- Understand the importance of the teacher in the Computer Science Fundamentals curriculum
+- Understand different types of Computer Science Fundamentals lessons
+
+## Basic Coding Concepts and Teaching Practices
+
+### Lesson 3: Sequencing (15-45 minutes)
+- Define "program" and "algorithm"
+- Identify where sequencing is introduced in the Computer Science Fundamentals courses
+- Use the Code.org visual programming engine to write simple programs
+- Explore an unplugged lesson on sequencing and reflect on classroom application
+- Think about how to use lesson plans
+
+### Lesson 4: Loops (15-45 minutes)
+- Define "loops" and explain their importance
+- Identify where loops are introduced in the Computer Science Fundamentals courses
+- Explore an unplugged lesson on loops and reflect on classroom application
+- Practice coding simple loops
+- Understand the benefits of pair programming
+
+### Lesson 5: Events (15-45 minutes)
+- Define "events" and explain their importance
+- Identify where events are introduced in the Computer Science Fundamentals courses
+- Explore an unplugged lesson on events and reflect on classroom application
+- Practice coding simple events
+- Understand the debugging process
+
+### Lesson 6: Conditionals (15-45 minutes)
+- Define "conditionals" and explain their importance
+- Identify where conditionals are introduced in the Computer Science Fundamentals courses
+- Explore an unplugged lesson on conditionals and reflect on classroom application
+- Practice coding simple conditionals
+- Understand the teaching practice of journaling
+
+### Lesson 7: End of Course Projects (15-45 minutes)
+- Understand the benefit of end of course projects
+- Identify where end of course projects are introduced in the Computer Science Fundamentals courses
+- Practice coding a project
+
+## [Optional] Diving Deeper: Courses E and F 
+You will want to complete this section if you are teaching Courses E or F. This section dives into some of the harder concepts covered in these courses for older students.
+
+### Lesson 8: Functions (30-45 minutes)
+- Identify if you will be teaching Courses E or F to students
+- Define "functions" and explain their importance
+- Identify where functions are introduced in the Computer Science Fundamentals courses
+- Explore the unplugged lesson on functions and reflect on classroom application
+- Practice coding simple functions
+
+### Lesson 9: Variables (30-45 minutes)
+- Define "variable" and explain its importance
+- Identify where variables are introduced in the Computer Science Fundamentals courses
+- Explore the unplugged lesson on variables and reflect on classroom application
+- Practice coding with variables
+
+### Lesson 10: For Loops (30-45 minutes)
+- Define "for loops" and explain its importance
+- Identify where for loops are introduced in the Computer Science Fundamentals courses
+- Explore the unplugged lesson on for loops and reflect on classroom application
+- Practice coding with for loops
+
+### Lesson 11: Sprite Lab (15-45 minutes)
+- Define "sprite" and "behavior"
+- Identify where sprites and behaviors are introduced in the Computer Science Fundamentals courses
+- Explore the coding environment Sprite Lab
+
+## Next Steps
+
+### Lesson 12: Reviewing your Reflections (15 minutes)
+- Review the reflections you have made throughout the course so far
+
+### Lesson 13: Next Steps (15 minutes)
+- Explore teacher resources
+- Plan for next steps you can take to continue your learning
+- Connect with a global community of fellow educators interested in computer science education
+- Share your takeaways and feedback on this course
+
+> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time. 
+
+MARKDOWN

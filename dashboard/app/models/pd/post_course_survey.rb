@@ -37,16 +37,8 @@ module Pd
 
     belongs_to :user
 
-    # @override
-    def self.attribute_mapping
-      {
-        user_id: 'userId',
-        course: 'csp_or_csd'
-      }
-    end
-
     validates_uniqueness_of :user_id, scope: [:form_id, :year, :course],
-      message: 'already has a submission for this form, year, and course'
+                            message: 'already has a submission for this form, year, and course'
 
     validates_presence_of(
       :user_id,
@@ -54,6 +46,14 @@ module Pd
     )
     validates_inclusion_of :year, in: VALID_YEARS
     validates_inclusion_of :course, in: VALID_COURSES
+
+    # @override
+    def self.attribute_mapping
+      {
+        user_id: 'userId',
+        course: 'csp_or_csd'
+      }
+    end
 
     def self.form_id
       get_form_id 'post_course', CURRENT_YEAR

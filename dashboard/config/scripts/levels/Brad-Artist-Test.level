@@ -9,7 +9,33 @@
     "skin": "artist",
     "preload_asset_list": null
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2019-11-19 19:54:21 +0000\",\"changed\":[],\"changed_by_id\":34,\"changed_by_email\":\"brad@code.org\"}]"
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant" deletable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_move_by_constant" deletable="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant" deletable="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
 </Artist>

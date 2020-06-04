@@ -1,17 +1,17 @@
-class BubbleChoiceDSL < BaseDSL
+class BubbleChoiceDSL < ContentDSL
   def initialize
     super
-    @hash[:title] = nil
+    @hash[:display_name] = nil
     @hash[:description] = nil
     @hash[:sublevels] = []
-    @i18n_strings = Hash.new({})
   end
 
-  def parse_output
-    {name: @name, properties: @hash}
+  # @override
+  def self.i18n_fields
+    super + %w(description display_name)
   end
 
-  def title(text) @hash[:title] = text end
+  def display_name(text) @hash[:display_name] = text end
 
   def description(text) @hash[:description] = text end
 
@@ -31,12 +31,6 @@ class BubbleChoiceDSL < BaseDSL
     end
 
     @hash[:sublevels] << name
-  end
-
-  def i18n_strings
-    @i18n_strings['title'] = @hash[:title] if @hash[:title]
-    @i18n_strings['description'] = @hash[:description] if @hash[:description]
-    {'name' => {@name => @i18n_strings}}
   end
 
   def self.parse_file(filename)

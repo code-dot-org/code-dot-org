@@ -331,7 +331,7 @@ export default connect(
     initialLockStatus: state.stageLock.lockStatus,
     isOpen: !!state.stageLock.lockDialogStageId,
     saving: state.stageLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
   dispatch => ({
     saveDialog(sectionId, lockStatus) {

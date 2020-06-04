@@ -32,6 +32,7 @@ import {
 import {
   Courses,
   Subjects,
+  LegacySubjects,
   States
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import RegionalPartnerDropdown, {
@@ -312,6 +313,36 @@ export class WorkshopFilter extends React.Component {
     }));
   }
 
+  static getSubjectOptions(subjects, prefix = '') {
+    let result = {};
+
+    Object.keys(subjects).map(
+      course =>
+        (result[course] = subjects[course].map(subject => ({
+          value: subject,
+          label: prefix + subject
+        })))
+    );
+
+    return result;
+  }
+
+  static concatSubjectArrays(objValue, srcValue) {
+    if (_.isArray(objValue)) {
+      return objValue.concat(srcValue);
+    }
+  }
+
+  static combineSubjectOptions(currentSubjects, legacySubjects) {
+    const legacyPrefix = '[Legacy] ';
+
+    return _.mergeWith(
+      this.getSubjectOptions(currentSubjects),
+      this.getSubjectOptions(legacySubjects, legacyPrefix),
+      this.concatSubjectArrays
+    );
+  }
+
   render() {
     // limit is intentionally stored in state and not reflected in the URL
     const filters = {
@@ -321,6 +352,13 @@ export class WorkshopFilter extends React.Component {
 
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
+
+    if (!this.subjectOptions) {
+      this.subjectOptions = WorkshopFilter.combineSubjectOptions(
+        Subjects,
+        LegacySubjects
+      );
+    }
 
     return (
       <Grid fluid>
@@ -376,7 +414,7 @@ export class WorkshopFilter extends React.Component {
             </FormGroup>
           </Col>
           <Clearfix visibleLgBlock />
-          {filters.course && Subjects[filters.course] && (
+          {filters.course && this.subjectOptions[filters.course] && (
             <Col md={5} sm={6}>
               <FormGroup>
                 <ControlLabel>Subject</ControlLabel>
@@ -384,10 +422,7 @@ export class WorkshopFilter extends React.Component {
                   value={filters.subject}
                   onChange={this.handleSubjectChange}
                   placeholder={null}
-                  options={Subjects[filters.course].map(v => ({
-                    value: v,
-                    label: v
-                  }))}
+                  options={this.subjectOptions[filters.course]}
                   {...SelectStyleProps}
                 />
               </FormGroup>

@@ -33,12 +33,6 @@ Dashboard::Application.configure do
   # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
-
-  # Generate digests for assets URLs.
-  config.assets.digest = true
-
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
@@ -58,10 +52,6 @@ Dashboard::Application.configure do
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
-  # Precompile additional assets.
-  # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  # config.assets.precompile += %w( search.js )
-
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -79,9 +69,6 @@ Dashboard::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-  # Whether or not to display pretty apps (formerly called blockly).
-  config.pretty_apps = true
 
   # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true

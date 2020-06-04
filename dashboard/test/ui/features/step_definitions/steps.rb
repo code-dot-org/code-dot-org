@@ -345,7 +345,7 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
 end
 
 When /^I (?:open|close) the small footer menu$/ do
-  menu_selector = 'div.small-footer-base a.more-link'
+  menu_selector = 'div.small-footer-base button.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible
     And I click selector "#{menu_selector}"
@@ -354,6 +354,23 @@ end
 
 When /^I press menu item "([^"]*)"$/ do |menu_item_text|
   menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
+    And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I (?:open|close) the help menu$/ do
+  help_menu_button_selector = '#help-icon'
+  steps %{
+    Then I wait until element "#{help_menu_button_selector}" is visible
+    And I click selector "#{help_menu_button_selector}"
+    Then I wait to see "#help-contents"
+  }
+end
+
+When /^I press help menu item "([^"]*)"$/ do |help_menu_item_id|
+  menu_item_selector = "#help-contents #{help_menu_item_id}"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
@@ -871,6 +888,7 @@ Then(/^I set slider speed to medium/) do
 end
 
 Then(/^I slow down execution speed$/) do
+  @browser.execute_script("Maze.shouldSpeedUpInfiniteLoops = false;")
   @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
@@ -992,6 +1010,43 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
+Given(/^I create a temp script$/) do
+  response = browser_request(
+    url: '/api/test/create_script',
+    method: 'POST'
+  )
+  @temp_script_name = JSON.parse(response)['script_name']
+  puts "created temp script named '#{@temp_script_name}'"
+end
+
+Given(/^I view the temp script overview page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}"
+    And I wait until element "#script-title" is visible
+  }
+end
+
+Given(/^I view the temp script edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+    And I wait until element ".edit_script" is visible
+  }
+end
+
+Given(/^I try to view the temp script edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+  }
+end
+
+Given(/^I delete the temp script$/) do
+  browser_request(
+    url: '/api/test/destroy_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
@@ -1019,6 +1074,40 @@ And /^I create a new section( and go home)?$/ do |home|
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
+Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+And /^I create a new section named "([^"]*)" assigned to "([^"]*)" version "([^"]*)"(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
+  individual_steps %Q{
+    When I see the section set up box
+    When I press the new section button
+    Then I should see the new section dialog
+    When I select email login
+    Then I wait to see "#uitest-section-name"
+    And I press keys "#{section_name}" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+
+    And I click selector "#assignment-version-year" once I see it
+    And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
+  }
+
+  if secondary
+    individual_steps %Q{
+      And I wait to see "#uitest-secondary-assignment"
+      And I select the "#{secondary}" option in dropdown "uitest-secondary-assignment"
+    }
+  end
+
+  individual_steps %Q{
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
+  }
+end
+
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
@@ -1043,7 +1132,7 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
 
   individual_steps %Q{
     And I press the save button to create a new section
-    And I wait for the dialog to close
+    And I wait for the dialog to close using jQuery
     Then I should see the section table
   }
 end
@@ -1055,6 +1144,13 @@ And /^I dismiss the language selector$/ do
   }
 end
 
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::AUTHORIZED_TEACHER
+  user.save!
+end
+
 And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
@@ -1064,6 +1160,13 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
+end
+
+And(/^I create a levelbuilder named "([^"]*)"$/) do |name|
+  steps %{
+    Given I create a teacher named "#{name}"
+    And I get levelbuilder access
+  }
 end
 
 def sign_up(name)
@@ -1198,7 +1301,12 @@ And(/^I get hidden script access$/) do
   browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
+And(/^I get levelbuilder access$/) do
+  browser_request(url: '/api/test/levelbuilder_access', method: 'POST')
+end
+
 And(/^I save the section url$/) do
+  wait_short_until {steps 'Then I should see the section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
       .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
@@ -1208,33 +1316,17 @@ And(/^I save the section url$/) do
   @section_url = "http://studio.code.org/join/#{section_code}"
 end
 
-And(/^I navigate to the section url$/) do
-  steps %Q{
-    Given I am on "#{@section_url}"
-  }
+And(/^I join the section$/) do
+  page_load(true) do
+    steps %Q{
+      Given I am on "#{@section_url}"
+      And I click selector ".btn.btn-primary" once I see it
+    }
+  end
 end
 
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
-end
-
-# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
-# thereof, removing it if it remains unused.
-And(/I display toast "([^"]*)"$/) do |message|
-  @browser.execute_script(<<-SCRIPT)
-    var div = document.createElement('div');
-    div.className = 'ui-test-toast';
-    div.textContent = "#{message}";
-    div.style.position = 'absolute';
-    div.style.top = '50px';
-    div.style.right = '50px';
-    div.style.padding = '50px';
-    div.style.backgroundColor = 'lightyellow';
-    div.style.border = 'dashed 3px #eeee00';
-    div.style.fontWeight = 'bold';
-    div.style.fontSize = '14pt';
-    document.body.appendChild(div);
-  SCRIPT
 end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
@@ -1565,6 +1657,10 @@ When /^I wait for the dialog to close$/ do
   steps 'When I wait until element ".modal" is gone'
 end
 
+When /^I wait for the dialog to close using jQuery$/ do
+  steps 'When I wait until element ".modal" is not visible'
+end
+
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
 end
@@ -1588,6 +1684,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 end
 
 Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
+  wait_short_until {steps 'Then I should see the section table'}
   @section_id = get_section_id_from_table(row_index)
 end
 
@@ -1613,6 +1710,13 @@ Then /^I navigate to teacher dashboard for the section I saved$/ do
   expect(@section_id).to be > 0
   steps %{
     Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}"
+  }
+end
+
+Then /^I navigate to teacher dashboard for the section I saved with experiment "([^"]*)"$/ do |experiment_name|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}?enableExperiments=#{experiment_name}"
   }
 end
 
@@ -1700,4 +1804,33 @@ end
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
+end
+
+def pass_time_for_user(name, amount_of_time)
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.created_at = amount_of_time
+  user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial
+  user.save!
+  user.user_school_infos.each do |info|
+    info.last_confirmation_date = amount_of_time
+    info.save!
+  end
+end
+
+And(/^eight days pass for user "([^"]*)"$/) do |name|
+  pass_time_for_user name, 8.days.ago
+end
+
+And(/^one year passes for user "([^"]*)"$/) do |name|
+  pass_time_for_user name, 1.year.ago
+end
+
+Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
+  step_list = []
+  times.to_i.times do
+    step_list.push("Then I click selector \"#{selector}\" once I see it")
+    step_list.push("And I wait for 1 seconds")
+  end
+  steps step_list.join("\n")
 end

@@ -65,7 +65,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
     configure_caching(@script)
-    if @script.finish_url && current_user.try(:completed?, @script)
+    if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
       redirect_to @script.finish_url
       return
     end
@@ -74,10 +74,11 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
+  use_database_pool show: :persistent
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = ScriptLevelsController.get_script(request, version_year: DEFAULT_VERSION_YEAR)
+    @script = ScriptLevelsController.get_script(request)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -105,12 +106,17 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # In the case of the puzzle_page, send it through to be included in the
+    # If the stage is not released yet (visible_after is in the future) then don't
+    # let a user go to the script_level page in that stage
+    return head(:forbidden) unless @script_level.lesson.published?(current_user)
+
+    # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
       extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
+    extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
     override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
@@ -162,8 +168,8 @@ class ScriptLevelsController < ApplicationController
 
     if stage_id
       # TODO(asher): change this to use a cache
-      stage = Stage.find(stage_id)
-      return head :forbidden unless stage.try(:script).try(:hideable_stages)
+      stage = Lesson.find(stage_id)
+      return head :forbidden unless stage.try(:script).try(:hideable_lessons)
       section.toggle_hidden_stage(stage, should_hide)
     else
       # We don't have a stage id, implying we instead want to toggle the hidden state of this script
@@ -178,10 +184,6 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
-      flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
-    end
-
     if current_user&.teacher?
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
@@ -191,7 +193,14 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
+      # This errs on the side of showing the warning by only if the script we are in
+      # is the assigned script for the section
+      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
+
+    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
+    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
+    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
     @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
@@ -201,7 +210,7 @@ class ScriptLevelsController < ApplicationController
       @level = @script_level.level
     elsif params[:level_name]
       @level = Level.find_by_name params[:level_name]
-      @script_level = @level.script_levels.find_by_script_id(@script.id)
+      @script_level = @level.script_levels.find_by_script_id(@script.id) if @level
     end
 
     if @level
@@ -213,9 +222,10 @@ class ScriptLevelsController < ApplicationController
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
+      next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
       stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_stage_extras(current_user),
-      bonus_levels: @script.get_bonus_script_levels(@stage),
+      next_level_path: @stage.next_level_path_for_lesson_extras(current_user),
+      bonus_levels: @script.get_bonus_script_levels(@stage, current_user),
     }.camelize_keys
     @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
 
@@ -240,11 +250,11 @@ class ScriptLevelsController < ApplicationController
     render json: stage.summary_for_lesson_plans
   end
 
-  def self.get_script(request, version_year: nil)
+  def self.get_script(request)
     script_id = request.params[:script_id]
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
       Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
-      Script.get_from_cache(script_id, version_year: version_year)
+      Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
     script
@@ -277,7 +287,7 @@ class ScriptLevelsController < ApplicationController
 
   def user_or_session_level
     if current_user
-      current_user.next_unpassed_progression_level(@script).try(:or_next_progression_level)
+      current_user.next_unpassed_visible_progression_level(@script)
     else
       find_next_level_for_session(@script)
     end
@@ -314,7 +324,11 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
-      @user_level = @user.user_level_for(@script_level, @level)
+      @user_level = UserLevel.find_by(
+        user: @user,
+        script: @script_level.script,
+        level: @level
+      )
       level_source = @user_level.try(:level_source)
       readonly_view_options
     elsif current_user
@@ -322,7 +336,11 @@ class ScriptLevelsController < ApplicationController
       @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
-      user_level = current_user.user_level_for(@script_level, @level)
+      user_level = UserLevel.find_by(
+        user: current_user,
+        script: @script_level.script,
+        level: @level
+      )
       if user_level && user_level.submitted?
         level_view_options(
           @level.id,
@@ -354,7 +372,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_section
-    if params[:section_id]
+    if params[:section_id] && params[:section_id] != "undefined"
       section = Section.find(params[:section_id])
 
       # TODO: This should use cancan/authorize.
@@ -367,6 +385,12 @@ class ScriptLevelsController < ApplicationController
   end
 
   def select_level
+    # If a BubbleChoice level's sublevel has been requested, return it.
+    if @script_level.bubble_choice? && params[:sublevel_position]
+      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+      return sublevel if sublevel
+    end
+
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
@@ -406,7 +430,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage ||= @script_level.stage
+    @stage ||= @script_level.lesson
 
     load_level_source
 
@@ -428,6 +452,9 @@ class ScriptLevelsController < ApplicationController
       level_id: @level.id
     )
 
+    # for level groups, @level and @callback point to the parent level, so we
+    # generate a url which can be used to report sublevel progress (after
+    # appending the sublevel id).
     if @level.game.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,

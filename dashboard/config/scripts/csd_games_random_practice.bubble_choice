@@ -1,0 +1,8 @@
+name 'CSD games random practice'
+display_name 'Practice with Random Numbers'
+description 'Try out your new skills on these levels.'
+
+sublevels
+level 'CSD U3 Random shape size_pilot'
+level 'CSD U3 Random shape position_pilot'
+level 'CSD U3 Random planets_pilot'

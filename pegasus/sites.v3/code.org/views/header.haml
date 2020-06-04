@@ -1,5 +1,5 @@
 :ruby
-  cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+  cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
 
@@ -43,7 +43,10 @@
                 %img#logo{:src=>'/images/logo.png'}
             - else
               %a.linktag#logo-signedout{:href=>CDO.code_org_url}
-                %img#logo{:src=>'/images/logo.png'}
+                - if request.path_info == '/'
+                  %img#logo{:src=>'/images/logo-inverse.svg'}
+                - else
+                  %img#logo{:src=>'/images/logo.png'}
           #headerlinks.desktop-feature
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
               %a.headerlink.linktag{id: entry[:id], href: entry[:url]}= entry[:title]
@@ -51,6 +54,7 @@
         #right
           #sign_in_or_user
             =view :sign_in_or_user
+          = view :help_button, hamburger_options
           = view :hamburger, hamburger_options
 
       #clear{:style=>'clear:both'}

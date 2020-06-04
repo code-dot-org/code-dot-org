@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
 import {
   announcementShape,
@@ -22,6 +22,8 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -64,6 +66,15 @@ const styles = {
  */
 class ScriptOverviewHeader extends Component {
   static propTypes = {
+    showCourseUnitVersionWarning: PropTypes.bool,
+    showScriptVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
+    showHiddenUnitWarning: PropTypes.bool,
+    courseName: PropTypes.string,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    userId: PropTypes.number,
+
+    // provided by redux
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
       courseViewPath: PropTypes.string.isRequired
@@ -78,13 +89,7 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    showCourseUnitVersionWarning: PropTypes.bool,
-    showScriptVersionWarning: PropTypes.bool,
-    showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
-    showHiddenUnitWarning: PropTypes.bool,
-    courseName: PropTypes.string,
-    locale: PropTypes.string
+    localeEnglishName: PropTypes.string
   };
 
   componentDidMount() {
@@ -141,18 +146,6 @@ class ScriptOverviewHeader extends Component {
         currentAnnouncements.push(element);
       }
     });
-
-    // Checks if the non-verified teacher announcement should be shown
-    if (currentView === 'Teacher') {
-      if (!this.props.isVerifiedTeacher && this.props.hasVerifiedResources) {
-        currentAnnouncements.push({
-          notice: i18n.verifiedResourcesNotice(),
-          details: i18n.verifiedResourcesDetails(),
-          link: 'https://support.code.org/hc/en-us/articles/115001550131',
-          type: NotificationType.information
-        });
-      }
-    }
     return currentAnnouncements;
   };
 
@@ -170,8 +163,14 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
-      courseName
+      courseName,
+      userId,
+      isVerifiedTeacher,
+      hasVerifiedResources
     } = this.props;
+
+    const displayVerifiedResources =
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -191,7 +190,7 @@ class ScriptOverviewHeader extends Component {
     );
     setRecommendedAndSelectedVersions(
       filteredVersions,
-      this.props.locale,
+      this.props.localeEnglishName,
       selectedVersion && selectedVersion.year
     );
 
@@ -208,6 +207,10 @@ class ScriptOverviewHeader extends Component {
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
+        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
+        {displayVerifiedResources && (
+          <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
         )}
         {displayVersionWarning && (
           <Notification
@@ -274,8 +277,9 @@ export default connect(state => ({
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
   betaTitle: state.progress.betaTitle,
-  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  localeEnglishName: state.locales.localeEnglishName
 }))(ScriptOverviewHeader);

@@ -1,0 +1,158 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2019-10-17T18:56:34.000Z",
+  "level_num": "custom",
+  "user_id": 831,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "Mikelab"
+    ],
+    "helper_libraries": [
+      "GameLabJr",
+      "MikeLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "hide_custom_blocks": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-17 18:57:17 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 18:57:41 +0000\",\"changed\":[\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\",\"use_modal_function_editor\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 19:09:12 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 19:17:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 19:19:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 19:23:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 19:25:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-17 19:27:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="Mikelab_whenYesNoClicked">
+          <title name="KEY">"yes"</title>
+          <next>
+            <block type="Mikelab_addTrainingData" editable="false">
+              <title name="NAME">{x: 201, y: 100}</title>
+              <title name="LOCATION">{x: randomNumber(51, 350), y: randomNumber(50, 350)}</title>
+            </block>
+          </next>
+        </block>
+        <block type="Mikelab_whenYesNoClicked">
+          <title name="KEY">"no"</title>
+          <next>
+            <block type="Mikelab_addTrainingData">
+              <title name="NAME">{x: 201, y: 100}</title>
+              <title name="LOCATION">{x: randomNumber(52, 350), y: randomNumber(50, 350)}</title>
+            </block>
+          </next>
+        </block>
+        <block type="Mikelab_repeatUntilComplete" editable="false">
+          <statement name="DO">
+            <block type="Mikelab_getNext" editable="false">
+              <next>
+                <block type="Mikelab_ifLabel">
+                  <title name="DANCE">MOVES.ClapHigh</title>
+                  <statement name="DO1">
+                    <block type="Mikelab_sendGood" editable="false"/>
+                  </statement>
+                  <statement name="DO2">
+                    <block type="Mikelab_sendBad" editable="false"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="Mikelab_repeatUntilComplete" editable="false">
+          <statement name="DO">
+            <block type="Mikelab_getNext" editable="false">
+              <next>
+                <block type="Mikelab_ifRecognizeLabelOnly">
+                  <title name="DANCE">MOVES.Clown</title>
+                  <statement name="DO1">
+                    <block type="Mikelab_hideFish" editable="false">
+                      <title name="TRASH">object</title>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="Mikelab_whenYesNoClicked">
+          <title name="KEY">"yes"</title>
+          <next>
+            <block type="Mikelab_addTrainingData">
+              <title name="NAME">{x: 200, y: 100}</title>
+              <title name="LOCATION">{x: randomNumber(50, 350), y: randomNumber(50, 350)}</title>
+            </block>
+          </next>
+        </block>
+        <block type="Mikelab_whenYesNoClicked">
+          <title name="KEY">"no"</title>
+          <next>
+            <block type="Mikelab_addTrainingData">
+              <title name="NAME">{x: 200, y: 100}</title>
+              <title name="LOCATION">{x: randomNumber(53, 350), y: randomNumber(50, 350)}</title>
+            </block>
+          </next>
+        </block>
+        <block type="Mikelab_repeatUntilComplete" editable="false">
+          <statement name="DO">
+            <block type="Mikelab_getNext" editable="false">
+              <next>
+                <block type="Mikelab_ifLabel">
+                  <title name="DANCE">MOVES.Clown</title>
+                  <statement name="DO1">
+                    <block type="Mikelab_sendGood" editable="false"/>
+                  </statement>
+                  <statement name="DO2">
+                    <block type="Mikelab_sendBad" editable="false"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="Mikelab_repeatUntilComplete" editable="false">
+          <statement name="DO">
+            <block type="Mikelab_getNext" editable="false">
+              <next>
+                <block type="Mikelab_ifRecognizeLabelOnly">
+                  <title name="DANCE">MOVES.Clown</title>
+                  <statement name="DO1">
+                    <block type="Mikelab_hideFish">
+                      <title name="TRASH">fish</title>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>

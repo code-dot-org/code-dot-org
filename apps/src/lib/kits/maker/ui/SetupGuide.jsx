@@ -3,7 +3,7 @@ import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
 import SetupChecker from '../util/SetupChecker';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import {
   isCodeOrgBrowser,
@@ -96,8 +96,8 @@ class Downloads extends React.Component {
         {LINUX === platform && <LinuxDownloads />}
         {CHROMEBOOK === platform && <ChromebookInstructions />}
         <h2>{i18n.support()}</h2>
-        <UnsafeRenderedMarkdown markdown={i18n.debugMakerToolkit()} />
-        <UnsafeRenderedMarkdown markdown={i18n.contactGeneralSupport()} />
+        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
+        <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
       </div>
     );
   }
@@ -125,6 +125,7 @@ class WindowsDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Windows (${
               installer.version
             })`}
@@ -176,6 +177,7 @@ class MacDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Mac (${installer.version})`}
             icon="download"
             color={ButtonColor.orange}
@@ -226,6 +228,7 @@ class LinuxDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Linux (${
               installer.version
             })`}

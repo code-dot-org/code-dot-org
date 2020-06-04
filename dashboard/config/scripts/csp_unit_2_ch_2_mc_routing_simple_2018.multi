@@ -1,9 +1,10 @@
 name 'CSP Unit 2 Ch 2 MC routing simple_2018'
+editor_experiment ''
 title 'Routing'
 type 'multi2'
 height 'auto'
 
-question 'Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.'
+question 'Which of the following statements are true about routers and routing on the Internet. Choose **two** answers.'
 wrong 'Protocols ensure that a single path between two computers is established before sending packets over it.'
 wrong 'Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.'
 right 'A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".'

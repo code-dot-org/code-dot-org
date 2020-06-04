@@ -3,9 +3,11 @@ require 'test_helper'
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
   include UsersHelper
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
   end
 
   test "login: authorizing with known facebook account signs in" do
@@ -390,92 +392,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test 'login: oauth takeover transfers sections to taken over account' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      teacher = create :teacher
-      section = create :section, user: teacher, login_type: 'clever'
-      oauth_student = create :student, provider: provider
-      student = create :student
-
-      oauth_students = [oauth_student]
-      section.set_exact_student_list(oauth_students)
-
-      # Pull sections_as_student from the database and store them in an array to compare later
-      sections_as_student = oauth_student.sections_as_student.to_ary
-
-      @request.cookies[:pm] = 'clever_takeover'
-      set_oauth_takeover_session_variables(provider, oauth_student)
-      check_and_apply_oauth_takeover(student)
-
-      assert_equal sections_as_student, student.sections_as_student
-    end
-  end
-
-  test 'login: oauth takeover does not happen if takeover is expired' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      teacher = create :teacher
-      section = create :section, user: teacher, login_type: 'clever'
-      oauth_student = create :student, provider: provider
-      student = create :student
-
-      oauth_students = [oauth_student]
-      section.set_exact_student_list(oauth_students)
-
-      # Pull sections_as_student from the database and store them in an array to compare later
-      sections_as_student = oauth_student.sections_as_student.to_ary
-
-      @request.cookies[:pm] = 'clever_takeover'
-      set_oauth_takeover_session_variables(provider, oauth_student)
-      @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.ago
-      check_and_apply_oauth_takeover(student)
-
-      assert_equal sections_as_student, oauth_student.sections_as_student
-      refute_equal sections_as_student, student.sections_as_student
-    end
-  end
-
-  test 'login: oauth takeover takes over account when account has no activity' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      oauth_student = create :student, provider: provider
-      student = create :student
-
-      set_oauth_takeover_session_variables(provider, oauth_student)
-      check_and_apply_oauth_takeover(student)
-
-      oauth_student.reload
-      refute_nil oauth_student.deleted_at
-
-      student.reload
-      takeover_auth = student.authentication_options.last
-      assert_equal provider, takeover_auth.credential_type
-      assert_equal oauth_student.uid, takeover_auth.authentication_id
-      assert_equal '54321', takeover_auth.data_hash[:oauth_token]
-      assert_nil @request.session['clever_link_flag']
-    end
-  end
-
-  test 'login: oauth takeover does nothing if account has activity' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
-      oauth_student = create :student, provider: provider
-      student = create :student
-      level = create(:level)
-      create :user_level, user: oauth_student, level: level, attempts: 1, best_result: 1
-
-      assert oauth_student.has_activity?
-
-      FirehoseClient.any_instance.expects(:put_record).at_least_once
-
-      assert_does_not_create(AuthenticationOption) do
-        set_oauth_takeover_session_variables(provider, oauth_student)
-        check_and_apply_oauth_takeover(student)
-      end
-
-      oauth_student.reload
-      assert_nil oauth_student.deleted_at
-      assert_equal 1, student.authentication_options.count
-    end
-  end
-
   test 'clever: signs in user if user is found by credentials' do
     # Given I have a Clever-Code.org account
     user = create :student, :clever_sso_provider
@@ -621,6 +537,94 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
     assert_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
     assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
+  end
+
+  test 'maker_google_oauth2: returns an error if no token' do
+    # Go to function with no parameters
+    post :maker_google_oauth2
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_no_code')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: returns an error if token is expired' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token from 6 minutes ago
+    secret_code = Encryption.encrypt_string_utf8(
+      (Time.now - 6.minutes).strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_token_expired')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: returns an error if provider is incorrect' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token with incorrect provider
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "Clever"
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_wrong_provider')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: returns an error if user if is invalid' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token with corrupted authentication id
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "test" + user_auth['credential_type']
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_invalid_user')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: logs in user if valid token' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
+
+    #Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    #Then I am signed in
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'google_oauth2: signs in user if user is found by credentials' do
@@ -1024,6 +1028,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       },
     )
 
+    windowslive_auth_option = user.authentication_options.find {|ao| ao.credential_type == 'windowslive'}
+    assert windowslive_auth_option.primary?
+
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
     get :microsoft_v2_auth
@@ -1033,6 +1040,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, user.authentication_options.count
     microsoft_auth_option = user.authentication_options.first
     refute_nil microsoft_auth_option
+    assert microsoft_auth_option.primary?
     assert_equal 'microsoft_v2_auth', microsoft_auth_option.credential_type
     assert_equal uid, microsoft_auth_option.authentication_id
     assert_equal signed_in_user_id, user.id
@@ -1097,11 +1105,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User.last.id, signed_in_user_id
   end
 
-  test 'sign_up_clever: email taken redirect if _two_ users are already using your email address' do
-    # TODO: Make this not a thing
+  test 'sign_up_clever: email conflict redirect if any users are already using your email address' do
     email = 'alreadytaken@example.com'
     create :student, email: email
-    create :student, email: email + '.oauthemailalreadytaken'
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
@@ -1113,27 +1119,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_creates(User) do
       get :clever
     end
-    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{email}.oauthemailalreadytaken"
-  end
-
-  test 'sign_up_clever: clever email taken redirect if _two_ users are already using your email address and one of them is clever' do
-    # TODO: Make this not a thing
-    email = 'alreadytaken@example.com'
-    create :student, email: email
-    taken_email = email + '.oauthemailalreadytaken'
-    create :student, email: taken_email, provider: AuthenticationOption::CLEVER
-
-    auth = generate_auth_user_hash(
-      provider: AuthenticationOption::CLEVER,
-      user_type: User::TYPE_TEACHER,
-      email: email
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    refute_creates(User) do
-      get :clever
-    end
-    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{taken_email}"
+    assert_redirected_to users_existing_account_path({provider: "clever", email: email})
   end
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
@@ -1512,6 +1498,34 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal expected_notice, flash.notice
   end
 
+  test "connect_provider: return messaging specific to linked account" do
+    provider = AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.sample
+
+    [User::TYPE_STUDENT, User::TYPE_TEACHER].each do |user_type|
+      user = create user_type
+      auth = generate_auth_user_hash(
+        provider: provider,
+        email: user.email
+      )
+      @request.env['omniauth.auth'] = auth
+
+      Timecop.freeze do
+        setup_should_connect_provider(user, 2.days.from_now)
+        get provider
+
+        assert_redirected_to 'http://test.host/users/edit'
+
+        provider_name = I18n.t(provider, scope: :auth)
+        expected_notice = user.teacher? ?
+          I18n.t('user.auth_option_saved', provider: provider_name, email: user.email) :
+          I18n.t('user.auth_option_saved_no_email', provider: provider_name)
+
+        assert_equal expected_notice, flash.notice
+        sign_out user
+      end
+    end
+  end
+
   test 'silent_takeover: Adds email to teacher account missing email' do
     # Set up existing account
     malformed_account = create :teacher, :demigrated
@@ -1673,22 +1687,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   private
-
-  def set_oauth_takeover_session_variables(provider, user)
-    if user.migrated?
-      auth_option = user.authentication_options.find_by credential_type: provider
-      uid = auth_option.authentication_id
-    else
-      uid = user.uid
-    end
-
-    begin_account_takeover(
-      provider: provider,
-      uid: uid,
-      oauth_token: '54321',
-      force_takeover: false
-    )
-  end
 
   # Try to link a credential to the provided user
   # @return [OmniAuth::AuthHash] the auth hash, useful for validating

@@ -19,7 +19,6 @@ import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
 const styles = {
   nonResponsive: {
-    width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
   },
   share: {
@@ -35,7 +34,6 @@ const styles = {
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    width: applabConstants.APP_WIDTH,
     height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
     overflow: 'hidden',
     // layer 1 is design mode/div applab
@@ -56,7 +54,14 @@ class Visualization extends React.Component {
     isPaused: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     playspacePhoneFrame: PropTypes.bool.isRequired,
-    isResponsive: PropTypes.bool.isRequired
+    isResponsive: PropTypes.bool.isRequired,
+    widgetMode: PropTypes.bool
+  };
+
+  state = {
+    appWidth: this.props.widgetMode
+      ? applabConstants.WIDGET_WIDTH
+      : applabConstants.APP_WIDTH
   };
 
   handleDisableMaker = () => project.toggleMakerEnabled();
@@ -67,19 +72,26 @@ class Visualization extends React.Component {
   };
 
   render() {
-    const appWidth = applabConstants.APP_WIDTH;
+    const {appWidth} = this.state;
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
       <div
         id={VISUALIZATION_DIV_ID}
-        className={classNames({
-          responsive: this.props.isResponsive,
-          with_padding: this.props.visualizationHasPadding
-        })}
+        className={
+          this.props.widgetMode
+            ? 'widgetWidth widgetHeight'
+            : classNames({
+                responsive: this.props.isResponsive,
+                with_padding: this.props.visualizationHasPadding
+              })
+        }
         style={[
-          !this.props.isResponsive && styles.nonResponsive,
+          !this.props.isResponsive && {
+            ...styles.nonResponsive,
+            ...{width: appWidth}
+          },
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
           this.props.playspacePhoneFrame &&
@@ -106,7 +118,7 @@ class Visualization extends React.Component {
         />
         <div
           style={[
-            styles.screenBlock,
+            {...styles.screenBlock, ...{width: appWidth}},
             !(this.props.isPaused && this.props.playspacePhoneFrame) &&
               commonStyles.hidden
           ]}
@@ -116,11 +128,14 @@ class Visualization extends React.Component {
   }
 }
 
+export const UnconnectedVisualization = Visualization;
+
 export default connect(state => ({
   visualizationHasPadding: state.pageConstants.visualizationHasPadding,
   isShareView: state.pageConstants.isShareView,
   isRunning: state.runState.isRunning,
   isPaused: state.runState.isDebuggerPaused,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
-  isResponsive: isResponsiveFromState(state)
+  isResponsive: isResponsiveFromState(state),
+  widgetMode: state.pageConstants.widgetMode
 }))(Radium(Visualization));

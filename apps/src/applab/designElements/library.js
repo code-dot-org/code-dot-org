@@ -26,7 +26,8 @@ var ElementType = utils.makeEnum(
   'CANVAS',
   'SCREEN',
   'CHART',
-  'SLIDER'
+  'SLIDER',
+  'PHOTO_SELECT'
 );
 
 var elements = {};
@@ -42,6 +43,7 @@ elements[ElementType.CANVAS] = require('./canvas');
 elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
+elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
 
 export default {
   ElementType: ElementType,
@@ -122,12 +124,15 @@ export default {
    */
   getElementType: function(element, allowUnknown) {
     var tagname = element.tagName.toLowerCase();
-
     switch (tagname) {
       case 'button':
         return ElementType.BUTTON;
       case 'label':
-        return ElementType.LABEL;
+        if ($(element).hasClass('img-upload')) {
+          return ElementType.PHOTO_SELECT;
+        } else {
+          return ElementType.LABEL;
+        }
       case 'select':
         return ElementType.DROPDOWN;
       case 'div':
@@ -153,11 +158,18 @@ export default {
             return ElementType.TEXT_INPUT;
         }
     }
+    let errorMessage =
+      'Project contains an element with an unknown type' +
+      `\nType: ${element.tagName}` +
+      `\nId: ${element.id}` +
+      `\nClass: ${element.className}`;
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {
+      console.warn(errorMessage);
       return null;
     }
-    throw new Error('unknown element type');
+    // TODO: Gracefully handle errors from malformed design mode elements
+    throw new Error(errorMessage);
   },
 
   /**
@@ -170,12 +182,18 @@ export default {
   },
 
   getCurrentTheme: function(parentScreen) {
-    return parentScreen
-      ? parentScreen.getAttribute('data-theme')
-      : themeOptions[DEFAULT_THEME_INDEX];
+    return (
+      (parentScreen && parentScreen.getAttribute('data-theme')) ||
+      themeOptions[DEFAULT_THEME_INDEX]
+    );
   },
 
-  applyCurrentTheme: function(element, parentScreen) {
+  /**
+   * Sets all properties on the element to reflect the current theme
+   * of the parent screen. This function ignores any student customization
+   * on those properties and overwrites all theme properties.
+   */
+  setAllPropertiesToCurrentTheme: function(element, parentScreen) {
     const currentTheme = this.getCurrentTheme(parentScreen);
     const themeValues = this.getThemeValues(element);
     for (const propName in themeValues) {
@@ -189,9 +207,13 @@ export default {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function(element, updateProperty) {
-    var elementType = this.getElementType(element);
-    if (elements[elementType] && elements[elementType].onDeserialize) {
+  onDeserialize: function(element, updateProperty, skipIfUnknown) {
+    var elementType = this.getElementType(element, skipIfUnknown);
+    if (
+      elementType &&
+      elements[elementType] &&
+      elements[elementType].onDeserialize
+    ) {
       elements[elementType].onDeserialize(element, updateProperty);
     }
   },

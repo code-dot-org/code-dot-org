@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
 import * as dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
 

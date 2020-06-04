@@ -1,31 +1,21 @@
 name 'CSD U2 image debug match'
-encrypted '3Ov2oYc12jHpsy+2xxXdlpQz3JPNZq0FoZvM16VBrOGuAsAMA00LDmmcl+8B
-x6rRX51jwmWWvGxoNTVgfHAnN7mNO0nwNwRzN5NMPQrpRqZbkkDti4AYu30k
-5CW0bTKdsquUSIYnhO0Ga1V4Y4NSPYj6Twm9PnND7Ns0i36PYRXfwc9qDVq7
-mdbjNhXfUUPlsU0UhBfXf2kTZZhdE7jfQgRUJ4hpsU9XrLNnpfnnxniJI0uv
-icbnmQQuisKFvvPjRv0sMTDnopsYK1T6hf4jboSZFpX/7WPgMjpaSAgMvDWR
-ztCml5xqK1C2m/oa4uV2iPmNtNlNI+vdWFAQ8a9zAsibEx8RfyfdxqaJoaLN
-2EgMWDEfNRs2tJayTc8CiW3ZG2zfQSKJ9or/by+E3M11HLFa6kygAkVNsk9T
-ltDGba2IJLQdVPLEO6O/TkHtXmp8JN+VZiQo5dwIOaR9tuFuBbA+W9KpW6Kg
-4UihlRraVZpa4BoECjI9u9JaaZrYnIVYlkgACT01O1DZKKKkTnmTl65XjLN+
-8aCgtSvBEAgpXEb68TD10PZNopR8xpRFZBbpcFBPZGMbzgqasXHSmS0yfU43
-yAJCRsvRHcSu/h9CYck/A+j9W2b63k+YUvJQ1OM/HqbEhaNOG0VPPqwRyiXg
-brsCYey9yPCePCvJYFz42OZOplLMkmyUxGyLHd8m1+l4m8FfBkAih9x+eCus
-4dIKmL/rABar1hffBNlUXyFCPU4yyraQsDod15xjVIr19mW3wNNOhrQkE6qh
-IjDMoWuzcVCGr2vzVGscqY0Oe5vwjH5wdnCFwzBS5I+k98aNKYnxziNj4uPP
-QlhJgu6h0oVElUI1+3Ptkh041uPf4WrE9QNMqgfGneDmjTcHqgXut1DNG06I
-9bxiCs0zyYsMNKUNOpaZfAPMT+pYF4snCvxwhUDh0Afiq5TbF4BGO5W2/Qdx
-G4qLBLwZt0S9SL1kWukVw1DgxnbbNYJ0nWbNUykITgEVQAl6FINcBTQ/9+we
-o6yDfEjFaHwpzsMcfCpmaaifldDna/7yEYTpf10wR4Vam94Mo0i5ODTmVYAr
-+KqP8Z6lCjl7/bBcXZsLeRDAmAyIXXD3GmEUXAjZwgQBvJTon1AYOxej/T1s
-zK4AgPjAlGyeAMK5nEdqpMphZ5kj9mCfOzLAa2Dfqo05JRCpcGQawuvf8eqY
-5D5q97HXlG8k2KyZ5eZdV094tyojEVSNk8AmC2SU0LHPku6USwBOvn0lA4He
-Mj6HY3nHVmKSMshYwzh6s0MGcW/66vsbraHPN4FDF4el1MRbdBf57iNdvl3Q
-FTR4aQhQvVAHTYIjS0Lsgjy31n0ZHRalPF6yqbxuVlPFDfhIzOyfVN9XwSXf
-QmJLaVy8dSCY9xCGQpK2G2YrHfKALgecwEReTbTBQLF/lvr5oZYdVm1BXsNs
-Ad3MCd6VIAfKIB/a+VDt+4+Rljh6K/HBkn/QuTLiF3vyENChDkTFBs0bWrWh
-inPS13rTXM2K3ZxHPbSpPxeRo5uO9vXU30nhPYur7HYAUto9cFrc7ujmcRZS
-wGUGQi16oGESLbcWZk3YZLbPEMwHdoiYRg+VRS3C01q1zoS9MnMEk3IC7qDN
-4BKMtRAYo2/O9jsZu9uXF0Vbwx5UWdml16ZR5gh9bWPSN89CndJIrNvqe/mo
-zHb6tTALfqI5qmF9q0gKxYQ9S9CRZAodYM+eKxzNDsgHGX9Q
-'
+editor_experiment ''
+description 'Match the buggy HTML code with the description of its bug.'
+question 'The `src` attribute is spelled incorrectly.'
+answer 'https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png'
+question 'The `src` and `alt` attributes are switched'
+answer 'https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png'
+question 'The file extension (.jpg) is missing from the image address'
+answer 'https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png'
+question 'The image address is not given as a `src` attribute'
+answer 'https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png'
+question 'There is a space in the file name'
+answer 'https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Although this level can be used to assess student understanding of the syntax of the `<img>` tag, its main purpose is to make students aware of the most common types of bugs they may encounter when adding images to web pages.
+MARKDOWN

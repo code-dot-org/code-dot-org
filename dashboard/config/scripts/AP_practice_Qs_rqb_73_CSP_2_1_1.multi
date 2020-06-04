@@ -1,10 +1,7 @@
 name 'AP_practice_Qs_rqb_73_CSP_2_1_1'
-wrong 'I, II, III
-'
-wrong 'I, III, II
-'
-wrong 'II, III, II,
-'
+wrong 'I, II, III'
+wrong 'I, III, II'
+wrong 'II, III, II,'
 right 'II, I, III'
 markdown <<MARKDOWN
 Rank the following from largest to smallest.

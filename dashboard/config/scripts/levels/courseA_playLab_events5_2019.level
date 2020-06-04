@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "short_instructions": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed.",
+    "short_instructions": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed. Make Jorge get the flags to finish the level!",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,21 +47,35 @@
     "timeout_failure_tick": "0",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_playLab_events5_1\",\r\n  \"callout_text\": \"Click here to change the direction of the event arrow.\",\r\n  \"element_id\": \"#callMeUp\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "gradek_playlab_events5c_template_2019",
-    "long_instructions": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
+    "long_instructions": "Add events to have Jorge move up and down when the \\`up\\` and \\`down\\` buttons are pressed. Make Jorge get the flags to finish the level!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here are the event blocks that you will need to use to move Jorge up and down:\\n\\n<xml><block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">up</title>\\n  </block></xml>\\n\\nand \\n\\n<xml><block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">down</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/536b0700cfe0e78418cc52a56a91ef89/courseA_playLab_events5_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?\\n\\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)\",\"hint_id\":\"courseA_playLab_events5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4826a4c9a589619d30b858f3e9a26d2a/courseA_playLab_events5_2018.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_long_instructions_override": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
+    "tts_long_instructions_override": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed. Make Jorge get the flags to finish the level!",
     "disable_procedure_autopopulate": "false",
     "background": "space",
     "parent_level_id": 11641,
     "name_suffix": "_2019",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/ce222213d37908eaf27b969bdbfc2fd0=levelbuilder/45310.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "tts_short_instructions_override": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed. Make Jorge get the flags to finish the level!",
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:43:31 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:54:42 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 16:05:10 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-16 16:05:39 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 18:34:47 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2019-05-07 18:52:06 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:43:31 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:54:42 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 16:05:10 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-16 16:05:39 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 18:34:47 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2019-05-07 18:52:06 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 20:43:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"short_instructions\",\"long_instructions\",\"tts_long_instructions_override\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

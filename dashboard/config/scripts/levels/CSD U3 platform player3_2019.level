@@ -33,7 +33,7 @@
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template_2019",
-    "encrypted_examples": "pe1Q/wNGt9tsPSqJzQcUyQO3dYi7omzj/TlVaekx7vuN5lBDX3LENRUtQ9QI\niKEr\n",
+    "encrypted_examples": "YSfvnP4yK4TnKPvmEJHks1o7TPc81oDrB+Kl5G3XQWCVz5COb+8P4GQvBTin\nzQVONmN2K1GIdh9ml4Z3IUQZ0A==\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "true",
@@ -43,7 +43,6 @@
     "expand_debugger": "false",
     "parent_level_id": 11425,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/",
@@ -59,11 +58,13 @@
       "/docs/concepts/javascript/if-else-statements/",
       "/docs/concepts/javascript/functions/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-06 00:03:10 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:07:21 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-06 00:03:10 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:07:21 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-28 19:03:04 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

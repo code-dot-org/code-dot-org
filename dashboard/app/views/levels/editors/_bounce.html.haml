@@ -3,7 +3,7 @@
   = f.number_field :ball_direction, step: :any
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
 
 .field
   = f.label :soft_buttons, 'Software Buttons'
@@ -38,7 +38,7 @@
   = f.text_area :failure_condition, rows: 4
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'use_flag_goal', description: "Use Flag Goal"}
 
 .field
   = f.label :theme, 'Theme'

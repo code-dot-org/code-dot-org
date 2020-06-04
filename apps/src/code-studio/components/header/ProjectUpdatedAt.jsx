@@ -6,6 +6,7 @@ import msg from '@cdo/locale';
 import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
 import {projectUpdatedStatuses as statuses} from '../../headerRedux';
+import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 
 const styles = {
   container: {
@@ -55,6 +56,7 @@ class ProjectUpdatedAt extends React.Component {
     return (
       <div className="project_updated_at header_text" style={styles.container}>
         {this.renderText()}
+        <RetryProjectSaveDialog />
       </div>
     );
   }

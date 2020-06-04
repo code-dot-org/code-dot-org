@@ -3,19 +3,20 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import ScriptOverviewTopRow, {
+import {
+  UnconnectedScriptOverviewTopRow as ScriptOverviewTopRow,
   NOT_STARTED,
   IN_PROGRESS,
   COMPLETED
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 
 const defaultProps = {
-  sectionsInfo: [],
+  sectionsForDropdown: [],
   scriptProgress: NOT_STARTED,
   scriptId: 42,
   scriptName: 'test-script',
@@ -23,8 +24,6 @@ const defaultProps = {
   viewAs: ViewType.Student,
   isRtl: false,
   resources: [],
-  scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false,
   showAssignButton: true
 };
 
@@ -43,11 +42,13 @@ describe('ScriptOverviewTopRow', () => {
         <div>
           <div>
             <Button
+              __useDeprecatedTag
               href="/s/test-script/next"
               text={i18n.tryNow()}
               size={Button.ButtonSize.large}
             />
             <Button
+              __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
@@ -76,6 +77,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           href="/s/test-script/next"
           text={i18n.continue()}
           size={Button.ButtonSize.large}
@@ -96,6 +98,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           href="/s/test-script/next"
           text={i18n.printCertificate()}
           size={Button.ButtonSize.large}
@@ -104,7 +107,7 @@ describe('ScriptOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Assign to section" for teacher', () => {
+  it('renders SectionAssigner for teacher', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
     );
@@ -112,11 +115,11 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
-          <AssignToSection
-            sectionsInfo={defaultProps.sectionsInfo}
+          <SectionAssigner
+            sections={defaultProps.sectionsForDropdown}
             courseId={defaultProps.currentCourseId}
             scriptId={defaultProps.scriptId}
-            assignmentName={defaultProps.scriptTitle}
+            showAssignButton={defaultProps.showAssignButton}
           />
           <div>
             <span>
@@ -148,30 +151,17 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
-          <AssignToSection
-            sectionsInfo={defaultProps.sectionsInfo}
-            courseId={defaultProps.currentCourseId}
-            scriptId={defaultProps.scriptId}
-            assignmentName={defaultProps.scriptTitle}
-          />
-          <div>
-            <DropdownButton
-              text={i18n.teacherResources()}
-              color={Button.ButtonColor.blue}
-            >
-              <a href="https://example.com/a" target="_blank">
-                {i18n.curriculum()}
-              </a>
-              <a href="https://example.com/b" target="_blank">
-                {i18n.vocabulary()}
-              </a>
-            </DropdownButton>
-          </div>
-          <div>
-            <span>
-              <ProgressDetailToggle />
-            </span>
-          </div>
+          <DropdownButton
+            text={i18n.teacherResources()}
+            color={Button.ButtonColor.blue}
+          >
+            <a href="https://example.com/a" target="_blank">
+              {i18n.curriculum()}
+            </a>
+            <a href="https://example.com/b" target="_blank">
+              {i18n.vocabulary()}
+            </a>
+          </DropdownButton>
         </div>
       )
     ).to.be.true;

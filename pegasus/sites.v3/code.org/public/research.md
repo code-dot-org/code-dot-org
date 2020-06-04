@@ -19,6 +19,19 @@ Code.org partners with researchers for a variety of types of studies.  Researche
 
 ## Research, Papers and Reports about Code.org Materials and Programs
 
+[Estimating the Causal Effect of Code.org Teacher Training Program on Advanced Placement Outcomes](http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf)
+
+* This study employs a potential outcomes modeling approach to estimate the causal effect
+of Code.org’s Professional Learning Program on Advanced Placement (AP) Computer
+Science Principles test taking and qualifying scores.
+* Results indicate substantial and significant
+increases in both Computer Science AP test taking and qualifying score earning for all students.
+* In addition, the significant effects were even greater for Computer Science AP test taking and
+qualifying score earned by female and minority students when impact ratios are analyzed
+separately.
+
+
+
 [Computational Thinking in Italian Schools: Quantitative Data and Teachers’ Sentiment Analysis after Two Years of "Programma il Futuro" Project -- July, 2017 (ACM Digital Library)](http://dl.acm.org/citation.cfm?id=3059040)
 
 * In two years more than one million [Italian] students have been engaged and have completed a total of 10 million hours of informatics using Code.org materials in schools.  A detailed analysis of quantitative and qualitative data about the project is presented and areas for improvement are identified. One of the most interesting observations appears to corroborate the hypothesis that an exposure to informatics since the early age is important to attract students independently from their gender.

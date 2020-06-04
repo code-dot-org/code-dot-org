@@ -1,4 +1,4 @@
-var i18n = require('./locale');
+var i18n = require('../locale');
 import items from './items';
 
 // Helper functions for block string

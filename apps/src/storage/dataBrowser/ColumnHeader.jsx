@@ -48,6 +48,7 @@ class ColumnHeader extends React.Component {
     isEditable: PropTypes.bool.isRequired,
     isEditing: PropTypes.bool.isRequired,
     isPending: PropTypes.bool.isRequired,
+    readOnly: PropTypes.bool,
     renameColumn: PropTypes.func.isRequired
   };
 
@@ -155,22 +156,24 @@ class ColumnHeader extends React.Component {
           <div style={styles.columnName} className="test-tableNameDiv">
             {this.props.columnName}
           </div>
-          <div style={styles.iconWrapper}>
-            {this.props.isPending ? (
-              <FontAwesome
-                icon="spinner"
-                className="fa-spin"
-                style={styles.icon}
-              />
-            ) : (
-              <ColumnMenu
-                coerceColumn={this.coerceColumn}
-                handleDelete={this.handleDelete}
-                handleRename={this.handleRename}
-                isEditable={this.props.isEditable}
-              />
-            )}
-          </div>
+          {!this.props.readOnly && (
+            <div style={styles.iconWrapper}>
+              {this.props.isPending ? (
+                <FontAwesome
+                  icon="spinner"
+                  className="fa-spin"
+                  style={styles.icon}
+                />
+              ) : (
+                <ColumnMenu
+                  coerceColumn={this.coerceColumn}
+                  handleDelete={this.handleDelete}
+                  handleRename={this.handleRename}
+                  isEditable={this.props.isEditable}
+                />
+              )}
+            </div>
+          )}
         </div>
         <Dialog
           body="Are you sure you want to delete this entire column? You cannot undo this action."

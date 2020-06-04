@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '@cdo/apps/utils';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 const styles = {
   main: {
@@ -46,14 +47,26 @@ export default class MiniViewTopRow extends React.Component {
 
   render() {
     const {scriptName, linesOfCodeText, selectedSectionId} = this.props;
-    const queryParams = selectedSectionId
-      ? stringifyQueryParams({section_id: selectedSectionId})
-      : '';
+
+    const sectionId = queryParams('section_id');
+    switch (true) {
+      case !!selectedSectionId:
+        updateQueryParam('section_id', selectedSectionId);
+        break;
+      case !!sectionId && sectionId !== 'undefined':
+        updateQueryParam('section_id', sectionId);
+        break;
+      default:
+        updateQueryParam('section_id', undefined);
+    }
+    const params = stringifyQueryParams(queryParams());
+
     return (
       <div style={styles.main}>
         <Button
+          __useDeprecatedTag
           text={i18n.viewUnitOverview()}
-          href={`/s/${scriptName}${queryParams}`}
+          href={`/s/${scriptName}${params}`}
           color={Button.ButtonColor.gray}
         />
         <span style={styles.linesOfCodeText}>{linesOfCodeText}</span>

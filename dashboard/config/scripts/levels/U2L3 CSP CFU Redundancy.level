@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-08-19T16:55:08.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Redundancy\r\n\r\nWhat are the benefits of building redundancy into a network? What are the potential issues with building redundancy?",
+    "encrypted_solution": "Sg81kTfXlGtHirMtMcipXHUq6pM1jr8plstgkk7AB7z1Joxa6KtJEuXw1H3K\nUP8JbcG8Lp4+oHs8ZDIYXVKQnUeO1G4zW5+c9A9EwM4/loZZa0sBvh/ITRV+\nbO25NZ3WUEFiYfYu4HH9VLgqZjzMaeDwiIuHSGl2NieFjUjkRtcLdCk2iG/6\nxmxlQeXkvGk+N1D5C/99kkd47BAybmdWeqmo52d4EhkNIrg+SutVCrWVBITh\ntizEugzbytsBDjIHE81/d3AV1yl3nFVPATBdrPg43HvTx40fnLPJQAJkpZdO\n/YKwwXw4ZJRXFxMem1SuwiQcFekLi6E7u3vLj5nfqv2HC7MA65eXKQK8BfrP\nmBQkTB5KKUnT8ludTwa842EXty3XNs9tysfKEUR5ZtmOlQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19006,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

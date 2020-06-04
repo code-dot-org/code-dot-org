@@ -90,24 +90,26 @@ class Pardot
 
   # Perform inserts, updates and reconciliation from contact rollups into Pardot
   # @return [Hash] Hash containing number of insert and update operations performed
-  def self.sync_contact_rollups_to_pardot
+  def self.sync_contact_rollups_to_pardot(log_collector)
     # In case previous process was interrupted, first look in Pardot to see if
     # it has any Pardot IDs that we have not yet recorded on our side. This will
     # keep us from erroneously creating a new prospect when it should be an
     # update.
-    update_pardot_ids_of_new_contacts
+    log_collector.time!('update_pardot_ids_of_new_contacts') {update_pardot_ids_of_new_contacts}
 
     # Handle any new contacts and create corresponding prospects in Pardot.
-    num_inserts = sync_new_contacts_with_pardot
+    num_inserts = 0
+    log_collector.time!('sync_new_contacts_with_pardot') {num_inserts = sync_new_contacts_with_pardot}
 
     # Retrieve Pardot IDs for newly created contacts and store them in our DB.
     # We do this as a separate pass for efficient batching of API calls to help
     # ensure we don't hit our 25K/day limit.
-    update_pardot_ids_of_new_contacts
+    log_collector.time!('update_pardot_ids_of_new_contacts') {update_pardot_ids_of_new_contacts}
 
     # Handle any contact changes that should update existing prospects in
     # Pardot.
-    num_updates = sync_updated_contacts_with_pardot
+    num_updates = 0
+    log_collector.time!('sync_updated_contacts_with_pardot') {num_updates = sync_updated_contacts_with_pardot}
 
     {num_inserts: num_inserts, num_updates: num_updates}
   end

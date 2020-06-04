@@ -121,6 +121,7 @@ function validateReport(report) {
         if (
           report.app === 'applab' ||
           report.app === 'gamelab' ||
+          report.app === 'spritelab' ||
           report.app === 'weblab'
         ) {
           validateType('submitted', value, 'boolean');
@@ -144,9 +145,6 @@ function validateReport(report) {
         break;
       case 'lines':
         validateType('lines', value, 'number');
-        break;
-      case 'save_to_gallery':
-        validateType('save_to_gallery', value, 'boolean');
         break;
       case 'attempt':
         validateType('attempt', value, 'number');
@@ -192,7 +190,6 @@ function validateReport(report) {
  * @property {number} serverLevelId - ??
  * @property {?} submitted - ??
  * @property {?} time - ??
- * @property {?} save_to_gallery - ??
  * @property {?} attempt - ??
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
@@ -228,7 +225,6 @@ reporting.sendReport = function(report) {
     'submitted',
     'time',
     'lines',
-    'save_to_gallery',
     'attempt',
     'image'
   ];

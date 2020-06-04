@@ -2,7 +2,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 
@@ -38,9 +38,7 @@ describe('PopUpMenu', () => {
       </MenuBubble>
     );
     wrapper
-      .find(PopUpMenu.Item)
-      .first()
-      .children()
+      .find('div[onClick]')
       .first()
       .simulate('click');
     expect(spy1).to.have.been.calledOnce;

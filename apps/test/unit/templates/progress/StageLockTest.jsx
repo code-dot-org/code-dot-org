@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedStageLock as StageLock} from '@cdo/apps/templates/progress/StageLock';
@@ -37,6 +37,7 @@ describe('StageLock', () => {
       <div>
         <div>
           <Button
+            __useDeprecatedTag
             color={Button.ButtonColor.gray}
             text={i18n.lockSettings()}
             icon="lock"
@@ -52,7 +53,7 @@ describe('StageLock', () => {
       <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} saving={true} />
     );
     expect(wrapper).to.containMatchingElement(
-      <Button text={i18n.saving()} icon="lock" />
+      <Button __useDeprecatedTag text={i18n.saving()} icon="lock" />
     );
   });
 

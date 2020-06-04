@@ -1,0 +1,67 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2019-09-18T14:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 803,
+  "properties": {
+    "encrypted": "false",
+    "skin": "studio",
+    "success_condition": "function () {\n  // Sample conditions:\n  // return Studio.sprite[0].isCollidingWith(1);\n  // return Studio.sayComplete > 0;\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\n  // return Studio.tickCount > 50;\n}",
+    "failure_condition": "function () {\n}",
+    "timeout_after_when_run": true,
+    "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2019-09-18 21:34:22 +0000\",\"changed\":[],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2019-09-18 21:34:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setSpriteParams">
+              <title name="VALUE">"witch"</title>
+              <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_setSpriteParams">
+                  <title name="VALUE">"dinosaur"</title>
+                  <value name="SPRITE">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_setSpritePositionParams">
+                      <title name="VALUE">7</title>
+                      <value name="SPRITE">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="studio_setSpritePositionParams">
+                          <title name="VALUE">13</title>
+                          <value name="SPRITE">
+                            <block type="math_number">
+                              <title name="NUM">2</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Studio>

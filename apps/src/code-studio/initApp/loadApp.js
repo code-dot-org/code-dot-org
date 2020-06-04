@@ -4,7 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {SignInState, mergeProgress} from '../progressRedux';
+import {mergeProgress} from '../progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
@@ -27,6 +28,7 @@ import {
 import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
+import msg from '@cdo/locale';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -99,6 +101,7 @@ export function setupApp(appOptions) {
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
+        appOptions.app === 'spritelab' ||
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
@@ -147,9 +150,13 @@ export function setupApp(appOptions) {
           lastSavedProgram
         );
       }
-      // report.callback will already have the correct milestone post URL in
-      // the contained level case, unless we're editing blocks
+      // Our report will already have the correct callback and program
+      // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
+        if (appOptions.hasContainedLevels) {
+          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+          report.program = Blockly.Xml.domToText(xml);
+        }
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
@@ -184,16 +191,15 @@ export function setupApp(appOptions) {
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
         const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${window.dashboard.i18n.t('stage')} ${
-          stageInfo.position
-        }: ${stageInfo.name}`;
+        const stageName = `${msg.stage()} ${stageInfo.position}: ${
+          stageInfo.name
+        }`;
         ReactDOM.render(
           <PlayZone
             stageName={stageName}
             onContinue={() => {
               dialog.hide();
             }}
-            i18n={window.dashboard.i18n}
           />,
           body
         );
@@ -298,20 +304,19 @@ function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
       if (project.hideBecauseAbusive()) {
-        renderAbusive(project, window.dashboard.i18n.t('project.abuse.tos'));
+        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
         return;
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(
-          project,
-          window.dashboard.i18n.t('project.abuse.policy_violation')
-        );
+        renderAbusive(project, msg.policyViolation());
         return;
       }
       if (project.getSharingDisabled()) {
         renderAbusive(
           project,
-          window.dashboard.i18n.t('project.sharing_disabled')
+          msg.sharingDisabled({
+            sign_in_url: 'https://studio.code.org/users/sign_in'
+          })
         );
         return;
       }
@@ -426,7 +431,7 @@ function loadAppAsync(appOptions) {
         }
 
         const store = getStore();
-        const signInState = store.getState().progress.signInState;
+        const signInState = store.getState().currentUser.signInState;
         if (signInState === SignInState.SignedIn) {
           progress.showDisabledBubblesAlert();
         }
@@ -472,17 +477,11 @@ const sourceHandler = {
   getLevelHtml() {
     return window.Applab && Applab.getHtml();
   },
-  getLibrary() {
-    return getAppOptions().getLibrary();
-  },
-  codeContainsError() {
-    return getAppOptions().codeContainsError();
-  },
-  setInitialLevelLibraries(libraries) {
+  setInitialLibrariesList(libraries) {
     getAppOptions().level.libraries = libraries;
   },
-  getLevelLibraries() {
-    return window.Applab && Applab.getLibraries();
+  getLibrariesList() {
+    return getAppOptions().level.libraries;
   },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
@@ -521,6 +520,13 @@ const sourceHandler = {
     } else {
       callback({});
     }
+  },
+  setInitialGeneratedProperties(generatedProperties) {
+    getAppOptions().initialGeneratedProperties = generatedProperties;
+  },
+  getGeneratedProperties() {
+    const {getGeneratedProperties} = getAppOptions();
+    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

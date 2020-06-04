@@ -1,0 +1,43 @@
+name 'U7L7 CFU Libraries AP'
+editor_experiment ''
+
+
+title 'AP Pseudocode: Parameters and Return'
+description ''
+right 'Line 3'
+wrong 'Line 6'
+wrong 'Line 8'
+wrong 'Line 11'
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how traversal questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+![](https://images.code.org/38a3904314c1f6446359e5e71e8320b1-image-1575580720791.17.50 PM.png)
+
+![](https://images.code.org/f6d2aa1971a47af38c6cac7ac33445ac-image-1576266687902.51.16 AM.png)
+
+![](https://images.code.org/408b83e12bf405577598d7867a0132d9-image-1576266790962.52.33 AM.png)
+
+## Practice Question
+
+The following procedure was developed to determine if a list contains a negative number. If the list contains a negative number it should return `true`, otherwise it should return false.
+
+An error was made in writing this function so that it does not work as intended. Which line of code would need to be fixed in order for the function to work as designed?
+
+```
+01 PROCEDURE checkNegative(list)
+02 {
+03	hasNegative <- true
+04    FOR EACH number IN list
+05    {
+06      IF(number < 0)
+07      {
+08        hasNegative <- true
+09      }
+10    }
+11	RETURN(hasNegative)
+12 }
+```
+MARKDOWN

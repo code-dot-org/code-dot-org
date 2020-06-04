@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "short_instructions": "Add another event block to get Jorge to move right when the `right` button is clicked.",
+    "short_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,11 +47,11 @@
     "timeout_failure_tick": "0",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_playlab_events4_callout1\",\r\n  \"callout_text\": \"This is a callout\",\r\n  \"element_id\": \"#whenArrow\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "gradek_playlab_events5c_template_2019",
-    "long_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked.",
+    "long_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n<xml><block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/18040c96ad827073ee04d73bfbe5ef34/courseA_playLab_events4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the code you will need to complete this puzzle:\\n\\n<xml><block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">right</title>\\n    <next>\\n  <block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block></next></block></xml>\",\"hint_id\":\"courseA_playLab_events4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4a2d790296ae7eab7e5cf5a78e1e1ae4/courseA_playLab_events4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_long_instructions_override": "Now, get Jorge to move right when the right arrow button is clicked.",
+    "tts_long_instructions_override": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 11639,
     "name_suffix": "_2019",
@@ -59,11 +59,22 @@
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/684a9a43963d23cf3986caf8688b7149=levelbuilder/45309.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "tts_short_instructions_override": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
+    "mini_rubric": "false",
+    "default_num_example_blocks": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:42:16 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:50:04 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-17 19:25:01 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-07 18:48:13 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-07 18:50:58 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:42:16 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:50:04 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-17 19:25:01 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-07 18:48:13 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-07 18:50:58 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 20:41:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"short_instructions\",\"long_instructions\",\"tts_long_instructions_override\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

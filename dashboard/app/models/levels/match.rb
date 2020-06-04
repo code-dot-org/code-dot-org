@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -25,13 +25,13 @@
 
 class Match < DSLDefined
   def dsl_default
-    <<ruby
-name 'unique level name here'
-title 'title'
-description 'description here'
-question 'Question'
-answer 'Answer 1'
-ruby
+    <<~ruby
+      name 'unique level name here'
+      title 'title'
+      description 'description here'
+      question 'Question'
+      answer 'Answer 1'
+    ruby
   end
 
   def questions
@@ -61,14 +61,12 @@ ruby
 
   # Shuffle the answers until they are different from the original answers (if
   # possible), but retain the original indexes for validation.
-  def shuffled_indexed_answers
-    indexed_answers = answers.each_with_index.map do |answer, i|
-      answer.merge({'index' => i})
-    end
-    return indexed_answers if indexed_answers.length <= 1 # avoid infinite loop
+  def shuffled_answer_indexes
+    answer_indexes = (0...answers.size).to_a
+    return answer_indexes if answer_indexes.length <= 1 # avoid infinite loop
 
-    shuffled_answers = indexed_answers.shuffle until shuffled_answers && shuffled_answers != indexed_answers
-    shuffled_answers
+    shuffled_indexes = answer_indexes.shuffle until shuffled_indexes && shuffled_indexes != answer_indexes
+    shuffled_indexes
   end
 
   def supports_markdown?

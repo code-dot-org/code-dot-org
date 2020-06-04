@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   buttonContainer: {
@@ -46,6 +47,17 @@ class ProgressLessonTeacherInfo extends React.Component {
   onClickHiddenToggle = value => {
     const {scriptName, sectionId, lesson, toggleHiddenStage} = this.props;
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
+    firehoseClient.putRecord({
+      study: 'hidden-lessons',
+      study_group: 'v0',
+      event: value,
+      data_json: JSON.stringify({
+        script_name: scriptName,
+        section_id: sectionId,
+        lesson_id: lesson.id,
+        lesson_name: lesson.name
+      })
+    });
   };
 
   render() {
@@ -68,6 +80,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
             <Button
+              __useDeprecatedTag
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
               icon="file-text"
@@ -93,7 +106,7 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId,
+    sectionId: state.teacherSections.selectedSectionId.toString(),
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,

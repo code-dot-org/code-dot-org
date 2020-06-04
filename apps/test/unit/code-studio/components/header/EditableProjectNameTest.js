@@ -18,9 +18,9 @@ describe('EditableProjectName', () => {
     currentName = 'Brand New Project';
     replaceOnWindow('dashboard', {
       project: {
-        rename: (name, cb) => {
+        rename: name => {
           currentName = name;
-          cb();
+          return Promise.resolve();
         },
         getCurrentName: () => currentName
       },
@@ -34,7 +34,7 @@ describe('EditableProjectName', () => {
     restoreOnWindow('dashboard');
   });
 
-  it('provides a "rename project" interface', () => {
+  it('provides a "rename project" interface', async () => {
     const store = createStore(combineReducers({header: headerReducer}));
     store.dispatch(refreshProjectName());
     const wrapper = mount(
@@ -57,10 +57,17 @@ describe('EditableProjectName', () => {
 
     // Modifying the input and clicking save will update the name
     const renameSpy = sinon.spy(window.dashboard.project, 'rename');
-    wrapper.find('.project_name').get(0).value = 'New Name';
+    wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
     expect(renameSpy.calledOnce).to.be.true;
     expect(renameSpy.calledWith('New Name')).to.be.true;
+
+    // This manual wait-and-update is needed because a rename is an async operation,
+    // which we're faking in our test, and enzyme doesn't always re-render when needed
+    // in this situation.
+    await new Promise(resolve => setTimeout(resolve, 0));
+    wrapper.update();
+
     expect(wrapper.find('.project_name').type()).to.equal('div');
     expect(wrapper.find('.project_edit')).to.have.lengthOf(1);
     expect(wrapper.find('.project_save')).to.have.lengthOf(0);

@@ -6,7 +6,7 @@ import soundLibrary from '../soundLibrary.json';
 
 const styles = {
   root: {
-    height: 330,
+    height: 315,
     overflowY: 'scroll',
     clear: 'both'
   }
@@ -43,7 +43,7 @@ export default class SoundList extends React.Component {
         this.props.selectedSound.name === sound.name ? true : false;
       return (
         <SoundListEntry
-          key={sound.name}
+          key={sound.sourceUrl}
           assetChosen={this.props.assetChosen}
           soundMetadata={sound}
           isSelected={isSelected}

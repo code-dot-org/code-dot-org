@@ -5,9 +5,10 @@ function levelSuccess(testResult) {
   validationResult = testResult;
 }
 
-function levelFailure(msg) {
+function levelFailure(testResult, msg) {
   validationState = 'failed';
-  validationResult = msg;
+  validationResult = testResult;
+  validationMessage = msg;
 }
 
 var validationProps = {};

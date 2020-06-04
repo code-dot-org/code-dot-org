@@ -306,8 +306,7 @@ module Pd::Application
     test 'formatted_partner_contact_email' do
       application = create :pd_facilitator1920_application
 
-      partner = create :regional_partner, contact: nil
-      contact = create :teacher
+      partner = create :regional_partner
 
       # no partner
       assert_nil application.formatted_partner_contact_email
@@ -323,10 +322,6 @@ module Pd::Application
       # email only? still nil
       partner.contact_name = nil
       assert_nil application.formatted_partner_contact_email
-
-      # old contact field
-      partner.contact = contact
-      assert_equal "\"#{contact.name}\" <#{contact.email}>", application.formatted_partner_contact_email
 
       # program manager but no contact_name or contact_email
       program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager

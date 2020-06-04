@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+#
+# Script to remove race data from users who might have been affected by the
+# geolocation bug.
+#
+
+require_relative '../../../dashboard/config/environment'
+
+# We specifically care about users that:
+#
+# 1. Have race data and
+# 2. Have either:
+#     a. a blank geoloc (cleared out in FND-592) or
+#     b. have been geolocated to outside the US (they've been re-geolocated
+#     since their IP/geoloc was cleared out in FND-592).
+#
+# We therefore gather the list of users to be updated with:
+#
+# have_race = User.with_deleted.includes(:user_geos).where.not(races: nil)
+# affected_users = have_race.
+#   where(user_geos: {id: nil}).
+#   or(have_race.where.not(user_geos: {country: "United States"}))
+#
+# Or, equivalently, with:
+#
+# SELECT users.id
+# FROM   users
+#        LEFT OUTER JOIN user_geos
+#                     ON user_geos.user_id = users.id
+# WHERE  ( users.races IS NOT NULL
+#          AND ( user_geos.id IS NULL
+#                 OR user_geos.country != 'United States' ) )
+#
+# The resulting user ids then should be put into a file, whose path should be
+# passed as the first argument to this script.
+File.readlines(ARGV[0]).each do |line|
+  id = line.to_i
+  user = User.with_deleted.find_by_id(id)
+
+  if user.races.nil?
+    puts("#{line.strip} - skip - race already removed")
+    next
+  end
+
+  # we can ignore users who have not signed in since the proxies list was
+  # updated prior to https://github.com/code-dot-org/code-dot-org/pull/28635
+  old_account = user.current_sign_in_at.present? &&
+    user.current_sign_in_at < "2017-11-17 12:25:11 -0800".to_datetime
+  if old_account
+    puts("#{line.strip} - skip - old account")
+    next
+  end
+
+  # Of the users (mostly students) with URM data but no geolocation, about 60%
+  # are in a section of a teacher in the US. So: Let's KEEP race data for
+  # students with _teachers_ whose geolocation is in the US OR with teachers
+  # who are associated with a school in the US, so that we can reduce the
+  # proportion of students with data we're wiping from 13% to 8%.
+  has_us_teacher = user.student? &&
+    user.teachers.any? do |teacher|
+      teacher.within_united_states? ||
+        teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
+    end
+  if has_us_teacher
+    puts("#{line.strip} - skip - has US teacher")
+    next
+  end
+
+  user.races = nil
+  user.save!
+  puts("#{line.strip} - success")
+rescue
+  puts("#{line.strip} - ERROR - other")
+end

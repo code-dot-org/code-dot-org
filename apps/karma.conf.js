@@ -5,16 +5,19 @@ var tty = require('tty');
 var PORT = process.env.PORT || 9876;
 
 var reporters = ['mocha'];
-if (envConstants.CIRCLECI) {
+if (envConstants.DRONE) {
   reporters.push('junit');
-  reporters.push('coverage');
+  reporters.push('coverage-istanbul');
 }
 if (envConstants.COVERAGE) {
-  reporters.push('coverage');
+  reporters.push('coverage-istanbul');
 }
 
+// Use the babel test env defined in .babelrc
+process.env.BABEL_ENV = 'test';
+
 module.exports = function(config) {
-  var browser = envConstants.BROWSER || 'PhantomJS';
+  var browser = envConstants.BROWSER || 'ChromeHeadless';
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -77,9 +80,10 @@ module.exports = function(config) {
         : '',
       outputFile: 'all.xml'
     },
-    coverageReporter: {
+    coverageIstanbulReporter: {
+      reports: ['html', 'lcovonly'],
       dir: 'coverage',
-      reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      fixWebpackSourcePaths: true
     },
     mochaReporter: {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',

@@ -1,0 +1,18 @@
+name 'cspu5_assess1_debugging_2018_2019_virtual'
+type 'multi2'
+wrong 'Change the names of variables within the program and run the program again.'
+right 'Display the value of variables at various points during the program.'
+right 'Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.'
+wrong 'Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.'
+
+markdown <<MARKDOWN
+Which of the following are actions a programmer could take when debugging a segment of code that would most likely lead to finding a problem and fixing it? (choose two)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+Debugging a program by printing out the current values with console.log and seeing what the program is internally doing at a certain moment will be helpful. Asking for help from another person is also a good way of debugging, especially if you've been working on your code for a long time and need a fresh pair of eyes.
+
+On the other hand, changing variable names will not help because you are only renaming the problem rather than finding and fixing the problem. Computers read code line by line, so rewriting chunks of code is the same as rewriting the same problem.
+MARKDOWN

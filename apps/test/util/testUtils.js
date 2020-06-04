@@ -3,7 +3,6 @@ import $ from 'jquery';
 import sinon from 'sinon';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
-import i18n from '@cdo/apps/code-studio/i18n';
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -16,11 +15,9 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
-  window.dashboard = {...window.dashboard, i18n, assets, project};
+  window.dashboard = {...window.dashboard, assets, project};
 
   beforeFunc(() => {
-    sinon.stub(i18n, 't').callsFake(selector => selector);
-
     sinon.stub(project, 'clearHtml');
     sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
@@ -34,8 +31,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     sinon.stub(assets.listStore, 'list').returns([]);
   });
   afterFunc(() => {
-    i18n.t.restore();
-
     project.clearHtml.restore();
     project.exceedsAbuseThreshold.restore();
     project.hasPrivacyProfanityViolation.restore();
@@ -49,9 +44,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     assets.listStore.list.restore();
   });
 
-  window.marked = function(str) {
-    return str;
-  };
   window.trackEvent = () => {};
 }
 
@@ -109,6 +101,29 @@ export function dragToVisualization(type, left, top) {
     pageY: $('#visualization').offset().top + top
   });
   $(document).trigger(drag);
+
+  //
+  // Apply border-box styling that would normally come from applab css files
+  // on the element types: input, div.textArea, button, select, img, label
+  //
+  switch (type) {
+    case 'BUTTON':
+    case 'TEXT_INPUT':
+    case 'TEXT_AREA':
+    case 'RADIO_BUTTON':
+    case 'LABEL':
+    case 'SLIDER':
+    case 'CHECKBOX':
+    case 'DROPDOWN':
+      $('.draggingParent')
+        .first()
+        .children()
+        .first()
+        .css('box-sizing', 'border-box');
+      break;
+    default:
+      break;
+  }
 
   // when we start our drag, it positions the dragged element to be centered
   // on our cursor. adjust the target drop location accordingly
@@ -361,4 +376,46 @@ export function enforceDocumentBodyCleanup(
 
     describe('', runTestCases);
   });
+}
+
+/**
+ * Call in the `describe` block for a group of tests to stub the value of window.dashboard safely.
+ * @param {object} value - The temporary value for window.dashboard
+ * @example
+ *   describe('example', () => {
+ *     stubWindowDashboard({
+ *       CODE_ORG_URL: '//test.code.org'
+ *     });
+ *
+ *     it('stubs the value', () => {
+ *       assert.equal('//test.code.org', window.dashboard.CODE_ORG_URL);
+ *     });
+ *   });
+ */
+export function stubWindowDashboard(value) {
+  let originalDashboard;
+  before(() => (originalDashboard = window.dashboard));
+  after(() => (window.dashboard = originalDashboard));
+  beforeEach(() => (window.dashboard = value));
+}
+
+/**
+ * Call in the `describe` block for a group of tests to stub the value of window.pegasus safely.
+ * @param {object} value - The temporary value for window.pegasus
+ * @example
+ *   describe('example', () => {
+ *     stubWindowPegasus({
+ *       STUDIO_URL: '//test-studio.code.org'
+ *     });
+ *
+ *     it('stubs the value', () => {
+ *       assert.equal('//test-studio.code.org', window.dashboard.STUDIO_URL);
+ *     });
+ *   });
+ */
+export function stubWindowPegasus(value) {
+  let originalPegasus;
+  before(() => (originalPegasus = window.pegasus));
+  after(() => (window.pegasus = originalPegasus));
+  beforeEach(() => (window.pegasus = value));
 }
