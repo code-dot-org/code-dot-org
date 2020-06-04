@@ -53,7 +53,7 @@ class ContactRollupsRaw < ApplicationRecord
     source_name ||= "dashboard.#{source}"
     wrapped_source = source_is_subquery ? "(#{source}) AS subquery" : source
 
-    <<~SQL.squish
+    <<~SQL
       INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
         #{email_column},
