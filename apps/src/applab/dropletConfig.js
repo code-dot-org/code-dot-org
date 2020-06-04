@@ -11,6 +11,7 @@ import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
+import experiments from '../util/experiments';
 import {
   setPropertyDropdown,
   setPropertyValueSelector

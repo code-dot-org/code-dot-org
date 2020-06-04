@@ -478,7 +478,7 @@ module LevelsHelper
     speech_service_options = {}
 
     if @level.game.use_azure_speech_service?
-      uri = URI.parse("https://westus.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+      uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
       header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
