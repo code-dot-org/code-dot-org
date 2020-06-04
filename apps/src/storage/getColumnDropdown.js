@@ -25,31 +25,31 @@ function openModal(type, callback, table) {
 
 export function getTables() {
   return function() {
-    var options = [];
-    options.push({
-      text: msg.choosePrefix(),
-      display:
-        '<span class="chooseAssetDropdownOption">' +
-        msg.choosePrefix() +
-        '</a>',
-      click: callback => openModal(ParamType.TABLE, callback)
-    });
-    return options;
+    return [
+      {
+        text: msg.choosePrefix(),
+        display:
+          '<span class="chooseAssetDropdownOption">' +
+          msg.choosePrefix() +
+          '</a>',
+        click: callback => openModal(ParamType.TABLE, callback)
+      }
+    ];
   };
 }
 
 export function getColumns() {
   return function() {
     const tableName = stripQuotes(getFirstParam('getColumn', this.parent));
-    var options = [];
-    options.push({
-      text: msg.choosePrefix(),
-      display:
-        '<span class="chooseAssetDropdownOption">' +
-        msg.choosePrefix() +
-        '</a>',
-      click: callback => openModal(ParamType.COLUMN, callback, tableName)
-    });
-    return options;
+    return [
+      {
+        text: msg.choosePrefix(),
+        display:
+          '<span class="chooseAssetDropdownOption">' +
+          msg.choosePrefix() +
+          '</a>',
+        click: callback => openModal(ParamType.COLUMN, callback, tableName)
+      }
+    ];
   };
 }
