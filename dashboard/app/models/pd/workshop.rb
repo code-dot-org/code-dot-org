@@ -54,7 +54,6 @@ class Pd::Workshop < ActiveRecord::Base
     # Indicates that this workshop will be conducted virtually, which has the
     # following effects in our system:
     #   - Ensures `suppress_email` is set (see below)
-    #   - Makes `location_address` optional, and does not autofill a value
     #     when it is left blank.
     #   - Uses a different, virtual-specific post-workshop survey.
     'virtual',
@@ -298,7 +297,9 @@ class Pd::Workshop < ActiveRecord::Base
     course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
-    "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
+    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
+    name += " in #{friendly_location}" if friendly_location.present?
+    name[0...255]
   end
 
   def friendly_subject
@@ -317,17 +318,20 @@ class Pd::Workshop < ActiveRecord::Base
   # 1. known variant of TBA? use TBA
   # 2. processed location? use city, state
   # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use TBA
+  # 4. no location address at all? use blank
   def friendly_location
     return 'Location TBA' if location_address_tba?
     return 'Virtual Workshop' if location_address_virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || 'Location TBA'
+    location_address.presence || ''
   end
 
+  # Returns date and location (only date if no location specified)
   def date_and_location_name
-    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
-    "#{date_string}, #{friendly_location}#{teachercon? ? ' TeacherCon' : ''}"
+    date_and_location_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    date_and_location_string += ", #{friendly_location}" if friendly_location.present?
+    date_and_location_string += ' TeacherCon' if teachercon?
+    date_and_location_string
   end
 
   # Puts workshop in 'In Progress' state
