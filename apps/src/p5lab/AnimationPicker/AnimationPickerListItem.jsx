@@ -46,6 +46,9 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   },
+  noLabel: {
+    paddingBottom: 10
+  },
   labelIcon: {
     fontStyle: 'italic'
   },
@@ -65,6 +68,8 @@ class AnimationPickerListItem extends React.Component {
   };
 
   render() {
+    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+
     const thumbnailStyle = [
       styles.thumbnail,
       this.props.icon && styles.thumbnailIcon
@@ -78,7 +83,7 @@ class AnimationPickerListItem extends React.Component {
 
     return (
       <div
-        style={styles.root}
+        style={rootStyle}
         onClick={this.props.onClick}
         className="uitest-animation-picker-item"
       >
