@@ -10,4 +10,4 @@ require 'active_support/cache'
 #
 # Objects in this cache will persist across multiple requests,
 # but will be cleared on application restart.
-CDO.cache = ActiveSupport::Cache::MemoryStore.new(cache_size: 128.megabytes)
+CDO_CACHE = ActiveSupport::Cache::MemoryStore.new(cache_size: 128.megabytes)

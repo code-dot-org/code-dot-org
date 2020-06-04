@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Al
 
 #### Por que isso é importante?
 
-A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhões das novas vagas de trabalho nos EUA eram de cargos que valorizam as habilidades em programação — inclusive nas áreas de arte e design. But 65 percent of schools in the U.S. don't teach computer science. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia dará a eles confiança, além de uma vantagem competitiva. <br /> <br />
+A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhões das novas vagas de trabalho nos EUA eram de cargos que valorizam as habilidades em programação — inclusive nas áreas de arte e design. But 55 percent of schools in the U.S. don't teach computer science. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia dará a eles confiança, além de uma vantagem competitiva. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhõe
 
 #### Sobre a Code.org
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também às minorias sociais, empoderando, por exemplo, mulheres e negros para a participação nesta área. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para mais informaçõe, visite: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também às minorias sociais, empoderando, por exemplo, mulheres e negros para a participação nesta área. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![imagem](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagem](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagem](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imagem](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagem](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagem](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## Infográficos
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

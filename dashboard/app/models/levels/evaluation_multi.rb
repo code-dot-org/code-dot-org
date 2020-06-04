@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -25,12 +25,12 @@
 
 class EvaluationMulti < Multi
   def dsl_default
-    <<ruby
-name 'Unique question name here'
-question 'Question'
-answer 'Answer1', weight: 1, stage_name: 'stage_name'
-answer 'Answer2', weight: 1, stage_name: 'stage_name'
-ruby
+    <<~ruby
+      name 'Unique question name here'
+      question 'Question'
+      answer 'Answer1', weight: 1, stage_name: 'stage_name'
+      answer 'Answer2', weight: 1, stage_name: 'stage_name'
+    ruby
   end
 
   def answers

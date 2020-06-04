@@ -108,9 +108,9 @@ pt:
           Dica: tens que descobrir até onde virar, clicando no número do bloco virar.'
         turtle_1_5: Agora, para praticar, desenha um triângulo e, em seguida, um quadrado
           para desenhar um envelope.
-        turtle_1_6: 'Consegues descobrir como desenhar este triângulo e quadrado?
-          Dica: Faz o triângulo primeiro, e depois tenta descobrir o quanto virar
-          antes de desenhar o quadrado.'
+        turtle_1_6: 'Você consegue descobrir como desenhar esse triângulo e esse quadrado?
+          Dica: faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
+          de desenhar o quadrado.'
         turtle_1_7: Bem, vamos dificultar um pouco - vê se podes desenhar esses óculos
           verdes. Os quadrados são 100 pixeis de cada lado e são separados 50 pixeis.
           Não te esqueças de desenhar no verde!
@@ -583,8 +583,8 @@ pt:
         C2_binary_bracelets: Pulseiras binárias
         C2_relay_programming: Programação por revezamento
         C2_paper_airplanes: Aviões de papel
-        C2_digital_footprint: Seu rastro digital
-        C2_digital_footprint_v2: Seu rastro digital
+        C2_digital_footprint: A tua Pegada Digital
+        C2_digital_footprint_v2: A tua Pegada Digital
         C3_maze_level_4: Ciclos do labirinto
         C3_artist_intro: Introdução ao artista
         C3_artist_functions: Funções do Artista
@@ -604,7 +604,7 @@ pt:
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_intro: Introdução
-        C4_loops_zombie: ciclos
+        C4_loops_zombie: Ciclos
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
@@ -622,7 +622,9 @@ pt:
         C4_unplugged_forloops: Ciclos "for"
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
+        CSF_create_functions: Criar Funções
         CSF_my_robotic_friends: Meus amigos robóticos
+        CSF_Power_of_Words: Poder das Palavras
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
@@ -633,9 +635,25 @@ pt:
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
+        csd_concept_how_computers_work: Apresentando Como os Computadores Funcionam
+        csd_concept_computer: 'Como os computadores funcionam: O que faz um computador,
+          um computador?'
+        csd_concept_circuits_logic: 'Como os computadores funcionam: Circuitos e Lógica'
+        csd_concept_memory_cpu_input_output: 'Como os computadores funcionam: Memória,
+          Processador, Entrada e Saída'
+        csd_concept_search: Como a Pesquisa Funciona
+        csd_external_waze_data: Por que muitos utilizadores estão obcecados com o
+          Waze?
+        csd_gamelab_velocity: Velocidade
+        csd_weblab_intro_1: Introdução ao Web Lab - Parte 1
+        csd_weblab_intro_2: Introdução ao Web Lab - Parte 2
+        csd_weblab_css_1: Introdução ao CSS - Parte 1
+        csd_weblab_css_2: Introdução ao CSS - Parte 2
+        csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com parâmetros
-        csp_applab_loops: ciclos
+        csp_applab_loops: Ciclos
+        csp_cs_is_changing_everything: A Ciência da Computação está a Mudar Tudo.
         starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
         starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
@@ -661,9 +679,34 @@ pt:
         mc_2016_spawn: Minecraft Hora de Código - Spawn (Gerar)
         mc_2016_congrats: Minecraft Hora de Código - Parabéns
         mc_2017_congratulations: Minecraft Hora de Código - Parabéns
-        CSF_loops_AB: ciclos
+        hint_videos_d_11_3_first: 'Vídeos Sugestão: D.11.3 Primeiro'
+        hint_videos_d_11_3_last: 'Vídeos Sugestão: D.11.3 Último'
+        hint_videos_d_11_4_first: 'Vídeos Sugestão: D.11.4 Primeiro'
+        hint_videos_d_11_4_last: 'Vídeos Sugestão: D.11.4 Último'
+        hint_videos_d_11_5_first: 'Vídeos Sugestão: D.11.5 Primeiro'
+        hint_videos_d_11_5_last: 'Vídeos Sugestão: D.11.5 Último'
+        hint_videos_d_11_6_first: 'Vídeos Sugestão: D.11.6 Primeiro'
+        hint_videos_d_11_6_last: 'Vídeos Sugestão: D.11.6 Último'
+        hint_videos_d_11_7_first: 'Vídeos Sugestão: D.11.7 Primeiro'
+        hint_videos_d_11_7_last: 'Vídeos Sugestão: D.11.7 Último'
+        hint_videos_d_11_9_first: 'Vídeos Sugestão: D.11.9 Primeiro'
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_if_allskins: O bloco Se
+        CSF_ifelse_allskins: Usando os Blocos Se/Caso Contrário
+        CSF_ifelseifelse_allskins: Usando os blocos Se/Caso Contrário Se/Caso Contrário
+        CSF_loops_AB: Ciclos
+        csd_gamelab_conditional_statements: Declarações Condicionais
+        csd_gamelab_if_else: Declarações Se/Caso Contrário
+        CSF_StarWars_ProjectIntro: Introdução ao Projecto Star Wars
+        c_and_c_great_to_create: É Óptimo Criar e Jogar Limpo
+        c_and_c_digital_sharing: Partilha Digital
+        what_is_cs: O que é a Ciência da Computação?
+        what_is_an_event: O que é um evento?
         csd_pair_programming: Programação em duplas
         csd_applab_parameters: Funções com parâmetros
+        csp-pd-welcome: Bem-vindo(a) à Família!
+        csd_what_computers_do: O que é que os Computadores fazem?
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

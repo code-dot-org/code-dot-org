@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -25,20 +25,20 @@
 
 class LevelGroup < DSLDefined
   def dsl_default
-    <<ruby
-name 'unique level name here'
-title 'title of the assessment here'
-submittable 'true'
-anonymous 'false'
+    <<~ruby
+      name 'unique level name here'
+      title 'title of the assessment here'
+      submittable 'true'
+      anonymous 'false'
 
-page
-level 'level1'
-level 'level2'
+      page
+      level 'level1'
+      level 'level2'
 
-page
-level 'level 3'
-level 'level 4'
-ruby
+      page
+      level 'level 3'
+      level 'level 4'
+    ruby
   end
 
   def icon
@@ -47,14 +47,7 @@ ruby
 
   # Returns a flattened array of all the Levels in this LevelGroup, in order.
   def levels
-    level_names = []
-    properties["pages"].each do |page|
-      page["levels"].each do |page_level_name|
-        level_names << page_level_name
-      end
-    end
-
-    Level.where(name: level_names).sort_by {|l| level_names.index(l.name)}
+    pages.map(&:levels).flatten
   end
 
   class LevelGroupPage
@@ -89,6 +82,16 @@ ruby
     end
   end
 
+  def self.setup(data)
+    level = super(data)
+    level.update_pages(data[:pages])
+    level
+  end
+
+  def update_pages(pages)
+    update!(properties: {pages: pages})
+  end
+
   def assign_attributes(params)
     @pages = nil
     super(params)
@@ -103,11 +106,11 @@ ruby
 
   # Perform a deep copy of this level by cloning all of its sublevels
   # using the same suffix, and write them to the new level definition file.
-  def clone_with_suffix(new_suffix)
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
     new_name = "#{base_name}#{new_suffix}"
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = super(new_suffix)
+    level = super(new_suffix, editor_experiment: editor_experiment)
     level.clone_sublevels_with_suffix(new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
@@ -168,7 +171,11 @@ ruby
       # anonymity.
       results = section.students.map do |student|
         # Skip student if they haven't submitted for this LevelGroup.
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = UserLevel.find_by(
+          user: student,
+          script: script_level.script,
+          level: script_level.level
+        )
         next unless user_level.try(:submitted)
 
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))
@@ -236,7 +243,7 @@ ruby
 
       # All the results for one LevelGroup for a group of students.
       surveys_by_level_group[level_group.id] = {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: reportable_results
       }
     end

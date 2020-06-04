@@ -1,0 +1,40 @@
+  DaemonStorageUtilizationAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
+      AlarmDescription: Send page if daemon storage utilization exceeds 80% for an hour
+      AlarmName: <%="#{stack_name}_daemon_high_storage_utilization" %>
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: Filesystem
+          Value: '/dev/xvda1'
+        - Name: MountPath
+          Value: '/'
+        - Name: InstanceId
+          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
+      EvaluationPeriods: 60
+      MetricName: DiskSpaceUtilization
+      Namespace: 'System/Linux'
+      Period: 60
+      Statistic: Average
+      Threshold: 80
+      TreatMissingData: missing
+  DaemonMemoryUtilizationAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
+      AlarmDescription: Send page if daemon memory utilization exceeds 87% for 5 minutes
+      AlarmName: <%="#{stack_name}_daemon_high_memory_utilization" %>
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: InstanceId
+          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
+      EvaluationPeriods: 5
+      MetricName: MemoryUtilization
+      Namespace: 'System/Linux'
+      Period: 60
+      Statistic: Maximum
+      Threshold: 87
+      TreatMissingData: missing

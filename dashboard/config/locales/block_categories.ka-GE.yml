@@ -3,54 +3,28 @@ ka:
   data:
     block_categories:
       Actions: მოქმედებები
-      Loops: ციკლები
-      Functions: ფუნქციები
-      Color: ფერი
-      Brushes: ფუნჯები
-      Math: მათემატიკა
-      Logic: ლოგიკა
-      Variables: ცვლადები
-      Number: რიცხვი
-      String: სტრიქონი
-      Image: სურათი
-      Boolean: ბულის ცვლადი
-      Conditionals: პირობითი ბრძანებები
-      Events: მოვლენები
-      Games/Score: თამაშები/ქულა
-      Comments: კომენტარები
-      Category: კატეგორია
-      Prebuilt: წინასწარ ჩაშენებული
-      Text: ტექსტი
-      Picker: ამომრჩევი
-      Comment: კომენტარი
-      World: სამყარო
-      Sprites: სპრაიტები
-      Behaviors: ქცევა
-      'Variables ': 'ცვლადები '
-      Default: ნაგულისხმევი
-      Locations: მდებარეობები
-      everythingelse: ყველაფერი სხვა
-      Location: ადგილმდებარეობა
-      numbers: რიცხვები
-      Numbers: რიცხვები
-      Input: შემომავალი ინფორმაცია
-      Groups: ჯგუფები
       Advanced: დამატებით
-      Start: დაწყება
-      Music: მუსიკა
-      Dancing: ცეკვა
-      Sprite: სპრაიტი
-      Brush: ფუნჯი
-      Make Sprite: სპრაიტის შექმნა
-      Movement: მოძრაობა
-      Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
-      Functional: ფუნქციები
-      Predefined: წინასწარ განსაზღვრული
-      test: ტესტი
-      test2: ტესტი2
-      Foo: Foo
-      Name: სახელი
-      NEW BLOCKS: ახალი ბლოკები
+      Behaviors: ქცევა
+      Brushes: ფუნჯები
+      Color: ფერი
+      Comment: კომენტარი
+      Comments: კომენტარები
+      Conditionals: პირობითი ბრძანებები
+      Default: ნაგულისხმევი
+      Events: მოვლენები
+      Functions: ფუნქციები
       'Functions ': 'ფუნქციები '
       Game/Score: თამაში/ქულა
-      Function: ფუნქცია
+      Games/Score: თამაშები/ქულა
+      Groups: ჯგუფები
+      Input: შემომავალი ინფორმაცია
+      Locations: მდებარეობები
+      Logic: ლოგიკა
+      Loops: ციკლები
+      Math: მათემატიკა
+      Numbers: რიცხვები
+      Sprites: სპრაიტები
+      Text: ტექსტი
+      Variables: ცვლადები
+      'Variables ': 'ცვლადები '
+      World: სამყარო

@@ -3,60 +3,30 @@ zh-CN:
   data:
     block_categories:
       Actions: 操作
-      Loops: 循环
-      Functions: 函数
-      Color: 颜色
-      Brushes: 刷子
-      Math: 数学
-      Logic: 逻辑
-      Variables: 变量
-      Number: 数字
-      String: 字符串
-      Image: 图像
-      Boolean: 布尔值
-      Conditionals: 条件语句
-      Events: 事件
-      Games/Score: 游戏/得分
-      Comments: 评论
-      Category: 类别
-      Prebuilt: 预构建
-      Text: 文本
-      Picker: 选取器
-      Comment: 注释
-      World: 世界
-      Sprites: 精灵
-      Behaviors: 行为
-      'Variables ': '变量 '
-      Default: 默认
-      Locations: 位置
-      Bunny Game: 兔子游戏
-      everythingelse: 其它东西
-      Location: 所在地区
-      numbers: 数字
-      Numbers: 数字
-      Input: 输入
-      Dancers: 舞者
-      Groups: 小组
       Advanced: 高级
-      Start: 开始
-      Music: 音乐
-      Dancing: 跳舞
-      Sprite: 精灵
-      Brush: 刷子
-      Make Sprite: 制作精灵
-      Movement: 移动
-      Booleans: 布尔值
-      Functional: 函数
-      While Events: '"当" 事件'
-      Sprite Properties: 精灵属性
-      Predefined: 预定义的
-      test: 测试
-      test2: 测试2
-      Use These Blocks: 使用这些块
-      Do Not Use: 不要使用
-      Foo: Foo
-      Name: 姓名
-      NEW BLOCKS: 新模块
+      Behaviors: 行为
+      Brushes: 刷子
+      Color: 颜色
+      Comment: 注释
+      Comments: 评论
+      Conditionals: 条件语句
+      Dancers: 舞者
+      Default: 默认
+      Events: 事件
+      Functions: 函数
       'Functions ': 函数
       Game/Score: 游戏/得分
-      Function: 函数
+      Games/Score: 游戏/得分
+      Groups: 小组
+      Input: 输入
+      Locations: 位置
+      Logic: 逻辑
+      Loops: 循环
+      Math: 数学
+      Numbers: 数字
+      Properties: 属性
+      Sprites: 精灵图
+      Text: 文本
+      Variables: 变量
+      'Variables ': '变量 '
+      World: 世界

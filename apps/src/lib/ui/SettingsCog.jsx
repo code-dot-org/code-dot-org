@@ -11,9 +11,8 @@ import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
-import experiments from '@cdo/apps/util/experiments';
-import LibraryPicker from '../../code-studio/components/LibraryPicker';
 
 const style = {
   iconContainer: {
@@ -44,8 +43,7 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool,
-    openLibraryPicker: PropTypes.func
+    showMakerToggle: PropTypes.bool
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -57,7 +55,7 @@ class SettingsCog extends Component {
     open: false,
     canOpen: true,
     confirmingEnableMaker: false,
-    libraryPickerOpen: false
+    managingLibraries: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -74,13 +72,9 @@ class SettingsCog extends Component {
     assets.showAssetManager();
   };
 
-  openLibraryPicker = () => {
+  manageLibraries = () => {
     this.close();
-    this.setState({libraryPickerOpen: true});
-  };
-
-  closeLibraryPicker = () => {
-    this.setState({libraryPickerOpen: false});
+    this.setState({managingLibraries: true});
   };
 
   toggleMakerToolkit = () => {
@@ -102,6 +96,7 @@ class SettingsCog extends Component {
 
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
+  closeLibraryManager = () => this.setState({managingLibraries: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -114,6 +109,11 @@ class SettingsCog extends Component {
       top: rect.bottom + offsetSoItLooksRight.top,
       left: rect.left + rect.width / 2 + offsetSoItLooksRight.left
     };
+  }
+
+  areLibrariesEnabled() {
+    let pageConstants = getStore().getState().pageConstants;
+    return pageConstants && pageConstants.librariesEnabled;
   }
 
   render() {
@@ -142,8 +142,8 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          {experiments.isEnabled('student-libraries') && (
-            <ManageLibraries onClick={this.openLibraryPicker} />
+          {this.areLibrariesEnabled() && (
+            <ManageLibraries onClick={this.manageLibraries} />
           )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
@@ -154,12 +154,10 @@ class SettingsCog extends Component {
           handleConfirm={this.confirmEnableMaker}
           handleCancel={this.hideConfirmation}
         />
-        {experiments.isEnabled('student-libraries') && (
-          <LibraryPicker
-            isOpen={this.state.libraryPickerOpen}
-            onClose={this.closeLibraryPicker}
-          />
-        )}
+        <LibraryManagerDialog
+          isOpen={this.state.managingLibraries}
+          onClose={this.closeLibraryManager}
+        />
       </span>
     );
   }
@@ -176,7 +174,7 @@ ManageAssets.propTypes = {
 };
 
 export function ManageLibraries(props) {
-  return <PopUpMenu.Item {...props}>Manage Libraries</PopUpMenu.Item>;
+  return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
 }
 
 export function ToggleMaker(props) {

@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-convert-decimal_2020'
+height 'auto'
+
+question 'Convert the decimal (base-10) number 20 to binary (base-2).’
+wrong ‘10010’
+wrong ‘00101’
+wrong ‘11000’
+right ‘10100’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

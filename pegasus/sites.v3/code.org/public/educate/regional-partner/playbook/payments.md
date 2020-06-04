@@ -16,21 +16,9 @@ ________________
 - [Community Events](#community)
 - [CS Fairs](#csfair)
 - [Local Summer Workshop Community Building Event](#LSW)
-- [Teacher Recruitment Fund](#recruitment)
 
 ________________
 
-## Announcements
-
-**March 8 -**
-
-Instructions for requesting reimbursement towards the [Teacher Recruitment Fund](https://code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) is now available. Jump to the [Teacher Recruitment Fund](#recruitment) section below.
-
-
-
-**March 1 -**
-
-All invoices should be submitted by completing the form and attaching the required documentation at [bit.ly/codeinvoices](http://bit.ly/codeinvoices).
 
 Please note that invoices submitted to invoices@code.org on or after March 1 will be redirected to the new submission form. Invoices submitted more than 30 days after the event or workshop date will not be paid per our existing policy.
 
@@ -52,15 +40,25 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 
 **When you'll be paid**
 
+**Group 1 and 2 - Code.org Funded Partners:** All payments will be provided as outlined in the 2019-20 Regional Partner Agreement. Please refer to your agreements for detailed information on when payments will be disbursed and how final amounts will be calculated (Review exhibits that outline the Teacher Scholarship Fund, Scholarship Fund Implementation and Scholarship Fund Match).
+
+**Group 3 and 4 - Code.org Funded Partners:**
+
+**Local Summer Workshops:** Local summer workshop payment amounts will be calculated based on the details outlined in your Regional Partner Agreement.
 - The Code.org payment cycle runs twice per month to capture workshops that took place between the *1st-15th* and *16th-last day* of each month.
 - At the close of a payment cycle, Code.org prepares a payment report.
 - You will receive an email from **workshoppayments@code.org** with summary payment details for each workshop that you ran during that period, with an opportunity to amend any incorrect information within 3 business days.
-- After the review period, Code.org initates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
-- If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops.
+- After the review period, Code.org initiates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
 
-**Paying Facilitators**
+**Academic Year Workshops:** Academic Year Workshop payments have been split into two categories, Fixed Costs and Per Person (variable) Costs, which will be paid at different times. This information is outlined in amendments to the original Regional Partner agreements.
+- Fixed Costs include facilitator, venue, and staffer pay, and will be paid in advance of your workshops, in 4 installments, at fixed times of the year (August 1, 2019, November 1, 2019, February 1, 2020, and April 1, 2020). 
+- Per Person Costs include food payments, and will be paid 30 business days after the close of the payment cycle in which the workshop is held.
+Payment amounts have not changed and will continue to be as outlined in your original agreement.
 
-- When you arrange for a facilitator to lead an upcoming workshop, please be upfront with them about the process and timeline for payments so they know:
+**General Note:**
+If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops.
+
+**Paying Facilitators**: When you arrange for a facilitator to lead an upcoming workshop, please be upfront with them about the process and timeline for payments so they know:
 	- how much they will be paid,
 	- any steps they need to take to request payment (e.g., signing an invoice, submitting a timesheet, etc.), and
 	- how many weeks after the workshop they can expect to receive payment.
@@ -91,16 +89,15 @@ Facilitators can host workshops that are not associated with their Regional Part
 
 **CS Fundamentals Facilitator Travel Reimbursement Process**
 
-Code.org will provide Partners with limited travel support for CS Fundamentals facilitators, up to, but not exceeding 250 dollars per facilitator per workshop, with the understanding that this should be around 30% of a Partner's workshops (ie. you should not be needing this travel support for every workshop you host).
+Code.org will provide Partners with limited travel support for CS Fundamentals facilitators, up to, but not exceeding $500 dollars per facilitator per workshop, with the understanding that this should be around 30% of a Partner's workshops (ie. you should not be needing this travel support for every workshop you host).
 
 Travel support will be provided by the following reimbursement process:
 
-- Regional Partner should submit an invoice and receipts within 30 days of the workshop by completing the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices)
-- Invoice total can be up to 250 dollars.
-- Reimbursable expenses include items like mileage, rental car, hotel, meals, etc.
-- For mileage reimbursement, no receipts are needed, but Regional Partner should specify the number of miles traveled.
-- For meals under 25 dollars, no receipts are needed.
+- Regional Partner should complete the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of when the expenses were incurred.
+- Invoice total can be up to 500 dollars.
+- Reimbursable expenses include items like mileage, rental car, hotel, meals, etc. Refer to the 6-12 <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>travel policy</a> for suggested guidance of reasonable expenses. Note that Egencia is not used for CS Fundamentals facilitator travel, yet. 
 - Payment will be provided independent of the regular workshop payment that is generated automatically from the workshop dashboard.
+
 
 [**Back to the top**](#top)
 ________________
@@ -192,12 +189,3 @@ Need an example of an official invoice? Visit [this site](http://www.wikihow.com
 [**Back to the top**](#top)
 ________________
 
-<a id="recruitment"></a>
-
-## Teacher Recruitment Fund
-
-To receive reimbursement for expenses incurred towards your Recruitment Fund, complete the form and attach recripts for [allowable expenses](https://staging.code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) at [bit.ly/codeinvoices](http://bit.ly/codeinvoices).
-
-Required information for reimbursement will include date, amount, invoice, receipts, a brief explanation of how the expenses supported recruitment in your region, and your best estimate of the number of teachers reached.
-
-[**Back to the top**](#top)

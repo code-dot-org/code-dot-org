@@ -358,7 +358,7 @@ module Pd
       }
 
       DummyForm.stubs(:sync_batch_size).returns(5)
-      mock_questions = mock {expects(:last_submission_id).returns(nil)}
+      mock_questions = mock {expects(:last_submission_id).returns(nil).at_least_once}
       DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(mock_questions)
 
       # 3 batches (batch limit == 5)
@@ -368,7 +368,8 @@ module Pd
           mock_questions.expects(:update!).with(last_submission_id: submission_id)
           mock do |mock_submission|
             expects(:[]).with(:submission_id).returns(submission_id)
-            DummyForm.expects(:process_submission).with(mock_submission, nil).returns(true)
+            DummyForm.expects(:process_submission).with(mock_submission, nil).
+              returns(Pd::JotFormBackedForm::IMPORTED)
           end
         end
         mock do |_mock_translation|
@@ -381,20 +382,27 @@ module Pd
         end
       end
       JotForm::Translation.expects(:new).with(form_id).times(3).returns(*mock_translations)
-      CDO.log.expects(:info).with('11 JotForm submissions imported in 3 batches.')
+
+      actual_log_message = ''
+      CDO.log.expects(:info).with do |message|
+        actual_log_message = message
+      end
 
       DummyForm.sync_from_jotform form_id
+
+      assert actual_log_message.start_with?('11 JotForm submissions imported in 3 batches.')
     end
 
-    test 'jotform sync collects errors and stops updating last submission id' do
+    test 'jotform sync collects errors and updates last processed submission id' do
       form_id = get_form_id
 
-      mock_questions = mock {expects(:last_submission_id).returns(nil)}
-      DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(mock_questions)
+      mock_questions = mock {expects(:last_submission_id).returns(nil).at_least_once}
 
-      generate_mock_submission = proc do |imported, error, expect_update_last_submission_id|
+      DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(mock_questions)
+      mock_questions.expects(:update!).at_least_once
+
+      generate_mock_submission = proc do |imported, error|
         submission_id = get_submission_id
-        mock_questions.expects(:update!).with(last_submission_id: submission_id) if expect_update_last_submission_id
         mock do |mock_submission|
           expects(:[]).with(:submission_id).returns(submission_id)
 
@@ -402,17 +410,20 @@ module Pd
             DummyForm.expects(:process_submission).with(mock_submission, nil).raises(error)
           else
             # process_submission returns nil for skipped submissions
-            DummyForm.expects(:process_submission).with(mock_submission, nil).returns(imported ? true : nil)
+            DummyForm.expects(:process_submission).with(mock_submission, nil).returns(imported ?
+              Pd::JotFormBackedForm::IMPORTED :
+              Pd::JotFormBackedForm::SKIPPED_DIFFERENT_ENVIRONMENT
+            )
           end
         end
       end
 
       mock_submissions = [
-        generate_mock_submission[true, nil, true], # imported # 1
-        generate_mock_submission[false, nil, true], # skipped
-        generate_mock_submission[true, nil, true], # imported # 2
+        generate_mock_submission[true, nil],  # imported # 1
+        generate_mock_submission[false, nil], # skipped
+        generate_mock_submission[true, nil],  # imported # 2
         generate_mock_submission[false, 'Processing error 1', false], # error
-        generate_mock_submission[true, nil, false], # imported #3, post error
+        generate_mock_submission[true, nil],  # imported #3, post error
       ]
 
       JotForm::Translation.expects(:new).with(form_id).returns(
@@ -430,11 +441,17 @@ module Pd
           )
         end
       )
-      CDO.log.expects(:info).with('3 JotForm submissions imported in 1 batch.')
+
+      actual_log_message = ''
+      CDO.log.expects(:info).with do |message|
+        actual_log_message = message
+      end
 
       e = assert_raises do
         DummyForm.sync_from_jotform form_id
       end
+
+      assert actual_log_message.start_with?('3 JotForm submissions imported in 1 batch.')
       assert e.message.include? "Error syncing JotForm submissions for forms [#{form_id}]. Errors:"
       assert e.message.include? "Processing error 1"
     end
@@ -443,7 +460,7 @@ module Pd
       form_id = get_form_id
       DummyForm.stubs(:sync_batch_size).returns(2)
       DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(
-        mock {expects(:last_submission_id).returns(nil)}
+        mock {expects(:last_submission_id).returns(nil).at_least_once}
       )
 
       mock_submissions = 2.times.map do |i|

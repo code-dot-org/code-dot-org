@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Nous espérons que cette initiative va susciter l'intérêt de nos élèves et q
 
 #### Pourquoi est-ce important?
 
-La technologie transforme tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux Usa se situaient dans des métiers qui requièrent des capacités de programmation, y compris dans les secteurs de l'art et du design. But 65 percent of schools in the U.S. don't teach computer science. Il est temps pour nous de rentrer dans le 21e siècle. Nous savons que quelque soit la filière que nos élèves choisiront plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artistes, savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et comprendre les bases du succès. <br /> <br />
+La technologie transforme tous les secteurs de la planète. En 2015, 7 millions d'offres d'emplois aux Usa se situaient dans des métiers qui requièrent des capacités de programmation, y compris dans les secteurs de l'art et du design. But 55 percent of schools in the U.S. don't teach computer science. Il est temps pour nous de rentrer dans le 21e siècle. Nous savons que quelque soit la filière que nos élèves choisiront plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artistes, savoir programmer leur donnera la confiance et le savoir-faire pour maîtriser les technologies et comprendre les bases du succès. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ La technologie transforme tous les secteurs de la planète. En 2015, 7 millions 
 
 #### À propos de Code.org
 
-Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Its vision is that every student in every school has the opportunity to learn computer programming. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Pour plus d'information, rendez-vous sur [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Its vision is that every student in every school has the opportunity to learn computer programming. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

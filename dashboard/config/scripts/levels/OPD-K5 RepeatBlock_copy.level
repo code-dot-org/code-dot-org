@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-21T17:56:35.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "video_key": "repeat_block",
+    "instructions_important": "false",
+    "long_instructions": "Watch the video below, which explains how loops work and introduces the 'Repeat' block in CS Fundamentals.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16683,
+    "name_suffix": "_copy"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 19:21:24 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-02-15 19:22:28 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

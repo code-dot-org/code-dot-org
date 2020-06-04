@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {assert} from '../../util/reconfiguredChai';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 
 describe('FilterGroupContainer', () => {
@@ -16,11 +16,13 @@ describe('FilterGroupContainer', () => {
     const wrapper = shallow(
       <FilterGroupContainer text={title}>{content}</FilterGroupContainer>
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>{title}</div>
-        {content}
-      </div>
+    assert(
+      wrapper.containsMatchingElement(
+        <div>
+          <div>{title}</div>
+          {content}
+        </div>
+      )
     );
   });
 });

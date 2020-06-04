@@ -10,14 +10,8 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.0.7.2'
 gem 'rails-controller-testing'
-
-# Add CacheFile backend module.
-# Ref: https://github.com/svenfuchs/i18n/pull/423
-# Support numeric keys in Simple backend.
-# Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -28,7 +22,10 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 2.0'
 
-gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
+# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
+# breaks some firebase URIs. See
+# https://github.com/code-dot-org/code-dot-org/pull/31614
+gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/38
@@ -61,7 +58,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
-  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -84,6 +80,7 @@ group :development, :test do
   #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
+  gem 'benchmark-ips'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
@@ -94,7 +91,6 @@ group :development, :test do
   gem 'webmock', require: false
 
   gem 'codecov', require: false
-  gem 'fake_sqs'
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'simplecov', '~> 0.9', require: false
@@ -136,7 +132,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
@@ -191,14 +187,14 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
 # Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
 gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
-gem 'mini_magick'
+gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
 
 gem 'acts_as_list'
@@ -218,7 +214,6 @@ gem 'therubyracer', '~> 0.12.2', platforms: :ruby
 gem 'jwt' # single signon for zendesk
 
 gem 'codemirror-rails' # edit code in textarea
-gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
@@ -240,13 +235,15 @@ gem 'aws-sdk-cloudfront', '~> 1'
 gem 'aws-sdk-cloudwatch', '~> 1'
 gem 'aws-sdk-cloudwatchlogs', '~> 1'
 gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-databasemigrationservice', '~> 1'
 gem 'aws-sdk-dynamodb', '~> 1'
 gem 'aws-sdk-ec2', '~> 1'
 gem 'aws-sdk-firehose', '~> 1.6'
+gem 'aws-sdk-glue', '~> 1'
 gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
-gem 'aws-sdk-sqs', '~> 1'
+gem 'aws-sdk-secretsmanager', '~> 1'
 
 # Lint tools
 group :development, :staging do
@@ -334,6 +331,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
+gem 'active_record_union'
 gem 'activerecord-import'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
@@ -344,3 +342,5 @@ gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
 
 gem 'require_all', require: false
+
+gem 'dotiw'

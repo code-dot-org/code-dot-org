@@ -22,7 +22,7 @@ DNS and IP address work in the real world because of the hierarchy and duplicity
 * Activity:  <a href="https://docs.google.com/document/d/19W0-2tTK4t1f-jKW2MCMoWVHPird-uiQ0PpcqNWx7g8/edit?usp=sharing" target="_blank">DNS in the Real World Jigsaw</a>
 * Video: <a href="https://www.youtube.com/watch?v=2ZUxoi7YNgs" target="_blank">  How DNS Works</a>
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/2ZUxoi7YNgs?rel=0" frameborder="0" allowfullscreen></iframe>
+[![How the DNS Works video](https://images.code.org/34d14d3624c178bbaba4d5299e7f075e-image-1571174598529.23.05 PM.png)](https://www.youtube.com/watch?v=2ZUxoi7YNgs?rel=0)
 
 ## Articles
 
@@ -38,4 +38,6 @@ DNS and IP address work in the real world because of the hierarchy and duplicity
 * <a href="http://thenextweb.com/insider/2015/04/10/new-zealand-internet-providers-threatened-with-legal-action-for-providing-access-to-us-netflix/" target="_blank">  New Zealand Internet Providers Threatened with Legal Action for Providing Access to US Netflix</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
 MARKDOWN

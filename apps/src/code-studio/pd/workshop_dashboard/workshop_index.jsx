@@ -12,6 +12,7 @@ import {
   WorkshopAdmin,
   Organizer,
   CsfFacilitator,
+  Facilitator,
   ProgramManager
 } from './permission';
 import $ from 'jquery';
@@ -54,6 +55,10 @@ export class WorkshopIndex extends React.Component {
     this.context.router.push('/reports');
   };
 
+  handleLegacySurveySummariesClick = () => {
+    this.context.router.push('/legacy_survey_summaries');
+  };
+
   handleFilterClick = e => {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
@@ -68,7 +73,8 @@ export class WorkshopIndex extends React.Component {
     const canDelete = this.props.permission.hasAny(
       WorkshopAdmin,
       Organizer,
-      ProgramManager
+      ProgramManager,
+      CsfFacilitator
     );
     const canCreate = this.props.permission.hasAny(
       WorkshopAdmin,
@@ -80,6 +86,10 @@ export class WorkshopIndex extends React.Component {
       WorkshopAdmin,
       Organizer,
       ProgramManager
+    );
+    const canSeeLegacySurveySummaries = this.props.permission.hasAny(
+      Facilitator,
+      CsfFacilitator
     );
 
     return (
@@ -97,6 +107,11 @@ export class WorkshopIndex extends React.Component {
           {canSeeAttendanceReports && (
             <Button onClick={this.handleAttendanceReportsClick}>
               Attendance Reports
+            </Button>
+          )}
+          {canSeeLegacySurveySummaries && (
+            <Button onClick={this.handleLegacySurveySummariesClick}>
+              Legacy Facilitator Survey Summaries
             </Button>
           )}
           <Button

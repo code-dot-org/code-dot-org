@@ -15,8 +15,8 @@ class LevelGroupTest < ActiveSupport::TestCase
   end
 
   def get_evaluation_multi_dsl(id)
-    stage1 = create :stage
-    stage2 = create :stage
+    stage1 = create :lesson
+    stage2 = create :lesson
 
     "
     name 'evaluation_multi_#{id}'
@@ -368,21 +368,20 @@ level 'level1 copy2'"
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [
-      {
-        levels: %w(
-          level_free_response
-          level_multi_unsubmitted
-          level_multi_correct
-          level_multi_incorrect
-          level_multi_unattempted
-        )
-      }
-    ]
-    level1.save!
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+      anonymous 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
     script_level = create :script_level, script: script, levels: [level1], assessment: true
 
     updated_at = Time.now
@@ -419,7 +418,7 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: [
           {
             type: "text_match",
@@ -480,19 +479,18 @@ level 'level1 copy2'"
     create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [
-      {
-        levels: %w(
-          level_free_response
-          level_multi_unsubmitted
-          level_multi_unattempted
-        )
-      }
-    ]
-    level1.save!
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+      anonymous 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
     script_level = create :script_level, script: script, levels: [level1], assessment: true
 
     # Create a section
@@ -503,7 +501,7 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: []
       }
     }

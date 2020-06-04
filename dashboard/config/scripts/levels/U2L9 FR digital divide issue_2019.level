@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "long_instructions": "Consider the following statement from the CS Principles course framework:\r\n\r\n```\r\n7.4.1C The global distribution of computing resources raises issues of equity, access, and power.\r\n```\r\n\r\nBriefly describe one of these issues that you learned about in the lesson and how it affects your life or the lives of people you know.  Keep your response to about 100 words (about 3-5 sentences).",
+    "long_instructions": "Consider the following statement from the CS Principles course framework:\r\n\r\n`7.4.1C The global distribution of computing resources raises issues of equity, access, and power.`\r\n\r\nBriefly describe one of these issues that you learned about in the lesson and how it affects your life or the lives of people you know.  Keep your response to about 100 words (about 3-5 sentences).",
     "title": "Personal Reflection",
     "allow_user_uploads": "false",
     "submittable": "true",
@@ -13,9 +13,15 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 13049,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "optional": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-06 17:34:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

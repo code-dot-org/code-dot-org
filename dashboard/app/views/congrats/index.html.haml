@@ -15,4 +15,4 @@
 #congrats-container
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/congrats/index.js'), data: {congrats: congrats_data.to_json}}
+  %script{src: webpack_asset_path('js/congrats/index.js'), data: {congrats: congrats_data.to_json}}

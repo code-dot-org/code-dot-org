@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
 import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
+import SafeMarkdown from '../SafeMarkdown';
 
 const styles = {
   standard: {
@@ -123,7 +123,7 @@ class MarkdownInstructions extends React.Component {
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
       >
-        <UnsafeRenderedMarkdown markdown={markdown} />
+        <SafeMarkdown markdown={markdown} />
       </div>
     );
   }

@@ -4,7 +4,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
   freeze_time
 
   setup do
-    @workshop = create :pd_workshop, num_sessions: 2
+    @workshop = create :workshop, num_sessions: 2
     @workshop.start!
   end
 
@@ -24,7 +24,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: 'Yes',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'format partial attendance' do
@@ -44,7 +44,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: 'Yes',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'format full attendance' do
@@ -63,7 +63,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: 'Yes',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'handle_no_user' do
@@ -81,7 +81,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: '',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'deleted user that attended shows as attended' do
@@ -101,7 +101,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: '',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'deleted user that did not attend shows as not attended' do
@@ -121,11 +121,11 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: '',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'cdo scholarship column' do
-    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_CDO)
     assert_equal Pd::ScholarshipInfoConstants::YES_CDO, enrollment.scholarship_status
@@ -141,11 +141,11 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: 'Yes',
       other_scholarship: ''
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 
   test 'other scholarship column' do
-    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
@@ -161,6 +161,32 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       cdo_scholarship: '',
       other_scholarship: 'Yes'
     }
-    assert_equal expected, serialized
+    assert_equal expected, serialized.slice(*expected.keys)
+  end
+
+  test 'extract school and teacher info when they present' do
+    enrollment = build :pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8']
+    expected = {
+      district_name: enrollment.school_info.school_district.name,
+      school: enrollment.school_info.school.name,
+      role: enrollment.role,
+      grades_teaching: enrollment.grades_teaching
+    }
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(enrollment).attributes
+    assert_equal expected, serialized.slice(*expected.keys)
+  end
+
+  test 'extract school and teacher info when they are empty' do
+    enrollment = build :pd_enrollment, school_info: (build :school_info_us)
+    expected = {
+      district_name: nil,
+      school: nil,
+      role: nil,
+      grades_teaching: nil
+    }
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(enrollment).attributes
+    assert_equal expected, serialized.slice(*expected.keys)
   end
 end

@@ -86,6 +86,14 @@ class SharedResources < Sinatra::Base
     pass
   end
 
+  # WebAssembly
+  get '/shared/wasm/*.wasm' do |_path|
+    path = deploy_dir(request.path_info)
+    content_type 'application/wasm'
+    cache :static
+    send_file path
+  end
+
   # Images
   get '/shared/images/*' do |_path|
     path = request.path_info

@@ -156,14 +156,25 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
+    # Set libraryPublishedAt timestamp if we are publishing a project library.
+    publish_library = value.delete('publishLibrary')
+    value = value.merge('libraryPublishedAt' => Time.now) if publish_library
+
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
     project_type = value.delete('projectType')
 
     begin
-      value = StorageApps.new(get_storage_id).update(id, value, request.ip, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
+      value = StorageApps.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => e
+      if e.class == ProfanityPrivacyError
+        dont_cache
+        status 422
+        content_type :json
+        return {nameFailure: e.flagged_text}.to_json
+      else
+        bad_request
+      end
     end
 
     dont_cache
@@ -251,6 +262,26 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # GET /v3/channels/<channel-id>/share-failure
+  #
+  # Get an indication of why a project can't be shared.
+  #
+  get %r{/v3/channels/([^/]+)/share-failure} do |id|
+    dont_cache
+    content_type :json
+    language = request.language
+
+    value = explain_share_failure(id)
+    intl_value = language != 'en' ?
+      explain_share_failure(id, language) : nil
+    {
+      share_failure: value,
+      intl_share_failure: intl_value,
+      language: language
+    }.to_json
+  end
+
+  #
   #
   # GET /v3/channels/<channel-id>/sharing_disabled
   #
@@ -277,7 +308,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(get_storage_id).get_abuse(id)
+      value = StorageApps.get_abuse(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end

@@ -1,99 +1,98 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
-layout: wide
-nav: how_to_nav
+title: How to host an Hour of Code - Companies
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # چگونه یکساعت کدنویسی را به شرکت خودتان ببرید
 
-### Find out how you and your employees can inspire students to try computer science!
+### دریابید که چگونه شما و کارمندانتان می توانید به دانش آموزان برای برای استفاده از علوم کامپیوتر الهام ببخشید.
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## با کلاس ها و داوطلبان محلی ساعت کدنویسی َآشنا شوید
 
-Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org فرصتی را برای کارمندانتان فراهم می کند تا با کلاس های محلی که ساعت کدنویسی را انجام می دهند و آنها میتوانند که تجربیات کاریشان در صنعت تکنولوژی را با دانش آموزان به اشتراک بگذارند و دانش آموزان را به یادگیری علوم کامپیوتر تشویق کنند، [وصل شوند]({{ urls/volunteer }}). 
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+برای داوطلب شدن ثبت نام کنید.</button> <br /> <br /></p> 
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+برای راهنمایی های بیشتر در مورد تشویق کارمندان و ارتباط کارمندان خود با کلاس ها، به ما، [راهنمای شرکای شرکت]({{ localized_files/hoc_corporate_toolkit }}) را بررسی کنید.
 
-## Additional ways companies can support the Hour of Code
+## راههای دیگری که شرکتها میتوانند ساعت کدنویسی را حمایت کنند:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- از مدیر عامل شرکتتان بخواهید با [ارسال یک ایمیل به همه ی کارمندان]({{ promote/sample_emails }}) بر اهمیت علوم کامپیوتر تاکید و کارمندان را به این مهم تشویق کند.
+- میزبان ساعتهای شادی با یکساعت کدنویسی با همکارانتان به همراه [آموزشها](%= resolve_url('/learn') %) باشید.
+- میزبان رویدادهای یکساعت کدنویسی در کلاسهای دانش آموزان و یا شرکای غیرانتفاعی جهت یکساعت کدنویسی در محل شرکتتان باشید. راهنمای چگونگی رویداد را در زیر ببینید.
 
-# How to host an Hour of Code event with students
+# چگونه میزبان رویداد ساعت کدنویسی با دانش آموزان باشید
 
-## 1. Promote your Hour of Code
+## ۱. برنامه ساعت کدنویسی خود را اطلاع رسانی کنید
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
+- رویداد [ساعت کدنویسی](%= resolve_url('/promote') %) خود را تبلیغ کنید و دیگران را به میزبانی آن تشویق کنید.
+- **مهندسان نرم افزار**شرکتتان را به بازدید کلاسهای محلی تشویق کنید تا به برگزارکنندگان یکساعت کدنویسی کمک کرده و الهام بخش دانش آموزان برای یادگیری علوم کامپیوتر باشند. آنها میتوانند [ثبت نام](%= resolve_url('https://code.org/volunteer/engineer') %) کنند تا با کلاسها در ارتباط باشند.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## ۲. این فیلم آموزشی را ببینید <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## ۳. یک فعالیت را انتخاب کنید
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [امتحان کنید](%= resolve_url('/learn') %)
+ما [آموزش های یک ساعته]({{ urls/learn }}) ی جالب و متنوعی برای تمام سنین که توسط شرکای مختلف ساخته شده اند را تهیه کرده ایم. [آنها را امتحان کنید.]({{ urls/learn }})
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**تمام آموزش های ساعت کدنویسی** به کمترین زمان آمادگی برای سازمان دهندگان نیاز دارند، و خود خوان می باشند - به این معنی که به دانش آموزان این امکان را می دهند که با توجه به سرعت و سطح مهارت خود پیشرفت کنند.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 4. برای تکنولوژی های مورد نیاز خود برنامه ریزی کنید - داشتن رایانه اختیاری است
 
-بهترین ساعتهای یکساعت کدنویسی زمانهایی است که به اینترنت وصل هستند. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+بهترین ساعتهای یکساعت کدنویسی زمانهایی است که به اینترنت وصل هستند. اما برای هر دانش آموز به یک کامپیوتر **نیاز ندارید**، و حتی این امکان وجود دارد که ساعت کدنویسی را بدون کامپیوتر برگزار کنید.
 
-**Plan Ahead!** Do the following before your event starts:
+**از پیش برنامه ریزی کنید!** موارد زیر را قبل از شروع رویداد انجام دهید:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **رایانه به اندازه کافی ندارید؟** از [برنامه نویسی جفتی](https://www.youtube.com/watch?v=vgkahOzFH2Q) استفاده کنید. When participants partner up, they help each other and rely less on the organizer. همچنين متوجه مي شوند كه دانش كامپيوتر يك فعاليت اجتماعي و مبتني بر همكاري است.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- برنامه های آموزشی را بر روی کامپیوتر یا ابزار های دیگر امتحان کنید. مطمئن شوید که فیلم ها بر روی مرورگرها با صدا و تصویر نمایش داده می شوند.
+- اگر برنامه آموزشی مورد نظرتان با صدا بهتر کار می کند، براي كلاس تان هدفون تهيه كنيد، يا از دانش آموزان بخواهيد که هدفون های خودشان را به کلاس بياورند.
+- **رایانه به اندازه کافی ندارید؟** از [برنامه نویسی جفتی](https://www.youtube.com/watch?v=vgkahOzFH2Q) استفاده کنید. هنگامي كه دانش آموزان گروهی کار مي‌كنند، به هم كمك كرده و تكيه‌شان بر معلم كمتر مي‌شود. همچنين متوجه مي شوند كه دانش كامپيوتر يك فعاليت اجتماعي و مبتني بر همكاري است.
+- **پهناي باند كمي داريد؟** فیلم ها را براي كل كلاس نمايش دهيد، در اين صورت هر دانش آموز بطور جداگانه ويدئوها را دانلود نخواهد كرد. و يا از فعالیت های آفلاين استفاده كنيد.
 
-## 5. Start your Hour of Code off with an inspiring video
+## ۵. ساعت کد نویسی تان را با یک ویدئوی الهام بخش شروع کنید
 
-یکساعت کدتان را،با الهام بخشی شرکت کنندگان و اینکه علوم رایانه چه تاثیری بر همه ابعاد زندگیمان دارد، شروع کنید. Share more about what inspired you to pursue computer science and your role at your company.
+یکساعت کدتان را،با الهام بخشی شرکت کنندگان و اینکه علوم رایانه چه تاثیری بر همه ابعاد زندگیمان دارد، شروع کنید. دلایلی را که خودتان علوم رایانه را انتخاب کردید و نقشتان در شرکت را به اشتراک بگذارید.
 
 **ویدئوهای الهام بخش را نمایش دهید:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- سایت code.org فیلم هایی از بیل گیتز ، مارک زوکربرگ ، و ستاره بسکتبال کریس بوش آماده کرده است .( فیلم ها در نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای ](https://www.youtube.com/watch?v=nKIu9yen5nc)و [9 دقیقه ای ](https://www.youtube.com/watch?v=dU1xS07N-FA)موجودند )
 - ویدئو [ساعت کدنویسی در سرتاسر جهان](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [باراک اوباما تمام دانش آموزان را به یادگیری علوم کامپیوتر فرا میخواند.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - ویدئوهای الهام بخش دیگر را از [اینجا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) پیدا کنید.
 
-**Ideas to introduce your Hour of Code activity to students:**
+**ایده هایی برای معرفی فعالیتهای ساعت کدنویسی تان به دانش آموزان:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- راههایی که تکنولوژی بر زندگی ما تاثیر می گذارد را با مثالهایی هم برای دختران و هم پسران بیان کنید -در مورد تکنولوژی هایی که جان انسانهارا نجات میدهد، به مردم کمک میکند، مردم را بهم مرتبط میکنند صحبت کنید).
+- اگر شما از یک شرکت تکنولوژی هستید، یک دموی جذاب از محصولات نوآورانه شرکتتان که بر روی آن کار می کنید نمایش دهید.
+- اگر ار یک شرکت تکنولوژی نیستید، در مورد استفاده شرکتتان از تکنولوژی در جهت حل مشکلات و رسیدن به اهدافتان صحبت کنید.
+- از مهندسین نرم افزار شرکتتان دعوت کنید تا درمورد اینکه چرا آنها تصمیم به مطالعه علوم کامپیوتر گرفته اند و پروژه هایی که روی آنها کار میکنند، صحبت کنند.
+- در [اينجا](http://code.org/girls) نكاتي را براي مشتاق كردن دختران به علم كامپيوتر ببينيد
 
-## 6. Code!
+## ۶.کد بنویسید!
 
 **دانش آموزان را به فعالیت هدایت کنید**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- لینک فعالیت را بر روی تخته بنویسید. لینک را در [اطلاعات مربوط به آموزش انتخابیتان](%= resolve_url('/learn') %) در زیر تعداد شرکت کنندگان پیدا کنید.
+- برای دانش آموزان کوچکتر، صفحه فعالیت را قبل از کلاس بارگذاری کنید یا آن را به عنوان بوکمارک ذخیره کنید.
 
-**When participants come across difficulties it's okay to respond:**
+**اگر در حین آموزش کسی به مشکلی برخورد، ایرادی ندارد اگر پاسخ دهید:**
 
 - "نمیدانم. بگذار با هم حلش کنیم."
 - "یادگیری برنامه نویسی مانند یادگیری زبان است؛ لزومی ندارد از اول روان صحبت کنی."
 
 **چه كار كنيم اگر دانش آموزی زودتر تمام كرد؟**
 
-- They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- آنها می توانند سعی به انجام یکی دیگر از فعالیت های ساعت کدنویسی در hourofcode.com/learn کنند
+- و یا بخواهید به یکی از دوستانشان که در انجام فعالیت مشکل دارد کمک کنند.
 
 ## 8) جشن بگیرید
 
-- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- گواهینامه ها را برای دانش آموزان و شرکت کنندگان [ چاپ کنید](%= resolve_url('https://code.org/certificates') %).
+- استیکر «من یک ساعت کدنویسی انجام دادم» را برای دانش آموزانتان چاپ کنید.
+- برای کارمندان [تی شرت های مخصوص سفارش دهید.](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
-<%= view :signup_button %>
+{{ signup_button }}

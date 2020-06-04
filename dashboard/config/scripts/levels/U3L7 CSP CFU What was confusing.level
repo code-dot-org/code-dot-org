@@ -1,0 +1,14 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-08-28T22:03:01.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-26 15:38:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-28 18:47:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-28 21:58:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"encrypted\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-28 22:07:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-29 17:31:19 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  },
+  "encrypted_properties": "f3QPqvHB3ar4w5NnKxHJ0z7KdeA01iK9xDw9Ig1uc1wsoNhlZdytPagtWZOv\n3Nxz2e2hmi2qdxYjwHEK5Xx95ZvxrtHalqZMZQTq+hGY5OTLegDSVaJHdN7s\nijnf3yzAJXEtnkUcakLz2WKLNNXqwgZsgUkcVBGCgzblvaC91tHryot4rpJV\nuHuIkU0zGOlJgz0jhGyvA2ku16HRbye/RUlZrVRDUyDeUcaqTasGIsSIp36I\nBwfYT9CrOXZpduzIignPOQk4NnP9C43R1uXy5SkKdG8aothsjZtWITbEHFgM\nWz5OSW+qWZ/mYIK48Qz8HQuJHQ1auCFK2LRRe87FKkmCx6noo+dXY03kKiNS\nAMei/YgXjMfp+5vegnhxbtpVrF4AKa2kSY+XUwsXAe8hCfy+/j3uBTv/ZrS+\nPTHLGYqkXLauhkSMycuojiZPhK0QljOizNktosbf0BdesLjmUPzWetgupPxe\nNwACXpjNew4JtqsAc3jS2JappNI9SeCwUr7U7WGGtl4lwmiT5JOaaB+zoDJc\nhlhDIuPDJMHEsmZn0T8pQ18ytsx12dQZhSDHEb7acqmXuyxJNpX7Ql8f2/Bq\nkGZVd54Cj2q7q9OFbatUXXzeboSbLhCm2QxVcHg0msRwjDM5UDdKtzCe+hQe\n2QysnoVibyFMGt/kghxnsomPhXVkKdf43yjgIDjSuI9qKWXKVAjBJtFsziyD\nT7F7tuAMHUZqtkVy9LhqrGO9IRJDI1tDJ86GrqkoQLgZ701MxN++tjriF9oO\nW/O1LLlMGR6CDW2eZUlEIxqxRg0Os710ijMm/mgX711J9R/+8JDLE0TR4ZNm\ntm3hEN6MiCm6rbfA0l8NeiUhdjyhDo+YJi5m0nK0TsjDOen5g7JoO8NS69Fw\n5680jcM63/gBkQzfMivWT7Y4cLQDLlA1W5FQd1pOsqPiLq2CLRNBp+MLBc+G\nL3gZPebfTDxcdif2HCzEA5sBmKs3BoCN/5VsF2/MSa5XMagdqIwyso+H7R5p\n2ep5GPJnbIBSSpOwMSR27g1QZ8okH1YW+Z0y8gxFzqWuUWUNVtcIQ3YXvXaT\nz8eQPFSc5YpQ6HCwBJDBdVd/+ueqFU256Tt7VvzLsZCXPxz2LAxUt5zt4jFQ\nXip1NnmDDXAZgzFQTf8YfqjvHNQqtdu3Tga2I0hKU7bkPVgOup7my+JuDtY3\n1CWoMbiDZfm8ZbOxsDG6/NbJQNFHqtg2Fx617EI4qBJA+l1L+ukZW3XoNok=\n",
+  "encrypted_notes": ""
+}]]></config>
+</FreeResponse>

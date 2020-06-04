@@ -4,13 +4,12 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {
-  personalProjectDataPropType,
-  PROJECT_TYPE_MAP
-} from './projectConstants';
+import {personalProjectDataPropType} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
   ConditionallyPublishableProjectTypes
@@ -19,6 +18,8 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
+import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
+import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -120,9 +121,10 @@ const dateFormatter = function(time) {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
+    canShare: PropTypes.bool.isRequired,
+
+    // Provided by Redux
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType)
-      .isRequired,
-    canShare: PropTypes.bool.isRequired
   };
 
   state = {
@@ -157,6 +159,7 @@ class PersonalProjectsTable extends React.Component {
         projectType={rowData.type}
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
+        projectNameFailure={rowData.projectNameFailure}
       />
     );
   };
@@ -196,7 +199,7 @@ class PersonalProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: thumbnailFormatter,
+          formatters: [thumbnailFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -219,7 +222,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: nameFormatter,
+          formatters: [nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -236,7 +239,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: typeFormatter,
+          formatters: [typeFormatter],
           props: {
             style: {
               ...styles.cellType,
@@ -253,7 +256,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -265,7 +268,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.publishedAtFormatter,
+          formatters: [this.publishedAtFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -286,7 +289,7 @@ class PersonalProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: this.actionsFormatter,
+          formatters: [this.actionsFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -300,6 +303,10 @@ class PersonalProjectsTable extends React.Component {
   };
 
   render() {
+    if (!this.props.personalProjectsList) {
+      return null;
+    }
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -318,22 +325,28 @@ class PersonalProjectsTable extends React.Component {
     const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
-      <div style={styles.bottomMargin}>
-        {!noProjects && (
-          <Table.Provider
-            columns={columns}
-            style={tableLayoutStyles.table}
-            className="ui-personal-projects-table"
-          >
-            <Table.Header />
-            <Table.Body
-              rows={sortedRows}
-              rowKey="channel"
-              className="ui-personal-projects-row"
-            />
-          </Table.Provider>
-        )}
-        {noProjects && <h3>{i18n.noPersonalProjects()}</h3>}
+      <div>
+        <div id="uitest-personal-projects" style={styles.bottomMargin}>
+          {!noProjects && (
+            <Table.Provider
+              columns={columns}
+              style={tableLayoutStyles.table}
+              className="ui-personal-projects-table"
+            >
+              <Table.Header />
+              <Table.Body
+                rows={sortedRows}
+                rowKey="channel"
+                className="ui-personal-projects-row"
+              />
+            </Table.Provider>
+          )}
+          {noProjects && (
+            <h3 style={{textAlign: 'center'}}>{i18n.noPersonalProjects()}</h3>
+          )}
+        </div>
+        <PublishDialog />
+        <DeleteProjectDialog />
       </div>
     );
   }

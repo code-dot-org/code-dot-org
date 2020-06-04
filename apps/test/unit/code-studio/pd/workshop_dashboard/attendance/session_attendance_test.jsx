@@ -98,6 +98,7 @@ describe('SessionAttendance', () => {
 
     // After the server responds
     server.respond();
+    wrapper.update();
     // Has expected columns:
     expect(
       wrapper.containsMatchingElement(
@@ -126,6 +127,7 @@ describe('SessionAttendance', () => {
 
     // After the server responds
     server.respond();
+    wrapper.update();
     // Has expected columns:
     expect(
       wrapper.containsMatchingElement(
@@ -151,6 +153,7 @@ describe('SessionAttendance', () => {
 
     // After the server responds
     server.respond();
+    wrapper.update();
     // Has expected columns:
     expect(
       wrapper.containsMatchingElement(

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:09.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "submittable": "false",
+    "encrypted_solution": "a39inp6ZkWRaUb1dlutaCTSCCIOb/9S7eH25gT9HvtJfO5icfGtog50Jhy99\n6bn3U0avdwTn+vLCNVyFnkuV28yCcywW1w0CO6pUhdfktXRrwZ3YlsJuUQgD\n983NAawA/easozKNFSWBxG8tptGZ/kyFWrGEhCdtUdv4kLmrRNlrQPXOZVhO\ne3gD6C4Zn8b67Ct24d+CKajnUFL24D4DMSR6JwwZDEIwu39mXdnj/n39GaVt\n5E6vPbN3C+YCXE4UHCHGDwDXFd6zkxfD3HJheZcEteMiWjpkXlgRY/u66pd4\nnKnnV1Vp6dj3I3OvBIN3l2A41kvj6wRzPr9ldPdVVXNArSYSLsIqDhmb66Mw\nkEiiFWp3Sa/1Sj7a8rMO98iPxrruA0r08+To0CLBFfn9NfKkXK+nlYT2uSQE\nPol/G5ZU5eabl/jbzzIkoa6/c4zzVrkUfX/MsF5/1RLL807uh7geHwowQ/DA\nzt68klaI5UBooeSRR8eN/t1rjQOA+jeMrm40KPTN16CFquhF2xE1kn9HvkhY\n941aac4nUTHmZ8dFwI5VGsOym0vCBXmwqYa6T6JbhJBQ96mEdvuzRN2Uj2cH\nD0JNL5LU5W1lgwyYs15EisCKCOCQ5t8uzNuyNxRgpecfV6nA4MKv/19RGoA5\nfw==\n",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "**Short Response:** \r\n\r\nTwo students, Kaleb and Hunter, are arguing in class about an App Lab project. Kaleb states, “Huh, a button and an image are basically the same thing!”.  Hunter replies, “That doesn’t make any sense at all!”.\r\n\tExplain what Kaleb may have meant by that statement.",
+    "instructions_important": "false",
+    "parent_level_id": 17177,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-22 14:28:13 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -7,6 +7,9 @@ import {
 } from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 import $ from 'jquery';
+import Adapter from 'enzyme-adapter-react-15.4';
+import enzyme from 'enzyme';
+enzyme.configure({adapter: new Adapter()});
 
 // Add story files here to exclude them from the storybook render tests.
 const BLACKLIST = [
@@ -18,14 +21,18 @@ describe('react-storybook stories render without errors or warnings', function()
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
 
-  //Stub jquery fileupload library function
-  let fileupload;
+  // Stub jquery fileupload library function and window.Audio class.
+  let fileupload, windowAudio;
   before(() => {
     fileupload = $.fn.fileupload;
     $.fn.fileupload = () => {};
+
+    windowAudio = window.Audio;
+    window.Audio = FakeAudio;
   });
   after(() => {
     $.fn.fileupload = fileupload;
+    window.Audio = windowAudio;
   });
 
   // Test all the *.story.jsx files that aren't blacklisted
@@ -39,3 +46,14 @@ describe('react-storybook stories render without errors or warnings', function()
       });
     });
 });
+
+class FakeAudio {
+  play() {}
+  pause() {}
+  load() {}
+  // EventTarget interface
+  addEventListener() {}
+  removeEventListener() {}
+  dispatchEvent() {}
+  removeAttribute() {}
+}

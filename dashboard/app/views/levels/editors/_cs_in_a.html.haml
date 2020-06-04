@@ -1,12 +1,12 @@
 //CS in A stuff
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_contract_editor, description: "Use MSM contract editor"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_contract_editor, description: "Use MSM contract editor"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :default_num_example_blocks, description: "Default # of example blocks in contract editor"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :default_num_example_blocks, description: "Default # of example blocks in contract editor"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_examples, description: "Hide examples section in contract editor"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_examples, description: "Hide examples section in contract editor"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :examples_required, description: "Each function must have at least 1 example, and examples will be checked when hitting run"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :examples_required, description: "Each function must have at least 1 example, and examples will be checked when hitting run"}
 %table.contract-editor-config
   %tr
     %th Section

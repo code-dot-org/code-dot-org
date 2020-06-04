@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 
 // We want level builders to be able to specify which of these strings is used,
-// but then want to make sure to show tachers the localized version
+// but then want to make sure to show teachers the localized version
 const ResourceType = {
   curriculum: 'curriculum',
   teacherForum: 'teacherForum',
@@ -12,7 +12,8 @@ const ResourceType = {
   codeIntroduced: 'codeIntroduced',
   standardMappings: 'standardMappings',
   allHandouts: 'allHandouts',
-  videos: 'videos'
+  videos: 'videos',
+  curriculumGuide: 'curriculumGuide'
 };
 export default ResourceType;
 
@@ -25,7 +26,8 @@ export const stringForType = {
   [ResourceType.codeIntroduced]: i18n.codeIntroduced(),
   [ResourceType.standardMappings]: i18n.standardMappings(),
   [ResourceType.allHandouts]: i18n.allHandouts(),
-  [ResourceType.videos]: i18n.videos()
+  [ResourceType.videos]: i18n.videos(),
+  [ResourceType.curriculumGuide]: i18n.curriculumGuide()
 };
 
 export const resourceShape = PropTypes.shape({

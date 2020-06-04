@@ -33,6 +33,10 @@ ms:
         text: Setiap blok adalah satu arahan. Jika anda seret blok "maju kehadapan"
           ke ruang kerja anda dan tekan "Mainkan Program", burung itu akan bergerak
           satu ruang pada maze.
+      11:
+        text: Untuk melakukan lebih daripada satu gerakan, anda boleh seret (drag)
+          banyak blok kr ruang kerja anda dan sambungkan mereka bersama. Burung itu
+          akan melakukan arahan dari atas ke bawah.
       12:
         text: Jika anda menjalankan aturcara dan ingin betulkan dan cuba lagi, tekan
           butang "Set Semula".
@@ -177,6 +181,24 @@ ms:
           yang membolehkan mereka menang.
       7:
         text: Berseronok menggunakan blok "Jika"!
+    if_else:
+      1:
+        text: Hai, nama saya Saloni. Saya menggunakan sains komputer untuk membantu
+          menyelesaikan masalah dalam perubatan dan kesihatan. Mari belajar mengenai
+          blok "jika lain". ianya kelihat seperti blok "jika", tetapi ianya mempunyai
+          bahagian ekstra di penghujung yang menyatakan "lain".
+      2:
+        text: Jika saya letakkan blok "maju kehadapan" di dalam tempat yang menyatakan
+          "buat" dan blok "pusing kiri" di tempat yang menyatakan "lain" maksudnya
+          zombie akan memlih antara 2 pilihan. JIKA ada lauan kehadapan, zombie akan
+          bergerak kehadapan, dan SEBALIKNYA (tiada laluan kehadapan), zombie akan
+          pusing ke kiri.
+      3:
+        text: Seperti blok "jika", kita boleh masukkan blok "jika lain" ke dalam blok
+          "ulang" supaya zombie terus bergerak dan blok "jika lain" akan sentiasa
+          menyemak jika ada tempat untuk berpusing.
+      4:
+        text: Sekarang, hantarkan zombie tersebut ke mana sepatutnya mereka pergi!
     function:
       1:
         text: Hi, saya Brina, seorang jurutera di Instagram. Fungsi adalah baris-baris

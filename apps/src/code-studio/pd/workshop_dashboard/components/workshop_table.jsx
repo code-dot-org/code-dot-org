@@ -4,7 +4,8 @@
 import _, {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
@@ -12,6 +13,8 @@ import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
+import {CSF, CSD, CSP} from '../../application/ApplicationConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   container: {
@@ -105,7 +108,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Manage'
         },
         cell: {
-          format: this.formatManagement
+          formatters: [this.formatManagement]
         }
       },
       {
@@ -115,7 +118,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatSessions
+          formatters: [this.formatSessions]
         }
       },
       {
@@ -132,7 +135,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -142,7 +145,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -175,7 +178,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Organizer'
         },
         cell: {
-          format: this.formatOrganizer
+          formatters: [this.formatOrganizer]
         }
       });
     }
@@ -187,7 +190,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Facilitators'
         },
         cell: {
-          format: this.formatFacilitators
+          formatters: [this.formatFacilitators]
         }
       },
       {
@@ -218,7 +221,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Signup Url'
         },
         cell: {
-          format: this.formatSignupUrl
+          formatters: [this.formatSignupUrl]
         }
       });
     }
@@ -279,7 +282,7 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatManagement = manageData => {
-    const {id, course, subject, state, date} = manageData;
+    const {id, course, subject, state, date, canDelete, endDate} = manageData;
 
     return (
       <WorkshopManagement
@@ -289,12 +292,14 @@ export default class WorkshopTable extends React.Component {
         viewUrl={`/workshops/${id}`}
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
-        onDelete={state !== 'Ended' ? this.props.onDelete : null}
+        onDelete={canDelete ? this.props.onDelete : null}
         showSurveyUrl={
           state === 'Ended' ||
-          (['CS Discoveries', 'CS Principles'].includes(course) &&
-            subject !== 'Code.org Facilitator Weekend')
+          ([CSD, CSP].includes(course) &&
+            subject !== SubjectNames.SUBJECT_FIT) ||
+          (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
         }
+        endDate={endDate}
       />
     );
   };
@@ -314,7 +319,9 @@ export default class WorkshopTable extends React.Component {
           course: row.course,
           subject: row.subject,
           state: row.state,
-          date: row.sessions[0].start
+          date: row.sessions[0].start,
+          canDelete: row.can_delete,
+          endDate: row.sessions[row.sessions.length - 1].end
         }
       })
     );

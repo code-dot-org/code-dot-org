@@ -1,7 +1,7 @@
 name 'Commute Assess - comp 5 - block_exam_prep'
 question 'What does this code do?'
 wrong 'Makes sure the value of x is not equal to 10'
-wrong 'Makes sure the value of  x is less than 5'
+wrong 'Makes sure the value of x is less than 5'
 right 'Makes sure the value of x is between 10 and 5'
 wrong 'It always sets x equal to 5'
 wrong 'This code will cause an error'

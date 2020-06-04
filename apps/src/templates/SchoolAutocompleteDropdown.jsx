@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import VirtualizedSelect from 'react-virtualized-select';
-import 'react-virtualized/styles.css';
-import 'react-select/dist/react-select.css';
-import 'react-virtualized-select/styles.css';
+import loadable from '../util/loadable';
+const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';

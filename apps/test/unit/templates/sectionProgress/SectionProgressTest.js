@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
@@ -16,6 +16,7 @@ describe('SectionProgress', () => {
   beforeEach(() => {
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
+      setCurrentView: () => {},
       loadScript: () => {},
       setScriptId: () => {},
       scriptId: 1,
@@ -35,9 +36,15 @@ describe('SectionProgress', () => {
             levels: [{id: 789}]
           }
         ],
-        excludeCsfColumnInLegend: true
+        csf: true,
+        hasStandards: true
       },
-      isLoadingProgress: false
+      isLoadingProgress: false,
+      scriptFriendlyName: 'My Script',
+      showStandardsIntroDialog: false,
+      studentTimestamps: {
+        1: Date.now()
+      }
     };
   });
 
@@ -53,20 +60,12 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('shows viewCourse link with section id', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    const backLink = wrapper.find(
-      'SmallChevronLink[link="/scripts/myscript?section_id=2"]'
-    );
-    expect(backLink.exists()).to.be.true;
-  });
-
-  it('summary view shows summary view and legend', () => {
+  it('shows summary view', () => {
     const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
   });
 
-  it('detail view shows detail view and legend', () => {
+  it('shows detail view', () => {
     const wrapper = shallow(
       <UnconnectedSectionProgress
         {...DEFAULT_PROPS}
@@ -74,5 +73,26 @@ describe('SectionProgress', () => {
       />
     );
     expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
+  });
+
+  it('shows standards view', () => {
+    const wrapper = shallow(
+      <UnconnectedSectionProgress
+        {...DEFAULT_PROPS}
+        currentView={ViewType.STANDARDS}
+      />
+    );
+    expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
+  });
+
+  it('shows student timestamps', () => {
+    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const tooltip = wrapper.find('#tooltipIdForStudent1');
+    expect(
+      tooltip
+        .children()
+        .first()
+        .text()
+    ).to.contain('Today');
   });
 });

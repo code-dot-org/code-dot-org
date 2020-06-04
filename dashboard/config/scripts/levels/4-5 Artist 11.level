@@ -13,7 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "9",
+    "ideal": "7",
     "slider_speed": "0.4",
     "embed": "false",
     "disable_param_editing": "true",
@@ -35,10 +35,23 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Within your loop, make sure the artist jumps backwards and upwards after drawing each line.\",\r\n  \"hint_id\": \"4-5_Artist_11_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
     "hint_prompt_attempts_threshold": 20,
-    "contained_level_names": null
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/8da383d616d24782bffd663237c3b451=levelbuilder/47636.png",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-30 14:05:41 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-09-30 14:05:48 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-09-30 14:07:13 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-10-01 13:42:03 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"predraw_blocks\",\"ideal\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_loops": 3
@@ -94,7 +107,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_colour" inline="true">
+            <block type="draw_colour">
               <value name="COLOUR">
                 <block type="colour_picker">
                   <title name="COLOUR">#228b22</title>

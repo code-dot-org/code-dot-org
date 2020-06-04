@@ -1,37 +1,33 @@
 name 'U1L14 Student Lesson Summary'
-encrypted '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
-RNAefLrh
-'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 1: Lesson 14 - Encoding B&W Images
+
+## Background
+
+Digital images perform the difficult task of translating human vision into a bit-level encoding. Accomplishing this task requires both technical know-how and an understanding of how human vision works. Digital images break a larger image into small squares on a monitor, called pixels, which can be individually illuminated. In a black and white image each pixel may either be turned on or off, and so can be represented by a single bit.
+
+## Vocabulary
+
+* Pixel: the fundamental unit of a digital image, typically a tiny square which contains a single color. Pixel is short for "picture element"
+* Metadata: data that provides more information or context about another piece of data
+
+## Lesson
+
+* Develop encoding scheme for B&W images
+* Experiment with Pixelation Tool
+* Incorporate metadata into encoding of a digital image
+ 
+## Resources
+
+* Activity Guide: [Encoding B&W Images](https://docs.google.com/document/d/1kLLr-ELXgBKDULCYDm3slAVQkszAHez85es7aLdAk_Q/export?format=pdf)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1lWMPd94bv8J2p-o9I3vz_DtfI7zyNPHpdbheWd21ME4/edit" target="_blank">KEY: Activity Guide- Encode a B&W Image</a>
+MARKDOWN

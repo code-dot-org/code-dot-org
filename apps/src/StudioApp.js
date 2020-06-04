@@ -37,13 +37,12 @@ import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
 import getAchievements from './achievements';
-import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import userAgentParser from './code-studio/initApp/userAgentParser';
-import {KeyCodes, TestResults} from './constants';
+import {KeyCodes, TestResults, TOOLBOX_EDIT_MODE} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
@@ -56,6 +55,7 @@ import {setIsRunning, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
   setBlockLimit,
@@ -70,13 +70,15 @@ import {
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 900;
+var MIN_WIDTH = 1200;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
@@ -181,7 +183,7 @@ class StudioApp extends EventEmitter {
     this.onContinue = undefined;
     this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
-    this.sendToPhone = undefined;
+    this.isUS = undefined;
     this.enableShowBlockCount = true;
 
     this.disableSocialShare = false;
@@ -195,7 +197,6 @@ class StudioApp extends EventEmitter {
     this.libraries = {};
   }
 }
-
 /**
  * Configure StudioApp options
  */
@@ -280,24 +281,26 @@ StudioApp.prototype.init = function(config) {
 
   this.configureDom(config);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <div>
-        <InstructionsDialogWrapper
-          showInstructionsDialog={autoClose => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-        />
-        <FinishDialog
-          onContinue={() => this.onContinue()}
-          getShareUrl={() => this.lastShareUrl}
-        />
-      </div>
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <div>
+          <InstructionsDialogWrapper
+            showInstructionsDialog={autoClose => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+          />
+          <FinishDialog
+            onContinue={() => this.onContinue()}
+            getShareUrl={() => this.lastShareUrl}
+          />
+        </div>
+      </Provider>,
+      document.body.appendChild(document.createElement('div'))
+    );
+  }
 
-  if (config.usesAssets) {
+  if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
 
     // Pre-populate asset list
@@ -323,6 +326,18 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.level.iframeEmbedAppAndCode) {
+    StudioApp.prototype.handleIframeEmbedAppAndCode_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      noHowItWorks: config.noHowItWorks,
+      isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
+      wireframeShare: config.wireframeShare
+    });
+  }
+
   if (config.share) {
     this.handleSharing_({
       makeUrl: config.makeUrl,
@@ -332,13 +347,15 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
-  this.authoredHintsController_.init(
-    config.level.authoredHints,
-    hintsUsedIds,
-    config.scriptId,
-    config.serverLevelId
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+    this.authoredHintsController_.init(
+      config.level.authoredHints,
+      hintsUsedIds,
+      config.scriptId,
+      config.serverLevelId
+    );
+  }
   if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(
       config.authoredHintViewRequestsUrl
@@ -787,32 +804,35 @@ StudioApp.prototype.handleSharing_ = function(options) {
 export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
-      text: i18n.t('footer.try_hour_of_code'),
+      key: 'try-hoc',
+      text: msg.tryHourOfCode(),
       link: 'https://code.org/learn',
       newWindow: true
     },
     {
-      text: i18n.t('footer.how_it_works'),
+      key: 'how-it-works',
+      text: msg.howItWorks(),
       link: project.getProjectUrl('/edit'),
       newWindow: false
     },
     {
-      text: i18n.t('footer.report_abuse'),
+      key: 'report-abuse',
+      text: msg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
     {
-      text: i18n.t('footer.copyright'),
-      link: '#',
+      text: msg.copyright(),
+      link: 'javascript:void(0)',
       copyright: true
     },
     {
-      text: i18n.t('footer.tos'),
+      text: msg.tos(),
       link: 'https://code.org/tos',
       newWindow: true
     },
     {
-      text: i18n.t('footer.privacy'),
+      text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
     }
@@ -821,6 +841,14 @@ export function makeFooterMenuItems() {
   //Removes 'Try-HOC' from only gamelab footer menu
   if (project.getStandaloneApp() === 'gamelab') {
     footerMenuItems.shift();
+  }
+
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
   }
 
   return footerMenuItems;
@@ -836,14 +864,15 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: i18n.t('footer.built_on_code_studio'),
+    baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
       width: $('#visualization').width()
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
-    phoneFooter: true
+    phoneFooter: true,
+    channel: project.getCurrentId()
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
@@ -920,13 +949,15 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
+  if (run || reset) {
+    run.style.display = showRun ? 'inline-block' : 'none';
+    run.disabled = !showRun;
+    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.disabled = showRun;
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
-  $('.arrow').prop('disabled', showRun);
+  getStore().dispatch(setArrowButtonDisabled(showRun));
 };
 
 StudioApp.prototype.isRunning = function() {
@@ -955,9 +986,13 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {boolean} options.noOverlap if true, will not start playing if the sound is already playing
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (options && options.noOverlap && Sounds.getSingleton().isPlaying(name)) {
+    return;
+  }
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
@@ -1439,19 +1474,6 @@ StudioApp.prototype.resizeVisualization = function(width) {
   );
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
-
-    // If the small print and language selector are on the same line,
-    // the small print should float right.  Otherwise, it should float left.
-    var languageSelector = smallFooter.querySelector('form');
-    var smallPrint = smallFooter.querySelector('small');
-    if (
-      languageSelector &&
-      smallPrint.offsetTop === languageSelector.offsetTop
-    ) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
   }
 
   // Fire resize so blockly and droplet handle this type of resize properly:
@@ -1570,7 +1592,7 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
-  options.sendToPhone = this.sendToPhone;
+  options.isUS = this.isUS;
   options.channelId = project.getCurrentId();
 
   try {
@@ -1803,7 +1825,9 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   var deviceWidth;
   var desiredWidth;
-  var minWidth;
+  var width;
+  var scale;
+
   if (this.share && dom.isMobile()) {
     var mobileNoPaddingShareWidth =
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
@@ -1812,14 +1836,47 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = mobileNoPaddingShareWidth;
+    var minWidth = mobileNoPaddingShareWidth;
+    width = Math.max(minWidth, desiredWidth);
+    scale = deviceWidth / width;
   } else {
-    // assume we are in landscape mode, so width is the longer of the two
-    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-    minWidth = MIN_WIDTH;
+    // We want the longer edge, the width in landscape, to get MIN_WIDTH.
+    let screenWidth = Math.max(screen.width, screen.height);
+
+    width = MIN_WIDTH;
+    scale = screenWidth / width;
   }
-  var width = Math.max(minWidth, desiredWidth);
-  var scale = deviceWidth / width;
+
+  // Setting `minimum-scale=scale` means that we are unable to shrink the
+  // entire playspace area down to fit on a portrait iPhone, even though
+  // it's technically not visible because of the RotateContainer on top.
+  // But setting `maximum-scale=scale` was preventing an Android from starting
+  // in the desired zoom level in landscape, so we removed that but left
+  // `minimum-scale=scale`.
+  var content = [
+    'width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'viewport-fit=cover'
+  ];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function(
+  viewport,
+  width
+) {
+  // iOS sets the screen width to the min of width and height. Android sets the
+  // screen width to the landscape width. We take the min of width and height
+  // here to enforce consistent behavior.
+  let screenWidth = Math.min(screen.width, screen.height);
+  const scale = screenWidth / width;
+
   var content = [
     'width=' + width,
     'minimal-ui',
@@ -1838,18 +1895,12 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
 StudioApp.prototype.setConfigValues_ = function(config) {
   this.share = config.share;
 
-  // By default, we center our embedded levels. Can be overridden by apps.
-  config.centerEmbedded = utils.valueOr(config.centerEmbedded, true);
-
-  // By default, embedded levels are not responsive.
-  config.responsiveEmbedded = utils.valueOr(config.responsiveEmbedded, false);
-
   // If set to true, we use our wireframe share (or chromeless share on mobile).
   config.wireframeShare = utils.valueOr(config.wireframeShare, false);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
-  this.sendToPhone = config.sendToPhone;
+  this.isUS = config.isUS;
   this.noPadding = config.noPadding;
 
   // contract editor requires more vertical space. set height to 1250 unless
@@ -1978,8 +2029,8 @@ StudioApp.prototype.configureDom = function(config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
-  // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
+  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use if in CSP/CSD (in which case
+  // display videos in the top instructions) or InstructionsCSF (in which case the videos are appended here).
 
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed;
   if (!referenceAreaInTopInstructions && referenceArea) {
@@ -1996,7 +2047,7 @@ StudioApp.prototype.configureDom = function(config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks === 'toolbox_blocks') {
+      if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = {category: {x: 20}};
       }
@@ -2010,7 +2061,7 @@ StudioApp.prototype.configureDom = function(config) {
       document.body.className += ' embedded_iframe';
     }
 
-    if (config.pinWorkspaceToBottom) {
+    if (config.pinWorkspaceToBottom && !config.level.iframeEmbedAppAndCode) {
       var bodyElement = document.body;
       bodyElement.style.overflow = 'hidden';
       bodyElement.className = bodyElement.className + ' pin_bottom';
@@ -2023,14 +2074,6 @@ StudioApp.prototype.configureDom = function(config) {
 
   if (config.readonlyWorkspace) {
     $(codeWorkspace).addClass('readonly');
-  }
-
-  // NOTE: Can end up with embed true and hideSource false in level builder
-  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
-  if (config.embed && config.hideSource && config.centerEmbedded) {
-    container.className = container.className + ' centered_embed';
-    visualizationColumn.className =
-      visualizationColumn.className + ' centered_embed';
   }
 
   var smallFooter = document.querySelector(
@@ -2127,6 +2170,47 @@ StudioApp.prototype.handleHideSource_ = function(options) {
       }
     }
   }
+};
+
+StudioApp.prototype.handleIframeEmbedAppAndCode_ = function() {
+  document.body.style.backgroundColor = 'transparent';
+  document.body.className += 'iframe_embed_app_and_code';
+  var vizColumn = document.getElementById('visualizationColumn');
+  $(vizColumn).addClass('chromelessShare');
+};
+
+/**
+ * Adds any library blocks in the project to the toolbox.
+ * @param {object} config The object containing all metadata about the project
+ */
+StudioApp.prototype.loadLibraryBlocks = function(config) {
+  if (!config.level.libraries && config.level.startLibraries) {
+    config.level.libraries = JSON.parse(config.level.startLibraries);
+  }
+  if (!config.level.libraries) {
+    return;
+  }
+
+  config.level.projectLibraries = [];
+  config.level.libraries.forEach(library => {
+    config.dropletConfig.additionalPredefValues.push(library.name);
+    config.level.projectLibraries.push({
+      name: library.name,
+      code: createLibraryClosure(library)
+    });
+    // TODO: add category management for libraries (blocked on spec)
+    // config.dropletConfig.categories['libraryName'] = {
+    //   id: 'libraryName',
+    //   color: 'colorName',
+    //   rgb: 'colorHexCode',
+    //   blocks: []
+    // };
+
+    library.dropletConfig.forEach(dropletConfig => {
+      config.dropletConfig.blocks.push(dropletConfig);
+      config.level.codeFunctions[dropletConfig.func] = null;
+    });
+  });
 };
 
 /**
@@ -2579,7 +2663,7 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     this.checkForEmptyBlocks_ = false;
     if (
       config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks' ||
+      config.level.edit_blocks === TOOLBOX_EDIT_MODE ||
       config.level.edit_blocks === 'recommended_blocks'
     ) {
       // Don't show when run block for toolbox/required/recommended block editing
@@ -2620,10 +2704,9 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
       config.level.topLevelProcedureAutopopulate,
       false
     ),
-    useModalFunctionEditor: utils.valueOr(
-      config.level.useModalFunctionEditor,
-      false
-    ),
+    useModalFunctionEditor:
+      config.level.edit_blocks !== TOOLBOX_EDIT_MODE &&
+      !!config.level.useModalFunctionEditor,
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(
@@ -2643,10 +2726,14 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     typeHints: utils.valueOr(config.level.showTypeHints, false)
   };
 
-  // Never show unused blocks or disable autopopulate in edit mode
+  // Never show unused blocks in edit mode. Procedure autopopulate should always
+  // be enabled in edit mode. Except in toolbox mode where functions/behaviors
+  // should never be created (and therefore the autopopulated blocks would be
+  // confusing).
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
-    options.disableProcedureAutopopulate = false;
+    options.disableProcedureAutopopulate =
+      options.editBlocks === TOOLBOX_EDIT_MODE;
   }
 
   [
@@ -3052,8 +3139,8 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: i18n.t('project.abuse.tos'),
-          contact_us: i18n.t('project.abuse.contact_us')
+          tos: msg.tosLong({url: 'http://code.org/tos'}),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
@@ -3070,8 +3157,8 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: i18n.t('project.abuse.policy_violation'),
-          contact_us: i18n.t('project.abuse.contact_us')
+          tos: msg.policyViolation(),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
@@ -3149,9 +3236,35 @@ StudioApp.prototype.polishGeneratedCodeString = function(code) {
  * the visualizationColumn.
  */
 StudioApp.prototype.isResponsiveFromConfig = function(config) {
-  const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
   const isWorkspaceView = !config.hideSource;
-  return isResponsiveEmbedView || isWorkspaceView;
+  return config.embed || isWorkspaceView;
+};
+
+/**
+ * Checks if the level a teacher is viewing of a students has
+ * not been started.
+ * For contained levels don't show the banner ever.
+ * Otherwise if its a channel backed level check for the channel. Lastly
+ * if its not a channel backed level and its not free play we know it has
+ * not been started if no progress has been made.
+ */
+StudioApp.prototype.isNotStartedLevel = function(config) {
+  const progress = getStore().getState().progress;
+
+  if (config.hasContainedLevels || config.level.isProjectLevel) {
+    return false;
+  } else if (
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
+      config.levelGameName
+    )
+  ) {
+    return config.readonlyWorkspace && !config.channel;
+  } else {
+    return (
+      config.readonlyWorkspace &&
+      progress.levelProgress[progress.currentLevelId] === undefined
+    );
+  }
 };
 
 /**
@@ -3178,6 +3291,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
+      isNotStartedLevel: this.isNotStartedLevel(config),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
@@ -3193,6 +3307,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       is13Plus: config.is13Plus,
       isSignedIn: config.isSignedIn,
       userId: config.userId,
+      verifiedTeacher: config.verifiedTeacher,
       textToSpeechEnabled: config.textToSpeechEnabled,
       isK1: config.level.isK1,
       appType: config.app,
@@ -3201,7 +3316,8 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverScriptLevelId: config.serverScriptLevelId
     },
     appSpecificConstants
   );

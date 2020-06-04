@@ -2,8 +2,7 @@ name 'AP_practice_Qs_rqb_29_CSP_2_2_3'
 wrong 'Both inputs must be false'
 right 'At least one input must be true'
 wrong 'Both inputs must be true'
-wrong 'There are no values of A and B that will make the output of the circuit true
-'
+wrong 'There are no values of A and B that will make the output of the circuit true'
 markdown <<MARKDOWN
 The figure below shows a circuit composed of two logic gates. The output of the circuit is true.
 <br><img src="https://curriculum.code.org/media/uploads/csp/4eaa68a2a87b6dbce17d2a93c12a2f8d" width="300"><br>

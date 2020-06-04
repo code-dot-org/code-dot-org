@@ -1,10 +1,13 @@
 name 'Commute Assess - cond 3 - block'
 question 'What will be displayed after running this code?'
-right '<pre>Under 40</pre>'
-wrong '<pre>And under 21</pre>'
-wrong '<pre>And contains a 3</pre>'
-wrong '<pre>Under 40<br>And contains a 3</pre>'
-wrong '<pre>Under 40<br>And under 21<br>And contains a 3</pre>'
+right '`Under 40`'
+wrong '`And under 21`'
+wrong '`And contains a 3`'
+wrong '`Under 40`  
+`And contains a 3`'
+wrong '`Under 40`  
+`And under 21`  
+`And contains a 3`'
 wrong 'Nothing will be displayed'
 
 

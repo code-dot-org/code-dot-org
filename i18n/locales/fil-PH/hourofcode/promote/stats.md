@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Umaasa kami na ito'y magbibigay ng kislap sa interes sa mga estudyante upang pat
 
 #### Bakit ito mahalaga?
 
-Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 65 percent of schools in the U.S. don't teach computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
+Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 55 percent of schools in the U.S. don't teach computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon a
 
 #### Tungkol sa Code.org
 
-Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan upang palawakin ng partisipasyon sa computer science at pataasin ang partisipasyon ng mga kababaihan at mga kulang sa pagkatawan na mga estudyante na iba't ibang kulay. Its vision is that every student in every school has the opportunity to learn computer programming. Pagkatapos ilunsad noong 2013, ang Code.org nag-organize ng kampanya ng Hour of Code – kung saan ipinakilala sa higit 100 milyon na mga estudyante ang computer science hanggang ngayon – at nakisosyo sa 70 distritong pampublikong paaralan sa buong bansa upang palawakin ang mga programa ng computer science. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para sa karagdagang impormasyon, mangyaring bisitahin ang:[<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan upang palawakin ng partisipasyon sa computer science at pataasin ang partisipasyon ng mga kababaihan at mga kulang sa pagkatawan na mga estudyante na iba't ibang kulay. Its vision is that every student in every school has the opportunity to learn computer programming. Pagkatapos ilunsad noong 2013, ang Code.org nag-organize ng kampanya ng Hour of Code – kung saan ipinakilala sa higit 100 milyon na mga estudyante ang computer science hanggang ngayon – at nakisosyo sa 70 distritong pampublikong paaralan sa buong bansa upang palawakin ang mga programa ng computer science. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![larawan](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![larawan](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

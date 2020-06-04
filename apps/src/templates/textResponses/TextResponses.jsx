@@ -83,6 +83,13 @@ class TextResponses extends Component {
     filterByStageName: null
   };
 
+  componentDidMount() {
+    this.props.asyncLoadTextResponses(
+      this.props.sectionId,
+      this.props.scriptId
+    );
+  }
+
   getResponsesByScript = () => {
     const {responses, scriptId} = this.props;
     return responses[scriptId] || [];
@@ -179,6 +186,7 @@ class TextResponses extends Component {
             >
               {/* onClick functionality for Button handled by CSVLink */}
               <Button
+                __useDeprecatedTag
                 text={i18n.downloadCSV()}
                 onClick={() => {}}
                 color={Button.ButtonColor.white}

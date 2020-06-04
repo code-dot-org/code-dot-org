@@ -1,0 +1,6 @@
+name 'U6L4 CFU Reason for Heuristics'
+question 'In which of the following situations is it most appropriate to use a heuristic solution?'
+wrong 'The only algorithms that provide exact solutions run in linear time'
+wrong 'The problem has been identified as undecidable'
+right 'The only algorithms that provide exact solutions run in unreasonable time but exact solutions are not necessary'
+wrong 'Two different algorithms have been identified that solve the problem in reasonable time'  

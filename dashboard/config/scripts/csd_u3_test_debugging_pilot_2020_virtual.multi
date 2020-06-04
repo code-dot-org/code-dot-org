@@ -1,0 +1,18 @@
+name 'CSD U3 Test debugging_pilot_2020_virtual'
+editor_experiment ''
+title 'Question 5'
+
+wrong '3 only'
+wrong '1 and 2'
+wrong '1 and 3'
+right '2 and 3'
+wrong '1, 2, and 3'
+
+
+markdown <<MARKDOWN
+A team is making a platform jumper game.  The background and platforms are working, but the main character won\’t appear.  What might be the problem?
+
+1. They forgot to call `drawSprites` in the draw loop.
+1. The character sprite is drawn behind the background sprite.
+1. The character sprite is drawn off the screen.
+MARKDOWN

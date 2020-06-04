@@ -186,10 +186,6 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "true",
     "instructions_important": "false",
     "display_name": "Thermostat App v.1",
@@ -214,12 +210,18 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"homeScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: black;\"><button id=\"downButton\" style=\"padding: 0px; margin: 0px; height: 135px; width: 135px; color: rgb(255, 255, 255); position: absolute; left: 15px; top: 300px; font-size: 40px; background-color: lightblue; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;\" data-canonical-image-url=\"icon://fa-arrow-down\" data-icon-color=\"darkBlue\"></button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: white; max-width: 320px; width: 280px; height: 40px; position: absolute; left: 0px; top: 10px; text-align: center; font-size: 22px;\" id=\"appName\">Home Thermostat App</label><button id=\"upButton\" style=\"padding: 0px; margin: 0px; height: 135px; width: 135px; color: rgb(255, 255, 255); position: absolute; left: 170px; top: 300px; font-size: 40px; background-color: pink; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;\" data-canonical-image-url=\"icon://fa-arrow-up\" data-icon-color=\"red\"></button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; width: 290px; height: 225px; position: absolute; left: 20px; top: 60px; color: white; text-align: center; font-size: 100px;\" id=\"temperatureText\">70 F</label><img data-canonical-image-url=\"icon://fa-home\" data-object-fit=\"contain\" id=\"image1\" style=\"height: 35px; width: 35px; position: absolute; left: 280px; top: 5px; margin: 0px;\" data-icon-color=\"white\"></div></div>",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Thermostat App, version 1\r\n\r\nWith a partner investigate the app.\r\n\r\n* Click run and observe what happens.\r\n* Try clicking on different parts of the app's screen.\r\n\r\nDiscuss with your partner:\r\n* How does the app work?\r\n* What are the variables? \r\n\t* What is being stored? \r\n    * What is being changed?",
-    "contained_level_names": null
+    "long_instructions": "# Thermostat App, version 1\r\n\r\n**Run the App:** With a partner investigate the app.\r\n\r\n* Click run and observe what happens.\r\n* Try clicking on different parts of the app's screen.\r\n\r\n**Predict:** Discuss with your partner:\r\n\r\n* How does the app work?\r\n* What are the variables? \r\n\t* What is being stored? \r\n    * What is being changed?",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "widget_mode": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-07 17:12:42 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-07 17:17:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 17:12:42 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-07 17:17:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-09 15:05:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

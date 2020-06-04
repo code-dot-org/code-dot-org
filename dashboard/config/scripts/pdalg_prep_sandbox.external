@@ -5,11 +5,11 @@ markdown <<MARKDOWN
 
 With the paper Design Recipe complete, the next in your lesson will be to move online. You'll need to choose which of the two sandbox environments to use - we call them Calc (for calculate) and Eval (for evaluate).
 
-#### <a href="/projects/calc" target="_blank"><i class="fa fa-calculator" /> Calc:</a>
+#### <a href="/projects/calc" target="_blank"><i class="fa fa-calculator" ></i> Calc:</a>
 
 The Calc environment is great for programs that are restricted to strictly mathematic operations (no Strings, Images, Booleans, or Conditionals) and has the benefit of animating the evaluation of your program when run.
 
-#### <a href="/projects/calc" target="_blank"><i class="fa fa-pencil" /> Eval:</a>
+#### <a href="/projects/calc" target="_blank"><i class="fa fa-pencil" ></i> Eval:</a>
 
 While Eval lacks the animated evaluation of Calc, it comes with a more full set of programming tools, including Strings, Images, Booleans, and Conditionals. Even for programs that strictly deal with math and numbers, Eval tends to make your programs feel a little more like apps because it hides the evaluation of your program from the user, only showing the outcome.
 

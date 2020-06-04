@@ -1,0 +1,28 @@
+{
+  "category": "Actions",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "hideFish",
+    "blockText": "remove {TRASH}",
+    "args": [
+      {
+        "name": "TRASH",
+        "options": [
+          [
+            "object",
+            "object"
+          ],
+          [
+            "fish",
+            "fish"
+          ]
+        ]
+      }
+    ],
+    "methodCall": true
+  }
+}

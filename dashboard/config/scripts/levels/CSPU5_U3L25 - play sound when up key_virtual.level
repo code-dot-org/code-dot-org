@@ -1,0 +1,71 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:43.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(event){\n console.log('key is: '+event.key); \n}"
+        ]
+      },
+      "console.log": null,
+      "playSound": {
+        "params": [
+          "\"https://studio.code.org/v3/assets/R3xt1BXO0VuQve0HdwClFg/cartoonButton.mp3\""
+        ]
+      },
+      "ifBlock": null,
+      "equalityOperator": null,
+      "stopSound": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "slider_speed": "1.0",
+    "start_blocks": "onEvent(\"screen1\", \"keydown\", function(event){\r\n playSound(\"https://studio.code.org/v3/assets/R3xt1BXO0VuQve0HdwClFg/cartoonButton.mp3\");\r\n console.log('key is: '+event.key); \r\n});",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 244px; height: 19px; position: absolute; left: 35px; top: 155px;\" id=\"label1\">Click the up arrow to play a sound</label>\r\n  </div>\r\n</div>",
+    "long_instructions": "# Play Sound With Keys\r\n\r\nYou may have noticed from the last couple of levels that the value of `event.key` is just a string which is the name of the key. As a result we can check which key was pressed with a simple conditional statement.  For example to check for the press of the **\"a\"** key we could write `if (event.key == \"a\")`.\r\n\r\n# Do This:\r\nThe **starter code provided** plays the sound whenever ANY key is pressed.\r\n\r\n* Use `console.log` to **find out the value of `event.key` when the up arrow is pressed.**\r\n\r\n* **Add an `if` statement** so the sound only plays when the when the **up arrow** is pressed.",
+    "short_instructions": "Change the code so the sound will only play when the up arrow is pressed. (Click to see full instructions)",
+    "encrypted_examples": "jCj8yap7qFx+bpyASKmF2HPzbsAE9MR5b9W0c8uPrlEFpvwNo2tIFqsbua4W\nzg7x\n",
+    "parent_level_id": 17366,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "preload_asset_list": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Applab>

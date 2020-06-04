@@ -35,7 +35,7 @@
     "project_template_level_name": "CSD U3 platform template_2019",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "encrypted_examples": "oWrJ65sfN2v8hHbGp+Ut0Twf5445KHL7mzFWOZKowgOll6VJjpA3JnCvNkiC\nz4ye\n",
+    "encrypted_examples": "fAwlODzMoGrBlfdPplRLirpNWU8PA1dk+44Rfjhv3YD4CXM4SLkLlvpFsg1Z\nA7HRnroOroskbRUOTAGpn/uWEQ==\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "true",
@@ -43,7 +43,6 @@
     "expand_debugger": "false",
     "parent_level_id": 11422,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/sprites/sprite-properties/",
@@ -57,11 +56,13 @@
       "/docs/concepts/game-lab/shapes-and-parameters/",
       "/docs/concepts/javascript/functions/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 23:59:54 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 23:59:54 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-28 18:49:34 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 da:
   slides:
     maze_intro:
@@ -303,6 +308,7 @@ da:
       2:
         text: "Denne lektion kaldes at bygge et fundament. I denne lektion vil vi arbejde med en opgave som det er meningen skal være meget svær. Du vil finde ud af, hvordan man bygger en struktur der er mindst lige så høj som en af de her kopper, og den er nødt til at være stærk nok til at kunne holde vægten af en bog."
       3:
+        text: "Nogen gange virke det ikke, det du har kodet. Nogen gange bliver du frustreret og har lyst til at give op. Det kan ske mange gange. Men hvis du bliver ved, selv om det driller, så skal det nok snart lykkes for dig."
       4:
         text: "Vedholdenhed er at hænge i, når du virkelig ønsker at give op. Hvis du ønsker at skabe noget nyt og anderledes, vil der være en masse fejl undervejs."
       5:
@@ -315,12 +321,16 @@ da:
       3:
         text: "I dag skal vi have en dance-fest. Vi vil handle ud fra sløjfer med en ny dans. Iteration. Vi kommer til at lære om løkker ved hjælp af en dans. Du vil lære et par nemme trin og gentage dem igen og igen for at fuldføre dansen."
       4:
+        text: "Her er de trin som du må lære. Klap i hænderne. Tag dine hænder bag hovedet. Sæt dine hænder på hofterne. Løft din venstre hånd. Løft din højre hånd. Det er da ret let ikke? Du vil finde ud af, at du kan forkorte disse beskeder ved at putte nogle danste trin ind i en løkke."
       5:
         text: "Vi bruger faktisk løkker i vores dans. Danserne er iført computere, alle i samme netværk. Jeg kan f.eks. køre lysene i en løkke mellem de samme dansere igen og igen. I løkken kunne jeg have en iteration hvor jeg beder dig om at køre i en en løkke imellem disse seks dansere igen og igen, og derefter inden for løkken skal du øge lysenes hastighed. Og det laves altsammen ved hjælp af løkker. Løkker er vigtige i datalogi, fordi de gør vores arbejde kortere og lettere."
     C1_happy_maps_unplugged:
       1:
+        text: "Denne opgave kaldes Sjove kort. I dag skal vi hjælpe vores lille lodne ven Flurb, med at komme frem til hendes frugter."
       2:
+        text: "Hjælp Flurb med at komme hen til frugterne. For at kunne gøre det, skal du finde ud af, hvilken vej Flurb skal gå og styrer hende med pile. Hvilken retning skal Flurb gå, for at få æblet? Prøv at finde den rigtige vej."
       3:
+        text: "For at få den der hen, må du markere retningen som den skal gå."
       4:
         text: "Opret din algoritme ved at lime pile ved siden af det kort, som du forsøger at løse. Den anden er den samme, men nedad."
       5:
@@ -348,6 +358,7 @@ da:
         text: "I dag skal vi så vores egne frø, ved hjælp af en algoritme. Opret din egen algoritme ved at klippe billederne fra hinanden. Vælg de billeder, der viser trinene i at så frø, og arranger disse billeder i den korrekte rækkefølge."
       4:
       5:
+        text: "Når vi ønsker at lave chokolade, er der mange store trin i denne proces. Og hvert af disse store trin har sit eget sæt af mindre trin. Og der er forskellige opskrifter eller algoritmer, afhængigt af hvordan vi ønsker chokoladen skal smage. Hvert trin er vigtigt, selv de små. Så hvis man undlader et trin, kan resten af dem ikke fuldføres. At lave algoritmer, som andre kan forstå, er virkelig vigtigt. Det er derfor hvert trin må skrives ned, så uanset hvem der følger dem, er resultatet er det samme."
     C1_playlab_storytelling:
       1:
       2:
@@ -359,6 +370,10 @@ da:
       1:
       2:
         text: "Prøv om du kan stave ordet de giver dig i boksen under banen. Men vær forsigtig! hvis du flytter i den forkerte retning, tilføjer du uønskede bogstaver."
+    C2_bee_loops:
+      1:
+        text: "En løkke er en gentagelse af en aktivitet. Så når jeg går ind i et bistad og inspicerer, ser jeg på et billede og derefter sætter jeg det tilbage, så jeg gentager den samme aktivitet flere gange. Det kører i en løkke, og laver den samme aktivitet flere gange."
+      2:
     C2_maze_intro:
       1:
       2:
@@ -395,6 +410,7 @@ da:
       2:
       3:
       4:
+        text: "Jeg har tænkt mig at vælge \"Drej til højre\" blokken, og jeg vil trække det under min \"Flyt\" blok, indtil den gule pil kommer frem. Derefter jeg vil slippe den, og de to blokke vil klikke sammen. Når jeg trykker på \"Kør\" igen, vil fuglen udføre de kommandoer, der er stablet fra top til bund på vores arbejdsplads."
       5:
         text: "Hvis du nogensinde ønsker at slette en blok, kan du bare fjerne den fra stakken og trække den til papirkurven. efter du har kørt programmet, kan du altid trykke på nulstillingsknappen for at få fuglen tilbage til start. Lad os nu få fanget de svin!"
     starwars_intro:
@@ -433,18 +449,42 @@ da:
         text: "Når du laver en fejl på linjen, fremhæver programmet det for dig så at du kan prøve at ændre din tekst for at rette det."
       7:
         text: "Hvis du sidder fast, kan du altid starte forfra med start knappen og du kan skifte tilbage til bloktilstand når som helst ved at klikke i øverste højre hjørne. Ok, lad os prøve at skrive! Og hvis du laver fejl, blive ikke frustreret. Alle bruger et par forsøg for at få det rigtige."
-    starwars_blocks_intro:
+    starwars_events:
       1:
       2:
+      3:
+      4:
+        text: "Eksempler på hændelser er at lytte efter et museklik, en piletast eller at der tappes på skærmen."
+      5:
+      6:
+      7:
+      8:
+      9:
+    starwars_blocks_intro:
+      1:
+        text: "Hej, jeg er Kathleen Kennedy og jeg er producer på Star Wars, The Force Awakens. I dag skal du arbejde med en af vores stjerner, BB-8. BB-8 er en sfærisk droid. Alt, hvad han gør og hver bevægelse, som han gør styres af computerprogrammer. Computere påvirker alle brancher, fra markedsføring til sundhedspleje til film. Faktisk arbejdede hundredvis af computer ingeniører, sammen om at lave en film som The Force Awakens."
+      2:
+        text: "Hej jeg er Rachel Rose, jeg er en senior R&D ingeniør på ILM og jeg leder animation og væsen udviklingsteamet. I The Force Awakens, er jeg ansvarlig for at hjælpe kunstnere udvikle rigge, som er de dele af karakteren, som bevæger sig for at se meget troværdig ud i en galakse langt langt væk."
       3:
       4:
       5:
         text: "Denne miderste område er værktøjskassen og hver af disse blokke er en kommando, som BB-8 kan forstå."
       6:
+        text: "Det tomme område til højre kaldes arbejdsområdet og det er hvor vi skal bygge vores program."
       7:
       8:
       9:
       10:
+        text: "Efter du har trykket Kør, kan du altid trykke på nulstillingsknappen for at få BB-8 tilbage til start. Lad os nu rulle!"
+    starwars_blocks_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Eksempler på hændelser er at lytte efter et museklik, en piletast eller at der tappes på skærmen."
+      5:
+      6:
+      7:
     mc_intro:
       1:
         text: "Jeg hedder Jens Bergensten, men jeg er bedre kendt som Jeb. Jeg er Lead Developer på Minecraft her hos Mojang i Stockholm. Jeg tror, at jeg var 11 eller måske 12, da jeg begyndte at programmere for at lave spil. En af min fars venner fortalte mig, at jeg skulle lære at programmere, hvis jeg ville lave spil. Så derfor kom jeg i gang. Jeg elsker at designe og planlægge opbygningen af spil. Det er det, jeg elsker ved Minecraft."
@@ -517,10 +557,12 @@ da:
       2:
       3:
       4:
+        text: "Skærmen er opdelt i tre hoveddele. Til venstre er den plads hvor dit program vil køre. Instruktioner til hvert trin er skrevet under."
       5:
       6:
         text: "Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program."
       7:
+        text: "Til at begynde med, skal du knytte dine blokke til den orange \"når kør\" blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden, indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv."
       8:
       9:
     iceage_intro:
@@ -528,9 +570,220 @@ da:
       2:
       3:
       4:
+        text: "Skærmen er opdelt i tre hoveddele. Til venstre er den plads hvor dit program vil køre. Instruktioner til hvert trin er skrevet under."
       5:
       6:
         text: "Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program."
       7:
+        text: "Til at begynde med, skal du knytte dine blokke til den orange \"når kør\" blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden, indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv."
       8:
       9:
+    hoc_dance_warmup:
+      1:
+        text: "Hour of Code | Dansefest: Opvarmning"
+      2:
+        text: "Hej! Mit navn er Miral Kotb og jeg er danser, software programmør, og skaber af iLuminate."
+      3:
+        text: "Programmering er på mange måder meget kreativt. Virkeligt meget. Jeg mener, at når du først har muligheden for at skrive koden til software, så kan du virkelig bruge alle dine idéer. Jeg gøre det med lys på tøjet. Der er så meget du kan gøre, når du har det rette værktøj til at kode, og mulighederne er uendelige."
+      4:
+        text: "I løbet af den næste time, skal du i gang med at programmere din egen dansefest. Vi har samlet nogle seje musik hits, og et team af super dansere, som du kan lege med."
+      5:
+        text: "Du skal bruge kode-blokke til at vælge forskellige dansere, skifte mellem forskellige dansetrin, få danserne til at følge musikken og få dem gjort interaktive."
+      6:
+        text: "Du vil se at skærmen er delt i tre forskellige områder. Til venstre er 'spilområdet' eller 'scenen'. Det er her at du vil se danserne."
+      7:
+        text: "I midten er 'værktøjskassen'. Her vil du finde nye kodeblokke, efterhånden som du kommer gennem opgaven."
+      8:
+        text: "Til højre har du 'Arbejdsområdet'. Herover kan du trække blokke fra værktøjskassen, for at opbygge dit danseprogram."
+      9:
+        text: "Øverst på skærmen er 'Instruktioner' for hvert trin. Hvis du har brug for lidt mere hjælp, så skal du bare klikke på lyspæren."
+      10:
+        text: "Først skal du lave en ny danser med denne røde blok. Trækker blokken fra Værktøjskassen over på Arbejdsområdet, og sætter den under den orange 'opret' blok. Denne danser er en kat og den hedder \"my_first_dancer\". Du kan selv ændre navnet til det du selv ønsker, ved at klikke her."
+      11:
+        text: "Du kan også ændre hvor danseren vises på scenen med denne."
+      12:
+        text: "Oven over scenen er en menu, hvor du kan vælge musikken. Der er en masse sange som du kan vælge mellem. Så glæd dig til at finde en af dine favoritter. Under scenen er 'Kør' knappen. Når du trykker på Kør, vil du se danserne fra dit program på scenen og musikken vil blive spillet."
+      13:
+        text: "Prøv det selv. Og hvis du kører lidt fast i arbejdet, så er det Ok. Så rejs dig op og bevæg dig lidt, og før du ved af det, så har du lavet din egen dansefest. Så hvad vil du skabe?"
+    hoc_dance_events:
+      1:
+        text: "Hour of Code | Dansefest: Indledning"
+      2:
+        text: "Jeg hedder Aloe Blacc. Jeg er sanger, sangskriver, og entertainer. Jeg synes at teknologiforståelse er virkeligt vigtigt at lære. Fordi teknologien er fremtiden, og jeg synes det er vigtigt, at folk forstår den teknologi som i virkeligheden styrer deres liv."
+      3:
+        text: "For at få forskellige dansetrin til at ske på det rigtige tidspunkt, i forhold til musikken, kan du bruge det der kaldes 'hændelser'(på engelsk:event). En hændelse giver dit program besked om, at lytter efter at noget skal ske, og så handle på den rigtige måde."
+      4:
+        text: "Som eksempler på 'hændelser' er lytten efter et museklik, tryk på en piletast eller tryk på skærmen. De hændelser vi skal bruge, vil lytte efter ændringer i sangen. Den ændring vil påvirke din danser til, at begynde en ny dans."
+      5:
+        text: "Professionelle dansere øver deres koreografi ved, at tælle takterne i sangen."
+      6:
+        text: "I musik er 'takten' et bestemt antal grundslag. I de fleste popmusik sange er takten 4 slag."
+      7:
+        text: "For at få dansere til at begynde, har du brug for en grøn hændelses-blok. Denne hændelsesblok betyder: \"efter 4 takter\"."
+      8:
+        text: "Hvis du tager en lilla \"udfør forevigt\" blok, så kan du vælge en dans som din danser skal udføre. Fordi den er under \"efter 4 takter\"-blokken, vil din danser vente 4 takter i sangen, inden danseren begynder at danse."
+      9:
+        text: "Hold øje med takt-tælleren øverst til venstre på scenen."
+      10:
+        text: "Kig og lyt efter den hændelse, der igangsætter dansekoden. Og lige efter 'tegnet' vil danseren begynde."
+    hoc_dance_properties:
+      1:
+        text: "Hour of Code | Dansefest: Indstillinger"
+      2:
+        text: "Mit navn er Maria. Jeg er studerende på University of Washington og jeg er Amazon Future ingeniør."
+      3:
+        text: "I elsker at arbejde med programmering, fordi det forener problemløsning og kritisk tænkning. Og efter at have brugt en masse time på det, så får du noget virkeligt cool og sejt ud af det."
+      4:
+        text: "Okay. Du har nu prøvet at lege med forskellige typer af dansere, og du har kodet dem til forskellige dansetrin. Men hvordan fungere disse i virkeligheden?"
+      5:
+        text: "Hvert dansetrin et delt op i en serie af billeder som kaldes 'frames'. Hver frame er lidt forskellig fra den der var lige før. Når dit program kører, så viser den en hel række af frames efter hinanden. De bliver vist så hurtigt, at det ser ud som om danseren bevæger sig. Dette er hemmeligheden bag al animation."
+      6:
+        text: "Ikke nok med at du kan ændre danserens dansetrin, du kan også ændre på danserens indstillinger. Indstillingerne beskriver danserens placering på skærmen, størrelsen og farve."
+      7:
+        text: "For at ændre på indstillingerne for en danser, skal du bruge en indstil-blok. Lad os bruge en indstil-blok til at få danseren til at være mindre. Først skal du bruge en indstil-blok i dit program. Så skal du vælge den danser, som du ønsker at ændre, og skrive den størrelse du synes den skal have på scenen."
+      8:
+        text: "Fuld størrelse er 100. Hvis du vælger et mindre tal, så bliver danseren mindre. Jo mindre danseren er, jo længere væk ser den ud. Dette er en super måde, at lave dansere der står i baggrunden."
+      9:
+        text: "Hvis du bruger 'sæt', eller 'indstil', blokke, så kan du ændre på dansernes størrelse, rotation, position og farve. Prøv at leg lidt med disse indstillinger, for så kan du lave alle mulige ændringer, og koble dem til forskellige dele af sangen."
+      10:
+        text: "Husk på, at du kun kan indstille egenskaberne til en danser, som allerede er oprettet. Sørg for, at 'indstil'-blokken kommer efter en 'Opret en ny danser' - blok. Prøv dig frem og vær kreativ. Det er sjovt!"
+    hoc_dance_congrats:
+      1:
+        text: "Hour of Code | Dance Party: Så er der fest!"
+      2:
+        text: "Tillykke! Du har nu lært det grundlæggende i kodning. Nu kan du bruge de forskellige blokke til, at skabe dit eget dance party, med dit eget design, som du kan dele med dine venner."
+      3:
+        text: "Hvis du kigger i værktøjskassen, kan du finde helt nye blokke, som du ikke har set før. Der er f. eks. blokke, som du kan bruge til at arrangere danserne på forskellige på scenen."
+      4:
+        text: "Kig lidt rundt, og prøv disse nye blokke. Har du ikke lyst til at skabe en koreograferet dans til en af dine favoritssange?"
+      5:
+        text: "Eller en danseturnering med dine venner?"
+      6:
+        text: "Eller noget andet sammen?"
+      7:
+        text: "Når du er færdig med denne tutorial, så kan du dele det du har lavet med dine venner, med et link. Så brug din fantasi og hav det sjovt!"
+    hoc_dance_warmup_2019:
+      1:
+        text: "Hour of Code | Dansefest: Opvarmning"
+      2:
+        text: "Hej! Mit navn er Miral Kotb og jeg er danser, software programmør, og skaber af iLuminate."
+      3:
+        text: "Programmering er på mange måder meget kreativt. Virkeligt meget. Jeg mener, at når du først har muligheden for at skrive koden til software, så kan du virkelig bruge alle dine idéer. Jeg gøre det med lys på tøjet. Der er så meget du kan gøre, når du har det rette værktøj til at kode, og mulighederne er uendelige."
+      4:
+        text: "I løbet af den næste time, skal du i gang med at programmere din egen dansefest. Vi har samlet nogle seje musik hits, og et team af super dansere, som du kan lege med."
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "Du skal bruge kode-blokke til at vælge forskellige dansere, skifte mellem forskellige dansetrin, få danserne til at følge musikken og få dem gjort interaktive."
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "Du vil se at skærmen er delt i tre forskellige områder. Til venstre er 'spilområdet' eller 'scenen'. Det er her at du vil se danserne."
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "I midten er 'værktøjskassen'. Her vil du finde nye kodeblokke, efterhånden som du kommer gennem opgaven."
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "Til højre har du 'Arbejdsområdet'. Herover kan du trække blokke fra værktøjskassen, for at opbygge dit danseprogram."
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "Øverst på skærmen er 'Instruktioner' for hvert trin. Hvis du har brug for lidt mere hjælp, så skal du bare klikke på lyspæren."
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "Til at begynde med, skal du skabe en ny danser med en rød blok. Træk den fra værktøjskassen og lad den 'snappe' op under den orange 'opret' blok. Denne danser er en kat."
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "Du kan også ændre hvor danseren vises på scenen med denne."
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "Oven over scenen er en menu, hvor du kan vælge musikken. Der er en masse sange som du kan vælge mellem. Så glæd dig til at finde en af dine favoritter. Under scenen er 'Kør' knappen. Når du trykker på Kør, vil du se danserne fra dit program på scenen og musikken vil blive spillet."
+      13:
+        text: "Prøv det selv. Og hvis du kører lidt fast i arbejdet, så er det Ok. Så rejs dig op og bevæg dig lidt, og før du ved af det, så har du lavet din egen dansefest. Så hvad vil du skabe?"
+    hoc_dance_events_2019:
+      1:
+        text: "Hour of Code | Dansefest: Indledning"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "Jeg hedder Erin, og jeg er programmør her hos Code.org. Jeg har hjulpet med at bygger Danse Party."
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "For at få forskellige dansetrin til at ske på det rigtige tidspunkt, i forhold til musikken, kan du bruge det der kaldes 'hændelser'(på engelsk: event). En hændelse giver dit program besked om, at lytter efter at noget skal ske, og så handle på den rigtige måde."
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "Eksempler på hændelser er at lytte efter et museklik, en piletast eller at der tappes på skærmen."
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "Her skal vi programmere en danser, til at lave nogle dansetrin, nå du trykker på en af piletasteren under scenen, eller på dit tastatur."
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "Vi kan bruge en 'når op klikkes' blok, og forbinde den med en 'gør en gang' blok. Når der bliver trykket på piletasten, vil koden under 'når op klikkes' bliver aktiveret. Hvilke dansetrin vil du vælge?"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "Sørg for at den type af danser som du vælger, passer med en af danserne, som du oprettede inden i 'opret' blokken. Ellers kan det være at koden ikke virker."
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "Du kan eventuelt oprette flere handlinger som denne. Så kan du få danserne til, at danse forskellige dansetrin med de forskellige piletaser. Prøv en gang. For med få kodelinjer kan du skabe din egen interaktive dans."
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "Hour of Code | Dansefest: Takter"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "Jeg hedder Aloe Blacc. Jeg er sanger, sangskriver, og entertainer. Jeg synes at teknologiforståelse er virkeligt vigtigt at lære. Fordi teknologien er fremtiden, og jeg synes det er vigtigt, at folk forstår den teknologi som i virkeligheden styrer deres liv."
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "Den 'handling' som du skal bruge nu, vil lytte efter ændringer i sangen. Ændringen vil gøre, at din danser danser en ny dans."
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "Professionelle danser øver deres koreografi ved at tælle slagene i sangen. I musik er en takt et bestemt antal slag. I det meste popmusik er en takt af 4 slag lang."
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "For at få dansere til at begynde, har du brug for en grøn hændelses-blok. Denne hændelsesblok betyder: \"efter 4 takter\"."
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "Hvis du tager en lilla \"udfør forevigt\" blok, så kan du vælge en dans som din danser skal udføre. Fordi den er under \"efter 4 takter\"-blokken, vil din danser vente 4 takter i sangen, inden danseren begynder at danse."
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "Hold øje med takt-tælleren øverst til venstre på scenen."
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "Kig og lyt efter den hændelse, der igangsætter dansekoden. Og lige efter 'tegnet' vil danseren begynde."
+    hoc_dance_properties_2019:
+      1:
+        text: "Hour of Code | Dansefest: Indstillinger"
+      2:
+        text: "Mit navn er Maria. Jeg er studerende på University of Washington og jeg er Amazon Future ingeniør."
+      3:
+        text: "I elsker at arbejde med programmering, fordi det forener problemløsning og kritisk tænkning. Og efter at have brugt en masse time på det, så får du noget virkeligt cool og sejt ud af det."
+      4:
+        text: "Okay. Du har nu prøvet at lege med forskellige typer af dansere, og du har kodet dem til forskellige dansetrin. Men hvordan fungere disse i virkeligheden?"
+      5:
+        text: "Hvert dansetrin et delt op i en serie af billeder som kaldes 'frames'. Hver frame er lidt forskellig fra den der var lige før. Når dit program kører, så viser den en hel række af frames efter hinanden. De bliver vist så hurtigt, at det ser ud som om danseren bevæger sig. Dette er hemmeligheden bag al animation."
+      6:
+        text: "Ikke nok med at du kan ændre danserens dansetrin, du kan også ændre på danserens indstillinger. Indstillingerne beskriver danserens placering på skærmen, størrelsen og farve."
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "For at ændre indstillingen på en danser, skal du bruge en 'sæt' eller 'skift' blok. Lad os prøve en 'skift' blok for at få danseren til at se mindre ud. Træk en 'skift' blok over til dit program."
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "Så vælger du den danser, som du gerne vil ændre på, og skriver størrelsen den skal have på scenen. Fuld størrelse er 100, og mindre talværdi gør danserene mindre. Jo mindre danseren er, jo længer væk ser den ud til at være."
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "Hvis du bruger 'sæt', eller 'indstil', blokke, så kan du ændre på dansernes størrelse, rotation, position og farve. Prøv at leg lidt med disse indstillinger, for så kan du lave alle mulige ændringer, og koble dem til forskellige dele af sangen."
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "Husk på, at du kun kan indstille egenskaberne til en danser, som allerede er oprettet. Sørg for, at 'indstil'-blokken kommer efter en 'Opret en ny danser' - blok. Prøv dig frem og vær kreativ. Det er sjovt!"
+    hoc_dance_congrats_2019:
+      1:
+        text: "Hour of Code | Dance Party: Så er der fest!"
+      2:
+        text: "Tillykke! Du har nu lært det grundlæggende i kodning. Nu kan du bruge de forskellige blokke til, at skabe dit eget dance party, med dit eget design, som du kan dele med dine venner."
+      3:
+        text: "Hvis du kigger i værktøjskassen, kan du finde helt nye blokke, som du ikke har set før. Der er f. eks. blokke, som du kan bruge til at arrangere danserne på forskellige på scenen."
+      4:
+        text: "Kig lidt rundt, og prøv disse nye blokke. Har du ikke lyst til at skabe en koreograferet dans til en af dine favoritssange?"
+      5:
+        text: "Eller en danseturnering med dine venner?"
+      6:
+        text: "Eller noget andet sammen?"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "Når du er færdig med denne tutorial, så kan du dele det du har lavet med dine venner, med et link. Så brug din fantasi og hav det sjovt!"

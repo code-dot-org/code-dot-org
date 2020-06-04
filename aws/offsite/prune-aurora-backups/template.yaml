@@ -1,0 +1,98 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Runs a lambda function once per day to delete old aurora backup snapshots in the offsite account.
+
+Parameters:
+  HoneybadgerSnsTopicArn:
+    Type: String
+    Description: SNS topic ARN created by alerting CloudFormation stack
+    NoEcho: True
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 900
+
+Resources:
+  PruneAuroraBackupsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: PruneAuroraBackupsRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonRDSFullAccess
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "lambda.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+
+  PruneAuroraBackupsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: !GetAtt PruneAuroraBackupsRole.Arn
+      CodeUri: src/
+      Handler: prune-aurora-backups.handler
+      Runtime: nodejs10.x
+
+  OncePerDayRule:
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: Run prune aurora backups once per day.
+      Name: !Sub "${AWS::StackName}-OncePerDay"
+      ScheduleExpression: rate(1 day)
+      State: "ENABLED"
+      Targets:
+        - Arn: !GetAtt PruneAuroraBackupsFunction.Arn
+          Id: PruneAuroraBackupsFunctionTarget
+
+  PermissionForEventsToInvokeLambda: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: !Ref PruneAuroraBackupsFunction
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt OncePerDayRule.Arn
+
+  ErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-Errors"
+      AlarmDescription: Alarms when the Prune Aurora Backups lambda fails.
+      AlarmActions:
+      - !Ref HoneybadgerSnsTopicArn
+      Dimensions:
+      - Name: FunctionName
+        Value: !Ref PruneAuroraBackupsFunction
+      MetricName: Errors
+      Namespace: AWS/Lambda
+      Statistic: Sum
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 0.0
+      Period: 300 # 5 minutes
+      EvaluationPeriods: 1
+      TreatMissingData: notBreaching
+
+  NoInvocationsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-NoInvocations"
+      AlarmDescription: Alarms when the "once per day" cloudwatch rule doesn't attempt to start a Verify Backups fargate task at least once per day.
+      AlarmActions:
+      - !Ref HoneybadgerSnsTopicArn
+      Dimensions:
+      - Name: FunctionName
+        Value: !Ref PruneAuroraBackupsFunction
+      MetricName: Invocations
+      Namespace: AWS/Lambda
+      Statistic: Sum
+      ComparisonOperator: LessThanThreshold
+      Threshold: 1.0
+      Period: 86400 # One day
+      EvaluationPeriods: 1
+      TreatMissingData: breaching

@@ -1,84 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import Button from '../../templates/Button';
-import DialogFooter from '../../templates/teacherDashboard/DialogFooter';
+import $ from 'jquery';
 
 const styles = {
   deleteWarning: {
     paddingLeft: '34px',
     textAlign: 'left',
     color: color.red
-  },
-  leftAlign: {
-    textAlign: 'left'
   }
 };
-
-class ConfirmImageDeleteDialog extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    usage: PropTypes.number,
-    onCancel: PropTypes.func.isRequired,
-    handleDelete: PropTypes.func.isRequired,
-    // For logging purposes
-    studyGroup: PropTypes.string.isRequired,
-    projectId: PropTypes.string.isRequired,
-    elementId: PropTypes.string
-  };
-
-  onConfirmDelete = () => {
-    firehoseClient.putRecord({
-      study: 'delete-asset',
-      study_group: this.props.studyGroup,
-      event: 'confirm-referenced',
-      project_id: this.props.projectId,
-      data_json: JSON.stringify({
-        assetName: this.props.name,
-        elementId: this.props.elementId,
-        usage: this.props.usage
-      })
-    });
-    this.props.handleDelete();
-  };
-
-  render() {
-    return (
-      <Dialog
-        title={i18n.warning()}
-        isOpen
-        handleClose={this.props.onCancel}
-        style={styles.leftAlign}
-      >
-        <Body>
-          <p>
-            {i18n.deleteUsedImage({
-              name: this.props.name,
-              value: this.props.usage
-            })}
-          </p>
-          <DialogFooter>
-            <Button
-              onClick={this.props.onCancel}
-              text={i18n.no()}
-              color={Button.ButtonColor.gray}
-            />
-            <Button
-              onClick={this.onConfirmDelete}
-              text={i18n.yesSure()}
-              color={Button.ButtonColor.orange}
-            />
-          </DialogFooter>
-        </Body>
-      </Dialog>
-    );
-  }
-}
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -89,11 +23,13 @@ export default class AssetRow extends React.Component {
     timestamp: PropTypes.string,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: PropTypes.number,
-    useFilesApi: PropTypes.bool.isRequired,
+    api: PropTypes.object.isRequired,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
+    levelName: PropTypes.string,
+    hideDelete: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -103,20 +39,14 @@ export default class AssetRow extends React.Component {
   state = {
     action: 'normal',
     actionText: '',
-    usage: 0
+    attemptedUsedDelete: false
   };
 
   /**
    * Confirm the user actually wants to delete this asset.
    */
   confirmDelete = () => {
-    let places = $('#designModeViz').find(
-      `[src$=\'${encodeURIComponent(this.props.name)}']`
-    );
     this.setState({action: 'confirming delete', actionText: ''});
-    if (places.length > 0) {
-      this.setState({usage: places.length});
-    }
     firehoseClient.putRecord({
       study: 'delete-asset',
       study_group:
@@ -127,8 +57,7 @@ export default class AssetRow extends React.Component {
       project_id: this.props.projectId,
       data_json: JSON.stringify({
         assetName: this.props.name,
-        elementId: this.props.elementId,
-        usage: places.length
+        elementId: this.props.elementId
       })
     });
   };
@@ -147,8 +76,7 @@ export default class AssetRow extends React.Component {
   handleDelete = () => {
     this.setState({action: 'deleting', actionText: ''});
 
-    let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.deleteFile(this.props.name, this.props.onDelete, () => {
+    this.props.api.deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({
         action: 'confirming delete',
         actionText: i18n.errorDeleting()
@@ -171,6 +99,10 @@ export default class AssetRow extends React.Component {
     this.props.onChoose();
   };
 
+  attemptBadDelete = () => {
+    this.setState({attemptedUsedDelete: true});
+  };
+
   render() {
     let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
@@ -185,40 +117,36 @@ export default class AssetRow extends React.Component {
       flex = size + ' kb';
     }
 
+    let usage = $('#visualization').find(
+      `[src*="${encodeURIComponent(this.props.name)}"]`
+    ).length;
+
     switch (this.state.action) {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <button
-              type="button"
-              className="btn-danger"
-              onClick={this.confirmDelete}
-            >
-              <i className="fa fa-trash-o" />
-            </button>
+            {!this.props.hideDelete && (
+              <button
+                type="button"
+                className={usage > 0 ? '' : 'btn-danger'}
+                onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
+              >
+                <i className="fa fa-trash-o" />
+              </button>
+            )}
+
+            {this.state.attemptedUsedDelete && (
+              <div style={styles.deleteWarning}>
+                {i18n.cannotDeleteUsedImage()}
+              </div>
+            )}
           </td>
         );
         break;
       case 'confirming delete':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            {this.state.usage > 0 && (
-              <ConfirmImageDeleteDialog
-                name={this.props.name}
-                usage={this.state.usage}
-                onCancel={this.cancelDelete}
-                handleDelete={this.handleDelete}
-                elementId={this.props.elementId}
-                projectId={this.props.projectId}
-                studyGroup={
-                  this.props.onChoose &&
-                  typeof this.props.onChoose === 'function'
-                    ? 'choose-assets'
-                    : 'manage-assets'
-                }
-              />
-            )}
             <button
               type="button"
               className="btn-danger"
@@ -258,8 +186,9 @@ export default class AssetRow extends React.Component {
             type={this.props.type}
             name={this.props.name}
             timestamp={this.props.timestamp}
-            useFilesApi={this.props.useFilesApi}
+            api={this.props.api}
             soundPlayer={this.props.soundPlayer}
+            levelName={this.props.levelName}
           />
         </td>
         <td>{this.props.name}</td>

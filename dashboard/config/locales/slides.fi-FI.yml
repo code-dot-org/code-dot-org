@@ -83,9 +83,9 @@ fi:
         text: Oletko koskaan kuullut pelistä nimeltä FlappyBird? Käyttäen tapahtumakäsittelijöitä,
           opimme kuinka ohjelmoida oma räätälöity versio FlappyBirdistä!
       5:
-        text: Nyt tehtävä koodaus tulee tapahtumaan raahaamalla koodia esittäviä lohkoja.
-          Jokainen lohko vastaa yhtä tietokoneelle annettavaa komentoa. Pinnan alla
-          kukin näistä lohkoista vastaa oikea koodia.
+        text: Nyt tehtävä koodaus tulee tapahtumaan vetämällä ja pudottamalla koodia
+          esittäviä lohkoja. Jokainen lohko vastaa yhtä tietokoneelle annettavaa komentoa.
+          Pinnan alla kukin näistä lohkoista vastaa oikea koodia.
       6:
         text: Kun tarkastelet työtilaa, huomaat joitain vihreitä lohkoja valmiiksi
           täytettynä - nämä ovat "tapahtumakäsittelijöitä"
@@ -124,7 +124,7 @@ fi:
         text: Pidä hauskaa uuden "toista"-lohkon kanssa!
     loop_until:
       1:
-        text: Hei, olen Chris. Ennen kuin liityin Miami Heatiin, opiskelin tietojenkäsittelytiedettä
+        text: Hei, olen Chris. Ennen kuin liityin Miami Heatiin, opiskelin tietotekniikkaa
           Georgian teknillisessä oppilaitoksessa. Kokeillaanpa uutta "toista kunnes"
           -lohkoa.
       2:
@@ -154,18 +154,17 @@ fi:
           reittiä – ja jos on, se kääntyy. "Toista"-lohko on hyvin tärkeä, jotta tarkistus
           tehdään joka askeleella.
       6:
-        text: Jos-lauseet ovat hyvin tärkeitä tietojenkäsittelytieteessä. Yksi ensimmäisistä
+        text: Jos-lauseet ovat hyvin tärkeitä tietotekniikassa. Yksi ensimmäisistä
           ohjelmista, jonka kirjoitin, oli peli nimeltä ristinolla. Siinä oli jos-lause,
-          joka sanoi "JOS toinen henkilö on voittamassa, estä se siirto, jolla hän
-          voittaisi."
+          joka sanoi että JOS toinen henkilö on voittamassa, estä siirto, jolla hän
+          voittaisi.
       7:
         text: Pidä hauskaa "Jos"-lohkolla!
     if_else:
       1:
-        text: Hei, nimeni on Saloni. Käytän tietojenkäsittelytiedettä ratkomaan ongelmia
-          terveyden ja lääketieteen alueella. Opiskellaanpa "jos muuten" -lohkosta.
-          Se näyttää "jos"-lohkolta, mutta siinä on ylimääräinen pala lopussa, joka
-          sanoo "muuten".
+        text: Hei, nimeni on Saloni. Käytän tietotekniikkaa ratkomaan ongelmia terveyden
+          ja lääketieteen aloilla. Opiskellaanpa "jos muuten" -lohkosta. Se näyttää
+          "jos"-lohkolta, mutta siinä on ylimääräinen pala lopussa, joka sanoo "muuten".
       2:
         text: Jos laitan "liiku eteenpäin" -lohkon paikkaan jossa on "tee" ja "käänny
           vasemmalle" -lohkot kohtaan jossa lukee "muuten" se tarkoittaa että zombie
@@ -206,7 +205,7 @@ fi:
           nimi on "täytä 5", ja se koostuu "toista"-lohkosta ja "täytä"-lohkosta.
       4:
         text: Määritelmät ovat työtilassa, mutta maanviljelijä ei suorita funktiota
-          ennen kuin raahaamme "täytä 5" -funktiolohkon funktiot-valikosta.
+          ennen kuin vedämme "täytä 5" -funktiolohkon funktiot-valikosta.
       5:
         text: 'Laitetaanpa funktiot käytöön! '
     loop_while:
@@ -226,9 +225,9 @@ fi:
         text: Tämä on uusi "laskuri"-silmukkamme. Se suorittaa komentoja yhä uudelleen
           ja voit muuttaa silmukan toimintaa hieman jokaisella kerralla.
       3:
-        text: Tässä esimerkissä "laskuri" -silmukkamme sanoo "laske laskurilla  50:stä
-          90:een 10 välein" ja sen sisällä meillä on "piirrä neliö" -lohko. Raahaa
-          "laskuri" -lohko "Muuttujat"-valikosta "pituus"-kohtaan.
+        text: Tässä esimerkissä "laskuri" -silmukkamme sanoo "laske laskurilla 50:stä
+          90:een 10 välein" ja sen sisällä meillä on "piirrä neliö" -lohko. Vedä "laskuri"
+          -lohko "Muuttujat" -valikosta "pituus" -kohtaan.
       4:
         text: Tämä tarkoittaa, että taiteilijamme aikoo piirtää neliön, jonka sivujen
           pituus on 50 kuvapistettä, lisätä tähän 10 ja piirtää neliön, jonka sivujen
@@ -349,9 +348,9 @@ fi:
       1:
         text: Hei, olen Chris Bosh. Olen koripalloammattilainen ja koodasin yliopistossa.
       2:
-        text: Yksi tietojenkäsittelytieteen tärkeimmistä käsitteistä on uusien komentojen
-          luominen. Suurimmassa osassa ohjelmointikieliä on vain 100 käskysanaa tai
-          komentoa. Ohjelmoinnin taika onkin omien uusien sanojen määrittely ja rakentaminen
+        text: Yksi tietotekniikan tärkeimmistä käsitteistä on uusien komentojen luominen.
+          Suurimmassa osassa ohjelmointikieliä on vain 100 käskysanaa tai komentoa.
+          Ohjelmoinnin taika onkin omien uusien sanojen määrittely ja rakentaminen
           näistä rakennuspalikoista.
       3:
         text: Kun olet kerran opettanut tietokoneen tekemään toiminnon käyttäen tätä
@@ -570,6 +569,12 @@ fi:
       3:
         text: Ah, siinä se ongelma on! Kissan viikset ovat 75 kuvapistettä pitkät,
           ei 25.
+    C2_bee_loops:
+      1:
+        text: Silmukka on toiminnan toistamista. Mennessäni mehiläispesälle tarkistamaan,
+          katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa
+          useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä
+          useita kertoja.
     C2_maze_intro:
       2:
         text: Blockly on jaettu kolmeen pääosaan. Vasemmalla on lintulabyrintti, jossa
@@ -681,12 +686,12 @@ fi:
           mallien havainnointi, abstraktio ja algoritmien luominen.'
     starwars_intro:
       1:
-        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan, Star Wars: Force Awakens,
-          tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n parissa. BB-8
+        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan Star Wars: Force Awakens
+          tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n, kanssa. BB-8
           on pallomainen droidi. Kaikkea sen toimintaa ja liikkumista ohjaa tietokoneohjelmisto.
-          Tietojenkäsittelytiede vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista
-          terveydenhuoltoon tai elokuva-alalle. Itse asiassa tämäkin elokuva, The
-          Force Awakens, vaati satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
+          Tietotekniikka vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista terveydenhuoltoon
+          ja elokuva-alalle. Itse asiassa tämäkin elokuva, The Force Awakens, vaati
+          satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
       2:
         text: Hei olen Rachel Rose, ja olen vanhempi tuotekehitysinsinööri ILM:llä
           (Industrial Light and Magic), jossa johdan animaatio- ja olentojenkehitystiimiä.
@@ -836,12 +841,12 @@ fi:
           kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
     starwars_blocks_intro:
       1:
-        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan, Star Wars: Force Awakens,
-          tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n parissa. BB-8
+        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan Star Wars: Force Awakens
+          tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n, kanssa. BB-8
           on pallomainen droidi. Kaikkea sen toimintaa ja liikkumista ohjaa tietokoneohjelmisto.
-          Tietojenkäsittelytiede vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista
-          terveydenhuoltoon tai elokuva-alalle. Itse asiassa tämäkin elokuva, The
-          Force Awakens, vaati satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
+          Tietotekniikka vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista terveydenhuoltoon
+          ja elokuva-alalle. Itse asiassa tämäkin elokuva, The Force Awakens, vaati
+          satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
       2:
         text: Hei olen Rachel Rose, ja olen vanhempi tuotekehitysinsinööri ILM:llä
           (Industrial Light and Magic), jossa johdan animaatio- ja olentojenkehitystiimiä.
@@ -945,15 +950,15 @@ fi:
           kuulla, että pelejä tehtäessä pitää osata ohjelmoida. Siitä urani sai alkunsa.
           Tykkään suunnittelusta ja arkkitehtuurista. Sen vuoksi pidän paljon Minecraftista.
       2:
-        text: Seuraavan tunnin aikana opettelemme ohjelmoinnin perusteita Alexin ja
-          Steven avulla. Autamme heitä liikkumaan Minecraft-maailmassa.
+        text: Seuraavan tunnin aikana opit tietotekniikan perusteita ohjelmoimalla
+          Alexin ja Steven liikkumaan Minecraft-maailmassa.
       3:
         text: Tavallisesti ohjelmointi tehdään koodilla, mutta tänään käytämme Blocklya,
           jonka avulla voimme ohjelmoida palikoilla. Pinnan alla koodaatte JavaScriptillä.
       4:
-        text: Opitte konsepteja, joita ohjelmoijat käyttävät päivittäin ja jotka toimivat
-          ohjelmoinnin perustana. Mojangilla me käytämme samoja konsepteja Minecraftin
-          ohjelmoinnissa.
+        text: Opit käsitteitä, joita ohjelmoijat käyttävät päivittäin ja jotka ovat
+          tietotekniikan perusta. Mojangilla me käytämme samoja käsitteitä saadaksemme
+          Minecraftin toimimaan.
       5:
         text: Valitaan ensin hahmo. Minä valitsen Alexin. Ohjelmoidaan koodi, joka
           auttaa häntä liikkumaan ruudulla.
@@ -1027,7 +1032,7 @@ fi:
           Muista varoa askeleitasi jos-lauseiden avulla.
     mc_congrats_share:
       1:
-        text: Onneksi olkoon! Nyt olet oppinut ohjelmoinnin perusteet.
+        text: Onneksi olkoon! Olet juuri oppinut tietotekniikan tärkeimmät rakennuspalikat.
       2:
         text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai
           selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
@@ -1039,7 +1044,7 @@ fi:
           hauskaa!
     mc_congrats_no_share:
       1:
-        text: Onneksi olkoon! Nyt olet oppinut ohjelmoinnin perusteet.
+        text: Onneksi olkoon! Olet juuri oppinut tietotekniikan tärkeimmät rakennuspalikat.
       2:
         text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai
           selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
@@ -1054,9 +1059,25 @@ fi:
           suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
       6:
         text: Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      7:
+        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
+          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
+          keltaisen viivan ja sitten ne kohdistuvat yhteen.
     iceage_intro:
       4:
         text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi
           suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
       6:
         text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      7:
+        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
+          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
+          keltaisen viivan ja sitten ne kohdistuvat yhteen.
+    mc_2016_intro:
+      8:
+        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä
+          sen työkalupakkiin.
+    hoc_dance_events_2019:
+      4:
+        text: Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen
+          käyttö tai näytön napautus.

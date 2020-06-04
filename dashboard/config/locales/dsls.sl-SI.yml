@@ -1,349 +1,1696 @@
 ---
-sl:
+sl-SI:
   data:
-    external:
-      Begin planning your project:
-        title: naslov
-      Prepare for your presentation:
-        title: naslov
-    match:
-      2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Poveži kombinacije gumbov
-          s plesnimi gibi.
-        Matching: Ujemanje
-      2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Ujemanje
-      2-3 Graph Paper Match 1:
-        Match the grid to the program.: Poveži mrežo s programom.
-        Matching: Ujemanje
-      2-3 Maze Match 2:
-        Instructions: Navodila
-        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
-        Maze Match: Labirint povezovanje
-      2-3 artist loops match 1:
-        Match the loop to the shape: Poveži zanke z ustrezno obliko
-      2-3 artist match 1:
-        Artist Matching: Ujemanje umetnikov
-        Match the shape with the blocks that complete it.: Ustrezno poveži bloke z
-          liki.
-      2-3 maze match 1:
-        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
-      4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Dodaj Igralcu ena njegov
-          rezultat k skupnemu rezultatu</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Primerjaj rezultate
-          igralcev, da vidiš, kdo zmaga</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Igralec 1 vrže kocko</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Postavi rezultat Igralca 1 na 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Poveži
-          korake v Igri s kocko po vrstnem redu, kot se morajo pojaviti v algoritmu.
-        Matching: Ujemanje
-      4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Kolesa/strani: 2 <br/>
-          Okna/stran: 1</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Vsako
-          od teh vozil je bilo razstavljeno na manjše dele. Poveži vsako od vozil
-          s seznamom delov.
-        Matching: Ujemanje
-      4-5 Suncatchers Match 1:
-        Match each program to the word it makes, using the provided group of skills.: Poveži
-          vsak program z besedo, ki ga naredi. Uporabi podane skupine spretnosti.
-        Matching: Ujemanje
-      4-5 maze match 1:
-        Instructions: Navodila
-        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
-        Maze Match: Labirint povezovanje
-      K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Poveži like glede na njihovo obliko.
-        Matching: Ujemanje
-      K-1 Bee Loops Match 1:
-        Match the blocks: Poveži bloke
-        Matching: Ujemanje
-      K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Poveži kombinacije gumbov
-          s plesnimi gibi.
-        Matching: Ujemanje
-      K-1 Maze Match 1:
-        Instructions: Navodila
-        Match the puzzles and blocks: Poveži ustrezene puzle in bloke
-        Matching: Ujemanje
-    multi:
+    dsls:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Izberi algoritem za dano sliko.
-        Multiple Choice: Izbirno vprašanje
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Začni
-          s kvadratom<br/>Postavi paralelogram nad kvadrat<br/>Postavi trikotnik desno
-          od paralelograma
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Začni
-          s kvadratom<br/>Postavi trikotnik nad kvadrat<br/>Postavi trikotnik pod
-          kvadrat
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Začni
-          s kvadratom<br/>Postavi trikotnik pod kvadrat<br/>Postavi paralelogram desno
-          od trikotnika
-        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram"
-        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram"
+        answers:
+        - text: Začni s kvadratom<br/>Postavi trikotnik nad kvadrat<br/>Postavi trikotnik
+            pod kvadrat
+        - text: Začni s kvadratom<br/>Postavi trikotnik desno od kvadrata<br/>Postavi
+            paralelogram pod kvadrat<br/>Postavi trikotnik desno od paralelograma
+        - text: Začni s kvadratom<br/>Postavi paralelogram nad kvadrat<br/>Postavi
+            trikotnik desno od paralelograma
+        - text: Začni s kvadratom<br/>Postavi trikotnik pod kvadrat<br/>Postavi paralelogram
+            desno od trikotnika
+        questions:
+        - text: Izberi algoritem za dano sliko.
+        title: Izbirno vprašanje
       2-3 Algorithms Multi 2:
-        Multiple Choice: Izbirno vprašanje
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Začni
-          s trikotnikom<br/>Postavi kvadrat pod trikotnik<br/>Postavi še en trikotnik
-          pod kvadrat
-        Which image does <em>not</em> follow this algorithm?: Katera slika <em>ne</em>
-          ustreza algoritmu?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Začni s trikotnikom<br/>Postavi kvadrat pod trikotnik<br/>Postavi
+          še en trikotnik pod kvadrat
+        questions:
+        - text: Katera slika <em>ne</em> ustreza algoritmu?
+        title: Izbirno vprašanje
+      2-3 Big Event Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Poveži kombinacije gumbov s plesnimi gibi.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
+      2-3 Binary Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Uporabi zgornje slike, da povežeš črke na levi s kodo na desni
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        title: Ujemanje
       2-3 Conditionals Multi 1:
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri komplet kart je po pravilniku igre točkovan pravilno?
+        title: Izbirno vprašanje
       2-3 Getting Loopy Multi 1:
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Izbirno vprašanje
+      2-3 Graph Paper Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Poveži mrežo s programom.
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which program makes this image?: Kateri program naredi to sliko?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri program naredi to sliko?
+        title: Izbirno vprašanje
+      2-3 Maze Match 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Poveži ustrezne bloke z rešitvami
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labirint povezovanje
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Labirint izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri niz blokov me bo pripeljal do pujsa?
+        title: Labirint izbirno vprašanje
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri program NE ustvari te slike?
+        title: Izbirno vprašanje
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri odgovor ne vsebuje napak?
+        title: Izbirno vprašanje
+      2-3 artist debug multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kaj moraš narediti, da dokončaš krog?
+        title: Umetnik Razhroščevanje Izbirno vprašanje 1
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Umetnik funkcije izbirno vprašanje ena
-        Pick the correct blocks to draw this image using the given functions: Ozači
-          pravi blok z dano funkcijo, ki bo narisal dva pravokotnika
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Ozači pravi blok z dano funkcijo, ki bo narisal dva pravokotnika
+        title: Umetnik funkcije izbirno vprašanje ena
+      2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Poveži zanke z ustrezno obliko
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Umetnik Zanke Igra povezovanja
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
-        Which shape is made by this loop?: Katera oblika nastane s to zanko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera oblika nastane s to zanko?
+        title: Umetnik zanke izbirno vprašanje
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
-        Which shape is made by this program?: Katera oblika nastane s tem programom?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera oblika nastane s tem programom?
+        title: Umetnik zanke izbirno vprašanje
+      2-3 artist match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Ustrezno poveži bloke z liki.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Ujemanje umetnikov
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: Katera spodnja primerjava velja?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera spodnja primerjava velja?
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: Izberi najboljše bloke.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Izberi najboljše bloke.
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Čebelica zanke izbirno vprašanje ena
-        Which blocks collect all of the nectar?: S katerim blokom lahko nabereš ves
-          nektar?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: S katerim blokom lahko nabereš ves nektar?
+        title: Čebelica zanke izbirno vprašanje ena
+      2-3 maze match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Poveži ustrezne bloke z rešitvami
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labirint povezovanje
       2-3 maze multi 1:
-        Maze Multiple Choice One: Labirint izbirno vprašanje ena
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri niz blokov je pravilen odgovor?
+        title: Labirint izbirno vprašanje ena
+      4-5 Algorithms Match 1:
+        answers:
+        - text: "<h4>Postavi rezultat Igralca 1 na 0</h4>"
+        - text: "<h4>Igralec 1 vrže kocko</h4>"
+        - text: "<h4>Dodaj Igralcu ena njegov rezultat k skupnemu rezultatu</h4>"
+        - text: "<h4>Primerjaj rezultate igralcev, da vidiš, kdo zmaga</h4>"
+        content1: Poveži korake v Igri s kocko po vrstnem redu, kot se morajo pojaviti
+          v algoritmu.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        title: Ujemanje
       4-5 Algorithms Multi 1:
-        Baking cookies: Peka piškotov
-        Banana: Banana
-        Brushing your teeth: Umivanje zob
-        Multiple Choice: Izbirno vprašanje
-        Shopping from a grocery list: Nakupovanje stvari s seznama
-        Which one of these items is hardest to describe an algorithm for?: Katere
-          od teh stvari je najtežje predstaviti z algoritmom?
+        answers:
+        - text: Umivanje zob
+        - text: Peka piškotov
+        - text: Nakupovanje stvari s seznama
+        - text: Banana
+        questions:
+        - text: Katere od teh stvari je najtežje predstaviti z algoritmom?
+        title: Izbirno vprašanje
+      4-5 Computational Thinking Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Vsako od teh vozil je bilo razstavljeno na manjše dele. Poveži vsako
+          od vozil s seznamom delov.
+        questions:
+        - text: "<h3>Kolesa/strani: 2 <br/> Okna/stran: 0</h3>"
+        - text: "<h3>Kolesa/strani: 2 <br/> Okna/stran: 1</h3>"
+        - text: "<h3>Kolesa/stran: 2 <br/> Okna/stran: 6</h3>"
+        - text: "<h3>Kolesa/stran: 3 <br/> Okna/stran: 2</h3>"
+        title: Ujemanje
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene je _____ mesto.
-        0: "? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?"
-        1: ": Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?"
-        Multiple Choice: Izbirno vprašanje
-        Seattle _____ a _____ _____.: Seattle je _____ _______.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          je veliko mesto.<br/>Eugene je srednje mesto.<br/>Hillview je majhno mesto.
-        _____ is _____ a _____.: _____ _____ je _____.
-        _____ is a _____ city.: _____ je _____ mesto.
+        answers:
+        - text: Seattle je _____ _______.
+        - text: _____ je _____ mesto.
+        - text: _____ _____ je _____.
+        - text: Eugene je _____ mesto.
+        content1: Napisani so trije stavki. Kateri od spodnjih primerov je napisan
+          tako, da vsi trije stavki ustrezajo predlogi?
+        questions:
+        - text: Seattle je veliko mesto.<br/>Eugene je srednje mesto.<br/>Hillview
+            je majhno mesto.
+        title: Izbirno vprašanje
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which of these pictures best represents crowdsourcing?: Katera od spodnjih
-          slik najbolje predstavlja "crowdsourcing"?
+        answers:
+        - {}
+        - {}
+        questions:
+        - text: Katera od spodnjih slik najbolje predstavlja "crowdsourcing"?
+        title: Izbirno vprašanje
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Česanje tvojih las
-        Cleaning your room: Čiščenje tvoje sobe
-        Eating your dessert: Jesti tvojo sladico
-        Multiple Choice: Izbirno vprašanje
-        Washing your face: Umivanje tvojega obraza
-        Which one of these activities would be best for practicing crowdsourcing?: Katera
-          od teh aktivnosti bi bila najboljša za izvajanje "crowdsourcinga"?
+        answers:
+        - text: Čiščenje tvoje sobe
+        - text: Jesti tvojo sladico
+        - text: Česanje tvojih las
+        - text: Umivanje tvojega obraza
+        questions:
+        - text: Katera od teh aktivnosti bi bila najboljša za izvajanje "crowdsourcinga"?
+        title: Izbirno vprašanje
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which piece of information listed below is okay to share on the internet?: Katere
-          od navedenih informacij je v redu deliti na internetu?
-        Your address: Tvoj naslov
-        Your birthday: Tvoj rojstni dan
-        Your favorite food: Tvoja najljubša hrana
-        Your parent's credit card number: Številko kreditne kartice tvojih staršev
+        answers:
+        - text: Tvoj rojstni dan
+        - text: Tvoja najljubša hrana
+        - text: Tvoj naslov
+        - text: Številko kreditne kartice tvojih staršev
+        questions:
+        - text: Katere od navedenih informacij je v redu deliti na internetu?
+        title: Izbirno vprašanje
       4-5 Internet Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ko
-          se poskušaš prijaviti na code.org, na kateri IP naslov te bo DNS najverjetneje
-          pripeljal?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Ko se poskušaš prijaviti na code.org, na kateri IP naslov te bo DNS
+            najverjetneje pripeljal?
+        title: Izbirno vprašanje
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Če
-          te je DNS poslal na stran z IP naslovom 100.42.50.110, na kateri spletni
-          strani se nahajaš?
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Če te je DNS poslal na stran z IP naslovom 100.42.50.110, na kateri
+            spletni strani se nahajaš?
+        title: Izbirno vprašanje
       4-5 Songwriting Multi 1:
-        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin."
-        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin."
-        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,"
-        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,"
-        Multiple Choice: Izbirno vprašanje
-        4: "? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?"
-        5: ": What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?"
+        answers:
+        - text: Lou, Lou, skip to my Lou,
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+            <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+            <br/>Skip to my Lou, my darlin.
+        questions:
+        - text: Kateri je največji kos te pesmi, ki ga lahko določite za refren, da
+            se refren ponovi natanko takrat, ko se ga pokliče?
+        title: Izbirno vprašanje
+      4-5 Suncatchers Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Poveži vsak program z besedo, ki ga naredi. Uporabi podane skupine
+          spretnosti.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kateri
-          od spodnjih programov <em>ne</em> naredi enakega zaporedja kot Program 1?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri od spodnjih programov <em>ne</em> naredi enakega zaporedja
+            kot Program 1?
+        title: Izbirno vprašanje
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
-        Which blocks will create the design?: Kateri bloki bodo ustvarili to sliko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki bodo ustvarili to sliko?
+        title: Umetnik zanke izbirno vprašanje
       4-5 artist multi 1:
-        Artist Multiple Choice: Umetnik izbirno vprašanje
-        Which blocks draw a rectangle with a perimeter of 100?: Kateri bloki narišejo
-          pravokotnik z obsegom 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki narišejo pravokotnik z obsegom 100?
+        title: Umetnik izbirno vprašanje
       4-5 artist multi 2:
-        Artist Multiple Choice: Umetnik izbirno vprašanje
-        Which drawing is symmetric?: Katera risba je simetrična?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera risba je simetrična?
+        title: Umetnik izbirno vprašanje
       4-5 bee conditionals multi 1:
-        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?"
-        1: ": Vijolična roža ima lahko 3, 2 ali 1 nektar, ampak ne veš, koliko. Kateri
-          blok pravilno preveri in dobi ves nektar iz vijoličnega cveta?"
-        Bee Conditionals Multiple Choice: Čebelica pogoji izbirno vprašanje
-        Choose the best blocks.: Izberi najboljše bloke.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Vijolična roža ima lahko 3, 2 ali 1 nektar, ampak ne veš, koliko.
+          Kateri blok pravilno preveri in dobi ves nektar iz vijoličnega cveta?
+        questions:
+        - text: Izberi najboljše bloke.
+        title: Čebelica pogoji izbirno vprašanje
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Čebelica razhroščevanje izbirno vprašanje
-        Which version of the function will work?: Katera verzija funkcije bo delovala?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera verzija funkcije bo delovala?
+        title: Čebelica razhroščevanje izbirno vprašanje
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Čebelica zanke izbirno vprašanje
-        Which blocks will solve the puzzle?: Kateri bloki rešijo to uganko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki rešijo to uganko?
+        title: Čebelica zanke izbirno vprašanje
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Labirint pogoji izbirno vprašanje
-        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki rešijo uganko?
+        title: Labirint pogoji izbirno vprašanje
+      4-5 maze match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Poveži ustrezne bloke z rešitvami
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labirint povezovanje
       4-5 maze multi 1:
-        Maze Multiple Choice: Labirint izbirno vprašanje
-        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki rešijo uganko?
+        title: Labirint izbirno vprašanje
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: naslov
+      CSD U3 Boolean MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: naslov
+      CSD U3 Boolean MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: naslov
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprites intro predict multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 array multi_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 array multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which blocks solve this puzzle?: Kateri bloki rešijo to uganko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki rešijo to uganko?
+        title: Izbirno vprašanje
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Izbirno vprašanje
-        Which blocks draw the square?: Kateri bloki narišejo kvadrat?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki narišejo kvadrat?
+        title: Izbirno vprašanje
+      K-1 Artist 2 Match 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Poveži like glede na njihovo obliko.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: Koliko nektarjev je to?
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Koliko nektarjev je to?
+        title: Izbirno vprašanje
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: Koliko nektarjev je to?
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Koliko nektarjev je to?
+        title: Izbirno vprašanje
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Poveži bloke
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
+      K-1 Big Event Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content2: Poveži kombinacije gumbov s plesnimi gibi.
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera izmed živali ima <strong>najslabši</strong> digitalni odtis?
+        title: Izbirno vprašanje
       K-1 Getting Loopy Multi 1:
-        Multiple Choice: Izbirno vprašanje
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Izbirno vprašanje
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which arrow gets the Flurb to the treasure?: Katera puščica pripelje Flurba
-          do zaklada?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera puščica pripelje Flurba do zaklada?
+        title: Izbirno vprašanje
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which information should you <strong>not</strong> share online?: Katere informacije
-          <strong>ne</strong> smeš deliti na internetu?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katere informacije <strong>ne</strong> smeš deliti na internetu?
+        title: Izbirno vprašanje
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which choice should be the final block?: Katera izbira bi moral biti zadnji
-          blok?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera izbira bi moral biti zadnji blok?
+        title: Izbirno vprašanje
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which repeat block is the same?: Kateri blok za ponavljanje je isti?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri blok za ponavljanje je isti?
+        title: Izbirno vprašanje
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Izbirno vprašanje
-        Pick the correct repeat block.: Označi pravi blok za ponavljanje.
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Označi pravi blok za ponavljanje.
+        title: Izbirno vprašanje
+      K-1 Maze Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Poveži ustrezene puzle in bloke
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Ujemanje
       K-1 Maze Multiple Choice 2:
-        Maze: Labirint
-        Which answer solves this level?: Kateri odgovor reši to uganko?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri odgovor reši to uganko?
+        title: Labirint
       K-1 Move It Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which algorithm gets the Flurb to the flowers?: Kateri algoritem pripelje
-          Furba do cvetja?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri algoritem pripelje Furba do cvetja?
+        title: Izbirno vprašanje
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which step should go at the beginning of this algorithm?: Kateri korak bi
-          moral biti na začetku tega algoritma?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri korak bi moral biti na začetku tega algoritma?
+        title: Izbirno vprašanje
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Izbirno vprašanje
-        Which step should fill in the blank for this algorithm?: Kateri korak bi moral
-          zapolniti praznino v algoritmu?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri korak bi moral zapolniti praznino v algoritmu?
+        title: Izbirno vprašanje
       K-1 Word Search Multi 1:
-        Multiple Choice: Izbirno vprašanje
-        Which blocks spell "MOVE"?: Kateri bloki črkujejo "MOVE"?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kateri bloki črkujejo "MOVE"?
+        title: Izbirno vprašanje
       K-1 Word Search Multi 3:
-        Multiple Choice: Izbirno vprašanje
-        Which word is spelled?: Katera beseda je črkovana?
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Katera beseda je črkovana?
+        title: Izbirno vprašanje
+      New Challenge Introduction:
+        markdown: "### Nov izziv: Razvozlaj Naključno Zamenjalno Šifro... z novim
+          gradnikom\n\nKaj, če bi namesto premikanja celotne abecede, naredili seznam
+          s povezavo vsake črke v abecedi z neko naključno drugo črko iz abecede?
+          Temu rečemo **naključna zamenjalna šifra.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNamesto,
+          da bi bila skrivna sporočila šifrirana z enostavnim premikom abecede, se
+          boš od zdaj naprej srečal/a s sporočili šifriranimi z **naključno zamenjavo**.
+          \n\n\nTa so dosti težja za razbiti in potrebujejo bolj napredno orodje,
+          zato...\n\nKo klikneš Nadaljuj, se ti bo pokazala **nova, naprednejša verzija
+          kriptirnega orodja,** ki ti pokaže veliko različnih stvari.\n\nAmpak to,
+          kar počne, je neke vrste skrivnost! \n\n### Tvoja naloga\n\n * Ugotovi,
+          kaj se dogaja v tej novi verziji orodja.\n * Katere informacije so ti predstavljene?\n
+          * Ugotovi, kaj ti orodje omogoča.\n * Kot ponavadi: ne moreš ga pokvariti.
+          Klikni na stvari, raziskuj naokoli.\n * Če ugotoviš kaj dela, ti mogoče
+          uspe razbiti skrivno sporočilo šifrirano z naključno zamenjavo.\n\n### Namig\n*
+          Si vedel/a, da je **E** najbolj pogosto uporabljena črka v Angleščini.\n\n\n"
+      'Technique: Frequency Analysis':
+        markdown: "# Razvozlanje Zamenjalnih Šifer\n\nNajboljši način za razvozlanje
+          naključne zamenjalne šifre se imenuje **frekvenčna analiza** \n\nPovzeto
+          po: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* **Frekvenčna
+          analiza** je tehnika, ki bazira na tem kako *pogosto* se določene črke pojavijo
+          v Angleščini.\n* Na primer, če imamo odstavek angleškega teksta, so *E*,
+          *T*, *A*, in *O* najpogostejše, medtem ko so *Z*, *Q* in *X* redkejše. Prav
+          tako so *TH*, *ER*, *ON*, in *AN* najpogostejši pari črk, ki se pojavijo
+          druga ob drugi.\n* V bistvu je distribucija črk približno enaka za skoraj
+          *katerikoli* primer angleškega besedila.\n\nVerzija orodja na prejšnji strani
+          je namenjena pomaganju **razvozlanja zamenjalne šifre s frekvenčno analizo**.\n\nZ
+          analizo pogostosti črk v enkriptiranem besedilu in primerjavo s pogostostjo
+          črk v angleškem navadnem besedilu, si lahko približno predstavljamo katere
+          črke bi lahko bile povezane v šifri. \n\nOrodje ti pokaže kako se pogostost
+          črk v enkriptiranem besedilu (oranžno) primerja s pogostostjo črk v navadni
+          angleščini (modro).\n\n### Namig: Kje začeti?\n\n1. Najprej najdi krajše
+          besede in jih \"razvozlaj\". Koliko enočrkovnih besed poznaš? (\"a\"). Zelo
+          pogosto tričrkovna beseda je \"the\".\n2. Ko si konec s tem, imaš zamenjavo
+          za nekaj najpogostejših črk. Z intuicijo bi lahko pogledal/a ostale besede
+          in s pomočjo razvozlanih črk uganil/a manjkajoče.\n3. Ko najdeš le nekaj
+          pomembnih črk, bo razvozlanje ostalih manjkajočih enostavno.\n4. S primerjavo
+          pogostosti črk lahko dobiš dober občutek za ugibanje ostalih.\n\n### Poizkusi
+          to:\nAnimacija spodaj prikazuje nekoga, ki ravno začenja. Poizkusili so
+          že\n\n* Razvrstiti znake po pogostosti.\n* Identificirati skupino znakov
+          ki se mogoče ujemajo z besedo `the`.  \nTo je dober začetek!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Je naključna zamenjava dobra?\n* Z malo vadbe, koliko časa rabiš, da razvozlaš
+          naključno zamenjalno šifro?\n* Je to dobro, ali ne?\n\n\n"
+      Terminology Recap:
+        markdown: "# Premor in ponovitev\n\nSporočila šifrirana s **Cezarjevo šifro**
+          so zelo enostavna za razvozlanje, še posebno z uporabo računskega orodja.
+          Zdaj ko imaš za sabo malo treninga z razvozlavanjem abecedne zamenjalne
+          šifre (precej enostavno, kajne?), poizkusimo nekaj težjega.\n\n**Ponovimo
+          izrazoslovje:**\n\n* **Enkripcija** - proces šifriranja sporočil z namenom,
+          da ostanejo skrivna, tako da jih lahko preberjo samo tisti z dovoljenjem.\n*
+          **Dekripcija** - proces, ki obrne enkripcijo, tako da vzame skrivno sporočilo
+          in proizvede originalni tekst.\n* **Šifra** - splošni izraz za tehniko (ali
+          algoritem) ki izvede enkripcijo.\n* **Cezarjeva šifra** - tehnika enkripcije
+          ki črke po abecedi premakne za nekaj mest.\n* **Razvozlanje enkripcije**
+          - Ko poizkusiš dešifrirati skrivno sporočilo *brez*, da poznaš šifro, se
+          temu reče, da poizkusiš razvozlati enkripcijo.\n\n\nKlikni Nadaljuj, da
+          vidiš **Naslednji izziv**...\n\n \n"
+      behaviors 1 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Ne vem
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Ne vem
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Ne vem
+        questions:
+        - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
-        A: A
-        B: B
-        C: C
-        D: D
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        A: A
-        B: B
-        C: C
-        D: D
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
-        A: A
-        B: B
-        C: C
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        A: A
-        B: B
-        C: C
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_ramp13:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_scrat_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_bee_functions_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

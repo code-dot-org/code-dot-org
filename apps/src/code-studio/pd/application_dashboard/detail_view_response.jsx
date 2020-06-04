@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
 import {Row, Col, FormControl, Panel} from 'react-bootstrap';
-import MarkdownSpan from '../components/markdownSpan';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
   lineItem: {
@@ -22,7 +22,9 @@ const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
   return (
-    <MarkdownSpan style={props.style}>{`${props.text}${suffix}`}</MarkdownSpan>
+    <span style={props.style}>
+      <InlineMarkdown markdown={`${props.text}${suffix}`} />
+    </span>
   );
 };
 Question.propTypes = {
@@ -106,11 +108,16 @@ export default class DetailViewResponse extends React.Component {
         );
 
         return (
-          <Panel header={heading} style={styles.panel}>
-            <Row>
-              <Col xs={scoredQuestion ? 9 : 12}>{renderedValue}</Col>
-              {scoredQuestion && <Col xs={3}>{this.renderScore()}</Col>}
-            </Row>
+          <Panel style={styles.panel}>
+            <Panel.Heading>
+              <Panel.Title>{heading}</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+              <Row>
+                <Col xs={scoredQuestion ? 9 : 12}>{renderedValue}</Col>
+                {scoredQuestion && <Col xs={3}>{this.renderScore()}</Col>}
+              </Row>
+            </Panel.Body>
           </Panel>
         );
       }

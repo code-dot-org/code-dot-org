@@ -1,0 +1,103 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "setPropRandomEach",
+    "blockText": "randomize {GROUP} {PROPERTY}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "bears",
+            "\"BEAR\""
+          ],
+          [
+            "cats",
+            "\"CAT\""
+          ],
+          [
+            "dogs",
+            "\"DOG\""
+          ],
+          [
+            "ducks",
+            "\"DUCK\""
+          ],
+          [
+            "frogs",
+            "\"FROG\""
+          ],
+          [
+            "moose",
+            "\"MOOSE\""
+          ],
+          [
+            "pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "robots",
+            "\"ROBOT\""
+          ],
+          [
+            "sharks",
+            "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ]
+        ]
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      }
+    ]
+  }
+}

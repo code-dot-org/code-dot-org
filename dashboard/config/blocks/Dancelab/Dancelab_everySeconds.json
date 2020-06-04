@@ -2,7 +2,7 @@
   "category": "Events",
   "config": {
     "func": "everySeconds",
-    "blockText": "every {N} {UNIT} ",
+    "blockText": "repeat every {N} {UNIT} ",
     "args": [
       {
         "name": "N",

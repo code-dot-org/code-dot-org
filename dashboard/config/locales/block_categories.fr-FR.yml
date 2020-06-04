@@ -3,57 +3,30 @@ fr:
   data:
     block_categories:
       Actions: Actions
-      Loops: boucles
-      Functions: fonctions
-      Color: Couleur
-      Brushes: Pinceaux
-      Math: Math
-      Logic: Logique
-      Variables: variables
-      Number: Nombre
-      String: Chaîne
-      Image: Image
-      Boolean: Booléen
-      Conditionals: Instructions conditionnelles
-      Events: Événements
-      Games/Score: Jeux/Score
-      Comments: Commentaires
-      Category: Catégorie
-      Prebuilt: Préconstruit
-      Text: Texte
-      Picker: Sélecteur
-      Comment: Commentaire
-      World: Monde
-      Behaviors: Comportements
-      'Variables ': 'Variables '
-      Default: Par défaut
-      Locations: Emplacements
-      everythingelse: toutlereste
-      Location: Localisation
-      numbers: nombres
-      Numbers: Nombres
-      Input: Entrée
-      Dancers: Danseurs
-      Groups: Groupes
       Advanced: Avancé
-      Start: Commencer
-      Music: Musique
-      Dancing: Danse
-      Sprite: Lutin
-      Brush: Pinceau
-      Make Sprite: Créer un lutin
-      Movement: Mouvement
-      Booleans: Booléens
-      Functional: Fonctionnel
-      While Events: Événements de boucle
-      Sprite Properties: Propriétés du sprite
-      Predefined: Prédéfini
-      test: test
-      test2: test2
-      Use These Blocks: Utiliser ces blocs
-      Do Not Use: Ne pas utiliser
-      Name: Nom
-      NEW BLOCKS: NOUVEAUX BLOCS
+      Behaviors: Comportements
+      Brushes: Pinceaux
+      Color: Couleur
+      Comment: Commentaire
+      Comments: Commentaires
+      Conditionals: Instructions conditionnelles
+      Dancers: Danseurs
+      Default: Par défaut
+      Events: Événements
+      Functions: fonctions
       'Functions ': 'Fonctions '
       Game/Score: Jeu/Score
-      Function: Fonction
+      Games/Score: Jeux/Score
+      Groups: Groupes
+      Input: Entrée
+      Locations: Emplacements
+      Logic: Logique
+      Loops: boucles
+      Math: Math
+      Numbers: Nombres
+      Properties: Propriétés
+      Sprites: Les Lutins
+      Text: Texte
+      Variables: variables
+      'Variables ': 'Variables '
+      World: Monde

@@ -1,12 +1,14 @@
 name 'PS U3 Q1-8'
+editor_experiment ''
 
 layout 'wrap'
 wrong 'drawStar;'
 right 'drawStar();'
-wrong 'function drawStar(){ <br>&nbsp;&nbsp;&nbsp;&nbsp; for(var i = 0; i &lt 5; i++){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveForward(100); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnLeft(36);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>} '
+wrong '![](https://images.code.org/f7d07331ddd6ff10e6825e42a286cf6b-image-1579899560773.png) '
 wrong 'function drawStar;'
 wrong 'function drawStar()'
 markdown <<MARKDOWN
 Which of the following will _**call**_ the function drawStar?
+
 
 MARKDOWN

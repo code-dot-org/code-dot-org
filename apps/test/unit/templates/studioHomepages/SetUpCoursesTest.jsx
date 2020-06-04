@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import SetUpMessage from '@cdo/apps/templates/studioHomepages/SetUpMessage';
 

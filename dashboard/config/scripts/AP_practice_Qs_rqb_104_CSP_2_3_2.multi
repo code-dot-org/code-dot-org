@@ -1,11 +1,8 @@
 name 'AP_practice_Qs_rqb_104_CSP_2_3_2'
 wrong 'Hardware used'
-wrong 'Quality of simulation
-'
-right 'The amount of code executed 
-'
-wrong 'The details of the simulation
-'
+wrong 'Quality of simulation'
+right 'The amount of code executed'
+wrong 'The details of the simulation'
 markdown <<MARKDOWN
 Which of the following does not affect the cost and length of a simulation? 
 MARKDOWN

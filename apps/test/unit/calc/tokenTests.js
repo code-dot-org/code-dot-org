@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 
 var Token = require('@cdo/apps/calc/token');
 var jsnums = require('@code-dot-org/js-numbers');

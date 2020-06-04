@@ -1,7 +1,8 @@
+tts true
 hidden false
 has_lesson_plan true
 
-stage 'Dance Party'
+lesson 'Dance Party'
 level 'Dance_Party_01'
 level 'Dance_Party_02'
 level 'Dance_Party_03'

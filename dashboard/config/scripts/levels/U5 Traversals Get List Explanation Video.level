@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-16T23:59:55.000Z",
+  "level_num": "custom",
+  "user_id": 898,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "u5-traversals-get-list-explanation",
+    "instructions_important": "false",
+    "long_instructions": "Note: The data sets have already been imported for the apps in the next two levels.",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-17 00:09:33 +0000\",\"changed\":[],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-17 00:09:56 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

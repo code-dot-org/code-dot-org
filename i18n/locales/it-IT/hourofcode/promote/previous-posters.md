@@ -1,18 +1,17 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
-layout: wide
-nav: promote_nav
+title: Poster degli anni precedenti
 ---
-<%= view :signup_button %>
 
-# Ultima Ora del Codice
+{{ signup_button }}
 
-### Trova i nostri poster degli anni precedenti da stampare e da portare nella tua classe! Cerchi i poster più recenti? [Clicca qui](<%= resolve_url('/promote/resources#posters') %>).
+# Poster degli anni precedenti
+
+### Trova i nostri poster degli anni precedenti da stampare e da portare nella tua classe! Cerchi i poster più recenti? [Clicca qui]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

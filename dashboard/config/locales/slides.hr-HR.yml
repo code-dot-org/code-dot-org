@@ -619,6 +619,11 @@ hr:
           trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem.
           No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima
           na Facebooku i poželjeti im sve najbolje za rođendan.
+    C2_bee_loops:
+      1:
+        text: Petlja je ponavljanje aktivnosti. Da biste provjerili košnicu, pogledate
+          u okvir i vratite ga nazad te ponavljate radnju nekoliko puta. To je petlja,
+          ponavljanje iste aktivnosti više puta.
     C2_playlab_createstory:
       1:
         text: Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki
@@ -627,6 +632,11 @@ hr:
       2:
         text: Ovdje je blok "kad strelica" i blok "kada lik". Možeš staviti te blokove
           zajedno da bi pomicao lik uokolo pomoću tipki sa strelicama.
+    C2_zuck_repeat_loop:
+      1:
+        text: Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste
+          naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti
+          istu stvar milijunima, čak i milijardama puta i nije im dosadno.
     C3_playlab_create_game:
       1:
         text: Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki
@@ -711,9 +721,27 @@ hr:
           R2-D2-a da reagira na događaj pritiska tipke kako bismo ga pomaknuli po
           sceni. Korak po korak vaša igra postaje sve interaktivnija.
     starwars_blocks_intro:
+      1:
+        text: "Zdravo, ja sam Kathleen Kennedy i ja producentica sam filam \"Ratova
+          zvijezda - Sila se budi\". Danas ćemo raditi s našom zvijezdom, BB-8. BB-8
+          je sferni droid. Sve što on radi i svaki njegov pokret je kontroliran softverom.
+          \nRačunalna znanost utječe na sve djelatnosti, od marketinga i zdravstva,
+          do filma. Stotine programera radilo je zajedno da stvore film \"Sila se
+          budi\"."
+      2:
+        text: Ja sam Rachel Rose. Ja sam starija Inženjerka istraživanja i razvoja
+          u tvrtci ILM i vodim razvojne timove za animaciju i likove. U filmu sam
+          zadužena da pomažem umjetnicima da oblikuju pokretne dijelove likova, a
+          koji omogućavaju da oni izgledaju stvarno u galaksiji tako dalekoj.
       5:
         text: U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8
           razumije.
+      6:
+        text: Bijelo područje na desnoj strani je radna površina i to je mjesto na
+          kojem ćemo razvijati naš program.
+      10:
+        text: Kad kliknete "Pokreni" uvijek možete kliknuti "Poništi" i vratiti BB-8
+          na početak. Krenimo!
     starwars_blocks_events:
       1:
         text: |-
@@ -844,10 +872,30 @@ hr:
       4:
         text: Sad možeš napraviti što god želiš. Zabavi se!
     gumball_intro:
+      4:
+        text: Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor
+          u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah
+          ispod njega.
       6:
         text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati
           naš program.
+      7:
+        text: Za početak trebaš prikačiti svoje blokove za narančasti blok "pri pokretanju".
+          Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže
+          žuta linija, a tada će se oni zakačiti.
     iceage_intro:
+      4:
+        text: Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor
+          u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah
+          ispod njega.
       6:
         text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati
           naš program.
+      7:
+        text: Za početak trebaš prikačiti svoje blokove za narančasti blok "pri pokretanju".
+          Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže
+          žuta linija, a tada će se oni zakačiti.
+    hoc_dance_events_2019:
+      4:
+        text: Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa
+          strelicom ili dodir ekrana.

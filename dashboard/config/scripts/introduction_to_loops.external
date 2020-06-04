@@ -9,19 +9,17 @@ Loops are a simple way to repeat a block of code over and over again.  There are
 ## Connection to Earlier Lessons
 Earlier in the unit, we used functions as a way to reduce replicating code. Here, we start using loops as a way to *directly* repeat the same action. (Meaning that if you’d like to use the same block of code later in the program, you’d need to rewrite the loop or put it inside of a function.)  Below are two examples that both produce a square using the turtle.  The program on the left makes use of functions, while the one on the right uses a single loop. 
 
-<img src="https://images.code.org/12c1853200feaabf29550bd6a99ea83c-image-1479790863828.png" style="float:left; margin-left:5%; margin-right:5%; width:25%">
-<br><br><br>
-<img src="https://images.code.org/81db4aea714e1ddbf0cf2e6826bed3e9-image-1479790863827.png" style="float:right; margin-left:5%; margin-right:5%; width:55%">
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<img src="https://images.code.org/12c1853200feaabf29550bd6a99ea83c-image-1479790863828.png" style="width:25%">
+<img src="https://images.code.org/81db4aea714e1ddbf0cf2e6826bed3e9-image-1479790863827.png" style="width:55%">
 
 
+<br><br>
 If you were planning to create a square multiple times, you could put the loop inside of a function:
 <br><br>
 <img src="https://images.code.org/32054e11fa50b8ed31b321444960306b-image-1479790863826.png" style="margin-left:25%; margin-right:25%; width:50%">
 
 <br><br>
-To learn more about different types of Loops in JavaScript, check out <a href = “https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration” target=_blank> this resource <i class="fa fa-external-link-square"/></a>
+To learn more about different types of Loops in JavaScript, check out <a href = “https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration” target=_blank> this resource <i class="fa fa-external-link-square"></i></a>
 
 
 

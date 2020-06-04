@@ -1,0 +1,15 @@
+name 'Update your Hypothesis - Part 2_2018_2019_virtual'
+css 'unplugged'
+markdown <<MARKDOWN
+# Updating Your Hypotheses - Part 2
+
+You should now be ready to **compare the results of your simulation to your second hypothesis**.
+
+* How accurate was your prediction of the **upper and lower bounds for the number of flips to get a streak of 12 heads?**
+* Were you at all surprised by this result? What might explain the differences between your prediction and what you observed?
+
+Just as before, you should **update your hypotheses** to reflect the results of your simulation. Try to come up with a reasonable explanation for the results you observed.
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

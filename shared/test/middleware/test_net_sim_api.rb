@@ -37,12 +37,11 @@ class NetSimApiTest < Minitest::Test
     assert read_records.first.nil?, 'Table did not begin empty'
 
     # Disable metrics during tests
-    @old_netsim_enable_metrics = CDO.netsim_enable_metrics
-    CDO.netsim_enable_metrics = false
+    CDO.stubs(netsim_enable_metrics: false)
   end
 
   def teardown
-    CDO.netsim_enable_metrics = @old_netsim_enable_metrics
+    CDO.unstub(:netsim_enable_metrics)
   end
 
   def test_create_read_update_delete

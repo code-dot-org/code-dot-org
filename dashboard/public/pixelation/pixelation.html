@@ -22,25 +22,25 @@
       <td>
         <label for="width">Image width:</label>
       </td><td>
-      <input type="number" min="1" max="255" value="10" id="width" oninput="setSliders();" onchange="setMinTextValues();">
+      <input type="number" min="1" max="255" value="10" id="width" oninput="setSliders();" onchange="setMinTextValues();" disabled>
     </td><td class="hide_on_v2">
-      <input type="range" min="1" max="255" value="10" id="widthRange" oninput="changeVal('width');" onchange="changeVal('width');" class="rangeInput">
+      <input type="range" min="1" max="255" value="10" id="widthRange" oninput="changeVal('width');" onchange="changeVal('width');" class="rangeInput" disabled>
     </td>
     </tr><tr>
     <td>
       <label for="height">Image height:</label>
     </td><td>
-    <input type="number" min="1" max="255" value="10" id="height" oninput="setSliders();" onchange="setMinTextValues();">
+    <input type="number" min="1" max="255" value="10" id="height" oninput="setSliders();" onchange="setMinTextValues();" disabled>
   </td><td class="hide_on_v2">
-    <input type="range" min="1" max="255" value="10" id="heightRange" oninput="changeVal('height');" onchange="changeVal('width');" class="rangeInput">
+    <input type="range" min="1" max="255" value="10" id="heightRange" oninput="changeVal('height');" onchange="changeVal('width');" class="rangeInput" disabled>
   </td>
   </tr><tr class="hide_on_v1 hide_on_v2">
     <td>
       <label for="bitsPerPixel">Bits per pixel:</label>
     </td><td>
-    <input type="number" min="1" max="24" id="bitsPerPixel" value="1" oninput="setSliders();" onchange="setMinTextValues();">
+    <input type="number" min="1" max="24" id="bitsPerPixel" value="1" oninput="setSliders();" onchange="setMinTextValues();" disabled>
   </td><td>
-    <input type=range id="bitsPerPixelSlider" min="1" max="24" oninput="changeVal('bitsPerPixel')" onchange="changeVal('width');" class="rangeInput">
+    <input type=range id="bitsPerPixelSlider" min="1" max="24" oninput="changeVal('bitsPerPixel')" onchange="changeVal('width');" class="rangeInput" disabled>
   </td>
   </tr>
   </table>
@@ -49,10 +49,10 @@
   </label>
   <div class="label_group encoding_controls">
     <label>Binary:
-      <input type="radio" name="binHex" value="bin" checked="checked" onchange="hexToBin(); drawGraph();">
+      <input id="hex_to_bin" type="radio" name="binHex" value="bin" checked="checked" onchange="hexToBin(); drawGraph();" disabled>
     </label>
     <label>Hexadecimal:
-      <input type="radio" name="binHex" value="hex" onchange="binToHex(); drawGraph();">
+      <input id="bin_to_hex" type="radio" name="binHex" value="hex" onchange="binToHex(); drawGraph();" disabled>
     </label>
   </div>
 </div>
@@ -63,9 +63,9 @@
   </div>
   <div id="belowVisualization">
     <label id="actual_size_label" class="right">Actual size:
-      <input type="checkbox" id="actual_size" onchange="drawGraph();">
+      <input type="checkbox" id="actual_size" onchange="drawGraph();" disabled>
     </label>
-    <button id="save_image" class="btn" onclick="showPNG();">Save Image</button>
+    <button id="save_image" class="btn" onclick="showPNG();" disabled>Save Image</button>
     <div id="bubble">
       <p id="below_viz_instructions" style="display: none;"></p>
     </div>
@@ -73,15 +73,15 @@
   <div id="reference_area_target"></div>
 </div>
 <div id="visualizationEditor" class="responsive">
-  <textarea id="pixel_data" oninput="drawGraph(null, false, true);" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
+  <textarea id="pixel_data" oninput="drawGraph(null, false, true);" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false" disabled></textarea>
   <!--[if IE 9]>
   <script>
     document.getElementById('pixel_data').onkeyup = drawGraph.bind(null, null, false, true);
   </script>
   <![endif]-->
-  <button class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel">Readable format</button>
-  <button class="btn" onclick="unformatBits();"  title="View bits without any formatting">Raw format</button>
-  <button id="start_over" class="btn btn-danger" onclick="startOverClicked();">Start Over</button>
-  <button id="finished" class="btn btn-primary right" onclick="onFinishedButtonClick();">Finished! Continue to next stage</button>
+  <button id="readable_format" class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel" disabled>Readable format</button>
+  <button id="raw_format" class="btn" onclick="unformatBits();"  title="View bits without any formatting" disabled>Raw format</button>
+  <button id="start_over" class="btn btn-danger" onclick="startOverClicked();" disabled>Start Over</button>
+  <button id="finished" class="btn btn-primary right" onclick="onFinishedButtonClick();" disabled>Finished! Continue to next stage</button>
 </div>
 <script type="text/javascript" src="/pixelation/pixelation.js"></script>

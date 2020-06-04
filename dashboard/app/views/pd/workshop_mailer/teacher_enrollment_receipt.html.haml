@@ -14,6 +14,10 @@
     5-day Summer workshop on the Code.org
     = @workshop.course
     curriculum.
+- elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
+  %p
+    Thanks for enrolling in Code.org’s summer workshop prep session. We look
+    forward to seeing you there!
 - else
   %p
     Thanks for enrolling in Code.org’s
@@ -32,5 +36,7 @@
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
+- elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
+  = render partial: 'teacher_enrollment_details_facilitator'
 -else
   = render partial: 'teacher_enrollment_details'

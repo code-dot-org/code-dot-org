@@ -1,0 +1,140 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:05.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveTo": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Use turnTo() and moveTo() to help draw a smiley face. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.9",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "long_instructions": "# Moving Relative to the Screen\r\n\r\nThe turtle commands we've seen so far move the turtle **relative to the turtle's location and direction**. If you want to get the turtle to a specific position on the screen using only `moveForward()` or `turnLeft()`, you need to know the turtle's location beforehand.\r\n\r\nTwo new commands in the toolbox help resolve this issue. `moveTo()` moves the turtle to a location on the screen based on its X and Y coordinates. `turnTo()` turns the turtle in a specific direction. Together these commands can make many drawings easier to complete.\r\n\r\n# Do This:\r\n\r\n**Read the documentation:** Read the documentation for `moveTo()` and `turnTo()`. Pay specific attention to how the coordinate system is arranged in App Lab as it is different from what you might have seen in a math class.\r\n\r\n**Draw the smiley:** Use these new commands to help you draw the smiley face pictured below.\r\n\r\n**HINT:** You can't really do this one without using `penUp()` and `penDown()`.\r\n\r\n![](https://images.code.org/20cab2a0b3a4fdfd53d7a1876963fa10-image-1441990625064.png)",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "Lw+9Kkhyxqfvk9gjoWqa6ov3+8pLzsilAKeVlNRs9T4uPBinCbmKchk2PPdy\n1i8H\n",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem"
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "App Lab is expecting you to draw at least 2 dots - one for the background and one for the yellow face. You can use dots for the eyes as well, but there are other ways, too."
+      },
+      {
+        "entries": [
+          "moveTo:2"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to use moveTo at least once. You probably want to use it more."
+      },
+      {
+        "entries": [
+          "turnTo:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App Lab is expecting you to use turnTo at least once - just to try it out."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Unlike in math class, the y-axis moves from top to bottom and 0 degrees is straight up. The screen size is 320 * 480 pixels.\r\n\r\n**Moving Relative to the Screen:** Students are introduced to `moveTo` and `turnTo`, functions which move and turn the turtle based on fixed locations on the screen. A student can specify an exact location to move the turtle using x and y coordinates, and can specify a direction for the turtle to turn using a value between 0 and 360. Students combine these commands with those used previously to draw a smiley face.\r\n\r\nValidation note: we don't check to see if the student actually drew this exact figure. We check that the student:\r\n\r\n* called `moveTo(x,y)` at least once\r\n* called `turnTo` at least once\r\n* made at least 2 dots - one for the background and one for the face. (The eyes can be made with dots, but don't have to be.).",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 16922,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:47:49 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-09-07 00:05:33 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,9 +1,7 @@
 name 'AP_practice_Qs_rqb_121_CSP_6_2_2'
 type 'multi2'
-right 'While sending messages, the TCP layer breaks information down into packets and hands it off to the IP layer.
-'
-wrong 'TCP applies to and from addresses to each packet of information and hands it off to the physical internet layer.
-'
+right 'While sending messages, the TCP layer breaks information down into packets and hands it off to the IP layer.'
+wrong 'TCP applies to and from addresses to each packet of information and hands it off to the physical internet layer.'
 right 'TCP assembles all packets received in the correct order, and transmits it to the Application layer that uses Protocols like SMTP for email, VOIP for Skype, etc.'
 wrong 'The TCP layer regulates the traffic flow on the Internet by monitoring the Routing Tables.'
 markdown <<MARKDOWN

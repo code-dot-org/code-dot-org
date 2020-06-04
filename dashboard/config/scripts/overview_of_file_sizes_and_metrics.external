@@ -2,7 +2,7 @@ name 'Overview of File Sizes and Metrics'
 markdown <<MARKDOWN
 # Overview of File Size and Metrics
 
-When data (an image, picture, sound, etc.)  is stored in computer memory, resources have to be allocated for that storage.  The amount of memory require varies, depending on the type and amount of data being stored. The amount of memory used to store a file is called the *file size*.  Like other measurable quantities, there’s a standard unit used to describe the size of digital files: the byte.  A byte is actually made up of smaller units: bits, which represent two possible states.  A byte is made up of eight bits and therefore is often used to represent numbers between 0 and 255 (because you with 8 bits you can represent all of the numbers from 0 - 255).  Frequently, however, many bytes are needed to represent all of the data in a file.  To name these groups of bytes, we use ‘kilo-’, ‘mega-’, ‘giga-’, and ‘tera-’ prefixes similar to other units of measurement like meters or watts. Note that there are some discrepancies in common usage of the kilo, mega, giga prefixes, as described in the followingexerpt from the  <a href=”https://web.stanford.edu/class/cs101/bits-gigabytes.html” target=_blank> Stanford CS 101 website: </a>
+When data (an image, picture, sound, etc.)  is stored in computer memory, resources have to be allocated for that storage.  The amount of memory require varies, depending on the type and amount of data being stored. The amount of memory used to store a file is called the *file size*.  Like other measurable quantities, there’s a standard unit used to describe the size of digital files: the byte.  A byte is actually made up of smaller units: bits, which represent two possible states.  A byte is made up of eight bits and therefore is often used to represent numbers between 0 and 255 (because you with 8 bits you can represent all of the numbers from 0 - 255).  Frequently, however, many bytes are needed to represent all of the data in a file.  To name these groups of bytes, we use ‘kilo-’, ‘mega-’, ‘giga-’, and ‘tera-’ prefixes similar to other units of measurement like meters or watts. Note that there are some discrepancies in common usage of the kilo, mega, giga prefixes, as described in the followingexerpt from the  <a href="https://web.stanford.edu/class/cs101/bits-gigabytes.html" target=_blank> Stanford CS 101 website: </a>
 
 
 <div style="margin-left:15px"> <h2><i class="fa fa-quote-left" aria-hidden="true"></i></h2></div> <div style="float:right; margin-left:25px"> It’s convenient within the computer to organize things in groups of powers of 2. For example, 2\^10 is 1024, and so a program might group 1024 items together, as a sort of “round” number of things within the computer. The term “kilobyte” above refers to this group size of 1024 things. However, people also group things by thousands – 1 thousand or 1 million items.
@@ -15,7 +15,7 @@ If nothing else, remember that terms like “megabyte” have this little wiggle
 
 To get a better idea of the sizes of different file types, check out this table of approximate file sizes found on <a href ="http://www.greennet.org.uk/support/understanding-file-sizes#main" target=_blank> Greennet.org:</a>
 
-<img src="https://images.code.org/745a5a6e55f7b2843e4ab9763f2ff80a-image-1476022907812.png"style="width:70%;margin-left:15%" />
+<img src="https://images.code.org/745a5a6e55f7b2843e4ab9763f2ff80a-image-1476022907812.png" style="width:70%;margin-left:15%" />
 
 
 MARKDOWN

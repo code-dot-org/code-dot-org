@@ -187,6 +187,7 @@ class StubSetupChecker extends SetupChecker {
     sinon.stub(this, 'detectChromeAppInstalled').resolves();
     sinon.stub(this, 'detectBoardPluggedIn').resolves();
     sinon.stub(this, 'detectCorrectFirmware').resolves();
+    sinon.stub(this, 'detectBoardType').resolves();
     sinon.stub(this, 'detectComponentsInitialize').resolves();
     sinon.stub(this, 'celebrate').resolves();
     sinon.stub(this, 'teardown');

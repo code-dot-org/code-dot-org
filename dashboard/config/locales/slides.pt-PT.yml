@@ -633,6 +633,12 @@ pt:
       4:
         text: Crie o seu algoritmo colando setas no mapa que está a tentar resolver.
           O segundo é o mesmo, mas vai para baixo.
+    C2_bee_loops:
+      1:
+        text: Um loop é uma repetição de uma atividade ou tarefa. Assim que abro uma
+          colmeia para a inspecionar, retiro uma moldura, inspeciono-a, e depois coloco-a
+          de volta no seu local. Seguidamente, eu repito essa tarefa várias vezes.
+          vezes. Isso é um loop, ou seja, fazer a mesma atividade várias vezes.
     C2_playlab_createstory:
       1:
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas
@@ -661,6 +667,18 @@ pt:
           de criar algo que vai facilitar a vida das pessoas. Eu acho que é a coisa
           mais próxima que temos de uma superpotência. A parte mais importante é a
           de começar. Eu sou um principiante e eu quero aprender comigo próprio.
+    starwars_events:
+      4:
+        text: 'Alguns exemplos de eventos são: ouvir o clique do rato, pressionar
+          uma seta no teclado ou tocar no ecrã.'
+    starwars_blocks_intro:
+      9:
+        text: Se quiseres eliminar um bloco, basta removê-lo da pilha e arrastá-lo
+          de volta para a caixa de ferramentas.
+    starwars_blocks_events:
+      4:
+        text: 'Alguns exemplos de eventos são: ouvir o clique do rato, pressionar
+          uma seta no teclado ou tocar no ecrã.'
     mc_intro:
       1:
         text: O meu nome é Jens Bergensten, mas conhecem-me por Jeb. Sou o diretor
@@ -799,13 +817,29 @@ pt:
       4:
         text: Agora podes construir o que quiseres. Diverte-te!
     gumball_intro:
+      4:
+        text: Sua tela está dividida em três partes principais. À esquerda está o
+          espaço do jogo, onde seu programa será executado. As instruções para cada
+          nível estão escritas abaixo.
       6:
         text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que
           vamos construir o nosso programa. '
+      7:
+        text: Para começar, você terá que conectar seus blocos ao bloco laranja "quando
+          executar". É possível conectar diversos blocos uns aos outros, arrastando-os
+          até ver a linha amarela e, então, eles se encaixam.
     iceage_intro:
+      4:
+        text: Sua tela está dividida em três partes principais. À esquerda está o
+          espaço do jogo, onde seu programa será executado. As instruções para cada
+          nível estão escritas abaixo.
       6:
         text: 'O espaço branco à direita é chamado o espaço de trabalho, e é aí que
           vamos construir o nosso programa. '
+      7:
+        text: Para começar, você terá que conectar seus blocos ao bloco laranja "quando
+          executar". É possível conectar diversos blocos uns aos outros, arrastando-os
+          até ver a linha amarela e, então, eles se encaixam.
     mc_2016_intro:
       1:
         text: Olá, chamo-me Jens e sou o designer criativo principal de Minecraft.
@@ -911,3 +945,7 @@ pt:
       11:
         text: Se te esqueceres do que tens de fazer, tens as instruções para cada
           nível ao cimo.
+    hoc_dance_events_2019:
+      4:
+        text: 'Alguns exemplos de eventos são: ouvir o clique do rato, pressionar
+          uma seta no teclado ou tocar no ecrã.'

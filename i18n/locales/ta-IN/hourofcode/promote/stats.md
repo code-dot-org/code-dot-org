@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{signup_button}}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### இது ஏன் முக்கியமானது?
 
-தொழில்நுட்பம் ஒவ்வொரு தொழிற்துறையையும் கிரகத்தில் மாற்றும். 2015 ஆம் ஆண்டில் யு.எஸ். ல் 7 மில்லியன் திறப்புக்கள் கலை மற்றும் வடிவமைப்பு உள்ளிட்ட ஆக்கிரமிப்புகளில் இருந்தன. But 65 percent of schools in the U.S. don't teach computer science. இது 21 ஆம் நூற்றாண்டில் பிடிக்க வேண்டிய நேரம். நம் மாணவர்கள் என்ன செய்கிறார்கள் என்பதைப் பொறுத்தவரை, அவர்கள் மருந்து, வணிக, அரசியல் அல்லது கலைகள், தொழில்நுட்பம் எவ்வாறு உருவாக்கப்படுகிறார்கள் என்பது அவர்களுக்கு நம்பிக்கையையும், போட்டித் தன்மையையும் அளிக்கிறது என்பதை அறிவோம். <br /> <br />
+தொழில்நுட்பம் ஒவ்வொரு தொழிற்துறையையும் கிரகத்தில் மாற்றும். 2015 ஆம் ஆண்டில் யு.எஸ். ல் 7 மில்லியன் திறப்புக்கள் கலை மற்றும் வடிவமைப்பு உள்ளிட்ட ஆக்கிரமிப்புகளில் இருந்தன. But 55 percent of schools in the U.S. don't teach computer science. இது 21 ஆம் நூற்றாண்டில் பிடிக்க வேண்டிய நேரம். நம் மாணவர்கள் என்ன செய்கிறார்கள் என்பதைப் பொறுத்தவரை, அவர்கள் மருந்து, வணிக, அரசியல் அல்லது கலைகள், தொழில்நுட்பம் எவ்வாறு உருவாக்கப்படுகிறார்கள் என்பது அவர்களுக்கு நம்பிக்கையையும், போட்டித் தன்மையையும் அளிக்கிறது என்பதை அறிவோம். <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Code.org பற்றி
 
-Code.org என்பது ஒரு 501c3 பொது லாபமல்லாதது, கணினி அறிவியல் துறையில் விரிவுபடுத்துதல் மற்றும் பெண்களின் அதிகரித்துவரும் பங்கேற்பு மற்றும் வண்ணத்தின் குறைபாடுடைய மாணவர்கள் பங்கேற்பு ஆகியவற்றிற்கு அர்ப்பணிக்கப்பட்டதாகும். Its vision is that every student in every school has the opportunity to learn computer programming. 2013 இல் தொடங்கப்பட்ட பின்னர், Code.org பிரச்சாரத்தின் மணிநேரத்தை ஒழுங்குபடுத்தியது - இன்று வரை கணினி அறிவியல் அறிமுகப்படுத்திய 100 மில்லியன் மாணவர்களை அறிமுகப்படுத்தியது - கணினி அறிவியல் விஞ்ஞான திட்டங்களை விரிவுபடுத்துவதற்காக 70 பொதுப்பள்ளி மாவட்டங்களுடன் கூட்டுசேர்ந்துள்ளது. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. மேலும் தகவலுக்கு, செல்க: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org என்பது ஒரு 501c3 பொது லாபமல்லாதது, கணினி அறிவியல் துறையில் விரிவுபடுத்துதல் மற்றும் பெண்களின் அதிகரித்துவரும் பங்கேற்பு மற்றும் வண்ணத்தின் குறைபாடுடைய மாணவர்கள் பங்கேற்பு ஆகியவற்றிற்கு அர்ப்பணிக்கப்பட்டதாகும். Its vision is that every student in every school has the opportunity to learn computer programming. 2013 இல் தொடங்கப்பட்ட பின்னர், Code.org பிரச்சாரத்தின் மணிநேரத்தை ஒழுங்குபடுத்தியது - இன்று வரை கணினி அறிவியல் அறிமுகப்படுத்திய 100 மில்லியன் மாணவர்களை அறிமுகப்படுத்தியது - கணினி அறிவியல் விஞ்ஞான திட்டங்களை விரிவுபடுத்துவதற்காக 70 பொதுப்பள்ளி மாவட்டங்களுடன் கூட்டுசேர்ந்துள்ளது. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{signup_button}}

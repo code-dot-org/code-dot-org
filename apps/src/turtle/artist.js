@@ -53,10 +53,9 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
-import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const CANVAS_HEIGHT = 400;
@@ -70,6 +69,8 @@ const MAX_STICKER_SIZE = 100;
 
 const SMOOTH_ANIMATE_STEP_SIZE = 5;
 const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
+
+const MAX_TICKS_FOR_PREVIEW = 10000;
 
 const REMIX_PROPS = [
   {
@@ -309,9 +310,6 @@ Artist.prototype.init = function(config) {
     showDecoration: () => this.skin.id === 'elsa'
   });
 
-  this.limitedAutoRun =
-    experiments.isEnabled('limited-auto-artist') ||
-    this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
 
   this.executionInfo = {...DEFAULT_EXECUTION_INFO};
@@ -326,18 +324,6 @@ Artist.prototype.init = function(config) {
 
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
-
-  if (
-    config.embed &&
-    config.level.longInstructions &&
-    !config.level.shortInstructions
-  ) {
-    // if we are an embedded level with long instructions but no short
-    // instructions, we want to display CSP-style instructions and not be
-    // centered
-    config.noInstructionsWhenCollapsed = true;
-    config.centerEmbedded = false;
-  }
 
   // Push initial level properties into the Redux store
   const appSpecificConstants = {};
@@ -364,14 +350,8 @@ Artist.prototype.init = function(config) {
 
   if (this.autoRun) {
     this.studioApp_.addChangeHandler(() => {
-      if (this.limitedAutoRun) {
-        if (this.studioApp_.isRunning() && !this.executing) {
-          this.execute();
-        }
-      } else {
-        if (!this.executing) {
-          this.execute();
-        }
+      if (!this.executing) {
+        this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
       }
     });
   }
@@ -615,7 +595,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
   } else {
     code = blocksOrCode;
   }
-  this.evalCode(code);
+  this.evalCode(code, this.executionInfo);
   this.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -759,26 +739,20 @@ Artist.prototype.runButtonClick = function() {
     Blockly.mainBlockSpace.traceOn(true);
   }
   this.studioApp_.attempts++;
-  if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.blockSpaceEditor.lockMovement();
-  }
-  this.execute();
+  this.execute(this.executionInfo);
 };
 
 Artist.prototype.resetButtonClick = function() {
   this.shouldAnimate_ = !this.instant_ && !this.autoRun;
-  if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.blockSpaceEditor.unlockMovement();
-  }
 
-  if (this.autoRun && !this.limitedAutoRun) {
-    this.execute();
+  if (this.autoRun) {
+    this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
   } else {
     this.reset();
   }
 };
 
-Artist.prototype.evalCode = function(code, executionInfo = this.executionInfo) {
+Artist.prototype.evalCode = function(code, executionInfo) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
       Turtle: this.api,
@@ -851,7 +825,7 @@ Artist.prototype.handleExecutionError = function(
 /**
  * Execute the user's code.  Heaven help us...
  */
-Artist.prototype.execute = function() {
+Artist.prototype.execute = function(executionInfo) {
   this.executing = true;
   this.api.log = [];
 
@@ -876,7 +850,7 @@ Artist.prototype.execute = function() {
     }
 
     this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-    this.evalCode(this.code);
+    this.evalCode(this.code, executionInfo);
   }
 
   // api.log now contains a transcript of all the user's actions.
@@ -909,10 +883,6 @@ Artist.prototype.execute = function() {
     this.studioApp_.playAudio('start', {loop: true});
     // animate the transcript.
     this.pid = window.setTimeout(_.bind(this.animate, this), 100);
-    if (this.studioApp_.isUsingBlockly()) {
-      // Disable toolbox while running
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-    }
   } else {
     while (this.animate()) {}
   }
@@ -1350,10 +1320,9 @@ Artist.prototype.displayFeedback_ = function() {
   // many projects. Instead store them as /c/ links, which are much more
   // space-efficient since they store only one copy of identical projects made
   // by different users.
-  const saveToProjectGallery =
-    !level.impressive && PUBLISHABLE_SKINS.includes(this.skin.id);
+  const saveToProjectGallery = PUBLISHABLE_SKINS.includes(this.skin.id);
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
@@ -1366,10 +1335,7 @@ Artist.prototype.displayFeedback_ = function() {
       !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
     alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToLegacyGalleryUrl:
-      level.freePlay && this.response && this.response.save_to_gallery_url,
-    // save to the project gallery instead of the legacy gallery
+    // save to the project gallery
     saveToProjectGallery: saveToProjectGallery,
     disableSaveToGallery: !isSignedIn,
     appStrings: {
@@ -1514,11 +1480,6 @@ Artist.prototype.checkAnswer = function() {
     this.report();
   }
 
-  if (this.studioApp_.isUsingBlockly()) {
-    // reenable toolbox
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  }
-
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
@@ -1549,8 +1510,7 @@ Artist.prototype.report = function(enableOnComplete = true) {
     level: this.level.id,
     result: this.levelComplete,
     testResult: this.testResults,
-    program: encodeURIComponent(this.getUserCode()),
-    save_to_gallery: !!this.level.impressive
+    program: encodeURIComponent(this.getUserCode())
   };
 
   if (enableOnComplete) {

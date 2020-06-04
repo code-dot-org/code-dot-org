@@ -3,6 +3,8 @@
 # As part of this content, it also provides CSS classes which determine
 # responsive visibility for the header itself and the items inside it.
 
+require_relative 'help_header'
+
 class Hamburger
   # These are the CSS classes applied to items in the hamburger,
   # and to the hamburger itself.
@@ -22,6 +24,7 @@ class Hamburger
     show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
+    show_help_options = SHOW_MOBILE
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
@@ -79,7 +82,8 @@ class Hamburger
       show_student_options: show_student_options,
       show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
-      show_intl_about: show_intl_about
+      show_intl_about: show_intl_about,
+      show_help_options: show_help_options
     }
   end
 
@@ -165,6 +169,13 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
+    legal_entries = [
+      {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
+      {title: "legal_tos", url: CDO.code_org_url("/tos")},
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
+
     # Get visibility CSS.
     visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
     visibility = Hamburger.get_visibility(visibility_options)
@@ -177,14 +188,18 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_pegasus_options]), id: "after-teacher"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
     elsif options[:user_type] == "student"
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_pegasus_options]), id: "after-student"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_pegasus_options]), id: "after-signed-out"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_help_options]), id: "after-signed-out"}
     end
+
+    help_contents = HelpHeader.get_help_contents(options)
+    entries.concat help_contents.each {|e| e[:class] = visibility[:show_help_options]}
+    entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
 
     # Pegasus options.
 
@@ -228,6 +243,14 @@ class Hamburger
         class: visibility[:show_pegasus_options]
       }
     end
+
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}legal"),
+      id: "legal_entries",
+      subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
     {entries: entries, visibility: visibility[:hamburger_class]}
   end

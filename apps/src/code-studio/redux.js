@@ -9,14 +9,14 @@ import shareDialog from './components/shareDialogRedux';
 import exportDialog from './components/exportDialogRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
-import libraryShareDialog from './components/libraryShareDialogRedux';
-import applabLibrary from './components/applabLibraryRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
+import projects from '../templates/projects/projectsRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 
 registerReducers({
-  applabLibrary,
   header,
   progress,
   teacherSections,
@@ -26,10 +26,12 @@ registerReducers({
   exportDialog,
   hiddenStage,
   isRtl,
-  libraryShareDialog,
   responsive,
   publishDialog,
-  verifiedTeacher
+  projects,
+  verifiedTeacher,
+  currentUser,
+  arrowDisplay
 });
 
 export {getStore};

@@ -57,7 +57,7 @@
   "setGravityNormal": "gravitacija = normali",
   "setGravityHigh": "gravitacija = didelė",
   "setGravityVeryHigh": "gravitacija = labai didelė",
-  "setGravityTooltip": "Nustato šio lygio\/etapo gravitaciją",
+  "setGravityTooltip": "Nustato šio lygio/etapo gravitaciją",
   "setGround": "žemės paviršius =",
   "setGroundRandom": "žemės paviršius = bet koks",
   "setGroundFlappy": "žemės paviršius = Normalus",

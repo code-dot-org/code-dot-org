@@ -3,59 +3,28 @@ nn:
   data:
     block_categories:
       Actions: Handlingar
-      Loops: Løkker
-      Functions: Funksjonar
-      Color: Farge
-      Brushes: Penslar
-      Math: Matematikk
-      Logic: Logikk
-      Variables: Variablar
-      Number: Tal
-      String: Tekst
-      Image: Bilete
-      Boolean: Boolsk
-      Conditionals: Betingelser
-      Events: Hendingar
-      Games/Score: Spel/Poengsum
-      Comments: Kommentar
-      Category: Kategori
-      Prebuilt: Forhåndsbygde
-      Text: Tekst
-      Picker: Veljar
-      Comment: Kommentar
-      World: Verd
-      Sprites: Sprites
-      Behaviors: Atferd
-      'Variables ': 'Variablar '
-      Default: Standard
-      Locations: Stadar
-      everythingelse: resten
-      Location: Stad
-      numbers: tal
-      Numbers: Tal
-      Input: Inngang
-      Dancers: Dansarar
-      Groups: Grupper
       Advanced: Avansert
-      Start: Start
-      Music: Musikk
-      Dancing: Dansing
-      Sprite: Sprite
-      Brush: Pensel
-      Make Sprite: Lag Sprite
-      Movement: Rørsle
-      Booleans: Boolske verdiar
-      Functional: Funksjonell
-      While Events: Medan-hendingar
-      Sprite Properties: Eigenskapar ved Sprite
-      Predefined: Forhåndsdefinerte
-      test: test
-      test2: test2
-      Use These Blocks: Bruk disse blokkene
-      Do Not Use: Ikke bruk
-      Foo: Foo
-      Name: Namn
-      NEW BLOCKS: NYE BLOKKER
+      Behaviors: Atferd
+      Brushes: Penslar
+      Color: Farge
+      Comment: Kommentar
+      Comments: Kommentar
+      Conditionals: Betingelser
+      Dancers: Dansarar
+      Default: Standard
+      Events: Hendingar
+      Functions: Funksjonar
       'Functions ': 'Funksjonar '
       Game/Score: Spel/Poengsum
-      Function: Funksjon
+      Games/Score: Spel/Poengsum
+      Groups: Grupper
+      Locations: Stadar
+      Logic: Logikk
+      Loops: Løkker
+      Math: Matematikk
+      Numbers: Tal
+      Properties: Eigenskapar
+      Text: Tekst
+      Variables: Variablar
+      'Variables ': 'Variablar '
+      World: Verd

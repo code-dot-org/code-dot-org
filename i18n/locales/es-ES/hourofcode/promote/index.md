@@ -1,36 +1,31 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
-layout: wide
-nav: promote_nav
+title: Promueve
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/es"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HoraDeCódigo' %>
+{{ signup_button }}
 
 # Involucra a tu comunidad en la Hora del Código
 
-## 1. Corre la voz
+## 1. Difunde el mensaje
 
-¡Habla a tus amigos de la **#HoraDelCódigo**!
+¡Cuéntale a tus amigos sobre la **#HoraDelCódigo**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
-## 2. Pide a tu escuela que ofrezca una "Hora del Código"
+## 2. Pide a tu escuela que organice una Hora del Código
 
-[Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a su director y desafíe a cada clase de su escuela para que se inscriba.
+[Envía este correo electrónico]({{ promote/sample_emails }}) a tu director y desafía a cada clase de tu escuela a que se inscriba.
 
-## 3. Pide a tu empresa que se involucre
+## 3. Pide a tu empleador que participe
 
-[Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a su gerente o director general de la compañía.
+[Envía este correo electrónico]({{ promote/sample_emails }}) a tu gerente o al director general de la empresa.
 
-## Promociona la "Hora del Código" dentro de tu comunidad
+## 4. Promueve la Hora del Código dentro de tu comunidad
 
-[Recluta a un grupo local](%= resolve_url('/promote/resources#sample-emails') %): niños /niñas del club scouts, iglesia, Universidad, grupo de veteranos, sindicato o incluso algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](%= resolve_url('/promote/resources') %) para su propio evento.
+[Recluta a un grupo local]({{ promote/sample_emails }}): clubes de niñas y niños exploradores, iglesias, universidades, grupos de veteranos, sindicatos o, incluso, algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Utiliza estos [carteles, pancartas, etiquetas adhesivas, videos y demás recursos](/promote/resources) en tu propio evento.
 
-## 5. Pídele a un funcionario local electo que apoye la Hora del Código
+## 5. Pide a un funcionario local electo que apoye la Hora del Código
 
-[Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a sus representantes locales, Concejo Municipal o junta escolar e invítelos a visitar su escuela para la Hora de Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
+[Envía este correo electrónico]({{ promote/sample_emails }}) a tus representantes locales, al concejo municipal o a la junta escolar, e invítalos a visitar tu escuela durante la Hora del Código. Puede ayudarte a apoyar las ciencias de la computación en tu zona durante más que una hora.
 
-<%= view :signup_button %>
+{{ signup_button }}

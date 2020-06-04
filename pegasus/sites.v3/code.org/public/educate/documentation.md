@@ -1,7 +1,7 @@
 # Documentation and Walkthroughs
 
 ### App Lab topics and features
-- [Here's](https://docs.code.org/applab/) a comprehensive library of all App Lab functions and code commands!
+- [Here's](https://studio.code.org/docs/applab/) a comprehensive library of all App Lab functions and code commands!
 - [Sharing screens from one app to another](https://code.org/applab/docs/import)
 - [Using the Data browser](http://teacherblog.code.org/post/153869146169/beginners-can-explore-and-edit-data-with-app-labs)
 

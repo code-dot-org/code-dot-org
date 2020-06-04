@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-06-15T18:31:12.000Z",
+  "created_at": "2018-12-14T19:32:14.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -33,10 +33,25 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "Teacher markdown for the original level",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-24 10:33:13 -0400\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":26,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

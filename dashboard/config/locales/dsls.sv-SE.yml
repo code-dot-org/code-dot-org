@@ -1,370 +1,1942 @@
 ---
-sv:
+sv-SE:
   data:
-    external:
-      Begin planning your project:
-        description here: Beskrivning här
-        title: titel
-      Begin planning your project_2018:
-        description here: Beskrivning här
-      Prepare for your presentation:
-        description here: Beskrivning här
-        title: titel
-    match:
-      2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Matcha knapp- kombinationen
-          med dansrörelserna.
-        Matching: Matchning
-      2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>D</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Matchning
-        Use the key to match each code to its letter: Använd nyckeln för att matcha
-          varje kod till sin bokstav
-      2-3 Graph Paper Match 1:
-        Match the grid to the program.: Matcha nätet till programmet.
-        Matching: Matchning
-      2-3 Maze Match 2:
-        Instructions: Instruktioner
-        Match the puzzles to the blocks: Matcha pusslet till blocken
-        Maze Match: Labyrint matchning
-      2-3 artist loops match 1:
-        Match the loop to the shape: Matcha slingan till formen
-      2-3 artist match 1:
-        Artist Matching: Artist matchande
-        Match the shape with the blocks that complete it.: Matcha formen med de block
-          som slutför den.
-      2-3 maze match 1:
-        Match the puzzles to the blocks: Matcha pusslet till blocken
-        Maze Match One: Labyrint matchar en
-      4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>1)</h4>"
-        "<h4>3)</h4>": "<h4>1)</h4>"
-        "<h4>4)</h4>": "<h4>1)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Lägg till spelare 1 rulla
-          till totalpoäng</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Jämför spelar- poäng
-          för att se vem som vinner</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Spelare 1 rullar tärningen</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Set spelare 1 poäng  0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Matcha
-          stegen i Dice Race spelet i den ordning som de ska visas i algoritmen.
-        Matching: Matchning
-      4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
-          0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
-          1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
-          6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Hjul/sida: 2 <br/>Fönster/sida:
-          2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Vart
-          och ett av dessa fordon har brutits ned i mindre bitar. Matcha varje fordon
-          med dess lista av delar.
-        Matching: Matchning
-      4-5 Suncatchers Match 1:
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STJÄRNA</h4>"
-        Match each program to the word it makes, using the provided group of skills.: Matcha
-          varje program till ordet som det gör, med hjälp av medföljande grupp av
-          kunskaper.
-        Matching: Matchning
-      4-5 maze match 1:
-        Instructions: Instruktioner
-        Match the puzzles to the blocks: Matcha pusslet till blocken
-        Maze Match: Labyrint matchning
-      K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Matcha formerna baserat på typ.
-        Matching: Matchning
-      K-1 Bee Loops Match 1:
-        Match the blocks: Matcha blocken
-        Matching: Matchning
-      K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Matcha knapp- kombinationen
-          med dansrörelserna.
-        Matching: Matchning
-      K-1 Maze Match 1:
-        Instructions: Instruktioner
-        Match the puzzles and blocks: Matcha pussel och block
-        Matching: Matchning
-    multi:
+    dsls:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Välj en algoritm till den givna
-          bilden.
-        Multiple Choice: Flervalsfråga
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Börja
-          med en fyrkant <br/> sätta ett parallellogram ovanför fyrkanten <br/> sätt
-          en triangel till höger om parallellogrammet
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Börja
-          med en fyrkant <br/> sätt en triangel ovanför fyrkanten <br/> sätt en triangel
-          under fyrkanten
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Börja
-          med en fyrkant <br/> sätt en triangel under fyrkanten <br/> sätt ett parallelogram
-          till höger om triangeln
-        0: "? Börja med en fyrkant <br/> sätt en triangel till höger om fyrkanten
-          <br/> sätt ett parallellogram nedanför fyrkanten <br/> rSätt triangeln till
-          höger om parallellogrammet"
-        1: ": Start med en fyrkant <br/> sätt en triangel till höger om fyrkanten
-          <br/> sätt ett parallellogram nedanför fyrkanten <br/> Sätt triangeln till
-          höger om parallellogrammet"
+        answers:
+        - text: Börja med en fyrkant <br/> sätt en triangel ovanför fyrkanten <br/>
+            sätt en triangel under fyrkanten
+        - correct: true
+        - text: Börja med en fyrkant <br/> sätta ett parallellogram ovanför fyrkanten
+            <br/> sätt en triangel till höger om parallellogrammet
+        - text: Börja med en fyrkant <br/> sätt en triangel under fyrkanten <br/>
+            sätt ett parallelogram till höger om triangeln
+        questions:
+        - text: Välj en algoritm till den givna bilden.
+        title: Flervalsfråga
       2-3 Algorithms Multi 2:
-        Multiple Choice: Flervalsfråga
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Börja
-          med en triangel <br/> sätta en fyrkant under triangeln <br/> sätt en annan
-          triangel under fyrkanten
-        Which image does <em>not</em> follow this algorithm?: Vilken bild följer <em>inte</em>  denna
-          algoritm?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        content1: Börja med en triangel <br/> sätta en fyrkant under triangeln <br/>
+          sätt en annan triangel under fyrkanten
+        questions:
+        - text: Vilken bild följer <em>inte</em>  denna algoritm?
+        title: Flervalsfråga
+      2-3 Big Event Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Matcha knapp- kombinationen med dansrörelserna.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Matchning
+      2-3 Binary Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Använd nyckeln för att matcha varje kod till sin bokstav
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>D</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        title: Matchning
       2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: Enligt
-          reglerna för spelet, vilken uppsättning kort har rätt poäng?
-        Multiple Choice: Flervalsfråga
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Enligt reglerna för spelet, vilken uppsättning kort har rätt poäng?
+        title: Flervalsfråga
       2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Hur vill du förenkla denna
-          sekvens med slingor?
-        Multiple Choice: Flervalsfråga
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Hur vill du förenkla denna sekvens med slingor?
+        title: Flervalsfråga
+      2-3 Graph Paper Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Matcha nätet till programmet.
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Matchning
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which program makes this image?: Vilket program gör denna bild?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilket program gör denna bild?
+        title: Flervalsfråga
+      2-3 Maze Match 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Matcha pusslet till blocken
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labyrint matchning
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Labyrint Flerval
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Labyrint Flerval
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Flervalsfråga
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Flervalsfråga
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Flervalsfråga
-        Which image-program combo does not contain mistakes?: Vilket bild-program
-          combo innehåller inga misstag?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Vilket bild-program combo innehåller inga misstag?
+        title: Flervalsfråga
+      2-3 artist debug multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Artist Funktioner Flerval Ett
-        Pick the correct blocks to draw this image using the given functions: Välj
-          de korrekta blocken för att rita denna bild med de givna funktionerna
+        answers:
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Välj de korrekta blocken för att rita denna bild med de givna funktionerna
+        title: Artist Funktioner Flerval Ett
+      2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Matcha slingan till formen
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Flerval
-        Which shape is made by this loop?: Vilken form är gjord av denna loop?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilken form är gjord av denna loop?
+        title: Artist Loops Flerval
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Artist Loops Flerval
-        Which shape is made by this program?: Vilken form är gjord av detta program?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Vilken form är gjord av detta program?
+        title: Artist Loops Flerval
+      2-3 artist match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Matcha formen med de block som slutför den.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Artist matchande
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: Vilken jämförelse nedan är sann?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilken jämförelse nedan är sann?
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: Välj de bästa blocken.
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Välj de bästa blocken.
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Bee Loopar Flerval Ett
-        Which blocks collect all of the nectar?: Vilket block samlar all nektar?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Vilket block samlar all nektar?
+        title: Bee Loopar Flerval Ett
+      2-3 maze match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Matcha pusslet till blocken
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labyrint matchar en
       2-3 maze multi 1:
-        Maze Multiple Choice One: Labyrint Flerval Ett
-        Which set of blocks is the correct answer?: Vilken uppsättning block är det
-          rätta svaret?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilken uppsättning block är det rätta svaret?
+        title: Labyrint Flerval Ett
+      4-5 Algorithms Match 1:
+        answers:
+        - text: "<h4>Set spelare 1 poäng  0</h4>"
+        - text: "<h4>Spelare 1 rullar tärningen</h4>"
+        - text: "<h4>Lägg till spelare 1 rulla till totalpoäng</h4>"
+        - text: "<h4>Jämför spelar- poäng för att se vem som vinner</h4>"
+        content1: Matcha stegen i Dice Race spelet i den ordning som de ska visas
+          i algoritmen.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>1)</h4>"
+        - text: "<h4>1)</h4>"
+        - text: "<h4>1)</h4>"
+        title: Matchning
       4-5 Algorithms Multi 1:
-        Baking cookies: Baka kakor
-        Banana: Banan
-        Brushing your teeth: Borsta tänderna
-        Multiple Choice: Flervalsfråga
-        Shopping from a grocery list: Handla från en inköpslista
-        Which one of these items is hardest to describe an algorithm for?: Vilken
-          av dessa objekt är svårast att skriva en algoritm för?
+        answers:
+        - text: Borsta tänderna
+        - text: Baka kakor
+        - text: Handla från en inköpslista
+        - text: Banan
+          correct: true
+        questions:
+        - text: Vilken av dessa objekt är svårast att skriva en algoritm för?
+        title: Flervalsfråga
+      4-5 Computational Thinking Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: Vart och ett av dessa fordon har brutits ned i mindre bitar. Matcha
+          varje fordon med dess lista av delar.
+        questions:
+        - text: "<h3>Hjul/sida: 2 <br/>Fönster/sida: 0</h3>"
+        - text: "<h3>Hjul/sida: 2 <br/>Fönster/sida: 1</h3>"
+        - text: "<h3>Hjul/sida: 2 <br/>Fönster/sida: 6</h3>"
+        - text: "<h3>Hjul/sida: 2 <br/>Fönster/sida: 2</h3>"
+        title: Matchning
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene är en _____ stad.
-        0: "? Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så
-          att alla tre matchar samma mönster som mallen?"
-        1: ": Här är tre meningar. Vilken av mallarna nedan abstraherar korrekt så
-          att alla tre matchar samma mönster som mallen?"
-        Multiple Choice: Flervalsfråga
-        Seattle _____ a _____ _____.: Seattle _____ en _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          är en storstad. <br/>Eugene är en medelstor stad <br/> Hillview är en liten
-          stad.
-        _____ is _____ a _____.: _____ är _____ en _____.
-        _____ is a _____ city.: _____ är en _____ stad.
+        answers:
+        - text: Seattle _____ en _____ _____.
+        - text: _____ är en _____ stad.
+          correct: true
+        - text: _____ är _____ en _____.
+        - text: Eugene är en _____ stad.
+        questions:
+        - text: Seattle är en storstad. <br/>Eugene är en medelstor stad <br/> Hillview
+            är en liten stad.
+        title: Flervalsfråga
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which of these pictures best represents crowdsourcing?: Vilken av dessa bilder
-          representerar bäst crowdsourcing?
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - text: Vilken av dessa bilder representerar bäst crowdsourcing?
+        title: Flervalsfråga
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Borsta håret
-        Cleaning your room: Städa ditt rum
-        Eating your dessert: Ät din dessert
-        Multiple Choice: Flervalsfråga
-        Washing your face: Tvätta ansiktet
-        Which one of these activities would be best for practicing crowdsourcing?: Vilken
-          av dessa verksamheter skulle vara bäst för crowdsourcing?
+        answers:
+        - text: Städa ditt rum
+          correct: true
+        - text: Ät din dessert
+        - text: Borsta håret
+        - text: Tvätta ansiktet
+        questions:
+        - text: Vilken av dessa verksamheter skulle vara bäst för crowdsourcing?
+        title: Flervalsfråga
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which piece of information listed below is okay to share on the internet?: Vilken
-          del av informationen nedan är okej att dela på internet?
-        Your address: Din adress
-        Your birthday: Din födelsedag
-        Your favorite food: Din favoritmat
-        Your parent's credit card number: Dina föräldrars kreditkortsnummer
+        answers:
+        - text: Din födelsedag
+        - text: Din favoritmat
+          correct: true
+        - text: Din adress
+        - text: Dina föräldrars kreditkortsnummer
+        questions:
+        - text: Vilken del av informationen nedan är okej att dela på internet?
+        title: Flervalsfråga
       4-5 Internet Multi 1:
-        Multiple Choice: Flervalsfråga
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: När
-          du försöker logga in på code.org, vilken IP-adress är mest sannolikt att
-          DNS-servern tar dig till?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: När du försöker logga in på code.org, vilken IP-adress är mest sannolikt
+            att DNS-servern tar dig till?
+        title: Flervalsfråga
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Om
-          DNS-servern har skickat dig till sidan på IP-adressen 100.42.50.110, vilken
-          hemsida är du på?
-        Multiple Choice: Flervalsfråga
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Om DNS-servern har skickat dig till sidan på IP-adressen 100.42.50.110,
+            vilken hemsida är du på?
+        title: Flervalsfråga
       4-5 Songwriting Multi 1:
-        0: "? Flugor i mjölken <br/> Shoo, fluga, shoo, <br/> flugor i mjölken, <br/>
-          Shoo, fluga, shoo, <br/> flugor i mjölken, <br/> Shoo, fluga, shoo, <br/>
-          hoppa till min Lou, min älskling."
-        1: ":  Flugor i mjölken <br/> Shoo, fluga, shoo, <br/> flugor i mjölken, <br/>
-          Shoo, fluga, shoo, <br/> flugor i mjölken, <br/> Shoo, fluga, shoo, <br/>
-          hoppa till min Lou, min älskling."
-        Lou, Lou, skip to my Lou,: Lou Lou, hoppa till min Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou, <br/> Lou,
-          Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling.
-        2: "? Lou, Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou, <br/>
-          Lou, Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling. <br/>
-          <br/><p>Flugor i mjölken, <br/>Shoo, fluga, shoo,"
-        3: ": Lou, Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou, <br/>
-          Lou, Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling. <br/>
-          <br/><p>Flugor i mjölken, <br/>Shoo, fluga, shoo,"
-        Multiple Choice: Flervalsfråga
-        4: "? Vilken är den största bit av låten som du kan definiera som refräng
-          så att refrängen repeteras exakt varje gång den är kallad?"
-        5: ": Vilken är den största bit av låten som du kan definiera som refräng
-          så att refrängen repeteras exakt varje gång den är kallad?"
+        answers:
+        - text: Lou Lou, hoppa till min Lou,
+        - text: Lou, Lou, hoppa till min Lou, <br/> Lou, Lou, hoppa till min Lou,
+            <br/> Lou, Lou, hoppa till min Lou, <br/> hoppa till min Lou, min älskling.
+          correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Flervalsfråga
+      4-5 Suncatchers Match 1:
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STJÄRNA</h4>"
+        - text: "<h4>RAMP</h4>"
+        content1: Matcha varje program till ordet som det gör, med hjälp av medföljande
+          grupp av kunskaper.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Matchning
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Vilket
-          av programmen nedan <em>inte</em> skapar exakt samma sekvens som programmet
-          1?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilket av programmen nedan <em>inte</em> skapar exakt samma sekvens
+            som programmet 1?
+        title: Flervalsfråga
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Flerval
-        Which blocks will create the design?: Vilka block kommer att skapa designen?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilka block kommer att skapa designen?
+        title: Artist Loops Flerval
       4-5 artist multi 1:
-        Artist Multiple Choice: Artist Flerval
-        Which blocks draw a rectangle with a perimeter of 100?: Vilket block ritar
-          en rektangel med en omkrets av 100?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilket block ritar en rektangel med en omkrets av 100?
+        title: Artist Flerval
       4-5 artist multi 2:
-        Artist Multiple Choice: Artist Flerval
-        Which drawing is symmetric?: Vilken teckning är symmetrisk?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilken teckning är symmetrisk?
+        title: Artist Flerval
       4-5 bee conditionals multi 1:
-        0: "? En lila blomma kan ha antingen 3, 2 eller 1 nektar, men du vet inte
-          hur många. Vilket block kontrollerar och samlar in nektar från en lila blomma
-          korrekt?"
-        1: "? En lila blomma kan ha antingen 3, 2 eller 1 nektar, men du vet inte
-          hur många. Vilket block kontrollerar och samlar in nektar från en lila blomma
-          korrekt?"
-        Bee Conditionals Multiple Choice: Bee Villkorssatser Flerval
-        Choose the best blocks.: Välj de bästa blocken.
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Välj de bästa blocken.
+        title: Bee Villkorssatser Flerval
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bee Felsökning Flerval
-        Which version of the function will work?: Vilken version av funktionen fungerar?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilken version av funktionen fungerar?
+        title: Bee Felsökning Flerval
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Bee Loops Flerval
-        Which blocks will solve the puzzle?: Vilka block löser pusslet?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Vilka block löser pusslet?
+        title: Bee Loops Flerval
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Labyrint Villkorssatser Flerval
-        Which blocks solve the puzzle?: Vilket block löser detta pussel?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Vilket block löser detta pussel?
+        title: Labyrint Villkorssatser Flerval
+      4-5 maze match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content1: Matcha pusslet till blocken
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labyrint matchning
       4-5 maze multi 1:
-        Maze Multiple Choice: Labyrint Flerval
-        Which blocks solve the puzzle?: Vilket block löser detta pussel?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Vilket block löser detta pussel?
+        title: Labyrint Flerval
+      Begin planning your project:
+        content1: Beskrivning här
+      Begin planning your project_2018:
+        content1: Beskrivning här
+      Begin planning your project_2018_2019:
+        content1: Beskrivning här
+      CSD Header Size MC:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 Design Project:
+        content1: Beskrivning här
+      CSD U2 Design Project_2018:
+        content1: Beskrivning här
+      CSD U2 Design Project_2018_2019:
+        content1: Beskrivning här
+      CSD U2 L1 Overview:
+        content1: Beskrivning här
+      CSD U2 L2 Overview:
+        content1: Beskrivning här
+      CSD U2 L3 Overview:
+        content1: Beskrivning här
+      CSD U2 L4 Overview:
+        content1: Beskrivning här
+      CSD U2 L5 Overview:
+        content1: Beskrivning här
+      CSD U2 L6 Overview:
+        content1: Beskrivning här
+      CSD U2 Lesson 6 Overview:
+        content1: Beskrivning här
+      CSD U2 expand project:
+        content1: Beskrivning här
+      CSD U2 expand project_2018:
+        content1: Beskrivning här
+      CSD U2 expand project_2018_2019:
+        content1: Beskrivning här
+      CSD U2 image debug match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide:
+        content1: Beskrivning här
+      CSD U2 project guide_2018:
+        content1: Beskrivning här
+      CSD U2 project guide_2018_2019:
+        content1: Beskrivning här
+      CSD U3 - conditionals - Matching:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titel
+      CSD U3 Boolean MC_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titel
+      CSD U3 Boolean MC_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titel
+      CSD U3 Card Examples_2018:
+        content1: Beskrivning här
+      CSD U3 Card Examples_2018_2019:
+        content1: Beskrivning här
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Keypress Matching:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprites intro predict multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 combining rep:
+        content1: Beskrivning här
+      CSD U3 combining rep_2018:
+        content1: Beskrivning här
+      CSD U3 combining rep_2018_2019:
+        content1: Beskrivning här
+      CSD U3 drawSprites placement match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: Beskrivning här
+      CSD U3 game intro_2018:
+        content1: Beskrivning här
+      CSD U3 game intro_2018_2019:
+        content1: Beskrivning här
+      CSD U3 platform intro:
+        content1: Beskrivning här
+      CSD U3 platform intro_2018:
+        content1: Beskrivning här
+      CSD U3 platform intro_2018_2019:
+        content1: Beskrivning här
+      CSD U5 Encryption 1:
+        content1: Beskrivning här
+      CSD U5 Encryption 1_2018:
+        content1: Beskrivning här
+      CSD U5 Encryption 1_2018_2019:
+        content1: Beskrivning här
+      CSD U5 Encryption 2:
+        content1: Beskrivning här
+      CSD U5 Encryption 2_2018:
+        content1: Beskrivning här
+      CSD U5 Encryption 2_2018_2019:
+        content1: Beskrivning här
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: Beskrivning här
+      CSD U5 crosstab warmup:
+        content1: Beskrivning här
+      CSD U5 crosstab warmup_2018:
+        content1: Beskrivning här
+      CSD U5 crosstab warmup_2018_2019:
+        content1: Beskrivning här
+      CSD U5 data visualization:
+        content1: Beskrivning här
+      CSD U5 data visualization_2018:
+        content1: Beskrivning här
+      CSD U5 data visualization_2018_2019:
+        content1: Beskrivning här
+      CSD U5 student record:
+        content1: Beskrivning här
+      CSD U5 student record_2018:
+        content1: Beskrivning här
+      CSD U5 student record_2018_2019:
+        content1: Beskrivning här
+      CSD U6 LED create intro:
+        content1: Beskrivning här
+      CSD U6 LED create intro_2018:
+        content1: Beskrivning här
+      CSD U6 LED create intro_2018_2019:
+        content1: Beskrivning här
+      CSD U6 array multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 array multi_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 array multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro:
+        content1: Beskrivning här
+      CSD U6 final intro_2018:
+        content1: Beskrivning här
+      CSD U6 final intro_2018_2019:
+        content1: Beskrivning här
+      CSD U6 setProperty predict multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "\"# Fortsätt dansa! \n\nI del 2, skapar du ditt eget projekt. Här
+          finns inga huvudbryn - istället finns ett gäng projekt som visar olika sätt
+          att skapa mer komplexa dansparties. \n\nDu kan göra dessa nivåer _i valfri
+          ordning_. Hoppa runt och kolla på hur något gjordes på en tidigare nivå,
+          eller kombinera koncept projekten emellan. Prova allt, välj en favorit,
+          och lägg tiden på att lägga till saker till projektet så att det blir ditt
+          eget. \n\n<a class=\"\"btn btn-large btn-primary next-stage submitButton
+          pull-right\"\">Continue</a> \n\n<div class=\"\"clearfix\"\"></div>\n\n <div
+          style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"2\"\">\n <h2>\nBack
+          and Forth\n</h2> \n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>\n\n
+          </div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"3\"\">
+          \n<h2>\nMore Buttons\n</h2> \n\n<img src=\"\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"\"></a>\n\n
+          </div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"4\"\">
+          \n<h2> \nGet In Formation\n</h2>\n\n <img src=\"\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"\"></a>\n\n
+          </div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"5\"\">
+          \n<h2> \nWhere'd They Go?\n </h2> \n\n<img src=\"\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"\"></a>
+          \n\n</div>\n\n <div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"6\"\">\n
+          <h2> \nDance Crews \n</h2>\n\n <img src=\"\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"\"></a>\n\n
+          </div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"7\"\">\n
+          <h2> \nQuarter Notes</h2>\n\n <img src=\"\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"\"></a>\n\n
+          </div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"8\"\">\n
+          <h2> \nBass, Mid, Treble\n </h2>\n\n <img src=\"\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"9\"\">\n
+          <h2>\nSpeed It Up, Slow It Down\n</h2> \n\n<img src=\"\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"\"></a>\n\n
+          </div>\n\"\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          "# Fortsätt dansa!
+
+          I del 2 kommer du att skapa ditt eget projekt. Här finns inga pussel – istället finns det flera projekt som visar olika sätt att skapa mer komplexa danspartyn.
+
+          Du kan göra de här nivåerna _i vilken ordning du vill_. Titta runt för att se hur något har gjorts på en tidigare nivå eller kombinera koncept från olika projekt. Prova dem alla, välj dina favoriter och använd din tid till att utveckla det projektet så att det blir ditt eget.
+
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Fortsätt</a>
+
+          <div class=""clearfix""></div>
+
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""2"">
+          <h2>
+          Fram och tillbaka
+          <h2>
+
+          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""3"">
+          <h2>
+          Fler knappar
+          <h2>
+
+          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
+
+          </div>
+          <div style=""float: left; margin: 10px"">
+          <a href=""4"">
+          <h2>
+          Få information
+          <h2>
+
+          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""5"">
+          <h2>
+          Vart tog de vägen?
+          <h2>
+
+          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""6"">
+          <h2>
+          Dansgrupp
+          <h2>
+
+          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""7"">
+          <h2>
+          Fjärdedelsnoter
+          <h2>
+
+          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""8"">
+          <h2>
+          Bas, mellan, diskant
+          <h2>
+
+          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""9"">
+          <h2>
+          Öka hastigheten, sakta ned
+          <h2>
+
+          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
+
+          </div>"
+      Internet Simulator Setup:
+        content1: Beskrivning här
+      Internet Simulator Setup 2:
+        content1: Beskrivning här
+      Internet Simulator Setup 3:
+        content1: Beskrivning här
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which blocks solve this puzzle?: Vilket block löser detta pussel?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilket block löser detta pussel?
+        title: Flervalsfråga
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Flervalsfråga
-        Which blocks draw the square?: Vilket block ritar fyrkanten?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Vilket block ritar fyrkanten?
+        title: Flervalsfråga
+      K-1 Artist 2 Match 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Matcha formerna baserat på typ.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Matchning
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: Hur många nektar är detta?
-        Multiple Choice: Flervalsfråga
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Hur många nektar är detta?
+        title: Flervalsfråga
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: Hur många nektar är detta?
-        Multiple Choice: Flervalsfråga
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Hur många nektar är detta?
+        title: Flervalsfråga
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Matcha blocken
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Matchning
+      K-1 Big Event Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        content2: Matcha knapp- kombinationen med dansrörelserna.
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Matchning
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Vilket
-          djur har det digitala fotavtryck som lämnar honom eller henne i den <strong>mest
-          osäkra</strong>?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Vilket djur har det digitala fotavtryck som lämnar honom eller henne
+            i den <strong>mest osäkra</strong>?
+        title: Flervalsfråga
       K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Hur vill du förenkla denna
-          sekvens med slingor?
-        Multiple Choice: Flervalsfråga
+        answers:
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Hur vill du förenkla denna sekvens med slingor?
+        title: Flervalsfråga
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which arrow gets the Flurb to the treasure?: Vilken pil får Flurb till skatten?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilken pil får Flurb till skatten?
+        title: Flervalsfråga
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which information should you <strong>not</strong> share online?: Vilken information
-          bör du <strong>inte</strong> dela online?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilken information bör du <strong>inte</strong> dela online?
+        title: Flervalsfråga
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which choice should be the final block?: Vilket val bör vara det sista blocket?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Vilket val bör vara det sista blocket?
+        title: Flervalsfråga
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which repeat block is the same?: Vilka 'upprepa' block är identiska?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilka 'upprepa' block är identiska?
+        title: Flervalsfråga
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Flervalsfråga
-        Pick the correct repeat block.: Väljdet rätt 'upprepa'- blocket.
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Väljdet rätt 'upprepa'- blocket.
+        title: Flervalsfråga
+      K-1 Maze Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Matcha pussel och block
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: Matchning
       K-1 Maze Multiple Choice 2:
-        Maze: Labyrint
-        Which answer solves this level?: Vilket svar löser denna nivå?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilket svar löser denna nivå?
+        title: Labyrint
       K-1 Move It Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which algorithm gets the Flurb to the flowers?: Vilken algoritm får Flurb
-          till blommorna?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Vilken algoritm får Flurb till blommorna?
+        title: Flervalsfråga
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which step should go at the beginning of this algorithm?: Vilka steg ska stå
-          i början av denna algoritm?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Vilka steg ska stå i början av denna algoritm?
+        title: Flervalsfråga
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Flervalsfråga
-        Which step should fill in the blank for this algorithm?: Vilket/vilka steg
-          ska fylla i tomrummet i den här algoritmen?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilket/vilka steg ska fylla i tomrummet i den här algoritmen?
+        title: Flervalsfråga
       K-1 Word Search Multi 1:
-        Multiple Choice: Flervalsfråga
-        Which blocks spell "MOVE"?: Vilka block stavar ordet 'MOVE'(flytta)?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Vilka block stavar ordet 'MOVE'(flytta)?
+        title: Flervalsfråga
       K-1 Word Search Multi 3:
-        Multiple Choice: Flervalsfråga
-        SOUTH: SÖDER
-        Which word is spelled?: Vilket ord stavas?
+        answers:
+        - {}
+        - correct: true
+        - text: SÖDER
+        questions:
+        - text: Vilket ord stavas?
+        title: Flervalsfråga
+      Multi-Screen Apps:
+        content1: Beskrivning här
+      New Challenge Introduction:
+        content1: Beskrivning här
+      OPD-K5 Reviewing Reflections:
+        content1: Beskrivning här
+      OPD-K5 Stage3aGo:
+        content1: Beskrivning här
+      OPD-K5 Stage3aGo_copy:
+        content1: Beskrivning här
+      OPD-K5 conditionals introduced:
+        content1: Beskrivning här
+      OPD-K5 debugging:
+        content1: Beskrivning här
+      OPD-K5 diving deeper intro:
+        content1: Beskrivning här
+      OPD-K5 events introduced:
+        content1: Beskrivning här
+      OPD-K5 for loops:
+        content1: Beskrivning här
+      OPD-K5 for loops intro:
+        content1: Beskrivning här
+      OPD-K5 for loops introduction:
+        content1: Beskrivning här
+      OPD-K5 functions introduced:
+        content1: Beskrivning här
+      OPD-K5 journaling:
+        content1: Beskrivning här
+      OPD-K5 lesson implementation planning:
+        content1: Beskrivning här
+      OPD-K5 lesson plans:
+        content1: Beskrivning här
+      OPD-K5 loops introduced:
+        content1: Beskrivning här
+      OPD-K5 project:
+        content1: Beskrivning här
+      OPD-K5 projects introduction:
+        content1: Beskrivning här
+      OPD-K5 role_of_teacher:
+        content1: Beskrivning här
+      OPD-K5 sequencing introduced:
+        content1: Beskrivning här
+      OPD-K5 sprite lab:
+        content1: Beskrivning här
+      OPD-K5 sprite lab introduction:
+        content1: Beskrivning här
+      OPD-K5 sprite lab unplugged:
+        content1: Beskrivning här
+      OPD-K5 sprite lab video:
+        content1: Beskrivning här
+      OPD-K5 types of lessons:
+        content1: Beskrivning här
+      OPD-K5 using lesson plans:
+        content1: Beskrivning här
+      OPD-K5 variables:
+        content1: Beskrivning här
+      OPD-K5 variables introduction:
+        content1: Beskrivning här
+      OPD-K5 variables unplugged:
+        content1: Beskrivning här
+      OPD-K5 where to next:
+        content1: Beskrivning här
+      OPD-K5-projects-1:
+        content1: Beskrivning här
+      Prepare for your presentation:
+        content1: Beskrivning här
+      'Technique: Frequency Analysis':
+        content1: Beskrivning här
+      Terminology Recap:
+        content1: Beskrivning här
+      behaviors 1 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Fel
+        questions:
+        - {}
+      behaviors 4 predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Fel
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
+        questions:
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_ramp13:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_scrat_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_bee_functions_predict1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

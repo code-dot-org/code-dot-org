@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
-import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '../../../../templates/SafeMarkdown';
 
 const styles = {
   subtitle: {
@@ -135,7 +135,7 @@ export default class EligibilityConfirmDialog extends Component {
           <label>
             <div>{i18n.verifySignature()}</div>
             <div style={styles.signature}>
-              <UnsafeRenderedMarkdown markdown={verifySignatureMd} />
+              <SafeMarkdown markdown={verifySignatureMd} />
             </div>
             <input
               value={this.state.signature}
@@ -146,16 +146,18 @@ export default class EligibilityConfirmDialog extends Component {
           </label>
         </form>
         <div>
-          <UnsafeRenderedMarkdown markdown={contactSupportMd} />
+          <SafeMarkdown markdown={contactSupportMd} />
         </div>
         {this.state.error && <div style={styles.error}>{this.state.error}</div>}
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.props.onCancel}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             text={i18n.getCode()}
             onClick={this.handleSubmit}
             disabled={!this.state.validInput || this.state.submitting}

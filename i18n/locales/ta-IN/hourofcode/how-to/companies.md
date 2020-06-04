@@ -1,100 +1,208 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
-layout: wide
-nav: how_to_nav
+title: ஒரு Hour of Code –ஐ எவ்வாறு நடத்துவது - நிறுவனங்கள்
 ---
-<%= view :signup_button %>
+
+{{signup_button}}
 
 # உங்கள் நிறுவனத்தின் கோட் ஹவர் எப்படி கொண்டு வர வேண்டும்
 
-### Find out how you and your employees can inspire students to try computer science!
+### நீங்கள் மற்றும் உங்கள் ஊழியர்கள் கணினி அறிவியல் முயற்சி மாணவர்கள் ஊக்குவிக்கும் எப்படி கண்டுபிடிக்க!
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## உள்ளூர் வகுப்பறையுடன் இணைத்து, கோடரியின் மணிநேரத்திற்குத் தன்னார்வத் தொண்டு
 
-Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+ode.org உங்கள் ஊழியர்களுக்கு உள்ளூர் வகுப்பறைகளுடன் மணிநேர குறியீட்டைச் செய்யும் [ இணைக்க ]({{url / volunteer }a>) வாய்ப்பை வழங்குகிறது, அங்கு அவர்கள் தொழில்நுட்ப தொழில் அனுபவத்தைப் பகிர்ந்து கொள்ளவும், மாணவர்களை படிக்க ஊக்குவிக்கவும் முடியும் கணினி அறிவியல். <button> தன்னார்வலராக பதிவு செய்க! </ பட்டன்> </a> <br /> <br /></p> 
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+<p>
+  பணியாளர்களை ஊக்குவிப்பது மற்றும் உங்கள் பணியாளர்களை வகுப்பறைகளுடன் இணைப்பது பற்றிய கூடுதல் வழிமுறைகளுக்கு, எங்கள் <a href=" {{localized_files/hoc_corporate_toolkit }a>"> கார்ப்பரேட் கூட்டாளர்களுக்கான வழிகாட்டி </a> ஐப் பாருங்கள்.
+</p>
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+<h2>
+  கூடுதல் வழிகளில் நிறுவனங்கள் கோடரியின் நேரத்தை ஆதரிக்க முடியும்
+</h2>
 
-## Additional ways companies can support the Hour of Code
+<ul>
+  <li>
+    கணினி அறிவியலின் முக்கியத்துவத்தை வலியுறுத்துவதற்கும், பணியாளர்களைப் பரப்ப ஊக்குவிப்பதற்கும் <a href="== {விளம்பரப்படுத்தவும் / மாதிரி_இமெயில்கள் }a>"> நிறுவன அளவிலான மின்னஞ்சலை அனுப்பவும் </a> உங்கள் தலைமை நிர்வாக அதிகாரியிடம் கேளுங்கள்.
+  </li>
+  <li>
+    <a href="αα urls/learn }a>"> செயல்பாடுகளை </a> முயற்சிக்க சக ஊழியர்களுடன் ஒரு மணிநேர குறியீட்டு இனிய நேரத்தை வழங்கவும்.
+  </li>
+  <li>
+    மாணவர்களின் ஒரு உள்ளூர் வகுப்பினருக்கான கோட் நிகழ்வின் ஒரு மணிநேரத்தை அல்லது உங்கள் நிறுவனத்தின் அலுவலகத்தில் கோடரியின் ஒரு மணிநேரம் செய்ய இலாபம் ஈட்டும் கூட்டாளர்களுக்கு ஒரு விருந்தாளி. கீழே எப்படி வழிகாட்ட வேண்டும் என்பதைக் காண்க.
+  </li>
+</ul>
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+<h1>
+  மாணவர்களுடன் கோட் நிகழ்வின் ஒரு மணிநேரத்தை எவ்வாறு நடத்துவது
+</h1>
 
-# மாணவர்களுடன் கோட் நிகழ்வின் ஒரு மணிநேரத்தை எவ்வாறு நடத்துவது
+<h2>
+  1. உங்களுடைய கோடை மணிநேரத்தை ஊக்குவிக்கவும்
+</h2>
 
-## 1. உங்களுடைய கோடை மணிநேரத்தை ஊக்குவிக்கவும்
+<ul>
+  <li>
+    உங்கள் <a href="== {urls/promote }ibl"> குறியீட்டு நேரம் </a> நிகழ்வை விளம்பரப்படுத்தவும், ஹோஸ்ட் செய்ய மற்றவர்களை ஊக்குவிக்கவும்.
+  </li>
+  <li>
+    உங்கள் நிறுவனத்தின் மென்பொருள் பொறியியலாளர்களை கோட்பாட்டின் ஒரு மணி நேரத்திற்கு வழிநடத்தும் மற்றும் கணினி அறிவியல் ஆய்வு செய்ய மாணவர்கள் ஊக்குவிப்பதற்காக ஒரு உள்ளூர் வகுப்பறையைப் பார்வையிட ஊக்குவிக்கவும். அவர்கள் ஒரு வகுப்பறையுடன் இணைக்க <a href="== {urls/volunteer_engineer }a>"> பதிவுபெற </a> முடியும்.
+  </li>
+</ul>
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
+<h2>
+  2. இந்த வீடியோவை எப்படி பார்க்க வேண்டும்
+</h2> <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. இந்த வீடியோவை எப்படி பார்க்க வேண்டும் <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<h2>
+  3. Choose an activity
+</h2>
 
-## 3. Choose an activity
+<p>
+  பல்வேறு வயது கூட்டாளர்களால் உருவாக்கப்பட்ட, எல்லா வயதினருக்கும் பங்கேற்பாளர்களுக்காக நாங்கள் பலவிதமான <a href="== {urls/learn }a>"> வேடிக்கையான, மணிநேர நடவடிக்கைகள் </a> வழங்குகிறோம். <a href=" {{urls/learn }a>"> அவற்றை முயற்சிக்கவும்! </a>
+</p>
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](%= resolve_url('/learn') %)
-
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
-
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
-
-## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
-
-கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
-
-**Plan Ahead!** Do the following before your event starts:
-
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- ** போதுமான சாதனங்கள் இல்லையா? </ strong> [ ஜோடி நிரலாக்க ](https://www.youtube.com/watch?v=vgkahOzFH2Q) என்பதைப் பயன்படுத்துக. When participants partner up, they help each other and rely less on the organizer. அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</li> 
+<p>
+  <strong> குறியீட்டு நடவடிக்கைகளின் அனைத்து மணிநேரமும் </ strong> குறைந்தபட்சத் தேவைக்கேற்ப, மற்றும் சுய-வழிகாட்டுதல் தேவைப்படும் - பங்கேற்பாளர்கள் தங்கள் வேகத்தில் மற்றும் திறன் அளவிலான வேலைகளை அனுமதிக்கும்.</p> 
+  
+  <p>
+    <a href="{{ urls/learn }}"><img src="/images/fit-700/tutorials.png" /></a>
+  </p>
+  
+  <h2>
+    4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
+  </h2>
+  
+  <p>
+    கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். ஆனால் ஒவ்வொரு பங்கேற்பாளருக்கும் ஒரு கணினி தேவை <strong> வேண்டாம் </ strong> இல்லை, மேலும் ஒரு கணினியில் இல்லாமல் கோட் இன் மணிநேரத்தை கூட செய்யலாம்.</p> 
     
-    - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.</ul> 
-    
-    ## 5. கோட் ஆஃப் ஹார்ட் உங்கள் எழுச்சியூட்டும் வீடியோவுடன் தொடங்கவும்
-    
-    பங்கேற்பாளர்களை ஊக்குவிப்பதன் மூலம் உங்கள் கோட் ஆப் ஹீட்டை உதைத்து, கணினி அறிவியல் எவ்வாறு நம் வாழ்க்கையின் ஒவ்வொரு பகுதியையும் பாதிக்கிறது என்பதைப் பற்றி விவாதிக்கவும். Share more about what inspired you to pursue computer science and your role at your company.
-    
-    **ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
-    
-    - பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நடிகர் கிரிஸ் பாஷ் ([ 1 நிமிடம் </ a > [ 5 நிமிடம் ](https://www.youtube.com/watch?v=nKIu9yen5nc), மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிட ](https://www.youtube.com/watch?v=qYZF6oIZtfc) பதிப்புகள்).
-    - [ குறியீட்டு உலகளாவிய வீடியோவின் ஹவர் ](https://www.youtube.com/watch?v=KsOIlDT145A)
-    - [ ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-    - [ இங்கு ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) மேலும் தூண்டும் வீடியோக்களைக் கண்டறிக.
-    
-    **Ideas to introduce your Hour of Code activity to students:**
-    
-    - Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-    - If you are a tech company, demo fun, innovative products your company is working on.
-    - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-    - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-    - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
-    
-    ## 6. கோட்!
-    
-    **நடவடிக்கைக்கு நேரடி பங்கேற்பாளர்கள்**
-    
-    - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
-    - For younger students, load the activity page ahead of time or save it as a bookmark.
-    
-    **When participants come across difficulties it's okay to respond:**
-    
-    - "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
-    - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
-    
-    **ஆரம்பத்தில் யாராவது முடிந்தால் என்ன செய்வது?**
-    
-    - They can try another Hour of Code activity at hourofcode.com/learn.
-    - Or, ask them to help a friend who are having trouble with the activity.
-    
-    ## 7) கொண்டாடுங்கள்
-    
-    - [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
-    - [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-    - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-    - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
-    
-    <%= view :signup_button %>
+    <p>
+      <strong> திட்டமிட்டே திட்டமிடுங்கள்! </ strong> உங்கள் நிகழ்வு தொடங்கும் முன் பின்வரும்தை செய்யுங்கள்:</p> 
+      
+      <ul>
+        <li>
+          கணினிகள் அல்லது சாதனங்களில் சோதனை நடவடிக்கைகள். அவர்கள் ஒலி மற்றும் வீடியோவுடன் உலாவியில் சரியாக இயங்குவதை உறுதிசெய்யவும்.
+        </li>
+        <li>
+          ஹெட்ஃபோன்களை வழங்குக அல்லது பங்கேற்பாளர்களை நீங்கள் தேர்வு செய்யும் செயல்பாடு ஒலி மூலம் சிறந்த முறையில் செயல்படுகிறதா எனக் கேட்கவும்.
+        </li>
+        <li>
+          <strong> போதுமான சாதனங்கள் இல்லையா? </ strong> <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> ஜோடி நிரலாக்க </a> என்பதைப் பயன்படுத்துக. பங்கேற்பாளர்கள் பங்குதாரர் வரை, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் அமைப்பாளர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</li> 
+          
+          <li>
+            <strong> குறைவான பட்டையகலம் உள்ளதா? </ strong> நிகழ்வின் முன் வீடியோக்களைக் காண்பிப்பதற்கான திட்டம், எனவே ஒவ்வொரு பங்கேற்பாளரும் தங்கள் சொந்த வீடியோக்களைப் பதிவிறக்குவதில்லை. அல்லது நீக்கப்பட்ட / ஆஃப்லைன் செயல்களை முயற்சிக்கவும்.</li> </ul> 
+            
+            <h2>
+              5. கோட் ஆஃப் ஹார்ட் உங்கள் எழுச்சியூட்டும் வீடியோவுடன் தொடங்கவும்
+            </h2>
+            
+            <p>
+              பங்கேற்பாளர்களை ஊக்குவிப்பதன் மூலம் உங்கள் கோட் ஆப் ஹீட்டை உதைத்து, கணினி அறிவியல் எவ்வாறு நம் வாழ்க்கையின் ஒவ்வொரு பகுதியையும் பாதிக்கிறது என்பதைப் பற்றி விவாதிக்கவும். உங்கள் நிறுவனத்தில் கணினி அறிவியல் மற்றும் உங்கள் பங்கைத் தொடர நீங்கள் என்ன ஊக்கமளித்தது என்பதைப் பற்றி மேலும் அறியவும்.
+            </p>
+            
+            <p>
+              <strong>ஒரு தூண்டுதலாக வீடியோவை காட்டு:</strong>
+            </p>
+            
+            <ul>
+              <li>
+                பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நடிகர் கிரிஸ் பாஷ் (<a href="https://www.youtube.com/watch?v=qYZF6oIZtfc"> 1 நிமிடம் </ a > <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"> 5 நிமிடம் </a>, மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிட </a> பதிப்புகள்).
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=KsOIlDT145A"> குறியீட்டு உலகளாவிய வீடியோவின் ஹவர் </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=6XvmhE1J9PY"> ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்</a>.
+              </li>
+              <li>
+                <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> இங்கு </a> மேலும் தூண்டும் வீடியோக்களைக் கண்டறிக.
+              </li>
+            </ul>
+            
+            <p>
+              <strong>மாணவர்களுக்கான கோட் நடவடிக்கையின் உங்கள் மணிநேரத்தை அறிமுகப்படுத்துவதற்கான கருத்துக்கள்:</strong>
+            </p>
+            
+            <ul>
+              <li>
+                வாழ்க்கையை காப்பாற்றுவது, மக்களுக்கு உதவுதல், மக்களை இணைப்பது போன்ற தொழில்நுட்பங்களைப் பற்றி பேசுதல்.
+              </li>
+              <li>
+                நீங்கள் ஒரு தொழில்நுட்ப நிறுவனம் என்றால், டெமோ வேடிக்கை, உங்கள் நிறுவனம் வேலை புதுமையான தயாரிப்புகள்.
+              </li>
+              <li>
+                நீங்கள் ஒரு தொழில்நுட்ப நிறுவனம் இல்லையென்றால், பிரச்சினைகள் மற்றும் இலக்குகளை அடைய உங்கள் நிறுவனம் தொழில் நுட்பத்தை பயன்படுத்துவதைப் பற்றி விவாதிக்கவும்.
+              </li>
+              <li>
+                உங்கள் நிறுவனத்தில் இருந்து மென்பொருள் பொறியாளர்களை அழைக்கவும், அவர்கள் கணினி அறிவியல் மற்றும் அவர்கள் வேலை செய்யும் திட்டங்களை ஆய்வு செய்ய முடிவுசெய்தது பற்றி பேசவும்.
+              </li>
+              <li>
+                கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க <a href="a> {urls/girls }a>"> இங்கே </a>.
+              </li>
+            </ul>
+            
+            <h2>
+              6. கோட்!
+            </h2>
+            
+            <p>
+              <strong>நடவடிக்கைக்கு நேரடி பங்கேற்பாளர்கள்</strong>
+            </p>
+            
+            <ul>
+              <li>
+                செயல்பாட்டு இணைப்பை ஒரு வெள்ளை பலகையில் எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் <a href="== {urls/learn }a>"> நீங்கள் தேர்ந்தெடுத்த செயல்பாட்டிற்கான தகவல் </a> இல் பட்டியலிடப்பட்டுள்ள இணைப்பைக் கண்டறியவும்.
+              </li>
+              <li>
+                இளைய மாணவர்களுக்கு, முன்னோக்கி செயல்படும் பக்கத்தை ஏற்றவும் அல்லது அதை ஒரு புக்மார்க்காக சேமிக்கவும்.
+              </li>
+            </ul>
+            
+            <p>
+              <strong>பங்கேற்பாளர்கள் சிரமங்களை எதிர்கொள்கையில், அது பதிலளிக்க வேண்டியது பரவாயில்லை:</strong>
+            </p>
+            
+            <ul>
+              <li>
+                "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
+              </li>
+              <li>
+                "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
+              </li>
+            </ul>
+            
+            <p>
+              <strong>ஆரம்பத்தில் யாராவது முடிந்தால் என்ன செய்வது?</strong>
+            </p>
+            
+            <ul>
+              <li>
+                அவர்கள் hourofcode.com/learn மணிக்கு மற்றொரு நடவடிக்கை கோட் நடவடிக்கை முயற்சி செய்யலாம்.
+              </li>
+              <li>
+                அல்லது, நடவடிக்கை மூலம் சிக்கல் கொண்ட ஒரு நண்பருக்கு உதவ அவர்களைக் கேளுங்கள்.
+              </li>
+            </ul>
+            
+            <h2>
+              7) கொண்டாடுங்கள்
+            </h2>
+            
+            <ul>
+              <li>
+                பங்கேற்பாளர்களுக்கும் மாணவர்களுக்கும் <a href=" {{urls/certificates }ibl"> அச்சு சான்றிதழ்கள் </a>.
+              </li>
+              <li>
+                <a href="== {Promot /resources_stickers }ibl"> "நான் ஒரு மணிநேர குறியீடு செய்தேன்!" </a> ஸ்டிக்கர்களை அச்சிடுங்கள்.
+              </li>
+              <li>
+                உங்கள் ஊழியர்களுக்கான <a href="http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more"> தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</li> 
+                
+                <li>
+                  சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
+                </li></ul> 
+                
+                <p>
+                  {{signup_button}}
+                </p>

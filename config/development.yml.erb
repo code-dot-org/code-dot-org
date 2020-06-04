@@ -1,0 +1,39 @@
+# Configuration defaults for development environment.
+<%= clear_secrets %>
+
+dashboard_enable_pegasus: true
+
+firebase_name: cdo-v3-dev
+# provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
+firebase_secret: !Secret
+firebase_shared_secret: !Secret
+firebase_channel_id_suffix: -DEVELOPMENT-<%=ENV['USER']%>
+
+lint: true
+optimize_webpack_assets: false
+optimize_rails_assets: false
+stub_school_data: true
+daemon: true
+
+# Disable this for developers by default, it won't make much sense because we
+# have our own db.
+disable_s3_image_uploads: true
+
+chef_local_mode: true
+
+devinternal_db_writer: !Secret
+dashboard_honeybadger_api_key: '00000000'
+pegasus_honeybadger_api_key:   '00000000'
+google_safe_browsing_key: fake_api_key
+pusher_app_id:             fake_app_id
+pusher_application_key:    fake_application_key
+pusher_application_secret: fake_application_secret
+poste_secret: not a real secret
+dashboard_devise_pepper: not a pepper!
+dashboard_secret_key_base: not a secret
+db_writer: 'mysql://root@localhost/'
+
+custom_error_response: false
+
+# Used for the exporting teacher enrollment data to a gsheet
+enrollments_summer_2020_gsheet_key:

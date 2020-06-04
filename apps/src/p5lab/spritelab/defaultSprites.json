@@ -1,0 +1,708 @@
+{
+  "orderedKeys": [
+    "77fcb37e-e837-4230-abe5-c38ffe39dc3f",
+    "963b7e6e-afc8-43ae-8d44-89257b902e7b",
+    "98a96ffa-fbdc-42ab-bda1-876ea8e6d6c7",
+    "5687e89d-7015-484d-a8da-47505df1ba9e",
+    "c71f8624-bc69-4131-8af4-3db6b34b480f",
+    "1b3549d0-607f-4702-8fda-c9a2c2b951e4",
+    "f72dadb4-f85a-4867-bae9-204290b806f4",
+    "e4b42ce0-9510-46c2-910c-0c4b69cf612c",
+    "31942aad-c011-4676-bc37-3385ba6dfdbd",
+    "38198004-a9f7-4c94-8a06-b5d113c11017",
+    "45e301c8-a90f-44f9-88cd-28f3ac03ea57",
+    "21d7923f-d23c-4fab-8353-25d06325f496",
+    "b3459b90-8953-4229-9826-9a67f46f3349",
+    "f3899dc4-8a21-46cf-8fe1-19de2f851a20",
+    "e3fcf3f4-43c9-43f4-a108-a3da084f690d",
+    "c99d1174-6898-4b84-a3cd-c156b2e765b8",
+    "72b433a1-5231-4756-a4f4-bf5c5745a8c2",
+    "653410a3-3ee6-46fb-b170-cfc75cc55536",
+    "419b2e07-56bc-4d9d-836d-8c37802ce403",
+    "88955b91-9530-4705-a46d-ca34509128f6",
+    "708d8909-9ab4-468f-9882-2e82a06f7382",
+    "6ee8577d-4432-44e7-be22-c066cba01e3f",
+    "e9c2afb6-6841-429f-a0a6-0489000991b1",
+    "79471631-21e6-4bb6-aeaa-09ecef687710",
+    "16523800-670c-4401-8b99-65fbe8e563d7",
+    "cfec234c-9e58-413b-b93f-5fd26c225ac3",
+    "24cc61ba-4b6f-4563-8aa8-71e441403783",
+    "8c4d59cc-c01a-4118-abac-9ee3aa3495d0",
+    "3135901b-5398-4f3b-b9dd-b9bcffe35735",
+    "7ac1f4e7-8e50-4448-a14a-5410c0cca06b",
+    "fa8a6d22-dc6a-462c-ba75-400cf9b06aad",
+    "e9b3a9de-45a1-4c6c-920b-0b9521b7d910",
+    "1efa6613-a2a9-4f2d-94d2-9575df99a2ec",
+    "627380a2-e63a-4865-8e4b-7e25e0ab86f5",
+    "aa67ed36-c01c-415d-b5a9-7007cdd38c0c",
+    "def9ff27-d2cf-4863-ba29-ec820b5dae13",
+    "64bd6737-a596-463a-9ed3-c639c79b662b",
+    "0976caea-2ecc-47b3-b7a3-4d962fb04dcb",
+    "14561fe0-d917-40c9-ba9e-e2ab01d433f4",
+    "4b62a499-b010-4f3b-984c-91bbb0a9e393",
+    "e8bd0110-4bde-493d-991e-1f26af21cfef",
+    "a6462adf-2059-40f2-a980-18905e3355cd",
+    "538cef50-6ab5-4e33-9f9e-784624a0935b",
+    "1da5d891-3c60-408a-8496-8cc026a3e793",
+    "bb45c28c-d5c3-427a-aec0-9600ecfa9304",
+    "6f0024ce-42c6-416a-acf9-e25e7342c911",
+    "fdb8c610-c88b-4faf-8432-77c9add74eab",
+    "aaba8a27-9f63-4ee2-923a-757f5a593122",
+    "6d6c845a-0b4a-45e9-93e3-6503b6dda8a0",
+    "bf8a170e-a710-424e-b690-e416260865fc",
+    "9a39f1aa-2b4a-4587-ba2a-36f4df582f99",
+    "84e4e25b-ab5c-43fe-8c54-d0a2d89787d4",
+    "a39e6a03-6995-48d8-be2d-d666cfa358f4",
+    "2dc1905c-3851-4590-b4a7-52167d05c64a"
+  ],
+  "propsByKey": {
+    "77fcb37e-e837-4230-abe5-c38ffe39dc3f": {
+      "name": "bear",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png",
+      "frameSize": {
+        "x": 254,
+        "y": 333
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp"
+    },
+    "963b7e6e-afc8-43ae-8d44-89257b902e7b": {
+      "name": "bee",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/EE3g6ia8pNICxkHVHUoTkljd9sHj40pE/category_animals/bee.png",
+      "frameSize": {
+        "x": 62,
+        "y": 50
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "EE3g6ia8pNICxkHVHUoTkljd9sHj40pE"
+    },
+    "98a96ffa-fbdc-42ab-bda1-876ea8e6d6c7": {
+      "name": "brown bunny",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l/category_animals/bunny1_ready.png",
+      "frameSize": {
+        "x": 120,
+        "y": 191
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l"
+    },
+    "5687e89d-7015-484d-a8da-47505df1ba9e": {
+      "name": "purple bunny",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png",
+      "frameSize": {
+        "x": 152,
+        "y": 193
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "kBiszeGACcLTGTrqmS4laPVQKPGQnDln"
+    },
+    "c71f8624-bc69-4131-8af4-3db6b34b480f": {
+      "name": "corgi",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/VtKpUDKH2C9JjfbimUkhbbH.dHQ5t7ex/category_animals/corgi.png",
+      "frameSize": {
+        "x": 542,
+        "y": 500
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "VtKpUDKH2C9JjfbimUkhbbH.dHQ5t7ex"
+    },
+    "1b3549d0-607f-4702-8fda-c9a2c2b951e4": {
+      "name": "cow",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/ROqEBwbLmX6qg9Acz.DUkfyl2gaMh4lP/category_animals/cow.png",
+      "frameSize": {
+        "x": 265,
+        "y": 300
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "ROqEBwbLmX6qg9Acz.DUkfyl2gaMh4lP"
+    },
+    "f72dadb4-f85a-4867-bae9-204290b806f4": {
+      "name": "crab",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/SdV.w3j8_4Djmt1L5C_gEVpS2VTh53Od/category_animals/crab.png",
+      "frameSize": {
+        "x": 288,
+        "y": 191
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "SdV.w3j8_4Djmt1L5C_gEVpS2VTh53Od"
+    },
+    "e4b42ce0-9510-46c2-910c-0c4b69cf612c": {
+      "name": "elephant",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ/category_animals/elephant2.png",
+      "frameSize": {
+        "x": 99,
+        "y": 97
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ"
+    },
+    "31942aad-c011-4676-bc37-3385ba6dfdbd": {
+      "name": "fish",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/CwVno2kER.r_tECMOL4D4YL.lcaFNv7h/category_animals/fish.png",
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "CwVno2kER.r_tECMOL4D4YL.lcaFNv7h"
+    },
+    "38198004-a9f7-4c94-8a06-b5d113c11017": {
+      "name": "hippo",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/zqsDGpXOezy.SxANtxyxyThklFz1v1.1/category_animals/hippo_gray.png",
+      "frameSize": {
+        "x": 243,
+        "y": 300
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "zqsDGpXOezy.SxANtxyxyThklFz1v1.1"
+    },
+    "45e301c8-a90f-44f9-88cd-28f3ac03ea57": {
+      "name": "ladybug",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/BF9M9h767oyE2PE2u8uCA2pDQzJG19ji/category_animals/ladybug.png",
+      "frameSize": {
+        "x": 63,
+        "y": 36
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "BF9M9h767oyE2PE2u8uCA2pDQzJG19ji"
+    },
+    "21d7923f-d23c-4fab-8353-25d06325f496": {
+      "name": "mouse",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/sTV_ECoTPZ4e322cfbiihNiMroU13hpD/category_animals/mouse.png",
+      "frameSize": {
+        "x": 61,
+        "y": 37
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "sTV_ECoTPZ4e322cfbiihNiMroU13hpD"
+    },
+    "b3459b90-8953-4229-9826-9a67f46f3349": {
+      "name": "pig",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3/category_animals/pig.png",
+      "frameSize": {
+        "x": 288,
+        "y": 257
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3"
+    },
+    "f3899dc4-8a21-46cf-8fe1-19de2f851a20": {
+      "name": "bell",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/PXwfEV0ey9ywPrIX.eBetY3EPIBehUdU/category_generic_items/bell.png",
+      "frameSize": {
+        "x": 85,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "PXwfEV0ey9ywPrIX.eBetY3EPIBehUdU"
+    },
+    "e3fcf3f4-43c9-43f4-a108-a3da084f690d": {
+      "name": "book",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/LjwHKxijspVx1mP9MzObUvyxK5WG3oim/category_generic_items/book.png",
+      "frameSize": {
+        "x": 109,
+        "y": 125
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "LjwHKxijspVx1mP9MzObUvyxK5WG3oim"
+    },
+    "c99d1174-6898-4b84-a3cd-c156b2e765b8": {
+      "name": "compass",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/2dfHfS8SHX0KZKAOFL4p1tpdmcyE.P5q/category_generic_items/compass.png",
+      "frameSize": {
+        "x": 105,
+        "y": 79
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "2dfHfS8SHX0KZKAOFL4p1tpdmcyE.P5q"
+    },
+    "72b433a1-5231-4756-a4f4-bf5c5745a8c2": {
+      "name": "computer monitor",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/AV67_BG0DzS_w3UNmSsT7JXTV_wmaBeo/category_generic_items/computer_monitor.png",
+      "frameSize": {
+        "x": 136,
+        "y": 129
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "AV67_BG0DzS_w3UNmSsT7JXTV_wmaBeo"
+    },
+    "653410a3-3ee6-46fb-b170-cfc75cc55536": {
+      "name": "first aid kit",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/qJH1.9rzwUqhdOsDInXK3DZLW2JQLHjE/category_generic_items/first_aid.png",
+      "frameSize": {
+        "x": 117,
+        "y": 117
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "qJH1.9rzwUqhdOsDInXK3DZLW2JQLHjE"
+    },
+    "419b2e07-56bc-4d9d-836d-8c37802ce403": {
+      "name": "keys",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/yLPZZ9U2U5MNSf321I3XMwS_kAw9LyZZ/category_generic_items/keys.png",
+      "frameSize": {
+        "x": 94,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "yLPZZ9U2U5MNSf321I3XMwS_kAw9LyZZ"
+    },
+    "88955b91-9530-4705-a46d-ca34509128f6": {
+      "name": "money",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/WOADjHCtrTpzfug5zO08.VemfZQxczxM/category_generic_items/money.png",
+      "frameSize": {
+        "x": 101,
+        "y": 106
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "WOADjHCtrTpzfug5zO08.VemfZQxczxM"
+    },
+    "708d8909-9ab4-468f-9882-2e82a06f7382": {
+      "name": "paint pallette",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/N1aMvPy04__knoU3yolIxey_2v3kCnN3/category_generic_items/paint_pallette.png",
+      "frameSize": {
+        "x": 116,
+        "y": 96
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "N1aMvPy04__knoU3yolIxey_2v3kCnN3"
+    },
+    "6ee8577d-4432-44e7-be22-c066cba01e3f": {
+      "name": "potion",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/lwbDlPwSetDvZN1Qg.5X9rLcUirjG5ZZ/category_generic_items/flask.png",
+      "frameSize": {
+        "x": 60,
+        "y": 112
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "lwbDlPwSetDvZN1Qg.5X9rLcUirjG5ZZ"
+    },
+    "e9c2afb6-6841-429f-a0a6-0489000991b1": {
+      "name": "tablet",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/nBBhpOU7OIfXpQlr3_A3Qc2rXHON5Pyo/category_generic_items/tablet.png",
+      "frameSize": {
+        "x": 84,
+        "y": 98
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "nBBhpOU7OIfXpQlr3_A3Qc2rXHON5Pyo"
+    },
+    "79471631-21e6-4bb6-aeaa-09ecef687710": {
+      "name": "teapot",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/8sssIK6UnCKrpe.Zuv3D3QCDOsIj4CnM/category_generic_items/teapot.png",
+      "frameSize": {
+        "x": 152,
+        "y": 116
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "8sssIK6UnCKrpe.Zuv3D3QCDOsIj4CnM"
+    },
+    "16523800-670c-4401-8b99-65fbe8e563d7": {
+      "name": "boat",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/oI8SYIuf5aImfljkVGuZQjPe_qAA.3Do/category_vehicles/boat.png",
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "oI8SYIuf5aImfljkVGuZQjPe_qAA.3Do"
+    },
+    "cfec234c-9e58-413b-b93f-5fd26c225ac3": {
+      "name": "black car",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/f6UiaZsQPPCFNgNO9Mcdy1EgAC_1JWTw/category_vehicles/car_black.png",
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "f6UiaZsQPPCFNgNO9Mcdy1EgAC_1JWTw"
+    },
+    "24cc61ba-4b6f-4563-8aa8-71e441403783": {
+      "name": "blue car",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/hIV5hwpg4j64uoioQoAr_dkM20tRdbCJ/category_vehicles/car_blue.png",
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "hIV5hwpg4j64uoioQoAr_dkM20tRdbCJ"
+    },
+    "8c4d59cc-c01a-4118-abac-9ee3aa3495d0": {
+      "name": "green car",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/8NcV6Ju_WCltp8Tx9Z_SiAjpVo_H_HRK/category_vehicles/car_green.png",
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "8NcV6Ju_WCltp8Tx9Z_SiAjpVo_H_HRK"
+    },
+    "3135901b-5398-4f3b-b9dd-b9bcffe35735": {
+      "name": "red car",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/cuyAiiAvL6Yqn.vTw2.HeDXqGXSQxH0L/category_vehicles/car_red.png",
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "cuyAiiAvL6Yqn.vTw2.HeDXqGXSQxH0L"
+    },
+    "7ac1f4e7-8e50-4448-a14a-5410c0cca06b": {
+      "name": "yellow car",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/Tfk8fRkUNkkl85SiTwxCG24LrsVNvhJK/category_vehicles/car_yellow.png",
+      "frameSize": {
+        "x": 71,
+        "y": 131
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "Tfk8fRkUNkkl85SiTwxCG24LrsVNvhJK"
+    },
+    "fa8a6d22-dc6a-462c-ba75-400cf9b06aad": {
+      "name": "blue plane",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/grzc0jLLnQ2NSxjwUjplDJj.R2E10flT/category_vehicles/planeBlue1.png",
+      "frameSize": {
+        "x": 88,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "grzc0jLLnQ2NSxjwUjplDJj.R2E10flT"
+    },
+    "e9b3a9de-45a1-4c6c-920b-0b9521b7d910": {
+      "name": "red plane",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/AX6K06DecwVXhRO4AvAt7SLsE7NtvfNt/category_vehicles/planeRed1.png",
+      "frameSize": {
+        "x": 88,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "AX6K06DecwVXhRO4AvAt7SLsE7NtvfNt"
+    },
+    "1efa6613-a2a9-4f2d-94d2-9575df99a2ec": {
+      "name": "blue alien",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/ejbq67QKuPrQTpRKtoL.M2HVHzpNduns/category_characters/alienBlue.png",
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "ejbq67QKuPrQTpRKtoL.M2HVHzpNduns"
+    },
+    "627380a2-e63a-4865-8e4b-7e25e0ab86f5": {
+      "name": "green alien",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/DW4DypUlfossYbRM0NcaMXXGBvbs9tJW/category_characters/alienGreen.png",
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "DW4DypUlfossYbRM0NcaMXXGBvbs9tJW"
+    },
+    "aa67ed36-c01c-415d-b5a9-7007cdd38c0c": {
+      "name": "pink alien",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu/category_characters/alienPink.png",
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu"
+    },
+    "def9ff27-d2cf-4863-ba29-ec820b5dae13": {
+      "name": "yellow alien",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/7iIxntwgHtrM.IEp6Ga2OFAGz1Ciq_y1/category_characters/alienYellow.png",
+      "frameSize": {
+        "x": 66,
+        "y": 82
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "7iIxntwgHtrM.IEp6Ga2OFAGz1Ciq_y1"
+    },
+    "64bd6737-a596-463a-9ed3-c639c79b662b": {
+      "name": "ghost",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/X2R5uPhDuVXpg9iy6qK_kYrY9KWXxASH/category_characters/ghost.png",
+      "frameSize": {
+        "x": 51,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "X2R5uPhDuVXpg9iy6qK_kYrY9KWXxASH"
+    },
+    "0976caea-2ecc-47b3-b7a3-4d962fb04dcb": {
+      "name": "orange monster",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/PYXi1AIsJ3QoaegkbPhHIqcC.yWg_t0X/category_characters/orange_monster.png",
+      "frameSize": {
+        "x": 240,
+        "y": 300
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "PYXi1AIsJ3QoaegkbPhHIqcC.yWg_t0X"
+    },
+    "14561fe0-d917-40c9-ba9e-e2ab01d433f4": {
+      "name": "green monster",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/rT9oAB0skB62_LtrjffjYO0SrACE6D_Y/category_characters/happy_critter.png",
+      "frameSize": {
+        "x": 262,
+        "y": 300
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "rT9oAB0skB62_LtrjffjYO0SrACE6D_Y"
+    },
+    "4b62a499-b010-4f3b-984c-91bbb0a9e393": {
+      "name": "purple monster",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/CdlNOvtih6CV7QUekCCPH7e11tMwCGQh/category_characters/purple_monster.png",
+      "frameSize": {
+        "x": 280,
+        "y": 290
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "CdlNOvtih6CV7QUekCCPH7e11tMwCGQh"
+    },
+    "e8bd0110-4bde-493d-991e-1f26af21cfef": {
+      "name": "cloud",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/zQs0ejWu81wIiZyi4WyF0G0efY1RG5kY/category_environment/cloud.png",
+      "frameSize": {
+        "x": 260,
+        "y": 134
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "zQs0ejWu81wIiZyi4WyF0G0efY1RG5kY"
+    },
+    "a6462adf-2059-40f2-a980-18905e3355cd": {
+      "name": "rock",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/bwzgoXDO24mMPbQmo21kn4tqxa8CZm_X/category_environment/rock.png",
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "bwzgoXDO24mMPbQmo21kn4tqxa8CZm_X"
+    },
+    "538cef50-6ab5-4e33-9f9e-784624a0935b": {
+      "name": "sun",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/5i6Vfj3NhrIHW5XFDTfF6K0y4Xegltto/category_environment/sun.png",
+      "frameSize": {
+        "x": 150,
+        "y": 150
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "5i6Vfj3NhrIHW5XFDTfF6K0y4Xegltto"
+    },
+    "1da5d891-3c60-408a-8496-8cc026a3e793": {
+      "name": "apple",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/vbw9BDeBFLTx8OXL1VvVXKtSU8Bchm7_/category_food/apple.png",
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "vbw9BDeBFLTx8OXL1VvVXKtSU8Bchm7_"
+    },
+    "bb45c28c-d5c3-427a-aec0-9600ecfa9304": {
+      "name": "carrot",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/LktfiFiKxVZilg.oRMm7BIzGPEA3igqc/category_food/carrot.png",
+      "frameSize": {
+        "x": 78,
+        "y": 70
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "LktfiFiKxVZilg.oRMm7BIzGPEA3igqc"
+    },
+    "6f0024ce-42c6-416a-acf9-e25e7342c911": {
+      "name": "cupcake",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/9YuGeoTtld.6UW7A462ht9nigqil_6xs/category_food/cupcake.png",
+      "frameSize": {
+        "x": 283,
+        "y": 300
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "9YuGeoTtld.6UW7A462ht9nigqil_6xs"
+    },
+    "fdb8c610-c88b-4faf-8432-77c9add74eab": {
+      "name": "mushroom",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/12FsgKxv2Cvon5LWsmLIZQckWyx.tAyv/category_food/mushroom_red.png",
+      "frameSize": {
+        "x": 81,
+        "y": 99
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "12FsgKxv2Cvon5LWsmLIZQckWyx.tAyv"
+    },
+    "aaba8a27-9f63-4ee2-923a-757f5a593122": {
+      "name": "watermelon",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/5BW1xx6Sl6Ec6d_sOSReEIOe5W.UXMiG/category_food/sliced_watermelon.png",
+      "frameSize": {
+        "x": 300,
+        "y": 240
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "5BW1xx6Sl6Ec6d_sOSReEIOe5W.UXMiG"
+    },
+    "6d6c845a-0b4a-45e9-93e3-6503b6dda8a0": {
+      "name": "gold coin",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/Vs3f3C74lKLX_.v83wHjBOqPduB14F0T/category_gameplay/coin_gold.png",
+      "frameSize": {
+        "x": 61,
+        "y": 61
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "Vs3f3C74lKLX_.v83wHjBOqPduB14F0T"
+    },
+    "bf8a170e-a710-424e-b690-e416260865fc": {
+      "name": "silver coin",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/kDI1bxJye5Z4LS0frg.jfN6qZ0piUaxl/category_gameplay/coin_silver.png",
+      "frameSize": {
+        "x": 61,
+        "y": 61
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "kDI1bxJye5Z4LS0frg.jfN6qZ0piUaxl"
+    },
+    "9a39f1aa-2b4a-4587-ba2a-36f4df582f99": {
+      "name": "target",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC/category_gameplay/target_red3_outline.png",
+      "frameSize": {
+        "x": 142,
+        "y": 142
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC"
+    },
+    "84e4e25b-ab5c-43fe-8c54-d0a2d89787d4": {
+      "name": "cactus",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/fvP_YDSp32ON.B1R69F.ha4Et2iu.U5W/category_obstacles/cactus.png",
+      "frameSize": {
+        "x": 117,
+        "y": 160
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "fvP_YDSp32ON.B1R69F.ha4Et2iu.U5W"
+    },
+    "a39e6a03-6995-48d8-be2d-d666cfa358f4": {
+      "name": "wheat",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/1T4NkoECSpVfV_gWsnBrrMcXWDhL5Heb/category_obstacles/wheat.png",
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "1T4NkoECSpVfV_gWsnBrrMcXWDhL5Heb"
+    },
+    "2dc1905c-3851-4590-b4a7-52167d05c64a": {
+      "name": "soap",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ/category_generic_items/soap.png",
+      "frameSize": {
+        "x": 97,
+        "y": 97
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ"
+    }
+  }
+}

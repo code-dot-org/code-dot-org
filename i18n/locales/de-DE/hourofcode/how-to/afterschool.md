@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
-layout: wide
-nav: how_to_nav
+title: How-to Anleitung
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Wie unterrichtet man eine Hour of Code in Freizeit und Verein
 
-### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie zusätzliche Hilfe brauchen, können Sie diese unter [Freiwillige vor Ort](%= codeorg_url('/volunteer/local') %) anfordern. Hier wird Ihnen geholfen, eine Hour of Code im nachschulischen Unterricht oder Clubs durchzuführen.
+### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie möchten, dass ein zusätzliches Paar Hände aushelfen, können Sie einen [lokalen Freiwilligen]({{ urls/volunteer_local }}}) finden, der Ihnen hilft, eine Hour of Code in Ihrer außerschulischen Klasse oder Ihrem Club auszuführen.
 
 * * *
 
@@ -15,17 +14,17 @@ nav: how_to_nav
 
 ## Wähle eine Lektion
 
-Wir bieten eine Vielzahl an [interessanten, einstündigen Tutorien](%= resolve_url('/learn') %) für alle Altersklassen an, die von verschiedenen Partnern erstellt wurden. [Probieren Sie es einfach aus!](%= resolve_url('/learn') %)
+Wir bieten eine Vielzahl von [lustigen, stundenlangen Tutorials]({{ urls/learn }}) für Teilnehmer jeden Alters, die von einer Vielzahl von Partnern erstellt wurden. [Probieren Sie sie aus!]({{ urls/learn }})
 
 **Alle Hour of Code Tutorien** erfordern minimale Vorbereitungszeit für den Organisator und sind selbstgeführt, so dass die Kinder in ihrer eigenen Geschwindigkeit und ihren eigenen Fähigkeiten entsprechend arbeiten können.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 **Brauchen Sie einen Stundenplan für Ihre nachschulische Hour of Code?** Sehen Sie sich diese [Vorlage](/files/AfterschoolEducatorLessonPlanOutline.docx) an!
 
 ## 3. Machen Sie Werbung für Ihre "Hour of Code"
 
-Machen Sie [mit diesen Tools](%= resolve_url('/promote') %) Werbung für Ihre "Hour of Code" und ermutigen Sie andere, selbst Veranstaltungen durchzuführen.
+Bewerben Sie Ihre Hour of Code [mit diesen Tools]({{ urls/promote }}) und ermutigen Sie andere, ihre eigenen Veranstaltungen durchzuführen.
 
 ## 4. Planen Sie ihren Bedarf an technischer Ausstattung - Computer sind nicht immer erforderlich
 
@@ -52,22 +51,22 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 - Beschreiben Sie, wie Technologie unser Leben beeinflusst, mit Beispielen, die Jungen und Mädchen ansprechen (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
 - Zählen Sie auf, wo überall im täglichen Leben Code verwendet wird.
-- [Hier](%= resolve_url('https://code.org/girls') %) sind Tipps, wie Sie Mädchen für Informatik interessieren können.
+- [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
 
 **Brauchen Sie mehr Hilfe?** Laden Sie diese [Vorlage für einen Unterrichtsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) herunter.
 
 ## 6. Programmieren!
 
-**Zeigen Sie, wo die Aktivität zu finden ist** - Schreiben Sie den Link zum Tutorium and die Tafel. Den Link finden Sie in [den Informationen zu Ihrem Kurs](%= resolve_url('/learn') %) unter der Anzahl der Teilnehmer.
+**Zeigen Sie, wo die Aktivität zu finden ist** - Schreiben Sie den Link zum Tutorium and die Tafel. Den Link, der auf der Seite [Informationen für das ausgewählte Tutorial]({{ urls/learn }}) aufgeführt ist, finden Sie unter der Teilnehmerzahl.
 
 **Wenn jemand Schwierigkeiten hat, ist es okay zu antworten:**- - "Ich weiß nicht. Versuchen wir zusammen eine Lösung zu finden." - "Technik funktioniert nicht immer so, wie wir uns es wünschen." - "Programmieren lernen ist wie das Erlernen einer neuen Sprache; Es braucht Zeit, bis man flüssig sprechen kann."
 
-**Was tun, wenn jemand früher fertig ist_** - Ermutigen Sie die Teilnehmer, eine andere Hour of Code Aktivität auf [hourofcode.com/learn](%= resolve_url('/learn') %) aus zu probieren. - Oder bitten Sie diejenigen, die früher fertig sind, anderen zu helfen, die Schwierigkeiten haben.
+**Was tun, wenn jemand früher fertig ist?** - Ermutigen Sie die Teilnehmer, eine weitere Hour of Code Aktivität unter [hourofcode.com/learn]({{ urls/learn }}) auszuprobieren. - Oder bitten Sie diejenigen, die früh fertig sind, anderen zu helfen, die Probleme haben.
 
 ## 7. Feiern
 
-- Drucken Sie [Urkunden](%= codeorg_url('/certificates') %) für Ihre Schüler aus.
-- Drucken Sie ["I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) Aufkleber für Ihre Schülerinnen und Schüler aus.
+- [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre Schüler.
+- [Drucken Sie "I did an hour of code!"]({{ promote/resources_stickers }}}) Aufkleber für Ihre Schüler.
 - Bestellen Sie hier [speziell angefertigte T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für die Teilnehmer.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
@@ -75,11 +74,11 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 - Sehen Sie sich [bewährte Methoden](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) von früheren Hour of Code Veranstaltern an.
 - Schauen Sie sich die Aufzeichnung unseres [Anleitung für Hour of Code Unterrichtende](https://youtu.be/EJeMeSW2-Mw) Webinars an.
-- Besuchen Sie das [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code), um Vorschläge, Einblicke und Unterstützung von anderen Veranstaltern zu erhalten. <% if @country == 'us' %>
-- Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an. <% end %>
+- Besuchen Sie das [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code), um Vorschläge, Einblicke und Unterstützung von anderen Veranstaltern zu erhalten.
+- Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
 
 ## Was kommt nach der Hour of Code?
 
-Die Hour of Code ist erst der erste Schritt auf einer Reise, auf der man mehr darüber erfahren kann, wie Technologie funktioniert und wie Software Anwendungen erstellt werden. Helfen Sie Schülern, ihre Reise fortzusetzen, und ermutigen Sie sie [online mehr zu lernen](%= codeorg_url('/learn/beyond') %)!
+Die Hour of Code ist erst der erste Schritt auf einer Reise, auf der man mehr darüber erfahren kann, wie Technologie funktioniert und wie Software Anwendungen erstellt werden. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
-<%= view :signup_button %>
+{{ signup_button }}

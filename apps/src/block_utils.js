@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import xml from './xml';
+import experiments from '@cdo/apps/util/experiments';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -331,7 +332,7 @@ exports.calcBlockGetVar = function(variableName) {
 /**
  * Generate the xml for a math block (either calc or eval apps).
  * @param {string} type Type for this block
- * @param {Object.<string,string} inputs Dictionary mapping input name to the
+ * @param {Object.<string,string>} inputs Dictionary mapping input name to the
      xml for that input
  * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
  */
@@ -440,14 +441,20 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
-    const name = func.ownerDocument.evaluate(
+    let ownerDocument = func.ownerDocument.evaluate
+      ? func.ownerDocument
+      : document;
+    let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
+      ? startBlocksDom.ownerDocument
+      : document;
+    const name = ownerDocument.evaluate(
       'title[@name="NAME"]/text()',
       func,
       null,
       XPathResult.STRING_TYPE,
       null
     ).stringValue;
-    const type = func.ownerDocument.evaluate(
+    const type = ownerDocument.evaluate(
       '@type',
       func,
       null,
@@ -455,7 +462,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       null
     ).stringValue;
     const alreadyPresent =
-      startBlocksDom.ownerDocument.evaluate(
+      startBlocksDocument.evaluate(
         `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
         startBlocksDom,
         null,
@@ -600,7 +607,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         type: arg.type,
         options: arg.options,
         assignment: arg.assignment,
-        defer: arg.defer
+        defer: arg.defer,
+        customOptions: arg.customOptions
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -858,6 +866,9 @@ exports.createJsWrapperBlockCreator = function(
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
    * @param {boolean} opts.simpleValue Just return the field value of the block.
+   * @param {string[]} opts.extraArgs Additional arguments to pass into the generated function.
+   * @param {string[]} opts.callbackParams Parameters to add to the generated callback function.
+   * @param {string[]} opts.miniToolboxBlocks
    * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
@@ -879,7 +890,10 @@ exports.createJsWrapperBlockCreator = function(
       eventBlock,
       eventLoopBlock,
       inline,
-      simpleValue
+      simpleValue,
+      extraArgs,
+      callbackParams,
+      miniToolboxBlocks
     },
     helperCode,
     pool
@@ -986,6 +1000,34 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
+        if (
+          miniToolboxBlocks &&
+          experiments.isEnabled(experiments.MINI_TOOLBOX)
+        ) {
+          var toggle = new Blockly.FieldIcon('+');
+          var miniToolboxXml = '<xml>';
+          miniToolboxBlocks.forEach(block => {
+            miniToolboxXml += `\n <block type="${block}"></block>`;
+          });
+          miniToolboxXml += '\n</xml>';
+          // Block.tray is used in the blockly repo to track whether or not the horizontal flyout is open.
+          this.tray = false;
+          // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
+          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.tray) {
+              toggle.setText('+');
+            } else {
+              toggle.setText('-');
+            }
+            this.tray = !this.tray;
+            this.render();
+          });
+          this.appendDummyInput()
+            .appendTitle(toggle)
+            .appendTitle(' ');
+          this.initMiniFlyout(miniToolboxXml);
+        }
+
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag
         // behavior and indicates the sibling block to shadow the value from
         if (blockText === 'clicked {SPRITE}') {
@@ -1032,6 +1074,10 @@ exports.createJsWrapperBlockCreator = function(
         })
         .filter(value => value !== null);
 
+      if (extraArgs) {
+        values.push(...extraArgs);
+      }
+
       if (simpleValue) {
         const code = prefix + values[args.findIndex(arg => !arg.assignment)];
         if (returnType !== undefined) {
@@ -1056,17 +1102,25 @@ exports.createJsWrapperBlockCreator = function(
           this.nextConnection && this.nextConnection.targetBlock();
         let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
         handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
-        values.push(`function () {\n${handlerCode}}`);
+        if (callbackParams) {
+          let params = callbackParams.join(',');
+          values.push(`function (${params}) {\n${handlerCode}}`);
+        } else {
+          values.push(`function () {\n${handlerCode}}`);
+        }
       }
 
       if (expression) {
+        // If the original expression has a value placeholder, replace it
+        // with the selected value.
+        let valueExpression = expression.replace('VALUE', values[0]);
         if (returnType !== undefined) {
           return [
-            `${prefix}${expression}`,
+            `${prefix}${valueExpression}`,
             orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
           ];
         } else {
-          return `${prefix}${expression}`;
+          return `${prefix}${valueExpression}`;
         }
       }
 

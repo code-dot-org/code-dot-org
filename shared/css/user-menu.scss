@@ -1,6 +1,6 @@
 @import 'color';
 @import 'font';
-.user_menu, .create_menu {
+.user_menu, .create_menu, .help_button {
   user-select: none;
   height: 38px;
 
@@ -21,7 +21,7 @@
     margin-top: -3px;
   }
 
-  .user_options, .create_options {
+  .user_options, .create_options, .help_contents {
     position: absolute;
     top: 55px;
     right: 55px;
@@ -72,7 +72,66 @@
     a + a {
       border-top: 1px solid $charcoal;
     }
+
+    &.hide-responsive-menu {
+      display: none;
+    }
   }
+}
+
+.help_button {
+  padding-left: 16px;
+  padding-top: 4px;
+
+  &.hide-mobile {
+    display: block;
+  }
+  .hide-mobile {
+    display: block;
+  }
+
+  display: inline-block;
+  float: left;
+  z-index: 99;
+  position: relative;
+
+  .help_icon {
+    padding: 9px 0 16px 0;
+    font-size: 26px;
+    color: $white;
+    height: 25px;
+    cursor: pointer;
+    height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  .help_contents {
+    z-index: 100001;
+    text-align: left;
+    white-space: nowrap;
+    padding: 0;
+    right: 0px;
+
+    a {
+      display: block;
+      padding: 10px;
+      font-family: $gotham-bold;
+    }
+
+    a + a {
+      border-top: 1px solid $charcoal;
+    }
+  }
+
+  @media(max-width: 970px) {
+    &.hide-mobile {
+      display: none;
+    }
+    .hide-mobile {
+      display: none;
+    }
+                                                                                              }
 }
 
 .create_menu {

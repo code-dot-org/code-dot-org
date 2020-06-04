@@ -1,5 +1,5 @@
 ---
-hy:
+hy-AM:
   data:
     display_name:
       CSD U2 Pair Programming Video: Զույգ Ծրագրավորում
@@ -50,7 +50,6 @@ hy:
       CSD U3 Variables Map: փոփոխականների
       CSD U3 Variables Map_2018: փոփոխականների
       CSD U3 Variables Map_2019: փոփոխականների
-      CSD U3 functions map: գործառույթները
       CSD U6 for loop map: For Loops
       CSD U6 for loop map_2018: For Loops
       CSD U6 for loop map_2019: For Loops
@@ -58,6 +57,3 @@ hy:
       CSD U6 functions paramters video_2018: Գործառույթները պարամետրերով
       CSD U6 functions paramters video_2019: Գործառույթները պարամետրերով
       'CSD: For Loop_2018': For Loops
-      'CSD: For Loop_2019': For Loops
-      MC_HOC_2017_FP10x10: Free Play
-      MC_HOC_2017_FP10x10_RE: Free Play

@@ -1,18 +1,17 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
-layout: wide
-nav: promote_nav
+title: Eelmised KoodiTund plakatid
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Eelmised KoodiTund plakatid
 
-### Kasuta meie eelmiste aastate plakateid ning kaunista nendega oma klassiruum! Otsid uusi plakateid?<a href="<%= resolve_url('/promote/resources#posters') %> Kliki siia</a>.
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

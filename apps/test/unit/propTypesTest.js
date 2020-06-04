@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 var propTypes = require('@cdo/apps/propTypes');
 
 describe('propTypes module', () => {

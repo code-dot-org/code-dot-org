@@ -1,0 +1,8 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+.dataset
+
+%script{src: webpack_asset_path('js/datasets/show.js'),
+        data: {tableName: @table_name.to_json, dataset: @dataset.to_json, liveDatasets: @live_datasets.to_json}}

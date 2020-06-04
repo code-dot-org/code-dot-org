@@ -1,7 +1,10 @@
 ---
-title: "<%= I18n.t(:page_not_found_title) %>"
 theme: responsive
 ---
+
+:ruby
+  @header["title"] = I18n.t(:page_not_found_title)
+
 %link{href: "/css/errors.css", rel: "stylesheet"}
 .error-parent
   .error-child

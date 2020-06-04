@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require_relative '../lib/cdo/mysql_console_helper'
+
+raise 'please define CDO.reporting_db_admin' unless CDO.reporting_db_admin
+
+MysqlConsoleHelper.run(CDO.reporting_db_admin, ARGV.join(' ').strip)

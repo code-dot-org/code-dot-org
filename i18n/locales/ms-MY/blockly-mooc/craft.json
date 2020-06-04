@@ -55,7 +55,7 @@
   "blockIfLavaAhead": "jika ada lava dihadapan",
   "blockIs": "",
   "blockMove": "",
-  "blockMoveBackward": "",
+  "blockMoveBackward": "bergerak ke belakang dengan",
   "blockMoveForward": "bergerak ke hadapan",
   "blockPlace": "letakkan",
   "blockPlaceTorch": "letakkan obor",

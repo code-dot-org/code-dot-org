@@ -8,13 +8,13 @@ This lesson continues the introduction to CSS style properties, this time focusi
 
 ## Introduced Code
 
-*  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
-*  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
-*  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
-*  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
-*  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
-*  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
-*  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
-*  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
+*  **[Background Color](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+*  **[Float](//studio.code.org/docs/weblab/float/)** - `float: value;`
+*  **[Margin](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+*  **[Width](//studio.code.org/docs/weblab/width/)** - `width: value;`
+*  **[Height](//studio.code.org/docs/weblab/height/)** - `height: value;`
+*  **[Border Style](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+*  **[Border Width](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+*  **[Border Color](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
 
 MARKDOWN

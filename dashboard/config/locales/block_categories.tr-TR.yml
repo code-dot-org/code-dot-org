@@ -3,57 +3,30 @@ tr:
   data:
     block_categories:
       Actions: İşlemler
-      Loops: Döngüler
-      Functions: Fonksiyonlar
-      Color: Renk
-      Brushes: Fırçalar
-      Math: Matematik
-      Logic: Mantık
-      Variables: Değişkenler
-      Number: Sayı
-      String: Dize
-      Image: Resim
-      Boolean: Boole komutlari
-      Conditionals: Koşullar
-      Events: Olaylar
-      Games/Score: Oyunlar/skor
-      Comments: Yorumlar
-      Category: Kategori
-      Prebuilt: Önceden bitirilmis
-      Text: yazı
-      Picker: Seçici
-      Comment: Yorum
-      World: Dünya
-      Sprites: Hareketli Nesneler
-      Behaviors: Davranışlar
-      'Variables ': Değişkenler
-      Default: Varsayılan
-      Locations: Konumlar
-      everythingelse: diğerherşey
-      Location: Konum
-      numbers: sayılar
-      Numbers: Sayılar
-      Input: Girdi
-      Dancers: Dansçılar
-      Groups: Gruplar
       Advanced: İleri seviye
-      Start: Başlayın
-      Dancing: Dans
-      Sprite: Hareketli nesne
-      Brush: Fırça
-      Make Sprite: Hareketli Nesne Oluştur
-      Movement: Hareket
-      Booleans: Boolean Değerleri
-      Functional: İşlevsel
-      While Events: While olgulari
-      Sprite Properties: Nesne özellikleri
-      Predefined: Önceden Tanımlanmış
-      test: dene
-      test2: Test2
-      Use These Blocks: Bu Bloklari Kullan
-      Do Not Use: Kullanma!
-      Name: İsim
-      NEW BLOCKS: YENİ BLOKLAR
+      Behaviors: Davranışlar
+      Brushes: Fırçalar
+      Color: Renk
+      Comment: Yorum
+      Comments: Yorumlar
+      Conditionals: Koşullar
+      Dancers: Dansçılar
+      Default: Varsayılan
+      Events: Olaylar
+      Functions: Fonksiyonlar
       'Functions ': Fonksiyonlar
       Game/Score: Oyun/Skor
-      Function: Fonksiyon
+      Games/Score: Oyunlar/skor
+      Groups: Gruplar
+      Input: Girdi
+      Locations: Konumlar
+      Logic: Mantık
+      Loops: Döngüler
+      Math: Matematik
+      Numbers: Sayılar
+      Properties: Özellikleri
+      Sprites: Hareketli Nesneler
+      Text: yazı
+      Variables: Değişkenler
+      'Variables ': Değişkenler
+      World: Dünya

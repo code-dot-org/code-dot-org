@@ -3,57 +3,30 @@ de:
   data:
     block_categories:
       Actions: Aktionen
-      Loops: Schleifen
-      Functions: Funktionen
-      Color: Farbe
-      Brushes: Bürsten
-      Math: Mathematik
-      Logic: Logik
-      Variables: Variablen
-      Number: Nummer
-      String: String
-      Image: Bild
-      Boolean: Boolean
-      Conditionals: Bedingungen
-      Events: Ereignisse
-      Games/Score: Spiele/Punktzahl
-      Comments: Kommentare
-      Category: Kategorie
-      Prebuilt: Vorgefertigt
-      Text: Text
-      Picker: Sammler
-      Comment: Kommentar
-      World: Welt
-      Behaviors: Verhaltensweisen
-      'Variables ': 'Variablen '
-      Default: Standard
-      Locations: Orte
-      Bunny Game: Hasenspiel
-      everythingelse: allesandere
-      Location: Standort
-      numbers: Nummern
-      Numbers: Nummern
-      Input: Eingabe
-      Dancers: Tänzer
-      Groups: Gruppen
       Advanced: Erweitert
-      Start: Start
-      Dancing: Tanzen
-      Sprite: Sprite
-      Brush: Bürste
-      Make Sprite: Sprite erstellen
-      Movement: Bewegung
-      Booleans: Boolesche Werte
-      Functional: Funktional
-      Sprite Properties: Sprite Eigenschaften
-      Predefined: Vordefiniert
-      test: prüfe
-      test2: test2
-      Use These Blocks: Benutze diese Bausteine
-      Do Not Use: Nicht benutzen
-      Foo: Kram
-      Name: Name
-      NEW BLOCKS: NEUE BAUSTEINE
+      Behaviors: Verhaltensweisen
+      Brushes: Pinsel
+      Color: Farbe
+      Comment: Kommentar
+      Comments: Kommentare
+      Conditionals: Bedingungen
+      Dancers: Tänzer
+      Default: Standard
+      Events: Ereignisse
+      Functions: Funktionen
       'Functions ': 'Funktionen '
       Game/Score: Spiel/Punktzahl
-      Function: Funktion
+      Games/Score: Spiele/Punktzahl
+      Groups: Gruppen
+      Input: Eingabe
+      Locations: Orte
+      Logic: Logik
+      Loops: Schleifen
+      Math: Mathematik
+      Numbers: Zahlen
+      Properties: Eigenschaften
+      Sprites: Sprites
+      Text: Text
+      Variables: Variablen
+      'Variables ': 'Variablen '
+      World: Welt

@@ -6,11 +6,13 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {
   setSections,
-  selectSection
+  selectSection,
+  setPageType,
+  pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
-import {setUserSignedIn} from '@cdo/apps/code-studio/progressRedux';
+import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {
   setVerified,
@@ -25,6 +27,7 @@ function showCourseOverview() {
   const scriptData = JSON.parse(script.dataset.coursesShow);
   const courseSummary = scriptData.course_summary;
   const isTeacher = scriptData.is_teacher;
+  const userId = scriptData.user_id;
 
   const teacherResources = (courseSummary.teacher_resources || []).map(
     ([type, link]) => ({type, link})
@@ -34,6 +37,8 @@ function showCourseOverview() {
   if (courseSummary.has_verified_resources) {
     store.dispatch(setVerifiedResources());
   }
+
+  store.dispatch(setPageType(pageTypes.courseOverview));
 
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
@@ -81,6 +86,7 @@ function showCourseOverview() {
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
+        userId={userId}
       />
     </Provider>,
     document.getElementById('course_overview')

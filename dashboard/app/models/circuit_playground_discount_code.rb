@@ -15,7 +15,7 @@
 class CircuitPlaygroundDiscountCode < ApplicationRecord
   # We'll notify honeybadger when we request a full/partial discount and there
   # are fewer than this many available (so that we can add more).
-  WARN_COUNT = 50
+  WARN_COUNT = 25
 
   # Claims the next available code of the given discount amount (full/partial)
   # and returns the code.

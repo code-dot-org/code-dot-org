@@ -1,14 +1,12 @@
-require 'pd/survey_pipeline/daily_survey_retriever.rb'
-require 'pd/survey_pipeline/daily_survey_parser.rb'
-require 'pd/survey_pipeline/daily_survey_joiner.rb'
-require 'pd/survey_pipeline/mapper.rb'
-require 'pd/survey_pipeline/daily_survey_decorator.rb'
+require 'pd/survey_pipeline/survey_pipeline_helper.rb'
 require 'honeybadger/ruby'
 
 module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
     include ::Pd::WorkshopSurveyReportCsvConverter
     include Pd::WorkshopSurveyResultsHelper
+    include Pd::SurveyPipeline::Helper
+    include Pd::WorkshopSurveyConstants
 
     load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
@@ -87,14 +85,39 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
-      return local_workshop_daily_survey_report if @workshop.summer? ||
-        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
-        @workshop.workshop_starting_date > Date.new(2018, 8, 1))
-
+      # 2 separate routes for CSF deep dive (201) workshop and summer/academic year workshop.
+      # We don't compute survey result roll-up for CSF deep dive.
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
+      return create_generic_survey_report if [COURSE_CSP, COURSE_CSD].include?(@workshop.course)
 
+      raise 'Action generic_survey_report should not be used for this workshop'
+    rescue => e
+      notify_error e
+    end
+
+    # GET /api/v1/pd/workshops/experiment_survey_report/:id/
+    def experiment_survey_report
+      render json: {experiment: true}
+    rescue => e
+      notify_error e
+    end
+
+    private
+
+    def create_csf_survey_report
+      render json: report_single_workshop(@workshop, current_user)
+    end
+
+    def create_generic_survey_report
+      this_ws_report = report_single_workshop(@workshop, current_user)
+      rollup_report = report_rollups(@workshop, current_user)
+
+      render json: this_ws_report.merge(rollup_report)
+    end
+
+    def notify_error(exception, error_status_code = :bad_request)
       Honeybadger.notify(
-        error_message: 'Action generic_survey_report should not be used for this workshop',
+        exception,
         context: {
           workshop_id: @workshop.id,
           course: @workshop.course,
@@ -102,76 +125,15 @@ module Api::V1::Pd
         }
       )
 
-      render status: :bad_request, json: {
-        error: "Do not know how to process survey results for this workshop "\
-          "#{@workshop.course} #{@workshop.subject}"
+      render status: error_status_code, json: {
+        errors: [
+          {
+            severity: Logger::Severity::ERROR,
+            message: "#{exception.message}. First backtrace: #{exception.backtrace.first}."\
+              " Workshop id: #{@workshop.id}, course: #{@workshop.course}, subject: #{@workshop.subject}."
+          }
+        ]
       }
-    end
-
-    private
-
-    def local_workshop_daily_survey_report
-      survey_report = generate_workshop_daily_session_summary(@workshop)
-
-      respond_to do |format|
-        format.json do
-          render json: survey_report
-        end
-      end
-    end
-
-    def create_csf_survey_report
-      # Retriever
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new workshop_ids: [@workshop.id]
-
-      # Transformers
-      parser = Pd::SurveyPipeline::DailySurveyParser
-      joiner = Pd::SurveyPipeline::DailySurveyJoiner
-
-      # Mapper + Reducers
-      group_config = [:workshop_id, :form_id, :name, :type, :answer_type]
-
-      is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
-      is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
-      is_number_question = lambda {|hash| hash[:type] == 'number'}
-      map_config = [
-        {condition: is_single_select_answer, field: :answer,
-        reducers: [Pd::SurveyPipeline::HistogramReducer]},
-        {condition: is_free_format_question, field: :answer,
-        reducers: [Pd::SurveyPipeline::NoOpReducer]},
-        {condition: is_number_question, field: :answer,
-        reducers: [Pd::SurveyPipeline::AvgReducer]},
-      ]
-
-      mapper = Pd::SurveyPipeline::GenericMapper.new(
-        group_config: group_config, map_config: map_config
-      )
-
-      # Decorator
-      decorator = Pd::SurveyPipeline::DailySurveyDecorator
-
-      create_generic_survey_report(
-        retriever: retriever,
-        parser: parser,
-        joiner: joiner,
-        mappers: [mapper],
-        decorator: decorator
-      )
-    end
-
-    def create_generic_survey_report(retriever:, parser:, joiner:, mappers:, decorator:)
-      retrieved_data = retriever.retrieve_data
-
-      parsed_data = parser.transform_data retrieved_data
-
-      joined_data = joiner.transform_data parsed_data
-
-      summary_data = []
-      mappers.each do |mapper|
-        summary_data += mapper.map_reduce joined_data
-      end
-
-      render json: decorator.decorate(summary_data: summary_data, parsed_data: parsed_data)
     end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and

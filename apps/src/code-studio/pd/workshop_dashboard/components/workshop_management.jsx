@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
-import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  WorkshopTypes,
+  SubjectNames
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType} from '../permission';
 
@@ -23,7 +26,8 @@ export class WorkshopManagement extends React.Component {
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
     showSurveyUrl: PropTypes.bool,
-    date: PropTypes.string
+    date: PropTypes.string,
+    endDate: PropTypes.string
   };
 
   static defaultProps = {
@@ -35,8 +39,10 @@ export class WorkshopManagement extends React.Component {
     super(props);
 
     if (props.showSurveyUrl) {
-      let surveyBaseUrl = null;
-      if (this.use_daily_survey_route()) {
+      let surveyBaseUrl;
+      if (this.use_foorm_route()) {
+        surveyBaseUrl = 'workshop_daily_survey_results';
+      } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = 'local_summer_workshop_survey_results';
@@ -63,16 +69,30 @@ export class WorkshopManagement extends React.Component {
     let new_facilitator_weekend =
       workshop_date >= new Date('2018-08-01') &&
       ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
-      this.props.subject !== 'Code.org Facilitator Weekend';
+      this.props.subject !== SubjectNames.SUBJECT_FIT;
 
     // 2019-05-20 is when we started using a JotForm survey for Deep Dive workshops.
     // Don't change this date here.
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&
-      this.props.subject === 'Deep Dive';
+      this.props.subject === SubjectNames.SUBJECT_CSF_201;
 
     return (
       new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
+    );
+  };
+
+  use_foorm_route = () => {
+    let workshop_date = this.props.endDate
+      ? new Date(this.props.endDate)
+      : new Date(this.props.date);
+
+    // Local summer or CSF Intro after 5/8/2020 will use Foorm for survey completion.
+    return (
+      workshop_date >= new Date('2020-05-08') &&
+      (this.props.subject === '5-day Summer' ||
+        (this.props.subject === SubjectNames.SUBJECT_CSF_101 &&
+          this.props.course === 'CS Fundamentals'))
     );
   };
 
@@ -165,6 +185,10 @@ export class WorkshopManagement extends React.Component {
   }
 
   render() {
+    const confirmationBodyText =
+      "Are you sure you want to delete this workshop? Once deleted it can't be recovered. " +
+      'Participants will not be notified. Please reach out to them directly before deleting.';
+
     return (
       <div>
         {this.renderViewButton()}
@@ -176,7 +200,7 @@ export class WorkshopManagement extends React.Component {
           onOk={this.handleDeleteConfirmed}
           onCancel={this.handleDeleteCanceled}
           headerText="Delete Workshop"
-          bodyText="Are you sure you want to delete this workshop? Once deleted it can't be recovered."
+          bodyText={confirmationBodyText}
         />
       </div>
     );

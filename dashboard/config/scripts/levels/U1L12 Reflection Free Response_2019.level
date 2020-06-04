@@ -6,12 +6,23 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Data Storage",
-    "long_instructions": "Respond to this prompt or to another as directed by your teacher.\n\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \n\nIs the salesperson telling me the truth? Why or why not?\n",
+    "long_instructions": "Respond to this prompt or to another as directed by your teacher.\r\n\r\nThe salesperson in a cell phone store is telling me that the phone I'm considering has 8GB of memory, which means I can save 10,000 photos taken with the phone's camera! \r\n\r\nIs the salesperson telling me the truth? Why or why not?\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 12989,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "encrypted_solution": "WEe+/GHq9B5/SJb55IdBIohnvNU/J7SZtD0jO3JOsDlpb9EyWxPrWAXSfsXU\nekWbx41IRWvkPJ6K02Qi7DqImcRX9lOt0TXmOnqRjAe0WpmfZGqQl8HfYs4o\nxDk6qCtPXfSVIVXapJ/16ElW3dipkCaK4d51SgTpggtRLL3Gp1yXN3E3vhby\nBzOHn61eSwde4+f7O3N/FGhg5aD5iVkt+U6/LC/2WXPxFDdr5rxh8c4=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-01-21 17:59:47 +0000\",\"changed\":[\"notes\",\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

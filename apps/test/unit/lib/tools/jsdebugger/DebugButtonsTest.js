@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
@@ -107,6 +107,7 @@ describe('The DebugConsole component', () => {
       // responsible for dealing with the interpreter (applab/gamelab)
       // TODO: consider a different architecture?
       interpreter.executeInterpreter(false);
+      root.update();
     });
 
     it('the handlePauseContinue method of the interpreter gets called', () => {
@@ -155,7 +156,10 @@ describe('The DebugConsole component', () => {
   });
 
   describe('When the interpreter is started from somewhere else', () => {
-    beforeEach(runApp);
+    beforeEach(() => {
+      runApp();
+      root.update();
+    });
 
     it('the pause, step over, step in, and step out buttons are visible', () => {
       expect(getVisibleButtons()).to.deep.equal([

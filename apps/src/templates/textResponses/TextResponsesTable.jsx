@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
@@ -90,7 +91,7 @@ class TextResponsesTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.studentNameFormatter,
+          formatters: [this.studentNameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -170,7 +171,7 @@ class TextResponsesTable extends Component {
           }
         },
         cell: {
-          format: this.responseFormatter,
+          formatters: [this.responseFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell

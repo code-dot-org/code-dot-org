@@ -780,10 +780,9 @@ nn:
           til å snakke og påvirke hverandre. Begynn å tenke på hva slags historie
           du vil fortelle.
       2:
-        text: Katten har alltid vært redd for hunden. Hva om katten oppdager at hunden
-          prøver å være snill? "Når kjør" blokken starter alt. "Flytt" blokken vil
-          flytte figuren din, og "si" blokken vil få figuren din til å si det du skriver
-          inn.
+        text: Katten har alltid vært redd for hunden. Kva om katten oppdagar at hunden
+          prøver å være snill? "Når køyr"-blokka startar alt. "Flytt"-blokken flyttar
+          figuren din, og seie-blokka får figuren din til å seie det du skriv inn.
       3:
         text: Dette er "når figurene kræsjer" blokken du kan sette sammen med de andre
           blokkene.
@@ -848,9 +847,9 @@ nn:
           med å tegne med kunstneren!
     C2_bee_conditionals:
       1:
-        text: Dette er betingelsesblokken. Den sier at HVIS det finnes nektar eller
-          honning som er enten mindre, lik eller større enn et tall, DA skal man gjøre
-          noe.
+        text: Dette er vilkår-blokka. Den seuier at DERSOM det finst nektar eller
+          honning som enten er mindre, lik eller større enn eit tal, DÅ skal ein gjere
+          noko.
       2:
         text: Dette er nyttig når vi ikke vet hvor mye nektar eller honning vi skal
           ta, som vi ser her med dette spørsmåltegnet.
@@ -919,13 +918,13 @@ nn:
           ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne
           feil.
       2:
-        text: Her har vi allerede fått noen blokker. Vi skal bruke steg-knappen for
-          å gå gjennom blokkene steg for steg for å se om dette er riktig løsning,
-          eller hvor vi trenger å gjøre endringer.
+        text: Her har vi allereie fått nokre blokker i arbeidsområdet. Vi skal bruke
+          steg-knappen for å gå gjennom blokkene steg for steg for å sjå om dette
+          er riktig løysing eller kvar vi treng å gjere endringar.
       3:
-        text: Ser ut som det er et problem! Vi trenger én ekstra gå fremover-blokk.
-          Steg-knappen hjelper oss å feilsøke problemet ved å vise hvor feilen er
-          slik at vi kan fikse den.
+        text: Ser ut som det er eit problem! Vi treng ei ekstra gå framover-blokk.
+          Steg-knappen hjelper oss med å feilsøke problemet ved å vise kor feilen
+          er slik at vi kan fikse den.
     C2_digital_footprint:
       1:
         text: Du har hatten på hodet, og dingsene dine forteller deg hva du skal gjøre,
@@ -998,9 +997,10 @@ nn:
           ganger og fullføre kvadratet.
     C2_bee_loops:
       1:
-        text: En løkke er en repeterende handling. Jeg åpner en bikube for å inspisere
-          den, jeg ser på rammen og så setter jeg den tilbake. Dette gjør jeg flere
-          ganger. Det går i løkke, gjentar den samme handlingen flere ganger.
+        text: Ei løkke er ei gjentaking av ein aktivitet. Når eg går inn i bikuben
+          for å inspisere, tar eg opp ei ramme og så setter eg den ned att, så gjentar
+          eg den samme handlinga fleire gongar. Løkka går i ring, der handlinga blir
+          gjort fleire gongar.
       2:
         text: Dette er en gjenta blokk. Det du putter inne i den vil repeteres det
           antall ganger som du ber den om. For eksempel, på dette nivået, i stedet
@@ -1020,19 +1020,19 @@ nn:
           Det hvite feltet til høyre kalles arbeidsområdet, og det er her vi skal
           bygge programmet vårt.
       3:
-        text: Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og
-          trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet.
-          Hva hvis jeg vil at fuglen skal gjøre noe annet etterpå? Da legger jeg til
-          en blokk til i programmet vårt.
+        text: Kva skjer dersom eg drar "gå framover"-blokka til arbeidsområdet og
+          trykker "Køyr"? Fuglen flyttar seg ein boks framover i koordinatsystemet.
+          Kva om eg vil at fuglen skal gjere noko anna etterpå? Då legger eg til ei
+          blokk til i programmet vårt.
       4:
         text: Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken,
           til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil
           feste seg sammen. Når jeg trykker på "Kjør" igjen, vil fuglen gjøre kommandoene
           som er stablet i arbeidsområdet fra toppen og nedover.
       5:
-        text: Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra
-          den til søppelkassen. Etter at du trykker "kjør", kan du alltid velge "nullstill"
-          for å få fuglen tilbake til start. La oss fange grisene!
+        text: Dersom du vil slette ei blokk, kan du dra den vekk fra stablen og dra
+          den til bosskassa. Etter at du trykker "Køyr", kan du alltid velge "nullstill"
+          for å få fuglen tilbake til start. La oss fange grisane!
     C2_paper_airplanes:
       1:
         text: Denne leksjonen kalles virkelige-liv-algoritmer. Algoritmer beskriver
@@ -1091,11 +1091,10 @@ nn:
           det! Debugging er å finne og fikse problemer. Bra, godt jobbet!
     C2_zuck_repeat_loop:
       1:
-        text: En ting datamaskiner er skikkelig gode til er å gjenta kommandoer. Siden
-          du er et menneske ville du kjedet deg veldig hvis du måtte gjøre den samme
-          tingen mange ganger på rad. Men en datamaskin kan gjøre den samme tingen
-          millioner eller til og med milliarder ganger, uten å kjede seg, og kan gjøre
-          det ordentlig bra.
+        text: Noko datamaskiner er veldig gode til, er å gjenta kommandoar. Vi menneske
+          gjeng fort leide dersom vi må gjere den same oppgåva mange, mange gongar
+          på rad. Men ei datamaskin kan gjere det same millionar eller sjølv milliardar
+          av gongar utan å gå lei.
       2:
         text: Så hvis jeg for eksempel ønsket å gratulere alle på Facebook med bursdagen
           ved å sende dem en epost ville det tatt med mer enn hundre år å faktisk
@@ -1164,9 +1163,9 @@ nn:
           plassere den inni en annen gjenta-ganger-blokk. Ganske kult!
     C3_bee_conditionals:
       1:
-        text: Dette er betingelsesblokken. Den sier at HVIS det finnes nektar eller
-          honning som er enten mindre, lik eller større enn et tall, DA skal man gjøre
-          noe.
+        text: Dette er vilkår-blokka. Den seuier at DERSOM det finst nektar eller
+          honning som enten er mindre, lik eller større enn eit tal, DÅ skal ein gjere
+          noko.
       2:
         text: Dette er nyttig når vi ikke vet hvor mye nektar eller honning vi skal
           ta, som vi ser her med dette spørsmåltegnet.
@@ -1180,13 +1179,13 @@ nn:
           ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne
           feil.
       2:
-        text: Her har vi allerede fått noen blokker. Vi skal bruke steg-knappen for
-          å gå gjennom blokkene steg for steg for å se om dette er riktig løsning,
-          eller hvor vi trenger å gjøre endringer.
+        text: Her har vi allereie fått nokre blokker i arbeidsområdet. Vi skal bruke
+          steg-knappen for å gå gjennom blokkene steg for steg for å sjå om dette
+          er riktig løysing eller kvar vi treng å gjere endringar.
       3:
-        text: Ser ut som det er et problem! Vi trenger én ekstra gå fremover-blokk.
-          Steg-knappen hjelper oss å feilsøke problemet ved å vise hvor feilen er
-          slik at vi kan fikse den.
+        text: Ser ut som det er eit problem! Vi treng ei ekstra gå framover-blokk.
+          Steg-knappen hjelper oss med å feilsøke problemet ved å vise kor feilen
+          er slik at vi kan fikse den.
     C3_bee_functions:
       1:
         text: En av de viktigste konseptene i datavitenskap er hvordan man definerer
@@ -1207,11 +1206,11 @@ nn:
           den senere. Når du definerer din egen kommando og gir den et navn, kalles
           det en funksjon. Nå skal vi bruke funksjoner for å hjelpe bien.
       4:
-        text: I dette eksemplet kalles funksjonen få 2 nektar, denne grønne blokken
-          her. Vi vet hva få 2 nektar gjør ved å se på denne grå boksen som er funksjonensdefinisjonen.
-          Hvis vi ser inni den, ser vi at få 2 nektar får nektar og deretter får nektar
-          igjen. Se alltid på det som er i den grå boksen, slik at du vet hva disse
-          grønne funksjonsblokkene kan gjøre.
+        text: I dette dømet heiter funksjonen "få 2 nektar", altså denne grøne blokka
+          her. Vi veit kva "få 2 nektar" gjer ved å sjå på denne grå boksen som er
+          definisjonen på funksjonen. Om vi ser inni den, ser vi at "få 2 nektar"
+          får nektar og deretter får nektar igjen. Sjå alltid på det som er i den
+          grå boksen, slik at du veit kva desse grøne funksjonsblokkene kan gjere.
     C3_bee_nested_loops:
       1:
         text: Nå skal vi bruke løkker i løkker med bien. Vi har fått litt kode å starte
@@ -1397,22 +1396,23 @@ nn:
           utrolig hastighet. Et dataprogram er egentlig litt matematikk og noen hvis-setninger
           hvor beslutninger blir tatt.
       2:
-        text: Hvis-blokken hjelper zombien med å ta en beslutning. Den sjekker noe.
-          For eksempel, la oss bruke blokken som sier "hvis sti til venstre", og sette
-          en "snu til venstre"-kommando inni den. Vi ber zombien om å sjekke omgivelsene,
-          se om det er en sti til venstre, og hvis det er det skal den snu seg.
+        text: Dersom-blokka hjelper zombien med å bestemme seg. Den sjekkar noko.
+          La oss til dømes bruke blokka som seier dersom det finst ein sti til venstre,
+          setter vi ein "snu til venstre"-kommando inni den. Vi ber zombien om å sjekke
+          rundt seg, sjå om det er ein sti til venstre, og dersom det er det, skal
+          den snu seg.
       3:
-        text: Så bruker vi "gå fremover"-blokken inni "gjenta til du når den" for
-          å fortsette å bevege seg fremover så lenge den vil gå rett frem. Så når
-          det er en sving, vil hvis-blokken be den svinge til venstre. Du kan se at
-          hvis vi gjør det, hvis den snur til venstre og ellers flytter seg fremover,
-          vil vi nå målet.
+        text: Deretter bruker vi "gå framover"-blokka inni "gjenta til du når den"
+          for å fortsatt flytte seg framover så lenge den vil gå rett fram. Når det
+          kjem ein sving, vil dersom-blokka be den svinge til venstre. Du kan sjå
+          at dersom vi gjer det, dersom den snur til venstre og ellers flyttar seg
+          framover, vil vi nå målet.
       4:
-        text: Det er et eksempel på bruk av en hvis-setning som er et virkelig grunnleggende
-          konsept i dataprogrammering. Noe av det første jeg lærte var å skrive et
-          program som spilte bondesjakk. Jeg hadde hvis-setninger som sa, ok, hvis
-          den andre personen holder på å vinne, må du blokkere det stedet. Ha det
-          gøy mens du lærer om hvis-setninger, det er et nøkkelkonsept.
+        text: Det er eit døme på bruk av ei dersom-setning som eigentleg er eit grunnleggjande
+          konsept i dataprogrammering. Noko av det første eg lærte var å skrive eit
+          program som spelte bondesjakk. Eg hadde dersom-setninger som sa, ok, dersom
+          den andre personen er i ferd med å vinne, må du blokkere den staden. Ha
+          det gøy medan du lærer om dersom-setningar. Det er et nøkkelkonsept.
     C3_maze_level_4:
       1:
         text: I dette eksemplet er målet ditt å få zombien til å nå solsikken. Vi
@@ -1449,10 +1449,10 @@ nn:
           den en gang!
     C4_bee_conditional:
       1:
-        text: Dette er en vilkårsblokk. Den vil fortelle om du har kommet til blomsten
-          eller til vokskaken, og at du må gjøre noe. Denne er nyttig når vi ikke
-          vet hvor mye honning eller nektar vi skal hente, som vi ser her ved dette
-          spørsmålstegnet.
+        text: Dette er ei vilkårsblokk. Den vil fortelle om du har kome til blomen
+          eller til bikuben, og at du må gjere noko. Denne er nyttig når vi ikkje
+          veit kor mykjee honning eller nektar vi skal hente, som vi ser her ved dette
+          spørsmålsteiknet.
       2:
         text: I dette eksempelet kommer vi til å si at hvis det er en blomst, hent
           all nektaren. Og så bruker vi en annen til å si hvis det er en vokskake,
@@ -1626,10 +1626,10 @@ nn:
           Det hvite feltet til høyre kalles arbeidsområdet, og det er her vi skal
           bygge programmet vårt.
       3:
-        text: Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og
-          trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet.
-          Hva hvis jeg vil at fuglen skal gjøre noe annet etter at den har flyttet
-          seg frem en boks? Da legger jeg til en blokk til i programmet vårt.
+        text: Kva skjer dersom eg drar "gå framover"-blokka til arbeidsområdet og
+          trykker "Køyr"? Fuglen flyttar seg ein boks framover i koordinatsystemet.
+          Kva om eg vil at fuglen skal gjere noko anna etterpå? Då legger eg til ei
+          blokk til i programmet vårt.
       4:
         text: Jeg kommer til å velge en "rotér mot høyre"-blokk og dra den inn under
           "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den
@@ -1637,9 +1637,9 @@ nn:
           igjen, vil fuglen utføre kommandoene i arbeidsområdet i rekkefølge fra toppen
           og nedover.
       5:
-        text: Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra
-          den til søppelkassen. Etter at du trykker "kjør", kan du alltid velge "nullstill"
-          for å få fuglen tilbake til start. La oss fange grisene!
+        text: Dersom du vil slette ei blokk, kan du dra den vekk fra stablen og dra
+          den til bosskassa. Etter at du trykker "Køyr", kan du alltid velge "nullstill"
+          for å få fuglen tilbake til start. La oss fange grisane!
     C4_math_artist:
       1:
         text: Hvis jeg ønsker å tegne en firkant som er 50 punkter høy og dobbelt
@@ -2482,15 +2482,18 @@ nn:
           figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles
           på en telefon.
       4:
-        text: Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen,
-          hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet
-          nedenfor.
+        text: Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der
+          spelet ditt vil køyre. Instruksjonane for kvart nivå er skrivne under speleflata.
       5:
         text: I midten er verktøykassa, og hver av disse blokkene er en kommando,
           et stykke kode.
       6:
         text: Det kvite området til høgre er arbeidsområdet, og det er her vi bygger
           opp programmet.
+      7:
+        text: For å starte må du kople blokkene dine til den oransje-"når den køyrer"-blokka.
+          Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina
+          og vil dei snappe saman.
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2548,15 +2551,18 @@ nn:
           figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles
           på en telefon.
       4:
-        text: Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen,
-          hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet
-          nedenfor.
+        text: Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der
+          spelet ditt vil køyre. Instruksjonane for kvart nivå er skrivne under speleflata.
       5:
         text: I midten er verktøykassa, og hver av disse blokkene er en kommando,
           et stykke kode.
       6:
         text: Det kvite området til høgre er arbeidsområdet, og det er her vi bygger
           opp programmet.
+      7:
+        text: For å starte må du kople blokkene dine til den oransje-"når den køyrer"-blokka.
+          Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina
+          og vil dei snappe saman.
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2857,3 +2863,7 @@ nn:
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
+    hoc_dance_events_2019:
+      4:
+        text: Døme på hendingar er å vente på eit museklikk, ein piltast eller trykk
+          på skjermen.

@@ -8,7 +8,7 @@
 #notes-content{style: 'display: none;'}
   %ul
     %li
-      %a{href: '#video'}
+      %a{href: '#videoTabContainer'}
         = I18n.t('video.tab')
         %span.video-name
     %li
@@ -16,7 +16,7 @@
 
 - if @script_level
   - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.course&.name }
-  %script{ src: minifiable_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
 
@@ -35,27 +35,18 @@
     Check that @script_level exists, because it won't for a /level/ view.
   - if @script_level && @script_level.should_hide_survey(current_user, @user)
     = I18n.t('level_group.hide_survey_last_answer')
-  - elsif @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
+  - elsif @script_level && @script_level.lesson.lockable? && (!current_user || @script_level.locked?(current_user))
     -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
     = render 'levels/locked_stage'
   - else
     -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
-    - if @script_level && @script_level.stage.lockable? && current_user.try(:teacher?)
+    - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
       = render 'levels/locked_stage', hidden: true
 
     - if @game.unplugged?
       :javascript
         var appOptions = #{app_options.to_json};
       = render partial: 'levels/unplug', locals: {app: @game.app}
-    - elsif (@level.is_a?(Applab) || @level.is_a?(Gamelab) || @level.is_a?(Weblab)) && app_options['readonlyWorkspace'] && !app_options['channel']
-      -# A teacher is trying to view a student's progress on a level they have not started.
-      = render partial: 'levels/not_started'
-    - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks && !@level.is_a?(Applab) && !@level.is_a?(Gamelab) && !@level.is_a?(Weblab)
-      #title
-        - if @level.properties['short_instructions'].present?
-          %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= brakeman_no_warn(@level.properties['short_instructions'])
-      -# Pass special parameters to Blockly partial for embedded level type.
-      = render partial: 'levels/blockly'
     - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)
       :javascript
         var appOptions = #{app_options.to_json};

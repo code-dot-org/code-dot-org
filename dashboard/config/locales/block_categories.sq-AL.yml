@@ -3,18 +3,12 @@ sq:
   data:
     block_categories:
       Actions: Veprime
-      Loops: cikle
-      Functions: funksione
       Color: Ngjyra
-      Math: Matematikë
-      Logic: Logjikë
-      Variables: variabla
       Conditionals: Kushtet
       Events: Ngjarje
+      Functions: funksione
+      Logic: Logjikë
+      Loops: cikle
+      Math: Matematikë
       Text: Tekst
-      Location: Lokacioni
-      Start: Fillo
-      Booleans: Booleans
-      test: test
-      Name: Emri
-      Function: Funksion
+      Variables: variabla

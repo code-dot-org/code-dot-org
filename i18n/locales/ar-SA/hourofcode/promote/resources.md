@@ -1,172 +1,195 @@
 ---
-title: <%= hoc_s(:title_resources).inspect %>
-layout: wide
-nav: promote_nav
+title: المصادر
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# ساعد على الترويج لساعة من البرمجة
+# الترويج لأنشطة "ساعة البرمجة"
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
+### يمكنك العثور على جميع المصادر التي تحتاجها لجذب الانتباه إلى أنشطة "ساعة البرمجة" الخاصة بك. لا تعرفمن أين تبدأ؟ ابدأ باستخدام [الدليل الإرشادي لاستضافة أحداث "ساعة البرمجة"]({{ how_to_url }})!
 
 * * *
 
-<%= view :promote_handouts %> <%= view :promote_videos %>
+{{ promote_handouts }} {{ promote_videos }}
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## قم بتعليق هذه الملصقات في مدرستك
 
-<%= view :promote_new_posters %>
+تتوفر مجموعة ملصقات جديدة تضم مالالا وستيفن كيري وشاكيرا والمزيد! هذا العام، ستأتي كل مجموعة أيضًا مع 6 ملصقات و126 ملصقًا صغيرة مكتوبًا عليها "لقد شاركت في أنشطة "ساعة البرمجة". الكمية محدودة، لذلك [اطلب ملصقاتك](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) بسرعة. لطباعة ملصقات بنفسك، كل ما عليك فعله هو النقر على الصورة أدناه لعرض نسخة قابلة للطباعة وحفظها.
 
-Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
+{{ promote_new_posters }} 
+
+* هل تبحث عن ملصقاتنا من السنوات السابقة؟[يمكنك العثور عليها هنا]({{ promote/previous_posters_url }})! 
 
 <a id="social"></a>
 
-## Post these on social media
+## انشر هذه على مواقع التواصل الاجتماعي
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## استخدم شعار منصة "ساعة البرمجة" للترويج لها
 
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
+[![صورة]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[يمكنك تنزيل إصدارات عالية الدقة](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**منصة "ساعة البرمجة" هي علامة تجارية. ونحن لا نريد منع استخدامها، لكننا نريد التأكد من أن يتم هذا الاستخدام في حدود قليلة وملائمة:**
 
-1. وينبغي استخدام أي إشارة إلى "ساعة من التعليمات البرمجية" بطريقة لا توحي أنها اسم علامة تجارية خاصة بك، ولكن بدلاً من ذلك الإشارة ل "ساعة من التعليمات البرمجية" كحركة شعبية. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](%= resolve_url('https://code.org') %) websites, that says the following:
+1. يجب استخدام أي إشارة إلى "ساعة البرمجة" بطريقة لا توحي بأنها اسم علامتك التجارية الخاصة، بل الإشارة إلى "ساعة البرمجة" على أنها مبادرة وطنية. **مثال جيد</ strong>: "شارك في ساعة البرمجة ™ علىACMECorp.com." **مثال سيئ</ strong>: "جرِّب "ساعة البرمجة" بواسطة ACME Corp." </li> 
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
-
-4. No use of "Hour of Code" in app names.
+    * استخدم العلامة الفوقية "TM" في أبرز الأماكن التي تذكر فيها "ساعة البرمجة"، سواء في موقعك الإلكتروني أو في وصف التطبيق الخاص بك.
+    * اكتب فقرة في صفحتك أو (أسفل الصفحة)، تتضمن روابط لمواقع الأسبوع العالمي للبرمجة وعلوم الحاسوب وموقع [Code.org]({{ codeorg_link }})، وتنص على ما يلي:
+        
+        *"ساعة البرمجة ™" هي مبادرة على مستوى الدولة برعاية الأسبوع العالمي للبرمجة وعلوم الحاسوب [csedweek.org] وموقع Code.org [code.org] لتعريف ملايين الطلاب بعلوم الحاسوب وبرمجة الحاسوب في أنشطة مدتها ساعة واحدة فقط."*
+    
+    * لا تستخدم "ساعة البرمجة" في أسماء التطبيقات.</ol> 
+    
+    
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
-
-(Stickers are 1" diameter, 63 per sheet) <br />
-
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+    
+    ## اطبع هذه الملصقات لتقدمها لطلابك
+    
+    (حجم الملصقات: قطر 1 بوصة، و 63 لكل ورقة)<br />
+    
+    [![صورة](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+    
+    
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
-
-### Find [more information and language you can use](<%= resolve_url('/promote/stats') %>) when talking about the Hour of Code.
-
-* * *
+    
+    ## قم بدعوة الأشخاص في مجتمعك إلى حدث "ساعة البرمجة" الخاص بك والترويج للحدث عبر البريد الإلكتروني
+    
+    ### يمكنك العثور على [المزيد من المعلومات والصياغات التي يمكنك استخدامها]({{ promotion/stats_url }}) عند التحدث عن "ساعة البرمجة".
+    
+    * * *
+    
+    
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
-
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
-
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
-
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
-
-This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
-
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
-
-Get started at http://hourofcode.com/<%= @country %> <br />
-
-* * *
+    
+    ### اطلب من مدرستك أو صاحب عملك أو أصدقائك التسجيل:
+    
+    **سطر الموضوع:** انضم إليَّ وإلى أكثر من 100 طالب للقيام بأنشطة "ساعة البرمجة" <br />
+    
+    أجهزة الحاسوب في كل مكان، تعمل على تغيير جميع أنواع الصناعات على كوكب الأرض. ومع ذلك، يتم تدرس علوم الحاسوب في 45٪ فقط من المدارس الثانوية. الخبر السار هو أننا في طريقنا لتغيير هذا! إذا سمعت عن "ساعة البرمجة" من قبل، فقد تعرف أنها صنعت التاريخ. لقد جرَّب أكثر من 100 مليون طالب أنشطة "ساعة البرمجة".
+    
+    مع منصة "ساعة البرمجة"، أصبحت علوم الحاسوب على الصفحات الرئيسية لكل من Google و MSN و Yahoo! و Disney. هناك أكثر من 100 شريك انضموا لدعم هذه المبادرة. لقد استضاف جميع "متاجر آبل" في العالم أنشطة "ساعة البرمجة"، وكتب قادة مثل الرئيس أوباما ورئيس الوزراء الكندي جاستن ترودو الأسطر الأولى من كود البرمجة كجزء من الحملة. 
+    
+    لنجعل المبادرة أكبر هذه السنة. وأنا أطلب منكم الانضمام إلى "ساعة البرمجة" {{campaign date / year}}. يرجى المشاركة في حدث "ساعة البرمجة" أثناء لأسبوع العالمي للبرمجة وعلوم الحاسوب، {{campaign date / full}}.
+    
+    ساعد في نشر الحدث، واستضافة أحداث أخرى. اطلب من مدرسة محلية التسجيل. أو جرِّب أنشطة "ساعة البرمجة" بنفسك - يمكن للجميع الاستفادة من تعلم الأساسيات.
+    
+    ابدأ الخطوات الأولى على http://hourofcode.com/ {{country}}<br />
+    
+    * * *
+    
+    
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
-
-#### [Find more resources and information about volunteering in schools here](<%= resolve_url('/how-to/volunteers') %>).
-
-**Subject line:** Can we help you host an Hour of Code?
-
-Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
-
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
-
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
-
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
-
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
-
-* * *
+    
+    ### تطوَّع في مدرسة:
+    
+    #### [يمكنك العثور على المزيد من المصادر والمعلومات حول التطوع في المدارس هنا]({{ how_to_volunteers_url }}).
+    
+    **عنوان الموضوع:** هل نستطيع مساعدتك لاستضافة حدث "ساعة البرمجة"؟
+    
+    من بين {{ campaign_date/short }}، 10 بالمئة من المتعلمين حول العالم سيحتفلون بالأسبوع العالمي للبرمجة وعلوم الحاسوب من خلال القيام بأنشطة "ساعة البرمجة" في مدرستهم. إنها فرصة لكل طفل لمعرفة كيف تعمل التكنولوجيا من حولنا.
+    
+    تود [Our organization/My name] مساعدة [school name] لإجراء حدث "ساعة البرمجة". يمكننا مساعدة المعلمين على استضافة أحداث "ساعة البرمجة" في الفصول الدراسية (لا نحتاج إلى أجهزة حاسوب!) أو إذا كنت ترغب في استضافة تجمُّع مدرسي، فيمكننا الترتيب لحضور متحدث يتحدث عن كيفية عمل التكنولوجيا وما شعور أن تكون مهندس برمجيات.
+    
+    سوف يصمِّم الطلاب تطبيقاتهم أو ألعابهم الخاصة التي يمكنهم عرضها على آبائهم، وسنقوم أيضًا بطباعة شهادات "ساعة البرمجة" التي يمكنهم أخذها معهم إلى المنزل. وهذا أمر رائع! فمن خلال الأنشطة التفاعلية العملية، سيتعلم الطلاب مهارات التفكير الحسابي بطريقة سهلة.
+    
+    أجهزة الحاسوب في كل مكان، تعمل على تغيير جميع أنواع الصناعات على كوكب الأرض. ومع ذلك، يتم تدرس علوم الحاسوب في 45٪ فقط من المدارس الثانوية. الخبر السار هو أننا في طريقنا لتغيير ذلك! إذا سمعت عن منصة "ساعة البرمجة" من قبل، فربما تعلم أنها صنعت التاريخ؛ لقد جرَّب أكثر من 100 مليون طالب حول العالم أنشطة وبرامج "ساعة البرمجة". حتى القادة مثل الرئيس أوباما ورئيس الوزراء الكندي جاستن ترودو كتبوا السطور الأولى في البرمجة كجزء من الحملة.
+    
+    يمكنك قراءة المزيد عن الحدث على http://hourofcode.com. أو إخبارنا إذا كنت ترغب في تحديد وقت معين للتحدث عن كيفية مشاركة [اسم المدرسة].<br />
+    
+    * * *
+    
+    
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
-
-**Subject line:** Our students are changing the future with an Hour of Code
-
-Dear Parents,
-
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
-
-But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
-
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
-
-This is a chance to change the future of education in [TOWN/CITY NAME].
-
-See http://hourofcode.com/<%= @country %> for details, and help spread the word. <br />
-
-* * *
+    
+    ### أخبر أولياء الأمور عن الحدث الذي تنظمه مدرستك:
+    
+    **عنوان الموضوع**: طلابنا يغيِّرون المستقبل بواسطة "ساعة البرمجة"
+    
+    أولياء الأمور الأعزاء،
+    
+    نحن نعيش في عالم محاط بالتكنولوجيا. ونعلم أنه مهما كان المجال الذي يختار طلابنا التخصص فيه كبالغين، فإن قدرتهم على النجاح تعتمد بشكل متزايد على فهم كيفية عمل التكنولوجيا.
+    
+    لكن جزءًا صغيرًا منا فقط يتعلم **كيف</ strong> تعمل التكنولوجيا. يتم تدرس علوم الحاسوب في 45٪ فقط من المدارس الثانوية.</p> 
+    
+    لهذا السبب انضمت مدرستنا بأكملها في أكبر حدث تعليمي في التاريخ: "ساعة البرمجة"، أثناء الأسبوع العالمي للبرمجة وعلوم الحاسوب ({{campaign date / full}}). أكثر من 100 مليون طالب في جميع أنحاء العالم جرَّبوا بالفعل أنشطة وبرامج "ساعة برمجة". تعلن "ساعة البرمجة" أن [SCHOOL NAME] على استعداد لتعليم المهارات الأساسية التي تميِّز القرن الحادي والعشرين. ولمواصلة تقديم أنشطة البرمجة لطلابك، نريد أن نجعل حدث "ساعة البرمجة" الخاص بنا حدثًا ضخمًا. أشجعك على التطوع والتواصل مع وسائل الإعلام المحلية ومشاركة الأخبار على وسائل التواصل الاجتماعي والتفكير في استضافة أحداث "ساعة البرمجة" في المجتمع.
+    
+    هذه فرصة لتغيير مستقبل التعليم في [TOWN / CITY NAME].
+    
+    يرجى الاطلاع على http://hourofcode.com/ {{country}} للحصول على المزيد من التفاصيل، والمساعدة في نشر المبادرة.<br />
+    
+    * * *
+    
+    
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
-
-#### [Check out our press kit for more information on inviting media to your event.](<%= resolve_url('/promote/press-kit') %>)
-
-**Subject line**: Local school joins mission to introduce students to computer science
-
-Computers are everywhere, changing every industry on the planet, but only 35% of all high schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. الخبر السار، أننا في طريقنا لنغير ذلك.
-
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
-
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
-
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
-
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
-
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
-
-I look forward to being in touch. <br />
-
-* * *
+    
+    ### قم بدعوة وسائل الإعلام لحضور الحدث الخاص بك:
+    
+    #### [يمكنك الاطلاع على مجوعة المواد الصحفية لمزيد من المعلومات حول دعوة وسائل الإعلام لحضور الحدث الخاص بك.]({{ promote/press_kit_url }})
+    
+    **عنوان الموضوع</ strong>: المدرسة المحلية تنضم إلى مهمة تعريف الطلاب بعلوم الحاسوب</p> 
+    
+    أجهزة الحاسوب في كل مكان، وتغيِّر جميع أنواع الصناعات على هذا الكوكب، ومع ذلك، يتم تدريس علوم الحاسوب في 45٪ فقط من المدارس الثانوية. الفتيات والأقليات ممثلة تمثيلًا ضعيفًا للغاية في فصول علوم الحاسوب، وفي صناعة التكنولوجيا. الخبر السار هو أننا في طريقنا لتغيير ذلك.
+    
+    مع منصة "ساعة البرمجة"، أصبحت علوم الحاسوب على الصفحات الرئيسية لكل من Google و MSN و Yahoo! و Disney. هناك أكثر من 100 شريك انضموا لدعم هذه المبادرة. واستضاف جميع متاجر "آبل" في العالم أحداث وفعاليات "ساعة البرمجة". حتى الرئيس أوباما كتب السطر الأول من نشاط البرمجة كجزء من الحملة.
+    
+    هذا هو السبب في أن كل واحد من طلاب [X number] في [SCHOOL NAME] ينضم إلى أكبر حدث تعليمي في التاريخ: "ساعة البرمجة"، خلال الأسبوع العالمي للبرمجة وعلوم الحاسوب (3-9 ديسمبر).
+    
+    أكتب إليكم لدعوتكم لحضور اجتماعنا الافتتاحي ولرؤية الأطفال يبدأون النشاط في [DATE].
+    
+    مبادرة "ساعة البرمجة"، التي نظمتها منظمة Code.org غير الربحية وأكثر من 100 آخرين، هي مبادرة عالمية تؤمن أن طلاب اليوم مستعدون لتعلم المهارات الأساسية لتحقيق النجاح في القرن الحادي والعشرين. أرجو أن تنضموا إلينا.
+    
+    جهة الاتصال: [اسمك]، [TITLE]، الهاتف: (212) 555-5555 الموعد: [DATE and TIME of your event] المكان: [ADDRESS and DIRECTIONS]
+    
+    أتطلع إلى رؤيتكم!<br />
+    
+    * * *
+    
+    
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
-
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event](<%= resolve_url('/how-to/public-officials') %>).
-
-**Subject line**: Join our school as we change the future with an Hour of Code
-
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
-
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
-
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
-
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
-
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-
-<%= view :signup_button %>
+    
+    ### قم بدعوة سياسي محلي إلى الحدث الذي تنظمه مدرستك:
+    
+    #### [هل تحتاج إلى مزيد من المعلومات؟ ألق نظرة على مصادرنا لدعوة السياسيين لحضور حدثك]({{ how_to_public_officials_url }}).
+    
+    **عنوان الموضوع**: انضم إلى مدرستنا لنغير المستقبل من خلال "ساعة البرمجة"
+    
+    سيادة [Mayor/Governor/Representative/Senator LAST NAME]:
+    
+    هل تعلم أن الحوسبة هي المصدر الأول للأجور في الولايات المتحدة؟ هناك أكثر من 500000 وظيفة شاغرة في مجال الحوسبة على مستوى الدولة، ولكن في العام الماضي فقط تخرَّج 42969 من طلاب علوم الحاسوب وانضموا إلى القوى العاملة.
+    
+    تعد علوم الحاسوب عاملًا أساسيًا في جميع الصناعات اليوم، ومع ذلك، لا يتم تدريسها في معظم المدارس. في [SCHOOL NAME]، نحاول تغيير ذلك.
+    
+    لهذا السبب انضمت مدرستنا بأكملها في أكبر حدث تعليمي في التاريخ: "ساعة البرمجة"، أثناء الأسبوع العالمي للبرمجة وعلوم الحاسوب ({{campaign date / full}}). أكثر من 100 مليون طالب في جميع أنحاء العالم جرَّبوا بالفعل أنشطة وبرامج "ساعة برمجة".
+    
+    أكتب إلى سيادتكم لأدعوكم للانضمام إلى حدث "ساعة البرمجة" والتحدث في الافتتاح.أ سوف يُقام الحدث في [DATE ، TIME ، PLACE]، ونحن نسعى إلى إرسال رسالة قوية بأن [State أو City name] جاهزة لتعليم طلابنا المهارات الأساسية للقرن الحادي والعشرين. نريد أن نتأكد من أن طلابنا في طليعة ابتكارات تكنولوجيا المستقبل - وليسوا مجرد مستهلكين لها فحسب.
+    
+    يرجى الاتصال بنا على [رقم الهاتف أو عنوان البريد الإلكتروني]. ونحن نتطلع إلى ردكم.
+    
+    {{ signup_button }}

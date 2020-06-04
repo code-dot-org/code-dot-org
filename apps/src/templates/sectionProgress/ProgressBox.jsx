@@ -2,16 +2,28 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 
+const PROGRESS_BOX_SIZE = 20;
+
 const styles = {
   box: {
-    height: 20,
-    width: 20,
+    height: PROGRESS_BOX_SIZE,
+    width: PROGRESS_BOX_SIZE,
     borderWidth: 1,
     borderStyle: 'solid',
-    boxSizing: 'content-box'
+    boxSizing: 'content-box',
+    position: 'relative'
   },
   filler: {
-    width: 20
+    width: PROGRESS_BOX_SIZE,
+    position: 'absolute'
+  },
+  lessonNumber: {
+    position: 'absolute',
+    zIndex: 2,
+    paddingTop: 2,
+    textAlign: 'center',
+    width: PROGRESS_BOX_SIZE,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 
@@ -22,7 +34,8 @@ export default class ProgressBox extends Component {
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
     style: PropTypes.object,
-    stageIsAllAssessment: PropTypes.bool
+    stageIsAllAssessment: PropTypes.bool,
+    lessonNumber: PropTypes.number
   };
 
   render() {
@@ -47,13 +60,15 @@ export default class ProgressBox extends Component {
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
-      height: perfect
+      height: perfect,
+      top: PROGRESS_BOX_SIZE - perfect
     };
 
     const assessmentLevels = {
       ...styles.filler,
       backgroundColor: color.level_submitted,
-      height: perfect
+      height: perfect,
+      top: PROGRESS_BOX_SIZE - perfect
     };
 
     const incompleteLevels = {
@@ -68,8 +83,15 @@ export default class ProgressBox extends Component {
       height: imperfect
     };
 
+    const lessonNumberStyle = {
+      ...styles.lessonNumber,
+      color: perfect ? color.white : color.charcoal
+    };
     return (
       <div style={boxWithBorderStyle}>
+        {this.props.lessonNumber && (
+          <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
+        )}
         <div style={incompleteLevels} />
         <div style={imperfectLevels} />
         <div

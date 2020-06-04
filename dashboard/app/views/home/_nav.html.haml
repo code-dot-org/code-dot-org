@@ -5,10 +5,10 @@
 .row.navcontainer
   .span12{style: 'margin-left: 0'}
     %ul.nav.nav-pills{style: 'margin: 0'}
-      - if current_user && !current_user.working_on_user_scripts.empty?
+      - if current_user && Queries::ScriptActivity.working_on_user_scripts(current_user).any?
         %li{class: active == :working ? 'active' : ''}
           %a{href: '#working'}= I18n.t('studio.courses_working_on')
-      - if current_user && !current_user.completed_user_scripts.empty?
+      - if current_user && Queries::ScriptActivity.completed_user_scripts(current_user).any?
         %li{class: active == :completed ? 'active' : ''}
           %a{href: '#completed'}= I18n.t('studio.completed_courses')
       %li{class: active == :all ? 'active' : ''}

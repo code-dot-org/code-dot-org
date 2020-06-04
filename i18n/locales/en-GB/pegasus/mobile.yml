@@ -13,7 +13,6 @@
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: "Name"
   email: "Email"
@@ -157,7 +156,6 @@
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\">Learn more</a> about the prizes for every educator."
   blockly_name: "Blockly"
   course1_name: "Course 1"
-  math_category_name: "Mathematics"
   lightbot_gradelevel: "All ages"
   thinkersmith_gradelevel: "All ages"
   lightbotintl_gradelevel: "All ages"

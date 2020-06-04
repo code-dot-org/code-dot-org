@@ -6,6 +6,7 @@ var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
 var OPERATORS = [['=', '=='], ['<', '<'], ['>', '>']];
+const RTL_OPERATORS = [['=', '=='], ['>', '<'], ['<', '>']];
 
 var TOOLTIPS = {
   '==': Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ,
@@ -231,7 +232,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       );
       this.appendDummyInput().appendTitle(' ');
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(OPERATORS),
+        new blockly.FieldDropdown(Blockly.RTL ? RTL_OPERATORS : OPERATORS),
         'OP'
       );
       this.appendDummyInput().appendTitle(' ');

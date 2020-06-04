@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
 
 const DEFAULT_PROPS = {

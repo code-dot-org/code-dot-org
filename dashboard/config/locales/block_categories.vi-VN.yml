@@ -3,49 +3,28 @@ vi:
   data:
     block_categories:
       Actions: hành động
-      Loops: Vòng lặp
-      Functions: Các hàm
-      Color: Màu sắc
-      Brushes: Bàn chải
-      Math: thuật toán
-      Logic: Logic
-      Variables: Các biến
-      Number: Số
-      String: Chuỗi
-      Image: Hình ảnh
-      Boolean: Luận lí
-      Conditionals: Điều kiện
-      Events: Các sự kiện
-      Games/Score: Trò chơi/Điểm
-      Comments: Bình luận
-      Category: Chuyên mục
-      Prebuilt: Dựng sẵn
-      Text: văn bản
-      Picker: Chọn
-      Comment: Bình luận
-      World: Thế giới
-      Behaviors: Hành vi
-      'Variables ': 'Các biến '
-      Default: Mặc định
-      everythingelse: thứ khác
-      Location: Địa điểm
-      numbers: các con số
-      Numbers: Các con số
-      Dancers: Vũ công
-      Groups: Nhóm
       Advanced: Nâng cao
-      Start: Bắt đầu
-      Sprite: Ma
-      Brush: Chải
-      Make Sprite: Tạo ma
-      Movement: Phong trào
-      Booleans: Các toán tử
-      Functional: Chức năng
-      Predefined: Xác định trước
-      test: kiểm thử
-      test2: bàikiểmtra2
-      Name: Tên
-      NEW BLOCKS: NHỮNG KHỐI MỚI
+      Behaviors: Hành vi
+      Brushes: Bàn chải
+      Color: Màu sắc
+      Comment: Bình luận
+      Comments: Bình luận
+      Conditionals: Điều kiện
+      Dancers: Vũ công
+      Default: Mặc định
+      Events: Các sự kiện
+      Functions: Các hàm
       'Functions ': 'Chức năng '
       Game/Score: Trò chơi/Điểm
-      Function: Hàm
+      Games/Score: Trò chơi/Điểm
+      Groups: Nhóm
+      Locations: Địa điểm
+      Logic: Logic
+      Loops: Vòng lặp
+      Math: thuật toán
+      Numbers: Các con số
+      Properties: Thuộc tính
+      Text: Văn bản
+      Variables: Các biến
+      'Variables ': 'Các biến '
+      World: Thế giới

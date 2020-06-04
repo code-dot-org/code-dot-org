@@ -16,7 +16,7 @@
   margin: 5px 0px;
   background-color: white;
   border-color: white;
-  color: #4d575f;
+  color: black;
 }
 
 .ctabutton-white-inverse {
@@ -83,9 +83,24 @@ a.category-link {
   border-radius: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
+  background-color: white;
+}
+
+.announcements-body {
+  background-color: #5c3f7f;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  max-width: 30%;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
+  .announcements-body {
+    min-width: 100%;
+  }
+
   .robotics-provider {
     max-width: 45%;
   }
@@ -101,8 +116,12 @@ a.category-link {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
+  .announcements-body {
+    min-width: 100%;
+  }
+
   .robotics-provider {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   .front-header-banner h4 {
@@ -116,8 +135,12 @@ a.category-link {
 }
 
 @media screen and (min-width: 1201px) {
+  .announcements-body {
+    min-width: 100%;
+  }
+
   .robotics-provider {
-    max-width: 15%;
+    width: 22%;
   }
 
   .front-header-banner h4 {
@@ -149,7 +172,6 @@ a.category-link {
   color: white;
   border-radius: 5px;
   padding: 10px;
-  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1.0);
   text-align: center;
 }
 
@@ -159,8 +181,10 @@ a.category-link {
 }
 
 .front-header-description {
+  color: black;
   max-width: 800px;
   display: inline-block;
+  text-shadow: 0px 0px 20px white, 0px 0px 20px white, 0px 0px 20px white;
 }
 
 .hoc-description {

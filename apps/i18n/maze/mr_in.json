@@ -1,3 +1,8 @@
 {
-  "ifCode": "जर"
+  "continue": "सुरू ठेवा",
+  "elseCode": "किंवा",
+  "heightParameter": "उंची",
+  "ifCode": "जर",
+  "no": "नाही",
+  "yes": "होय"
 }

@@ -1,0 +1,83 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2019-08-17T23:52:31.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "fill": null,
+      "ellipse": null,
+      "rect": null,
+      "background": null,
+      "arc": null,
+      "line": null,
+      "stroke": null,
+      "strokeWeight": null,
+      "noFill": null,
+      "noStroke": null,
+      "point": null,
+      "shape": null,
+      "regularPolygon": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Make a Shape Scene\r\n\r\nNow that you have some new blocks, decide what you'd like to draw with them.\r\n\r\n# Do This\r\n\r\n* Draw a scene.  You can use the scenes below for inspiration.\r\n\r\n<img src=\"https://images.code.org/c4f937728760a22079fc1c38ac300984-image-1566088819489.39.48 PM.png\" style=\"float:left; height: 200px; margin: 15px;\">\r\n\r\n<img src=\"https://images.code.org/d8bbcfd08bd76090903eb1eeadab53a9-image-1566088832981.24.42 PM.png\" style=\"float:left; height: 200px; margin: 15px;\">\r\n\r\n<img src=\"https://images.code.org/e424ac937fbd5d6a219b1f1744a30084-image-1566088839042.16.14 PM.png\" style=\"float:left; height: 200px; margin: 15px;\">\r\n\r\n<img src=\"https://images.code.org/28e9f2963706078d80a8f06e84eaa2fb-image-1566095034917.18.19 PM.png\" style=\"float:left; height: 200px; margin: 15px;\">\r\n\r\n<img src=\"https://images.code.org/4d966b1ce5450d2cbcea8ac40ffd1988-image-1566095039922.23.16 PM.png\" style=\"float:left; height: 200px; margin: 15px;\">",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "start_blocks": "fill(\"green\");\r\nellipse(200,200,200,200);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "parent_level_id": 18454,
+    "name_suffix": "_pilot",
+    "reference_links": [
+      "/docs/csd-1718/drawing_shapes_map/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/shape_size_map/index.html",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "display_name": "Make a Shape Scene",
+    "teacher_markdown": "This creative task allows students to use their new knowledge to achieve a goal that they set for themselves, or  to tinker with the code without a specific set goal.  ",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-25 20:03:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 23:43:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:15 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:30:47 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:50:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-07 21:13:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-03-07 21:15:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"rubric_key_concept\",\"rubric_exceeds\",\"rubric_meets\",\"rubric_approaches\",\"rubric_no_evidence\",\"mini_rubric\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-08-18 00:02:00 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 00:42:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 02:24:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 02:25:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

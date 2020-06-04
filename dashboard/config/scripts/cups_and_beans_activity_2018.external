@@ -37,12 +37,12 @@ In this activity, cups filled with beans will represent information going back a
 
 ### Main Takeaways and Terminology: 
 
-<p>
+<ul>
 <li> Obviously on the Internet information is not exchanged as beans in cups.</li>
 <li> Our demonstration DOES NOT show or explain how the math or encryption works (we’ll get to that next)</li>
 <li> What it DOES show are the mechanics of public key communication: How public and private keys are used to encrypt information.</li>
 <li> Here are the terms you should know:</li>
-</p>
+</ul>
 <p>
 <img src="https://images.code.org/8ab1d4ed160eb395f65d711c5d6fd71e-image-1485710773739.png" style="width: 700px"/>
 </p>

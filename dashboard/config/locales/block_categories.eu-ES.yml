@@ -3,53 +3,27 @@ eu:
   data:
     block_categories:
       Actions: Ekintzak
-      Loops: Itzuliak
-      Functions: Funtzioak
-      Color: Kolorea
-      Brushes: Pintzelak
-      Math: Matematika
-      Logic: Logika
-      Variables: Aldagaiak
-      Number: Zenbakia
-      String: Testua
-      Image: Irudia
-      Boolean: Boolearra
-      Conditionals: Baldintzak
-      Events: Gertaerak
-      Games/Score: Jokoak/Puntuak
-      Comments: Iruzkinak
-      Category: Kategoria
-      Prebuilt: Aurrekonpilatua
-      Text: Testua
-      Picker: Hautatzailea
-      Comment: Iruzkina
-      World: Mundua
-      Behaviors: Jokabideak
-      'Variables ': 'Aldagaiak '
-      Default: Lehenetsia
-      Locations: Kokalekuak
-      everythingelse: besteguztia
-      Location: Kokalekua
-      numbers: zenbakiak
-      Numbers: Zenbakiak
-      Dancers: Dantzariak
-      Groups: Taldeak
       Advanced: Aurreratua
-      Start: Hasiera
-      Dancing: Dantzan
-      Sprite: Sprite
-      Brush: Pintzela
-      Make Sprite: Pribatu egin
-      Movement: Mugimentua
-      Booleans: Boolearrak
-      Functional: Funtzioak
-      While Events: While ebentuak
-      Sprite Properties: Sprite-n Propietateak
-      Predefined: Aurredefinitua
-      test: proba
-      test2: test2
-      Name: Izena
-      NEW BLOCKS: BLOKE BERRIAK
+      Behaviors: Jokabideak
+      Brushes: Pintzelak
+      Color: Kolorea
+      Comment: Iruzkina
+      Comments: Iruzkinak
+      Conditionals: Baldintzak
+      Dancers: Dantzariak
+      Default: Lehenetsia
+      Events: Gertaerak
+      Functions: Funtzioak
       'Functions ': 'Funtzioak '
       Game/Score: Jokoa/Puntuak
-      Function: Funtzioa
+      Games/Score: Jokoak/Puntuak
+      Groups: Taldeak
+      Locations: Kokalekuak
+      Logic: Logika
+      Loops: Itzuliak
+      Math: Matematika
+      Numbers: Zenbakiak
+      Text: Testua
+      Variables: Aldagaiak
+      'Variables ': 'Aldagaiak '
+      World: Mundua

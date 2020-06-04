@@ -3,18 +3,12 @@ bn:
   data:
     block_categories:
       Actions: ক্রিয়া
-      Loops: চক্র
-      Functions: ফাংশনগুলি
       Color: রং
-      Math: গণিত
-      Logic: যুক্তি
-      Variables: চলকগুলো
       Conditionals: শর্তযুক্ত
       Events: ঘটনাবলী
+      Functions: ফাংশনগুলি
+      Logic: যুক্তি
+      Loops: চক্র
+      Math: গণিত
       Text: পাঠ
-      Location: অবস্থান
-      Start: শুরু করুন
-      Booleans: বুলিয়ান
-      test: পরীক্ষা
-      Name: নাম
-      Function: ফাংশন
+      Variables: চলকগুলো

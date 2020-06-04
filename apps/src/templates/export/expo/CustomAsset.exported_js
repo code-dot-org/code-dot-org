@@ -1,4 +1,5 @@
-import { Asset, FileSystem } from 'expo';
+import { Asset } from 'expo-asset';
+import * as FileSystem from 'expo-file-system';
 
 export default class CustomAsset {
   constructor({ asset, fileName }) {

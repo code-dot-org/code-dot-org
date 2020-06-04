@@ -8,8 +8,8 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
-      @fit_workshop = create :pd_workshop, :fit
-      @workshop = create :pd_workshop
+      @fit_workshop = create :fit_workshop
+      @workshop = create :workshop
       @application = create :pd_facilitator1920_application
       @application_with_fit_workshop = create :pd_facilitator1920_application,
         pd_workshop_id: @workshop.id, fit_workshop_id: @fit_workshop.id
@@ -260,37 +260,25 @@ module Pd::Application
     end
 
     test 'fit_cohort' do
-      included = []
-      facilitator_cohort_view_statuses = Api::V1::Pd::ApplicationsController::COHORT_VIEW_STATUSES & Pd::Application::Facilitator1920Application.statuses
-      facilitator_cohort_view_statuses.each do |status|
-        application = create :pd_facilitator1920_application, fit_workshop_id: @fit_workshop.id
-        application.update_column(:status, status)
-        application.lock!
-        included << application if facilitator_cohort_view_statuses.include? status
-      end
+      fit_workshop = create :fit_workshop
+      expected_application_ids = []
 
-      unlocked_application = create :pd_facilitator1920_application, fit_workshop_id: @fit_workshop.id
-      unlocked_application.update_column(:status, 'accepted')
+      # create some applications to be included in fit_cohort
+      expected_application_ids << (create :pd_facilitator1920_application, :locked, fit_workshop_id: fit_workshop.id, status: :accepted).id
+      expected_application_ids << (create :pd_facilitator1920_application, :locked, fit_workshop_id: fit_workshop.id, status: :withdrawn).id
+      # no workshop
+      expected_application_ids << (create :pd_facilitator1920_application, :locked, status: :accepted).id
 
-      excluded = [
-        # not locked
-        unlocked_application,
+      #create some applications that won't be included in fit_cohort
+      # not locked
+      create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id, status: :accepted
 
-        # not accepted or waitlisted
-        @application_with_fit_workshop,
+      # not accepted or withdrawn
+      create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id, status: :waitlisted
 
-        # no workshop
-        @application
-      ]
+      actual_application_ids = Facilitator1920Application.fit_cohort.map(&:id)
 
-      fit_cohort = Facilitator1920Application.fit_cohort
-
-      included.each do |application|
-        assert fit_cohort.include? application
-      end
-      excluded.each do |application|
-        refute fit_cohort.include? application
-      end
+      assert_equal expected_application_ids, actual_application_ids
     end
 
     test 'memoized filtered_labels' do
@@ -467,8 +455,8 @@ module Pd::Application
     end
 
     test 'associated models cache prefetch' do
-      workshop = create :pd_workshop
-      fit_workshop = create :pd_workshop, :fit
+      workshop = create :workshop
+      fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
       # Workshops, Sessions, Enrollments
       assert_queries 3 do
@@ -481,7 +469,7 @@ module Pd::Application
     end
 
     test 'enroll_user creates enrollment' do
-      fit_workshop = create :pd_workshop, :fit
+      fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id
 
       assert_nil application.auto_assigned_fit_enrollment_id
@@ -493,8 +481,8 @@ module Pd::Application
     end
 
     test 'enroll_user for a different workshop deletes previous enrollment' do
-      original_fit_workshop = create :pd_workshop, :fit
-      new_fit_workshop = create :pd_workshop, :fit
+      original_fit_workshop = create :fit_workshop
+      new_fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
 
       application.enroll_user

@@ -110,14 +110,16 @@ class VisualizationResizeBar extends React.Component {
         window.innerWidth -
         (window.pageXOffset + rect.left + rect.width / 2) -
         parseInt(window.getComputedStyle(this.domElement).right, 10);
-      newVizWidth = window.innerWidth - event.pageX - offset;
+      const pageX = event.pageX || (event.touches && event.touches[0].pageX);
+      newVizWidth = window.innerWidth - pageX - offset;
     } else {
       offset =
         window.pageXOffset +
         rect.left +
         rect.width / 2 -
         parseInt(window.getComputedStyle(this.domElement).left, 10);
-      newVizWidth = event.pageX - offset;
+      const pageX = event.pageX || (event.touches && event.touches[0].pageX);
+      newVizWidth = pageX - offset;
     }
     resizeVisualization(newVizWidth);
   };
@@ -138,6 +140,7 @@ class VisualizationResizeBar extends React.Component {
 export const UnconnectedVisualizationResizeBar = VisualizationResizeBar;
 export default connect(state => ({
   hidden:
+    state.pageConstants.widgetMode ||
     // e.g. jigsaw
     state.pageConstants.noVisualization ||
     // e.g. share pages

@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
-const SCHOOL_TYPES_HAVING_NAMES = [
+export const SCHOOL_TYPES_HAVING_NAMES = [
   'charter',
   'private',
   'public',
@@ -108,6 +108,15 @@ export default class SchoolInfoInputs extends Component {
     const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(
       this.props.schoolType
     );
+
+    // Added condition to show required field indicator(asterisk)
+    // only when type is NCES. If non-US or US, non-NCES school,
+    // type field is not required (asterisk is not shown).
+    let isNcesSchool = false;
+    const ncesSchoolType = ['public', 'private', 'charter'];
+    if (ncesSchoolType.includes(this.props.schoolType)) {
+      isNcesSchool = true;
+    }
     const schoolNameLabel = ['afterschool', 'organization'].includes(
       this.props.schoolType
     )
@@ -123,10 +132,12 @@ export default class SchoolInfoInputs extends Component {
           showErrorMsg={this.props.showErrors}
           showRequiredIndicator={this.props.showRequiredIndicator}
           singleLineLayout
+          maxHeight={160}
         />
         <SchoolTypeDropdown
           value={this.props.schoolType}
           fieldName={this.props.fieldNames.schoolType}
+          country={this.props.country}
           onChange={this.props.onSchoolTypeChange}
           showErrorMsg={this.props.showErrors}
           showRequiredIndicator={this.props.showRequiredIndicator}
@@ -146,6 +157,7 @@ export default class SchoolInfoInputs extends Component {
           <SchoolNotFound
             ref={this.bindSchoolNotFound}
             onChange={this.props.onSchoolNotFoundChange}
+            isNcesSchool={isNcesSchool}
             schoolName={
               askForName ? this.props.schoolName : SchoolNotFound.OMIT_FIELD
             }
@@ -156,6 +168,7 @@ export default class SchoolInfoInputs extends Component {
             }
             schoolZip={isUS ? this.props.schoolZip : SchoolNotFound.OMIT_FIELD}
             schoolLocation={this.props.schoolLocation}
+            country={this.props.country}
             controlSchoolLocation={true}
             fieldNames={this.props.fieldNames}
             showErrorMsg={this.props.showErrors}

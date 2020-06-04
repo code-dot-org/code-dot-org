@@ -1,7 +1,7 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
+import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
@@ -35,7 +35,8 @@ const defaultProps = {
   ],
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
-  versions: []
+  versions: [],
+  sectionsForDropdown: []
 };
 
 describe('CourseOverview', () => {

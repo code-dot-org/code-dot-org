@@ -9,7 +9,7 @@ This unit continues to develop students’ ability to program in the JavaScript 
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/1/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/1/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 The “event-driven” mindset of programming can take a little getting used to. Often when learning, you write sequential programs that run from start (usually the first line of the program) to the end, or to some point when the program terminates. In an event-driven program your code must always be at the ready to respond to user events, like clicking a button, that may happen at any time, or not at all. More complex event-driven programs require interplay and coordination between so-called “event handlers” - which are functions the programmer writes, but are triggered by the system in response to certain events.
 This lesson is a first step toward getting into this mindset. Certain high-level programming languages and environments are designed to make certain tasks easier for a programmer. Design Mode allows students to easily design the User Interface (UI) of their apps using a drag-and-drop editor. Being able to design the user interface for an app using a drag-and-drop editor makes designing a stylish product much faster and easier. App Lab has a way to make the User Interface elements quickly and easily, leaving your brain more free to think about how to write the event handlers.
@@ -20,7 +20,7 @@ This lesson is a first step toward getting into this mindset. Certain high-level
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/2/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/2/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 While the title of this lesson is “multi-screen apps” and students do indeed learn how to add multiple “screens” to an app and code to switch between them, this lesson focuses more on techniques of debugging including using console.log, a command that allows them to print out tech which the user cannot see.  As event-driven applications get more complex, it is easy to generate errors in a program, and the need to debug the program will become more prevalent. In some instances, the error will be in the syntax of the program (e.g., a missing semicolon or misspelled function name). In other instances, however, programs will have logical errors which the computer will not catch and so can only be found by testing. Debugging and learning to interpret error messages is a critical step in the process of developing reliable software.  Students will end the lesson by creating an improved version of the “chaser” game which has multiple screens.
 
@@ -31,7 +31,7 @@ While the title of this lesson is “multi-screen apps” and students do indeed
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/3/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/3/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 This lesson gives students time to familiarize themselves with the process of making event-driven apps before we move on to deeper content. They will design and create a (minimum) 4-screen app on a topic of their choosing. It is not heavy on new CS content. It is primarily a time to reinforce programming skills in App Lab while quickly prototyping a simple event-driven application. The lesson does, however, fall at the intersection of the Big Ideas of Creativity and Programming. The fact that students will share ideas before programming their projects and will provide feedback using a peer rubric also mirrors some of the practices of collaboration that students can employ on the Create Performance Task.
 As for the project itself, it probably bears the closest resemblance to creating a “computational artifact” as outlined in the Explore Performance Task – Creating something to communicate an idea non-textually.

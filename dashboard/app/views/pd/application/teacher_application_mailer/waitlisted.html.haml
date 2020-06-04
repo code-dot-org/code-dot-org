@@ -1,0 +1,21 @@
+%p
+  Hi
+  = @application.first_name + ","
+
+%p
+  Thank you for applying to
+  = @application.effective_regional_partner_name + "'s"
+  Professional Learning Program for
+  = @application.course_name + "."
+  Our team appreciated the opportunity to review your application and learn about
+  your commitment to computer science education.
+  I'm writing to let you know you know we are currently unable to offer you a space
+  in the Professional Learning Program this year; however, we have placed you on
+  our waitlist should a space become available later.
+  Please respond to this message if you have any questions or if you would like
+  to withdraw your application from consideration.
+
+%p
+  Thank you,
+
+= render partial: 'partner_signature'

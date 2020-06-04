@@ -64,10 +64,9 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "show_debug_watch": "true",
-    "encrypted_examples": "91SlFwwguMt4iZqwhWdmEXt0Hp0uIeldCBABVIut/s+ZiSwDfREdB3Z0YegX\nNpnZ\n",
+    "encrypted_examples": "wjKH69nz8pFNpm/GIfaXnD3L9evh7QlD43vzFGsE3FzHmVCkI0+5vUCNKXs1\n5X8Wh1sNAP2DNiudLAmHgAxAdA==\n",
     "parent_level_id": 11363,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/collision-detection/",
       "/docs/concepts/game-lab/sprites/velocity/"
@@ -75,11 +74,13 @@
     "map_reference": "/docs/concepts/game-lab/sprites/sprite-interactions/",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 19:10:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 19:10:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 17:52:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

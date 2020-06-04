@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 kk:
   slides:
     maze_intro:
@@ -1214,3 +1219,13 @@ kk:
       11:
         text: "Егер не істеу керек екенін ұмытқан болсаң, әрбір деңгей үшін ережелері жоғарыда."
       12:
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Кейбір оқиғалардың мысалдрары тышқанды, бағдары бар батырмаларды немесе экранды шертуді тыңдап әрекет жасайды."
+      5:
+      6:
+      7:
+      8:

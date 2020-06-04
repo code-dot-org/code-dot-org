@@ -8,6 +8,12 @@
     ],
     "func": "spriteClicked",
     "blockText": "{CONDITION} {SPRITE} clicked",
+    "miniToolboxBlocks": [
+      "gamelab_clickedSpritePointer"
+    ],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "CONDITION",
@@ -24,8 +30,7 @@
       },
       {
         "name": "SPRITE",
-        "type": "Sprite",
-        "defer": true
+        "type": "Sprite"
       }
     ],
     "eventBlock": true

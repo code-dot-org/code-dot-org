@@ -10,7 +10,8 @@ import * as dataStyles from './dataStyles';
 class EditTableListRow extends React.Component {
   static propTypes = {
     onViewChange: PropTypes.func.isRequired,
-    tableName: PropTypes.string.isRequired
+    tableName: PropTypes.string.isRequired,
+    tableType: PropTypes.string
   };
 
   handleEdit = () => {
@@ -18,7 +19,7 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
-    FirebaseStorage.deleteTable(this.props.tableName);
+    FirebaseStorage.deleteTable(this.props.tableName, this.props.tableType);
   };
 
   render() {

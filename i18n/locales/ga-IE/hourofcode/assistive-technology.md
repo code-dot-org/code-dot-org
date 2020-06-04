@@ -1,6 +1,7 @@
 ---
 title: Completing an Hour of Code with Assistive Technology
 ---
+
 # Completing an Hour of Code with Assistive Technology
 
 Anyone can try an Hour of Code during Computer Science Education Week.

@@ -14,17 +14,31 @@ const UPDATE_TABLE_RECORDS = 'data/UPDATE_TABLE_RECORDS';
 const UPDATE_KEY_VALUE_DATA = 'data/UPDATE_KEY_VALUE_DATA';
 const SHOW_WARNING = 'data/SHOW_WARNING';
 const CLEAR_WARNING = 'data/CLEAR_WARNING';
+const SHOW_PREVIEW = 'data/SHOW_PREVIEW';
+const HIDE_PREVIEW = 'data/HIDE_PREVIEW';
+const SET_LIBRARY_MANIFEST = 'data/SET_LIBRARY_MANIFEST';
+
+/**
+ * Types which a column can be coerced to.
+ * @enum {string}
+ */
+export const tableType = {
+  SHARED: 'shared',
+  PROJECT: 'project'
+};
 
 const DataState = Record({
   view: DataView.OVERVIEW,
   tableListMap: {},
   tableName: '',
   tableColumns: [],
-  tableRecords: {},
+  tableRecords: [],
   keyValueData: {},
   warningTitle: '',
   warningMsg: '',
-  isWarningDialogOpen: false
+  isWarningDialogOpen: false,
+  isPreviewOpen: false,
+  libraryManifest: {}
 });
 
 const initialState = new DataState();
@@ -35,14 +49,14 @@ export default function(state = initialState, action) {
       return state.set(
         'tableListMap',
         Object.assign({}, state.tableListMap, {
-          [action.tableName]: true
+          [action.tableName]: action.tableType
         })
       );
     case CHANGE_VIEW:
       // Discard table data when not viewing a table, so that we don't momentarily
       // show data for the wrong table when we return to the table view.
       if (action.view !== DataView.TABLE) {
-        state = state.set('tableRecords', {});
+        state = state.set('tableRecords', []);
       }
       return state.set('view', action.view).set('tableName', action.tableName);
     case DELETE_TABLE_NAME: {
@@ -51,7 +65,12 @@ export default function(state = initialState, action) {
       return state.set('tableListMap', map);
     }
     case UPDATE_KEY_VALUE_DATA:
-      return state.set('keyValueData', action.keyValueData);
+      // "if all of the keys are integers, and more than half of the keys between 0 and
+      // the maximum key in the object have non-empty values, then Firebase will render
+      // it as an array."
+      // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+      // For simplicity, always coerce it to an object.
+      return state.set('keyValueData', Object.assign({}, action.keyValueData));
     case UPDATE_TABLE_COLUMNS:
       if (state.tableName === action.tableName) {
         return state.set('tableColumns', action.tableColumns);
@@ -59,7 +78,19 @@ export default function(state = initialState, action) {
       return state;
     case UPDATE_TABLE_RECORDS:
       if (state.tableName === action.tableName) {
-        return state.set('tableRecords', action.tableRecords);
+        // "if all of the keys are integers, and more than half of the keys between 0 and
+        // the maximum key in the object have non-empty values, then Firebase will render
+        // it as an array."
+        // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+        // For simplicity, always coerce it to an array (list of records).
+        if (!action.tableRecords) {
+          return state.set('tableRecords', []);
+        }
+        let records = Array.isArray(action.tableRecords)
+          ? action.tableRecords
+          : Object.values(action.tableRecords);
+        records = records.filter(record => record !== undefined);
+        return state.set('tableRecords', records);
       }
       return state;
     case SHOW_WARNING:
@@ -72,6 +103,18 @@ export default function(state = initialState, action) {
         .set('warningMsg', '')
         .set('warningTitle', '')
         .set('isWarningDialogOpen', false);
+    case SHOW_PREVIEW:
+      return state
+        .set('isPreviewOpen', true)
+        .set('tableName', action.tableName);
+    case HIDE_PREVIEW:
+      return state
+        .set('isPreviewOpen', false)
+        .set('tableName', '')
+        .set('tableRecords', [])
+        .set('tableColumns', []);
+    case SET_LIBRARY_MANIFEST:
+      return state.set('libraryManifest', action.libraryManifest);
     default:
       return state;
   }
@@ -81,9 +124,10 @@ export default function(state = initialState, action) {
  * Action which adds a table name to the table list map, if it doesn't exist already.
  * @param {string} tableName
  */
-export const addTableName = tableName => ({
+export const addTableName = (tableName, tableType) => ({
   type: ADD_TABLE_NAME,
-  tableName
+  tableName,
+  tableType
 });
 
 export const changeView = (view, tableName) => ({
@@ -127,4 +171,13 @@ export const showWarning = (warningMsg, warningTitle) => ({
 
 export const clearWarning = () => ({
   type: CLEAR_WARNING
+});
+
+export const showPreview = tableName => ({type: SHOW_PREVIEW, tableName});
+
+export const hidePreview = () => ({type: HIDE_PREVIEW});
+
+export const setLibraryManifest = libraryManifest => ({
+  type: SET_LIBRARY_MANIFEST,
+  libraryManifest
 });

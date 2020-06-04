@@ -1,18 +1,17 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
-layout: wide
-nav: promote_nav
+title: الملصقات السابقة لمنصة "ساعة البرمجة"
 ---
-<%= view :signup_button %>
 
-# Past Hour of Code Posters
+{{ signup_button }}
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here](<%= resolve_url('/promote/resources#posters') %>).
+# الملصقات السابقة لمنصة "ساعة البرمجة" 
+
+### يمكنك العثور على ملصقاتنا من السنوات السابقة للطباعة والتعليق داخل فصلك الدراسي! هل تبحث عن أحدث الملصقات؟ [انقر هنا]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -313,26 +313,26 @@ function uploadAllFilesFromBramble(callback) {
       if (i < entries.length) {
         const entry = entries[i];
         getFileData(entry.path, (err, fileData) => {
-          if (err) {
-            callback();
-          } else {
+          // Always call the callback. If err is undefined, the callback will handle it gracefully.
+          callback(err);
+          if (!err) {
             webLab_.changeProjectFile(
               entry.path,
               fileData,
               (err, versionId) => {
-                if (err) {
-                  callback();
-                } else {
+                callback(err);
+                if (!err) {
                   _lastSyncedVersionId = versionId;
                   getEntryFileData(i + 1, callback);
                 }
-              }
+              },
+              true /* skipPreWriteHook - because we are calling from within the preWriteHook */
             );
           }
         });
       } else {
         // end of list, call completion callback
-        callback(null);
+        callback(null, true /* preWriteHook was successful */);
       }
     }
 

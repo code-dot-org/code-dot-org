@@ -40,7 +40,7 @@ class School < ActiveRecord::Base
   has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
-  has_one :ap_school_code, class_name: 'Census::ApSchoolCode'
+  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
   has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
@@ -57,13 +57,13 @@ class School < ActiveRecord::Base
   # discount codes - this is not a definition we apply broadly.
   # @return [Boolean] True if high-needs, false otherwise.
   def maker_high_needs?
-    # As of January 2019, "high-needs" is defined as having >= 40% of the student population
+    # As of January 2020, "high-needs" is defined as having >= 50% of the student population
     # eligible for free-and-reduced lunch programs.
     stats = school_stats_by_year.order(school_year: :desc).first
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.4
+    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
   end
 
   # Public school ids from NCES are always 12 digits, possibly with
@@ -99,12 +99,8 @@ class School < ActiveRecord::Base
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-      # this also needs to be commented out to prevent seeding
-      # of new schools until school_districts table is updated
-      # b/c we'll get foreign key errors if this were to be executed
-      # (i.e., schools added without appropriate school districts)
-      # else
-      #   School.seed_from_s3
+    else
+      School.seed_from_s3
     end
   end
 

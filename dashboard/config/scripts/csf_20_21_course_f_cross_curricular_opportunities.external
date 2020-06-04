@@ -1,0 +1,42 @@
+name 'csf_20-21_course_f_cross-curricular_opportunities'
+editor_experiment ''
+title 'Course F: Cross-Curricular Opportunities'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course F: Cross-Curricular Opportunities
+
+## Common Core English Language Arts Standards
+
+<details><summary>
+
+**Speaking & Listening**
+
+</summary>
+
+* **5.SL.1** - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 5 topics and texts, building on others’ ideas and expressing their own clearly.
+
+* **5.SL.4** - Report on a topic or text or present an opinion, sequencing ideas logically and using appropriate facts and relevant, descriptive details to support main ideas or themes; speak clearly at an understandable pace.
+
+* **5.SL.6** - Adapt speech to a variety of contexts and tasks, using formal English when appropriate to task and situation.
+
+</details>
+
+## Next Generation Science Standards
+
+<details><summary>
+
+**Engineering, Technology, and Applications of Science**
+
+</summary>
+
+* **3-5-ETS1-1** - Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.
+
+* **3-5-ETS1-2** - Generate and compare multiple possible solutions  to a problem based on how well each is likely to meet the criteria and constraints of the problem.
+
+* **3-5-ETS1-3** - Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.
+
+</details>
+
+
+MARKDOWN

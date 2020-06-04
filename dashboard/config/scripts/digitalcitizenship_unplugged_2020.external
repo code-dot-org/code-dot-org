@@ -1,0 +1,10 @@
+name 'DigitalCitizenship-Unplugged_2020'
+video_key 'CSF_Super_Digital_Citizen'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Digital Citizenship
+
+Some information is not safe to share online. This lesson will help you learn the difference between safe and private information.
+MARKDOWN

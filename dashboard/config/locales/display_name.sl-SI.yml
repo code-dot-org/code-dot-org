@@ -1,5 +1,5 @@
 ---
-sl:
+sl-SI:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programiranje parov
@@ -8,7 +8,6 @@ sl:
       CSD U3 Variables Map: Spremenljivke
       CSD U3 Variables Map_2018: Spremenljivke
       CSD U3 Variables Map_2019: Spremenljivke
-      CSD U3 functions map: Funkcije
       CSD U6 functions paramters video: Funkcije s parametri
       CSD U6 functions paramters video_2018: Funkcije s parametri
       CSD U6 functions paramters video_2019: Funkcije s parametri

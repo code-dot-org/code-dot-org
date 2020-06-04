@@ -155,4 +155,5 @@ export default function(app, levels, options) {
 
   // Report app type to newRelic
   logToCloud.setCustomAttribute('appType', options && options.app);
+  logToCloud.setCustomAttribute('locale', options && options.locale);
 }

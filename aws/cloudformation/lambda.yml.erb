@@ -123,7 +123,7 @@ Resources:
         Variables:
           SLACK_ENDPOINT: !Ref SlackEndpoint
       Handler: slackCloudWatchEvent.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs10.x
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
   BasicLambdaRole:
@@ -171,47 +171,19 @@ Resources:
                 - 's3:PutObjectAcl'
                 - 'S3:DeleteObject'
               Resource: !Sub "arn:aws:s3:::*"
-  GlueConfiguration:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: Adjusts Glue Configuration property.
-      FunctionName: GlueConfiguration
-      Handler: index.handler
-      Role: !GetAtt GlueConfigurationRole.Arn
-      Code:
-        ZipFile: <%=js 'glueConfiguration.js'%>
-      Timeout: 30
-      Runtime: nodejs6.10
-  GlueConfigurationRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-        - Effect: Allow
-          Principal: {Service: [lambda.amazonaws.com]}
-          Action: ['sts:AssumeRole']
-      Path: /
-      ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-      Policies:
-      - PolicyName: GluePolicy
-        PolicyDocument:
-          Version: '2012-10-17'
-          Statement:
-            - Effect: Allow
-              Action:
-                - 'glue:UpdateCrawler'
-              Resource: '*'
   S3PartitionCloudFrontLog:
     Type: AWS::Lambda::Function
     Properties:
       Description: 'Partition CloudFront Access Log stored on S3.'
       FunctionName: S3PartitionCloudFrontLog
+      Environment:
+        Variables:
+          ATHENA_DB: elb_logs
+          ATHENA_TABLE: cloudfront_logs
       Code:
         ZipFile: <%=js 's3PartitionCloudFrontLog.js'%>
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs12.x
       Timeout: 30
       Role: !GetAtt S3LogsRole.Arn
   S3LogsRole:
@@ -238,6 +210,11 @@ Resources:
             - 's3:PutObjectAcl'
             - 's3:DeleteObject'
             Resource: "arn:aws:s3:::cdo-logs/*"
+          - Effect: Allow
+            Action:
+            - "glue:CreatePartition"
+            - "glue:GetPartition"
+            Resource: '*'
   S3BucketConfiguration:
     Type: AWS::Lambda::Function
     Properties:
@@ -264,6 +241,34 @@ Resources:
           };
       Timeout: 30
       Runtime: nodejs6.10
+  FastSnapshotRestore:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Enables EBS Fast Snapshot Restore for the given AMI snapshot.'
+      FunctionName: FastSnapshotRestore
+      Code: <%=lambda_zip 'fast_snapshot_restore.rb', 'cfn_response.rb' %>
+      Handler: fast_snapshot_restore.handler
+      Runtime: ruby2.5
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt FastSnapshotRestoreRole.Arn
+  FastSnapshotRestoreRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - "ec2:EnableFastSnapshotRestores"
+            - "ec2:DisableFastSnapshotRestores"
+            - "ec2:DescribeImages"
+            Resource: '*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
 Outputs:
   AMIManager:
     Value: !GetAtt AMIManager.Arn

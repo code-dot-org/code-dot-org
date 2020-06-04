@@ -52,9 +52,10 @@ module Pd::SurveyPipeline
         submission_no_content.merge(question_content['Q3']).merge(qid: 'Q3', answer: 'Like it')
       ]
 
-      result = DailySurveyJoiner.transform_data questions: questions, submissions: submissions
+      context = {parsed_questions: questions, parsed_submissions: submissions}
+      DailySurveyJoiner.process_data context
 
-      assert_equal expected_result, result
+      assert_equal expected_result, context[:question_answer_joined]
     end
 
     test 'join submission and matrix questions' do
@@ -96,7 +97,7 @@ module Pd::SurveyPipeline
           merge(
             qid: DailySurveyJoiner.compute_descendant_key(qid, "Sub question #{i + 1}"),
             name: DailySurveyJoiner.compute_descendant_key(qname, "Sub question #{i + 1}"),
-            text: "#{qtext}->Sub question #{i + 1}",
+            text: "#{qtext} -> Sub question #{i + 1}",
             type: TYPE_RADIO,
             answer: "Option #{i + 1}",
             answer_type: ANSWER_SINGLE_SELECT,
@@ -105,9 +106,10 @@ module Pd::SurveyPipeline
           )
       end
 
-      result = DailySurveyJoiner.transform_data questions: questions, submissions: submissions
+      context = {parsed_questions: questions, parsed_submissions: submissions}
+      DailySurveyJoiner.process_data context
 
-      assert_equal expected_result, result
+      assert_equal expected_result, context[:question_answer_joined]
     end
   end
 end

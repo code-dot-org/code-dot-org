@@ -13,10 +13,12 @@ const workshopShape = PropTypes.shape({
   capacity: PropTypes.number.isRequired,
   facilitators: PropTypes.array.isRequired,
   organizer: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired
+    name: PropTypes.string,
+    email: PropTypes.string
   }).isRequired,
-  enrollment_code: PropTypes.string
+  enrollment_code: PropTypes.string,
+  workshop_starting_date: PropTypes.string,
+  pre_workshop_survey_url: PropTypes.string
 });
 
 const enrollmentShape = PropTypes.shape({

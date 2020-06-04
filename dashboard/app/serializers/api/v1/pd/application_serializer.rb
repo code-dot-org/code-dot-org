@@ -4,7 +4,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   attributes(
     :regional_partner_name,
     :regional_partner_id,
-    :regional_partner_emails_sent_by_system,
+    :update_emails_sent_by_system,
     :locked,
     :notes,
     :notes_2,
@@ -153,8 +153,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object.try(:principal_approval_state)
   end
 
-  def regional_partner_emails_sent_by_system
-    object&.regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
+  # update emails are sent by the system if there is no regional partner or if the regional partner
+  # has not set the decision email flag to SENT_BY_PARTNER
+  def update_emails_sent_by_system
+    !(object&.regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER)
   end
 
   def meets_scholarship_criteria
@@ -165,6 +167,11 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     return 'N/A' unless count && total
 
     "#{(100.0 * count / total).round(2)}%"
+  end
+
+  def yes_no_string(value)
+    return nil if value.nil?
+    value ? Pd::Application::ApplicationBase::YES : Pd::Application::ApplicationBase::NO
   end
 
   def school_stats
@@ -178,6 +185,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
     {
       title_i_status: stats.title_i_status,
+      rural_status: yes_no_string(stats.rural_school?),
       school_type: school.school_type.try(:titleize),
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),

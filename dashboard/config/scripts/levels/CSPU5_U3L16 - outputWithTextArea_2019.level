@@ -57,12 +57,17 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "short_instructions": "Output a message to the 'textArea' (Click to see full instructions)",
-    "long_instructions": "# Generating Text Output\r\n\r\nSo far we've been outputting our messages to the console, but now we'd like to display them in the app. In order to do so we're going to be using a new UI element called a `textArea`. You can use `setText` with a `textArea` just like you would with a `textLabel`.\r\n\r\n![](https://images.code.org/45e6b6cdb1ca87f53cf1d6bba97cb812-image-1445977693641.24.43 PM.png)\r\n\r\nIf we want to combine user input with default text we can do so with **string concatenation**. Together with a `textArea` we can use this ability to compose longer messages based on user input.\r\n\r\n# Do This:\r\n\r\n* **Add a `textArea`** to your app and give it a descriptive and meaningful ID.\r\n* **Create a variable inside your event handler** called `userMessage` to hold the full message that will be sent to the user.\r\n* **Use string concatenation** to compose a message from the user input.\r\n* **Use `setText`** to place your `userMessage` inside the `textArea` you created.\r\n\r\n<img src=\"https://images.code.org/193af3e0c993dbf0b7af9c571ec5f56d-image-1445977696957.27.08 PM.png\", style=\"width:250px;\">",
-    "preload_asset_list": null
+    "long_instructions": "# Generating Text Output\r\n\r\nSo far we've been outputting our messages to the console, but now we'd like to display them in the app. In order to do so we're going to be using a new UI element called a `textArea`. You can use `setText` with a `textArea` just like you would with a `textLabel`.\r\n\r\n![](https://images.code.org/45e6b6cdb1ca87f53cf1d6bba97cb812-image-1445977693641.24.43 PM.png)\r\n\r\nIf we want to combine user input with default text we can do so with **string concatenation**. Together with a `textArea` we can use this ability to compose longer messages based on user input.\r\n\r\n# Do This:\r\n\r\n* **Add a `textArea`** to your app and give it a descriptive and meaningful ID.\r\n* **Create a variable inside your event handler** called `userMessage` to hold the full message that will be sent to the user.\r\n* **Use string concatenation** to compose a message from the user input.\r\n* **Use `setText`** to place your `userMessage` inside the `textArea` you created.\r\n\r\n![](https://images.code.org/193af3e0c993dbf0b7af9c571ec5f56d-image-1445977696957.27.08 PM.png)",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "widget_mode": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-11-09 21:57:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-11-09 21:57:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-11 19:44:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

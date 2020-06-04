@@ -21,6 +21,7 @@ module Pd
         TYPE_PAGEBREAK = 'pagebreak'.freeze,
         TYPE_HEAD = 'head'.freeze,
         TYPE_WIDGET = 'widget'.freeze,
+        TYPE_IMAGE = 'image'.freeze,
       ].freeze
 
       ANSWER_TYPES = [

@@ -1,0 +1,12 @@
+name 'csp-u1-exam1-same-binary-sequence_2020'
+height 'auto'
+
+question 'Which of the following is NOT true of how computers represent complex information?'
+wrong ‘Computing devices use patterns of bits to represent complex information’
+right ‘Abstraction helps represent complex information by surfacing complexity that might otherwise be hidden’
+wrong ‘Depending on context the same sequence of bits may represent different types of information’
+wrong ‘Common abstractions that are represented by computing devices include numbers, characters, and color.’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

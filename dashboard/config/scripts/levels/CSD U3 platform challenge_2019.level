@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-20T16:17:27.000Z",
+  "created_at": "2019-02-14T01:30:01.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template_2019",
     "all_animations_single_frame": "false",
-    "encrypted_examples": "CLp70Nl1O85yhw/TdOPhX98ssoTAl+vJ+baCh01rfFCdECQ/gI0sHjy4gpzw\nLgCg\n",
+    "encrypted_examples": "Tnu2AG9JnfsDSXpXGFgMASAEh5IkiC83igHJdVNyVEdZQwUcdU/JbhWZjOGK\nvjeqkavcFLtAzj9zQhLTzV4DPQ==\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "start_in_animation_tab": "false",
@@ -70,7 +70,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:26:19 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:04:01 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 06:24:08 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-28 20:58:23 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -18,7 +18,7 @@ In the first chapter of unit 2, we’ll explore both lossless and lossy compress
 
 Some compression formats do not store the original file with complete fidelity.  This is called lossy compression.  Lossy files have truly lost information; they cannot ever recreate the original file.  They can, however, create a reasonable approximation of it by keeping the key information in a much smaller space than lossless compression.  Lossy compression is used more frequently for media files (image, sound, video) than text files.  While missing information in media is often unnoticeable to the user, lossy compression of a text file is far more noticeable because some parts of the original text has been lost (as seen in the example on the right). 
 
-Common lossy compression formats include JPEG, MP3, and  MPEG.  To see a more comprehensive list of lossy formats and read more about how they work, check out the <a href=”https://en.wikipedia.org/wiki/Lossy_compression” target=_blank>lossy compression wikipedia page</a>.
+Common lossy compression formats include JPEG, MP3, and  MPEG.  To see a more comprehensive list of lossy formats and read more about how they work, check out the <a href="https://en.wikipedia.org/wiki/Lossy_compression" target=_blank>lossy compression wikipedia page</a>.
 
 > NOTE: Students in this course do not need to know how each individual lossy/lossless algorithm works, but should **have a general idea how each format works, and the general tradeoffs of using lossless or lossy compression.**
 

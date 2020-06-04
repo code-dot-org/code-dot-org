@@ -1,0 +1,27 @@
+name 'CSD U3 Boolean MC_2018_2019_pilot_2020'
+editor_experiment ''
+title 'title'
+description ''
+question 'Which result will be printed in the console by this program?'
+right 'true  
+false  
+true'
+wrong '0  
+200  
+100'
+wrong 'true  
+error  
+true'
+wrong 'false  
+true  
+false'
+
+markdown <<MARKDOWN
+# Boolean Expressions
+
+**Boolean expression** - an expression that can only evaluate to `TRUE` or `FALSE`
+
+# Predict
+
+Read the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question
+MARKDOWN

@@ -448,3 +448,33 @@ lv:
       2:
         text: Ir pieejams "kad bultiņa" bloks un "pārvietot tēlu" bloks. Savienojot
           šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām.
+    starwars_events:
+      4:
+        text: 'Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu
+          vai pieskārienu ekrānam.'
+    starwars_blocks_events:
+      4:
+        text: 'Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu
+          vai pieskārienu ekrānam.'
+    gumball_intro:
+      4:
+        text: Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles
+          laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta
+          zem laukuma.
+      7:
+        text: Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo "kad palaists"
+          bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi
+          dzeltenu līniju un tad bloki saķersies kopā.
+    iceage_intro:
+      4:
+        text: Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles
+          laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta
+          zem laukuma.
+      7:
+        text: Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo "kad palaists"
+          bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi
+          dzeltenu līniju un tad bloki saķersies kopā.
+    hoc_dance_events_2019:
+      4:
+        text: 'Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu
+          vai pieskārienu ekrānam.'

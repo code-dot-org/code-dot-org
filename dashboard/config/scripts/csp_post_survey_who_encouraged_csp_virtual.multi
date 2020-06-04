@@ -1,0 +1,13 @@
+name 'csp-post-survey-who-encouraged-csp_virtual'
+type 'multi2'
+question 'Was someone\'s encouragement a factor in your choice to take this class? If so, who was most influential to you?  (choose up to two).'
+right 'A friend'
+right 'A parent'
+right 'Another family member'
+right 'A teacher'
+right 'A counselor'
+right 'Another person at school (coach, principal, dean, etc.)'
+right 'Another person not listed'
+right 'No one in particular. I just wanted to take it.'
+right 'I didn\'t choose to take this class.'
+

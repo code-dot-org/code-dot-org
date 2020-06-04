@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "ACkRTDFTSHSoTlmhLpQqrIKH1PBApOFKPYyOWytXkOd2MhISlsygAFNcLX6g\n9bK+\n",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "randomNumber_min_max": null,
+      "setPosition": null,
+      "setWidth": null,
+      "hideElement": null,
+      "showElement": null,
+      "setSize": null,
+      "console.log": null
+    },
+    "teacher_markdown": "### Teaching Tip\r\n\r\nThe thing students are most likely to miss here is clicking **Make Default** to make the new screen they just made the default screen for the app.\r\n\r\nAlso you may need to **collapse the instructions** in order to see the \"Screen\" element in the design toolbox. \r\n\r\n",
+    "parent_level_id": 17116,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "short_instructions": "Recreate the game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)",
+    "long_instructions": "# Add A Welcome Screen\r\n\r\n<div style=\"float: right; width: 150px\">\r\n\r\n\r\n<img src=\"https://images.code.org/558ae19d0fb8af8c6ec573e5d7ac4e29-image-1477369385328.png\" style=\"float: right; width: 150px\"><br>\r\n<em>This is an example showing the elements of a welcome screen. Yours <strong> should not </strong> look exactly like this.  Yours should be appropriate for your game.</em>\r\n\r\n</div>\r\n\r\nIn the last lesson you made a simple chaser game. Let's improve your it by adding a welcome screen that shows immediately when the app runs. We'll also add a button to start the game.\r\n\r\n**Important:** If you didn't make a chaser game in the last lesson, you'll want to go back and do that now.\r\n\r\n**Do this:**\r\n\r\n1. **In Design Mode:**\r\n   * Add a New Screen to the App\r\n   * Make this new screen the **default screen**\r\n   * Add a new Button to the screen that says \"Start\"\r\n   * Add text welcoming the user to the game.\r\n   * Give the button and the screen meaningful IDs\r\n\r\n2. **Add an onEvent Handler for the Button:**\r\n   * Insert a new onEvent block for the \"start\" button\r\n   * When the \"start\" button is clicked it should `setScreen` to the screen that plays the game.\r\n\r\n3. **Run. Test. Debug.**  Make sure that:\r\n\t* When app starts up, your new welcome screen shows first\r\n\t* When you click the \"start\" button it takes you to the game play screen\r\n\r\n\r\nNote: right now there's no way to get back to the welcome screen - it's okay, we'll add that later.\r\n\r\n",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-10 22:56:19 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:05:05 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-03 19:50:19 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:59 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 16:48:57 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 16:58:24 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

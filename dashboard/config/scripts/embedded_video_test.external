@@ -1,10 +1,16 @@
 name 'Embedded Video Test' 
 markdown <<MARKDOWN
-# The Future of Big Data
+# Test Embedded Video in Markdown
+
+This level exists to test that we _do not allow_ iframes in our markdown.
+
+In between the following horizontal rules is a line containing an html iframe that is attempting to embed [this link](https://www.youtube.com/embed/l_a0ecZ2Oe0):
+
+---
 
 <iframe width="560" height = "315" src="https://www.youtube.com/embed/l_a0ecZ2Oe0" frameborder="0" allowfullscreen></iframe>
 
-[Source](http://www.fwthinking.com/video/clips/future-big-data-video/)
+---
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+If everything is working correctly, you should **not** see any content between the two horizontal rules.
 MARKDOWN

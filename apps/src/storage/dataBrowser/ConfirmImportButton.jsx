@@ -3,7 +3,7 @@ import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
 const INITIAL_STATE = {
@@ -36,8 +36,8 @@ class ConfirmImportButton extends React.Component {
     const file = this.importFileInput.files[0];
     const reader = new FileReader();
     reader.onload = e => {
-      // It is safe to pass a callback to be called by DataTable, because this component
-      // will always live as long as DataTable.
+      // It is safe to pass a callback to be called by DataTableView, because this component
+      // will always live as long as DataTableView.
       this.props.importCsv(e.target.result, this.handleImportComplete);
       // Make sure we get another change event if the same file is selected again.
       this.importFileInput.value = '';
@@ -65,7 +65,7 @@ class ConfirmImportButton extends React.Component {
           onChange={this.handleSelectImportFile}
         />
         <Dialog
-          body={applabMsg.confirmImportOverwrite()}
+          body={msg.confirmImportOverwrite()}
           cancelText="Cancel"
           confirmText="Overwrite"
           confirmType="danger"

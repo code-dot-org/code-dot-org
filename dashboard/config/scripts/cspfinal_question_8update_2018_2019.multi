@@ -1,19 +1,30 @@
 name 'CSPFinal_Question_8update_2018_2019'
+editor_experiment ''
 question ' '
 
-wrong ‘<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
-right '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
-wrong ‘<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
-wrong ‘<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>’
+question ' '
+
+wrong '`010000`  
+`1110`  
+`01010`'
+right '`01010`  
+`1110`  
+`010000`'
+wrong ‘`010000`  
+`01010`  
+`1110`'
+wrong '`1110`  
+`01010`  
+`010000`'
 
 markdown <<MARKDOWN
 Consider the following three binary numbers:
 
-<code style="color: black;">&nbsp;01010</code>
+`01010`
 
-<code style="color: black;">010000</code>
+`010000`
 
-<code style="color: black;">&nbsp;&nbsp;1110</code>
+`1110`
 
 Which of the following lists the numbers in order from **least to greatest**?
 MARKDOWN

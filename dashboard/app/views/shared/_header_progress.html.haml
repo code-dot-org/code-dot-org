@@ -2,7 +2,7 @@
 - if @stage_extras
   - text = @stage.localized_title
 - else
-  - stage = @stage || @script_level.stage
+  - stage = @stage || @script_level.lesson
   - text = @script.professional_learning_course? ? stage.localized_name : stage.localized_title
 
 -# Pass along section_id param so that when teacher moves between lesson page and course overview
@@ -28,4 +28,4 @@
   - script_data = {scriptName: {name: text,
     href: script_path(@script, section_id: section_id, user_id: user_id),
     smallText: small_text}.to_json}
-  %script{type: "text/javascript", src: minifiable_asset_path('js/shared/_header_progress.js'), data: script_data}
+  %script{type: "text/javascript", src: webpack_asset_path('js/shared/_header_progress.js'), data: script_data}

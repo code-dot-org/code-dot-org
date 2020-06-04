@@ -1,6 +1,9 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 
 class ContactRollupsValidation
+  # Connection to read from Pegasus reporting database.
+  PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+
   DATA_CHECKS = [
     {
       name: "Rollup total record count",
@@ -56,13 +59,6 @@ class ContactRollupsValidation
               LIKE '%District Contact%'",
       min: 50,
       max: 500
-    },
-    {
-      name: "Regional Partner count",
-      query: "SELECT COUNT(*) from contact_rollups_daily where roles
-              LIKE '%Regional Partner%'",
-      min: 25,
-      max: 250
     },
     {
       name: "Petition Signer count",
@@ -170,15 +166,6 @@ class ContactRollupsValidation
               WHERE courses_facilitated IS NOT NULL",
       min: 100,
       max: 40_000
-    },
-    {
-      name: "Check that all contacts with courses facilitated are "\
-            "facilitators",
-      query: "SELECT COUNT(*) FROM contact_rollups_daily
-              WHERE courses_facilitated IS NOT NULL
-              AND Roles NOT LIKE '%Facilitator%'",
-      min: 0,
-      max: 0
     },
     {
       name: "Count of contacts with professional learning enrollment",
@@ -304,13 +291,12 @@ class ContactRollupsValidation
 
   def self.validate_contact_rollups
     overall_pass = true
-    pegasus_clone_db_reader = ContactRollups.pegasus_clone_db_reader
 
     output = []
     # run each validation check
     DATA_CHECKS.each do |check|
       # run the validation query and get the returned count
-      count = pegasus_clone_db_reader[check[:query]].first.first[1]
+      count = PEGASUS_REPORTING_DB_READER[check[:query]].first.first[1]
       # determine if the count is within validation bounds (inclusive)
       pass = count >= check[:min] && count <= check[:max]
 

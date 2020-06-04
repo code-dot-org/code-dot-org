@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-represent-numbers_2020'
+height 'auto'
+
+question 'Which of the following is true of how computers represent numbers?’
+wrong ‘Using a fixed but large number of bits can eliminate the possibility of round off error when representing numbers in binary’
+right ‘With a fixed number of bits some numbers are too large to represent in a computer which will lead to overflow errors.’
+wrong ‘Using a fixed but large number of bits, for example 128, eliminates the possibility of overflow errors.’
+wrong ‘With a large but fixed number of bits it is possible to eliminate either round-off errors or overflow errors, but not both.'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

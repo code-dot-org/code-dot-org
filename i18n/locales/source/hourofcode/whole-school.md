@@ -1,9 +1,8 @@
 ---
-title: <%= hoc_s(:title_whole_school).inspect %>
-layout: wide
+title: Whole School Participation
 ---
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Get your whole school to participate
 

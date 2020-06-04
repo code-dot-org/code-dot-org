@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 Now that you have variables keeping track of useful information in an app, the next thing you probably want to do is make decisions based on their values.
 
-For example: in the Count Up/Down App what we want to say is **“if the count reaches 20 then switch screens”**
+For example: in the Count Up/Down App what we want to say is **"if the count reaches 20 then switch screens"**
 
 **NOTE:** we're going to learn all about `if` statements later on.  For now, we need *just* enough to make our program end. If you can understand enough to copy this example then you're good.
 
@@ -32,7 +32,7 @@ If you understand the example above and feel like you could incorporate that int
 
 
 ## *if* Statements
-Most programming languages have a way to do this: to check to see if some condition is true, and if it is do something.  It’s called an **“`if` statement”**.  `if` statements are a big topic in and of themselves, but for now we’ll just look at a simple example to meet our current needs.
+Most programming languages have a way to do this: to check to see if some condition is true, and if it is do something.  It’s called an **"`if` statement"**.  `if` statements are a big topic in and of themselves, but for now we’ll just look at a simple example to meet our current needs.
 
 Here’s an example of an `if` statement (shown in both block and text form)
 

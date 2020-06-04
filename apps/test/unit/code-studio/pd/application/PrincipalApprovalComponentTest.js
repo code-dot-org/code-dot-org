@@ -4,8 +4,7 @@ import PrincipalApprovalComponent, {
   MANUAL_SCHOOL_FIELDS,
   REQUIRED_SCHOOL_INFO_FIELDS,
   ALWAYS_REQUIRED_FIELDS
-} from '@cdo/apps/code-studio/pd/application/principalApproval1920/PrincipalApproval1920Component';
-import {TextFields} from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
+} from '@cdo/apps/code-studio/pd/application/principalApproval/PrincipalApprovalComponent';
 
 describe('Principal Approval Component', () => {
   it('Requires only the top few fields if application is rejected', () => {
@@ -48,14 +47,13 @@ describe('Principal Approval Component', () => {
     const expectedFields = [
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS,
-      'replaceWhichCourseCsd',
-      'csdImplementation'
+      'replaceWhichCourseCsd'
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
         doYouApprove: 'Yes',
         course: 'Computer Science Discoveries',
-        replaceCourse: TextFields.yesReplaceExistingCourse
+        replaceCourse: 'Yes'
       }
     ).sort();
     expect(actualFields).to.deep.equal(expectedFields);
@@ -65,20 +63,19 @@ describe('Principal Approval Component', () => {
     const expectedFields = [
       ...ALWAYS_REQUIRED_FIELDS,
       ...REQUIRED_SCHOOL_INFO_FIELDS,
-      'replaceWhichCourseCsp',
-      'cspImplementation'
+      'replaceWhichCourseCsp'
     ].sort();
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields(
       {
         doYouApprove: 'Yes',
         course: 'Computer Science Principles',
-        replaceCourse: TextFields.yesReplaceExistingCourse
+        replaceCourse: 'Yes'
       }
     ).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
 
-  it('Expect student enrollment to be an integer', () => {
+  it('Expect student enrollment to be a positive integer', () => {
     ['10000', '1,000,000'].forEach(validEnrollmentNumber => {
       expect(
         PrincipalApprovalComponent.getErrorMessages({
@@ -88,14 +85,14 @@ describe('Principal Approval Component', () => {
     });
   });
 
-  it('Non integers create errors for student enrollments', () => {
-    ['10.5', 'So many', '0x1234'].forEach(invalidEnrollmentNumber => {
+  it('Invalid values create errors for student enrollments', () => {
+    ['0', '10.5', 'So many', '0x1234'].forEach(invalidEnrollmentNumber => {
       expect(
         PrincipalApprovalComponent.getErrorMessages({
           totalStudentEnrollment: invalidEnrollmentNumber
         })
       ).to.deep.equal({
-        totalStudentEnrollment: 'Must be a valid number'
+        totalStudentEnrollment: 'Must be a valid and positive number'
       });
     });
   });

@@ -1,0 +1,31 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:09:50.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**How do I use the Inspector Tool?**]\r\n\r\nThe Inspector Tool is a great way to learn more about unfamiliar code in Web Lab. To turn on the Inspector Tool, click <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png\" style=\"width:100px\">. You will know that the Inspector Tool is on because the button will turn white and say \"Inspector: On\". Once you turn on the Inspector Tool, you can hover over anything in the preview area and Web Lab will highlight the code that is making that part of the page appear.\r\n\r\n:::\r\n</div>\r\n\r\n# Explore HTML\r\n\r\nThis is a web page written in HTML, the language of the web. You'll learn more about how it works, but first explore it by using the Inspector Tool.\r\n\r\n# Do This\r\n\r\n* Click the Tip \"How do I use the Inspector Tool?\" on the right to learn how to use the Inspector Tool.\r\n* Follow the instructions in the web page to explore the web page.",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n\\t<head>\\n\\t\\t<title>Exploring HTML</title>\\n\\t</head>\\n\\t<body>\\n\\t\\t<h1>Welcome to Web Lab!</h1>\\n\\t\\t<h2>This is a web page</h2>\\n\\t\\t<p>You are looking at an actual web page written in HTML, the language of the web. On the left side you can see the code used by your computer to create this page.</p>\\n\\t\\t<h2>Inspector Tool</h2>\\n\\t\\t<p>Use the Inspector tool to see what pieces of code are linked to what text on the web page. Go through it with a partner so you can discuss what you're seeing.</p>\\n\\t\\t<h2>Discuss</h2>\\n\\t\\t<p>With a friend discuss the following questions:</p>\\n\\t\\t<ul>\\n\\t\\t\\t<li>What text is appearing in both the code and the web page?</li>\\n\\t\\t\\t<li>How is this language communicating extra information about the way to represent text?</li>\\n\\t\\t</ul>\\n\\t</body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "teacher_markdown": "## Using the Tool\r\n\r\nAs students explore the site, make sure that they understand how to use the inspector tool, the drop down tips on the right side of the instruction pane, and the \"Help and Tips\" tab, which will give them access to the previous video.\r\n\r\n## HTML Discussion\r\n\r\nYou should bring students back together once they've spent a couple minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.\r\n\r\n* What text is appearing in both the code and the web page?\r\n* How is this language communicating extra information about the way to represent text?\r\n\r\nThe goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed.",
+    "hide_share_and_remix": "true",
+    "display_name": "Explore HTML",
+    "submittable": "false",
+    "parent_level_id": 19998,
+    "name_suffix": "_virtual",
+    "video_key": "csd_weblab_intro_1",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "map_reference": "/docs/concepts/html/html-tags/index.html",
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-17 18:27:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 21:31:35 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:26:57 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:02:53 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:08:17 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-07-30 21:04:57 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:09:26 +0000\",\"changed\":[\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-19 16:10:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-09-19 16:11:22 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-09-20 17:47:26 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-20 17:48:13 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-18 20:52:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

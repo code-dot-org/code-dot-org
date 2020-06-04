@@ -1,0 +1,10 @@
+name 'ScreenOutTheMean-Unplugged_2020'
+video_key 'CSF_Power_of_Words'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Screen Out the Mean
+
+Today you will learn about what to do if someone is being mean online.
+MARKDOWN

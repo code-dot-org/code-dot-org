@@ -1,5 +1,8 @@
 ---
 zu:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   cancel: Hoxisa
   continue: Qhubeka
   signup_form:
@@ -14,8 +17,6 @@ zu:
     startover_cancel: Hoxisa
   terms_interstitial:
     print: Khiphela ephepheni
-  flex_category:
-    csp_lists: Umbhalo olandelanayo
   pd:
     form_entries:
       subjects:
@@ -23,3 +24,4 @@ zu:
         math: Izibalo
       email_opt_in:
         opt_in_no: Cha
+  copy: Kopisha

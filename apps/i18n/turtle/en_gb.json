@@ -22,8 +22,14 @@
   "drawATree": "dibuja un árbol",
   "drawATriangle": "dibuja un triangulo",
   "drawSticker": "dibuja una estampa",
+  "forward": "forwards",
   "heightParameter": "height",
   "jump": "jump",
   "jumpTooltip": "Mueve al artista sin dejar ninguna marca.",
-  "pixels": "pixeles"
+  "moveBackward": "move backward",
+  "moveForward": "move forward",
+  "pixels": "pixeles",
+  "step": "Step",
+  "turnLeft": "turn left",
+  "turnRight": "turn right"
 }

@@ -1,105 +1,104 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
-layout: wide
-nav: how_to_nav
+title: Πως-να-το-κάνω οδηγός για εθελοντές Κώδικα
 ---
-<%= view :signup_button %>
 
-# Οδηγός για εθελοντές βήμα-βήμα
+{{ signup_button }}
 
-### Make a difference in a classroom today!
+# Οδηγός για Εθελοντές
+
+### Κάντε τη διαφορά στην τάξη σήμερα!
 
 * * *
 
-## Why volunteer?
+## Γιατί να γίνω εθελοντής;
 
-Check out some testimony from past volunteers:
+Διαβάστε μερικές εμπειρίες προηγούμενων εθελοντών:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- «Το καλύτερο κομμάτι της εμπειρίας μου ήταν πως όλη η τάξη ήταν έγχρωμα κορίτσια. Είναι καλό για το μέλλον της βιομηχανίας μας να έχει την ευκαιρία να προσεγγίσει και να ενθουσιάσει αυτά τα παιδιά.»
+- «Χάρηκα ιδιαίτερα που μου δόθηκε η ευκαιρία να ενθαρρύνω τα νέα κορίτσια προς την τεχνολογία. Αισθάνθηκα πως βοήθησα την νέα γενιά στην περιοχή μου.»
+- "ΛΑΤΡΕΨΑ το πόσο ενθουσιασμένα ήταν τα παιδιά. «Ήταν καταπληκτικό ότι οι εκπαιδευτικοί παρατηρούσαν πως κάποιοι μαθητές, οι οποίοι δεν απέδιδαν ιδιαίτερα καλά στα σχολικά μαθήματα, ήταν πολύ καλοί στον τρόπο σκέψης του προγραμματισμού και στο να βοηθούν τους άλλους να μάθουν - δίνοντάς τους μια ευκαιρία να νιώσουν αυτοπεποίθηση.»
 
-## Anyone can volunteer
+## Όλοι μπορούν να γίνουν εθελοντές
 
-### Volunteers and speakers in tech:
+### Εθελοντές και ομιλητές στην τεχνολογία:
 
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+Έχετε επαφή με την Επιστήμη των Υπολογιστών ή την τεχνολογία; Εάν εργάζεστε ως μηχανικός λογισμικού, σε μια εταιρεία τεχνολογίας σε οποιοδήποτε θέση (μηχανικός ή μη-μηχανικός), ή αν έχετε ακολουθήσει μαθήματα επιστήμης των υπολογιστών, μπορείτε να βοηθήσετε να εμπνευσθούν οι μαθητές! Πολλοί μαθητές δεν έχουν γνωρίσει ποτέ κάποιον που δουλεύει στον τομέα της τεχνολογίας και οι εκπαιδευτικοί μας χαίρονται ιδιαίτερα να φέρνουν σε επαφή τις τάξεις τους με επαγγελματίες και φοιτητές.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Μπορείτε να συμμετάσχετε ως ομιλητής σε μια τάξη, ή να βοηθήσετε έναν εκπαιδευτικό σε ένα μάθημα. Επισκεφθείτε μια τοπική τάξη και εμπνεύστε τους μαθητές να συνεχίσουν να μαθαίνουν την επιστήμη των υπολογιστών. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Εγγραφείτε σήμερα ως εθελοντής τεχνολογίας!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Όποιος έχει πάθος για την επέκταση των ευκαιριών:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+  Πιστεύετε πως η εκμάθηση της επιστήμης των υπολογιστών μπορεί να ανοίξει νέες πόρτες στους μαθητές; Βοηθήστε μια τοπική τάξη ή διοργανώστε μια εκδήλωση μετά το σχολείο! Δεν χρειάζεται να έχετε προηγούμενες γνώσεις στην επιστήμη των υπολογιστών για να διοργανώσετε μια Ώρα του Κώδικα. Συχνά αρκεί το να βοηθήσετε στο να πείσετε τον δάσκαλο του παιδιού σας, έναν φίλο ή έναν όμιλο να δοκιμάσουν την Ώρα του Κώδικα.
 </p>
 
 <h3>
-  How do you get started?
+  Πώς μπορείτε να ξεκινήσετε;
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Στείλτε αυτό το μήνυμα</a> στον δάσκαλο του παιδιού σας, προσφέροντας βοήθεια στο να διοργανώσουν την Ώρα του Κώδικα.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Προσφερθείτε να διοργανώσετε μια εκδήλωση της Ώρας του Κώδικα μετά το σχολείο σε ένα τοπικό σχολείο. <a href="{{ urls/how_to_guide }}">Χρησιμοποιήστε αυτό τον οδηγό</a> για να βοηθηθείτε στον σχεδιασμό της εκδήλωσης.
   </li>
 </ol>
 
 <h2>
-  Recruit your co-workers to volunteer
+  Παρακινήστε τους συναδέλφους σας να γίνουν εθελοντές
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Ενημερώστε τους φίλους και συναδέλφους σας σχετικά με την Ώρα του Κώδικα. Χιλιάδες εκπαιδευτικοί αναζητούν εθελοντές, επομένως ζητήστε τους να <a href="https://code.org/volunteer">εγγραφούν ως εθελοντές</a>. Ζητήστε από τον εργοδότη σας να συμμετάσχει. <a href="{{ promote/sample_emails }}">Στείλτε αυτό το email</a> στον διευθυντή σας ή τον διευθύνοντα σύμβουλο, ώστε να συμμετέχετε όλοι.
 </p>
 
 <h2>
-  Πως να προετοιμαστείς
+  Πως να προετοιμαστείτε
 </h2>
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="{{ promote/videos }}">Επιλέξτε ένα βίντεο</a> για να προβάλλετε, ώστε να βοηθήσετε την τάξη να συγκεντρωθεί και να ενθουσιαστεί για την Ώρα του Κώδικα.
   </li>
   <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
+    Δείτε <a href="/files/hoc-volunteer-toolkit.pdf">το Εγχειρίδιο Εθελοντών στην Ώρα του Κώδικα</a> που περιλαμβάνει περίληψη, χρονοδιάγραμμα, υλικό προετοιμασίας και διαφήμισης. Όλα όσα χρειάζεστε για να είστε έτοιμοι για την εθελοντική εμπειρία σας!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    Εάν πρόκειται να πραγματοποιήσετε ένα μάθημα-οδηγό, αφιερώστε τουλάχιστον 30 λεπτά δοκιμάζοντας τουλάχιστον ένα <a href="{{ urls/learn }}">μάθημα-οδηγό της Ώρας του Κώδικα</a>.
   </li>
   <li>
-    If you're visiting a school, complete any background checks or required paperwork.
+    Αν θα επισκεφτείτε ένα σχολείο, ολοκληρώστε τυχόν ελέγχους ιστορικού ή απαιτούμενη γραφική εργασία.
   </li>
   <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+    <a href="https://code.org/files/CSTT_Volunteers.pdf"> Διαβάστε αυτές τις συμβουλές</a> για το πώς να αλληλεπιδράσετε με τους μαθητές.
   </li>
   <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+    Συμμετέχετε σε μια συζήτηση στο Facebook, Twitter, Instagram και Tumblr με το #HourOfCode.
   </li>
   <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
+    Επικοινωνήστε με τον εκπαιδευτικό για να συζητήσετε για το τι σκοπεύετε να μιλήσετε κατά τη διάρκεια της παρουσίας σας.
   </li>
   <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
+    Εάν είστε εθελοντής μέσω βιντεοκλήσης, δοκιμάστε εκ των προτέρων τον ήχο, την εικόνα και την δυνατότητά διαμοιρασμού της οθόνης σας.
   </li>
 </ul>
 
 <h2>
-  Day-of Hour of Code Event
+  Εκδήλωση Ώρας του Κώδικα
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Κατά τη διάρκεια της εκδήλωσης της Ώρας του Κώδικα, ακολουθήστε το παρακάτω παράδειγμα προγράμματος για την ημέρα. Πριν το ξεκίνημα της εκδήλωσης, επισκεφθείτε το σχολείο και συναντήστε τον εκπαιδευτικό την ημέρα της εκδήλωσης. Επιβεβαιώστε το πρόγραμμα της ημέρας και συζητήστε οποιαδήποτε θέματα της ομιλίας.
 </p>
 
 <h3>
-  Sample agenda:
+  Παράδειγμα προγράμματος:
 </h3>
 
 <table>
@@ -109,140 +108,140 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </th>
     
     <th>
-      Agenda item
+      Πρόγραμμα
     </th>
   </tr>
   
   <tr>
     <td>
-      1-5 minutes
+      1-5 λεπτά
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="{{ promote/videos }}">Προβάλλετε ένα εμπνευσμένο βίντεο</a>.
     </td>
   </tr>
   
   <tr>
     <td>
-      5-10 minutes
+      5-10 λεπτά
     </td>
     
     <td>
-      Introduce yourself and learn more about the students: </ul>
+      Συστηθείτε στους μαθητές και μάθετε περισσότερα γι αυτούς: </ul>
       
       <li>
-        What do you work, what do you do, and what do you love most about your job?
+        Τι δουλειά κάνετε, τι αρμοδιότητες έχετε και τι σας αρέσει περισσότερο στη δουλειά σας;
       </li>
       
       <li>
-        What or who inspired you?
+        Τι ή ποιος σας ενέπνευσε;
       </li>
       
       <li>
-        How did you get interested in computer science?
+        Πώς γεννήθηκε το ενδιαφέρον σας για την επιστήμη των υπολογιστών;
       </li>
       
       <li>
-        Did you have a mentor?
+        Είχατε κάποιον μέντορα;
       </li>
       
       <li>
-        Share a story about how tech affects everyone.
+        Μοιραστείτε μια ιστορία σχετικά με το πώς η τεχνολογία επηρεάζει τους πάντες.
       </li>
       
-      <br />Ask the students questions and leave time for Q&A.</br> 
+      <br />Ρωτήστε τους μαθητές και αφήστε χρόνο για δικές τους ερωτήσεις.</br> 
       
       <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
+        Τι επαγγέλματα τους ενδιαφέρουν, ποιες είναι οι αγαπημένες τους εφαρμογές και πώς πιστεύουν ότι δημιουργήθηκαν;
       </li>
       
       <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
+        Έχουν ερωτήσεις για εσάς οι μαθητές;</ul></td> </tr> <tr>
           <td>
-            30-60 minutes
+            30 - 60 λεπτά
           </td>
           
           <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
+            <strong>Προγραμματίστε!</strong> Κινηθείτε μέσα στην τάξη, απαντήστε ερωτήσεις και καθοδηγήστε τους μαθητές στις δύσκολες ασκήσεις. Προσπαθήστε να μη δίνετε κατευθείαν τη λύση στους μαθητές, αλλά να τους κάνετε ερωτήσεις ώστε να αναρωτηθούν τι πήγε λάθος και ενθαρρύνετέ τους να ρωτάνε ο ένας τον άλλον εάν έχουν απορίες. Το να μάθουν ο ένας από τον άλλον είναι ένας σπουδαίος τρόπος μάθησης.
           </td>
         </tr>
         
         <tr>
           <td>
-            1-3 minutes
+            1-3 λεπτά
           </td>
           
           <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
+            Ευχαριστήστε όλους και μοιραστείτε κάποιες λέξεις για κλείσιμο. Μοιράστε υλικό της εταιρείας σας (τα αυτοκόλλητα είναι υπέροχα)!
           </td>
         </tr>
         
         <tr>
           <td>
-            After
+            Μετά το κλείσιμο
           </td>
           
           <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
+            <strong>Κάντε μια αλλαγή που διαρκεί:</strong> Μιλήστε με τον εκπαιδευτικό σχετικά με την εξέλιξη της Ώρας του Κώδικα σε ένα ολοκληρωμένο μάθημα επιστήμης υπολογιστών! Επισκεφθείτε τον ιστότοπο <a href="https://code.org/yourschool">code.org/yourschool</a> μαζί με τον εκπαιδευτικό και συμπληρώστε τι διδάσκει το σχολείο σήμερα και ενθαρρύνετέ τους να δεσμευθούν να φέρουν την επιστήμη των υπολογιστών στην τάξη τους.
           </td>
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Μετά την εκδήλωση:
         </h3>
         <ul>
           <li>
-            Share your photos and stories with Code.org at giving@code.org.
+            Μοιραστείτε τις φωτογραφίες και ιστορίες σας με την Code.org μέσω του giving@code.org.
           </li>
           <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
+            Θυμηθείτε να εισαγάγετε τις ώρες εθελοντισμού σας στο portal παρακολούθησης εθελοντών της εταιρείας σας.
           </li>
           <li>
-            Share about your experience on social media #HourOfCode!
+            Μοιραστείτε την εμπειρία σας στα μέσα κοινωνικής δικτύωσης #HourOfCode!
           </li>
           <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
+            Εάν βγάλετε φωτογραφίες/βίντεο κατά τη διάρκεια της εκδήλωσης, <strong>κυρίως με μαθητές</strong>, βεβαιωθείτε πως έχετε την έγκριση του εκπαιδευτικού/γονέα σε περίπτωση που θελήσετε να αναρτήσετε τις ιστορίες σας στα μέσα κοινωνικής δικτύωσης.
           </li>
           <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
+            Τέλος, επικοινωνήστε ξανά σε ένα μήνα: Ενδιαφέρεται ο εκπαιδευτικός να διδάξει ένα μάθημα επιστήμης υπολογιστών; Μοιραστείτε <a href="https://code.org/yourschool">υλικό και δυνατότητες επαγγελματικής κατάρτισης για να τους βοηθήσετε</a>.
           </li>
         </ul>
         <h2>
-          How you get selected as a technical volunteer of guest speaker
+          Πώς επιλέγεστε ως τεχνικός εθελοντής ή ομιλητής
         </h2>
         <ul>
           <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
+            Οι εκπαιδευτικοί θα αναζητούν για εθελοντές στον <a href="/volunteer/local">χάρτη εθελοντών</a>.
           </li>
           <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+            Προσπαθήστε να έχετε όσο το δυνατόν πιο ολοκληρωμένο προφίλ, ώστε να αυξήσετε τις πιθανότητες να σας διαλέξει ένας εκπαιδευτικός.
           </li>
           <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
+            Ο εκπαιδευτικός θα επικοινωνήσει μαζί σας μέσω αυτής της φόρμας (η διεύθυνση του ηλεκτρονικού ταχυδρομείου σας δεν θα είναι ποτέ διαθέσιμη στον εκπαιδευτικό). <em>Εάν δέχεστε πολλά αιτήματα από εκπαιδευτικούς, μπορείτε να ενημερώσετε τις προτιμήσεις σας, πατώντας τον σύνδεσμο για επεξεργασία των πληροφοριών σας ή για διαγραφή από τη λίστα που βρίσκεται στο τέλος κάθε email από τον εκπαιδευτικό.</em>
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          Συχνές ερωτήσεις σχετικά με τον εθελοντισμό για την Ώρα του Κώδικα
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Δεν έχει επικοινωνήσει μαζί μου κανένας εκπαιδευτικός. Πώς μπορώ να βοηθήσω αλλιώς;
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Προσπαθήστε να αναζητήσετε τοπικά σχολεία και τηλεφωνήστε στον διευθυντή/εκπαιδευτικό/γραμματέα και ρωτήστε τους πως μπορείτε να βοηθήσετε.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Πόσο διαρκεί μια επίσκεψη στην τάξη;
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Μια επίσκεψη στην τάξη διαρκεί συνήθως 60-90 λεπτά, ενώ μια βιντεοκλήση διαρκεί συνήθως 20-30 λεπτά.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Για τι ηλικίες είναι κατάλληλη η Ώρα του Κώδικα;
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Η Code.org και οι συνεργάτες μας σχεδιάζουν όλες τις δραστηριότητες της Ώρας του Κώδικα με σκοπό να απευθυνθούν σε μαθητές όλων των τάξεων (Κ-12), αγόρια και κορίτσια, από οποιοδήποτε υπόβαθρο. Όλοι, ακόμα και ενήλικοι, μπορούν να διασκεδάσουν παίζοντας!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

@@ -19,6 +19,7 @@
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
 #  hidden            :boolean          default(FALSE), not null
+#  autoplay_enabled  :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -61,8 +62,12 @@ class Section < ActiveRecord::Base
   belongs_to :script
   belongs_to :course
 
-  has_many :section_hidden_stages
+  has_many :section_hidden_lessons
   has_many :section_hidden_scripts
+
+  # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
+  # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
+  alias_attribute :lesson_extras, :stage_extras
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -71,6 +76,11 @@ class Section < ActiveRecord::Base
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze
+  ]
+
+  LOGIN_TYPES_OAUTH = [
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER
   ]
 
   TYPES = [
@@ -224,21 +234,30 @@ class Section < ActiveRecord::Base
       link_to_assigned = script_path(script)
     end
 
-    unique_students = students.uniq(&:id)
+    # Remove ordering from scope when not including full
+    # list of students, in order to improve query performance.
+    unique_students = include_students ?
+      students.distinct(&:id) :
+      students.unscope(:order).distinct(&:id)
+    num_students = unique_students.size
+
     {
       id: id,
       name: name,
+      createdAt: created_at,
       teacherName: teacher.name,
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
-      numberOfStudents: unique_students.length,
+      numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
-      stage_extras: stage_extras,
+      stage_extras: lesson_extras, # TODO: remove after corresponding js change has been deployed
+      lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
+      autoplay_enabled: autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
@@ -247,7 +266,7 @@ class Section < ActiveRecord::Base
         name: script.try(:name),
         project_sharing: script.try(:project_sharing)
       },
-      studentCount: unique_students.size,
+      studentCount: num_students,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
@@ -269,11 +288,11 @@ class Section < ActiveRecord::Base
 
   # Hide or unhide a stage for this section
   def toggle_hidden_stage(stage, should_hide)
-    hidden_stage = SectionHiddenStage.find_by(stage_id: stage.id, section_id: id)
+    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
     if hidden_stage && !should_hide
       hidden_stage.delete
     elsif hidden_stage.nil? && should_hide
-      SectionHiddenStage.create(stage_id: stage.id, section_id: id)
+      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
     end
   end
 
@@ -294,8 +313,8 @@ class Section < ActiveRecord::Base
   # once such a thing exists
   def has_sufficient_discount_code_progress?
     return false if students.length < 10
-    csd2 = Script.get_from_cache('csd2-2018')
-    csd3 = Script.get_from_cache('csd3-2018')
+    csd2 = Script.get_from_cache('csd2-2019')
+    csd3 = Script.get_from_cache('csd3-2019')
     raise 'Missing scripts' unless csd2 && csd3
 
     csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)
@@ -330,4 +349,20 @@ class Section < ActiveRecord::Base
   def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the section name.
+  # We make a best-effort to make the name usable without the removed characters.
+  # We can remove this once our database has utf8mb4 support everywhere.
+  def strip_emoji_from_name
+    # We don't want to fill in a default name if the caller intentionally tried to clear it.
+    return unless name.present?
+
+    # Drop emoji and other unsupported characters
+    self.name = name&.strip_utf8mb4&.strip
+
+    # If dropping emoji resulted in a blank name, use a default
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+  end
+  before_validation :strip_emoji_from_name
 end

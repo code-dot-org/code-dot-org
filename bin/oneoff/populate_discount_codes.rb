@@ -11,12 +11,10 @@ require src_dir 'database'
 
 def populate_csv_data(filename, full_discount, expiration)
   csv_contents = CSV.read(filename)
-  # skip header row
-  csv_contents.shift
   csv_contents.each do |line|
-    prefix, code = line
+    code = line[0]
     CircuitPlaygroundDiscountCode.create!(
-      code: prefix + code,
+      code: code,
       full_discount: full_discount,
       expiration: expiration
     )
@@ -41,7 +39,7 @@ else
   exit(-1)
 end
 
-populate_csv_data(filename, full_discount, Date.new(2018, 12, 31))
+populate_csv_data(filename, full_discount, Date.new(2021, 4, 30))
 
 puts 'Complete'
 

@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### 為什麼這很重要?
 
-科技正在改變這個行星上的所有產業。 在 2015 年，美國有700 萬工作機會看重編程技能，其中包括藝術和設計。 But 65 percent of schools in the U.S. don't teach computer science. 現在是我們應該迎頭趕上21世界步伐的時候了。 我們知道，無論我們的學生們長大後做什麼，無論他們從事醫藥，商業，政治或者藝術工作，知道如何使用科技將會給他們信心並讓他們知道成功的訣竅。 <br /> <br />
+科技正在改變這個行星上的所有產業。 在 2015 年，美國有700 萬工作機會看重編程技能，其中包括藝術和設計。 But 55 percent of schools in the U.S. don't teach computer science. 現在是我們應該迎頭趕上21世界步伐的時候了。 我們知道，無論我們的學生們長大後做什麼，無論他們從事醫藥，商業，政治或者藝術工作，知道如何使用科技將會給他們信心並讓他們知道成功的訣竅。 <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### 關於 Code.org
 
-Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. 更多詳情, 請訪問: [ <%= resolve_url('code.org')%> ](%= resolve_url('https://code.org') %)。
+Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![圖片](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![圖片](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

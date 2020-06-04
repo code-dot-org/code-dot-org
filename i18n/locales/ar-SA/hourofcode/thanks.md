@@ -1,53 +1,35 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
-layout: wide
-nav: how_to_nav
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+title: شكرًا للتسجيل لاستضافة حدث "ساعة البرمجة"!
 ---
-<% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+# شكرًا للتسجيل لاستضافة حدث "ساعة البرمجة"!
 
-# شكراً لمشاركتك في استضافة حدث "ساعة البرمجة"!
+<br /> **تبدأ حملة "ساعة البرمجة" في {{ campaign_date/full }} وسنكون على اتصال في حالة توفر دروس وبرامج تعليمية وتحديثات مثيرة أخرى جديدة. في أثناء ذلك، ما الذي يمكنك فعله الآن؟**
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+تعبيرًا عن الشكر والامتنان لمنطمي "ساعة البرمجة"، لدينا ملصق جديد يضم مالالا، ستيفن كيري، وشاكيرا وآخرين متاح للطلب على [خصم 50% على أمازون](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). هذه السنة،تأتي كل مجموعة مع 6 ملصقات و 126 ملصقًا أعلانيًا مكتوب عليها: "لقد شاركت في أنشطة ساعة البرمجة". مع الخصم، يمكن أن تحصل عليها بأقل تكلفة ممكنة. الكمية محدودة، لذا بادر بطلب الملصقات. إذا لم تكن مقيمًا في الولايات المتحدة، فيمكنك [تنزيل وطباعة جميع الملصقات]({{ promotion/promote_posters_url }}).
 
-## انشر الامر في مدرستك ومجتمعك
+## 1. انشر حملة "ساعة البرمجة" في مدرستك ومجتمعك
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+لقد انضممت إلى حركة "ساعة البرمجة". أخبر أصدقاءك باستخدام **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+{{ social_media_hoc }} <br /> شجِّع الآخرين على المشاركة [بأمثلة البريد الإلكتروني هذه.]({{ promote/sample_emails }}) اتصل بمديرك واطلب من كل فصل دراسي في مدرستك الاشتراك. قم بإشراك المجموعات المحلية - نادي كشافة، كنيسة ، جامعة، مجموعة قدامى المحاربين، نقابة عمالية، أو حتى بعض الأصدقاء. لست بحاجة لأن تكون في المدرسة لتعلم مهارات جديدة. يمكنك دعوة سياسي محلي أو صانع سياسات لزيارة مدرستك أثناء القيام بأنشطة "ساعة البرمجة". يمكن أن يساعد ذلك في بناء دعم لعلوم الحاسوب في منطقتك بعد ساعة واحدة فقط.
 
-Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+استخدم هذه [الملصقات، واللافتات، ومقاطع الفيديو وغيرها]({{ promote/resources }}) لحدثك الخاص.
 
-## 2. البحث عن متطوع محلي لمساعدتك في الحدث الخاص بك.
+## 2. اعثر على متطوع محلي لمساعدتك في هذا الحدث.
 
-[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[ابحث في خريطتنا للمتطوعين]({{ urls/volunteer_local }}) عن المتطوعين الذين يمكنهم زيارة فصلك الدراسي أو القيام بمحادثة عبر الفيديو عن بُعد لإلهام الطلاب حول تعدد الإمكانات عند دراسة علوم الحاسوب.
 
-## 3. ضع خطة لساعتك من البرمجة
+## 3. ضع خطة لحدث "ساعة البرمجة"
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
+اختر [نشاط ساعة البرمجة](https://hourofcode.com/learn) للفصول الدراسية و[راجع هذا الدليل الإرشادي]({{ urls/how_to_guide }}).
 
-# تجاوز ساعة من البرمجية
+### 4. وفِّر أدوات الدعم
 
-<% if @country == 'us' %> ساعة من البرمجة هي البداية فقط. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+اطلب مواد لمساعدة الطلاب على التحمس لحدثك من خلال التوجه إلى موقع Code.org [متجر أمازون](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [اطلب الملصقات ](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (واحصل على خصم إضافي بنسبة 50٪) ومجموعة ادوات "ساعة البرمجة" والملصقات والمزيد! لكن يجب أن تبادر بالحجز والطلب، فالكمية محدودة.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+# الاطلاع على المزيد من البرامج التعليمية
 
-<% else %> ساعة من البرمجة هي البداية فقط. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+{{ go_beyond_hoc }}
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

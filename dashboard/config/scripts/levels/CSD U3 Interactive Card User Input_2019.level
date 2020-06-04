@@ -205,10 +205,9 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "f14EZ20txRZ3cxYtqaBurqUKVNccgSr4/orxfldv1rwx9dm5Ntho13fUxcCI\noeNm\n",
+    "encrypted_examples": "M4e0pnnbtK/xoEkqfg3veixDqlj4U/4BKHmi0zkGOqtcZdUGzQTR0tE/R18q\no/ku24DcV/EEyiIZOUoKX5krpWbNaMeas63XrInQClWPMYEqKzA6MJt1bC17\np8Z/ABAwfV1644fGlXARXUYiPFy7hw==\n",
     "parent_level_id": 11308,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/docs/concepts/javascript/if-statements/",
@@ -216,11 +215,13 @@
     ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 07:10:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 07:10:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 20:18:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

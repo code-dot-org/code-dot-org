@@ -70,13 +70,23 @@ export function extend(defaults, options) {
   return finalOptions;
 }
 
+/**
+ * Replaces special characters in string by HTML entities.
+ * List of special characters is taken from
+ * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html.
+ * @param {string} unsafe - The string to escape.
+ * @returns {string} Escaped string. Returns an empty string if input is null or undefined.
+ */
 export function escapeHtml(unsafe) {
   return unsafe
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
+    ? unsafe
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/\//g, '&#47;')
+    : '';
 }
 
 /**
@@ -693,6 +703,13 @@ export function reload() {
 
 export function currentLocation() {
   return window.location;
+}
+
+/**
+ * Helper that wraps window.open, for stubbing in unit tests.
+ */
+export function windowOpen(...args) {
+  return window.open(...args);
 }
 
 /**

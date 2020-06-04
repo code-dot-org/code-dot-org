@@ -11,7 +11,8 @@ Before embarking on making your own app from scratch let's recap a few important
 
 <div style="width: 300px; text-align: left; float: right">
 
-	<img src="https://images.code.org/1c583d7f9d5e9d651a0616e583ccc801-image-1477513803793.png"><br>
+<img src="https://images.code.org/1c583d7f9d5e9d651a0616e583ccc801-image-1477513803793.png"><br>
+    
 <em>This example shows how buttons, labels and images can be made to look very similar. They can all behave similarly as well depending how you do event handling.</em>
 </div>
 

@@ -1,0 +1,25 @@
+name 'cspu5_assess1_value_2018_2019_virtual'
+wrong 'value is: 2'
+wrong 'value is: 2.3333333'
+wrong 'value is: 3'
+right 'value is: 4'
+wrong 'value is: c'
+markdown <<MARKDOWN
+What is displayed by the _console.log_ statement after the following code segment executes?
+
+![](https://images.code.org/cdd2a13688bb9cebdf36dd315a93b25d-image-1518821289861.47.53 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+Solve this problem by going through the lines of code while keeping track of the value of each variable.
+It is important to note that if a variable is assigned a new value, the lines of code that reference that variable afterwards also references the new value.
+
+* At the very beginning, a = 3, b = 6, c = 10
+* a = b / a which equals  6 / 3 = 2. Thus, variable "a" is changed to the value 2
+* _Now, the value of "a" is set to 2_
+* b = c - a which equals 10 - 2 = 8. Variable "b" now equals 8
+* c = b / a which equals 8 / 2 = 4
+* By the end of the program, value of c = 4
+MARKDOWN

@@ -47,7 +47,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "52WOAYrSSqzjd6Leyyp3C7tuD5KdSPik3xJY7DX9NsX7CWUs8ccmgMx6ZpNr\nEhslsBXP/olMbmMM+gWtjkyTjG1yoDEfuidTJBRc9k+bd0xhGfOF2RSKgAVf\nERTYID45MWjN7SfGHORWe+OgwmNrxg==\n",
+    "encrypted_examples": "Ktuw+xanTQ5zGfdB8r0gzFxGK0QTp8gJCVaYQqSkQlBJwDs/laEIMX+lXkgj\nIltzzyMg8nE3NcdXtonwIruVkTu2XVET1Yyv2v0Igw+5a36jvmvHGCc8eEck\nDo9nPbwJ7NOsdPGFBE9pHnTnXbzqWQ==\n",
     "parent_level_id": 11195,
     "name_suffix": "_2019",
     "reference_links": [
@@ -56,11 +56,15 @@
     "map_reference": "/docs/csd-1718/shape_size_map/index.html",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 23:44:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:21 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:25:21 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:50:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 23:44:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:39:21 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:25:21 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 18:50:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-24 23:45:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

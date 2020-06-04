@@ -78,25 +78,17 @@ ps:
         options:
           CONDITION:
             '"while"': کله چي
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"while"': کله چي
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"while"': کله چي
       Mikelab_randomColor:
         text: نا ټاکلۍ رنګ
-      aalab_checkTouching:
+      aalab_goToScene:
         options:
-          CONDITION:
-            '"while"': کله چي
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
         options:
-          CONDITION:
-            '"while"': کله چي
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"while"': کله چي
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'

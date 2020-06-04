@@ -38,6 +38,7 @@ module.exports = {
     "no-trailing-spaces": "error",
     "no-undef": "error",
     "no-unused-vars": ["error", { args: "none" }],
+    "no-useless-escape": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
     "react/button-has-type": "error",
@@ -54,6 +55,7 @@ module.exports = {
     "react/no-string-refs": "off",
     "react/no-unescaped-entities": "off",
     "react/self-closing-comp": "error",
+    "react/no-danger" : "error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
     strict: "error"

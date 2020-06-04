@@ -39,14 +39,14 @@
     "custom_helper_library": "World.SPRITE_NAMES = [\"CAT\", \"MOOSE\"];\r\n\r\nWorld.MOVE_NAMES = [\r\n  {\r\n    name: \"Rest\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"ClapHigh\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Clown\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Dab\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"DoubleJam\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Drop\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Floss\",\r\n    mirror: true\r\n  }\r\n];",
     "preload_asset_list": [
       "https://curriculum.code.org/images/DancePartyLoading.gif",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_08.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_09.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_10.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_11.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/moose_24.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/moose_25.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/moose_26.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/moose_27.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_08.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_09.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_10.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_11.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_24.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_25.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_26.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_27.png"
     ],
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_01\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 14634,

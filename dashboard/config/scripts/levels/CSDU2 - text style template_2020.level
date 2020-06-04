@@ -1,0 +1,21 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-02-17T23:24:05.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"h1 {\\n    color: red;\\n    font-size: 24px;\\n}\\n\\np {\\n    font-size: 14px;\\n}\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  <h1>Odd World Records</h1> \\n  <h3>\\n    Most M&amp;Ms Eaten Blindfolded, with a Chopstick in \\n    1 Minute\\n  </h3>\\n  <p>\\n    The most M&amp;Ms eaten in one minute blindfolded is 20 \\n    and was achieved by Ashrita Furman (USA), at the Sri \\n    Chimnoy Centre in New York, New York, USA, on 8 \\n    December 2011. \\n  </p> \\n\\n  <h3>Largest Bubble Blown</h3>\\n  <p> \\n    Chad Fell (USA) blew a bubblegum bubble with a \\n    diameter of 50.8 cm (20 in) without using his hands \\n    at the Double Springs High School, Winston County, \\n    Alabama, USA on 24 April 2004.The secret of his success, \\n    says Chad, is blowing with three pieces of Double Bubble \\n    gum. \\n  </p> \\n\\n  <h3>Hula Hoop Marathon</h3>\\n  <p>\\n    The longest hula hooping marathon by an individual \\n    using a single hoop is 74 hours and 54 minutes and \\n    was achieved by Aaron Hibbs (USA) in Columbus, Ohio, \\n    USA on 22-25 October 2009. Aaron had his own news \\n    segment on Fox News 28 after the attempt. Over 100 \\n    people helped him through the impressive feat and he \\n    secured the record after no one had beaten it for \\n    25 years. \\n  </p> \\n</body>\\n</html>  \\n\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 18336,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 18:23:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-14 15:00:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-14 15:02:29 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-02-11 22:55:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]"
+}]]></config>
+</Weblab>

@@ -34,7 +34,7 @@
     "free_play": "true",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "false",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -60,11 +60,15 @@
     "parent_level_id": 13349,
     "name_suffix": "_2019",
     "long_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\n**You Try it: Checking IDs** -- Your first debugging task will be to verify that the button IDs match the event-handlers.  You'll also see error messages in the **\"Debug Console\"**\r\n\r\n![](https://images.code.org/6bb61c1ab1af5c0ce84a8cc4dc9b95cd-image-1476970435861.png)\r\n\r\n1. **Run the program** and inspect the error messages in the Debug Console.\r\n   * **NOTE:** an error message *only* indicates where the computer ran into trouble.  It doesn't tell you the root cause of the problem, necessarily.\r\n2. **Investigate** -- Use the **error message as a clue** to investigate the possible problem.\r\n3. **Fix it** -- Make a change that you think will fix the problem.\r\n4. **Run the program** and verify that not only are there no error messages but the program works as intended (turtle moves forward on button click).\r\n5. **Didn't work?** - repeat the steps above.  And stick with it!  You'll get it eventually.\r\n\r\n**Remember:** You can see the ID of a UI element by just hovering your mouse over it.\r\n<details>\r\n\r\n<summary>\r\nHint? [click here]\r\n</summary>\r\n\r\n<li>In this case the ID of the button does not match the ID in the onEvent command</li>\r\n<li>The error message is saying: \"you're telling me to listen to events on a UI Element with id 'button1' and no such thing exists!\" </li><br>\r\nThere are two ways to fix this:<br>\r\n<li>Change the ID in the event handler code to match the button ID in design mode.</li>\r\n<li>...or Change the button ID in design mode to match the event handler</li>\r\n\r\n</details>\r\n\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-19 20:12:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-11 00:53:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-09-19 20:12:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-11 00:53:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-07-30 17:37:14 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

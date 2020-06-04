@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
-layout: wide
-nav: how_to_nav
+title: راهنما
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # نحوه تدریس ساعت کدنویسی در کلاس های فوق برنامه مدارس و باشگاه ها
 
-### به این جنبش بپیوندید و با این مراحل، گروهی از دانش آموزان را با اولین ساعتشان با علوم کامپیوتر آشنا کنید. اجرای ساعت کدنویسی خیلی آسان است - حتی برای مبتدیان! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+### به این جنبش بپیوندید و با این مراحل، گروهی از دانش آموزان را با اولین ساعتشان با علوم کامپیوتر آشنا کنید. اجرای ساعت کدنویسی خیلی آسان است - حتی برای مبتدیان! اگر میخواهید افراد کمکی دیگری داشته باشید، می توانید یک [داوطلب محلی](%= codeorg_url('/volunteer/local') %) برای اجرای ساعت کدنویسی در کلاس خود پیدا کنید.
 
 * * *
 
@@ -15,17 +14,17 @@ nav: how_to_nav
 
 ## 2. یکی از برنامه های آموزشی را انتخاب کنید
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [امتحان کنید](%= resolve_url('/learn') %)
+ما [آموزش های یک ساعته]({{ urls/learn }}) ی جالب و متنوعی برای تمام سنین که توسط شرکای مختلف ساخته شده اند را تهیه کرده ایم. [آنها را امتحان کنید.]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**تمام آموزش های ساعت کدنویسی** نیاز به کمترین زمان آماده سازی برای سازمان ها و خودخوان ها هستند - اجازه میدهند که به بچه ها اجازه می دهندکه با سرعت دلخواهشان و سطح مهارتشان کار کنند. 
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**نیاز به طرح درسی برای ساعت کد نویسی بعد از مدرسه را دارید؟**این [قالب](/files/AfterschoolEducatorLessonPlanOutline.docx) را ببینید.
 
 ## 3. برنامه ساعت کدنویسی خود را اطلاع رسانی کنید
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+ساعت کدنویسی خود را [با استفاده از این ابزارها](%= resolve_url('/promote') %) ترویج کنید و دیگران راتشویق کنید تا میزبان رویدادهای خودشان باشند.
 
 ## 4. برای تکنولوژی های مورد نیاز خود برنامه ریزی کنید - داشتن رایانه اختیاری است
 
@@ -45,41 +44,41 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 
 - سایت Code.org ویدیویی از بیل گیتز ، مارک زوکربرگ ، و ستاره بسکتبال، کریس بوش آماده کرده است - نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای](https://www.youtube.com/watch?v=nKIu9yen5nc)، و [9 دقیقه ای](https://www.youtube.com/watch?v=dU1xS07N-FA) این ویدئو موجود می باشند.
 - ویدئو [ساعت کدنویسی در سرتاسر جهان](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [باراک اوباما تمام دانش آموزان را به یادگیری علوم کامپیوتر فرا میخواند.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - ویدئوهای الهام بخش دیگر را از [اینجا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) پیدا کنید.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**ایرادی ندارد اگر در علوم کامپیوتر تازه کار هستید. در اینجا ایده هایی ذکر می شود که می توانید از آنها برای معرقی فعالیت های ساعت کدنویسی تان استفاده کنید:**
 
 - در مورد روش هایی که فناوری بر زندگی ما اثر گذاشته، به همراه مثال هایی که هم برای دختران و هم برای پسران مهم باشند توضیح دهید (در مورد برنامه ها و فناوری هایی که زندگی انسانها را نجات می دهند، به مردم کمک می کنند، بین مردم ارتباط برقرار می کنند و غیره صحبت کنید).
 - چیزهایی که در زندگی روزمره از کد استفاده میکنند را لیست کنید.
-- در [اینجا](%= resolve_url('https://code.org/girls') %) روشهایی را برای علاقمند کردن دختران به علوم کامپیوتر ببینید.
+- در [اينجا](http://code.org/girls) نكاتي را براي مشتاق كردن دختران به علم كامپيوتر ببينيد
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**به راهنمایی بیشتر احتیاج دارید؟** [طرح برنامه درسی](/files/AfterschoolEducatorLessonPlanOutline.docx) را دانلود کنید.
 
-## 6. Code!
+## ۶.کد بنویسید!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+**شرکت کنندگان را به فعالیت راهنمایی کنید** - لینک آموزش را بر روی تخته بنویسید. لینک مورد نظر را که در بخش اطلاعات مربوط به <a href="http://<%= codeorg_url() %>اطلاعاتی برای آموزش مورد نظر شما</a> است و در زیر تعداد شرکت کنندگان قرار دارد پیدا کنید.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+زمانی که کسی به مشکلی برمی خورد، اشکالی ندارد که بگویید: «نمیدانم.» بیاید با هم آن را حل کنیم.» - " تکنولوژی همیشه جوری که ما میخوایهم کار نمی کند." -"یادگرفتن برنامه نویسی مانند یادگیری یک زبان جدید است؛ فوراً مسلط نخواهید شد." 
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %) - Or, ask those who finish early to help others who are having trouble.
+**چه کار کنیم اگر کسی زودتر تمام کرد؟** - شرکت کنندگان را تشویق کنید که یک فعالیت ساعت کدنویسی دیگر را در [hourofcode.com/learn]({{ urls/learn }}) امتحان کنند.
 
-## 7. Celebrate
+## 7. جشن بگیرید
 
-- [Print certificates](%= codeorg_url('/certificates') %) for your students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- گواهینامه ها را برای دانش آموزانتان [ چاپ کنید](%= resolve_url('https://code.org/certificates') %).
+- استیکر «من یک ساعت کدنویسی انجام دادم» را برای دانش آموزانتان چاپ کنید.
+- برای شرکت کنندگان [تی شرت مخصوص سفارش دهید.](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
 ## سایر منابع ساعت کدنویسی برای مدرسان
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- تجربه های موفق سایر مدرسان ساعت کدنویسی را [اینجا ببینید](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).
+- ویدئوی ضبط شده در وبینار ما را در مورد [راهنمای ساعت کدنویسی برای مدرسان](https://youtu.be/EJeMeSW2-Mw) را تماشا کنید.
+- [تالار گفتگوی ساعت کدنویسی](http://forum.code.org/c/plc/hour-of-code)را برای دریافت مشاوره، کمک و پشتیبانی از سایر برگزارکنندگان بازدید کنید.
+- [پرسش و پاسخ ساعت کدنویسی](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) را ببینید.
 
 ## مرحله بعد از ساعت كدنويسي چيست؟
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+ساعت کد نویسی تنها اولین قدم در مسیر یادگیری چگونگی کارکرد تکنولوژی و شیوه ی ساخت یک نرم افزار کامپیوتری است . به دانش آموزان کمک کنید تا به مسیرشان ادامه دهند و آن ها را تشویق کنید تا [آنلاین یاد بگیرند.](/beyond)
 
-<%= view :signup_button %>
+{{ signup_button }}

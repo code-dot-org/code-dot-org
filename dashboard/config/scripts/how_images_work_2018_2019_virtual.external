@@ -1,0 +1,73 @@
+name 'How Images Work_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How to Add Images in Design Mode
+
+Adding an image UI element in design mode is relatively simple. But you have three options for how to get the image you want.
+
+![](https://images.code.org/3366ed3afaa1dcabbb9039305392f03d-image-1476897019665.png)
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Copy and paste the URL of some image that already exists on the web into this box.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Click Choose... to upload your own image.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Or click Choose... to use a Pre-Loaded Icon</p>
+</div>
+
+<br><br>
+
+<details><summary> [Expand to read]
+
+## More about using images from the web...
+
+</summary>
+
+<img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
+
+There are several ways to get the URL of an image.  
+
+A common technique (shown at right) is to find an image you like on a web page and then right-click (or ctrl-click) and choose an option that says something like "Copy Image Address." Then you can paste it into the text box in App Lab.
+
+If you're unsure, you can also choose an option like "Open Image in New Tab" which will isolate the image by itself and the URL will show in the address bar. Then you can copy/paste into App Lab.
+
+**Common Mistake**: Using the URL of an *image search web site* rather than a URL of the image itself.
+
+* Make sure you get the path to an actual image file - something that ends with **.jpg**, **.gif** or **.png**.
+* A URL that starts like this: `https://www.google.com/search?q=cat&espv=2&biw=1497....`  is probably wrong.
+
+</details><details>
+
+<summary> [Expand to read]
+
+## More about using your own images...</summary>
+
+If you have saved images on your computer you can upload them into app lab's **asset manager**.  Just **click Upload File** and follow the dialogs on screen.
+
+For images the file must be of type: **.jpg**, **.png**, or **.gif**
+
+Once you've uploaded the image then you need to **Choose** it to set the image to that file. If you add multiple images you'll see them all listed every time you upload a file and you can choose to use *any* file that you've already uploaded.
+
+![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
+
+</details><details><summary> [Expand to read]
+
+## More about using pre-loaded icons...
+
+</summary>
+App Lab comes with a set of handy single color **icons** (black icon, white/transparent background) that you can use for buttons or graphics, whatever you like.  You can also change the color of the icon after you add it to the app.  
+
+The *trickiest* part is that you need to find and **click on the "Icons" tab** once the asset manager pops up.
+
+![](https://images.code.org/c02f76e80b05c2dbdabca761635b2d21-image-1476897099806.gif)
+</details>
+
+### Click Continue to try it!
+
+
+MARKDOWN

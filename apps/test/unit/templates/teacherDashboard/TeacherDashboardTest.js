@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboard as TeacherDashboard} from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const DEFAULT_PROPS = {
@@ -15,7 +15,7 @@ const DEFAULT_PROPS = {
 describe('TeacherDashboard', () => {
   it('renders TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboard {...DEFAULT_PROPS} />);
-    expect(wrapper.find('TeacherDashboardHeader')).to.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.exist;
   });
 
   it('does not render TeacherDashboardHeader on /login_info', () => {
@@ -23,7 +23,15 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.find('TeacherDashboardHeader')).to.not.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
+  });
+
+  it('does not render TeacherDashboardHeader on /standards_report', () => {
+    const location = {pathname: '/standards_report'};
+    const wrapper = shallow(
+      <TeacherDashboard {...DEFAULT_PROPS} location={location} />
+    );
+    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
   });
 
   it('defaults to progress tab if no tab provided in route', () => {

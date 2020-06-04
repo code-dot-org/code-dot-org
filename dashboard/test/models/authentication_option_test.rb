@@ -122,6 +122,22 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert option.oauth?
   end
 
+  test 'primary?' do
+    user = create(:user)
+
+    assert_equal 1, user.authentication_options.count
+    refute_nil user.primary_contact_info
+    old_primary_ao = user.primary_contact_info
+    assert old_primary_ao.primary?
+
+    google_ao = create(:google_authentication_option, user: user)
+    user.update!(primary_contact_info: google_ao)
+    old_primary_ao.reload
+
+    assert google_ao.primary?
+    refute old_primary_ao.primary?
+  end
+
   test 'update_oauth_credential_tokens raises an error if auth option is not oauth' do
     not_oauth = build :authentication_option, credential_type: AuthenticationOption::EMAIL
     assert_raises(RuntimeError) do
@@ -210,5 +226,49 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
 
     refute_empty option.hashed_email
     refute_empty option.authentication_id
+  end
+
+  test "email must be unique for trusted credential types" do
+    # For most credential types, we trust that the email provided by the
+    # credential can also be used to identify the user (for example, when a
+    # user authenticates with google we can trust that they are also
+    # authenticated to use the email associated with their google account).
+    #
+    # Therefore, we enforce that a credential with that email can only be
+    # associated with a user account that has that email.
+    AuthenticationOption::TRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
+      option = build :authentication_option, credential_type: credential_type
+      create(:user, email: option.email)
+      refute option.valid?
+    end
+  end
+
+  test "email does not have to be unique for untrusted credential types" do
+    # For some of our credential types, we cannot trust that the email provided
+    # by the credential can also be used to identify the user (for example,
+    # when a user authenticates with clever we cannot trust that they are also
+    # authenticated to use the email associated with their clever account,
+    # because clever does not verify emails).
+    #
+    # Therefore, we allow a user account to use a credential with that email
+    # even if there already exists a different user account with that same
+    # email.
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
+      option = build :authentication_option, credential_type: credential_type
+      create(:user, email: option.email)
+      assert option.valid?
+    end
+  end
+
+  test "untrusted emails do not violate uniqueness for trusted emails" do
+    untrusted = create :authentication_option,
+      credential_type: AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.sample
+    assert untrusted.valid?
+
+    trusted = create :authentication_option,
+      email: untrusted.email,
+      hashed_email: untrusted.hashed_email,
+      credential_type: AuthenticationOption::TRUSTED_EMAIL_CREDENTIAL_TYPES.sample
+    assert trusted.valid?
   end
 end

@@ -56,7 +56,7 @@ describe('SingleCheckbox', () => {
     expect(onChangeCallback).to.have.been.calledOnce;
     expect(onChangeCallback).to.have.been.calledWith({testCheckbox: true});
 
-    onChangeCallback.reset();
+    onChangeCallback.resetHistory();
     singleCheckbox
       .find('Checkbox')
       .simulate('change', {target: {checked: false}});

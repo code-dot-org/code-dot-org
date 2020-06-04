@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
-layout: wide
-nav: promote_nav
+title: Blurbs and useful stats
 ---
-
 
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -33,7 +30,7 @@ Vi hoppas att det ska väcka större intresse för eleverna att lära sig mer in
 
 #### Varför är det viktigt?
 
-Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 65 percent of schools in the U.S. don't teach computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, ekonomi, politik, eller konst, så behöver de veta hur man använder teknik och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
+Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 55 percent of schools in the U.S. don't teach computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, ekonomi, politik, eller konst, så behöver de veta hur man använder teknik och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -41,16 +38,16 @@ Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner 
 
 #### Om Code.org
 
-Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

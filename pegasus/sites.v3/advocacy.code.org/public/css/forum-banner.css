@@ -13,13 +13,18 @@
   float: left;
 }
 
-.announcement .left p.title {
+.announcement-thumbnail {
+  float: left;
+  padding-right: 15px;
+}
+
+.announcement .left .title {
   font-size: 16px;
   margin-bottom: 3px;
   font-family: 'Gotham 5r', sans-serif;
 }
 
-.announcement .left p.details {
+.announcement .left .details {
   margin-bottom: 0px;
 }
 
@@ -27,9 +32,17 @@
   float: right;
 }
 
-.announcement button {
+.announcement .large-button {
   margin-top: 0px;
-  width: 150px;
+  width: 100px;
   height: 50px;
   font-family: 'Gotham 5r', sans-serif;
 }
+
+.announcement .small-button {
+  margin-top: 0px;
+  width: 80px;
+  height: 50px;
+  font-family: 'Gotham 5r', sans-serif;
+}
+

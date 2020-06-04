@@ -1,5 +1,5 @@
 ---
-fa:
+fa-IR:
   data:
     display_name:
       CSD U2 Pair Programming Video: برنامه نویسی دوتایی
@@ -50,7 +50,6 @@ fa:
       CSD U3 Variables Map: متغیرها
       CSD U3 Variables Map_2018: متغیرها
       CSD U3 Variables Map_2019: متغیرها
-      CSD U3 functions map: توابع
       CSD U6 for loop map: حلقه های "برای"
       CSD U6 for loop map_2018: حلقه های "برای"
       CSD U6 for loop map_2019: حلقه های "برای"
@@ -58,6 +57,3 @@ fa:
       CSD U6 functions paramters video_2018: معادله با پارامترها
       CSD U6 functions paramters video_2019: معادله با پارامترها
       'CSD: For Loop_2018': حلقه های "برای"
-      'CSD: For Loop_2019': حلقه های "برای"
-      MC_HOC_2017_FP10x10: بازی رایگان
-      MC_HOC_2017_FP10x10_RE: بازی رایگان

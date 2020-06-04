@@ -1,48 +1,47 @@
 ---
-title: <%= hoc_s(:title_op_ed).inspect %>
-layout: wide
-nav: promote_nav
+title: مثال لمقال رأي داعم للأسبوع العالمي للبرمجة وعلوم الحاسوب وساعة البرمجة
 ---
-<%= view :signup_button %>
 
-# Write an op-ed in support of Computer Science Education Week
+{{ signup_button }}
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+# اكتب مقالة رأي لدعم الأسبوع العالمي للبرمجة وعلوم الحاسوب
 
-### Visit [advocacy.code.org](%= resolve_url('https://advocacy.code.org') %) to find state specific information about computer science.
+### فيما يلي نموذج لمقالة رأي داعمة للأسبوع العالمي للبرمجة وعلوم الحاسب - وأهدافه - يمكن استخدامها من قِبل المُشرِّعين المحليين والمُشرِّعين على مستوى الولايات وقادة الأعمال وغيرهم.
+
+### قم بزيارة موقع [advocacy.code.org]({{ urls/advocacy }}) لإيجاد معلومات خاصة بكل ولاية عن علوم الحاسوب.
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### العنوان: الحوسبة ... أين الوظائف؟
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### بقلم [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+أجهزة الحاسوب في كل مكان. إنها في جيوبنا. إنها في جدراننا. إنها في سياراتنا. إنها جزء مهم من بنيتنا التحتية، من شبكات الكهرباء إلى إشارات المرور إلى الأعمال الداخلية لأسواقنا المالية. وجميع أجهزة الحاسوب تشترك في شيء واحد. أنها تعتمد على البرامج لتخبرها بما يجب عليها فعله.
 
-But who exactly is going to write this software?
+ولكن مَن تحديدًا يمكنه تصميم هذه البرامج؟
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+بالنظر إلى مدى سرعة تحول عالمنا بسبب التكنولوجيا، قد تتوقع أن يكون عدد الطلاب الذين يدرسون علوم الحاسوب في رياض الأطفال وحتى الصف الثاني اليوم في أعلى مستوياته على الإطلاق. وأنت مخطيء في ذلك. في الواقع، هناك عدد أقل من الطلاب الذين يدرسون علوم الحاسوب، وعدد أقل من المدارس التي تدرسها، مما كانت عليه قبل عشر سنوات.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+وفي وقت زيادة الطلب على المبرمجين المهرة على نحو غير مسبوق، فإننا لدينا عدد أقل من علماء الحاسوب. حتى في فترة ارتفاع معدل البطالة هذه، فإن آلاف الوظائف، والكثير منها هنا في **[INSERT STATE/CITY]**، أصبحت شاغرة بسبب نقص العدد الكافي من الأفراد الذين لديهم مجموعات المهارات المناسبة.
 
-Why is this? And how can we address it?
+ما السبب في ذلك؟ وكيف يمكننا معالجته؟
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+تبدأ المشكلة في مدارسنا الإعدادية والثانوية. فهناك تسعة من أصل عشرة من مدارسنا لا تقدم دروسًا في برمجة الحاسوب. في **[SCHOOL DISTRICT]** العام الماضي، لم يلتحق سوى **[NUMBER]** من الطلاب لخوض اختبار التنسيب المتقدم علوم الحاسوب على مستوى الكلية، و**[%]**فقط من بين جميع الطلاب الذين أخذوا هذا الاختبار في ولايتنا. نحن ببساطة لا نبذل جهدًا كافيًا لإعداد أو تشجيع طلابنا على البحث عن هذه الوظائف الحيوية ذات الأجور العالية.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+لقد تم اختراع جميع ابتكارات الحوسبة الرئيسية تقريبًا هنا في هذا البلد، لكننا مُعرَّضون لخطر فقدان هذه الريادة إذا لم نفعل شيئًا الآن.
 
-We need to make some changes.
+نحن بحاجة إلى إجراء بعض التغييرات.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+سيكون أحد التغييرات الإيجابية هو السماح بدورات علوم الحاسوب المكثفة لتلبية متطلبات المدارس الثانوية أو متطلبات التخصص في العلوم. في **[INSERT STATE]**، تعد دورات علوم الحاسوب اختيارية. ونظرًا للمتطلبات الأكاديمية، لا يستطيع الطلاب دراسة دورات اختيارية في علوم الحاسوب. ويمكن أن يكون لإجراء هذا التغيير تأثير كبير. ففي الولايات التي تكون فيها دورات علوم الحاسوب ضمن متطلبات التخرج، تكون الدورات أكبر بنسبة خمسين بالمائة مع معدلات مشاركة أعلى بكثير للأقليات المحرومة من الولايات التي تعامل علوم الحاسوب على أنها اختيارية.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+يجب علينا أيضًا العمل مع الطلاب في سن مبكرة لإثارة اهتمامهم بعلوم الحاسوب والبرمجة. ويجب ألَّا يتعلم أطفالنا فقط كيفية استخدام التطبيقات وممارسة ألعاب الفيديو؛ بل يجب أن يتعلموا كيفية تصميمها. يمكن للأطفال تعلم أساسيات البرمجة في وقت مبكر من الصف الثاني.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+نحن بحاجة إلى توظيف المزيد من معلمي علوم الحاسوب وتشجيع التطوير المهني في مجال عملهم. فاليوم، هناك العديد من المصادر عبر الإنترنت التي يمكن أن تساعد المعلمين في الوصول إلى أحدث التقنيات للطلاب وتحديثها.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+وفقًا لمكتب إحصاءات العمل، فإنه بحلول عام 2020 سيكون هناك 9.2 مليون وظيفة في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. نصف هذه الوظائف - 4.6 مليون وظيفة - ستكون في مجال الحوسبة أو تكنولوجيا المعلومات. وعلوم الحاسوب تتزايد قيمتها باعتبارها المعرفة الأساسية للقرن الحادي والعشرين. والسؤال هنا: مَن سيشغل هذه الوظائف إذا لم يُمنَح أطفالنا الفرصة لاكتساب المهارات المطلوبة؟
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+هذا الأسبوع، {{campaign date / full}}، هو الأسبوع العالمي للبرمجة وعلوم الحاسوب. في المدارس**[STATE]**، سيشارك طلابنا في فعالية وطنية من فعاليات "ساعة البرمجة"، ويكشفون أسرار علوم الحاسوب على أمل إثارة حماسهم للاستمرار في هذا المجال ومعرفة المزيد. سأنضم إلهم، وأدعوكم للانضمام أيضًا. يجب على الجميع تعلم كيفية البرمجة. قم بزيارة https://hourofcode.com/{{ country }} للمزيد من التفاصيل والبدء. وادعم جهودنا لتدريس علوم الكمبيوتر في المزيد من المدارس في **[STATE]**.
 
-<%= view :signup_button %>
+{{ signup_button }}

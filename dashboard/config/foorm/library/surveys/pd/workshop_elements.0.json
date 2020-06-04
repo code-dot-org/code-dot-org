@@ -1,0 +1,26 @@
+{
+  "title": "Library of elements for surveys of PD workshops",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "consent_survey",
+          "title": "Your participation is voluntary but strongly encouraged. Do you consent to completing this survey?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "Yo"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

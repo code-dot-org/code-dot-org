@@ -1,0 +1,12 @@
+name 'PrivatePersonalInformation-Unplugged_control'
+editor_experiment 'broward'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Private and Personal Information
+
+Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
+
+![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+MARKDOWN

@@ -16,7 +16,7 @@ In these lesson, students are introduced to the App Lab programming environment 
 **Lesson Type:** Turtle Programming | Pair Problem Solving
 
 
-<a href = “https://curriculum.code.org/csp/unit3/4/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit3/4/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/d6819c3fb66a615f08e7a07f347b4506-image-1479787011340.png" style="float:right; margin-left:30px; width:200px">
 The main purpose of this lesson is start students on their programming journey in such a way that the focus is more on problem-solving than learning syntax. Like the previous lessons about algorithms, by limiting the number of available commands students have to come up creative solutions that they might not come up with otherwise. 
@@ -33,7 +33,7 @@ One reason to introduce programing in this way is because at its core, a compute
 
 **Lesson Type:** Turtle Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit3/5/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit3/5/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/ae25372e0d9c6f969791b1ab35a07100-image-1479787011339.png" style="float:right; margin-left:30px; width:200px">
 Programming languages must define the meaning of a set of commands which are generally useful and applicable. In order to extend their functionality, nearly all programming languages provide a means for defining and calling new commands which programmers design to fit the needs of the problems they are trying to solve. This process takes the form of defining functions, and is an example of how computer scientists use *abstraction* to solve problems. A programmer will design a solution to a small, well-defined portion of the task and then give a name to the associated code. Whenever that problem arises again, the programmer can invoke the new function by name, without having to solve the problem again. This ability to refer to complex functionality by simple, meaningful names allows for programs to be written in more intuitive ways that reflect the relationships between different blocks of code.
@@ -50,7 +50,7 @@ In the previous lesson students had need for, but no ability to use/create, a tu
 
 **Lesson Type:** Turtle Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit3/6/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit3/6/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/e32d060d8648fd75ae0cfa2de5c3b41a-image-1479787011337.png" style="float:right; margin-left:30px; width:200px">
 

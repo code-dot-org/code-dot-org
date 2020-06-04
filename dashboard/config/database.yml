@@ -5,15 +5,15 @@
 # configure the read pool
 
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
-reader = URI.parse(CDO.dashboard_reporting_db_reader) if CDO.dashboard_reporting_db_reader
+reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
 %>
 
 mysql_defaults: &mysql_defaults
   adapter: seamless_database_pool
   prepared_statements: false
   pool_adapter: mysql2
-  encoding: utf8
-  collation: utf8_unicode_ci
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
   default_group: 'cdo'
 
   # ActiveRecord connection-pool settings:
@@ -51,8 +51,9 @@ mysql_defaults: &mysql_defaults
     username: <%= writer.user || 'root' %>
     password: <%= writer.password || '' %>
     host: <%= writer.host || 'localhost' %>
+    port: <%= writer.port || 3306 %>
     database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
-  <% if reader && reader.host != writer.host %>
+  <% if reader && reader != writer %>
     # When there is a separate read-only database configured, do NOT
     # include the master database in the read pool.
     # Ref: https://github.com/bdurand/seamless_database_pool#the-master-connection
@@ -63,6 +64,7 @@ mysql_defaults: &mysql_defaults
    - username: <%= reader.user %>
      password: <%= reader.password %>
      host: <%= reader.host %>
+     port: <%= reader.port || 3306 %>
      database: <%= reader.path.sub(%r{^/},"") %>
   <% end %>
 
@@ -84,11 +86,12 @@ levelbuilder:
 # Do not set this db to the same as development or production.
 test:
   adapter: mysql2
-  encoding: utf8
-  collation: utf8_unicode_ci
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
   username: <%= writer.user || 'root' %>
   password: <%= writer.password || '' %>
   host: <%= writer.host || 'localhost' %>
+  port: <%= writer.port || 3306 %>
   pool: <%= ENV['CI'] ? 20 : 5 %>
   database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
   connect_timeout: 2
