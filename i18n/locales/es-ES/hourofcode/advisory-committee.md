@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Comité asesor de la Hora del Código y la Semana por la Educación en Ciencias de la Computación
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Comité asesor de la Hora del Código y la Semana por la Educación en Ciencias de la Computación
 
 {{ advisory-committee/about_headshots }}
 

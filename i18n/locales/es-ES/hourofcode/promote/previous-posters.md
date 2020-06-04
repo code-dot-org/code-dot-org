@@ -1,12 +1,12 @@
 ---
-title: Carteles de la última Hora del Código
+title: Carteles de actividades de la Hora del Código anteriores
 ---
 
 {{ signup_button }}
 
-# Carteles de la última Hora del Código
+# Carteles de actividades de la Hora del Código anteriores
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### ¡Imprime nuestros carteles de años anteriores y cuélgalos en tu clase! ¿Buscas las últimas versiones? [Haz clic aquí]({{ promote/promote_posters_url }}).
 
 * * *
 

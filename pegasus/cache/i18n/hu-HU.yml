@@ -1592,6 +1592,8 @@ hu-HU:
   header_teacher_community: Tanári közösség
   header_help_support: 'Segítség és támogatás '
   header_report_bug: Hiba jelentése
+  header_legal_privacy: Adatvédelmi Elvek
+  header_legal_tos: Feltételek
   header_tutorials: Gyakorlatok
   header_documentation: Dokumentáció
   user_header_label: Üdv %{username}

@@ -9,7 +9,6 @@ import {Galleries} from './projectConstants';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   container: {
@@ -56,16 +55,16 @@ const galleryTabs = [
     headerText: i18n.myProjects()
   },
   {
+    key: Galleries.LIBRARIES,
+    url: '/projects/libraries',
+    headerText: i18n.myLibraries()
+  },
+  {
     key: Galleries.PUBLIC,
     url: '/projects/public',
     headerText: i18n.publicProjects()
   }
 ];
-const myLibrariesTab = {
-  key: Galleries.LIBRARIES,
-  url: '/projects/libraries',
-  headerText: i18n.myLibraries()
-};
 
 class ProjectsGallery extends Component {
   static propTypes = {
@@ -76,14 +75,6 @@ class ProjectsGallery extends Component {
     selectedGallery: PropTypes.string.isRequired,
     selectGallery: PropTypes.func.isRequired
   };
-
-  componentWillMount() {
-    // Add "My Libraries" tab if user is in experiment.
-    // TODO: Add myLibrariesTab to galleryTabs once experiment is complete.
-    if (experiments.isEnabled(experiments.STUDENT_LIBRARIES)) {
-      galleryTabs.splice(1, 0, myLibrariesTab);
-    }
-  }
 
   toggleTo = tab => {
     window.history.pushState(null, null, tab.url);

@@ -606,6 +606,8 @@ en:
         codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

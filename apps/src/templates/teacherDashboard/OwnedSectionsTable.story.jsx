@@ -16,7 +16,7 @@ const serverSections = [
     login_type: 'picture',
     grade: '2',
     code: 'PMTKVH',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     script: null,
     course_id: 29,
@@ -30,7 +30,7 @@ const serverSections = [
     login_type: 'picture',
     grade: '11',
     code: 'DWGMFX',
-    stage_extras: false,
+    lesson_extras: false,
     pairing_allowed: true,
     script: {
       id: 36,
@@ -48,7 +48,7 @@ const serverSections = [
     grade: null,
     providerManaged: true,
     code: 'C-1234567890',
-    stage_extras: true,
+    lesson_extras: true,
     pairing_allowed: true,
     script: {
       id: 36,
@@ -66,7 +66,7 @@ const serverSections = [
     grade: '7',
     providerManaged: true,
     code: 'G-12345',
-    stage_extras: true,
+    lesson_extras: true,
     pairing_allowed: true,
     script: {
       id: 36,
@@ -83,7 +83,7 @@ const serverSections = [
     login_type: 'email',
     grade: '10',
     code: 'WGYXTR',
-    stage_extras: true,
+    lesson_extras: true,
     pairing_allowed: false,
     script: {
       id: 46,

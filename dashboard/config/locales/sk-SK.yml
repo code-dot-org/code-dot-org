@@ -209,6 +209,12 @@ sk:
     email_preference_yes: Áno
     email_preference_no: Nie
     email_preference_required: Musíte zadať emailové preferencie.
+    parent_account_checkbox: Som rodič/právny zástupca, ktorý sa prihlasuje v mene
+      svojho dieťaťa.
+    parent_account_email_progress_permission: Môžeme vám poslať e-mail s príležitostnými
+      aktualizáciami o pokroku a projektoch vášho dieťaťa a aktualizáciami o kurze
+      a informatike? [(Pozrite si naše pravidlá ochrany osobných údajov)]%{privacy_policy_url}
+    parent_account_email_label: E-mail rodiča/zákonného zástupcu
   school_info:
     title: Informácie o škole (voliteľné)
     school_country: Krajina
@@ -532,8 +538,15 @@ sk:
       %{email}.
     auth_option_saved_no_email: Úspešne si si prepojil/a svoj %{provider} účet.
     update_email: Aktualizovať
+    for_parents_and_guardians: Pre rodičov a zákonných zástupcov
+    link_a_parent_email: Prepojte tento účet s e-mailovou adresou rodiča/zákonného
+      zástupcu, aby ste boli informovaní o pokroku a projektoch vášho dieťaťa. Túto
+      e-mailovú adresu budete môcť použiť aj na obnovenie hesla.
     parent_guardian_email_label: Email rodiča/zákonného zástupcu
     none: Žiadne
+    only_one_parent_email_supported_warning: 'Poznámka: V súčasnosti sme schopní na
+      jednom študentskom účte podporiť len jednu e-mailovú adresu rodiča/zákonného
+      zástupcu.'
     encrypted: šifrované
   user_level:
     completed: Dokončené
@@ -848,12 +861,12 @@ sk:
     wrong_body: Ďakujeme za odoslanie odpovedí.
     correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovedí.
-    hide_survey_last_answer: Tento prieskum je anonymný. Pre súhrnné informácie o
-      výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu
-      budú zobrazené pri účasti minimálne piatich študentov.
-    survey_submission_thankyou: Ďakujeme vám za vyplnenie ankety! Formulár bol vymazaný,
-      aby sme mohli Vaše odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné
-      odpovede za celú triedu, avšak bez konkrétnych mien.
+    hide_survey_last_answer: Tento dotazník je anonymný.  Výsledky sú dostupné v prehľade
+      triedy, na záložke "Hodnotenia/dotazníky". Výsledky dotazníku budú zobrazené
+      pri účasti minimálne piatich študentov.
+    survey_submission_thankyou: Ďakujeme za vyplnenie ankety! Formulár bol vymazaný,
+      aby sme mohli odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné odpovede
+      za celú triedu, avšak bez konkrétnych mien.
   level_group-submittable:
     wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovedí.
@@ -863,10 +876,10 @@ sk:
     unsubmit-body: Zrušenie zaslaných odpovedí vynuluje čas a dátum odoslania.  Si
       si istý?
     submit-incomplete-title: Odoslať odpovede
-    submit-incomplete-body: Niektoré otázky si nechal nevyplnené. Po odoslaní svoje
-      odpovede už nemôžeš upravovať. Si si istý?
+    submit-incomplete-body: Niektoré otázky si zostali nevyplnené. Po odoslaní svoje
+      odpovede už nemôžeš upravovať. Si si istý/-á?
     submit-complete-title: Odoslať odpovede
-    submit-complete-body: Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý?
+    submit-complete-body: Po odoslaní už nemôžeš upraviť svoje hodnotenie. Si si istý/á?
   match:
     wrong_title: Nesprávne riešenie
     wrong_body: Zadané riešenie nie je správne.  Prosím skúste to znova!
@@ -984,7 +997,7 @@ sk:
     completed_too_many_blocks: dokončené, príliš veľa blokov
     completed_perfect: dokončené, super
     furthest_level_attempted: najvyššia dosiahnutá úroveň
-    assessment: ocenenie
+    assessment: hodnotenie
     submitted: predložené
   studio:
     courses_working_on: Kurzy na ktorých pracuješ
@@ -1306,3 +1319,8 @@ sk:
         na vašom domovskom prehliadači.
       copy_code: Na prihlásenie do Code.org prosím skopírujte a prilepte tento kód
         do aplikácie Maker.
+  parent_email_banner:
+    text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s
+      týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
+    link_your_email: Prepojte svoj e-mail
+    not_now: Teraz nie

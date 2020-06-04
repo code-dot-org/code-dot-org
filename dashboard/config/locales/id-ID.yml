@@ -198,6 +198,12 @@ id:
     email_preference_yes: Ya
     email_preference_no: Tidak
     email_preference_required: Anda harus menentukan preferensi email.
+    parent_account_checkbox: 'Saya adalah orang tua/wali yang mendaftar atas nama
+      anak saya '
+    parent_account_email_progress_permission: Bisakah kami sesekali mengirimkan email
+      kabar mengenai perkembangan dan proyek anak Anda, serta kabar mengenai kursus
+      dan ilmu komputer mereka? [(Lihat kebijakan privasi kami)](%{privacy_policy_url})
+    parent_account_email_label: Email Orang Tua/Wali
   school_info:
     title: Informasi sekolah (pilihan)
     school_country: Negara Sekolah
@@ -407,7 +413,7 @@ id:
       gamelab_jr: Game Lab (beta)
       gumball: Dunia Gumball yang menakjubkan
       iceage: Zaman Es
-      infinity: "∞"
+      infinity: Tidak terhingga
       makerlab: Pembuat Toolkit
       minecraft_adventurer: Petualang Minecraft
       minecraft_aquatic: Minecraft Aquatic
@@ -416,6 +422,7 @@ id:
       minecraft_hero: Minecraft Hero
       playlab: Play Lab/Lab Permainan
       playlab_k1: Play Lab (pra-pembaca)
+      spritelab: Sprite Lab
       starwars: Perang Bintang
       starwarsblocks: Star wars(blok)
       starwarsblocks_hour: Star wars(blok)
@@ -523,8 +530,14 @@ id:
     update: Perbarui Akun
     account_successfully_updated: Akun sukses diperbarui.
     update_email: Update
+    for_parents_and_guardians: Untuk Orang Tua dan Wali
+    link_a_parent_email: Tautkan alamat email orang tua/wali ke akun ini untuk menerima
+      kabar perkembangan dan proyek anak Anda. Anda juga dapat menggunakan alamat
+      email ini untuk pemulihan kata sandi.
     parent_guardian_email_label: Email orang tua/wali
     none: Tidak Ada
+    only_one_parent_email_supported_warning: 'Catatan: kami hanya dapat mendukung
+      satu alamat email orang tua/wali per akun siswa untuk saat ini.'
     encrypted: dienkripsi
   user_level:
     completed: Selesai
@@ -576,6 +589,8 @@ id:
     choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah
       ini
     print_certificate: Cetak Sertifikat
+  certificate_sponsor_message: "%{sponsor_name} banyak memberikan sumbangan untuk
+    mensponsori pembelajaran Anda."
   move_students:
     new_section_dne: Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan
       kode bagian berbeda.
@@ -1063,6 +1078,7 @@ id:
     instructor_feedback: Umpan balik instruktur
     peer_feedback: Peer Feedback
     outdated: Umpan balik ini telah ditambahkan sebelumnya diserahkan versi
+    peer_review: Penelaahan Sejawat
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan
@@ -1229,3 +1245,8 @@ id:
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
   copy: Salin
+  parent_email_banner:
+    text: "**Anda orang tua atau wali?** Tautkan email Anda ke akun ini untuk mendapatkan
+      kabar perkemabgan dan proyek anak Anda!"
+    link_your_email: Tautkan email Anda
+    not_now: Lain kali
