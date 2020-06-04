@@ -1,5 +1,9 @@
 %h2 NetSim settings
 
+.field
+  = f.label :skin
+  = f.select :skin, options_for_select(@level.class.skins, @level.skin)
+
 %h3 Lobby configuration
 .field
   %table.checkboxes
