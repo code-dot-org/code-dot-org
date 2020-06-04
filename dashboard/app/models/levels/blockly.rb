@@ -506,6 +506,9 @@ class Blockly < Level
       )
       original_function_name = function_name.content
       function_name.content = localized_name if localized_name
+      # The description and parameter declarations are in a mutation.
+      # If this function doesn't have a mutation, it won't have a
+      # description or parameters, so we can move on.
       function_mutation = function.at_xpath('./mutation')
       next unless function_mutation
       function_description = function_mutation.at_xpath('./description')
@@ -516,6 +519,7 @@ class Blockly < Level
         smart: true
       )
       function_description.content = localized_description if localized_description
+      # Translate the "declared" parameter names
       function_mutation.xpath("./arg").each do |parameter|
         localized_parameter = I18n.t(
           parameter["name"],
@@ -525,6 +529,7 @@ class Blockly < Level
         )
         parameter["name"] = localized_parameter if localized_parameter
       end
+      # Replace usages of parameters with their translated name
       function.xpath(".//title[@name=\"VAR\"]").each do |parameter|
         parameter_name = parameter.content
         localized_parameter = I18n.t(
