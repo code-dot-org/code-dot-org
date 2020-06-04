@@ -171,7 +171,7 @@ class VirtualizedDetailView extends Component {
           <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) => {
               return (
-                <span>
+                <span key={i}>
                   <FontAwesome
                     icon={getIconForLevel(level, true)}
                     style={
@@ -179,7 +179,6 @@ class VirtualizedDetailView extends Component {
                         ? progressStyles.unpluggedIcon
                         : progressStyles.icon
                     }
-                    key={i}
                   />
                   {level.sublevels &&
                     level.sublevels.map((sublevel, i) => {
