@@ -679,6 +679,7 @@ class Pd::Workshop < ActiveRecord::Base
     subject == SUBJECT_SUMMER_WORKSHOP
   end
 
+  # return true if this is a CSP Workshop for Returning Teachers
   def csp_wfrt?
     subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
   end
