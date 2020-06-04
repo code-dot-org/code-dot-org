@@ -26,6 +26,7 @@
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
+    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
     = render partial: 'levels/editors/instructions_area', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
     = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined))
     // Note that many DSL levels also use this partial. See _dsl.html.haml
@@ -49,7 +50,6 @@
     = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
-    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
