@@ -168,7 +168,7 @@ class Pd::Enrollment < ActiveRecord::Base
       enrollment.workshop.teachercon?
     end
 
-    # Local summer, CSP WFRT, or CSF Intro after 5/8/2020 will use Foorm for survey completion
+    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion
     foorm_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
       enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
         (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)

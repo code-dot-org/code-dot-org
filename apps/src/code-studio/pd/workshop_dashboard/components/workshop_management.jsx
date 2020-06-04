@@ -38,6 +38,7 @@ export class WorkshopManagement extends React.Component {
 
   constructor(props) {
     super(props);
+
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
       let workshop_date = props.endDate
