@@ -144,7 +144,7 @@ class FoormEditor extends React.Component {
                   type="text"
                   value={this.state.workshop_subject}
                   onChange={e =>
-                    this.setState({workshop_course: e.target.value})
+                    this.setState({workshop_subject: e.target.value})
                   }
                 />
               </label>
