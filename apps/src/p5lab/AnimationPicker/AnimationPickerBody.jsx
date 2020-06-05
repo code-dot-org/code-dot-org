@@ -46,7 +46,8 @@ export default class AnimationPickerBody extends React.Component {
     playAnimations: PropTypes.bool.isRequired,
     getLibraryManifest: PropTypes.func.isRequired,
     categories: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired
+    hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired
   };
 
   state = {
@@ -140,7 +141,7 @@ export default class AnimationPickerBody extends React.Component {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
-        label={animationProps.name}
+        label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
         onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
         playAnimations={this.props.playAnimations}
