@@ -10,7 +10,7 @@ const styles = {
   }
 };
 
-export class AmazonFutureEngineerEligibility extends React.Component {
+export default class AmazonFutureEngineerEligibility extends React.Component {
   constructor(props) {
     super(props);
 
