@@ -24,18 +24,13 @@ export class AmazonFutureEngineerEligibility extends React.Component {
     };
   }
 
-  // Make this a real handleChange
   handleChange = change => {
     this.setState(change);
   };
 
-  // make this a real submit
   submit = () => {
-    // const params = {
-    // get real params
-    // };
-
-    // use (or remove) submitting state
+    // TO DO: actually check whether a school is eligible
+    // TO DO: if ineligible, open new ineligibility page (markdown that marketing can edit)
     this.setState({
       schoolEligible: true
     });
@@ -49,8 +44,7 @@ export class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   render() {
-    // update ID and classname appropriately
-    // should separate this little form group out into its own component (like DiscountCodeSchoolChoice)
+    // TO DO: figure out how FormGroup id/className were used in regional partner mini contact
     return (
       <div>
         {this.state.schoolEligible === null && (
@@ -119,7 +113,6 @@ class AmazonFutureEngineerForm extends React.Component {
     this.setState(change);
   };
 
-  // make this a real submit
   submit = () => {
     const stateChange = _.pick(this.state, [
       'firstName',
@@ -138,9 +131,10 @@ class AmazonFutureEngineerForm extends React.Component {
     this.props.onContinue(stateChange);
   };
 
-  // need to control values with react
-  // add checkbox saying "you teach at eligible school" at top
   render() {
+    // TO DO: gray out school dropdown and disable editing
+    // TO DO: Add "Not your school? go back" link below school dropdown
+    // TO DO: Enforce that these required fields are actually required
     return (
       <div>
         <div>
@@ -241,8 +235,13 @@ class AmazonFutureEngineerForm extends React.Component {
   }
 }
 
-export class AmazonFutureEngineerAccountConfirmation extends React.Component {
+class AmazonFutureEngineerAccountConfirmation extends React.Component {
   render() {
+    // TO DO: Add links to account sign up page.
+    // TO DO: Need to put submission data
+    //  (currently kept in state of AmazonFutureEngineerEligibility component)
+    //  somewhere (session cookie?) that will persist while they sign up or sign in,
+    // at which point we'll send an API request to Amazon's Pardot API endpoint.
     return (
       <div>
         <h2>Almost done!</h2>
@@ -261,18 +260,31 @@ export class AmazonFutureEngineerAccountConfirmation extends React.Component {
   }
 }
 
-export class ShippingAddressFormGroup extends React.Component {
+// This might be better as pure functional component?
+// Just takes handleChange as argument, returns form?
+class ShippingAddressFormGroup extends React.Component {
+  static propTypes = {
+    handleChange: PropTypes.func.isRequired
+  };
+
+  handleChange = change => {
+    this.props.handleChange(change);
+  };
+
   render() {
-    // Maybe outermost element should be FormGroup, not div
+    // TO DO: Maybe outermost element should be FormGroup, not div
     return (
       <div>
+        <div>
+          Since you checked the box above, please verify your school address
+          below.
+        </div>
         <FieldGroup
           id="street_1"
           label="Street 1"
           type="text"
           required={true}
           onChange={this.handleChange}
-          defaultValue={'500 Big Dog Salmon Way'}
         />
         <FieldGroup
           id="street_2"
