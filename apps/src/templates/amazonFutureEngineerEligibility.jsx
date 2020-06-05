@@ -41,19 +41,11 @@ export class AmazonFutureEngineerEligibility extends React.Component {
     });
   };
 
-  handleConsent = () => {
+  handleSchoolDropdownChange = (field, event) => {
     this.setState({
-      consent: true
+      schoolId: event ? event.value : '',
+      schoolName: event ? event.label : ''
     });
-  };
-
-  handleDropdownChange = (field, event) => {
-    if (field === 'nces') {
-      this.setState({
-        schoolId: event ? event.value : '',
-        schoolName: event ? event.label : ''
-      });
-    }
   };
 
   render() {
@@ -79,9 +71,9 @@ export class AmazonFutureEngineerEligibility extends React.Component {
                 onChange={this.handleChange}
               />
               <SchoolAutocompleteDropdownWithLabel
-                setField={this.handleDropdownChange}
-                fieldName="school"
+                setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
+                value={this.state.schoolId}
               />
               <Button id="submit" onClick={this.submit}>
                 Send
@@ -156,7 +148,12 @@ export class AmazonFutureEngineerForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleChange}
-              defaultValue={'ben@code.org'}
+              defaultValue={this.props.email}
+            />
+            <SchoolAutocompleteDropdownWithLabel
+              setField={this.handleDropdownChange}
+              showRequiredIndicator={true}
+              value={this.props.schoolId}
             />
             <FieldGroup
               id="first_name"
