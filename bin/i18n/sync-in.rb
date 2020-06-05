@@ -254,7 +254,8 @@ def localize_block_content
 end
 
 def localize_animation_library
-  spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/course_content/spritelab_animation_library.json"
+  spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
+  FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
   File.open(spritelab_animation_source_file, "w") do |file|
     animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
     file.write(JSON.pretty_generate(animation_strings))
