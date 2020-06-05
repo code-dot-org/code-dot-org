@@ -5194,12 +5194,23 @@ es-ES:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
-          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          A continuación, recoge las gemas restantes en esta fila.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Agrega estos bloques a tu programa.
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -12265,7 +12276,7 @@ es-ES:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12276,7 +12287,7 @@ es-ES:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12287,7 +12298,7 @@ es-ES:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12659,13 +12670,24 @@ es-ES:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
-          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          A continuación, recoge las gemas restantes en esta fila.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Agrega estos bloques a tu programa.
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
