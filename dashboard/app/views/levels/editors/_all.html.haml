@@ -12,11 +12,7 @@
 = render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
 = render partial: 'levels/editors/fields/video', locals: {f: f} unless (@level.is_a?(DSLDefined) || @level.is_a?(CurriculumReference))
 = render partial: 'levels/editors/fields/special_level_types', locals: {f: f} if  @level.is_a?(Blockly) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse)
-= render partial: 'levels/editors/fields/validation_code', locals: {f: f} if (@level.uses_droplet?)
-
-- if @level.respond_to? :coordinate_grid_background
-  .field
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
+= render partial: 'levels/editors/fields/validation_code', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
 
 - if @level.is_a?(Blockly)
   .field
