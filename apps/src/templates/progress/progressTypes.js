@@ -8,8 +8,7 @@ export const levelType = PropTypes.shape({
   isUnplugged: PropTypes.bool,
   levelNumber: PropTypes.number,
   isCurrentLevel: PropTypes.bool,
-  isConceptLevel: PropTypes.bool,
-  sublevels: PropTypes.arrayOf(PropTypes.object)
+  isConceptLevel: PropTypes.bool
 });
 
 /**
