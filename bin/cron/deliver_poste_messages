@@ -49,46 +49,53 @@ def main
     POSTE_DB[:poste_deliveries].where(sent_at: nil).limit(BATCH_SIZE).reverse_order(:id).each {|i| results << i}
   end
 
-  deliverer = Deliverer.new SMTP_OPTIONS
+  queue_count = queue.length
 
-  until queue.empty?
-    next unless delivery = queue.pop(true) rescue nil
+  worker_count = [[queue_count / MIN_MESSAGES_PER_THREAD, MAX_THREAD_COUNT].min, 1].max
 
-    sent_at = DateTime.now
+  workers = create_threads(worker_count) do
+    deliverer = Deliverer.new SMTP_OPTIONS
 
-    begin
-      deliverer.send delivery
-    rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
-      Honeybadger.notify(
-        e,
-        error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      )
-      deliverer.reset_connection
-      sent_at = 0
-    rescue AbortEmailError => e
-      Honeybadger.notify(
-        e,
-        error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
-      )
-      sent_at = 0
-    rescue => e
-      Honeybadger.notify(
-        e,
-        error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      )
-      raise
-    end
+    until queue.empty?
+      next unless delivery = queue.pop(true) rescue nil
 
-    if Poste.dashboard_student?(delivery[:hashed_email])
-      # We clear the email here for privacy. Note that (given architecture)
-      # it has to be persisted for a short while to actually send the email.
-      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
-        update(sent_at: sent_at, contact_email: '')
-    else
-      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
-        update(sent_at: sent_at)
+      sent_at = DateTime.now
+
+      begin
+        deliverer.send delivery
+      rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
+        deliverer.reset_connection
+        sent_at = 0
+      rescue AbortEmailError => e
+        Honeybadger.notify(
+          e,
+          error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        )
+        sent_at = 0
+      rescue => e
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
+        raise
+      end
+
+      if Poste.dashboard_student?(delivery[:hashed_email])
+        # We clear the email here for privacy. Note that (given architecture)
+        # it has to be persisted for a short while to actually send the email.
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at, contact_email: '')
+      else
+        POSTE_DB[:poste_deliveries].where(id: delivery[:id]).
+          update(sent_at: sent_at)
+      end
     end
   end
+  workers.each(&:join)
 
   if CDO.newrelic_logging
     # How many emails we sent on _this run_ of the cronjob
