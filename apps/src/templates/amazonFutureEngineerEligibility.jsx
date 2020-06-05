@@ -2,7 +2,7 @@ import React from 'react';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
-import AmazonFutureEngineerEligibilityForm from './AmazonFutureEngineerEligibilityForm';
+import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 
 const styles = {
   intro: {
