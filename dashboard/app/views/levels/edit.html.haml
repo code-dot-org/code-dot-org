@@ -33,7 +33,6 @@
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
     = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
-    = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
