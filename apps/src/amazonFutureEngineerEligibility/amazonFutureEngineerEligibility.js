@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {AmazonFutureEngineerEligibility} from '@cdo/apps/templates/amazonFutureEngineerEligibility';
+import AmazonFutureEngineerEligibility from '@cdo/apps/templates/AmazonFutureEngineerEligibility';
 
 $(document).ready(init);
 
