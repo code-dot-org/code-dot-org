@@ -1,4 +1,4 @@
-# Rack middleware that whitelists cookies and headers based on path-based cache behaviors.
+# Rack middleware that allowlists cookies and headers based on path-based cache behaviors.
 # Behaviors are defined in http cache config.
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 require 'active_support/core_ext/hash/slice'
@@ -6,7 +6,7 @@ require 'cdo/rack/response'
 require 'cdo/aws/cloudfront'
 
 module Rack
-  module Whitelist
+  module Allowlist
     # Downstream middleware filters out unwanted HTTP request headers and cookies,
     # and extracts cookies into HTTP headers before the request reaches the cache.
     class Downstream
@@ -23,7 +23,7 @@ module Rack
         path = request.path
         behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
 
-        # Filter whitelisted request headers.
+        # Filter allowlisted request headers.
         headers = behavior[:headers]
         REMOVED_HEADERS.each do |remove_header|
           name, value = remove_header.split ':'
@@ -48,8 +48,8 @@ module Rack
             headers.delete 'Set-Cookie'
             [status, headers, body]
           else
-            # Strip all request cookies not in whitelist.
-            # Extract whitelisted cookies to X-COOKIE-* request headers.
+            # Strip all request cookies not in allowlist.
+            # Extract allowlisted cookies to X-COOKIE-* request headers.
             request_cookies = request.cookies
             request_cookies.slice!(*cookies)
             cookie_str = request_cookies.map do |key, value|
@@ -89,7 +89,7 @@ module Rack
         if cookies == 'all'
           response.add_header 'Vary', 'Cookie'
         elsif cookies != 'none'
-          # Add "Vary: X-COOKIE-*" to the response for each whitelisted cookie.
+          # Add "Vary: X-COOKIE-*" to the response for each allowlisted cookie.
           request_cookies = request.cookies
           request_cookies.slice!(*cookies)
           request_cookies.keys.each do |key|

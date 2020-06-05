@@ -125,7 +125,7 @@ export default class App extends React.Component {
         {showWebView && <View style={this.webViewContainerStyle()}>
           <WebView
             allowUniversalAccessFromFileURLs
-            originWhitelist={['*']}
+            originAllowlist={['*']}
             allowFileAccess
             allowFileAccessFromFileURLs
             allowingReadAccessToURL={readAccessToURL}
