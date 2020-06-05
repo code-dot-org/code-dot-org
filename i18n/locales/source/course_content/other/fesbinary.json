@@ -10,7 +10,10 @@
     "short_instructions": "Each binary string represents one row of this picture. Can you rearrange them so it draws a smiley face instead of a frowny face?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -21,7 +24,10 @@
     "short_instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -32,7 +38,10 @@
     "short_instructions": "Finish this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -43,7 +52,10 @@
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits?",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -54,7 +66,10 @@
     "short_instructions": "Free Play: Here's a blank canvas for you to draw on.  Have fun!",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -79,7 +94,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -91,7 +109,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -106,7 +127,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -124,7 +148,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -139,7 +166,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -155,7 +185,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -170,7 +203,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -185,7 +221,10 @@
         "name": "draw bit"
       },
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       }
     }
   },
@@ -198,7 +237,10 @@
     },
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"
@@ -209,7 +251,10 @@
     "short_instructions": "Finish the code to create this drawing.",
     "function_definitions": {
       "draw": {
-        "name": "draw"
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
       },
       "draw bit": {
         "name": "draw bit"

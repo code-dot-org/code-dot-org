@@ -10,8 +10,14 @@ mt:
           stages:
             Flappy Code:
               name: Code ta' Flappy
+          lessons:
+            Flappy Code:
+              name: Code ta' Flappy
         flappy-impact-study:
           stages:
+            Flappy Code:
+              name: Code ta' Flappy
+          lessons:
             Flappy Code:
               name: Code ta' Flappy
         csd3-chapters:

@@ -181,6 +181,7 @@ module SharedConstants
       "setRGB": null,
 
       // Data
+      "getColumn": null,
       "startWebRequest": null,
       "setKeyValue": null,
       "getKeyValue": null,

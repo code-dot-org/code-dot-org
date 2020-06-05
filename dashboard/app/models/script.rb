@@ -878,7 +878,7 @@ class Script < ActiveRecord::Base
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         lesson_groups = script_data[:lesson_groups]
-        lessons = script_data[:stages]
+        lessons = script_data[:lessons]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
@@ -922,7 +922,7 @@ class Script < ActiveRecord::Base
           key: '',
           script: script,
           user_facing: false,
-          position: 0
+          position: 1
         )
 
         script_lesson_groups << lesson_group
@@ -993,7 +993,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         lesson_group_key = raw_level.delete(:lesson_group)
-        lockable = !!raw_level.delete(:stage_lockable)
+        lockable = !!raw_level.delete(:lesson_lockable)
 
         key = raw_level.delete(:name)
 
@@ -1031,7 +1031,7 @@ class Script < ActiveRecord::Base
         level
       end
 
-      lesson_name = raw_script_level.delete(:stage)
+      lesson_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
       if new_suffix && properties[:variants]
@@ -1126,7 +1126,7 @@ class Script < ActiveRecord::Base
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
 
-      raw_lesson = raw_lessons.find {|rs| rs[:stage].downcase == lesson.name.downcase}
+      raw_lesson = raw_lessons.find {|rs| rs[:lesson].downcase == lesson.name.downcase}
       lesson.visible_after = raw_lesson[:visible_after]
       lesson.save! if lesson.changed?
     end
@@ -1260,7 +1260,7 @@ class Script < ActiveRecord::Base
             properties: Script.build_property_hash(general_params)
           },
           script_data[:lesson_groups],
-          script_data[:stages]
+          script_data[:lessons]
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
@@ -1419,7 +1419,6 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_lesson_info, #TODO(dmcavoy) REMOVE AFTER A COUPLE DAYS April 2020
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
@@ -1451,7 +1450,10 @@ class Script < ActiveRecord::Base
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:stages] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+    if include_lessons
+      summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)}
+      summary[:stages] = summary[:lessons] # TODO: remove after corresponding js code change is deployed and not cached anymore
+    end
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 

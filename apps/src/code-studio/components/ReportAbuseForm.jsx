@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -19,20 +20,6 @@ const INPUT_WIDTH = 500;
 const DROPDOWN_WIDTH = 514;
 
 const alert = window.alert;
-
-/**
- * Extracts a channel id from the given abuse url
- * @returns {string} Channel id, or undefined if we can't get one.
- */
-export const getChannelIdFromUrl = function(abuseUrl) {
-  let match;
-  if (abuseUrl.indexOf('codeprojects') >= 0) {
-    match = /.*codeprojects.*[^\/]+\/([^\/]+)/.exec(abuseUrl);
-  } else {
-    match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(abuseUrl);
-  }
-  return match && match[1];
-};
 
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {

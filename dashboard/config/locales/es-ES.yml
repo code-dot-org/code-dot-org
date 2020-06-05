@@ -404,6 +404,8 @@ es:
       help_us: Ayudenos
       teach: Enseñar
       about: Acerca de
+      legal_privacy: Política de Privacidad
+      legal_tos: Términos de uso
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de distrito
@@ -936,6 +938,8 @@ es:
     open_response_body: "¡Gracias por tu respuesta!"
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
+  lesson_extras:
+    bonus_level: Nivel de bonificación
   dialog:
     ok: OK
     startover_title: "¿Seguro que quieres empezar de nuevo?"
