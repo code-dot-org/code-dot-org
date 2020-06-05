@@ -97,17 +97,6 @@ class SchoolStatsByYear < ActiveRecord::Base
       include? community_type
   end
 
-  # Title I status can be values 1-6, M, or nil.
-  # Values 1-5 are Title I eligible,
-  # 6 is ineligible, and M and nil are unknown.
-  # Ben to find documentation and add link here.
-  def title_i_eligible?
-    return nil unless title_i_status
-    return nil if title_i_status == 'M'
-
-    %w(1 2 3 4 5).include? title_i_status
-  end
-
   # returns what percent "count" is of the total student enrollment
   def percent_of_students(count)
     return nil unless count && students_total
