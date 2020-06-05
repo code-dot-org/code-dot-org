@@ -257,6 +257,49 @@ The animation has been skipped.
     return strings
   end
 
+  def upload_localized_manifest(locale, strings)
+    return unless @options[:spritelab]
+
+    @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
+    @animation_objects ||= get_animation_objects(bucket)
+
+    animation_metadata = build_animation_metadata(animation_objects, False)
+    animation_metadata.each do |_, metadata|
+      metadata['aliases'] = metadata['aliases'].map {|aliaz| strings['aliases'][aliaz]}
+      metadata['aliases'].delete_if(&:blank?)
+    end
+    alias_map = build_alias_map(animation_metadata)
+
+    if @options[:spritelab] && @options[:upload_to_s3]
+      info "Uploading file to S3"
+      AWS::S3.upload_to_bucket(
+        DEFAULT_S3_BUCKET,
+        "manifests/spritelabCostumeLibrary.#{locale}.json",
+        JSON.pretty_generate(
+          {
+            # JSON-style file comment
+            '//': [
+              'Animation Library Manifest',
+              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
+            ],
+
+            # Strip aliases from metadata - they're no longer needed since they
+            #   are represented in the alias map.
+            # Also sort for stable updates
+            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+
+            # Sort alias map for stable updates
+            'aliases': alias_map.sort.to_h
+          }
+        ),
+        acl: 'public-read',
+        no_random: true,
+        content_type: 'json'
+      )
+    end
+  end
+
   # Given an S3 bucket, return map of animation file objects:
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
   def get_animation_objects(bucket)

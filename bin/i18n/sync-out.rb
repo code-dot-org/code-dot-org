@@ -263,7 +263,17 @@ def distribute_translations
     sanitize_file_and_write(loc_file, destination)
   end
 
+  upload_animation_library_translations(locale)
+
   puts "Distribution finished!"
+end
+
+def upload_animation_library_translations(locale)
+  @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload: true})
+
+  spritelab_animation_translation_file = "#i18n/locales/#{locale}/animations/spritelib_animation_library.json"
+  translations = JSON.load(File.open(spritelab_animation_translation_file))
+  @manifest_builder.upload_localized_manifest(locale, translations)
 end
 
 # For untranslated apps, copy English file for all locales
