@@ -231,6 +231,8 @@ et:
       educate_hoc: "KoodiTund"
       teach: "Õpeta"
       about: "Info"
+      legal_privacy: "Privaatsuspoliitika"
+      legal_tos: "Teenuse tingimused"
     user:
       classroom: 'Õpetaja kodulehekülg'
       district_dashboard: 'Piirkondlik juhtpaneel'

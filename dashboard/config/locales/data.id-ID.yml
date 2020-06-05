@@ -636,6 +636,7 @@ id:
         C4_unplugged_forloops: Untuk Pengulangan
         C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
+        CSF_a_b_artist_loops: Loop dalam Artis
         CSF_create_functions: Membuat fungsi
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
@@ -725,6 +726,7 @@ id:
         mc_2016_congrats: Jam Mengkode Minecraft - Selamat
         mc_2017_congratulations: Jam Mengkode Minecraft - Selamat
         csd_applab_arrays: Pengenalan untuk array
+        CSF_harvester_loops_K1: Loop dalam Pemanen
         CSF_ifelseifelse_allskins: Menggunakan If/Elself/Blok Else
         CSF_loops_AB: Loop
         csd_gamelab_conditional_statements: Pernyataan kondisional
@@ -774,6 +776,7 @@ id:
         hoc_dance_measures_2019: Pesta Tari 2019 - Birama
         hoc_dance_properties_2019: Pesta Tari 2019 - Properti
         csf_my_online_neighborhood_2020: Tetangga daring saya
+        csf_private_and_personal_information: Informasi Privat dan Pribadi
         csd_what_computers_are: Apa itu komputer?
     callout:
       text:
