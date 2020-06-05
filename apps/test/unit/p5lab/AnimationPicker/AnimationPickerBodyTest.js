@@ -19,7 +19,8 @@ describe('AnimationPickerBody', function() {
     playAnimations: false,
     getLibraryManifest: () => spriteCostumeLibrary,
     categories: CostumeCategories,
-    hideUploadOption: false
+    hideUploadOption: false,
+    hideAnimationNames: false
   };
 
   describe('upload warning', function() {

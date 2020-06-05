@@ -46,6 +46,9 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   },
+  noLabel: {
+    paddingBottom: 10
+  },
   labelIcon: {
     fontStyle: 'italic'
   },
@@ -58,13 +61,15 @@ class AnimationPickerListItem extends React.Component {
   static propTypes = {
     animationProps: shapes.AnimationProps,
     icon: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string
   };
 
   render() {
+    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+
     const thumbnailStyle = [
       styles.thumbnail,
       this.props.icon && styles.thumbnailIcon
@@ -78,7 +83,7 @@ class AnimationPickerListItem extends React.Component {
 
     return (
       <div
-        style={styles.root}
+        style={rootStyle}
         onClick={this.props.onClick}
         className="uitest-animation-picker-item"
       >
@@ -103,7 +108,7 @@ class AnimationPickerListItem extends React.Component {
             />
           )}
         </div>
-        <div style={labelStyle}>{this.props.label}</div>
+        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
       </div>
     );
   }
