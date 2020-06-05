@@ -10,3 +10,8 @@
     = f.label :poems, 'Custom poems'
     - 3.times do
       = text_area_tag 'level[poems][]', nil, rows: 4
+
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}
