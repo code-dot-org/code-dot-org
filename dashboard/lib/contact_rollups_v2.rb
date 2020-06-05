@@ -10,15 +10,21 @@ class ContactRollupsV2
   )
 
   def self.execute_query_in_transaction(query)
-    # TODO: add explanation
+    # For long-running queries, we use Sequel connection instead of ActiveRecord connection.
+    # ActiveRecord has a default 30s read_timeout that we cannot override. Sequel allows us
+    # to a create connection with custom query_timeout and read_timeout values.
+    #
+    # However, Sequel write operations to the dashboard database don't work in test environments
+    # (in local, Drone, and test machine) and Rails console sandbox. In those environments,
+    # all database operations are wrapped in a ActiveRecord transaction so they can be rolled
+    # back later. Sequel write operations cannot acquire a lock to the dashboard database, which
+    # already locked by ActiveRecord, then fail with "Lock wait timeout exceeded" error.
+    #
+    # The workaround is to use different database connections in different environments.
     if Rails.env.test?
-      ActiveRecord::Base.transaction do
-        ActiveRecord::Base.connection.exec_query(query)
-      end
+      ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_query(query)}
     else
-      ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
-        ContactRollupsV2::DASHBOARD_DB_WRITER.run(query)
-      end
+      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.run(query)}
     end
   end
 
