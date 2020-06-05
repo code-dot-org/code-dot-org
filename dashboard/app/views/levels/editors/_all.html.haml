@@ -12,4 +12,3 @@
 = render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f} if ((@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)) && !@level.is_a?(NetSim)
 = render partial: 'levels/editors/fields/special_level_types', locals: {f: f} if (@level.is_a?(Blockly) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse)) && !@level.is_a?(NetSim)
 = render partial: 'levels/editors/fields/preload_assets', locals: {f: f} if @level.is_a?(Applab) || @level.is_a?(Gamelab)
-= render partial: 'levels/editors/fields/callouts', locals: {f: f} unless (@level.is_a?(CurriculumReference) || @level.is_a?(DSLDefined))
