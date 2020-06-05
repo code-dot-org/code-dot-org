@@ -651,9 +651,10 @@ class LevelsHelperTest < ActionView::TestCase
     toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
 
-    start = "<xml><block type=\"procedures_defnoreturn\"><mutation><description>function description</description></mutation><title name=\"NAME\">details</title></block></xml>"
+    start = "<xml><block type=\"procedures_defnoreturn\"><mutation><arg name=\"parameter\"/><description>function description</description></mutation><title name=\"NAME\">details</title></block></xml>"
     start_translated_name = "dettagli"
     start_translated_description = "descrizione"
+    start_translated_parameter = "parametro"
     @level.start_blocks = start
 
     I18n.locale = :'it-IT'
@@ -666,7 +667,10 @@ class LevelsHelperTest < ActionView::TestCase
             },
             "details" => {
               "name" => start_translated_name,
-              "description" => start_translated_description
+              "description" => start_translated_description,
+              "parameters" => {
+                "parameter" => start_translated_parameter
+              }
             }
           }
         }
@@ -677,6 +681,7 @@ class LevelsHelperTest < ActionView::TestCase
     new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
     new_start = start.sub("details", start_translated_name)
     new_start = new_start.sub("function description", start_translated_description)
+    new_start = new_start.sub("parameter", start_translated_parameter)
     refute_equal new_toolbox, toolbox
     refute_equal new_start, start
 
@@ -690,7 +695,7 @@ class LevelsHelperTest < ActionView::TestCase
     toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
 
-    start = "<xml><block type=\"procedures_defnoreturn\"><mutation><description>function description</description></mutation><title name=\"NAME\">details</title></block></xml>"
+    start = "<xml><block type=\"procedures_defnoreturn\"><mutation><arg name=\"parameter\"/><description>function description</description></mutation><title name=\"NAME\">details</title></block></xml>"
     start_translated_name = "dettagli"
     @level.start_blocks = start
 
