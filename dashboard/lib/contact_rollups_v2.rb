@@ -9,6 +9,19 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  def self.execute_query_in_transaction(query)
+    # TODO: add explanation
+    if Rails.env.test?
+      ActiveRecord::Base.transaction do
+        ActiveRecord::Base.connection.exec_query(query)
+      end
+    else
+      ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
+        ContactRollupsV2::DASHBOARD_DB_WRITER.run(query)
+      end
+    end
+  end
+
   def initialize(is_dry_run: false)
     @is_dry_run = is_dry_run
     @log_collector = LogCollector.new('Contact Rollups')

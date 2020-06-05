@@ -22,9 +22,6 @@ class ContactRollupsFinal < ApplicationRecord
       SELECT *
       FROM contact_rollups_processed;
     SQL
-
-    ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
-      ContactRollupsV2::DASHBOARD_DB_WRITER.run(insert_sql)
-    end
+    ContactRollupsV2.execute_query_in_transaction(insert_sql)
   end
 end
