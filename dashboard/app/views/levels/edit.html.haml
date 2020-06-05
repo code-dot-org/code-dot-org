@@ -53,9 +53,10 @@
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
     = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
-    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined))
+    = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
     = render partial: 'levels/editors/calc', locals: {f: f} if @level.is_a? Calc
+    = render partial: 'levels/editors/eval', locals: {f: f} if @level.is_a? Eval
 
   .field
     = f.hidden_field :published
