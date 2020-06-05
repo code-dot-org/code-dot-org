@@ -339,6 +339,8 @@ sk:
       help_us: "Pomôžte nám"
       teach: "Vyučujte"
       about: "O nás"
+      legal_privacy: "Zásady ochrany súkromia"
+      legal_tos: "Podmienky používania služby"
     user:
       classroom: 'Domovská stránka učiteľa'
       district_dashboard: 'Prehľad pre školský okres'

@@ -21,6 +21,8 @@ te:
       help_support: సహాయం మరియు మద్దతు
       report_bug: ఒక సమస్యను రిపోర్టు చేయండి
       about: పరియచం
+      legal_privacy: గోప్యతా పాలసీ
+      legal_tos: సర్వీసు నిబంధనలు
     user:
       signin: సైన్ ఇన్
       signup: ఒక అకౌంట్ సృష్టించండి
