@@ -28,32 +28,36 @@
 
   / Only enter name to create new records of certain level types.
   - unless @level.is_a?(Fish) || (@level.new_record? && @level.is_a?(Blockly))
-    = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
-    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
-    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
+    -# CSF Style Puzzles
+    = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
+    = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
+    = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
+    = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
+    = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
+    = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
+    = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
+    = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
+    -# *Labs
+    = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
+    = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
+    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)
+    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
+    = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
+    -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
+    = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
+    = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
     = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
     = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
-    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined))
-    = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
-    = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
-    = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
-    = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
-    = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
-    = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
-    = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
-    = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
-    = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
-    = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
-    = render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Studio))
-    = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
-    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)
-    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
-    = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
-    = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
-    = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
+    -# Other
+    = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
+    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
+    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
+    = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined))
+    = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
+    = render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Studio))
 
   .field
     = f.hidden_field :published
