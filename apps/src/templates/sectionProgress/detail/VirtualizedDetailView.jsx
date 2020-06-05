@@ -169,17 +169,36 @@ class VirtualizedDetailView extends Component {
         )}
         {rowIndex === 1 && columnIndex >= 1 && (
           <span style={styles.bubbleSet}>
-            {scriptData.stages[stageIdIndex].levels.map((level, i) => (
-              <FontAwesome
-                icon={getIconForLevel(level, true)}
-                style={
-                  level.isUnplugged
-                    ? progressStyles.unpluggedIcon
-                    : progressStyles.icon
-                }
-                key={i}
-              />
-            ))}
+            {scriptData.stages[stageIdIndex].levels.map((level, i) => {
+              return (
+                <span key={i}>
+                  <FontAwesome
+                    icon={getIconForLevel(level, true)}
+                    style={
+                      level.isUnplugged
+                        ? progressStyles.unpluggedIcon
+                        : progressStyles.icon
+                    }
+                  />
+                  {level.sublevels &&
+                    level.sublevels.map((sublevel, i) => {
+                      return (
+                        <span
+                          className="filler"
+                          key={i}
+                          style={{
+                            width: 17,
+                            display: 'inline-block',
+                            color: color.background_gray
+                          }}
+                        >
+                          .
+                        </span>
+                      );
+                    })}
+                </span>
+              );
+            })}
           </span>
         )}
       </div>
