@@ -386,6 +386,8 @@ nn:
       help_us: Hjelp oss
       teach: Undervis
       about: Om
+      legal_privacy: Personvern
+      legal_tos: Vilkår
     user:
       classroom: Side for lærarar
       district_dashboard: Distrikt dashboard
