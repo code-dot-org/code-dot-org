@@ -59,7 +59,8 @@ const styles = {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
-    fontSize: 0
+    fontSize: 0,
+    alignItems: 'none'
   },
   smallDiamond: {
     width: SMALL_DIAMOND_SIZE,
