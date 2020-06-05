@@ -215,14 +215,14 @@ The animation has been skipped.
     animation_objects = get_animation_objects(bucket)
 
     animation_metadata = build_animation_metadata(animation_objects, read_old_metadata)
-
+    key = @options[:spritelab] ? "spritelab" : "gamelab"
     strings = Hash.new
-    strings['aliases'] = Hash.new
+    strings[key] = Hash.new
     animation_metadata.each do |_, metadata|
-      strings['aliases'][metadata['name']] = metadata['name']
+      strings[key][metadata['name']] = metadata['name']
       next unless metadata['aliases']
       metadata['aliases'].each do |aliaz|
-        strings['aliases'][aliaz] = aliaz
+        strings[key][aliaz] = aliaz
       end
     end
     return strings
