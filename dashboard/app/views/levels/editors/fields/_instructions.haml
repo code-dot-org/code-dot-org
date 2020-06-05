@@ -4,7 +4,7 @@
     Instructions
 
   #instructions.in.collapse
-    - unless (@level.is_a?(Applab) || (@level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)) || @level.is_a?(Weblab) || @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(FrequencyAnalysis))
+    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab))
       %p
         Learn how to use long and short instructions
         = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Editing-Level-Instructions', target: '_blank'
