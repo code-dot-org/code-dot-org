@@ -5,15 +5,7 @@
 .field
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_ball_exit', description: "Fail on Ball Exit"}
 
-.field
-  = f.label :soft_buttons, 'Software Buttons'
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
-  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
 
 .field
   = f.label :timeout_failiure_tick, 'Timeout Failure Tick'
