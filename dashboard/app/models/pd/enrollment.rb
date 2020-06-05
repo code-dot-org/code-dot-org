@@ -180,6 +180,13 @@ class Pd::Enrollment < ActiveRecord::Base
       (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer?)
     end
 
+    # we currently don't have a post survey for CSP for returning teachers.
+    # Once we do we will need to convert _ to a useful variable.
+    _, other_enrollments = other_enrollments.partition do |enrollment|
+      enrollment.workshop.course == Pd::Workshop::COURSE_CSP &&
+        enrollment.workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    end
+
     new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
       [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
@@ -417,7 +424,13 @@ class Pd::Enrollment < ActiveRecord::Base
   private_class_method def self.filter_for_academic_year_survey_completion(academic_year_enrollments, select_completed)
     completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+      begin
+        Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
+      # if we can't find the expected form id we will get a key error. Consider this to be a completed survey as there
+      # is no survey.
+      rescue KeyError
+        true
+      end
     end
 
     select_completed ? completed_surveys : uncompleted_surveys
