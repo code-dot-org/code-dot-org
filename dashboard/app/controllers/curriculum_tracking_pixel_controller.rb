@@ -41,7 +41,7 @@ class CurriculumTrackingPixelController < ApplicationController
         lesson = split_url[2]
       end
 
-      FirehoseClient.instance.put_record(
+      FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
         study: STUDY_NAME,
         study_group: 'v1',
         event: EVENT_NAME,

@@ -54,7 +54,7 @@ module SafeBrowsing
 
     # Record to Firehose the response time of request rounded to thousandths of a second,
     # url, and human-readable response message
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: "safe-browsing-request",
       study_group: "v1",
       event: "api-response",

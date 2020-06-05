@@ -2,8 +2,9 @@ require 'test_helper'
 
 class CurriculumTrackingPixelControllerTest < ActionController::TestCase
   def stub_firehose
-    FirehoseClient.instance.stubs(:put_record).with do |args|
+    FirehoseClient.instance.stubs(:put_record).with do |stream_name, args|
       @firehose_record = args
+      @firehose_stream_name = stream_name
       true
     end
   end
@@ -17,6 +18,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     assert_equal parsed_result['csx'], "csf-18"
     assert_equal parsed_result['course_or_unit'], "pre-express"
     assert_equal parsed_result['lesson'], "11"
+    assert_equal ANALYSIS_EVENTS_STREAM_NAME, @firehose_stream_name
   end
 
   def assert_non_english_curriculum_page_view_logged(curriculum_url, user_id)
@@ -28,6 +30,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     assert_equal parsed_result['csx'], "csf-1718"
     assert_equal parsed_result['course_or_unit'], "coursec"
     assert_equal parsed_result['lesson'], "10"
+    assert_equal ANALYSIS_EVENTS_STREAM_NAME, @firehose_stream_name
   end
 
   def refute_curriculum_page_view_logged

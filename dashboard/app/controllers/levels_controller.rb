@@ -451,7 +451,7 @@ class LevelsController < ApplicationController
   # Gathers data on top pain points for level builders by logging error details
   # to Firehose / Redshift.
   def log_save_error(level)
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'level-save-error',
       # Make it easy to count most frequent field name in which errors occur.
       event: level.errors.keys.first,

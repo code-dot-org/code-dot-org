@@ -342,7 +342,7 @@ class ProjectsController < ApplicationController
       # continue as normal, as we only use this value for stats.
     end
 
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'project-views',
       event: project_view_event_type(iframe_embed, sharing),
       # allow cross-referencing with the storage_apps table.

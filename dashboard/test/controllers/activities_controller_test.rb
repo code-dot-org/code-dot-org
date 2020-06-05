@@ -6,8 +6,9 @@ class ActivitiesControllerTest < ActionController::TestCase
   include UsersHelper
 
   def stub_firehose
-    FirehoseClient.instance.stubs(:put_record).with do |args|
+    FirehoseClient.instance.stubs(:put_record).with do |stream_name, args|
       @firehose_record = args
+      @firehose_stream_name = stream_name
       true
     end
   end
@@ -778,6 +779,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert @firehose_record[:event], 'share_filtering_error'
     assert @firehose_record[:data_string], 'OpenURI::HTTPError: something broke'
     refute_nil @firehose_record[:data_json]["level_source_id"]
+    assert_equal ANALYSIS_EVENTS_STREAM_NAME, @firehose_stream_name
   end
 
   test 'sharing program with IO::EAGAINWaitReadable error logs' do
@@ -800,6 +802,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert @firehose_record[:event], 'share_filtering_error'
     assert @firehose_record[:data_string], 'IO::EAGAINWaitReadable: Resource temporarily unavailable'
     refute_nil @firehose_record[:data_json]["level_source_id"]
+    assert_equal ANALYSIS_EVENTS_STREAM_NAME, @firehose_stream_name
   end
 
   test 'sharing program with swear word in Spanish rejects word' do

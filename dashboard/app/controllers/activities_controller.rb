@@ -66,7 +66,7 @@ class ActivitiesController < ApplicationController
           params[:program].strip_utf8mb4
         )
         if share_filtering_error
-          FirehoseClient.instance.put_record(
+          FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
             study: 'share_filtering',
             study_group: 'v0',
             event: 'share_filtering_error',

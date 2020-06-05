@@ -813,7 +813,7 @@ module LevelsHelper
         error_message = I18n.t("errors.messages.teacher_must_accept_terms")
       else
         error_message = I18n.t("errors.messages.too_young")
-        FirehoseClient.instance.put_record(
+        FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
           study: "redirect_under_13",
           event: "student_with_no_teacher_redirected",
           user_id: current_user.id,

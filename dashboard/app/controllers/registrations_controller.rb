@@ -478,7 +478,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'user-soft-delete-audit-v2',
       event: 'initiated-account-deletion',
       user_id: current_user.id,
@@ -491,7 +491,7 @@ class RegistrationsController < Devise::RegistrationsController
     # Log separate events for dependent users destroyed in user-initiated account deletion.
     # This should only happen for teachers.
     dependent_users.each do |user|
-      FirehoseClient.instance.put_record(
+      FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
         study: 'user-soft-delete-audit-v2',
         event: 'dependent-account-deletion',
         user_id: user[:id],

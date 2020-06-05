@@ -21,7 +21,7 @@ module ImageModeration
     Honeybadger.notify(err)
 
     # Log to firehose as well, to have longer-lived data
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'azure-content-moderation',
       study_group: 'v1',
       event: 'moderation-error',

@@ -47,7 +47,7 @@ module SignUpTracking
 
   def self.log_load_sign_up(session)
     event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: STUDY_NAME,
       study_group: study_group(session),
       event: event_name,
@@ -67,11 +67,11 @@ module SignUpTracking
         errors: user.errors&.full_messages
       }.to_json
     }
-    FirehoseClient.instance.put_record(tracking_data)
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME, tracking_data)
   end
 
   def self.log_load_finish_sign_up(session, provider)
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: STUDY_NAME,
       study_group: study_group(session),
       event: "#{provider}-load-finish-sign-up-page",
@@ -80,7 +80,7 @@ module SignUpTracking
   end
 
   def self.log_cancel_finish_sign_up(session, provider)
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: STUDY_NAME,
       study_group: study_group(session),
       event: "#{provider}-cancel-finish-sign-up",
@@ -91,7 +91,7 @@ module SignUpTracking
   def self.log_oauth_callback(provider, session)
     return unless provider && session
     if session[:sign_up_tracking_expiration]&.future?
-      FirehoseClient.instance.put_record(
+      FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
         study: STUDY_NAME,
         study_group: study_group(session),
         event: "#{provider}-callback",
@@ -110,7 +110,7 @@ module SignUpTracking
         event: "#{provider}-sign-in",
         data_string: session[:sign_up_uid]
       }
-      FirehoseClient.instance.put_record(tracking_data)
+      FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME, tracking_data)
     end
     end_sign_up_tracking session
   end
@@ -130,7 +130,7 @@ module SignUpTracking
         errors: user.errors&.full_messages
       }.to_json
     }
-    FirehoseClient.instance.put_record(tracking_data)
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME, tracking_data)
 
     end_sign_up_tracking session if user.persisted?
   end

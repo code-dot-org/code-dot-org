@@ -25,7 +25,7 @@ class Api::V1::SchoolsController < ApplicationController
       params[:use_new_search]
     )
     if Gatekeeper.allows('logSchoolSearch')
-      FirehoseClient.instance.put_record(
+      FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
         study: 'school-search-log',
         # TODO: (suresh) Change this to log request.headers["Referer"] (the URL of the page that the current
         # XMLHTTPRequest was embedded in) so we can identify which page ("yourschool", "account sign up", etc.) was

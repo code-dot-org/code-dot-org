@@ -51,7 +51,7 @@ class AnimationBucket < BucketHelper
 
     # If the fallback is successful, let's notify Firehose, because we'd
     # like these to go down over time.
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'bucket-warning',
       study_group: self.class.name,
       event: 'served-latest-version',

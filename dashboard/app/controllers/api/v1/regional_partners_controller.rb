@@ -66,7 +66,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
       result = 'no-state'
     end
 
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'regional-partner-search-log',
       event: result,
       data_string: zip_code,

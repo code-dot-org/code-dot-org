@@ -104,7 +104,7 @@ class AzureContentModerator
 
   # Report to Firehose that we're about to make a request to Azure
   def report_request(image_url)
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'azure-content-moderation',
       study_group: 'v1',
       event: 'moderation-request',
@@ -116,7 +116,7 @@ class AzureContentModerator
 
   # Report the response we got from Azure to Firehose
   def report_response(image_url, rating, data, request_duration)
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'azure-content-moderation',
       study_group: 'v1',
       event: 'moderation-result',

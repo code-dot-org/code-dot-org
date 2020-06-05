@@ -461,7 +461,7 @@ class ApiController < ApplicationController
     original_data = params.require(:original_data)
     event = original_data['event']
     project_id = original_data['project_id'] || nil
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'firehose-error-unreachable',
       event: event,
       project_id: project_id,

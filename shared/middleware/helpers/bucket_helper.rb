@@ -242,7 +242,7 @@ class BucketHelper
         'reject-comparing-older-main-json'
       end
 
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'project-data-integrity',
       study_group: 'v4',
       event: error_type,
@@ -411,7 +411,7 @@ class BucketHelper
           }
         )
         version_restored = true
-        FirehoseClient.instance.put_record(
+        FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
           study: 'bucket-warning',
           study_group: self.class.name,
           event: 'restore-specific-version',
@@ -425,7 +425,7 @@ class BucketHelper
         # It is probably deleted.
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
-        FirehoseClient.instance.put_record(
+        FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
           study: 'bucket-warning',
           study_group: self.class.name,
           event: 'restore-deleted-object',
@@ -476,7 +476,7 @@ class BucketHelper
   def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
     owner_id, storage_app_id = storage_decrypt_channel_id(project_id)
     key = s3_path owner_id, storage_app_id, filename
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'project-data-integrity',
       study_group: 'v4',
       event: 'version-restored',

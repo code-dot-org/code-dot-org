@@ -33,7 +33,7 @@ def title_profanity_privacy_violation(name, locale)
     ShareFiltering.find_name_failure(name, locale)
   rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => error
     # If WebPurify or Geocoder are unavailable, default to viewable, but log error
-    FirehoseClient.instance.put_record(
+    FirehoseClient.instance.put_record(ANALYSIS_EVENTS_STREAM_NAME,
       study: 'share_filtering',
       study_group: 'v0',
       event: 'share_filtering_error',
