@@ -155,7 +155,7 @@ da-DK:
         for at skabe din første danser. \n\n-   _Du kan også klikke på pæren til venstre,
         hvis du ønsker mere information eller ekstra udfordringer._"
       CourseD_Dance_Party_02: "Lad os få denne elg til at danse! \n\nTræk <xml><block
-        type=\"Dancelab_changeMoveLR\" block-text=\"new_dancer do floss\"><title name=\"SPRITE\">new&#95;dancer</title><title
+        type=\"Dancelab_changeMoveLR\" block-text=\"new_dancer do floss\"><title name=\"SPRITE\">new\\_dancer</title><title
         name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title
         name=\"DIR\">-1</title></block></xml> blokken ud på arbejdsområdet. Forbinde
         den under <xml><block type=\"Dancelab_atTimestamp\" block-text=\"after 4 measures\"><title
@@ -186,7 +186,7 @@ da-DK:
       CourseD_Dance_Party_10: "Nu ved vi, hvordan man ændrer en dansers egenskaber.
         Vi kan også få de samme egenskaber til at reagere automatisk på musikken ved
         hjælp af denne blok: <xml>\n  <block type=\"Dancelab_startMapping\" block-text=\"right_unicorn
-        begins following bass\">\n    <title name=\"SPRITE\">right_unicorn</title>\n
+        begins following bass\">\n    <title name=\"SPRITE\">right\\_unicorn</title>\n
         \   <title name=\"PROPERTY\">\"scale\"</title>\n    <title name=\"RANGE\">\"bass\"</title>\n
         \ </block></xml> \n\nDette program bruger musikens \"bas\"-volumen (de lave
         lyde) til at kontrollere en dansers højde. Kan du også få den anden danser
@@ -292,7 +292,7 @@ da-DK:
       Dance_Party_02: |-
         Lad os få denne elg til at danse
 
-        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
+        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
 
         **Takter** bliver brugt til at måle tiden i musik. I denne vejledning er en takt på fire slag.
       Dance_Party_03: "_Nu skal vi lave rytmen!_ \n\nTilføj <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -317,7 +317,7 @@ da-DK:
       Dance_Party_10: "Nu ved vi, hvordan man ændrer en dansers egenskaber. Vi kan
         også få de samme egenskaber til at reagere automatisk på musikken ved hjælp
         af denne blok: <xml>\n  <block type=\"Dancelab_startMapping\">\n    <title
-        name=\"SPRITE\">right_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n
+        name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n
         \   <title name=\"RANGE\">\"bass\"</title>\n  </block></xml> \n\nDette program
         bruger musikens \"bas\"-volumen (de lave lyde) til at kontrollere en dansers
         højde. Kan du også få den anden danser til at reagere på musikken?"

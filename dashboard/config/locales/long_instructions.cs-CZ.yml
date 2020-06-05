@@ -311,7 +311,7 @@ cs-CZ:
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Dance_Party_03: |-
