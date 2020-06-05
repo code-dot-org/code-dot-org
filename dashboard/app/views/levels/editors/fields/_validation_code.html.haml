@@ -1,4 +1,4 @@
-%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#validation"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#validation"}}
   Validation
 
 #validation.in.collapse
@@ -16,3 +16,6 @@
 
   - if @level.is_a?(Applab)
     = render partial: 'levels/editors/fields/applab_validations', locals: {f: f}
+
+  - if @level.is_a?(Studio)
+    = render partial: 'levels/editors/fields/studio_validations', locals: {f: f}

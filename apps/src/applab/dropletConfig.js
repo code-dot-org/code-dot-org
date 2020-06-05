@@ -9,9 +9,9 @@ import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {getTables, getColumns} from '@cdo/apps/storage/getColumnDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
-import experiments from '../util/experiments';
 import {
   setPropertyDropdown,
   setPropertyValueSelector
@@ -528,7 +528,19 @@ export var blocks = [
     params: ['imgData', '0', '0', '255', '255', '255'],
     dontMarshal: true
   },
-
+  {
+    func: 'getColumn',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'column'],
+    params: ['"mytable"', '"mycolumn"'],
+    nativeIsAsync: true,
+    type: 'value',
+    dropdown: {
+      0: getTables(),
+      1: getColumns()
+    }
+  },
   {
     func: 'startWebRequest',
     parent: api,
@@ -1115,21 +1127,8 @@ export var blocks = [
     docFunc: 'comment',
     category: 'Goals',
     noAutocomplete: true
-  },
-  {
-    func: 'getColumn',
-    parent: api,
-    category: 'Data',
-    paletteParams: ['table', 'column'],
-    params: ['"mytable"', '"mycolumn"'],
-    nativeIsAsync: true,
-    type: 'value'
   }
 ];
-
-if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
-  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
-}
 
 export const categories = {
   'UI controls': {
