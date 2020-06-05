@@ -4,8 +4,8 @@
 = render partial: 'levels/editors/fields/video', locals: {f: f}
 = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 = render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
-= render partial: 'levels/editors/grid', locals: {f: f} (Studio)
-= render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Studio))
+= render partial: 'levels/editors/fields/grid', locals: {f: f} (Studio)
+= render partial: 'levels/editors/fields/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Studio))
 
 
 = render partial: 'levels/editors/fields/preload_assets', locals: {f: f}

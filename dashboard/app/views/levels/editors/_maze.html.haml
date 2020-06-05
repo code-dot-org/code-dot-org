@@ -4,7 +4,7 @@
 = render partial: 'levels/editors/fields/video', locals: {f: f}
 = render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
 = render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
-= render partial: 'levels/editors/grid', locals: {f: f}
+= render partial: 'levels/editors/fields/grid', locals: {f: f}
 
 = render partial: 'levels/editors/fields/maze_editors', locals: {f: f}
 = render partial: 'levels/editors/fields/karel_editors', locals: {f: f} if @level.is_a? Karel
