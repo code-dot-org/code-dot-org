@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Using the Script Edit Page
 
 Scenario: View the script edit page
