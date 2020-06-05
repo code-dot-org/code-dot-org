@@ -1,4 +1,4 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#defaultSong"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#defaultSong"}}
   Default Song
 
 #defaultSong.in.collapse
@@ -9,15 +9,7 @@
 
 = render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
 
-= render partial: 'levels/editors/fields/block_pools', locals: {f: f}
-
-= render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
-
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'dance'}
-
-= render partial: 'levels/editors/fields/custom_block', locals: {f: f}
-
-= render partial: 'levels/editors/fields/custom_helper_library', locals: {f: f}
 
 :javascript
   window.toggleBlock = function (elementId) {
