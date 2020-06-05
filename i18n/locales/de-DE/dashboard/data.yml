@@ -402,7 +402,11 @@ de:
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
         csp_concept_http_html: 'Das Internet: HTTP & HTML'
+        csp_concept_what_is_internet: Was ist das Internet?
         csp_cs_is_changing_everything: Informatik verändert alles
+        csp_internetsimulator_1: Internet Simulator - Teil 1
+        csp_internetsimulator_2: Internet Simulator - Teil 2
+        csp_internetsimulator_3: Internet Simulator - Teil 3
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code – Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code – JavaScript'
         starwars_events: 'Star Wars: Erbaue ein Galaxie aus Code – Ereignisse'
@@ -537,6 +541,7 @@ de:
         codebreak_e03: 'Code Break 3.0: Verschlüsselung mit Ashton Kutcher and Mia Gil Epner'
         codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
+        csd_how_teamwork_works: Wie Teamarbeit funktioniert
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

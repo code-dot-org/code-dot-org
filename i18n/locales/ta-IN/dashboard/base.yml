@@ -105,6 +105,8 @@ ta:
       report_bug: "ஒரு பிரச்னையை தெரிவிக்கவும்"
       educate_hoc: "நிரல்வரி நேரம்"
       about: "பற்றி"
+      legal_privacy: "தனியுரிமை கொள்கை"
+      legal_tos: "சேவையின் விதிமுறைகள்"
     user:
       label: 'வணக்கம் %{username}'
       settings: 'எனது கணக்கு'

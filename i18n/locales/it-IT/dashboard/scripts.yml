@@ -93,6 +93,8 @@ it:
               name: 'Ape: Cicli'
             The Big Event:
               name: Il grande evento
+            'Studio: Create a Story':
+              name: 'Laboratorio: Crea una Storia'
             Going Places Safely:
               name: Cittadinanza digitale - Il mio quartiere digitale
             'Artist: Loops':
@@ -174,6 +176,8 @@ it:
               name: Il grande evento
             Flappy:
               name: Flappy
+            'Studio: Create a Story':
+              name: 'Laboratorio: Crea una Storia'
             Your Digital Footprint:
               name: La tua impronta digitale
             'Artist: Nested Loops':
@@ -257,6 +261,10 @@ it:
               name: 'Ape: Correzione di Errori'
             Bounce:
               name: Ping-Pong
+            'Studio: Create a Story':
+              name: 'Laboratorio: Crea una Storia'
+            'Studio: Create a Game':
+              name: 'Laboratorio: Crea un Gioco'
             Internet:
               name: Internet
             Crowdsourcing:

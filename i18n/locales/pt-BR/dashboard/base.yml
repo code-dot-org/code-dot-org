@@ -346,6 +346,8 @@ pt-BR:
       help_us: "Ajude-nos"
       teach: "Ensinar"
       about: "Sobre"
+      legal_privacy: "Política de Privacidade"
+      legal_tos: "Termos de Serviço"
     user:
       classroom: 'Página inicial do professor'
       district_dashboard: 'Painel do distrito'
