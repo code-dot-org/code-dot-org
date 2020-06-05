@@ -68,7 +68,9 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "encrypted_examples": "XlTm8xF1427wH97Z7WD04Xif48nSOilcAQ2qnK4b9GcbK9w6bCSXtn2S5Uve\nWcew\n",
+    "encrypted_examples": [
+
+    ],
     "show_debug_watch": "true",
     "display_name": "Collision Detection",
     "hide_share_and_remix": "false",
@@ -77,17 +79,17 @@
     "teacher_markdown": "The code in this level is overwhelming.  The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions.  They should understand that the `isTouching` block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier.\r\n\r\nThis code does not include the y and height properties because the two sprites are interacting on the same horizontal line.  If the bunny could move diagonally, then the code would be even more complicated.",
     "parent_level_id": 18619,
     "name_suffix": "_2020",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "contained_level_names": [
       "CSD games collision predict contained"
-    ]
+    ],
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 16:43:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 18:31:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 22:13:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 22:14:54 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 22:19:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 16:43:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 18:31:08 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 22:13:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 22:14:54 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 22:19:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-06-04 16:44:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
