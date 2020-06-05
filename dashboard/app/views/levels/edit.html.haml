@@ -55,7 +55,7 @@
     = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
     = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined))
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
-    = render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval) || @level.is_a?(Studio))
+    = render partial: 'levels/editors/calc', locals: {f: f} if @level.is_a? Calc
 
   .field
     = f.hidden_field :published
