@@ -38,8 +38,8 @@
     -# *Labs
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
     = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
-    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)
-    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
+    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.instance_of?(Gamelab)
+    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.instance_of?(GamelabJr)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
     -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
