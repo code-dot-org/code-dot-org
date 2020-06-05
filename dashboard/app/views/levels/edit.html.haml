@@ -57,6 +57,7 @@
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
     = render partial: 'levels/editors/calc', locals: {f: f} if @level.is_a? Calc
     = render partial: 'levels/editors/eval', locals: {f: f} if @level.is_a? Eval
+    = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
 
   .field
     = f.hidden_field :published
