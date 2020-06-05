@@ -24,6 +24,7 @@ const styles = {
   libraryTitle: {
     fontFamily: "'Gotham 5r', sans-serif",
     fontSize: 16,
+    cursor: 'pointer',
     color: color.link_color,
     ':hover': {
       color: color.link_color
