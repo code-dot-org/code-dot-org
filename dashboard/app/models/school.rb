@@ -53,28 +53,17 @@ class School < ActiveRecord::Base
     end.compact.join(' ')
   end
 
-  def most_recent_school_stats
-    school_stats_by_year.order(school_year: :desc).first
-  end
-
   # Determines if this is a high-needs school for the purpose of distributing Maker Toolkit
   # discount codes - this is not a definition we apply broadly.
   # @return [Boolean] True if high-needs, false otherwise.
   def maker_high_needs?
     # As of January 2020, "high-needs" is defined as having >= 50% of the student population
     # eligible for free-and-reduced lunch programs.
-    stats = most_recent_school_stats
+    stats = school_stats_by_year.order(school_year: :desc).first
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
     stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
-  end
-
-  # determines if school meets Amazon Fugure Engineer criteria
-  # eligible if a) title I school, >40% URM, or >40% eligible for free and reduced meals
-  def afe_high_needs?
-    stats = most_recent_school_stats
-    stats.title_i_eligible? || stats.urm_percent >= 0.4 || stats.frl_eligible_percent >= 0.4
   end
 
   # Public school ids from NCES are always 12 digits, possibly with
