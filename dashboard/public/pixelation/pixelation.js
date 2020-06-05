@@ -164,16 +164,22 @@ function initProjects() {
               studentCode = isHexLevel() ? binToHexPvt(binCode) : binCode;
             }
 
-            // Versions 2 & 3 store the height & width in the first two bytes.
-            // We need to explicitly store it for version 1. Note: Version 1 is
-            // never hex. Only binary.
-            if(options.version === "1") {
-              studentCode = JSON.stringify({
-                width: widthText.value,
-                height: heightText.value,
-                binaryCode: studentCode
-              })
+            var charactersToTrim = 0;
+            if (options.version === "2") {
+              charactersToTrim = 2;
+            } else if (options.version === "3") {
+              charactersToTrim = 3;
             }
+
+            charactersToTrim = isHexLevel() ? charactersToTrim * 2 : charactersToTrim * 8;
+            studentCode = studentCode.substring(charactersToTrim, studentCode.length);
+            studentCode = JSON.stringify({
+              width: widthText.value,
+              height: heightText.value,
+              bitsPerPixel: bitsPerPixelText.value,
+              binaryCode: studentCode
+            });
+
             callback(studentCode);
           }
         };
@@ -204,7 +210,7 @@ function initProjects() {
         // the user cannot create any work which we are then unable to save if
         // the initial load fails.
         enableUiControls();
-
+        loadMetadata();
         pixelationDisplay();
       })
       .catch(function() {
@@ -217,19 +223,46 @@ function initProjects() {
   }
 }
 
-function pixelationDisplay() {
-  if (options.version == "1" && options.projectData) {
-    var projectData = JSON.parse(options.projectData)
-    // Legacy "version 1" projects do not have the height & width stored, they
-    // only have the binary code stored as a string.
-    if (typeof projectData === "object") {
-      // This is a newer "version 1" project. Get the width & height
-      widthText.value = widthRange.value = projectData.width;
-      heightText.value = heightRange.value = projectData.height;
-      pixel_data.value = projectData.binaryCode;
+/**
+ * Load the project's width and height and bitsPerPixel into the pixelation
+ * widget and (if this is a version 2 or 3 project) prepend them into the code
+ * too.
+*/
+function loadMetadata() {
+  // First check if this is a legacy (pre 2020) project. Legacy projects do not
+  // have the height & width & bitsPerPixel stored, they only have the binary
+  // code stored as a string. If this is a legacy project, do nothing. It will
+  // be migrated when it is saved.
+  try {
+    var projectData = options.projectData && JSON.parse(options.projectData);
+  } catch (e) {
+    return;
+  }
+
+  if (typeof projectData !== "object") {
+    return;
+  }
+
+  // This is a newer project. Get the width & height & bitsPerPixel.
+  widthText.value = widthRange.value = projectData.width;
+  heightText.value = heightRange.value = projectData.height;
+  if (projectData.bitsPerPixel) {
+    // Only V3 projects have bitsPerPixel.
+    bitsPerPixelText.value = bitsPerPixelRange.value = projectData.bitsPerPixel;
+  }
+
+  var sliderBytes = "";
+  if (options.version !== "1") {
+    sliderBytes = getSliderBytes();
+    if (isHexLevel()) {
+      sliderBytes = binToHexPvt(sliderBytes);
     }
   }
 
+  pixel_data.value = sliderBytes + projectData.binaryCode;
+}
+
+function pixelationDisplay() {
   pixel_data.value = pixel_data.value || options.projectData || options.data;
   drawGraph(null, false, true);
   formatBitDisplay();
@@ -289,7 +322,7 @@ function drawGraph(ctx, exportImage, updateControls) {
   }
 
   var bitsPerPix = 1;
-  if (options.version == "1") {
+  if (options.version === "1") {
     image_w = getPositiveValue(widthText);
     image_h = getPositiveValue(heightText);
   } else {
@@ -629,20 +662,30 @@ function getPositiveValue(element) {
   return value >= 1 ? value : 1;
 }
 
-function updateBinaryDataToMatchSliders() {
+/**
+ * Gets the numbers stored in the slider and returns them as a byte string.
+ */
+function getSliderBytes() {
   var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
   var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
   var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
-  var justBits = pixel_data.value.replace(/[ \n]/g, "");
+  var sliderBits = widthByte + heightByte;
+  if (options.version === "3") {
+    sliderBits += bppByte;
+  }
 
+  return sliderBits;
+}
+
+function updateBinaryDataToMatchSliders() {
+  var newBits = getSliderBytes();
+  var justBits = pixel_data.value.replace(/[ \n]/g, "");
   if (isHexSelected()) {
     justBits = hexToBinPvt(justBits);
   }
 
-  var newBits = widthByte + heightByte;
-  if (options.version == "3") {
-    newBits += bppByte;
+  if (options.version === "3") {
     if (justBits.length > 24) {
       newBits += justBits.substring(24);
     }
