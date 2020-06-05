@@ -25,10 +25,9 @@ import {getStore} from '../redux';
 import msg from '@cdo/locale';
 import firehoseClient from '../lib/util/firehose';
 
-//import ScriptName from '@cdo/apps/code-studio/components/header/ScriptName';
-//import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
-
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+
+import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -182,6 +181,18 @@ header.build = function(
     headerPopup
       .find('.header_popup_scrollable')
       .css('max-height', viewportHeight - (popupTop + popupBottom));
+  }
+};
+
+header.buildProjectInfoOnly = function() {
+  const container = document.getElementsByClassName('project_info');
+  if (container.length) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <ProjectInfo onComponentResize={() => {}} />
+      </Provider>,
+      container[0]
+    );
   }
 };
 
