@@ -2,7 +2,7 @@
   Learn how to use long and short instructions
   = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Editing-Level-Instructions', target: '_blank'
 
-- unless @level.is_a?(Pixelation)
+- unless @level.is_a?(Pixelation) || @level.is_a?(TextCompression)
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :instructions_important, description: "Mark Instructions as Important"}
     %p
