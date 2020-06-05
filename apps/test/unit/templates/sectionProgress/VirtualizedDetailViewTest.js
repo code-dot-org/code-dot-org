@@ -66,6 +66,7 @@ describe('VirtualizedSummaryView', () => {
         <UnconnectedVirtualizedDetailView {...defaultProps} />
       </Provider>
     );
+
     const studentNames = wrapper.find('SectionProgressNameCell');
     expect(studentNames.at(0)).to.have.text(studentData[0].name);
     expect(studentNames.at(1)).to.have.text(studentData[1].name);
