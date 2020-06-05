@@ -76,16 +76,16 @@ export class AmazonFutureEngineerEligibility extends React.Component {
                 value={this.state.schoolId}
               />
               <Button id="submit" onClick={this.submit}>
-                Send
+                Find out if I'm eligible
               </Button>
             </FormGroup>
           </div>
         )}
-        {this.state.schoolEligible !== null && this.state.consent === false && (
+        {this.state.schoolEligible === true && this.state.consent === false && (
           <AmazonFutureEngineerForm
-            email="ben@code.org"
-            schoolId="-1"
-            onClick={this.handleConsent}
+            email={this.state.email}
+            schoolId={this.state.schoolId}
+            onContinue={this.handleChange}
           />
         )}
         {this.state.schoolEligible !== null && this.state.consent === true && (
@@ -96,11 +96,11 @@ export class AmazonFutureEngineerEligibility extends React.Component {
   }
 }
 
-export class AmazonFutureEngineerForm extends React.Component {
+class AmazonFutureEngineerForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    onClick: PropTypes.func
+    onContinue: PropTypes.func
   };
 
   constructor(props) {
@@ -108,23 +108,34 @@ export class AmazonFutureEngineerForm extends React.Component {
 
     this.state = {
       email: this.props.email,
-      inspirationKit: false
+      inspirationKit: false,
+      csta: false,
+      awsEducate: false,
+      consent: false
     };
   }
 
-  handleChange = stateUpdate => {
-    this.setState(stateUpdate);
+  handleChange = change => {
+    this.setState(change);
   };
 
   // make this a real submit
   submit = () => {
-    // use (or remove) submitting state
-    this.setState({
-      submitting: true,
-      schoolEligible: true
-    });
+    const stateChange = _.pick(this.state, [
+      'firstName',
+      'lastName',
+      'inspirationKit',
+      'csta',
+      'awsEducate',
+      'consent',
+      'street1',
+      'street2',
+      'city',
+      'state',
+      'zip'
+    ]);
 
-    // do something when submitting
+    this.props.onContinue(stateChange);
   };
 
   // need to control values with react
@@ -181,19 +192,26 @@ export class AmazonFutureEngineerForm extends React.Component {
               label="Send my school an Inspiration Kit with posters and stickers to
               help promote computer science to students and parents."
               onChange={this.handleChange}
+              value={this.state.inspirationKit}
             />
-            {this.state.inspirationKit && <ShippingAddressFormGroup />}
+            {this.state.inspirationKit && (
+              <ShippingAddressFormGroup handleChange={this.handleChange} />
+            )}
             <SingleCheckbox
               name="csta"
               label="Send me a free annual Computer Science Teachers Association (CSTA)
               Plus membership - which includes access to Amazon expert-led
               webinars and other exclusive content."
+              onChange={this.handleChange}
+              value={this.state.csta}
             />
             <SingleCheckbox
-              name="aws_educate"
+              name="awsEducate"
               label="Send me a free membership to Amazon Web Services Educate to access
               free content and cloud computing credits to help my students learn
               to build in the cloud."
+              onChange={this.handleChange}
+              value={this.state.awsEducate}
             />
             <hr />
             <SingleCheckbox
@@ -202,6 +220,8 @@ export class AmazonFutureEngineerForm extends React.Component {
               school name, address, and ID with Amazon.com (required to
               participate). Use of your personal information is subject to
               Amazon’s Privacy Policy."
+              onChange={this.handleChange}
+              value={this.state.consent}
               required={true}
             />
             <div>
@@ -211,7 +231,7 @@ export class AmazonFutureEngineerForm extends React.Component {
               always have the choice to adjust your interest settings or
               unsubscribe.
             </div>
-            <Button id="submit" onClick={this.props.onClick}>
+            <Button id="continue" onClick={this.submit}>
               Continue
             </Button>
           </form>
