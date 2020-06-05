@@ -296,6 +296,14 @@ class Pd::Workshop < ActiveRecord::Base
     current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
+  # Find the workshop with the closest session to today
+  # enrolled in by the given teacher.
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.nearest_enrolled_in_by(teacher)
+    current_scope.enrolled_in_by(teacher).nearest
+  end
+
   def course_name
     COURSE_NAME_OVERRIDES[course] || course
   end
