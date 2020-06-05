@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Bạn đã nhấn phím, nhưng vũ công của bạn không phản hồi.",
   "danceFeedbackNeedTwoDancers": "Bạn cần phải tạo hai vũ công.",
   "danceFeedbackOnlyOneDancerMoved": "Chỉ một trong các vũ công của bạn di chuyển.",
-  "danceFeedbackNeedLead": "Bạn cũng cần tạo một vũ công chính với khối <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Bạn cũng cần tạo một vũ công chính với khối <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Bạn cần tạo một nhóm các vũ công phụ họa với khối <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "Bạn cần thay đổi kích thước của ít nhất một vũ công sau khi nhạc bắt đầu.",
   "measure": "Nhịp:"

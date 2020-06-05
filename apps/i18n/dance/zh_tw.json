@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "你按了一個鍵，可是你的舞者沒有反應。",
   "danceFeedbackNeedTwoDancers": "需要製作出兩個舞者。",
   "danceFeedbackOnlyOneDancerMoved": "你的這些舞者之中，只有一位能夠舞動。",
-  "danceFeedbackNeedLead": "還需要製作出一個首席舞者，利用 <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> 程式積木。",
+  "danceFeedbackNeedLead": "還需要製作出一個首席舞者，利用 <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> 程式積木。",
   "danceFeedbackNeedBackup": "你需要創造出一組伴舞者，使用 <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">全部獨角獸</title><title name=\"LAYOUT\">圓形</title></block></xml> 程式積木。",
   "danceFeedbackSetSize": "在音樂響起後，你起碼需要更改一位舞者的大小。",
   "measure": "小節："

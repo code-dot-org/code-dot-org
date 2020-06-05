@@ -610,54 +610,48 @@ sk-SK:
         - {}
       CSD U3 - conditionals - Matching:
         answers:
-        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.rotation &lt; cat.rotation
         - text: dog.x &lt; cat.x
-        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
         content1: Spoj logický výraz s jeho popisom.
         questions:
-        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
-        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
-        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018:
         answers:
-        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.rotation &lt; cat.rotation
         - text: dog.x &lt; cat.x
-        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
         content1: Spoj logický výraz s jeho popisom.
         questions:
-        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
-        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
-        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
-        - text: dog.rotácia &lt; cat.rotácia
+        - text: dog.rotation &lt; cat.rotation
         - text: dog.x &lt; cat.x
-        - text: dog.veľkosť &gt; cat.veľkosť
+        - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
         content1: Spoj logický výraz s jeho popisom.
         questions:
-        - text: Je rotácia „sprite“ objektu „pes“ menšia ako rotácia „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ menšie ako x „sprite“ objektu „mačka“?
-        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „sprite“ objektu
-            „mačka“?
-        - text: Je x „sprite“ objektu „pes“ väčšie ako x „sprite“ objektu „mačka“?
-        - text: Je x „sprite“ objektu „pes“ rovné x „sprite“ objektu „mačka“?
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
       CSD U3 AnimationsMulti STOP project guide:
         markdown: |
@@ -754,6 +748,16 @@ sk-SK:
           * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
           * [setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Defender SFLP:
+        markdown: |
+          # Prehľad
+
+          Táto lekcia ti predstaví proces, ktorý použiješ pri navrhovaní hier. Týmto procesom prejdeme vo viacerých cvičeniach. Ako súčasť tejto lekcie sa  tiež naučíš používať multi-frame animácie. Na jej konci budeš mať príležitosť vylepšiť hru podľa seba.
+
+
+          ## Zdroje
+
+          * [Project Guide - Defender Game - Project Guide](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
         markdown: |+
           # Začni svoj prieskum
@@ -770,60 +774,63 @@ sk-SK:
 
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
         markdown: |-
           #Záleží na tom, kde sa funkcie vytvoria?
 
           Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
-
-          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
-           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
-           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
-           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
         markdown: |-
           #Záleží na tom, kde sa funkcie vytvoria?
 
           Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
-
-          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
-           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
-           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
-           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
         markdown: |-
           #Záleží na tom, kde sa funkcie vytvoria?
 
           Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
-
-          A.   Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať funkcie po tom, čo sú vytvorené.
-           B.   Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať funkcie predtým, než sú vytvorené.
-           C.   Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek časti kódu.
-           D.   Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
       CSD U3 Functions SFLP:
         markdown: |
           # Prehľad
 
-          V tejto lekcii si povieme o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich sa častí. Naučíme sa, že na vyššej úrovni, alebo pomocou abstraktných krokov, sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom začneme funkcie tvoriť. Na konci lekcie tieto znalosti použijeme na  zefektívnenie a pridanie funkcionality do finálnej verzie tvojej hry.
+          V tejto lekcii si povieme o funkciách ako spôsobe organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich sa častí. Naučíme sa, že na vyššej, abstraktnejšej úrovni sa dajú jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom začneme funkcie tvoriť. Na konci lekcie tieto znalosti použijeme na  zefektívnenie a pridanie funkcionality do finálnej verzie tvojej hry.
 
           ## Slovník
 

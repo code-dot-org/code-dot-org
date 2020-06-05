@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Tu as appuyé sur une touche, mais ton danseur n'a pas répondu.",
   "danceFeedbackNeedTwoDancers": "Tu dois créer deux danseurs.",
   "danceFeedbackOnlyOneDancerMoved": "Un seul de tes danseurs a bougé.",
-  "danceFeedbackNeedLead": "Tu dois également créer un danseur principal avec le bloc <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "Tu dois également créer un danseur principal avec le bloc <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Tu dois créer un groupe de danseurs de secours avec le bloc <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackSetSize": "Tu dois modifier la taille d'au moins un danseur après le début de la musique.",
   "measure": "Mesure:"
