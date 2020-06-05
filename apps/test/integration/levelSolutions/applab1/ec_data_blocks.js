@@ -269,6 +269,7 @@ export default {
           )
           .toArray();
         const expectedBlocks = [
+          'getColumn',
           'startWebRequest',
           'setKeyValue',
           'getKeyValue',
