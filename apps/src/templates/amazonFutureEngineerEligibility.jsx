@@ -1,68 +1,26 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import _ from 'lodash';
 import {FormGroup, Button} from 'react-bootstrap';
 import FieldGroup from '../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../code-studio/pd/form_components/SingleCheckbox';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
-import color from '@cdo/apps/util/color';
 
 const styles = {
-  error: {
-    color: color.red
-  },
-  miniContactContainer: {
-    backgroundColor: color.lightest_cyan,
-    padding: 20,
-    borderRadius: 10,
-    textAlign: 'left'
-  },
-  modalHeader: {
-    padding: '0 15px 0 0',
-    height: 30,
-    borderBottom: 'none'
-  },
-  modalBody: {
-    padding: '0 15px 15px 15px',
-    fontSize: 14,
-    lineHeight: '22px'
-  },
   intro: {
     paddingBottom: 10
-  },
-  select: {
-    maxWidth: 500
   }
 };
 
 export class AmazonFutureEngineerEligibility extends React.Component {
-  // Update options to only be email and school
-  static propTypes = {
-    options: PropTypes.shape({
-      email: PropTypes.string,
-      zip: PropTypes.string,
-      notes: PropTypes.string,
-      grade_levels: PropTypes.array,
-      role: PropTypes.string
-    }),
-    apiEndpoint: PropTypes.string.isRequired,
-    sourcePageId: PropTypes.string.isRequired
-  };
-
   constructor(props) {
     super(props);
 
     this.state = {
       schoolEligible: null,
       consent: false,
-      submitting: false,
-      submitted: false,
-      errors: [],
-      email: this.props.options.email,
-      zip: this.props.options.zip,
-      notes: this.props.options.notes,
-      role: this.props.options.role,
-      grade_levels: this.props.options.grade_levels
+      email: ''
     };
   }
 
@@ -79,11 +37,8 @@ export class AmazonFutureEngineerEligibility extends React.Component {
 
     // use (or remove) submitting state
     this.setState({
-      submitting: true,
       schoolEligible: true
     });
-
-    // do something when submitting
   };
 
   handleConsent = () => {
@@ -109,12 +64,7 @@ export class AmazonFutureEngineerEligibility extends React.Component {
         {this.state.schoolEligible === null && (
           <div>
             <h2>Am I eligible?</h2>
-            <FormGroup
-              id={`regional-partner-mini-contact-form-${
-                this.props.sourcePageId
-              }`}
-              className="regional-partner-mini-contact-form"
-            >
+            <FormGroup id="amazon-future-engineer-eligiblity-intro">
               <div style={styles.intro}>
                 Enter your teacher email address and select your school below to
                 find out if you're eligible to participate in the Amazon Future
@@ -127,7 +77,6 @@ export class AmazonFutureEngineerEligibility extends React.Component {
                 type="text"
                 required={false}
                 onChange={this.handleChange}
-                defaultValue={this.state.name}
               />
               <SchoolAutocompleteDropdownWithLabel
                 setField={this.handleDropdownChange}
