@@ -56,6 +56,7 @@
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
+    = render partial: 'levels/editors/fields/hide_share_and_remix', locals: {f: f} if ((@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)) && !@level.is_a?(NetSim)
     = render partial: 'levels/editors/fields/callouts', locals: {f: f} unless (@level.is_a?(CurriculumReference) || @level.is_a?(DSLDefined))
     = render partial: 'levels/editors/fields/audit_log', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/fields/deprecated', locals: {f: f} unless @level.is_a? EvaluationMulti
