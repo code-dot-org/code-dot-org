@@ -92,6 +92,7 @@ class AnimationPicker extends React.Component {
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
         fullWidth={true}
+        style={styles.dialog}
       >
         <HiddenUploader
           ref="uploader"
