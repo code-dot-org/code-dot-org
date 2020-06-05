@@ -221,6 +221,8 @@ bs:
       about_jobs: "Poslovi"
       help_us: "Pomogni nam"
       teach: "Podučavaj"
+      legal_privacy: "Pravila Privatnosti"
+      legal_tos: "Uvjeti"
     user:
       classroom: 'Početna Stranica za Učitelje'
       district_dashboard: 'Nadzorna ploča za distrikte'

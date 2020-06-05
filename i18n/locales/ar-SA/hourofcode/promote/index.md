@@ -1,5 +1,5 @@
 ---
-title: أنشر الكلمة
+title: نشر المبادرة
 ---
 
 {{ signup_button }}

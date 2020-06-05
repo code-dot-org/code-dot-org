@@ -299,6 +299,7 @@ id:
       sections: "Sesi"
       help_support: "Bantuan dan dukungan"
       report_bug: "Laporkan masalah"
+      report_abuse: "Laporkan penyalahgunaan"
       teacher_community: "Komunitas guru"
       professional_learning: "Pembelajaran profesional"
       documentation: "Dokumentasi"
@@ -334,6 +335,9 @@ id:
       help_us: "Bantu Kami"
       teach: "Mengajar"
       about: "Tentang"
+      legal: "Privasi & Hukum"
+      legal_privacy: "Kebijakan privasi"
+      legal_tos: "Ketentuan Layanan"
     user:
       classroom: 'Beranda guru'
       district_dashboard: 'Wilayah Dashboard'
@@ -374,6 +378,7 @@ id:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Play Lab/Lab Permainan'
       playlab_k1: 'Play Lab (pra-pembaca)'
+      sports: 'Olahraga'
       spritelab: 'Sprite Lab'
       starwars: 'Perang Bintang'
       starwarsblocks: 'Star wars(blok)'
@@ -657,6 +662,7 @@ id:
     hero:
       title: "Minecraft"
     sports:
+      title: "Olahraga"
       body: "Membuat sebuah pertandingan basket atau mencampur dan mencocokkan di cabang olahraga."
     text-compression:
       title: "kompresi Teks"
