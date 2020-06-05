@@ -1402,6 +1402,8 @@ fa-IR:
   header_teach: آموزش
   header_help_us: به ما کمک کنید
   header_about: درباره
+  header_legal_privacy: قوانین حفظ حریم خصوصی
+  header_legal_tos: شرایط
   user_header_label: سلام %{username}
   user_header_team: تیم
   user_header_settings: حساب کاربری من

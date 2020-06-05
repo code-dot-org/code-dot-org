@@ -200,7 +200,10 @@ export default function sanitizeHtml(
       'placeholder',
       'step',
       'type',
-      'value'
+      'value',
+      'accept',
+      'hidden',
+      'capture'
     ]),
     select: standardAttributes.concat(['multiple', 'size'])
   };

@@ -44,31 +44,17 @@ export default class AnimationPickerBody extends React.Component {
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    libraryManifest: PropTypes.object.isRequired,
+    getLibraryManifest: PropTypes.func.isRequired,
     categories: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired
+    hideUploadOption: PropTypes.bool.isRequired,
+    hideAnimationNames: PropTypes.bool.isRequired
   };
 
-  constructor(props) {
-    super(props);
-    const initialState = {
-      searchQuery: '',
-      categoryQuery: '',
-      currentPage: 0
-    };
-    const {results, pageCount} = searchAssets(
-      initialState.searchQuery,
-      initialState.categoryQuery,
-      props.libraryManifest,
-      initialState.currentPage,
-      MAX_SEARCH_RESULTS
-    );
-    this.state = {
-      ...initialState,
-      results,
-      pageCount
-    };
-  }
+  state = {
+    searchQuery: '',
+    categoryQuery: '',
+    currentPage: 0
+  };
 
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
@@ -81,7 +67,7 @@ export default class AnimationPickerBody extends React.Component {
       categoryQuery = this.state.categoryQuery;
     }
     if (libraryManifest === undefined) {
-      libraryManifest = this.props.libraryManifest;
+      libraryManifest = this.props.getLibraryManifest();
     }
 
     return searchAssets(
@@ -99,14 +85,14 @@ export default class AnimationPickerBody extends React.Component {
     const nextPage = currentPage + 1;
     if (
       scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
-      nextPage <= pageCount
+      (!pageCount || nextPage <= pageCount)
     ) {
       const {results: newResults, pageCount} = this.searchAssetsWrapper(
         nextPage
       );
 
       this.setState({
-        results: [...results, ...newResults],
+        results: [...(results || []), ...newResults],
         currentPage: nextPage,
         pageCount
       });
@@ -155,7 +141,7 @@ export default class AnimationPickerBody extends React.Component {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
-        label={animationProps.name}
+        label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
         onClick={this.props.onPickLibraryAnimation.bind(this, animationProps)}
         playAnimations={this.props.playAnimations}
@@ -164,6 +150,10 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
+    const libraryManifest = this.props.getLibraryManifest();
+    if (!libraryManifest) {
+      return <div>{msg.loading()}</div>;
+    }
     const {searchQuery, categoryQuery, results} = this.state;
     const {
       categories,
