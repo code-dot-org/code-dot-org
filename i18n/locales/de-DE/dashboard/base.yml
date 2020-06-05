@@ -345,6 +345,8 @@ de:
       help_us: "Helfen Sie uns"
       teach: "Unterrichten"
       about: "Über"
+      legal_privacy: "Datenschutzerklärung"
+      legal_tos: "AGBs"
     user:
       classroom: 'Lehrer-Homepage'
       district_dashboard: 'Landkreis-Dashboard'
