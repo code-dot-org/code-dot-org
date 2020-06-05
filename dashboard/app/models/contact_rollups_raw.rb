@@ -20,10 +20,7 @@ class ContactRollupsRaw < ApplicationRecord
 
   def self.extract_email_preferences
     query = get_extraction_query('email_preferences', 'email', ['opt_in'])
-
-    ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
-      ContactRollupsV2::DASHBOARD_DB_WRITER.run(query)
-    end
+    ContactRollupsV2.execute_query_in_transaction(query)
   end
 
   def self.extract_parent_emails
@@ -32,11 +29,8 @@ class ContactRollupsRaw < ApplicationRecord
       FROM users
       GROUP BY parent_email
     SQL
-
     query = get_extraction_query(source_sql, 'parent_email', [], true, 'dashboard.users.parent_email')
-    ContactRollupsV2::DASHBOARD_DB_WRITER.transaction do
-      ContactRollupsV2::DASHBOARD_DB_WRITER.run(query)
-    end
+    ContactRollupsV2.execute_query_in_transaction(query)
   end
 
   # @param source [String] Source from which we want to extract data (can be a dashboard table name, or subquery)
