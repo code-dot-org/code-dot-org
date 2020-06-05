@@ -612,7 +612,7 @@ nn-NO:
       Dance_Party_02: |-
         No må vi få elgen til å danse!
 
-        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
 
         **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
       Dance_Party_03: |-
@@ -643,7 +643,7 @@ nn-NO:
         No veit vi korleis vi endrar eigenskapane til dansarane. Vi kan óg få dei same eigenskapane til å reagere på musikken med denne blokka:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
