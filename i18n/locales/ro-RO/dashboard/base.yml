@@ -327,6 +327,8 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
+      legal_privacy: "Politică de confidențialitate"
+      legal_tos: "Termeni şi condiţii de utilizare"
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'

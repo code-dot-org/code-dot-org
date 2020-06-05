@@ -1078,7 +1078,7 @@ ro-RO:
       Dance_Party_02: |-
         Hai să facem acest elan să danseze!
 
-        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
+        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
 
         **Măsurile** sunt utilizate pentru a măsura timpul în muzică. În acest tutorial, o măsură are lungimea a 4 bătăi.
       Dance_Party_03: |-

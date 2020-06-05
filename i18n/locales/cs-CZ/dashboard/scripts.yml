@@ -3821,6 +3821,8 @@ cs:
               name: Silná hesla
             Sticker Art with Loops:
               name: Razítka v cyklech
+            Picturing Data:
+              name: Zobrazení dat
           lesson_groups:
             csf_digcit:
               display_name: Digitální občanství
@@ -3849,6 +3851,8 @@ cs:
               name: Razítka v cyklech
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
+            Picturing Data:
+              name: Zobrazení dat
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -4675,6 +4679,8 @@ cs:
               name: Vytvoř hru Flappy Bird
             Events in Play Lab:
               name: Honička s událostmi
+            Picturing Data:
+              name: Zobrazení dat
           lesson_groups:
             csf_digcit:
               display_name: Digitální občanství
@@ -4701,6 +4707,8 @@ cs:
               name: Razítka v cyklech
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
+            Picturing Data:
+              name: Zobrazení dat
         coursed-2020:
           title: Kurz D (2019)
           description: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
