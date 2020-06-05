@@ -161,20 +161,18 @@ class AmazonFutureEngineerForm extends React.Component {
               value={this.props.schoolId}
             />
             <FieldGroup
-              id="first_name"
+              id="firstName"
               label="First name"
               type="text"
               required={true}
               onChange={this.handleChange}
-              defaultValue={'ben'}
             />
             <FieldGroup
-              id="last_name"
+              id="lastName"
               label="Last name"
               type="text"
               required={true}
               onChange={this.handleChange}
-              defaultValue={'brooks'}
             />
             <div>
               How can Amazon Future Engineer help you grow computer science at
@@ -311,7 +309,7 @@ class ShippingAddressFormGroup extends React.Component {
           id="zip"
           label="Zip code"
           type="number"
-          required={false}
+          required={true}
           onChange={this.handleChange}
         />
       </div>
