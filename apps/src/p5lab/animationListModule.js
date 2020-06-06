@@ -20,6 +20,8 @@ import {
   getCurrentId
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import defaultSprites from './spritelab/defaultSprites.json';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -265,7 +267,7 @@ export function setInitialAnimationList(serializedAnimationList) {
     serializedAnimationList = {orderedKeys: [], propsByKey: {}};
   }
 
-  // TODO: Tear out this migration when we don't think we need it anymore.
+  // TODO (from 2015): Tear out this migration when we don't think we need it anymore.
   if (Array.isArray(serializedAnimationList)) {
     // We got old animation data that needs to be migrated.
     serializedAnimationList = {
@@ -276,6 +278,19 @@ export function setInitialAnimationList(serializedAnimationList) {
       }, {})
     };
   }
+
+  // TODO (from 2020): Tear out this migration when we don't think we need it anymore.
+  serializedAnimationList.orderedKeys.forEach(key => {
+    let animation = serializedAnimationList.propsByKey[key];
+    if (animation.sourceUrl.includes('/v3/')) {
+      if (defaultSprites.propsByKey[key]) {
+        animation = defaultSprites.propsByKey[key];
+      } else {
+        let details = `name=${animation.name};key=${key}`;
+        trackEvent('Research', 'CouldNotReplaceSprite', details);
+      }
+    }
+  });
 
   // Convert frameRates to frameDelays.
   for (let key in serializedAnimationList.propsByKey) {
