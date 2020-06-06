@@ -1,0 +1,17 @@
+%p
+  Learn how to use long and short instructions
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Editing-Level-Instructions', target: '_blank'
+
+- unless @level.is_a?(Pixelation) || @level.is_a?(TextCompression)
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :instructions_important, description: "Mark Instructions as Important"}
+    %p
+      Are these instructions particularly important? Is this level
+      introducing some new concept or is set up in some unusual way that
+      would be particularly confusing if the student were to jump right in
+      and start solving without looking at the instructions first?
+.field
+  = f.label :short_instructions, "Short Instructions"
+  ~ f.text_area :short_instructions,
+      placeholder: 'some short, plaintext instructions, used to quickly communicate the goals of the level without taking up too much vertical real estate',
+      rows: 2, class:"input-block-level"
