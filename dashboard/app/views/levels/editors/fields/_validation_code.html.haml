@@ -15,4 +15,4 @@
     = f.text_area :validation_code
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
-  = render partial: 'levels/editors/fields/studio_validations', locals: {f: f} if @level.is_a?(Studio) || @level.is_a?(Bounce)
+  = render partial: 'levels/editors/fields/studio_validations', locals: {f: f} if @level.is_a?(Studio) || @level.is_a?(Bounce) || @level.is_a?(Flappy)

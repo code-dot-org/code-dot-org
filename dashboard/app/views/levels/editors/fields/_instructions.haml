@@ -36,7 +36,7 @@
         %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
           ~ f.text_area :long_instructions, rows: 4
 
-    = render partial: 'levels/editors/fields/tts', locals: {f: f}
+    = render partial: 'levels/editors/fields/tts', locals: {f: f} unless @level.is_a?(ExternalLink)
 
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
