@@ -1,9 +1,10 @@
-.field
-  = f.label :timeout_failure_tick, 'Timeout failure tick'
-  %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.
-  - if @level.is_a?(Studio)
-    %p Step speed (above) controls the length of a tic
-  = f.number_field :timeout_failure_tick
+- unless @level.is_a?(Flappy)
+  .field
+    = f.label :timeout_failure_tick, 'Timeout failure tick'
+    %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.
+    - if @level.is_a?(Studio)
+      %p Step speed (above) controls the length of a tic
+    = f.number_field :timeout_failure_tick
 - if @level.is_a?(Studio)
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :timeout_after_when_run, description: "Timeout after all blocks run"}
