@@ -74,7 +74,11 @@ class School < ActiveRecord::Base
   # eligible if a) title I school, >40% URM, or >40% eligible for free and reduced meals
   def afe_high_needs?
     stats = most_recent_school_stats
-    stats.title_i_eligible? || stats.urm_percent >= 0.4 || stats.frl_eligible_percent >= 0.4
+    return false if stats.nil?
+
+    # To align with maker_high_needs? definition above, returning false
+    # if we don't have all data for a given school
+    stats.title_i_eligible? || (stats.urm_percent || 0) >= 0.4 || (stats.frl_eligible_percent || 0) >= 0.4
   end
 
   # Public school ids from NCES are always 12 digits, possibly with

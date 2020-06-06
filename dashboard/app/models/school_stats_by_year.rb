@@ -99,8 +99,9 @@ class SchoolStatsByYear < ActiveRecord::Base
 
   # Title I status can be values 1-6, M, or nil.
   # Values 1-5 are Title I eligible,
-  # 6 is ineligible, and M and nil are unknown.
-  # Ben to find documentation and add link here.
+  # 6 is ineligible, M=Missing, and nil are unknown.
+  # See description under TITLEISTAT here:
+  # https://nces.ed.gov/ccd/Data/txt/sc131alay.txt
   def title_i_eligible?
     return nil unless title_i_status
     return nil if title_i_status == 'M'
