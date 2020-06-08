@@ -49,38 +49,13 @@ Prueba un tutorial de una hora diseñado para todas las edades. Hay cientos de a
 * Y muchos [más tutoriales](https://code.org/hourofcode/overview)!
 
 <p><a href="#top">[Volver arriba]</a></p>
+
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
 ## Videos: Mira estos sencillos videos educativos de 3-5 minutos
 
-<div class="col-33" style="padding-right: 20px;">
+{{ athome_videos }}
 
-{{ athome_vid_howcomputers }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">Cómo funcionan las computadoras</a>: Con una introducción de Bill Gates, <a href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank">esta serie</a> de seis videos cortos es de fácil acceso y está diseñada para que pueda ser comprendida por todos.  La serie explica qué hace que una computadora sea una computadora, cómo se representa la información digital en 1s y 0s, cómo funcionan los circuitos de la computadora para manipular la información digital, y cómo una unidad central de procesamiento (CPU) y el sistema operativo controlan las entradas, salidas, memoria y hardware de una computadora.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-<div class="col-33" style="padding-right: 20px;">
-
-{{ athome_vid_howinternet }}
-
-</div>
-
-<div class="col-66">
-
-<a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">Cómo funciona Internet</a>: Esta serie de <a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank">ocho videos cortos</a> 
-presenta a Vint Cerf, el inventor de TCP/IP; David Karp, el fundador de Tumblr para explicar HTTP y HTML; "Security Princess", de Google, para explicar SSL y ciberseguridad; e ingenieros de Microsoft.
-
-</div>
-
-<div style="clear: both; margin-bottom: 40px"></div>
-[Visita nuestra biblioteca de videos.](https://code.org/educate/resources/videos)
 <br>
 
 <p><a href="#top">[Volver arriba]</a></p>
@@ -90,61 +65,25 @@ presenta a Vint Cerf, el inventor de TCP/IP; David Karp, el fundador de Tumblr p
 
 ## Aprende los fundamentos con nuestros cursos rápidos
 ### **Curso Express**
-Una gran opción para que los estudiantes comiencen solos. Aprenderás los fundamentos de la ciencia de la computación con bloques de arrastrar & soltar. Crea tus propios dibujos y juegos. <strong>Nota: Los cursos exprés actualmente solo están disponibles en inglés, hindi, italiano y español. Para otros idiomas, recomendamos nuestro <a href="https://studio.code.org/s/20-hour"> Curso Acelerado</a> de 20 horas. Para ver qué hay disponible en tu idioma, visita <a href="https://studio.code.org/courses">catalogo de cursos</a>.</strong>
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Curso Exprés</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Curso rápido para prelectores</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both"></div>
 
 <hr />
 
-### **Programming Modules for older students**
-
-Adapted from our CS Principles courses, these short, self-paced modules for middle and high school students are a great way to learn concepts that span all programming languages and tools.
-
-<div style="clear: both; margin-bottom: 20px"></div>
-
-#### Turtle Programming in App Lab
-
-<div class="col-25" style="padding-right: 20px;">
-
-<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
-
-</div>
-
-<div class="col-75">
-
-<p>Begin working in App Lab where you’ll use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Learn to break down big programming problems into manageable pieces. Design and program your own digital scene! For middle and high school students.</p>
-<a href="https://studio.code.org/s/csp3-virtual"><button>Pruébalo</button></a>
-
-</div>
-
-<div style="clear: both; margin-bottom: 30px"></div>
-
-#### Event-Driven Programming in App Lab
-
-<div class="col-25" style="text-align:center; padding-right: 20px;">
-
-<a href="https://studio.code.org/s/csp5-virtual"><img src="/images/athome/events.png" style="width: 60%"/></a>
-
-</div>
-
-<div class="col-75">
-
-<p>Program in the JavaScript language using App Lab. Learn to design apps that respond to user interaction like clicks and key presses. Create a series of simple applications (apps) that live on the web! For middle and high school students.</p>
-<a href="https://studio.code.org/s/csp5-virtual"><button>Pruébalo</button></a>
-
-</div>
+{{ athome_olderstudents }}
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
@@ -163,7 +102,7 @@ Adapted from our CS Principles courses, these short, self-paced modules for midd
 
 <p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
 <p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Pruébalo</button></a>
+<a href="https://code.org/educate/applab"><button>Try it out</button></a>
 
 </div>
 
@@ -206,7 +145,7 @@ Adapted from our CS Principles courses, these short, self-paced modules for midd
 <a id="teacher-support"></a>
 
 ## Apoyo a profesores a mitad de curso
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them. 
+We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
