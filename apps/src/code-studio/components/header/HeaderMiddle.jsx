@@ -25,9 +25,10 @@ const styles = {
 
 class HeaderMiddle extends React.Component {
   static propTypes = {
+    projectInfoOnly: PropTypes.bool,
     appLoaded: PropTypes.bool,
-    scriptNameData: PropTypes.object.isRequired,
-    lessonData: PropTypes.object.isRequired,
+    scriptNameData: PropTypes.object,
+    lessonData: PropTypes.object,
     lessonExtrasUrl: PropTypes.string,
     children: PropTypes.node
   };
@@ -85,7 +86,9 @@ class HeaderMiddle extends React.Component {
   // The first item is the script name, the second item is the progress container.
   // But the third item can be the "I'm finished" link, or the popup link.
   thirdItem() {
-    if (this.props.lessonData.finishLink) {
+    if (!this.props.lessonData) {
+      return 'none';
+    } else if (this.props.lessonData.finishLink) {
       return 'finish';
     } else if (this.props.lessonData.num_script_lessons > 1) {
       return 'popup';
@@ -98,25 +101,39 @@ class HeaderMiddle extends React.Component {
   getWidths() {
     const width = this.state.width - this.state.projectInfoWidth;
     const thirdItem = this.thirdItem();
-    const progressDesiredWidth = getFullWidthForLevels(
-      this.props.lessonExtrasUrl /*&& !this.props.lessonTrophyEnabled*/
-    );
+    const progressDesiredWidth = this.props.projectInfoOnly
+      ? 0
+      : getFullWidthForLevels(
+          this.props.lessonExtrasUrl /*&& !this.props.lessonTrophyEnabled*/
+        );
+
+    if (this.props.projectInfoOnly) {
+      return {
+        projectInfo: this.state.projectInfoWidth,
+        scriptName: 0,
+        progress: 0,
+        finishLink: 0
+      };
+    }
 
     if (thirdItem === 'finish') {
       if (width < 160) {
         return {
+          projectInfo: this.state.projectInfoWidth,
           scriptName: 0,
           progress: 0,
           finishLink: width
         };
       } else if (width < 300) {
         return {
+          projectInfo: this.state.projectInfoWidth,
           scriptName: 0,
           progress: Math.min(progressDesiredWidth, (3 * width) / 4),
           finishLink: width / 4
         };
       } else {
         return {
+          projectInfo: this.state.projectInfoWidth,
           scriptName: width / 4,
           progress: Math.min(progressDesiredWidth, (2 * width) / 4),
           finishLink: width / 4
@@ -125,18 +142,21 @@ class HeaderMiddle extends React.Component {
     } else if (thirdItem === 'popup') {
       if (width < 160) {
         return {
+          projectInfo: this.state.projectInfoWidth,
           scriptName: 0,
           progress: 0,
           popup: 40
         };
       } else if (width < 300) {
         return {
+          projectInfo: this.state.projectInfoWidth,
           scriptName: 0,
           progress: Math.min(progressDesiredWidth, width - 40 - 1),
           popup: 40
         };
       } else {
         return {
+          projectInfo: this.state.projectInfoWidth,
           scriptName: (width - 40) / 2 - 1,
           progress: Math.min(progressDesiredWidth, (width - 40) / 2 - 1),
           popup: 40
@@ -146,11 +166,13 @@ class HeaderMiddle extends React.Component {
   }
 
   render() {
-    const {scriptNameData, lessonData} = this.props;
+    const {projectInfoOnly, scriptNameData, lessonData} = this.props;
 
     const widths = this.getWidths();
 
-    const extraScriptNameData = {...scriptNameData, width: widths.scriptName};
+    const extraScriptNameData = scriptNameData
+      ? {...scriptNameData, width: widths.scriptName}
+      : null;
 
     if (this.props.appLoaded) {
       return (
@@ -159,56 +181,64 @@ class HeaderMiddle extends React.Component {
             id="project_info_container"
             style={{
               float: 'left'
-              //width: widths.projectInfo,
-              //overflow: 'scroll'
             }}
           >
             <ProjectInfo
               onComponentResize={projectInfoWidth => {
                 this.setState({projectInfoWidth});
               }}
+              width={widths.projectInfo}
             />
           </div>
 
-          <div
-            id="script_name_container"
-            style={{
-              float: 'left',
-              width: widths.scriptName,
-              display: widths.scriptName === 0 ? 'none' : undefined
-            }}
-          >
-            <ScriptName {...extraScriptNameData} />
-          </div>
-
-          <div
-            id="lesson_progress_container"
-            style={{
-              float: 'left',
-              width: widths.progress,
-              display: widths.progress === 0 ? 'none' : undefined
-            }}
-          >
-            <LessonProgress width={widths.progress} />
-          </div>
-
-          {lessonData.finishLink && (
+          {extraScriptNameData && (
             <div
-              id="finish_link_container"
-              style={{float: 'left', width: widths.finishLink}}
+              id="script_name_container"
+              style={{
+                float: 'left',
+                width: widths.scriptName,
+                display: widths.scriptName === 0 ? 'none' : undefined
+              }}
             >
-              <div className="header_finished_link" style={styles.finishedLink}>
-                <a href={lessonData.finishLink}>{lessonData.finishText}</a>
-              </div>
+              <ScriptName {...extraScriptNameData} />
             </div>
           )}
 
-          {lessonData.num_script_lessons > 1 && (
+          {!projectInfoOnly && (
             <div
-              id="header_popup_container"
-              style={{float: 'left', width: widths.popup}}
+              id="lesson_progress_container"
+              style={{
+                float: 'left',
+                width: widths.progress,
+                display: widths.progress === 0 ? 'none' : undefined
+              }}
             >
-              <ProtectedStatefulDiv ref="header_popup_components" />
+              <LessonProgress width={widths.progress} />
+            </div>
+          )}
+
+          {lessonData && (
+            <div>
+              <div
+                id="finish_link_container"
+                style={{float: 'left', width: widths.finishLink}}
+              >
+                <div
+                  className="header_finished_link"
+                  style={styles.finishedLink}
+                >
+                  <a href={lessonData.finishLink}>{lessonData.finishText}</a>
+                </div>
+              </div>
+
+              {lessonData.num_script_lessons > 1 && (
+                <div
+                  id="header_popup_container"
+                  style={{float: 'left', width: widths.popup}}
+                >
+                  <ProtectedStatefulDiv ref="header_popup_components" />
+                </div>
+              )}
             </div>
           )}
         </div>
