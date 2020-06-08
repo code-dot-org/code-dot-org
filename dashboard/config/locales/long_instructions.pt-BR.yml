@@ -14148,8 +14148,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -14158,8 +14158,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -14168,8 +14168,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -21235,10 +21235,17 @@ pt-BR:
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
         > Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 CS Video_copy: "## Get to know CS Fundamentals\n\nLet's start by learning
+        a bit about what Computer Science (CS) Fundamentals is, and how it has worked
+        for teachers and students around the globe. "
       OPD-K5 Closing: |-
         > \*\*Se você gostou deste curso, inscreva-se para um workshop presencial: \*\*
         >
         > [Inscreva-se agora](http://code.org/professional-development-workshops) para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
+      OPD-K5 Closing_copy: |-
+        > **If you enjoyed this course, sign up for an in-person workshop:**
+        >
+        > <a href="http://code.org/professional-development-workshops" target="blank">Sign up now</a> to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
       OPD-K5 EventsVid: |-
         Assista este vídeo que define "eventos" e mostra como eles funcionam em Fundamentos de CC. Em seguida, você irá tentar alguns quebra-cabeças que requerem que você codifique eventos.
 
@@ -21246,6 +21253,10 @@ pt-BR:
       OPD-K5 FirstProgram: Assista o vídeo abaixo, que explica o primeiro programa
         que os estudantes irão escrever no [Curso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         Na próxima página, você mesmo irá escrever um programa parecido!
+      OPD-K5 FirstProgram_copy: Watch the video below, which explains a program that
+        young students will write in <a href="https://studio.code.org/s/coursea-2019"
+        target="blank">Course A</a>. On the next page, you'll get to write a similar
+        program of your own!
       OPD-K5 LessonPlanning: |-
         Até agora, você foi apresentado a alguns de nossos planos de aulas desplugados. No entanto, existem planos de aula para cada uma das lições em Fundamentos de CC - tanto conectadas quanto on-line. Você pode encontrar a lista completa de planos de aula para cada curso abaixo:
         <br/>
@@ -21293,10 +21304,75 @@ pt-BR:
         Assista o vídeo abaixo para entender os benefícios do uso de atividades desplugadas para lecionar ciências da computação.
 
         **À medida que você progredir através das Etapas 4-8**, você terá uma oportunidade para rever algumas de nossas atividades desplugadas para cada um dos conceitos chave que são tratados neste curso.
+      OPD-K5 Unplugged Video_copy: "It might seem counterproductive to teach computer
+        science away from the computer! However, we've found that some of the most
+        impactful  lessons are actually \"unplugged,\" or conducted with little to
+        no technology at all. \n\nAll of our CS Fundamentals courses use unplugged
+        activities to introduce computer science concepts with physical manipulatives
+        before students write computer programs using those concepts. We also use
+        unplugged activities to teach important concepts that are not coding, like
+        digital citizenship. Watch the video below to understand the benefits of using
+        unplugged activities to teach computer science."
       OPD-K5 WhatIsCS: Você já se perguntou "Exatamente, o que é ciência da computação?"
         Ou, "Por que alguns programas de computador são escritos com palavras e alguns
         são escritos usando imagens?" Se sim, assista a este vídeo; é uma ótima introdução
         ao campo da ciência da computação.
+      OPD-K5 WhatIsCS_copy: |-
+        <span style="font-size: 1.1em">
+        Have you ever wondered what computer science is, or what kinds of different program languages there are? This video provides an introduction to the field of computer science.
+        </span>
+      OPD-K5 conditionals free response: |-
+        # Reflect on Conditionals
+
+        In this lesson, we explored how conditionals help programmers add logic to their code.
+
+        Now take a moment to reflect. How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?
+      OPD-K5 events free response: |-
+        # Reflect on Events
+
+        In this lesson, you stretched your coding muscles by using events to trigger certain actions in your program.
+
+        Now take a moment to reflect. How would you explain the concept of events to your students? What are the steps you could take to debug a program?
+      OPD-K5 for loops free response: |-
+        # Reflect on For Loops
+
+        Take a moment to reflect. How would you explain the concept of for loops to your students? What is one teaching practice that you could use to teach this concept?
+      OPD-K5 functions free response: |-
+        # Reflect on Functions
+
+        In this lesson, we explored how functions can make you a faster and better programmer by allowing you to reuse segments of your code. In the next lesson, we'll look at the concept of variables.
+
+        Now take a moment to reflect. How would you explain the concept of functions to your students? What is one teaching practice that you could use to teach this concept?
+      OPD-K5 loops free response: |-
+        # Reflect on Loops
+
+        In this lesson, we explored how loops can be used to make code more efficient. In the next lesson, we'll look at how events can add interactivity into a program.
+
+        Now take a moment to reflect. How can you connect the concept of loops to your students’ prior experience outside of the CS classroom? What are the benefits of pair programming, and how could you use the it when teaching this lesson?
+      OPD-K5 projects free response: |-
+        # Reflect on end-of-course projects
+
+        Take a moment to reflect. How would you use end-of-course proejcts in your classroom? What is the benefit of having students complete a project?
+      OPD-K5 sequencing free response: "# Reflect on Sequencing\n\nCongratulations!
+        You just wrote some code. You are officially a programmer!\n\nDid you notice
+        that the last puzzle was a little more difficult? It was a challenge puzzle.
+        Challenge puzzles are meant to stretch the boundaries of what students will
+        do. We make it clear that they should be attempted, but do not require that
+        they be completed for students to succeed for the lesson.\n\nNow take a moment
+        to reflect. How would you describe the difference between computer science
+        and coding? How would you explain sequencing and algorithms to your students? "
+      OPD-K5 sprite lab free response: "# Reflect on Sprite Lab\n\nTake a moment to
+        reflect. How would you use Sprite Lab in your classroom? "
+      OPD-K5 variables free response: |-
+        # Reflect on Variables
+
+        Take a moment to reflect. How would you explain the concept of variables to your students? What is one teaching practice that you could use to teach this concept?
+      OPD-K5 whats your plan: "# What's your plan?\n\nThroughout the course, you will
+        be asked to write reflections on what you have learned. Once you submit your
+        response, it will save, and you can always come back to it. We will revisit
+        it at the end of this online course.\n\nTake a moment now to reflect. How
+        and when will you complete this online course to make ensure you get the most
+        benefit from the experience? "
       OPD-K5-events-2: "Anexe o bloco `quantidade normal de bater de asas` ao evento
         `quando clicar`, depois pressione \"Executar\".   \n\n* * *\n\nClique ou toque
         no espaço de jogo para mover o Flappy para o alvo."
@@ -23324,10 +23400,19 @@ pt-BR:
         para a direita quando a seta para direita for clicada.
       courseA_playLab_events4_2018: Agora, adicione um outro bloco de evento para
         fazer Jorge mover-se para a direita quando a seta para direita for clicada.
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: Adcione eventos para fazer com que Jorge mova-se para
         cima e para baixo quando a seta para cima e para baixo forem pressionadas.
       courseA_playLab_events5_2018: Adcione eventos para fazer com que Jorge mova-se
         para cima e para baixo quando a seta para cima e para baixo forem pressionadas.
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the \`up\` and \`down\` buttons are pressed. Make Jorge get the flags to finish
+        the level!
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7_2018: _Jogo Livre:_ Adicione qualquer coisa nesse jogo.
         Você consegue fazer o dinossauro desaparecer  quando Jorge correr em direção
         a ele?

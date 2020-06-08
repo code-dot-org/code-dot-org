@@ -3712,7 +3712,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -11534,8 +11534,8 @@ pt-BR:
         courseD_farmer_condLoops5_b: Poderia haver mais de uma planta de milho ou
           alface em cada local. Use um laço `enquanto` para reunir todos eles!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'Há um novo laço: `repetir até a abóbora`. Você
-          pode ver como usá-lo neste quebra-cabeça?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until there are
+          pumpkins`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Poderia haver mais de uma planta de milho ou
           alface em cada local. Use um laço `enquanto` para reunir todos eles!
       courseD_farmer_condLoops6:

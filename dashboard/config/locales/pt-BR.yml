@@ -367,6 +367,7 @@ pt-BR:
       sections: Seções
       help_support: Ajuda e suporte
       report_bug: Reportar um erro
+      report_abuse: Report abuse
       teacher_community: Comunidade de professores
       professional_learning: Aprendizado Profissional
       documentation: Documentação
@@ -402,6 +403,7 @@ pt-BR:
       help_us: Ajude-nos
       teach: Ensinar
       about: Sobre
+      legal: Privacy & Legal
       legal_privacy: Política de Privacidade
       legal_tos: Termos de Serviço
     user:
@@ -881,12 +883,14 @@ pt-BR:
     correct_title: Correto
     correct_body: Essa é a resposta correta.
     toofew_title: Poucas respostas.
+    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar uma resposta.
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta.
     toofew_title: Poucas respostas.
+    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar respostas.
@@ -933,6 +937,8 @@ pt-BR:
     open_response_body: Obrigado pela sua resposta!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  lesson_extras:
+    bonus_level: Bonus Level
   dialog:
     ok: OK
     startover_title: Tem certeza de que deseja começar do início?
@@ -1116,6 +1122,15 @@ pt-BR:
     instructor_feedback: Feedback do instrutor
     peer_feedback: Feedback de colegas
     outdated: Este feedback foi adicionado para uma versão enviada anteriormente
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
     peer_review: Revisão em grupo
   external_links:
     disclaimer: Aviso
@@ -1187,6 +1202,19 @@ pt-BR:
     download_in_Vietnamese: 'Baixar em Vietnamita:'
     windows: Windows (64 bits)
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
   locked_stage: O conteúdo desta fase não pode ser visto, pois ela está bloqueada
     no momento. Seu professor pode desbloquear esta fase quando chegar a hora de trabalhar
     com ela ou quando for revisar suas respostas.
@@ -1209,6 +1237,53 @@ pt-BR:
   view_all_units: Visualizar todas unidades
   view_teacher_guide: Exibir Guia do Professor
   pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?
     form_labels:
       first_name: Primeiro nome
       first_name_preferred: Primeiro Nome Preferido

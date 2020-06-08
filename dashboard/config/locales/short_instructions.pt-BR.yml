@@ -1665,6 +1665,10 @@ pt-BR:
         pode mudar todas as regras, misturar e combinar esportes, e criar o que quiser!
         Quando terminar, clique em Concluir para deixar seus amigos experimentarem
         seu jogo em seus smartphones.'
+      OPD-K5 whats your plan: Take a moment now to consider how and when you will
+        complete this online course to ensure you get the most benefit from the experience.
+        When you've got a good plan sketched out, continue on to dive more deeply
+        into Computer Science Fundamentals.
       OPD-K5-events-2: Anexe o bloco `quantidade normal de bater de asas` ao evento
         `quando clicar`, depois pressione "Executar".    Clique ou toque no espaço
         de jogo para mover o Flappy para o alvo.
@@ -2389,18 +2393,30 @@ pt-BR:
         evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events3_2018: Conecte o bloco `mover para a esquerda` ao bloco
         de evento`quando esquerda` que já está na área de trabalho.
+      courseA_playLab_events3_2019: Connect the `move left` block to the `when left`
+        event block that is already in the workspace. Use the arrow keys or press
+        the arrow buttons to move Jorge to the flag and finish the level!
       courseA_playLab_events4: Adicione blocos para mover para a direita quando o
         botão `direito` é clicado.
       courseA_playLab_events4_2018: Adicione outro bloco de evento para fazer Jorge
         mover para a direita quando o botão `direito` é clicado.
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: Adicione eventos para que o Jorge suba e desça quando
         os botões `para cima` e`para baixo` forem pressionados.
       courseA_playLab_events5_2018: Adicione eventos para que o Jorge suba e desça
         quando os botões `para cima` e`para baixo` forem pressionados.
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the `up` and `down` buttons are pressed. Make Jorge get the flags to finish
+        the level!
       courseA_playLab_events6: Torne isso mais interessante alterando o fundo e tocando
         um som aleatório quando Jorge for clicado.
       courseA_playLab_events6_2018: Torne isso mais interessante alterando o fundo
         e tocando um som aleatório quando Jorge for clicado.
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7: Adicione o que quiser a este jogo. Você pode fazer
         o dinossauro desaparecer quando Jorge se depara com ele?
       courseA_playLab_events7_2018: '_Jogo Livre_: Adicione o que você quiser neste
