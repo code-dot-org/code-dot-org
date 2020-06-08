@@ -32,6 +32,13 @@ he:
             תקשורת, פתרון בעיות, והנאה.
           description_short: קורס היכרות עם מדעי המחשב אשר מעודד את התלמידים ליצור
             יצירות מקוריות משלהם.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: This is a course for allthethings
+          description_student: This is a course for allthethings and has a longer
+            description for students
+          description_teacher: This is a course for allthethings and has a longer
+            description for teachers
         csd-2018:
           assignment_family_title: תגליות במדעי המחשב
           title: תגליות במדעי המחשב ('18-'19)
@@ -62,6 +69,8 @@ he:
             מדעי המחשב ולעודד ולעניין גם את אלו שאין להם ייצוג בתחום באופן מסורתי
             בכלים מחשוביים חשובים ואפשרויות ממגוון תחומים.
         csp-2019:
+          title: Computer Science Principles ('19-'20)
+          version_title: "'19-'20"
           description_short: למד מושגי יסוד במדעי המחשב.
           description_student: בסתיו 2016, הנהלת המכללה השיקה קורס AP® חדש, עקרונות
             מדעי המחשב למתקדמים. הקורס מציג לתלמידים את עקרונות היסוד של מדעי המחשב
@@ -76,6 +85,8 @@ he:
             מדעי המחשב ולעודד ולעניין גם את אלו שאין להם ייצוג בתחום באופן מסורתי
             בכלים מחשוביים חשובים ואפשרויות ממגוון תחומים.
         csd-2019:
+          title: Computer Science Discoveries ('19-'20)
+          version_title: "'19-'20"
           description_short: קורס היכרות עם מדעי המחשב אשר מעודד את התלמידים ליצור
             יצירות מקוריות משלהם.
           description_student: תגליות במדעי המחשב הוא קורס מבוא במדעי המחשב שמעודד

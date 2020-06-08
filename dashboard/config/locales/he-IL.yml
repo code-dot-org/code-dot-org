@@ -12,6 +12,12 @@ he:
         לתוכן זה. כדי לגשת לתוכן זה, הפסק את מצב התכנות המשותף ונסה שוב.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: is invalid. Note that each link can only be used once to reset
+                your password, and only the most recently sent link will work.
       messages:
         blank: נדרש
         blank_plural: הנם נדרשים
@@ -39,6 +45,11 @@ he:
           עבור <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: מלא את הפרטים הבאים על מנת לסיים ליצור
           חשבון Code.org עבור **%{email}**.
+        finish_sign_up_subheader_provider: Fill out the following information to finish
+          creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Fill out the following information
+          to finish creating a Code.org account with **%{provider}** for **%{email}**.
+        reset_password_token: The reset password link you have followed
         error:
           future: לא יכול להיות בעתיד
   beta: בטא
@@ -51,13 +62,17 @@ he:
   previous_page: דף קודם
   next_page: הדף הבא
   next_resource: המשאב הבא
+  done_with_module: Done with this Learning Module
   cancel: בטל
   okay: בסדר
   or: או
   heading_x_of_y: "%{heading} (עמוד %{x} מתוך %{y})"
   join_section:
     code:
+      title: Join a section on Code.org
       placeholder: קוד קבוצה (ABCDEF)
+      instructions: 'Please enter the 6 letter code your teacher shared with you (example:
+        "ABCDEF") to join their section.'
       instructions_short: הזן את קוד הקבוצה שלך באורך 6 תווים
       submit: הצטרף
   add_hint_form:
@@ -88,6 +103,9 @@ he:
     continue_with: המשך באמצעות %{provider}
     sign_in_with: היכנס באמצעות %{provider}
     signed_in: נכנסת!
+    signed_out_markdown: "### You have signed out of [Code.org](%{url})."
+    sign_out_of_markdown: "#### You used %{provider} to sign in. [Click here](%{url})
+      to sign out of %{provider}."
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
     google_oauth2: חשבון גוגל
@@ -108,6 +126,14 @@ he:
       "הפורטל החכם" שלך במקום.
     unable_to_connect_provider: אין אפשרות להתחבר לחשבון Code.org שלך אל ה%{provider}
       שלך. אנא נסה שוב.
+    already_in_use: Your %{provider} account is already connected to another Code.org
+      account.
+    already_linked: Your %{provider} account is already linked to your Code.org account.
+    existing_account:
+      account_exists: Good news! You already have a Code.org account that uses %{email}
+      sign_in: Please sign in and we'll link your %{provider} profile.
+      sign_up: Not your email? Want to create a new account with a different email?
+        We will also link your %{provider} profile if you choose to create a new account.
   signup_form:
     email_signup: הירשם באמצעות הדוא"ל שלך
     student_count: "%{count} תלמידים כבר נרשמו."
@@ -153,6 +179,10 @@ he:
     student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
     agree_us_website: אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית.
     my_data_to_us: יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית.
+    student_terms_markdown: Email addresses are not stored in a form that allows us
+      to contact students. Students will never receive emails from Code.org except
+      for password recovery. See our [privacy policy](http://code.org/privacy) for
+      more information.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
     user_type_button: עדכן סוג חשבון
     user_type_label: סוג חשבון
@@ -167,6 +197,11 @@ he:
     email_preference_yes: כן
     email_preference_no: לא
     email_preference_required: עליך לציין העדפה של דואר אלקטרוני.
+    parent_account_checkbox: I am a parent/guardian signing up on behalf of my child
+    parent_account_email_progress_permission: Can we email you with occasional updates
+      on your child’s progress and projects, and updates about their course and computer
+      science? [(See our privacy policy)](%{privacy_policy_url})
+    parent_account_email_label: Parent/Guardian Email
   school_info:
     title: מידע על בית הספר (רשות)
     school_country: ארץ בית הספר
@@ -207,6 +242,8 @@ he:
     login: התחבר
     invalid_login: נתוני חיבור שגויים, אנא נסה שנית
     pair_programming: אני יחד עם שותף במחשב שלי
+    student_privacy_markdown: Learn more about why you're not seeing your full name
+      [here](%{student_privacy_blog}).
   password:
     reset_form:
       title: שכחת את הסיסמא שלך?
@@ -251,6 +288,7 @@ he:
     remove: "(הסר קבוצה)"
     type:
       picture: תמונת סיסמה
+      word: Secret Words
       email: דואר אלקטרוני
       google_classroom: כיתת גוגל
       clever: Clever
@@ -310,10 +348,17 @@ he:
       sections: קבוצות
       help_support: עזרה ותמיכה
       report_bug: דווח תקלה
+      report_abuse: Report abuse
       teacher_community: קהילת המורים
       professional_learning: לימוד מקצועי
       documentation: מסמכים
       tutorials: מדריכים
+      app_lab_documentation: App Lab Documentation
+      app_lab_tutorials: App Lab Tutorials
+      game_lab_documentation: Game Lab Documentation
+      game_lab_tutorials: Game Lab Tutorials
+      sprite_lab_documentation: Sprite Lab Documentation
+      sprite_lab_tutorials: Sprite Lab Tutorials
       educate_overview: סקירת המורה
       educate_elementary: בית ספר יסודי
       educate_middle: חטיבת ביניים
@@ -339,6 +384,7 @@ he:
       help_us: עזור לנו
       teach: למד
       about: אודות
+      legal: Privacy & Legal
       legal_privacy: הצהרת פרטיות
       legal_tos: תנאים
     user:
@@ -363,20 +409,32 @@ he:
       artist_k1: האמן (טרום-קריאה)
       basketball: כדורסל
       bounce: להקפיץ
+      calc: Calc
       dance: מסיבת ריקודים
+      eval: Eval
       flappy: פלאפי
       frozen: לשבור את הקרח
       gamelab: מעבדת המשחקים
       gamelab_jr: מעבדת המשחקים (בטא)
+      gumball: The Amazing World of Gumball
       iceage: עידן הקרח
       infinity: אינסוף
+      makerlab: Maker Toolkit
       minecraft_adventurer: הרפתקן מיינקראפט
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: מיינקראפט
       minecraft_hero: גיבור מיינקרפט
       playlab: מעבדת הצעצועים
       playlab_k1: מעבדת הצעצועים (טרום-קריאה)
+      scratch: Scratch
+      sports: Sports
+      spritelab: Sprite Lab
       starwars: מלחמת הכוכבים
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
       weblab: מעבדת האתרים
+      view_all: View all projects...
     popup:
       progress_for_user: ההתקדמות של %{name}
       progress: ההתקדמות שלך
@@ -446,6 +504,8 @@ he:
     create_personal_login_under_13_parent_email: דוא"ל של הורה/אפוטרופוס
     create_personal_login_info: אם ברצונך להמשיך להשתמש בחשבון Code.org שלך גם לאחר
       סיום שנת הלימודים, באפשרותך ליצור חשבון כניסה אישי משלך מטה.
+    create_personal_login_link_account: You can also instead choose to connect to
+      a personal account under the “Manage Linked Accounts” section.
     create_personal_login_terms: על-ידי יצירת חשבון כניסה אישי, אני מסכים להיות מחויב
       ל<a href='%{terms_of_service_url}', target='_blank'>תנאי השימוש</a> של Code.org.
       אם אני תחת גיל 13, אני מאשר שיש בידי אישור מהורה או אפוטרופוס חוקי רשות להשתמש
@@ -469,9 +529,18 @@ he:
       סיסמה)
     update: עדכן חשבון
     account_successfully_updated: חשבון עודכן בהצלחה.
+    auth_option_saved: You have successfully linked your %{provider} account with
+      email %{email}.
+    auth_option_saved_no_email: You have successfully linked your %{provider} account.
     update_email: עדכון
+    for_parents_and_guardians: For Parents and Guardians
+    link_a_parent_email: Link a parent/guardian email address to this account to stay
+      updated on your child’s progress and projects. You will also be able to use
+      this email address for password recovery.
     parent_guardian_email_label: דוא"ל של הורה/אפוטרופוס
     none: כלום
+    only_one_parent_email_supported_warning: 'Note: we are only able to support one
+      parent/guardian email address per student account at this time.'
     encrypted: מוצפן
   user_level:
     completed: הושלם
@@ -511,10 +580,16 @@ he:
     test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
     try_beta_courses: חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'
     use_as_teacher: השתמש באתר הזה כמורה
+    heading_elementary_markdown: |-
+      ## 20 hour courses for
+
+      # Computer Science Fundamentals (all ages)
     your_gallery: גלריה
     no_primary_course: נסה קורס קוד סטודיו
     choose_next_course: נסה קורס מסטודיו קוד ע"י בחירת אחד מטה
     print_certificate: הדפס תעודה
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   move_students:
     new_section_dne: מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר
       קוד קבוצה אחרת.
@@ -537,6 +612,7 @@ he:
   gender:
     male: גבר
     female: אישה
+    non_binary: Non-binary
     not_listed: המונח המועדף אינו מופיע ברשימה
     none: מעדיף לא לענות
   user_type:
@@ -551,12 +627,33 @@ he:
       טוויטר, ועוד רבים אחרים שעזרו ליצור חומרים אלו.
     help_from_html_old: המהנדסים של גוגל, מיקרוסופט, פייסבוק, טוויטר עזרו לנו ליצור
       חומרים אלה.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
+    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
     powered_by_aws: ממונע ע"י Amazon Web Services
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: זכויות יוצרים
     more: יותר
     feedback: משוב
     translate: עזרו לנו לתרגם לשפתך
     support: עזרה וקהילה
+    support_url: http://support.code.org
     tos_short: תנאים
     tos: תנאים
     privacy: הצהרת פרטיות
@@ -589,6 +686,18 @@ he:
         target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה
         בעיות בחלק מן הפונקציונליות הקיימת.
       link: למד עוד
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      oceans_unsupported_browser: This browser is not supported for this tutorial.
+        Please try visiting this page using Edge, Chrome, Firefox, or another modern
+        browser.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
       weblab_unsupported_locale_storage: יתכן ותחווה תקלות בעת שימוש במעבדת האינטרנט
         תחת גלישה במצב "מוסתר". אנא טען את הדף במצב רגיל. מצטערים על אי הנוחות.
   slow_loading: זה לוקח זמן רב מהרגיל...
@@ -660,6 +769,7 @@ he:
       audience: גילאי 13+
       cta: למד כיצד
     hoc-encryption:
+      title: Simple Encryption
       body: התלמידים ילמדו טכניקות ליצירה ופיצוח הודעות מוצפנות.
     weblab:
       title: מעבדת האתרים (בטא)
@@ -685,7 +795,13 @@ he:
       title: מיינקראפט
     hero:
       title: מיינקראפט
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
+    sports:
+      title: Sports
+      body: Make a basketball game or mix and match across sports.
     text-compression:
+      title: Text Compression
       body: בשיעור זה, התלמידים ישתמשו בווידג'ט של דחיסת טקסט כדי לכווץ אותו על-ידי
         החלפת תבניות עם סמלים.
     unplugged:
@@ -706,8 +822,11 @@ he:
       audience: גילאי 14+
       cta: למד כיצד
   landing:
+    prerelease_tutorial: This tutorial is in **beta**.  It is subject to revision
+      as feedback is received and improvements are made.
     report_bug: דווח על באג
     support: קבל עזרה
+    support_url: "//support.code.org"
     help_resources: עזרה ומשאבים
     help_support: עזרה ותמיכה
     documentation: מסמכים
@@ -719,11 +838,15 @@ he:
     wrong_body: התשובה שענית אינה נכונה. נא נסה שנית!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: תודה רבה
     wrong_body: תודה ששלחת תשובה.
     correct_title: תודה רבה
     correct_body: תודה ששלחת תשובה.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: תודה רבה
     wrong_body: תודה ששלחת תשובות.
@@ -760,12 +883,16 @@ he:
     badrange: החוזה שלך מכיל טווח שגוי.
     baddomainsize: בחוזה שלך אין את המספר הנכון של פריטים כפי שמופיע בקבוצת המחשבים.
     baddomainname: לאחד או יותר מן הפריטים בתחום יש שם לא נכון.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: הכנס את התשובה שלך כאן
     open_response_title: תודה
     open_response_body: תודה על תגובתך!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
+  lesson_extras:
+    bonus_level: Bonus Level
   dialog:
     ok: אישור
     startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?
@@ -780,6 +907,12 @@ he:
   age_interstitial:
     age: הגיל שלך
     header: פרטי החשבון עודכנו
+    warning: We're in the process of updating our experience to provide you with even
+      stronger privacy protections. To do this, we need existing users to enter their
+      age here.
+    disclaimer: As always, code.org will never rent, sell or share this information
+      with any third parties.
+    sign_out_markdown: If you do not wish to provide your age you may [sign out](%{url}).
   terms_interstitial:
     title: תנאי השירות ותנאי הפרטיות עודכנו
     intro_desc: 'עדכנו את תנאי השירות ותנאי הפרטיות שלנו כפי שמופיע מטה. השינויים
@@ -802,6 +935,8 @@ he:
     accept_label: אני מאשר את <a href="%{tos_url}" target="_blank">תנאי השימוש</a>
       וגם את <a href="%{privacy_url}" target="_blank">תנאי הפרטיות</a>.
     accept_label_markdown: אני מאשר את [תנאי השימוש](%{tos_url}) וגם את [תנאי הפרטיות](%{privacy_url}).
+    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url})
+      and [Privacy Policy](%{privacy_url}).
     accept: אשר
     print: הדפס
     reminder_desc: עדכנו את <a href="%{tos_url}" target="_blank">תנאי השירות</a> שלנו
@@ -916,16 +1051,34 @@ he:
   peer_review:
     accepted:
       name: אושר
+      description_markdown: "**Yes**, this submission **meets** the requirements"
     rejected:
       name: נדחה
+      description_markdown: "**No**, this submission **does not meet** the requirements"
     escalated:
       name: הועבר לאישור
       description: אני מבקש שמדריך יבדוק את הטופס
     instructor_feedback: התייחסות המדריך
+    peer_feedback: Peer Feedback
     outdated: משוב זה נוסף לגרסה הקודמת שנשלחה
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
+    review_count: You must complete %{review_count} reviews for this unit
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
+    peer_review: Peer Review
   external_links:
     disclaimer: כתב ויתור
     leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's.
+      We have selected these third party resources because we think they will be useful
+      to you. While we are not directly responsible for the content of this website,
+      please <a href='%{support_url}'>contact support</a> if you find the content
+      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: הורדות של שעת קוד
     capsule_title: האם יש ברשותך גישה לאינטרנט?
@@ -985,16 +1138,87 @@ he:
     download_in_Vietnamese: 'הורד בוייטנאמית:'
     windows: חלונות (64-סיביות)
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
   locked_stage: התכנים בשלב זה אינם ניתנים לשימוש מכיוון ששלב זה נעול כרגע. המורה
     שלך יכול לשחרר את הנעילה של השלב ברגע שיגיע הזמן לעבוד עליו או הזמן לבדוק את תשובותיך.
   hidden_stage: המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון אותך
     לשיעור שאתה אמור להיות בו.
   hidden_script: המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון
     אותך ליחידה שאתה אמור להיות בה.
+  no_course_access_student: You don't have access to this course. Please ask your
+    teacher which course you should be on.
+  no_course_access_teacher: You don't have access to this course. If you believe you
+    should have access to this course, please write to support@code.org so that we
+    can fix the situation.
+  no_script_access_student: You don't have access to this unit. Please ask your teacher
+    which unit you should be on.
+  no_script_access_teacher: You don't have access to this unit. If you believe you
+    should have access to this unit, please write to support@code.org so that we can
+    fix the situation.
   return_unit_overview: עבור לסקירת יחידת הלימוד
   return_course_overview: עבור לסקירת הקורס
   view_all_units: הצג את כל היחידות
+  view_teacher_guide: View teacher guide
   pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?
     form_labels:
       first_name: שם פרטי
       first_name_preferred: שם פרטי מועדף
@@ -1026,6 +1250,7 @@ he:
       gender:
         male: גבר
         female: אישה
+        non_binary: Non-binary
         not_listed: המונח המועדף אינו מופיע ברשימה
         none: מעדיף לא לענות
       school_country:
@@ -1046,6 +1271,7 @@ he:
         ages_19_over: גילאי 19+
       subjects:
         cs: מדעי המחשב
+        ict: ICT
         math: מתמטיקה
         science: מדע
         history: היסטוריה / מדעי החברה
@@ -1055,15 +1281,67 @@ he:
         art: אמנות
         other: 'אחר:'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
+        lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
         other: 'אחר:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
         other: 'אחר:'
+      workshop_course:
+        csf_af: CS Fundamentals (Courses A-F)
+        csf_express: CS Fundamentals (Pre-Express or Express)
+        csd: CS Discoveries
+        csp: CS Principles
       email_opt_in:
         opt_in_yes: כן
         opt_in_no: לא
+    international_opt_in:
+      title: Workshop Attendance
+      intro: Thank you for taking time to receive training on Code.org’s curriculum.
+        Our mission to bring computer science education opportunities to all children
+        in all schools around the world would not be possible without you.
+      instructions: Please fill out the form below to indicate that 1) you attended
+        a training workshop run by one of Code.org’s international partners, and 2)
+        you agree to share your information with our international partner in your
+        country so that they can help to support your journey as a computer science
+        teacher.
+      thanks_markdown: Thank you for submitting! We look forward to supporting you
+        as you get to know Code.org’s curriculum and tools. Please keep sharing your
+        questions and feedback with us by writing to us at [support@code.org](%{support_email_url})
+        or by posting on the [teacher forum](%{teacher_forum_url})!
+    logged_out:
+      heading: Thanks for your interest in the Professional Learning Program!
+      body: To get started, you first need to be logged into your Code.org account.
+        If you’d like more information about the program before you start your application,
+        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body_markdown: Thanks for your interest in Code.org’s Professional Learning
+        Program! You’re currently signed into a student account. Please either create
+        a teacher account or [go to your user settings](%{user_settings}) to upgrade
+        your account from student to teacher.
+      more_markdown: If you’d like more information about the program before you start
+        your application, please check out the [Professional Learning Program overview](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Your account doesn’t have an email address. Please [visit your
+        account settings](%{user_registration}) to add your email address before completing
+        this form.
+  courses_category: Full Courses
   cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
     more_information: הצג את מדיניות הפרטיות של Code.org.
     accept: מסכים
   gdpr_dialog:
@@ -1073,4 +1351,25 @@ he:
     privacy_policy: מדיניות פרטיות
     logout: התנתק
     true: כן
+  page_not_found_title: Page Not Found
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home
   copy: העתק
+  maker:
+    google_oauth:
+      login_with_google: Login to the Maker App with Google
+      enter_code: Please enter the code provided when you logged in via Google on
+        your default browser.
+      copy_code: Please copy and paste this code into the Maker App to login to Code.org.
+      error_token_expired: Token has expired. Please log in again for a new token.
+      error_wrong_provider: Wrong provider. Please make sure you are logging in with
+        Google.
+      error_invalid_user: Invalid user id. Please try logging in again.
+      error_no_code: Please enter your login code.
+  parent_email_banner:
+    text: "**Are you a parent or guardian?** Link your email to this account to stay
+      updated on your child’s progress and projects!"
+    link_your_email: Link your email
+    not_now: Not now

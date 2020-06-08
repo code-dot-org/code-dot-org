@@ -30,6 +30,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
           MOVE2:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
@@ -42,6 +43,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
       Dancelab_atTimestamp:
         text: אחרי {TIMESTAMP} {UNIT}
@@ -87,6 +89,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ he:
             MOVES.Clown: גאנגם
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -187,6 +191,7 @@ he:
             MOVES.Kick: כוכב
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -218,10 +223,13 @@ he:
             MOVES.Kick: כוכב
             MOVES.XArmsUp: סטרץ'
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'חזור כל {N} תיבות אחרי {START} '
       Dancelab_everySeconds:
@@ -282,6 +290,7 @@ he:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
       Dancelab_ifTime:
         text: |-
@@ -965,10 +974,19 @@ he:
         text: הגדרה
       Dancelab_whenSetup2:
         text: הגדרה
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -1013,10 +1031,13 @@ he:
         options:
           CHOICE:
             '"this"': זה
+            '"other"': other
       gamelab_hideTitleScreen:
         text: הסתר כותרת מסך
       gamelab_isTouchingEdges:
         text: "{SPRITE} נוגע בפינות"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
       gamelab_keyPressed:
@@ -1075,6 +1096,8 @@ he:
             '"left"': שמאלה
       gamelab_mouseLocation:
         text: מיקום עכבר
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה
       gamelab_moveInDirection:
@@ -1087,6 +1110,10 @@ he:
             '"West"': מערבה
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: פלייסאונד {SOUND}
       gamelab_pointInDirection:
@@ -1121,13 +1148,31 @@ he:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': מערה
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': בית המשפט
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': מדבר
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': גלקסיה
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': מדע בדיוני
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': כוכבים
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
@@ -1164,12 +1209,18 @@ he:
           CONDITION:
             '"when"': כאשר
             '"while"': כאשר
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: הפוך {SPRITE} {DIRECTION} {N} מעלות
         options:
           DIRECTION:
             '"right"': ימינה
             '"left"': שמאלה
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: כאשר חץ למטה נלחץ
       gamelab_whenKey:
@@ -1233,7 +1284,10 @@ he:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": לא דגים
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": התווית שלי
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": לא התווית שלי
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -1241,7 +1295,10 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -1253,9 +1310,19 @@ he:
             "{x: 300, y: 100}": למעלה מימין
             "{x: 100, y: 300}": למטה משמאל
             "{x: 300, y: 300}": למטה מימין
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: קבל את האובייקט הבא
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': גודל
@@ -1294,6 +1361,7 @@ he:
             "{x: 300, y: 100}": למעלה מימין
             "{x: 100, y: 300}": למטה משמאל
             "{x: 300, y: 300}": למטה מימין
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: הסר {SELECT} {COSTUME}
         options:
@@ -1386,6 +1454,7 @@ he:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
+            MOVES.Thriller: Zombie
             MOVES.Rest: כלום
       Mikelab_ifLabel:
         text: |-
@@ -1411,14 +1480,20 @@ he:
           DANCE:
             MOVES.ClapHigh: דגים
             MOVES.Clown: לא התווית שלי
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: צבע אקראי
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: ספרייט {SPRITE} תחנות {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: חזור לנצח
       Mikelab_sendBad:
@@ -1426,10 +1501,30 @@ he:
       Mikelab_sendGood:
         text: הזזת אובייקט ימינה
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -1437,11 +1532,20 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': ימינה
             '"left"': שמאלה
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: "{COSTUME} חדש ספרייט ב {LOCATION}"
         options:
@@ -1455,6 +1559,7 @@ he:
             "{x: 300, y: 100}": למעלה מימין
             "{x: 100, y: 300}": למטה משמאל
             "{x: 300, y: 300}": למטה מימין
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: כאשר {SPRITE} נלחץ
       Mikelab_whenKeyPressed:
@@ -1465,42 +1570,63 @@ he:
             '"down"': חץ למטה
             '"left"': חץ שמאלה
             '"right"': חץ ימינה
+            '"space"': spacebar
             '"w"': מע
             '"a"': א
             '"s"': ד
             '"d"': ד
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': חץ למעלה
             '"down"': חץ למטה
             '"left"': חץ שמאלה
             '"right"': חץ ימינה
+            '"space"': spacebar
             '"w"': מע
             '"a"': א
             '"s"': ד
             '"d"': ד
       Mikelab_whenMouseClicked:
         text: כאשר העכבר לוחץ
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: כאשר לחץ על {KEY}
         options:
           KEY:
             '"yes"': כן. כן
             '"no"': לא. לא
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': חץ למעלה
             '"down"': חץ למטה
             '"left"': חץ שמאלה
             '"right"': חץ ימינה
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
       RyanLab_moveForward:
         text: זוז קדימה
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: פנה שמאלה
       RyanLab_turnRight:
@@ -1565,9 +1691,16 @@ he:
       aalab_setupStory:
         text: סיפור ההתקנה
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': אקראי
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:
