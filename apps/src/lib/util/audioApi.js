@@ -1,13 +1,13 @@
 /* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, outputWarning, OPTIONAL} from './javascriptMode';
-import Sounds from '../../Sounds';
 import {
-  SpeechConfig,
-  SpeechSynthesizer,
-  SpeechSynthesisOutputFormat
-} from 'microsoft-cognitiveservices-speech-sdk';
+  apiValidateType,
+  outputWarning,
+  getAsyncOutputWarning,
+  OPTIONAL
+} from './javascriptMode';
+import Sounds from '../../Sounds';
 import {findProfanity} from '@cdo/apps/code-studio/components/libraries/util';
 import i18n from '@cdo/locale';
 
@@ -153,24 +153,8 @@ export const commands = {
       opts.language,
       opts.text
     );
-    if (cachedBytes === null) {
-      const profaneWords = await findProfanity(opts.text, languageCode);
-      if (profaneWords && profaneWords.length > 0) {
-        outputWarning(
-          i18n.textToSpeechProfanity({
-            profanityCount: profaneWords.length,
-            profaneWords: profaneWords.join(', ')
-          })
-        );
-        Sounds.getSingleton().registerTextBytes(
-          opts.language,
-          opts.text,
-          true,
-          profaneWords
-        );
-        return;
-      }
-    } else if (cachedBytes['hasProfanity']) {
+
+    if (cachedBytes !== null && cachedBytes['hasProfanity']) {
       outputWarning(
         i18n.textToSpeechProfanity({
           profanityCount: cachedBytes['profaneWords'].length,
@@ -179,60 +163,133 @@ export const commands = {
       );
       return;
     }
-
-    let forceHTML5 = false;
-    if (window.location.protocol === 'file:') {
-      // There is no way to make ajax requests from html on the filesystem.  So
-      // the only way to play sounds is using HTML5. This scenario happens when
-      // students export their apps and run them offline. At this point, their
-      // uploaded sound files are exported as well, which means varnish is not
-      // an issue.
-      forceHTML5 = true;
-    }
+    const asyncOutputWarning = getAsyncOutputWarning();
+    // There is no way to make ajax requests from html on the filesystem.  So
+    // the only way to play sounds is using HTML5. This scenario happens when
+    // students export their apps and run them offline. At this point, their
+    // uploaded sound files are exported as well, which means varnish is not
+    // an issue.
+    const forceHTML5 = window.location.protocol === 'file:';
 
     if (cachedBytes !== null && cachedBytes[opts.gender] !== null) {
-      Sounds.getSingleton().playBytes(cachedBytes[opts.gender].slice(0), {
-        volume: 1.0,
-        loop: false,
-        forceHTML5: forceHTML5,
-        allowHTML5Mobile: true,
-        fromCached: true
-      });
-    } else {
-      const speechConfig = SpeechConfig.fromAuthorizationToken(
-        appOptions.azureSpeechServiceToken,
-        appOptions.azureSpeechServiceRegion
-      );
-      speechConfig.speechSynthesisOutputFormat =
-        SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3;
-      const synthesizer = new SpeechSynthesizer(speechConfig, undefined);
-      let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
-        opts.text
-      }</voice></speak>`;
-      await synthesizer.speakSsmlAsync(
-        ssml,
-        result => {
-          Sounds.getSingleton().registerTextBytes(
-            opts.language,
-            opts.text,
-            false,
-            null,
-            opts.gender,
-            result.audioData.slice(0)
-          );
-          Sounds.getSingleton().playBytes(result.audioData, {
+      if (cachedBytes[opts.gender].length > 0) {
+        Sounds.getSingleton().addPromiseToSpeechQueue(
+          cachedBytes[opts.gender].slice(0),
+          {
             volume: 1.0,
             loop: false,
             forceHTML5: forceHTML5,
-            allowHTML5Mobile: true
-          });
+            allowHTML5Mobile: true,
+            onEnded: () => {
+              Sounds.getSingleton().onSpeechFinished();
+            }
+          }
+        );
+      } else {
+        Sounds.getSingleton().addPromiseToSpeechQueue(
+          null,
+          {
+            volume: 1.0,
+            loop: false,
+            forceHTML5: forceHTML5,
+            allowHTML5Mobile: true,
+            onEnded: () => {
+              Sounds.getSingleton().onSpeechFinished();
+            }
+          },
+          {
+            language: opts.language,
+            text: opts.text,
+            gender: opts.gender,
+            profanityFoundCallback: profaneWords => {
+              asyncOutputWarning(
+                i18n.textToSpeechProfanity({
+                  profanityCount: profaneWords.length,
+                  profaneWords: profaneWords.join(', ')
+                })
+              );
+            }
+          }
+        );
+      }
+    } else {
+      let ssml = `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voice}">${
+        opts.text
+      }</voice></speak>`;
+      const url = `https://${
+        appOptions.azureSpeechServiceRegion
+      }.tts.speech.microsoft.com/cognitiveservices/v1`;
 
-          synthesizer.close();
-        },
-        error => {
-          console.warn(error);
-          synthesizer.close();
+      var request = new XMLHttpRequest();
+      const resultPromise = new Promise(async function(resolve, reject) {
+        const profaneWords = await findProfanity(opts.text, languageCode);
+        if (profaneWords && profaneWords.length > 0) {
+          asyncOutputWarning(
+            i18n.textToSpeechProfanity({
+              profanityCount: profaneWords.length,
+              profaneWords: profaneWords.join(', ')
+            })
+          );
+          Sounds.getSingleton().registerTextBytes(
+            opts.language,
+            opts.text,
+            true,
+            profaneWords
+          );
+          resolve('profanity found');
         }
+        request.onreadystatechange = function() {
+          if (request.readyState === 4) {
+            if (request.status >= 200 && request.status < 300) {
+              resolve(request.response);
+            } else {
+              reject({
+                status: request.status,
+                statusText: request.statusText
+              });
+            }
+          }
+        };
+
+        request.open('POST', url, true);
+        request.responseType = 'arraybuffer';
+        request.setRequestHeader(
+          'Authorization',
+          'Bearer ' + appOptions.azureSpeechServiceToken
+        );
+        request.setRequestHeader('Content-Type', 'application/ssml+xml');
+        request.setRequestHeader(
+          'X-Microsoft-OutputFormat',
+          'audio-16khz-32kbitrate-mono-mp3'
+        );
+        request.send(ssml);
+      });
+      Sounds.getSingleton().addPromiseToSpeechQueue(
+        resultPromise,
+        {
+          volume: 1.0,
+          loop: false,
+          forceHTML5: forceHTML5,
+          allowHTML5Mobile: true,
+          onEnded: () => {
+            Sounds.getSingleton().onSpeechFinished();
+          }
+        },
+        {
+          language: opts.language,
+          text: opts.text,
+          hasProfanity: false,
+          profaneWords: null,
+          gender: opts.gender
+        }
+      );
+      Sounds.getSingleton().registerTextBytes(
+        opts.language,
+        opts.text,
+        false,
+        null,
+        opts.gender,
+        []
       );
     }
   }

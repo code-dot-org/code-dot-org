@@ -58,6 +58,9 @@ export default function Sounds() {
    */
   this.audioUnlocked_ = false;
 
+  this.speechPlaying = false;
+  this.speechQueue = [];
+
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
@@ -375,7 +378,67 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
   }
 };
 
-Sounds.prototype.playBytes = function(bytes, playbackOptions) {
+Sounds.prototype.addPromiseToSpeechQueue = function(
+  promise,
+  playbackOptions,
+  cacheParams = null
+) {
+  this.speechQueue.push({
+    promise: promise,
+    playbackOptions: playbackOptions,
+    cacheParams: cacheParams
+  });
+  this.checkSpeechQueue();
+};
+
+Sounds.prototype.checkSpeechQueue = async function() {
+  if (!this.speechPlaying && this.speechQueue.length > 0) {
+    this.speechPlaying = true;
+    let nextSpeech = this.speechQueue.shift();
+    let bytes = await nextSpeech['promise'];
+    if (bytes === null) {
+      if (
+        this.textBytesByLanguage[nextSpeech['cacheParams']['language']][
+          nextSpeech['cacheParams']['text']
+        ]['hasProfanity']
+      ) {
+        nextSpeech['cacheParams']['profanityFoundCallback'](
+          this.textBytesByLanguage[nextSpeech['cacheParams']['language']][
+            nextSpeech['cacheParams']['text']
+          ]['profaneWords']
+        );
+        this.onSpeechFinished();
+      } else {
+        bytes = this.textBytesByLanguage[nextSpeech['cacheParams']['language']][
+          nextSpeech['cacheParams']['text']
+        ][nextSpeech['cacheParams']['gender']];
+        this.playSpeechBytes(bytes.slice(0), nextSpeech['playbackOptions']);
+      }
+    } else if (bytes === 'profanity found') {
+      this.onSpeechFinished();
+    } else if (nextSpeech['cacheParams'] !== null) {
+      const bytes = await nextSpeech['promise'];
+      this.registerTextBytes(
+        nextSpeech['cacheParams']['language'],
+        nextSpeech['cacheParams']['text'],
+        nextSpeech['cacheParams']['hasProfanity'],
+        nextSpeech['cacheParams']['profaneWords'],
+        nextSpeech['cacheParams']['gender'],
+        bytes.slice(0)
+      );
+      this.playSpeechBytes(bytes, nextSpeech['playbackOptions']);
+    } else {
+      this.playSpeechBytes(bytes.slice(0), nextSpeech['playbackOptions']);
+    }
+  }
+};
+
+Sounds.prototype.onSpeechFinished = function() {
+  this.speechPlaying = false;
+  this.checkSpeechQueue();
+};
+
+Sounds.prototype.playSpeechBytes = function(bytes, playbackOptions) {
   if (this.isMuted) {
     return;
   }
