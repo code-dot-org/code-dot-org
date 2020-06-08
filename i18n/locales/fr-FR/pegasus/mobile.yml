@@ -155,6 +155,7 @@
   enter_valid_email: "Merci de saisir une adresse e-mail valide."
   get_a_certificate_message: "Nous t’enverrons un certificat et des informations sur comment <a href='/learn/beyond'>Apprendre au-delà d’une Heure</a>"
   get_a_certificate_message_after: "Clique sur le diplôme pour le télécharger ou l'imprimer. Maintenant, continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>."
+  get_a_certificate_message_after_markdown: "Click on the certificate to download or print it. Now, keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Nous te remercions de ta participation !"
   if_you_enjoyed: "Si tu as aimé apprendre, demande à des amis d’essayer aussi ! Nous voulons que le monde entier apprenne."
   personalize_certificate: "Personnalise ton diplôme"
@@ -168,6 +169,7 @@
   enter_certificate_names: "Saisissez jusqu'à 30 noms, **un par ligne**. Une page imprimable avec des certificats personnalisés %{script_name}  sera générée."
   share_achievement: "Partage ta réalisation"
   beyond_hour_message: "Continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>."
+  beyond_hour_message_markdown: "Keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Classements pour l'Heure de Code."
   support_url: "http://support.code.org/"
   country: "Pays"
@@ -242,6 +244,9 @@
   stats_nina: '«&#160;Nous avons eu chaque jour les mêmes résultats - une mobilisation à 100&#160;%.&#160;» — Nina Nichols Peery, enseignante'
   stats_student: '«&#160;Je savais que c''était une chance<b> unique</b>.&#160;» — Mariana Alzate, élève de CM2'
   stats_michael: '«&#160;Je n''ai <b>vraiment jamais</b> vu mes élèves aussi enthousiasmés d''apprendre.&#160;» — Michael Clark, enseignant'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Teacher'
   studiobar_title: "Explorer <a href='http://studio.code.org'> et les cours de Code.org</a>"
   studiobar_title_nolink: "Explorer les cours de Code.org"
   studiobar_elementary_title: "Cours élémentaires"
@@ -322,6 +327,7 @@
   homepage_banner_link_prizes: 'Rejoins le plus grand évènement d''apprentissage de l’histoire.'
   homepage_banner_text_main: "Code.org et le College Board s’associent pour améliorer la diversité en informatique."
   homepage_banner_text_link: "Pour en savoir plus"
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Pour en savoir plus"
   homepage_banner_20k_teachers: "20 000 enseignants formés enseignant maintenant l'informatique dans les classes."
   homepage_banner_20k_teachers_link: "Pour en savoir plus"
@@ -329,6 +335,7 @@
   homepage_banner_congress_link: "Ajouter votre support"
   homepage_banner_emailprivacy: "Nous apportons un changement majeur dans notre manière de soutenir la confidentialité des étudiants."
   homepage_banner_emailprivacy_link: "Lire la suite"
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Pour en savoir plus"
   homepage_slot_text_title_hoc: "Heure de Code"
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
@@ -402,7 +409,9 @@
   class_submission_level_vocational: "Professionnelle"
   class_submission_languages_other: "Autre(s) langue(s)"
   videos_more: "Plus de <a href='%{inspiring_videos_playlist}'> vidéos qui inspirent</a> et qui font intervenir des modèles de référence et des célébrités"
+  videos_more_markdown: "More [inspirational videos](%{inspiring_videos_playlist}) featuring role models and celebrities"
   careers_page_more: "Plus de <a href='%{careers_url}' target='_blank'> vidéos inspirational</a> mettant en vedette les professionnels dans les domaines de la technologie"
+  careers_page_more_markdown: "More [inspirational videos](%{careers_url}) featuring professionals in technology fields"
   playlab_choose_theme: "Choisis ton thème de Labo de jeux"
   playlab_classic_title: "Classique"
   playlab_gumball_title: "Le monde incroyable de Gumball"
@@ -508,9 +517,13 @@
   volunteer_engineer_submission_subtitle_specific: "% {num_teachers} enseignants ont besoin de bénévoles.<br>% {num_volunteers} bénévoles se sont inscrits. Rejoignez-les."
   volunteer_engineer_submission_intro_background: "Hour of Code est un mouvement mondial qui a pour but de présenter l'informatique durant une heure à des dizaines de millions d’élèves dans plus de 180 pays. Engagez-vous dans la Semaine de l’Enseignement de l’Informatique, du 7 au 13 décembre."
   volunteer_engineer_submission_intro_recruit: 'Les enseignants aimeraient avoir quelqu''un de <span style="font-family: ''Gotham 7r'', sans-serif;">passionné par l''enseignement de l’informatique, </span> qui pourrait les aider dans la salle de classe, ou quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span> leurs élèves en leur parlant des nombreuses possibilités qu’offre l''informatique (ce qui pourrait se faire par un échange vidéo).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
   volunteer_engineer_submission_intro_guide: "En savoir plus sur notre <a href=\"%{volunteer_guide}\"> programme de bénévolat</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Veuillez saisir les informations suivantes si vous êtes étudiant en informatique ou professionnel des logiciels. Vous devez être âgé d’au moins 18 ans pour vous inscrire en tant que bénévole. Notez que toutes les informations que vous fournirez, dans cette section, seront accessibles à quiconque consultera la <a href=\"/volunteer/local\">carte des bénévoles</a>.  Les champs marqués d'un <span class=\"form-required-field\">*</span> sont obligatoires."
+  volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
   volunteer_engineer_submission_intro_links: "Êtes-vous un enseignant et cherchez-vous des bénévoles ? Trouvez un bénévole près de chez vous sur notre <a href=\"%{volunteer_local}\">carte des bénévoles</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Mettez à jour vos informations"
   volunteer_engineer_submission_header_shared: "Informations partagées avec les enseignants sur la carte des bénévoles"
   volunteer_engineer_submission_field_name: "Nom"
@@ -544,6 +557,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Je certifie que j'ai au moins 18 ans."
   volunteer_engineer_submission_submit: "Envoyer"
   volunteer_engineer_submission_thankyou: "Nous vous remercions de vous être inscrit en tant que bénévole. Les enseignants utiliseront <a href=\"%{url}\">cette carte</a> pour rechercher et contacter des bénévoles comme vous."
+  volunteer_engineer_submission_thankyou_markdown: "Thank you! Your volunteer information was successfully submitted. Teachers will be using [this map](%{url}) to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_commitment_uncertain: "Incertain"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 heure par semaine"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 heures par semaine"
@@ -743,6 +757,7 @@
   dashboard_pre-express: 'Cours Express pour les pré-lecteurs : '
   dashboard_express: 'Cours Express : '
   dashboard_unplugged: "Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez ces leçons \"débranchées\" </a> dans votre classe."
+  dashboard_unplugged_markdown: "If you don't have computers, [try these unplugged lessons](%{unplugged_url}) in your classroom."
   dashboard_tools: 'Outils: '
   dashboard_curriculum: "Programme"
   dashboard_curriculum_overview: "Aperçu du programme pour les élèves de primaire"
@@ -868,6 +883,7 @@
   starwars_name: 'Star Wars : Construire une Galaxie avec du Code'
   codeorg_name: "Labyrinthe classique"
   codeintl_name: "Labyrinthe classique"
+  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "Introduction au JavaScript"
   khanes_name: "Introduction au JavaScript"
   khanpt_name: "Introduction au JavaScript"
@@ -876,9 +892,13 @@
   khanpl_name: "Introduction au JavaScript"
   tynker_name: "Construis ton propre jeu"
   scratch_name: "Deviens créatif avec le codage"
+  lightbot_name: "Lightbot"
   thinkersmith_name: "Mes amis les robots"
   condcards_name: "Instructions conditionnelles avec des cartes"
+  lightbotintl_name: "Lightbot"
   codehs_name: "Apprends à coder avec le chien Karel"
+  codecademy_name: "Codecademy"
+  codecombat_name: "CodeCombat"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Construis un jeu avec JavaScript"
   processing_name: "Dessine avec du code"
@@ -892,8 +912,11 @@
   flappy_name: "Crée un jeu Flappy"
   bitsbox_name: "Bitsbox — crée un jeu"
   makeschool_name: "Crée un jeu pour iPhone dans ton navigateur !"
+  touchdevelop_name: "TouchDevelop"
   appinventor_name: "Heure de Code AppInventor"
   blockly_name: "Blockly"
+  thinkersmith2_name: "Binary Baubles"
+  kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "Pierre, papier, ciseaux"
   hourofcode_name: "Labyrinthe classique"
   playlab_name: "Labo"
@@ -903,6 +926,7 @@
   allcancode_name: "Cours Marco&#160;!"
   csfirst_name: "D’abord l’informatique"
   boxisland_name: "Île Box"
+  codesters_name: "Codesters"
   texasinstruments_name: "10 minutes de Code"
   teacherled_name: "Plans de Cours Menés par l’Enseignant"
   course1_name: "Cours 1"
@@ -939,11 +963,18 @@
   coursed-2019_name: Cours D (2019)
   coursee-2019_name: Cours E (2019)
   coursef-2019_name: Cours F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
   pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
   express-2020_name: Cours Express (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: "Cours accéléré"
@@ -958,6 +989,8 @@
   iceage_name: "L’âge de Glace"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (blocs)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Cryptage simple
   text-compression_name: Compression de texte
   applab_name: "Labo des applis"
@@ -968,6 +1001,7 @@
   applab_shortdescription_congrats: "App Lab est un environnement de programmation avec lequel vous pouvez créer des applications simples. Concevez une application, codez-la avec des blocs ou du JavaScript, puis partagez-la en quelques secondes"
   codeorg_gradelevel: "De 4 à 104 ans"
   codeintl_gradelevel: "De 4 à 104 ans"
+  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "Collège"
   khanes_gradelevel: "Secondaire"
   khanpt_gradelevel: "Secondaire"
@@ -1069,6 +1103,7 @@
   groklearning_platformtext: "Navigateurs web récents"
   quorum_platformtext: "Navigateurs Web modernes. Pris en charge par les lecteurs d'écran"
   codespark_platformtext: "iOS, Android (ou navigateur web)"
+  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "iPad, tablettes Android"
   robomindnl_platformtext: "Navigateurs web récents, web mobile"
   flappy_platformtext: "Navigateurs récents, smartphones, tablettes"
@@ -1093,6 +1128,7 @@
   teacherled_platformtext: "Navigateurs récents, smartphones, tablettes"
   codeorg_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds&#160;!"
   codeintl_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds !"
+  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Apprends à dessiner en JavaScript"
   khanes_shortdescription: "Apprends à dessiner en JavaScript"
   khanpt_shortdescription: "Apprends à dessiner en JavaScript"
@@ -1219,6 +1255,8 @@
   khan_beyond_name: "Apprends la programmation informatique"
   tynker_beyond_name: "Apprends à programmer à la maison"
   scratch_beyond_name: "Deviens créatif grâce au code"
+  lightbot_beyond_name: "LightBot"
+  codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "ScratchJR pour les primo-lecteurs"
   hopscotch_beyond_name: 'Marelle : Programmation sur ton iPad'
@@ -1228,16 +1266,28 @@
   robomind_beyond_name: "Programmer un robot virtuel"
   makeschool_beyond_name: "Crée un jeu pour iPhone dans ton navigateur !"
   appinventor_beyond_name: "Heure de Code AppInventor"
+  touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "Apprendre à coder avec le chien Karel"
   udemy_beyond_name: "Cours de programmation en ligne"
   lynda_beyond_name: "Cours de programmation en ligne"
   edx_beyond_name: "Classe Harvard CS50"
   coursera_beyond_name: "Classe Stanford CS 101"
+  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Cours universitaires en ligne"
+  kodu_beyond_name: "Kodu"
+  cargobot_beyond_name: "Cargobot"
+  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "Apprends le HTML"
   codeavengers_beyond_name: "Apprendre à programmer des sites Web"
+  mozilla_beyond_name: "Webmaker"
+  codecombat_beyond_name: "CodeCombat"
+  codea_beyond_name: "Codea"
+  lego_beyond_name: "Mindstorms"
+  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino avec Sparkfun"
   processing_beyond_name: "Programmer avec Processing"
+  alice_beyond_name: "Alice"
+  sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "De 4 à 104 ans"
   khan_beyond_gradelevel: "Secondaire"
   tynker_beyond_gradelevel: "De 5 à 13 ans"
@@ -1281,6 +1331,9 @@
   scratch_beyond_platformtext: "N'importe quel navigateur"
   lightbot_beyond_platformtext: "iOS, Android (ou navigateur Web)"
   codecademy_beyond_platformtext: "Navigateurs Web modernes. Applications iOS, Android"
+  kodable_beyond_platformtext: "iPad"
+  scratchjr_beyond_platformtext: "iPad"
+  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "Application mobile"
   groklearning_beyond_platformtext: "Navigateurs Web modernes"
   hacketyhack_beyond_platformtext: "Installation sur ordinateur"
@@ -1295,11 +1348,14 @@
   coursera_beyond_platformtext: "Navigateurs récents"
   udacity_beyond_platformtext: "Navigateurs récents"
   teachingtree_beyond_platformtext: "Web"
+  kodu_beyond_platformtext: "Windows, xBox"
+  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "Installation sur ordinateur"
   w3schools_beyond_platformtext: "Navigateurs web récents"
   codeavengers_beyond_platformtext: "Navigateurs web récents"
   mozilla_beyond_platformtext: "Navigateurs web récents"
   codecombat_beyond_platformtext: "Web (Firefox, Chrome, Safari, IE9+)"
+  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "Achat de robot"
   finch_beyond_platformtext: "Achat de robot"
   arduino_beyond_platformtext: "Navigateur Web, puis achat de kit"
@@ -1383,7 +1439,14 @@
   compatibility_hide_this_warning: "Cacher l'avertissement"
   compatibility_unsupported_browser: "Votre navigateur n'est pas supporté. Merci de le mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez essayer d’afficher la page, mais la fonctionnalité risque d’être rompue."
   compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
+  starwars_shortcode: "star"
+  mc_shortcode: "mc"
+  frozen_shortcode: "frzn"
+  hourofcode_shortcode: "code"
   flappy_shortcode: "battre des ailes"
+  infinity_shortcode: "inf"
+  playlab_shortcode: "lab"
+  artist_shortcode: "art"
   header_home: "Accueil"
   header_my_dashboard: "Mon Tableau de Bord"
   header_courses: "Cours"
@@ -1419,6 +1482,8 @@
   header_teacher_community: "Communauté des enseignants"
   header_help_support: 'Aide et support '
   header_report_bug: "Rapporter un problème"
+  header_report_abuse: "Report abuse"
+  header_legal: "Privacy & Legal"
   header_legal_privacy: "Politique de confidentialité"
   header_legal_tos: "Conditions Générales d'Utilisation"
   header_tutorials: "Didacticiels"
@@ -1488,6 +1553,7 @@
   hoc_overview_dance_2019_subtitle: "Code une Soirée Dansante à partager avec tes amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, et 34 autres !"
   hoc_overview_title: "Activités Hour of Code de Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code</a> est un mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de 180 pays. Quiconque, n'importe où, peut organiser un événement Hour of Code ou essayer un des 500 et plus tutoriels d'une heure, disponibles en plus de 45 langues."
+  hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
   hoc_overview_partner_activities_title: "Plus d'activités des partenaires"
   hoc_overview_partner_activities_body: "Le site Web Hour of Code propose plus de 500 activités informatiques, pour tous les âges et tous les niveaux d'expérience, développées par Code.org et ses partenaires."
   hoc_overview_partner_activities_link: "Afficher les Activités"
@@ -1588,6 +1654,7 @@
   hoc2018_dance_view_creativity_video_playlist: "Qu'est-ce que la Créativité ? Voir la Série Complète (5 min)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "En partenariat avec"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* est un programme complet, qui s’étend de l’enfance jusqu’à l’âge actif, destiné à inspirer, éduquer et former les enfants à faible revenu, ou autrement défavorisés, et les jeunes à poursuivre une carrière dans l’informatique. <a href='%{amazon_future_engineer_link}' target='_blank'>En savoir plus</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn more](%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Pour en savoir plus sur Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "À propos d'Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Découvrez le programme d’Amazon, qui s’étend de la Maternelle jusqu’à l’âge actif, destiné à accroître l’accès à l’enseignement informatique. Trouvez des informations sur la manière de vous impliquer dans nos camps d’été, nos classes d’informatique au secondaire, nos bourses d’études et nos stages."
@@ -1625,3 +1692,8 @@
   hoc2019_mc_mee_description2: "Accédez à des ressources gratuites, qui comprennent un plan de leçon, des vidéos, un programme d'études en informatique et des formations pour les enseignants."
   hoc2019_mc_more_coding_resources: "Plus De Ressources De Codage"
   hoc2019_dance_previous_versions: "Vous cherchez une version antérieure de Soirée Dansante ?  Cliquez ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie 2](%{dance_extras_2018_link}) qui datent de l'année dernière."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

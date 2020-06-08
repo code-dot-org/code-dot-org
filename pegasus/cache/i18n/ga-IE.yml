@@ -456,6 +456,8 @@ ga-IE:
   homepage_banner_text_main: Code.org agus The College Board i gcomhar le chéile chun
     ilghnéitheacht sa ríomheolaíocht a fheabhsú.
   homepage_banner_text_link: Tuilleadh eolais
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Tuilleadh eolais
   homepage_banner_20k_teachers: 20,000 múinteoir a rinne traenáil agus atá ag múineadh
     na ríomheolaíochta sa seomra ranga anois.
@@ -466,6 +468,7 @@ ga-IE:
   homepage_banner_emailprivacy: Seo é athrú tábhachtach ar an gcaoi a gcosnaímid príobháideachas
     na ndaltaí.
   homepage_banner_emailprivacy_link: Tuilleadh eolais
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Tuilleadh eolais
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
@@ -1294,8 +1297,11 @@ ga-IE:
   flappy_name: Déan cluiche Flappy
   bitsbox_name: Bitsbox - cruthaigh cluiche
   makeschool_name: Tóg cluiche iPhone i do bhrabhsálaí!
+  touchdevelop_name: TouchDevelop
   appinventor_name: Uair Chódála AppInventor
   blockly_name: Blockly
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Cloch, Páipéar, Siosúr
   hourofcode_name: Cathair Ghríobháin Chlasaiceach
   playlab_name: Spraotharlann
@@ -1305,6 +1311,7 @@ ga-IE:
   allcancode_name: Rith a Mharcó!
   csfirst_name: CS First
   boxisland_name: Oileán na mBoscaí
+  codesters_name: Codesters
   texasinstruments_name: 10 Nóiméad Códála
   teacherled_name: Ceachtanna faoi cheannas múinteoirí
   course1_name: Cúrsa 1
@@ -1329,12 +1336,34 @@ ga-IE:
   coursed-2017_name: Cúrsa D (2017)
   coursee-2017_name: Cúrsa E (2017)
   coursef-2017_name: Cúrsa F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Luaschúrsa (2018)
   pre-express-2018_name: Luaschúrsa do Réamhléitheoirí (2018)
+  express-2019_name: Express Course (2019)
   pre-express-2019_name: Luaschúrsa do Réamhléitheoirí (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Aonad 2: Forbairt Gréasáin'
   csd3_name: 'Aonad 3: Beochan agus Cluichí'
   accelerated_name: Cúrsa Luathaithe
+  express_name: Express Course
   pre-express_name: Luaschúrsa do Réamhléitheoirí
   20-hour_name: Cúrsa Luathaithe
   algebra_name: 'Ríomheolaíocht san Ailgéabar: Cúrsa Iomlán'
@@ -1345,7 +1374,10 @@ ga-IE:
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocanna)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Criptiú Simplí
+  text-compression_name: Text Compression
   applab_name: Saotharlann Aipeanna
   gamelab_name: An tSaotharlann Cluichíochta
   basketball_name: Déan do chluiche cispheile féin
@@ -1356,6 +1388,7 @@ ga-IE:
     í, ansin foilsigh an aip ar an toirt
   codeorg_gradelevel: Aois 4-104
   codeintl_gradelevel: Aois 4-104
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Meánscoil +
   khanes_gradelevel: Meánscoil +
   khanpt_gradelevel: Meánscoil +
@@ -1484,6 +1517,7 @@ ga-IE:
     Birds!
   codeintl_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry
     Birds!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Foghlaim an líníocht in JavaScript
   khanes_shortdescription: Foghlaim an líníocht in JavaScript
   khanpt_shortdescription: Foghlaim an líníocht in JavaScript
@@ -1628,6 +1662,11 @@ ga-IE:
     bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants
     vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34
     teanga.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
     agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in
     éineacht le do rang!
@@ -1816,11 +1855,13 @@ ga-IE:
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR i gcomhair réamhléitheoirí
   hopscotch_beyond_name: 'Hopscotch: Ríomhchlárú ar an iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Foghlaim Python
   hacketyhack_beyond_name: Foghlaim Ruby
   robomind_beyond_name: Bí i gceannas ar róbat fíorúil
   makeschool_beyond_name: Tóg cluiche iPhone i do bhrabhsálaí!
   appinventor_beyond_name: Uair Chódála AppInventor
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Foghlaim an Chódáil le Karel an Madra
   udemy_beyond_name: Ranganna Ríomhchláraithe Ar Líne
   lynda_beyond_name: Ranganna Ríomhchláraithe Ar Líne
@@ -1830,14 +1871,18 @@ ga-IE:
   teachingtree_beyond_name: Cúrsaí ollscoile ar líne
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Foghlaim HTML
   codeavengers_beyond_name: Foghlaim le suímh Ghréasáin a chruthú
+  mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino le Sparkfun
   processing_beyond_name: Ríomhchlárú le Processing
   alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Aois 4-104
   khan_beyond_gradelevel: Meánscoil +
   tynker_beyond_gradelevel: Aois 5-13
@@ -2150,7 +2195,14 @@ ga-IE:
     duit [ceann de na brabhsálaithe tacaithe](%{supported_browsers_url}) a shuiteáil.
     Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe
     ar an leathanach briste.
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: gread
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Baile
   header_my_dashboard: Mo Phainéal
   header_courses: Cúrsaí
@@ -2186,6 +2238,8 @@ ga-IE:
   header_teacher_community: Comhphobal múinteoirí
   header_help_support: 'Cabhair agus tacaíocht '
   header_report_bug: Déan tuairisc ar fhadhb
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Polasaí Príobháideachais
   header_legal_tos: Téarmaí Seirbhíse
   header_tutorials: Cúrsaí Teagaisc
@@ -2265,12 +2319,14 @@ ga-IE:
     sa gcluaisín "Bainistigh Daltaí":'
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google
     Account”:'
+  hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
   applab_tile_title: Buneolas ar an tSaotharlann Aipeanna (Aois 13+)
   applab_tile_subtitle: Cruithaigh d'aip féin in JavaScript le códáil bunaithe ar
     bhlocanna. Nó tabhair céim chun tosaigh le códáil téacsbhunaithe. (Béarla amháin)
   applab_tile_start_tutorial: Tosaigh
   applab_tile_teacher_guide: Eolas do mhúinteoirí
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: An bhfuil cead againn ríomhphost a sheoladh chugat
     maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
     (uair amháin sa mhí, nó thart air sin)
@@ -2500,3 +2556,8 @@ ga-IE:
   hoc2019_dance_previous_versions: "An bhfuil tú ag lorg leagan níos sine den Chóisir
     Dhamhsa?  \nCliceáil anseo chun [Cuid 1](%{dance_2018_link}) agus [Cuid 2](%{dance_extras_2018_link})
     ón bhliain seo caite a thosú."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

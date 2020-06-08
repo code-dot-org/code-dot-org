@@ -24,12 +24,22 @@ pl-PL:
   csedweek_banner_teachers_text: Jesteś nauczycielem informatyki? Zobacz inne propozycje
     CSEdWeek
   n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien móc uczyć się informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do
     # innych.'
+  petition_sign_message_num: If you agree, sign your name and join our mailing list
+    along with %{num} others.
   petition_join_others: 'Dołącz do # innych'
+  petition_join_others_num: Join %{num} others
   name: Imię/Nazwisko
   email: Adres e-mail
   zipcode: Kod pocztowy lub kraj
@@ -42,6 +52,8 @@ pl-PL:
   og_title_here: Oto Godzina Kodowania!
   og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
     informatyki.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Zbliża się Godzina Kodowania
   csedweek_og_description: Informatyka jest podstawą w kształceniu każdego ucznia.
   csedweek_og_description_soon: Godzina Kodowania nadchodzi 3-9 grudnia 2018, Informatyka
@@ -58,6 +70,7 @@ pl-PL:
   hoc2014_support: Udziel wsparcia &#x25BE;
   hoc2014_whatishoc: Czym jest Godzina Kodowania?
   csedweek_map_header: 'Wydarzenia #CSEdWeek / Godziny Kodowania na całym świecie'
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Zarejestruj swoje wydarzenie
   csedweek_map_search_placeholder: Szukaj wydarzeń Godziny Kodowania
   csedweek_map_search_search: Szukaj
@@ -218,16 +231,31 @@ pl-PL:
     Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>,
     lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną
     Kodowania</a>.
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Dziękujemy za przesłanie!
   if_you_enjoyed: Jeśli spodobała Ci się nauka, to zaproś znajomych, aby też spróbowali!  Chcemy,
     aby cały świat się uczył.
   personalize_certificate: Spersonalizuj swój certyfikat
+  print_batch_certificates: Print a batch of certificates
   print_certificates: Drukuj certyfikaty
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
+  print_ice_art_from_frozen: Print ice art from Frozen tutorials
+  want_a_blank_certificate_template: Want a blank certificate template to write in
+    your students' names?
+  landscape_recommended_certificates: It is recommended that you choose **Landscape**
+    when you print the certificates.
   print_one_here_certificates: Wypisz jeden tutaj.
+  enter_certificate_names: Enter up to 30 names, **one per line**. A printable page
+    with personalized %{script_name} certificates will be generated.
   share_achievement: Podziel się swoim osiągnięciem
   beyond_hour_message: Kontynuuj z naszymi <a href='http://studio.code.org'> innymi
     kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć
     się poza Godziną Kodowania</a>.
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Liderzy Godziny Programowania (Hour of Code).
   support_url: http://support.Code.org/
   country: Kraj
@@ -283,6 +311,8 @@ pl-PL:
   just_did_accelerated: Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg
   just_did_hoc_donor: 'Właśnie ukończyłem #HourOfCode - sprawdź to! (Dzięki %{donor_twitter}
     za wspieranie @codeorg)'
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki.
     http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/.
   twitter_cs_foundational: Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY.
@@ -309,6 +339,12 @@ pl-PL:
     uczennica 5 klasy'
   stats_michael: '"<b>Nigdy</b> nie widziałem moich uczniów tak podekscytowanych nauką."
     - Frank Martinez, nauczyciel'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>
   studiobar_title_nolink: Poznaj Kursy Code.org
   studiobar_elementary_title: Kursy podstawowe
@@ -330,6 +366,9 @@ pl-PL:
   homepage_stats_students: amerykańskich studentów ma konta na Code.org
   homepage_stats_female: naszych studentów to kobiety
   homepage_stats_teachers: nauczyciele korzystają z Code.org
+  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
     podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla"
   homepage_hero_text_susan: |-
@@ -399,6 +438,8 @@ pl-PL:
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia
     różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Dowiedz się więcej
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Naucz się więcej
   homepage_banner_20k_teachers: Wyszkolonych jest 20,000 nauczycieli i teraz uczą
     informatyki w klasach.
@@ -409,6 +450,7 @@ pl-PL:
   homepage_banner_emailprivacy: Wprowadzamy ważną zmianę w tym, jak zapewniamy uczniom
     prywatność.
   homepage_banner_emailprivacy_link: Dowiedz się więcej
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Dowiedz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
@@ -486,8 +528,12 @@ pl-PL:
   class_submission_languages_other: Inne języki
   videos_more: Więcej <a href='%{inspiring_videos_playlist}'> inspirujących filmów</a>
     pokazujących modele ról i gwiazdy
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: Więcej <a href='%{careers_url}' target='_blank'> inspirujących
     filmów</a>, w których występują specjaliści z obszarów technologii
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: Wybierz własny motyw Play Lab
   playlab_classic_title: Klasyczny
   playlab_gumball_title: Niesamowity świat Gumball
@@ -647,14 +693,27 @@ pl-PL:
     informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span
     style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając
     o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: Dowiedz się tutaj więcej o naszym <a
     href="%{volunteer_guide}"> programie dla wolontariuszy</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
     jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span
     class="form-required-field"> *</span> są wymagane.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Czy jesteś nauczycielem poszukującym
     wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href="%{volunteer_local}">
     mapie wolontariuszy</a>.
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Uaktualnij informacje o sobie
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
     na mapie wolontariuszy
@@ -710,6 +769,10 @@ pl-PL:
     pomyślnie przesłany. Nauczyciele będą używać <a href="%{url}"> tej mapy</a> do
     wyszukiwania i kontaktu z wolontariuszami takimi, jak Ty. Twoje dane zostaną wyświetlone
     na mapie w ciągu 48 godzin.
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Niepewny
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 godzina tygodniowo
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 godziny tygodniowo
@@ -810,6 +873,7 @@ pl-PL:
     pracujących nauczycieli do prowadzenia zajęć z informatyki przez cały rok. Aby
     zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href="/educate/districts">
     do partnerstwa w Twoim okregu</a> z Code.org.
+  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org współpracuje z Bootstrap przy opracowaniu
     programu nauczania, który uczy pojęć algebraicznych i geometrycznych z wykorzystaniem
     programowania.
@@ -1001,9 +1065,12 @@ pl-PL:
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Szybki Kurs: '
   dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
     tych lekcji bez komputera</a> w klasie.
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
   dashboard_tools: 'Narzędzia: '
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
@@ -1023,6 +1090,7 @@ pl-PL:
   dashboard_curriculum_csp: 'Podstawy informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_curriculum_csd: 'Odkrycia Informatyczne: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
   dashboard_login_word: Słowo
@@ -1125,6 +1193,7 @@ pl-PL:
   carousel_heading_beyond_languages: Poznaj inne języki programowania
   carousel_heading_apps_games: Utwórz własną aplikację lub grę
   carousel_heading_university: Uniwersyteckie kursy online
+  carousel_heading_online_university: University Courses Available Online
   carousel_heading_webpages: Naucz się tworzyć strony internetowe
   carousel_heading_robots: Naucz się programować roboty i inne urządzenia
   carousel_heading_ide: Platformy popularne wśród nauczycieli
@@ -1202,6 +1271,7 @@ pl-PL:
   allcancode_name: Biegnij Marco!
   csfirst_name: Najpierw informatyka
   boxisland_name: Kartonowa Wyspa (Box Island)
+  codesters_name: Codesters
   texasinstruments_name: 10 minut kodowania
   teacherled_name: Plany lekcji do poprowadzenia przez nauczyciela
   course1_name: Kurs 1
@@ -1226,10 +1296,35 @@ pl-PL:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Szybki Kurs (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
   csd2_name: 'Rodział 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Przyspieszony kurs
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Przyspieszony kurs
   algebra_name: Pełny kurs Informatyka w algebrze
   AlgebraA_name: Informatyka w Kursie A Algebry
@@ -1239,6 +1334,8 @@ pl-PL:
   iceage_name: Epoka lodowcowa
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bloki)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Proste szyfrowanie
   text-compression_name: Kompresja tekstu
   applab_name: App Lab
@@ -2048,7 +2145,14 @@ pl-PL:
     Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
     z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
     nie działać właściwie.
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: pofruń
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Strona główna
   header_my_dashboard: Mój pulpit
   header_courses: Kursy
@@ -2084,10 +2188,17 @@ pl-PL:
   header_teacher_community: Społeczność nauczycieli
   header_help_support: 'Pomoc i wsparcie '
   header_report_bug: Zgłoś błąd
+  header_report_abuse: Report abuse
   header_legal: Prywatność i legalność
   header_legal_privacy: Polityka prywatności
   header_legal_tos: Regulamin
   header_tutorials: Samouczki
+  app_lab_documentation: App Lab Documentation
+  app_lab_tutorials: App Lab Tutorials
+  game_lab_documentation: Game Lab Documentation
+  game_lab_tutorials: Game Lab Tutorials
+  sprite_lab_documentation: Sprite Lab Documentation
+  sprite_lab_tutorials: Sprite Lab Tutorials
   header_documentation: Dokumentacja
   user_header_label: Witaj %{username}
   user_header_team: Zespół
@@ -2184,6 +2295,10 @@ pl-PL:
     w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny
     Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45
     językach.
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
   hoc_overview_partner_activities_title: Więcej aktywności od naszych partnerów
   hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 500
     aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla
@@ -2318,6 +2433,10 @@ pl-PL:
     kształci i szkoli dzieci i młodzież o niskich dochodach i innych przeciwnościach,
     aby kontynuowały rozwój kariery w dziedzinie informatyki. <a href='%{amazon_future_engineer_link}'
     target='_blank'> Dowiedz się więcej </a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Dowiedz się więcej
     o programie Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: O programie Amazon Future Engineer
@@ -2362,6 +2481,8 @@ pl-PL:
   hoc2018_dance_video4: Potańcówka - Gratulacje
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
   page_not_found_button: Powrót do strony domowej
   hoc2018_mc_with_microsoft: 'W partnerstwie z: '
   hoc2018_mc_thank_microsoft: Dziękujemy Microsoft za wspieranie naszej wizji i misji,
@@ -2377,3 +2498,8 @@ pl-PL:
   hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
     tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
     z ostatniego roku."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

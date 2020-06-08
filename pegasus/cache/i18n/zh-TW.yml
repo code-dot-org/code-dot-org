@@ -915,6 +915,7 @@ zh-TW:
   starwars_name: 星際大戰：用程式建立一個銀河系
   codeorg_name: 經典迷宮
   codeintl_name: 經典迷宮
+  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 簡介
   khanes_name: JavaScript 簡介
   khanpt_name: JavaScript 簡介
@@ -923,9 +924,13 @@ zh-TW:
   khanpl_name: JavaScript 簡介
   tynker_name: 建立你自己的遊戲
   scratch_name: 透過編程發揮創意
+  lightbot_name: Lightbot
   thinkersmith_name: 我的機器人朋友
   condcards_name: 用撲克牌學習條件判斷（Conditionals）
+  lightbotintl_name: Lightbot
   codehs_name: 與小狗 Karel 一起學習編程
+  codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: 用 JavaScript 創建一個遊戲
   processing_name: 用程式繪圖
@@ -939,8 +944,11 @@ zh-TW:
   flappy_name: 製作一個像素鳥遊戲
   bitsbox_name: Bitsbox - 製作一個遊戲
   makeschool_name: 在你的瀏覽器創建一個 iPhone 遊戲！
+  touchdevelop_name: TouchDevelop
   appinventor_name: 一小時玩 AppInventor
   blockly_name: Blockly
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭、布
   hourofcode_name: 經典迷宮
   playlab_name: Play Lab
@@ -950,6 +958,7 @@ zh-TW:
   allcancode_name: Run Marco!
   csfirst_name: CS First
   boxisland_name: 方塊島
+  codesters_name: Codesters
   texasinstruments_name: 十分鐘玩程式
   teacherled_name: 一小時教程式計畫
   course1_name: 課程 1
@@ -997,6 +1006,7 @@ zh-TW:
   express-2019_name: 速學課程（2019）
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 單元 2：Web 開發
   csd3_name: 單元 3：動畫與遊戲
   accelerated_name: 速成課程
@@ -1011,6 +1021,8 @@ zh-TW:
   iceage_name: 冰原歷險記
   minecraft_name: Minecraft
   starwarsblocks_name: 星際大戰（程式積木）
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: 簡單加密
   text-compression_name: 文字壓縮
   applab_name: App Lab
@@ -1022,6 +1034,7 @@ zh-TW:
     的方式設計，製作完後也能分享。
   codeorg_gradelevel: 年齡 4-104
   codeintl_gradelevel: 年齡 4-104
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: 國中 +
   khanes_gradelevel: 國中 +
   khanpt_gradelevel: 國中 +
@@ -1148,6 +1161,7 @@ zh-TW:
   teacherled_platformtext: 主流的瀏覽器、手機、平板
   codeorg_shortdescription: 與馬克（Facebook 創辦人）及憤怒鳥一起學習編程！
   codeintl_shortdescription: 與馬克（Facebook 創辦人）及憤怒鳥一起學習編程！
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: 學習用 JavaScript 畫圖
   khanes_shortdescription: 學習用 JavaScript 畫圖
   khanpt_shortdescription: 學習用 JavaScript 畫圖
@@ -1289,14 +1303,18 @@ zh-TW:
   khan_beyond_name: 學習計算機編程
   tynker_beyond_name: 在家學習編程
   scratch_beyond_name: 透過編程發揮創意
+  lightbot_beyond_name: LightBot
+  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: 給學齡前幼童的 ScratchJR
   hopscotch_beyond_name: Hopscotch：在你的 iPad 上設計程式
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: 學習 Python 編程
   hacketyhack_beyond_name: 學習 Ruby
   robomind_beyond_name: 用程式設計出虛擬機器人
   makeschool_beyond_name: 在你的瀏覽器創建一個 iPhone 遊戲！
   appinventor_beyond_name: 一小時玩 AppInventor
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: 使用Karel狗學習程式設計
   udemy_beyond_name: 線上的程式設計課程
   lynda_beyond_name: 線上程式設計課程
@@ -1304,9 +1322,15 @@ zh-TW:
   coursera_beyond_name: 史丹佛大學 CS 101 課程
   udacity_beyond_name: CS 101
   teachingtree_beyond_name: 大學的線上課程
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: 學習 HTML
   codeavengers_beyond_name: 學習網站程式設計
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino 與 Sparkfun
   processing_beyond_name: 處理常式
@@ -1534,6 +1558,8 @@ zh-TW:
   header_teacher_community: 教師社群
   header_help_support: 幫助與支援
   header_report_bug: 回報問題
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: 隱私政策
   header_legal_tos: 服務條款
   header_tutorials: 所有教程
@@ -1764,3 +1790,8 @@ zh-TW:
   hoc2019_dance_previous_versions: |-
     你在找之前的舞蹈派對嗎？
     這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

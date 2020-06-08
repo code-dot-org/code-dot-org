@@ -451,6 +451,7 @@ is-IS:
   homepage_banner_emailprivacy: Við erum að gera mikilvæga breytingu á persónuvernd
     nemenda okkar.
   homepage_banner_emailprivacy_link: Lesa meira
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Nánar
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
@@ -589,6 +590,31 @@ is-IS:
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Sækja
     núna</a> Quick Start leiðarvísi fyrir umsjónaraðila og PowerPoint kynningar fyrir
     yngri og eldri nemendur."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Klukkustund kóðunar - íþróttir
   sports_og_title: Láttu reyna á þig. Það geta allir lært.
   sports_og_description: Meistarar og gullverðlaunarhafar hvetja þig til að prófa
@@ -666,13 +692,26 @@ is-IS:
     einhvern sem getur <span style="font-family: ''Gotham 7r'', sans-serif;">hvatt</span>
     nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta
     gæti farið fram með netspjalli).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: Fáðu að vita meira um <a href="%{volunteer_guide}">sjálfboðaliðastarfið
     okkar hér</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Vinsamlegast skráðu eftirfarandi upplýsingar
     ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span
     class="form-required-field">*</span> þarf að fylla út.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Þarft þú að finna sjálfboðaliða? Finndu
     nálægan sjálfboðaliða á <a href="%{volunteer_local}">liðveislukortinu</a> okkar.
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Uppfærðu upplýsingar þínar
   volunteer_engineer_submission_header_shared: Upplýsingar sem deildar eru með kennurum
     á korti sjálfboðaliða
@@ -709,6 +748,10 @@ is-IS:
   volunteer_engineer_submission_field_email_desc: Netfangi þínu verður aldrei deilt,
     en við munum senda þér beiðnir frá kennurum.
   volunteer_engineer_submission_field_email_placeholder: Netfang
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Já
   volunteer_engineer_submission_field_email_preference_no: Nei
   volunteer_engineer_submission_final_paragraph: Þú verður sýndur á korti fyrir kennara
@@ -726,6 +769,10 @@ is-IS:
     munu nota <a href="%{url}">þetta kort</a> til að leita að og hafa samband við
     sjálfboðaliða eins og þig. Vinsamlegast gerðu ráð fyrir að það taki 48 klst. áður
     en upplýsingar þínar birtast rétt á kortinu.
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Óvíst
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 klst. á viku
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 klst. á viku
@@ -1015,6 +1062,7 @@ is-IS:
   dashboard_coursed: 'Námskeið D: '
   dashboard_coursee: 'Námskeið E: '
   dashboard_coursef: 'Námskeið F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Hraðnámskeið: '
   dashboard_unplugged: Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir
     þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum.
@@ -1039,6 +1087,7 @@ is-IS:
   dashboard_curriculum_csp: 'AP® Undirstöðuatriði tölvunarfræði:'
   dashboard_curriculum_ecs: 'Tölvunarfræði könnuð:'
   dashboard_curriculum_csd: 'Uppgötvanir í Tölvunarfræði: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Annað
   dashboard_login_word: Orð
@@ -1182,6 +1231,7 @@ is-IS:
   lightbotintl_name: Lightbot
   codehs_name: Lærðu að kóða með hundinum Karel
   codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Búðu til leik með JavaScript
   processing_name: Teiknað með kóða
@@ -1198,6 +1248,8 @@ is-IS:
   touchdevelop_name: TouchDevelop
   appinventor_name: Klukkustund kóðunar með AppInventor
   blockly_name: Blockly
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Steinn, pappír, skæri
   hourofcode_name: Völundarhús
   playlab_name: Leikjasmiðja
@@ -1207,6 +1259,7 @@ is-IS:
   allcancode_name: Run Marco!
   csfirst_name: CS First
   boxisland_name: Box Island
+  codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Klukkustund kóðunar - handleiðsla kennara
   course1_name: Námskeið 1
@@ -1232,6 +1285,7 @@ is-IS:
   coursee-2017_name: Námskeið E (2017)
   coursef-2017_name: Námskeið F (2017)
   coursea-2018_name: Námskeið A (2018)
+  courseb-2018_name: Course B (2018)
   coursec-2018_name: Námskeið C (2018)
   coursed-2018_name: Námskeið D (2018)
   coursee-2018_name: Námskeið E (2018)
@@ -1243,14 +1297,21 @@ is-IS:
   coursee-2019_name: Námskeið E (2019)
   coursef-2019_name: Námskeið F (2019)
   coursea-2020_name: Námskeið A (2019)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Hraðnámskeið (2018)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
   express-2019_name: Hraðnámskeið (2019)
   pre-express-2019_name: Hraðnámskeið fyrir forlæsa (2019)
+  express-2020_name: Express Course (2020)
   pre-express-2020_name: Hraðnámskeið fyrir forlæsa (2020)
   csd2_name: 'Eining 2: Vefsíðugerð'
   csd3_name: 'Eining 3: Hreyfing og leikir'
   accelerated_name: Hraðnámskeiðið
+  express_name: Express Course
   pre-express_name: Hraðnámskeið fyrir forlæsa
   20-hour_name: Hraðnámskeiðið
   algebra_name: TF í algebru
@@ -1261,6 +1322,8 @@ is-IS:
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Kubbar)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Einföld dulkóðun
   text-compression_name: Þjöppun texta
   applab_name: Appsmiðjan
@@ -1375,6 +1438,7 @@ is-IS:
   groklearning_platformtext: Fyrir nýjustu vafra
   quorum_platformtext: Nýjustu vafrar. Stuðningur við talgervla
   codespark_platformtext: iOS, Android (eða vefvafri)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad og Android spjaldtölvur
   robomindnl_platformtext: Fyrir nýjustu vafraa, líka í farsímum
   flappy_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1399,6 +1463,7 @@ is-IS:
   teacherled_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeorg_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   codeintl_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lærðu að teikna með JavaScript
   khanes_shortdescription: Lærðu að teikna með JavaScript
   khanpt_shortdescription: Lærðu að teikna með JavaScript
@@ -1704,6 +1769,7 @@ is-IS:
   khan_beyond_name: Lærðu tölvuforritun
   tynker_beyond_name: Lærðu forritun heima
   scratch_beyond_name: Virkjaðu sköpunargleðina með forritun
+  lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR fyrir ólæsa
@@ -1720,11 +1786,21 @@ is-IS:
   lynda_beyond_name: Forritunarnámskeið á netinu
   edx_beyond_name: Harvard CS50 kúrsinn
   coursera_beyond_name: Stanford CS 101 kúrsinn
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Háskólakúrsar á netinu
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Lærðu HTML
   codeavengers_beyond_name: Lærðu að forrita vefsíður
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino með Sparkfun
   processing_beyond_name: Forritaðu með Processing
+  alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: 4-104 ára
   khan_beyond_gradelevel: Miðskóli +
@@ -1769,6 +1845,9 @@ is-IS:
   scratch_beyond_platformtext: Einhver vafri
   lightbot_beyond_platformtext: iOS, Android (eða vefvafri)
   codecademy_beyond_platformtext: Öpp fyrir nýjustu vafra, iOS, Android
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Símaapp
   groklearning_beyond_platformtext: Fyrir nýjustu vafra
   hacketyhack_beyond_platformtext: Uppsetning á borðtölvu
@@ -1783,11 +1862,14 @@ is-IS:
   coursera_beyond_platformtext: Fyrir nýjustu vafra
   udacity_beyond_platformtext: Fyrir nýjustu vafra
   teachingtree_beyond_platformtext: Fyrir vefsíðu
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Uppsetning á borðtölvu
   w3schools_beyond_platformtext: Fyrir nýjustu vafra
   codeavengers_beyond_platformtext: Fyrir nýjustu vafra
   mozilla_beyond_platformtext: Fyrir nýjustu vafra
   codecombat_beyond_platformtext: Fyrir vefsíðu (FireFox, Chrome, Safari, IE9+)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Kaup á vélmenni
   finch_beyond_platformtext: Kaup á vélmenni
   arduino_beyond_platformtext: Fyrir vafra, síðan kaup á setti
@@ -2006,7 +2088,13 @@ is-IS:
     sem við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að
     eitthvað virki ekki.
   starwars_shortcode: stjarna
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: blaka
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Forsíða
   header_my_dashboard: Stjórnborðið mitt
   header_courses: Námskeið
@@ -2042,6 +2130,8 @@ is-IS:
   header_teacher_community: Kennarasamfélag
   header_help_support: 'Hjálp og stuðningur '
   header_report_bug: Tilkynna galla
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Persónuverndarstefna
   header_legal_tos: Skilmálar
   header_tutorials: Kennslutímar
@@ -2119,6 +2209,7 @@ is-IS:
     Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google
     aðgangi":'
+  hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Kynning á Appsmiðjunni
   applab_tile_title: Kynning á Appsmiðjunni (aldur 13+)
   applab_tile_subtitle: Búðu til þitt eigið app í JavaScript með forritun sem notar
@@ -2126,6 +2217,7 @@ is-IS:
     ensku)
   applab_tile_start_tutorial: Byrja
   applab_tile_teacher_guide: Leiðbeiningar kennara
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: Megum við senda þér tölvupóst með upplýsingum um námskeið,
     tækifæri á þínu svæði eða aðrar fréttir um tölvunarfræði? (u. þ. b. einu sinni
     í mánuði)
@@ -2168,12 +2260,18 @@ is-IS:
   hoc2018_creativity_courses: Náðu lengra með Code.org námskeiðum
   hoc2018_creativity_courses_link: Náðu lengra með <a href="https://studio.code.org/courses">Code.org
     námskeiðum</a>
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
   hoc2018_mc_page_title: Klukkustund kóðunar með Minecraft
   hoc2018_mc_details: Mörg tungumál | Fyrir nýlega vafra og spjaldtölvur | 2. bekkur+
+  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
+    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
+    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
   hoc2018_mc_aquatic_title: Minecraft Neðansjávarferð
   hoc2018_mc_aquatic_description: |-
     Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
     Ferðist um Minecraft með kóða.
+  hoc2019_mc_aquatic_description: Explore and build underwater worlds with code.
   hoc2018_mc_hero_title: Ferðalag Minecraft hetju
   hoc2018_mc_hero_description: |-
     Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
@@ -2231,10 +2329,16 @@ is-IS:
   hoc2018_mc_homepage_watch_video: Horfðu á myndbandið okkar
   hoc2018_mc_homepage_join_us: Vertu með
   hoc2018_mc_homepage_try_it: Prófið hana
+  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
   hoc2018_mc_back_journey: |-
     Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
     Ferðist um Minecraft með kóða.
   hoc2018_mc_teacher_guide: Leiðbeiningar kennara
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Continue learning with Minecraft.
+  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
+  hoc2018_mc_short_description: Use your creativity and problem solving skills to
+    find treasure and explore under water worlds with the power of code.
   hoc2018_mc_short_description_shorter: Notaðu sköpunargáfuna og hæfileika til að
     leysa þrautir til að kanna og byggja neðansjávarheima með kóða.
   hoc2018_mc_journey: Ferðastu um Minecraft með kóða.
@@ -2270,12 +2374,38 @@ is-IS:
     að markmiði að hvetja, mennta og þjálfa fátæk og önnur börn og ungmenni sem standa
     höllum fæti til að finna sér starfsvettvang innan tölvunarfræði. <a href='%{amazon_future_engineer_link}'
     target='_blank'>Nánar</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Lærðu meira um
     Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Um Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
   hoc2018_dance_amazon_about_future_engineer_button: Nánar
   hoc2018_dance_amazon_try_coding_this_summer_title: Prófaðu að kóða í sumar
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend to study a CS degree at a
+    4-year college or university in the United States.
   hoc2018_dance_amazon_scholarship_programs_button: Sækja um nú
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
   hoc2018_dance_amazon_future_engineer_footer: "* Listamennirnir sem eiga tónlistina
     sem er notuð í þessu kennsluefni eru ekki að styðja við eða mæla með Amazon þó
     þeir veiti Code.org leyfi til að nota tónlist sína.\n\n"

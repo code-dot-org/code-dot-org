@@ -23,13 +23,23 @@ ru-RU:
   csedweek_banner_teachers_text: Вы учитель информатики? Смотреть другие ресурсы недели
     образования в информатике
   n_have_learned_an_hoc: "<h1>Попробовать</h1><h2>Час кода</h2><h3>Уже попробовали</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: Каждый может учиться.
   learn_now: Начать изучение
   petition_message: Каждый ученик в каждой школе должен иметь возможность изучения
     информатики
   petition_sign_message: 'Если вы согласны, укажите свое имя. Присоединяйтесь к #
     остальным.'
+  petition_sign_message_num: If you agree, sign your name and join our mailing list
+    along with %{num} others.
   petition_join_others: 'Присоединяйтесь к #остальным'
+  petition_join_others_num: Join %{num} others
   name: Имя
   email: Электронная почта
   zipcode: Почтовый индекс или страна
@@ -42,9 +52,13 @@ ru-RU:
   og_title_here: Час Кода здесь!
   og_description: Каждый студент в каждой школе заслуживает возможность изучения компьютерных
     наук.
+  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
+    or your class!
   csedweek_og_title: Час кода настал
   csedweek_og_description: 4-10 декабря 2017 года. Информатика - это основа для каждого
     учащегося.
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
+    science is foundational for every student to learn.
   csedweek_og_description_here: Час кода уже здесь. Каждый ученик должен изучить информатику.
   hoc2014_heading: Присоединяйтесь к <a href="http://hourofcode.com">Часу кода</a><br/>8-14
     декабря 2014 года<br/>
@@ -56,6 +70,7 @@ ru-RU:
   hoc2014_support: Поддержите это ▾
   hoc2014_whatishoc: Что такое «час кода»?
   csedweek_map_header: "# CSEdWeek /События по всему миру, в рамках «часа кода»"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Зарегистрируйте свое мероприятие
   csedweek_map_search_placeholder: Искать мероприятия «часа кода»
   csedweek_map_search_search: Поиск
@@ -215,15 +230,31 @@ ru-RU:
     его. Теперь продолжайте изучение <a href='http://studio.code.org'>других наших
     курсов</a> или узнайте, какие еще есть возможности<a href='/learn/beyond'> продолжить
     обучение после часа кода</a>.
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Благодарим, ваш запрос отправлен!
   if_you_enjoyed: Если вам понравилось обучение, пригласите попробовать своих друзей!
     Мы хотим, чтобы весь мир учился.
   personalize_certificate: Выберите вид сертификата
+  print_batch_certificates: Print a batch of certificates
   print_certificates: Распечатать сертификаты
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
+  print_ice_art_from_frozen: Print ice art from Frozen tutorials
+  want_a_blank_certificate_template: Want a blank certificate template to write in
+    your students' names?
+  landscape_recommended_certificates: It is recommended that you choose **Landscape**
+    when you print the certificates.
+  print_one_here_certificates: Print one here.
+  enter_certificate_names: Enter up to 30 names, **one per line**. A printable page
+    with personalized %{script_name} certificates will be generated.
   share_achievement: Делитесь своими достижениями
   beyond_hour_message: Продолжайте изучение <a href='http://studio.code.org'>других
     наших курсов</a> или узнайте, какие еще есть возможности<a href='/learn/beyond'>
     продолжить обучение после часа кода</a>.
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Доска лидеров часа кода.
   support_url: http://support.сode.org
   country: Страна
@@ -277,6 +308,10 @@ ru-RU:
   just_did_coursee: Я только что закончил курс E - проверьте его! @codeorg
   just_did_coursef: Я только что закончил курс F - проверьте его! @codeorg
   just_did_accelerated: Я только что закончил(а) ускоренный курс - посмотрите на @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
+    for supporting @codeorg)'
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 'Почему не во всех школах изучают информатику? Мы можем исправить
     это. http://youtu.be/2DxWIxec6yo. Чтобы узнать больше, посетите наш сайт: http://code.org/.'
   twitter_cs_foundational: Компьютерные технологии являются основой обучения для каждого
@@ -291,6 +326,8 @@ ru-RU:
   lines_of_code: БОЛЕЕ <b># СТРОК КОДА</b> УЖЕ НАПИСАНО.
   lines_of_code_alt: "<b>#</b> СТРОК КОДА НАПИСАНО УЧЕНИКАМИ"
   who_has_done_hoc: 'Кто выполнил #HourOfCode? @code.org'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Таблица лидеров часа кода
   students_and_lines: "%{students}% учеников прошли час кода и написали %{lines} строк
     кода."
@@ -302,6 +339,12 @@ ru-RU:
     пятиклассница"
   stats_michael: "«Я еще <b>никогда не</b> видел своих учеников настолько увлеченными
     обучением», — Майкл Кларк, учитель"
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: Знакомьтесь со <a href='http://studio.code.org'>студией кода</a>
   studiobar_title_nolink: Исследуй Студию Кода
   studiobar_elementary_title: Начальные курсы
@@ -322,9 +365,12 @@ ru-RU:
     учиться
   studiobar_shop_title: Магазин
   studiobar_shop_body: Ломайте стереотипы. Носите наш логотип с гордостью.
+  homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: из наших учеников - девушки
   homepage_stats_teachers: учителя используют Code.org
   homepage_stats_hourofcodde: из учеников по всему миру пробовали Час Программирования
+  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "«Я призываю всех девочек мира пройти один час программирования»,
     — Малала, лауреат Нобелевской премии мира"
   homepage_hero_text_susan: "«Если вы сможете изменить технологии, вы сможете изменить
@@ -335,6 +381,10 @@ ru-RU:
     возможность изучать информатику». Шерил, главный операционный директор Facebook"
   homepage_hero_text_satya: "«Информатика поможет раскрыть лучшие возможности в мире».
     Сатья, генеральный директор Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "«Если вы программируете, значит вы можете выбрать направление
     своей жизни». Крис Бош"
   homepage_hero_text_student1: "«Эти навыки изменили мое будущее. Не считая того,
@@ -378,6 +428,7 @@ ru-RU:
   homepage_action_text_girlvideo: Вдохновите девочку
   homepage_action_text_learn: Начать обучение
   homepage_action_text_signpetition: Подписать петицию
+  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Я согласен(на) ▾
   homepage_signpetition_dropdown_text: Я согласен(на)
   homepage_diversity_pledge: Присоединиться к петиции о разнообразии
@@ -387,6 +438,8 @@ ru-RU:
   homepage_banner_text_main: Code.org и совет колледжа объединяются, чтобы улучшить
     разнообразие в информатике.
   homepage_banner_text_link: Узнать больше
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: узнать больше
   homepage_banner_20k_teachers: 20 000 учителей были обучены и теперь преподают информатику
     в классах.
@@ -397,6 +450,7 @@ ru-RU:
   homepage_banner_emailprivacy: Мы вносим важное изменение в то, как мы поддерживаем
     студенческую частную жизнь.
   homepage_banner_emailprivacy_link: Подробнее
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Узнать больше
   homepage_slot_text_title_hoc: Час кода
   homepage_slot_text_blurb_hoc: Каждый может учиться. Начните сегодня
@@ -476,8 +530,12 @@ ru-RU:
   class_submission_languages_other: Другие языки
   videos_more: Больше <a href='%{inspiring_videos_playlist}'>вдохновляющего видео</a>
     с участием актёров и знаменитостей
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: Больше <a href='%{careers_url}' target='_blank'>вдохновляющего
     видео</a> с участием профессионалов в области технологий
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: Выберите вашу тему для "Лаборатории игр"
   playlab_classic_title: Классический
   playlab_gumball_title: Удивительный мир Гамбола
@@ -637,13 +695,26 @@ ru-RU:
     в обучении информатике,</span> мог бы помочь в классе или <span style="font-family:
     ''Gotham 7r'', sans-serif;">мотивировать</span> учеников рассказом о безграничных
     возможностях, которые открываются при изучении информатики (к примеру, через видеочат).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: Узнайте больше о <a href="%{volunteer_guide}">волонтёрской
     программе здесь</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Укажите следующую информацию, если вы
     ученик, занимающийся информатикой, или специалист по программному обеспечению.
     Поля, отмеченные <span class="form-required-field">*</span>, являются обязательными.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Хотите найти волонтеров? Найдите волонтера
     в своем регионе на нашей <a href="%{volunteer_local}">карте волонтеров</a>.
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Обновление вашей информации
   volunteer_engineer_submission_header_shared: Информация, которой делятся учителя
     на карте волонтеров
@@ -702,6 +773,10 @@ ru-RU:
   volunteer_engineer_submission_thankyou: Благодарим вас за регистрацию в качестве
     волонтера. Учителя будут пользоваться <a href="%{url}">данной картой</a> для поиска
     таких волонтеров как вы и связи с ними.
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Не могу сказать точно
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 час в неделю
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 часа в неделю
@@ -739,6 +814,9 @@ ru-RU:
   volunteer_engineer_submission_type_task_mentor: Я ищу наставника, который поможет
     мне подготовиться к программированию с моими учениками
   petition_age: Возраст
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
   dashboard_announce_learn_more_button: Узнать больше
   dashboard_landing_title: Домашняя страница преподавателя
   dashboard_landing_welcome: Добро пожаловать в новый, улучшенный личный кабинет преподавателя.
@@ -998,9 +1076,12 @@ ru-RU:
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс Е: '
   dashboard_coursef: 'Курс F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Экспресс курс: '
   dashboard_unplugged: Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте
     эти оффлайн уроки в вашем классе.
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
   dashboard_tools: 'Инструменты: '
   dashboard_curriculum: Учебная программа
   dashboard_curriculum_overview: Обзор программы для дошкольников и учеников начальной
@@ -1021,6 +1102,7 @@ ru-RU:
   dashboard_curriculum_csp: 'Принципы информатики AP®:'
   dashboard_curriculum_ecs: 'Изучение информатики:'
   dashboard_curriculum_csd: 'Первооткрыватели компьютерных наук: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Детский сад
   dashboard_grade_other: Другое
   dashboard_login_word: Слово
@@ -1117,11 +1199,16 @@ ru-RU:
   carousel_heading_beyond_languages: Учебники по другим языкам программирования
   carousel_heading_apps_games: Создавай свои собственные приложения или игры
   carousel_heading_university: Онлайн-курсы и школы
+  carousel_heading_online_university: University Courses Available Online
   carousel_heading_webpages: Научись создавать веб-страницы
   carousel_heading_robots: Научись программировать роботов
   carousel_heading_ide: Популярные среди преподавателей платформы
   carousel_heading_desktop: Учитесь программировать на компьютере
   carousel_heading_mobtabelem: Для телефонов и планшетов
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Unreliable or no internet? Install these apps on your
+    computer
   educator_notes: Заметки педагога
   teach_led_lesson_plans: Планы уроков для учителей
   learn_footer_all_tutorials: См. <a href="https://code.org/educate/allhourofcode">полный
@@ -1132,6 +1219,8 @@ ru-RU:
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   beyond_submission: Хотите предложить урок для программы «Продолжение обучения после
     часа кода»? См. требования и форму заявки.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: участники
   teachers_notes: Заметки учителя
   teachers_notes_hoc: 'Учителям: ознакомьтесь с важными заметками для педагогов здесь'
@@ -1146,6 +1235,7 @@ ru-RU:
   starwars_name: 'Звёздные войны: создайте галактику, используя код'
   codeorg_name: Классический лабиринт
   codeintl_name: Классический лабиринт
+  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Введение в JavaScript
   khanes_name: Введение в JavaScript
   khanpt_name: Введение в JavaScript
@@ -1154,9 +1244,13 @@ ru-RU:
   khanpl_name: Введение в JavaScript
   tynker_name: Создайте свою собственную игру
   scratch_name: Покажите творческий подход, занимаясь программированием
+  lightbot_name: Lightbot
   thinkersmith_name: Мои друзья роботы
   condcards_name: Условные выражения с картами
+  lightbotintl_name: Lightbot
   codehs_name: Учитесь писать код с псом Карелом
+  codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: ОбезьянкаПрограммист
   codeavengers_name: Создайте Игру с JavaScript
   processing_name: Рисование с помощью кода
@@ -1170,8 +1264,11 @@ ru-RU:
   flappy_name: Создайте игру Flappy
   bitsbox_name: Bitsbox, создайте игру
   makeschool_name: Создайте игру на iPhone в своем браузере!
+  touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor час кода
   blockly_name: Блокли
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Камень, ножницы, бумага
   hourofcode_name: Классический лабиринт
   playlab_name: Лаборатория игр
@@ -1181,6 +1278,7 @@ ru-RU:
   allcancode_name: Беги, Марко!
   csfirst_name: Имя
   boxisland_name: Остров коробки
+  codesters_name: Codesters
   texasinstruments_name: Код за 10 минут
   teacherled_name: Планы уроков для учителей
   course1_name: Курс 1
@@ -1205,11 +1303,35 @@ ru-RU:
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Экспресс-курс (2017)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Экспресс-курс (2017)
+  pre-express-2019_name: Pre-reader Express Course (2019)
   express-2020_name: Экспресс-курс (2017)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Ускоренный курс
   express_name: Экспресс-курс
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Ускоренный курс
   algebra_name: Информатика в алгебре
   AlgebraA_name: 'Информатика в алгебре: курс A'
@@ -1219,7 +1341,10 @@ ru-RU:
   iceage_name: Ледниковый период
   minecraft_name: Minecraft
   starwarsblocks_name: Звездные войны (блоки)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Простое шифрование
+  text-compression_name: Text Compression
   applab_name: Лаборатория приложений
   gamelab_name: Лаборатория игр
   basketball_name: Создать игру в баскетбол
@@ -1230,6 +1355,7 @@ ru-RU:
     или JavaScript и смотри, как он работает, а затем моментально поделись этим приложением
   codeorg_gradelevel: Возраст 4-104
   codeintl_gradelevel: Возраст 4-104
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Средняя школа +
   khanes_gradelevel: Средняя школа +
   khanpt_gradelevel: Средняя школа +
@@ -1334,6 +1460,7 @@ ru-RU:
   groklearning_platformtext: Современные веб-браузеры
   quorum_platformtext: Современные веб-браузеры. Поддерживается чтение с экрана
   codespark_platformtext: Операционные системы iOS и Android (или веб-браузер)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android планшеты
   robomindnl_platformtext: Современные веб-браузеры, мобильный интернет
   flappy_platformtext: Современные браузеры, смартфоны, планшеты
@@ -1359,6 +1486,7 @@ ru-RU:
   codeorg_shortdescription: Учитесь программировать с Марком Цукербергом и Angry Birds!
   codeintl_shortdescription: Учитесь программировать с Марком Цукербергом и Angry
     Birds!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Учитесь рисовать в JavaScript
   khanes_shortdescription: Учитесь рисовать в JavaScript
   khanpt_shortdescription: Учитесь рисовать в JavaScript
@@ -1443,6 +1571,53 @@ ru-RU:
     в темы программирования, реализованные в предыдущих курсах, чтобы найти более
     гибкие решения сложных задач. К концу этого курса студенты создадут интерактивные
     истории и игры, они смогут поделиться с кем-либо. Рекомендуется для 4-8 классов.
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2019_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2019_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Изучите основные понятия информатики, написав программу
     путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой
     форме, состоящие из видеолекций с участием Билла Гейтса, Марка Цукерберга, персонажей
@@ -1633,6 +1808,8 @@ ru-RU:
   khan_beyond_name: Обучайтесь компьютерному программированию
   tynker_beyond_name: Обучайтесь программированию у себя дома
   scratch_beyond_name: Проявите творчество занимаясь программированием
+  lightbot_beyond_name: LightBot
+  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR для детей, еще не научившихся читать
   hopscotch_beyond_name: 'Игра в классики: Программируйте на своем iPad'
@@ -1642,16 +1819,28 @@ ru-RU:
   robomind_beyond_name: Запрограммируйте виртуального робота
   makeschool_beyond_name: Создайте игру для iPhone в Вашем браузере!
   appinventor_beyond_name: AppInventor Час Кода
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Учитесь писать код с Псом Карел
   udemy_beyond_name: Онлайн-курсы программирования
   lynda_beyond_name: Онлайн-курсы программирования
   edx_beyond_name: Курс информатики CS50 Гарвардского университета
   coursera_beyond_name: Курс информатики CS 101 Стэнфордского университета
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Университетские курсы онлайн
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Изучить HTML
   codeavengers_beyond_name: Научитесь писать код для веб-сайтов
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino c микроконтроллером
   processing_beyond_name: Программа с обработкой
+  alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Возраст 4-104
   khan_beyond_gradelevel: Средняя школа +
   tynker_beyond_gradelevel: Возраст 5-13
@@ -1696,6 +1885,9 @@ ru-RU:
   lightbot_beyond_platformtext: iOS, Android (или веб-браузер)
   codecademy_beyond_platformtext: Современные веб-браузеры. Приложения для операционных
     систем iOS и Android
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Приложение для мобильного телефона
   groklearning_beyond_platformtext: Современные веб-браузеры
   hacketyhack_beyond_platformtext: Настольный компьютер
@@ -1710,12 +1902,15 @@ ru-RU:
   coursera_beyond_platformtext: Современные браузеры
   udacity_beyond_platformtext: Современные браузеры
   teachingtree_beyond_platformtext: На базе онлайн-технологий
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Настольная установка
   w3schools_beyond_platformtext: Современные веб-браузеры
   codeavengers_beyond_platformtext: Современные веб-браузеры
   mozilla_beyond_platformtext: Современные веб-браузеры
   codecombat_beyond_platformtext: На базе онлайн-технологий (Firefox, Chrome, Safari,
     IE9 +)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Покупка робота
   finch_beyond_platformtext: Покупка робота
   arduino_beyond_platformtext: Веб-браузер, а затем приобрести комплект
@@ -1956,7 +2151,14 @@ ru-RU:
     обновите свой браузер до <a href='%{supported_browsers_url}', target='_blank'>одного
     из поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницу, но
     будьте готовы к тому, что функциональность может быть нарушена.
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: взмах крыльев
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: На главную
   header_my_dashboard: Моя доска
   header_courses: курсы
@@ -1992,9 +2194,16 @@ ru-RU:
   header_teacher_community: Сообщество учителей
   header_help_support: 'Помощь и поддержка '
   header_report_bug: Сообщить об ошибке
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Политика конфиденциальности
   header_legal_tos: Условия предоставления услуг
   header_tutorials: Обучающие материалы
+  app_lab_documentation: App Lab Documentation
+  app_lab_tutorials: App Lab Tutorials
+  game_lab_documentation: Game Lab Documentation
+  game_lab_tutorials: Game Lab Tutorials
+  sprite_lab_documentation: Sprite Lab Documentation
   sprite_lab_tutorials: 'Лаборатория спрайтов: учебники'
   header_documentation: Документация
   user_header_label: Привет, %{username}
@@ -2004,6 +2213,8 @@ ru-RU:
   user_header_logout: Выйти
   user_header_signin: Вход
   user_header_create: 'Создать '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Artist '
   user_header_gamelab: Лаборатория игр
   user_header_playlab: Лаборатория игр
   user_header_dance: Танцевальная вечеринка
@@ -2014,11 +2225,59 @@ ru-RU:
   user_header_view_project_gallery: Показать проекты
   user_header_view_my_projects: Показать мои проекты
   view_all_sections: Показать все классы
+  view_section: View Section
+  view_named_section: View %{section_name}
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  signing_in: Signing In
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
   sign_in_instruct_website: Перейти к %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
+  sign_in_instruct_name: Choose their display name.
+  sign_in_instruct_secret: Choose their secret %{secret}.
+  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_overview_cards: Students can find all of this information, including their
+    secret %{secret}, in the login cards below.
+  reset_student_password: Resetting student passwords
+  reset_student_password_instructions: You can reset the secret <word/picture> for
+    any of your students by going to the “Manage Students” tab for the section, clicking
+    the “Show secret” button under the “Password” column, and clicking the “Reset
+    secret” button.
+  login_cards: Login Cards
+  print_login_cards: Print login cards
+  joining_section: Joining your section (one-time only)
   joining_section_overview: Если ваши ученики ещё не присоединились к вашему разделу,
     им следует выполнить инструкции ниже. Их достаточно проделать один раз. Присоединившись,
     ученики смогут увидеть назначенные им курсы, а вы сможете следить за их работой.
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
+    done so. They can do this at https://studio.code.org/users/sign_up. Note that
+    they can either sign up with an email address and password, or sign up through
+    Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: Sign in to their Code.org account.
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
+    code: %{section_code}.'
+  joining_section_instruct_button: Once they press the “Go” button, they should be
+    added to your section.
+  signing_in_single_instruct: Your students can sign in to their Code.org accounts
+    by going to https://code.org/ and clicking on the “Sign in” button on the top
+    right corner.
+  reset_student_password_email: If your student created a Code.org account by using
+    their email address and password (instead of signing in through their Google,
+    Facebook, Microsoft, or Clever account), you can reset their password by going
+    to the “Manage Students” tab for the section, and clicking the “Reset password”
+    button under the “Password” column.
+  syncing_students: Syncing your students
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
+    Account” option:'
   hero_name: 'Майнкрафт: Путешествие Героя'
+  applab-intro_name: App Lab Intro
+  applab_tile_title: Intro to App Lab (Ages 13+)
+  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
+    Or take your skills to the next level with text-based programming. (English Only)
   applab_tile_start_tutorial: Начать
   applab_tile_teacher_guide: Посмотреть руководство для учителей
   aquatic_name: 'Майнкрафт: Водное путешествие'
@@ -2034,6 +2293,15 @@ ru-RU:
   hoc_overview_dance_2019_subtitle: Напишите программу танцевальной вечеринки и поделитесь
     ей с друзьями. С участием Кэти Перри, Шона Мендес, группы Panic! At The Disco,
     группы Lil Nas X, братьев Джонас, Никки Минаж и еще 34 артистов!
+  hoc_overview_title: Hour of Code Activities from Code.org
+  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
+    a global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
   hoc_overview_partner_activities_title: Дополнительные мероприятия от партнеров
   hoc_overview_partner_activities_body: Вебсайт «Час кода» предлагает более 100 мероприятий
     по изучению компьютерной науки для всех возрастов и уровней опыта. Разработан
@@ -2041,9 +2309,23 @@ ru-RU:
   hoc_overview_partner_activities_link: Смотреть упражнения
   hoc_overview_start_tutorial: Начать
   hoc_overview_view_teacher_guide: Посмотреть руководство для учителей
+  hoc2018_creativity: creativity
   hoc2018_creativity_create: Создать
   hoc2018_creativity_hoc_coming: Час кода настал…
   hoc2018_creativity_what_will_you_create: Что вы будете создавать?
+  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+    Watch our video.
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
+    I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
+    What will you create?'
+  hoc2018_creativity_courses: Go further with Code.org courses
+  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
+    courses</a>
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
   hoc2018_mc_page_title: Руководства к часу кода c Minecraft
   hoc2018_mc_details: Доступно на разных языках| на всех современных браузерах и планшетах|
     c 8 лет
@@ -2054,6 +2336,7 @@ ru-RU:
   hoc2018_mc_aquatic_title: Майнкрафт водное путешествие
   hoc2018_mc_aquatic_description: Возвращение Minecraft с новыми возможностями на
     «Час кода»! Путешествие по миру программирования с Minecraft.
+  hoc2019_mc_aquatic_description: Explore and build underwater worlds with code.
   hoc2018_mc_hero_title: 'Майнкрафт: Путешествие Героя'
   hoc2018_mc_hero_description: Возвращение Minecraft с новыми возможностями на «Час
     кода»! Путешествие по миру программирования с Minecraft.
@@ -2127,10 +2410,13 @@ ru-RU:
     чтобы изучать и строить подводные миры с помощью программирования.
   hoc2018_mc_journey: Путешествие по Майнкрафт с помощью программирования.
   hoc2018_dance_party_main_heading: Танцевальная вечеринка
+  hoc2018_dance_party_landing_title: Dance
+  hoc2018_dance_party_subheading: Help translate Dance Party
   hoc2018_dance_create_your_own_dance_title: Создайте свою танцевальную вечеринку
   hoc2018_dance_party_box_title: Танцевальная вечеринка
   hoc2018_dance_party_box_description: Запрограммируйте собственный танец и поделитесь
     им с друзьями!
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
   hoc2018_dance_party_button: Начать
   hoc2018_dance_keep_on_dancing_box_title: Продолжайте танцевать
   hoc2018_dance_keep_on_dancing_description: Дополнительные идеи для проектов уведут
@@ -2146,17 +2432,83 @@ ru-RU:
     принципы программирования для совместной хореографической постановки танцевальной
     вечеринки.
   hoc2018_dance_teacher_resources_tile2_button: Урок без компьютера
+  hoc2018_dance_featured_student_creations_title: Featured Student Creations
+  hoc2018_dance_videos_section_heading: Get Inspired
+  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
+  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
+    (5 min)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: В партнерстве с
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
+    more</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
   hoc2018_dance_amazon_about_future_engineer_button: Узнать больше
+  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend to study a CS degree at a
+    4-year college or university in the United States.
   hoc2018_dance_amazon_scholarship_programs_button: Применить сейчас
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
+  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used
+    in this tutorial are not sponsoring or endorsing Amazon as part of licensing use
+    of their music to Code.org.\n\n"
   hoc2018_dance_measure: Такты
   hoc2018_dance_measure_colon: 'Такты:'
   hoc2018_aquatic_video1: 'Майнкрафт: Водное путешествие. Введение'
   hoc2018_aquatic_video2: Майнкрафт. Водное путешествие - Циклы
   hoc2018_aquatic_video3: Майнкрафт. Водное путешествие - Условия
   hoc2018_aquatic_video4: Майнкрафт. Водное путешествие - Поздравления
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations
   page_not_found_title: Страница не найдена
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home
   hoc2018_mc_with_microsoft: В партнерстве с
   hoc2018_mc_thank_microsoft: Мы благодарим Microsoft за поддержку нашего видения
     и миссии, чтобы каждый ребенок имел возможность изучать информатику и навыки,
     необходимые для достижения успеха в 21 веке.
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available
+    in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of
+    coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings.
+  hoc2019_mc_more_coding_resources: More Coding Resources
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?
+    \ \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link})
+    from last year."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

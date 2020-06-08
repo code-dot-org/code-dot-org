@@ -22,13 +22,23 @@ ro-RO:
   csedweek_banner_teachers_text: Ești profesor de informatică ? Vezi alte resurse
     CSEdWeek
   n_have_learned_an_hoc: "<h1>Încearcă o</h1><h2>Ora de cod</h2><h3># servit</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: Oricine poate învăța.
   learn_now: Învaţă Acum
   petition_message: Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea
     de a învăța informatică
   petition_sign_message: 'Dacă ești de acord, semnează-te cu numele. Alătură-te #
     celorlalți.'
+  petition_sign_message_num: If you agree, sign your name and join our mailing list
+    along with %{num} others.
   petition_join_others: 'Alătură-te altor #'
+  petition_join_others_num: Join %{num} others
   name: Nume
   email: Email
   zipcode: Cod poştal sau ţară
@@ -61,6 +71,7 @@ ro-RO:
   hoc2014_whatishoc: Ce este Ora de Programare?
   csedweek_map_header: "# SaptamanaEducatieiInInformatica / Evenimente Ora de Cod
     in intreaga lume"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Inscrieti-va evenimentul
   csedweek_map_search_placeholder: Cauta evenimente Hour of Code
   csedweek_map_search_search: Cautare
@@ -224,15 +235,31 @@ ro-RO:
     printa. Acum, incercati <a href='http://studio.code.org'> celelalte cursuri</a>
     ale noastre sau verificati mai multe opţiuni la <a href='/learn/beyond'> Invata
     mai mult de o Ora</a>.
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Mulţumim pentru transmitere!
   if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi
     să încerce acest lucru. Vrem ca toată lumea să învețe.
   personalize_certificate: Personalizează-ți certificatul
+  print_batch_certificates: Print a batch of certificates
   print_certificates: Tipărește certificatele
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
+  print_ice_art_from_frozen: Print ice art from Frozen tutorials
+  want_a_blank_certificate_template: Want a blank certificate template to write in
+    your students' names?
+  landscape_recommended_certificates: It is recommended that you choose **Landscape**
+    when you print the certificates.
+  print_one_here_certificates: Print one here.
+  enter_certificate_names: Enter up to 30 names, **one per line**. A printable page
+    with personalized %{script_name} certificates will be generated.
   share_achievement: Distribuie realizarea personală
   beyond_hour_message: Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a>
     ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa
     mai mult de O Oră</a>.
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Clasamentele pentru Ora de Cod.
   support_url: http://support.code.org/
   country: Ţară
@@ -317,6 +344,12 @@ ro-RO:
     Alzate, elev de clasa a cincea'
   stats_michael: '"Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
     să învețe."- Michael Clark, Profesor'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: Explorează <a href='http://studio.code.org'>Studio-ul Code</a>
   studiobar_title_nolink: Explorează cursurile Code.org
   studiobar_elementary_title: Cursuri elementare
@@ -414,6 +447,8 @@ ro-RO:
   homepage_banner_text_main: Code.org şi College Board formează o alianţă pentru a
     îmbunătăţi diversitatea în informatică.
   homepage_banner_text_link: Află mai mult
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Află mai mult
   homepage_banner_20k_teachers: 20000 de profesori instruiţi, şi acum predau informatică
     în sălile de clasă.
@@ -424,6 +459,7 @@ ro-RO:
   homepage_banner_emailprivacy: Facem o schimbare importantă pentru cum sprijinim
     confidenţialitatea studentului.
   homepage_banner_emailprivacy_link: Citeşte mai mult
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Află mai mult
   homepage_slot_text_title_hoc: Oră de Programare
   homepage_slot_text_blurb_hoc: Oricine poate învăța. Începe astăzi
@@ -453,6 +489,7 @@ ro-RO:
   homepage_slot_text_link_donate: Fă o donație
   homepage_slot_text_link_shop: Tricouri, palarii & mai mult
   homepage_slot_text_link_administrators: Aduceți Informatica în școala dvs.
+  homepage_gallery_header: Over %{project_count} million Code.org projects created
   homepage_header_donors: Code.org mulţumește suporterilor săi
   homepage_donors_seall: Vizualizați toate
   homepage_donors_donate: Donează
@@ -502,8 +539,12 @@ ro-RO:
   class_submission_languages_other: Alte limbi
   videos_more: Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri inspirationale</a>
     cu modele şi celebrităţi
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: Mai multe <a href='%{careers_url}' target='_blank'> clipuri video
     inspiraționale</a> cu profesioniști din domeniile tehnologiei
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: Alege tema ta la Laboratorul de Joacă
   playlab_classic_title: Clasic
   playlab_gumball_title: Minunata lume a lui Gumball
@@ -531,6 +572,9 @@ ro-RO:
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Tutoriale Hour of Code Minecraft
   minecraft_specs: Mai multe limbi | Browsere moderne și tablete | Clasele 2+
+  minecraft_start_tutorial: Start tutorial
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
   minecraft_agent_button: Începe
   minecraft_designer_description: Programeaza animale şi alte creaturi Minecraft în
     propria ta versiune a jocului.
@@ -668,14 +712,27 @@ ro-RO:
     style="font-family: ''Gotham 7r'', sans-serif;">inspira</span> studentii vorbindu-le
     despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul
     unui video chat).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: Aflați mai multe despre <a href="%{volunteer_guide}">programul
     nostru de voluntariat aici</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Te rugăm sa introduci următoarele informaţii,
     dacă ești un student la automatică și calculatoare sau matematică-informatică
     sau un profesionist în software. Câmpurile marcate cu un <span class="form-required-field">
     *</span> sunt obligatorii.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Esti un profesor in cautare de voluntari?
     Gaseste un voluntar local in <a href="%{volunteer_local}">harte de voluntari</a>.
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Vă rugăm să actualizați informațiile
     dumneavoastră
   volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor
@@ -731,6 +788,10 @@ ro-RO:
   volunteer_engineer_submission_thankyou: Îți mulțumim pentru inscrierea ta ca voluntar.
     Profesorii vor folosi <a href="%{url}">Aceasta harta</a> pentru a cauta si contacta
     voluntari ca tine.
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Nesigur
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 oră pe săptămână
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ore pe săptămână
@@ -1037,6 +1098,8 @@ ro-RO:
   dashboard_express: 'Curs Expres: '
   dashboard_unplugged: Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați
     aceste lecţii offline</a> în clasa dvs.
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
   dashboard_tools: 'Instrumente: '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Prezentare generală Curriculum pentru clasele 1-5
@@ -1155,6 +1218,7 @@ ro-RO:
   carousel_heading_beyond_languages: Tutoriale pentru alte limbaje de programare
   carousel_heading_apps_games: Creează-ți propriile aplicații sau jocuri
   carousel_heading_university: Cursuri universitare online
+  carousel_heading_online_university: University Courses Available Online
   carousel_heading_webpages: Învață să creezi pagini web
   carousel_heading_robots: Învață să programezi cu roboți
   carousel_heading_ide: Platforme populare în rândul profesorilor
@@ -1190,6 +1254,7 @@ ro-RO:
   starwars_name: 'Star Wars: Programarea unei galaxii'
   codeorg_name: Labirint Clasic
   codeintl_name: Labirint Clasic
+  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: O introducere în JavaScript
   khanes_name: O introducere în JavaScript
   khanpt_name: O introducere în JavaScript
@@ -1198,9 +1263,13 @@ ro-RO:
   khanpl_name: O introducere în JavaScript
   tynker_name: Costruiește propriul tău joc
   scratch_name: Fii creativ cu programarea
+  lightbot_name: Lightbot
   thinkersmith_name: Amicii mei roboți
   condcards_name: Condiționale cu Carduri
+  lightbotintl_name: Lightbot
   codehs_name: Învață programare cu Karel, câinele
+  codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Construiește un joc cu JavaScript
   processing_name: Desenează programând
@@ -1214,8 +1283,11 @@ ro-RO:
   flappy_name: Să facem un joc cu Flappy
   bitsbox_name: Bitsbox - creează un joc
   makeschool_name: Realizeaza un joc pentru iPhone in propriul browser!
+  touchdevelop_name: TouchDevelop
   appinventor_name: Ora de Pprogramare - Inventatorul de aplicatii
   blockly_name: Blockly
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piatră, hârtie, foarfece
   hourofcode_name: Labirint Clasic
   playlab_name: Laborator de Joacă
@@ -1225,6 +1297,7 @@ ro-RO:
   allcancode_name: Fugi Marco!
   csfirst_name: CS First
   boxisland_name: Insula Cutiei
+  codesters_name: Codesters
   texasinstruments_name: 10 minute de Programat
   teacherled_name: Planuri de lectie pentru Ora de Programare
   course1_name: Curs 1
@@ -1249,8 +1322,35 @@ ro-RO:
   coursed-2017_name: Curs D (2017)
   coursee-2017_name: Curs E (2017)
   coursef-2017_name: Curs F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
+  express-2018_name: Express Course (2018)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Curs intensiv
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Curs intensiv
   algebra_name: CS în Algebră
   AlgebraA_name: CS în algebră Curs A
@@ -1260,7 +1360,10 @@ ro-RO:
   iceage_name: Epoca de gheață
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocuri)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Criptare simplă
+  text-compression_name: Text Compression
   applab_name: Laboratului Aplicației
   gamelab_name: Game Lab
   basketball_name: Realizeaza un joc de baschet
@@ -1271,6 +1374,7 @@ ro-RO:
     pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Gimnaziu +
   khanes_gradelevel: Gimnaziu +
   khanpt_gradelevel: Gimnaziu +
@@ -1372,6 +1476,7 @@ ro-RO:
   groklearning_platformtext: Browsere web moderne
   quorum_platformtext: Browserele web moderne. Cititoarele de ecran suportate
   codespark_platformtext: iOS, Android (sau browser web)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablete Android
   robomindnl_platformtext: Browsere web moderne, web pentru mobil
   flappy_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -1396,6 +1501,7 @@ ro-RO:
   teacherled_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeorg_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
   codeintl_shortdescription: Învață să programezi cu Mark Zuckerberg și Angry Birds!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Învață sa desenezi în JavaScript
   khanes_shortdescription: Învață sa desenezi în JavaScript
   khanpt_shortdescription: Învață sa desenezi în JavaScript
@@ -1484,6 +1590,8 @@ ro-RO:
   coursea_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
   coursed_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi
     mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
   coursee_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi
@@ -1493,6 +1601,8 @@ ro-RO:
   coursea-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
   coursed-2017_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
     apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
     altele.
@@ -1503,6 +1613,8 @@ ro-RO:
   coursea-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
   coursed-2018_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
     apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
     altele.
@@ -1513,6 +1625,8 @@ ro-RO:
   coursea-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
     (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
   coursed-2019_shortdescription_congrats: Acoperiți rapid conceptele din cursul C,
     apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe
     altele.
@@ -1718,6 +1832,8 @@ ro-RO:
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă
   scratch_beyond_name: Fii creativ cu programarea
+  lightbot_beyond_name: LightBot
+  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR pentru preșcolari
   hopscotch_beyond_name: 'Șotron: Programare pe iPad'
@@ -1727,16 +1843,28 @@ ro-RO:
   robomind_beyond_name: Programează un robot virtual
   makeschool_beyond_name: Realizeaza un joc pentru iPhone in propriul browser!
   appinventor_beyond_name: Ora de Pprogramare - Inventatorul de aplicatii
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Învață programare cu Karel, câinele
   udemy_beyond_name: Cursuri de programare online
   lynda_beyond_name: Cursuri de programare online
   edx_beyond_name: Cursul Harvard CS50
   coursera_beyond_name: Cursul Stanford CS 101
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Cursuri universitare online
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Învață HTML
   codeavengers_beyond_name: Învață să programezi website-uri
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino cu Sparkfun
   processing_beyond_name: Programează cu Processing
+  alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Vârste între 4-104 ani
   khan_beyond_gradelevel: Gimnaziu +
   tynker_beyond_gradelevel: Vârste între 5-13 ani
@@ -1780,6 +1908,9 @@ ro-RO:
   scratch_beyond_platformtext: Orice browser
   lightbot_beyond_platformtext: iOS, Android (sau browser web)
   codecademy_beyond_platformtext: Browsere web moderne, iOS, Aplicații Android
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: App pentru mobil
   groklearning_beyond_platformtext: Browsere web moderne
   hacketyhack_beyond_platformtext: Instalare pe Desktop
@@ -1794,11 +1925,14 @@ ro-RO:
   coursera_beyond_platformtext: Browsere web moderne
   udacity_beyond_platformtext: Browsere web moderne
   teachingtree_beyond_platformtext: Web based
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Instalare pe Desktop
   w3schools_beyond_platformtext: Browsere web moderne
   codeavengers_beyond_platformtext: Browsere web moderne
   mozilla_beyond_platformtext: Browsere web moderne
   codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Cumpărare-Robot
   finch_beyond_platformtext: Cumpărare-Robot
   arduino_beyond_platformtext: Browser web, apoi cumpărare Kit
@@ -2040,7 +2174,14 @@ ro-RO:
     să faceţi upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'>
     unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii,
     dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare.
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: zboară
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Acasă
   header_my_dashboard: Panoul meu principal
   header_courses: cursuri
@@ -2076,22 +2217,35 @@ ro-RO:
   header_teacher_community: Comunitate profesori
   header_help_support: 'Ajutor și asistență '
   header_report_bug: Raportare problemă
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Politică de confidențialitate
   header_legal_tos: Termeni şi condiţii de utilizare
   header_tutorials: Tutoriale
+  app_lab_documentation: App Lab Documentation
+  app_lab_tutorials: App Lab Tutorials
+  game_lab_documentation: Game Lab Documentation
+  game_lab_tutorials: Game Lab Tutorials
+  sprite_lab_documentation: Sprite Lab Documentation
+  sprite_lab_tutorials: Sprite Lab Tutorials
   header_documentation: Documentație
   user_header_label: Salut %{username}
   user_header_team: Echipa
+  user_header_my_projects: My projects
   user_header_settings: Contul meu
   user_header_logout: Deloghează-te
   user_header_signin: Autentificare
   user_header_create: 'Creare '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Artist '
   user_header_gamelab: Game Lab
   user_header_playlab: Laborator de Joacă
   user_header_dance: Petrecere dansantă
   user_header_spritelab: Laborator Sprite
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_all: View all projects...
+  user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: Vezi proiectele
   view_all_sections: Vizualizați toate secțiunile
   view_section: Vedeți secţiunea
@@ -2143,8 +2297,14 @@ ro-RO:
     pe butonul "Sincronizare elevii din clasa Google" de pe fila "Gestionare elevii":'
   google_sign_in_instruct: 'De acolo, ei ar trebui să aleagă opțiunea "Conectare cu
     contul Google":'
+  hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Introducere Laborator de Aplicații
+  applab_tile_title: Intro to App Lab (Ages 13+)
+  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
+    Or take your skills to the next level with text-based programming. (English Only)
   applab_tile_start_tutorial: Începe
+  applab_tile_teacher_guide: View teacher guide
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: Sunteți de acord să vă trimitem prin e-mail actualizări
     cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul
     informaticii?
@@ -2157,17 +2317,52 @@ ro-RO:
   hoc_overview_dance_2019_subtitle: Codează o petrecere dansantă pentru a o partaja
     cu prietenii. Împreună cu Katy Perry, Shawn Mendes, Panic! La discotecă, Lil Nas
     X, Jonas Brothers, Nicki Minaj și încă 34!
+  hoc_overview_title: Hour of Code Activities from Code.org
+  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
+    a global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
+  hoc_overview_partner_activities_title: More activities from partners
+  hoc_overview_partner_activities_body: The Hour of Code website has over 500 computer
+    science activities for all ages and experience levels, developed by Code.org and
+    partners.
+  hoc_overview_partner_activities_link: View Activities
   hoc_overview_start_tutorial: Începe
+  hoc_overview_view_teacher_guide: View teacher guide
   hoc2018_creativity: creativitate
   hoc2018_creativity_create: Crează
+  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
   hoc2018_creativity_what_will_you_create: Ce vei creea?
+  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+    Watch our video.
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
+    I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
+    What will you create?'
+  hoc2018_creativity_courses: Go further with Code.org courses
+  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
+    courses</a>
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft
   hoc2018_mc_details: Mai multe limbi | Browsere moderne și tablete | Clasele 2+
   hoc2018_mc_aquatic_announcement: Înregistrează-ţi clasa pentru a încerca peste 150
     de activităţi noi în cadrul Orei de cod (3+9 decembrie). Fi sigur că verifici
     noua noastră activitate Minecraft pentru 2018, Aventura acvatică! Înregistrează-ţi
     clasa astăzi.
+  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
+  hoc2018_mc_aquatic_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  hoc2019_mc_aquatic_description: Explore and build underwater worlds with code.
   hoc2018_mc_hero_title: 'Minecraft: Călătoria eroului'
+  hoc2018_mc_hero_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
   hoc2018_mc_designer_title: Minecraft Designer
   hoc2018_mc_designer_description: Programeaza animale şi alte creaturi Minecraft
     în propria ta versiune a jocului.
@@ -2177,7 +2372,23 @@ ro-RO:
   hoc2018_mc_start: Începe
   hoc2018_mc_no_internet: Nu ai Internet?
   hoc2018_mc_download_adventurer: Descarcă versiunea offline a Minecraft Adventurer.
+  hoc2018_mc_educators: For Educators
+  hoc2018_mc_educators_box1_title: Code with Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
+    curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: Get started
+  hoc2018_mc_educators_box2_title: Download Facilitator Guide
+  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
+    and engage your students in computer science.
   hoc2018_mc_educators_box2_button: Descarcă
+  hoc2018_mc_educators_box3_title: Attend a free student workshop
+  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
+    Hour of Code workshop. For participants of all skill levels, ages six and up.
+  hoc2018_mc_educators_box3_button: Find a workshop
+  hoc2018_mc_educators_box4_title: Access more computer science resources
+  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
+    and computer science education resources from Microsoft.
+  hoc2018_mc_educators_box4_button: Explore resources
   hoc2018_mc_watch_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
     inspirationale
   hoc2018_mc_videos_more: Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri
@@ -2198,12 +2409,25 @@ ro-RO:
   hoc2018_mc_video_title_hoc_is_here: Hour of Code este aici - Oricine poate învăţa
   hoc2018_mc_video_title_anybody_can_learn: Oricine poate învăța
   hoc2018_mc_video_title_my_name_is_aracely: Numele meu este Aracely
+  hoc2018_mc_homepage_hoc_coming: The Hour of Code is coming...
   hoc2018_mc_homepage_what_create: Ce vei creea?
+  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+  hoc2018_mc_homepage_watch_video: Watch our video
   hoc2018_mc_homepage_join_us: Alatura-ni-te
   hoc2018_mc_homepage_try_it: Încearcă
+  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
+  hoc2018_mc_back_journey: Minecraft is back for the Hour of Code with a brand new
+    activity! Journey through Minecraft with code.
+  hoc2018_mc_teacher_guide: View teacher guide
   hoc2018_mc_minecraft_education: Educație cu Minecraft
   hoc2018_mc_continue_learning: Continuă să înveți cu Minecraft.
   hoc2018_mc_go_to_mc_education: Mergi la Minecraft Education
+  hoc2018_mc_short_description: Use your creativity and problem solving skills to
+    find treasure and explore under water worlds with the power of code.
+  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
+    to explore and build underwater worlds with code.
+  hoc2018_mc_journey: Journey through Minecraft with code.
   hoc2018_dance_party_main_heading: Petrecere dansantă
   hoc2018_dance_party_landing_title: Dans
   hoc2018_dance_party_subheading: Ajută la traducerea Petreceii cu dans
@@ -2238,6 +2462,10 @@ ro-RO:
     copilărie până la profesie, copii cu venituri mici sau alte dezavantaje şi tineri
     care urmăresc obţinerea unei cariere în domeniul ştiinţei calculatoarelor. <a
     href='%{amazon_future_engineer_link}' target='_blank'>Află mai multe</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Află mai multe
     despre Viitorii ingineri de la Amazon
   hoc2018_dance_amazon_about_future_engineer_title: Despre Viitorii infineri de la
@@ -2275,8 +2503,35 @@ ro-RO:
     vedere al licenţei de utilizare a muzicii lor la Code.org.\n\n"
   hoc2018_dance_measure: Măsură
   hoc2018_dance_measure_colon: 'Măsură:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
   hoc2018_dance_video1: Petrecere cu dans - Introducere
   hoc2018_dance_video2: Petrecere cu dans - Evenimente
   hoc2018_dance_video3: Petrecere cu dans - Proprietăţi
   hoc2018_dance_video4: Petrecere cu dans - Felicitări
+  page_not_found_title: Page Not Found
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home
   hoc2018_mc_with_microsoft: În parteneriat cu â
+  hoc2018_mc_thank_microsoft: We thank Microsoft for supporting our vision and mission
+    to ensure every child has the opportunity to learn computer science and the skills
+    to succeed in the 21st century.
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available
+    in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of
+    coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings.
+  hoc2019_mc_more_coding_resources: More Coding Resources
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?
+    \ \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link})
+    from last year."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

@@ -23,14 +23,24 @@ hi-IN:
   n_have_learned_an_hoc: |-
     का प्रयास एक कोड के घंटे सेवा की
      code ke ek ghante dha koshish karo
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: हर कोई सीख सकता है
   learn_now: अब जानें
   petition_message: हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना चाहिए
   petition_sign_message: यदि आप सहमत हैं, तो अपना नाम साइन करें और ऑवर ऑफ़ कोड अन्य
     लोगों के साथ हमारी मेलिंग सूची में शामिल हों।
+  petition_sign_message_num: If you agree, sign your name and join our mailing list
+    along with %{num} others.
   petition_join_others: |-
     # दूसरों में शामिल हों
     Log nal shaamil ho
+  petition_join_others_num: Join %{num} others
   name: नाम
   email: ईमेल
   zipcode: ज़िप कोड या देश
@@ -65,6 +75,7 @@ hi-IN:
   csedweek_map_header: |-
     घंटा कोड की घटनाओं दुनिया भर
     dhuniya bhar mein code kee ghatanaon ke ghante
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: |-
     साइन अप आपके ईवेंट
     Upne ghatana ko sankhet karo
@@ -228,15 +239,31 @@ hi-IN:
     पर क्लिक करें। अब, हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
     विकल्प देखें।
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: सबमिट करने के लिए धन्यवाद!
   if_you_enjoyed: यदि आपको सीखने में मज़ा आया, तो अपने दोस्तों से भी इसे आजमाने को
     कहें!  हम चाहते हैं कि पूरी दुनिया इसे सीखे।
   personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
+  print_batch_certificates: Print a batch of certificates
   print_certificates: प्रमाण-पत्र प्रिंट करें
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
+  print_ice_art_from_frozen: Print ice art from Frozen tutorials
+  want_a_blank_certificate_template: Want a blank certificate template to write in
+    your students' names?
+  landscape_recommended_certificates: It is recommended that you choose **Landscape**
+    when you print the certificates.
+  print_one_here_certificates: Print one here.
+  enter_certificate_names: Enter up to 30 names, **one per line**. A printable page
+    with personalized %{script_name} certificates will be generated.
   share_achievement: आपकी उपलब्धि साझा करें
   beyond_hour_message: हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
     विकल्प देखें।
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Leaderboards ऑवर ऑफ़ कोड के लिए।
   support_url: http://support.code.org/
   country: देश
@@ -320,6 +347,12 @@ hi-IN:
     - मैरियाना अल्ज़ाटे (Mariana Alzate), पांचवें ग्रेड की छात्रा'
   stats_michael: '"मैंने अपने छात्रों को <b>पहले कभी भी</b> सीखने के लिए इतना उत्साहित
     नहीं देखा।" - फ्रैंक मार्टिनेज़ (Frank Martinez), अध्यापक'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: "<a href='http://studio.code.org'>Code.org के कोर्सों की पड़ताल
     करें</a>"
   studiobar_title_nolink: Code.org के कोर्सों की पड़ताल करें
@@ -417,11 +450,19 @@ hi-IN:
   homepage_banner_text_main: Code.org और कॉलेज बोर्ड कंप्यूटर साइंस में विविधता को
     सुधारने के लिए संबंध जोड़ते हैं।
   homepage_banner_text_link: अधिक जानें
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: अधिक जानें
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
   homepage_banner_20k_teachers_link: अधिक जानें
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: हम छात्रों की गोपनीयता को सहयोग करने के अपने तरीके
     में महत्वपूर्ण बदलाव ला रहे हैं।
   homepage_banner_emailprivacy_link: और पढ़ें
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: अधिक जानें
   homepage_slot_text_title_hoc: आवर ऑफ़ कोड
   homepage_slot_text_blurb_hoc: हर कोई सीख सकता है। आज ही शुरुआत करें
@@ -500,8 +541,12 @@ hi-IN:
   class_submission_languages_other: अन्य भाषा(एं)
   videos_more: रोल मॉडल्स और जानी-मानी हस्तियों के और <a href='%{inspiring_videos_playlist}'>प्रेरणादायक
     वीडियो</a>
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: प्रौद्योगिकी क्षेत्रों में पेशेवरों के और <a href='%{careers_url}'
     target='_blank'>प्रेरणादायक वीडियो</a>
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: अपना प्ले लैब विषय चुनें
   playlab_classic_title: क्लासिक
   playlab_gumball_title: गम्बॉल की अद्भुत दुनिया
@@ -665,17 +710,30 @@ hi-IN:
     व्यक्ति को, जो कंप्यूटर साइंस के साथ संभावनाओं के विस्तार के बारे में बात करके
     अपने छात्रों को <span style="font-family: ''Gotham 7r'', sans-serif;">प्रेरित</span>
     कर सके (जो वीडियो चैट के माध्यम से किया जा सकता है)।'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: यहां हमारे <a href="%{volunteer_guide}">स्वयं
     सेवक प्रोग्राम के बारे में जानें</a>।
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: यदि आप कंप्यूटर साइंस के छात्र या सॉफ्टवेयर
     पेशेवर हैं तो निम्न जानकारी दर्ज करें। स्वयं सेवक के तौर पर साइन अप करने के लिए
     आपकी आयु कम से कम 18 वर्ष होनी आवश्यक है। ध्यान दें कि इस सेक्शन में आपके द्वारा
     भरे जाने वाले सभी भाग <a href="/volunteer/local">स्वयं सेवक मानचित्र</a> पर किसी
     के भी देखने के लिए सावर्जनिक तौर पर उपलब्ध होंगे। <span class="form-required-field">*</span>
     से चिन्हित किए गए भाग आवश्यक हैं।
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: क्या आप ऐसे अध्यापक हैं, जिन्हें स्वयं
     सेवकों की तलाश है? हमारे<a href="%{volunteer_local}">स्वयं सेवक मानचित्र पर स्थानीय
     स्वयं सेवक ढूंढें</a>।
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: अपनी जानकारी का अद्यतन करें
   volunteer_engineer_submission_header_shared: स्वयं सेवक मानचित्र पर अध्यापकों के
     साथ साझा की गई जानकारी
@@ -733,6 +791,10 @@ hi-IN:
     प्रस्तुत की गई थी। अध्यापक आप जैसे स्वयं सेवकों को खोजने और संपर्क करने के लिए
     <a href="%{url}">इस मानचित्र</a> का उपयोग करेंगे। कृपया मानचित्र पर आपकी जानकारी
     को ठीक ढंग से दिखाई देने के लिए 48 घंटे का समय दें।
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: अनिश्चित
   volunteer_engineer_submission_commitment_one_hr_per_week: प्रति सप्ताह 1 घंटे
   volunteer_engineer_submission_commitment_three_hrs_per_week: प्रति सप्ताह 3 घंटे
@@ -835,6 +897,7 @@ hi-IN:
     पेश करने में स्कूल डिस्ट्रिक्ट की मदद करता है। पेशेवर विकास वर्कशॉप्स के लिए पंजीकरण
     करने हेतु, Code.org के साथ <a href="/educate/districts">पूरे डिस्ट्रिक्ट में भागीदारी
     के लिए</a> आवेदन करें।
+  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org ने ऐसा पाठ्यक्रम विकसित करने के लिए Bootstrap
     के साथ साझेदारी की है, जो कंप्यूटर प्रोग्रामिंग के माध्यम से बीजगणित और रेखागणितीय
     अवधारणाएं सिखाता है।
@@ -1031,6 +1094,8 @@ hi-IN:
   dashboard_express: 'एक्सप्रेस कोर्स: '
   dashboard_unplugged: यदि आपके पास कंप्यूटर नहीं हैं, तो अपनी कक्षा में <a href='%{unplugged_url}'>ये
     अनप्लग्ड पाठ आजमाएं</a>।
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
   dashboard_tools: 'टूल्स: '
   dashboard_curriculum: पाठ्यक्रम
   dashboard_curriculum_overview: K-5 पाठ्यक्रम की रूपरेखा
@@ -1185,6 +1250,7 @@ hi-IN:
   starwars_name: 'Star Wars: कोड से तारा समूह बनाना'
   codeorg_name: क्लासिक मेज़ (Classic Maze)
   codeintl_name: क्लासिक मेज़ (Classic Maze)
+  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript से परिचय
   khanes_name: JavaScript से परिचय
   khanpt_name: JavaScript से परिचय
@@ -1193,9 +1259,13 @@ hi-IN:
   khanpl_name: JavaScript से परिचय
   tynker_name: अपनी खुद की गेम बनाएं
   scratch_name: कोडिंग के साथ रचनात्मक बनें
+  lightbot_name: Lightbot
   thinkersmith_name: मेरे रोबोटिक दोस्त
   condcards_name: कार्डों के साथ सापेक्ष
+  lightbotintl_name: Lightbot
   codehs_name: कैरेल द डॉग के साथ कोड करना सीखें
+  codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: JavaScript के साथ गेम बनाएं
   processing_name: कोड के साथ ड्राइंग बनाना
@@ -1209,8 +1279,11 @@ hi-IN:
   flappy_name: फ्लैपी गेम बनाएं
   bitsbox_name: Bitsbox - गेम बनाएं
   makeschool_name: अपने ब्राउजर में एक iPhone गेम बनाएं!
+  touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor आवर ऑफ़ कोड
   blockly_name: ब्लॉक्ली
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: चट्टान, कागज़, कैंची
   hourofcode_name: क्लासिक मेज़ (Classic Maze)
   playlab_name: प्ले लैब
@@ -1220,6 +1293,7 @@ hi-IN:
   allcancode_name: मार्को भागो!
   csfirst_name: CS फर्स्ट
   boxisland_name: बॉक्स आइलैंड
+  codesters_name: Codesters
   texasinstruments_name: 10 मिनट कोड
   teacherled_name: अध्यापकों द्वारा संचालित पाठ योजनाएं
   course1_name: कोर्स 1
@@ -1262,10 +1336,13 @@ hi-IN:
   coursed-2020_name: कोर्स D (2019)
   coursee-2020_name: कोर्स E (2019)
   coursef-2020_name: कोर्स F (2019)
+  express-2018_name: Express Course (2018)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
   express-2019_name: एक्सप्रेस कोर्स (2019)
   pre-express-2019_name: पूर्व-पाठक एक्सप्रेस कोर्स (2019)
   express-2020_name: एक्सप्रेस कोर्स (2019)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: त्वरित पाठ्यक्रम
   express_name: एक्सप्रेस कोर्स
@@ -1279,6 +1356,8 @@ hi-IN:
   iceage_name: हिम युग
   minecraft_name: माइनक्राफ्ट
   starwarsblocks_name: Star Wars (ब्लॉक्स)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: सरल एन्क्रिप्शन
   text-compression_name: टेक्स्ट कम्प्रेशन
   applab_name: ऐप लैब
@@ -1291,6 +1370,7 @@ hi-IN:
     या JavaScript के साथ कोड करें, फिर सेकंडों में अपने ऐप को साझा करें।
   codeorg_gradelevel: उम्र 4-104
   codeintl_gradelevel: उम्र 4-104
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: मिडल स्कूल +
   khanes_gradelevel: मिडल स्कूल +
   khanpt_gradelevel: मिडल स्कूल +
@@ -1392,6 +1472,7 @@ hi-IN:
   groklearning_platformtext: आधुनिक वेब ब्राउजर
   quorum_platformtext: आधुनिक वेब ब्राउजर। स्क्रीन-रीडर्स समर्थित
   codespark_platformtext: iOS, Android (या वेब ब्राउजर)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android टैब्लेट्स
   robomindnl_platformtext: आधुनिक वेब ब्राउजर, मोबाइल वेब
   flappy_platformtext: आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स
@@ -1418,6 +1499,7 @@ hi-IN:
     साथ कोड करना सीखें
   codeintl_shortdescription: मार्क ज़ुकरबर्ग (Mark Zuckerberg) और एंग्री बर्ड्स के
     साथ कोड करना सीखें
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: JavaScript में चित्रित करना सीखें
   khanes_shortdescription: JavaScript में चित्रित करना सीखें
   khanpt_shortdescription: JavaScript में चित्रित करना सीखें
@@ -1556,6 +1638,11 @@ hi-IN:
     मूल अवधारणाएं सीखें। यह गेम-जैसा, स्व-निर्देशित ट्यूटोरियल है, जिसमें बिल गेट्स,
     मार्क ज़ुकरबर्ग, एंग्री बर्ड्स और प्लांट्स वर्सेज ज़ोम्बीस द्वारा वीडियो लेक्चर
     दिए गए हैं। दोहराएं-लूप्स, सापेक्ष और मूल कलन विधियां सीखें। 34 भाषाओं में उपलब्ध।
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: अपने खुद के कोड के साथ मजेदार ड्राइंग बनाते हुए JavaScript
     प्रोग्रामिंग की मूल बातें सीखें। इसे अकेले करें या अपनी कक्षा के साथ!
   khanes_longdescription: अपने खुद के कोड के साथ मजेदार ड्राइंग बनाते हुए JavaScript
@@ -1725,24 +1812,39 @@ hi-IN:
   khan_beyond_name: कंप्यूटर प्रोग्रामिंग सीखें
   tynker_beyond_name: घर पर प्रोग्रामिंग सीखें
   scratch_beyond_name: कोडिंग के साथ रचनात्मक बनें
+  lightbot_beyond_name: LightBot
+  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: आरंभिक-पाठकों के लिए ScratchJR
   hopscotch_beyond_name: 'Hopscotch: आपके iPad पर प्रोग्रामिंग'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: पाइथन प्रोग्रामिंग सीखें
   hacketyhack_beyond_name: Ruby सीखें
   robomind_beyond_name: आभासी रोबोट को प्रोग्राम करना
   makeschool_beyond_name: अपने ब्राउजर में एक iPhone गेम बनाएं!
   appinventor_beyond_name: AppInventor आवर ऑफ़ कोड
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: कैरेल द डॉग के साथ कोड करना सीखें
   udemy_beyond_name: ऑनलाइन प्रोग्रामिंग कोर्स
   lynda_beyond_name: ऑनलाइन प्रोग्रामिंग कोर्स
   edx_beyond_name: Harvard CS50 कक्षा
   coursera_beyond_name: Stanford CS 101 कक्षा
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: यूनिवर्सिटी कोर्स ऑनलाइन
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: HTML सीखें
   codeavengers_beyond_name: वेबसाइट्स को कोड करना सीखें
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Sparkfun के साथ Arduino
   processing_beyond_name: प्रोसेसिंग के साथ प्रोग्राम करें
+  alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: उम्र 4-104
   khan_beyond_gradelevel: मिडल स्कूल +
   tynker_beyond_gradelevel: उम्र 5-13
@@ -1786,6 +1888,9 @@ hi-IN:
   scratch_beyond_platformtext: कोई भी ब्राउजर
   lightbot_beyond_platformtext: iOS, Android (या वेब ब्राउजर)
   codecademy_beyond_platformtext: आधुनिक वेब ब्राउजर, iOS, Android ऐप्स
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: मोबाइल ऐप
   groklearning_beyond_platformtext: आधुनिक वेब ब्राउजर
   hacketyhack_beyond_platformtext: डेस्कटॉप इंस्टॉल
@@ -1800,11 +1905,14 @@ hi-IN:
   coursera_beyond_platformtext: आधुनिक ब्राउजर
   udacity_beyond_platformtext: आधुनिक ब्राउजर
   teachingtree_beyond_platformtext: Web based
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: डेस्कटॉप इंस्टॉल
   w3schools_beyond_platformtext: आधुनिक वेब ब्राउजर
   codeavengers_beyond_platformtext: आधुनिक वेब ब्राउजर
   mozilla_beyond_platformtext: आधुनिक वेब ब्राउजर
   codecombat_beyond_platformtext: वेब आधारित (Firefox, Chrome, Safari, IE9+)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: रोबोट खरीद
   finch_beyond_platformtext: रोबोट खरीद
   arduino_beyond_platformtext: वेब ब्राउजर, फिर किट खरीद
@@ -2038,7 +2146,14 @@ hi-IN:
     अपने ब्राउजर को <a href='%{supported_browsers_url}', target='_blank'>हमारे समर्थित
     ब्राउजरों में से एक</a> के साथ अपग्रेड करें। आप पृष्ठ देखने का प्रयास कर सकते
     हैं, लेकिन कार्यात्मकता खंडित हुई हो सकती है।
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: फ़ड़फ़ड़ाय
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: मुख्य पृष्ठ
   header_my_dashboard: मेरा डैशबोर्ड
   header_courses: पाठ्यक्रम
@@ -2074,6 +2189,8 @@ hi-IN:
   header_teacher_community: अध्यापक समुदाय
   header_help_support: 'सहायता और समर्थन '
   header_report_bug: समस्या की रिपोर्ट करें
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: गोपनीयता नीति
   header_legal_tos: सेवा की शर्तें
   header_tutorials: ट्यूटोरियल
@@ -2081,6 +2198,8 @@ hi-IN:
   app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
   game_lab_documentation: गेम लैब दस्तावेज
   game_lab_tutorials: गेम लैब ट्यूटोरियल्स
+  sprite_lab_documentation: Sprite Lab Documentation
+  sprite_lab_tutorials: Sprite Lab Tutorials
   header_documentation: दस्तावेजीकरण
   user_header_label: हेलो %{username}
   user_header_team: टीम
@@ -2176,6 +2295,10 @@ hi-IN:
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं
     भी आवर ऑफ़ कोड इवेंट आयोजित कर सकता है या 200 से अधिक एक-घंटे के ट्यूटोरिल्स को
     आजमा सकता है, जो 45 से अधिक भाषाओं में उपलब्ध हैं।
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
   hoc_overview_partner_activities_title: साझेदारों से और गतिविधियां
   hoc_overview_partner_activities_body: आवर ऑफ़ कोड वेबसाइट पर हर आयु वर्ग और अनुभव
     स्तर के व्यक्तियों के लिए 100 से अधिक कंप्यूटर साइंस की गतिविधियां हैं, जो Code.org
@@ -2210,6 +2333,7 @@ hi-IN:
   hoc2018_mc_aquatic_title: 'Minecraft: समुद्री यात्रा जलचर'
   hoc2018_mc_aquatic_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड
     के लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
+  hoc2019_mc_aquatic_description: Explore and build underwater worlds with code.
   hoc2018_mc_hero_title: Minecraft Hour of Code
   hoc2018_mc_hero_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के
     लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
@@ -2230,6 +2354,7 @@ hi-IN:
   hoc2018_mc_educators_box2_title: प्रशिक्षण गाइड डाउनलोड करें
   hoc2018_mc_educators_box2_desc: यह टूलकिट आवर ऑफ़ कोड आयोजित करने और कंप्यूटर साइंस
     में अपने छात्रों को शामिल करने में आपकी मदद करेगी।
+  hoc2018_mc_educators_box2_button: Download
   hoc2018_mc_educators_box3_title: निशुल्क छात्र वर्कशॉप में शामिल हों
   hoc2018_mc_educators_box3_desc: निशुल्क आवर ऑफ़ कोड वर्कशॉप के लिए अपने क्षेत्र
     में Microsoft स्टोर पर जाएं। हर कौशल स्तरों, छह वर्ष और इससे अधिक के आयु वर्ग
@@ -2313,6 +2438,10 @@ hi-IN:
     में कैरियर बनाने के लिए प्रेरित करने, शिक्षित व प्रशिक्षित करने के लिए एक व्यापक
     बचपन के कैरियर तक का प्रोग्राम है। <a href='%{amazon_future_engineer_link}' target='_blank'>और
     जानें</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Amazon Future
     Engineer के बारे में और जानें
   hoc2018_dance_amazon_about_future_engineer_title: Amazon Future Engineer के बारे
@@ -2365,3 +2494,18 @@ hi-IN:
   hoc2018_mc_thank_microsoft: हम Microsoft का धन्यवाद करते हैं कि उन्हें यह सुनिश्चित
     करने के हमारे दृष्टिकोण और उद्देश्य को सहयोग किया कि प्रत्येक बच्चे के पास कंप्यूटर
     साइंस सीखने और 21वीं सदी में सफल होने के लिए कौशल हों।
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available
+    in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of
+    coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings.
+  hoc2019_mc_more_coding_resources: More Coding Resources
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?
+    \ \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link})
+    from last year."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

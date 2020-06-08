@@ -21,12 +21,22 @@ nn-NO:
     none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
   csedweek_banner_teachers_text: Er du en lærar i IT? Sjå andre CSEdWeek-ressursar
   n_have_learned_an_hoc: "<h1>Prøv ein</h1><h2>Kodetime</h2><h3># har prøvd</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: Alle kan læra.
   learn_now: Lær no
   petition_message: Alle elevar på alle skular burde få høve til å lære koding
   petition_sign_message: 'Om du er einig, skriv under med namnet ditt. Gå saman med
     # andre.'
+  petition_sign_message_num: If you agree, sign your name and join our mailing list
+    along with %{num} others.
   petition_join_others: 'Bli med # andre'
+  petition_join_others_num: Join %{num} others
   name: Namn
   email: E-post
   zipcode: Postnummer eller land
@@ -56,6 +66,7 @@ nn-NO:
   hoc2014_support: Støtt det &#x25BE;
   hoc2014_whatishoc: Kva er kodetimen?
   csedweek_map_header: "# CSEdWeek / Kodetimen-arrangement verda over"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Registrer ditt arrangement
   csedweek_map_search_placeholder: Søk etter Kodetime-arrangement
   csedweek_map_search_search: Søk
@@ -208,17 +219,31 @@ nn-NO:
   get_a_certificate_message_after: Klikk på diplomet for å laste det ned eller skrive
     det ut. Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller
     finn ut korleis du kan å <a href='/learn/beyond'>lære meir etter Kodetimen</a>.
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Takk for at du sendte inn!
   if_you_enjoyed: Hvis du likte opplæringa, kan du be venane dine om å prøve det også!  Vi
     vil at heile verda skal lære.
   personalize_certificate: Tilpass diplomet
+  print_batch_certificates: Print a batch of certificates
   print_certificates: Skriv ut diplomar
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   print_ice_art_from_frozen: Print iskunst fra Frozen-opplæringen
+  want_a_blank_certificate_template: Want a blank certificate template to write in
+    your students' names?
+  landscape_recommended_certificates: It is recommended that you choose **Landscape**
+    when you print the certificates.
   print_one_here_certificates: Print en her.
+  enter_certificate_names: Enter up to 30 names, **one per line**. A printable page
+    with personalized %{script_name} certificates will be generated.
   share_achievement: Del det du har klart
   beyond_hour_message: Hald fram med dei <a href='http://studio.code.org'>andre kursa
     våre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir etter
     Kodetimen</a>.
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Resultatliste for Kodetimen.
   support_url: http://support.code.org/
   country: Land
@@ -302,6 +327,12 @@ nn-NO:
     livet</b>.» – Mariana Alzate, femteklassing"
   stats_michael: "«Eg har <b>aldri, nokonsinne</b> sett elevane mine så interessert
     i å læra.» – Michael Clark, lærar"
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: Prøv <a href='http://studio.code.org'>Kursa på Code.org</a>
   studiobar_title_nolink: Prøv kursa på Code.org
   studiobar_elementary_title: Grunnleggande kurs
@@ -398,6 +429,8 @@ nn-NO:
   homepage_banner_text_main: Code.org og College Board dannar ein allianse for å auka
     mangfaldet i informatikk.
   homepage_banner_text_link: Lær meir
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Lær meir
   homepage_banner_20k_teachers: 20 000 lærerar er opplært i, og underviser no koding
     i klasserommet.
@@ -407,6 +440,7 @@ nn-NO:
   homepage_banner_emailprivacy: Vi gjer ei viktig endring i korleis vi støttar personvernet
     til elevane.
   homepage_banner_emailprivacy_link: Les meir
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Lær meir
   homepage_slot_text_title_hoc: Kodetimen
   homepage_slot_text_blurb_hoc: Alle kan læra. Begynn i dag
@@ -484,8 +518,12 @@ nn-NO:
   class_submission_languages_other: Andre språk
   videos_more: Fleire <a href='%{inspiring_videos_playlist}'>inspirerande videoar</a>
     med rollemodellar og kjendisar
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: Fleire <a href='%{careers_url}' target='_blank'>inspirerande
     videoar</a> med profesjonelle innanfor teknologi
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: Velg eit tema for Spel-lab
   playlab_classic_title: Klassisk
   playlab_gumball_title: Gumballs fantastiske verd
@@ -640,16 +678,29 @@ nn-NO:
     som kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspirere</span>
     elevane med å preike om alle dei moglegheitene som finst innan informatikk og
     programmering (som kan bli gjort gjennom ein video-chat).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: Lær mer om vårt <a href="%{volunteer_guide}">program
     for frivillige her</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Fint om du oppgir følgande informasjon
     dersom du er ein informatikkstudent eller jobbar med programmering. Du må vere
     minst 18 år for å registrere deg som frivillig. Merk deg at felta du fyller ut
     i denne seksjonen vil bli tilgjengelege offentleg for alle å sjå på <a href="/volunteer/local">kartet
     over frivillige</a>Felt som er markert med <span class="form-required-field">*</span>
     er påkrevde.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Er du ein lærar som ser etter frivillige?
     Finn ein lokal frivillig på vårt <a href="%{volunteer_local}">kart over frivillige</a>.
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Oppdatér informasjonen din
   volunteer_engineer_submission_header_shared: Informasjon vert delt med lærarar på
     eit kart over frivillige
@@ -706,6 +757,10 @@ nn-NO:
     vart sendt inn. Lærarar vil bruke <a href="%{url}">dette kartet</a> for å søke
     etter og kontakte frivillige som deg. Det tar rundt 48 timar før informasjonen
     din er satt på kartet.
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Usikker
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 time per veke
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timar per veke
@@ -807,6 +862,7 @@ nn-NO:
     i datavitskap ved å førebu lærarar til å tilby dette nye fagområdet. For å melde
     deg på de profesjonelle utviklingsverkstadene, søk etter <a href="/educate/districts">partnar
     i distriktet</a> med Code.org.
+  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org har inngått eit samarbeid med Bootstrap om
     å utvikle pensum som lærer bort algebraiske og geometriske konsept gjennom dataprogrammering.
   dashboard_course_csins: Datavitenskap i Vitskap
@@ -995,6 +1051,8 @@ nn-NO:
   dashboard_express: 'Ekspresskurs: '
   dashboard_unplugged: Om de ikkje har datamaskiner, kan du <a href='%{unplugged_url}'>prøve
     desse analoge oppgåvene</a>.
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
   dashboard_tools: 'Verktøy: '
   dashboard_curriculum: Læreplan
   dashboard_curriculum_overview: Oversikt for barnetrinnet
@@ -1141,6 +1199,7 @@ nn-NO:
   starwars_name: 'Star Wars: Bygg ein galakse med kode'
   codeorg_name: Klassisk labyrint
   codeintl_name: Klassisk labyrint
+  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ein introduksjon til JavaScript
   khanes_name: Ein introduksjon til JavaScript
   khanpt_name: Ein introduksjon til JavaScript
@@ -1149,9 +1208,13 @@ nn-NO:
   khanpl_name: Ein introduksjon til JavaScript
   tynker_name: Lag ditt eige spel
   scratch_name: Bli kreativ med koding
+  lightbot_name: Lightbot
   thinkersmith_name: Mine robotvener
   condcards_name: Vilkår med kort
+  lightbotintl_name: Lightbot
   codehs_name: Lær å kode med hunden Karel
+  codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Lag eit spel med JavaScript
   processing_name: Teikning med kode
@@ -1165,8 +1228,11 @@ nn-NO:
   flappy_name: Lag eit Flaksespel
   bitsbox_name: Bitsbox - lag eit spel
   makeschool_name: Lag eit iPhone-spel i nettlesaren din!
+  touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kodetimen
   blockly_name: Blockly
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
   hourofcode_name: Klassisk labyrint
   playlab_name: Spel-lab
@@ -1176,6 +1242,7 @@ nn-NO:
   allcancode_name: Kjør Marco!
   csfirst_name: CS First
   boxisland_name: Bokseøya
+  codesters_name: Codesters
   texasinstruments_name: 10 minutter med kode
   teacherled_name: Lærarrettleiing til Kodetimen
   course1_name: Kurs 1
@@ -1200,12 +1267,34 @@ nn-NO:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Ekspresskurs (2018)
   pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
+  express-2019_name: Express Course (2019)
   pre-express-2019_name: Ekspresskurs før ein kan lese (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Eining 2: Nettutvikling'
   csd3_name: 'Eining 3: Animasjonar og spel'
   accelerated_name: Framskunda kurs
+  express_name: Express Course
   pre-express_name: Programmeringskurs før ein kan lese
   20-hour_name: Framskunda kurs
   algebra_name: Heilt kurs i algebra for datavitskap
@@ -1216,7 +1305,10 @@ nn-NO:
   iceage_name: Istid
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blokker)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Enkel kryptering
+  text-compression_name: Text Compression
   applab_name: App-lab
   gamelab_name: Spel-lab
   basketball_name: Lag eit basketballspel
@@ -1227,6 +1319,7 @@ nn-NO:
     å få den til å fungere og del appen din på få sekund
   codeorg_gradelevel: Frå 4 - 104 år
   codeintl_gradelevel: Frå 4 - 104 år
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Mellomtrinnet
   khanes_gradelevel: Mellomtrinnet
   khanpt_gradelevel: Mellomtrinnet
@@ -1328,6 +1421,7 @@ nn-NO:
   groklearning_platformtext: Moderne nettlesarar
   quorum_platformtext: Moderne nettlesarar. Støtte for skjermlesarar
   codespark_platformtext: iOS, Android (eller nettlesar)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android nettbrett
   robomindnl_platformtext: Moderne nettlesarar, mobilt internett
   flappy_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -1352,6 +1446,7 @@ nn-NO:
   teacherled_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og Angry Birds!
   codeintl_shortdescription: Lær å kode med Mark Zuckerberg og Angry Birds!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lær å teikne i JavaScript
   khanes_shortdescription: Lær å teikne i JavaScript
   khanpt_shortdescription: Lær å teikne i JavaScript
@@ -1435,6 +1530,8 @@ nn-NO:
     ikkje kan lese.
   courseb_shortdescription_congrats: Ein introduksjon til informatikk for dei som
     ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
   coursed_shortdescription_congrats: Få eit raskt overblikk over konsepta frå kurs
     C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
   coursee_shortdescription_congrats: Få eit raskt overblikk over konsepta frå kurs
@@ -1445,6 +1542,8 @@ nn-NO:
     som ikkje kan lese.
   courseb-2017_shortdescription_congrats: Ein introduksjon til informatikk for dei
     som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
   coursed-2017_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
     kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
   coursee-2017_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
@@ -1455,6 +1554,8 @@ nn-NO:
     som ikkje kan lese.
   courseb-2018_shortdescription_congrats: Ein introduksjon til informatikk for dei
     som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
   coursed-2018_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
     kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
   coursee-2018_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
@@ -1465,6 +1566,8 @@ nn-NO:
     som ikkje kan lese.
   courseb-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei
     som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
   coursed-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
     kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
   coursee-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
@@ -1650,6 +1753,8 @@ nn-NO:
   khan_beyond_name: Lær programmering
   tynker_beyond_name: Lær programmering heime
   scratch_beyond_name: Bli kreativ med koding
+  lightbot_beyond_name: LightBot
+  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR for førskulebarn
   hopscotch_beyond_name: 'Hopscotch: Programmering på iPad'
@@ -1659,16 +1764,28 @@ nn-NO:
   robomind_beyond_name: Programmer ein virtuell robot
   makeschool_beyond_name: Lag eit iPhone-spel i nettlesaren din!
   appinventor_beyond_name: AppInventor Kodetimen
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Lær å kode med hunden Karel
   udemy_beyond_name: Programmeringskurs på nettet
   lynda_beyond_name: Programmeringskurs på nettet
   edx_beyond_name: Harvard-faget CS50
   coursera_beyond_name: Stanford-faget CS 101
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Universitetskurs på nettet
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Lær HTML
   codeavengers_beyond_name: Lær å programmere nettsider
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino med Sparkfun
   processing_beyond_name: Programmèr med Processing
+  alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Frå 4 - 104 år
   khan_beyond_gradelevel: Mellomtrinnet
   tynker_beyond_gradelevel: Alder 5 til 13
@@ -1712,6 +1829,9 @@ nn-NO:
   scratch_beyond_platformtext: Kva som helst nettlesar
   lightbot_beyond_platformtext: iOS, Android (eller nettlesar)
   codecademy_beyond_platformtext: Moderne nettlesarar. iOS- ogAndroid-app'ar
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobilapp
   groklearning_beyond_platformtext: Moderne nettlesarar
   hacketyhack_beyond_platformtext: Installering på datamaskina
@@ -1726,11 +1846,14 @@ nn-NO:
   coursera_beyond_platformtext: Moderne nettlesarar
   udacity_beyond_platformtext: Moderne nettlesarar
   teachingtree_beyond_platformtext: Nettbasert
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Installering på datamaskina
   w3schools_beyond_platformtext: Moderne nettlesarar
   codeavengers_beyond_platformtext: Moderne nettlesarar
   mozilla_beyond_platformtext: Moderne nettlesarar
   codecombat_beyond_platformtext: Nettbasert (Firefox, Chrome, Safari, IE9 +)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Robotkjøp
   finch_beyond_platformtext: Robotkjøp
   arduino_beyond_platformtext: Nettlesar, deretter kjøpe Kit
@@ -1958,7 +2081,13 @@ nn-NO:
     nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at
     noko ikkje vil virke slik det er meint.
   starwars_shortcode: stjerne
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: flaks
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Heim
   header_my_dashboard: Kontrollpanel
   header_courses: Kurs
@@ -1994,6 +2123,8 @@ nn-NO:
   header_teacher_community: Lærarforum
   header_help_support: Hjelp og støtte
   header_report_bug: Rapporter feil
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Personvern
   header_legal_tos: Vilkår
   header_tutorials: Rettleiingar
@@ -2016,6 +2147,7 @@ nn-NO:
   user_header_gamelab: Spel-lab
   user_header_playlab: Spel-lab
   user_header_dance: Dansefest
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flakse
   user_header_view_all: Sjå alle prosjekt...
@@ -2076,6 +2208,7 @@ nn-NO:
     på engelsk)
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Sjekk lærerrettleiing
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: Kan vi sende deg nyheter om kursa våre, lokale jobbmoglegheiter
     eller andre IT-relaterte nyheiter? (Omlag ein gong i månaden)
   account_sign_up_child_accept_terms: Eg stadfestar at eg har løyve frå foreldre eller
@@ -2091,6 +2224,10 @@ nn-NO:
     rørsle som når ut til eit titalls millionar elever i over 180 land. Kven som helst
     kan organisere ein kodetime kvar som helst eller prøve ei av over 500 timeslange
     øvingar, tilgjengelege på over 45 språk.
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
   hoc_overview_partner_activities_title: Fleire aktivitetar frå partnarar
   hoc_overview_partner_activities_body: Kodetime-nettstaden har over 500 aktivitetar
     i programmering for alle aldre og erfaringsnivå, utvikla av Code.org og partnarar.
@@ -2222,6 +2359,10 @@ nn-NO:
     utdanne og trene barn og unge frå dårlegare vilkår til å skaffe seg ei karriere
     i datavitenskap. <a href='%{amazon_future_engineer_link}' target='_blank'>Les
     meir</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Lær meir om Amazon
     Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Om Amazon Future Engineer
@@ -2283,3 +2424,8 @@ nn-NO:
   hoc2019_dance_previous_versions: "Ser du etter ein tidlegare versjon av Dansefest?
     \nKlikk her for å starte [Del 1](%{dance_2018_link}) og [Del 2](%{dance_extras_2018_link})
     frå i fjor."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

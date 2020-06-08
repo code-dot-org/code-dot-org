@@ -24,13 +24,23 @@ el-GR:
   csedweek_banner_teachers_text: Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους
     του CSEdWeek
   n_have_learned_an_hoc: "<h1>Δοκιμάστε μία</h1><h2>Ώρα του Κώδικα</h2><h3># την δοκίμασαν</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει.
   learn_now: Μάθε τώρα
   petition_message: Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να
     μάθει την επιστήμη των υπολογιστών
   petition_sign_message: 'Αν συμφωνείτε, συμπληρώστε τα στοιχεία σας και γίνετε μέλος
     της λίστας αλληλογραφίας μας όπως # άλλοι.'
+  petition_sign_message_num: If you agree, sign your name and join our mailing list
+    along with %{num} others.
   petition_join_others: 'Ενωθείτε μαζί με # άλλους'
+  petition_join_others_num: Join %{num} others
   name: Όνομα
   email: Ηλεκτρονικό ταχυδρομείο
   zipcode: Ταχυδρομικός κώδικας (για κατοίκους Η.Π.Α) ή χώρα
@@ -65,6 +75,7 @@ el-GR:
   hoc2014_whatishoc: Τι είναι η  Ώρα του Κώδικα;
   csedweek_map_header: "# CSEdWeek / Εκδηλώσεις για την Ώρα του Κώδικα σε όλο τον
     κόσμο"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Προσθέστε την εκδήλωσή σας
   csedweek_map_search_placeholder: Αναζήτηση εκδηλώσεων για την Ώρα του Κώδικα
   csedweek_map_search_search: Αναζήτηση
@@ -240,14 +251,31 @@ el-GR:
     ή να το τυπώσετε. Τώρα, συνεχίστε με <a href='http://studio.code.org'>άλλα μαθήματα</a>,
     ή δείτε περισσότερες επιλογές για να <a href='/learn/beyond'>Μάθετε μετά την μία
     Ώρα</a>.
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Ευχαριστούμε για την υποβολή!
   if_you_enjoyed: Εάν απολαύσατε το μάθημα, ζητήστε από φίλους σας να δοκιμάσουν και
     αυτοί!  Θέλουμε όλος ο κόσμος να μάθει.
   personalize_certificate: Προσωποποιήστε το πιστοποιητικό σας
+  print_batch_certificates: Print a batch of certificates
+  print_certificates: Print certificates
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
+  print_ice_art_from_frozen: Print ice art from Frozen tutorials
+  want_a_blank_certificate_template: Want a blank certificate template to write in
+    your students' names?
+  landscape_recommended_certificates: It is recommended that you choose **Landscape**
+    when you print the certificates.
+  print_one_here_certificates: Print one here.
+  enter_certificate_names: Enter up to 30 names, **one per line**. A printable page
+    with personalized %{script_name} certificates will be generated.
   share_achievement: Μοιραστείτε τα επιτεύγματα σας
   beyond_hour_message: Συνεχίστε με <a href='http://studio.code.org'>άλλα μαθήματα</a>,
     ή δείτε περισσότερες επιλογές για να <a href='/learn/beyond'>Μάθετε μετά τη μια
     Ώρα</a>.
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Πίνακες με τις ψηλότερες βαθμολογίες για το "Μια Ώρα Κώδικα".
   support_url: http://support.code.org/
   country: Χώρα
@@ -333,6 +361,12 @@ el-GR:
     Ε'' τάξη'
   stats_michael: '"Δεν έχω <b>ποτέ, μα ποτέ</b> δει τους μαθητές μου τόσο ενθουσιώδεις
     για μάθηση" - Michael Clark, Δάσκαλος'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: Εξερευνήστε το <a href='http://studio.code.org'>Στούντιο Κώδικα</a>
   studiobar_title_nolink: Εξερευνήστε το Code Studio
   studiobar_elementary_title: Βασικά μαθήματα
@@ -426,13 +460,19 @@ el-GR:
   homepage_banner_text_main: Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία
     συμμαχία για τη βελτίωση της ποικιλομορφίας στην Πληροφορική.
   homepage_banner_text_link: Μάθετε περισσότερα
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Μάθετε περισσότερα
   homepage_banner_20k_teachers: 20.000 δάσκαλοι εχουν εκπαιδευτεί και τώρα διδάσκουν
     επιστήμη υπολογιστών σε τάξεις.
   homepage_banner_20k_teachers_link: Μάθετε περισσότερα
+  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
+    computer science.
+  homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: Κάνουμε μια σημαντική αλλαγή στην υποστήριξη της προστασίας
     των προσωπικών δεδομένων των μαθητών.
   homepage_banner_emailprivacy_link: Διαβάστε περισσότερα
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Μάθετε περισσότερα
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
@@ -515,8 +555,12 @@ el-GR:
   class_submission_languages_other: Άλλες γλώσσες
   videos_more: Περισσότερα <a href='%{inspiring_videos_playlist}'> εμπνευσμένα βίντεο</a>
     από ανθρώπους που αποτελούν πρότυπα και από διασημότητες
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: Περισσότερα <a href='%{careers_url}' target='_blank'> εμπνευσμένα
     βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: Διαλέξτε το θέμα Play Lab
   playlab_classic_title: Κλασικό
   playlab_gumball_title: Τσιχλόμπαλα
@@ -561,11 +605,25 @@ el-GR:
   minecraft_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
     Minecraft.
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Εγγραφείτε</a>
     για την ελεύθερη ώρα Κωδικόυ Minecraft εργαστηρίο, σε καταστήματα της Microsoft
     σε Αυστραλία, Καναδά, Πουέρτο Ρίκο ή τις ΗΠΑ. Μάθετε πώς η κωδικοποίηση είναι
     για όλους και συνδυάζει τη δημιουργικότητα, την επίλυση προβλημάτων και τόνους
     διασκέδασης."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Πληροφορική για όλους: Πέρα από μια ώρα κωδικού στο
     Κατάστημα της Microsoft'
   minecraft_continue_learning_description: Δεν απαιτείται εμπειρία πληροφορικής! Βοηθήστε
@@ -576,14 +634,25 @@ el-GR:
     κλειδιά στην επιστήμη υπολογιστωών, και ετοιμαστείτε να οδηγήσετε μια ώρα κωδικοποίησης
     στην τάξη σας ή την Κοινότητά σας. Το έχετε! <a href='%{minecraft_continue_learning_url}',
     target='_blank'>Εγγραφείτε σήμερα</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Τα Αθλήματα της Ώρας του Κώδικα
   sports_og_title: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
   sports_og_description: Πρωταθλητές και Ολυμπιονίκες σας συνιστούμε να δοκιμάσετε
     την Ώρα του Κώδικα. Γράψτε κώδικα για το δικό σας άθλημα.
+  sports_title: Code your own sports game
   sports_watch_video: Δείτε το βίντεο
   sports_video_title: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
   sports_select_theme: Επιλέξτε το θέμα του μαθήματός σας
   sports_basketball_title: Φτιάξτε ένα παιχνίδι μπάσκετ
+  sports_all_sports_title: Mix and match across sports
   sports_featured_athletes: Δείτε προτεινόμενους αθλητές
   sports_athletes_title: Προτεινόμενοι αθλητές
   sports_athlete_Draymond: Ντρέιμοντ Γκριν, χρυσός Ολυμπιονίκης και πρωταθλητής του
@@ -629,8 +698,10 @@ el-GR:
   video_title_real_madrid: Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης
   video_title_marco_belinelli: Η Ώρα του Κώδικα με τον Μάρκο Μπελινέλι
   video_title_chris_bosh: Ο Κρις Μπος για την Πληροφορική
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 λεπτό
   video_2min: 2 λεπτά
+  video_3min: 3 min
   video_5min: 5 λεπτά
   speak_another_language: Μιλάτε άλλη γλώσσα;
   help_translate: Βοηθήστε μας με τη μετάφραση.
@@ -658,13 +729,28 @@ el-GR:
     ή κάποιον που μπορεί να <span style="font-family: ''Gotham 7r'', sans-serif;">εμπνεύσει</span>
     τους μαθητές τους μιλώντας για το εύρος των δυνατοτήτων με την Πληροφορική (κάτι
     που μπορεί να γίνει και μέσω βίντεοομιλίας).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Παρακαλούμε εισάγετε τις ακόλουθες πληροφορίες,
     αν είστε φοιτητής Πληροφορικής ή επαγγελματίας λογισμικού. Τα πεδία με <span class="form-required-field">
     *</span> είναι υποχρεωτικά.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Δεν θέλετε να γίνετε εθελοντής; <a href="%{learn_more}">Μάθετε
     περισσότερα</a> για τη διοργάνωση της δικής σας εκδήλωσης της Ώρας του Κώδικα
     και βρείτε εθελοντές από τον <a href="%{volunteer_local}">χάρτη εθελοντών</a>
     μας.
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Ενημερώστε την πληροφόρησή σας
   volunteer_engineer_submission_header_shared: Οι πληροφορίες μοιράζονται με τους
     καθηγητές στο χάρτη εθελοντή
@@ -699,6 +785,8 @@ el-GR:
   volunteer_engineer_submission_field_email_desc: Η διεύθυνση email σας δεν πρόκειται
     ποτέ να κοινοποιηθεί, αλλά θα σας στέλνουμε αιτήσεις από τους εκπαιδευτικούς.
   volunteer_engineer_submission_field_email_placeholder: Διεύθυνση email
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
   volunteer_engineer_submission_field_email_preference_privacy: "(Δείτε την πολιτική
     απορρήτου μας)"
   volunteer_engineer_submission_field_email_preference_yes: Ναι
@@ -711,11 +799,17 @@ el-GR:
   volunteer_engineer_submission_checkbox_contact: 'Συμφωνώ ότι εκπαιδευτικοί μπορούν
     να επικοινωνήσουν μαζί μου για δυνατότητες εθελοντισμού (Σημείωση: η διεύθυνση
     email σας δεν θα γίνει κοινόχρηστη)'
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.
   volunteer_engineer_submission_submit: Υποβολή
   volunteer_engineer_submission_thankyou: Σας ευχαριστούμε για τη συμμετοχή σας ως
     εθελοντής για την Ώρα του Κώδικα. Για να ετοιμαστείτε για στην ώρα του κώδικα
     και να στρατολογήσετε άλλους μηχανικούς, <a href="%{url}"> μάθετε περισσότερα
     εδώ.</a>
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Αβέβαιο
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ώρα την εβδομάδα
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ώρες την εβδομάδα
@@ -752,6 +846,9 @@ el-GR:
   volunteer_engineer_submission_type_task_mentor: Ψάχνω για έναν σύμβουλο για να με
     βοηθήσει να προετοιμαστώ για την κωδικοποίηση με τους μαθητές μου
   petition_age: Ηλικία
+  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
+    Code traffic. We are unable to save any progress this week, but progress from
+    before this week is still safe.
   dashboard_announce_learn_more_button: Μάθετε περισσότερα
   dashboard_landing_title: Αρχική Σελίδα Εκπαιδευτή
   dashboard_landing_welcome: Καλώς ήλθατε στο νέο και βελτιωμένο πίνακα εκπαιδευτικού.
@@ -766,6 +863,7 @@ el-GR:
   dashboard_landing_new_beta: Νέο! Δοκιμάστε τα beta-μαθήματά μας για μαθητές K-5.
   dashboard_landing_new_k5courses: Νέο! Δοκιμάστε τα μαθήματά μας για μαθητές K-5.
   dashboard_landing_useful_links: Μερικοί άλλοι Χρήσιμοι Σύνδεσμοι (στα Αγγλικά μόνο)
+  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Θέστε ένα ερώτημα εσείς οι ίδιοι! Επισκεφθείτε τις
     μηνιαίες βίντεο ώρες γραφείου.
   dashboard_landing_print_certificates: Εκτύπωση πιστοποιητικών για τους μαθητές που
@@ -787,6 +885,11 @@ el-GR:
     που προσφέρονται από τους συνεργάτες μας.</a> Μάθετε να προγραμματίζετε με ρομπότ,
     να φτιάχνετε ιστοσελίδες, να φτιάχνετε τη δική σας εφαρμογή (app) ή να εξερευνήσετε
     άλλες γλώσσες όπως C++, Ruby, ή Python!
+  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_video_library: Use a video from the Video Library of computer
+    science concepts.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Η Ώρα του Κώδικα για Όλες τις Ηλικίες
   dashboard_hoc_courses_desc: Δοκιμάστε κάποιο από αυτά τα μικρότερα σεμινάρια 1 ώρας
     με τους μαθητές σας!
@@ -837,8 +940,18 @@ el-GR:
   dashboard_action_delete_no: Όχι
   dashboard_action_confirm: Διαγραφή;
   dashboard_action_done: Ολοκληρώθηκε
+  dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'Δείτε τις αξιολογήσεις σε:'
   dashboard_assessments_none: Δεν υπάρχουν αξιολογήσεις
+  dashboard_assessments_none_part2: If you are teaching a middle or high school course,
+    we have assessment questions available as part of Code.org to help your students
+    prepare for the AP test. To use these assessments, first assign the course to
+    your class and then pick the course from the drop down above and you'll see your
+    students' answers here.
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
+  dashboard_surveys_answers: Surveys
+  dashboard_percent: Percent
   dashboard_filter_by_stage: 'Φίλτρο κατά στάδιο:'
   dashboard_filter_all: Ολα
   dashboard_download_csv: Κατεβάστε το CSV
@@ -851,10 +964,13 @@ el-GR:
   dashboard_navigation_section_speakers: Πληροφορική <br/> προσκεκλημένων ομιλητών
   dashboard_navigation_all_sections: Λογαριασμοί μαθητών και Πρόοδος
   dashboard_navigation_view_progress: Πρόοδος
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Αξιολογήσεις
+  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Προσθήκη μαθητών
   dashboard_navigation_manage_students: Διαχείριση μαθητών
   dashboard_navigation_lesson_plans_resources: Σχέδια μαθήματος και Πόροι
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'Τμήμα: %{section_name}'
   dashboard_navigation_student: 'Μαθητής: %{student_name}'
   dashboard_progress_not_started: δεν έχει ξεκινήσει
@@ -867,9 +983,11 @@ el-GR:
   dashboard_progress_view: 'Προβολή προόδου σε:'
   dashboard_progress_student_in_script: Πληροφορίες προόδου για τον/την %{student_name}
     στο %{script_name}
+  dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'Δείτε τις απαντήσεις κειμένου σε:'
   dashboard_responses_none: Δεν υπάρχουν απαντήσεις κειμένου
   dashboard_sections_new_section: Νέα ενότητα
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Δημιουργήστε νέες ενότητες και προσθέστε
     σε αυτές μαθητές. Οι ενότητες σας βοηθήσουν να οργανώσετε τους μαθητές σε μικρότερες
     ομάδες, ώστε να μπορείτε να παρακολουθείτε την πρόοδό τους και να διαχειρίζεστε
@@ -879,6 +997,7 @@ el-GR:
   dashboard_sections_table_grade: Βαθμος
   dashboard_sections_table_course: Μάθημα
   dashboard_sections_table_pairing_allowed: Προγραμματισμός κατά ζεύγη
+  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Μαθητές
   dashboard_sections_table_code: Κωδικός ενότητας
   dashboard_sections_name: Όνομα ενότητας
@@ -912,6 +1031,14 @@ el-GR:
   dashboard_sections_no_move: Όχι, θέλω να μεταφέρω τους μαθητές μόνο στο νέο τμήμα.
   dashboard_sections_move_students: Μετακίνησε τους μαθητές
   dashboard_sections_assign_hoc_script_desc: Συμμετοχή στην Ωρα του Κώδικα;
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not be able to
+    save progress in this course from December 3 - 11 due to the amount of traffic
+    our site will receive for the Hour of Code.  Everything else in this tutorial
+    will continue to work as expected.  You may still assign the course and give all
+    students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print
+    these in advance</a>.)  We will save and report student progress for every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: Δεν επιλέξατε κανένα μαθητή για να μετακινήσετε.
     Παρακαλώ επιλέξτε τουλάχιστον ενα μαθητή.
   dashboard_error_other_section: Αν μετακινείτε μαθητές μεταξύτων δικών σας τμημάτων,
@@ -919,6 +1046,9 @@ el-GR:
     να μετακινήσετε τους μαθητές σας σε τμήμα ενός διαφορετικού δασκάλου.
   dashboard_students_add_multiple: 'Πληκτρολογήστε ή επικολλήστε τα ονόματα των μαθητών
     σας, ένα ανά γραμμή:'
+  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
+    Google Classroom</b> button above.
   dashboard_students_new_section: Έχετε δημιουργήσει μια νέα ενότητα! Τώρα προσθέστε
     τους μαθητές σας, χρησιμοποιώντας τα ανωτέρω πλήκτρα <b>Προσθήκη μαθητή</b> και
     <b>Προσθήκη πολλών μαθητών</b>.
@@ -930,6 +1060,8 @@ el-GR:
   dashboard_students_total_lines: Γραμμές κώδικα
   dashboard_students_share_section: 'Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας
     με τους μαθητές σας:'
+  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
+    sign in page with your students:'
   dashboard_students_print_info: Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των
     μαθητών σας.
   dashboard_students_secret_picture_title: Μυστική εικόνα
@@ -954,6 +1086,7 @@ el-GR:
     ταχυδρομείου, ή αν θέλετε να δημιουργήσετε λογαριασμούς γι αυτούς, αλλάξτε τον
     μυστικό τύπο της ενότητας σε  <b>λέξη</b> ή <b>εικόνα</b>.
   dashboard_students_print_page: Εκτυπώστε αυτή την σελίδα
+  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Κλικ
     εδώ</a> για το έγγραφο δήλωσης απορρίτου, που μπορείτε να μοιράσετε ή να τυπώσετε
@@ -969,6 +1102,19 @@ el-GR:
   dashboard_course2: 'Μάθημα 2:'
   dashboard_course3: 'Μάθημα 3:'
   dashboard_course4: 'Μάθημα 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
+    these unplugged lessons</a> in your classroom.
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Πρόγραμμα σπουδών
   dashboard_curriculum_overview: Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως
     Ε΄ Δημοτικού
@@ -987,6 +1133,8 @@ el-GR:
   dashboard_curriculum_csins: 'Η Πληροφορική στην Επιστήμη:'
   dashboard_curriculum_csp: 'AP® Αρχές Πληροφορικής:'
   dashboard_curriculum_ecs: 'Εξερευνώντας την Πληροφορική:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Άλλα
   dashboard_login_word: Λέξη
@@ -1034,6 +1182,14 @@ el-GR:
   code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής
+  host_an_hour: Host an hour
+  learn_banner_title: Join us for the Hour of Code
+  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
+    students in more than 180 countries. Anyone, anywhere can organize an Hour of
+    Code event. Help us give every student the opportunity to learn computer science!
+    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
+    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
+    target='_blank'>these videos</a>.
   learn_more: Δοκιμάστε τώρα
   learn_sign_up_description: Εγγραφείτε για να συμμετάσχετε στην Ώρα του Κώδικα κατά
     τη διάρκεια της Εκπαιδευτικής Εβδομάδας στην Επιστήμη Υπολογιστών
@@ -1080,9 +1236,16 @@ el-GR:
   carousel_heading_beyond_languages: Βοηθήματα εκμάθησης σε άλλες γλώσσες προγραμματισμού
   carousel_heading_apps_games: Δημιουργήστε τις δικές σας εφαρμογές ή παιχνίδια
   carousel_heading_university: Μαθήματα Πανεπιστημίων σε σύνδεση
+  carousel_heading_online_university: University Courses Available Online
   carousel_heading_webpages: Μάθετε να δημιουργείτε ιστοσελίδες
   carousel_heading_robots: Μάθετε να προγραμματίζετε με ρομπότ
   carousel_heading_ide: Δημοφιλείς ψηφιακές πλατφόρμες μεταξύ των εκπαιδευτικών
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Unreliable or no internet? Install these apps on your
+    computer
   educator_notes: Σημειώσεις επιμορφωτή
   teach_led_lesson_plans: Σχέδια Μαθήματος για την Ώρα Κώδικα από το Teacher Led
   learn_footer_all_tutorials: Δείτε τον <a href="https://code.org/educate/allhourofcode">ολοκληρωμένο
@@ -1093,6 +1256,8 @@ el-GR:
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
   beyond_submission: Θέλετε να υποβάλετε ένα σεμινάριο για την ενότητα Πέρα από μια
     Ώρα; Δείτε τα κριτήρια και την φόρμα υποβολής.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: συμμετέχοντες
   teachers_notes: Σημειώσεις εκπαιδευτικού
   teachers_notes_hoc: 'Δάσκαλοι: Δείτε εδώ σημαντικές σημειώσεις για εκπαιδευτικούς'
@@ -1150,26 +1315,77 @@ el-GR:
   allcancode_name: Τρέξε Μάρκο!
   csfirst_name: CS First
   boxisland_name: " Κουτί Νησί "
+  codesters_name: Codesters
   texasinstruments_name: Τα 10 λεπτά του κώδικα
   teacherled_name: Σχέδια Μαθήματος για την Ώρα Κώδικα από το Teacher Led
   course1_name: Μάθημα 1
   course2_name: Μάθημα 2
   course3_name: Μάθημα 3
   course4_name: Μάθημα 4
+  coursea-draft_name: Course A
+  coursea_name: Course A
+  courseb-draft_name: Course B
+  courseb_name: Course B
+  coursec-draft_name: Course C
+  coursec_name: Course C
+  coursed-draft_name: Course D
+  coursed_name: Course D
+  coursee-draft_name: Course E
+  coursee_name: Course E
+  coursef-draft_name: Course F
+  coursef_name: Course F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Επιταχυνόμενη πορεία μάθησης
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: Επιστήμη Υπολογιστών στην Αλγεβρα
   AlgebraA_name: Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Α
   AlgebraB_name: Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Β
+  gumball_name: Gumball
   classicmaze_name: Κλασικός λαβύρινθος
   iceage_name: Εποχή των Παγετώνων
   minecraft_name: Minecraft
   starwarsblocks_name: Πόλεμος τον Άστρων (μπλοκ)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Απλή Κρυπτογράφηση
   text-compression_name: Συμπίεση κειμένου
   applab_name: App Lab
   gamelab_name: Game Lab
   basketball_name: Φτιάξτε ένα παιχνίδι μπάσκετ
+  sports_name: Code your own sports game
   applab_gradelevel: Ηλικίες 13+
   applab_shortdescription_congrats: Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον
     προγραμματισμού όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια
@@ -1230,21 +1446,25 @@ el-GR:
   course3_gradelevel: Ηλικίες 8-18
   course4_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   coursea_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb_gradelevel: Ages 5-8
   coursec_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2017_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2017_gradelevel: Ages 5-8
   coursec-2017_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2017_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2017_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2017_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2018_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2018_gradelevel: Ages 5-8
   coursec-2018_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2018_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2018_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2018_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2019_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2019_gradelevel: Ages 5-8
   coursec-2019_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
@@ -1278,6 +1498,7 @@ el-GR:
   quorum_platformtext: Σύγχρονα προγράμματα περιήγησης. Υποστηρίζονται αναγνώστες
     οθόνης
   codespark_platformtext: iOS, Android (ή πρόγραμμα περιήγησης)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android ταμπλέτες
   robomindnl_platformtext: Σύγχρονα προγράμματα περιήγησης, κινητά
   flappy_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
@@ -1398,6 +1619,53 @@ el-GR:
     θα βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος
     οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν
     με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού.
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2019_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2019_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
@@ -1600,6 +1868,7 @@ el-GR:
   khan_beyond_name: Μάθετε προγραμματισμό υπολογιστών
   tynker_beyond_name: Μάθετε προγραμματισμό στο σπίτι
   scratch_beyond_name: Γίνετε δημιουργικοί με την κωδικοποίηση
+  lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy - Ακαδημία Κώδικα
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR για προσχολικές ηλικίες
@@ -1617,12 +1886,22 @@ el-GR:
   lynda_beyond_name: Μαθήματα Προγραμματισμού σε σύνδεση
   edx_beyond_name: Χάρβαρντ κατηγορία CS50
   coursera_beyond_name: Στάνφορντ κατηγορία CS 101
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Μαθήματα Πανεπιστημίων σε σύνδεση
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Μάθετε HTML
   codeavengers_beyond_name: Μάθετε γράφετε Κώδικα για Ιστοσελίδες
+  mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat - Μονομαχία Κώδικα
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino με Sparkfun
   processing_beyond_name: Προγραμματισμός με Επεξεργασία
+  alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Ηλικίες 4-104
   khan_beyond_gradelevel: Γυμνάσιο +
   tynker_beyond_gradelevel: Ηλικίες 5-13
@@ -1666,6 +1945,9 @@ el-GR:
   scratch_beyond_platformtext: Οποιοδήποτε πρόγραμμα περιήγησης
   lightbot_beyond_platformtext: iOS, Android (ή πρόγραμμα περιήγησης)
   codecademy_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης. iOS, Android εφαρμογές
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Εφαρμογή για Κινητά
   groklearning_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
   hacketyhack_beyond_platformtext: Εγκατάσταση σε υπολογιστή
@@ -1681,11 +1963,14 @@ el-GR:
   coursera_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης
   udacity_beyond_platformtext: Σύγχρονα προγράμματα περιήγησης
   teachingtree_beyond_platformtext: Με βάση το Internet
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Εγκατάσταση σε υπολογιστή
   w3schools_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
   codeavengers_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
   mozilla_beyond_platformtext: Σύγρονα Προγράμματα περιήγησης
   codecombat_beyond_platformtext: Με βάση το Internet (Firefox, Chrome, Safari, IE9+)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Αγορά Ρομπότ
   finch_beyond_platformtext: Αγορά Ρομπότ
   arduino_beyond_platformtext: Πρόγραμμα περιήγησης και στη συνέχεια αγορά Kit
@@ -1934,37 +2219,71 @@ el-GR:
     SPRK προσφέρουν στα παιδιά ένα διασκεδαστικό εντατικό μάθημα στον προγραμματισμό
     των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη.
   compatibility_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
+  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
+    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
+    supported browsers</a>. You can try viewing the page, but expect functionality
+    to be broken.
+  compatibility_unsupported_browser_markdown: Your browser is not supported. Please
+    upgrade your browser to [one of our supported browsers](%{supported_browsers_url}).
+    You can try viewing the page, but expect functionality to be broken.
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: Φτερούγισε
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
+  header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Τες
   header_course_catalog: Κατάλογος Μαθημάτων
   header_project_gallery: Έργα
   header_sections: Ενότητες
+  header_professional_learning: Professional Learning
+  header_educate_overview: Educator Overview
   header_educate_elementary: Δημοτικό σχολείο
   header_educate_middle: Γυμνάσιο
   header_educate_high: Λύκειο
   header_educate_hoc: Ώρα του Κώδικα
+  header_educate_partner: Partner with Us
   header_educate_beyond: Πέρα από το Code.org
   header_educate_inspire: Εμπνεύστε έναν Μαθητή
   header_educate_community: Online Κοινότητα
+  header_educate_tools: Tools and Videos
   header_about_us: Σχετικά με εμάς
+  header_about_leadership: Leadership
   header_about_donors: Δωρητές
   header_about_partners: Συνεργάτες
+  header_about_team: Full Team
+  header_about_news: Newsroom
   header_about_evaluation: Αξιολογήσεις
   header_about_jobs: Θέσεις εργασίας
   header_about_contact: Επικοινωνία
   header_about_faqs: Συχνές ερωτήσεις
   header_learn: Εκμάθηση
   header_teach: Διδασκαλία
+  header_stats: Stats
+  header_help_us: Help Us
   header_about: Σχετικά
   header_teacher_community: Κοινότητα δασκάλων
   header_help_support: 'Βοήθεια και υποστήριξη '
   header_report_bug: Αναφορά προβλήματος
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Πολιτική Απορρήτου
   header_legal_tos: Όροι
   header_tutorials: Οδηγοί εκμάθησης
+  app_lab_documentation: App Lab Documentation
+  app_lab_tutorials: App Lab Tutorials
+  game_lab_documentation: Game Lab Documentation
+  game_lab_tutorials: Game Lab Tutorials
+  sprite_lab_documentation: Sprite Lab Documentation
+  sprite_lab_tutorials: Sprite Lab Tutorials
   header_documentation: Τεκμηρίωση
   user_header_label: Γεια σου %{username}
   user_header_team: Ομάδα
+  user_header_my_projects: My projects
   user_header_settings: Ο λογαριασμός μου
   user_header_logout: Αποσύνδεση
   user_header_signin: Σύνδεση
@@ -1978,6 +2297,61 @@ el-GR:
   user_header_minecraft: Minecraft
   user_header_flappy: Πουλάκι
   user_header_view_all: Όλα τα έργα...
+  user_header_view_project_gallery: View project gallery
+  user_header_view_my_projects: View my projects
+  view_all_sections: View all sections
+  view_section: View Section
+  view_named_section: View %{section_name}
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  signing_in: Signing In
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
+  sign_in_instruct_name: Choose their display name.
+  sign_in_instruct_secret: Choose their secret %{secret}.
+  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_overview_cards: Students can find all of this information, including their
+    secret %{secret}, in the login cards below.
+  reset_student_password: Resetting student passwords
+  reset_student_password_instructions: You can reset the secret <word/picture> for
+    any of your students by going to the “Manage Students” tab for the section, clicking
+    the “Show secret” button under the “Password” column, and clicking the “Reset
+    secret” button.
+  login_cards: Login Cards
+  print_login_cards: Print login cards
+  joining_section: Joining your section (one-time only)
+  joining_section_overview: If a student has not already joined your section, please
+    ask them to do the following steps. Note that they only need to do this once.
+    By joining your section, students will be able see the course assigned to them
+    and you will be able to track the progress of the work they complete while they
+    are signed in.
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
+    done so. They can do this at https://studio.code.org/users/sign_up. Note that
+    they can either sign up with an email address and password, or sign up through
+    Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: Sign in to their Code.org account.
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
+    code: %{section_code}.'
+  joining_section_instruct_button: Once they press the “Go” button, they should be
+    added to your section.
+  signing_in_single_instruct: Your students can sign in to their Code.org accounts
+    by going to https://code.org/ and clicking on the “Sign in” button on the top
+    right corner.
+  reset_student_password_email: If your student created a Code.org account by using
+    their email address and password (instead of signing in through their Google,
+    Facebook, Microsoft, or Clever account), you can reset their password by going
+    to the “Manage Students” tab for the section, and clicking the “Reset password”
+    button under the “Password” column.
+  syncing_students: Syncing your students
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
+    Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
   applab_tile_title: Εισαγωγή στο App Lab (Ηλικίες 13+)
   applab_tile_subtitle: Δημιουργήστε τη δική σας εφαρμογή σε Javascript με τη χρήση
     προγραμματισμού βασισμένου σε μπλοκ. Εναλλακτικά, αναβαθμίστε τις δεξιότητές σας
@@ -1985,6 +2359,10 @@ el-GR:
   applab_tile_start_tutorial: Έναρξη
   applab_tile_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
   aquatic_name: 'Minecraft: Υδάτινο Ταξίδι'
+  account_sign_up_email_opt_in: Can we email you about updates to our courses, local
+    opportunities, or other computer science news? (roughly once a month)
+  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
+    permission to use the Code.org services.
   hoc_overview_dance_title: Πάρτι Χορού
   hoc_overview_dance_subtitle: Γράψτε κώδικα για ένα Πάρτι Χορού και μοιραστείτε το
     με τους φίλους σας. Συμμετέχουν οι Katy Perry, Madonna, J. Balvin, Sia, Keith
@@ -1998,6 +2376,10 @@ el-GR:
     χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του
     Κώδικα ή να δοκιμάσει πάνω από 200 ωριαίους οδηγούς εκμάθησης, διαθέσιμοι σε πάνω
     από 45 γλώσσες.
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
   hoc_overview_partner_activities_title: Περισσότερες δραστηριότητες από συνεργάτες
   hoc_overview_partner_activities_body: Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από
     100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα
@@ -2005,14 +2387,33 @@ el-GR:
   hoc_overview_partner_activities_link: Προβολή Δραστηριοτήτων
   hoc_overview_start_tutorial: Έναρξη
   hoc_overview_view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_creativity: creativity
   hoc2018_creativity_create: Δημιουργία
+  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
   hoc2018_creativity_what_will_you_create: Τι θα δημιουργήσετε;
+  hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+    Watch our video.
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
+    I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
+    What will you create?'
+  hoc2018_creativity_courses: Go further with Code.org courses
+  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
+    courses</a>
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
   hoc2018_mc_page_title: Μαθήματα Minecraft από την Ώρα του Κώδικα
   hoc2018_mc_details: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets
     | Ηλικίες 2+
+  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
+    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
+    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
   hoc2018_mc_aquatic_title: 'Minecraft: Υδάτινο Ταξίδι'
   hoc2018_mc_aquatic_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα,
     με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2019_mc_aquatic_description: Explore and build underwater worlds with code.
   hoc2018_mc_hero_title: Ταξίδι του Ήρωα του Minecraft
   hoc2018_mc_hero_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
     μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
@@ -2036,7 +2437,13 @@ el-GR:
     μια Ώρα του Κώδικα και να εμπλέξετε τους μαθητές σας στην επιστήμη των υπολογιστών.
   hoc2018_mc_educators_box2_button: Λήψη
   hoc2018_mc_educators_box3_title: Παρακολουθήστε ένα δωρεάν σεμινάριο για φοιτητές
+  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
+    Hour of Code workshop. For participants of all skill levels, ages six and up.
   hoc2018_mc_educators_box3_button: Βρείτε ένα σεμινάριο
+  hoc2018_mc_educators_box4_title: Access more computer science resources
+  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
+    and computer science education resources from Microsoft.
+  hoc2018_mc_educators_box4_button: Explore resources
   hoc2018_mc_watch_videos: Πριν ξεκινήσετε, δείτε ένα από αυτά τα βίντεο
   hoc2018_mc_videos_more: Περισσότερα <a href='%{inspiring_videos_playlist}'> εμπνευσμένα
     βίντεο</a> από ανθρώπους που αποτελούν πρότυπα και από διασημότητες
@@ -2044,6 +2451,7 @@ el-GR:
     βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας
   hoc2018_mc_video_1min: 1 λεπτό
   hoc2018_mc_video_2min: 2 λεπτά
+  hoc2018_mc_video_3min: 3 min
   hoc2018_mc_video_5min: 5 λεπτά
   hoc2018_mc_video_title_steph_curry: Η Ώρα του Κώδικα με τον Steph Curry
   hoc2018_mc_video_title_sports: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
@@ -2055,33 +2463,47 @@ el-GR:
   hoc2018_mc_video_title_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί
     να Μάθει
   hoc2018_mc_video_title_anybody_can_learn: Οποιοσδήποτε Μπορεί να Μάθει
+  hoc2018_mc_video_title_my_name_is_aracely: My Name is Aracely
   hoc2018_mc_homepage_hoc_coming: Η Ώρα του Κώδικα πλησιάζει...
   hoc2018_mc_homepage_what_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+  hoc2018_mc_homepage_watch_video: Watch our video
   hoc2018_mc_homepage_join_us: Ελάτε μαζί μας
   hoc2018_mc_homepage_try_it: Δοκιμάστε το
+  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
   hoc2018_mc_back_journey: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια
     ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
   hoc2018_mc_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Continue learning with Minecraft.
+  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
+  hoc2018_mc_short_description: Use your creativity and problem solving skills to
+    find treasure and explore under water worlds with the power of code.
   hoc2018_mc_short_description_shorter: Χρησιμοποιήστε τη δημιουργικότητά σας και
     τις δεξιότητες επίλυσης προβλημάτων, για να εξερευνήσετε και να χτίσετε υποβρύχιους
     κόσμους με κώδικα.
+  hoc2018_mc_journey: Journey through Minecraft with code.
   hoc2018_dance_party_main_heading: Πάρτι Χορού
+  hoc2018_dance_party_landing_title: Dance
   hoc2018_dance_party_subheading: Βοηθήστε να μεταφράσουμε το Πάρτι Χορού
   hoc2018_dance_create_your_own_dance_title: Δημιουργήστε και μοιραστείτε το δικό
     σας Πάρτι Χορού
   hoc2018_dance_party_box_title: Πάρτι Χορού
   hoc2018_dance_party_box_description: Δημιουργήστε ένα δικό σας Πάρτι Χορού για να
     το μοιραστείτε με τους φίλους σας!
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
   hoc2018_dance_party_button: Έναρξη
   hoc2018_dance_keep_on_dancing_box_title: Συνεχίστε να Χορεύετε
-  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς
+  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές
     ιδέες για πρότζεκτ.
+  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
   hoc2018_dance_keep_on_dancing_button: Έναρξη δεύτερου μέρους
   hoc2018_dance_teacher_resources_title: Πηγές για εκπαιδευτικούς
   hoc2018_dance_teacher_resources_tile1_description: Σχέδια μαθήματος, πιστοποιητικά
     και φίλτρα μουσικής.
   hoc2018_dance_teacher_resources_tile1_button: Σχέδιο μαθήματος
-  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς καλώδια
+  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς υπολογιστή
   hoc2018_dance_teacher_resources_tile2_description: 'Δεν απαιτούνται υπολογιστές!  Μάθετε
     έννοιες προγραμματισμού για να χορογραφήσετε μαζί ένα πάρτι χορού. '
   hoc2018_dance_teacher_resources_tile2_button: Αποσυνδεδεμένη Δραστηριότητα
@@ -2091,10 +2513,77 @@ el-GR:
   hoc2018_dance_view_creativity_video_playlist: Τι είναι Δημιουργικότητα; Προβολή
     ολόκληρης της σειράς (5 λεπτά)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: Σε συνεργασία με
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Το πρόγραμμα
+    Amazon Future Engineer* έχει σκοπό να εμπνεύσει, να μορφώσει και να εκπαιδεύσει
+    παιδιά με χαμηλό εισόδημα ή άλλες δυσκολίες έτσι ώστε στο μέλλον να μπορέσουν
+    να διεκδικήσουν επαγγέλματα σχετικά με την επιστήμη των υπολογιστών.  <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Μάθετε περισσότερα</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
   hoc2018_dance_amazon_about_future_engineer_button: Μάθετε περισσότερα
+  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend to study a CS degree at a
+    4-year college or university in the United States.
+  hoc2018_dance_amazon_scholarship_programs_button: Apply now
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
   hoc2018_dance_amazon_future_engineer_footer: "* Οι καλλιτέχνες των οποίων η μουσική
     χρησιμοποιείται σε αυτό τον οδηγό εκμάθησης δεν προωθούν την Amazon ως μέρος της
     άδειας χρήσης της μουσικής τους στο Code.org.\n\n"
   hoc2018_dance_measure: Μέτρα
   hoc2018_dance_measure_colon: 'Μέτρα:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations
+  page_not_found_title: Page Not Found
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: The page you are looking for doesn't exist at this address.
+    Check the web address and resubmit. Or, go back to our homepage.
+  page_not_found_button: Return home
   hoc2018_mc_with_microsoft: Σε συνεργασία με
+  hoc2018_mc_thank_microsoft: We thank Microsoft for supporting our vision and mission
+    to ensure every child has the opportunity to learn computer science and the skills
+    to succeed in the 21st century.
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available
+    in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of
+    coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings.
+  hoc2019_mc_more_coding_resources: More Coding Resources
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?
+    \ \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link})
+    from last year."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

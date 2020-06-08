@@ -14,11 +14,24 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Та КШУ-ны багш уу? Бусад CSEdWeek нөөцийг харах</a>'
   csedweek_banner_teachers_text: "Та КШУ-ны багш уу? Бусад CSEdWeek нөөцийг харах"
   n_have_learned_an_hoc: "<h1>Оролдох</h1><h2>Кодын цаг</h2><h3># үйлчилсэн</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Бүх хүн сурч болно."
   learn_now: "Одоо сурах"
   petition_message: "Сургууль болгоны сурагч бүр компьютерийн шинжлэх ухаанд суралцах боломжтой байх ёстой"
   petition_sign_message: 'Зөвшөөрч байгаа бол өөрийн нэр дээр гарын үсэг зурж, # бусдын хамт цахим шуудангийн жагсаалтад нэгдээрэй.'
+  petition_sign_message_num: "If you agree, sign your name and join our mailing list along with %{num} others."
   petition_join_others: '# Бусадтай нэгдэх'
+  petition_join_others_num: "Join %{num} others"
   name: "Нэр"
   email: "Цахим шуудан"
   zipcode: "ZIP код эсвэл улс"
@@ -43,6 +56,7 @@
   hoc2014_support: "Үүнийг дэмжээрэй &#x25BE;"
   hoc2014_whatishoc: "Кодын цаг гэж юу вэ?"
   csedweek_map_header: "# CSEdWeek / Дэлхийн өнцөг булан бүр дэх Кодын Цагийн арга хэмжээ"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: "Үйл явдлаа бүртгүүлээрэй"
   csedweek_map_search_placeholder: "Кодын Цагийн үйл явдлыг хайх"
   csedweek_map_search_search: "Хайлт"
@@ -145,12 +159,21 @@
   enter_valid_email: "Хүчинтэй цахим шуудангийн хаяг оруулаарай"
   get_a_certificate_message: "Бид танд <a href='/learn/beyond'>Кодын Цагаас Цааш</a> талаарх гэрчилгээ, мэдээллийг илгээх болно"
   get_a_certificate_message_after: "Гэрчилгээг татаж авах эсвэл хэвлэхийн тулд дараарай. Одоо манай <a href='http://studio.code.org'>бусад сургалтууд</a>-г үргэлжлүүлэн сурч, эсвэл <a href='/learn/beyond'>Кодын Цагаас Цааш Сурах</a> дээр илүү сонголтыг үзээрэй."
+  get_a_certificate_message_after_markdown: "Click on the certificate to download or print it. Now, keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Илгээсэнд баярлалаа!"
   if_you_enjoyed: "Хэрэв та сурах дуртай байсан бол найз нөхдөөсөө үүнийг туршиж үзэхийг хүсээрэй. Дэлхий нийтээрээ суралцахыг бид хүсч байна."
   personalize_certificate: "Гэрчилгээгээ хувийн болгоорой"
+  print_batch_certificates: "Print a batch of certificates"
   print_certificates: "Гэрчилгээг хэвлэх"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  print_ice_art_from_frozen: "Print ice art from Frozen tutorials"
+  want_a_blank_certificate_template: "Want a blank certificate template to write in your students' names?"
+  landscape_recommended_certificates: "It is recommended that you choose **Landscape** when you print the certificates."
+  print_one_here_certificates: "Print one here."
+  enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
   share_achievement: "Амжилтаа хуваалцаарай"
   beyond_hour_message: "Одоо манай <a href='http://studio.code.org'>бусад сургалтууд</a>-г үргэлжлүүлэн сурч, эсвэл <a href='/learn/beyond'>Кодын Цагаас Цааш Сурах</a> дээр илүү сонголтыг үзээрэй."
+  beyond_hour_message_markdown: "Keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Кодын цагийн тэргүүлэгчдийн жагсаалт."
   support_url: "http://support.code.org/"
   country: "Улс"
@@ -225,6 +248,9 @@
   stats_nina: '"Өдөр бүр ижил үр дүн өгдөг байв&mdash; 100%-н оролцоо." - Нина Николс Пийри, Багш'
   stats_student: '"Энэ бол <b>амьдралт нэг удаагийн</b> боломж байсныг би мэдэж байсан." - Мариана Алзате, 5-р анги'
   stats_michael: '"Би <b>хэзээ ч, үүрд</b> сурагчдаа ийм баярласан байгааг харж байгаагүй." - Фрэнк Мартинез, Багш'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Teacher'
   studiobar_title: "<a href='http://studio.code.org'>Code.org-н хичээл</a>-г судлах"
   studiobar_title_nolink: "Code.org-н хичээл-г судлах"
   studiobar_elementary_title: "Анхан шатны хичээлүүд"
@@ -325,10 +351,15 @@
   homepage_banner_link_prizes: 'Түүхэн дэх хамгийн том сургалтын арга хэмжээнд нэгдээрэй. '
   homepage_banner_text_main: "Code.org ба коллежийн зөвлөл нь компьютерийн шинжлэх ухааны олон талт байдлыг сайжруулах зорилгоор холбоо байгуулдаг."
   homepage_banner_text_link: "Илүү мэдээлэл авах"
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Илүү мэдээлэл авах"
+  homepage_banner_20k_teachers: "20,000 teachers trained, and now teaching computer science in classrooms."
   homepage_banner_20k_teachers_link: "Илүү мэдээлэл авах"
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "Бид сурагчийн нууцлалыг хэрхэн дэмжиж буйд чухал өөрчлөлт оруулж байна."
   homepage_banner_emailprivacy_link: "Цааш нь унших"
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Илүү мэдээлэл авах"
   homepage_slot_text_title_hoc: "Кодын цаг"
   homepage_slot_text_blurb_hoc: "Бүх хүн сурч болно. Өнөөдөр эхлэх"
@@ -402,7 +433,9 @@
   class_submission_level_vocational: "Мэргэжлийн сургууль"
   class_submission_languages_other: "Бусад хэл (үүд)"
   videos_more: "Илүү <a href='%{inspiring_videos_playlist}'>урам зориг өгөх видеонууд</a>гол дүр, одуудыг онцолсон"
+  videos_more_markdown: "More [inspirational videos](%{inspiring_videos_playlist}) featuring role models and celebrities"
   careers_page_more: "Илүү <a href='%{careers_url}' target='_blank'>урам зориг өгөх видеонууд</a>технологийн салбар дахь мэргэжилтнуудыг онцолсон"
+  careers_page_more_markdown: "More [inspirational videos](%{careers_url}) featuring professionals in technology fields"
   playlab_choose_theme: "Өөрийн Тоглоомын лабын сэдвийг сонгоорой"
   playlab_classic_title: "Сонгодог"
   playlab_gumball_title: "Гамболлын гайхалтай ертөнц"
@@ -508,9 +541,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} багш нарт сайн дурынхан хэрэгэй байна.<br>%{num_volunteers} сайн дурынхан бүртгүүлсэн. Тэдэнтэй нэгдээрэй."
   volunteer_engineer_submission_intro_background: "Кодын Цаг нь 180+ орны хэдэн арван сая сурагчдад хүрч компьютерийн шинжлэх ухаантай нэг цагийн турш танилцах хөдөлгөөн юм. Компьютерийн шинжлэх ухааны боловсролын долоо хоногт 12-р сарын 7-13-ны өдрүүдэд хамрагдаарай."
   volunteer_engineer_submission_intro_recruit: 'Багш нар <span style = "font-family: ''Gotham 7r'', sans-serif;"> компьютерийн боловсролын талаар хүсэл эрмэлзэлтэй </span> бөгөөд ангид туслах боломжтой хэн нэгнийг ангид байхыг хүсдэг. Тэрээр <span style="font-family: ''Gotham 7r'', sans-serif;">урам зориг өгөх</span> боломжтой бөгөд компьютерийн шинжлэх ухааны (энэ нь видео чатаар хийх боломжтой) өргөн боломжуудын талаар ярилцдаг.'
+  volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
   volunteer_engineer_submission_intro_guide: "Манай <a href=\"%{volunteer_guide}\">сайн дурын хөтөлбөрийн талаар эндээс</a> дэлгэрэнгүй үзээрэй."
+  volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Та компьютерийн шинжлэх ухааны сурагч эсвэл програм хангамжийн мэргэжилтэй бол дараах мэдээллийг оруулна уу. Та сайн дурын гишүүнээр бүртгүүлэхийн тулд дор хаяж 18 настай байх ёстой. Энэ хэсэгт бөглөсөн бүх талбарууд <a href=\"/volunteer/local\">сайн дурын газрын зураг</a> -ыг харж буй бүх хүмүүст нээлттэй болно гэдгийг анхаарна уу. <Span class = \"form-required-field\"> * </span> гэсэн тэмдэг бүхий талбаруудыг оруулах шаардлагатай."
+  volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
   volunteer_engineer_submission_intro_links: "Та сайн дурын ажилтан хайж байгаа багш уу? Манай <a href=\"%{volunteer_local}\">сайн дурынхны газрын зураг</a>-с орон нутгийн сайн дурын ажилтан олоорой."
+  volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Мэдээллээ шинэчлээрэй"
   volunteer_engineer_submission_header_shared: "Сайн дурын газрын зураг дээр багш нартай хуваалцсан мэдээлэл"
   volunteer_engineer_submission_field_name: "Нэр"
@@ -544,6 +581,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Би дор хаяж 18 настай гэдгээ гэрчилж байна."
   volunteer_engineer_submission_submit: "Илгээх"
   volunteer_engineer_submission_thankyou: "Баярлалаа! Таны сайн дурын ажилтны мэдээллийг амжилттай илгээлээ. Тантай адил сайн дурын ажилтнуудыг хайж, холбоо барих зорилгоор багш нар <a href=\"%{url}\">энэ газрын зургийг</a> ашиглана. Таны мэдээлэл газрын зураг дээр зөв гарч ирэхийн тулд 48 цаг хүлээгээрэй."
+  volunteer_engineer_submission_thankyou_markdown: "Thank you! Your volunteer information was successfully submitted. Teachers will be using [this map](%{url}) to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_commitment_uncertain: "Тодорхой бус"
   volunteer_engineer_submission_commitment_one_hr_per_week: "7 хоногт 1 цаг"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "7 хоногт 3 цаг"
@@ -611,6 +649,7 @@
   dashboard_middle_courses_desc: "Манай дунд сургуулийн сургалтын хөтөлбөр нь математик, шинжлэх ухааны ойлголтыг заах хэрэгсэл болгон дунд сургуулийн математик, шинжлэх ухааны хүрээнд компьютерийн шинжлэх ухаан, програмчлалыг ашигладаг. Мэргэжлийн дээшлүүлэх семинарт бүртгүүлэхийн тулд Code.org-тай <a href=\"/educate/district\"> дүүргийн хэмжээний түншлэл</a> хүсэлт гаргаарай."
   dashboard_high_courses: "Жилийн хугацаатай Ахлах сургуулийн сургалт"
   dashboard_high_courses_desc: "Манай ахлах сургуулийн хөтөлбөр нь сургуулийнхаа дүүргүүдэд энэ чиглэлээр ажиллах багш нарыг бэлтгэх замаар бүтэн жилийн компьютерийн хичээлийг санал болгоход тусалдаг. Мэргэжил дээшлүүлэх семинарт бүртгүүлэхийн тулд Code.org-д <a href=\"/educate/district\">дүүргийн хэмжээнд түншлэх</a> хүсэлт гаргаарай."
+  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "Code.org нь компьютерийн програмчлалаар дамжуулан алгебрийн болон геометрийн ойлголтуудыг заах сургалтын хөтөлбөр боловсруулахад Bootstrap-тэй хамтран ажилласан."
   dashboard_course_csins: "Компьютерын шинжлэх ухаан Шинжлэх ухааны салбарт"
   dashboard_course_csins_desc: "Code.org нь загварчлал, симуляцийн хүрээнд компьютерийн шинжлэх ухааны ойлголтуудыг танилцуулах зорилгоор Project GUTS компанитай хамтарч ажилласан."
@@ -742,6 +781,7 @@
   dashboard_pre-express: 'Урьдчилан унших Шуурхай хичээл: '
   dashboard_express: 'Шуурхай хичээл: '
   dashboard_unplugged: "Танд компьютер байхгүй бол, <a href='%{unplugged_url}'>эдгээр тогонд залгаагүй хичээл</a>-г анги дотор оролдоорой."
+  dashboard_unplugged_markdown: "If you don't have computers, [try these unplugged lessons](%{unplugged_url}) in your classroom."
   dashboard_tools: 'Хэрэгслүүд: '
   dashboard_curriculum: "Сургалтын хөтөлбөр"
   dashboard_curriculum_overview: "K-5 сургалтын хөтөлбөрүүдийн тойм"
@@ -867,6 +907,7 @@
   starwars_name: 'Оддын дайн: Галаксиг кодоор бүтээх'
   codeorg_name: "Классик мэйз тоглоом"
   codeintl_name: "Классик мэйз тоглоом"
+  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "JavaScript-ийн танилцуулга"
   khanes_name: "JavaScript-ийн танилцуулга"
   khanpt_name: "JavaScript-ийн танилцуулга"
@@ -875,9 +916,13 @@
   khanpl_name: "JavaScript-ийн танилцуулга"
   tynker_name: "Өөрийн гэсэн тоглоом байгуулах"
   scratch_name: "Кодчлолтой бүтээлчээр ажиллах"
+  lightbot_name: "Lightbot"
   thinkersmith_name: "Миний робот найзууд"
   condcards_name: "Карт бүхий нөхцлүүд"
+  lightbotintl_name: "Lightbot"
   codehs_name: "Карел нохойтой хамт кодлож сурах"
+  codecademy_name: "Codecademy"
+  codecombat_name: "CodeCombat"
   codemonkey_name: "КодынСармагчин"
   codeavengers_name: "Тоглоомыг JavaScript-ээр бүтээх"
   processing_name: "Кодоор зурах"
@@ -891,8 +936,11 @@
   flappy_name: "Хийсдэг шувуу тоглоом хийх"
   bitsbox_name: "Bitsbox - тоглоом хийх"
   makeschool_name: "Хөтөчдөө iPhone-н тоглоом бүтээгээрэй!"
+  touchdevelop_name: "TouchDevelop"
   appinventor_name: "АппБүтээгчийн кодын цаг"
   blockly_name: "Blockly"
+  thinkersmith2_name: "Binary Baubles"
+  kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "Хайч чулуу даавуу"
   hourofcode_name: "Классик мэйз тоглоом"
   playlab_name: "Тоглоомын лаборатори"
@@ -902,6 +950,7 @@
   allcancode_name: "Марког гүйлгээрэй!"
   csfirst_name: "КШУ эхэнд"
   boxisland_name: "Хайрцаган арал"
+  codesters_name: "Codesters"
   texasinstruments_name: "Кодын 10 минут"
   teacherled_name: "Багшийн удирдсан хичээлийн төлөвлөгөө"
   course1_name: "Хичээл 1"
@@ -949,6 +998,7 @@
   express-2019_name: Шуурхай хичээл (2019)
   pre-express-2019_name: Урьдчилан унших шуурхай хичээл (2019)
   express-2020_name: Шуурхай хичээл (2019)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Нэгж 2: Вэб хөгжүүлэлт'
   csd3_name: 'Нэгж 3 - Анимейшн ба тоглоомууд'
   accelerated_name: "Хурдасгасан хичээл"
@@ -963,6 +1013,8 @@
   iceage_name: "Мөсөн Галав"
   minecraft_name: "Майнкрафт"
   starwarsblocks_name: "Оддын дайн (Блокууд)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Энгийн шифрлэлт
   text-compression_name: Текстийн шахалт
   applab_name: "Апп-ын лаб"
@@ -973,6 +1025,7 @@
   applab_shortdescription_congrats: "Аппын лаборатори нь энгийн программ зохиох боломжтой программчлалын орчин юм. Үүнийг ажиллуулахын тулд блокууд ба JavaScript-н хамтаар программ, кодыг бүтээгээрэй. Дараа нь, программаа хэдэн секундын дотор хуваалцаарай"
   codeorg_gradelevel: "4-104 насныхан"
   codeintl_gradelevel: "4-104 насныхан"
+  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "Дунд сургууль +"
   khanes_gradelevel: "Дунд сургууль +"
   khanpt_gradelevel: "Дунд сургууль +"
@@ -1074,6 +1127,7 @@
   groklearning_platformtext: "Орчин үеийн вэб хөтчүүд"
   quorum_platformtext: "Орчин үеийн вэб хөтөч. Дэлгэц уншигчийг дэмждэг"
   codespark_platformtext: "iOS, Android (эсвэл вэб хөтөч)"
+  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "iPad, Android таблетууд"
   robomindnl_platformtext: "Орчин үеийн вэб хөтчүүд, Хөдөлгөөнт вэб"
   flappy_platformtext: "Орчин үеийн интернэт хөтөч, ухаалаг гар утас, таблет"
@@ -1098,6 +1152,7 @@
   teacherled_platformtext: "Орчин үеийн интернэт хөтөч, ухаалаг гар утас, таблет"
   codeorg_shortdescription: "Марк Зукерберг болон Ууртай Шувуудтай хамт кодлож сураарай!"
   codeintl_shortdescription: "Марк Зукерберг болон Ууртай Шувуудтай хамт кодлож сураарай!"
+  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Javascript дээр зурж сураарай"
   khanes_shortdescription: "Javascript дээр зурж сураарай"
   khanpt_shortdescription: "Javascript дээр зурж сураарай"
@@ -1174,6 +1229,7 @@
   coursef-2019_shortdescription_congrats: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
   codeorg_longdescription: "Компьютерийн шинжлэх ухааны үндсэн ойлголтыг чирэх, буулгах програмын тусламжтайгаар олж мэдэх. Энэ бол Билл Гейтс, Марк Зукерберг, Angry Birds and Plants vs. Zombies зэрэг видео лекцүүдийг тоглуулдаг тоглоом шиг хичээл юм. Давталтын гогцоо, нөхцлүүд, үндсэн алгоритм зэргийг сураарай. 34 хэл дээр ашиглаж болно."
   codeintl_longdescription: "Компьютерийн шинжлэх ухааны үндсэн ойлголтыг чирэх, буулгах програмын тусламжтайгаар олж мэдэх. Энэ бол Билл Гейтс, Марк Зукерберг, Angry Birds and Plants vs. Zombies зэрэг видео лекцүүдийг тоглуулдаг тоглоом шиг хичээл юм. Давталтын гогцоо, нөхцлүүд, үндсэн алгоритм зэргийг сураарай. 34 хэл дээр ашиглаж болно."
+  thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   khan_longdescription: "Кодоороо хөгжилтэй зураг зурж байхдаа JavaScript програмын үндсийг мэдэж аваарай. Үүнийг ганцаараа эсвэл ангиараа хамт хийгээрэй!"
   khanes_longdescription: "Кодоороо хөгжилтэй зураг зурж байхдаа JavaScript програмын үндсийг мэдэж аваарай. Үүнийг ганцаараа эсвэл ангиараа хамт хийгээрэй!"
   khanpt_longdescription: "Кодоороо хөгжилтэй зураг зурж байхдаа JavaScript програмын үндсийг мэдэж аваарай. Үүнийг ганцаараа эсвэл ангиараа хамт хийгээрэй!"
@@ -1223,24 +1279,39 @@
   khan_beyond_name: "Компьютерийн програмчлалын талаар сураарай"
   tynker_beyond_name: "Гэртээ програмчлал хийж сураарай"
   scratch_beyond_name: "Кодчлолтой бүтээлчээр ажиллах"
+  lightbot_beyond_name: "LightBot"
+  codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "Урьдчилан уншигчдад зориулсан ScratchJR"
   hopscotch_beyond_name: 'Hopscotch: Өөрийн iPad дээр програмчлах'
+  pocketcode_beyond_name: "Pocket Code"
   groklearning_beyond_name: "Python програмчлалын талаар сураарай"
   hacketyhack_beyond_name: "Руби-г сураарай"
   robomind_beyond_name: "Виртуал роботыг програмчлах"
   makeschool_beyond_name: "Хөтөчдөө iPhone-н тоглоом бүтээгээрэй!"
   appinventor_beyond_name: "АппБүтээгчийн кодын цаг"
+  touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "Карел нохойтой хамт кодлож сурах"
   udemy_beyond_name: "Онлайн програмчлалын хичээлүүд"
   lynda_beyond_name: "Онлайн програмчлалын хичээлүүд"
   edx_beyond_name: "Харвардын CS50 анги"
   coursera_beyond_name: "Стэнфордын CS 101 анги"
+  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Их сургуулийн онлайн хичээлүүд"
+  kodu_beyond_name: "Kodu"
+  cargobot_beyond_name: "Cargobot"
+  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "HTML-г сурах"
   codeavengers_beyond_name: "Вэбсайтыг кодлож сурах"
+  mozilla_beyond_name: "Webmaker"
+  codecombat_beyond_name: "CodeCombat"
+  codea_beyond_name: "Codea"
+  lego_beyond_name: "Mindstorms"
+  finch_beyond_name: "Finch"
   arduino_beyond_name: "Sparkfun-тай хамтарсан Ардуино"
   processing_beyond_name: "Боловсруулалт бүхий програм"
+  alice_beyond_name: "Alice"
+  sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "4-104 насныхан"
   khan_beyond_gradelevel: "Дунд сургууль +"
   tynker_beyond_gradelevel: "5-13 насныхан"
@@ -1284,6 +1355,9 @@
   scratch_beyond_platformtext: "Бүх интернэт хөтөч"
   lightbot_beyond_platformtext: "iOS, Android (эсвэл вэб хөтөч)"
   codecademy_beyond_platformtext: "Орчин үеийн вэб хөтчүүд, iOS, Android аппууд"
+  kodable_beyond_platformtext: "iPad"
+  scratchjr_beyond_platformtext: "iPad"
+  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "Гар утасны апп"
   groklearning_beyond_platformtext: "Орчин үеийн вэб хөтчүүд"
   hacketyhack_beyond_platformtext: "Десктоп дээр суулгах"
@@ -1298,11 +1372,14 @@
   coursera_beyond_platformtext: "Орчин үеийн интернэт хөтчүүд"
   udacity_beyond_platformtext: "Орчин үеийн интернэт хөтчүүд"
   teachingtree_beyond_platformtext: "Вэб дээр суурилсан"
+  kodu_beyond_platformtext: "Windows, xBox"
+  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "Десктоп дээр суулгах"
   w3schools_beyond_platformtext: "Орчин үеийн вэб хөтчүүд"
   codeavengers_beyond_platformtext: "Орчин үеийн вэб хөтчүүд"
   mozilla_beyond_platformtext: "Орчин үеийн вэб хөтчүүд"
   codecombat_beyond_platformtext: "Вэб дээр суурилсан (Firefox, Chrome, Safari, IE9 +)"
+  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "Робот худалдан авалт"
   finch_beyond_platformtext: "Робот худалдан авалт"
   arduino_beyond_platformtext: "Вэб хөтөч, дараа нь иж бүрдэл худалдан авах"
@@ -1386,7 +1463,14 @@
   compatibility_hide_this_warning: "Энэ анхааруулгыг нуух"
   compatibility_unsupported_browser: "Таны интернэт хөтчийг дэмжихгүй байна. Интернэт хөтчөө <a href='%{supported_browsers_url}', target='_blank'> манай дэмжих интернэт хөтчийн нэг</a>рүү шинэчлээрэй. Та хуудсыг харснаар оролдож болох ч, функцийн үйл ажиллагаа эвдэрч магадгүйд анхаараарай."
   compatibility_unsupported_browser_markdown: "Таны интернэт хөтчийг дэмжихгүй байна. Интернэт хөтчөө [дэмжих интернэт хөтчийн нэг](%{supported_browsers_url}) рүү шинэчлээрэй. Та хуудсыг харснаар оролдож болох ч, функцийн үйл ажиллагаа эвдэрч магадгүйд анхаараарай."
+  starwars_shortcode: "star"
+  mc_shortcode: "mc"
+  frozen_shortcode: "frzn"
+  hourofcode_shortcode: "code"
   flappy_shortcode: "сөхөх"
+  infinity_shortcode: "inf"
+  playlab_shortcode: "lab"
+  artist_shortcode: "art"
   header_home: "Эхлэл хуудас"
   header_my_dashboard: "Миний хянах самбар"
   header_courses: "Хичээл"
@@ -1422,6 +1506,8 @@
   header_teacher_community: "Багш нар"
   header_help_support: 'Тусламж, дэмжлэг '
   header_report_bug: "Асуудал мэдээлэх"
+  header_report_abuse: "Report abuse"
+  header_legal: "Privacy & Legal"
   header_legal_privacy: "Нууцлалын бодлого"
   header_legal_tos: "Үйлчилгээний нөхцөл"
   header_tutorials: "Хичээлүүд"
@@ -1491,6 +1577,7 @@
   hoc_overview_dance_2019_subtitle: "Найзуудтайгаа хуваалцах бүжгийн үдэшлэгийг кодчилоорой. Кэти Перри, Шон Мендес, Паник! Ат де Диско, Лиль Нас Экс, Жонас Бродерс, Ники Минаж нар болон бусад 34 хүнийг онцолж байна!"
   hoc_overview_title: "Code.org-с зохион байгуулсан Кодын Цагийн үйл ажиллагаа"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Кодын Цаг</a> нь 180+ гаруй орны хэдэн арван сая сурагчдд хүрч үйлчилдэг дэлхийн хөдөлгөөн юм. Хүн бүр, хаа сайгүй Кодын Цаг арга хэмжээг зохион байгуулж, 45-аас дээш хэл дээрх 500+ гаруй цагийн хичээлийг ашиглаж болно."
+  hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
   hoc_overview_partner_activities_title: "Түншүүдээс ирүүлсэн илүү олон үйл ажиллагаа"
   hoc_overview_partner_activities_body: "Кодын Цаг вэбсайт нь бүх насныханд болон янз бүрийн туршлагатай хүмүүст зориулсан 500 гаруй компьютерийн шинжлэх ухааны үйл ажиллагааг агуулах ба эдгээр Code.org болон түншүүдийн хөгжүүлсэн зүйлс билээ."
   hoc_overview_partner_activities_link: "Үйл ажиллагааг харах"
@@ -1591,6 +1678,7 @@
   hoc2018_dance_view_creativity_video_playlist: "Бүтээлч байдал гэж юу вэ? Бүрэн цувралуудыг үзэх (5 мин)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "-тай түншлэн"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Амазоны ирээдүйн инженер* нь бага насны болон бусад хөгжлийн бэрхшээлтэй хүүхдүүд, залуучуудыг компьютерийн шинжлэх ухаанд карьераа өдөөх, сургах, өсгөх зорилготой бага насны ажил мэргэжлээс бүрдэх иж бүрэн хөтөлбөр юм. <a href='%{amazon_future_engineer_link}' target='_blank'>Цааш нь үзэх</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn more](%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Амазоны ирээдүйн инженерийн талаар илүү ихийг олж мэдэх"
   hoc2018_dance_amazon_about_future_engineer_title: "Амазоны ирээдүйн инженерийн тухай"
   hoc2018_dance_amazon_about_future_engineer_description: "Компьютерийн шинжлэх ухааны боловсролд нэвтрэх боломжийг нэмэгдүүлэх зорилгоор Amazon-ийн цэцэрлэгийг карьерын хөтөлбөрт хамруулах талаар олж мэдэх. Манай зуслан, ахлах сургуулийн КШУ-ны ангиуд, тэтгэлэг, дадлага сургуульд хэрхэн хамрагдах тухай мэдээллийг олж аваарай."
@@ -1628,3 +1716,8 @@
   hoc2019_mc_mee_description2: "Хичээлийн төлөвлөгөө, видео бичлэг, компьютерийн шинжлэх ухааны сургалтын хөтөлбөр, багшийн сургалт зэргийг багтаасан үнэгүй нөөцөд хандаарай."
   hoc2019_mc_more_coding_resources: "Илүү кодлох эх үүсвэрүүд"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nӨмнөх жилийн [1-р хэсэг](%{dance_2018_link})-г эхлүүлэхийн тулд дарж [2-р хэсэг](%{dance_extras_2018_link})-г дараарай."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

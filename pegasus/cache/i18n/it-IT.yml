@@ -25,6 +25,12 @@ it-IT:
   n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
   try_hoc_num_served: "<h1>Prova un'</h1><h2>Ora del Codice</h2><h3>, ne hanno già
     fatte %{num}</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare
@@ -232,6 +238,9 @@ it-IT:
   get_a_certificate_message_after: |-
     Clicca sull'attestato per scaricarlo o stamparlo. Se sei un insegnante di una scuola italiana scarica gli attestati dal sito di <a href="http://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">Programma il Futuro</a>.<br><br>
     Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
+  get_a_certificate_message_after_markdown: Click on the certificate to download or
+    print it. Now, keep going with our [other courses](http://studio.code.org), or
+    see more options to [Learn beyond an Hour](/learn/beyond).
   thanks_for_submitting: Grazie per l'invio!
   if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
     che tutto il mondo impari.
@@ -239,6 +248,8 @@ it-IT:
     usare l''attestato italiano di Programma il Futuro: www.programmailfuturo.it/come/attestati-personalizzati'
   print_batch_certificates: Stampa un insieme di attestati
   print_certificates: Stampa gli attestati
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
   print_ice_art_from_frozen: Stampa i disegni sul ghiaccio delle esercitazioni di
     Frozen
   want_a_blank_certificate_template: Vuoi un modello di attestato in bianco su cui
@@ -251,6 +262,8 @@ it-IT:
   share_achievement: Condividi il tuo successo
   beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
     o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
+  beyond_hour_message_markdown: Keep going with our [other courses](http://studio.code.org),
+    or see more options to [Learn beyond an Hour](/learn/beyond).
   leaderboards_for_hoc: Classifiche per l'Ora del Codice.
   support_url: http://programmailfuturo.it/aiuto
   country: Nazione
@@ -339,6 +352,12 @@ it-IT:
     Alzate, 5a Elementare'
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti
     di imparare." - Michael Clark, Insegnante'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana
+    Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about
+    learning." - Frank Martinez, Teacher'
   studiobar_title: Esplora i <a href='http://studio.code.org'>corsi di Code.org</a>
   studiobar_title_nolink: Esplora i corsi di Code.org
   studiobar_elementary_title: Scuola Primaria
@@ -449,6 +468,8 @@ it-IT:
     l'apprendimento dell'informatica e ad aumentare la partecipazione da parte delle
     donne e degli studenti delle minoranze.
   homepage_banner_text_link: Ulteriori informazioni
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Ulteriori informazioni
   homepage_banner_20k_teachers: 20.000 insegnanti addestrati negli USA, che ora insegnano
     informatica nelle loro classi.
@@ -460,6 +481,7 @@ it-IT:
   homepage_banner_emailprivacy: Stiamo facendo un cambiamento importante per tutelare
     ancora di più la privacy degli studenti.
   homepage_banner_emailprivacy_link: Ulteriori informazioni…
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
@@ -540,8 +562,12 @@ it-IT:
   videos_more: Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a>
     con modelli di ruolo e celebrità e <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro"
     target="_blank">un video in italiano di Programma il Futuro</a>
+  videos_more_markdown: More [inspirational videos](%{inspiring_videos_playlist})
+    featuring role models and celebrities
   careers_page_more: Ulteriori <a href='%{careers_url}' target='_blank'> video stimolanti</a>
     con professionisti in settori tecnologici
+  careers_page_more_markdown: More [inspirational videos](%{careers_url}) featuring
+    professionals in technology fields
   playlab_choose_theme: Scegli il tema del tuo Laboratorio
   playlab_classic_title: Classico
   playlab_gumball_title: Lo straordinario mondo di Gumball
@@ -592,7 +618,30 @@ it-IT:
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
   minecraft_leader_guide: Scarica le risorse per aiutarti a pianificare ed organizzare
     un evento.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Aiuta tutti i giovani a prepararsi al futuro
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft è tornato con una nuova attività per l'Ora del
     Codice. Programma animali ed altre creature del mondo di Minecraft nella tua personale
     versione di Minecraft.
@@ -682,14 +731,27 @@ it-IT:
     possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham
     7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità
     dell''informatica (che potrebbe essere fatto con una chat video).'
+  volunteer_engineer_submission_intro_recruit_markdown: Teachers would love to have
+    somebody **passionate about computer science education** who can help in the classroom,
+    or for somebody who can **inspire** their students by talking about the breadth
+    of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_guide: Scopri di più sul nostro <a href="%{volunteer_guide}">programma
     volontari</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Learn more about our [volunteer
+    program here](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Compila i campi sottostanti se sei uno
     studente di informatica o uno sviluppatore professionista. I campi contrassegnati
     con un <span class="form-required-field">*</span> sono obbligatori.
+  volunteer_engineer_submission_intro_signup_markdown: Please enter the following
+    information if you are a computer science student or software professional. You
+    must be at least 18 years old to sign up as a volunteer. Note that all the fields
+    you fill out in this section will be publicly available to anyone looking at the
+    [volunteer map](/volunteer/local). Fields marked with a _*_ are required.
   volunteer_engineer_submission_intro_links: Sei un insegnante in cerca di volontari?
     Trova un volontario locale sulla nostra <a href="%{volunteer_local}">Mappa Volontari</a>
     (solo per gli USA).
+  volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
+    volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Aggiorna le tue informazioni
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti
     sulla mappa dei volontari
@@ -745,6 +807,10 @@ it-IT:
   volunteer_engineer_submission_thankyou: Grazie per il l'attività di volontariato
     per l'Ora di Codice. Pre prepararsi all'Ora del Codice e reclutare altri appassionati,
     <a href="%{url}"> per saperne di più.</a>
+  volunteer_engineer_submission_thankyou_markdown: Thank you! Your volunteer information
+    was successfully submitted. Teachers will be using [this map](%{url}) to search
+    for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Incerto
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ora alla settimana
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ore alla settimana
@@ -1066,6 +1132,8 @@ it-IT:
   dashboard_express: 'Corso Rapido: '
   dashboard_unplugged: Se non hai un computer, <a href='%{unplugged_url}'>usa queste
     lezioni tradizionali</a> nella tua classe.
+  dashboard_unplugged_markdown: If you don't have computers, [try these unplugged
+    lessons](%{unplugged_url}) in your classroom.
   dashboard_tools: 'Strumenti: '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
@@ -1085,6 +1153,7 @@ it-IT:
   dashboard_curriculum_csp: 'Principi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
   dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: livello
   dashboard_grade_other: Altro
   dashboard_login_word: Parola
@@ -1181,6 +1250,7 @@ it-IT:
   carousel_heading_beyond_languages: Tutorial in altre lingue di programmazione
   carousel_heading_apps_games: Costruisci la tua app o il tuo gioco
   carousel_heading_university: Corsi universitari online
+  carousel_heading_online_university: University Courses Available Online
   carousel_heading_webpages: Impara a costruire pagine web
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
@@ -1216,6 +1286,7 @@ it-IT:
   starwars_name: 'Guerre Stellari: Costruisci una galassia con il codice'
   codeorg_name: Labirinto Classico
   codeintl_name: Labirinto Classico
+  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Un'introduzione a JavaScript
   khanes_name: Un'introduzione a JavaScript
   khanpt_name: Un'introduzione a JavaScript
@@ -1224,9 +1295,13 @@ it-IT:
   khanpl_name: Un'introduzione a JavaScript
   tynker_name: Costruisci un gioco come vuoi tu
   scratch_name: Scopri la tua creatività con la programmazione
+  lightbot_name: Lightbot
   thinkersmith_name: I miei amici robotici
   condcards_name: Istruzioni condizionali con le carte da gioco
+  lightbotintl_name: Lightbot
   codehs_name: Imparare a programmare con il cane Karel
+  codecademy_name: Codecademy
+  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Costruisci un gioco con JavaScript
   processing_name: Disegna con il codice
@@ -1241,8 +1316,11 @@ it-IT:
   flappy_name: Costruisci la tua versione del gioco Flappy
   bitsbox_name: Bitsbox - crea un gioco
   makeschool_name: Costruisci un gioco per l'iPhone nel tuo browser!
+  touchdevelop_name: TouchDevelop
   appinventor_name: L'ora del codice per AppInventor
   blockly_name: Blockly
+  thinkersmith2_name: Binary Baubles
+  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sasso, Carta, Forbici
   hourofcode_name: Labirinto Classico
   playlab_name: Laboratorio
@@ -1252,6 +1330,7 @@ it-IT:
   allcancode_name: Corri Marco!
   csfirst_name: Prima il CS
   boxisland_name: Isola scatola
+  codesters_name: Codesters
   texasinstruments_name: 10 minuti di Coding
   teacherled_name: Piani di attività "Gestite dagli Insegnanti" per l'Ora del Codice
   course1_name: Corso 1
@@ -1282,11 +1361,26 @@ it-IT:
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
   express-2019_name: Corso Rapido (2017)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
   express-2020_name: Corso Rapido (2017)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Corso rapido
   express_name: Corso Rapido (2018)
   pre-express_name: Corso Rapido pre-scolare
@@ -1299,6 +1393,8 @@ it-IT:
   iceage_name: L'Era Glaciale
   minecraft_name: Minecraft
   starwarsblocks_name: Guerre Stellari (Blocchi)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Crittografia semplice
   text-compression_name: Compressione del testo
   applab_name: Sviluppo App
@@ -1311,6 +1407,7 @@ it-IT:
     o JavaScript e infine condividila.
   codeorg_gradelevel: Da 4 a 104 anni
   codeintl_gradelevel: Da 4 a 104 anni
+  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Dalla scuola media in su
   khanes_gradelevel: Dalla scuola media in su
   khanpt_gradelevel: Dalla scuola media in su
@@ -1412,6 +1509,7 @@ it-IT:
   groklearning_platformtext: Browser Web moderni
   quorum_platformtext: Browser web moderni. I lettori di schermo sono supportati
   codespark_platformtext: iOS, Android (o browser web)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablet Android
   robomindnl_platformtext: Browser web moderni, Browser web mobili
   flappy_platformtext: Browser moderni, smartphone, tablet
@@ -1436,6 +1534,7 @@ it-IT:
   teacherled_platformtext: Browser moderni, smartphone, tablet
   codeorg_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
+  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Imparare a disegnare usando codice JavaScript
   khanes_shortdescription: Imparare a disegnare usando codice JavaScript
   khanpt_shortdescription: Imparare a disegnare usando codice JavaScript
@@ -1776,6 +1875,8 @@ it-IT:
   khan_beyond_name: Impara la programmazione informatica
   tynker_beyond_name: Impara a casa la programmazione informatica
   scratch_beyond_name: Scopri la tua creatività con la programmazione
+  lightbot_beyond_name: LightBot
+  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR per i bambini che non sanno ancora leggere
   hopscotch_beyond_name: 'Il Gioco della Campana: programma sul tuo iPad'
@@ -1785,16 +1886,28 @@ it-IT:
   robomind_beyond_name: Programma un robot virtuale
   makeschool_beyond_name: Costruisci un gioco per l'iPhone nel tuo browser!
   appinventor_beyond_name: L'ora del codice per AppInventor
+  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Imparare a programmare con il cane Karel
   udemy_beyond_name: Corsi di programmazione online
   lynda_beyond_name: Corsi di programmazione online
   edx_beyond_name: Corso CS50 di Harvard
   coursera_beyond_name: Corso CS 101 di Stanford
+  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Corsi universitari online
+  kodu_beyond_name: Kodu
+  cargobot_beyond_name: Cargobot
+  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Impara il linguaggio HTML
   codeavengers_beyond_name: Impara a programmare siti Web
+  mozilla_beyond_name: Webmaker
+  codecombat_beyond_name: CodeCombat
+  codea_beyond_name: Codea
+  lego_beyond_name: Mindstorms
+  finch_beyond_name: Finch
   arduino_beyond_name: Arduino con Sparkfun
   processing_beyond_name: Programma con il linguaggio Processing
+  alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Da 4 a 104 anni
   khan_beyond_gradelevel: Dalla scuola media in su
   tynker_beyond_gradelevel: Da 5 a 13 anni
@@ -1838,6 +1951,9 @@ it-IT:
   scratch_beyond_platformtext: Qualsiasi browser Web
   lightbot_beyond_platformtext: iOS, Android (o browser web)
   codecademy_beyond_platformtext: Browser web moderni. iOS, applicazioni Android
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: App mobile
   groklearning_beyond_platformtext: Browser Web moderni
   hacketyhack_beyond_platformtext: Installazione sul computer
@@ -1852,12 +1968,15 @@ it-IT:
   coursera_beyond_platformtext: Browser moderni
   udacity_beyond_platformtext: Browser moderni
   teachingtree_beyond_platformtext: Attività basate sul Web
+  kodu_beyond_platformtext: Windows, xBox
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Installazione sul computer
   w3schools_beyond_platformtext: Browser Web moderni
   codeavengers_beyond_platformtext: Browser Web moderni
   mozilla_beyond_platformtext: Browser Web moderni
   codecombat_beyond_platformtext: Attività basate sul Web (Firefox, Chrome, Safari,
     IE10 +)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Acquisto di un robot
   finch_beyond_platformtext: Acquisto di un robot
   arduino_beyond_platformtext: Browser Web, poi acquisto del Kit
@@ -2101,7 +2220,14 @@ it-IT:
   compatibility_unsupported_browser_markdown: Il tuo browser non è supportato. Per
     favore aggiorna il browser ad [uno dei nostri browser supportati](%{supported_browsers_url}).
     Prova comunque a visualizzare la pagina, ma aspettati che qualcosa non funzioni.
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: sbatti le ali
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Home
   header_my_dashboard: Controllo
   header_courses: Corsi
@@ -2137,9 +2263,15 @@ it-IT:
   header_teacher_community: Teacher community
   header_help_support: Help and support
   header_report_bug: Report a problem
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Informativa sulla privacy
   header_legal_tos: Termini di servizio
   header_tutorials: Corsi
+  app_lab_documentation: App Lab Documentation
+  app_lab_tutorials: App Lab Tutorials
+  game_lab_documentation: Game Lab Documentation
+  game_lab_tutorials: Game Lab Tutorials
   sprite_lab_documentation: Documentazione Sviluppo App
   sprite_lab_tutorials: Esercitazioni Sviluppo App
   header_documentation: Documentazione
@@ -2207,6 +2339,9 @@ it-IT:
     la password accedendo alla scheda "Gestisci gli studenti" per la classe, e cliccare
     sul pulsante "Reimposta la password" sotto la colonna "Password".
   syncing_students: Sincronizzazione studenti
+  syncing_students_instructions: 'If your Code.org section is ever out of date with
+    your list of students in Google Classroom, click on the “Sync students from Google
+    Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'Da li'', possono scegliere l''opzione "Accedi con account
     di Google":'
   hero_name: 'Minecraft: Il viaggio dell''eroe'
@@ -2234,6 +2369,10 @@ it-IT:
     movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni.
     Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice o provare
     una delle oltre 200 esercitazioni di un'ora, disponibili in oltre 45 lingue diverse.
+  hoc_overview_subtitle_markdown: The [Hour of Code](https://hourofcode.com) is a
+    global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 500+ one-hour
+    tutorials, available in over 45 languages.
   hoc_overview_partner_activities_title: Altre attività dei nostri partner
   hoc_overview_partner_activities_body: Il sito Web “The Hour of Code” offre più di
     100 attività legate all’informatica adatte a tutte le età e a tutti livelli di
@@ -2376,6 +2515,10 @@ it-IT:
     e addestrare bambini e ragazzi di famiglie a basso reddito e di altre categorie
     svantaggiate affinché intraprendano una carriera in informatica. <a href='%{amazon_future_engineer_link}'
     target='_blank'>Maggiori informazioni</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is a comprehensive childhood-to-career program to inspire, educate,
+    and train low-income and other disadvantaged children and young people to pursue
+    careers in computer science. [Learn more](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ulteriori informazioni
     su Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Informazioni su Amazon Future
@@ -2427,3 +2570,18 @@ it-IT:
   hoc2018_mc_thank_microsoft: Ringraziamo Microsoft per il supporto che dà alla nostra
     missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica
     e le competenze per avere successo nel XXI secolo.
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available
+    in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of
+    coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings.
+  hoc2019_mc_more_coding_resources: More Coding Resources
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?
+    \ \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link})
+    from last year."
+  homepage_slot_text_title_at_home: Learn at Home
+  homepage_slot_text_blurb_at_home: These resources make it easy
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

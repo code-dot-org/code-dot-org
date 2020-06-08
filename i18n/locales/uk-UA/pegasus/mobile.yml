@@ -14,11 +14,24 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
   csedweek_banner_teachers_text: "Ви вчитель інформатики? Перегляньте інші ресурси з предмету"
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Кожен може вчитися."
   learn_now: "Почати навчання"
   petition_message: "Кожен учень у кожній школі повинен мати можливість вивчати інформатику"
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до # інших.'
+  petition_sign_message_num: "If you agree, sign your name and join our mailing list along with %{num} others."
   petition_join_others: 'Приєднатися до # інших'
+  petition_join_others_num: "Join %{num} others"
   name: "Ім’я"
   email: "Електронна пошта"
   zipcode: "Поштовий індекс або країна"
@@ -43,6 +56,7 @@
   hoc2014_support: "Підтримайте &#x25BE;"
   hoc2014_whatishoc: "Що таке Година коду?"
   csedweek_map_header: "Події # CSEdWeek та Години коду по всьому світу"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: "Зареєструйте свій захід"
   csedweek_map_search_placeholder: "Пошук заходів Години коду"
   csedweek_map_search_search: "Пошук"
@@ -145,12 +159,21 @@
   enter_valid_email: "Будь ласка, введіть електронну адресу"
   get_a_certificate_message: "Ми надішлемо вам сертифікат та інформацію про те, як <a href='/learn/beyond'>вчитися далі після Години коду</a>"
   get_a_certificate_message_after: "Клацніть на сертифікаті, щоб завантажити або роздрукувати його. А далі, продовжуйте навчатись на <a href='http://studio.code.org'>інших курсах</a>, або розгляньте інші варіанти <a href='/learn/beyond'>навчання поза Годиною коду</a>."
+  get_a_certificate_message_after_markdown: "Click on the certificate to download or print it. Now, keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Дякуємо за участь!"
   if_you_enjoyed: "Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати увесь світ."
   personalize_certificate: "Персоналізувати ваш сертифікат"
+  print_batch_certificates: "Print a batch of certificates"
   print_certificates: "Друкувати сертифікати"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  print_ice_art_from_frozen: "Print ice art from Frozen tutorials"
+  want_a_blank_certificate_template: "Want a blank certificate template to write in your students' names?"
+  landscape_recommended_certificates: "It is recommended that you choose **Landscape** when you print the certificates."
+  print_one_here_certificates: "Print one here."
+  enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
   share_achievement: "Поділитись досягненнями"
   beyond_hour_message: "Продовжуйте навчання на <a href='http://studio.code.org'>інших курсах</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза Годиною коду </a>."
+  beyond_hour_message_markdown: "Keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Лідери „Години Коду“."
   support_url: "http://support.code.org/"
   country: "Країна"
@@ -225,6 +248,9 @@
   stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна Ніколс Пірі, педагог'
   stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате, 5 клас'
   stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Френк Мартінез, педагог'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Teacher'
   studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
   studiobar_title_nolink: "Познайомтесь зі Студією коду"
   studiobar_elementary_title: "Базові курси"
@@ -247,6 +273,7 @@
   homepage_stats_female: "наших учнів - жінки"
   homepage_stats_teachers: "викладачів користуються Code.org"
   homepage_stats_hourofcodde: "студентів світу спробували Годину коду"
+  homepage_stats_policy: "states changed policy to support computer science"
   homepage_stats_title: "Ми змінюємо світ"
   homepage_hero_text_malala: "&ldquo;Я закликаю дівчат у всіх країнах\nвивчити одну Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру"
   homepage_hero_text_susan: |-
@@ -324,6 +351,7 @@
   homepage_banner_link_prizes: 'Приєднуйтесь до найбільшої освітньої події в історії. '
   homepage_banner_text_main: "Code.org та Рада коледжів утворили альянс для посилення різноманітності в інформатиці."
   homepage_banner_text_link: "Дізнайтеся більше"
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Дізнайтеся більше"
   homepage_banner_20k_teachers: "Вже навчено 20 000 вчителів, які зараз викладають інформатику в своїх класах."
   homepage_banner_20k_teachers_link: "Дізнайтеся більше"
@@ -331,6 +359,7 @@
   homepage_banner_congress_link: "Підтримайте"
   homepage_banner_emailprivacy: "Ми вносимо важливі зміни у підтриманні конфіденційності учнів."
   homepage_banner_emailprivacy_link: "Докладніше"
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Дізнайтеся більше"
   homepage_slot_text_title_hoc: "Година коду"
   homepage_slot_text_blurb_hoc: "Кожен може навчитися. Почніть сьогодні"
@@ -360,9 +389,11 @@
   homepage_slot_text_link_donate: "Зробити пожертвування"
   homepage_slot_text_link_shop: "Футболки, капелюхи та інше"
   homepage_slot_text_link_administrators: "Привнесить Інформатику до вашої школи"
+  homepage_gallery_header: "Over %{project_count} million Code.org projects created"
   homepage_header_donors: "Code.org дякує своїм помічникам"
   homepage_donors_seall: "Подивитися усіх"
   homepage_donors_donate: "Підтримати"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
   homepage_below_hero_announcement_link_text: "Дізнайтеся більше"
   contact_form_topic_student: "Я учень"
   contact_form_topic_parent: "Я батько/мати"
@@ -402,7 +433,9 @@
   class_submission_level_vocational: "Професійна освіта"
   class_submission_languages_other: "Інші мови"
   videos_more: "Більше <a href='%{inspiring_videos_playlist}'>надихаючих відео</a> з рольовими моделями та знаменитостями"
+  videos_more_markdown: "More [inspirational videos](%{inspiring_videos_playlist}) featuring role models and celebrities"
   careers_page_more: "Більше <a href='%{careers_url}' target='_blank'>надихаючих відео</a> з фахівцями зі сфери технологій"
+  careers_page_more_markdown: "More [inspirational videos](%{careers_url}) featuring professionals in technology fields"
   playlab_choose_theme: "Обери тему Ігрової лабораторїі"
   playlab_classic_title: "Класична"
   playlab_gumball_title: "Гамбол"
@@ -427,6 +460,8 @@
   minecraft_adventurer: "Майнкрафт - Пригоди"
   minecraft_tutorials: "Підручники Години коду від Майнкрафт"
   minecraft_specs: "Багато мов | Сучасні браузери та планшети | Класи 2+"
+  minecraft_start_tutorial: "Start tutorial"
+  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   minecraft_agent_button: "Початок"
   minecraft_designer_description: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
   minecraft_designer_button: "Початок"
@@ -439,8 +474,15 @@
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Реєструйся</a> на безкоштовні майстерні Години коду від Minecraft у магазинах Microsoft у Австралії, Канаді, Пуерто Ріко чи США. Дізнайся, чому кодування підходить для всіх та поєднує в собі творчість, вирішення проблем та багато веселощів."
   minecraft_host_event: "Проведіть Годину коду від Minecraft"
   minecraft_teach_resources: "Ресурси вчителя та план уроку."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
   minecraft_future: "Допожить всій молоді стати готовими до майбутнього"
   minecraft_future_description: "Дізнайтесь, як інші школи та некомерційні організації привносять цифрові навичкі, від цифровій грамотності до навчання інформатиці, до їх спільноти. Розгляньте різні моделі, отримуйте поради та хитрощі та <a href='%{minecraft_future_url}', target='_blank'>отримуйте ресурси</a>, що вони знайшли найцинішими."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Спортивна Година коду"
   sports_og_title: "Постарайся! Навчитись може кожен."
   sports_og_description: "Обери між підручниками створення гри в баскетбол чи заміксуй інші спортивні заходи."
@@ -499,9 +541,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} вчителів потребують волонтерів, натхненних інформатичною освітою для допомоги у проведенні Години коду цього грудня.<br>%{num_volunteers} волонтерів вже підписались. Приєднуйтесь."
   volunteer_engineer_submission_intro_background: "Година коду - це глобальний рух годинного вступу до програмування, що охоплює десятки мільйонів учнів у більш, як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня."
   volunteer_engineer_submission_intro_recruit: 'Ці вчителі хочуть, щоб хтось, <span style="font-family: ''Gotham 7r'', sans-serif;">захоплений інформатичною освітою</span> допоміг їм у класі, або <span style="font-family: ''Gotham 7r'', sans-serif;">надихнув</span> їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат). Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію власного заходу Години коду.'
+  volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
   volunteer_engineer_submission_intro_guide: "Дізнайтеся більше про нашу <a href=\"%{volunteer_guide}\">волонтерську програму тут</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span class=\"form-required-field\">*</span> є обов'язковими для заповнення."
+  volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
   volunteer_engineer_submission_intro_links: "Не шукаєте волонтера? <a href=\"%{learn_more}\">Дізнайтесь більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів на нашій <a href=\"%{volunteer_local}\">карті волонтерів</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Оновіть свої дані"
   volunteer_engineer_submission_header_shared: "Інформація доступна вчителям та волонтерам на карті"
   volunteer_engineer_submission_field_name: "Ім’я"
@@ -526,6 +572,8 @@
   volunteer_engineer_submission_field_email: "Адреса електронної пошти"
   volunteer_engineer_submission_field_email_desc: "Ваша адреса електронної пошти ніколи не передаватиметься, але ми надішлемо вам запити від учителів."
   volunteer_engineer_submission_field_email_placeholder: "Адреса електронної пошти"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Так'
   volunteer_engineer_submission_field_email_preference_no: 'Ні'
   volunteer_engineer_submission_final_paragraph: "Ви з'явитесь на карті, щоб місцеві вчителі могли зв'язатися з Вами для Години коду чи інших волонтерських заходів. Ваша адреса електронної пошти чи поштова адреса НІКОЛИ не буде оприлюднена. Але інша інформація (включаючи приблизне розташування) буде публічно доступною місцевим вчителям."
@@ -533,6 +581,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Я підтверджую, що мені щонайменше 18 років."
   volunteer_engineer_submission_submit: "Надіслати"
   volunteer_engineer_submission_thankyou: "Дякуємо за подання вашої інформації. Щоб підготуватись до Години коду і залучити інших волонтерів, <a href=\"%{url}\">звертайтесь сюди.</a>"
+  volunteer_engineer_submission_thankyou_markdown: "Thank you! Your volunteer information was successfully submitted. Teachers will be using [this map](%{url}) to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_commitment_uncertain: "Невизначено"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 година на тиждень"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 години на тиждень"
@@ -561,6 +610,7 @@
   volunteer_engineer_submission_type_task_remote: "Я хочу запросити Вас на Skype-зв'язок у свій клас для заохочення учнів"
   volunteer_engineer_submission_type_task_mentor: "Я шукаю наставника, який допоможе мені підготуватись до програмування з учнями"
   petition_age: "Вік"
+  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
   dashboard_announce_learn_more_button: "Дізнайтеся більше"
   dashboard_landing_title: "Домашня сторінка вчителя"
   dashboard_landing_welcome: "Вітаємо в оновленій та покращеній вчительській панелі керування."
@@ -656,6 +706,7 @@
   dashboard_responses_view: 'Переглянути тексти відповідей у:'
   dashboard_responses_none: "Більшість наших курсів розроблені для молодшого віку, і не вимагають друкування учнями відповідей, тож ви не побачите тут текстових відповідей. Для старших учнів у курсах для середньої та старшої школи, можна переглянути їхні відповіді на питання з відкритими формулюваннями, обираючи призначений курс з випадного меню вгорі."
   dashboard_sections_new_section: "Нова група"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Створюйте нові групи і додавайте до них учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження прогресу та керування обліковими записами."
   dashboard_sections_table_section: "Група"
   dashboard_sections_table_secret: "Тип логіну"
@@ -727,8 +778,10 @@
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс E: '
   dashboard_coursef: 'Курс F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Швидкий Курс: '
   dashboard_unplugged: "Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте ці безмашинні вправи</a> у своєму класі."
+  dashboard_unplugged_markdown: "If you don't have computers, [try these unplugged lessons](%{unplugged_url}) in your classroom."
   dashboard_tools: 'Інструменти: '
   dashboard_curriculum: "Навчальний план"
   dashboard_curriculum_overview: "Огляд навчальної програми"
@@ -747,6 +800,8 @@
   dashboard_curriculum_csins: 'Інформатика в науці:'
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
   dashboard_curriculum_ecs: 'Вивчення інформатики:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Kлас"
   dashboard_grade_other: "Інше"
   dashboard_login_word: "Слово"
@@ -824,16 +879,22 @@
   carousel_heading_beyond_languages: "Підручники інших мов програмування"
   carousel_heading_apps_games: "Створіть власні програми чи ігри"
   carousel_heading_university: "Курси університетів онлайн"
+  carousel_heading_online_university: "University Courses Available Online"
   carousel_heading_webpages: "Навчіться створювати веб-сторінки"
   carousel_heading_robots: "Навчіться програмувати роботів"
   carousel_heading_ide: "Платформи, популярні серед вчителів"
+  carousel_heading_desktop: "Learn to code on a computer"
   carousel_heading_mobtabelem: "Для телефонів і планшетів"
+  carousel_heading_prereader: "For pre-readers"
+  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
+  carousel_heading_nointernet: "Unreliable or no internet? Install these apps on your computer"
   educator_notes: "Інформація для вчителя"
   teach_led_lesson_plans: "Плани уроків для вчителів"
   learn_footer_all_tutorials: "Перегляньте<a href=\"https://code.org/educate/allhourofcode\">вичерпний перелік підручників Години коду</a>. Щоб ознайомитись з нашими критеріями та інструкціями з подання підручників Години коду, <a href=\"https://hourofcode.com/tutorial-guidelines\">клацніть тут.</a>"
   how_to_teach_hoc: "Як викладати \"Годину коду\""
   more_resources_educators: "Більше ресурсів для вчителів та освітян"
   beyond_submission: "Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте критерії та форму подання."
+  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "учасники"
   teachers_notes: "Інформація для вчителя"
   teachers_notes_hoc: 'Вчителі: ознайомтесь із вказівками для вчителів'
@@ -889,6 +950,7 @@
   allcancode_name: "Біжи, Марко!"
   csfirst_name: "Перша інформатика"
   boxisland_name: "Острів Бокс"
+  codesters_name: "Codesters"
   texasinstruments_name: "10 хвилин коду"
   teacherled_name: "Плани уроків для вчителів"
   course1_name: "Курс 1"
@@ -913,10 +975,35 @@
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Експрес курс (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Блок 2: Веб-розробка'
   csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: "Прискорений курс"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Прискорений курс
   algebra_name: "Інформатика в алгебрі"
   AlgebraA_name: "Інформатика в алгебрі - Курс А"
@@ -926,7 +1013,10 @@
   iceage_name: "Льодовиковий період"
   minecraft_name: "Майнкрафт"
   starwarsblocks_name: "Зоряні війни (блоки)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Просте шифрування
+  text-compression_name: Text Compression
   applab_name: "App Lab"
   gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
@@ -1037,6 +1127,7 @@
   groklearning_platformtext: "Сучасні веб-браузери"
   quorum_platformtext: "Сучасні веб-браузери. Підтримується читання екрану"
   codespark_platformtext: "iOS, Android (або веб-браузер)"
+  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "планшети iPad, Android"
   robomindnl_platformtext: "Сучасні веб-браузери, мобільні застосунки"
   flappy_platformtext: "Сучасні браузери, смартфони, планшети"
@@ -1061,6 +1152,7 @@
   teacherled_platformtext: "Сучасні браузери, смартфони, планшети"
   codeorg_shortdescription: "Вчіться програмувати з Марком Цукенбергом та Злими птахами!"
   codeintl_shortdescription: "Вчіться програмувати з Марком Цукенбергом та Злими птахами!"
+  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Вчимося малювати в JavaScript"
   khanes_shortdescription: "Вчимося малювати в JavaScript"
   khanpt_shortdescription: "Вчимося малювати в JavaScript"
@@ -1111,6 +1203,30 @@
   course2_shortdescription_congrats: "Цей курс для учнів з базовими навичками читаннябазується на Курсі 1. Учні створюватимуть програми для розв'язування задач та розробки інтерактивних ігор чи історій, якими можна поділитись. Рекомандовано для 2-5 класів."
   course3_shortdescription_congrats: "Готові до наступного рівня? Учні глибше розглянуть теми з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні історії та ігри, якими зможуть поділитись. Рекомендовано для 4-5 класів."
   course4_shortdescription_congrats: "Готові йти далі? Учні глибше розглянуть теми з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні історії та ігри, якими зможуть поділитись. Рекомендовано для 4-8 класів."
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
+  coursea-2017_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2019_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2019_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами."
   codeintl_longdescription: "Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами."
   thinkersmithspanish_longdescription: "За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. \"Мої друзі-роботи\" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі."
@@ -1163,6 +1279,7 @@
   khan_beyond_name: "Вивчайте програмування"
   tynker_beyond_name: "Вивчайте програмування вдома"
   scratch_beyond_name: "Творіть програмуючи"
+  lightbot_beyond_name: "LightBot"
   codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "ScratchJR для тих, хто ще не читає"
@@ -1179,12 +1296,21 @@
   lynda_beyond_name: "Онлайнові курси з програмування"
   edx_beyond_name: "Курс CS50 (Гарвард)"
   coursera_beyond_name: "Курс CS 101 (Стенфорд)"
+  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Курси університетів онлайн"
+  kodu_beyond_name: "Kodu"
+  cargobot_beyond_name: "Cargobot"
+  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "Вивчіть HTML"
   codeavengers_beyond_name: "Навчіться програмувати веб-сайти"
+  mozilla_beyond_name: "Webmaker"
   codecombat_beyond_name: "CodeCombat"
+  codea_beyond_name: "Codea"
+  lego_beyond_name: "Mindstorms"
+  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino зі Sparkfun"
   processing_beyond_name: "Програмуйте на Processing"
+  alice_beyond_name: "Alice"
   sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "Вік 4-104"
   khan_beyond_gradelevel: "Середня школа +"
@@ -1229,6 +1355,9 @@
   scratch_beyond_platformtext: "Будь-які браузери"
   lightbot_beyond_platformtext: "iOS, Android (або веб-браузер)"
   codecademy_beyond_platformtext: "Сучасні веб-браузери. програми iOS, Android"
+  kodable_beyond_platformtext: "iPad"
+  scratchjr_beyond_platformtext: "iPad"
+  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "Мобільний додаток"
   groklearning_beyond_platformtext: "Сучасні веб-браузери"
   hacketyhack_beyond_platformtext: "Установка програми"
@@ -1243,11 +1372,14 @@
   coursera_beyond_platformtext: "Сучасні браузери"
   udacity_beyond_platformtext: "Сучасні браузери"
   teachingtree_beyond_platformtext: "Веб-базовані"
+  kodu_beyond_platformtext: "Windows, xBox"
+  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "Установка програми"
   w3schools_beyond_platformtext: "Сучасні веб-браузери"
   codeavengers_beyond_platformtext: "Сучасні веб-браузери"
   mozilla_beyond_platformtext: "Сучасні веб-браузери"
   codecombat_beyond_platformtext: "Веб інтерфейс (Firefox, Chrome, Safari, IE9+)"
+  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "Покупка робота"
   finch_beyond_platformtext: "Покупка робота"
   arduino_beyond_platformtext: "Веб-браузер, потім покупка комплекту"
@@ -1331,12 +1463,21 @@
   compatibility_hide_this_warning: "Сховати попередження"
   compatibility_unsupported_browser: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
   compatibility_unsupported_browser_markdown: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
+  starwars_shortcode: "star"
+  mc_shortcode: "mc"
+  frozen_shortcode: "frzn"
+  hourofcode_shortcode: "code"
   flappy_shortcode: "махати"
+  infinity_shortcode: "inf"
+  playlab_shortcode: "lab"
+  artist_shortcode: "art"
   header_home: "Головна"
+  header_my_dashboard: "My Dashboard"
   header_courses: "курси"
   header_course_catalog: "Каталог курсів"
   header_project_gallery: "Проекти"
   header_sections: "Секції"
+  header_professional_learning: "Professional Learning"
   header_educate_overview: "Огляд для педагога"
   header_educate_elementary: "Початкова школа"
   header_educate_middle: "Середня школа"
@@ -1365,9 +1506,17 @@
   header_teacher_community: "Спільнота вчителів"
   header_help_support: 'Допомога та підтримка '
   header_report_bug: "Сповістити про проблему"
+  header_report_abuse: "Report abuse"
+  header_legal: "Privacy & Legal"
   header_legal_privacy: "Політика конфіденційності"
   header_legal_tos: "Умови надання послуг"
   header_tutorials: "Навчальні матеріали"
+  app_lab_documentation: "App Lab Documentation"
+  app_lab_tutorials: "App Lab Tutorials"
+  game_lab_documentation: "Game Lab Documentation"
+  game_lab_tutorials: "Game Lab Tutorials"
+  sprite_lab_documentation: "Sprite Lab Documentation"
+  sprite_lab_tutorials: "Sprite Lab Tutorials"
   header_documentation: "Документація"
   user_header_label: "Привіт %{username}"
   user_header_team: "Команда"
@@ -1376,20 +1525,64 @@
   user_header_logout: "Вийти"
   user_header_signin: "Увійти"
   user_header_create: 'Творіть '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Artist '
   user_header_gamelab: "Ігрова лабораторія"
   user_header_playlab: "Ігрова студія"
   user_header_dance: "Танцювальна вечірка"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Майнкрафт"
   user_header_flappy: "Пурх"
+  user_header_view_all: "View all projects..."
+  user_header_view_project_gallery: "View project gallery"
+  user_header_view_my_projects: "View my projects"
+  view_all_sections: "View all sections"
+  view_section: "View Section"
+  view_named_section: "View %{section_name}"
+  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
+  signing_in: "Signing In"
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
+  sign_in_instruct_website: "Go to %{code_org_url}."
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
+  sign_in_instruct_name: "Choose their display name."
   sign_in_instruct_secret: "Виберіть їх секрет %{secret}."
+  sign_in_instruct_button: "Click the “Sign in” button."
+  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
+  reset_student_password: "Resetting student passwords"
+  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
+  login_cards: "Login Cards"
+  print_login_cards: "Print login cards"
+  joining_section: "Joining your section (one-time only)"
+  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
+  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
+  joining_section_instruct_account: "Sign in to their Code.org account."
+  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
+  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
+  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
+  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
+  syncing_students: "Syncing your students"
+  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
+  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro
+  applab_tile_title: "Intro to App Lab (Ages 13+)"
+  applab_tile_subtitle: "Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming. (English Only)"
   applab_tile_start_tutorial: "Початок"
+  applab_tile_teacher_guide: "View teacher guide"
   aquatic_name: 'Minecraft: Водна подорож'
   account_sign_up_email_opt_in: "Чи можемо ми сповіщати вас про оновлення курсів, локальних можливості та інші новини з області інформатики за допомогою електронної пошти?"
   account_sign_up_child_accept_terms: "Я підтверджую що у мене є згода моїх батьків і законних опікунів на дозвіл використання Code.org."
   hoc_overview_dance_title: "Танцювальна вечірка"
   hoc_overview_dance_subtitle: "Закодуйте танцювальну вечірку та покажіть її друзям. Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25 виконавців!"
   hoc_overview_dance_2019_subtitle: "Закодуйте танцювальну вечірку та покажіть її друзям. Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers, Нікі Мінаж та 34 інших виконавців та груп!"
+  hoc_overview_title: "Hour of Code Activities from Code.org"
+  hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_partner_activities_title: "More activities from partners"
+  hoc_overview_partner_activities_body: "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners."
+  hoc_overview_partner_activities_link: "View Activities"
   hoc_overview_start_tutorial: "Початок"
+  hoc_overview_view_teacher_guide: "View teacher guide"
   hoc2018_creativity: "творчість"
   hoc2018_creativity_create: "Створити"
   hoc2018_creativity_hoc_coming: "Наближається Година коду…"
@@ -1400,9 +1593,15 @@
   hoc2018_creativity_social_media_2: 'Цього року #HourOfCode стосується креативності. А що створите Ви?'
   hoc2018_creativity_courses: "Навчайтесь далі з курсами Code.org"
   hoc2018_creativity_courses_link: "Навчайтесь далі з <a href=\"https://studio.code.org/courses\">курсами Code.org</a>"
+  hoc2018_homepage: "Sign up your class to try one of the over 150 NEW activites for the Hour of Code (Dec 3-9)!"
   hoc2018_mc_page_title: "Підручники Години коду від Майнкрафт"
   hoc2018_mc_details: "Багато мов | Сучасні браузери та планшети | Класи 2+"
+  hoc2018_mc_aquatic_announcement: "Sign up your class to try one of the over 150 NEW activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today."
+  hoc2018_mc_aquatic_title: "Minecraft Voyage Aquatic"
+  hoc2018_mc_aquatic_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2019_mc_aquatic_description: "Explore and build underwater worlds with code."
   hoc2018_mc_hero_title: "Minecraft: Подорож героя"
+  hoc2018_mc_hero_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   hoc2018_mc_designer_title: "Майнкрафт - Розробник"
   hoc2018_mc_designer_description: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
   hoc2018_mc_adventurer_title: "Майнкрафт - Пригоди"
@@ -1410,7 +1609,19 @@
   hoc2018_mc_start: "Початок"
   hoc2018_mc_no_internet: "Немає Інтернету?"
   hoc2018_mc_download_adventurer: "Завантажуйте оффлайнову версію Майнкрафт - Пригод."
+  hoc2018_mc_educators: "For Educators"
+  hoc2018_mc_educators_box1_title: "Code with Minecraft"
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: "Get started"
+  hoc2018_mc_educators_box2_title: "Download Facilitator Guide"
+  hoc2018_mc_educators_box2_desc: "This toolkit will help you host an Hour of Code and engage your students in computer science."
   hoc2018_mc_educators_box2_button: "Завантажити"
+  hoc2018_mc_educators_box3_title: "Attend a free student workshop"
+  hoc2018_mc_educators_box3_desc: "Visit a Microsoft Store in your area for a free Hour of Code workshop. For participants of all skill levels, ages six and up."
+  hoc2018_mc_educators_box3_button: "Find a workshop"
+  hoc2018_mc_educators_box4_title: "Access more computer science resources"
+  hoc2018_mc_educators_box4_desc: "Create change in your community with digital skills and computer science education resources from Microsoft."
+  hoc2018_mc_educators_box4_button: "Explore resources"
   hoc2018_mc_watch_videos: "Перед початком роботи перегляньте ці відео для натхнення"
   hoc2018_mc_videos_more: "Більше <a href='%{inspiring_videos_playlist}'>надихаючих відео</a> з рольовими моделями та знаменитостями"
   hoc2018_mc_careers_more: "Більше <a href='%{careers_url}' target='_blank'>надихаючих відео</a> з фахівцями зі сфери технологій"
@@ -1428,14 +1639,28 @@
   hoc2018_mc_video_title_hoc_is_here: "Година коду вже тут - навчитись може кожен"
   hoc2018_mc_video_title_anybody_can_learn: "Навчитись може кожен"
   hoc2018_mc_video_title_my_name_is_aracely: "Мене звати Араклі"
+  hoc2018_mc_homepage_hoc_coming: "The Hour of Code is coming..."
   hoc2018_mc_homepage_what_create: "А що створите Ви?"
+  hoc2018_mc_homepage_give_flight: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be."
+  hoc2018_mc_homepage_watch_video: "Watch our video"
   hoc2018_mc_homepage_join_us: "Приєднуйтесь"
   hoc2018_mc_homepage_try_it: "Спробувати"
+  hoc2018_mc_back: "Minecraft is back with a brand new activity for Hour of Code!"
+  hoc2018_mc_back_journey: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2018_mc_teacher_guide: "View teacher guide"
+  hoc2018_mc_minecraft_education: "Minecraft Education"
+  hoc2018_mc_continue_learning: "Continue learning with Minecraft."
+  hoc2018_mc_go_to_mc_education: "Go to Minecraft Education"
+  hoc2018_mc_short_description: "Use your creativity and problem solving skills to find treasure and explore under water worlds with the power of code."
+  hoc2018_mc_short_description_shorter: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
+  hoc2018_mc_journey: "Journey through Minecraft with code."
   hoc2018_dance_party_main_heading: "Танцювальна вечірка"
+  hoc2018_dance_party_landing_title: "Dance"
   hoc2018_dance_party_subheading: "Допоможіть перекласти Dance Party"
   hoc2018_dance_create_your_own_dance_title: "Створіть власну Dance Party"
   hoc2018_dance_party_box_title: "Танцювальна вечірка"
   hoc2018_dance_party_box_description: "Закодуй танцювальну вечірку і поділися з друзями!"
+  hoc2018_dance_party_specs: "Language | Format | Age 6-106"
   hoc2018_dance_party_button: "Початок"
   hoc2018_dance_keep_on_dancing_box_title: "Продовжуємо танцювати"
   hoc2018_dance_keep_on_dancing_description: "Рухайся далі однієї години з розширеними проектними ідеями."
@@ -1451,11 +1676,48 @@
   hoc2018_dance_videos_section_heading: "Надихайтесь"
   hoc2018_dance_video_title_what_is_creativity: "Що таке креативність?"
   hoc2018_dance_view_creativity_video_playlist: "Що таке креативність? Перегляньте всі серії (5 хв)"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "In partnership with"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn more</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn more](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Learn more about Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_title: "About Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_description: "Learn about Amazon’s kindergarten to career program to increase access to computer science education. Find information on how to get involved in our summer camps, high school CS classes, scholarships, and internships."
   hoc2018_dance_amazon_about_future_engineer_button: "Дізнайтеся більше"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Try coding this summer"
+  hoc2018_dance_amazon_try_coding_this_summer_description: "Get involved in Amazon Future Engineer’s free, fun, and inclusive computer science camps! Summer camps are available for students from kindergarten through 8th grade in multiple locations in the US for summer 2019."
   hoc2018_dance_amazon_try_coding_this_summer_button: "Приєднатися до табору"
+  hoc2018_dance_amazon_scholarship_programs_title: "Scholarship programs"
+  hoc2018_dance_amazon_scholarship_programs_description: "Amazon is offering scholarships of $10,000 per year for underserved students who have successfully completed or are currently enrolled in an AP CS course and intend to study a CS degree at a 4-year college or university in the United States."
+  hoc2018_dance_amazon_scholarship_programs_button: "Apply now"
+  hoc2018_dance_amazon_internships_title: "Come Intern at Amazon"
+  hoc2018_dance_amazon_internships_description: "Applications are now open for summer 2019 Amazon Future Engineer internships. Interns will partner with a manager, technical mentor, and other interns to innovate and create new features and services on behalf of Amazon customers. Internships are available in the US and Canada."
+  hoc2018_dance_amazon_internships_button: "Find an internship"
+  hoc2018_dance_amazon_k8_programs_title: "K-8 programs"
+  hoc2018_dance_amazon_funding_title: "Get funding for your CS degree"
+  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.\n\n"
   hoc2018_dance_measure: "Крок"
   hoc2018_dance_measure_colon: 'Крок:'
+  hoc2018_aquatic_video1: "Minecraft Voyage Aquatic - Introduction"
+  hoc2018_aquatic_video2: "Minecraft Voyage Aquatic - Loops"
+  hoc2018_aquatic_video3: "Minecraft Voyage Aquatic - Conditionals"
+  hoc2018_aquatic_video4: "Minecraft Voyage Aquatic - Congratulations"
+  hoc2018_dance_video1: "Dance Party - Introduction"
+  hoc2018_dance_video2: "Dance Party - Events"
+  hoc2018_dance_video3: "Dance Party - Properties"
+  hoc2018_dance_video4: "Dance Party - Congratulations"
   page_not_found_title: "Сторінка не знайдена"
   page_not_found_header: '404: Сторінка не знайдена'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
+  hoc2018_mc_with_microsoft: "In partnership with"
+  hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+  hoc2019_mc_mee_title: "Minecraft AI for Good"
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
   hoc2019_mc_more_coding_resources: "Більше Coding ресурсів"
   hoc2019_dance_previous_versions: "Шукаєте попередню версію Dance Party?\nНатисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

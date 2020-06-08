@@ -998,6 +998,7 @@
   express-2019_name: Curso Expresso (2019)
   pre-express-2019_name: Curso Pre-reader Express (2019)
   express-2020_name: Curso Expresso (2019)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Unidade 2: Desenvolvimento para Web'
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: "Curso acelerado"
@@ -1013,6 +1014,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Blocos)"
   hoc-impact-study_name: "\nLabirinto clássico com pesquisa"
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
   applab_name: "Laboratório de Aplicativo"
@@ -1150,6 +1152,7 @@
   teacherled_platformtext: "Navegadores modernos, smartphones, tablets"
   codeorg_shortdescription: "Aprenda a programar com Mark Zuckerberg e Angry Birds!"
   codeintl_shortdescription: "Aprenda a programar com Mark Zuckerberg e Angry Birds!"
+  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Aprenda a desenhar em JavaScript"
   khanes_shortdescription: "Aprenda a desenhar em JavaScript"
   khanpt_shortdescription: "Aprenda a desenhar em JavaScript"
@@ -1293,15 +1296,21 @@
   lynda_beyond_name: "Cursos de programação on-line"
   edx_beyond_name: "Curso CS50 de Harvard"
   coursera_beyond_name: "Curso CS 101 de Stanford"
+  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Cursos universitários on-line"
   kodu_beyond_name: "Programação com Processing"
+  cargobot_beyond_name: "Cargobot"
+  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "Aprenda HTML"
   codeavengers_beyond_name: "Aprenda a criar sites"
   mozilla_beyond_name: "Webmaker"
   codecombat_beyond_name: "CodeCombat"
   codea_beyond_name: "Codea"
+  lego_beyond_name: "Mindstorms"
+  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino com Sparkfun"
   processing_beyond_name: "Programação com Processing"
+  alice_beyond_name: "Alice"
   sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "De 4 a 104 anos"
   khan_beyond_gradelevel: "A partir do ensino fundamental II"
@@ -1454,7 +1463,14 @@
   compatibility_hide_this_warning: "Ocultar este aviso"
   compatibility_unsupported_browser: "Seu navegador não é compatível. Atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível que algumas funcionalidades não funcionem."
   compatibility_unsupported_browser_markdown: "Seu navegador não é compatível. Atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível que algumas funcionalidades não funcionem."
+  starwars_shortcode: "star"
+  mc_shortcode: "mc"
+  frozen_shortcode: "frzn"
+  hourofcode_shortcode: "code"
   flappy_shortcode: "bata asas"
+  infinity_shortcode: "inf"
+  playlab_shortcode: "lab"
+  artist_shortcode: "art"
   header_home: "Início"
   header_my_dashboard: "Meu painel de Controle"
   header_courses: "percursos"
@@ -1490,6 +1506,8 @@
   header_teacher_community: "Comunidade de professores"
   header_help_support: 'Ajuda e suporte '
   header_report_bug: "Reportar um erro"
+  header_report_abuse: "Report abuse"
+  header_legal: "Privacy & Legal"
   header_legal_privacy: "Política de Privacidade"
   header_legal_tos: "Termos de Serviço"
   header_tutorials: "Tutoriais"
@@ -1698,3 +1716,8 @@
   hoc2019_mc_mee_description2: "Acesse recursos grátis incluindo um plano de aula, vídeos, currículo de ciência da computação e treinamentos para professores."
   hoc2019_mc_more_coding_resources: "Mais Recursos de Codificação"
   hoc2019_dance_previous_versions: "Procurando uma versão anterior de Festa Dançante?\nClique aqui para começar [Parte 1](%{dance_2018_link}) and [Parte 2](%{dance_extras_2018_link}) do último ano."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

@@ -14,11 +14,24 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek</a>'
   csedweek_banner_teachers_text: "Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek"
   n_have_learned_an_hoc: "<h1> Subukan ang</h1><h2>Hour of Code</h2><h3>#served</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Lahat ay puwedeng matuto."
   learn_now: "Matuto Ngayon"
   petition_message: "Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon na matuto ng computer science"
   petition_sign_message: 'Kung ikaw ang sumasang-ayon, isulat ang iyong pangalan. Sumali sa # pang iba.'
+  petition_sign_message_num: "If you agree, sign your name and join our mailing list along with %{num} others."
   petition_join_others: 'Sumali sa # iba'
+  petition_join_others_num: "Join %{num} others"
   name: "Pangalan"
   email: "Email"
   zipcode: "ZIP code o bansa"
@@ -43,6 +56,7 @@
   hoc2014_support: "Suportahan ito &#x25BE;"
   hoc2014_whatishoc: "Ano ba ang Hour of Code?"
   csedweek_map_header: "# CSEdWeek / Mga pangyayari sa Hour of Code sa buong mundo"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: "Magsign-up para sa iyong kaganapan"
   csedweek_map_search_placeholder: "Maghanap ng mga kaganapan para sa Hour of Code"
   csedweek_map_search_search: "Maghanap"
@@ -70,6 +84,7 @@
   congratulations: "Maligayang pagbati!"
   congratulations_on_completing_hoc: "Pagbati\nsa pagkumpleto ng isang Oras ng Code"
   congratulations_volunteer: 'Maligayang bati: Ngayon na nasubukan mo na ang Hour of Code, <a href="https://code.org/volunteer">magsign-up para magboluntaryo sa isang silid-aralan</a> at tumulong sa mga estudyante na matuto nang Hour of Code!'
+  congratulations_on_completing_course: "Congratulations on completing %{course}"
   congrats_next_tutorials_title: "Magsitapos sa sunod na antas"
   congrats_next_tutorials_desc: "Subukan ang pinaikli na, 1 oras na mga tutoryal o subukan ang <a href=\"%{current_path}/next\">may kasamang tutoryal</a>."
   get_a_certificate_of_achievement: "Kumuha ng certificate of achievement"
@@ -144,12 +159,21 @@
   enter_valid_email: "Paki-pasok ng valid na email address"
   get_a_certificate_message: "Kami ay magpapadala sa iyo ng  certificate at inpormasyon tungkol sa paano <a href='/learn/beyond'>Matuto ng lampas sa Isang Oras</a>"
   get_a_certificate_message_after: "I-click ang certificate upang ma-download ma-print ito. Ngayon, ipagpatuloy ang iba na naming <a href='http://studio.code.org'>mga kurso</a>, o kaya tingnan ang iba pang mga option upang <a href='/learn/beyond'>Matuto lampas sa One Hour</a>."
+  get_a_certificate_message_after_markdown: "Click on the certificate to download or print it. Now, keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Salamat sa pag-submit!"
   if_you_enjoyed: "Kung ikaw ang natuwang matuto, sabihan ang iyong mga kaibigan na subukan rin ito! Gusto namin na buong mundo ay matuto."
   personalize_certificate: "Gawing pansarili ang iyong certificate"
+  print_batch_certificates: "Print a batch of certificates"
   print_certificates: "Magprinta ng mga sertipiko"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  print_ice_art_from_frozen: "Print ice art from Frozen tutorials"
+  want_a_blank_certificate_template: "Want a blank certificate template to write in your students' names?"
+  landscape_recommended_certificates: "It is recommended that you choose **Landscape** when you print the certificates."
+  print_one_here_certificates: "Print one here."
+  enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
   share_achievement: "Ibahagi ang iyong achievement"
   beyond_hour_message: "Magpatuloy sa <a href='http://studio.code.org'>ibang kurso</a>, o kaya tingnan ang ibang option upang <a href='/learn/beyond'>Matuto ng higit sa Isang Oras</a>."
+  beyond_hour_message_markdown: "Keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Mga leaderboard para sa Hour of Code."
   support_url: "http://support.code.org/"
   country: "Bansa"
@@ -203,6 +227,7 @@
   just_did_coursef: "Kakatapos ko lang sa Kursong F - suriin ang mga ito! @codeorg"
   just_did_accelerated: "Kakatapos ko lang sa Pinabilis na Kurso - suriin ito! @codeorg"
   just_did_hoc_donor: 'Kakagawa ko lang ng #HourOfCode - suriin ito! (Salamat kay %{donor_twitter} sa pagsuporta sa @codeorg)'
+  just_did_course_donor: "I just finished %{course} - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 sa 10 tao ang sumang-ayon, ang mga paaralan ay dapat magturo ng computer science. http://youtu.be/nKIu9yen5nc. Bisitahin ang https://code.org/."
   twitter_cs_foundational: "Ang computer science ay isang pundasyon na dapat matutonan na bawat estudyante. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Matuto ng Hour of Code"
@@ -223,6 +248,9 @@
   stats_nina: '"Bawat araw ay nagbunga nang parehang mga resulta&mdash; 100% na pakikipag-ugnayan." - Nina Nichols Peery, Guro'
   stats_student: '"Alam ko na ito ay <b>minsan</b> lang na pagkakataon." - Mariana Alzate, nasa ika-5 baitang'
   stats_michael: '"Hindi pa ako nakakita, <b>kahit kailan</b>, sa aking mga estudyante na ganito kasabik na matuto." - Frank Martinez, Guro'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Teacher'
   studiobar_title: "Tingnan ang <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_title_nolink: "Tuklasin ang mga kurso sa Code.org"
   studiobar_elementary_title: "Mga kurso pang elementary"
@@ -317,10 +345,15 @@
   homepage_banner_link_prizes: 'Sumali sa pinakamalaking pag-aaral na pangyayari sa buong kasaysayan. '
   homepage_banner_text_main: "Ang code.org at ang College Board ay bumuo ng isang alyansa para mapabuti ang kayamuan sa computer science."
   homepage_banner_text_link: "Matuto nang higit pa"
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Matuto nang higit pa"
+  homepage_banner_20k_teachers: "20,000 teachers trained, and now teaching computer science in classrooms."
   homepage_banner_20k_teachers_link: "Matuto nang higit pa"
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "Gumagawa kami ng isang mahalagang pagbabago kung paano namin suportahan ang pribadong buhay ng mga estudyante."
   homepage_banner_emailprivacy_link: "Magbasa pa"
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Matuto nang higit pa"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Kahit na sino ay maaaring matuto. Magsimula ngayon"
@@ -350,9 +383,11 @@
   homepage_slot_text_link_donate: "Magbigay ng donasyon"
   homepage_slot_text_link_shop: "Mga t-shirt, mga sombrero, & iba pa"
   homepage_slot_text_link_administrators: "Dalhin sa iyong paaralan o distrito"
+  homepage_gallery_header: "Over %{project_count} million Code.org projects created"
   homepage_header_donors: "Pinasasalamatan ng Code.org ang mag tagasuporta nito"
   homepage_donors_seall: "Tingnan lahat"
   homepage_donors_donate: "Magbigay ng donasyon"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
   homepage_below_hero_announcement_link_text: "Matuto nang higit pa"
   contact_form_topic_student: "Ako ay estudyante"
   contact_form_topic_parent: "Ako ay magulang"
@@ -392,7 +427,9 @@
   class_submission_level_vocational: "Vocational"
   class_submission_languages_other: "Ibang (mga) wika"
   videos_more: "Magdagdag pa ng <a href='%{inspiring_videos_playlist}'>inspirasyonal na mga video</a> na nagtatampok sa mga huwaran at kilalang mga tao"
+  videos_more_markdown: "More [inspirational videos](%{inspiring_videos_playlist}) featuring role models and celebrities"
   careers_page_more: "Magdagdag pa ng <a href='%{careers_url}' target='_blank'>inspirasyonal na mga video</a> na nagtatampok sa mga propesyonal sa larangan ng teknolohiya"
+  careers_page_more_markdown: "More [inspirational videos](%{careers_url}) featuring professionals in technology fields"
   playlab_choose_theme: "Piliin ang tema ng iyong Play Lab"
   playlab_classic_title: "Klasiko"
   playlab_gumball_title: "Ang Kamangha-manghang Mundo ng Gumball"
@@ -417,6 +454,7 @@
   minecraft_adventurer: "Tagapaglakbay sa Minecraft"
   minecraft_tutorials: "Mga Tutoryal sa Minecraft Hour of Code"
   minecraft_specs: "Maraming wika | Modernong mga browser at mga tablet | Baitang 2+"
+  minecraft_start_tutorial: "Start tutorial"
   minecraft_agent_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
   minecraft_agent_button: "Panimula"
   minecraft_designer_description: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
@@ -468,6 +506,7 @@
   sports_athlete_Chris: "Chris Bosh, Olympic Gold Medallist at Kampeon sa NBA, Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medallist at Kampeon sa NBA, Dallas Mavericks"
   watch_inspirational_videos: "Bago ka magsimula, panoorin ang isa sa mga inspirasyonal na mga video na ito"
+  video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Magbigay inspirasyon sa isang babae"
   video_title_cs_intro: "Panimula sa Computer Science"
   video_title_schools_dont_teach: "Madalas na Hindi Tinuturo sa Karamihan sa mga Paaralan"
@@ -480,8 +519,10 @@
   video_title_real_madrid: "Hour of Code kasama si Real Madrid"
   video_title_marco_belinelli: "Hour of Code kasama si Marco Belinelli"
   video_title_chris_bosh: "Si Chris Bosh tungkol sa Computer Science"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 minuto"
   video_2min: "2 minuto"
+  video_3min: "3 min"
   video_5min: "5 minuto"
   speak_another_language: "Nagsasalita ng ibang wika?"
   help_translate: "Tulungan kaming mag-salin."
@@ -494,9 +535,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} na mga guro ang nangangailangan ng mga boluntaryo.<br>%{num_volunteers} na mga boluntaryo ang nagsign-up. Sumali sa kanila."
   volunteer_engineer_submission_intro_background: "Ang Hour of Code ay isang global na kilusan para subukan ang isang oras na panimula sa computer science, umabot sa sampung milyong mga estudyante ang naabot sa 180+ na mga bansa. Sana makalahok ka sa Computer Science Education Week ngayong ika-7 hanggang ika-13 ng Disyembre."
   volunteer_engineer_submission_intro_recruit: 'Gusto ng mga guro na magkaroon ng isang tao na <span style="font-family: ''Gotham 7r'', sans-serif;">mainit tungkol sa edukasyon sa computer science</span> na maaaring tumulong sa silid-aralan, o kahit na sino na maaaring <span style="font-family: ''Gotham 7r'', sans-serif;">magbigay inspirasyon</span> sa kanilang mga estudyante sa pamamagitan ng pakikipag-usap sa lawak ng posibilidad sa computer science (na maaaring magawa sa pamamagitan ng video chat).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
   volunteer_engineer_submission_intro_guide: "Alamin pa ang tungkol sa ating <a href=\"%{volunteer_guide}\">programa sa pagboluntaryo dito</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Pakilagyan ang sumusunod na mga impormasyon kung ikaw ay isang estudyante sa computer sciece o isang software na propesyonal. Ang mga patlang na may markang<span class=\"form-required-field\">*</span> ay kinakailangan."
+  volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
   volunteer_engineer_submission_intro_links: "Isa ka bang guro na naghahanap ng mga boluntaryo? Maghanap ng boluntaryo sa ating <a href=\"%{volunteer_local}\">mapa ng boluntaryo</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "I-update ang iyong impormasyon"
   volunteer_engineer_submission_header_shared: "Mga impormasyong ibinahagi sa mga guro sa volunteer map"
   volunteer_engineer_submission_field_name: "Pangalan"
@@ -521,6 +566,8 @@
   volunteer_engineer_submission_field_email: "Email address"
   volunteer_engineer_submission_field_email_desc: "Ang iyong email address ay hindi ibabahagi kailan man, ngunit kami ay magpapadala sa iyo ng mga kahilingan mula sa mga guro."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Oo'
   volunteer_engineer_submission_field_email_preference_no: 'Hindi'
   volunteer_engineer_submission_final_paragraph: "Ikaw ay ililista sa isang mapa para sa mga lokal na mga guro na makipag-ugnayan sa iyo para sa Hour of Code o ibang mga oportunidad sa pagboluntaryo. Ang iyong email at eksaktong address ay HINDI namin ibabahagi. Ngunit ang ibang impormasyon (kalakip na ang tinatantyang lokasyon) ay publikong makikita ng mga lokal na guro."
@@ -528,6 +575,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Pinapatunayan ko na ako ay hindi bababa sa 18 taong gulang."
   volunteer_engineer_submission_submit: "Ipasa"
   volunteer_engineer_submission_thankyou: "Salamat! Ang iyong impormasyon sa pagboluntaryo at matagumpay na naisumite. Ang mga guro ay gagamit ng <a href=\"%{url}\">mapang ito</a> para maghanap at makipag-ugnayan sa mga boluntaryo kagaya mo. Mangyayaring maghintay ng 48 na oras bago maipakita ng wasto ang iyong impormasyon sa mapa."
+  volunteer_engineer_submission_thankyou_markdown: "Thank you! Your volunteer information was successfully submitted. Teachers will be using [this map](%{url}) to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_commitment_uncertain: "Walang kasiguraduhan"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 oras kada linggo"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 oras kada linggo"
@@ -595,6 +643,7 @@
   dashboard_middle_courses_desc: "Ang aming gitnang paaralan na kurikulum ay gumagamit ng computer science at pagprogram sa loob ng konteksto ng gitnang paaralan na matematika at agham - bilang isang kagamitan sa pagturo ng matematika at agham na mga konsepto. Para magrehistro sa mga workshop ng propesyonal na pag-unlad, mag-apply para sa <a href=\"/educate/districts\">buong distrito na pakikipagsamahan</a> sa Code.org."
   dashboard_high_courses: "Buong taon na mga Kurso sa Mataas na Paaralan"
   dashboard_high_courses_desc: "Ang aming programa para sa mataas na paaralan ay tumutulong sa mga distrito ng paaralan na mag-alok ng buong-taon na klase sa computer science sa pamamagitan ng paghahanda sa mga umiiral ng tagapagturo na mga kawani na mag-alok sa bagong larangan na ito. Para magrehistro para sa mga workshop sa propesyonal na pag-unlad, mag-apply para sa <a href=\"/educate/districts\">buong distrito na pakikipagsamahan</a> sa Code.org."
+  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "Ang Code.org ay nakikipagtulungan sa Bootstrap para makabuo ng isang kurikulum na nagtuturo ng mga konsepto sa algebra at geometry sa pamamagitan ng pagprogram sa kompyuter."
   dashboard_course_csins: "Computer Science sa Agham"
   dashboard_course_csins_desc: "Ang Code.org ay nakikipagtulungan sa Project GUTS para makahatid ng isang panimula sa mga konsepto ng computer science sa loob ng konteksto ng pagmomodelo at simulasyon."
@@ -726,6 +775,7 @@
   dashboard_pre-express: 'Pre-reader na Pinabilis na Kurso: '
   dashboard_express: 'Pinabilis na Kurso: '
   dashboard_unplugged: "Kung wala kang mga kompyuter, <a href='%{unplugged_url}'>subukan ang mga unplugged na mga aralin</a> sa iyong silid-aralan."
+  dashboard_unplugged_markdown: "If you don't have computers, [try these unplugged lessons](%{unplugged_url}) in your classroom."
   dashboard_tools: 'Mga Kagamitan: '
   dashboard_curriculum: "Kurikulum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
@@ -823,6 +873,7 @@
   carousel_heading_beyond_languages: "Mag-aral sa ibang mga wika na pang-program"
   carousel_heading_apps_games: "Gumawa ng sarili mo na mga app o kaya laro"
   carousel_heading_university: "Mga kurso ng unibersidad na online"
+  carousel_heading_online_university: "University Courses Available Online"
   carousel_heading_webpages: "Matuto gumawa ng mga web page"
   carousel_heading_robots: "Matuto mag-program gamit ang mga robot"
   carousel_heading_ide: "Mga platform na sikat sa mga guro"
@@ -850,6 +901,7 @@
   starwars_name: 'Star Wars: Pagbuo ng Kalawakan gamit ang Code'
   codeorg_name: "Klasiko na Maze"
   codeintl_name: "Klasiko na Maze"
+  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "Isang introduksyon sa JavaScript"
   khanes_name: "Isang introduksyon sa JavaScript"
   khanpt_name: "Isang introduksyon sa JavaScript"
@@ -858,9 +910,13 @@
   khanpl_name: "Isang introduksyon sa JavaScript"
   tynker_name: "Gumawa ng sarili mong laro"
   scratch_name: "Maging creative gamit ang pag-code"
+  lightbot_name: "Lightbot"
   thinkersmith_name: "Ang Robot Kong Mga Kaibigan"
   condcards_name: "Mga Conditional gamit ang mga Card"
+  lightbotintl_name: "Lightbot"
   codehs_name: "Matutong mag-code kasama si Karel ang Aso"
+  codecademy_name: "Codecademy"
+  codecombat_name: "CodeCombat"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Bumuo ng Laro gamit ang JavaScript"
   processing_name: "Pagguhit gamit ang Code"
@@ -874,8 +930,11 @@
   flappy_name: "Gumawa ng Flappy na laro"
   bitsbox_name: "Bitsbox - gumawa ng laro"
   makeschool_name: "Gumawa ng iPhone na laro sa iyong browser!"
+  touchdevelop_name: "TouchDevelop"
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
+  thinkersmith2_name: "Binary Baubles"
+  kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "Bato, Papel, Gunting"
   hourofcode_name: "Klasiko na Maze"
   playlab_name: "Play Lab"
@@ -885,6 +944,7 @@
   allcancode_name: "Takbo Marco!"
   csfirst_name: "CS First"
   boxisland_name: "Box Island"
+  codesters_name: "Codesters"
   texasinstruments_name: "10 Minuto ng Pag-code"
   teacherled_name: "Pinamumunuan ng Guro na mga Banghay-Aralin"
   course1_name: "Kurso 1"
@@ -903,10 +963,41 @@
   coursee_name: "Kursong E"
   coursef-draft_name: Kursong F
   coursef_name: "Kursong F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
   coursed-2018_name: Bagong Kursong D na Iskript
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Mabilis na Kurso
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Pinabilis na Kurso"
   express_name: "Mabilis na Kurso"
+  pre-express_name: Pre-reader Express Course
   20-hour_name: Pinabilis na Kurso
   algebra_name: "CS sa Algebra"
   AlgebraA_name: "CS sa Algebra na Kursong A"
@@ -916,7 +1007,10 @@
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Mga bloke)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simpleng Pag-encrypt
+  text-compression_name: Text Compression
   applab_name: "App na Lab"
   gamelab_name: "Game Lab"
   basketball_name: "Gumawa ng isang basketbol na laro"
@@ -925,6 +1019,7 @@
   applab_shortdescription_congrats: "Ang App Lab ay isang kapaligiran sa pagprogram kung saan maaari kang gumawa ng mga simpleng mga apps. Magdisenyo ng app, mag-code gamit ang mga bloke, o JavaScript para mapagana ito, pagkatapos ay ibahagi ang iyong app sa ilang segundo lang"
   codeorg_gradelevel: "Edad 4-104"
   codeintl_gradelevel: "Edad 4-104"
+  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "Middle school"
   khanes_gradelevel: "Middle school"
   khanpt_gradelevel: "Middle school"
@@ -1026,6 +1121,7 @@
   groklearning_platformtext: "Modernong mga web browsers"
   quorum_platformtext: "Mga modernong mga browser. Ang mambabasa sa screen ay suportado"
   codespark_platformtext: "iOS, Android (o web browser)"
+  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "iPad, Android na mga tablet"
   robomindnl_platformtext: "Mondernong mga web browsers, Mobile na web"
   flappy_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
@@ -1050,6 +1146,7 @@
   teacherled_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
   codeorg_shortdescription: "Matutong magcode kasama si Mark Zuckerberg at ang Angry Birds!"
   codeintl_shortdescription: "Matutong magcode kasama si Mark Zuckerberg at ang Angry Birds!"
+  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Matutong gumuhit sa JavaScript"
   khanes_shortdescription: "Matutong gumuhit sa JavaScript"
   khanpt_shortdescription: "Matutong gumuhit sa JavaScript"
@@ -1126,6 +1223,7 @@
   coursef-2019_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
   codeorg_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   codeintl_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
+  thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   khan_longdescription: "Pag-aralan ang mga pangunahing konsepto ng pagprogram sa Javascript habang lumikha ng mga masasayang drowing gamit ang iyong code. Gawin ito nang ikaw lang o sa iyong klase!"
   khanes_longdescription: "Pag-aralan ang mga pangunahing konsepto ng pagprogram sa Javascript habang lumikha ng mga masasayang drowing gamit ang iyong code. Gawin ito nang ikaw lang o sa iyong klase!"
   khanpt_longdescription: "Pag-aralan ang mga pangunahing konsepto ng pagprogram sa Javascript habang lumikha ng mga masasayang drowing gamit ang iyong code. Gawin ito nang ikaw lang o sa iyong klase!"
@@ -1175,24 +1273,39 @@
   khan_beyond_name: "Matuto nang pag-program sa kompyuter"
   tynker_beyond_name: "Matuto nang pag-program sa bahay"
   scratch_beyond_name: "Maging creative gamit ang pag-code"
+  lightbot_beyond_name: "LightBot"
+  codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "ScratchJR para sa mga hindi pa marunong magbasa"
   hopscotch_beyond_name: 'Hopscotch: Pag-Program Sa Iyong iPad'
+  pocketcode_beyond_name: "Pocket Code"
   groklearning_beyond_name: "Matuto ng Phyton"
   hacketyhack_beyond_name: "Matuto ng Ruby"
   robomind_beyond_name: "Mag-program ng virtual robot"
   makeschool_beyond_name: "Gumawa ng iPhone na laro sa iyong browser!"
   appinventor_beyond_name: "AppInventor Hour of Code"
+  touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "Matutong mag-code kasama si Karel ang Aso"
   udemy_beyond_name: "Online na Pang-Program ng mga Kurso"
   lynda_beyond_name: "Online na Pang-Program ng mga Kurso"
   edx_beyond_name: "Harvard CS50 na klase"
   coursera_beyond_name: "Stanford CS 101 na klase"
+  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Mga kurso ng unibersidad na online"
+  kodu_beyond_name: "Kodu"
+  cargobot_beyond_name: "Cargobot"
+  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "Matuto ng HTML"
   codeavengers_beyond_name: "Matutong mag-code ng mga Websites"
+  mozilla_beyond_name: "Webmaker"
+  codecombat_beyond_name: "CodeCombat"
+  codea_beyond_name: "Codea"
+  lego_beyond_name: "Mindstorms"
+  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduine sa Sparkfun"
   processing_beyond_name: "Programa na may Pagproseso"
+  alice_beyond_name: "Alice"
+  sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "Edad 4-104"
   khan_beyond_gradelevel: "Middle school"
   tynker_beyond_gradelevel: "Edad 5-13"
@@ -1236,6 +1349,9 @@
   scratch_beyond_platformtext: "Kahit anong panginain (browser)"
   lightbot_beyond_platformtext: "iOS, Android (o web browser)"
   codecademy_beyond_platformtext: "Mondernong mga web browsers, iOS, mga Android apps"
+  kodable_beyond_platformtext: "iPad"
+  scratchjr_beyond_platformtext: "iPad"
+  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "Mobile na App"
   groklearning_beyond_platformtext: "Modernong mga web browsers"
   hacketyhack_beyond_platformtext: "Pag-install ng Desktop"
@@ -1250,11 +1366,14 @@
   coursera_beyond_platformtext: "Mga modernong panginain (browser)"
   udacity_beyond_platformtext: "Mga modernong panginain (browser)"
   teachingtree_beyond_platformtext: "Nakabatay sa Web"
+  kodu_beyond_platformtext: "Windows, xBox"
+  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "Pag-install ng Desktop"
   w3schools_beyond_platformtext: "Mondernong mga Web browsers"
   codeavengers_beyond_platformtext: "Mondernong mga Web browsers"
   mozilla_beyond_platformtext: "Mondernong mga Web browsers"
   codecombat_beyond_platformtext: "Web based (Firefox, Chrome, Safari, IE9+)"
+  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "Pagbili ng Robot"
   finch_beyond_platformtext: "Pagbili ng Robot"
   arduino_beyond_platformtext: "Web browser, pagkatapos pagbili ng Kit"
@@ -1338,7 +1457,14 @@
   compatibility_hide_this_warning: "Itago ang babalang ito"
   compatibility_unsupported_browser: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
   compatibility_unsupported_browser_markdown: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
+  starwars_shortcode: "star"
+  mc_shortcode: "mc"
+  frozen_shortcode: "frzn"
+  hourofcode_shortcode: "code"
   flappy_shortcode: "flap"
+  infinity_shortcode: "inf"
+  playlab_shortcode: "lab"
+  artist_shortcode: "art"
   header_home: "Home"
   header_my_dashboard: "Aking Dashboard"
   header_courses: "Mga kurso"
@@ -1374,21 +1500,35 @@
   header_teacher_community: "Komunidad ng mga Guro"
   header_help_support: 'Tulong at suporta '
   header_report_bug: "I-report ang problema"
+  header_report_abuse: "Report abuse"
+  header_legal: "Privacy & Legal"
   header_legal_privacy: "Patakaran sa Pagkapribado"
   header_legal_tos: "Mga Alituntunin ng Serbisyo"
   header_tutorials: "Mga Tutorial"
+  app_lab_documentation: "App Lab Documentation"
+  app_lab_tutorials: "App Lab Tutorials"
+  game_lab_documentation: "Game Lab Documentation"
+  game_lab_tutorials: "Game Lab Tutorials"
+  sprite_lab_documentation: "Sprite Lab Documentation"
+  sprite_lab_tutorials: "Sprite Lab Tutorials"
   header_documentation: "Dokumentasyon"
   user_header_label: "Mabuhay %{username}"
   user_header_team: "Koponan"
+  user_header_my_projects: "My projects"
   user_header_settings: "Account Ko"
   user_header_logout: "Mag-sign out"
   user_header_signin: "Mag-sign in"
   user_header_create: 'Lumikha '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Artist '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_dance: "Dance Party"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  user_header_view_all: "View all projects..."
+  user_header_view_project_gallery: "View project gallery"
   user_header_view_my_projects: "Tingnan ang aking mga proyekto"
   view_all_sections: "Tingnan ang Lahat ng mga Seksiyon"
   view_section: "Tingnan ang Seksiyon"
@@ -1419,15 +1559,41 @@
   google_sign_in_instruct: 'Mula dito, sila ay dapat pipili sa "Sign in with Google Account" na opsyon:'
   hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab
+  applab_tile_title: "Intro to App Lab (Ages 13+)"
+  applab_tile_subtitle: "Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming. (English Only)"
   applab_tile_start_tutorial: "Panimula"
+  applab_tile_teacher_guide: "View teacher guide"
+  aquatic_name: 'Minecraft: Voyage Aquatic'
+  account_sign_up_email_opt_in: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
+  account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
   hoc_overview_dance_title: "Dance Party"
   hoc_overview_dance_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, at karagdagang 25 pa!"
   hoc_overview_dance_2019_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, at karagdagang 34 pa!"
+  hoc_overview_title: "Hour of Code Activities from Code.org"
+  hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_partner_activities_title: "More activities from partners"
+  hoc_overview_partner_activities_body: "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners."
+  hoc_overview_partner_activities_link: "View Activities"
   hoc_overview_start_tutorial: "Panimula"
+  hoc_overview_view_teacher_guide: "View teacher guide"
+  hoc2018_creativity: "creativity"
   hoc2018_creativity_create: "I-create"
+  hoc2018_creativity_hoc_coming: "The Hour of Code is coming…"
+  hoc2018_creativity_what_will_you_create: "What will you create?"
+  hoc2018_creativity_homepage: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be. Watch our video."
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will you create?'
+  hoc2018_creativity_courses: "Go further with Code.org courses"
+  hoc2018_creativity_courses_link: "Go further with <a href=\"https://studio.code.org/courses\">Code.org courses</a>"
+  hoc2018_homepage: "Sign up your class to try one of the over 150 NEW activites for the Hour of Code (Dec 3-9)!"
   hoc2018_mc_page_title: "Mga Tutoryal sa Minecraft Hour of Code"
   hoc2018_mc_details: "Maraming wika | Modernong mga browser at mga tablet | Baitang 2+"
+  hoc2018_mc_aquatic_announcement: "Sign up your class to try one of the over 150 NEW activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today."
+  hoc2018_mc_aquatic_title: "Minecraft Voyage Aquatic"
   hoc2018_mc_aquatic_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
+  hoc2019_mc_aquatic_description: "Explore and build underwater worlds with code."
   hoc2018_mc_hero_title: "Minecraft: Ang Paglalakbay ng Isang Bayani"
   hoc2018_mc_hero_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
   hoc2018_mc_designer_title: "Designer ng Minecraft"
@@ -1437,34 +1603,115 @@
   hoc2018_mc_start: "Panimula"
   hoc2018_mc_no_internet: "Wala ka bang Internet?"
   hoc2018_mc_download_adventurer: "I-download ang offline na bersyon ng Minecraft Adventurer."
+  hoc2018_mc_educators: "For Educators"
+  hoc2018_mc_educators_box1_title: "Code with Minecraft"
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: "Get started"
+  hoc2018_mc_educators_box2_title: "Download Facilitator Guide"
+  hoc2018_mc_educators_box2_desc: "This toolkit will help you host an Hour of Code and engage your students in computer science."
   hoc2018_mc_educators_box2_button: "I-download"
+  hoc2018_mc_educators_box3_title: "Attend a free student workshop"
+  hoc2018_mc_educators_box3_desc: "Visit a Microsoft Store in your area for a free Hour of Code workshop. For participants of all skill levels, ages six and up."
+  hoc2018_mc_educators_box3_button: "Find a workshop"
+  hoc2018_mc_educators_box4_title: "Access more computer science resources"
+  hoc2018_mc_educators_box4_desc: "Create change in your community with digital skills and computer science education resources from Microsoft."
+  hoc2018_mc_educators_box4_button: "Explore resources"
   hoc2018_mc_watch_videos: "Bago ka magsimula, panoorin ang isa sa mga inspirasyonal na mga video na ito"
   hoc2018_mc_videos_more: "Magdagdag pa ng <a href='%{inspiring_videos_playlist}'>inspirasyonal na mga video</a> na nagtatampok sa mga huwaran at kilalang mga tao"
   hoc2018_mc_careers_more: "Magdagdag pa ng <a href='%{careers_url}' target='_blank'>inspirasyonal na mga video</a> na nagtatampok sa mga propesyonal sa larangan ng teknolohiya"
   hoc2018_mc_video_1min: "1 minuto"
   hoc2018_mc_video_2min: "2 minuto"
+  hoc2018_mc_video_3min: "3 min"
   hoc2018_mc_video_5min: "5 minuto"
   hoc2018_mc_video_title_steph_curry: "Hour of Code kasama si Steph Curry"
   hoc2018_mc_video_title_sports: "Sikapin ang iyong sarili. Kahit na sino ay maaaring matuto."
+  hoc2018_mc_video_title_cs_is_everything: "Computer Science is Changing Everything"
   hoc2018_mc_video_title_inspire_girl: "Magbigay inspirasyon sa isang babae"
   hoc2018_mc_video_title_cs_intro: "Panimula sa Computer Science"
   hoc2018_mc_video_title_schools_dont_teach: "Madalas na Hindi Tinuturo sa Karamihan sa mga Paaralan"
   hoc2018_mc_video_title_obama: "President Obama tungkol sa computer science"
   hoc2018_mc_video_title_hoc_is_here: "Nandito ang Hour of Code - Kahit na Sino ay Maaaring Matuto"
   hoc2018_mc_video_title_anybody_can_learn: "Kahit na Sino ay Maaaring Matuto"
+  hoc2018_mc_video_title_my_name_is_aracely: "My Name is Aracely"
+  hoc2018_mc_homepage_hoc_coming: "The Hour of Code is coming..."
+  hoc2018_mc_homepage_what_create: "What will you create?"
+  hoc2018_mc_homepage_give_flight: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be."
+  hoc2018_mc_homepage_watch_video: "Watch our video"
   hoc2018_mc_homepage_join_us: "Samahan niyo kami"
   hoc2018_mc_homepage_try_it: "Subukan mo"
   hoc2018_mc_back: "Ang minecraft ay nagbabalik na may mga bagong gawain para sa Oras ng Code!"
   hoc2018_mc_back_journey: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
+  hoc2018_mc_teacher_guide: "View teacher guide"
   hoc2018_mc_minecraft_education: "Edukasyon ng Minecraft"
   hoc2018_mc_continue_learning: "Magpatuloy sa pag-aaral ng Minecraft."
   hoc2018_mc_go_to_mc_education: "Pumunta sa Edukasyon ng Minecraft"
+  hoc2018_mc_short_description: "Use your creativity and problem solving skills to find treasure and explore under water worlds with the power of code."
+  hoc2018_mc_short_description_shorter: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
+  hoc2018_mc_journey: "Journey through Minecraft with code."
   hoc2018_dance_party_main_heading: "Dance Party"
+  hoc2018_dance_party_landing_title: "Dance"
+  hoc2018_dance_party_subheading: "Help translate Dance Party"
+  hoc2018_dance_create_your_own_dance_title: "Create Your Own Dance Party"
   hoc2018_dance_party_box_title: "Dance Party"
+  hoc2018_dance_party_box_description: "Code a Dance Party to share with your friends!"
+  hoc2018_dance_party_specs: "Language | Format | Age 6-106"
   hoc2018_dance_party_button: "Panimula"
+  hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
+  hoc2018_dance_keep_on_dancing_description: "Go beyond the first hour with extended project ideas."
+  hoc2018_dance_keep_on_dancing_specs: "Language | Format | Age 13+"
+  hoc2018_dance_keep_on_dancing_button: "Start Part 2"
+  hoc2018_dance_teacher_resources_title: "Teacher Resources"
+  hoc2018_dance_teacher_resources_tile1_description: "Lesson plans, certificates, and music filtering."
   hoc2018_dance_teacher_resources_tile1_button: "Banghay-aralin"
+  hoc2018_dance_teacher_resources_tile2_title: "Dance Party Unplugged"
+  hoc2018_dance_teacher_resources_tile2_description: "No computers needed!  Learn coding concepts to choreograph a dance party together."
   hoc2018_dance_teacher_resources_tile2_button: "Unplugged na Aktibidad"
+  hoc2018_dance_featured_student_creations_title: "Featured Student Creations"
+  hoc2018_dance_videos_section_heading: "Get Inspired"
+  hoc2018_dance_video_title_what_is_creativity: "What is Creativity?"
+  hoc2018_dance_view_creativity_video_playlist: "What is Creativity? View Full Series (5 min)"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "In partnership with"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn more</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn more](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Learn more about Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_title: "About Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_description: "Learn about Amazon’s kindergarten to career program to increase access to computer science education. Find information on how to get involved in our summer camps, high school CS classes, scholarships, and internships."
   hoc2018_dance_amazon_about_future_engineer_button: "Matuto nang higit pa"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Try coding this summer"
+  hoc2018_dance_amazon_try_coding_this_summer_description: "Get involved in Amazon Future Engineer’s free, fun, and inclusive computer science camps! Summer camps are available for students from kindergarten through 8th grade in multiple locations in the US for summer 2019."
+  hoc2018_dance_amazon_try_coding_this_summer_button: "Join a camp"
+  hoc2018_dance_amazon_scholarship_programs_title: "Scholarship programs"
+  hoc2018_dance_amazon_scholarship_programs_description: "Amazon is offering scholarships of $10,000 per year for underserved students who have successfully completed or are currently enrolled in an AP CS course and intend to study a CS degree at a 4-year college or university in the United States."
   hoc2018_dance_amazon_scholarship_programs_button: "Mag-apply ngayon"
+  hoc2018_dance_amazon_internships_title: "Come Intern at Amazon"
+  hoc2018_dance_amazon_internships_description: "Applications are now open for summer 2019 Amazon Future Engineer internships. Interns will partner with a manager, technical mentor, and other interns to innovate and create new features and services on behalf of Amazon customers. Internships are available in the US and Canada."
+  hoc2018_dance_amazon_internships_button: "Find an internship"
+  hoc2018_dance_amazon_k8_programs_title: "K-8 programs"
+  hoc2018_dance_amazon_funding_title: "Get funding for your CS degree"
+  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.\n\n"
   hoc2018_dance_measure: "Measure"
   hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_aquatic_video1: "Minecraft Voyage Aquatic - Introduction"
+  hoc2018_aquatic_video2: "Minecraft Voyage Aquatic - Loops"
+  hoc2018_aquatic_video3: "Minecraft Voyage Aquatic - Conditionals"
+  hoc2018_aquatic_video4: "Minecraft Voyage Aquatic - Congratulations"
+  hoc2018_dance_video1: "Dance Party - Introduction"
+  hoc2018_dance_video2: "Dance Party - Events"
+  hoc2018_dance_video3: "Dance Party - Properties"
+  hoc2018_dance_video4: "Dance Party - Congratulations"
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
+  hoc2018_mc_with_microsoft: "In partnership with"
+  hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+  hoc2019_mc_mee_title: "Minecraft AI for Good"
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
+  hoc2019_mc_more_coding_resources: "More Coding Resources"
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) from last year."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

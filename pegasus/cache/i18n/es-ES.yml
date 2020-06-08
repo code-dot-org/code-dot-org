@@ -443,6 +443,8 @@ es-ES:
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar
     la diversidad en Ciencias de la Computación.
   homepage_banner_text_link: Aprende más
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Aprende más
   homepage_banner_20k_teachers: Se formaron 20.000 profesores que ahora enseñan Ciencias
     de la Informática en clase.
@@ -453,6 +455,7 @@ es-ES:
   homepage_banner_emailprivacy: Estamos haciendo un cambio importante en la forma
     en que apoyamos la privacidad de los estudiantes.
   homepage_banner_emailprivacy_link: Leer más
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comienza hoy mismo
@@ -1314,6 +1317,7 @@ es-ES:
   allcancode_name: "¡Ejecutar Marco!"
   csfirst_name: Primero CS
   boxisland_name: Isla de caja
+  codesters_name: Codesters
   texasinstruments_name: 10 minutos de código
   teacherled_name: El Profesor impartió lecciones de la Hora de Code
   course1_name: Curso 1
@@ -1361,6 +1365,7 @@ es-ES:
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
   express-2020_name: Curso Express (2019)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
@@ -1375,6 +1380,8 @@ es-ES:
   iceage_name: La Era de Hielo
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (bloques)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
   applab_name: Laboratorio de Aplicaciones
@@ -1881,6 +1888,7 @@ es-ES:
   arduino_beyond_name: Arduino con Sparkfun
   processing_beyond_name: Programación con Processing
   alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Edad 4-104
   khan_beyond_gradelevel: Secundaria
   tynker_beyond_gradelevel: Edad 5-13
@@ -2186,8 +2194,14 @@ es-ES:
     actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros
     navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad
     podría verse afectada.
+  starwars_shortcode: star
   mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
   flappy_shortcode: aletear
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art
   header_home: Inicio
   header_my_dashboard: Mi Panel de Control
   header_courses: Cursos
@@ -2223,6 +2237,8 @@ es-ES:
   header_teacher_community: Comunidad de profesores
   header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: Reporte los errores
+  header_report_abuse: Report abuse
+  header_legal: Privacy & Legal
   header_legal_privacy: Política de Privacidad
   header_legal_tos: Términos de uso
   header_tutorials: Tutoriales
@@ -2550,3 +2566,6 @@ es-ES:
     2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: Aprende desde casa
   homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
+  homepage_slot_text_link_code_break: Take a Code Break
+  homepage_slot_text_link_do_hoc: Do an Hour of Code
+  homepage_slot_text_link_express_course: Try an Express Course

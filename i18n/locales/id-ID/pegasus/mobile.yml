@@ -344,11 +344,15 @@
   homepage_banner_link_prizes: 'Bergabung dengan acara belajar terbesar dalam sejarah. '
   homepage_banner_text_main: "Code.org dan College Board membentuk aliansi untuk meningkatkan keberagaman dalam ilmu komputer."
   homepage_banner_text_link: "Pelajari lebih lanjut"
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Pelajari lebih banyak"
   homepage_banner_20k_teachers: "20.000 guru telah dilatih, dan sekarang mereka mengajar ilmu komputer di kelas-kelas."
   homepage_banner_20k_teachers_link: "Pelajari lebih lanjut"
+  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "Kami membuat perubahan penting tentang bagaimana kami mendukung privasi siswa."
   homepage_banner_emailprivacy_link: "Baca selengkapnya"
+  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Pelajari lebih lanjut"
   homepage_slot_text_title_hoc: "Jam kode"
   homepage_slot_text_blurb_hoc: "Siapapun bisa belajar. Mulailah hari ini"
@@ -450,6 +454,7 @@
   minecraft_tutorials: "Tutorial Minecraft Jam Kode"
   minecraft_specs: "Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+"
   minecraft_start_tutorial: "Mulai tutorial"
+  minecraft_agent_description: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   minecraft_agent_button: "Mulai"
   minecraft_designer_description: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
   minecraft_designer_button: "Mulai"
@@ -500,6 +505,7 @@
   sports_athlete_Chris: "Chris Bosh, peraih medali emas olimpiade dan juara NBA, Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, peraih medali emas dan juara NBA, Dallas Mavericks"
   watch_inspirational_videos: "Sebelum Anda memulai, lihat salah satu video inspiratif ini"
+  video_title_cs_is_everything: "Ilmu Komputer sedang Mengubah Segalanya"
   video_title_inspire_girl: "Inspirasi seorang gadis"
   video_title_cs_intro: "Perkenalan Ilmu Komputer"
   video_title_schools_dont_teach: "Apa yang tidak diajarkan di kebanyakan sekolah"
@@ -937,6 +943,7 @@
   allcancode_name: "Lari Marco!"
   csfirst_name: "CS yang Pertama"
   boxisland_name: "Pulau Kotak"
+  codesters_name: "Codesters"
   texasinstruments_name: "10 Menit Mengkode"
   teacherled_name: "Guru Dipimpin oleh rencana pembelajaran Hour of Code"
   course1_name: "Kursus 1"
@@ -961,13 +968,34 @@
   coursed-2017_name: Kursus D (2017)
   coursee-2017_name: Kursus E (2017)
   coursef-2017_name: Kursus F (2017)
+  coursea-2018_name: Kursus A(2018)
+  courseb-2018_name: Kursus B (2018)
+  coursec-2018_name: Kursus C (2018)
+  coursed-2018_name: Kursus D (2018)
+  coursee-2018_name: Kursus E (2018)
+  coursef-2018_name: Kursus F (2018)
+  coursea-2019_name: Kursus A(2019)
+  courseb-2019_name: Kursus B (2019)
+  coursec-2019_name: Kursus C (2019)
+  coursed-2019_name: Kursus D (2019)
+  coursee-2019_name: Kursus E (2019)
+  coursef-2019_name: Kursus F (2019)
+  coursea-2020_name: Kursus A(2020)
+  courseb-2020_name: Kursus B (2020)
+  coursec-2020_name: Kursus C (2020)
+  coursed-2020_name: Kursus D (2020)
+  coursee-2020_name: Kursus E (2020)
+  coursef-2020_name: Kursus F (2020)
   express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
+  express-2019_name: Kursus Kilat (2019)
   pre-express-2019_name: Kursus Express Pre-Reader(2019)
+  express-2020_name: Kursus Kilat (2020)
   pre-express-2020_name: Kursus Kilat Pre-reader(2020)
   csd2_name: 'Unit 2: Pengembangan Web'
   csd3_name: 'Unit 3: Animasi dan Game'
   accelerated_name: "Kursus akselerasi"
+  express_name: "Kursus Kilat"
   pre-express_name: Kursus ekspres Pre-reader
   20-hour_name: Kursus akselerasi
   algebra_name: "CS di Kursus penuh Aljabar"
@@ -978,6 +1006,8 @@
   iceage_name: "Zaman Es"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star wars(blok)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Enkripsi sederhana
   text-compression_name: kompresi Teks
   applab_name: "Laboratorium Aplikasi"
@@ -1426,7 +1456,14 @@
   compatibility_hide_this_warning: "Sembunyikan peringatan"
   compatibility_unsupported_browser: "Peramban kamu tidak didukung. Harap tingkatkan Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi beberapa fungsi tidak dapat bekerja."
   compatibility_unsupported_browser_markdown: "Peramban kamu tidak didukung. Harap tingkatkan Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi beberapa fungsi tidak dapat bekerja."
+  starwars_shortcode: "star"
+  mc_shortcode: "mc"
+  frozen_shortcode: "frzn"
+  hourofcode_shortcode: "code"
   flappy_shortcode: "kepakkan"
+  infinity_shortcode: "inf"
+  playlab_shortcode: "lab"
+  artist_shortcode: "art"
   header_home: "Beranda"
   header_my_dashboard: "Dasbor saya"
   header_courses: "Kursus"
@@ -1519,11 +1556,13 @@
   syncing_students: "Singkronkan siswa anda"
   syncing_students_instructions: 'Jika bagian Code.org anda sudah kadaluarsa dengan daftar siswa di kelas Google,klik tombol "sync students from Google Clasroom pada tab:"manage students":'
   google_sign_in_instruct: 'Dari sana, mereka harus memilih opsi:"sign with Google Account":'
+  hero_name: 'Minecraft: Perjalanan Pahlawan'
   applab-intro_name: Pembukaan aplikasi lab
   applab_tile_title: "Pembukaan untuk aplikasi Lab(usia13+)"
   applab_tile_subtitle: "Buat aplikasimu sendiri di javascriptmenggunakan blok dasar programing. Atau asah keterampilan anda ke tingkat selanjutnya teks-dasar programing.( hanya dalam bahasa inggris)"
   applab_tile_start_tutorial: "Mulai"
   applab_tile_teacher_guide: "Lihat petunjuk guru"
+  aquatic_name: 'Minecraft: Perjalanan Air'
   account_sign_up_email_opt_in: "Dapat kami email Anda tentang pembaruan kursus kami, peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)"
   account_sign_up_child_accept_terms: "Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
   hoc_overview_dance_title: "Pesta Tari"
@@ -1552,8 +1591,10 @@
   hoc2018_mc_details: "Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+"
   hoc2018_mc_aquatic_announcement: "Daftarkan kelasmu untuk mencoba satu dari 150 aktifitas BARU untuk Hour of Code (Des 3-9). Pastikan untuk mengecek brand aktifitas minekraft baru untuk 2018, perjalanan air! Daftarkan kelasmu sekarang."
   hoc2018_mc_aquatic_title: "Perjalanan air Minekraft"
+  hoc2018_mc_aquatic_description: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   hoc2019_mc_aquatic_description: "Jelajahi dan bangun dunia bawah laut dengan kode."
   hoc2018_mc_hero_title: "Minecraft: Perjalanan Pahlawan"
+  hoc2018_mc_hero_description: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   hoc2018_mc_designer_title: "Perancang Minecraft"
   hoc2018_mc_designer_description: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
   hoc2018_mc_adventurer_title: "Petualang Minecraft"
@@ -1583,6 +1624,7 @@
   hoc2018_mc_video_5min: "5 min"
   hoc2018_mc_video_title_steph_curry: "Hour of Code bersama Steph Curry"
   hoc2018_mc_video_title_sports: "Dorong dirimu. Setiap orang bisa belajar."
+  hoc2018_mc_video_title_cs_is_everything: "Ilmu Komputer sedang Mengubah Segalanya"
   hoc2018_mc_video_title_inspire_girl: "Inspirasi seorang gadis"
   hoc2018_mc_video_title_cs_intro: "Perkenalan Ilmu Komputer"
   hoc2018_mc_video_title_schools_dont_teach: "Apa yang tidak diajarkan di kebanyakan sekolah"
@@ -1596,6 +1638,8 @@
   hoc2018_mc_homepage_watch_video: "Tonton video kami"
   hoc2018_mc_homepage_join_us: "Bergabunglah dengan kami"
   hoc2018_mc_homepage_try_it: "Cobalah"
+  hoc2018_mc_back: "Minecraft hadir kembali dengan aktivitas Hour of Code yang serba baru!"
+  hoc2018_mc_back_journey: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   hoc2018_mc_teacher_guide: "Lihat petunjuk guru"
   hoc2018_mc_minecraft_education: "Minecraft Education"
   hoc2018_mc_continue_learning: "Lanjutkan pembelajaran dengan Minecraft."
