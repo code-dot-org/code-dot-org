@@ -354,12 +354,22 @@ id:
         C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
         CSF_a_b_artist_loops: Loop dalam Artis
+        CSF_artist_angles: Sudut dalam Artis
+        CSF_collector_k1_blocks: 'CS Fundamentals: Si Kolektor'
+        CSF_collector_repeat_loops: Putaran Berulang Kolektor
+        CSF_collector_text_blocks: 'CS Fundamentals: Si Kolektor'
         CSF_create_functions: Membuat fungsi
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Perihal ilmu komputer
+        CSF_maze_intro_k1_blocks: Menuju ke Studio Kode
+        CSF_maze_intro_text_blocks: Menuju ke Studio Kode
         CSF_my_robotic_friends: Teman-teman robot saya
         CSF_Power_of_Words: Kemampuan kata-kata
+        CSF_Super_Digital_Citizen: Warga Negara Digital Super
+        CSF_stevie_big_project: Stevie dan Proyek Besar
+        CSF_unspotted_bugs: Masalah tak Terlihat
+        CSF_zuck_loops_short: Putaran Berulang
         frozen_intro: Perkenalan Hour of Code
         frozen_loops: Pengenalan pengulangan
         frozen_functions: Pengenalan Fungsi
@@ -370,6 +380,8 @@ id:
         infinity_playlab_intro: Play Lab - Pendahuluan
         infinity_playlab_events: Play Lab - Kegiatan
         infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
+        csd_concept_how_computers_work: Memperkenalkan Bagaimana Komputer Bekerja
+        csd_concept_computer: 'Bagaimana Komputer Bekerja: Apakah yang Membuat Komputer, sebuah Komputer?'
         csd_concept_binary_data: 'Cara Kerja Komputer: Biner & Data'
         csd_concept_circuits_logic: 'Cara Kerja Komputer: Sirkuit & Logika'
         csd_concept_memory_cpu_input_output: 'Cara Kerja Komputer: Memori, CPU, Input, & Output'
@@ -379,16 +391,52 @@ id:
         csd_external_netflix_data: Bagaimana Netflix Membuat Acara TV dan Saran Film?
         csd_external_waze_data: Mengapa Banyak Pengguna terobsesi Dengan Waze?
         csd_gamelab_animation_tab: Tab Animasi
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Percepatan
         csd_weblab_intro_1: Introduksi ke Web Lab - Bagian 1
         csd_weblab_intro_2: Introduksi ke Web Lab - Bagian 2
         csd_weblab_css_1: Introduksi ke CSS - Bagian 1
         csd_weblab_css_2: Introduksi ke CSS - Bagian 2
         csd_weblab_intro_3: Introduksi ke Web Lab - Bagian 3
+        csp_applab_objects: Introduction to Objects
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_processing_lists: Processing Lists with Loops
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Pengenalan Fungsi
         csp_applab_functions_parameters: Fungsi dengan parameter
         csp_applab_loops: Loop
+        csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
+        csp_concept_http_html: 'The Internet: HTTP & HTML'
+        csp_concept_what_is_internet: What is the Internet?
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Sedikit tentang piksel
+        csp_cs_is_changing_everything: Ilmu Komputer sedang Mengubah Segalanya
         csp_pixelation_color_1: widget pixelation Warna - Bagian 1
         csp_pixelation_color_2: widget pixelation Warna - Bagian 2
         csp_pixelation_color_3: widget pixelation Warna - Bagian 3
@@ -396,6 +444,9 @@ id:
         csp_U1L14_tipstricks: Unit 1 pelajaran 14 Tips & Trik guru
         csp_textcompression: widget Teks kompresi
         csp_textcompression_new: widget Teks kompresi
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS didalam Aljabar - Pendahuluan
         alg_2_eval_block: CS didalam Aljabar - Block Evaluasi
         alg_3_pemdas: CS didalam Aljabar - Perintah Operasi
@@ -432,12 +483,56 @@ id:
         iceage_events: Jam Mengkode Ice Age - Kejadian
         iceage_repeat: Jam Mengkode Ice Age - Pernyataan yang diulang
         mc_2016_intro: Jam Mengkode Minecraft- Introduksi
+        mc_2016_loops: Hour of Code Minecraft - Putaran
+        mc_2016_events: Hour of Code Minecraft - Kejadian
+        mc_2016_spawn: Hour of Code Minecraft - Memunculkan
         mc_2016_congrats: Jam Mengkode Minecraft - Selamat
+        applab_hoc_welcome: Hour of Code App Lab - Selamat Datang
+        applab_hoc_setproperty: "Hour of Code App Lab - setProperty\n"
+        applab_hoc_onevent: Hour of Code App Lab - onEvent
+        applab_hoc_designmode: Hour of Code AppLab - Mode Desain
+        applab_hoc_share: "Hour of Code AppLab - Berbagi\n"
+        mc_2017_agent_intro: Hour of Code Minecraft - Si Agen
+        mc_2017_repeat: Hour of Code Minecraft - Putaran Berulang
+        mc_2017_functions: Hour of Code Minecraft - Fungsi
         mc_2017_congratulations: Jam Mengkode Minecraft - Selamat
+        mc_2017_puzzle_1: Hour of Code Minecraft - Si Agen
+        mc_2017_puzzle_3: Hour of Code Minecraft - Putaran Berulang
+        mc_2017_puzzle_8: Hour of Code Minecraft - Fungsi
+        mc_2017_puzzle_12: Hour of Code Minecraft - Main Bebas
+        hint_videos_d_11_3_first: 'Video Petunjuk: D.11.3 Pertama'
+        hint_videos_d_11_3_last: 'Video Petunjuk: D.11.3 Terakhir'
+        hint_videos_d_11_4_first: 'Video Petunjuk: D.11.4 Pertama'
+        hint_videos_d_11_4_last: 'Video Petunjuk: D.11.4 Terakhir'
+        hint_videos_d_11_5_first: 'Video Petunjuk: D.11.5 Pertama'
+        hint_videos_d_11_5_last: 'Video Petunjuk: D.11.5 Terakhir'
+        hint_videos_d_11_6_first: 'Video Petunjuk: D.11.6 Pertama'
+        hint_videos_d_11_6_last: 'Video Petunjuk: D.11.6 Terakhir'
+        hint_videos_d_11_7_first: 'Video Petunjuk: D.11.7 Pertama'
+        hint_videos_d_11_7_last: 'Video Petunjuk: D.11.7 Terakhir'
+        hint_videos_d_11_9_first: 'Video Petunjuk: D.11.9 Pertama'
+        hint_videos_d_11_9_last: 'Video Petunjuk: D.11.9 Terakhir'
+        hint_videos_d_11_11_first: 'Video Petunjuk: D.11.11 Pertama'
+        hint_videos_d_11_11_last: 'Video Petunjuk: D.11.11 Terakhir'
+        applab_intro_welcome: App Lab - Memulai
+        applab_intro_events: App Lab - Membuatnya Interaktif
+        applab_intro_sounds: App Lab - Gambar dan Suara
+        applab_intro_designmode: App Lab - Mode Desain
+        applab_intro_share: App Lab - Bagikan App Anda
         csd_applab_arrays: Pengenalan untuk array
+        CSF_skinOverview_Harvester: Si Pemanen
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loop dengan BB-8
+        CSF_harvester_skinOverview_K-1: Si Pemanen
         CSF_harvester_loops_K1: Loop dalam Pemanen
+        CSF_scrat_loops_K1: Putaran dalam Ice Age
+        CSF_scrat_loops_CF: Putaran dalam Ice Age
+        CSF_if_allskins: Balok If
+        CSF_ifelse_allskins: Menggunakan Balok If/Else
         CSF_ifelseifelse_allskins: Menggunakan If/Elself/Blok Else
         CSF_loops_AB: Loop
+        csd_gamelab_booleans: Ekspresi Boolean
         csd_gamelab_conditional_statements: Pernyataan kondisional
         csd_gamelab_if_else: If/pernyataan If
         CSF_SpriteLabIntro_CDEF: Ini adalah Lab Sprite
@@ -446,7 +541,9 @@ id:
         CSF_SpriteLab_SpritesInAction_CDEF: Sprite dalam aksi
         CSF_StarWars_ProjectIntro: Pendahuluan proyek Star Wars
         mc_2018_intro: 'Minekraft: pengenalan perjalanan air'
+        MC_2018_loops: 'Minecraft: Perjalanan Akuatik Berulang Hingga'
         mc_2018_conditionals: 'Minekraft: kondisional perjalanan air'
+        mc_2018_closing: 'Minecraft: Perjalanan Akuatik Kongratulasi'
         hoc_dance_warmup: Pesta Tari - Pemanasan
         hoc_dance_events: Pesta dansa-acara
         hoc_dance_properties: Pesta dans-properti
@@ -473,16 +570,44 @@ id:
         csd_applab_loops: Loop dalam aplikasi Lab
         csd_problem_solving_process: Proses Pemecahan Masalah
         CSF_Going_Places_Safely: Tetangga daring saya
+        CSF_SpriteLab_Intro_v2: Memperkenalkan Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Bagaimana cara Membuat sebuah Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprite dalam aksi
         csd_debugging: Debugging
+        csd_applab_designmode_short: Mode Desain App Lab 
+        csp-pd-welcome: Selamat datang ke dalam Keluarga!
+        CSF-Teaching-Problem-Solving: CSF Mengajar Penyelesaian Masalah
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video Pengantar - Balok data
+        u7-libraries-explanation: 'App Lab: Membuat balok Anda Sendiri - Bagaimana cara Menggunakan Libraries'
+        how-to-k5-workshops: 'CS Fundamentals Code.org: Teruji oleh Anak, Dipersetujui oleh Guru'
+        why-should-teach-unplugged-activities: 'FAQ: Mengapa saya harus mengajar aktivitas “offline”?'
+        cs-principles-intro-to-objects: 'CS Principles: Pengenalan pada Objek'
+        oceans_machine_learning: Pembelajaran Mesin
+        oceans_training_data: Data Latihan
+        oceans_societal_implications: Implikasi Masyarakat
         hoc_dance_congrats_2019: Pesta Tari 2019 - Pesta Digelar!
         hoc_dance_warmup_2019: Pesta Tari 2019 - Pemanasan
         hoc_dance_events_2019: Pesta Tari 2019 - Acara
         hoc_dance_measures_2019: Pesta Tari 2019 - Birama
         hoc_dance_properties_2019: Pesta Tari 2019 - Properti
+        csd_what_computers_do: "Apa yang Dilakukan oleh Komputer?\n"
         csf_my_online_neighborhood_2020: Tetangga daring saya
+        csf_follow_the_digital_trail: "Ikuti Jejak Digital\n"
         csf_private_and_personal_information: Informasi Privat dan Pribadi
         csd_what_computers_are: Apa itu komputer?
+        codebreak_e01: 'Pemecahan Kode 1.0: Algoritme dengan Hill Harper'
+        codebreak_e02: 'Pemecahan Kode 2.0: Prototipe dengan Mark Cuban dan Lyndsey Scott'
+        codebreak_e03: 'Pemecahan Kode 3.0: Enkripsi dengan Ashton Kutcher dan Mia Gil Epner'
+        codebreak_e04: Pemecahan Kode 4.0 Informasi Digital dengan Mike Krieger dan Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulations & Data with Bill Gates'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China Anne McClain'
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

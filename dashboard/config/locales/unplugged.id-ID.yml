@@ -12,6 +12,9 @@ id:
           muda kosa kata yang berkaitan dengan pelajaran yang mereka ikuti, tetapi
           menyajikan mereka dalam cara yang lucu dan menyenangkan sekarang jauh lebih
           produktif daripada menunggu kesempatan yang lebih lanjut.
+        pdfs:
+        - unplug1
+        video: Unplug1
       Unplug2:
         title: Berpikir secara komputasi
         desc: Hanya dengan kertas dan spidol, para siswa akan belajar 4 langkah berpikir
@@ -25,6 +28,9 @@ id:
           Para tim kemudian berganti algoritma dengan kelompok lain dan menggambar
           monster sesuai dengan yang tertera pada algoritma. Apakah gambarnya sesuai
           dengan yang diinginkan tim awal?
+        pdfs:
+        - unplug2
+        video: Unplug2
       Unplug3:
         title: Pemrograman grafis diatas kertas
         desc: Dengan memprogram satu sama lain untuk menggambar, murid-murid akan
@@ -32,6 +38,9 @@ id:
           saling mengarahkan untuk menggambar persegi berwarna di kertas grafik dalam
           usaha membuat lagi gambar yang telah ada. Jika masih ada waktu, pelajaran
           dapat diakhiri dengan gambar-gambar yang mereka buat sendiri.
+        pdfs:
+        - unplug3
+        video: Unplug3
       Unplug4:
         title: Algoritma
         desc: Pelajaran ini mencakup algoritma.  Menggunakan bentuk tangram dan kertas
@@ -40,6 +49,9 @@ id:
           Anda dapat melipat kertas menjadi persegi panjang, mencatat bagaimana beberapa
           metode dapat memerlukan lipatan yang lebih banyak atau lebih sedikit daripada
           yang lain.
+        pdfs:
+        - unplug4
+        video: Unplug4
       Unplug5:
         title: fungsi
         desc: Dalam pelajaran ini, siswa akan membuat suncatcher string, manik-manik,
@@ -53,12 +65,18 @@ id:
           siswa akan perlu "abstrak keluar" rincian dari bahan-bahan mereka dan menciptakan
           istilah yang Samar untuk kebutuhan individu.Hal ini memanfaatkan penampung
           yang umum merupakan pengenalan yang indah untuk variabel.
+        pdfs:
+        - unplug5
+        video: Unplug5
       Unplug6:
         title: Persyaratan
         desc: Ini adalah permainan kelas.  Setelah memperkenalkan gagasan conditional,
           pernyataan if-else (jika-lain dari itu) dan loop (putaran), kelas dapat
           berlatih bersama-sama menggunakan program yang telah ditulis, setumpuk kartu,
           dan keberuntungan mengundi.
+        pdfs:
+        - unplug6
+        video: Unplug6
       Unplug7:
         title: Menulis lagu
         desc: Membaca lirik adalah pengalaman yang cukup intuitif untuk sebagian besar
@@ -67,28 +85,43 @@ id:
           terbiasa dengan proses mendefinisikan panggilan, kita akan menambahkan kemampuan
           tambahan yang datang bersama dengan melewati parameter dalam pemanggilan
           fungsi tersebut.
+        pdfs:
+        - unplug7
+        video: Unplug7
       Unplug8:
         title: Abstraksi
         desc: Kegiatan ini menggabungkan rutinitas sehari-hari siswa Anda dan permainan
           pikiran seperti Mad-Lib untuk membantu kelas Anda belajar tentang efektivitas
           abstraksi.
+        pdfs:
+        - unplug8
+        video: Unplug8
       Unplug9:
         title: Pemrograman relay
         desc: Pelajaran ini akan mengambil ide dari kegiatan sebelumnya (4. Kertas
           grafik pemrograman) dan menggunakan keterampilan mereka untuk menekankan
           pentingnya menyelesaikan program yang beroperasi dalam urutan dan sering
           memeriksa program untuk "bug".
+        pdfs:
+        - unplug9
+        video: Unplug9
       Unplug10:
         title: Internet
         desc: Dalam pelajaran ini, siswa akan berpura-pura untuk mengalir di dalam
           Internet, sambil belajar tentang alamat web, IP (Protokol Internet) dan
           DNS (Sistem Penamaan Domain).
+        pdfs:
+        - unplug10
+        video: Unplug10
       Unplug11:
         title: Penutupan
         desc: Tahap terakhir dalam seri 20 jam pertama ini akan membantu para siswa
           mengingat kembali semua momen favorit mereka, sambil memberikan langkah-langkah
           selanjutnya yang dapat mereka ambil jika tertarik untuk melanjutkan perjalanan
           ilmu komputer mereka.
+        pdfs:
+        - unplug11
+        video: Unplug11
       UnplugHappyMaps:
         title: Pemetaan bahagia
         desc: Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan
@@ -450,6 +483,11 @@ id:
           dan meneruskan alamat email Code.org yang Anda gunakan untuk masuk."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
       courseB_unplugged_MRF_2018:
         title: Teman-teman robot saya
         desc: Belajar memprogram dengan menulis kode untuk teman-teman Anda!
@@ -551,6 +589,8 @@ id:
       BuildingAFoundation_2019:
         title: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Teman-teman Robot Saya yang Mengulang-ulang
       Conditionals_2019:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan
@@ -711,6 +751,7 @@ id:
           kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan
           satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
       TheRightApp_2019:
+        title: Aplikasi yang Tepat
         desc: "* Semua orang menggunakan komputer dewasa ini, terutama telepon pintar.\r\n*
           Aplikasi telepon pintar, atau \"aplikasi\", membantu orang melakukan hal-hal
           seperti berbicara dengan teman, mendengarkan musik, berbelanja, atau sekadar
