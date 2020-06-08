@@ -6,15 +6,23 @@ hr-HR:
       BigEvent_2018: Veliki događaj
       BinaryBracelets: Binarne narukvice
       BinaryBracelets_2018: Binarne narukvice
+      BinaryImages: Binary Images
+      BinaryImages_2018: Binary Images
       BuildingAFoundation: Izrada temelja
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Razmišljati poput računala
       Conditionals: Uvjeti
       Conditionals_2018: Uvjeti
       Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DiceRace: 'Real Life Algorithms: Dice Race'
       DigitalCitizenship: Digitalno građanstvo
       DigitalFootprint: Tvoj digitalni trag
       DigitalFootprint_2018: Tvoj digitalni trag
+      EnvelopeVariables: Envelope Variables
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: For Petlja Zabava
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Funkcionalni ukrasi
       GettingLoopy: Zapetljancije
       GettingLoopy_2018: Zapetljancije
@@ -23,6 +31,8 @@ hr-HR:
       GraphPaperProgramming: Grafičko programiranje
       GraphPaperProgramming_2018: Grafičko programiranje
       Internet: Internet
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs: Mad Glibs
       MoveIt: Pomakni, pomakni
       MoveItMoveIt_2018: Pomakni, pomakni
       PaperPlanes: 'Algoritmi iz stvarnog života: Papirnati avioni'
@@ -32,14 +42,25 @@ hr-HR:
       RelayProgramming: Odnosno programiranje
       RelayProgramming_2018: Odnosno programiranje
       SongwritingParameters: Pisanje pjesama
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Pisanje pjesama s parametrima
+      TangramAlgorithms: Tangram Algorithms
       UnplugHappyMaps: Vesele karte
       UnplugHappyMaps_2018: Vesele karte
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Izvanmrežna aktivnost
       courseB_unplugged_MRF_2018: Moji robotski prijatelji
       courseB_unplugged_loopyMRF: Izvanmrežna aktivnost
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Izvanmrežna aktivnost
       courseC_Unplugged_ScreenOutTheMean_2018: Izvanmrežna aktivnost
       courseD_unplugged_digitalCitizenship: Izvanmrežna aktivnost
       courseD_unplugged_digitalCitizenship_2018: Izvanmrežna aktivnost
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Izvanmrežna aktivnost
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
