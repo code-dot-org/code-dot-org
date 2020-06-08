@@ -4,13 +4,26 @@ th-TH:
     title:
       BigEvent: อีเวนท์ใหญ่
       BigEvent_2018: อีเวนท์ใหญ่
+      BinaryBracelets: Binary Bracelets
+      BinaryBracelets_2018: Binary Bracelets
+      BinaryImages: Binary Images
+      BinaryImages_2018: Binary Images
       BuildingAFoundation: สร้างพื้นฐาน
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: คิดคำนวณ
       Conditionals: 'เงื่อนไข '
       Conditionals_2018: 'เงื่อนไข '
+      Crowdsourcing: Crowdsourcing
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'อัลกอริทึมในชีวิตจริง: การแข่งลูกเต๋า'
       DigitalCitizenship: พลเมืองดิจิทัล
+      DigitalFootprint: Your Digital Footprint
+      DigitalFootprint_2018: Your Digital Footprint
+      EnvelopeVariables: Envelope Variables
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: สนุกกับ For ลูป
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers: Functional Suncatchers
       GettingLoopy: มาวนลูปกัน
       GettingLoopy_2018: มาวนลูปกัน
       GoingPlacesSafely: ไปที่ไหนให้ปลอดภัย
@@ -18,6 +31,8 @@ th-TH:
       GraphPaperProgramming: การเขียนกระดาษกราฟ
       GraphPaperProgramming_2018: การเขียนกระดาษกราฟ
       Internet: อินเทอร์เน็ต
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs: Mad Glibs
       MoveIt: ขยับหน่อยสิ ขยับหน่อย
       MoveItMoveIt_2018: ขยับหน่อยสิ ขยับหน่อย
       PaperPlanes: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
@@ -26,13 +41,26 @@ th-TH:
       PlantASeed_2018: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
       RelayProgramming: โปรแกรมการถ่ายทอดข้อมูล
       RelayProgramming_2018: โปรแกรมการถ่ายทอดข้อมูล
+      SongwritingParameters: Songwriting
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters: Songwriting With Parameters
+      TangramAlgorithms: Tangram Algorithms
       UnplugHappyMaps: แผนที่แห่งความสุข
       UnplugHappyMaps_2018: แผนที่แห่งความสุข
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: กิจกรรมถอดปลั๊ก
       courseB_unplugged_MRF_2018: เพื่อนหุ่นยนต์
       courseB_unplugged_loopyMRF: กิจกรรมถอดปลั๊ก
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: กิจกรรมถอดปลั๊ก
       courseC_Unplugged_ScreenOutTheMean_2018: กิจกรรมถอดปลั๊ก
       courseD_unplugged_digitalCitizenship: กิจกรรมถอดปลั๊ก
       courseD_unplugged_digitalCitizenship_2018: กิจกรรมถอดปลั๊ก
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: กิจกรรมถอดปลั๊ก
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

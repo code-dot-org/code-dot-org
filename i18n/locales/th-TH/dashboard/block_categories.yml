@@ -17,12 +17,14 @@ th:
       Game/Score: เกม/คะแนน
       Games/Score: เกม/คะแนน
       Groups: กลุ่ม
+      Input: Input
       Locations: สถานที่ตั้ง
       Logic: ตรรกะ
       Loops: ลูป
       Math: คำนวณ
       Numbers: ตัวเลข
       Properties: คุณสมบัติ
+      Sprites: Sprites
       Text: ข้อความ
       Variables: ตัวแปร
       'Variables ': 'ตัวแปร '

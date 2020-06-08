@@ -32,6 +32,7 @@ th:
             MOVES.Clown: กังนัม
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
           MOVE2:
             MOVES.Roll: บอดี้โรล
@@ -44,6 +45,7 @@ th:
             MOVES.Clown: กังนัม
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
       Dancelab_atTimestamp:
         text: หลังจาก {TIMESTAMP} {UNIT}
@@ -89,6 +91,7 @@ th:
             MOVES.Clown: กังนัม
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -110,6 +113,7 @@ th:
             MOVES.Clown: กังนัม
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -189,6 +193,7 @@ th:
             MOVES.Kick: สตาร์
             MOVES.XArmsUp: กาง
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
@@ -220,10 +225,13 @@ th:
             MOVES.Kick: สตาร์
             MOVES.XArmsUp: กาง
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'ซ้ำทุกๆ {N} ห้องดนตรีหลังจาก {START} '
       Dancelab_everySeconds:
@@ -284,6 +292,7 @@ th:
             MOVES.Roll: บอดี้โรล
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
       Dancelab_ifTime:
         text: |-
@@ -969,10 +978,19 @@ th:
         text: การตั้งค่า
       Dancelab_whenSetup2:
         text: การตั้งค่า
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: "[SPRITE]เทพเจ้าเริ่มต้น[0] {BEHAVIOR}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
         options:
@@ -1018,10 +1036,13 @@ th:
         options:
           CHOICE:
             '"this"': นี่
+            '"other"': other
       gamelab_hideTitleScreen:
         text: หน้าจอซ่อนชื่อเรื่อง
       gamelab_isTouchingEdges:
         text: "{SPRITE} สัมผัสขอบ"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} ข้ามไปที่ {LOCATION}"
       gamelab_keyPressed:
@@ -1080,6 +1101,8 @@ th:
             '"left"': ซ้าย
       gamelab_mouseLocation:
         text: ตำแหน่งเมาส์
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: ย้าย {SPRITE} {DISTANCE} พิกเซลไปข้างหน้า
       gamelab_moveInDirection:
@@ -1092,6 +1115,10 @@ th:
             '"West"': เวสต์
       gamelab_moveToward:
         text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: เล่นเสียง {SOUND}
       gamelab_pointInDirection:
@@ -1126,13 +1153,44 @@ th:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ถ้ำ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous
+              grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': ศาล
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ทะเลทราย
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert
+              road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm
+              land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating
+              grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front
+              of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': กาแล็คซี่
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ตาข่าย
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living
+              room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine
+              trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': รุ้งกินน้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ไซไฟ
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer
+              field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ดาว
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun
+              and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine
+              showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis
+              court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree
+              island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
             undefined: ไม่เลย
@@ -1170,12 +1228,18 @@ th:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: เปิด {SPRITE} {DIRECTION} [1] {N} องศา
         options:
           DIRECTION:
             '"right"': ขวา
             '"left"': ซ้าย
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: เมื่อลูกศรลงกด
       gamelab_whenKey:
@@ -1239,7 +1303,10 @@ th:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ไม่ใช่ปลา
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ป้ายกำกับของ
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ไม่ใช่ป้ายกำกับของฉลาก
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -1247,7 +1314,10 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": ด้านบน
@@ -1259,9 +1329,19 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: ได้รับวัตถุต่อไป
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -1300,6 +1380,7 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: ลบ {SELECT} {COSTUME}
         options:
@@ -1392,6 +1473,7 @@ th:
             MOVES.Roll: บอดี้โรล
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Thriller: Zombie
             MOVES.Rest: ไม่มี
       Mikelab_ifLabel:
         text: |-
@@ -1417,14 +1499,20 @@ th:
           DANCE:
             MOVES.ClapHigh: ปลา
             MOVES.Clown: ไม่ใช่ป้ายกำกับของฉลาก
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'สถานที่ x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: สุ่มสี
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: ทำซ้ำตลอดไป
       Mikelab_sendBad:
@@ -1432,10 +1520,43 @@ th:
       Mikelab_sendGood:
         text: ย้ายวัตถุไปทางขวา
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous
+              grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert
+              road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm
+              land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating
+              grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front
+              of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living
+              room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine
+              trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer
+              field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun
+              and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine
+              showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis
+              court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree
+              island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -1443,11 +1564,21 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value
+          {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': ขวา
             '"left"': ซ้าย
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: "{COSTUME} สไปรท์ {LOCATION}"
         options:
@@ -1461,6 +1592,7 @@ th:
             "{x: 300, y: 100}": ขวาบน
             "{x: 100, y: 300}": ซ้ายล่าง
             "{x: 300, y: 300}": ขวาล่าง
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: เมื่อคลิก {SPRITE}
       Mikelab_whenKeyPressed:
@@ -1471,42 +1603,63 @@ th:
             '"down"': ลูกศรชี้ลง
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
+            '"space"': spacebar
             '"w"': W
             '"a"': ก
             '"s"': S
             '"d"': ง
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': ลูกศรชี้ขึ้น
             '"down"': ลูกศรชี้ลง
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
+            '"space"': spacebar
             '"w"': W
             '"a"': ก
             '"s"': S
             '"d"': ง
       Mikelab_whenMouseClicked:
         text: เมื่อคลิกเมาส์
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: เมื่อคลิก {KEY}
         options:
           KEY:
             '"yes"': ใช่
             '"no"': ไม่
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': ลูกศรชี้ขึ้น
             '"down"': ลูกศรชี้ลง
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x พิกัดของ {SPRITE}
       Mikelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
       RyanLab_moveForward:
         text: ไปข้างหน้า
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: หันซ้าย
       RyanLab_turnRight:
@@ -1571,9 +1724,16 @@ th:
       aalab_setupStory:
         text: เรื่องราวการติดตั้ง
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': สุ่ม
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: วาดเลขฐานสอง {BIN}
       binary_drawBinScreen:
