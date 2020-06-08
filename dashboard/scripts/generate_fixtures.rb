@@ -48,8 +48,10 @@ scripts_map.each do |_script_id, name|
   script = Script.find_by_name name
   @scripts[name] = script.attributes
 
-  script.lessons.each do |stage|
-    @stages["stage_#{stage.id}"] = stage.attributes
+  script.lesson_groups.each do |lesson_group|
+    lesson_group.lessons.each do |lesson|
+      @stages["stage_#{lesson.id}"] = lesson.attributes
+    end
   end
 
   script.script_levels.to_a[0, 10000].each do |sl|
