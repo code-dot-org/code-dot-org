@@ -583,11 +583,8 @@ class TopInstructions extends Component {
       return <div />;
     }
 
-    /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
     const showContainedLevelAnswer =
-      this.props.hasContainedLevels &&
-      isCSF &&
-      $('#containedLevelAnswer0').length > 0;
+      this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
     return (
       <div style={mainStyle} className="editor-column" ref="topInstructions">
