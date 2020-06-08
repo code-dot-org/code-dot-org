@@ -238,6 +238,10 @@ def distribute_translations
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Animation library
+    # Use js_locale here as the animation library is used by apps
+    upload_animation_library_translations(js_locale)
+
     ### Blockly Core
     # Blockly doesn't know how to fall back to English, so here we manually and
     # explicitly default all untranslated strings to English.
@@ -262,8 +266,6 @@ def distribute_translations
     destination = "pegasus/cache/i18n/#{locale}.yml"
     sanitize_file_and_write(loc_file, destination)
   end
-
-  upload_animation_library_translations(locale)
 
   puts "Distribution finished!"
 end
