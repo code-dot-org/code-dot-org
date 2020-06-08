@@ -4218,6 +4218,99 @@ is-IS:
           Þetta er mynstrið sem listamaðurinn mun fara eftir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       OPD-K5-variables-7:
         courseF_artist_variables5_a: Seinni helmingur kóðans ætti að vera næstum því
           eins og fyrri hlutinn, nema hvað þú átt að snúa til _vinstri_, hoppa og
@@ -4372,6 +4465,15 @@ is-IS:
       behaviors 6:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
           hraða hverrar veru?"
+      behaviors 7:
+        behaviors_hint1: You can create a new behavior that uses two different actions
+          or combine two existing behaviors.
+        sprites_idea1: |-
+          For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Athugasemdir eru einnig hjálplegar þegar aðrir
           reyna að lesa kóðann þinn.
@@ -9250,6 +9352,9 @@ is-IS:
           hraðan` til að leysa þessa þraut.
         courseC_PlayLab_eventsA_b: Þú þarft að draga `þegar keyrt` kubb út á vinnusvæðið
           til að leysa þessa þraut.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: Use the arrow keys to move the penguin. You do
+          not need to write any code to finish this level.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _Vantar hugmyndir?_
@@ -10385,6 +10490,30 @@ is-IS:
         courseC_harvester_loops_challenge1_b: Þú getur endurtekið `færa áfram` og
           `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju
           horni.
+        courseC_harvester_loops_challenge1_c: |-
+          After picking corn the first two times, you can use a nested loop to pick the next eight pieces.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta
           án þess að nota lykkjur!
@@ -10973,6 +11102,12 @@ is-IS:
           áfram.
         courseC_starWars_loops5_a: Besta lausnin notar eina `færa niður`skipun og
           eina lykkju með annarri `færa` skipun.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: The best solution uses a single `move forward`,
+          then a turn, then a loop.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: The best solution uses a single `move forward`,
+          then a turn, then a loop.
       courseC_starWars_loops5_copy:
         courseC_starWars_loops5_b: Til að færast niður þarft þú að snúa og svo fara
           áfram.
@@ -13081,8 +13216,8 @@ is-IS:
         courseD_farmer_condLoops5_b: Það gætu verið fleiri ein einn af maís eða káli
           í hverjum reit. Notaðu `meðan` lykkju til að safna öllu!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'Nú er ný lykkja: `endurtaka þar til við grasker`.
-          Geturðu séð hvernig hún nýtist í þessari þraut?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until there are
+          pumpkins`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Það gætu verið fleiri ein einn af maís eða káli
           í hverjum reit. Notaðu `meðan` lykkju til að safna öllu!
       courseD_farmer_condLoops6:
@@ -13120,6 +13255,8 @@ is-IS:
           Auðveldasta slóðin til að safna öllu er spírall.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: Try using `while path ahead` to keep the harvester
+          moving the right number of steps.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Í þessari áskorun gæti `Þrep` hnappurinn
           reynst gagnlegur.
@@ -14539,6 +14676,8 @@ is-IS:
         courseE_bee_concept3a_c: Það eru þrjú blómastóð þannig að ytri `endurtaka`
           lykkjan ætti að endurtaka 3svar sinnum.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Try using nested `repeat` or `while` loops to solve
+          this puzzle.
         courseE_bee_concept3a_b: Ef þú sérð ekki hvar á hafa lykkjurnar, er ráð að
           skrifa kóðann þrep fyrir þrep og leita svo að endurtekningum.
       courseE_bee_concept4:
@@ -16095,6 +16234,99 @@ is-IS:
           Þetta er mynstrið sem listamaðurinn mun fara eftir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: Kóðinn verður mjög svipaður kóðanum í síðustu
           þraut nema hvað þú þarft að snúa listamanninum, láta hann hoppa niður og
@@ -16103,6 +16335,99 @@ is-IS:
           Þetta er mynstrið sem listamaðurinn mun fara eftir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables5:
         courseF_artist_variables5_a: Seinni helmingur kóðans ætti að vera næstum því
           eins og fyrri hlutinn, nema hvað þú átt að snúa til _vinstri_, hoppa og

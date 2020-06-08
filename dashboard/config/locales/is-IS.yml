@@ -66,6 +66,7 @@ is:
   previous_page: Fyrri síða
   next_page: Næsta síða
   next_resource: Næstu tilföng
+  done_with_module: Done with this Learning Module
   cancel: Hætta við
   okay: Allt í lagi
   or: eða
@@ -207,6 +208,7 @@ is:
     email_preference_question: Megum við senda þér tölvupóst með upplýsingum um námskeið,
       tækifæri á þínu svæði eða aðrar fréttir um tölvunarfræði? (u. þ. b. einu sinni
       í mánuði)
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Já
     email_preference_no: Nei
     email_preference_required: Þú verður tilgreina tölvupóst.
@@ -361,6 +363,7 @@ is:
       sections: Hópar
       help_support: Hjálp og stuðningur
       report_bug: Tilkynna galla
+      report_abuse: Report abuse
       teacher_community: Kennarasamfélag
       professional_learning: Fagnám
       documentation: Skjölun
@@ -396,6 +399,9 @@ is:
       help_us: Hjálpaðu
       teach: Kenndu
       about: Um okkur
+      legal: Privacy & Legal
+      legal_privacy: Persónuverndarstefna
+      legal_tos: Skilmálar
     user:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
@@ -415,6 +421,7 @@ is:
       algebra_game: Algebra
       applab: Appsmiðjan
       artist: Listamaður
+      artist_k1: Artist (Pre-reader)
       basketball: Körfubolti
       bounce: Skopp
       calc: Reikningur
@@ -860,11 +867,15 @@ is:
     wrong_body: Svarið sem þú gafst er ekki rétt. Vinsamlegast reyndu aftur!
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Takk fyrir
     wrong_body: Takk fyrir að senda inn svar.
     correct_title: Takk fyrir
     correct_body: Takk fyrir að senda inn svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Takk fyrir
     wrong_body: Takk fyrir að senda inn svör.
@@ -911,6 +922,8 @@ is:
     open_response_body: Þökkum viðbrögð þín!
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
+  lesson_extras:
+    bonus_level: Bonus Level
   dialog:
     ok: Í lagi
     startover_title: Ertu viss um að þú viljir byrja aftur?
@@ -1093,7 +1106,15 @@ is:
     instructor_feedback: Álit leiðbeinanda
     peer_feedback: Álit samnemenda
     outdated: Þessi umsögn átti við áður innsenda útgáfu
+    review_in_progress: Ready to review
+    link_to_submitted_review: Link to submitted review
+    reviews_unavailable: Reviews unavailable at this time
     review_count: Þú verður að ljúka %{review_count} upprifjunum fyrir þessa einingu
+    must_be_enrolled: You must be enrolled in this course to review peers
+    no_reviews_at_this_moment_notice: There are no peer reviews available at this
+      moment, please check back soon
+    review_submitted: Your peer review was submitted
+    review_new_submission: Review a new submission
     peer_review: Álit samnemenda
   external_links:
     disclaimer: Afsal ábyrgðar
@@ -1164,6 +1185,19 @@ is:
     download_in_Vietnamese: 'Hlaða niður á víetnömsku:'
     windows: Windows (64-bita)
     mac: Mac OS X
+  plc:
+    preview_assignments:
+      content_focus_header: Content Focus Area
+      practice_focus_header: Practice Focus Area
+      content_focus_strong: Based on your self-assessment answers, we chose one content
+        focus area for you.
+      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
+        practice focus area for you.
+      choose_different_focus_area: You can choose a different focus area if you think
+        that it would help you better prepare to teach.
+      other_focus_areas_available: No matter what focus area you choose, all other
+        resources will still be available for reference.
+      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Innihald þessa áfanga er ekki sýnilegt eins og er vegna þess að áfanginn
     er læstur. Kennarinn þinn getur aflæst áfanganum þegar tími er kominn til að vinna
     með hann eða til að fara yfir svörin.
@@ -1187,7 +1221,52 @@ is:
   view_teacher_guide: Leiðbeiningar kennara
   pd:
     survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
       part_of_community_s: Mér finnst ég tilheyra samfélagi kennara.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?
     form_labels:
       first_name: Fornafn
       first_name_preferred: Fornafn sem þú vilt að sé notað

@@ -7,6 +7,22 @@ is:
           assignment_family_title: Undirstöðuatriði tölvunarfræði
           title: Undirstöðuatriði tölvunarfræði ('17-'18)
           version_title: "'17-'18"
+          description_student: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
           description_short: Kennir grunnhugtök í tölvunarfræði.
         csd-2017:
           assignment_family_title: Uppgötvanir í Tölvunarfræði
@@ -44,10 +60,42 @@ is:
           title: Undirstöðuatriði tölvunarfræði ('18-'19)
           version_title: "'18-'19"
           description_short: Kennir grunnhugtök í tölvunarfræði.
+          description_student: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
         csp-2019:
           title: Undirstöðuatriði tölvunarfræði ('19-'20)
           version_title: "'19-'20"
           description_short: Kennir grunnhugtök í tölvunarfræði.
+          description_student: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest
+            AP® course, AP Computer Science Principles. The course introduces students
+            to the foundational concepts of computer science and challenges them to
+            explore how computing and technology can impact the world. The AP Program
+            designed AP Computer Science Principles with the goal of creating leaders
+            in computer science fields and attracting and engaging those who are traditionally
+            underrepresented with essential computing tools and multidisciplinary
+            opportunities.
         csd-2019:
           title: Uppgötvanir í Tölvunarfræði ('19-'20)
           version_title: "'19-'20"

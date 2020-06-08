@@ -514,6 +514,33 @@ is-IS:
         bara að finna villurnar!
       Alien Defender: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
       CDEF_debugging_flappy2: Af hverju virkar þessi leikur ekki?
+      CSD U3 Boolean Modify: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2018: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2019: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Predict: What do you think this code will do when it is run?
+        Predict what each console.log() command will print, then run the program to
+        check your predictions.
+      CSD U3 Boolean Predict_2018: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Boolean Predict_2019: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Keypress Boolean: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Boolean_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Boolean_2018_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Watchers_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_2019: Modify the code so that all of the console.log
+        commands print true
       CSD U3 L5 Freeplay: Breyttu gildi petalSize oft. Hvaða áhrif hefur það á teikninguna?
       CSD U3 L5 Freeplay_2018: Breyttu gildi petalSize oft. Hvaða áhrif hefur það
         á teikninguna?
@@ -522,6 +549,9 @@ is-IS:
       CSD U3 Mouse Input Bee 2: Gerðu þetta
       CSD U3 Mouse Input Bee 2_2018: Gerðu þetta
       CSD U3 Mouse Input Bee 2_2019: Gerðu þetta
+      CSD U3 Sprites intro sprites: Do This
+      CSD U3 Sprites intro sprites_2018: Do This
+      CSD U3 Sprites intro sprites_2019: Do This
       CSD U3 Variables change circle size: Breyttu gildi petalSize oft. Hvaða áhrif
         hefur það á teikninguna?
       CSD U3 Variables change circle size_2018: Breyttu gildi petalSize oft. Hvaða
@@ -588,6 +618,39 @@ is-IS:
         -   (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
         -   Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
         -   (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
+      CSD U6 params modify planes: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2018: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2019: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
       CSDU4 - Design Mode - 16: Bættu við atvikshöndlara fyrir hnappinn með því að
         nota "Setja inn og sýna" tengilinn á atvikaflipa (Events ) Hönnunarstöðunnar.
         (Smelltu til að fá ítarlegri leiðbeiningar.).
@@ -603,6 +666,18 @@ is-IS:
         talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
       CSDU6 arrays select rainbow_2019: Skrifaðu innihald fylkisins út á skjáinn í
         talnaröð. (Smelltu til að sjá nánari leiðbeiningar)
+      CSDU6 arrays select random: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2018: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2019: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2018: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2019: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       Choose Your Own Adventure: Þú getur gert hvað sem þú vilt í leikjasmiðjunni!
         Hér er dæmi um að velja eigin ævintýrasögu í leikjasmiðjunni.
       Course 4 Artist 1: 'Hjálpaðu mér að teikna kassa. (Hver lína er 200 díla löng) '
@@ -1389,6 +1464,43 @@ is-IS:
         9, síðan 6 og svo 3 af blómasafa?
       NEW Course 4 Play Lab Params 11: 'Tími til að leika sér! Leiktu þér með alla
         kubbana í verkfærakassanum. '
+      NetSim Standalone Automatic DNS: In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast: In this version of the Internet Simulator, you
+        can connect to up to 5 other people in a room. When you send messages in the
+        room, everyone receives them. What are some of the challenges of this system,
+        and how might you solve them?
+      NetSim Standalone Classroom Routers: In this version of the Internet Simulator,
+        everyone connects to a router and has a specific address. To send messages,
+        you have to address your message to the specific address of the recipient,
+        and the router will take care of delivering it to the right computer. If there
+        are other routers created in your class, ask for the address of one of your
+        classmates and send them a message! View the Log Router to see the path the
+        messages have taken through the network.
+      NetSim Standalone Freeplay: In this configuration, most of the options are turned
+        on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS: In this version of the simulator you can't see
+        the other students' addresses.  Instead, one of you must act as a name service,
+        to help share addresses with each other.
+      NetSim Standalone Packets TCP: 'Messages on the Internet can take many paths
+        to get to their destination, and sometimes along the way the message gets
+        dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters. '
+      NetSim Standalone SendAB: You and your partner share a single wire that can
+        only be in state A or state B. You can set the wire to either state at any
+        time, and you can read the state of the wire at any time. Can you figure out
+        a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers: 'You and your partner can now reliably send
+        messages back and forth without extra coordination! While you''re always sending
+        bits back and forth, you can also represent those bits as decimal numbers.
+        What kinds of information can you represent with this system? '
+      NetSim Standalone Sending Numbers Ascii: 'Now that you''ve transmitted information
+        represented as decimal numbers, you can map those numbers to text characters
+        to send text-based information back and forth. With a text-based protocol,
+        you can easily represent and communicate all kinds of information. '
       New Artist Project: Teiknaðu eitthvað flott! Kóðinn þinn er vistaður sem verkefni,
         sem þú getur haldið áfram með hvenær sem er.
       New Basketball Project: Búðu til þinn eigin körfuboltaleik. Þú getur breytt
@@ -1405,6 +1517,10 @@ is-IS:
         breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið! Smelltu
         á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað hann í
         símunum sínum.'
+      OPD-K5 whats your plan: Take a moment now to consider how and when you will
+        complete this online course to ensure you get the most benefit from the experience.
+        When you've got a good plan sketched out, continue on to dive more deeply
+        into Computer Science Fundamentals.
       OPD-K5-events-2: Festu `blaka venjulega oft` kubb til `þegar smellt` atburðinn
         og smelltu svo á "Keyra".  Smelltu eða sláðu á leiksvæðið til að koma Flappy
         til marksins.
@@ -2097,25 +2213,41 @@ is-IS:
         vinnusvæðið og sjáðu hvað gerist!
       courseA_playLab_events1_2018: Þetta er borð í Leikjasmiðjunni. Færðu kubba inn
         á vinnusvæðið og sjáðu hvað gerist!
+      courseA_playLab_events1_2019: This is a Play Lab level. Move blocks to the workspace
+        and see what happens!
       courseA_playLab_events2: Hundurinn Jorge vill segja "Hæ." Geturðu hjálpað honum?
       courseA_playLab_events2_2018: Hundurinn Jorge vill segja "Hæ." Geturðu hjálpað
         honum?
+      courseA_playLab_events2_2019: Jorge the Dog wants to say "Hi there." Can you
+        help him?
       courseA_playLab_events3: Tengdu "færa vinstri" kubbinn við "þegar vinstri" atburðarkubbinn
         sem er nú þegar á vinnusvæðinu.
       courseA_playLab_events3_2018: Tengdu "færa vinstri" kubbinn við "þegar vinstri"
         atburðarkubbinn sem er nú þegar á vinnusvæðinu.
+      courseA_playLab_events3_2019: Connect the `move left` block to the `when left`
+        event block that is already in the workspace. Use the arrow keys or press
+        the arrow buttons to move Jorge to the flag and finish the level!
       courseA_playLab_events4: Bættu við kubbum til að færast til hægri þegar smellt
         er á `hægri` hnappinn.
       courseA_playLab_events4_2018: Bættu við öðrum atvikskubbi til að láta Jorge
         fara til hægri þegar smellt er á `hægri` hnappinn.
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: Bættu við atburðum til að láta Jorge hreyfast upp og
         niður þegar ýtt er á `upp` og `niður` hnappana.
       courseA_playLab_events5_2018: Bættu við atburðum til að láta Jorge hreyfast
         upp og niður þegar ýtt er á `upp` og `niður` hnappana.
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the `up` and `down` buttons are pressed. Make Jorge get the flags to finish
+        the level!
       courseA_playLab_events6: Gerðu þetta áhugaverðara með því að breyta bakgrunninum
         og spila eitthvert hljóð þegar smellt er á Jorge.
       courseA_playLab_events6_2018: Gerðu þetta áhugaverðara með því að breyta bakgrunninum
         og spila eitthvert hljóð þegar smellt er á Jorge.
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7: Bættu við leikinn eftir þínu höfði. Geturðu látið risaeðluna
         hverfa þegar Jorge rekst á hana?
       courseA_playLab_events7_2018: _Frjáls æfing:_ Bættu hverju sem þú vilt við þennan
@@ -4587,6 +4719,14 @@ is-IS:
       mike3bit: Þú byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum
         skilið eftir síðustu reitina. Ljúktu við myndina með því að finna út hvaða
         liti vantar og kóða þá.
+      mike3bitbird: Here's an example of an image made with 3-bit color. Try changing
+        it to understand how it works. If you want to reset the image, press "Start
+        Over".
+      mike3bitfreeplay: Make something awesome and share it with your classmates!
+        You can copy and paste the value of a pixel to use it repeatedly.
+      mike3bitmario: "A careless binary coder typed in ONE extra 0 or 1 somewhere
+        within this image's data. The extra bit that is causing Mario to glitch out!
+        \n\nDelete the extra bit to restore Mario back to normal!"
       ramp_artist_loops1: Farðu áfram 60 díla til að ljúka þessari þraut.
       ramp_artist_loops1_2018: Farðu áfram 60 díla til að ljúka þessari þraut.
       ramp_artist_loops1_2019: Farðu áfram 60 díla til að ljúka þessari þraut.

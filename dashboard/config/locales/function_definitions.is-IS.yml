@@ -20,9 +20,15 @@ is-IS:
       2-3 Artist 7:
         draw_rect:
           name: teikna_rétth
+          parameters:
+            width: breidd
+            height: hæð
       2-3 Artist Debugging 10:
         draw square:
           name: teikna ferning
+          parameters:
+            width: breidd
+            height: hæð
         jump to controller top left:
           name: hoppa efst til vinstri á stjórnborði
         jump to middle:
@@ -42,6 +48,9 @@ is-IS:
           name: teikna hægri fót
         draw body and arms:
           name: teikna búk og handleggi
+          parameters:
+            armlength: armlength
+            bodylength: bodylength
         draw a head:
           name: teikna höfuð
       2-3 Artist Debugging 6:
@@ -176,51 +185,71 @@ is-IS:
       Course 4 Artist Binary 1:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary 2:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary 3:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary 4:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary 5:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary 6:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary 7:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary Free Play 2:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary Free Play 2a:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary Free Play 2b:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       Course 4 Artist Binary pre1:
@@ -228,14 +257,19 @@ is-IS:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       Course 4 Artist Functions Inspiration:
         draw a square 20:
           name: teikna ferning 20
+          description: Draw a square 20px wide
       Course 4 Artist Functions challenge:
         draw a line of squares:
           name: teikna röð ferninga
+          description: draw a 6 squares next to one another 6 squares long
         draw a square 20:
           name: teikna ferning 20
+          description: Draw a square 20px wide
       Course 4 Bee Params 1:
         get 3 nectar:
           name: sækja 3 blómasafa
@@ -245,55 +279,102 @@ is-IS:
       Course 4 Bee Params 3:
         get 3 nectar:
           name: sækja 3 blómasafa
+          parameters:
+            direction: direction
       Course 4 Bee Params 4:
         get 3 nectar:
           name: sækja 3 blómasafa
+          parameters:
+            direction: direction
       Course 4 Bee Params 5:
         get 5 nectar:
           name: sækja 5 blómasafa
+          parameters:
+            direction: direction
       Course 4 Bee Params 6:
         get 5 nectar:
           name: sækja 5 blómasafa
+          parameters:
+            direction: direction
+            nectar units: nectar units
       Course 4 Bee Params 7:
         get many nectar:
           name: sækja mikinn blómasafa
+          description: Collect a given number of nectar in either direction
+          parameters:
+            direction: direction
+            nectars: nectars
       Course 4 Bee Params 8:
         get nectar make honey:
           name: safna blómasafa búa til hunang
+          description: Move in a direction to either collect nectar or make honey.
+          parameters:
+            direction: direction
+            nectars: nectars
+            honey: hunang
       Course 4 Play Lab Params 1:
         jump:
           name: hoppa
+          description: Makes the main character jump up 100 pixels
       Course 4 Play Lab Params 10:
         level_up:
           name: borð_upp
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
         score_points:
           name: skora_stig
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: stig
       Course 4 Play Lab Params 2:
         jump:
           name: hoppa
+          description: Makes the main character jump up 'height' pixels
       Course 4 Play Lab Params 3:
         jump:
           name: hoppa
+          description: Makes the given actor jump the given height
+          parameters:
+            height: hæð
+            actor: leikmaður
       Course 4 Play Lab Params 4:
         patrol:
           name: rása
+          description: Move a sprite up an down
         do something:
           name: gera eitthvað
       Course 4 Play Lab Params 5:
         patrol:
           name: rása
+          description: Move a sprite up an down
+          parameters:
+            actor: leikmaður
       Course 4 Play Lab Params 6:
         patrol:
           name: rása
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: leikmaður
       Course 4 Play Lab Params 7:
         patrol:
           name: rása
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Course 4 Play Lab Params 8:
         patrol:
           name: rása
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Course 4 Play Lab Params 9:
         score_points:
           name: skora_stig
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: stig
       Course 4 Play Lab Vars 1:
         set score:
           name: setja stig á
@@ -311,17 +392,24 @@ is-IS:
           name: hliðra niður/aftur á bak
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
       Course 4 SCF 1a:
         get nectar:
           name: sækja blómasafa
+          parameters:
+            dir: dir
+            counter: teljari
       Course 4 SCF 1b:
         make honey up and over:
           name: gera hunang upp til hægri
       Course 4 SCF 2:
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
         draw octagons:
           name: teikna átthyrninga
+          parameters:
+            numOctagons: numOctagons
         draw an octagon:
           name: teikna átthyrning
         shift down:
@@ -329,10 +417,13 @@ is-IS:
       Course 4 SCF 3:
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
         do something:
           name: gera eitthvað
         draw an octagon:
           name: teikna átthyrning
+          parameters:
+            length: lengd
       'Course E: Play Lab Project':
         do something:
           name: gera eitthvað
@@ -344,8 +435,13 @@ is-IS:
       FoodFight:
         level_up:
           name: borð_upp
+          description: Increase "level" by 1, reset points to 0, increase enemy speed,
+            and choose a random background.
         score_points:
           name: skora_stig
+          description: Adds the given number of points to the player_score variable.
+          parameters:
+            points: stig
       Function intro Ryan:
         build bridge:
           name: byggja brú
@@ -361,6 +457,7 @@ is-IS:
           name: teikna glugga
         rectangle:
           name: rétthyrningur
+          description: lol
         sun:
           name: sól
         diamond:
@@ -373,6 +470,7 @@ is-IS:
           name: þríhyrningur
         square:
           name: ferningur
+          description: lol
       Geometric Sun_2018:
         draw a door:
           name: teikna dyr
@@ -382,6 +480,7 @@ is-IS:
           name: teikna glugga
         rectangle:
           name: rétthyrningur
+          description: lol
         sun:
           name: sól
         diamond:
@@ -394,23 +493,43 @@ is-IS:
           name: þríhyrningur
         square:
           name: ferningur
+          description: lol
       Guess The Number:
         check guess:
           name: athuga ágiskun
+          parameters:
+            theGuess: theGuess
       InspirationalArtwork:
         n-sided shape:
           name: n-hliða form
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
+          parameters:
+            sides: sides
+            length: lengd
         draw a loop:
           name: teikna lykkju
+          parameters:
+            length: lengd
+            sides: sides
         draw spiral circle:
           name: teikna spíral
+          parameters:
+            size: stærð
       InspirationalArtwork_2018:
         draw a loop:
           name: teikna lykkju
+          parameters:
+            length: lengd
+            sides: sides
         n-sided shape:
           name: n-hliða form
+          description: 'The shape changes based on how many sides it currently has.  It
+            takes two parameters, length and sides. Length '
         draw spiral circle:
           name: teikna spíral
+          parameters:
+            size: stærð
       K-1 Artist2 3:
         draw roof:
           name: teikna þak
@@ -459,13 +578,16 @@ is-IS:
       NEW Course 4 Artist Functions 11:
         draw a line of  squares:
           name: teikna röð ferninga
+          description: draw a 6 squares next to one another 6 squares long
         draw a square 20:
           name: teikna ferning 20
+          description: Draw a square with sides 20 pixels long
         draw a line of squares:
           name: teikna röð ferninga
       NEW Course 4 Artist Functions 12:
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
         draw a line of squares:
           name: teikna röð ferninga
       NEW Course 4 Artist Functions 13:
@@ -478,22 +600,29 @@ is-IS:
           name: tómt fall
         draw a line of squares:
           name: teikna röð ferninga
+          description: 'draw a line of squares '
         draw a square 40:
           name: teikna ferning 40
+          description: Draw a square with sides length 40
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
       NEW Course 4 Artist Functions 3:
         draw a square:
           name: teikna ferning
       NEW Course 4 Artist Functions 4:
         draw a square:
           name: teikna ferning
+          description: draws a square that is 100 pixels in size
       NEW Course 4 Artist Functions 7:
         draw a square:
           name: teikna ferning
       NEW Course 4 Artist Functions 8:
         draw a triangle:
           name: teikna þríhyrning
+          description: 'draws a triangle that is 100 pixels in size
+
+'
       NEW Course 4 Artist Functions 9:
         draw a square:
           name: teikna ferning
@@ -509,38 +638,82 @@ is-IS:
           name: gera eitthvað
         draw a hexagon:
           name: teikna sexkant
+          description: draw a hexagon that is 100 pixels in size with a length parameter
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 11:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            sides: sides
+            length: lengd
         do something:
           name: gera eitthvað
+          parameters:
+            sides: sides
+            length: lengd
       NEW Course 4 Artist Params 12:
         draw a polygon:
           name: teikna marghyrning
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: lengd
+            sides: sides
       NEW Course 4 Artist Params 12a:
         draw a polygon:
           name: teikna marghyrning
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: lengd
+            sides: sides
       NEW Course 4 Artist Params 13:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
+            sides: sides
       NEW Course 4 Artist Params 14:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            sides: sides
       NEW Course 4 Artist Params 15:
         draw a star:
           name: teikna stjörnu
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            sides: sides
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            sides: sides
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
+            sides: sides
       NEW Course 4 Artist Params 2:
         do something:
           name: gera eitthvað
@@ -550,55 +723,112 @@ is-IS:
       NEW Course 4 Artist Params 3:
         draw a triangle:
           name: teikna þríhyrning
+          description: draw a triangle that is 50 pixels in size
       NEW Course 4 Artist Params 4:
         draw a triangle with length:
           name: teikna þríhyrning með lengd
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 5:
         draw a pentagon:
           name: teikna fimmhyrning
+          description: draw a pentagon that is 100 pixels
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 6:
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a hexagon:
           name: teikna sexkant
+          description: draw a hexagon that is 100 pixels in size
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          description: draw a square that is 100 pixels' length in size
+          parameters:
+            length: lengd
         draw a sqaure:
           name: teikna ferning
+          description: draw a square that is 100 pixels in size
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 7:
         draw a triangle:
           name: teikna þríhyrning
+          description: 'draw a triangle with length parameter
+
+'
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 8:
         draw a triangle with length:
           name: teikna þríhyrning með lengd
+          parameters:
+            length: lengd
       NEW Course 4 Artist Params 9:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         do something:
           name: gera eitthvað
       NEW Course 4 Artist Params inspire:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
+            sides: sides
       NEW Course 4 Play Lab Params 11:
         jump:
           name: hoppa
+          description: jump function block with height and actor parameter
+          parameters:
+            height: hæð
+            actor: leikmaður
         patrol:
           name: rása
+          description: Move a sprite up an down at the given speed
+          parameters:
+            actor: leikmaður
+            speed: hraða
       New Artist Project:
         draw a star:
           name: teikna stjörnu
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            sides: sides
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            sides: sides
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
       New Minecraft Hero Project:
         function 1:
           name: fall 1
@@ -607,8 +837,16 @@ is-IS:
       New Play Lab Project:
         jump:
           name: hoppa
+          description: jump function block with height and actor parameter
+          parameters:
+            height: hæð
+            actor: leikmaður
         patrol:
           name: rása
+          description: a patrol function that has a actor and speed parameter
+          parameters:
+            actor: leikmaður
+            speed: hraða
       Robot Doodle:
         25 pixel square:
           name: 25 díla ferningur
@@ -684,11 +922,15 @@ is-IS:
       course4_artist_binary_challenge1:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       course4_artist_binary_challenge2:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       course4_artist_concept_challenge2:
@@ -702,10 +944,15 @@ is-IS:
       course4_artist_fwp_challenge1:
         draw background:
           name: teikna bakgrunn
+          parameters:
+            color: litur
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            sides: sides
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
         do something:
           name: gera eitthvað
       course4_bee_for_challenge1:
@@ -714,9 +961,13 @@ is-IS:
       course4_bee_fwp_challenge1:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       course4_bee_fwp_challenge2:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseA_artist_loops_challenge1:
         '"simple" solution':
           name: '"einföld" lausn'
@@ -732,16 +983,22 @@ is-IS:
       courseC_artist_prog3:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog3_2018:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog3_2019:
         draw flame:
           name: teikna loga
+          parameters:
+            x: x
         draw fire:
           name: teikna eld
       courseC_artist_prog4:
@@ -761,169 +1018,237 @@ is-IS:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_artist_binary1_2018:
         draw bit:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_artist_binary1_2019:
         draw bit:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_artist_binary2:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary2_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary2_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary3:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary3_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary3_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary4:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary4_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary4_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary5:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary5_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary5_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary6:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary6_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary6_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary7:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary7_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary7_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary8:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary8_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary8_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary8_predict1:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary8_predict1_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary8_predict1_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binaryFP_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binaryFP_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary_challenge1_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary_challenge1_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary_challenge2_2018:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_artist_binary_challenge2_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_autorun_binary2_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_autorun_binary3_2019:
@@ -931,34 +1256,48 @@ is-IS:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_autorun_binary4_2019:
         draw bit:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_autorun_binary5_2019:
         draw bit:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_autorun_binary6_2019:
         draw bit:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_autorun_binary7_2019:
         draw bit:
           name: teikna bita
         draw:
           name: teikna
+          parameters:
+            binary: binary
       courseD_autorun_binary8_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseD_autorun_binary8_predict1_2019:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       courseE_Dogger_2:
@@ -1502,83 +1841,164 @@ is-IS:
           name: teikna ferning
         checker:
           name: athugari
+          parameters:
+            size: stærð
+            color: litur
         do something:
           name: gera eitthvað
         Make gingham:
           name: Búa til reiti
+          parameters:
+            size: stærð
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp2:
         draw a square:
           name: teikna ferning
+          description: 'draw a square with length parameter
+
+'
+          parameters:
+            length: lengd
         checker:
           name: athugari
+          parameters:
+            size: stærð
+            color: litur
         do something:
           name: gera eitthvað
         Make gingham:
           name: Búa til reiti
+          parameters:
+            size: stærð
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp2_predict1:
         draw a square:
           name: teikna ferning
+          description: draw a square with a length parameter
+          parameters:
+            length: lengd
       courseF_artist_fwp3:
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a square2:
           name: teikna ferning2
+          parameters:
+            size: stærð
         filled square:
           name: fylltur ferningur
+          parameters:
+            size: stærð
+            color: litur
         black outline:
           name: svört útlína
+          parameters:
+            length: lengd
       courseF_artist_fwp4:
         draw a polygon:
           name: teikna marghyrning
+          description: draw a polygon with sides and length paramater
+          parameters:
+            length: lengd
+            sides: sides
       courseF_artist_fwp5:
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            length: lengd
+            sides: sides
       courseF_artist_fwp6:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            sides: sides
       courseF_artist_fwp7:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            sides: sides
+            min: min
       courseF_artist_fwp8:
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            sides: sides
+            min: min
       courseF_artist_fwp9:
         draw a star:
           name: teikna stjörnu
+          description: draw a star with given points and sides of given length
+          parameters:
+            points: stig
+            length: lengd
         draw a circle:
           name: teikna hring
+          description: draw a circle of given radius
+          parameters:
+            radius: radius
         draw a pinwheel:
           name: teikna rellu
+          parameters:
+            sides: sides
+            length: lengd
+            repeat: endurtaka
         draw a triangle:
           name: teikna þríhyrning
+          parameters:
+            length: lengd
         draw a shape:
           name: teikna form
+          parameters:
+            sides: sides
+            length: lengd
         draw a house:
           name: teikna hús
+          parameters:
+            length: lengd
         draw a square:
           name: teikna ferning
+          parameters:
+            length: lengd
         draw a spiral edge:
           name: teikna útlínu spírals
+          parameters:
+            length: lengd
+            sides: sides
+            min: min
       courseF_artist_fwp_challenge1:
         draw background:
           name: teikna bakgrunn
+          parameters:
+            color: litur
         draw a polygon:
           name: teikna marghyrning
+          parameters:
+            sides: sides
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
         do something:
           name: gera eitthvað
       courseF_artist_fwp_challenge2:
         draw a square 20:
           name: teikna ferning 20
+          description: draw a square of size 20 pixels
         do something:
           name: gera eitthvað
         draw an octagon:
           name: teikna átthyrning
+          parameters:
+            length: lengd
       courseF_bee_conditionals2:
         move and check:
           name: færa og athuga
@@ -1649,27 +2069,43 @@ is-IS:
       courseF_bee_fwp4:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            length: lengd
       courseF_bee_fwp5:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: breidd
       courseF_bee_fwp6:
         rowOfNectar:
           name: rowOfNectar
+          parameters:
+            width: breidd
       courseF_bee_fwp7:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp8:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp9_predict1:
         rowOfNectarOrHoney:
           name: rowOfNectarOrHoney
+          parameters:
+            width: breidd
       courseF_bee_fwp_challenge1:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseF_bee_fwp_challenge2:
         pick row:
           name: tína beð
+          parameters:
+            length: lengd
       courseF_bee_variables_1_2018:
         collect row:
           name: safna röð
@@ -1725,25 +2161,35 @@ is-IS:
       grade5_artist_binary11:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       grade5_artist_binary4:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       grade5_artist_binary5:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       grade5_artist_binary8:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
       grade5_artist_binary9:
         draw:
           name: teikna
+          parameters:
+            binary: binary
         draw bit:
           name: teikna bita
