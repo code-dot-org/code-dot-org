@@ -3,12 +3,30 @@ bn:
   data:
     block_categories:
       Actions: ক্রিয়া
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: রং
+      Comment: Comment
+      Comments: Comments
       Conditionals: শর্তযুক্ত
+      Dancers: Dancers
+      Default: Default
       Events: ঘটনাবলী
       Functions: ফাংশনগুলি
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: যুক্তি
       Loops: চক্র
       Math: গণিত
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: পাঠ
       Variables: চলকগুলো
+      'Variables ': 'Variables '
+      World: World
