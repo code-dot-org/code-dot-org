@@ -10,7 +10,7 @@ import {
   SubjectNames
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import {PermissionPropType, Organizer, ProgramManager} from '../permission';
+import {PermissionPropType} from '../permission';
 import {useFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
