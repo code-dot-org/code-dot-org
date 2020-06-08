@@ -62,8 +62,9 @@ class P5LabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
+    const locale = window.appOptions.locale;
     if (this.props.spriteLab) {
-      fetch('/api/v1/animation-library/manifest/spritelab')
+      fetch(`/api/v0/animation-library/manifest/spritelab/${locale}`)
         .then(response => response.json())
         .then(libraryManifest => {
           this.setState({libraryManifest});
