@@ -179,7 +179,7 @@ When participants apply to the program, they must select a curriculum focus area
 
 Have questions? We have answers!
 
-Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target=_"blank">FAQs</a> or write to us at facilitators@code.org
+Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target="_blank">FAQs</a> or write to us at facilitators@code.org
 
 ## Interested in applying?
 
