@@ -235,7 +235,7 @@ module AWS
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'allowlist',
-          AllowlistedNames: behavior_config[:cookies]
+          WhitelistedNames: behavior_config[:cookies]
         } :
         {
           Forward: behavior_config[:cookies]
