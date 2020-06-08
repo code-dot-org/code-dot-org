@@ -19,6 +19,11 @@ el:
       pair_programmer: 'Αυτή τη στιγμή κάνετε συνεργατικό προγραμματισμό μαζί με έναν μαθητή που δεν έχει ακόμη πρόσβαση σε αυτό το περιεχόμενο. Για να δείτε αυτό το περιεχόμενο, πρέπει να σταματήσετε τον συνεργατικό προγραμματισμό και να προσπαθήσετε ξανά.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
       messages:
         blank: "απαιτείται"
         blank_plural: "απαιτούμενο"
@@ -41,6 +46,11 @@ el:
         gender: 'Φύλο'
         edit_header: 'Στοιχεία Λογαριασμού'
         finish_sign_up_header: 'Ολοκληρώστε τη δημιουργία του λογαριασμού σας'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Fill out the following information to finish creating a Code.org account with **%{provider}** for **%{email}**.'
+        reset_password_token: "The reset password link you have followed"
         error:
           future: δεν μπορεί να είναι στο μέλλον
   beta: "βήτα"
@@ -53,13 +63,16 @@ el:
   previous_page: Προηγούμενη σελίδα
   next_page: Επόμενη σελίδα
   next_resource: Επόμενος πόρος
+  done_with_module: Done with this Learning Module
   cancel: "Άκυρο"
   okay: "Εντάξει"
   or: "ή"
   heading_x_of_y: "%{heading} (σελίδα %{x} του %{y})"
   join_section:
     code:
+      title: 'Join a section on Code.org'
       placeholder: "Τμήμα κώδικα (ABCDEF)"
+      instructions: "Please enter the 6 letter code your teacher shared with you (example: \"ABCDEF\") to join their section."
       instructions_short: "Εισάγετε τον 6-ψήφιο κωδικό τάξης σας"
       submit: 'Συμμετοχή'
   add_hint_form:
@@ -90,6 +103,8 @@ el:
     continue_with: 'Συνέχεια μέσω %{provider}'
     sign_in_with: 'Εγγραφή μέσω  %{provider}'
     signed_in: 'Συνδέθηκες!'
+    signed_out_markdown: '### You have signed out of [Code.org](%{url}).'
+    sign_out_of_markdown: '#### You used %{provider} to sign in. [Click here](%{url}) to sign out of %{provider}.'
     already_signedup: 'Είσαι ήδη γραμμένος;'
     notyet_signedup: "Δεν έχει γραφτεί ακόμα;"
     google_oauth2: 'Λογαριασμός Google'
@@ -100,11 +115,19 @@ el:
     clever: 'Έξυπνος λογαριασμός'
     powerschool: 'Λογαριασμός Powerschool'
     forgot_password: 'Ξέχασες τον κωδικό σου;'
+    migration_success: 'Success! You have updated to our new account experience.'
+    demigration_success: 'The new account experience is now disabled on your account.'
     need_confirmation: "Δεν έλαβες τις οδηγίες επιβεβαίωσης;"
     need_unlock: "Δεν έλαβες τις οδηγίες ξεκλειδώματος;"
     not_linked: "Συγγνώμη, ο λογαριασμός σας στο Code.org δεν είναι συνδεδεμένος με τον %{provider} σας. Θα πρέπει να συνδεθείτε πληκτρολογώντας τον κωδικό σας παρακάτω."
     use_clever: "Συγγνώμη, ο λογαριασμός σας στο Code.org δεν είναι συνδεδεμένος με τον %{provider} σας. Θα πρέπει να συνδεθείτε μέσω του Clever Portal αντ'αυτού."
     unable_to_connect_provider: "Δεν μπορέσαμε να συνδέσουμε τον λογαριασμό σας στο Code.org με τον %{provider} σας. Παρακαλώ δοκιμάστε ξανά."
+    already_in_use: "Your %{provider} account is already connected to another Code.org account."
+    already_linked: "Your %{provider} account is already linked to your Code.org account."
+    existing_account:
+      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      sign_in: "Please sign in and we'll link your %{provider} profile."
+      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
   signup_form:
     email_signup: 'Εγγραφείτε με το email σας'
     student_count: '%{count} μαθητές έχουν ήδη εγγραφεί.'
@@ -133,6 +156,10 @@ el:
     valid_password: "Έγκυρος κωδικός πρόσβασης!"
     invalid_password: "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6 χαρακτήρες"
     mismatch_password: "Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν"
+    student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
     additional_information: "Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί η εγγραφή σας."
     user_type_button: "Ενημέρωση τύπου λογαριασμού"
     user_type_label: "Τύπος λογαριασμού"
@@ -141,9 +168,11 @@ el:
     field_is_required: "απαιτείται"
     accept_terms: "Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό"
     error: "Παρουσιάστηκε ένα σφάλμα."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
     email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
     email_preference_yes: "Ναι"
     email_preference_no: "Όχι"
+    email_preference_required: "You must specify an email preference."
     parent_account_checkbox: "Είμαι γονέας/κηδεμόνας και κάνω την εγγραφή για λογαριασμό του τέκνου μου"
     parent_account_email_progress_permission: "Μπορούμε να σας αποστείλουμε ηλεκτρονικά μηνύματα με περιστασιακές ενημερώσεις για την πρόοδο και τα έργα του παιδιού σας, καθώς και ενημερώσεις σχετικά με το τμήμα τους και την επιστήμη των υπολογιστών; [(Δείτε την πολιτική απορρήτου μας)](%{privacy_policy_url})"
     parent_account_email_label: "Διεύθυνση ηλεκτρονικού ταχυδρομείου γονέα/κηδεμόνα"
@@ -151,6 +180,7 @@ el:
     title: 'Πληροφορίες σχολείου (προαιρετικό)'
     school_country: 'Χώρα σχολείου'
     select_school_type: 'Επιλέξτε τύπο σχολείου'
+    charter: 'Charter'
     private: 'Ιδιωτικό'
     public: 'Δημόσιο'
     homeschool: 'Κατ'' οίκον διδασκαλία'
@@ -165,6 +195,8 @@ el:
     school_name: 'Όνομα σχολείου'
     school_zip: 'Ταχυδρομικός κώδικας σχολείου'
     school_address: 'Ταχυδρομική διεύθυνση σχολείου'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Έχετε ήδη λογαριασμό; Συνδεθείτε'
     login: 'Ηλεκτρονικό ταχυδρομείο'
@@ -184,12 +216,16 @@ el:
     login: 'Σύνδεση'
     invalid_login: 'Λανθασμένα στοιχεία εισόδου. Παρακαλούμε προσπαθήστε ξανά'
     pair_programming: 'Έχω έναν συνεργάτη στον υπολογιστή μου'
+    student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Ξέχασες τον κωδικό σου;'
       instructions: "Παρακαλούμε γράψτε παρακάτω τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας και θα σας στείλουμε οδηγίες για την ανάκτηση του κωδικού σας."
       email: 'Διεύθυνση email'
       submit: 'Υποβολή'
+    reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Αλλαγή κωδικού'
       new_password: 'Νέος κωδικός'
@@ -206,16 +242,25 @@ el:
 
        %{name}
   parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Καλωσήρθατε στο Code.org'
   teacher_mailer:
     new_teacher_subject: 'Καλωσήρθατε στο Code.org'
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
       one: 'Το τμήμα σας'
       other: 'Τα τμήματά σας:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    default_name: 'Untitled Section'
+    remove: '(remove section)'
     type:
+      picture: 'Picture Password'
       word: 'Μυστική λέξη'
       email: 'Ηλεκτρονικό ταχυδρομείο'
+      google_classroom: 'Google Classroom'
       clever: 'Εξυπνο'
   follower:
     invite_sent: 'Η πρόσκληση στάλθηκε'
@@ -229,6 +274,7 @@ el:
       section_not_found: "Δε βρέθηκε η ενότητα με τον κώδικα %{section_code}."
       blank_code: "Παρακαλώ δώστε μία ενότητα κώδικα"
       cant_join_own_section: "Λυπούμαι, δεν μπορείτε να συνδέσετε τη δική σας ενότητα."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: "Ειδοποίηση από την Code.org: ο μαθητής %{student_name} δεν είναι πλέον δικός σας."
@@ -249,35 +295,59 @@ el:
     updated: 'Το %{model} ενημερώθηκε με επιτυχία.'
     destroyed: '%{model} διαγράφηκε με επιτυχία.'
     access_denied: 'Δεν έχετε πρόσβαση σε αυτό το %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "Ολοκλήρωσα την Ώρα του Κώδικα"
       sign_in_to_save: 'Συνδέσου για να αποθηκεύσεις την πρόοδό σου'
+      my_dashboard: "My Dashboard"
       course_catalog: "Κατάλογος Μαθημάτων"
       project_gallery: "Έργα"
       sections: "Ενότητες"
       help_support: "Βοήθεια και υποστήριξη"
       report_bug: "Αναφορά προβλήματος"
+      report_abuse: "Report abuse"
       teacher_community: "Κοινότητα δασκάλων"
+      professional_learning: "Professional Learning"
       documentation: "Τεκμηρίωση"
       tutorials: "Οδηγοί εκμάθησης"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
+      sprite_lab_documentation: "Sprite Lab Documentation"
+      sprite_lab_tutorials: "Sprite Lab Tutorials"
+      educate_overview: "Educator Overview"
       educate_elementary: "Δημοτικό σχολείο"
       educate_middle: "Γυμνάσιο"
       educate_high: "Λύκειο"
       educate_hoc: "Ώρα του Κώδικα"
+      educate_partner: "Partner with Us"
       educate_beyond: "Πέρα από το Code.org"
       educate_inspire: "Εμπνεύστε έναν Μαθητή"
       educate_community: "Online Κοινότητα"
+      educate_tools: "Tools and Videos"
       about_us: "Σχετικά με εμάς"
+      about_leadership: "Leadership"
       about_donors: "Δωρητές"
       about_partners: "Συνεργάτες"
+      about_team: "Full Team"
+      about_news: "Newsroom"
       about_evaluation: "Αξιολογήσεις"
       about_jobs: "Θέσεις εργασίας"
       about_contact: "Επικοινωνία"
       about_faqs: "Συχνές ερωτήσεις"
       learn: "Εκμάθηση"
+      stats: "Stats"
+      help_us: "Help Us"
       teach: "Διδασκαλία"
       about: "Σχετικά"
+      legal: "Privacy & Legal"
       legal_privacy: "Πολιτική Απορρήτου"
       legal_tos: "Όροι"
     user:
@@ -285,6 +355,7 @@ el:
       district_dashboard: 'Περιοχή Ταμπλό'
       label: 'Γεια σου %{username}'
       stats: 'Στούντιο Κώδικα'
+      my_projects: 'My projects'
       settings: 'Ο λογαριασμός μου'
       logout: 'Αποσύνδεση'
       signin: 'Σύνδεση'
@@ -298,23 +369,34 @@ el:
       algebra_game: 'Άλγεβρα'
       applab: 'App Lab'
       artist: 'Καλλιτέχνης'
+      artist_k1: 'Artist (Pre-reader)'
+      basketball: 'Basketball'
       bounce: 'Αναπήδηση'
+      calc: 'Calc'
       dance: 'Πάρτι Χορού'
+      eval: 'Eval'
       flappy: 'Πουλάκι'
       frozen: 'Ψυχρά κι ανάποδα'
       gamelab: 'Game Lab'
+      gamelab_jr: 'Game Lab (beta)'
       gumball: 'Τσιχλόμπαλα'
       iceage: 'Εποχή των Παγετώνων'
       infinity: 'Άπειρο'
+      makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Ζήστε μια περιπέτεια στο Minecraft'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Hero'
       playlab: 'Εργαστήριο Παιχνιδιού'
+      playlab_k1: 'Play Lab (Pre-reader)'
       scratch: 'Scratch'
       sports: 'Αθλητισμός'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Πόλεμος τον Άστρων (μπλοκ)'
       starwarsblocks_hour: 'Πόλεμος τον Άστρων (μπλοκ)'
+      weblab: 'Web Lab'
       view_all: 'Όλα τα έργα...'
     popup:
       progress_for_user: "πρόοδος του %{name}"
@@ -364,21 +446,38 @@ el:
     current_password_hint: '(χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν οι αλλαγές)'
     delete: 'Διαγράψτε τον λογαριασμό σας'
     delete_text: "Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό σας."
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
     delete_text_teacher_note: "Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα διαγραφεί ο λογαριασμός των μαθητών σας."
     delete_confirm: 'Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?'
     deleted_user: 'διεγραμμένος χρήστης'
     no_password_because_oauth: 'Δεν απαιτείται κωδικός διότι εισέρχεστε με εξωτερικό πάροχο.'
     no_password_because_sponsored: 'Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί τον κωδικό σας.'
+    create_personal_login: 'Create a personal password login'
+    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Όνομα χρήστη (μην χρησιμοποιείτε το αληθινό σας όνομα!)"
     create_personal_login_under_13_parent_email: 'Διεύθυνση email γονέα/κηδεμόνα'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_terms_markdown: "By creating a personal login, I agree to be bound by the Code.org [terms of service](%{terms_of_service_url}). I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
+    create_personal_login_email_note_markdown: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](%{privacy_policy_url}) for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     parent_email_label: "Email γονέα/κηδεμόνα (προαιρετικό)"
+    parent_email_hint: "(this can be used for password recovery)"
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Ενημέρωση Λογαριασμού"
+    account_successfully_updated: "Account successfully updated."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Ενημέρωση"
     for_parents_and_guardians: "Για Γονείς και Κηδεμόνες"
     link_a_parent_email: "Συνδέστε μία διεύθυνση email γονέα/κηδεμόνα με αυτόν τον λογαριασμό, για να ενημερώνεστε για την πρόοδο και τα έργα του παιδιού σας. Θα μπορείτε να χρησιμοποιείτε επίσης αυτή την ηλεκτρονική διεύθυνση για την ανάκτηση κωδικών πρόσβασης."
     parent_guardian_email_label: "Διεύθυνση ηλεκτρονικού ταχυδρομείου γονέα/κηδεμόνα"
     none: "Κανένα"
     only_one_parent_email_supported_warning: "Σημείωση: μπορούμε να υποστηρίξουμε μόνο μία ηλεκτρονική διεύθυνση γονέα/κηδεμόνα ανά λογαριασμό φοιτητή αυτή τη στιγμή."
+    encrypted: "encrypted"
   user_level:
     completed: 'Ολοκληρώθηκε'
     tried: 'Δοκιμάστηκε'
@@ -413,12 +512,21 @@ el:
     test_videos_help: 'Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο  στο σχολείο σας'
     try_beta_courses: 'Νέο! Δοκιμάστε τα δοκιμαστικά  μαθήματα για φοιτητές K-5'
     use_as_teacher: 'Χρησιμοποιήστε αυτό τον ιστότοπο  ως δάσκαλος'
+    heading_elementary_markdown: "## 20 hour courses for\n\n# Computer Science Fundamentals (all ages)"
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: "Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα"
     choose_next_course: "Δοκιμάστε μια σειρά μαθημάτων Code Studio επιλέγοντας ένα παρακάτω"
     print_certificate: "Εκτύπωση πιστοποιητικού"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
+    new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
+    section_code_cant_be_current_section: "The current section cannot be the same as the new section."
+    current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
+    student_ids_not_entered: "Please provide student_ids."
     student_not_found: "Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών."
+    all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
+    already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Μάθετε με κώδικα Studio"
     description: "Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα."
@@ -426,6 +534,8 @@ el:
   gender:
     male: 'Αγόρι'
     female: 'Κορίτσι'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Προτιμώ να μην απαντήσω'
   user_type:
     student: 'φοιτητής/μαθητής'
@@ -458,6 +568,7 @@ el:
     title: 'Χρειάζεσε βοήθεια;'
     subtitle: 'Δες αυτά τα βίντεο και τις υποδείξεις'
     teacher: 'Δείτε τη λύση'
+    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'Δεν έχετε εξουσιοδήτηση να δείτε τη λύση.'
     submit: 'Ενημερώσετε την τοποθεσία του καλλιτέχνη'
     direction: 'Έναρξη κατεύθυνσης (σε μοίρες)'
@@ -469,9 +580,16 @@ el:
     download: 'Κατεβάστε το βίντεο'
     show_notes: 'Εμφάνιση σημειώσεων'
     show_video: 'Εμφάνιση βίντεο'
+    label: 'Video'
   compatibility:
     upgrade:
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
       link: "Μάθετε περισσότερα"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Αυτό διαρκεί περισσότερο από ότι συνήθως...'
   try_reloading: 'Δοκίμασε να φορτώσεις ξανά τη σελίδα'
   next_stage: 'Τελείωσε! Συνέχισε στο επόμενο στάδιο'
@@ -576,9 +694,12 @@ el:
       title: "Συνθήκες"
       body: "Μάθετε για αλγόριθμους και εντολές επιλογής σε αυτή την «χωρίς υπολογιστή» δραστηριότητα χρησιμοποιώντας μια τράπουλα."
     widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "Ηλικίες 14+"
       cta: "Μάθε πώς"
   landing:
+    prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Αναφορά σφάλματος"
     support: "Λάβετε βοήθεια"
     support_url: "//support.code.org"
@@ -593,21 +714,28 @@ el:
     wrong_body: "Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε ξανά!"
     correct_title: "Σωστό"
     correct_body: "Αυτή είναι η σωστή απάντηση."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "Ευχαριστούμε"
     wrong_body: "Ευχαριστούμε για την υποβολή της απάντησης."
     correct_title: "Ευχαριστούμε"
     correct_body: "Ευχαριστούμε για την υποβολή της απάντησης."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "Ευχαριστούμε"
     wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
     correct_title: "Ευχαριστούμε"
     correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
+    hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Ευχαριστούμε"
     wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
     correct_title: "Ευχαριστούμε"
     correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
+    unsubmit-title: "Unsubmit your assessment"
     unsubmit-body: "Αναιρώντας την αξιολόγησή σας θα μηδενίσει την ημερομηνία και ώρα υποβολής. Είστε σίγουροι;"
     submit-incomplete-title: "Υποβάλετε την αξιολόγησή σας"
     submit-incomplete-body: "Αφήσατε μερικές ερωτήσεις ημιτελείς. Δεν μπορείτε να διορθώσετε την αξιολόγησή σας μετα την υποβολή. Είσαστε σίγουρος;"
@@ -632,6 +760,8 @@ el:
     open_response_body: "Ευχαριστούμε για την απάντησή σου!"
     correct_title: "Σωστό"
     correct_body: "Αυτή είναι η σωστή απάντηση."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "OΚ"
     startover_title: "Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;"
@@ -645,17 +775,42 @@ el:
   age_interstitial:
     age: Η ηλικία σου
     header: Ενημέρωση Πληροφοριών Λογαριασμού
+    warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
+    disclaimer: "As always, code.org will never rent, sell or share this information with any third parties."
+    sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
+    title: "Updated Terms of Service and Privacy Policy"
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will *no longer store email addresses for student accounts on Code Studio.* This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Όροι"
     privacy: "Πολιτική Απορρήτου"
     privacy_notice: "Σημείωση απορρήτου"
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
+    accept_label_markdown: I agree to the [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
+    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
     accept: "Αποδοχή"
     print: "Εκτύπωσε"
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
+    review_terms: "Review updated terms"
   school_info_interstitial:
+    title: "We want to bring Computer Science to every student - help us track our progress!"
+    message: "Please enter your school information below."
+    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Αποθήκευση"
   race_interstitial:
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
+    message: "Please tell us your race (check all that apply)"
     races:
+      white: "White"
+      black: "Black or African American"
+      hispanic: "Hispanic or Latino"
+      asian: "Asian"
+      hawaiian: "Native Hawaiian or other Pacific Islander"
+      american_indian: "American Indian/Alaska Native"
       other: "Άλλα"
+      opt_out: "Prefer not to say"
     submit: "Υποβολή"
     decline: "Κλείσιμο"
   zendesk_too_young_message: 'Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε στον ιστότοπο υποστήριξης. Μπορείτε να περιηγηθείτε στο <a href="http://support.code.org">support.code.org</a> χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει μαζί μας.'
@@ -683,18 +838,25 @@ el:
     unpublish: "Αναίρεση δημοσίευσης"
     share_title: Μοιράσου το έργο σου
     share_copy_link: "Αντιγραφή του συνδέσμου:"
+    share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Ενσωματωμένο"
+    advanced_share: "Show advanced options"
+    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     name: "Όνομα"
     updated: "Ενημερωμένο"
     project_type: "Τύπος Έργου"
     help_text: "Κάνε κλικ στο <strong>Φτιάξε μία Εφαρμογή</strong> ή στο <strong>Σχεδίασε Κάτι</strong> παρακάτω να δημιουργήσεις ένα νέο έργο Play Lab ή Καλλιτέχνης!<br/> Μπορείς να επιστρέψεις και να εργαστείς στα έργα σου οποιαδήποτε στιγμή."
     need_help: "Χρειάζεστε βοήθεια για να ξεκινήσετε?"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     saved: "Αποθηκευμένο"
     not_saved: "Δεν έχει αποθηκευτεί"
     view_all: 'Δείξε τα Έργα μου'
     edit_project: 'Επεξεργαστείτε το έργο'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "Το έργο αυτό έχει αναφερθεί για την παραβίαση των όρων παροχής υπηρεσιών του Code.org <a href='http://code.org/tos'></a> και δεν μπορεί να μοιραστεί με άλλους."
+      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
       contact_us: "Αν νομίζετε ότι αυτό να είναι ένα λάθος, παρακαλώ <a href='https://code.org/contact'> επικοινωνήστε μαζί μας.</a>"
       go_to_code_studio: 'Πηγαίνετε στο Code Studio'
       report_abuse_form:
@@ -713,15 +875,52 @@ el:
           other: 'Άλλα'
         detail: 'Καλείσθε να παράσχετε τόσο λεπτομερώς όσο το δυνατόν σχετικά με το περιεχόμενο που πρόκειται να αναφέρετε.'
         acknowledge: 'Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy και το %{link_start_tos}Terms του Service%{link_end}'
+  peer_review:
+    accepted:
+      name: 'Accepted'
+      description_markdown: '**Yes**, this submission **meets** the requirements'
+    rejected:
+      name: 'Rejected'
+      description_markdown: '**No**, this submission **does not meet** the requirements'
+    escalated:
+      name: 'Escalated'
+      description: 'I would like an instructor to review this submission'
+    instructor_feedback: 'Instructor Feedback'
+    peer_feedback: 'Peer Feedback'
+    outdated: 'This feedback was added for a previously submitted version'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
+    peer_review: 'Peer Review'
   external_links:
     disclaimer: Αποποίηση ευθυνών
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available.
   hoc_download:
+    title: 'Hour of Code downloads'
     capsule_title: 'Έχετε Internet;'
+    capsule_desc: 'Use the online, web-based [%{app_name}](%{url}).'
     instructions_headline: 'Χωρίς Internet;'
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time [here](%{url}).'
     minecraft_name: 'Minecraft Ώρα του Κώδικα'
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Λήψη του %{app_name} για χρήση εκτός σύνδεσης (136MB)'
     download_in_Albanian: 'Λήψη στα Αλβανικά:'
     download_in_Arabic: 'Λήψη στα Αραβικά:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
     download_in_Czech: 'Λήψη στα Τσέχικα:'
     download_in_Danish: 'Λήψη στα Δανικά:'
     download_in_Dutch: 'Λήψη στα Ολλανδικά:'
@@ -733,25 +932,103 @@ el:
     download_in_Hebrew: 'Λήψη στα Εβραϊκά:'
     download_in_Hungarian: 'Λήψη στα Ουγγρικά:'
     download_in_Icelandic: 'Λήψη στα Ισλανδικά:'
+    download_in_Indonesian: 'Download in Indonesian:'
     download_in_Irish: 'Λήψη στα Ιρλανδικά:'
     download_in_Italian: 'Λήψη στα Ιταλικά:'
     download_in_Japanese: 'Λήψη στα Ιαπωνικά:'
     download_in_Korean: 'Λήψη στα Κορεατικά:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
     download_in_Spanish: 'Λήψη στα Ισπανικά:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  plc:
+    preview_assignments:
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
+  return_unit_overview: 'Go to unit overview'
+  return_course_overview: 'Go to course overview'
+  view_all_units: 'View all units'
   view_teacher_guide: 'Προβολή Οδηγού Εκπαιδευτικού'
   pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
       first_name: 'Όνομα'
+      first_name_preferred: 'Preferred First Name'
       last_name: 'Επώνυμο'
       email: 'Ηλεκτρονικό ταχυδρομείο'
+      email_alternate: 'Alternate Email'
+      gender: 'Gender Identity'
       school_name: 'Όνομα σχολείου'
+      school_city: 'School City'
       school_country: 'Χώρα σχολείου'
+      ages: 'Which age(s) do you teach this year?'
+      subjects: 'Which subject(s) do you teach this year?'
+      resources: 'Which of the following CS education resources do you use?'
+      robotics: 'Which of the following robotics resources do you use?'
+      workshop_organizer: 'Workshop Organizer'
+      workshop_facilitator: 'Workshop Facilitator'
+      workshop_course: 'Workshop Course'
+      email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
         male: 'Αγόρι'
         female: 'Κορίτσι'
+        non_binary: 'Non-binary'
+        not_listed: 'Preferred term not listed'
         none: 'Προτιμώ να μην απαντήσω'
       school_country:
         canada: 'Καναδάς'
@@ -801,18 +1078,52 @@ el:
         wonder: 'Wonder Workshop'
         other: "Άλλο:"
       workshop_course:
+        csf_af: 'CS Fundamentals (Courses A-F)'
+        csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: 'CS Discoveries'
         csp: 'Βασικές Αρχές της Επιστήμης των Υπολογιστών '' 16-''17'
       email_opt_in:
         opt_in_yes: 'Ναι'
         opt_in_no: 'Όχι'
+    international_opt_in:
+      title: 'Workshop Attendance'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
+    logged_out:
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body_markdown: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or [go to your user settings](%{user_settings}) to upgrade your account from student to teacher.'
+      more_markdown: 'If you’d like more information about the program before you start your application, please check out the [Professional Learning Program overview](%{pl_overview}).'
+    no_teacher_email:
+      body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
   courses_category: 'Πλήρη μαθήματα'
   cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
     accept: 'Συμφωνώ'
   gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
     privacy_policy: 'πολιτική απορρήτου'
     logout: 'Αποσύνδεση'
     yes: 'Ναι'
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
   copy: 'Αντιγραφή'
+  maker:
+    google_oauth:
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
   parent_email_banner:
     text: "**Είστε γονέας ή κηδεμόνας;** Συνδέστε την ηλεκτρονική σας διεύθυνση με αυτόν τον λογαριασμό, για να ενημερώνεστε για την πρόοδο και τα έργα του παιδιού σας!"
     link_your_email: "Συνδέστε την ηλεκτρονική σας διεύθυνση"

@@ -30,6 +30,7 @@ el:
             MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
           MOVE2:
             MOVES.Roll: Body Roll
@@ -42,6 +43,7 @@ el:
             MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
       Dancelab_atTimestamp:
         text: μετά από {TIMESTAMP} {UNIT}
@@ -87,6 +89,7 @@ el:
             MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ el:
             MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
           DIR:
             '1': "→"
@@ -187,6 +191,7 @@ el:
             MOVES.Kick: Αστέρι
             MOVES.XArmsUp: Τεντώσου
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
           DIR:
             '1': "→"
@@ -218,10 +223,13 @@ el:
             MOVES.Kick: Αστέρι
             MOVES.XArmsUp: Τεντώσου
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: 'επαναλάβετε κάθε [Ν] [0] μέτρα μετά [START] [1] '
       Dancelab_everySeconds:
@@ -282,6 +290,7 @@ el:
             MOVES.Roll: Body Roll
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
       Dancelab_ifTime:
         text: |-
@@ -965,10 +974,19 @@ el:
         text: αρχικοποίηση
       Dancelab_whenSetup2:
         text: αρχικοποίηση
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: aalab όλοι {ANIMATION}
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
@@ -1013,10 +1031,13 @@ el:
         options:
           CHOICE:
             '"this"': αυτό
+            '"other"': other
       gamelab_hideTitleScreen:
         text: κρύψε την οθόνη τίτλων
       gamelab_isTouchingEdges:
         text: "{SPRITE} αγγίζει τις άκρες"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} πήγαινε στο {LOCATION}"
       gamelab_keyPressed:
@@ -1075,6 +1096,8 @@ el:
             '"left"': αριστερά
       gamelab_mouseLocation:
         text: θέση ποντικιού
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: κινήσου {SPRITE} {DISTANCE} pixels προς τα μπρος
       gamelab_moveInDirection:
@@ -1087,6 +1110,10 @@ el:
             '"West"': Δυτικά
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
       gamelab_pointInDirection:
@@ -1121,13 +1148,31 @@ el:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': σπηλιά
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': δικαστήριο
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο τόξο
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': επιστημονικής φαντασίας
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
             undefined: Καμία
@@ -1164,12 +1209,18 @@ el:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:
           DIRECTION:
             '"right"': δεξιά
             '"left"': αριστερά
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: όταν πατηθεί το κάτω βέλος
       gamelab_whenKey:
@@ -1233,7 +1284,10 @@ el:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": όχι ψάρια
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": η ετικέτα μου
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα μου
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1241,7 +1295,10 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -1253,9 +1310,19 @@ el:
             "{x: 300, y: 100}": πάνω - δεξιά
             "{x: 100, y: 300}": κάτω - αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: Αποκτήστε το επόμενο αντικείμενο
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1294,6 +1361,7 @@ el:
             "{x: 300, y: 100}": πάνω - δεξιά
             "{x: 100, y: 300}": κάτω - αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: αφαίρεσε {SELECT} {COSTUME}
         options:
@@ -1386,6 +1454,7 @@ el:
             MOVES.Roll: Body Roll
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Thriller: Zombie
             MOVES.Rest: Κανένα
       Mikelab_ifLabel:
         text: |-
@@ -1411,14 +1480,20 @@ el:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: δεν είναι η ετικέτα μου
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: τυχαίο χρώμα
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: επαναλάμβανε για πάντα
       Mikelab_sendBad:
@@ -1426,10 +1501,30 @@ el:
       Mikelab_sendGood:
         text: μετακίνηση αντικειμένου δεξιά
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1437,11 +1532,20 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': δεξιά
             '"left"': αριστερά
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: καινούριο {COSTUME} χαρακτήρα σε {LOCATION}
         options:
@@ -1455,6 +1559,7 @@ el:
             "{x: 300, y: 100}": πάνω - δεξιά
             "{x: 100, y: 300}": κάτω - αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: όταν {SPRITE} πατηθεί
       Mikelab_whenKeyPressed:
@@ -1465,42 +1570,63 @@ el:
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
+            '"space"': spacebar
             '"w"': Δ
             '"a"': Α
             '"s"': Ν
             '"d"': Δ
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': επάνω βέλος
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
+            '"space"': spacebar
             '"w"': Δ
             '"a"': Α
             '"s"': Ν
             '"d"': Δ
       Mikelab_whenMouseClicked:
         text: όταν πατηθεί το ποντίκι
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: όταν πατήσατε {KEY}
         options:
           KEY:
             '"yes"': ναι
             '"no"': όχι
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': επάνω βέλος
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
       RyanLab_moveForward:
         text: προχώρησε μπροστά
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: στρίψε αριστερά
       RyanLab_turnRight:
@@ -1565,9 +1691,16 @@ el:
       aalab_setupStory:
         text: ιστορία εγκατάστασης
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': τυχαίο
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:
