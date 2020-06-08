@@ -4,36 +4,69 @@ fr:
       Unplug1:
         title: Introduction à l'informatique
         desc: Cette leçon vise à introduire le concept de l’informatique et expliquer ce que fait un informaticien. Elle donnera également aux élèves l'occasion d'assumer le rôle d'un informaticien. À la fin de l'activité, chaque élève repartira à la maison avec un résumé de ce qu'il ou elle aura appris. Vous pourriez être tenté d’omettre l’enseignement aux jeunes enfants des mots de vocabulaire qui sont associés aux leçons qui suivent. Cependant, les leur présenter de manière amusante et ludique à ce stade est beaucoup plus productif que d'attendre des occasions plus avancées futures.
+        pdfs:
+          - unplug1
+        video: Unplug1
       Unplug2:
         title: Algorithmique
         desc: Seulement munis de papier et de feutres, les étudiants vont apprendre les quatre étapes de la pensée computationnelle. Après une brève introduction, ils seront séparées en groupes pour créer des instructions à partir desquelles d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue de monstres pré-établis). L'intégralité de cette tâche doit être décomposée, puis les équipes étudieront les monstres du catalogue pour trouver un schéma, s'écarter des détails des différents monstres, puis utiliser ces informations pour créer un algorithme (des instructions) pour qu'une autre équipe dessine un monstre choisi. Les groupes échangeront alors leurs algorithmes entre eux et dessineront le monstre sur les indications de l'algorithme. Le dessin représente-t-il ce que la première équipe avait prévu ?
+        pdfs:
+          - unplug2
+        video: Unplug2
       Unplug3:
         title: Programmation sur papier quadrillé
         desc: En se programmant les uns les autres pour créer des images, les étudiants commenceront à comprendre ce qu'est réellement la programmation. Au début du cours, les élèves devront échanger des instructions pour colorier chaque carré d'une feuille de papier quadrillé, afin de reproduire une image existante. Si il reste du temps à la fin du cours, les élèves pourront alors inventer leurs propres images.
+        pdfs:
+          - unplug3
+        video: Unplug3
       Unplug4:
         title: Algorithmes
         desc: Cette leçon traite des algorithmes. Le premier exercice se fait à l'aide de formes de tangram et de papier millimétré. Il sert à démontrer combien il est important de rendre chaque instruction aussi claire et la moins équivoque possible. Par la suite, la classe explorera les différentes façons de plier un morceau de papier en rectangle, en notant comment certaines méthodes peuvent requérir plus ou moins de plis que d'autres.
+        pdfs:
+          - unplug4
+        video: Unplug4
       Unplug5:
         title: fonctions
         desc: Dans cette leçon, les élèves fabriqueront un capteur de soleil à l’aide de ficelle, de perles et d’un objet fétiche particulier. Les élèves suivront une série d’étapes répétitives, et il leur sera alors demandé d'identifier certains ensembles de « compétences » qui sont reproduits plusieurs fois. Ces compétences étant définies, elles seront appelées depuis un programme principal et tout le merveilleux processus de création sera enregistré sur une seule feuille de papier. Le programme final vise la classe entière, quel que soit le type de ficelle, de perles et d’objets fétiches. Pour plus d’efficacité, les élèves devront « retirer » les détails de leurs matériaux spécifiques et créer des termes vagues pour les fournitures personnelles. Cette utilisation d'espaces réservés génériques est une merveilleuse introduction aux variables.
+        pdfs:
+          - unplug5
+        video: Unplug5
       Unplug6:
         title: Conditions
         desc: Il s'agit d'un jeu s’adressant à toute la classe. Après avoir introduit la notion de conditions, de déclarations « si » et de boucles, la classe peut s'entrainer ensemble, à l'aide d'un programme pré-écrit, d'un paquet de cartes et d'un tirage au sort.
+        pdfs:
+          - unplug6
+        video: Unplug6
       Unplug7:
         title: Ecriture de chanson
         desc: Lire les paroles d’une chanson est une entreprise très intuitive pour la plupart des élèves. Nous allons prendre une activité qui fait déjà partie du savoir collectif et la transformer en une solide formation sur la définition et l'appel de fonctions. Une fois que les élèves ont compris le processus de définition/appel, nous ajoutons les fonctionnalités supplémentaires qui accompagnent le passage des paramètres lors des appels de fonction.
+        pdfs:
+          - unplug7
+        video: Unplug7
       Unplug8:
         title: Abstraction
         desc: Cette activité associe le quotidien de vos élèves et un jeu de réflexion de type Mad-Libs (histoire à trous) permettant à votre classe d'appréhender l’efficacité de l'abstraction.
+        pdfs:
+          - unplug8
+        video: Unplug8
       Unplug9:
         title: Relayer la programmation
         desc: Cette leçon emprunte une idée d'une activité précédente (4. La programmation sur papier millimétré) et utilise ces compétences pour insister sur l'importance de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement ces programmes pour y repérer les « bogues ».
+        pdfs:
+          - unplug9
+        video: Unplug9
       Unplug10:
         title: Internet et les réseaux connectés
         desc: Dans cette leçon, les élèves vont faire semblant de naviguer sur Internet, tout en apprenant ce que sont les adresses Web, les adresses IP et les DNS.
+        pdfs:
+          - unplug10
+        video: Unplug10
       Unplug11:
         title: Conclusion
         desc: La conclusion de cette première série de 20 heures aidera la classe à revivre ses moments préférés, tout en lui annonçant des étapes à suivre, en solo, si elle souhaite poursuivre la découverte de l'informatique.
+        pdfs:
+          - unplug11
+        video: Unplug11
       UnplugHappyMaps:
         title: Cartes Joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
@@ -152,6 +185,7 @@ fr:
         title: Activité manuelle
         desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient méchant en ligne.
       deeper learning description:
+        title: ''
         desc: 'traduction manquante : en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algorithmes du Monde Réel : Planter une Graine'
@@ -231,6 +265,42 @@ fr:
       courseB_unplugged_MRF_2018:
         title: Mes amis les robots
         desc: Apprends à programmer en écrivant du code pour tes amis !
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
       PlantASeed_2018:
         title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, en prenant, comme exemple, l’action de planter une graine. Elle se concentre également sur l'informatique en général, et le rôle essentiel que jouent les algorithmes.
@@ -275,6 +345,7 @@ fr:
         desc: Les élèves créent des bracelets comme des représentations binaires de la première lettre de leur nom. Les élèves apprennent que les données peuvent être représentées et stockées de plus d’une façon.
       MoveItMoveIt_2018:
         title: Bouge, Bouge
+        desc: ''
       courseB_unplugged_CnC_2018:
         title: C'est Super de Créer et de Jouer Équitablement
         desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre le processus créatif de partage et d'inspiration. Parallèlement à cela vient la promotion de l'expression créative et le besoin d'être juste avec le travail créatif.
@@ -348,6 +419,7 @@ fr:
         title: 'Algorithmes du Monde Réel : Avions en Papier'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions en papier. Cette leçon se concentre également sur l'informatique, en général, et le rôle essentiel que jouent les algorithmes.
       test-uid-passthrough:
+        title: ''
         desc: "# Session de Scénarios de Recrutement\\r\\r## Swipe Right for CS \\rPour cette session, nous utiliserons un outil appelé « Swipe Right for CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for CS, vous lirez certains profils d'étudiants et envisagerez des déclarations spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire à votre cours sur les Principes de l’Informatique. \\r\\r## Comment ça marche\\rLorsque vous jouerez à Swipe Right for CS, vous verrez une série de citations que vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur les citations qui, selon vous, seraient efficaces pour convaincre cet étudiant, en particulier, de s'inscrire au cours et glisserez vers la gauche sur les déclarations qui, selon vous ne seraient pas efficaces. Au cours de la session, nous discuterons en groupe de vos réflexions sur les types de déclarations les plus efficaces pour amener un étudiant à s'inscrire en Informatique, et vous aurez l'occasion de voir comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.\\r<br><br><br><br>\\r\\r<span style=\"display:none\">submitButton next-stage</span>\\r\\r <a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid = < user_id/>\"> Cliquez ici pour jouer à Swipe Right for CS !< /a> \\r \\r"
       PlantASeed_2019:
         title: 'Algorithmes du Monde Réel : Planter une Graine'
@@ -363,6 +435,7 @@ fr:
         desc: Dans cette leçon, tu découvriras les boucles!
       MoveItMoveIt_2019:
         title: Bouge, Bouge
+        desc: ''
       DigitalFootprint_2019:
         title: Ton Empreinte Numérique
         desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne des informations personnelles crée une empreinte numérique, ou « trace », qui a des conséquences.

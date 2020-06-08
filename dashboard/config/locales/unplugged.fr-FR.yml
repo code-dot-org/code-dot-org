@@ -12,6 +12,9 @@ fr:
           de vocabulaire qui sont associés aux leçons qui suivent. Cependant, les
           leur présenter de manière amusante et ludique à ce stade est beaucoup plus
           productif que d'attendre des occasions plus avancées futures.
+        pdfs:
+        - unplug1
+        video: Unplug1
       Unplug2:
         title: Algorithmique
         desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
@@ -25,6 +28,9 @@ fr:
           un monstre choisi. Les groupes échangeront alors leurs algorithmes entre
           eux et dessineront le monstre sur les indications de l'algorithme. Le dessin
           représente-t-il ce que la première équipe avait prévu ?
+        pdfs:
+        - unplug2
+        video: Unplug2
       Unplug3:
         title: Programmation sur papier quadrillé
         desc: En se programmant les uns les autres pour créer des images, les étudiants
@@ -33,6 +39,9 @@ fr:
           carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
           Si il reste du temps à la fin du cours, les élèves pourront alors inventer
           leurs propres images.
+        pdfs:
+        - unplug3
+        video: Unplug3
       Unplug4:
         title: Algorithmes
         desc: Cette leçon traite des algorithmes. Le premier exercice se fait à l'aide
@@ -41,6 +50,9 @@ fr:
           possible. Par la suite, la classe explorera les différentes façons de plier
           un morceau de papier en rectangle, en notant comment certaines méthodes
           peuvent requérir plus ou moins de plis que d'autres.
+        pdfs:
+        - unplug4
+        video: Unplug4
       Unplug5:
         title: fonctions
         desc: Dans cette leçon, les élèves fabriqueront un capteur de soleil à l’aide
@@ -55,12 +67,18 @@ fr:
           spécifiques et créer des termes vagues pour les fournitures personnelles.
           Cette utilisation d'espaces réservés génériques est une merveilleuse introduction
           aux variables.
+        pdfs:
+        - unplug5
+        video: Unplug5
       Unplug6:
         title: Conditions
         desc: Il s'agit d'un jeu s’adressant à toute la classe. Après avoir introduit
           la notion de conditions, de déclarations « si » et de boucles, la classe
           peut s'entrainer ensemble, à l'aide d'un programme pré-écrit, d'un paquet
           de cartes et d'un tirage au sort.
+        pdfs:
+        - unplug6
+        video: Unplug6
       Unplug7:
         title: Ecriture de chanson
         desc: Lire les paroles d’une chanson est une entreprise très intuitive pour
@@ -69,26 +87,41 @@ fr:
           et l'appel de fonctions. Une fois que les élèves ont compris le processus
           de définition/appel, nous ajoutons les fonctionnalités supplémentaires qui
           accompagnent le passage des paramètres lors des appels de fonction.
+        pdfs:
+        - unplug7
+        video: Unplug7
       Unplug8:
         title: Abstraction
         desc: Cette activité associe le quotidien de vos élèves et un jeu de réflexion
           de type Mad-Libs (histoire à trous) permettant à votre classe d'appréhender
           l’efficacité de l'abstraction.
+        pdfs:
+        - unplug8
+        video: Unplug8
       Unplug9:
         title: Relayer la programmation
         desc: Cette leçon emprunte une idée d'une activité précédente (4. La programmation
           sur papier millimétré) et utilise ces compétences pour insister sur l'importance
           de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement
           ces programmes pour y repérer les « bogues ».
+        pdfs:
+        - unplug9
+        video: Unplug9
       Unplug10:
         title: Internet et les réseaux connectés
         desc: Dans cette leçon, les élèves vont faire semblant de naviguer sur Internet,
           tout en apprenant ce que sont les adresses Web, les adresses IP et les DNS.
+        pdfs:
+        - unplug10
+        video: Unplug10
       Unplug11:
         title: Conclusion
         desc: La conclusion de cette première série de 20 heures aidera la classe
           à revivre ses moments préférés, tout en lui annonçant des étapes à suivre,
           en solo, si elle souhaite poursuivre la découverte de l'informatique.
+        pdfs:
+        - unplug11
+        video: Unplug11
       UnplugHappyMaps:
         title: Cartes Joyeuses
         desc: Les élèves créent des algorithmes simples (ensemble d'instructions)

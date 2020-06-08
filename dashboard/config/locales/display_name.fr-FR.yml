@@ -34,6 +34,9 @@ fr-FR:
       CSD Buzzer Map: 'Circuit Playground : Buzzer'
       CSD Buzzer Map_2018: 'Circuit Playground : Buzzer'
       CSD Buzzer Map_2019: 'Circuit Playground : Buzzer'
+      CSD Counter Pattern Map: The Counter Pattern
+      CSD Counter Pattern Map_2018: The Counter Pattern
+      CSD Counter Pattern Map_2019: The Counter Pattern
       CSD If Else Map: Instructions « si-alors »
       CSD If Else Map_2018: Instructions « si-alors »
       CSD If Else Map_2019: Instructions « si-alors »
@@ -121,6 +124,7 @@ fr-FR:
       CSD U2 lists map: Listes en HTML
       CSD U2 lists map_2018: Listes en HTML
       CSD U2 lists map_2019: Listes en HTML
+      CSD U2 publish video: Publishing Your Website
       CSD U2L01 TFMD_2018: Aperçu de la leçon
       CSD U2L01 TFMD_2019: Aperçu de la leçon
       CSD U2L02 TFMD_2018: Aperçu de la leçon
@@ -184,6 +188,7 @@ fr-FR:
       CSD U3 Entertainment Sample 4: Scènes de sprites
       CSD U3 Entertainment Sample 4_2018: Scènes de sprites
       CSD U3 Entertainment Sample 4_2019: Scènes de sprites
+      CSD U3 Functions Call Function_2019: 'Video: Calling and Defining Functions'
       CSD U3 Interactive Card Exemplar_2018: Carte interactive
       CSD U3 Interactive Card Exemplar_2019: Carte interactive
       CSD U3 Keyboard Input Challenge: 'Défi : Ajoute plus d’entrées'
@@ -285,9 +290,11 @@ fr-FR:
       CSD U3 finishing touches: Projet - Finitions
       CSD U3 finishing touches_2018: Projet - Finitions
       CSD U3 finishing touches_2019: Projet - Finitions
+      CSD U3 function video: 'Video: Functions'
       CSD U3 functions review: Révision des fonctions
       CSD U3 functions review_2018: Révision des fonctions
       CSD U3 functions review_2019: Révision des fonctions
+      CSD U3 if else predict: Predict
       CSD U3 interactions map: Révision des interactions de sprite
       CSD U3 interactions map_2018: Révision des interactions de sprite
       CSD U3 interactions map_2019: Révision des interactions de sprite
@@ -312,6 +319,9 @@ fr-FR:
       CSD U3 platform sample3: Saut de lapin
       CSD U3 platform sample3_2018: Saut de lapin
       CSD U3 platform sample3_2019: Saut de lapin
+      CSD U3 plotting shapes map: Plotting Shapes in Game Lab
+      CSD U3 plotting shapes map_2018: Plotting Shapes in Game Lab
+      CSD U3 plotting shapes map_2019: Plotting Shapes in Game Lab
       CSD U3 rect: Introduction au labo de jeux
       CSD U3 rect_2018: Introduction au labo de jeux
       CSD U3 rect_2019: Introduction au labo de jeux
@@ -420,8 +430,14 @@ fr-FR:
       CSD U4L16 autoSFLP_2019: Aperçu de la leçon
       CSD U5 Amazon Data Video: Collecte d’informations sur les utilisateurs
       CSD U5 Amazon Data Video_2018: Collecte d’informations sur les utilisateurs
+      CSD U5 Amazon Data Video_2019: How Amazon Uses Data
+      CSD U5 Netflix Data Video_2019: How Netflix Uses Data
       CSD U5 Waze Data Video: Collecte d’informations sur les utilisateurs
       CSD U5 Waze Data Video_2018: Collecte d’informations sur les utilisateurs
+      CSD U5 Waze Data Video_2019: How Waze Uses Data
+      CSD U5 binary video: Binary and Data
+      CSD U5 binary video_2018: Binary and Data
+      CSD U5 binary video_2019: Binary and Data
       CSD U5 black white images pixelation: Widget de pixellisation en noir et blanc
       CSD U5 black white images pixelation 2: Widget de pixellisation en noir et blanc
       CSD U5 black white images pixelation 2_2018: Widget de pixellisation en noir
@@ -486,6 +502,7 @@ fr-FR:
       CSD U6 arrays intro: Introduction aux Tableaux
       CSD U6 arrays intro_2018: Introduction aux Tableaux
       CSD U6 arrays intro_2019: Tableaux
+      CSD U6 arrays video: 'Video: Introduction to Arrays'
       CSD U6 challenge motorcycle_2018: 'Défi : Moto'
       CSD U6 challenge motorcycle_2019: 'Défi : Moto'
       CSD U6 circuit LED map: Circuits et LEDs
@@ -593,6 +610,9 @@ fr-FR:
       CSD colorLed Map: 'Circuit Playground : LEDs couleur'
       CSD colorLed Map_2018: 'Circuit Playground : LEDs couleur'
       CSD colorLed Map_2019: 'Circuit Playground : LEDs couleur'
+      CSD onBoardEvent Map: Responding to Board Events
+      CSD onBoardEvent Map_2018: Responding to Board Events
+      CSD onBoardEvent Map_2019: Responding to Board Events
       CSD-Arrays: Modifier et créer des tableaux
       CSD-Arrays_2018: Modifier et créer des tableaux
       CSD-Arrays_2019: Modifier et créer des tableaux
@@ -615,6 +635,7 @@ fr-FR:
       'CSD: Drawing in Game Lab 2_2019': 'Vidéo : Dessiner dans le labo des jeux -
         Partie 2'
       'CSD: For Loop_2018': Boucles « Pour »
+      'CSD: For Loop_2019': 'Video: For Loops'
       'CSD: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle draw'
       'CSD: Introduction to the Draw Loop_2018': 'Vidéo : Introduction à la boucle
         draw'
@@ -629,10 +650,25 @@ fr-FR:
       CSDU4 Design Mode Video: Introduction au mode création
       CSDU4 Design Mode Video_2018: Introduction au mode création
       CSDU4 Design Mode Video_2019: Introduction au mode création
+      CSDU4 Project Bug Feature: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2018: 'App Project: Bugs and Features'
+      CSDU4 Project Bug Feature_2019: 'App Project: Bugs and Features'
+      CSDU4 Project Events: 'App Project: Linking Screens'
+      CSDU4 Project Events_2018: 'App Project: Linking Screens'
+      CSDU4 Project Events_2019: 'App Project: Linking Screens'
+      CSDU4 Project Import: 'App Project: Screen Import'
+      CSDU4 Project Import_2018: 'App Project: Screen Import'
+      CSDU4 Project Import_2019: 'App Project: Screen Import'
+      CSDU6 - UI and Inputs - getNumber: getNumber
+      CSDU6 - board event challenge_2018: Sound Board
+      CSDU6 - board event challenge_2019: Sound Board
       CSDU6 buzzer 2d arrays_2018: Tableaux 2D
       CSDU6 buzzer 2d arrays_2019: Tableaux 2D
       CSDU6 buzzer.stop_2018: Arrêter la musique
       CSDU6 buzzer.stop_2019: Arrêter la musique
+      CSS U2 Body Map: The Body Element
+      CSS U2 Body Map_2018: The Body Element
+      CSS U2 Body Map_2019: The Body Element
       'Course E: Artist Project': Cours E Projet Artistique
       'Course E: Artist Project_2018': Cours E Projet Artistique
       'Course E: Artist Project_2019': Cours E Projet Artistique
@@ -677,6 +713,9 @@ fr-FR:
       Dance_Party_extras_speed_2019: Accélére la, ralenti la
       Dance_Party_extras_visible: Où iraient-ils ?
       Dance_Party_extras_visible_2019: Où iraient-ils ?
+      Final Personal Website: Final Personal Website
+      Final Personal Website_2018: Final Personal Website
+      Final Personal Website_2019: Final Personal Website
       Geometric Sun_2018: Soleil géométrique
       InspirationalArtwork_2018: Inspiration !
       Intro to Web Lab - Part 1: 'Vidéo : Introduction au labo du web - Partie 1'
@@ -689,6 +728,8 @@ fr-FR:
         2'
       Intro to Web Lab - Part 2_2019: 'Vidéo : Introduction au labo du web - Partie
         2'
+      Introduction to Variables - Part 1_2018: Introduction to Variables
+      Introduction to Variables - Part 1_2019: Introduction to Variables
       MC_HOC_2017_01_RETRY: Maison
       MC_HOC_2017_01_RETRY_2019: Maison
       MC_HOC_2017_02_Cole: La ferme
@@ -721,11 +762,19 @@ fr-FR:
       Oceans_Video_Machine_Learning: 'Vidéo : Apprentissage automatique'
       Oceans_Video_Societal_Implications: 'Vidéo : Conséquences sur la société'
       Oceans_Video_Training_Data: 'Vidéo : Données de formation'
+      Revisiting the Counter Pattern_2018: Revisiting the Counter Pattern
+      Revisiting the Counter Pattern_2019: Revisiting the Counter Pattern
       Robot Doodle_2018: 'Gribouillis de Robot
 
 '
       The Accelerometer_2018: L’accéléromètre
       The Accelerometer_2019: L’accéléromètre
+      Using Accelerometer Events_2018: Using Accelerometer Events
+      Using Accelerometer Events_2019: Using Accelerometer Events
+      'Video: Intro to CSS Part 2_2018': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS Part 2_2019': 'Video: Intro to CSS Part 2'
+      'Video: Intro to CSS_2018': 'Video: Intro to CSS'
+      'Video: Intro to CSS_2019': 'Video: Intro to CSS'
       courseA_video_Stevie: Stevie et le Grand Projet
       courseA_video_Stevie_2018: Stevie et le Grand Projet
       courseB_video_Unspotted: Les Bugs Passés Inaperçus

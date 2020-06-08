@@ -94,6 +94,49 @@ fr-FR:
         2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque
           carré pour compléter ce dessin.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Remember that the code from the last puzzle was:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Votre nouveau tournant devrait aller à la **fin**
           du code dans la boucle.
       2-3 Artist Loops New 12:
@@ -107,6 +150,9 @@ fr-FR:
         2-3_Artist_Loops_New_13_a: |-
           À la fin de chaque diamant, l’artiste est déjà dans la bonne direction pour commencer celui qui suit.
           Pour cette raison, nous n’avons pas besoin d’ajouter un bloc supplémentaire « tourner à gauche de » avant de recommencer.
+        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n\n-
+          \  move\n-   turn right 120 degrees\n-   move\n-   turn right 60 degrees
+          \ \n\nThen do it all again!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: L'artiste doit tourner à 45 degrés vers la droite
           avant de commencer à dessiner.
@@ -144,6 +190,19 @@ fr-FR:
         2-3_Bee_Conditionals_14_b: Si la fleur rouge était mauve, pourriez-vous trouver
           un moyen d'utiliser une boucle de répétition supplémentaire pour réduire
           le code?
+        2-3_Bee_Conditionals_14_c: |-
+          Try breaking this up into two separate chunks:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Gather nectar 3 times
+              -   Move forward 5 times
+              -   Check to see if nectar, if so: get it
+              -   Turn left
+
+          2.  Make honey
+              -   Move forward one time
+              -   Make two honey
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'N''oubliez pas: Les fleurs mauves n''ont seulement
           que 0 ou 1 nectar et ils peuvent changer à chaque fois que vous exécutez
@@ -1070,6 +1129,7 @@ fr-FR:
           </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Rappelle-toi des fonctions du niveau 16.
+        Course_4_SCF_1a_b: "Look at this path as your main route:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Envisage d’utiliser une boucle ˋpour\`. Pas pour les étapes
           mais comme paramètre de fonction.
         Course_4_SCF_1a_d: |-
@@ -1297,6 +1357,7 @@ fr-FR:
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: "Note que la forme de tous les points de miel est similaire.
           \ \n\nBon endroit pour une fonction !"
+        Course_4_SCF_1b_b: "Look at this idea for how the bee might travel:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: Envisage d’utiliser une boucle ˋpour\` pour la distance
           que l’abeille traverse.
         Course_4_SCF_1b_d: |-
@@ -2892,6 +2953,12 @@ fr-FR:
             </block>
           </xml>
       Course 4 SCV 2:
+        Course_4_SCV_2_a: |-
+          The completed image is made up of 10 of these "flowers":\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...which are made up of 10 of these decagons:\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Ce dessin utilise des boucles imbriquées (trois de profondeur).
           Toutes les boucles s’exécutent ˋcôtés\` fois. '
         Course_4_SCV_2_c: L’artiste tourne à gauche en créant chaque décagone, mais
@@ -3249,6 +3316,10 @@ fr-FR:
             </block>
           </xml>
       Course 4 SCV 5:
+        Course_4_SCV_5_a: |-
+          Take a look at this option for movement:
+
+          ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
         Course_4_SCV_5_b: À chaque fois que la boucle s’exécute, les fleurs ont deux
           nectars de moins et l’abeille doit fabriquer un miel supplémentaire.
         Course_4_SCV_5_c: Note qu’au début de la boucle extérieure, l’abeille bouge
@@ -3378,6 +3449,10 @@ fr-FR:
             </block>
           </xml>
       Course 4 SCV 6:
+        Course_4_SCV_6_a: |-
+          Take a look at what a single completed shape looks like
+
+          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: 'Il sera utile de créer 8 variables : rouge1, vert1, bleu1,
           rouge2, vert2, bleu2, longueur et côtés.'
         Course_4_SCV_6_c: Chacun des 5 côtés de la forme est séparé en morceaux de
@@ -4195,6 +4270,117 @@ fr-FR:
           Le bloc ˋdéfinis alphaˋ utilise la division pour faire s’effacer la couleur au fur et à mesure que le compteur augmente.
         after: Quand tu as fini chaque « pétale », assure-toi d’ˋavancerˋ de 20 pixels
           avant de tourner de 60 degrés.
+        solution: |-
+          **Solution**
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_colour" inline="true" id="draw-color">
+                      <value name="COLOUR">
+                        <block type="colour_picker">
+                          <title name="COLOUR">#0000cd</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">6</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="controls_for_counter" inline="true">
+                            <mutation counter="counter"></mutation>
+                              <value name="FROM">
+                                <block type="math_number">
+                                  <title name="NUM">3</title>
+                                </block>
+                              </value>
+                              <value name="TO">
+                                <block type="math_number">
+                                  <title name="NUM">17</title>
+                                </block>
+                              </value>
+                              <value name="BY">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="alpha" inline="true" id="alpha">
+                                  <value name="VALUE">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">DIVIDE</title>
+                                      <value name="A">
+                                        <block type="math_number">
+                                          <title name="NUM">500</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn" inline="false">
+                                      <mutation name="draw a polygon">
+                                      <arg name="length"></arg>
+                                      <arg name="sides"></arg>
+                                      </mutation>
+                                      <value name="ARG0">
+                                        <block type="math_number">
+                                          <title name="NUM">30</title>
+                                        </block>
+                                      </value>
+                                      <value name="ARG1">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">20</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnRight</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">60</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+            </xml>
       NEW Course 4 Bee For Loops 10a:
         NEW_Course_4_Bee_For_Loops_10a_a: Peux-tu trouver un modèle entre le nombre
           d'étapes que tu dois effectuer et le nombre de nectars à recueillir ?
@@ -4208,6 +4394,9 @@ fr-FR:
         NEW_Course_4_Bee_For_Loops_8_a: "Si ta boucle compte, l’augmentation est ajouté
           à ta variable compteur à chaque fois. \n\nQue dois-tu ajouter à chaque nombre
           pour avoir le nombre qui suit ?"
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
       OPD-K5-events-2:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       OPD-K5-events-3:
@@ -4595,7 +4784,28 @@ fr-FR:
         courseA_collector_loops_challenge1_c: Il y a 6 gemmes sur la droite de la
           grotte, mais tu n’as besoin de bouger et de collecter que 5 fois. Sais-tu
           pourquoi ?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: You only need to use one ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) block to solve this.
+        courseA_collector_loops_challenge2_a: |-
+          You can move back over the path a second time before moving south.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Start by looping the commands `move south` and `get treasure`.
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          The north pattern is a little different than the south pattern.
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
         courseB_collector_loops_challenge1_c: "Déplace-toi à l’Est deux fois entre
           chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block
           type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nTu peux résoudre ceci
@@ -4842,7 +5052,20 @@ fr-FR:
         courseD_bee_conditionals_challenge1_b: Dans ce puzzle, chaque espace peut
           avoir une fleur, un nid d'abeilles ou rien. Cela signifie que tu peux répéter
           chaque condition `si/autre` sur chaque place.
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: The original code would work great - if there
+          was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Utilise des boucles pour ne pas être à court
           de blocs ˋcollecter\` !
       course2_collector_prog_challenge1:
@@ -4857,6 +5080,33 @@ fr-FR:
         courseC_harvester_loops_challenge1_b: Tu peux répéter ˋavancer`et ˋrécolter
           maïs` autant de fois que nécessaire, puis ˋtourner à droite\` dans chaque
           coin.
+        courseC_harvester_loops_challenge1_c: |-
+          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Utiliser un zig-zag est un moyen de
           le résoudre. Une spirale peut être un autre moyen ! Il y a plusieurs solutions
@@ -4874,11 +5124,21 @@ fr-FR:
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: Pense à ce chemin comme étant 2 différente
           parties. Chacune d'elles à un modèle qui se répète.
+        courseC_maze_loops_challenge1_b: In between each `repeat` block, you will
+          need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+        courseC_maze_loops_challenge1_c: |-
+          If you make it this far, you just need to `turn left` then `move forward` a few times. Don't give up!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _"Si tu me fais aller en arrière, fais
           très attention de me faire tourner dans le bon sens!"_
         courseC_maze_programming_challenge2_b: La solution la plus courte n’utilise
           que 5 blocs, mais elle utilise le bloc ˋrépéter\` !
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: If you call the function one more time,
+          you can create the same design in the final corner. You can also `jump to`
+          other positions or change the whole thing around however you want!
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -5036,23 +5296,20 @@ fr-FR:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          Ensuite, collecte les joyaux restants, dans cette rangée.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Ajoute ces blocs à ton programme.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO
+          gems from each of the first two piles.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Ensuite, collecte les joyaux restants,
+          dans cette rangée.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAjoute ces blocs à ton programme.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Enfin, collecte le trésor restant.
           Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -5145,6 +5402,11 @@ fr-FR:
           -   Faire dire quelque chose au dinosaure.
           -   Mettre un nouvel arrière-plan.
           -   Faire disparaitre tous les acteurs et montrer un message "Fin du Jeu".
+      course4_artist_binary_challenge2:
+        courseD_artist_binary_challenge2_a: |-
+          The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
+
+          There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       course4_artist_concept_challenge2:
         courseE_artist_concept_challenge2_a: Dès que tu as définis une fonction, tu
           peux l'appeler encore et encore - n'importe quand, dès que tu le souhaites!
@@ -5674,6 +5936,10 @@ fr-FR:
               </next>
             </block>
           </xml>
+      course4_harvester_nested_loops_challenge1:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used
+          a loop to create a zig-zag pattern. If you remember that algorithm, you
+          can make a few additions to it here.
       course4_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
           Tu auras besoin de blocs supplémentaires de la boîte à outils pour amener les acteurs à parler.
@@ -12382,7 +12648,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12393,7 +12659,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12404,7 +12670,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12810,24 +13076,13 @@ fr-FR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Ensuite, collecte les joyaux restants, dans cette rangée.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Ajoute ces blocs à ton programme.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Ensuite, collecte les joyaux restants,
+          dans cette rangée.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAjoute ces blocs à ton programme.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Enfin, collecte le trésor restant.
           Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -13244,8 +13499,8 @@ fr-FR:
           de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les
           ramasser !
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'Il y a une nouvelle boucle : `répéter jusqu''à
-          la citrouille`. Vois-tu comment l''utiliser dans cette énigme ?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until there are
+          pumpkins`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Il pourrait y avoir plus d'un plant de maïs ou
           de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les
           ramasser !
@@ -14753,6 +15008,9 @@ fr-FR:
           trajet ?
       courseE_bee_concept2_2018:
         courseE_bee_concept2_a: Une boucle `Tant que` aiderait ici?
+        courseE_bee_concept2_d: 'With this `while` loop you  can check empty spaces
+          to see if the amount of honey is > 0. This does the same as the `while there
+          is honey` loop. '
         courseE_bee_concept2_b: Tu peux utiliser des boucles `tant que` pour aller
           au bout de chaque chemin, et ramasser tous le miel dans chaque espace.
         courseE_bee_concept2_c: Dans quel sens l'abeille doit tourner après chaque
