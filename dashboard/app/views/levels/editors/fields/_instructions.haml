@@ -1,68 +1,7 @@
-%fieldset.control-group
+%h1.control-legend{data: {toggle: "collapse", target: "#instructions"}}
+  Instructions
 
-  %legend.control-legend{data: {toggle: "collapse", target: "#instructions"}}
-    Instructions
-
-  #instructions.in.collapse
-
-    %p
-      Every level can have a combination of short and long instructions. When both
-      are present, the long instructions will be presented by default but the
-      instructions component can be "collapsed" down to show just the short
-      instructions. This allows us to provide both detailed, potentially verbose
-      instructions in the long instructions and short reminders of level goals
-      that don't take up too much screen space in the short instructions.
-
-    %p
-      If only one version of instructions is provided, only that version will be
-      shown.
-
-    %p
-      If neither instructions field is provided, the entire instructions component
-      (including the hint prompt) will be omitted.
-
-    .field
-      = f.label :short_instructions, "Short Instructions"
-      ~ f.text_area :short_instructions,
-        placeholder: 'some short, plaintext instructions, used to quickly communicate the goals of the level without taking up too much vertical real estate',
-        rows: 4, class:"input-block-level"
-
-    .field
-      = f.label :long_instructions, "Long Instructions"
-      %p
-        You can drag-and-drop or paste images in to this box, and they will be
-        uploaded to a suitable location.
-      %p
-        markdown-enabled instructions can take advantage of
-        = link_to 'various markdown rendering options', 'https://commonmark.org/help/'
-        to provide more in-depth (and more vertically intrusive) instruction.
-
-      %div{ style: 'border: 8px solid rgb(239, 239, 239)' }
-        #level_long_instructions_preview{ style: 'padding: 20px' }
-        %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
-          ~ f.text_area :long_instructions, rows: 4
-
-    .field
-      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :instructions_important, description: "Mark Instructions as Important"}
-      %p
-        Are these instructions particularly important? Is this level
-        introducing some new concept or is set up in some unusual way that
-        would be particularly confusing if the student were to jump right in
-        and start solving without looking at the instructions first?
-
-    = render partial: 'levels/editors/fields/tts', locals: {f: f}
-
-:javascript
-  var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
-    callback: function (editor, change) {
-      convertXmlToBlockly(document.getElementById('level_long_instructions_preview'));
-
-      localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
-    },
-    attachments: true
-  });
-
-  var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');
-  if (locallyStoredMarkdown) {
-    mdEditor.setValue(locallyStoredMarkdown);
-  }
+#instructions.in.collapse
+  = render partial: 'levels/editors/fields/short_instructions', locals: {f: f} unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(FrequencyAnalysis) || @level.is_a?(PublicKeyCryptography)|| @level.is_a?(Vigenere))
+  = render partial: 'levels/editors/fields/long_instructions', locals: {f: f}
+  = render partial: 'levels/editors/fields/tts', locals: {f: f} unless @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(Widget)
