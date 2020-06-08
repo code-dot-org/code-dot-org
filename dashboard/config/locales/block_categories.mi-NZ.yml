@@ -3,12 +3,30 @@ mi:
   data:
     block_categories:
       Actions: Ngā Hohenga
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Tae
+      Comment: Comment
+      Comments: Comments
       Conditionals: Ngā Here
+      Dancers: Dancers
+      Default: Default
       Events: Ngā Takunetanga
       Functions: Ngā Taumahi
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Ararau
       Loops: Ngā Koromeke
       Math: Pāngarau
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Kuputuhi
       Variables: Ngā Taurangi
+      'Variables ': 'Variables '
+      World: World
