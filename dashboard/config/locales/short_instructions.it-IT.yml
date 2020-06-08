@@ -605,7 +605,175 @@ it-IT:
       4-5 While Loops Assessment 1: Questo è un esercizio di riepilogo -- Ci sono
         molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere i
         mucchi di terra per rendere livellato il terreno.
+      AB_Debug_PlayLab3: Move the knight to each of the flags. If something goes wrong,
+        look for bugs!
       Alien Defender: 'Idea di progetto: costruisci un gioco di difesa nel Laboratorio!'
+      CDEF_debugging_flappy2: Why doesn't this game work?
+      CSD U3 Boolean Modify: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2018: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2019: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Predict: What do you think this code will do when it is run?
+        Predict what each console.log() command will print, then run the program to
+        check your predictions.
+      CSD U3 Boolean Predict_2018: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Boolean Predict_2019: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Keypress Boolean: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Boolean_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Boolean_2018_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Watchers_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 L5 Freeplay: Change the value of petalSize multiple times. How does it
+        change your drawing?
+      CSD U3 L5 Freeplay_2018: Change the value of petalSize multiple times. How does
+        it change your drawing?
+      CSD U3 L5 Freeplay_2019: Change the value of petalSize multiple times. How does
+        it change your drawing?
+      CSD U3 Mouse Input Bee 2: Do this
+      CSD U3 Mouse Input Bee 2_2018: Do this
+      CSD U3 Mouse Input Bee 2_2019: Do this
+      CSD U3 Sprites intro sprites: Do This
+      CSD U3 Sprites intro sprites_2018: Do This
+      CSD U3 Sprites intro sprites_2019: Do This
+      CSD U3 Variables change circle size: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables change circle size_2019: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables naming rules v2: Change the value of petalSize multiple times.
+        How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_2019: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random with assignment: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018: Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2019: Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U5 black white images pixelation: Complete the X shape by typing 0s and
+        1s
+      CSD U5 black white images pixelation 2: Draw a smiley face (click here to see
+        image)
+      CSD U5 black white images pixelation 2_2018: Draw a smiley face (click here
+        to see image)
+      CSD U5 black white images pixelation 2_2019: Draw a smiley face (click here
+        to see image)
+      CSD U5 black white images pixelation 3: Change the width and height sliders
+        to find the image (click here to see more)
+      CSD U5 black white images pixelation 3_2018: Change the width and height sliders
+        to find the image (click here to see more)
+      CSD U5 black white images pixelation 3_2019: Change the width and height sliders
+        to find the image (click here to see more)
+      CSD U5 black white images pixelation 4: Add eyebrows to the smiley face (click
+        here to see the image)
+      CSD U5 black white images pixelation 4_2018: Add eyebrows to the smiley face
+        (click here to see the image)
+      CSD U5 black white images pixelation 4_2019: Add eyebrows to the smiley face
+        (click here to see the image)
+      CSD U5 black white images pixelation 5: Draw anything you like
+      CSD U5 black white images pixelation 5_2018: Draw anything you like
+      CSD U5 black white images pixelation 5_2019: Draw anything you like
+      CSD U5 black white images pixelation_2018: Complete the X shape by typing 0s
+        and 1s
+      CSD U5 black white images pixelation_2019: Complete the X shape by typing 0s
+        and 1s
+      CSD U6 params modify clouds: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+
+        -   Create a new function `moveCloud(name)` that will move any cloud.
+            -   (Hint: you will use almost all the same code as the `moveCloud0` function)
+        -   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+            -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+
+        -   Create a new function `moveCloud(name)` that will move any cloud.
+            -   (Hint: you will use almost all the same code as the `moveCloud0` function)
+        -   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+            -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify planes: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2018: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2019: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSDU4 - Design Mode - 16: Add an event handler for the button using the "Insert
+        and show" link in the Design Mode Events tab. (Click to see full instructions).
+      CSDU4 - Design Mode - 17: Update the ID names and `console.log` messages to
+        match the correct button. (Click to see full instructions.)
+      CSDU4 - Design Mode - 18: Fix the layout of the bullseye game. (Click to see
+        full instructions)
+      CSDU4 - Design Mode - 4: Improve the button by choosing a descriptive and meaningful
+        ID. (Click to see full instructions)
+      CSDU6 arrays select rainbow: Write the contents of the array to the screen in
+        numerical order. (Click to see full instructions)
+      CSDU6 arrays select rainbow_2018: Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays select rainbow_2019: Write the contents of the array to the screen
+        in numerical order. (Click to see full instructions)
+      CSDU6 arrays select random: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2018: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2019: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2018: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2019: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       Choose Your Own Adventure: Puoi fare ciò che vuoi nel Laboratorio! Ecco qui
         come esempio una storia di avventura.
       Course 4 Artist 1: Aiutami a disegnare un quadrato. (Ogni lato è lungo 200 pixel)
@@ -1212,6 +1380,7 @@ it-IT:
         per rendere speciale il tuo acquario!
       FoodFight: Questo è un esempio di gioco che si può realizzare nell'ambiente
         del Laboratorio.
+      Frequency Analysis: Test
       Function intro Ryan: Usa due volte la funzione `costruisci un ponte` per creare
         un sentiero fino alla torcia di pietrarossa.
       Function intro Ryan_2019: Usa due volte la funzione `costruisci un ponte` per
@@ -1644,6 +1813,51 @@ it-IT:
       NEW Course 4 Play Lab Params 11: 'Tempo di giocare: divertiti a creare il gioco
         che preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15">alcune
         idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi.'
+      NetSim Standalone Automatic DNS: In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast: In this version of the Internet Simulator, you
+        can connect to up to 5 other people in a room. When you send messages in the
+        room, everyone receives them. What are some of the challenges of this system,
+        and how might you solve them?
+      NetSim Standalone Classroom Routers: In this version of the Internet Simulator,
+        everyone connects to a router and has a specific address. To send messages,
+        you have to address your message to the specific address of the recipient,
+        and the router will take care of delivering it to the right computer. If there
+        are other routers created in your class, ask for the address of one of your
+        classmates and send them a message! View the Log Router to see the path the
+        messages have taken through the network.
+      NetSim Standalone Freeplay: In this configuration, most of the options are turned
+        on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS: In this version of the simulator you can't see
+        the other students' addresses.  Instead, one of you must act as a name service,
+        to help share addresses with each other.
+      NetSim Standalone Packets TCP: 'Messages on the Internet can take many paths
+        to get to their destination, and sometimes along the way the message gets
+        dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters. '
+      NetSim Standalone SendAB: You and your partner share a single wire that can
+        only be in state A or state B. You can set the wire to either state at any
+        time, and you can read the state of the wire at any time. Can you figure out
+        a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers: 'You and your partner can now reliably send
+        messages back and forth without extra coordination! While you''re always sending
+        bits back and forth, you can also represent those bits as decimal numbers.
+        What kinds of information can you represent with this system? '
+      NetSim Standalone Sending Numbers Ascii: 'Now that you''ve transmitted information
+        represented as decimal numbers, you can map those numbers to text characters
+        to send text-based information back and forth. With a text-based protocol,
+        you can easily represent and communicate all kinds of information. '
+      New Artist Project: Draw something awesome! Your code is saved as a project
+        that you can return to at any time.
+      New Basketball Project: Create your own Basketball game. You can change all
+        the rules. When you're done, click Share to let friends try your game on their
+        phones.
+      New Bounce Project: Create your own Bounce game. You can change all the visuals
+        and the rules. When you're done, click Share to let friends try your game
+        on their phones.
       New Gumball Project: Crea il tuo gioco con i personaggi di Disney Infinity e
         condividilo!
       New Ice Age Project: Crea il tuo gioco con i personaggi di Disney Infinity e
@@ -1655,6 +1869,10 @@ it-IT:
       New Sports Project: 'Ora comandi tu. Puoi modificare tutte le regole, combinando
         i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per
         consentire agli amici di provare il tuo gioco sui loro telefoni.'
+      OPD-K5 whats your plan: Take a moment now to consider how and when you will
+        complete this online course to ensure you get the most benefit from the experience.
+        When you've got a good plan sketched out, continue on to dive more deeply
+        into Computer Science Fundamentals.
       OPD-K5-events-2: Collega il blocco `sbatti le ali per un numero di volte normale`
         all'evento `quando si clicca`, quindi premi "Esegui". Clicca o tocca nello
         spazio di gioco per far volare Flappy verso la sua destinazione.
@@ -1758,6 +1976,27 @@ it-IT:
         per raccogliere la lana da entrambe le pecore.
       Overworld Shear Sheep_2019: È il momento di tosare le pecore! Usa l'istruzione
         `tosa` per raccogliere la lana da entrambe le pecore.
+      Pixelation - Lesson 15 - Color Shades: We start you out with the row of shades
+        of red that Maddie created in the video. Experiment with 6-bit color by filling
+        in the bottom row of the image with shades of a different color. Here is an
+        example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Color Shades 4x4: 'We start you out with the 4x4 image
+        Maddie created in the video. Your task is to fill a 4x4 grid with colors using
+        12-bits per pixel. Here are the requirements: Row 1 - fill with shades of
+        red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.'
+      Pixelation - Lesson 15 - Complete 3-bit color: We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. Finish off the
+        image by figuring out which two colors are missing and encode them.
+      Pixelation 4x4 Empty: The width and height are now encoded in the pixel data.
+        Can you figure out how to adjust the dimensions?
+      Pixelation Bee: 'This larger image of a bee encodes color with 12 bits per pixel,
+        but viewing in hex makes it easier to see the color of each pixel. If you
+        switch to binary mode - hold on to your hat - it''s a lot of bits. Here''s
+        another mind-blowing thing to try: slide the bits per pixel up to 24 bits
+        per pixel. What happens? Can you explain this behavior?'
+      Pixelation Flappy: Here is a bigger image at 9 bits per pixel. With 9 bits per
+        pixel you can express 512 different colors. Click through to see the next
+        image which is even more sophisticated, but easier to understand.
       Robot Doodle: 'Idea per un progetto: crea un''immagine di qualcosa del mondo
         reale che conosci bene. Realizzarlo richiede pianificazione e persistenza!'
       Robot Doodle_2018: 'Idea per un progetto: crea un''immagine di qualcosa del
@@ -1801,6 +2040,12 @@ it-IT:
         triangoli o ottagoni? Cosa succede se vari anche altri valori?
       Standalone_Artist_9: Ora continua e realizza qualsiasi figura desideri! Hai
         anche una funzione vuota che puoi riempire a tuo piacere!
+      U4 Model Design 1: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
+      U4 Model Design 1_2018: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
+      U4 Model Design 1_2019: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
       Underground Avoiding Lava: Sotto alcuni di questi blocchi c'è la lava, che devi
         coprire per poter andare avanti. L'istruzione `se` ti è utile in questi casi.
         Aggiungi un istruzione `vai avanti` nel posto giusto per estrarre tutte le
@@ -1823,6 +2068,7 @@ it-IT:
         buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Mining Coal_2019: Nel sottosuolo trovi le risorse più preziose,
         ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
+      Vigenere: Test
       Virtual Pet 1: Cosa pensi che succederà se cliccherai su "Esegui" e poi cliccherai
         su di lei?
       Virtual Pet 1 Predict: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
@@ -1845,7 +2091,14 @@ it-IT:
         le voci nel dizionario, il simbolo per la voce è inserito nel testo al posto
         del modello.
       behaviors 1: Fai una previsione!
+      behaviors 2: Fly the rocket to the stars!
+      behaviors 3: Help the rover outrun the robot!
+      behaviors 3a: 'Debug: Make all of the stars spin the same way!'
       behaviors 4: Fai una previsione!
+      behaviors 5: Move the astronaut diagonally.
+      behaviors 6: Make the ball roll.
+      behaviors 7: Drive off into the horizon!
+      behaviors free play: 'Free play: Create your own outer space scene!'
       bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso
         sinistra` e premi "Esegui". Poi sposta la racchetta usando la freccia verso
         sinistra per raggiungere la bandierina.
@@ -2034,9 +2287,18 @@ it-IT:
       course4_artist_fwp_challenge1: Prova ad eseguire questo programma e ad apportare
         modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+      course4_artist_variables_challenge1: You've now learned everything you need
+        to know to make a pattern like this! This puzzle is meant to be difficult.  Can
+        you stick with it until you figure out the solution?
+      course4_bee_for_challenge1: Use this for loop to collect all of the nectar.
+        There are a few actions that you will want to repeat 'counter' times.
       course4_bee_fwp_challenge1: Utilizza un ciclo con contatore in una funzione
         per raccogliere tutte le pannocchie. Lo stesso ciclo con contatore può avere
         diversi valori massimi sfruttando il parametro `length` (_lunghezza_).
+      course4_bee_fwp_challenge2: Use one `for loop` in a function to collect all
+        of the vegetables in the row. Make the `for loop` can count to different maximum
+        values by using the `length` parameter. Make your program as short as possible
+        by using a second `for loop` outside the function.
       course4_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
         Se vuoi, puoi anche raccoglierli tutti e 4.
@@ -2193,6 +2455,8 @@ it-IT:
         completare questo esercizio.
       courseA_collector_loops_challenge2kp_2019: Raccogli almeno **3** diamanti per
         completare questo esercizio.
+      courseA_collector_preLoops1: "This is Laurel the Adventurer! \n\nPress \"Run\"
+        to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2: |-
         Grande! Ora puoi aggiungere codice liberamente!
 
@@ -2378,18 +2642,30 @@ it-IT:
       courseA_playLab_events3_2018: Aggancia il blocco `sposta il cane a sinistra`
         al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
         già nell'area di lavoro.
+      courseA_playLab_events3_2019: Connect the `move left` block to the `when left`
+        event block that is already in the workspace. Use the arrow keys or press
+        the arrow buttons to move Jorge to the flag and finish the level!
       courseA_playLab_events4: Ora fai muovere il cane a destra quando si preme la
         freccia a destra.
       courseA_playLab_events4_2018: Aggiungi un altro blocco evento per far muovere
         il cane a destra quando si preme la freccia a destra.
+      courseA_playLab_events4_2019: Now, add another event block to get Jorge to move
+        right when the right arrow button is clicked. Use the arrow keys or press
+        the arrow buttons to move Jorge to both flags and finish the level!
       courseA_playLab_events5: Aggiungi gli eventi per far muovere il cane su e giù
         quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018: Aggiungi gli eventi per far muovere il cane su
         e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events5_2019: Add events to have Jorge move up and down when
+        the `up` and `down` buttons are pressed. Make Jorge get the flags to finish
+        the level!
       courseA_playLab_events6: Rendi questa scena più interessante, cambiando lo sfondo
         e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events6_2018: Rendi questa scena più interessante, cambiando
         lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
+      courseA_playLab_events6_2019: Make this more interesting by changing the background
+        and playing a random sound when Jorge is clicked. When your code is ready,
+        click on Jorge to try it out!
       courseA_playLab_events7: Aggiungi ciò che vuoi a questo gioco. Riesci a fare
         in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando
         sei soddisfatto, premi "Termina" per completare il corso.)
@@ -2412,6 +2688,9 @@ it-IT:
         quando ci clicchi sopra.
       courseA_playlab_events_challenge2_2019: Dai ad ognuno di loro qualcosa da fare
         quando ci clicchi sopra.
+      courseA_video_events: Need a better playlab/events combo
+      courseA_video_events_2018: Need a better playlab/events combo
+      courseA_video_events_2019: Need a better playlab/events combo
       courseB_Scrat_ramp1_2018: Per risolvere questo esercizio, aggancia insieme i
         blocchi e clicca su "▶ Esegui"!
       courseB_Scrat_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i
@@ -2888,6 +3167,8 @@ it-IT:
         Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
 
         Esegui il gioco e muovi il pinguino con le frecce finché non segni un punto.
+      courseC_PlayLab_eventsA_embed_2019: Let's play a game. Score 5 points by moving
+        the Penguin to the Octopus!
       courseC_PlayLab_eventsFP: Crea il tuo gioco. Quando hai finito, clicca su "Termina"
         per farlo provare agli amici sui loro smartphone (devi inviargli il link sotto
         alla scritta "Condividi il tuo gioco:"). Guarda delle possibili idee nei suggerimenti.
@@ -2920,10 +3201,14 @@ it-IT:
         di gioco, quindi fagli disegnare un uccello usando un adesivo. '
       courseC_artist_loops1a_2019: 'Fai in modo che l''artista vada al centro dell''area
         di gioco, quindi fagli disegnare un uccello usando un adesivo. '
+      courseC_artist_loops1b_2019: 'Change the direction your sticker is facing by
+        adding a `turn` command to your code. '
       courseC_artist_loops2a: Ora usa un ciclo per disegnare l'uccello 12 volte con
         un angolo di 30 gradi.
       courseC_artist_loops2a_2018: Ora usa un ciclo per disegnare l'uccello 12 volte
         con un angolo di 30 gradi.
+      courseC_artist_loops2a_2019: Now, use a loop to make more copies of your sticker.
+        Try changing the numbers in the turn and repeat blocks to make different patterns.
       courseC_artist_loops3a: Ora aggiungi un pipistrello!
       courseC_artist_loops3a_2018: Ora aggiungi un pipistrello!
       courseC_artist_loops3a_2019: Ora aggiungi un pipistrello!
@@ -3080,6 +3365,8 @@ it-IT:
         completare questa sfida!
       courseC_collector_prog_challenge2_2019: Raccogli almeno **10** diamanti per
         completare questa sfida!
+      courseC_data wizard: "Press Run. \nThe wizard will make animals appear. \n\nCount
+        them. \nWhat do you notice?"
       courseC_flappy_events1: Collega il blocco `sbatti le ali per un numero di volte
         normale` all'evento `quando si clicca`, quindi premi "Esegui". Clicca o tocca
         nello spazio di gioco per far volare Flappy verso la sua destinazione.
@@ -3679,6 +3966,14 @@ it-IT:
       courseD_bee_conditionals10: Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals10_2018: Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals10_2019: Raccogli tutto il nettare e fai tutto il miele.
+      courseD_bee_conditionals1_predict1: Check to see if there's a flower under the
+        cloud. If there's a flower, get nectar.
+      courseD_bee_conditionals1_predict1_2018: Check to see if there's a flower under
+        the cloud. If there's a flower, get nectar.
+      courseD_bee_conditionals1_predict1_2019: Check to see if there's a flower under
+        the cloud. If there's a flower, get nectar.
+      courseD_bee_conditionals1_predict1_copy: Check to see if there's a flower under
+        the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals2: Prima di prendere il nettare, controlla sotto ogni
         nuvola, per vedere se sta nascondendo un fiore.
       courseD_bee_conditionals2_2018: Prima di prendere il nettare, controlla sotto
@@ -4080,8 +4375,10 @@ it-IT:
         arrivarci usando i cicli?
       courseD_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat
         ad arrivarci usando i cicli?
+      courseD_maze_intro4_2019: Help Red reach the pig.
       courseD_maze_intro5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire
         come arrivare fino al maialino!
+      courseD_maze_intro5c_2019: Watch out for TNT! Help Red get to the pig.
       courseD_maze_nestedLoops3: Fai arrivare lo zombie fino al girasole usando il
         minor numero possibile di blocchi.
       courseD_maze_nestedLoops3_2018: Fai arrivare lo zombie fino al girasole usando
@@ -4147,6 +4444,8 @@ it-IT:
         labirinto!
       courseD_maze_ramp5c: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2018: Aiuta l'uccellino a raggiungere il maialino.
+      courseD_maze_ramp5c_2019: Watch out for cracking ice! Help Scrat get to the
+        acorn.
       courseD_maze_ramp5d: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp5d_2018: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp5d_2019: Fai arrivare l'uccellino fino al maialino.
@@ -4255,6 +4554,8 @@ it-IT:
       courseD_scrat_ramp7: Aiuta Scrat a raggiungere la ghianda!
       courseD_scrat_ramp8: Usa ciò che hai imparato per fare in modo che Scrat raggiunga
         la ghianda!
+      courseE_aboutme_6: 'Keep going! Try adding more features to your poster to make
+        it even better. '
       courseE_artist_concept1: Disegna questa immagine.
       courseE_artist_concept1_2018: Disegna questa immagine.
       courseE_artist_concept4: Riproduci questo disegno.
@@ -4535,6 +4836,14 @@ it-IT:
         quindi gioca fino a raggiungere una di queste due condizioni.
       courseE_playLab_scaffold6: Hai finito! Ora puoi giocare con il tuo videogioco
         o condividerlo con i tuoi amici e compagni di classe!
+      courseE_video_createFunctions: We don't have a video for creating functions,
+        yet. This is a placeholder.
+      courseE_video_createFunctions2: We don't have a video for creating functions,
+        yet. This is a placeholder.
+      courseE_video_createFunctions2_2018: We don't have a video for creating functions,
+        yet. This is a placeholder.
+      courseE_video_createFunctions2_2019: We don't have a video for creating functions,
+        yet. This is a placeholder.
       courseF_artist_for1: Fai esperimenti con il _ciclo con contatore_ e gioca con
         la variabile `counter` (_contatore_).
       courseF_artist_for10: "**Tempo di giocare**: Prova ad usare la variabile `counter`
@@ -4730,6 +5039,8 @@ it-IT:
       courseF_artist_variables_challenge2_2019: Ora hai imparato tutto quello che
         ti serve per realizzare un disegno come questo!
       courseF_bee_conditionals10: Raccogli tutto il nettare e fai tutto il miele.
+      courseF_bee_conditionals1_predict1: Check to see if there's a flower under the
+        cloud. If there's a flower, get nectar.
       courseF_bee_conditionals2: Prima di prendere il nettare, controlla sotto ogni
         nuvola se sta nascondendo un fiore.
       courseF_bee_conditionals3: 'Aiuta l''ape a raccogliere tutto il nettare. '
@@ -4906,6 +5217,8 @@ it-IT:
         e il pinguino per guadagnarne 3 punti.  Ma fai attenzione, quando il gatto
         e il pinguino si toccano, perdi 1 punto. Arriva esattamente a 10 punti per
         vincere!
+      courseF_video_createFunctions: We don't have a video for creating functions,
+        yet. This is a placeholder.
       coursea_maze_ramp1_2018: Per risolvere questo esercizio, aggancia insieme i
         due blocchi e clicca su "▶ Esegui"!
       coursea_maze_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i
@@ -5018,6 +5331,8 @@ it-IT:
       grade5_artist_binary9: |-
         Ecco una griglia 16 x 16 di quadrati per disegnare con una risoluzione superiore!<br><br>
         Clicca su "Esegui" e guarda cosa succede quando cominciamo a essere creativi con i bit.
+      grade5_pixelation: Encode an image of anything you like using binary. The binary
+        language will be represented with '0' and '1' only.
       iceage_click_hello: Puoi aiutare Sid a chiamare i suoi amici quando si clicca
         su di lui?
       iceage_free_play: 'È il momento di creare un gioco o una storia per conto tuo! '
@@ -5044,6 +5359,17 @@ it-IT:
       k-1 maze 1: |-
         Riesci a spostarmi verso Ovest per prendere il maialino?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-4#VIDEO" target="_blank">Video doppiato in italiano</a>
+      mike3bit: We start you with the 4x2 image Maddie was creating, but we've left
+        out the last few pixels. Finish off the image by figuring out which colors
+        are missing and encoding them.
+      mike3bitbird: Here's an example of an image made with 3-bit color. Try changing
+        it to understand how it works. If you want to reset the image, press "Start
+        Over".
+      mike3bitfreeplay: Make something awesome and share it with your classmates!
+        You can copy and paste the value of a pixel to use it repeatedly.
+      mike3bitmario: "A careless binary coder typed in ONE extra 0 or 1 somewhere
+        within this image's data. The extra bit that is causing Mario to glitch out!
+        \n\nDelete the extra bit to restore Mario back to normal!"
       ramp_artist_loops1: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2018: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2019: Vai avanti di 60 pixel per completare l'esercizio.
@@ -5060,6 +5386,8 @@ it-IT:
         come ultima istruzione all'interno del ciclo?
       ramp_artist_loops4_2018: Cosa succede se aggiungi una svolta di 72 gradi a destra
         come ultima istruzione all'interno del ciclo?
+      ramp_artist_loops4_2019: Create this star pattern by looping a sequence of "move
+        forward" and "turn right by 144 degrees" blocks.
       ramp_artist_loops5: Usa i cicli per disegnare questa scalinata.
       ramp_artist_loops5_2018: Usa i cicli per disegnare questa scalinata.
       ramp_artist_loops5_2019: Usa i cicli per disegnare questa scalinata.

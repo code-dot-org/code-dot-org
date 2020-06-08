@@ -311,10 +311,15 @@ it:
       sections: "Classi"
       help_support: "Help and support"
       report_bug: "Report a problem"
+      report_abuse: "Report abuse"
       teacher_community: "Teacher community"
       professional_learning: "Professional learning"
       documentation: "Documentazione"
       tutorials: "Corsi"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
       sprite_lab_documentation: "Documentazione Sviluppo App"
       sprite_lab_tutorials: "Esercitazioni Sviluppo App"
       educate_overview: "Panoramica dei corsi"
@@ -342,6 +347,7 @@ it:
       help_us: "Aiutaci"
       teach: "Insegna"
       about: "Informazioni"
+      legal: "Privacy & Legal"
       legal_privacy: "Informativa sulla privacy"
       legal_tos: "Termini di servizio"
     user:
@@ -463,6 +469,8 @@ it:
     enter_parent_email: "Inserisci l'email del tuo genitore o tutore (per il recupero della password)"
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Aggiorna"
     for_parents_and_guardians: "Per genitori e tutori"
     link_a_parent_email: "Collega un indirizzo email del genitore/tutore a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio. Potrai usare questo indirizzo email per il recupero della password."
@@ -509,6 +517,7 @@ it:
     no_primary_course: "Prova un corso di Code Studio"
     choose_next_course: "Prova un corso di Code Studio scegliendone uno qui sotto"
     print_certificate: "Stampa l'attestato"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
     new_section_dne: "Ci dispiace, la classe col codice %{new_section_code} non esiste. Inserisci un codice di classe esistente."
     section_code_cant_be_current_section: "La nuova classe non può essere la stessa."
@@ -578,6 +587,7 @@ it:
       link: "Ulteriori informazioni"
       applab_unsupported_tablet: "Sviluppo App funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
       gamelab_unsupported_tablet: "Sviluppo Giochi funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
+      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
       weblab_unsupported_browser: "Purtroppo, ci sono al momento dei problemi per usare Sviluppo Web su questo browser. Ti consigliamo di utilizzare un altro browser, finché non risolviamo i problemi attuali. Ci scusiamo per l'inconveniente."
       weblab_unsupported_locale_storage: "Potrebbero verificarsi problemi utilizzando Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente."
   slow_loading: 'Questa operazione sta prendendo più tempo del solito...'
@@ -704,11 +714,15 @@ it:
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"
     correct_title: "Corretta"
     correct_body: "Questa è la risposta corretta."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "Grazie!"
     wrong_body: "Grazie per aver inviato una risposta."
     correct_title: "Grazie!"
     correct_body: "Grazie per aver inviato una risposta."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "Grazie!"
     wrong_body: "Grazie per aver inviato delle risposte."
@@ -746,6 +760,8 @@ it:
     open_response_body: "Grazie per la risposta!"
     correct_title: "Corretta"
     correct_body: "Questa è la risposta corretta."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "Ok"
     startover_title: "Sei sicuro di voler ripristinare la situazione iniziale?"
@@ -872,6 +888,14 @@ it:
     instructor_feedback: 'Feedback dell''istruttore'
     peer_feedback: 'Feedback di un collega'
     outdated: 'Questo commento è stato aggiunto per una versione precedentemente inviata'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
     peer_review: 'Valutazioni dei parigrado'
   external_links:
     disclaimer: Limiti di responsabilità
@@ -931,6 +955,15 @@ it:
     download_in_Vietnamese: 'Scarica in vietnamita:'
     windows: 'Windows (64 bit)'
     mac: 'Mac OS X'
+  plc:
+    preview_assignments:
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
   hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
@@ -943,6 +976,34 @@ it:
   view_all_units: 'Visualizza tutte le lezioni'
   view_teacher_guide: 'Guida per l''insegnante (in inglese)'
   pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
       first_name: 'Nome'
       first_name_preferred: 'Nome preferito'
@@ -1002,6 +1063,7 @@ it:
         csfirst: 'Google CS First'
         khan: 'Khan Academy'
         kodable: 'Kodable'
+        lightbot: 'Lightbot'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "Altro:"
@@ -1053,6 +1115,15 @@ it:
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
   copy: 'Copia'
+  maker:
+    google_oauth:
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
   parent_email_banner:
     text: "**Sei un genitore o tutore?** Collega la tua email a questo account per rimanere aggiornato sui progressi e sui progetti di tuo figlio!"
     link_your_email: "Collega la tua email"

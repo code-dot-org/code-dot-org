@@ -4459,6 +4459,9 @@ it-IT:
           viene aggiunto alla variabile`counter` (_contatore_) ad ogni ciclo. Quanto
           bisogna aggiungere in questo caso ad ogni valore per ottenere il valore
           successivo nella sequenza?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
       OPD-K5-events-2:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       OPD-K5-events-3:
@@ -4801,6 +4804,32 @@ it-IT:
           di essi per estrarre il carbone.
         mc_9_c: Usa il blocco `metti una torcia` per posizionare una torcia nel punto
           in cui ti trovi.
+      behaviors 2:
+        behavior hint: "Try editing the behaviors! \n\n-   Which direction does the
+          rocket need to move?"
+      behaviors 3:
+        behavior hint: "Try editing the behaviors! \n\n-   Which value is controlling
+          the speed of each sprite?"
+      behaviors 3a:
+        behavior hint: "Try editing the behaviors! \n\n-   Which value is controlling
+          the speed of each sprite?"
+      behaviors 5:
+        target hint: You can pick any of the four ships. Which one does the astronaut
+          want?
+        behavior hint: Edit the behavior to solve this puzzle. The astronaut sprite
+          needs to move in two different directions to end up going diagonally.
+      behaviors 6:
+        behavior hint: "Try editing the behaviors! \n\n-   Which value is controlling
+          the speed of each sprite?"
+      behaviors 7:
+        behaviors_hint1: You can create a new behavior that uses two different actions
+          or combine two existing behaviors.
+        sprites_idea1: |-
+          For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: I commenti sono utili anche quando altre persone
           tentano di leggere un tuo programma.
@@ -5113,7 +5142,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -5362,24 +5391,14 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Aggiungi questi blocchi al tuo programma:
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
+          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
+          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -5473,6 +5492,11 @@ it-IT:
           -   Fai dire qualcosa al dinosauro.
           -   Imposta un nuovo sfondo.
           -   Fai svanire tutti i personaggi e visualizza il messaggio "Fine del gioco!".
+      course4_artist_binary_challenge2:
+        courseD_artist_binary_challenge2_a: |-
+          The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
+
+          There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       course4_artist_concept_challenge2:
         courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
           richiamare più e più volte, ovunque tu voglia!
@@ -5740,6 +5764,10 @@ it-IT:
                 </block>
               </next>
             </block></xml>
+        courseF_bee_fwp_challenge1_b: |-
+          Look at how much corn is available to harvest in each space. Do you see the counter pattern? The `length` parameter should be used to set the maximum value in the `for loop`.
+
+          Don't forget to have the farmer move back to the main path after harvesting!
         courseF_bee_fwp_challenge1_c: |-
           Posiziona un ciclo con contatore all'interno di una funzione e impostalo per contare da `1` a `length` (_lunghezza_) con passo `1`.
           All'interno di questo ciclo, dovresti andare avanti e raccogliere tutte le pannocchie.
@@ -5765,6 +5793,11 @@ it-IT:
                       <statement name="DO">
                       </statement>
           </block></xml>
+        courseF_bee_fwp_challenge1_d: |-
+          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
+          After the `for loop` you can just `move backward` **length times**.
+
+          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
         courseF_bee_fwp_challenge1_e: |-
           **Soluzione:**
 
@@ -5841,6 +5874,9 @@ it-IT:
           Innanzitutto, assicurati di aver capito come _dovrebbe_ funzionare questa funzione. Per ora, mentre la contadina si muove lungo ogni percorso, cerca solo di raccogliere pannocchie. Come puoi farle invece eseguire un controllo per ciascuna delle 3 verdure e raccogliere solo quelle che trova?
 
           Aggiungi le necessarie istruzioni condizionali alla funzione per controllare la presenza di pannocchie, zucche e lattughe.
+        courseF_bee_fwp_challenge2_b: "Are you running out of `move forward` blocks?\nTry
+          using a _second_ `for loop` in your main program. \n\n**Note:** Be careful
+          not to confuse `counter` with `counter2` in your code."
         courseF_bee_fwp_challenge2_c: |-
           **Ecco che aspetto dovrebbe avere la tua funzione:**
 
@@ -6043,6 +6079,10 @@ it-IT:
               </next>
             </block>
           </xml>
+      course4_harvester_nested_loops_challenge1:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used
+          a loop to create a zig-zag pattern. If you remember that algorithm, you
+          can make a few additions to it here.
       course4_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
           Dorai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
@@ -6525,6 +6565,11 @@ it-IT:
                                     </block>
                                   </next>
                                 </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: You only need to use 1 block to solve
+          this.
+        courseA_collector_loops_challenge2_a: You can move back over the path a second
+          time before moving south.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: 'Prova questo percorso: è una possibile
           soluzione.'
@@ -6540,6 +6585,16 @@ it-IT:
           soluzione.'
         courseA_collector_loops_challenge2kp_a: Riesci a usare dei cicli per risolvere
           questo esercizio?
+      courseA_collector_preLoops4:
+        courseA_collector_preLoops4_a: To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          block to the bottom of the program and click "Run"!
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: You'll need to go two different directions
+          to get even one gem!
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          blocks to solve this puzzle.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
@@ -9773,6 +9828,9 @@ it-IT:
           uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
           tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: Use the arrow keys to move the penguin. You do
+          not need to write any code to finish this level.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _Serve un idea?_
@@ -9808,6 +9866,18 @@ it-IT:
 
           **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _Need an idea?_
+
+          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _Need an idea?_
+
+          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
         idea3: |-
           _Serve un idea?_
 
@@ -9959,6 +10029,18 @@ it-IT:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          This is the first block you will need:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          You can choose either left or right and any number of degrees.
       courseC_artist_loops2a:
         courseC_artist_loops2a_a: All'interno del ciclo dovresti saltare a "200 avanti
           200 in basso" (per raggiungere il centro dello schermo), quindi disegnare
@@ -10028,6 +10110,45 @@ it-IT:
           </xml>
 
           Non dimenticare di cambiare la distanza!
+        courseC_artist_loops4a_b: |-
+          Your program should look like this!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops5a:
         courseC_artist_loops5a_a: Usa i menù a discesa (▼) dei blocchi `disegna un
           adesivo` per cambiare le immagini.
@@ -10073,6 +10194,62 @@ it-IT:
         courseC_artist_loops5b_b: Per fare un disegno come quello qui sopra, devi
           far spostare l'artista all'indietro della stessa quantità di cui si è mosso
           in avanti.
+        courseC_artist_loops5b_c: |-
+          Your program should look like this!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops6a:
         courseC_artist_loops6a_a: Per realizzare un disegno come quello qui sopra,
           salta avanti meno di 75 pixel tra ogni adesivo.
@@ -12555,6 +12732,13 @@ it-IT:
           avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
           se c'è un fiore? Cosa fai se c'è un fiore?
         courseD_bee_conditionals5_hintVid2: Guarda il video per risolvere questo esercizio.
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: If you use an `if at flower` block, you can solve
+          this using a nested loop. Write a program for the left and bottom paths,
+          then repeat everything twice!
+        courseD_bee_conditionals5_c: To continue down the path, the bee will need
+          to `move forward`. As it moves, the bee needs to check for a flower. `if
+          there is a flower`, the bee should `get nectar`.
       courseD_bee_conditionals5_copy:
         courseD_bee_conditionals5_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
@@ -12706,7 +12890,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12717,7 +12901,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12728,7 +12912,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -13184,24 +13368,14 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Aggiungi questi blocchi al tuo programma:
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
+          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
+          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -13616,10 +13790,8 @@ it-IT:
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccogliere tutto!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che sei
-          su una zucca`, che ripete tutti i blocchi che contiene per tutto il tempo
-          in cui NON sei su una zucca e si interrompe quando finalmente arrivi ad
-          una zucca. Riesci a intuire come usarlo in questo esercizio?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until there are
+          pumpkins`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccogliere tutto!
       courseD_farmer_condLoops6:
@@ -14049,6 +14221,7 @@ it-IT:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per
           eseguire il codice un'istruzione alla volta. Riesci a capire cosa devi fare
           dopo?
+        courseC_maze_programming5_b: Remember that turns are from Red's perspective.
         courseC_maze_programming5_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
@@ -19309,6 +19482,9 @@ it-IT:
                                 </block>
                               </value>
                             </block></xml>
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: Instead of subtracting 1 from `gather`, add
+          1 each time instead. What should value should the variable have at first?
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Dovrai sostituire le parole "What should I
           shout?" (_Cosa devo urlare?_), che intravedi nel blocco verde, con "Goal!"
