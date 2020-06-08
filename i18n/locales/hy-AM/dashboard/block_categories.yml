@@ -2,12 +2,30 @@ hy:
   data:
     block_categories:
       Actions: գործողություններ
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Գույնը
+      Comment: Comment
+      Comments: Comments
       Conditionals: conditionals
+      Dancers: Dancers
+      Default: Default
       Events: Իրադարձություններ
       Functions: գործառույթները
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: տրամաբանություն
       Loops: loops
       Math: Մաթեմատիկա
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: տեքստ
       Variables: փոփոխականների
+      'Variables ': 'Variables '
+      World: World
