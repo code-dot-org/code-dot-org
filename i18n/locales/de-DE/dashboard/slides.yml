@@ -457,14 +457,19 @@ de:
         text: "Bei unseren Tänzen verwenden wir ebenfalls Schleifen. Die Tänzer tragen Computer, die über ein Netzwerk miteinander verbunden sind. Ich kann die Lichter nun immer wieder über die Anzüge derselben Tänzer laufen lassen. In der Schleife gibt es dann eine Iteration, bei der die Lichter bei diesen sechs Tänzern wiederholt werden und dann innerhalb der Schleife die Geschwindigkeit der Lichter vergrößert wird. Und das alles läuft über Schleifen. Schleifen sind in der Informatik sehr wichtig, da sie die Arbeit abkürzen und einfacher machen."
     C1_happy_maps_unplugged:
       1:
+        image: 'notes/C1_happy_maps_unplugged_1.png'
         text: "Diese Lektion heißt \"Landkartenspiel\". Heute werden wir unserem pelzigen kleinen Freund Flurb helfen, zur Frucht zu gelangen."
       2:
+        image: 'notes/C1_happy_maps_unplugged_2.png'
         text: "Hilf deinem Flurb, zu deiner Frucht zu gelangen. Dazu musst du herausfinden, wo der Flurb hingehen muss, und ihm den Weg mit den Pfeilen zeigen. In welche Richtungen muss der Flurb gehen, um zum Apfel zu gelangen? Wie bewegt sich der Flurb nach oben?"
       3:
+        image: 'notes/C1_happy_maps_unplugged_3.png'
         text: "Damit er dorthin gelangt, kreise die Richtung ein, in die er gehen muss!"
       4:
+        image: 'notes/C1_happy_maps_unplugged_4.png'
         text: "Erstelle deine Algorithmen, indem du die passenden Pfeile neben die Karten klebst. Die zweite Aufgabe ist ähnlich, aber hier muss der Flurb nach unten gehen."
       5:
+        image: 'notes/C1_happy_maps_unplugged_5.png'
         text: "Das ist wie Programmieren auf Papier. Es ist ganz einfach!"
     C1_maze_debugging:
       1:
@@ -481,8 +486,10 @@ de:
         text: "Fügen wir einen weiteren \"Nach-Westen\"-Baustein hinzu und klicken auf \"ausführen\", um zu sehen, ob es jetzt funktioniert. Super, du hast es geschafft!"
     C1_maze_intro_sequencing:
       1:
+        image: 'notes/C1_maze_intro_sequencing_1.png'
         text: "Bei dieser Aufgabe muss der Vogel das Schwein erreichen. Schaue dir die Aufgabe an und finde heraus, in welche Richtung er gehen muss."
       2:
+        image: 'notes/C1_maze_intro_sequencing_2.png'
         text: "Du musst die Bausteine aus der Werkzeugkiste auf die Arbeitsfläche ziehen. Die Bausteine müssen direkt unter dem \"Beim Ausführen\"-Baustein eingefügt werden. Wenn du denkst, dass du die richtige Lösung gefunden hast, klicke auf \"ausführen\" und schaue dir an, wie der Vogel zum Schwein läuft."
     C1_maze_loops:
       1:
@@ -496,10 +503,13 @@ de:
         text: "Um in dieser Aufgabe den Vogel zum Schwein zu bringen, ist es besser, den \"Wiederholen\"-Baustein zu verwenden, anstatt drei \"Nach-Norden-Bausteine\" zu nehmen. Ziehe den \"Wiederholen\"-Baustein auf die Arbeitsfläche und gibt dort die Zahl 3 ein. Ziehe dann den \"Nach-Norden\"-Baustein in den \"Wiederholen\"-Baustein und klicke auf \"ausführen\", um zu sehen, ob alles stimmt. Glückwunsch. Du hast es geschafft!"
     C1_moveitmoveit_unplugged:
       1:
+        image: 'notes/C1_moveitmoveit_unplugged_1.png'
         text: "Diese Lektion heißt \"Achtung, fertig, LOS!\". Wir werden zusammen ein Programm schreiben, um unsere Freunde vom Start mit der Kompassrose bis zum Ziel mit dem Smiley zu bringen."
       2:
+        image: 'notes/C1_moveitmoveit_unplugged_2.png'
         text: "Allerdings liegt der Smiley mit dem Gesicht nach unten, und nur eine Person weiß, wie man dorthin kommt. Lass uns anfangen mit dem Programmieren."
       3:
+        image: 'notes/C1_moveitmoveit_unplugged_3.png'
         text: "Ein Programm ist ein Algorithmus, der so codiert ist, dass er von einer Maschine ausgeführt werden kann. Die meisten von uns glauben, dass Programme nur für Computer geschrieben werden. Programme sind dafür tatsächlich sehr nützlich, funktionieren aber auch anderswo. Du kannst dein eigenes Spiel machen oder einen Roboter programmieren, der Dinge für dich erledigt."
     C1_going_places_safely:
       1:
@@ -554,12 +564,16 @@ de:
         text: "Wenn wir Schokolade machen möchten, ist das ein Prozess mit vielen großen Schritten, die jeweils aus kleineren Schritten bestehen. Es gibt verschiedene Rezepte oder Algorithmen, je nachdem, welchen Geschmack wir möchten. Jeder Schritt ist wichtig, auch die ganz kleinen Schritte. Wenn nur ein Schritt fehlt, können die anderen Schritte nicht durchgeführt werden. Es ist wichtig, Algorithmen zu erstellen, die von anderen verstanden werden. Deshalb muss jeder Schritt aufgeschrieben werden, damit das Ergebnis immer dasselbe ist, egal, wer die Schritte durchführt."
     C1_playlab_storytelling:
       1:
+        image: 'notes/C1_playlab_storytelling_1.png'
         text: "Jetzt kannst du kreativ werden und deine Programmierkenntnisse dazu nutzen, eine Geschichte zu erzählen. Deine Geschichte enthält Figuren, die du zum Sprechen bringst und miteinander interagieren lässt. Denke darüber nach, welche Geschichte du erzählen möchtest."
       2:
+        image: 'notes/C1_playlab_storytelling_2.png'
         text: "Die Katze hatte immer Angst vor dem Hund. Was passiert, wenn die Katze merkt, dass der Hund nur spielen möchte? Der \"Beim Ausführen\"-Baustein ist immer der Startpunkt. Der \"Bewegen\"-Baustein bewegt deine Figur und der \"Sagen\"-Baustein lässt deine Figur sagen, was du im Baustein eintippst."
       3:
+        image: 'notes/C1_playlab_storytelling_3.png'
         text: "Dies ist der Baustein \"wenn die Figuren sich berühren\", den du an die anderen Bausteine anhängen kannst."
       4:
+        image: 'notes/C1_playlab_storytelling_4.png'
         text: "Ich habe es so programmiert, dass der Hund zur Katze geht und \"Hallo\" sagt, aber die Katze hat Angst bekommen und ist weggerannt. \"Aaahh!\". Wenn ich mehr Zeit hätte, hätte ich ein glückliches Ende programmiert. Das Ende."
     C1_spelling_bee_intro:
       1:
@@ -625,14 +639,19 @@ de:
         text: "Ein Beispiel für Binärdaten beim Roboter sind die Roboteraugen. Die Augen des Roboters sind LEDs. Das sind Lichter, die entweder an oder aus sind. Das ist ein binäres System - entweder eins oder das andere. Wir können die Lichter verwenden, um binäre Zahlen zu repräsentieren. Wenn wir verschiedene Roboter haben, können wir sagen, dass der erste Roboter die Einer darstellt, der zweite Roboter die Zweier, der dritte Roboter die Vierer, und so weiter. So wird eine binäre Zahl repräsentiert. Die Roboter zählen mit ihren binären Augen für dich."
     C2_conditionals_with_cards:
       1:
+        image: 'notes/C2_conditionals_with_cards_1.png'
         text: "Diese Lektion heißt \"Bedingungen mit Karten\". Jeden Tag triffst du Entscheidungen anhand der Dinge, die du siehst und hörst."
       2:
+        image: 'notes/C2_conditionals_with_cards_2.png'
         text: "Ich möchte im Park spazieren gehen, muss aber erst entscheiden, ob ich einen Regenschirm mitnehme oder nicht. Also schaue ich aus dem Fenster. Wenn der Himmel bewölkt ist, nehme ich den Schirm mit. Ansonsten setze ich eine Sonnenbrille auf. Ich glaube, ich nehme lieber den Schirm. Was ich sehe und höre, bestimmt, was ich in den Park mitnehme."
       3:
+        image: 'notes/C2_conditionals_with_cards_3.png'
         text: "Bedingungen werden auch in Spielen verwendet. Heute üben wir Bedingungen mit einem Kartenspiel. Bei diesem Spiel bestimmt die Karte, die ich ziehe, was meine Freunde und ich tun werden. Wenn ich eine sieben ziehe, klatschen alle in die Hände. Wenn nicht, sagen alle \"Oooooh.\" Probieren wir es aus! \"Oooooh\" \"Jubel\""
       4:
+        image: 'notes/C2_conditionals_with_cards_4.png'
         text: "Du kannst bestimmt noch spannendere Spiele mit Bedingungen erfinden. Probiere es mal! Bedingungen lassen Computer so schlau wirken. Ein Computerprogramm mit Bedingungen kann auf den Anwender reagieren und seine Funktion ändern."
       5:
+        image: 'notes/C2_conditionals_with_cards_5.png'
         text: "Denke an dein Lieblings-Computerspiel. Bekommst du für manche Aktionen mehr Punkte als für andere? Das funktioniert, weil der Computer Bedingungen verwendet. So trifft der Computer Entscheidungen. Zum Beispiel: Wenn du das Ziel triffst, erhältst du zehn Punkte. Ansonsten verlierst du drei Punkte. Wenn du weißt, wie Bedingungen funktionieren, kannst du alle möglichen spannenden Spiele programmieren."
     C2_artist_debugging:
       1:
@@ -656,8 +675,10 @@ de:
         text: "Sieht so aus, als sei dort unser Problem! Wir brauchen einen weiteren \"Vorwärts bewegen\"-Baustein. Die \"Schritt\"-Schaltfläche hilft uns, unser Programm zu debuggen und zu identifizieren, wo der Fehler liegt, damit wir diesen reparieren können."
     C2_digital_footprint:
       1:
+        image: 'notes/C2_digital_footprint_1.png'
         text: "Auf dem Kopf da sitzt dein Hut, auch zum schlau sein ist er gut, er kann an schöne Sachen denken und anderen ein Lächeln schenken. Auch im Internet online, muss dein Kopf aufmerksam sein, um die ganz geheimen Sachen nicht dort öffentlich zu machen. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
       2:
+        image: 'notes/C2_digital_footprint_2.png'
         text: "Dein Herz das schlägt im Takt, das macht es ganz exakt, und hast du jemand herzlich gern, spürt man das von nah und fern. Im Internet und auch online, ist Herzlichkeit auch immer fein, und viel Respekt und Freundlichkeit, die bringen dich im Netz sehr weit. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
       3:
         image: 'notes/C2_digital_footprint_3.png'
@@ -673,6 +694,7 @@ de:
         text: "Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken! Denke mit dem Kopf, fühle mit dem Herz, bewege deine Arme, hör auf deinen Bauch, stehe auf deinen Beinen. Vom Kopf bis zu den Zehen: erst denken, dann gehen. Beim auf den Bildschirm blicken: erst denken, dann klicken!"
     C2_digital_footprint_v2:
       1:
+        image: 'notes/C2_digital_footprint_v2_1.png'
         text: "Immer wenn du online gehst, hinterlässt du einen Fußabdruck, der gesucht, kopiert und geteilt werden kann und so für immer im Netz bleibt. Was für einen digitalen Fußabdruck hinterlässt du? Was für einen digitalen Fußabdruck möchtest du hinterlassen?"
     C2_graph_paper:
       1:
@@ -845,14 +867,19 @@ de:
         text: "Dies können wir tun, indem wir den \"Wenn Linkspfeil\"-Baustein mit dem \"Nach links bewegen\"-Baustein verknüpfen und den \"Wenn Rechtspfeil\"-Baustein mit dem \"Nach rechts bewegen\"-Baustein. Probiere es aus, es ist gar nicht schwer, ein Bounce-Spiel zu machen!"
     C3_computational_thinking:
       1:
+        image: 'notes/C3_computational_thinking_1.png'
         text: "Bei dieser Lektion geht es um computerbezogenes Denken. Manchmal kann es ganz schön schwer sein, ein neues Spiel zu lernen, nicht wahr? Zuerst ist alles fürchterlich kompliziert und manchmal gibt es keinen, der dir die Regeln erklärt, und du musst alles selbst herausfinden."
       2:
+        image: 'notes/C3_computational_thinking_2.png'
         text: "Das Gute ist, dass du immer besser darin wirst, Dinge selbst herauszufinden, wenn du beim Nachdenken einige Tricks verwendest. Diese Tricks sind super, um Probleme zu untersuchen und zu lösen. In dieser Lektion lernst du vier Tricks und übst sie mit deinen Freunden, um die Regeln eines Spiels herauszufinden."
       3:
+        image: 'notes/C3_computational_thinking_3.png'
         text: "Wenn du ein großes Problem in kleinere Teile aufteilst, nutzt du dein Gehirn, um das große Problem auseinanderzunehmen. Nachdem du ein großes Problem in mehrere kleinere Probleme aufgeteilt hast, kannst du den nächsten Trick anwenden, die Musterübereinstimmung."
       4:
+        image: 'notes/C3_computational_thinking_4.png'
         text: "Dabei suchen wir nach Ähnlichkeiten zwischen Dingen. Wenn ich weiß, welche Dinge gleich sind, kann ich herausfinden, welche Dinge unterschiedlich sind. Wenn ich diese Unterschiede weglasse, nennt man das Abstraktion."
       5:
+        image: 'notes/C3_computational_thinking_5.png'
         text: "Nachdem ich die Schritte kenne, um ein Problem zu lösen, kann ich diese in einer bestimmten Reihenfolge ordnen, um einen Algorithmus zu erstellen, damit auch andere nach meiner Anleitung das Problem lösen können. Wir werden diese vier Schritte verwenden, um herauszufinden, wie das Spiel ohne Regeln gespielt wird. Am Ende des Spiels kannst du auch andere Spiele spielen, die so ähnlich aussehen!"
     C3_crowdsourcing:
       1:
@@ -892,8 +919,10 @@ de:
         text: "Wir haben einen neuen Baustein, der unserer Bäuerin hilft. Er heißt \"Solange\"-Baustein. Seine Funktion ist ganz einfach. Solange die Aussage oben wahr ist, wird etwas getan. Zum Beispiel: Solange ein Haufen da ist, musst du schaufeln. Probiere den Baustein bei der Bäuerin aus."
     C3_functional_suncatchers:
       1:
+        image: 'notes/C3_functional_suncatchers_1.png'
         text: "Bei dieser Lektion geht es um funktionale Sonnenfänger. Diese hübschen Sonnenfänger werden mit Funktionen erstellt. Mehrere Schritte sind nötig, um einen dieser Sonnenfänger zu machen. Einige dieser Schritte müssen mehrmals wiederholt werden."
       2:
+        image: 'notes/C3_functional_suncatchers_2.png'
         text: "Um den Prozess zu vereinfachen, müssen wir zuerst herausfinden, welche Handlung immer wieder wiederholt wird. Diese Schritte können wir in einer sogenannten Funktion gruppieren."
       3:
         image: 'notes/C3_functional_suncatchers_3.png'
@@ -942,8 +971,10 @@ de:
         text: "Das spart Zeit und Mühe. Ziehe den \"Vorwärts bewegen\"-Baustein einfach in den \"Wiederholen\"-Baustein. Klicke auf \"ausführen\", und der Zombie wird fünf Felder nach vorne zur leckeren Sonnenblume gehen."
     C3_playlab_create_game:
       1:
+        image: 'notes/C3_playlab_create_game_1.png'
         text: "Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives Spiel erstellen, das man tatsächlich spielen kann."
       2:
+        image: 'notes/C3_playlab_create_game_2.png'
         text: "Es gibt einige neue Bausteine, die du ausprobieren kannst. Da ist der \"Wenn Pfeil\"-Baustein und der \"Figur bewegen\"-Baustein. Diese Bausteine kannst du zusammensetzen, um die Figuren mit den Pfeiltasten zu bewegen. Außerdem gibt es einige Bausteine, die etwas tun, wenn Figuren zusammenstoßen oder angeklickt werden. Viel Spaß beim Ausprobieren!"
     C3_songwriting_with_parameters:
       1:
@@ -1060,12 +1091,16 @@ de:
         text: "Die Multiplikation von 50 x 2 ist zwar nicht schwierig, aber Computer sind so gut in Mathe, dass wir ihnen das Rechnen überlassen sollten, wann immer das möglich ist. Wenn ich eine Variable namens \"Höhe\" verwende, kann ich für die Höhe den Wert 50 angeben und dann meinen Algorithmus so ändern, dass ich dem Künstler sage, sich um \"Höhe\" nach oben zu bewegen und dann um \"2 x Höhe\" nach rechts. So erhalte ich ein Rechteck, das doppelt so breit wie hoch ist."
     C4_unplugged_algorithms:
       1:
+        image: 'notes/C4_unplugged_algorithms_1.png'
         text: "Diese Lektion heißt \"Tangram-Algorithmen\". Ein Tangram ist ein Puzzle mit sieben Teilen, das zu anderen Formen zusammengesetzt werden kann. Du wirst einen Algorithmus verwenden, um deinem Partner zu erklären, wie er das Puzzle zusammensetzen muss."
       2:
+        image: 'notes/C4_unplugged_algorithms_2.png'
         text: "Ein Algorithmus ist eine Liste von Schritten, mit der eine Aufgabe erledigt werden kann. Wir verwenden sie jeden Tag bei Einkaufslisten und Rezepten. Wenn du den Algorithmus zu einfach gestaltest, kann er auf unterschiedliche Weisen interpretiert werden, und die ausführende Person versteht eventuell nicht genau, was du willst. Wenn du ganz sicher sein willst, dass alle genau dasselbe tun, musst du einen sehr detaillierten Algorithmus erstellen."
       3:
+        image: 'notes/C4_unplugged_algorithms_3.png'
         text: "Ich habe heute einen Algorithmus verwendet, um ein Bild zu malen. Ich wollte ein paar Wölfe malen, aber ich kann nicht so gut malen. Zum Glück gibt es \"Malen nach Zahlen\". Man hat 40 Farben und kleine Buchstaben und Zahlen, die angeben, wie die Felder ausgemalt werden müssen. Mit \"Malen nach Zahlen\" weiß ich genau, welche Farbe ich wo verwenden muss."
       4:
+        image: 'notes/C4_unplugged_algorithms_4.png'
         text: "Die Anweisungen sind ganz deutlich, und deshalb sieht das Endergebnis richtig gut aus. Dies ist ein sehr guter Algorithmus. Wenn die Anweisungen nicht so deutlich wären, würden meine Wölfe nicht so gut aussehen. Wenn das Ergebnis genauso werden soll, wie du dir das vorgestellt hast, musst du sehr präzise sein."
     C4_unplugged_binary:
       1:
@@ -1105,10 +1140,13 @@ de:
         text: "Bei dieser Lektion haben wir gelernt, aus zwei existierenden Geschichten eine abstrahierte Vorlage zu erstellen. Abstraktion ist die Kunst, Unterschiede zu entfernen, um herauszufinden, wie eine Lösung für verschiedene Probleme verwendet werden kann. Das ist sehr hilfreich in der Informatik, da wir so Funktionen erstellen können, die in unterschiedlichen Situationen nützlich sein können."
     C4_unplugged_parameters:
       1:
+        image: 'notes/C4_unplugged_parameters_1.png'
         text: "Diese Lektion heißt \"Komponieren mit Parametern\". Diesmal schreiben wir selbst einige Songs. Manchmal ist der Refrain nach jeder Strophe etwas anders. Kennst du \"Old Macdonald hat `ne Farm\"? Der Refrain ist bei jedem Tier etwas anders. Und auf der Farm hat er `ne Kuh, i-a-i-a-o. Die kleine Änderung in jedem Refrain kann mit einem Element namens \"Parameter\" gezeigt werden."
       2:
+        image: 'notes/C4_unplugged_parameters_2.png'
         text: "Manchmal benötigt eine Funktion einen Parameter. Ein Parameter ist eine zusätzliche Information, die du in eine Funktion einsetzen und an deine Bedürfnisse anpassen kannst. Wenn du für deine Freunde Eisbecher machst, verwendest du einen Prozess, der Parametern in einem Computerprogramm ähnelt."
       3:
+        image: 'notes/C4_unplugged_parameters_3.png'
         text: "Die Kugel mit Vanilleeis ist vielleicht bei jedem Eisbecher dieselbe, aber wenn du deine Freunde fragst, welche beiden Extrazutaten sie möchten, kann es viele verschiedene Kombinationen geben. Extrazutat ist der Funktionsname, und die verschiedenen Sorten von Zutaten sind die Parameter. Funktionen und Parameter arbeiten zusammen – für tolle Computerprogramme und tolle Eisbecher."
     C4_unplugged_variables:
       1:
@@ -1171,21 +1209,29 @@ de:
         text: "Wenn du alle Aufgaben durcharbeitest, kannst du am Ende dein eigenes Spiel mit all diesen Figuren erstellen, die miteinander interagieren, Punkte gewinnen, Microbots, Kirschen, Töpfe, Funken und Eis werfen und einander verschwinden lassen können. Du hast die Wahl!"
     infinity_playlab_repeat_forever:
       1:
+        image: 'notes/infinity_playlab_repeat_forever_1.png'
         text: "Stell dir vor, du müsstest etwas ewig wiederholen. Hoffentlich wird das nie passieren, denn Computer sind viel besser darin, Dinge zu wiederholen. Das ist der \"Ewig wiederholen\"-Baustein. Alles innerhalb dieses Bausteins wird im Spiel immer wieder passieren."
       2:
+        image: 'notes/infinity_playlab_repeat_forever_2.png'
         text: "Willst du eine Figur dazu bringen, etwas immer wieder zu wiederholen, ohne dass der Spieler etwas tun muss, setzen wir die Bausteine in den \"Ewig wiederholen\"-Baustein. Bei der nächsten Aufgabe lassen wir Anna immer wieder nach oben und unten laufen. Wenn du lernst, wie der \"Wiederholen\"-Befehl funktioniert, kannst du später viel Zeit sparen, wenn du dein eigenes Spiel programmierst."
     tutorial_puzzle_challenge:
       1:
+        image: 'notes/tutorial_puzzle_challenge_1.png'
         text: "Was möchtest du werden, wenn du groß wirst, Olivia? Astronautin. Weißt du, was ein Programmierer ist? Ähh, nein. Ein was? Ich weiß nicht, wie man es am besten erklärt, aber Programmieren ist relativ einfach. Es ist eine Reihe von Anweisungen, wie ein Rezept, denen du Schritt für Schritt folgen musst, um das gewünschte Endergebnis zu erreichen."
       2:
+        image: 'notes/tutorial_puzzle_challenge_2.png'
         text: "Ich kann die Anzahl der Pixel ändern, die Länge der Linie, mit diesem Dropdown-Menü. Wie lang war das noch? Die Anleitungen kannst du unter der Schaltfläche \"ausführen\" sehen. Hier habe ich den \"Vorwärts bewegen\"-Baustein verwendet und wähle 100 Pixel. Ich kann einen Baustein löschen, indem ich ihn in die Werkzeugkiste oder den Papierkorb ziehe. Legen wir ihn wieder zurück."
       3:
+        image: 'notes/tutorial_puzzle_challenge_3.png'
         text: "Wir lassen den Code laufen, indem wir auf \"ausführen\" klicken. Das hat nicht funktioniert! Ich drücke auf \"Zurücksetzen\" und versuche es nochmal. Du kannst eine Aufgabe so oft probieren wie du möchtest, einzelne Aufgaben überspringen oder sie später lösen. Aber du solltest immer dein Bestes geben und nicht aufgeben! Fügen wir einen weiteren \"Vorwärts bewegen\"-Baustein hinzu. Das funktioniert immer noch nicht. Ich kann einen Baustein zwischen andere Bausteine setzen."
       4:
+        image: 'notes/tutorial_puzzle_challenge_4.png'
         text: "Nehmen wir einen \"Drehen\"-Baustein und setzen ihn zwischen die \"Vorwärts\"-Bausteine. Um 45 Grad nach links drehen. Versuchen wir es erneut. Zurücksetzen, ausführen, super! Hier ist eine weitere Aufgabe. Manchmal erhältst du etwas fertigen Code, den du vervollständigen sollst. Hier muss ich die passenden Längen und Grade eingeben."
       5:
+        image: 'notes/tutorial_puzzle_challenge_5.png'
         text: "Manchmal bringst du vielleicht versehentlich den Anfangscode durcheinander. Wie kannst du das reparieren? Drücke einfach auf \"Puzzle löschen\" und beginne erneut. Ich werde diesen Zahlenbaustein in die verschiedenen Pixelbereiche ziehen. Ich wähle 100 für Pixel, 45 für Grad und nochmal 100 für Pixel. Toll! Hier ist die Code-Studio-Biene. Ich muss die Biene zu jeder Blume bringen, um Nektar zu holen."
       6:
+        image: 'notes/tutorial_puzzle_challenge_6.png'
         text: "Die erste Blume ist drei Felder entfernt, daher muss ich mich dreimal vorwärts bewegen. 1, 2, 3. Dann einmal Nektar holen, und nochmal Nektar holen. Das hat nicht funktioniert! Ich setze einen weiteren \"Vorwärts bewegen\"-Baustein zwischen die \"Nimm Nektar\"-Bausteine und versuche es erneut. So geht es! Du hast gerade gelernt, wie du die Aufgaben mit dem Code-Studio-Künstler und der Biene löst. Viel Glück bei der Code-Studio-Puzzle-Herausforderung"
     unplug1:
       1:
@@ -1814,24 +1860,34 @@ de:
         text: "Das ist alles, was es gibt! Jetzt kannst du anfangen, Bilder und Sounds hinzuzufügen, um Deine Apps noch unterhaltsamer und dynamischer zu gestalten."
     applab_intro_designmode:
       1:
+        image: 'notes/applab_intro_designmode_1.png'
         text: "Um eigene Apps zu erstellen, musst du mit dem Design von Bildschirmen und Elementen von Grund auf neu beginnen. App Lab macht dies mit dem Designmodus einfach."
       2:
+        image: 'notes/applab_intro_designmode_2.png'
         text: "Verwend den Schalter oben in Deiner App, um in den Designmodus zu gelangen."
       3:
+        image: 'notes/applab_intro_designmode_3.png'
         text: "Du kannst neue Elemente hinzufügen, indem du sie auf den Bildschirm ziehst. Du kannst sie an verschiedene Positionen verschieben und ihre Größe ändern, indem du die untere rechte Ecke ziehst."
       4:
+        image: 'notes/applab_intro_designmode_4.png'
         text: "Um die Eigenschaften eines Elements zu ändern, verwende die Steuerelemente auf der rechten Seite. So ist es beispielsweise sehr einfach, Text, Farbe und Schriftgröße dieser Schaltfläche zu ändern."
       5:
+        image: 'notes/applab_intro_designmode_5.png'
         text: "Wenn du ein neues Element zu Deinem Bildschirm hinzufügst, erhält es eine generische ID wie button1. Es ist eine gute Idee, die ID dieser Schaltfläche in etwas Aussagekräftigeres wie \"rightButton\" zu ändern. Damit du weißt welches es ist, wenn du zum Programm gehst."
       6:
+        image: 'notes/applab_intro_designmode_6.png'
         text: "Wenn du versehentlich ein Element zur App hinzugefügt hast, ziehe es einfach heraus oder klicke auf Löschen."
       7:
+        image: 'notes/applab_intro_designmode_7.png'
         text: "Du kannst Deiner App völlig neue Bildschirme hinzufügen, indem du ein Bildschirmelement per Drag & Drop in die App ziehst"
       8:
+        image: 'notes/applab_intro_designmode_8.png'
         text: "Über das Dropdown-Menü oben kannst du schnell zwischen den von Dir erstellten Bildschirmen hin und her wechseln."
       9:
+        image: 'notes/applab_intro_designmode_9.png'
         text: "Innerhalb der App benötigst du eine Möglichkeit, zwischen all diesen Bildschirmen zu wechseln, so dass der setScreen-Baustein der Toolbox hinzugefügt wurde. Verwende \"setScreen\" innerhalb des Blocks \"onEvent\", um die Bildschirme per Knopfdruck zu wechseln."
       10:
+        image: 'notes/applab_intro_designmode_10.png'
         text: "In den nächsten Stufen wirst du an einem einzelnen Projekt arbeiten. Zuerst füge eine Schaltfläche hinzu, dann füge einen neuen Bildschirm hinzu und schließlich schreibe den Code so, dass die Schaltfläche auf den neuen Bildschirm wechselt."
     applab_intro_share:
       1:
@@ -1941,20 +1997,28 @@ de:
         text: "Denke daran, dass du die gleiche Funktion jedes Mal verwenden kannst, wenn du den gleichen Satz von Anweisungen ausführen musst, um etwas zu tun, wie zum Beispiel eine Brücke zu bauen. Viel Glück, ich weiß, dass du es schaffst!"
     mc_2017_congratulations:
       1:
+        image: 'notes/mc_2017_congratulations_1.png'
         text: "Preston: Herzlichen Glückwunsch!"
       2:
+        image: 'notes/mc_2017_congratulations_2.png'
         text: "Lizzy: Herzlichen Glückwunsch!"
       3:
+        image: 'notes/mc_2017_congratulations_3.png'
         text: "Stampy: Herzlichen Glückwunsch, du hast es geschafft!"
       4:
+        image: 'notes/mc_2017_congratulations_4.png'
         text: "Stacy: Herzlichen Glückwunsch Jungs, du hast das total gerockt! Und jetzt, da du die Stunde des Codes abgeschlossen hast, kannst du mit der Programmierung in Minecraft beginnen. Du hast mehr über Schleifen, Funktionen und was ein Software-Agent macht gelernt."
       5:
+        image: 'notes/mc_2017_congratulations_5.png'
         text: "Jetzt ist es Zeit für die Freispielstufe, in der du der Entwickler bist. Nutze die verbleibende Zeit, um deine eigenen Funktionen zum Erkunden, Bergbau und Bauen zu schreiben."
       6:
+        image: 'notes/mc_2017_congratulations_6.png'
         text: "Du kannst den Code, den du in dieser Stufe schreibst, in deine Minecraft-Welt auf Minecraft aufnehmen: Education Edition. Klick einfach auf 'Fertig stellen' und folge den Anweisungen, um den Link in deiner Welt zu verwenden. Viel Spaß und gute Arbeit!"
       7:
+        image: 'notes/mc_2017_congratulations_7.png'
         text: "Stacy: Und ich bin wieder da! Okay, Leute, hier ist der Agent! Ich zeige dir, was es kann. Schau, es tut es! Ich habe ihm gesagt, dass er eine Treppe aus diesen Terrakotta-Blöcken bauen soll, jetzt können wir das einfach benutzen, um hier rauszukommen. Und Leute, es sind nicht nur Treppen. Ich kann dem Agenten sagen, er soll alles tun, was ich will, und er wird es für mich tun."
       8:
+        image: 'notes/mc_2017_congratulations_8.png'
         text: "Stampy: Wie hast du das gemacht? Stacy: Es war eigentlich ganz einfach. Ich habe nur den Code benutzt!"
     csd_concept_how_computers_work:
       1:
@@ -1996,97 +2060,142 @@ de:
         text: "Und wer weiß, wie die Computer von morgen aussehen werden? Meine Hoffnung ist, dass du helfen kannst, zu entscheiden, wie die Computer von morgen aussehen sollen. Aber auf allen Computern, unabhängig von den verschiedenen Arten von Technologien, die sie verwenden, tun sie immer die gleichen vier Dinge. Sie nehmen Informationen auf, speichern sie als Daten, verarbeiten sie und geben dann die Ergebnisse aus."
     csd_concept_binary_data:
       1:
+        image: 'notes/csd_concept_binary_data_1.png'
         text: "Hallo! Mein Name ist Limor Fried, und ich bin Ingenieur hier bei Adafruit Industries. Und hier mache ich Engineering und Design, und ich entwerfe Schaltungen für Mode und Musik und Technologie."
       2:
+        image: 'notes/csd_concept_binary_data_2.png'
         text: "Mein Name ist Federico Gomez Suarez, und ich bin Softwareentwickler bei Microsoft Hack for Good. Und ich beschäftige mich mit dem Einsatz von Technologie, um einige der großen sozialen Probleme unserer Zeit zu lösen."
       3:
+        image: 'notes/csd_concept_binary_data_3.png'
         text: "Du hast vielleicht gehört, dass Computer mit Einsen und Nullen arbeiten. Aber fast niemand beschäftigt sich heute wirklich direkt mit diesen Einsen und Nullen. Aber Einsen und Nullen spielen eine große Rolle bei der Funktionsweise von Computern im Inneren."
       4:
+        image: 'notes/csd_concept_binary_data_4.png'
         text: "In einem Computer befinden sich elektrische Leitungen und Schaltungen, die alle Informationen in einem Computer übertragen. Wie speichert oder präsentiert man Informationen mit Hilfe von Strom?"
       5:
+        image: 'notes/csd_concept_binary_data_5.png'
         text: "Nun, wenn du einen einzelnen Draht hast, durch den Strom fließt, könnte das Signal entweder ein- oder ausgeschaltet sein. Das sind nicht viele Entscheidungen, aber es ist ein wirklich wichtiger Anfang. Mit einem Draht können wir ein Ja oder Nein, wahr oder falsch, ein Eins oder Null oder etwas anderes mit nur zwei Optionen darstellen. Dieser Ein/Aus-Zustand eines einzelnen Kabels wird als Bit bezeichnet und ist die kleinste Information, die ein Computer speichern kann."
       6:
+        image: 'notes/csd_concept_binary_data_6.png'
         text: "Wenn du mehr Drähte verwendest, bekommst du mehr Bits: mehr Einsen und Nullen. Mit mehr Bits kannst du komplexere Informationen darstellen. Aber um das zu verstehen, müssen wir etwas über das sogenannte Binärzahlensystem lernen."
       7:
+        image: 'notes/csd_concept_binary_data_7.png'
         text: "Im Dezimalsystem haben wir zehn Ziffern von Null bis neun, und so haben wir alle gelernt zu zählen. Im Binärzahlensystem haben wir nur zwei Ziffern: Null und Eins. Mit diesen beiden Ziffern können wir bis zu einer beliebigen Zahl zählen."
       8:
+        image: 'notes/csd_concept_binary_data_8.png'
         text: "Und so funktionierts. Im dezimalen Zahlensystem, an das wir alle gewöhnt sind, hat jede Position in einer Zahl einen anderen Wert. Es gibt eine 1 Position, die 10 Position, die 100 Position, und so weiter. Zum Beispiel ist eine 9 in der Position 100 eine 900. Im Binärbetrieb trägt jede Position auch einen Wert. Aber anstatt jedes Mal mit 10 zu multiplizieren, multiplizieren wir mit 2: Es gibt also die 1 Position, die 2 Position, die 4 Position, die 8 Position, und so weiter. Zum Beispiel ist die Zahl 9 im Binärformat 1001. Um den Wert zu berechnen, addieren wir 1 mal 8, plus 0 mal 4, plus 0 mal 2, plus 1 mal 1. Fast niemand macht diese Rechnung, weil Computer es für uns tun. Wichtig ist, dass jede Zahl nur mit Einsen und Nullen dargestellt werden kann, oder durch einen Haufen von Drähten, die ein- oder ausgeschaltet sind. Je mehr Kabel du verwendest, desto größer sind die Zahlen, die du speichern kannst. Mit 8 Drähten kannst du Zahlen zwischen 0 und 255 speichern. Das sind acht. Mit nur 32 Drähten kannst du den ganzen Weg von 0 bis über 4 Milliarden speichern. Mit dem Binärzahlensystem kannst du jede beliebige Zahl darstellen."
       9:
+        image: 'notes/csd_concept_binary_data_9.png'
         text: "Aber was ist mit anderen Arten von Informationen? Wie Text, Bilder oder Ton? Es stellt sich heraus, dass all diese Dinge auch mit Zahlen dargestellt werden können. Denke an alle Buchstaben im Alphabet. Du kannst jedem Buchstaben eine Nummer zuweisen. A könnte 1 sein, B könnte 2 sein, und so weiter. Du kannst dann jedes Wort oder jeden Absatz als eine Folge von Zahlen darstellen. Und wie wir gesehen haben, können diese Zahlen als Ein- oder Ausschaltsignale gespeichert werden. Jedes Wort, das du auf jeder Webseite oder deinem Handy siehst, wird mit einem System wie diesem dargestellt."
       10:
+        image: 'notes/csd_concept_binary_data_10.png'
         text: "Betrachten wir nun Fotos, Videos und alle Grafiken, die Sie auf einem Bildschirm sehen."
       11:
+        image: 'notes/csd_concept_binary_data_11.png'
         text: "Alle diese Bilder bestehen aus winzigen Punkten, die Pixel genannt werden, und jedes Pixel hat eine Farbe. Jede der Farben kann mit Zahlen dargestellt werden. Wenn man bedenkt, dass das typische Bild Millionen dieser Pixel hat und das typische Video 30 Bilder pro Sekunde zeigt, dann sprechen wir hier über eine Menge Daten."
       12:
+        image: 'notes/csd_concept_binary_data_12.png'
         text: "Jeder Klang ist im Grunde genommen eine Reihe von Schwingungen in der Luft. Vibrationen können grafisch als Wellenform dargestellt werden. Jeder Punkt dieser Wellenform kann durch eine Zahl dargestellt werden. Und so kann jeder Klang in eine Reihe von Zahlen zerlegt werden. Wenn Sie eine höhere Klangqualität wünschen, wählen Sie 32-Bit-Audio oder ein 8-Bit-Audio. Mehr Bits bedeuten einen größeren Zahlenbereich."
       13:
+        image: 'notes/csd_concept_binary_data_13.png'
         text: "Wenn du einen Computer benutzt, um Code zu schreiben oder deine eigene App zu erstellen, hast du es nicht direkt mit diesen Einsen und Nullen zu tun. Aber du wirst es mit Bildern, Ton oder Video zu tun haben. Wenn du also verstehen willst, wie Computer im Inneren funktionieren, kommt alles von diesen einfachen Einsen und Nullen und den elektrischen Signalen in den Schaltkreisen dahinter."
     csd_concept_circuits_logic:
       1:
+        image: 'notes/csd_concept_circuits_logic_1.png'
         text: "Eines der coolsten Dinge, die ich über Schaltkreise entdeckt habe, ist, dass Schaltkreise eine Kunstform sein können, wie wenn ich eine kreative Idee habe, ich kann diese kreative Idee mit Schaltkreisen herausbringen. Wenn Du also Ideen hast, kannst du die Technologie nutzen, um diese Ideen zum Leben zu erwecken."
       2:
+        image: 'notes/csd_concept_circuits_logic_2.png'
         text: "Jeder Ein- oder Ausgang eines Computers ist im Grunde genommen eine Art von Information, die durch ein- oder ausgeschaltete elektrische Signale oder Einsen und Nullen dargestellt werden kann."
       3:
+        image: 'notes/csd_concept_circuits_logic_3.png'
         text: "Um die Informationen, die als Input eingehen, zu verarbeiten und die Informationen, die ausgegeben werden, zu erzeugen, muss ein Computer die Eingangssignale ändern und kombinieren. Dazu verwendet ein Computer Millionen von winzigen elektronischen Komponenten, die sich zu Schaltungen zusammenfügen."
       4:
+        image: 'notes/csd_concept_circuits_logic_4.png'
         text: "Lasst uns einen genaueren Blick darauf werfen, wie Schaltkreise Informationen, die in Einsen und Nullen dargestellt werden, ändern und verarbeiten können. Dies ist eine unglaublich einfache Schaltung. Es nimmt ein elektrisches Signal, ein- oder ausgeschaltet, und dreht es um. Wenn also das Signal, das du eingibst, eine 1 ist, gibt die Schaltung dir eine 0, und wenn du der Schaltung eine 0 gibst, gibt sie dir eine 1. Das Signal, das hineingeht, ist nicht das gleiche wie das Signal, das herauskommt, und so nennen wir diese Schaltung NICHT."
       5:
+        image: 'notes/csd_concept_circuits_logic_5.png'
         text: "Komplexere Schaltungen können mehrere Signale aufnehmen und kombinieren und Ihnen ein anderes Ergebnis liefern. In diesem Beispiel nimmt eine Schaltung zwei elektrische Signale auf, jetzt könnte jedes eine 1 oder eine 0 sein. Wenn eines der eingehenden Signale eine 0 ist, dann ist das Ergebnis auch eine 0. Diese Schaltung gibt dir nur dann eine 1, wenn das erste Signal und das zweite Signal beide eine 1 sind, und so nennen wir die Schaltung UND."
       6:
+        image: 'notes/csd_concept_circuits_logic_6.png'
         text: "Es gibt viele kleine Schaltungen wie diese, die einfache logische Berechnungen durchführen. Wenn wir diese Schaltungen miteinander verbinden, können wir komplexere Schaltungen erstellen, die komplexere Berechnungen durchführen."
       7:
+        image: 'notes/csd_concept_circuits_logic_7.png'
         text: "Zum Beispiel kannst du eine Schaltung erstellen, die 2 Bits zusammen addiert, die als Addierer bezeichnet wird. Diese Schaltung nimmt 2 einzelne Bits, jedes eine 1 oder eine 0, auf und addiert sie zur Berechnung der Summe. Die Summe kann 0 plus 0 gleich 0 sein, 0 plus 1 gleich 1, oder 1 plus 1 gleich 2. Du brauchst zwei Drähte als Ausgabe, weil es bis zu zwei Binärziffern braucht um die Summe darzustellen. Sobald du einen einzelnen Addierer hast, um zwei Bits Informationen hinzuzufügen, kannst du Vielfache dieser Addierer-Schaltungen nebeneinander zusammensetzen, um viel größere Zahlen zusammenzufügen."
       8:
+        image: 'notes/csd_concept_circuits_logic_8.png'
         text: "Zum Beispiel kannst du hier sehen wie ein 8-Bit-Addierer die Zahlen 25 und 50 addiert. Jede Zahl wird durch 8 Bit dargestellt, was zu 16 verschiedenen elektrischen Signalen führt, die in den Stromkreis gelangen. Die Schaltung für einen 8-Bit-Addierer hat viele kleine Addierer im Inneren, die zusammen die Summe berechnen."
       9:
+        image: 'notes/csd_concept_circuits_logic_9.png'
         text: "Verschiedene Stromkreise können andere einfache Berechnungen wie Subtraktion oder Multiplikation durchführen. Tatsächlich ist die gesamte Informationsverarbeitung, die Ihr Computer durchführt, nur eine Menge und viele kleine einfache Operationen zusammengesetzt. Jede einzelne Operation, die von einem Computer durchgeführt wird, ist so einfach, dass sie von einem Menschen durchgeführt werden könnte, aber diese Schaltungen in Computern sind viel schneller."
       10:
+        image: 'notes/csd_concept_circuits_logic_10.png'
         text: "Damals waren diese Schaltkreise groß und klobig, und ein 8-Bit-Addierer könnte so groß wie ein Kühlschrank sein, und es würde Minuten dauern, bis sie eine einfache Berechnung durchgeführt hätten. Heute sind Computerschaltungen mikroskopisch klein und viel schneller. Warum sind kleinere Computer auch schneller? Nun, denn je kleiner die Schaltung ist, desto weniger Entfernung muss das elektrische Signal zurücklegen. Die Elektrizität bewegt sich fast so schnell wie das Licht, weshalb moderne Schaltungen Milliarden von Berechnungen pro Sekunde durchführen können."
       11:
+        image: 'notes/csd_concept_circuits_logic_11.png'
         text: "Egal, ob du ein Spiel spielst, ein Video aufnimmst oder den Kosmos erkundest, alles, was du mit Technologie machen kannst, erfordert eine extrem schnelle Verarbeitung vieler Informationen. Unter all dieser Komplexität befinden sich nur viele winzige kleine Schaltkreise, die binäre Signale in Websites, Videos, Musik und Spiele verwandeln. Diese Schaltkreise können uns sogar helfen, die DNA zu entschlüsseln, um Krankheiten zu diagnostizieren und zu heilen. Also, was möchtest du mit all diesen Schaltungen machen?"
     csd_concept_memory_cpu_input_output:
       1:
+        image: 'notes/csd_concept_memory_cpu_input_output_1.png'
         text: "Hallo, mein Name ist Madison Maxey. Ich habe eine Firma namens Loomia, und wir konzentrieren uns auf die Herstellung von Smart Fabrics für Smart Clothing und Smart Soft Good Products. Bei Textilien sind der Fantasie keine Grenzen gesetzt."
       2:
+        image: 'notes/csd_concept_memory_cpu_input_output_2.png'
         text: "Mein Name ist Danielle Applestone, und ich bin CEO der Othermachine Company. Wir bauen eine Tischfräse. Eine Fräsmaschine nimmt ein rotierendes Schneidwerkzeug und bewegt es durch das Material, um ein 3D-Objekt zu erzeugen."
       3:
+        image: 'notes/csd_concept_memory_cpu_input_output_3.png'
         text: "Unter der Haube tun alle Computer die gleichen vier grundlegenden Dinge. Sie geben Informationen ein, speichern und verarbeiten die Informationen und geben dann Informationen aus. Jedes dieser Dinge wird von einem anderen Teil des Computers erledigt."
       4:
+        image: 'notes/csd_concept_memory_cpu_input_output_4.png'
         text: "Es gibt Eingabegeräte, die Eingaben aus der Außenwelt übernehmen und in binäre Informationen umwandeln. Es gibt Speicher, um diese Informationen zu speichern. Es gibt eine zentrale Verarbeitungseinheit oder CPU, in der alle Berechnungen durchgeführt werden. Und schließlich gibt es Ausgabegeräte, die Informationen aufnehmen und in eine physische Ausgabe umwandeln."
       5:
+        image: 'notes/csd_concept_memory_cpu_input_output_5.png'
         text: "Lasst uns zuerst über den Input sprechen. Computer können viele verschiedene Arten von Eingaben vornehmen, wie die Tastatur eines Computers, das Touchpad eines Telefons, eine Kamera, ein Mikrofon oder ein GPS. Aber auch die Sensoren an einem Auto, einem Thermostat oder einer Drohne sind unterschiedliche Eingabegeräte."
       6:
+        image: 'notes/csd_concept_memory_cpu_input_output_6.png'
         text: "Betrachten wir nun ein einfaches Beispiel dafür, wie Input durch einen Computer läuft und zu Output wird. Wenn Sie eine Taste auf Ihrer Tastatur drücken - sagen wir den Buchstaben \"B\". Die Tastatur wandelt den Buchstaben in eine Zahl um. Diese Zahl wird als Binärwert, Einsen und Nullen, an den Computer gesendet."
       7:
+        image: 'notes/csd_concept_memory_cpu_input_output_7.png'
         text: "Ausgehend von dieser Zahl berechnet die CPU, wie der Buchstabe \"B\" Pixel für Pixel dargestellt wird. Die CPU fordert vom Speicher eine Schritt-für-Schritt-Anleitung an, die ihr sagt, wie man den Buchstaben \"B\" zeichnet. Die CPU führt diese Anweisungen aus und speichert die Ergebnisse als Pixel im Speicher."
       8:
+        image: 'notes/csd_concept_memory_cpu_input_output_8.png'
         text: "Schließlich werden diese Pixelinformationen binär an den Bildschirm gesendet. Der Bildschirm ist ein Ausgabegerät, das die binären Signale in die winzigen Lichter und Farben umwandelt, die das bilden, was du siehst."
       9:
+        image: 'notes/csd_concept_memory_cpu_input_output_9.png'
         text: "Dies alles geschieht so schnell, dass es sich sofort anfühlt, aber um jeden Buchstaben anzuzeigen, führt ein Computer Tausende von Anweisungen aus, beginnend mit dem Moment, in dem der Finger den Schlüsselpunkt drückt."
       10:
+        image: 'notes/csd_concept_memory_cpu_input_output_10.png'
         text: "In diesem Beispiel war das Ausgabegerät der Bildschirm, aber es gibt viele verschiedene Arten von Ausgängen, die ein binäres Signal vom Computer nehmen und etwas in der physikalischen Welt tun. So gibt beispielsweise ein Lautsprecher einen Ton wieder, und ein 3D-Drucker druckt ein Objekt. Ausgabegeräte können auch physische Bewegungen steuern, wie z. B. ein Roboterarm, der Motor eines Autos oder das Schneidwerkzeug der Fräsmaschine, die mein Unternehmen herstellt. Neue Arten von Ein- und Ausgängen lassen Computer auf völlig neue Weise mit der Welt interagieren. Dies wurde durch Verbesserungen bei der Geschwindigkeit und Größe von Speicher und CPU unterstützt."
       11:
+        image: 'notes/csd_concept_memory_cpu_input_output_11.png'
         text: "Je komplizierter eine Aufgabe ist und je mehr Informationen eingegeben oder ausgegeben werden, desto mehr Rechenleistung und Speicherplatz benötigt ein Computer. Die Eingabe von Buchstaben auf einem Bildschirm kann einfach sein, aber um komplizierte 3D-Grafiken zu erstellen oder einen hochauflösenden Film aufzunehmen, haben moderne Computer oft mehrere CPUs, um all diese Informationen zu verarbeiten, und viele Gigabyte Speicher, um sie zu speichern."
       12:
+        image: 'notes/csd_concept_memory_cpu_input_output_12.png'
         text: "Egal, was du mit dem Computer machen willst, jede einzelne Aktion dreht sich darum: Informationen aus der physischen Welt einzugeben, diese Informationen zu speichern und zu verarbeiten und etwas Output in die physische Welt zurückzubringen."
     csd_concept_hardware_software:
       1:
+        image: 'notes/csd_concept_hardware_software_1.png'
         text: "Hallo, mein Name ist Erica Gomez und ich bin technische Leiterin bei Amazon.com. Eines der besten Dinge an der Arbeit in der Technik, und insbesondere bei Amazon, ist, dass ich meinen Hund jeden Tag mit zur Arbeit nehmen kann. Mein Job ist es, dafür zu sorgen, dass Software veröffentlicht wird, und ihr Job ist es, unter meinem Schreibtisch zu schlafen und sehr laut zu schnarchen."
       2:
+        image: 'notes/csd_concept_hardware_software_2.png'
         text: "Mein Name ist Jerome Holman, und ich bin Programm-Manager bei Team Xbox und ich habe einen wirklich lustigen Job: Im Grunde genommen bringen ich Hardware und Software zusammen, um euch alle Spiele zu geben, die ihr auf eurer Xbox liebt."
       3:
+        image: 'notes/csd_concept_hardware_software_3.png'
         text: "Wenn du in ein Computergerät schaust, siehst du eine Menge Schaltungen, Chips, Kabel, Lautsprecher, Stecker und alle möglichen anderen Dinge. Das ist die Hardware."
       4:
+        image: 'notes/csd_concept_hardware_software_4.png'
         text: "Aber was du nicht siehst, ist die Software. Software sind alle Computerprogramme oder Codes, die auf diesem System ausgeführt werden. Software kann alles sein, von Apps und Spielen bis hin zu Webseiten und der Data-Science-Software, die ich und meine Teams bei Amazon verwenden, um zu verstehen, wie sich Kunden verhalten."
       5:
+        image: 'notes/csd_concept_hardware_software_5.png'
         text: "Aber wie interagieren die Hardware und die Software miteinander? Beginnen wir mit der Betrachtung der zentralen Verarbeitungseinheit oder CPU eines Computers."
       6:
+        image: 'notes/csd_concept_hardware_software_6.png'
         text: "Die CPU ist der Master-Chip, der alle anderen Teile des Computers steuert. Eine CPU muss verschiedene Dinge tun, so dass sie kleinere, einfachere Teile hat, die bestimmte Aufgaben erledigen. Es hat Schaltungen, um einfache Mathematik und Logik zu machen. Es hat andere Schaltungen zum Senden und Empfangen von Informationen zu und von verschiedenen Teilen des Computers."
       7:
+        image: 'notes/csd_concept_hardware_software_7.png'
         text: "Die eigentliche Magie der CPU besteht darin, woher sie weiß, welche Schaltungen sie verwenden muss und wann sie diese verwenden muss. Die CPU erhält einfache Befehle, die ihr sagen, welche Schaltung sie verwenden soll, um eine bestimmte Aufgabe zu erfüllen. Ein Befehl \"add\" weist die CPU beispielsweise an, ihre äußere Schaltung zu verwenden, um eine neue Zahl zu berechnen. Und dann sagt der Befehl \"store\" der CPU, dass sie eine andere Schaltung verwenden soll, um dieses Ergebnis im Speicher zu speichern."
       8:
+        image: 'notes/csd_concept_hardware_software_8.png'
         text: "Genau wie Zahlen können alle diese einfachen Befehle in binären Einsen und Nullen oder elektrischen Signalen ein- und ausgeschaltet werden. Die binären Befehle werden im Speicher abgelegt und die CPU holt und führt sie nacheinander aus. Diese Befehlsfolge ist in der Tat ein sehr einfaches Computerprogramm."
       9:
+        image: 'notes/csd_concept_hardware_software_9.png'
         text: "Binärcode ist die grundlegendste Form der Software und steuert die gesamte Hardware eines Computers. Heutzutage schreibt niemand mehr Software im Binärformat. Es würde ewig dauern!"
       10:
         image: 'notes/csd_concept_hardware_software_10.png'
@@ -2197,17 +2306,22 @@ de:
         image: 'notes/hoc_dance_properties_4.png'
         text: "Bisher hattest du die Möglichkeit, mit verschiedenen Arten von Tänzern zu spielen, und du hast sie so programmiert, dass sie verschiedene Arten von Tanzbewegungen ausführen. Aber wie funktionieren diese Bewegungen wirklich?"
       5:
+        image: 'notes/hoc_dance_properties_5.png'
         text: "Jede Tanzbewegung besteht aus einer Reihe von Bildern, die als Frames bezeichnet werden. Jedes Bild unterscheidet sich leicht von dem davor. Wenn dein Programm ausgeführt wird, zeigt der Computer ein Bild nach dem anderen an. Die Bilder werden so schnell gezeigt, dass es so aussieht, als würde sich die Tänzerin bewegen. Das ist das Geheimnis hinter jeder Animation."
       6:
+        image: 'notes/hoc_dance_properties_6.png'
         text: "Du kannst nicht nur die Bewegungen deiner Tänzerin ändern, du kannst auch die Eigenschaften einer Tänzerin ändern. Eigenschaften beschreiben Dinge wie die Position der Tänzerin auf dem Bildschirm, die Größe der Tänzerin und die Farbe der Tänzerin."
       7:
+        image: 'notes/hoc_dance_properties_7.png'
         text: "Um die Eigenschaften einer Tänzerin zu ändern, verwende einen festen Block. Lasst uns einen festen Block verwenden, damit unsere Tänzer kleiner aussehen. Zuerst ziehe den gesetzten Satz in dein Programm. Dann wähle die Tänzerin aus, die du ändern möchtest, und gib die Größe ein, die auf dem Bildschirm angezeigt wird."
       8:
+        image: 'notes/hoc_dance_properties_8.png'
         text: "Die volle Größe ist 100. Wenn du eine niedrigere Zahl wählst, wird die Tänzerin kleiner. Je kleiner die Tänzerin ist, desto weiter entfernt sieht sie aus. Dies ist eine großartige Möglichkeit, Background-Tänzer zu werden."
       9:
         image: 'notes/hoc_dance_properties_9.png'
         text: "Mit dem eingestellten Bausteinen kannst du auch die Abmessungen, die Drehung, die Position und die Farbe der Tänzerin ändern. Indem du mit diesen Eigenschaften herumspielst, kannst du alle möglichen Änderungen vornehmen und sie mit verschiedenen Teilen des Songs verknüpfen."
       10:
+        image: 'notes/hoc_dance_properties_10.png'
         text: "Denke daran, dass du nur die Eigenschaften einer Tänzerin einstellen kannst, die bereits existiert. Achte darauf, dass dein Set-Block nach dem Block \"Make a new dancer\" kommt. Zögere nicht zu experimentieren, sei kreativ und habe Spaß."
     hoc_dance_congrats:
       1:
@@ -2217,6 +2331,7 @@ de:
         image: 'notes/hoc_dance_congrats_2.png'
         text: "Herzlichen Glückwunsch! Du hast gerade die Grundlagen der Informatik gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst."
       3:
+        image: 'notes/hoc_dance_congrats_2019_3.png'
         text: "Wenn du in der Toolbox nachschaust, wirst du einige brandneue Blöcke finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise mit dem Layoutblock die Tänzer auf dem Bildschirm unterschiedlich anordnen."
       4:
         image: 'notes/hoc_dance_congrats_4.png'
@@ -2228,6 +2343,7 @@ de:
         image: 'notes/hoc_dance_congrats_6.png'
         text: "Oder etwas ganz anderes?"
       7:
+        image: 'notes/hoc_dance_congrats_2019_7.png'
         text: "Am Ende des Tutorials kannst du einen Link zu deiner Kreation mit deinen Freunden teilen. Öffne deine Vorstellungskraft und habe einfach Spaß!"
     mc_2018_intro:
       1:
@@ -2512,8 +2628,10 @@ de:
         image: 'notes/hoc_dance_properties_4.png'
         text: "Bisher hattest du die Möglichkeit, mit verschiedenen Arten von Tänzern zu spielen, und du hast sie so programmiert, dass sie verschiedene Arten von Tanzbewegungen ausführen. Aber wie funktionieren diese Bewegungen wirklich?"
       5:
+        image: 'notes/hoc_dance_properties_5.png'
         text: "Jede Tanzbewegung besteht aus einer Reihe von Bildern, die als Frames bezeichnet werden. Jedes Bild unterscheidet sich leicht von dem davor. Wenn dein Programm ausgeführt wird, zeigt der Computer ein Bild nach dem anderen an. Die Bilder werden so schnell gezeigt, dass es so aussieht, als würde sich die Tänzerin bewegen. Das ist das Geheimnis hinter jeder Animation."
       6:
+        image: 'notes/hoc_dance_properties_6.png'
         text: "Du kannst nicht nur die Bewegungen deiner Tänzerin ändern, du kannst auch die Eigenschaften einer Tänzerin ändern. Eigenschaften beschreiben Dinge wie die Position der Tänzerin auf dem Bildschirm, die Größe der Tänzerin und die Farbe der Tänzerin."
       7:
         image: 'notes/hoc_dance_properties_2019_7.png'
@@ -2535,6 +2653,7 @@ de:
         image: 'notes/hoc_dance_congrats_2.png'
         text: "Herzlichen Glückwunsch! Du hast gerade die Grundlagen der Informatik gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst."
       3:
+        image: 'notes/hoc_dance_congrats_2019_3.png'
         text: "Wenn du in der Toolbox nachschaust, wirst du einige brandneue Blöcke finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise mit dem Layoutblock die Tänzer auf dem Bildschirm unterschiedlich anordnen."
       4:
         image: 'notes/hoc_dance_congrats_4.png'

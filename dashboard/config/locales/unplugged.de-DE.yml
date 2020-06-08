@@ -12,6 +12,8 @@ de:
           wird, bei sehr jungen Schülern zu überspringen. Es ist allerdings produktiver,
           diese Begriffe bereits jetzt spielerisch einzuführen, anstatt auf spätere
           Gelegenheiten zu warten.
+        pdfs:
+        - unplug1
         video: Unplug1
       Unplug2:
         title: Computerorientiertes Denken
@@ -26,6 +28,9 @@ de:
           Die Teams tauschen ihre Algorithmen mit einer anderen Gruppe und zeichnen
           das Monster nach den Vorgaben der Anweisung. Entspricht die Zeichnung den
           Vorstellungen des Teams, das die Anweisungen erstellt hat?
+        pdfs:
+        - unplug2
+        video: Unplug2
       Unplug3:
         title: Millimeterpapier Programmierung
         desc: Schüler „programmieren“ einander, um Bilder zu zeichnen. Bei dieser
@@ -33,6 +38,9 @@ de:
           Der Unterricht beginnt damit, dass Schüler einander anweisen, Quadrate auf
           Millimeterpapier farbig anzumalen, um ein vorhandenes Bild zu reproduzieren.  Wenn
           Zeit dafür ist, können die Schüler am Ende der Stunde selbst Bilder erstellen.
+        pdfs:
+        - unplug3
+        video: Unplug3
       Unplug4:
         title: Algorithmen
         desc: In dieser Lektion geht es um Algorithmen.  Mit Tangram-Formen und Millimeterpapier
@@ -41,6 +49,9 @@ de:
           auf welche Weise ein Papier zu einem Rechteck gefaltet werden kann. Dabei
           wird angesprochen, dass einige Methoden mehr Faltvorgänge erfordern als
           andere.
+        pdfs:
+        - unplug4
+        video: Unplug4
       Unplug5:
         title: Funktionen
         desc: In dieser Lektion basteln Schüler ein Fensterbild aus Faden, Perlen
@@ -54,12 +65,18 @@ de:
           ihrer Materialien „abstrahieren“ und vage Begriffe für die einzelnen Bastelmaterialien
           erfinden.  Diese Verwendung allgemeiner Platzhalter ist eine wunderbare
           Einführung in Variablen.
+        pdfs:
+        - unplug5
+        video: Unplug5
       Unplug6:
         title: Bedingungen
         desc: Dies ist ein Spiel für die gesamte Klasse.  Nach der Einführung von
           Bedingungen, Wenn-Anweisungen und Schleifen kann die Klasse gemeinsam üben,
           und zwar mit einem zuvor erstellten Programm, einem Kartenspiel und ein
           bisschen Glück.
+        pdfs:
+        - unplug6
+        video: Unplug6
       Unplug7:
         title: Lieder schreiben
         desc: Liedtexte lesen ist für die meisten Schüler eine ziemlich intuitive
@@ -68,25 +85,40 @@ de:
           erläutern. Nachdem Schüler mit dem Definieren/Aufrufen von Funktionen vertraut
           sind, kommen die zusätzlichen Möglichkeiten hinzu, die durch die Weitergabe
           von Parametern beim Aufrufen einer Funktion entstehen.
+        pdfs:
+        - unplug7
+        video: Unplug7
       Unplug8:
         title: Abstraktion
         desc: Diese Aktivität kombiniert den Alltag der Schüler und ein Denkspiel
           nach Art von Onkel-Otto-Lückentexten, um der Klasse die Wirksamkeit von
           Abstraktion zu demonstrieren.
+        pdfs:
+        - unplug8
+        video: Unplug8
       Unplug9:
         title: Relais-Programmierung
         desc: Diese Lektion greift eine Idee von einer vorhergehenden Aktivität auf
           (4. Programmieren auf Millimeterpapier) und nutzt die dort erlernten Fähigkeiten,
           um Schülern die Notwendigkeit der Sequenzierung und des Debuggens zu vermitteln.
+        pdfs:
+        - unplug9
+        video: Unplug9
       Unplug10:
         title: das Internet
         desc: In dieser Lektion unternehmen die Schüler einen virtuellen Ausflug durch
           das Internet und lernen dabei über Internetadressen, IPs und DNS.
+        pdfs:
+        - unplug10
+        video: Unplug10
       Unplug11:
         title: Zusammenfassung
         desc: Als Abschluss der ersten 20-stündigen Serie durchlebt die Klasse ihre
           Lieblingsmomente. Außerdem wird darüber gesprochen, wie Schüler bei Interesse
           ihre Informatikkenntnisse selbstständig weiter ausbauen und vertiefen können.
+        pdfs:
+        - unplug11
+        video: Unplug11
       UnplugHappyMaps:
         title: Glücklich Karten
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
@@ -453,6 +485,11 @@ de:
         title: 'Brad Repro Bug 000
 
 '
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
       courseB_unplugged_MRF_2018:
         title: Meine Roboterfreunde
         desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
@@ -557,6 +594,8 @@ de:
         desc: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.desc
 
 '
+      courseB_unplugged_loopyMRF_2019:
+        title: My Loopy Robotic Friends
       Conditionals_2019:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
@@ -606,6 +645,7 @@ de:
           das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
           Bilder und Farben als Binärcode speichern können.
       courseE_unplugged_privateInformation_2019:
+        title: Private and Personal Information
         desc: 'Diese von Common Sense Education entwickelte Lektion befasst sich mit
           dem Unterschied zwischen Daten, die man im Internet sicher weitergegeben
           werden kann, und Daten, bei denen die Weitergabe nicht sicher ist.
@@ -737,6 +777,7 @@ de:
           einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
           Punkt" erstellen.
       TheRightApp_2019:
+        title: The Right App
         desc: "* Jeder benutzt heutzutage Computer, insbesondere Smartphones. \r\n*
           Smartphone-Anwendungen oder \"Apps\" helfen Menschen mit Freunden zu reden,
           Musik zu hören, einzukaufen oder einfach das Internet zu erkunden.\r\n*

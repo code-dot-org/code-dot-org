@@ -39,6 +39,7 @@ de:
         Custom: Künstler
         CustomStudio: Spielelabor
         Gamelab: Spielelabor
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronze
@@ -631,6 +632,7 @@ de:
         C4_unplugged_forloops: '"Zähle mit"-Schleifen'
         C4_unplugged_parameters: Songschreiben mit Parametern
         C4_unplugged_binary: Binärdatei
+        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Winkel in Künstler
         CSF_collector_k1_blocks: 'Einführung in Informatik und Programmieren: Der
           Sammler'
@@ -674,24 +676,80 @@ de:
         csd_external_netflix_data: Wie macht Netflix Serien- und Filmvorschläge?
         csd_external_waze_data: Warum sind So viele Nutzer von Waze besessen?
         csd_gamelab_animation_tab: Der Animations Tab
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Einführung in Variablen - Teil 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Geschwindigkeit
         csd_weblab_intro_1: Einführung in Web Lab - Teil 1
         csd_weblab_intro_2: Einführung in Web Lab - Teil 2
         csd_weblab_css_1: Einführung in CSS - Teil 1
         csd_weblab_css_2: Einführung in CSS - Teil 2
         csd_weblab_intro_3: Einführung in Web Lab - Teil 3
+        csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Einführung in Datenbanken - Teil 1
         csp_applab_databases_2: Einführung in Datenbanken - Teil 2
+        csp_applab_processing_lists: Processing Lists with Loops
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Einführung in Funktionen
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
+        csp_applab_turtle: Turtle Programming
+        csp_concept_bigdata_medicine: Data & Medicine
+        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
+        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'Das Internet: HTTP & HTML'
         csp_concept_what_is_internet: Was ist das Internet?
+        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
+        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
+          & Reliability'
+        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
+        csp_concept_rgb: A Little Bit About Pixels
         csp_cs_is_changing_everything: Informatik verändert alles
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Teil 1
         csp_internetsimulator_2: Internet Simulator - Teil 2
         csp_internetsimulator_3: Internet Simulator - Teil 3
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code – Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code – JavaScript'
         starwars_events: 'Star Wars: Erbaue ein Galaxie aus Code – Ereignisse'
@@ -800,6 +858,7 @@ de:
         csd_gamelab_functions: Aufrufen und Definieren von Funktionen
         csd_applab_parameters: Funktionen mit Parametern
         csd_applab_loops: Schleifen im App-Labor
+        csd_problem_solving_process: The Problem Solving Process
         CSF_Going_Places_Safely: Meine Online-Nachbarschaft
         CSF_SpriteLab_Intro_v2: Einführung Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Wie man einen Sprite erstellt
@@ -828,6 +887,7 @@ de:
         csd_what_computers_do: Was tun Computer eigentlich?
         csf_my_online_neighborhood_2020: Meine Online-Nachbarschaft
         csf_follow_the_digital_trail: Folge der digitalen Spur
+        csf_private_and_personal_information: Private and Personal Information
         csd_what_computers_are: Was ist ein Computer?
         codebreak_e01: 'Code Break 1.0: Algorithmen mit Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypen mit Mark Cuban und Lyndsey Scott'
@@ -836,6 +896,15 @@ de:
         codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint
+          Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China
+          Anne McClain'
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

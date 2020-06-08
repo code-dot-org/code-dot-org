@@ -531,6 +531,13 @@ de-DE:
         Course_4_Artist_9_a: "Willst du wissen, wie viel du drehen musst? \n\nWas
           ist 360 geteilt durch 10?"
       Course 4 Artist Binary Free Play 2b:
+        Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
+          counts up from 1 to 8, the other counts down from 8 to 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The
+          first draws the leftmost set of 1s, the second draws the 0s in the middle
+          and the third draws the 1s on the right.
+        Course_4_Artist_Binary_Free_Play_2b_c: In each repeat you need `counter` for
+          1s and `16-(2 x counter)` for 0s.
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **Lösung:**
 
@@ -560,6 +567,13 @@ de-DE:
         Course_4_Artist_For_Loops_Challenge_b: Die `Zähle mit`-Schleife zählt immer
           in 2er-Schritten.
       Course 4 Artist For Loops inspire:
+        Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same
+          as the solution to the previous challenge puzzle...with a couple of changes.
+        Course_4_Artist_For_Loops_inspire_b: Try a `for` loop that goes from 3 to
+          10 with an increment of 1.
+        Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same
+          repeat loop inside the `for` loop, but the second repeat turns the opposite
+          direction.
         Course_4_Artist_For_Loops_inspire_d: "**Lösung:**  \n\n<xml>\n  <block type=\"when_run\"
           deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\"
           inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n
@@ -620,6 +634,11 @@ de-DE:
           \             </block>\n            </next>\n          </block>\n        </statement>\n
           \     </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration:
+        Course_4_Artist_Functions_Inspiration_a: Start with the code from the last
+          puzzle and add an extra `turn right` of three degrees inside the repeat
+          loop.
+        Course_4_Artist_Functions_Inspiration_b: Try turning by more than 90 degrees
+          outside of the `repeat loop`, but still inside the `for loop`.
         Course_4_Artist_Functions_Inspiration_c: |-
           **Lösung:**
 
@@ -686,6 +705,15 @@ de-DE:
               </next>
             </block>
             </xml>
+      Course 4 Artist Functions challenge:
+        Course_4_Artist_Functions_challenge_a: Part of understanding how to use functions
+          is figuring out which ones you need, and which ones you don't.
+        Course_4_Artist_Functions_challenge_b: Use a `for loop`, then use its counter
+          variable inside of a nested `repeat` loop.
+        Course_4_Artist_Functions_challenge_c: Each iteration, you should draw a square
+          then jump forward.
+        Course_4_Artist_Functions_challenge_d: You will need to turn left by 90 degrees
+          outside of your `repeat`, but still inside the `for loop`.
       Course 4 Artist Inspire:
         Course_4_Artist_Inspire_a: Sobald ein Quadrat fertig ist, versuche eine halbe
           Seitenlänge vorwärts zu springen. Dann drehe dich um zeichne noch eines.
@@ -885,18 +913,47 @@ de-DE:
           teilst, nimmt die Länge der Seiten mit zunehmender Seitenzahl ab.
       Course 4 Bee Params 7:
         notice_pattern: 'Erkennst du ein Muster, wie sich die Anzahl der Nektare verändert? '
+        count_with_for: Notice that the nectar goes up in steps. What kind of block
+          can you use to do the same thing many times while counting up?
+      Course 4 Bee Params 8:
+        Course_4_Bee_Params_8_a: It's okay to ask for a honey number and a nectar
+          number each time.  If there's none of something, the number can be 0.
+      Course 4 Play Lab Params 2:
+        Course_4_Play_Lab_Params_2_a: You will need to click "edit" on the jump function
+          and update it so that it uses the `height` parameter.
       Course 4 Play Lab Vars 2:
         Course_4_Play_Lab_Vars_2_a: Achte darauf, dass die Zahl bei `Hund_Geschwindigkeit`
           etwas grösser ist als bei `Katze_Geschwindigkeit`.
+      Course 4 Play Labs For Loops 2:
+        Course_4_Play_Labs_For_Loops_2_a: What would you add to your `for` loop every
+          time to skip the even numbers?
+      Course 4 Playlab For Loops 4b:
+        Course_4_Playlab_For_Loops_4b_a: The flags are about 330 pixels away from
+          the characters.
+        Course_4_Playlab_For_Loops_4b_b: How can you make each character reach 330
+          pixels in the same number of moves with different starting and stopping
+          numbers?
+        Course_4_Playlab_For_Loops_4b_c: Remember, it doesn't matter how much a character
+          passes the flag by on its last step, as long as it takes each character
+          the same number of steps to get to the flag.
       Course 4 Playlab For Loops 5b:
         Course_4_Playlab_For_Loops_5b_a: Die Zeichen sind etwa 175 Pixel von der Mitte
           entfernt.
+        Course_4_Playlab_For_Loops_5b_b: Remember, a character's next step will be
+          longer than their last, since the counter keeps getting larger.
       Course 4 SCF 1:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
+        Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal
+          line.
         Course_4_SCF_1_c: "Bevor du die zweite Reihe von Sechsecken zeichnest, musst
           du dich um 60 Grad nach rechts drehen und 40 Pixel vorwärts springen.  \n\nWenn
           du dich an der richtigen vertikalen Position befindest, musst du deinen
           Künstler wieder zurückdrehen und 320 Pixel zurückspringen."
+        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to
+          turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in
+          the correct vertical location, you have to turn your artist back again and
+          jump backward 440 pixels (120 pixels farther than your `shift down/forward`
+          function. "
         Course_4_SCF_1_e: |-
           **Lösung:**
 
@@ -1085,6 +1142,8 @@ de-DE:
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Erinnere dich an deine Funktionen aus Level 16.
         Course_4_SCF_1a_b: "Betrachte diesen Weg als Deine Hauptroute:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
+        Course_4_SCF_1a_c: You should consider using a `for loop`. Not for the steps,
+          but for the function parameter.
         Course_4_SCF_1a_d: |-
           **Lösung:**
 
@@ -1308,8 +1367,12 @@ de-DE:
             </block>
           </xml>
       Course 4 SCF 1b:
+        Course_4_SCF_1b_a: "Notice that the shape of all honey points is similar.
+          \ \n\nGood place for a function!"
         Course_4_SCF_1b_b: "Schau dir diese Idee an, wie die Biene reisen könnte:
           \ \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
+        Course_4_SCF_1b_c: You should consider using a `for loop` for the distance
+          the bee travels.
         Course_4_SCF_1b_d: |-
           **Lösung:**
 
@@ -1424,6 +1487,12 @@ de-DE:
           </xml>
       Course 4 SCF 2:
         Course_4_SCF_2_a: Jedes Oktagon hat 40 Pixel lange Seiten.
+        Course_4_SCF_2_b: There is a 136 pixel jump between each octagon in each horizontal
+          line.
+        Course_4_SCF_2_c: "Before you draw the second row of octagons, you need to
+          turn right by 45 degrees and jump forward 96 pixels.  \n\nOnce you're in
+          the correct vertical location, you have to turn your artist back again and
+          jump backward 408 pixels. "
         Course_4_SCF_2_d: "Beachte, dass du, da in den geraden Reihen weniger Achtecke
           vorhanden sind, nicht weiter zurückspringen musst, um an den Startplatz
           der ungeraden Reihen zu gelangen.  \n\nDas bedeutet, dass du die gleiche
@@ -1897,7 +1966,12 @@ de-DE:
             </block>
           </xml>
       Course 4 SCFL 1a:
+        Course_4_SCFL_1a_a: You may have to travel farther overall to use the smallest
+          number of blocks.
         Course_4_SCFL_1a_b: "Schau sich diese Option für eine Bewegung an: \n\n![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)"
+        Course_4_SCFL_1a_c: A `for loop` will help you execute the same pattern, but
+          with a changing number of steps.  Notice that the number of steps needed
+          decreases from 7 to 5 by 1.
         Course_4_SCFL_1a_d: |-
           **Lösung:**
 
@@ -2042,6 +2116,10 @@ de-DE:
           </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: "Schau sich diese Option für eine Bewegung an: \n\n![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)"
+        Course_4_SCFL_2_b: Notice that there are three points during each iteration
+          of this `for` loop where you stop to interact with objects.
+        Course_4_SCFL_2_c: During each iteration of the `for` loop, the number for
+          each object relates to the `counter` variable in some way.
         Course_4_SCFL_2_d: |-
           **Lösung:**
 
@@ -2300,6 +2378,11 @@ de-DE:
             </block>
           </xml>
       Course 4 SCFL 4:
+        Course_4_SCFL_4_a: The color change happens using the `set color with red,
+          green, blue` block.  Red is always the value of `counter`, green is always
+          `255 - counter`, and blue remains constant at 255 exactly.
+        Course_4_SCFL_4_b: Each shape is a square with sides that are `counter` pixels
+          long, starting with 5px, and increasing by 5px all the way up to 200px.
         Course_4_SCFL_4_c: Der Maler dreht 15 Grad zwischen jedem Quadrat.
         Course_4_SCFL_4_d: |-
           **Lösung:**
@@ -2503,6 +2586,16 @@ de-DE:
             </block>
           </xml>
       Course 4 SCFL 7:
+        Course_4_SCFL_7_a: The color change happens using the `set color with red,
+          green, blue` block.  Red is set to `counter`. Green is  `255 - counter`,
+          and blue is set constant at 255.
+        Course_4_SCFL_7_b: 'This drawing is made using two similar `for loops`.  One
+          goes from 5 to 200 by 2, the other goes from 200 to 5 by 2. '
+        Course_4_SCFL_7_c: Inside each `for loop` you move forward 5 pixels before
+          you turn by `360 / counter`. Don't forget to set your brush to width `counter`
+          before you do!
+        Course_4_SCFL_7_d: You'll need to turn left by 225 degrees between the two
+          `for loops`.
         Course_4_SCFL_7_e: |-
           **Lösung:**
 
@@ -2714,6 +2807,14 @@ de-DE:
             </block>
           </xml>
       Course 4 SCV 1:
+        Course_4_SCV_1_a: 'Variables are helpful because you can add to them each
+          time through a loop. '
+        Course_4_SCV_1_b: This puzzle has one loop that creates the polygon, one loop
+          that repeats the polygon `sides` times, then another loop that does it all
+          again after adding 5 to `sides`.
+        Course_4_SCV_1_c: Using a variable for `sides` and one for `length` makes
+          the code cleaner because you can loop the same code multiple times, instead
+          of creating a new copy for each set of numbers.
         Course_4_SCV_1_d: |-
           **Lösung:**
 
@@ -2865,6 +2966,19 @@ de-DE:
             </block>
           </xml>
       Course 4 SCV 2:
+        Course_4_SCV_2_a: |-
+          The completed image is made up of 10 of these "flowers":\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...which are made up of 10 of these decagons:\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
+        Course_4_SCV_2_b: 'This design uses nested loops (three deep). All loops run
+          `sides` times. '
+        Course_4_SCV_2_c: The artist turns to the left when creating each decagon,
+          but turns to the right in both of the other loops.
+        Course_4_SCV_2_d: To prevent all of your 10 petal "flowers" from getting drawn
+          in the same place, make sure to jump forward by `length`/`sides` before
+          you turn 360/`sides` degrees as part of your outermost loop.
         Course_4_SCV_2_e: |-
           **Lösung:**
 
@@ -3038,6 +3152,10 @@ de-DE:
             </block>
           </xml>
       Course 4 SCV 3:
+        Course_4_SCV_3_a: 'Use your math block to add and subtract points to the `points`
+          variable when sprites collide. '
+        Course_4_SCV_3_b: You can change the parameter for how far you move your sprite
+          each time one of the arrow keys is pressed.
         Course_4_SCV_3_c: |-
           **Lösung:**
 
@@ -3068,6 +3186,12 @@ de-DE:
             </block>
           </xml>
       Course 4 SCV 4:
+        Course_4_SCV_4_a: Three variables will help you out here.  One for units of
+          nectar, one for units of honey, and one for how far the bee should move
+          each iteration.
+        Course_4_SCV_4_b: 'It will be very helpful to use three loops inside of your
+          main loop.  One for moving forward, one for collecting nectar and one for
+          making honey. '
         Course_4_SCV_4_c: "Schau sich diese Option für eine Bewegung an: \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
         Course_4_SCV_4_d: |-
           **Lösung:**
@@ -3209,6 +3333,10 @@ de-DE:
           Sieh dir diese Option für die Bewegung an:
 
           ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
+        Course_4_SCV_5_b: Each time through the loop, the flowers have two less nectar
+          and the bee needs to make one more honey.
+        Course_4_SCV_5_c: Notice that at the beginning of the outside loop, the bee
+          moves as many times as there is nectar in the next flower.
         Course_4_SCV_5_d: |-
           **Lösung:**
 
@@ -3338,6 +3466,17 @@ de-DE:
           Schau dir an, wie eine einzelne fertige Form aussieht
 
           ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
+        Course_4_SCV_6_b: 'You will benefit from creating 8 variables: red1, green1,
+          blue1, red2, green2, blue2, length, and sides.'
+        Course_4_SCV_6_c: Each of the shape's 5 sides is broken up into pieces of
+          `length`/`sides` where the zig is teal (rgb = 0,175,200) and the zag is
+          purple (rgb = 100, 50, 150).
+        Course_4_SCV_6_d: 'To zig, turn left by `360`/`sides`.  To zag, turn right
+          by `360`/`sides`. '
+        Course_4_SCV_6_e: 'The rest of the program is very standard for making a full
+          360 degree rotation from a shape, except that we are overlapping the shapes
+          by half, so we have to turn right by `180`/`sides`, which means that we
+          need twice as many of them as usual (`sides`\*`2` repetitions). '
         Course_4_SCV_6_f: |-
           **Lösung:**
 
@@ -4082,10 +4221,38 @@ de-DE:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Versuche, den Agenten einige Brücken bauen zu lassen,
           damit Alex oder Steve auf der Karte weiterlaufen können.
+      NEW Course 4 Artist Functions 13:
+        NEW_Course_4_Artist_Functions_13_a: Try editing the `draw a line of squares`
+          function so that you don't have to call it twice.
+        NEW_Course_4_Artist_Functions_13_c: What code would you need if you were going
+          to try to make a star using regular lines instead of boxes?
+      NEW Course 4 Artist Functions 4:
+        NEW_Course_4_Artist_Functions_4_a: You will have to use a `turn right by 120
+          degrees` block after each square.
+      NEW Course 4 Artist Functions 9:
+        NEW_Course_4_Artist_Functions_9_a: Try running the code before you add any
+          blocks.   What makes the drawing look a little off?
+        NEW_Course_4_Artist_Functions_9_b: If you can't quite put your finger on what's
+          going wrong, try slowing down the artist's by moving the slider to the left.
+      NEW Course 4 Artist Params 11:
+        NEW_Course_4_Artist_Params_11_a: There is more than one number that needs
+          to be replaced by a variable inside the function.
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: 'You will need to divide the _perimeter_
+          by the number of sides in order to keep the shapes the same size overall. '
       NEW Course 4 Artist Params 14:
         NEW_Course_4_Artist_Params_14_a: Du kannst das Programm ein paar Mal ausführen,
           um herauszufinden, wie die Funktion mit unterschiedlichen Parametern funktioniert.
       NEW Course 4 Artist Params inspire:
+        brush_width: We set the brush width to 1, then the color to blue before we
+          did anything else.
+        double_loop: Try putting a `for loop` inside of a `repeat` loop.
+        specifics: |-
+          The `for loop` runs from three to seventeen for each of the six "petals" before moving on to create the next, drawing shapes with only an odd number of sides.
+
+          The `set alpha` block uses division to fade the color as the counter gets higher.
+        after: When you're done with each "petal", be sure to `move forward` 20 pixels
+          before you make a 60 degree rotation.
         solution: "**Lösung** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"
           movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n
           \       <value name=\"WIDTH\">\n          <block type=\"math_number\">\n
@@ -4155,6 +4322,9 @@ de-DE:
           Wenn deine Schleife hochzählt, wird die Schrittweite bei jedem Durchlauf zu deiner Zählervariablen addiert.<br><br>
 
           Was musst du zu jeder Zahl addieren, um die nächste Zahl zu erhalten?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
+          or Steve can walk around beyond the edges of the map.
       OPD-K5-events-2:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       OPD-K5-events-3:
@@ -4516,6 +4686,12 @@ de-DE:
           ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
 
           ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
+      comment_intro_maze_2018:
+        courseC_maze_programming4_a: Kommentare sind außerdem sehr nützlich, wenn
+          andere versuchen deinen Code zu lesen.
+        courseC_maze_programming4_b: Füge einen Kommentar hinzu, wenn du die Richtung
+          wechselst - was wäre geschehen, wenn du dich in der anderen Richtung gedreht
+          hättest?
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_a: |-
           Mit Schleifen kannst du die Wände und das Dach gestalten. Versuche verschiedene Bausteine zu wiederholen.
@@ -4829,7 +5005,7 @@ de-DE:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -5072,13 +5248,13 @@ de-DE:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Als nächstes sammele die restlichen
           Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
           AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n
           \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
           type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>"
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: |-
           Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.
 
@@ -5126,6 +5302,11 @@ de-DE:
           \n-   Lass die Eichhörnchen traurig aussehen. \n-   Lass den Dinosaurier
           etwas sagen. \n-   Wähle einen neuen Hintergrund aus. \n-   Lass alle Figuren
           verschwinden und zeige eine Botschaft \"Game over!“ an."
+      course4_artist_binary_challenge2:
+        courseD_artist_binary_challenge2_a: |-
+          The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
+
+          There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       course4_artist_concept_challenge2:
         courseE_artist_concept_challenge2_a: Sobald du eine Funktion definiert haben,
           kannst du sie immer wieder aufrufen - wann und wo immer du willst!
@@ -5290,6 +5471,10 @@ de-DE:
           \                   </next>\n                  </block>\n                </next>\n
           \             </block>\n            </next>\n          </block>\n        </next>\n
           \     </block>\n    </next>\n  </block></xml>"
+        courseF_bee_fwp_challenge1_b: |-
+          Look at how much corn is available to harvest in each space. Do you see the counter pattern? The `length` parameter should be used to set the maximum value in the `for loop`.
+
+          Don't forget to have the farmer move back to the main path after harvesting!
         courseF_bee_fwp_challenge1_c: "Platziere eine \"Für-Schleife\" innerhalb einer
           Funktion und programmiere sie so ein, dass sie von \"1\" bis \"Länge\" um
           \"1\" hochzählt. \nInnerhalb dieser Schleife solltest du dich vorwärts bewegen
@@ -5302,6 +5487,11 @@ de-DE:
           \             <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n
           \             </block>\n            </value>\n            <statement name=\"DO\">\n
           \           </statement>\n</block></xml>"
+        courseF_bee_fwp_challenge1_d: |-
+          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
+          After the `for loop` you can just `move backward` **length times**.
+
+          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
         courseF_bee_fwp_challenge1_e: "**Hier ist die Lösung:** \n\n<xml>\n  <block
           type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n
           \   <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n    <title
@@ -5337,6 +5527,9 @@ de-DE:
           Achte zunächst darauf, dass du verstehst, wie diese Funktion funktionieren _soll_. Während der Landwirt jeden Weg entlanggeht, wird er nur versuchen, Mais zu sammeln. Wie kannst du stattdessen dafür sorgen, dass er nach jedem der drei Gemüse sucht und nur das pflückst, was er findet?
 
           Füge bedingte Anweisungen zu der Funktion hinzu, um nach Mais, Kürbissen und Salat zu suchen.
+        courseF_bee_fwp_challenge2_b: "Are you running out of `move forward` blocks?\nTry
+          using a _second_ `for loop` in your main program. \n\n**Note:** Be careful
+          not to confuse `counter` with `counter2` in your code."
         courseF_bee_fwp_challenge2_c: "**So sollte deine Funktion aussehen:** \n\n<xml><block
           type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\"
           usercreated=\"true\">\n    <mutation>\n      <arg name=\"length\"/>\n    </mutation>\n
@@ -7307,6 +7500,16 @@ de-DE:
       courseB_artist_loops5:
         courseB_artist_loops5_a: Ziehe eine "Wiederholungsschleife" heraus und lege
           dann die anderen Blöcke hinein. Wie oft musst du die Schleife wiederholen?
+      courseB_artist_loops5_2018:
+        courseB_artist_loops5_a: |-
+          Ziehe eine <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml> 'wiederholen'-Schleife hervor und lege dann die anderen Blöcke hinein. Wie oft musst du dies wiederholen?
+      courseB_artist_loops5_2019:
+        courseB_artist_loops5_a: |-
+          Ziehe eine <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml> 'wiederholen'-Schleife hervor und lege dann die anderen Blöcke hinein. Wie oft musst du dies wiederholen?
       courseB_artist_loops6:
         courseB_artist_loops6_b: Versuche, die Bewegungen auf ein Blatt Papier zu
           schreiben und dabei nach einem Muster zu suchen.
@@ -7534,6 +7737,10 @@ de-DE:
           ablaufen zu lassen.
         courseB_collector_loops6_b: Du kannst die Anzahl der Ausführungen der Wiederholen-Schleifen
           ändern, indem du auf die "3" klickst und eine andere Zahl wählst.
+        courseB_collector_loops6_c: |-
+          Um dieses Rätsel zu lösen wirst du 3 <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>  'wiederholen'-Schleifen benötigen.
         courseB_collector_loops6_d: Wenn dich das verwirrt, versuche, dieses Rätsel
           in 3 Teile zu zerlegen.
       courseB_collector_loops6_2019:
@@ -7542,6 +7749,10 @@ de-DE:
           ablaufen zu lassen.
         courseB_collector_loops6_b: Du kannst die Anzahl der Ausführungen der Wiederholen-Schleifen
           ändern, indem du auf die "3" klickst und eine andere Zahl wählst.
+        courseB_collector_loops6_c: |-
+          Um dieses Rätsel zu lösen wirst du 3 <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>  'wiederholen'-Schleifen benötigen.
         courseB_collector_loops6_d: Wenn dich das verwirrt, versuche, dieses Rätsel
           in 3 Teile zu zerlegen.
       courseB_collector_loops7:
@@ -7903,10 +8114,14 @@ de-DE:
       courseB_iceage_loops10:
         courseB_iceage_loops10_a: Vorsicht bei gebrochenem Eis! Scrat fällt dort ins
           Wasser!
+        courseB_iceage_loops10_b: Versuche die Schritte laut vorzusagen, oder schreibe
+          sie auf einem Stück Papier auf. Siehst du irgendwelche Muster??
         courseB_iceage_loops10_c: Das ist ein langes Rätsel! Folge diesem Weg.
       courseB_iceage_loops10_2019:
         courseB_iceage_loops10_a: Vorsicht bei gebrochenem Eis! Scrat fällt dort ins
           Wasser!
+        courseB_iceage_loops10_b: Versuche die Schritte laut vorzusagen, oder schreibe
+          sie auf einem Stück Papier auf. Siehst du irgendwelche Muster??
         courseB_iceage_loops10_c: Das ist ein langes Rätsel! Folge diesem Weg.
       courseB_iceage_loops1_2019:
         courseB_iceage_loops1_a: Vorsicht bei gebrochenem Eis! Scrat fällt gleich
@@ -7916,10 +8131,14 @@ de-DE:
 
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops2:
+        courseB_iceage_loops2_a: Teile dieses Rätsel auf in zwei Teile; eins vor der
+          Ecke, und noch eins nach der Ecke.
         courseB_iceage_loops2_b: Wenn du nicht weiterkommst, versuche die Schritte
           laut zu sagen.
         courseB_iceage_loops2_c: Folgt diesem Weg, um Scrat zur Eichel zu bringen.
       courseB_iceage_loops2_2019:
+        courseB_iceage_loops2_a: Teile dieses Rätsel auf in zwei Teile; eins vor der
+          Ecke, und noch eins nach der Ecke.
         courseB_iceage_loops2_b: Wenn du nicht weiterkommst, versuche die Schritte
           laut zu sagen.
         courseB_iceage_loops2_c: Folgt diesem Weg, um Scrat zur Eichel zu bringen.
@@ -7928,6 +8147,14 @@ de-DE:
           Verwende diesen neuen Baustein! <xml><block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">5</title>
               </block></xml>
+        courseB_iceage_loops3_b: |-
+          Um ein Stück Code zu wiederholen, schleife eine \`wiederholen‘-Schleife hervor,
+
+          <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>
+
+          und stecke dann den von dir gewählten Block in die Schleife.
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Benutze diesen neuen Baustein!
@@ -7973,11 +8200,17 @@ de-DE:
       courseB_iceage_loops8:
         courseB_iceage_loops8_a: Sind die Bewegungsblöcke richtig? Was kann man noch
           ändern?
+        courseB_iceage_loops8_b: The first loop should repeat **3** times, the second
+          should repeat **5** times, the third loop should repeat **4** times, and
+          the last loop should repeat **4** times.
         courseB_iceage_loops8_c: Benutze Schleifen, um Scrat zu helfen, diesem Weg
           zu folgen.
       courseB_iceage_loops8_2019:
         courseB_iceage_loops8_a: Sind die Bewegungsblöcke richtig? Was kann man noch
           ändern?
+        courseB_iceage_loops8_b: The first loop should repeat **3** times, the second
+          should repeat **5** times, the third loop should repeat **4** times, and
+          the last loop should repeat **4** times.
         courseB_iceage_loops8_c: Benutze Schleifen, um Scrat zu helfen, diesem Weg
           zu folgen.
       courseB_iceage_loops9:
@@ -8013,9 +8246,15 @@ de-DE:
       courseB_maze_seq1_2018:
         courseB_maze_seq1_a: Verbinde weitere Bausteine mit dem <xml><block type="when_run"/></xml>
           Baustein um Scrat zu bewegen!
+        courseB_maze_seq1_b: Schleife drei von diesen <xml><block type="maze_moveSouth"/></xml>-Pfeilen
+          heraus und verbinde diese mit dem <xml><block type="when_run"/></xml>-Block,
+          sodass Scrat zur Eichel gelangt.
       courseB_maze_seq1_2019:
         courseB_maze_seq1_a: Verbinde weitere Bausteine mit dem <xml><block type="when_run"/></xml>
           Baustein um Scrat zu bewegen!
+        courseB_maze_seq1_b: Schleife drei von diesen <xml><block type="maze_moveSouth"/></xml>-Pfeilen
+          heraus und verbinde diese mit dem <xml><block type="when_run"/></xml>-Block,
+          sodass Scrat zur Eichel gelangt.
       courseB_maze_seq2:
         courseB_maze_seq2_a: In diesem Programm fehlt ein Block. Kannst herausfinden,
           welcher?
@@ -9035,6 +9274,9 @@ de-DE:
           zu lösen.
         courseC_PlayLab_eventsA_b: Um diese Aufgabe zu lösen, musst du einen `wenn
           ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: Benutze die Pfeilschlüssel um den Pinguin zu bewegen.
+          Du musst keinen Code schreiben, um die Ebene abzuschließen.
       courseC_PlayLab_eventsFP:
         idea1: "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen
           Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)"
@@ -11862,6 +12104,13 @@ de-DE:
           auf der Außenseite und einer `währenden Weg vorwärts` Schleife auf der Innenseite
           ein. Wie viele Wege muss die Biene zurücklegen, wenn die Biene auf jeder
           Seite mit einer Blume zurückschlagen muss?
+        courseD_bee_conditionals5_c: Das Rechteck hat 3 Seiten mit Blumen, also muss
+          der Code '3-mal wiederholt' werden. Bei jeder Wiederholung muss die Biene
+          weiter auf dem Pfad summen, bei einer `während ein Weg vorwärts`-Schleife.
+          Um weiter vorwärts auf dem Pfad zu kommen, muss für die Biene ein ‘bewege
+          vorwärts‘-Block sein. Während die Biene auf dem Pfad ist, muss sie nach
+          einer Blume Ausschau halten. Im Falle eines 'wenn es eine Blume gibt'-Blocks
+          kann die Biene 'hole Nektar'ausführen.
         courseD_bee_conditionals5_b: Innerhalb des Bausteins`solange ein Pfad vor
           Dir liegt` müsst ihr euch vorwärts bewegen und nach einer Blume Ausschau
           halten. Wie prüft man, ob eine Blume vorhanden ist? Was tust du, wenn eine
@@ -12039,7 +12288,7 @@ de-DE:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12050,7 +12299,7 @@ de-DE:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12061,7 +12310,7 @@ de-DE:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12467,13 +12716,13 @@ de-DE:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Als nächstes sammele die restlichen
           Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
           AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n
           \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
           type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>"
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: |-
           Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.
 
@@ -12826,8 +13075,8 @@ de-DE:
         courseD_farmer_condLoops5_b: Es könnte an jedem Ort mehr als eine Mais- oder
           Salatpflanze stehen. Verwende eine "Während"-Schleife, um alle einzusammeln!
       courseD_farmer_condLoops5_2019:
-        courseD_farmer_condLoops5_a: 'Es gibt eine neue Schleife: `Wiederholen bis
-          zum Kürbis`. Kannst du sehen, wie man sie in diesem Rätsel verwendet?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until there are
+          pumpkins`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Es könnte an jedem Ort mehr als eine Mais- oder
           Salatpflanze stehen. Verwende eine "Während"-Schleife, um alle einzusammeln!
       courseD_farmer_condLoops6:
@@ -13127,10 +13376,14 @@ de-DE:
       courseD_iceage_loops10:
         courseB_iceage_loops10_a: Vorsicht bei gebrochenem Eis! Scrat fällt dort ins
           Wasser!
+        courseB_iceage_loops10_b: Versuche die Schritte laut vorzusagen, oder schreibe
+          sie auf einem Stück Papier auf. Siehst du irgendwelche Muster??
         courseB_iceage_loops10_c: Das ist ein langes Rätsel! Folge diesem Weg.
       courseD_iceage_loops10_2019:
         courseB_iceage_loops10_a: Vorsicht bei gebrochenem Eis! Scrat fällt dort ins
           Wasser!
+        courseB_iceage_loops10_b: Versuche die Schritte laut vorzusagen, oder schreibe
+          sie auf einem Stück Papier auf. Siehst du irgendwelche Muster??
         courseB_iceage_loops10_c: Das ist ein langes Rätsel! Folge diesem Weg.
       courseD_iceage_loops1_2019:
         courseD_iceage_loops1_a: Vorsicht bei gebrochenem Eis! Scrat fällt gleich
@@ -13140,10 +13393,14 @@ de-DE:
 
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops2:
+        courseD_iceage_loops2_a: Teile dieses Rätsel auf in zwei Teile; eins vor der
+          Ecke, und noch eins nach der Ecke.
         courseD_iceage_loops2_b: Wenn du nicht weiterkommst, versuche die Schritte
           laut zu sagen.
         courseD_iceage_loops2_c: Folgt diesem Weg, um Scrat zur Eichel zu bringen.
       courseD_iceage_loops2_2019:
+        courseD_iceage_loops2_a: Teile dieses Rätsel auf in zwei Teile; eins vor der
+          Ecke, und noch eins nach der Ecke.
         courseD_iceage_loops2_b: Wenn du nicht weiterkommst, versuche die Schritte
           laut zu sagen.
         courseD_iceage_loops2_c: Folgt diesem Weg, um Scrat zur Eichel zu bringen.
@@ -13198,11 +13455,17 @@ de-DE:
       courseD_iceage_loops8:
         courseD_iceage_loops8_a: Sind die `drehe`-Bausteine richtig? Was kann man
           noch ändern?
+        courseD_iceage_loops8_b: The first loop should repeat **3** times, the second
+          should repeat **5** times, the third loop should repeat **4** times, and
+          the last loop should repeat **4** times.
         courseD_iceage_loops8_c: Benutze Schleifen, um Scrat zu helfen, diesem Weg
           zu folgen.
       courseD_iceage_loops8_2019:
         courseD_iceage_loops8_a: Sind die `drehe`-Bausteine richtig? Was kann man
           noch ändern?
+        courseD_iceage_loops8_b: The first loop should repeat **3** times, the second
+          should repeat **5** times, the third loop should repeat **4** times, and
+          the last loop should repeat **4** times.
         courseD_iceage_loops8_c: Benutze Schleifen, um Scrat zu helfen, diesem Weg
           zu folgen.
       courseD_iceage_loops9:
@@ -13939,6 +14202,12 @@ de-DE:
         courseD_artist_functions2_c: Achte darauf, dass du den grünen `Zeichne ein
           Quadrat`-Block verwendest, um deine Funktion "aufzurufen". Sonst wird der
           Code in deiner Funktion nicht ausgeführt. (blockiert)[0]
+        courseD_artist_functions2_a: |-
+          Dein Programm sollte:
+
+          -   Deine Funktion benutzen
+          -   Sich um 100 + 75 Pixels vorwärts bewegen
+          -   Deine Funktionen nochmals benutzen
       courseE_artist_functions2_2019:
         courseD_artist_functions2_b: Die Funktion sollte nicht dein ganzes Programm
           enthalten, sondern nur den Teil, der ein Quadrat, dessen Seiten 100 Pixel
@@ -13946,6 +14215,12 @@ de-DE:
         courseD_artist_functions2_c: Achte darauf, dass du den grünen `Zeichne ein
           Quadrat`-Block verwendest, um deine Funktion "aufzurufen". Sonst wird der
           Code in deiner Funktion nicht ausgeführt. (blockiert)[0]
+        courseD_artist_functions2_a: |-
+          Dein Programm sollte:
+
+          -   Deine Funktion benutzen
+          -   Sich um 100 + 75 Pixels vorwärts bewegen
+          -   Deine Funktionen nochmals benutzen
       courseE_artist_functions2_copy:
         courseD_artist_functions2_b: Die Funktion, die du schreibst, sollte nicht
           dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat mit
@@ -14287,6 +14562,9 @@ de-DE:
           Weg drehen?
       courseE_bee_concept2_2018:
         courseE_bee_concept2_a: Könnte hier eine `während`-Schleife helfen?
+        courseE_bee_concept2_d: Mit dieser 'während'-Schleife kannst du leere Räume
+          untersuchen, um zu sehen auf die Menge Honig größer ist als null (> 0).
+          Dies lässt dasselbe Geschehen wie die Schleife 'während es noch Honig gibt'.
         courseE_bee_concept2_b: Du kannst `während`-Schleifen verwenden, um an das
           Ende jedes Weges zu gelangen und den gesamten Honig von jedem Feld einzusammeln.
         courseE_bee_concept2_c: In welche Richtung soll sich die Biene nach jedem
@@ -14300,6 +14578,8 @@ de-DE:
         courseE_bee_concept3a_c: Es gibt drei Gruppen von Blüten, also muss sich deine
           äußere `wiederholen`-Schleife dreimal wiederholen.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Um dieses Rätsel zu lösen, versuche verschachtelte
+          ‘wiederholen‘- oder ‘während‘-Schleifen.
         courseE_bee_concept3a_b: Wenn du nicht weißt, wo du die Schleifen einfügen
           sollst, versuche deinen Code schrittweise zu schreiben und suche dann nach
           Mustern.
@@ -14656,6 +14936,57 @@ de-DE:
           du jetzt einen `solange ein Haufen vorhanden ist` Baustein verwenden.
         courseE_farmer_ramp12_b: Du musst dich nur einmal vorwärts bewegen, um zum
           Loch zu gelangen.
+      courseE_farmer_ramp11b:
+        courseE_farmer_ramp11b_a: Du kannst deine 'während'-Schleife in eine 'wiederholen'-Schleife
+          stecken, um deinen Code zu verkürzen.
+      courseE_farmer_ramp11b_2018:
+        courseE_farmer_ramp11b_a: Du kannst deine 'während'-Schleife in eine 'wiederholen'-Schleife
+          stecken, um deinen Code zu verkürzen.
+      courseE_farmer_ramp11b_2019:
+        courseE_farmer_ramp11b_a: Du kannst deine 'während'-Schleife in eine 'wiederholen'-Schleife
+          stecken, um deinen Code zu verkürzen.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Du benötigst immer noch eine ‚wiederholen‘-Schleife
+          auf der Außenseite, um dem Landwirt mitzuteilen, wie oft er vorwärts laufen
+          muss um an alle Salatköpfe zu gelangen.
+      courseE_farmer_ramp12_forswap_2018:
+        courseE_farmer_ramp12_b: Du benötigst immer noch eine ‚wiederholen‘-Schleife
+          auf der Außenseite, um dem Landwirt mitzuteilen, wie oft er vorwärts laufen
+          muss um an alle Salatköpfe zu gelangen.
+      courseE_farmer_ramp12_forswap_2019:
+        courseE_farmer_ramp12_b: Du benötigst immer noch eine ‚wiederholen‘-Schleife
+          auf der Außenseite, um dem Landwirt mitzuteilen, wie oft er vorwärts laufen
+          muss um an alle Salatköpfe zu gelangen.
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: Du musst erst noch eine 'bis'-Schleife benutzen,
+          und dann noch eine 'während'-Schleife, wenn du einmal den Salat erreicht
+          hast.
+      courseE_farmer_ramp12c_2018:
+        courseE_farmer_ramp12b_b: Du musst erst noch eine 'bis'-Schleife benutzen,
+          und dann noch eine 'während'-Schleife, wenn du einmal den Salat erreicht
+          hast.
+      courseE_farmer_ramp12c_2019:
+        courseE_farmer_ramp12b_b: Du musst erst noch eine 'bis'-Schleife benutzen,
+          und dann noch eine 'während'-Schleife, wenn du einmal den Salat erreicht
+          hast.
+      courseE_farmer_ramp12d:
+        courseE_farmer_ramp12d_b: Um dieses Rätsel zu lösen, musst du noch deine 'bis'-Schleife
+          und deine 'während'-Schleife in eine 'wiederholen'-Schleife stecken!
+      courseE_farmer_ramp12d_2018:
+        courseE_farmer_ramp12d_b: Um dieses Rätsel zu lösen, musst du noch deine 'bis'-Schleife
+          und deine 'während'-Schleife in eine 'wiederholen'-Schleife stecken!
+      courseE_farmer_ramp12d_2019:
+        courseE_farmer_ramp12d_b: Um dieses Rätsel zu lösen, musst du noch deine 'bis'-Schleife
+          und deine 'während'-Schleife in eine 'wiederholen'-Schleife stecken!
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: Die Lösung zu diesem Rätsel wird sehr nach der Lösung
+          zum letzten Rätsel aussehen, aber drehend in der andere Richtung.
+      courseE_farmer_ramp12e_2018:
+        courseE_farmer_ramp12e_b: Die Lösung zu diesem Rätsel wird sehr nach der Lösung
+          zum letzten Rätsel aussehen, aber drehend in der andere Richtung.
+      courseE_farmer_ramp12e_2019:
+        courseE_farmer_ramp12e_b: Die Lösung zu diesem Rätsel wird sehr nach der Lösung
+          zum letzten Rätsel aussehen, aber drehend in der andere Richtung.
       courseE_farmer_ramp12f:
         courseE_farmer_ramp12f_b: Verwende einen `wenn/sonst`-Baustein, um dem Landwirt
           bei der Entscheidung zu helfen, ob er nach rechts oder nach links abbiegen
