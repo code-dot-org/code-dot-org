@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType, Organizer, ProgramManager} from '../permission';
+import {useFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
@@ -40,7 +41,11 @@ export class WorkshopManagement extends React.Component {
 
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
-      if (this.use_foorm_route()) {
+      let workshop_date = props.endDate
+        ? new Date(props.endDate)
+        : new Date(props.date);
+
+      if (useFoormSurvey(props.subject, workshop_date)) {
         surveyBaseUrl = 'workshop_daily_survey_results';
       } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
@@ -76,20 +81,6 @@ export class WorkshopManagement extends React.Component {
 
     return (
       new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
-    );
-  };
-
-  use_foorm_route = () => {
-    let workshop_date = this.props.endDate
-      ? new Date(this.props.endDate)
-      : new Date(this.props.date);
-
-    // Local summer or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    return (
-      workshop_date >= new Date('2020-05-08') &&
-      (this.props.subject === '5-day Summer' ||
-        (this.props.subject === SubjectNames.SUBJECT_CSF_101 &&
-          this.props.course === 'CS Fundamentals'))
     );
   };
 
