@@ -9,16 +9,20 @@ kk-KZ:
       BinaryImages: Екілік Суреттер
       BinaryImages_2018: Екілік Суреттер
       BuildingAFoundation: Ғимарат Салу
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: Есептегіштік ойлау
       Conditionals: Шарттар
       Conditionals_2018: Шарттар
       Crowdsourcing: Кроудсорсинг
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
       DiceRace: 'Қолданыстағы Алгоритмдер: Ойын тасы Жарысы'
       DigitalCitizenship: Сандық Азаматтық
       DigitalFootprint: Сіздің сандық іздеріңіз
       DigitalFootprint_2018: Сіздің сандық іздеріңіз
       EnvelopeVariables: Конверт Айнымалылары
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
       ForLoopFun: Көңілді For циклі
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: Функционалдық Күн сәулесін аулаушы
       GettingLoopy: Ілмектерді үйрену
       GettingLoopy_2018: Ілмектерді үйрену
@@ -27,6 +31,7 @@ kk-KZ:
       GraphPaperProgramming: Миллиметрлік Бағдарламалау
       GraphPaperProgramming_2018: Миллиметрлік Бағдарламалау
       Internet: Ғаламтор
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
       MadGlibs: Mad Glibs
       MoveIt: Қозғал, Қозғал
       MoveItMoveIt_2018: Қозғал, Қозғал
@@ -37,15 +42,25 @@ kk-KZ:
       RelayProgramming: Релелік Бағдарламалау
       RelayProgramming_2018: Релелік Бағдарламалау
       SongwritingParameters: Ән Жазу
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: Параметрлі Ән Жазу
       TangramAlgorithms: Танграм Алгоритмдері
       UnplugHappyMaps: Көңілді Карталар
       UnplugHappyMaps_2018: Көңілді Карталар
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: Іс-әрекеттерді өшіру
       courseB_unplugged_MRF_2018: Менің Достарым Роботтар
       courseB_unplugged_loopyMRF: Іс-әрекеттерді өшіру
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: Іс-әрекеттерді өшіру
       courseC_Unplugged_ScreenOutTheMean_2018: Іс-әрекеттерді өшіру
       courseD_unplugged_digitalCitizenship: Іс-әрекеттерді өшіру
       courseD_unplugged_digitalCitizenship_2018: Іс-әрекеттерді өшіру
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: Іс-әрекеттерді өшіру
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
