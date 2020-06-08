@@ -39,7 +39,9 @@ class ProjectInfo extends React.Component {
       >
         {({measureRef}) => (
           <div ref={measureRef}>
-            <HeaderComponent />
+            <div className="project_info">
+              <HeaderComponent />
+            </div>
           </div>
         )}
       </Measure>

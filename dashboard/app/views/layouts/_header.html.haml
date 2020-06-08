@@ -75,13 +75,12 @@
             = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
           - else
             = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
-        -# _header.js attaches ProjectInfo react component here.
-        -# ideally moved to header.js
-        .project_info
+
       .header_middle
         - if should_show_progress
           = render partial: 'shared/header_progress'
         - elsif level
+          .header_level
         - else
           .headerlinks.hide_on_tablet
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
