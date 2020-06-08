@@ -17,12 +17,14 @@
       Game/Score: Spill/poengsum
       Games/Score: Spill/poengsum
       Groups: Grupper
+      Input: Input
       Locations: Steder
       Logic: Logikk
       Loops: Løkker
       Math: Matematikk
       Numbers: Tall
       Properties: Egenskaper
+      Sprites: Sprites
       Text: tekst
       Variables: Variabler
       'Variables ': 'Variabler '
