@@ -3,12 +3,30 @@ lv:
   data:
     block_categories:
       Actions: Darbības
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
       Color: Krāsa
+      Comment: Comment
+      Comments: Comments
       Conditionals: Sazarojumi
+      Dancers: Dancers
+      Default: Default
       Events: Pasākumi
       Functions: Funkcijas
+      'Functions ': 'Functions '
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
       Logic: Loģika
       Loops: Cikli
       Math: Matemātika
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
       Text: Teksts
       Variables: Mainīgie
+      'Variables ': 'Variables '
+      World: World
