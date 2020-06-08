@@ -91,7 +91,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         summary << {
           category: lesson_group.localized_display_name,
           status: Plc::EnrollmentModuleAssignment.stages_based_status(
-            plc_course_unit.script.lessons.select {|lesson| lesson.lesson_group == lesson_group},
+            lesson_group.lessons,
             user,
             plc_course_unit.script
           ),
