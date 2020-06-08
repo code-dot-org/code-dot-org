@@ -332,7 +332,67 @@ ja-JP:
       4-5 While Loops 7: あらまあ、大きな土の山があるわよ。平らな地面になるまで土をかたづけるプログラムを作れますか？
       4-5 While Loops 8: " 大きな穴（あな）と山が１つずつあります。地面と同じ高さにするために、どれくらいシャベルを動かせばいいかな？"
       4-5 While Loops Assessment 1: たくさんの穴（あな）と山があります。地面を平らにするために、土をうめたり、かたづけるのを てつだってください。
+      AB_Debug_PlayLab3: Move the knight to each of the flags. If something goes wrong,
+        look for bugs!
       Alien Defender: 'プロジェクトのアイデア: Play Labでディフェンダーゲームを作ろう！'
+      CDEF_debugging_flappy2: Why doesn't this game work?
+      CSD U3 Boolean Modify: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2018: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Modify_2019: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Boolean Predict: What do you think this code will do when it is run?
+        Predict what each console.log() command will print, then run the program to
+        check your predictions.
+      CSD U3 Boolean Predict_2018: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Boolean Predict_2019: What do you think this code will do when it is
+        run? Predict what each console.log() command will print, then run the program
+        to check your predictions.
+      CSD U3 Keypress Boolean: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Boolean_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Boolean_2018_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers: Modify the code so that all of the console.log commands
+        print true
+      CSD U3 Keypress Watchers_2018: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 Keypress Watchers_2019: Modify the code so that all of the console.log
+        commands print true
+      CSD U3 L5 Freeplay: Change the value of petalSize multiple times. How does it
+        change your drawing?
+      CSD U3 L5 Freeplay_2018: Change the value of petalSize multiple times. How does
+        it change your drawing?
+      CSD U3 L5 Freeplay_2019: Change the value of petalSize multiple times. How does
+        it change your drawing?
+      CSD U3 Mouse Input Bee 2: Do this
+      CSD U3 Mouse Input Bee 2_2018: Do this
+      CSD U3 Mouse Input Bee 2_2019: Do this
+      CSD U3 Sprites intro sprites: Do This
+      CSD U3 Sprites intro sprites_2018: Do This
+      CSD U3 Sprites intro sprites_2019: Do This
+      CSD U3 Variables change circle size: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables change circle size_2019: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables naming rules v2: Change the value of petalSize multiple times.
+        How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_2019: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random with assignment: Change the value of petalSize multiple
+        times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018: Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2019: Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U5 black white images pixelation: 0 と 1 を入力して X の形を完成させる
       CSD U5 black white images pixelation 2: スマイリーフェイスを描く (画像を表示するにはここをクリック)
       CSD U5 black white images pixelation 2_2018: スマイリーフェイスを描く (画像を表示するにはここをクリック)
@@ -348,9 +408,84 @@ ja-JP:
       CSD U5 black white images pixelation 5_2019: 好きなものをかく
       CSD U5 black white images pixelation_2018: 0 と 1 を入力して X の形を完成させる
       CSD U5 black white images pixelation_2019: 0 と 1 を入力して X の形を完成させる
+      CSD U6 params modify clouds: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+
+        -   Create a new function `moveCloud(name)` that will move any cloud.
+            -   (Hint: you will use almost all the same code as the `moveCloud0` function)
+        -   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+            -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify clouds_2018: |-
+        # Clouds
+
+        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+
+        # Do This
+
+        -   Create a new function `moveCloud(name)` that will move any cloud.
+            -   (Hint: you will use almost all the same code as the `moveCloud0` function)
+        -   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
+            -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+      CSD U6 params modify planes: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2018: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify planes_2019: |-
+        # Multi-plane Controller
+
+        This program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.
+
+        # Do This
+
+        -   Create a new `movePlane(name)` function that can move any plane.
+        -   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.
+
+        _Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_
+      CSDU4 - Design Mode - 16: Add an event handler for the button using the "Insert
+        and show" link in the Design Mode Events tab. (Click to see full instructions).
+      CSDU4 - Design Mode - 17: Update the ID names and `console.log` messages to
+        match the correct button. (Click to see full instructions.)
+      CSDU4 - Design Mode - 18: Fix the layout of the bullseye game. (Click to see
+        full instructions)
+      CSDU4 - Design Mode - 4: Improve the button by choosing a descriptive and meaningful
+        ID. (Click to see full instructions)
       CSDU6 arrays select rainbow: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSDU6 arrays select rainbow_2018: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSDU6 arrays select rainbow_2019: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSDU6 arrays select random: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2018: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_2019: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable: Write a program that displays a randomly chosen
+        color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2018: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select variable_2019: Write a program that displays a randomly
+        chosen color from the array. (Click to see full instructions)
       Choose Your Own Adventure: これはプレイラボで作ることができる冒険物語です。
       Course 4 Artist 1: '四角形をかくのを手伝ってください。(それぞれの線の長さは300ピクセル) '
       Course 4 Artist 10: 面白い形を書くプログラムです。これを、入れ子でくりかえすと、どうなるでしょうか？くりかえす度に、少しまがると、どうなるでしょう？あなたの、すきな絵を書いて楽しんでください。
@@ -368,6 +503,13 @@ ja-JP:
       Course 4 Artist 8: 太陽の絵を書いてください。「くりかえし」ブロックを加えて、灰色（はいいろ）のブロック全部を中に入れてみてね。
       Course 4 Artist 8a: この形を、おぼえてますか？ヒントなしで、これを書いてみよう！
       Course 4 Artist 9: このデザインを書くには、10 回くりかえします。ヒント：1回書いたら、少しまがりましょう。
+      Course 4 Artist Binary 1: "Here's a function that takes a binary string of 1's
+        and 0's and instructs the artist to follow them from left to right, top to
+        bottom.  The artist will fill-in the squares when it sees a 1 and ignore the
+        square when it sees a 0. \n\nRun this code to see how the artist uses binary
+        to draw this pattern."
+      Course 4 Artist Binary 2: Which of these binary strings could you loop 8 times
+        to draw this image?
       Course 4 Artist Binary 3: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
       Course 4 Artist Binary 4: |-
         このプログラムを実行すると、おこった顔が書かれます。
@@ -386,6 +528,32 @@ ja-JP:
       Course 4 Artist Binary pre1: |-
         「Draw binary "01010101"」ブロックを「実行したとき」にくっつけて、実行してください。
         アーティストは、一番目の行にバイナリで「01010101」を書きます。
+      Course 4 Artist For Loops 1: Use a repeat block to draw this triangle that is
+        50 pixels wide.
+      Course 4 Artist For Loops 11: 'Remember back in a previous stage when we used
+        a variable to control the number of sides in a shape? We are going to do the
+        same thing with the `counter` variable now. This pattern starts with a triangle
+        and adds one side at a time until it draws a decagon (10 sides). Each side
+        should be 100 pixels long. '
+      Course 4 Artist For Loops 11a: |-
+        Let's put it all together!  Using your knowledge of `for` loops and the `counter` variable, create this drawing where each shape has two more sides than the last.  Make sure that each side is 10 times as long as the number of sides in the polygon.
+
+        Very little of the code has been provided for you.
+      Course 4 Artist For Loops 14: If you turn a little bit more or less than you
+        normally would for a shape, it creates a neat effect. Try using some of the
+        code from the last level, but turning 89 degrees to create this twisted square
+        spiral.
+      Course 4 Artist For Loops 15: 'Free Play: Try making some drawings of your own
+        using "for loops". We''ve added a few useful variables for you as well.'
+      Course 4 Artist For Loops 2: 'I''ve put the code for drawing a triangle inside
+        a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look at
+        the code before you hit "Run".'
+      Course 4 Artist For Loops 3: 'Use the last puzzle as a reference to complete
+        this one.  The smallest triangle has 20 pixel sides, the largest has 200 pixel
+        sides, and each triangle is 20 pixels larger than the last. '
+      Course 4 Artist For Loops 4: 'How would you modify what you''ve learned to draw
+        these squares? They start at 15 pixels long, the largest is 300 pixels long,
+        and each square is 15 pixels larger than the last. '
       Course 4 Artist For Loops 6a: |-
         さっきのプログラムを、3ヵ所かえるだけで、この絵を書くことが出来ます！
         ヒント：
@@ -393,6 +561,19 @@ ja-JP:
         1.  線の太さは？
         2.  まがる向きは？
         3.  いくつ「ずつ」カウントする？
+      Course 4 Artist For Loops 8: |-
+        Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?
+
+        Hint:  You need to remove something!
+      Course 4 Artist For Loops Challenge: "**Challenge:** Can you figure out how
+        to use all of the things you've learned to create this image of polygons,
+        all with 40 pixel sides?"
+      Course 4 Artist For Loops inspire: |-
+        Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.
+
+        Need a hint? Click here.
+      Course 4 Artist Functions Inspiration: Click here to see the hints again.
+      Course 4 Artist Functions challenge: Click here to see the hints again.
       Course 4 Artist Inspire: もっとカッコいいデザインを作るヒントを見たかったら、ランプをクリックして！自分のすきなデザインを、自由に書いても良いよ！
       Course 4 Artist Vars 1: 正三角形を書きましょう。それぞれの長さが100ピクセルぴったりの正三角形です。
       Course 4 Artist Vars 11: 前のパズルを、もっとむずかしくしました。変数 "sides" にセットする数を変えて、四角形を書くようにしてください。
@@ -427,9 +608,28 @@ ja-JP:
         時は、ハチミツを作りましょう。"
       Course 4 Bee Loops 5 NEW: 3つ花があり、それぞれの花にはミツがあります。「くりかえし」を上手く使って、少ないブロック数で、全部のミツを集めてください。
       Course 4 Bee Loops 5a NEW: 全ての花のミツを集めながら、ハチの巣（す）へ行きます。ハチの巣についたら、ハチミツを5回、作って下さい。「くりかえし」ブロックを使って、使うブロックの数を出来るだけ少なくしてくださいね！
+      Course 4 Bee Params 1: Write a sequence to collect all of the nectar using `get
+        3 nectar` which turns, moves to collect the nectar, and then returns to the
+        original location.
+      Course 4 Bee Params 2: Modify the "get 3 nectar" function so it makes me turn
+        right instead of left to the flowers.
+      Course 4 Bee Params 3: 'Now there are flowers on both sides! We''ve added variables
+        called "left" and "right" for you to use, and added a parameter called "direction"
+        to "get 3 nectar". Edit "get 3 nectar" so that the bee turns the correct direction
+        when the variables "left" or "right" are passed into the function.  '
+      Course 4 Bee Params 4: Try using your new function to collect nectar from all
+        of the flowers. Remember to use the left and right variables.
       Course 4 Bee Params 5: |-
         こんどは、「関数を作る」を使って、全部のプログラムを書いてみましょう。
         「方向」をパラメータにして「ミツを五つ取る」関数を作ってください。
+      Course 4 Bee Params 6: Wouldn't it be nice if we could collect all of these
+        nectars with a single function? Try adding a new parameter to your function
+        called "nectar units" to control the amount of nectar to collect. You'll probably
+        want to rename the function too!
+      Course 4 Bee Params 7: Try using your new function to collect all of this nectar.
+      Course 4 Bee Params 8: 'Challenge: Now there''s honey to deal with too! Rewrite
+        your function to use both the number of honey units and the number of nectar
+        units.  How would you use those numbers to decide what you should do?'
       Course 4 EC 1a: ルールなし、ヒントなしでちょうせんしてみてね。
       Course 4 EC 1b: ルールなし、ヒントなしでちょうせんしてみてね。
       Course 4 EC 2a: ルールなし、ヒントなしでちょうせんしてみてね。
@@ -439,6 +639,44 @@ ja-JP:
       Course 4 Maze 3: 'アングリーバードが、ブタの所に行くよう、プログラムしてね。 '
       Course 4 Maze 4: 使うブロックの数が少なくてすむように、「くりかえし」ブロックを使ってみて・・
       Course 4 Maze 5: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
+      Course 4 Play Lab Params 1: Here's a function called `jump` that causes your
+        main character to jump up 100 pixels. Run the program and use the jump function
+        to collect all of the flags by moving the dog with the arrow keys.
+      Course 4 Play Lab Params 10: "We've added one last function for you. \n\nUse
+        an \"if\" statement to program your game to call the \"level\\_up\" function
+        only when \"player\\_score\" becomes greater than a certain number.\n\nFor
+        example: \"player\\_score\" > 6\n\nPlay the game, and make it to level 3 to
+        move to the next puzzle. "
+      Course 4 Play Lab Params 2: "Now we've got flags that are too high for our current
+        jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple
+        jump heights.  \n\nWe need to add a parameter to our jump function called
+        \"height\".  The up arrow should cause the dog to jump 200 pixels and the
+        down arrow should make it jump only 100 pixels. "
+      Course 4 Play Lab Params 3: 'We have added another parameter to the jump function
+        so that we can use it with other actors. Each actor is represented by a number,
+        starting from one. Edit the "jump" function so that it uses the "actor" parameter
+        to make the correct character jump. '
+      Course 4 Play Lab Params 4: "Here's a function called `patrol`. \n\nEdit `patrol`
+        to move Cat up 400 pixels and then down 400 pixels."
+      Course 4 Play Lab Params 5: Edit the the "patrol" function to add an "actor"
+        parameter, so that we can call it for each of the actors on the screen. Remember,
+        the actors correspond to numbers 1, 2, and 3.
+      Course 4 Play Lab Params 6: Add another parameter called "speed" to the "patrol"
+        function. Try using a "set speed" block with the new "speed" parameter to
+        help Penguin get both flags before the other sprites even get one.
+      Course 4 Play Lab Params 7: |-
+        Let's have some fun! Look at the code provided to see if you can figure out what each block does.\
+        When you're done, use the arrow keys to control Dog and collect all of the flags.
+        NOTE: You don't need to make any changes to the program
+      Course 4 Play Lab Params 8: Use the `when actor touches` block to send Dog back
+        to the top-left ONLY if Dog touches any of the other actors.
+      Course 4 Play Lab Params 9: "Here's our game from an earlier stage, but most
+        of the code is hidden. There’s a new function `score_points.`\n\nEdit the
+        function so that a new parameter called `points` can be added to `player_score`.
+        \n\nThe variable `player_score` should increase each time Dog tags Cat with
+        pie, and decrease each time that Cat tags Dog with a sandwich.\n\nNote: When
+        you're done, click \"Run\" to play.  When Dog scores 6 points, you will move
+        on to the next puzzle. "
       Course 4 Play Lab Vars 1: |-
         プログラムは出来ていますので、「実行（じっこう）」ボタンをおして、ゲームをはじめてください。
         このゲームでは、あなたは犬です。ネコよりも多くのハタを集めたいと思っています。
@@ -464,11 +702,42 @@ ja-JP:
         自由時間です！たくさんのブロックがあるので、分類して整理しました。このステージに出てきたブロックや変数だけじゃなく、その他にも、いろいろなブロックがあります。まずは、使えるブロックをすべて見てみましょう。そのあとで、 くりかえし、変数、イベントを使って、ゲームやお話を作りましょう。
 
         ヒント: ワークスペース内のすべてのプログラムを見るにはスクロールして下さい。
+      Course 4 Play Labs For Loops 1: Let's make the dog speak every number from 1
+        to 100. Use a `for` loop and the counter block to speak the counter variable
+        each time the loop is run.
+      Course 4 Play Labs For Loops 2: This time, help Olive the Cat count only the
+        odd numbers from 1 to 101.
+      Course 4 Play Labs For Loops 3: If we count by larger numbers, we count even
+        higher in the same amount of time. Try making Pirate Pegleg count from 10
+        up to 1000, adding 10 at a time.
+      Course 4 Playlab For Loop Freeplay: 'Freeplay: Use everything you''ve learned
+        so far to make a game that includes a `for` loop!'
+      Course 4 Playlab For Loops 4b: Can you change the **increment** in one of the
+        loops so that the race is a tie?
+      Course 4 Playlab For Loops 5b: Adjust the interval on these `for` loops so that
+        the two characters end in the exact same place.
+      Course 4 Playlab For Loops 6b: "Edit this `for` loop to create a game that's
+        fun for you to play! \nPress \"Run\" and click Madame Unicorn as many times
+        as you can.  Can you beat our score of 24? "
+      Course 4 SCF 1: Use the suggested functions to draw four rows of hexagons. Notice
+        how our even numbered rows are shifted to the right?
+      Course 4 SCF 1a: Can you figure out how to collect all of this nectar with the
+        fewest blocks possible?
+      Course 4 SCF 1b: Can you figure out how to collect all of this honey with the
+        fewest blocks possible?
+      Course 4 SCF 2: 'Use what you learned in the previous level to draw an image
+        like this. Note: The code becomes more simple if you incorporate parameters. '
+      Course 4 SCF 3: 'Use what you learned in the previous level to draw an image
+        like this. Note: The code becomes more simple if you incorporate parameters. '
       Course 4 SCFL 1: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
+      Course 4 SCFL 1a: Can you get Scrat to his acorn using as few blocks as possible?
+      Course 4 SCFL 1b: Can you get Scrat to his acorn using as few blocks as possible?
       Course 4 SCFL 2: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
       Course 4 SCFL 3: この図形を書いてみよう！
       Course 4 SCFL 4: この図形を書いてみよう！
       Course 4 SCFL 6: この図形を書いてみよう！くりかえしを、1回だけ使って書けますか？
+      Course 4 SCFL 7: The artist wants to catch some waves! Can you figure out how
+        to re-create this drawing?
       Course 4 SCV 1: |-
         この図形を書いて下さい。
         この中には、ギザギザの線で書かれた五角形が、10コ書かれています。
@@ -487,6 +756,11 @@ ja-JP:
         これを5回くりかえします。
         はじめに「太さは1」プロックを追加して、線の太さを1にしてください。
         ヒントが ほしいときは、ランプをクリックしてね。
+      Course 4 SCV 3: |-
+        Now for a game of tag!  Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly 10 points to win!
+        But be careful, when Cat and Penguin tag each other, they take points away.
+
+        Add the blocks necessary to make this game work the way it's been explained.  How will you get Dog to move in all directions using the arrow keys?  How will you add points when Dog tags Cat or Penguin?  How will you subtract points when Cat and Penguin touch?
       Course 4 SCV 4: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
       Course 4 SCV 5: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
       Course 4 SCV 6: |-
@@ -593,6 +867,7 @@ ja-JP:
       Fish Tank 7-validated: ツールボックスにある新しいブロックを使って、水そうの中を にぎやかに しよう。
       Fish Tank 7-validated_2019: ツールボックスにある新しいブロックを使って、水そうの中を にぎやかに しよう。
       FoodFight: これは、プレイラボで作ることができるゲームのサンプルです。
+      Frequency Analysis: Test
       Function intro Ryan: "「橋をかける」関数を 2 回使って、たいまつまでの道を作りましょう。"
       Function intro Ryan_2019: "「橋をかける」関数を 2 回使って、たいまつまでの道を作りましょう。"
       Geometric Sun: アイデア：多角形を使って、もようをかいてみよう。
@@ -746,11 +1021,74 @@ ja-JP:
       MC_HOC_2017_Ali_2019: 関数を使って、溶岩をわたれる道を見つけましょう。
       MC_HOC_2017_FP20x20: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
       MC_HOC_2017_FP20x20_2019: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
+      NEW Course 4 Artist Functions 1: Can you draw a square that is 100 pixels in
+        length, using a repeat loop?
+      NEW Course 4 Artist Functions 11: Now we want to create a new function called
+        `draw a line of squares` that draws six squares all in a row.  Can you build
+        this function using this `draw a square 20` function that we created for you?
+      NEW Course 4 Artist Functions 12: Use the `draw a line of squares` function
+        from the last puzzle to draw this pattern.
+      NEW Course 4 Artist Functions 13: 'Can you draw a star shape using the `draw
+        a line of squares` function?  '
       NEW Course 4 Artist Functions 14: '自由時間です。カッコイイ絵を書いて、友だちに見せよう！ '
+      NEW Course 4 Artist Functions 2: Can you draw 3 squares 20 pixels apart from
+        one another? Each square is 100 pixels in size.
+      NEW Course 4 Artist Functions 3: "Here is a new type of Block. It is called
+        a `function` block. Click \"edit\" then fill it with the code for drawing
+        a square with 100 pixel sides. \n\nWhen you're done editing the function,
+        click \"Close\" to go back to your program."
+      NEW Course 4 Artist Functions 4: Use the `draw a square` function to draw this
+        pattern.
+      NEW Course 4 Artist Functions 7: 'Are you getting the hang of how to use function
+        blocks? Let''s modify this square so that it is 200 pixels in size. Click
+        on "edit" to enter the `draw a square` function editor. Remember to click
+        on "Close" to get out of the function editor. '
+      NEW Course 4 Artist Functions 8: We have created a new function for you called
+        "draw a triangle".  Can you edit the function definition to draw a triangle
+        with 100 pixel sides?
+      NEW Course 4 Artist Functions 9: Can you solve this by adding only one block?
+      NEW Course 4 Artist Params 1: Let's define this function to draw a square with
+        50 pixel sides. Click "edit" to get started.
+      NEW Course 4 Artist Params 10: 'Create a `draw a hexagon` function block with
+        a length parameter. This hexagon has sides that are 100 pixels in length. '
+      NEW Course 4 Artist Params 11: Can you figure out how to draw this shape? Edit
+        the function to use the "sides" parameter.
+      NEW Course 4 Artist Params 12: Can you complete this drawing? The sides of all
+        the shapes are 100 pixels long.
+      NEW Course 4 Artist Params 12a: This image is similar to the last. Can you use
+        a `for` loop with your function to make this design?
+      NEW Course 4 Artist Params 13: "Let's edit this \"draw a polygon\" function.
+        It already has a \"sides\" parameter. Now, let's add a \"length\" parameter.
+        \nThe perimeter of each shape is 200 pixels long. Do you remember the equation
+        to make shapes the same size when they have a different number of sides?"
+      NEW Course 4 Artist Params 14: Edit "draw a spiral edge" to use "length" and
+        "sides" parameters, then recreate these shapes.
+      NEW Course 4 Artist Params 15: 'Freeplay: Here are the functions you''ve written,
+        and some more for you to play with. Draw something awesome! Play with the
+        pen width to see how different your drawings look!'
       NEW Course 4 Artist Params 2: 50 ピクセルの辺を持つ三角形を書く `draw triangle` 関数を作ります。
+      NEW Course 4 Artist Params 3: Now let's use the function to draw 5 triangles
+        in a row. Each triangle is 30 pixels apart.
+      NEW Course 4 Artist Params 4: Do you notice anything different about these function
+        blocks? Click “Run” to see what happens.
+      NEW Course 4 Artist Params 5: 'Replace the `???` in the `length` parameter input
+        block. The pentagon has 100 pixel sides. '
+      NEW Course 4 Artist Params 6: Fill in the "length" parameter to draw these shapes
+        by replacing the "???" with the right numbers. The square and triangle have
+        100 pixels sides while each side of the hexagon is 75 pixels long.
+      NEW Course 4 Artist Params 7: Can you complete this drawing? The sides of each
+        triangle are 25 pixels larger than the last.  The first triangle has 25 pixel
+        sides.
+      NEW Course 4 Artist Params 8: The code for this triangle function is broken.
+        Can you edit the function to fix it, and then make triangles of length 25,
+        50, and 75?
       NEW Course 4 Artist Params 9: |-
         `draw a square`関数の「編集」をクリックして、`length` パラメータを追加します。「パラメータを追加（ついか）」ボタンの左のボックスに `length` と入れてから、ボタンをおして下さい。
         そして、正方形を三つ書きます。大きさは、25、50、75ピクセルで、それぞれ100ピクセルはなれています。
+      NEW Course 4 Artist Params inspire: "Free Play Inspiration: You've now learned
+        everything you need to know to make a pattern like this! If this picture inspires
+        you, try to make something similar. Otherwise, create something all your own.\n\nWant
+        to know how our inspiration pattern was made? "
       NEW Course 4 Artist Vars 12: 前のパズルのアルゴリズムを使って、今度は、辺の長さが150の五角形を書きましょう。
       NEW Course 4 Artist Vars 2: 数のブロックを「セット Length は？」と「？回くりかえす」のところに入れて、50ピクセルの長さの三角形を6つ書いてください。
       NEW Course 4 Artist Vars 4: もう一回やってみよう！このカッコイイ六角形を使ったデザインを書くには、「lengh」変数を60にしてみてね。
@@ -759,12 +1097,90 @@ ja-JP:
         「セット length は」に、数のブロックをくっつけて、数は100にします。全部の「前に動く？ピクセル」には「length」ブロックを入れて下さい。
         「length」に入れた数が、その後のプログラムで、どこでも使えることが分ったかな？
       NEW Course 4 Bee For Loops 1: "「くりかえし」を使って、すべての花からミツを集めましょう。"
+      NEW Course 4 Bee For Loops 10a: 'Ready for a challenge?  Take what you''ve learned
+        about loops and try to solve this problem. Remember: You may have to run through
+        solutions multiple times before you figure out all of the steps.'
+      NEW Course 4 Bee For Loops 2: Add the code necessary to make sure the bee collects
+        all the nectar. Look at how much code you need for this puzzle! (We'll learn
+        a simpler way in the next puzzle.)
+      NEW Course 4 Bee For Loops 3: 'Ah, the "for loop" makes this much easier! All
+        the code you need is here, take a look at how it is put together then click
+        "Run" to see how it works. '
+      NEW Course 4 Bee For Loops 4: 'Replace the ??? in the "for loop" with the largest
+        amount of nectar the bee has to collect. '
+      NEW Course 4 Bee For Loops 4 4: Now we need to move forward "counter" times,
+        then get nectar "counter" times.  Can you use two "repeat" loops to solve
+        this challenge?
+      NEW Course 4 Bee For Loops 5: You can also use a "for loop" to count down. Try
+        gathering this nectar by counting down from 5 to 1 by 1.
+      NEW Course 4 Bee For Loops 6: The last number in your for loop is called the
+        "increment". Each time the loop is run, the counter variable changes by the
+        value of the increment. Try collecting these flowers using an increment of
+        2.
+      NEW Course 4 Bee For Loops 7: |-
+        Now, let's combine the "counter" variable with a math block! How can you use the "counter" variable to navigate this garden with the fewest number of blocks possible? What do you need to do to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the "counter" variable!
+
+        Remember: If your loop is counting up, the increment is added to your "counter" variable each time through.
       NEW Course 4 Bee For Loops 8: 3、6、9、12、15の花のミツをとるためには、いくつずつ `counter` を ふやせば良いでしょう？「???」に正しい数をいれて、すべての花のミツを集めてください。
+      NEW Course 4 Bee For Loops 9: If your loop is counting down, the increment is
+        subtracted from your counter variable each loop. What should your increment
+        be to collect 15, then 12, then 9, 6, 3 nectar?
+      NEW Course 4 Play Lab Params 11: 'It''s free play time! Have fun with all the
+        blocks in your tool box. '
+      NetSim Standalone Automatic DNS: In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast: In this version of the Internet Simulator, you
+        can connect to up to 5 other people in a room. When you send messages in the
+        room, everyone receives them. What are some of the challenges of this system,
+        and how might you solve them?
+      NetSim Standalone Classroom Routers: In this version of the Internet Simulator,
+        everyone connects to a router and has a specific address. To send messages,
+        you have to address your message to the specific address of the recipient,
+        and the router will take care of delivering it to the right computer. If there
+        are other routers created in your class, ask for the address of one of your
+        classmates and send them a message! View the Log Router to see the path the
+        messages have taken through the network.
+      NetSim Standalone Freeplay: In this configuration, most of the options are turned
+        on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS: In this version of the simulator you can't see
+        the other students' addresses.  Instead, one of you must act as a name service,
+        to help share addresses with each other.
+      NetSim Standalone Packets TCP: 'Messages on the Internet can take many paths
+        to get to their destination, and sometimes along the way the message gets
+        dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters. '
+      NetSim Standalone SendAB: You and your partner share a single wire that can
+        only be in state A or state B. You can set the wire to either state at any
+        time, and you can read the state of the wire at any time. Can you figure out
+        a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers: 'You and your partner can now reliably send
+        messages back and forth without extra coordination! While you''re always sending
+        bits back and forth, you can also represent those bits as decimal numbers.
+        What kinds of information can you represent with this system? '
+      NetSim Standalone Sending Numbers Ascii: 'Now that you''ve transmitted information
+        represented as decimal numbers, you can map those numbers to text characters
+        to send text-based information back and forth. With a text-based protocol,
+        you can easily represent and communicate all kinds of information. '
+      New Artist Project: Draw something awesome! Your code is saved as a project
+        that you can return to at any time.
+      New Basketball Project: Create your own Basketball game. You can change all
+        the rules. When you're done, click Share to let friends try your game on their
+        phones.
+      New Bounce Project: Create your own Bounce game. You can change all the visuals
+        and the rules. When you're done, click Share to let friends try your game
+        on their phones.
       New Gumball Project: すきなものをつくってきょうゆうしましょう！
       New Ice Age Project: すきなものをつくってきょうゆうしましょう！
       New Infinity Project: すきなものをつくってきょうゆうしましょう！
       New Minecraft Hero Project: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
       New Sports Project: 君の ゲームを作ろう。あなたが全部きめてください。ルールは自由に変更できるし、スポーツをミックスしたり、自由にやろう！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
+      OPD-K5 whats your plan: Take a moment now to consider how and when you will
+        complete this online course to ensure you get the most benefit from the experience.
+        When you've got a good plan sketched out, continue on to dive more deeply
+        into Computer Science Fundamentals.
       OPD-K5-events-2: "`クリックしたとき` の下に `ふつうにパタパタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
         むかって うごきます。"
       OPD-K5-events-3: "”実行（じっこう）”ボタンがおされたら、スピードをふつうにしてみよう。まと まで はばたき つづけよう。"
@@ -815,6 +1231,27 @@ ja-JP:
       Overworld Powered Minecart_2019: 上出来です！資源をたくさん集め、それなりの家ができました。次はマップの端からドアまでレールを敷きましょう。
       Overworld Shear Sheep: '"刈る"コマンドを使って両方の羊から羊毛を集めましょう。'
       Overworld Shear Sheep_2019: '"刈る"コマンドを使って両方の羊から羊毛を集めましょう。'
+      Pixelation - Lesson 15 - Color Shades: We start you out with the row of shades
+        of red that Maddie created in the video. Experiment with 6-bit color by filling
+        in the bottom row of the image with shades of a different color. Here is an
+        example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Color Shades 4x4: 'We start you out with the 4x4 image
+        Maddie created in the video. Your task is to fill a 4x4 grid with colors using
+        12-bits per pixel. Here are the requirements: Row 1 - fill with shades of
+        red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.'
+      Pixelation - Lesson 15 - Complete 3-bit color: We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. Finish off the
+        image by figuring out which two colors are missing and encode them.
+      Pixelation 4x4 Empty: The width and height are now encoded in the pixel data.
+        Can you figure out how to adjust the dimensions?
+      Pixelation Bee: 'This larger image of a bee encodes color with 12 bits per pixel,
+        but viewing in hex makes it easier to see the color of each pixel. If you
+        switch to binary mode - hold on to your hat - it''s a lot of bits. Here''s
+        another mind-blowing thing to try: slide the bits per pixel up to 24 bits
+        per pixel. What happens? Can you explain this behavior?'
+      Pixelation Flappy: Here is a bigger image at 9 bits per pixel. With 9 bits per
+        pixel you can express 512 different colors. Click through to see the next
+        image which is even more sophisticated, but easier to understand.
       Robot Doodle: アイデア：リアルな絵をかいてみよう。どこに何をかくのか考えて、根気強く がんばろう。
       Robot Doodle_2018: アイデア：リアルな絵をかいてみよう。どこに何をかくのか考えて、根気強く がんばろう。
       Standalone_Artist_1: アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100
@@ -830,6 +1267,12 @@ ja-JP:
         花は 150 ピクセルずつ はなれているよ。'
       Standalone_Artist_8: "「Draw a shape」は、六角形を書くようにプログラムした関数です。まず実行して、この関数が、どう うごくか、みてみてください。さて、正方形や、三角形や、八角形を書くように、この関数の中のプログラムを書き直すことが出来るかな？"
       Standalone_Artist_9: さあ、あなたの好きな絵を書いてみて！すきなことが出来る、空っぽの関数もあるから、つかってね！
+      U4 Model Design 1: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
+      U4 Model Design 1_2018: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
+      U4 Model Design 1_2019: Add a large red button to your screen using Design Mode.
+        (Click for full instructions.)
       Underground Avoiding Lava: 一部のブロックの下には溶岩が隠れていて、前進する前に"if"コマンドでフタをする必要があります。適切な場所に"前進"コマンドを追加して、ブロックを掘りましょう。
       Underground Avoiding Lava_2019: 一部のブロックの下には溶岩が隠れていて、前進する前に"if"コマンドでフタをする必要があります。適切な場所に"前進"コマンドを追加して、ブロックを掘りましょう。
       Underground If Statements: 次は溶岩の中に落ちないようにして、レッドストーンを3つ掘りましょう。溶岩を見つけたら、"If"コマンドを使って丸石を置きます。
@@ -838,6 +1281,7 @@ ja-JP:
       Underground Iron_2019: 溶岩は熱くて危険です。丸石を置いて橋を作り、鉄のブロックを2つ以上掘りましょう。
       Underground Mining Coal: 地下は暗いけれども、貴重な資源があります。松明を2つ以上置いて、石炭を2個以上掘りましょう。
       Underground Mining Coal_2019: 地下は暗いけれども、貴重な資源があります。松明を2つ以上置いて、石炭を2個以上掘りましょう。
+      Vigenere: Test
       Virtual Pet 1: "”実行（じっこう）”をおして、キリンをクリックしたら どうなりますか？"
       Virtual Pet 1 Predict: 'エイリアンをクリックしたら、どうなりますか？  '
       Virtual Pet 2: ジェラルディンがプードルにさわったときという **イベント**を作って、キリンの色を茶色に変えてみよう。
@@ -847,6 +1291,10 @@ ja-JP:
       Virtual Pet 6: キリンがリンゴにさわったら、もとの大きさに もどるようにしましょう。
       Virtual Pet 8_2019: "**フリー プレイ** ペットに何をさせますか？好きなことを 試してみよう。"
       Virtual Pet Freeplay: 'フリープレイ キリンに もっと 何かさせてみよう。 '
+      'Widget: Text Compression': Look for patterns (repeated words or phrases) in
+        the text. Enter the patterns you see into the dictionary on the right. As
+        you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       behaviors 1: どうなるか予測してみよう！
       behaviors 2: ロケットを星に飛ばそう！
       behaviors 3: 探査車をロボットよりも早く走らせよう！
@@ -940,10 +1388,18 @@ ja-JP:
       course4_artist_functions_challenge2: プログラムが どのように 動いているのか よく見て、あなただけのプログラムを作ろう！
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
       course4_artist_variables_challenge1: あなたは、このようなパターンの作りかたを、すべて学びました。そんなに難しくないから、どうすれば良いか、考えてみよう。
+      course4_bee_for_challenge1: Use this for loop to collect all of the nectar.
+        There are a few actions that you will want to repeat 'counter' times.
       course4_bee_fwp_challenge1: トウモロコシを集めるために、関数の中で1つだけ`まで` を使います。パラメータ`length`を使った`まで`の中で、カウンターを別のくり返しの回数に使います。
+      course4_bee_fwp_challenge2: Use one `for loop` in a function to collect all
+        of the vegetables in the row. Make the `for loop` can count to different maximum
+        values by using the `length` parameter. Make your program as short as possible
+        by using a second `for loop` outside the function.
       course4_collector_nested_loops_challenge2: ツールボックスの中にあるブロックだけを使って最低でも2つの宝の山に行こう。できれば
         4つ すべて集めよう。
       course4_harvester_nested_loops_challenge1: '"ツールボックスの中にあるブロックをつかって、農夫を手伝って！"'
+      course4_playlab_variables_challenge1: Use these blocks to make the actors share
+        a knock-knock joke. Change the setup and punchline to tell your own joke!
       courseA_artist_loops1: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
         クリックします）
       courseA_artist_loops10: おちないよう石をおいてください。
@@ -1029,11 +1485,21 @@ ja-JP:
       courseA_collector_loops_challenge1: _"バグをみつけるのを てつだってくれる？"_
       courseA_collector_loops_challenge1_2018: _"バグをみつけるのを てつだってくれる？"_
       courseA_collector_loops_challenge1_2019: _"バグをみつけるのを てつだってくれる？"_
+      courseA_collector_loops_challenge2: 'Get all of the treasure! '
       courseA_collector_loops_challenge2kp: "**3** つ いじょう たからものを あつめれば このパズルを クリアできます。"
       courseA_collector_loops_challenge2kp_2018: "**3** つ いじょう たからものを あつめれば このパズルを
         クリアできます。"
       courseA_collector_loops_challenge2kp_2019: "**3** つ いじょう たからものを あつめれば このパズルを
         クリアできます。"
+      courseA_collector_preLoops1: "This is Laurel the Adventurer! \n\nPress \"Run\"
+        to see her walk up to the treasure and grab it."
+      courseA_collector_preLoops2: "Great!  Now you get to add code yourself!  \n\nSnap
+        a `get treasure` block to the bottom of the program and click \"Run\"."
+      courseA_collector_preLoops3: Snap two `E -->` blocks and one `get treasure`
+        block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops4: Can you figure out how to solve this puzzle?
+      courseA_collector_preLoops5: Get 1 of these 2 gems to solve this puzzle.
+      courseA_collector_preLoops6: Get both pieces of treasure to solve this puzzle.
       courseA_collector_preLoops7: たからものを ３つ あつめよう。
       courseA_harvester_loops1: トウモロコシを しゅうかく するのを てつだおう。
       courseA_harvester_loops10: トウモロコシを 5つ あつめよう！
@@ -2791,6 +3257,8 @@ ja-JP:
         えがおが書かれるように、プログラムを直してください。
       grade5_artist_binary8: このイメージを完成（かんせい）させてください。
       grade5_artist_binary9: "もっと細かいキャンバスがあります - 16 ピクセル × 16 ピクセルです! \\\r \\\rこのビットで何ができるか、見てください。"
+      grade5_pixelation: Encode an image of anything you like using binary. The binary
+        language will be represented with '0' and '1' only.
       iceage_click_hello: 'シドをクリックしたとき、シドに何か言わせることができるかな？ '
       iceage_free_play: 'あなたがゲームや物語をつくる番です！ '
       iceage_hello1: '`実行（じっこう）した時`の下に `言う` を引っ付けて、シドに"こんにちわ！"と言わせてみよう。'
@@ -2803,6 +3271,17 @@ ja-JP:
       iceage_throw_hearts: "`キャラ なげる`を使って、シド（キャラ1）にハートを投げさせて、グラニー（キャラ2）が受け取ったら うれしい顔になるようにしよう。"
       iceage_warn_ice_age: 背景を氷のもように変えて、シド（キャラ1）のスピードをはやいにしよう。
       k-1 maze 1: 西にうごかして、ブタさんのところまで つれていって あげましょう。
+      mike3bit: We start you with the 4x2 image Maddie was creating, but we've left
+        out the last few pixels. Finish off the image by figuring out which colors
+        are missing and encoding them.
+      mike3bitbird: Here's an example of an image made with 3-bit color. Try changing
+        it to understand how it works. If you want to reset the image, press "Start
+        Over".
+      mike3bitfreeplay: Make something awesome and share it with your classmates!
+        You can copy and paste the value of a pixel to use it repeatedly.
+      mike3bitmario: "A careless binary coder typed in ONE extra 0 or 1 somewhere
+        within this image's data. The extra bit that is causing Mario to glitch out!
+        \n\nDelete the extra bit to restore Mario back to normal!"
       ramp_artist_loops1: 60ピクセル進めば、このパズルをクリアできます。
       ramp_artist_loops1_2018: 60ピクセル進めば、このパズルをクリアできます。
       ramp_artist_loops1_2019: 60ピクセル進めば、このパズルをクリアできます。

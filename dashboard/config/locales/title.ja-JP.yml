@@ -2,23 +2,37 @@
 ja-JP:
   data:
     title:
+      BigEvent: The Big Event
+      BigEvent_2018: The Big Event
       BinaryBracelets: バイナリブレスレット
       BinaryBracelets_2018: バイナリブレスレット
       BinaryImages: バイナリ画像
       BinaryImages_2018: バイナリ画像
       BuildingAFoundation: ピラミッドをたてよう
+      BuildingAFoundation_2018: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
       ComputationalThinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
       Conditionals: 条件
       Conditionals_2018: 条件
       Crowdsourcing: クラウドソーシング
+      Crowdsourcing_2018: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DiceRace: 'Real Life Algorithms: Dice Race'
+      DigitalCitizenship: Digital Citizenship
       DigitalFootprint: あなたのデジタルフットプリント
       DigitalFootprint_2018: あなたのデジタルフットプリント
+      EnvelopeVariables: Envelope Variables
+      EnvelopeVariables_2018: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun: For Loop Fun
+      ForLoopFun_2018: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
       FunctionalSuncatchers: 関数サンキャッチャー
+      GettingLoopy: Getting Loopy
+      GettingLoopy_2018: Getting Loopy
       GoingPlacesSafely: 安全な道を通って行く
       GoingPlacesSafely_2018: 安全な道を通って行く
       GraphPaperProgramming: グラフ用紙のプログラミング
       GraphPaperProgramming_2018: グラフ用紙のプログラミング
       Internet: インターネット
+      Internet_2018: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs: Mad Glibs
       MoveIt: 動かせ！動かせ！
       MoveItMoveIt_2018: 動かせ！動かせ！
       PaperPlanes: '現実世界のアルゴリズム: 紙飛行機を作る場合'
@@ -28,14 +42,25 @@ ja-JP:
       RelayProgramming: プログラミングをリレーする
       RelayProgramming_2018: プログラミングをリレーする
       SongwritingParameters: 作詞作曲
+      SongwritingParameters_2018: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
       SongwritingWithParameters: パラメーターで作詞作曲
+      TangramAlgorithms: Tangram Algorithms
       UnplugHappyMaps: ハッピーマップ
       UnplugHappyMaps_2018: ハッピーマップ
+      courseA_unplugged_loops: Loops Unplugged
+      courseA_unplugged_loops_2018: Loops Unplugged
+      courseB_unplugged_CnC_2018: It's Great to Create and Play Fair
       courseB_unplugged_MRF: アンプラグド　アクティビティ
       courseB_unplugged_MRF_2018: 私のロボットの友だち
       courseB_unplugged_loopyMRF: アンプラグド　アクティビティ
+      courseB_unplugged_loopyMRF_2018: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
       courseC_Unplugged_ScreenOutTheMean: アンプラグド　アクティビティ
       courseC_Unplugged_ScreenOutTheMean_2018: アンプラグド　アクティビティ
       courseD_unplugged_digitalCitizenship: アンプラグド　アクティビティ
       courseD_unplugged_digitalCitizenship_2018: アンプラグド　アクティビティ
+      courseE_unplugged_CnC_2018: Digital Sharing
+      courseE_unplugged_privateInformation: 'Common Sense Education: Private and Personal
+        Information '
+      courseE_unplugged_privateInformation_2018: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
       courseF_unplugged_powerOfWords: アンプラグド　アクティビティ
+      courseF_unplugged_powerOfWords_2018: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'

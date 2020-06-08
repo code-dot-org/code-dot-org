@@ -32,6 +32,7 @@ ja:
             MOVES.Clown: カンナム
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
           MOVE2:
             MOVES.Roll: ボディロール
@@ -44,6 +45,7 @@ ja:
             MOVES.Clown: カンナム
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} 後"
@@ -89,6 +91,7 @@ ja:
             MOVES.Clown: カンナム
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
           DIR:
             '1': "→"
@@ -110,6 +113,7 @@ ja:
             MOVES.Clown: カンナム
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
           DIR:
             '1': "→"
@@ -191,6 +195,7 @@ ja:
             MOVES.Kick: 星
             MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
           DIR:
             '1': "→"
@@ -222,10 +227,13 @@ ja:
             MOVES.Kick: 星
             MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: eval {CODE}
       Dancelab_everyMeasuresRange:
         text: "{START} 後に、毎 {N} 小節 "
       Dancelab_everySeconds:
@@ -286,6 +294,7 @@ ja:
             MOVES.Roll: ボディロール
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
       Dancelab_ifTime:
         text: |-
@@ -971,10 +980,19 @@ ja:
         text: セットアップ
       Dancelab_whenSetup2:
         text: セットアップ
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
@@ -1019,10 +1037,13 @@ ja:
         options:
           CHOICE:
             '"this"': これ
+            '"other"': other
       gamelab_hideTitleScreen:
         text: タイトル画面を非表示にする
       gamelab_isTouchingEdges:
         text: "{SPRITE} エッジに触れている"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} is touching {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE}　{LOCATION}にとぶ"
       gamelab_keyPressed:
@@ -1081,6 +1102,8 @@ ja:
             '"left"': 左 に
       gamelab_mouseLocation:
         text: マウスの位置
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: 移動 {SPRITE} {DISTANCE} ピクセルフォワード
       gamelab_moveInDirection:
@@ -1093,6 +1116,10 @@ ja:
             '"West"': 西だ
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
+      gamelab_objectSpritePointer:
+        text: object {SPRITE}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1127,13 +1154,44 @@ ja:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': どうくつ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous
+              grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': 裁判所
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': さばく
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert
+              road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm
+              land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating
+              grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front
+              of house
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 銀河
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': グリッド
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living
+              room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine
+              trees
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': にじ
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': サイエンスフィクション
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer
+              field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun
+              and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine
+              showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis
+              court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree
+              island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
             undefined: なし
@@ -1170,12 +1228,18 @@ ja:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+      gamelab_subjectSpritePointer:
+        text: subject {SPRITE}
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: ターン {SPRITE} {DIRECTION} {N} 度
         options:
           DIRECTION:
             '"right"': 右 に
             '"left"': 左 に
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: 下矢印が押されたとき
       gamelab_whenKey:
@@ -1239,7 +1303,10 @@ ja:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 魚ではない
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": マイレーベル
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 私のラベルではありません
+      Mikelab_changeAnim:
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -1247,7 +1314,10 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -1259,9 +1329,19 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getNext:
         text: 次のオブジェクトを取得する
       Mikelab_getProp:
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -1300,6 +1380,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_groupDestroy:
         text: 削除 {SELECT} {COSTUME}
         options:
@@ -1392,6 +1473,7 @@ ja:
             MOVES.Roll: ボディロール
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Thriller: Zombie
             MOVES.Rest: 設定なし
       Mikelab_ifLabel:
         text: |-
@@ -1417,14 +1499,20 @@ ja:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: 私のラベルではありません
+      Mikelab_isAnim:
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: '場所 x: {X} Y： {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: てきとうな色
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: スプライト {SPRITE} 停止 {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_repeatUntilComplete:
         text: ずっと
       Mikelab_sendBad:
@@ -1432,10 +1520,43 @@ ja:
       Mikelab_sendGood:
         text: オブジェクトを右に移動
       Mikelab_setBG:
+        text: set background to {BG}
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous
+              grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert
+              road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm
+              land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating
+              grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front
+              of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living
+              room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine
+              trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer
+              field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun
+              and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine
+              showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis
+              court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree
+              island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -1443,11 +1564,21 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value
+          {VALUE} corner {CORNER}
         options:
           CORNER:
             '"right"': 右 に
             '"left"': 左 に
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: 新機能 {COSTUME} スプライト {LOCATION}
         options:
@@ -1461,6 +1592,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
       Mikelab_whenClickedOn:
         text: いつ {SPRITE} クリック
       Mikelab_whenKeyPressed:
@@ -1471,42 +1603,63 @@ ja:
             '"down"': 下矢じるしキーが おされたら
             '"left"': 左矢じるしキーが おされたら
             '"right"': 右矢じるしキーが おされたら
+            '"space"': spacebar
             '"w"': 西
             '"a"': A
             '"s"': 南
             '"d"': D
       Mikelab_whenKeyReleased:
+        text: when {KEY} released
         options:
           KEY:
             '"up"': 上矢じるしキーが おされたら
             '"down"': 下矢じるしキーが おされたら
             '"left"': 左矢じるしキーが おされたら
             '"right"': 右矢じるしキーが おされたら
+            '"space"': spacebar
             '"w"': 西
             '"a"': A
             '"s"': 南
             '"d"': D
       Mikelab_whenMouseClicked:
         text: マウスがクリックされたとき
+      Mikelab_whenMouseReleased:
+        text: when mouse released
+      Mikelab_whenTouchesAny:
+        text: when{SPRITE} touches any sprite
       Mikelab_whenYesNoClicked:
         text: いつ {KEY} クリック
         options:
           KEY:
             '"yes"': はい
             '"no"': いいえ
+      Mikelab_whileClicked:
+        text: while clicking on{SPRITE}
       Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
         options:
           KEY:
             '"up"': 上矢じるしキーが おされたら
             '"down"': 下矢じるしキーが おされたら
             '"left"': 左矢じるしキーが おされたら
             '"right"': 右矢じるしキーが おされたら
+            '"space"': spacebar
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{SPRITE} is touching any sprite
+          {STATEMENT}
+      Mikelab_worldSeconds:
+        text: number of seconds
       Mikelab_xLocationOf:
         text: x 座標の {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
       RyanLab_moveForward:
         text: 前に すすむ
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
       RyanLab_turnLeft:
         text: ひだりに まがる
       RyanLab_turnRight:
@@ -1571,9 +1724,16 @@ ja:
       aalab_setupStory:
         text: セットアップストーリー
       aalab_starwars_playSound:
+        text: play{OPTION}sound
         options:
           OPTION:
             '"random"': ランダム に
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: バイナリを描画する {BIN}
       binary_drawBinScreen:
